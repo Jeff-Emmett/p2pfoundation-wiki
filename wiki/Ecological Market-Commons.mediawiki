@@ -1,0 +1,182 @@
+'''* White Paper: Regen Network Economics Technical Paper. An Ecological Market-Commons, Secured by Proof-of-Stake. G. Landua, K. Birchard, W. Szal. Regen Network, Version 0.2, February 16, 2021'''
+
+URL = https://regen-network.gitlab.io/whitepaper/Economics.pdf?
+
+"A ... framework for overcoming the coordination challenges that are currently undermining market and non-market attempts to manage the common resource base of ecosystems as a public good. ... We will argue that a commons-based framework is optimal for understanding both the design and operation of a blockchain as well as the management of ecosystems."
+
+
+=Abstract=
+
+This paper will outline the use case of our token, starting from the context of ecological markets and agriculture. We will explore why blockchain
+is an appropriate solution, and why our Proof-of-Stake architecture and
+token design provide a suitable framework for overcoming the coordination challenges that are currently undermining market and non-market
+attempts to manage the common resource base of ecosystems as a public
+good. After this introduction we will detail our current token design, as
+well as list important topics for research and development for our project
+and the space more generally. We will argue that a commons-based framework is optimal for understanding both the design and operation of a
+blockchain as well as the management of ecosystems. We will review
+pilots that catalog the different actors and how they interact with our
+blockchain and token, and illustrate our token economy in a formal economic model. We intend for this paper to clearly illustrate the role of
+bringing together a group of potentially adversarial stakeholders to generate the public goods of verified information about ecological state, and
+the regeneration of agro-ecosystems to revitalize the carbon cycle and increase land steward profitability. This paper focuses exclusively on the
+protocol Proof-of-Stake token mechanics—not the smart contract enabled
+tokenization layer that will be built to represent, steward and exchange
+ecological value."
+
+
+=Contextual Quotes=
+
+
+==The argument for Ecological Market-Commons==
+
+G. Landua et al. :
+
+"We posit for the sake of argument, that we can view functioning markets—with
+their standards of engagement, goods, and participants—are one variety of
+commons. Regen Network supersedes the tragedy narrative—bringing to bear
+the best that both market thinking and commons governance have to offer.
+
+Regen Network effectively creates an ecological data commons in which the
+common pool resource of high quality data and trusted attestation about ecological state can be used by different stakeholders to form public or private
+agreements.
+
+We refer to our approach as a market-commons approach in which the market
+mechanisms are designed and maintained nested within the health imperatives
+of a clear group of stakeholders which govern the system. This is not to be confused with social democracy or
+other state-led efforts because this is a voluntary network of actors determining the optimal governance for market mechanisms to generate two key layers
+of public goods: near-perfect information about ecological health for all, and
+ecological regeneration outcomes for all."
+(https://regen-network.gitlab.io/whitepaper/Economics.pdf?)
+
+
+
+==[[Using Public Ledgers for Direct Payment of Regenerative Work]]==
+
+W. Szal et al. :
+
+"Rather than viewing farmers simply
+as food producers, we would like to elevate their societal status to that of land
+stewards. Agricultural use is the primary way (by land area) that humans interact with land, representing 37% of land globally [wor19]. Currently, the vast
+majority of this activity is degenerative, but it doesn‘t need to be this way.
+We do this through two fundamental instruments: Ecological State Protocols
+(ESPs) and Ecological Agreements. ESPs are algorithms that, primarily utilizing remote-sensing data, determine the change in state of a specific facet of
+ecological health. An example of this would be a soil carbon ESP, which would
+track the change in soil carbon in a given piece of land over a given period
+of time. Ecological Agreements are smart contracts tied to the outcomes of
+Ecological State Protocols. For example, a rancher has demonstrated via a soil
+carbon ESP that they‘ve sequestered one hundred tons of CO2 over the past
+year in their ranch land. A carbon market, utilizing an Ecological Agreement,
+could pay them automatically when this carbon sequestration is verified."
+(https://regen-network.gitlab.io/whitepaper/Economics.pdf?)
+
+=Excerpts=
+
+
+==The [[Regen Network]]==
+
+W. Szal et al. :
+
+"The aim of Regen Network is to imbue the economy with ecological sentience.
+
+The model of production of ecological knowledge—what and how we know about
+what is happening in a given ecosystem—is the foundation for achieving this
+aim. Therefore, a community dedicated to maintaining a decentralized open
+ledger of ecological health information to serve as the basis for conditional agreements between parties is an essential building block for a new phase of the global
+economy that accounts for ecological health and invests in ecological regeneration as the cornerstone of healthy business and governance. This paper outlines
+the economics and governance of the community that will maintain this open
+ecological ledger. On top of this ledger, a new economy of ecological value will
+be built. We will explore the economics of this application layer in subsequent
+papers. The “Regen“ in Regen Network is short for regeneration. But what
+does this mean? When we use the term, we‘re drawing on the work of business
+development consultant and educator Carol Sanford. We refer to regeneration
+as actions that increase the capacity, viability, and vitality of both the agent
+and system being acted within or upon. As these concepts can be elusive, it
+may be useful to ground our working definition in the sphere of regenerative
+agriculture. As defined by our sister enterprise, Terra Genesis International,
+regenerative agriculture is a system of farming principles and practices that
+enhance ecological health [Ter19]. This could be contrasted with conventional
+agriculture, which degrades ecological health. Public good outcomes of Regenerative Agriculture include carbon sequestration, clean water and biodiversity.
+Private good outcomes include increased economic prosperity for land stewards
+and other network participants.
+
+Financial capital is often created by liquidating ecological and social capital
+(for more on this subject see [Sza19a]). For example, the vast majority of
+palm oil plantations are sited on clearcut rainforest. Timber is often harvested
+using clearcuts, and fisheries extract so many fish that the populations crash.
+
+All this is driven by short-term profit. While it is clear that these processes
+create some form of value (especially financial capital), it is also clear that there
+is something important that has been lost along the way, and that the true
+wealth of the system is undermined. As these losses keep adding up, we find
+ourselves in a state of both societal and ecosystems collapse. If we want to
+address ecological degradation systemically, we need to intervene somewhere
+in the economic process. Regen Network aims to reinvent the economics of
+agriculture, and land use more broadly by bringing ecological state information
+to agreements and contracts to ensure rational choice and more efficiently price
+externalities. Beyond rational choice and pricing externalities, ubiquitous access
+to high quality ecological information will have an enormous impact on the
+quality of the relationship between the human economy and the greater than
+human living world.
+
+Near real-time access to high-fidelity ecological state information is now possible. This capacity has not been a common part of the human experience since
+the poorly-understood and nearly-forgotten evolutionary arc of small bands of
+hunter-gatherer Homo sapiens. Early humans and intact cultural traditions
+maintained (and sometimes still maintain) intimate individual and cultural connections to landscapes and ecosystems. We can now regenerate that missing
+capacity to attune our human economy with the health of the ecosystems that
+support us. Regen Network is making this leap possible.
+
+How can we ground these grand aims in a tooling that brings these ethics into
+an actionable sphere? Recent developments in blockchain architecture—such as
+Byzantine-Fault-Tolerant Proof-of-Stake consensus algorithms—have enabled a
+new form of decentralized governance in a data commons. To build on this foundation, we introduce a community staking model to even further decentralize
+decision making and align it more deeply with the community of users. Built
+on the Cosmos SDK, Regen Network is one of the first of a third generation of
+blockchains that leverages the governance mechanisms and data provisions for
+real world commons management."
+
+
+==[[Carbon Offset Markets]]==
+
+G. Landua et al. :
+
+"Current ecosystem service markets such as carbon offset markets (voluntary
+and compliance), are deeply flawed. We feel strongly that the foundation upon
+which ecosystem service markets—as well as non-market agreements between
+stakeholders to govern ecological commons in a sustainable, and if possible,
+regenerative way—will depend on in infrastructure of trust that we refer to as
+an ecological knowledge commons.
+
+The layers of technology that generate security, durability and integrity
+around data, compute functions and algorithms are the foundation for a trusted
+monitoring and verification system of ecological state. This trusted monitoring
+and verification system in turn is the foundation of any agreement between parties about ecological state. Agreements about ecological state are the foundation
+for the inclusion of ecological health into our financial system—an important
+aim of Regen Network.
+
+Currently, ecological health is not held on the balance sheet of any entity,
+private or governmental. This means that financial decisions are blind to their
+ecological impacts."
+(https://regen-network.gitlab.io/whitepaper/Economics.pdf?)
+
+
+==[[Global Ecological Services Market]]==
+
+K. Birchard et al. :
+
+"Currently, ecological health is not held on the balance sheet of any entity,
+private or governmental. This means that financial decisions are blind to their
+ecological impacts. This is starting to change in small ways; there is a global
+payments for ecological services market. A conservative estimate puts the global
+market size in 2016 at $36 billion annually [SBC+18]. One example of this would
+be the Natural Resource Conservation Service (a branch of the United States
+Department of Agriculture) paying farmers to plant riparian buffers around
+streams that pass through their farms to improve the health of their waters."
+(https://regen-network.gitlab.io/whitepaper/Economics.pdf?)
+
+[[Category:Crypto_Ecology]]
+
+[[Category:Crypto_Economy]]
+[[Category:Cryptoledger_Applications]]
+[[Category:P2P_Market_Approaches]]
+[[Category:Agrifood]]
+[[Category:Ecology]]

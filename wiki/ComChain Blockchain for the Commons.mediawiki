@@ -1,0 +1,36 @@
+'''= the Leman is a euro-swiss franc backed complementary currency for the interconnected french-swiss territory around the Geneva lake, which is linked to a mutual credit system a la [[SardeX]]/[[Wir]] and managed through a blockchain application'''
+
+
+=In French=
+
+Update via Jean Rossiaud over the Leman:
+
+"La version 2 de l’application du Léman est terminée. Elle sera diffusée par la coopérative à but non lucratif : ComChain (pour Blockchain pour les communs) : elle consiste en : 
+
+* un portefeuille multi-monnaie (pour MLC, mais avec la possibilité de transaction en devises dans la communauté de paiement)
+* permettant à la fois le crédit mutualisé, le nantissement et le salariat
+* l’inter-opérabilité (en MLC, avec un taux de change à définir de cas en cas)
+
+
+Pour les aspects P2P :
+
+* C’est de l’Opensource : AGPL
+* Le système est complètement P2P
+* Le backend est partagé :
+** Les transactions sont distribuées sur les noeuds de la Blockchain étherium (mais non lié à l’éther), sur lesquels s’appuie les smart contracts.
+** Le base de données (données structurées) est partagée sur Cassandra
+** Le stockage des bases de données non structurées sont partagées sur IPFS
+* Le front end
+** L’API est également partagée
+** NGNIX
+** Langage PHP
+* Comme il n’y a pas de rémunération du minage puisque les noeuds sont distribués entre les utilisateurs ** Pas de spéculation
+**Très peu gourmand en énergie.
+
+C’est à ma connaissance la seule solution pour les communs qui soit aussi sécurisée et aussi universelle : paiement éthique, démocratique, transparent et sûr."
+
+(email, January 2017)
+
+[[Category:Crypto_Economy]]
+
+[[Category:Cryptoledger_Applications]]

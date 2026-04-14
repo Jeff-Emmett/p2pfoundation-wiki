@@ -1,0 +1,75 @@
+= metric for the reach of Wiki's
+
+=Description<ref>[http://rationalwiki.org/wiki/WikiFactor WikiFactor at RationalWiki]</ref>=
+In his paper<ref>''wikiFactor: a measure of the importance of a wiki site'', Carl McBride, February 20, 2009, [http://arxiv.org/PS_cache/arxiv/pdf/0902/0902.3439v2.pdf pdf]</ref>, Carl McBride introduces the wF as follows:
+<blockquote>
+The [http://en.wikipedia.org/wiki/H-index Hirsch h-index]  is defined as the number of papers, h, that have &ge; h citations. This simple metric has proved to be highly popular. For example, it is now included as one of the functions in the ISI Web of Science.
+
+'''WIKIFACTOR'''
+
+The new metric proposed in this paper is that of the wikiFactor (wF). It is based on precisely the same style of measure as the h-index, but with two differences; the first is that it examines hits on web pages rather than citations of a publication, and secondly, there is a factor of a thousand. In other words the wikiFactor is defined as the number of pages that have had ≥ 1000wF hits.
+</blockquote>
+
+''The wikiFactor of a wiki is the unique number wF such that there are wF pages on the wiki with at least 1000 * wF views.''
+
+This is easy enough to calculate, even manually if you have a list of the pages sorted by the number of views. Then, you only have to look at the n-th page in the list with less then n * 1000 views. Then, wF = n-1.
+
+The more important the wiki, the easier the calculation. Take a look at this example:
+{|
+|
+{|class="wikitable" align="left"
+!#
+!title
+!views
+!
+|-
+!1
+!Main Page	
+|align="right"|27,741	
+|align="right" style="background:green; color:white" |&ge; 1,000
+|-
+!2
+!User talk:Philip J. Rayment	
+|align="right"|	17,889	
+|align="right" style="background:green; color:white" |&ge; 2,000
+|-
+!3
+!User talk:Ruylopez	
+|align="right"|	16,995	
+|align="right" style="background:green; color:white" |&ge; 3,000
+|-
+!4
+!Talk:Evidence for God's existence	
+|align="right"|	5,340	
+|align="right" style="background:green; color:white" |&ge; 4,000
+|-
+!5
+!Talk:Evolution	
+|align="right"|	4,743	
+|align="right" style="background:red; color:white" | < 5,000
+|-
+!6
+!Evolution	
+|align="right"|	4,484	
+|align="right" style="background:red; color:white" | < 6,000
+|-
+!7
+!MediaWiki:Common.css	
+|align="right"|	3,967	
+|align="right" style="background:red; color:white" | < 7,000
+|-
+|}
+|So, wF<sub>aSK</sub> = 4. That fits the definition: though there are four pages with more than 4,000 views, there aren't five pages with more than 5,000 views, thus, the biggest number wF such that there are wF pages with at least wF * 1000 views is 4.
+|}
+
+=References=
+<references/>
+
+=More Information=
+* [[P2P Metrics]]
+
+=External links =
+* http://wikiindex.org/WikiFactor
+* http://rationalwiki.org/wiki/WikiFactor
+
+[[Category:P2P Accounting]]

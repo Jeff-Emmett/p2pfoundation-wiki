@@ -1,0 +1,261 @@
+'''* Article: [[Complementary Currency]] Open Source Software in 2010. Matthew Slater D 82-87'''
+
+URL = http://matslats.net/ijccr-software-review [http://www.ijccr.net/IJCCR/2011_(15)_files/16%20Slater.pdf]
+
+
+=Abstract=
+
+"This report briefly covers the field of non-commercial mutual credit software, discussing the issues and challenges the projects collectively face in meeting the needs of the movement. There is a clear cultural divide between commercial barter software which helps businesses exchange spare capacity within the law, and free open source projects which help neighbours to exchange under the radar of the tax man. There is almost no cross-fertilisation between nonprofit, idealistic, community projects, and the business barter. The aims of both cultures are very different, though their methods are similar."
+(http://www.ijccr.net/IJCCR/2011_%2815%29.html)
+
+
+=Summary of some of the main conclusions=
+
+Excerpted:
+
+First conclusion: Cc activists are trawling the net trying to work out what each software package does, how they compare, and which is best for them. The only information available to them is in the form of a few poorly maintained lists on the web with no review and no attempts at balanced comparisons.* Implementers find themselves sifting through lists including dead projects, ready rolled services, and hard-core applications and there is very little actual information from users' perspectives.
+
+
+Second conclusion: One of the major barriers to achieving scale in a decentralised mutual credit economy is the fundamental inability of members of currency groups to exchange value between groups. however it is critical for the usefulness of the network that members be able to trade outside their local groups, across the network firstly with adjacent local groups
+
+
+Third conclusion: there is almost zero investment in software itself, any investment is always directed at implementations, and most of the software is built by busy people in their spare time. The movement is hardly organised enough to use its own issued money for funding (hat tip to CES), yet it needs highly professional skills to advance. ... Of all the software under discussion, only Cyclos is insulated from the possible demise of its primary programmer. All the others are still dependent on the altruist who initiated them, and have been unable to professionalise. No investment means no staff, no reliability, no guarantees for the future. A viable business model needs to be established for a CC software project.
+
+
+Fourth conclusion:There is much talk about 'virtual' currencies. These may broadly fit the definition of complementary currencies, but they offer none of the benefits which we are concerned with. Some are direct proxies for hard currencies which are paid for in advance, and then spent using a plethora of widgets and enticements. The distance of virtual currencies from national currencies allows operators to introduce games and incentives which blur the value, and make it easier to spend.*** It should be possible to use virtual currency tools such as the Opensocial API to quickly build a CC ecosystem, though an appropriate context would need to be found. One proposal on my back burner is a mutual credit bank, which would offer secure hosting of many currencies via an API. There may be a social network on which all trading takes place; instead everyone would trade through payment widgets on their own sites. Facebook makes an obvious platform for a complementary currency, but it might be a false investment. 
+(http://matslats.net/ijccr-software-review)
+
+
+
+=Discussion=
+
+Status update interview in April 2011:
+
+(Question by Michel Bauwens)
+
+Q: Matthew, about 9 months ago you wrote an overview of the state of free software programs dedicated to open money projects (http://matslats.net/ijccr-software-review)  and complementary currencies, which carried a number of critical conclusions. In this interview, I'd like to represent some of your salient conclusions, and let you elaborate on whether the situation has improved or not. And what do you think would be prioritary actions right now.
+
+
+        
+'''First conclusion''': Cc activists are trawling the net trying to work out what each software package does, how they compare, and which is best for them. The only information available to them is in the form of a few poorly maintained lists on the web with no review and no attempts at balanced comparisons. Implementers find themselves sifting through lists including dead projects, ready rolled services, and hard-core applications and there is very little actual information from users' perspectives.
+
+
+        
+Matthew Slater: This is still the situation. In fact software is only one of the needs of people looking to start CCs. The real problem is that there's no real centre to the movement except perhaps the man himself, Bernard Lietaer. Successful complementary currency projects are subtle and difficult, and there is much knowledge to share about them.  The same mistakes are being made time and again. Newcomers to the movement need to be usshered towards a community of implementers who have the knowledge and experience of software and currency design and the plethora of other processes involved. This is called a 'Community of Practice'. There's an initiative I'm involved with now (though as ever we are working with zero resources) to rebuild complementarycurrency.org as a 'Community of Practice' web site, but until then, the only real focal point is a permanent Skype chat run by 'King of Ning' Les Squires. This is why I took up the [http://ccmag.net CC Magazine. Back to the question, I've not yet seen or successfully solicited a comparative review between the major open source complementary currency accounting packages. I mean Cyclos, CES, Drupal, and GETS. I can't write one myself because my conclusion that Drupal is the best might be prejudiced by the fact that I'm the developer.
+
+        
+Right now, to share knowledge and build coherence in the movement, we need:
+
+        
+* a volunteer who will build that Community of Practice site, and someone with suitable experience then to cultivate it
+
+       
+* more attention paid to the production and promotion of the CC Mag (I'm not the best person to edit it)
+
+       
+* more practitioners writing for the CC Mag
+
+        
+'''Second conclusion''': One of the major barriers to achieving scale in a decentralised mutual credit economy is the fundamental inability of members of currency groups to exchange value between groups. however it is critical for the usefulness of the network that members be able to trade outside their local groups.
+
+
+        
+This is still very much the case. Some people think that local currencies should stay local, and I agree, insofar as there is a local economy for the currency to denominate. In the developed world, however, the local economy is completely marginal. As we have seen time and again, compared to a national currency, a currency that can only be spent locally is not very useful or compelling, except to idealists. There are many ways this could play out, but I see every locality having a medium of exchange mutual credit currency like a LETS or a timebanks, but denominated in the universal and egalitarian measure of time; those currencies will be interchangable with time-currencies from other areas. This is not the same as having a unified time currency because each locality will have to maintain a balance of trade. CES is already doing this, and I'm  working with them and Community Forge to make 'intertrading' open to other projects. Participation will involve meeting some kind of currency integrity standards.
+
+        
+Right now, to make digital local currencies more useful and portable we need:
+        
+* A developer with an understanding of web APIs and perhaps some knowledge of Drupal
+
+* Manpower to help build CES from the ground up
+
+
+        
+'''Third conclusion''': there is almost zero investment in software itself, any investment is always directed at implementations, and most of the software is built by busy people in their spare time. The movement is hardly organised enough to use its own issued money for funding (hat tip to CES), yet it needs highly professional skills to advance. ... Almost all the software under discussion is still dependent on the altruist who initiated it, and has been unable to professionalise. No investment means no staff, no reliability, no guarantees for the future. A viable business model needs to be established for a CC software project.
+
+
+        
+I no longer bow to the prevailing dictates that every roadsign and hospital bed must pay for itself.  Financial infrastructure should be a service provided by government. (When I say government, I don't mean the overpaid lackeys that serve the financial elites today, rather I mean that the economy should be kept in check by an electorate versed in financial literacy.) So I'm no longer thinking about a business model because any profit incentive would pervert the work that I think needs to be done. In my opinion.
+
+        
+So saying, while in USA I met with Xchange Stewards, who are working to remodel the Business to Business (B2B) barter industry. They are investing everything up front, but they at least plan a viable business once the software is salable. 
+
+        
+Transition Towns, working with New Economics Foundation in UK have put out a tender for a large contract to implement transition currencies. They were almost  ready to invest in new software, but they also needed to deploy soon, so they're playing it safe with Cyclos, though the cost of adding bells and whistles later will be large. 
+
+        
+I made the point above because I need to live while I do this work. I am now scraping by almost entirely from grass roots donations from Community For<li>ge communities, which is great, but while I'm still programming alone, and I'm running to stand still. '''Community Forge is actively seeking no strings cash and in-kind donations that can be used to accommodate and feed volunteer software developers to work new grass roots monetary tools'''.
+
+        
+I step back and I find it incredible that, of all the things that money is spent on, next to nothing is being invested on developing workable, just sustainable alternatives to this 'worst of all possible' designs* we take so for granted, even as it is falling down around us. The few people calling for, and investing in real alternatives and real innovation, are absolutely on the margins of the discussion. All the talk and the investment, is in a zombie that died in 2008.
+
+        
+Right now, to enable any community to reduce their reliance on scarce and damaging commercially produced debt-money:
+
+        
+* Community Forge needs to replicate its work with the LETS in South Belgium, by going to other countries and building relationships with the activists there.
+
+        
+* We also need to get intertrading working better so the movement can better channel its own resources
+                               
+
+        
+'''Fourth conclusion:''' There is much talk about 'virtual' currencies. These may broadly fit the definition of complementary currencies, but they offer none of the benefits which we are concerned with. Some are direct proxies for hard currencies which are paid for in advance, and then spent on virtual objects in social networks and games. Virtual currency tools such as the Opensocial API could be used build a CC ecosystem. Facebook makes an obvious platform for a complementary currency. One proposal on my back burner is a mutual credit bank, which would offer secure hosting of many currencies via an API.
+
+
+        
+The big banks understand what P2P technologies mean for their business model and they are investing to understand and control the Next Thing, whatever it is. They know that the developed economies are about to drown in debt, that more democratic and sustainable alternatives are within reach, and that they need to act if they are to retain their choke-hold on the other 99%. The real cost of digital money transfer is almost zero. There is a load of venture captial going into new payment systems and online wallets and virtual gold. [Link to DGC mag] A lot of people are trying to make a lot of money by positioning themselves in the next paradigm. Facebook (working with Goldman Sachs) is clearly trying to carve themselves out a piece. I agree that global social network is an ideal platform but no informed consciencious person would partner with a tool like Mark Zuckerberg! I would love to see investment in Diaspora as a monetary platform, but I have no resources with which to speculate on a project which isn't even launched.
+
+        
+Regarding the mutual credit bank, I'm working towards this slowly, with version 3 of my Drupal module. The accounting can be done into a remote database, which means that Community Forge, or whoever, could provide a service, via an open API, to host transaction logs with high security and availability. When any web application can be given read or write access to those logs, then you don't have to log into to one particular site to record transactions. Each member could have their own payment widgets on their own sites. At present rates it will be a while before we get to that.
+
+        
+Right now, in order to distinguish P2P money from devious and extractive new instruments, we need
+        
+* to talk ad nauseam in public about debt money, commodity money, and mutual credit, about centralised authority and P2P trust networks
+
+        
+* to stand up for the Liberty Dollar, whose founder just got 15 years on incorrect counterfeit charges and vague 'terrorism' fears
+        
+*to work with our local communities to start mutual credit systems - that's free money as against money we pay interest for.
+
+
+        
+In conclusion, the largest changes since I wrote that paper have been in my own knowledge and understanding. I stand by all I said before. It is frustrating for me, seeing clearly how almost all the world's problems boil down to the design and the pervasiveness money, and seeing this point so often missed and overlooked by economists politicians and commentators, none of whom are offering solutions. The problem of money is still not being communicated. Despite proven successes, complementary currencies have a patchy history, and governments regard them with suspicion everywhere except South America. Through Community Forge I'm able to reach and help some of the grass roots organisations that do understand, but it seems so little when whole countries are sinking underwater. Many organisations are coming to us for help, but few people are coming to offer help. And when they do, we don't even have time to manage them. The movement is growing, but not as fast as the economy is diving, and not as fast, I fear, as the money addicts are finding new ways to part us from it."
+
+
+=The playing field=
+
+* '''Source:''' [http://matslats.net/ijccr-software-review The state of CC software, for IJCCR] by Matthew Slater (Retrieved on 04/04/11)
+
+Before getting to the issues, here is a synopsis of each of the main projects, in order of age. These projects are selected on the basis that they are open source, have multiple implementations, and support community exchange using an arbitrary measure of value.
+
+==== Cyclos ====
+
+{| width="100%"
+|
+|-
+| '''Language/ platorm'''
+| '''Full time developers'''
+| '''Implementations'''
+| '''Plug 'n' Play?'''
+| '''Url'''
+|-
+| Java
+| 4
+| Many
+| No
+| www.cyclos.org
+|}
+
+Cyclos is the software implementation arm of the Social Trade Organisation. It is an open source, java, comprehensive accounting package used in increasingly large projects around the world. The German Tauschring network picked up Cyclos and now use it routinely, contributing back code. Many other 'one-off' projects also use it as a back end accounting package.
+
+
+==== Comunity Exchange System (CES) ====
+
+{| width="100%"
+| ''' Language/ platorm'''
+| '''! Full time developers'''
+| ''' Implementations'''
+| ''' Plug 'n' Play?'''
+| ''' Url'''
+|-
+| MS asp
+| 1
+| 200 in one
+| Yes
+| www.ces.org.za
+|}
+
+Arising from a grass-roots movement in Cape town, CES is a free web service that hosts 200 'Exchanges', each with its own currency and separate database. Some exchanges charge membership fees in the national currency, some in the currency of the exchange and some use the optional transactional levy feature. Trade is possible between exchanges.
+
+
+==== ccLite ====
+
+{| width="100%"
+| ''' Language/ platorm'''
+| ''' Full time developers'''
+| ''' Implementations'''
+| ''' Plug 'n' Play?'''
+| ''' Url'''
+|-
+| PERL
+| 1
+|
+| No
+| www.hughbarnard.org
+|}
+
+Cclite is a Perl package for local exchange trading systems (LETS), banking and other alternative money systems. Multi-registry, multi-currency, web services based transactions and templated to give multi-lingual capabilities.
+
+
+==== Fourth Corner ====
+
+{| width="100%"
+| ''' Language/ platorm'''
+| ''' Full time developers'''
+| ''' Implementations'''
+| ''' Plug 'n' Play?'''
+| ''' Url'''
+|-
+| Php
+| <1
+|
+| More or less
+| www.fourthcornerexchange.com
+|}
+
+Fourth Corner Exchange is a small family of LETS like groups. Their php/MySQL application was written for multiple implementations of that specific model. LETSlink UK has forked the software and done several implementations.
+
+
+==== Drupal & Community Forge ====
+
+{| width="100%"
+| ''' Language/ platorm'''
+| ''' Full time developers'''
+| ''' Implementations'''
+| ''' Plug 'n' Play?'''
+| ''' Url'''
+|-
+| Drupal
+| 1 + 1,000
+| 35
+| No / Yes
+| drupal.org/project/mutual_credit<br />www.communityforge.net
+|}
+
+A Drupal module for web developers to implement a complementary currency with total flexibilty over usability, design, wireframing etc. Community Forge is a non-profit hosting Drupal implementations tailored for LETS.
+
+
+==== oscurrency ====
+
+{| width="100%"
+| ''' Language/ platorm'''
+| ''' Full time developers'''
+| ''' Implementations'''
+| ''' Plug 'n' Play?'''
+| ''' Url'''
+|-
+| Inoshi
+| 1
+| 2
+| No
+| www.opensourcecurrency.org
+|}
+
+Developed by members of the Austin Time Exchange, this project is now under development for the Bay Area Community Exchange. While the platform, Insoshi is not well known, much attention has been given to openness, so that the system plugs in easily to the rest of the web.
+
+Also worthy of mention is Time Banks whose membership includes a special license to use the proprietary 'Community Weaver' software.
+
+
+
+
+[[Category:Money]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Articles]]
+
+[[Category:P2P Infrastructure]]

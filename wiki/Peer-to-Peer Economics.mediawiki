@@ -1,0 +1,34 @@
+
+'''= understood here as "modelling of the economic transactions carried out in a p2p file sharing system"'''
+
+URL = http://www.nes.aueb.gr/p2p.html
+
+=Description=
+
+From an introduction by the [[Network Economics and Services Group]]:
+
+"Detailed modelling of the economic transactions carried out in a p2p file sharing system is, in general, a very complex task. The main reason is that participating peers should contribute different types of resources (bandwidth, storage, CPU cycles, content) with differing characteristics, the provision of which generates complex costs such as legal risks and time spent using the system. Moreover, in certain cases, there exist several intangible value generators from participating in such a system, which often involve altruism, community building, "fighting the system", and more. Actually, some of these might be part of the reason why the theoretical results of economic theory are not always compatible with the performance of real p2p applications, which seems to be acceptable even without explicit incentives for cooperation.
+
+As far as economic efficiency is concerned (i.e. maximization of social welfare), besides the complicated modelling, an additional challenging issue is the lack of information concerning the types and preferences of the individual peers, which is required for the computation of the optimal allocation of resources and cost in a p2p system. The majority of our work addresses both theoretical and implementation issues concerning the improvement of economic efficiency of a p2p file-sharing system, in respect of content availability, which we consider its most important parameter. Content availability is a public good: the copying of a file by one peer does not prevent another peer also from copying it; but contributing files to the common pool is costly.
+
+The asymptotic analysis of certain public good models for p2p file sharing suggests that when the aim is to maximize social welfare, a fixed contribution scheme in terms of the number of files shared per unity of time can be asymptotically optimal as the number of participants n grows to infinity (see [3][5][6]). Such an incentive scheme is very simple and attractive, and is also suitable for other p2p applications with similar public good charasteristics such as WLAN peering [6][7]. However, its enforcement is not straightforward in cases where no trusted software or central entity accounting for peers' transactions can be assumed and peers are free to change their identity with no cost. That is, when no sort of user memory is available to be able to identify and punish the potential free riders.
+
+A 'memory-less' p2p system should rely only on the time peers are consuming resources to ensure that they contribute adequately. BitTorrent is an example of a successful real world application focusing on bandwidth provisioning for content distribution, which implements a reciprocative incentive scheme without relying on past transactions of peers but on a direct exchange of resources (i.e. upload bandwidth).
+
+Thus, we have also studied issues related to the actual design of a p2p file sharing system, which focuses on content availability without requiring the existence of any sort of user memory or the ability to permanently expel peers from the group to enforce the efficient resource provisioning from peers [2] [4], following the implementation principle of BitTorrent. So, we aim to improve the economic efficiency of the system without suffering from whitewashing and false trading (by proposing solutions that do not depend on long term tracking of peer behaviour). We believe time spent in the system will become a critical parameter of the contribution of peers in this context, especially as access speeds increase and people store more content in their PCs for their own use. We propose an incentive mechanism which both controls the time peers stay in the system so as not to be too short (by controlling the maximum upload bandwidth offered) and provides an incentive to offer a fixed number of files throughout that time. We then present a theoretical framework for the study of its qualitative characteristics. Using this mode, we evaluate the resulting efficiency compared to the one achieved using the theoretically optimal schemes and with one that would be achieved by an "uploads=downloads" mechanism often considered in the literature. We also provide some insights for the correct tuning of its basic parameters. See [1] (Chapter 2) for an introduction to peer-to-peer economics and a literature review."
+(http://www.nes.aueb.gr/p2p.html)
+
+
+=Bibliography=
+
+#P. Antoniadis. [http://nes.aueb.gr/publications/2006.antoniadis_thesis.english.pdf Economic Modelling and Incentive Mechanisms for Efficient Resource Provision in Peer-to-Peer Systems]. PhD Thesis, Athens University of Economics and Business, April 2006
+#P. Antoniadis, C. Courcoubetis, and R. Mason. [http://www.nes.aueb.gr/publications/2004.comparing_economic_incentives_ComputerNetworks.html Comparing Economic Incentives in Peer-to-Peer Networks]. Special Issue on Network Economics, Computer Networks, Elsevier, 45(1):133-146, 2004. 
+
+More items at http://www.nes.aueb.gr/p2p.html and here http://www.nes.aueb.gr/publications/index.html
+
+
+[[Category:Research]]
+
+[[Category:Business]]
+
+[[Category:Encyclopedia]]

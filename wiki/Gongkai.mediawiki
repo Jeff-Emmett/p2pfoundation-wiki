@@ -1,0 +1,31 @@
+
+
+'''= the Chinese 'reciprocal' way of sharing IP'''
+
+=Discussion=
+
+
+
+Bunnie:
+
+"About a year and a half ago, I wrote about a $12 “Gongkai” cell phone (pictured above) that I stumbled across in the markets of Shenzhen, China. My most striking impression was that Chinese entrepreneurs had relatively unfettered access to cutting-edge technology, enabling start-ups to innovate while bootstrapping. Meanwhile, Western entrepreneurs often find themselves trapped in a spiderweb of IP frameworks, spending more money on lawyers than on tooling. Further investigation taught me that the Chinese have a parallel system of traditions and ethics around sharing IP, which lead me to coin the term “gongkai”. This is deliberately not the Chinese word for “Open Source”, because that word (kaiyuan) refers to openness in a Western-style IP framework, which this not. Gongkai is more a reference to the fact that copyrighted documents, sometimes labeled “confidential” and “proprietary”, are made known to the public and shared overtly, but not necessarily according to the letter of the law. However, this copying isn’t a one-way flow of value, as it would be in the case of copied movies or music. Rather, these documents are the knowledge base needed to build a phone using the copyright owner’s chips, and as such, this sharing of documents helps to promote the sales of their chips. There is ultimately, if you will, a quid-pro-quo between the copyright holders and the copiers.
+
+This fuzzy, gray relationship between companies and entrepreneurs is just one manifestation of a much broader cultural gap between the East and the West. The West has a “broadcast” view of IP and ownership: good ideas and innovation are credited to a clearly specified set of authors or inventors, and society pays them a royalty for their initiative and good works. China has a “network” view of IP and ownership: the far-sight necessary to create good ideas and innovations is attained by standing on the shoulders of others, and as such there is a network of people who trade these ideas as favors among each other. In a system with such a loose attitude toward IP, sharing with the network is necessary as tomorrow it could be your friend standing on your shoulders, and you’ll be looking to them for favors. This is unlike the West, where rule of law enables IP to be amassed over a long period of time, creating impenetrable monopoly positions. It’s good for the guys on top, but tough for the upstarts.
+
+This brings us to the situation we have today: Apple and Google are building amazing phones of outstanding quality, and start-ups can only hope to build an appcessory for their ecosystem. I’ve reviewed business plans of over a hundred hardware startups by now, and most of them are using overpriced chipsets built using antiquated process technologies as their foundation. I’m no exception to this rule – we use the Freescale i.MX6 for Novena, which is neither the cheapest nor the fastest chip on the market, but it is the one chip where anyone can freely download almost complete documentation and anyone can buy it on Digikey. This parallel constraint of scarce documentation and scarce supply for cutting edge technology forces Western hardware entrepreneurs to look primarily at Arduino, Beaglebone and Raspberry Pi as starting points for their good ideas.
+
+Chinese entrepreneurs, on the other hand, churn out new phones at an almost alarming pace. Phone models change on a seasonal basis. Entrepreneurs experiment all the time, integrating whacky features into phones, such as cigarette lighters, extra-large battery packs (that can be used to charge another phone), huge buttons (for the visually impaired), reduced buttons (to give to children as emergency-call phones), watch form factors, and so forth. This is enabled because very small teams of engineers can obtain complete design packages for working phones – case, board, and firmware – allowing them to fork the design and focus only on the pieces they really care about.
+
+As a hardware engineer, I want that. I want to be able to fork existing cell phone designs. I want to be able to use a 364 MHz 32-bit microcontroller with megabytes of integrated RAM and dozens of peripherals costing $3 in single quantities, instead of a 16 MHz 8-bit microcontroller with a few kilobytes of RAM and a smattering of peripherals costing $6 in single quantities. Unfortunately, queries into getting a Western-licensed EDK for the chips used in the Chinese phones were met with a cold shoulder – our volumes are too small, or we have to enter minimum purchase agreements backed by hundreds of thousands of dollars in a cash deposit; and even then, these EDKs don’t include all the reference material the Chinese get to play with. The datasheets are incomplete and as a result you’re forced to use their proprietary OS ports. It feels like a case of the nice guys finishing last. Can we find a way to still get ahead, yet still play nice?
+
+We did some research into the legal frameworks and challenges around absorbing Gongkai IP into the Western ecosystem, and we believe we’ve found a path to repatriate some of the IP from Gongkai into proper Open Source. However, I must interject with a standard disclaimer: we’re not lawyers, so we’ll tell you our beliefs but don’t construe them as legal advice. Our intention is to exercise our right to reverse engineer in a careful, educated fashion to increase the likelihood that, if push comes to shove, the courts will agree with our actions. However, we also feel that shying away from reverse engineering simply because it’s controversial is a slippery slope: you must exercise your rights to have them. If women didn’t vote and black people sat in the back of the bus because they were afraid of controversy, the US would still be segregated and without universal suffrage."
+(http://www.bunniestudios.com/blog/?p=4297)
+
+
+=More Information=
+
+* cfr [[Shanzhai]]
+
+[[Category:China]]
+
+[[Category:IP]]

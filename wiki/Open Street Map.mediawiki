@@ -1,0 +1,111 @@
+'''= a free editable map of the whole world'''
+
+URL = http://www.openstreetmap.org/
+
+=Description=
+
+
+OpenStreetMap '''allows you to view, edit and use geographical data in a collaborative way''' from anywhere on Earth.
+
+"OpenStreetMap is the free and open alternative to commercial providers - where users collect GPS tracks and additional information and make that into a high-quality map. The Economist concluded an article about the aforementioned geodata big guns saying: "In time, such [OpenStreetMap] contributions could create a detailed, free map of the world. If so, TomTom's and Nokia's acquisitions would look very overpriced."
+(http://events.ccc.de/congress/2007/Fahrplan/events/2286.en.html)
+
+=Characteristics=
+
+Joe Morrison:
+
+"You can think of OSM in several ways:
+
+* A distributed community of mappers contributing information about the geography of the world to a common repository
+* A free web map hosted 
+* A loosely affiliated collection of free and open source tools for mapping the world
+* A real-time stream of instructions representing how to add, change, or remove cartographically projected geometries and associated metadata based on a prior state
+* … Google Maps, but openly licensed."
+
+(https://joemorrison.medium.com/openstreetmap-is-having-a-moment-dcc7eef1bb01)
+
+
+=History=
+
+"The project was started by CloudMade co-Founder Steve Coast in 2004.  Like many great inventions, the idea of OpenStreetMap grew from Steve’s personal desire to have a detailed map of his local area that he could use in any way.  He wanted a map he could hack on, so he started making his own map and quickly realized that a community of volunteer mappers could create a map that was far richer and far more relevant to people’s needs than maps created by traditional mapping companies."
+(http://blog.cloudmade.com/2009/02/16/a-summary-of-the-future-of-mapping)
+
+
+=Status=
+
+==2020==
+
+* "Over 1.5M individuals have contributed data to it. It averages 4.5M changes per day." [https://wiki.openstreetmap.org/wiki/Stats]
+
+
+'''1. Joe Morrison:'''
+
+"The open secret Jennings filled me in on is that OpenStreetMap (OSM) is now at the center of an unholy alliance of the world’s largest and wealthiest technology companies. The most valuable companies in the world are treating OSM as critical infrastructure for some of the most-used software ever written.
+The four companies in the inner circle— Facebook, Apple, Amazon, and Microsoft— have a combined market capitalization of over six trillion dollars. In almost every other setting, they are mortal enemies fighting expensive digital wars of attrition. Yet they now find themselves eagerly investing in and collaborating on OSM at an unprecedented scale (more on the scale later).
+
+What likely started as a conversation in a British pub between grad students in 2004 has spiraled out of control into an invaluable, strategic, voluntarily-maintained data asset the wealthiest companies in the world can’t afford to replicate."
+(https://joemorrison.medium.com/openstreetmap-is-having-a-moment-dcc7eef1bb01)
+
+
+'''2. Joe Morrison:'''
+
+"In that talk, Jennings outlines the findings presented in his research. Not only was there already significant corporate investment happening in OSM in 2018, but in many cases corporate editors were the responsible of the majority of edits in the specific geographies they were focused on. For instance:
+For areas where corporate teams are active, on average, the non-corporate editors are now responsible for less than 25% of total road editing activity, which is down from closer to 70% in 2017.
+
+Jennings noted, importantly, that as of 2018 non-corporate editors were still responsible for the majority of activity on OSM (about 70% of all edits) and were significantly more active on edits to buildings, places of interest, and amenities."
+(https://www.mdpi.com/2220-9964/8/5/232)
+
+==2008==
+
+From http://www.opengeodata.org/?p=309, August 2008:
+
+"Earlier this week the project surpassed 50,000 registered users with over 5,000 actively contributing data each month. Historically the contributor base has doubled every 5 months. That means there will be around 50,000 adding data monthly by the end of 2009. That’s a ten fold increase from today.
+
+Right now on each and every day, 25,000km of roads gets added to the OpenStreetMap database, on the historical trend that will be over 200,000km per day by the end of 2009. And that doesn’t include all the other data that makes OpenStreetMap the richest dataset available online. As Etienne succinctly put it in a response to one commentator.
+
+“OpenStreetMap maps a lot more than roads. All the things you mention: roads, paths, buildings, heights, pylons, fences … AND … post boxes, pubs, airfields, canals, rock climbing routes, shipwrecks, lighthouses, ski runs, whitewater rapids, universities, toucan crossings, coffeeshops (the dutch kind), trees, fields, toilets, speed cameras, toll booths, recycling points and a whole lot more.”
+
+Finally its worth saying a word or two about the bigger picture. Until very recently we talked about OpenStreetMap being a global project but the reality was that outside of Europe and the TIGER-Line fed USA the pockets of OpenStreetMap activity were sporadic, often just one contributor in each place, or the devoted work of one or two burning the midnight oil tracing over the Yahoo! imagery layer in far flung places. Even that’s changing though. The OpenStreetMap community itself is growing and one of the best examples of that is the proliferation of national websites acting as local language portals for the project. Already there is openstreetmap.ca, .ch, .cl, .de, .fr, .it, .jp, .nl, .se, .org.za and that’s probably missing a few that are on the way."
+(http://www.opengeodata.org/?p=309)
+
+=Example=
+
+* While Open Street Map has been used in humanitarian crises before, the super typhoon Haiyan is the first time the Red Cross has coordinated its use and the volunteer effort around it.
+
+URL = http://www.theatlantic.com/technology/archive/2013/11/how-online-mapmakers-are-helping-the-red-cross-save-lives-in-the-philippines/281366/
+
+
+=Discussion=
+
+==The Business Environment==
+
+Joe Morrison:
+
+"At the last OSM annual conference Frederik Ramm, a prominent and quite thoughtful OSM community member, summarized the attitude toward corporate contributors this way:
+
+“[…] none of these companies is essential to OpenStreetMap. They are contributors, but OpenStreetMap could work perfectly well without them […] the mainstay of OpenStreetMap is the millions of hobbyists, individuals that contribute to OpenStreetMap.
+
+A vocal minority of voluntary contributors to OSM seem to have a bit of a chip on their shoulder when it comes to the suits. A consistent undercurrent that I’ve noticed is skepticism about the motivations and incentives of for-profit firms. Here’s a typical sentiment excerpted from Serge Wroclawski’s magnificently controversial blog post, Why OpenStreetMap is in Serious Trouble (published in February of 2018).
+Many of the founders of the project, as well as others, have launched commercial services around OSM. Unfortunately, this creates an incentive to keep the project small and limited in scope to map up the gap with commercial services which they can sell.
+
+I think the playing field has changed significantly since Serge wrote those words — he was likely referring to projects like CloudMade (now defunct) and Mapbox ,which sought to offer generic map services on top of OSM’s dynamic map database (rather than enhance in-house products where mapping is ancillary to their core value proposition like it is for FAAM). He makes an interesting argument that OSM itself should be offering these services rather than letting companies piggyback on the efforts of countless volunteers while capturing all of the economic value.
+
+I wrote earlier this year about the concept of “Commoditizing Your Complement,” in my explanation of why Facebook acquired Mapillary and then gave away all the data they had just purchased for free.
+
+The concept is simple: undermine your competitors’ intellectual property advantage by collaborating with aligned entities to cheapen it with a free and openly licensed alternative.
+
+I would wager that corporate participation in OSM is less about directly monetizing souped-up versions of OSM data provided as modern web services and more about desperately avoiding the existential conflict of having to pay Google for the privilege of accessing their proprietary map data.
+
+Whatever the motivations of these mega-corporations, they’ve succeeded in carving out a niche for themselves within the OSM community whether the hobbyists like it or not. I’d like to highlight a nuance often lost in this discussion — just exactly who are these companies hiring to add data to the map? They are often already-active, enthusiastic contributors to OSM. These are people living the open data fanatic’s dream: getting paid to do a job they find so fulfilling they would otherwise do it for free in their spare time.
+There’s obviously a lot more to it than just sticking it to Google. Facebook, for instance, has ambitions of building new types of digital experiences that interplay with the real world (as evidenced by their focus on augmented reality and acquisition of novel user interface technology like CTRL-labs). Apple has added LiDAR to its new line of iPhones and iPods allowing customers to scan the 3D world in high fidelity among other exciting uses."
+(https://joemorrison.medium.com/openstreetmap-is-having-a-moment-dcc7eef1bb01)
+
+=More Information=
+
+#One year of edits visualization video at http://www.psfk.com/2009/01/year-of-edits-to-openstreetmap-via-video.html
+#Video presentation: the history, present and future of OpenStreetMap, at http://www.youtube.com/watch?v=2JFtc9_zYeQ&eurl=http://blog.cloudmade.com/2009/02/16/a-summary-of-the-future-of-mapping/&feature=player_embedded
+#Haklay, M. and P. Weber (2008). “OpenStreetMap: [[User-Generated Street Maps]].” Pervasive Computing, IEEE 7(4): 12-18.
+
+[[Category:Open]]
+[[Category:Resources]]
+[[Category:Geography]]

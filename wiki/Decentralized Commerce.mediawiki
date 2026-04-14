@@ -1,0 +1,283 @@
+=Text=
+
+
+==Part I==
+
+Source: https://x.com/orishim/status/1882064487718777094
+
+Reproduced in toto from X, by Ori Shimony:
+
+"The original aim of peer-to-peer cash and smart contracts was to disintermediate commerce, not just finance. Yet here we are years later with endless ways to issue, derivatize, and trade assets while the massive market of everyday commerce—from hiring a cleaner to buying used furniture—remains firmly in the grip of corporate platforms.
+
+This platform-dominated landscape has created a system of algorithmic control, high fees, and fragmented corporate silos. Walled gardens trap users' reputation and transaction history, preventing the emergence of open, interconnected markets.
+
+Enter DeCom: a movement to build credibly neutral marketplaces for real-world goods and services. DeCom aims to deliver on the cypherpunk vision of peer-to-peer commerce without a middleman. Think of it as the sharing economy reborn with composable building blocks and shared standards for an interconnected web of commerce.
+
+
+DeCom encompasses person-to-person marketplaces for human services and tangible goods that require trust and reputation:
+
+* Online services: from software engineers and designers to copywriters and video editors
+* Local services: drivers, cleaners, skilled trades, tutors, caregivers
+* Rentals: homes, vehicles, equipment, event spaces
+* Goods: second-hand items and new products from independent sellers
+
+
+Currently, centralized marketplaces charge 20-30% fees to intermediate these markets. DeCom can do better.
+Why now?
+
+
+Until recently, DeCom has been held back by two key challenges:
+
+First is the subjectivity problem. Blockchains excel at handling "complete contracts"—transactions where all outcomes can be precisely specified in advance, like token transfers or collateralized loans. But real-world commerce involves "incomplete contracts" where human judgment is necessary: Did the freelancer deliver satisfactory work? Was the rental property left in good condition? While mechanisms like Schelling games and third-party arbitrators can resolve these subjective conditions onchain, they introduce additional costs and delays compared to objectively verifiable transactions. AI agents are emerging as an efficient solution to bridge this gap.
+
+Second is the technology gap. Everyday commerce requires infrastructure that has become viable only recently: scalable L2s with affordable transactions, account abstraction for intuitive wallet experiences, battle-tested stablecoins, and seamless fiat onramps. At the same time, developers are progressing on the next wave of essential primitives: private transactions, anonymous credentials, attestation frameworks, and social graphs using ZKPs and FHE. These advances make it possible to build decentralized marketplaces that surpass the convenience and trust guarantees of Web2 platforms.
+
+
+===The path forward===
+
+As the core DeCom building blocks mature, critical questions remain:
+
+* What standards and design patterns will enable decentralized marketplaces while maintaining the user experience people expect?
+
+* Which markets are most disruptable, and how will their dynamics change when freed from platform intermediaries?
+
+* Will the catalyst be existing marketplaces adopting crypto standards or new crypto-native challengers?
+
+* How could pop-up cities, crypto-friendly jurisdictions, and special economic zones serve as proving grounds for DeCom?"
+
+(https://x.com/orishim/status/1882064487718777094)
+
+
+==Part II==
+
+"In 1985, cryptographer David Chaum published “[[Security Without Identification]],” a blueprint for commerce without surveillance or control. Over the following years, Chaum and other cypherpunks developed a comprehensive technical vision: pseudonymous identities, untraceable payments, anonymous credentials, decentralized reputation. Together, these components would enable peer-to-peer marketplaces where people could trade directly with privacy and autonomy.
+
+Only fragments of this vision were realized: secure browsing through HTTPS, end-to-end encrypted messaging apps, cryptocurrencies as digital cash. Yet these advances remained isolated, developing separately rather than converging into the comprehensive p2p commerce ecosystem envisioned by cypherpunks.
+
+Instead, the following decades saw the rise of corporate mediation. Companies like eBay and Amazon, followed by sharing economy platforms like Uber and Airbnb and super apps like WeChat, provided convenience through centralized control—solving trust between users but extracting growing fees and control.
+
+Today, the technical barriers that once prevented implementation of the complete cypherpunk vision have largely dissolved. Decentralized Commerce (DeCom) represents an opportunity to integrate the partial successes—cryptocurrency and encrypted communications—with the missing components of p2p discovery, reputation, and dispute resolution. Using low-cost smart contract execution environments (L2s), programmable cryptography (ZK, FHE, MPC, Obfuscation), content-addressed storage (IPFS, Arweave), open social protocols (Farcaster, AT Protocol), and other technologies, DeCom has the potential to improve market efficiency, reduce fees, enhance privacy, and return control to users.
+
+But before we can understand where DeCom might take us, we need to uncover the twists and turns that led us here. This essay excavates the history of p2p exchange, tracing how we arrived at today's centralized marketplace model, and examining why previous DeCom attempts failed. By analyzing these efforts—from early Bitcoin marketplaces to platform cooperatives—we can extract lessons to inform how we can realize the original vision from four decades ago."
+
+([[https://docs.google.com/document/d/1kQ44sPFO2IFhz_4Vw-nGMWEScS-Dla-eeihr_xv0O2Q/edit?]])
+
+
+===The History of eCommerce===
+
+Ori Shimoni:
+
+====The Classified Era====
+
+"The modern history of peer-to-peer commerce begins with the classified advertisement. Classifieds first appeared in 17th-century newspapers, creating a marketplace that connected individuals directly without physical co-presence. From the London Gazette's merchant notices in 1666 to the free PennySaver publications of the 1940s, the classified format remained the same: brief text ads organized by category allowed sellers to describe goods and services while providing contact information for interested buyers. Newspapers provided the infrastructure for distribution and discovery while staying out of the actual transactions.
+
+Classifieds were affordable for ordinary people, unlike formal business advertising, which required substantial investment. A factory worker could sell a used bicycle, a homeowner could rent a spare room, and a job-seeker could advertise their skills—all for a modest fee. This marketplace flourished for centuries with minimal change to its basic structure.
+
+
+The classified model solved several important commerce challenges:
+
+#Discovery: Newspapers provided a centralized, categorized listing service that helped buyers find relevant offerings.
+#Trust: The newspaper's reputation provided a baseline of legitimacy, while local transactions allowed for in-person verification.
+#Accessibility: The basic text format and straightforward process made advertising open to anyone, without requiring special skills or business relationships.
+#Minimal extraction: Newspapers charged for placement but took no commission on transactions.
+
+However, classifieds had significant limitations. Geographic constraints kept markets fragmented across local papers. Search was manual and time-consuming. Most importantly, newspapers had no involvement in the transactions themselves, leaving users to manage trust and logistics. This created a “caveat emptor” (buyer beware) environment where fraud was difficult to prevent. Newspapers generally bore no liability for fraudulent listings or dangerous encounters, with protection limited to basic screening of inappropriate content. Trust depended on local dynamics—the fact that transactions occurred face-to-face between members of the same community created accountability.
+
+
+====Early Online Commerce: eBay vs. Craigslist====
+
+In the 1980s, the classified model began migrating to online forums like Usenet and Bulletin Board Systems (BBS). By 1986, groups like misc.forsale and alt.forsale became bustling hubs for classifieds—from software and electronics to used cars, collectibles, and job listings. These forums operated through a distributed architecture—Usenet’s network of servers synchronized content across the internet without central control, while BBS’s independently operated nodes connected through protocols like FidoNet.
+
+This digital bazaar worked well in its early years. Users posted items for sale, interested buyers responded via email, and parties negotiated directly. Reputation developed organically through posting history, and most transactions concluded with local meetups or postal exchanges. There were no listing or transaction fees, and moderation was handled through community norms. The difficulty of getting online meant most users were tech-savvy enthusiasts who valued their reputation in the community. Bad actors could be identified through their posting history, and community members quickly warned others about fraudulent behavior.
+
+But as millions of new users flooded onto the net in the mid-1990s, these informal trust mechanisms broke down. Scammers exploited their anonymity, spam drowned out legitimate posts, and fraud rings emerged. By 1997, what was once a vibrant marketplace had become a cautionary tale about the limitations of informal trust systems at scale.
+
+Into this void stepped [[eBay]] (originally AuctionWeb) in 1995. eBay brought the auction mechanism online—a system that discovered market value through competitive bidding while creating urgency and engagement, unlike static classifieds. But eBay's real breakthrough came from formalizing reputation. In 1997, the platform introduced the Feedback Forum, creating a public record of seller reliability by allowing buyers to rate transactions. By combining auctions with reputation tracking, eBay addressed the pricing and trust problems that limited earlier forums. Transactions skyrocketed, and the company went public in 1998 at a $2 billion valuation. In 2002, eBay strengthened its trust infrastructure by acquiring PayPal, adding secure payments and buyer protection. This created a more reliable trading environment but increased costs, with fees growing from 6% to 12% by the mid-2000s as it evolved from a hobbyist marketplace to a commercial platform.
+
+Despite its successes, eBay struggled with trust issues. Counterfeit goods, false descriptions, and non-delivery scams remained common. The platform took a relatively hands-off approach to policing transactions. While providing a dispute resolution process and some buyer protections, it positioned itself as a neutral marketplace rather than guaranteeing outcomes. This limited liability approach allowed for rapid scaling but left significant risks for users.
+
+Around the same time eBay was founded, [[Craigslist]] emerged with a different approach to online commerce. In 1995, it started as an email list of San Francisco events and then launched as a web-based classified service in 1996. Craigslist translated the newspaper classified model to the internet—static listings organized by category, with most categories offered for free.
+
+Craigslist addressed trust through localization rather than technology. Transactions occurred face-to-face, allowing buyers to inspect items before payment and use cash to eliminate payment fraud. This approach created separate local marketplaces rather than a single global one. Craigslist operated with minimal intervention—offering no reputation systems, payment processing, or dispute resolution—while keeping most listings free and charging only for job postings and certain personal ads. This low-intermediation model enabled expansion to 450 cities worldwide by 2005 with just 25 employees and generating about $20 million in revenue.
+
+However, Craigslist’s hands-off approach became notorious for enabling not just legitimate commerce but also human trafficking through its “personals” and “adult services” sections. These problems forced Craigslist to shut down these sections and implement flagging systems for problematic content. Despite these measures, the platform continued to struggle with illegal listings for stolen goods and various fraudulent schemes. The company invoked Section 230 of the Communications Decency Act, which protected it from liability for user-generated content, while maintaining minimal content moderation.
+
+Despite different approaches—eBay's reputation system versus Craigslist's localization strategy—both platforms shared a philosophy of minimal intermediation with limited liability. This approach kept costs low and enabled rapid scaling while demonstrating demand for peer-to-peer commerce. However, the persistent trust and safety gaps in these marketplaces created an opening for interventionist platforms offering stronger reliability and safety guarantees.
+
+
+====The Platform Era: From Amazon to Uber====
+
+The platform era began when companies moved beyond simply connecting buyers and sellers to creating comprehensive ecosystems that controlled every aspect of user interaction. In 2000, Amazon led this transition when it opened its website to third-party sellers. Initially positioned as a retailer selling books directly to consumers, Amazon transformed into a platform where independent merchants could list their products alongside [[Amazon]]'s own inventory.
+
+Unlike eBay's peer-to-peer approach, Amazon's marketplace created a fundamentally different relationship between the platform and merchants. Sellers operated as businesses rather than individuals, and Amazon maintained strict control over the customer relationship. Merchants couldn't communicate directly with buyers, had to compete with Amazon's products, and faced suspension for violating the platform's complex policies. The marketplace model had evolved from enabling peer-to-peer trade to managing a vast network of dependent businesses.
+
+Unlike eBay, Amazon positioned itself as actively guaranteeing customer satisfaction through its A-to-Z Guarantee. It often sided with buyers in disputes and required sellers to maintain high performance metrics. The introduction of Fulfillment by Amazon (FBA) allowed sellers to ship their inventory to Amazon warehouses, and the platform handled storage, packing, shipping, customer service, and returns. This improved reliability and convenience compared to eBay's seller-managed logistics, but increased seller dependency on Amazon's infrastructure and algorithmic control.
+
+The sharing economy emerged as the next evolution in platform marketplaces. In the wake of the 2008 financial crisis, as smartphones became ubiquitous, platforms like Airbnb and Uber introduced a new vision focused on services and asset utilization rather than goods. These platforms enabled individuals to monetize their homes, cars, and skills through integrated systems for discovery, booking, payment, and reputation. Initially positioning themselves as lightweight peer connectors with narratives of microentrepreneurship and empowerment, the “sharing economy” promised to democratize opportunity while creating more efficient markets. Airbnb’s marketing highlighted how it helped homeowners earn extra income by renting spare rooms, while Uber emphasized how anyone with a car could become a driver in their spare time.
+
+As these platforms scaled, their relationship with service providers evolved significantly. These services came to comprise the “gig economy”—a labor market characterized precarious working conditions, lack of benefits, and unstable income. The model expanded beyond ride and home sharing to food delivery and grocery shopping (DoorDash, Deliveroo, Uber Eats, Instacart), household tasks (TaskRabbit, Thumbtack), professional services (Upwork, Fiverr), and more. 
+
+
+What began as lightweight intermediation evolved into comprehensive control over the transaction lifecycle through algorithmic means, including:
+
+* Pricing control: Dynamic pricing algorithms (like Uber's surge pricing) determined what providers could charge.
+
+* Work allocation: Algorithms determined which providers received opportunities based on various factors.
+
+* Behavioral management: Rating systems and acceptance requirements enforced platform-determined standards.
+
+
+This control came with higher costs, with commission rates increasing from 10-15% to 20-30%, but it improved safety and reliability. Platforms built comprehensive trust systems—Airbnb implemented host verification, payment protection, and property damage coverage; Uber deployed background checks and emergency response. They prevented users from circumventing fees through technical barriers—filtering messages to block contact information and designing apps to limit direct communication.
+
+Critics termed the result “platform feudalism”—a system where service providers owned their assets (cars, homes, labor) but operated within an economic relationship where platforms exercised near-complete control while extracting significant value. This growing power imbalance sparked backlash between 2016-2018, with worker protests, regulatory challenges, and increasing public skepticism about the sharing economy's promise.
+
+
+====Niche Marketplaces & the Rise of Superapps====
+
+The p2p platform model spread across various verticals, creating a diverse range of specialized marketplaces:
+
+* Transportation: Turo & Getaround for car rental, BlaBlaCar for carpooling.
+
+* Space rental: Peerspace for venues, LiquidSpace & Breather for offices, Spacer & Neighbor for storage.
+
+* Equipment rental: United Rentals, Fat Llama.
+
+* Care services: Care.com, UrbanSitter & Sittercity for children and elderly care, Rover & Wag! for pets.
+
+* Home services: Angi, Thumbtack, HomeAdvisor, Handy, Porch, Helpling.
+
+* Remote work: Upwork & Fiverr for freelance services, Mechanical Turk for microtasks.
+
+* Personal coaching: Preply for language, Wyzant for tutoring, BetterUp & TaskHuman for performance.
+
+* Health: Noom, FitnessTrainer & Trainwell for fitness, BetterHelp for therapy.
+
+
+These marketplaces vary along multiple dimensions: local vs. remote service delivery, algorithm-matched vs. self-selected, simple vs. specialized tasks. Each developed tailored solutions for its particular context—Upwork created milestone-based escrow for remote work, Peerspace built specialized venue booking with liability coverage, Angi developed contractor licensing verification. Despite this adaptation, nearly all followed the same approach—creating value by solving discovery and trust problems while extracting growing commissions and maintaining tight control over user relationships. The platform model has become the dominant paradigm for organizing trade across a wide range of domains. This proliferation has created significant fragmentation—consumers and service providers needed to create and maintain accounts across dozens of siloed platforms, each with isolated inventory, separate reputation systems, and geographic focus. This balkanization of the digital commerce ecosystem increased friction for users while reinforcing each platform's power over its vertical.
+
+While Western markets saw fragmentation of specialized marketplaces, Asian markets followed an entirely different evolution with the rise of “superapps”—comprehensive platforms consolidating dozens of services in a single application. WeChat led this revolution in China, transforming from a messaging app in 2011 into an all-encompassing ecosystem where users could chat, shop, hail taxis, pay bills, book medical appointments, apply for loans, and access mini-programs from third-party developers. Similar patterns emerged across Asia with Gojek in Indonesia, Grab in Southeast Asia, and Paytm in India, while Latin America saw comparable consolidation with apps like Rappi.
+
+These superapps leapfrogged the fragmented marketplace phase of Western digital commerce for three reasons (source). First, they coincided with widespread mobile adoption in emerging markets, where smartphones became the primary computing device for millions of first-time internet users who had never experienced desktop-based e-commerce. Second, they filled infrastructure gaps in regions where banking, retail, and service networks were underdeveloped, creating digital alternatives. Third, many benefited from government support, with countries like China and Indonesia favoring domestic tech champions through regulatory protections and limitations on foreign competition. Combined with aggressive acquisition strategies and less stringent antitrust laws than Western markets, these factors enabled superapps to consolidate services that remained fragmented elsewhere. While offering significant convenience, these platforms created even more concentrated power than their Western counterparts, with companies like Tencent (WeChat) and Grab controlling vast portions of their regional digital economies."
+
+([[https://docs.google.com/document/d/1kQ44sPFO2IFhz_4Vw-nGMWEScS-Dla-eeihr_xv0O2Q/edit?]])
+
+
+===The Search for Alternatives===
+
+====[[Darknet Marketplaces]]====
+
+In 2011, the first serious attempt to build commerce systems outside corporate control emerged with the Silk Road marketplace. The platform solved three fundamental challenges:
+
+* Payments without intermediaries: Bitcoin enabled direct value transfer without banks or payment processors, including escrow that protected buyers and sellers from fraud.
+
+* Anonymous access & hosting: While the marketplace's central server remained a vulnerability, Tor hidden services allowed it to resist regulatory reach while enabling anonymous user access.
+
+* Pseudonymous reputation: The marketplace maintained a functional reputation system through purchaser reviews without requiring a real-world identity.
+
+
+The success and eventual shutdown of Silk Road demonstrated the resilience and vulnerabilities of cryptographically-enabled marketplaces. Within weeks of its closure, Silk Road 2.0 emerged, followed by similar darknet markets: Agora, Evolution, AlphaBay, Hansa, and Dream Market. This hydra effect illustrated how anonymous access and cryptocurrency payments made it impossible to permanently shut down this market model. When authorities took down one marketplace, users migrated to alternatives.
+
+
+However, darknet marketplaces had three critical weaknesses. 
+
+First, their centralized infrastructure remained vulnerable to law enforcement. 
+
+Second, they required users to trust custodial escrow, which proved disastrous when operators disappeared with millions in user funds.
+
+Third, and most significantly for broader adoption, these platforms rejected content moderation and oversight. This aligned with their anti-censorship ethos, but it led to a proliferation of illegal content, undermining their potential for mainstream acceptance.
+
+
+====[[Bitcoin E-Commerce]]====
+
+Parallel to darknet marketplaces, Bitcoin-powered alternatives emerged to bring cryptocurrency benefits to mainstream commerce. Between 2012-2014, platforms like BitMit, Bitify (originally CryptoThrift), and BitBay attempted to recreate eBay-like functionality with Bitcoin payments, offering auctions, fixed-price listings, and multisignature escrow systems.
+
+OpenBazaar, the most technically ambitious early cryptocurrency marketplace, emerged from a 2014 Toronto hackathon project called “DarkMarket.” The project aimed to create a censorship-resistant marketplace in response to Silk Road’s closure.
+The platform aimed to decentralize every marketplace function. It used IPFS for content hosting and a Bitcoin multisig escrow system with a buyer, seller, and participant-chosen moderator for transactions. This created a “2-of-3” signature requirement that protected both buyers and sellers while keeping funds out of platform control. For curation and discovery, it relied on a network of third-parties to index listings according to their own content policies, rather than running a centralized listings service. This separated the marketplace protocol from content moderation, allowing different search providers to serve different communities while preserving the underlying permissionless architecture.
+
+OpenBazaar and other bitcoin-based marketplaces struggled to expand beyond cryptocurrency enthusiasts. Despite lower fees and trust-minimizing mechanisms, these platforms faced significant adoption barriers: interfaces requiring technical knowledge of Bitcoin payments and wallet management, cryptocurrency volatility complicating pricing and increasing risk, and ultimately failing to provide compelling advantages over conventional e-commerce for mainstream users.
+
+
+====Platform Co-ops====
+
+(see also: [[Platform Cooperatives]]; [[Platform Cooperativism]])
+
+As cryptocurrency marketplaces faced technical and usability challenges, a parallel movement emerged to challenge platform power through social and organizational means. In 2014-2015, Trebor Scholz and Nathan Schneider coined the term platform cooperativism, which proposed that users should collectively own and govern the platforms. This approach aimed to preserve the efficiency of digital platforms while being owned and governed by users rather than investors.
+
+Several promising examples emerged. Eva Coop in Montreal created a driver-owned ride-sharing service; Stocksy United built a photographer-owned stock photography marketplace; and Up & Go developed a worker-owned home services platform in NYC. These cooperatives aimed to charge equivalent or lower fees than their venture-backed counterparts while providing better compensation to service providers.
+
+
+However, these platform cooperatives faced significant scaling challenges:
+
+* Capital constraints: Without venture funding, they struggled to finance growth and marketing.
+
+* Legal and Regulatory Obstacles: Co-ops faced disadvantages within legal frameworks for traditional corporations, including unsuitable corporate structures and unfavorable tax treatment for deductions, profit distribution, and fundraising.
+
+* Coordination costs: Democratic governance created friction that slowed decision-making.
+
+* Network effects: Without massive user bases, they couldn't deliver the liquidity that made platforms valuable.
+
+
+Neither cryptocurrency-based marketplaces nor platform cooperatives achieved mainstream adoption. Cryptocurrency projects addressed technical disintermediation but created new usability barriers, while cooperatives addressed ownership and governance issues but couldn't overcome the low prices and high network effects of established platforms.
+
+
+====The Birth of [[Onchain Commerce]]====
+
+In 2015, the launch of Ethereum inspired new alternatives that combined crypto’s focus on technical disintermediation with the collective ownership models of platform co-ops. Smart contracts—self-executing agreements encoded in software—promised to automate marketplace functions previously requiring trusted third parties. Ethereum offered the possibility of creating commerce platforms free from fallible intermediaries and collectively governed by users.
+
+Early attempts to enable peer-to-peer commerce through smart contracts emerged alongside Ethereum's launch. La'Zooz aimed to create a community-owned ride-sharing network to eliminate intermediaries like Uber. The project introduced a “proof-of-movement” mechanism that rewarded users with tokens for contributing driving data, attempting to solve the chicken-and-egg problem that new ride-sharing services faced. However, while developing the prototype, founder Matan Field realized governance tooling wasn't mature enough to empower token-holders, leading him to shift focus toward building governance infrastructure with DAOstack.
+
+'''Slock.it''' aimed to create a “Universal Sharing Network” combining blockchain with IoT devices for peer-to-peer rental of physical assets. Smart locks connected to Ethereum smart contracts would allow anyone to rent physical items without intermediaries—users could discover available assets, make cryptocurrency payments, and receive digital access credentials automatically. Despite initial excitement and successful prototypes, Slock.it never launched their peer-to-peer rental marketplace at scale. The DAO hack in 2016 impacted the company’s resources and reputation, which diverted attention from their core product and raised questions about smart contract security. In the aftermath, Slock.it refocused on lightweight IoT blockchain integration rather than their consumer marketplace vision.
+
+The 2017-2018 ICO boom fueled new funding and interest in decentralized commerce. In 2017, District0x launched with a $9 million token sale, aiming to develop a network of autonomous marketplaces. It created a modular framework called d0xINFRA that provided core marketplace functionalities like listing creation, search, filtering, reputation, and payments—all managed through smart contracts with front-end interfaces distributed via IPFS. Rather than a single marketplace, District0x envisioned a network of specialized “districts” (decentralized marketplaces), governed by token holders through Aragon-based DAOs. Their first application, Ethlance, created in 2016, competed with freelancing platforms like Upwork by eliminating commission fees. The platform used smart contracts to manage escrow and reputation, allowing freelancers to receive full payment. Later districts included Name Bazaar for trading Ethereum domain names and Meme Factory for creating and trading digital collectibles. Despite launching several functional districts, the project struggled to gain adoption, and development slowed after the 2018 crypto market downturn.
+
+'''Origin Protocol''', founded in 2017, raised $38 million through private funding and a public ICO to build marketplace infrastructure on Ethereum. Similar to District0x, Origin created smart contracts and developer tools for decentralized marketplaces. The project aimed to enable direct transactions between buyers and sellers across various verticals without intermediaries, featuring a shared identity system, reputation tracking, and dispute resolution. Origin deployed demonstration applications including Dshop (an e-commerce storefront), Origin Marketplace (a general goods marketplace), and a vacation rental service. Despite technical achievements and partnerships with ServiceRocket and Brave, the platform struggled to attract mainstream users due to Ethereum's scaling limitations and complex user experience. By 2020, the project pivoted toward DeFi and NFTs, moving away from its original focus on peer-to-peer commerce.
+
+'''Swarm City''', founded in 2017, aimed to create a decentralized commerce protocol with ride-sharing as its first use case. The project utilized the SWT token for transactions and focused on a user-friendly interface to make onchain commerce accessible to mainstream users. It organized commerce through “hashtags” (specialized marketplaces) where “seekers” could post requests with prices and “providers” could respond. Its reputation system minted context-specific tokens upon successful transactions, creating an onchain record of marketplace-specific credibility, while allowing users to form “hives” (communities) to share resources and build collective reputation. Swarm City took a novel approach to moderation—each “hashtag” marketplace had its own creator who was responsible for maintaining quality and resolving disputes between users, creating a federated model where governance was localized rather than platform-wide. Swarm City’s architecture emphasized local data storage on user devices and employed Whisper for private chat. It introduced solutions to blockchain usability challenges, including an IPFS consortium for distributed data storage and a “gas station” to simplify transaction fee payments for new users.
+
+Swarm City faced a significant setback in July 2017 when a vulnerability in Parity's multisig wallet resulted in the loss of 44,055 ETH (worth ~$9 million at the time). Despite this loss, the team continued development for a time but struggled with the same adoption challenges as other DeCom projects—Ethereum's scalability limitations, complex onboarding, and competition with established platforms. 
+
+After the 2018 cryptocurrency market decline, development activity diminished.
+
+
+By 2019, early decentralized marketplace projects failed to achieve significant adoption, struggling with ongoing challenges:
+
+* Security vulnerabilities: Smart contract exploits like The DAO hack and the Parity multisig incident demonstrated the risks of building on immature infrastructure.
+
+* Technical limitations: Ethereum couldn't support the speed, cost, or volume requirements of everyday commerce.
+
+* UX complexity: Onboarding required technical knowledge that deterred mainstream users, from wallet setup to gas payments.
+
+* Network effect barriers: Token incentives were inadequate to overcome the network effects of established platforms with millions of users and suppliers.
+
+* Missing building blocks: Key marketplace components like decentralized identity, reputation, governance, and dispute resolution remained underdeveloped.
+
+These projects had ambitious visions ahead of their time. The infrastructure, tooling, and economic models for DeCom weren't mature enough to support the marketplace concepts envisioned. As these limitations became apparent, attention shifted to financial applications. From 2019 to 2021, investment and developer attention concentrated on DeFi primitives like lending, trading, and yield aggregation rather than real-world commerce. Deterministic finance proved a better fit for smart contracts than the messy business of human commerce.
+
+As we enter 2025, blockchain infrastructure has reached an inflection point. Cheap L2s have addressed scalability concerns, robust oracles connect reliably to real-world data, and ZKPs provide practical privacy. Meanwhile, account abstraction is simplifying wallet UX, interoperability solutions are on the way to solving chain fragmentation, and simple fiat onramps are proliferating. These advances are dismantling the technical barriers to DeCom, laying a foundation for onchain alternatives to today's marketplace giants.
+
+
+===The Protocol Era Ahead===
+
+History shows that technical capability isn't enough. The greatest challenge is overcoming the convenience-control trade-off observed from eBay to Amazon to super-apps, where greater convenience came through greater intermediation. DeCom must reverse this correlation, creating self-sovereign experiences that are more seamless than existing alternatives.
+
+
+What lessons can we draw from history to facilitate DeCom’s resurgence? 
+
+Here are three important takeaways:
+
+* Unbundle marketplace functions across the value stack. The history of peer-to-peer commerce shows fundamental components like identity, reputation, and dispute resolution being reinvented by each platform, creating fragmentation and inefficiency. DeCom can address this by developing reusable building blocks—modular escrow systems, portable reputation, pluggable dispute resolution—that can be combined in different ways across marketplaces. These composable primitives enable specialized solutions to flourish while maintaining interoperability, allowing each marketplace to assemble the specific combination of components needed for their context without rebuilding everything from the ground up.
+
+* Network effects can’t be overcome through technical superiority alone. Platform cooperatives offered improved governance, Bitcoin marketplaces removed payment processors, and Ethereum projects decreased dependence on centralized backends. But none gained enough users to compete with incumbents. DeCom must tackle this challenge from both directions: by creating integrations that allow traditional platforms to offload risk and cost centers to decentralized alternatives (identity, reputation, dispute resolution), while enabling crypto-native marketplaces to bootstrap user bases by importing data from existing platforms through cryptographic proofs (zkTLS).
+
+* Align incentives with market needs. Early DeCom prioritized decentralization over user needs. Successful DeCom initiatives must start with concrete marketplace problems, applying decentralization strategically where it offers tangible benefits. This requires a multi-faceted approach: open standards for marketplace interoperability; token incentives aligned with sustainable value creation; curation mechanisms for multiple discovery layers, as OpenBazaar attempted; and hybrid architectures that implement centralized components where necessary to improve safety and UX. Designs should acknowledge that users care more about outcomes (lower fees, greater privacy, data ownership) than backend infrastructure or short-term incentives.
+
+
+Four decades after Chaum's original papers, we're seeing a convergence of technologies to fulfill the complete cypherpunk vision. Unlike the past—where secure communications and digital cash developed in isolation—today's DeCom ecosystem can integrate these components with the essential pieces: verifiable credentials and reputation, user-controlled identity, discovery and matchmaking, escrow and dispute resolution.
+
+'''In Part 3, we'll analyze how the next wave of DeCom projects is implementing these lessons, mapping the emerging landscape and identifying gaps in building the missing pieces of the peer-to-peer commerce vision." '''
+
+([[https://docs.google.com/document/d/1kQ44sPFO2IFhz_4Vw-nGMWEScS-Dla-eeihr_xv0O2Q/edit?]])
+
+[[Category:Business]]
+[[Category:Business_Models]]
+[[Category:Crypto_Economy]]

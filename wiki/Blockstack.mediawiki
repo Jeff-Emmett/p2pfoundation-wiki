@@ -1,0 +1,195 @@
+
+'''= "an open source project whose goal is to make online naming and identity management more secure and user-centered".'''
+
+URL = https://blockstack.org/
+
+
+=Description=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Blockstack is an open source project whose goal is to make online naming and
+identity management more secure and user-centered by reimagining user credentials,
+DNS, certificate authorities, and public key infrastructure for the Internet. Similar to
+public key infrastructure systems, their goal is to provide a way for users to “own their
+own identity” outside of a mega-platform like Google or Facebook, giving an alternative
+way of verifying identity and authenticity. Using Blockstack, an author associates a
+public key with their username of choice, which can then be used to verify that
+documents associated with that name were produced by that person. The author can
+include any relevant identifying information as the value (like his website or profile) and
+then (assuming his private key isn’t compromised) can make changes associated with
+that name in a way that cannot be forged without undermining the Bitcoin blockchain.
+This is done by cryptographically signing the hash (which serves as a unique, digital
+“fingerprint”) of each new version of the website–the hash can be cross checked to
+verify its consistency with the website’s latest version, and the cryptographic signature
+cannot be forged unless the keys are compromised. The author gives the actual URL or
+website to the verifier out of band."
+
+
+=Discussion=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Blockstack is implemented as a layer for storing name/value pairs built on top of
+the Bitcoin blockchain, by registering Blockstack IDs. Blockstack uses Bitcoin’s
+blockchain to act as a tamper-resistant record of ordered operations, stored in Bitcoin
+transactions. Users issue two transactions to reserve a name–first a pre-order 90
+transaction, which obfuscates the name being reserved but proves that the user was
+first, and then a register transaction, which completes reserving the name and makes
+the registration publicly visible. This is done to avoid front running–if everyone could see
+the name being registered before it was confirmed, a sneaky party might try to claim it
+first, or might use that information to undermine the user. Both of these transactions
+must appear on the Bitcoin blockchain, and so might take up to an hour or longer to
+confirm.
+
+Once a name is registered, the owner of the private key used to sign the
+transaction registering that name then has control over that name’s value; the user can
+use their private key to make verifiable, signed changes to content, also in the form of
+Bitcoin transactions. For example, if Jane Doe decides to create a Blockstack
+username, ‘jane.id’, she could register that name in Blockstack, and others could see
+that was only done by someone with Jane’s private key (presumably Jane herself). She
+could then change the content that username points to, for example by updating her
+profile. Blockstack is designed to separate the storage and agreement of operations on
+the name/value pairs (like create, update, or delete) from the storage of the actual data
+being modified and stored. Users can point to content stored in a variety of
+places–Dropbox, Amazon web Services, IPFS, or their own website–by signing the
+location of the content (the URL).
+
+Other users can read the Bitcoin blockchain to find the Blockstack-specific
+transactions, and check the operations on a username to determine its final value. For
+example, Bob might be trying to read the latest updates from Jane. He sees some
+information online that says that Jane stores her content on her website, JaneDoe.com,
+but he is not sure if this is really the Jane he is looking for. Bob knows that the Jane he
+is interested in has a username of ‘jane.id’ in Blockstack. He can read the Bitcoin
+blockchain to find the Blockstack transaction where Jane registered ‘jane.id’.
+
+Then Bob could continue reading the Bitcoin blockchain to find the latest
+transaction signed with that registered public key to see where Jane stores her content,
+and validate that it really is JaneDoe.com by checking the signed URL. Theoretically,
+this could enable users to manage their own personal space on the internet for
+publishing–Jane can change the location of her content at any time simply by issuing a
+new Bitcoin transaction, and Bob can find and validate the change by reading the
+Bitcoin blockchain. In addition, Blockstack would also like to make their usernames
+usable as a single sign-on identity to login and federate user content across other
+platforms. The system could enable publishing competitors to more easily bootstrap
+new services since they could plug into existing, authenticated identities.
+But for all its promise, Blockstack may face challenges in assimilating into
+mainstream use on the web based on our three integration criteria: user adoption,
+developer opt-in and business viability. User adoption is probably the most challenging
+area for the Blockstack community to contend with. Prior efforts to support federated
+identity, such as OpenID, have gained traction only with very niche user bases. At its
+core, the limited adoption of independent identity systems like OpenID is tied to issues
+of demand. The average user doesn’t see the need for secure identity and thus isn’t
+interested in learning more about independently controlled identity solutions in order to
+adopt them.
+
+As security researchers Whitten and Tygar argue, “People do not generally sit
+down at their computers wanting to manage their security; rather, they want to send
+email, browse web pages, or download software, and they want security in place to
+protect them while they do those things... Designers of user interfaces for security
+should not assume that users will be motivated to read manuals or to go looking for
+security controls that are designed to be unobtrusive.” Offering integration with a
+decentralized identity system is probably not enough of a differentiator to motivate users
+to put forth the effort to learn how its security tools work. When evaluating Blockstack’s
+potential as a mass identity solution, we must ask whether or not it offers additional
+benefits over these prior efforts, and if it effectively addresses the usability challenges
+that other systems have struggled to overcome in the past. It is possible, however, that
+Blockstack could find itself adopted as an essential component of another, very
+compelling system.
+
+The Blockstack developers have been very intentional about the design of their
+system in order to address these challenges. Perhaps the biggest sticking point for
+Blockstack’s usability is related to its dependency on public key cryptography.
+Historically, strong cryptography has been very challenging for average users to deploy.
+For example, work evaluating the usability of PGP, perhaps the most well-known 92
+public key directory to date, has shown that there is a lot of misunderstanding among
+users about how public key cryptography works and how to use it effectively. This 93
+leads to serious use errors (i.e. accidently exposing secret keys) that nullify the overall
+security of the system. In order for the decentralized vision of the Blockstack system to
+work, the average user must either develop a coherent working model of how public key
+cryptography works, or designers must create intuitive user interfaces that enable
+average users to effectively manage their private keys.
+
+In light of these challenges, the Blockstack team has made user experience
+design for private key management one of their top priorities. These design choices
+illustrate some of the important trade-offs that developers face when building
+decentralized systems that are also user-friendly. Technically, the most “decentralized”
+version of Blockstack would require users to download and validate the entire Bitcoin
+blockchain (currently around 120 GB) in order to validate the location of a friend’s
+content. This is impractical, given the amount of disk space the Bitcoin blockchain
+takes, and the technical know-how required to independently manage one’s own
+Blockstack and Bitcoin nodes.
+
+Instead, Blockstack has mapped their cryptographic processes directly onto the
+familiar username and password procedures that users are already familiar with, and
+are utilizing third party providers. Today, new Blockstack users can register an identity
+via a registrar service like onename.com, which manages private keys for users and
+provides the familiar username/password login interface. Using onename.com, a user
+creates a password that encrypts a generated private key. The user is provided with a
+backup file that can be used to restore and reset their password in the event that he
+forgets his password.
+
+Although the encrypted private keys are stored on Onename’s servers, this
+configuration is arguably more secure than the traditional username/password
+approach, because the Onename servers do not have direct access to the private keys.
+The user needs to decrypt the private key before issuing any update or transfer to the
+account. Therefore, Onename cannot act maliciously on behalf of the user. At the
+same time, the Onename model suffers from some of the same security problems as
+the traditional username/password model -- if Jane’s Onename password is
+compromised, for example via a phishing email, the attacker can still take over the
+account and make changes -- for example by creating a new website and attaching it to
+Jane’s Blockstack ID in order to post embarrassing content.
+
+In the future, the Blockstack developers aim to eliminate passwords from their
+process altogether. This could happen in a couple of different ways. First, name
+registrars that build on top of Blockstack could develop alternative methods for
+managing private keys. Second, Blockstack is working to develop a client that supports
+a two-factor authentication process that would require authorization from multiple
+devices (i.e. the user’s laptop and mobile phone). Ideally, users would be able to
+authorize login requests with a simple click of a button, indicating their consent, without
+the need to remember additional information, such as a password or private key. Even if
+passwords were eliminated, however, the initial setup and recovery processes of putting
+private keys on their devices could prove quite challenging for everyday users.
+Blockstack is in the process of building a browser with a built-in wallet and built-in
+private key management that would enable a more seamless experience upon
+downloading. Of course, getting people to adopt a specialized browser to use your
+software is far from simple–developers have long bemoaned the challenges of getting
+users to download the latest version of the browser they already use, much less adopt
+an entirely new one. The Blockstack team will need to think carefully about how they roll
+out an effective adoption strategy for their specialized browser. Right now, they are
+focusing on a “Blockstack installer,” which upgrades existing browsers like Chrome and
+Safari, enabling users to access Blockstack from their default browsers.
+
+The Blockstack project must also consider how to help users recover when their
+private keys are compromised, for example when they lose a device on which the
+private keys are stored. Traditional identity management providers accomplish this by
+providing a way for users to prove their identity, and then the identity management
+provider will reset their password. In​ ​a​ ​decentralized​ ​system,​ ​there​ ​is​ ​no​ ​authority
+who​ ​can​ ​perform​ ​a​ ​reset.​ A related decentralized identity solution in development for
+the Ethereum blockchain, UPort, has a scheme to do this by letting a user designate
+“friends” who can perform the reset for them. It remains to be seen whether this works
+in practice. There are many outstanding challenges–for example, if many users are
+compromised at once, as has happened with the Sony and Target hacks, a user may
+not have any friends left with available accounts to help.
+
+The Blockstack developers are currently considering a multiple signature (aka
+“multi-sig”) scheme for achieving this goal, whereby a selected subset of a user’s family
+and friends would cooperate to reset one’s password on their behalf. In the coming
+years, issues related to key recovery and compromised accounts will remain important
+questions, ones that Blockstack will have to thoroughly contend with if their system is
+ever to achieve mass adoption."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+=Status=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+
+"Today Blockstack supports over 4,000 contributing members in its open source
+community and has registered over 70,000 domain names. The open source code is 
+maintained by Blockstack Inc., a company which recently announced that it raised $4
+million in funding from venture capital firms like Union Square Ventures and the Digital
+Currency Group. It will be interesting to see how this organizational structure will shape
+Blockstack’s prospects of adoption as an open standard."
+
+[[Category:P2P Infrastructure]]

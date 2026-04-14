@@ -1,0 +1,243 @@
+URL = http://action.ffii.org/openstandards
+
+More information at the Wikipedia, http://en.wikipedia.org/wiki/Open_Standards
+
+=Definition=
+
+1. From the [[FFII]]:
+
+"A specification that is public, the standard is inclusive and it has been developed and is maintained in an open standardization process, everybody can implement it without any restriction, neither payment, to license the IPR (granted to everybody for free and without any condition). This is the minimum license terms asked by standardization bodies as W3C."
+(http://action.ffii.org/openstandards)
+
+
+2. Peter Murray-Rust:
+
+"visible community mechanisms which act as agreed protocols for communicating information".
+(http://wiki.cubic.uni-koeln.de/bowiki/index.php/OpenStandards)
+
+=Description=
+# Open Standards are totally royalty-free and, mainly because that, 
+# Open Standards are different from [[RAND Standard]]s. 
+
+Official definition of Open Standard issued by the [http://ec.europa.eu/idabc/servlets/Doc?id=19528 European Interoperability Framework]: 
+<blockquote>
+"the following are the minimal characteristics that a specification and its attendant documents must have in order to be considered an open standard: 
+
+1. The standard is adopted and will be maintained by a not-for-profit organization, and its ongoing development occurs on the basis of an open decision-making procedure available to all interested parties (consensus or majority decision etc.). 
+
+2.The standard has been published and the standard specification document is available either freely or at a nominal charge. It must be permissible to all to copy, distribute and use it for no fee or at a nominal fee. 
+
+3. The intellectual property - i.e. patents possibly present - of (parts of) the standard is made irrevocably available on a royalty-free basis. 
+
+4. There are no constraints on the re-use of the standard."
+(http://ec.europa.eu/idabc/servlets/Doc?id=19528)
+</blockquote>
+
+=Policy Statements=
+
+Bruno Perens in the [[Sincere Choice]] platform:
+
+"Intercommunication and file formats should follow standards that are sincerely open for all to implement, without royalty fees or discrimination.
+
+Some software vendors "lock in" their customers through a strategy of deliberate incompatibility. For example, if they manufacture word processing software and their product dominates a particular market, they can force competitors out of that market simply by making sure that no competing product interoperates with theirs. In order to interoperate with the majority of other users, a user will have to purchase the dominant product.
+
+In order to have a fair market, without customer "lock-in", file formats like those used by word processors must be open standards. Then, the customer will have a choice of a number of interoperating products, with various prices, different levels of sophistication, and differentiating features. However, each of these products will be able to display and edit files produced by the others.
+
+The dominant vendors can not be expected to switch to open standards on their own. Only strong and continued pressure from their customers will cause them to do so. But open standards are entirely to the customer's benefit. They help to establish a competitive market that tends to reduce prices and increase quality.
+
+We support reverse-engineering for purposes of compatibility, and oppose legislation that would restrict it. Reverse-engineering is the only tool that competitors can use against a vendor who is not receptive to open standards. Products like Samba and OpenOffice benefit many customers. The developers of those products made use of reverse-engineering in order to make them compatible with other products."
+(http://www.sincerechoice.org/Principles/Open_Standards.html)
+
+
+=Typology=
+
+
+==Joel West==
+
+From Joel West at http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1913/1795
+
+"an “open” standard usually has two justifications: open in the process, or open in the outcome (cf. Greenberg, 1990). The open process is the perspective of the standards creators, and is normally associated a particular type of standards–setting organization (SSO) — a formal standards development organization rather than a standards consortium or private firm. The process fairness is achieved through the structure of the SSO: for example, Krechmer (2006) identifies key elements of process fairness as open meetings, due process in voting, and transparency of meeting outcomes.
+
+The other form of openness is openness of outcomes. Buyers seek an open enough outcome to assure competing implementations of the standard, in hopes of providing price competition and thus lower prices."
+(http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1913/1795)
+
+
+==Bruce Perens==
+
+" the six principles proposed by B. Perens:
+
+Availability is addressed by Open Documents.
+
+Maximum end-user choice is addressed by Open Use.
+
+No royalty is addressed under Open IPR.
+
+No discrimination is addressed by Open Meeting, Consensus and Due Process.
+
+Ability to create extension or subset is addressed by Open Interface.
+
+Ability to prevent predatory practices is addressed by Open Change.
+
+The six principles proposed by B. Perens map fully onto eight of the ten rights of Open Standards proposed. B. Perens does not directly address the desires for or against One World or the end user right of On-going Support. This is one affirmative test of the completeness of the rights of Open Standards proposed."
+(http://perens.com/OpenStandards/Definition.html)
+
+==Ken Krechmer==
+
+"The term Open Standards may be seen from the following three perspectives:
+
+   
+1. The formal SSOs, as organizations representing the standards creators, consider a standard to be open if the creation of the standard follows the tenets of open meeting, consensus and due process.
+   
+2. An implementer of an existing standard would call a standard open when it serves the markets they wish, it is without cost to them, does not preclude further innovation (by them), does not obsolete their prior implementations, and does not favor a competitor.
+   
+3. The user of an implementation of the standard would call a standard open when multiple implementations of the standard from different sources are available, when the implementation functions in all locations needed, when the implementation is supported over the user?s expected service life and when new implementations desired by the user are backward compatible to previously purchased implementations. 
+
+These are the very different views from the creators, implementers and users of standards on what is an Open Standard. Their combined, reasonable, but not simple expectations translate into ten rights that enable Open Standards:
+
+1.        [[Open Meeting]] - all may participate in the standards development process.
+
+2.        Consensus - all interests are discussed and agreement found, no domination.
+
+3.        Due Process - balloting and an appeals process may be used to find resolution.
+
+4.        Open IPR - IPR related to the standard is available to implementers.
+
+5.        One [[Open World]] - same standard for the same capability, world-wide.
+
+6.        [[Open Change]] - all changes are presented and agreed in a forum supporting the five rights above.
+
+7.        Open Documents - committee drafts and completed standards documents are easily available for implementation and use.
+
+8.        Open Interface - supports migration and allows proprietary advantage but standardized interfaces are not hidden or controlled.
+
+9.        [[Open Use]] - objective conformance mechanisms for implementation testing and user evaluation.
+
+10.     On-going Support - standards are supported until user interest ceases rather than when implementer interest declines (use)"
+(http://www.csrstds.com/openstds.html)
+
+==[[FFII]] Definitions and Classifications of Standards==
+
+[[FFII]]:
+
+"From the point of view of the specification of the standard and its license to implement it. What varies is the openness or inclusiveness. Standards fall into different categories that varies depending of its openness and inclusiveness as shown in the following scale: 
+
+ EXCLUSIVE AND CLOSED >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> INCLUSIVE AND OPEN
+ Non Standards -> Closed standards -> RAND standards -> Open Standards -> Libre Standards 
+
+
+•	A [[Non Standard]]: The specification is not public, neither normalized by any recognized national or international standardization body. This is no matter how widely used the format/protocol/methodology/process/etc is. If widely used, it is common to denominate it in slang language as "de facto standard", but it is not a standard. 
+
+•	[[Closed Standard]]: A specification normalized and licensed in any non free form indeed not public and not common for all the licensees (you have to negotiate with the owner of the IPRs). Specification itself could cost money but should be public (if not, it wouldn't be a standard). ECMA should be included in that category, since during its specification process doesn't warranty enough that Technical Committee members reveal its IPRs (patents mainly) covering the standard. 
+
+•	[[RAND Standard]]: A public specification normalized and licensed under terms that are public and common for all the licensees. Patent rights should be declared during the standardization process. Usually RAND terms is the minimum that standardization bodies ask for to grant a standard (ie. ISO and OASIS). Specification itself could cost money. ISO/IEC should be included in that category. Should be noticed that, contrary to what RAND stands for ("Reasonable and Non Discriminatory"), that RAND standards frequently discriminate to part of the industry or to some development models as FLOSS. Ie. FLOSS and other free distribution software are taken apart from the possibility to implement the standard just from the moment that the RAND license states a fee per copy, since it is impossible to account the number of copies distributed. Additionally, some RAND licenses include terms that explicitly discriminate to FLOSS and other development models that show the source code of the programs, by forcing to the implementers to close the code of the implementation of the standard. 
+
+•	Open standard: A specification that is public, the standard is inclusive and it has been developed and is maintained in an open standardization process, everybody can implement it without any restriction, neither payment, to license the IPR (granted to everybody for free and without any condition). This is the minimum license terms asked by standardization bodies as W3C. Of course, all the other bodies accept open standards. But specification itself could cost a fair amount of money (ie. 100-400Eur per copy as in ISO because copyright and publication of the document itself). FFII definition of open standard coincides with the definition issued in the European Interoperability Framework released on 2004. 
+
+•	[[Libre Standard]]: An open standard of which there is a complete reference implementation of the standard under a [[FLOSS]] license, or indeed, GPLd software or whose complete specification can be got for free and without any condition. 
+
+Being: 
+
+•	Open Standardisation Process: Inclusive and transparent standardisation process. Examples include the Request for Comments policy (RFC) of standardization bodies as IETF. 
+
+•	Complete reference implementation: An implementation of the standard that is self-sufficient and covers the whole standard."
+(http://action.ffii.org/openstandards)
+
+==Legal Standards==
+
+"there exists the following legal categories of standards: 
+
+•	LEGALLY BINDING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> NON LEGALLY BINDING
+
+•	Legal standards -> International & National standards -> Industry standards -> Private stds. -> Others 
+•	Legal standard: those normalized by organizations as CEN/CENELEC and different directives or laws in the EU, that make mandatory their use in EU administrations. 
+•	International standard: those normalized by international semi-governmental organizations as ISO, IEC, ITU-T or ITU-R. Sometimes they are called "de iure standards" but actually their standards are not official since these organizations are partially composed by the industry. 
+•	National standard: those normalized by official national bodies of standardization as ANSI in USA or AENOR in Spain. 
+•	Industry standard: those granted by an industrial consortium representing a significant part of the industry."
+(http://action.ffii.org/openstandards)
+
+=Discussion=
+
+
+==Why Standards are Important==
+
+Jonathan Schwartz of SUN, in his blog at
+http://blogs.sun.com/roller/page/jonathan/20060515 
+
+
+"When Thomas Edison first introduced the lightbulb, he held patents he tried to wield against potential competitors - he wanted to own the client (the bulb) and the server (the dynamo). He failed. Standards emerged around voltage and plugs, and GE Energy (formerly, Edison General Electric), to this day, remains one of the most profitable and interesting businesses around. How big would the power business be today if you could only buy bulbs and appliances from one company? A far sight smaller, I'd imagine. Standards grew markets and value.
+
+Then there was the civil war era in the US, when locomotive companies all had their own railroad widths and shapes - designed only to work with their rail cars and steam engines. How'd they fare? They failed, standards emerged that unified railways and rail lines, and that era created massive wealth, connecting economies within economies. Standards grew markets and value."
+
+
+==Open vs. Proprietary Standards==
+
+
+From: Irving Wladawsky-Berger, the Vice President of Technical Strategy and Innovation of IBM
+
+"If a crunch comes between the interests of the shareholders and interests of the community, a business has to choose the interests of the shareholders. A business creating a standard that it controls and says is "open" and that people should "trust them" is not robust from that perspective. Business should prevent itself from getting into these situation. Working with neutral professional organizations makes it impossible for such conflicts to corrupt the process and is key to good open standards."
+
+Cited by Joi Ito at http://joi.ito.com/archives/2006/01/17/irving_wladawskybergers_definition_of_open_standards.html
+
+
+==Why Standards cannot be fully open in a for-profit environment==
+
+From Joel West at http://www.firstmonday.org/issues/issue12_6/west/index.html
+
+"no standardization activity that is economically self–supporting can be perfectly open: from an economic perspective, there are limits to openness (West, 2006b). Simcoe (2006) observes that in standardization, firms face an inherent conflict between value creation and value capture. A completely open standard creates lots of value, none of which can be captured; a completely closed standard captures 100 percent of no value created. So a profit–maximizing firm must seek an intermediate point that partially accomplishes both goals.
+
+Thus to pay the bills, there has to be value capture somewhere: everything has some level of openness and some level of proprietary–ness [1]. Typically, standards that are open in one area are often not open in another."
+(http://www.firstmonday.org/issues/issue12_6/west/index.html)
+
+
+=Status=
+
+==[[FFII]] Fake Standards list==
+
+
+"[http://action.ffii.org/openstandards FFII] maintains a list of standards (and fake standards) on which considers that work should be done in order to promote them, if good open standards, or to clean up them, if (fake) standards driving to traps to the consumers and market. Current hot list include: 
+
+•	ODF ([[Open Document Format]], ISO 26300:2006) - office documents - open standard to promote 
+•	OOXML (Microsoft Office Open XML, DIS 29500, ECMA376) - office documents - exclusive fake standard to clean up or dismantle 
+•	PDF/A (ISO 19005-1:2005) - printing oriented documents subset of "the PDFs" - open standard to promote 
+•	Adobe PDF (DIS 32000) - printing oriented documents - to clean up at ISO/IEC before November 25th 2007  or to dismantle on the contrary 
+•	Microsoft XPS - printing oriented documents - exclusive standard to open or substitute by PDF/A and others PDFs 
+•	Adobe Flash technology - multimedia in web - exclusive patented & fake standard to open or substitute 
+•	Microsoft Silverlight - multimedia in web - exclusive patented & fake standard to open or substitute 
+•	DCI System Specification - cinema film standard - fake exclusive standard to clean up or dismantle 
+•	MP3 - music documents - exclusive patented standard to substitute by OGG 
+•	WMA and WMV - audio and video - exclusive patented & fake standard to substitute by others existing ones 
+•	OGG - music documents - open standard to promote 
+•	MPEG1 - video - open standard to promote 
+•	TLS-auth - "experimental" autorization extension to TLS handshake protocol - exclusive patented & fake standard to dismantle 
+•	SEPA (Single European Payment Area) - public policy initiative has the objective of "creating open and common standards" for non-cash payment methods in the euoro area - threaded by software and business method patents, to be cleaned up o rejected."
+(http://action.ffii.org/openstandards)
+
+
+=More Information=
+
+For starters, you may want to read the following:
+
+==What you really need to read==
+
+#[[Open Standards are Important]], 
+#[[P2P Standardization processes differ from the traditional media standard process]]
+#[http://fsfe.org/en/fellows/maffulli/docs/open_standards_and_unencumbered_open_standards How Open Standards are related to Free Software], which makes a distinction between encumbered and unemcumbered open standards.
+#'''You have to understand the [[The Contradiction between Openness and Profits]] !!'''
+
+==More==
+
+#Requirements for an [[Open Internet]]
+#We now need [http://www.p2pfoundation.net/Open_API '''new ethical guidelines for networked applications'''], where free software licenses no longer protect our freedom, as the data and software are no longer located on our local computers.
+#An [[Open Standards Primer]].
+#A [http://en.wikipedia.org/wiki/Open_standard definition] by Wikipedia
+#Open Standards blogs are monitored by Technorati [http://technorati.com/blogs/Open%20Standards]
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Standards]]
+
+[[Category:Open]]

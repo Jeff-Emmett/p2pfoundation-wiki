@@ -1,0 +1,176 @@
+'''= a proposal for a guild of guilds in the Web3 world'''
+
+
+=Definition=
+
+@guildguild:
+
+"Guilds constitute a novel sociotechnical arrangement that systematically couples first-order value creation with transparent distribution accounting. Through curated registries of contribution, the structure enhances the legibility of collective work for potential funders while reducing coordination costs for all stakeholders. The resultant architecture improves the ability of high-value public goods work to receive adequate financial support within environments traditionally characterized by funding instability and coordination failures (tyranny of structurelessness).
+
+...
+
+Guilds represent a significant advancement in organizational design for distributed coordination systems. By systematically coupling first-order value creation with transparent contribution and allocation mechanisms, guilds create sociotechnical environments conducive to specialized talent development while simultaneously enhancing funder confidence in supporting critical work.
+
+The modular nature of guilding enables customization to specific domain requirements while maintaining core design principles of structural minimalism, participant autonomy, and adequate transparency. Early empirical implementations, exemplified by the Protocol Guild, demonstrate promising results in addressing persistent challenges in sustainable public goods funding."
+
+(https://paragraph.com/@guildguild/guilds-reference-architecture)
+
+=Description=
+
+Kevin Owocki et al. :
+
+"Guild Guild is a locus of coordination for Guilding (Guilding = Creating, Stewarding, Enabling, or Studying Guilds). It’s a mechanism for making and promoting more guilds.
+
+Guild Guild responds to the need for more guilds across different sectors of the ecosystem. Guild Guild would replicate, and extend, Protocol Guild's success while addressing challenges like the ecosystem's total available attention.
+
+How will it do that? 
+
+* Propagate the means of guilding: Make it as easy as possible to launch a new Guild 
+
+* Reasonably simplify formation
+
+* Share best practices: creation, fundraising/operation, other support needed.
+
+* Aggregating guilds into a Guilds of Guilds
+
+* Bi-directional: top-down curation, bottom-up self-organization.
+
+
+...
+
+
+The addition of guilds saves attention for both guild members and funders. 
+
+
+Since guilds tend to emerge around specializations with well defined curation logic, the GuildGuild serves a two-fold purpose: 
+
+1) Distribute the means of guilding, and 
+
+2) facilitate coordination amongst guilds, helping to organize registries of guilds. 
+
+
+This model ensures that holistic strategies that span specialization are available to funders, while the individual guilds focus their attention on their specialized tactics. See Block.science’s piece for more on the importance of strategic and tactical autonomy. 
+
+Funders who are responsible for allocating capital and evaluating outcomes can coordinate with GuildGuild to identify relevant experts and recursively evaluate outcomes. Success will be most evident if both funders and guilds experience an overall reduction in effort spent in the process of matching funding to expert labor. 
+
+Furthermore, each individual guild is successful insofar as it identifies and curates contributions which are reliably useful to funders. It’s acceptable and even expected that not all guilds will survive. Under this model guilds govern themselves by publishing their curation logic, splitting logic and/or membership rules. Over time, guilds build reputation with each other, GuildGuild and funders by providing quality work. The resulting contribution economy provides many stable loci of coordination – preserving adequate decentralization while reducing the attention costs of that coordination.
+
+...
+
+
+Guild Guild has the potential to stimulate how guilding efforts are coordinated and rewarded in the Ethereum public goods ecosystem. By lowering the barriers to guild formation, it will empower communities to self-organize, collaborate, and amplify their collective bargaining power. The infrastructure, tools, and governance models offered by Guild Guild will foster an inclusive and decentralized environment where diverse guilds can thrive, resist centralization, and advance Ethereum’s long-term resilience. As more guilds emerge, this ecosystem will nurture innovation and empower contributors to make meaningful, collective impact. Now is the time to get involved in shaping this transformative model for the future of public goods."
+
+(https://paragraph.xyz/@guildguild/guild-guild)
+
+
+=Characteristics=
+
+Attributes of the Guild Ecosystem, by Ven Gist et al. :
+
+
+"The structure of a Guild ecosystem should embody several key values:
+
+* '''Anti-Capture''': The essence of having multiple guilds ensures that no single entity can monopolize the system. The decentralization of guilds prevents centralization and captures by any actor.
+
+* '''Pluralism''': The Guild ecosystem should encourage a form of “coopetition,” where cooperation and competition coexist in a healthy dynamic.
+
+* '''Localized Governance''': Guilds should be governed at a local level, allowing for diverse decision-making processes and autonomy within each guild. The governance surface area for each Guild is very minimal, allowing maximal autonomy of individuals with the whole."
+
+(https://paragraph.xyz/@guildguild/guild-guild)
+
+
+=Governance=
+
+@guildguild:
+
+==Membership Policy==
+
+"Governs adding and removing of members to the registry.
+
+Patterns:
+
+Time-based Retroactive: Member has contributed recently and at least for a certain amount of time. Commitment-based Prospective: Member will contribute over a period of time. Historical: Member has contributed historically. See Cumulative weightingDynamic: threshold based on a live data source
+
+
+==Attribution Policy==
+
+Governs how contributions are valued. Informs weighting policy.
+
+Patterns:
+
+Time-based: Ex. part-time/full-time, months per year. Maximum percentage is is capped
+Peer Review: intersubjective consensus via something like Coordinape
+Algorithmic: quantifiable contribution scoring via something like SourceCred or some other live data source.
+
+
+==Weighting Policy==
+
+Governs how and when member weights are updated.
+
+Patterns:
+
+Ephemeral weighting is where each update replaces the previous weights, acting as a snapshot of contribution.
+Cumulative weighting is where each update stacks with previous weights. Members aren't removed if not currently contributing, dilution occurs instead.
+Cyclical updates: weightings are updated in periodic cycles such as annually, quarterly, or monthly
+Dynamic updates: updates are based on real-time data feed of contribution scores. Could be cumulative or ephemeral.
+
+
+==Allocation Policy==
+
+Governs the periodicity of allocations from the reserve."
+
+
+(https://paragraph.com/@guildguild/guilds-reference-architecture)
+
+
+
+
+
+=Example=
+
+==The [[Protocol Guild]]==
+
+@guildguild:
+
+"The Protocol Guild represents the pioneering implementation that catalyzed this guild architecture, self-organizing contributors engaged in maintaining and improving Ethereum's core infrastructure. Protocol Guild has experimented with and implemented various tools and processes for each component since inception. This case study provides valuable insights into one configuration as a practical application of the guild architecture.
+
+===Registry Component===
+
+Governance Mechanism: Utilizes Moloch v3 decentralized autonomous organization infrastructure with one-person-one-vote decision-making processes. This implementation aligns with theoretical prescriptions regarding minimizing governance overhead while maintaining legitimacy.
+
+Membership Policy: Implements opt-in eligibility criteria requiring demonstrable contribution history of at least six months to Ethereum core protocol development. This boundary condition establishes clear membership delineation while maintaining openness to new participants based on objective contribution criteria.
+
+Attribution Policy: Operationalizes a domain-focused attribution framework that recognizes contributions specifically supporting maintenance and improvement of Ethereum's core protocol infrastructure. This approach establishes clear domain boundaries for valued contribution types.
+
+Weighting Policy: Employs a time-based contribution assessment approach updated on an annual cycle, with contributors self-reporting their participation intensity (part-time [0.5] or full-time [1.0]) and duration (months active [1-12]). This relatively simple weighting mechanism exemplifies the principle of governance minimization while maintaining sufficient sensitivity to contribution differences.
+
+
+===Reserve Component===
+
+Smart Contract Infrastructure: Utilizes Gnosis Safe multi-signature wallet technology, providing programmable treasury management with distributed control mechanisms
+
+Identification Infrastructure: Employs the Ethereum Name Service (ENS) domain "theprotocolguild.eth" as a human-readable identifier, enhancing usability while maintaining cryptographic verifiability
+
+Funding Source Diversification: Successfully aggregates capital from heterogeneous sources including protocols dependent on Ethereum infrastructure, supporters of open-source development, individual contributors, and institutional foundation grants. This diversification enhances financial sustainability through multiple resource streams
+
+
+===Allocator Component===
+Distribution Mechanism: Implements specialized vesting agreement infrastructure via the 0xSplits protocol, enabling programmatic, proportional distribution according to registry-defined weights
+
+Allocation Policy: Implements extended vesting periods with funding distributed over a two-year timeframe, providing contributor stability while addressing potential concerns regarding long-term alignment."
+
+(https://paragraph.com/@guildguild/guilds-reference-architecture)
+
+
+
+=More information=
+
+* [[Guilds]]
+
+* [[Neo-Guilds for the Crypto and Web3 Economy]]
+
+* [[Guild DAOs]]
+
+[[Category:Crypto_Economy]]
+[[Category:Crypto_Governance]]
+[[Category:Labor]]

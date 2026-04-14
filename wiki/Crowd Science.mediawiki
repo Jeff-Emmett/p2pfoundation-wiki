@@ -1,0 +1,81 @@
+
+'''= refers to 'crowdsourced' research in science'''
+
+
+=Description=
+
+Jeffrey R. Young:
+
+"Today, data sharing in astronomy isn't just among professors. Amateurs are invited into the data sets through friendly Web interfaces, and a schoolteacher in Holland recently made a major discovery, of an unusual gas cloud that might help explain the life cycle of quasars—bright centers of distant galaxies—after spending part of her summer vacation gazing at the objects on her computer screen.
+
+Crowd Science, as it might be called, is taking hold in several other disciplines, such as biology, and is rising rapidly in oceanography and a range of environmental sciences. "[[Crowdsourcing]] is a natural solution to many of the problems that scientists are dealing with that involve massive amounts of data," says Haym Hirsh, director of the Division of Information and Intelligent Systems at the National Science Foundation. Findings have just grown too voluminous and complex for traditional methods, which consisted of storing numbers in spreadsheets to be read by one person, says Edward Lazowska, a computer scientist and director of the University of Washington eScience Institute. So vast data-storage warehouses, accessible to many researchers, are going up in several scholarly fields to try to keep track of the wealth of information."
+(http://chronicle.com/article/The-Rise-of-Crowd-Science/65707/)
+
+
+
+
+=Discussion=
+
+From an extensive conference review by Steinberg at http://blog.steinberg.org/?p=7:
+
+" This emerging area doesn’t have a catchy moniker yet, but you can think of it as '''an amalgamation of crowd theory, human terrain mapping, and social simulation. It is the science of groups'''; it is a new kind of quantitative political science.
+
+The tools and theories needed to analyze social interactions are just now reaching the level of sophistication — in accuracy, in robustness – necessary to leave the lab and enter commercial duty. We are in a period analogous to the early 1970s, when developments like the Capital Asset Pricing Model and the Black-Scholes equation transformed finance, changing it from an art to a science, and opening enormous new markets in the process. Now, new equations describing “crowd dynamics” are about to change our lives. And not always for the better. This is one of the most significant technology trends I have seen in years; it may also be one of the most pernicious.
+
+To understand why this technology is so important, and so dangerous, you need to understand its patrimony. First, although the technology is brand new, the idea is a classic, long-time geek trope. It shows up, for example, in Isaac Asimov’s Foundation Trilogy, the best-selling albeit thinly-plotted space opera, in which protagonist Hari Seldon develops the science of “psychohistory”. According to Seldon, just as physics can predict the mass motion of a gas, even though any individual molecule is unpredictable, psychohistory allows us to predict the future of large groups of people. (It’s not hard to see why this sort of thing appeals to the socially maladroit. Forming cliques, establishing social ties– it’s complicated and messy stuff. If only there was a mathematics that laid it all out…)
+
+But why is this technology only emerging now, not fifteen or twenty years ago? For any technology, there are only three possible answers to this question: Moore’s law, the Internet, or the government. In the case of crowd dynamics, we have the last two to thank. The Internet has made the problem tractable by providing huge, easily-collected data sets of social interactions. But the government has been the real enabler. Just follow the money: nearly every relevant research project received funding from DARPA, the Defense Advanced Research Projects Agency.
+
+It wasn’t long after the 2003 invasion of Iraq that US military theorists began to realize that our soldiers were completely lost amidst the country’s byzantine tribal structures, religious factions, and internecine feuds. They needed tools to help navigate these social structures that were as effective as their GPS devices and laser-designators were at guiding them through the local geography. DARPA moved quickly, creating a half-dozen social science programs, all of them focused on near-term research with mostly tangible deliverables. The mission became known as “human terrain mapping”, sure to be one of the most important neologisms of this decade.
+
+It’s interesting, if unsurprising, that DARPA had focused on the social sciences only once before: in 1962, during the Vietnam War. That year, DARPA’s director testified to congress that “it is [our] primary thesis that remote area warfare is controlled in a major way by the environment in which the warfare occurs; by the sociological and anthropological characteristics of the people involved in the war.”  The most ambitious result of this view was called “Project Camelot”, described as an attempt to “develop a general social systems model which would make it possible to predict and influence politically significant aspects of social change in the developing nations of the world.” It’s unclear how much progress was made before, thanks to a poorly organized attempt at testing Project Camelot in Chile that was met with violent political protests and negative press domestically, McNamara canceled the program."
+(http://blog.steinberg.org/?p=7)
+
+ 
+=Examples=
+
+==Paul Torrens==
+
+Cut to … San Diego, 2008, where the echoes of Project Camelot reverberated throughout an ETech presentation by Paul Torrens, a geography professor at Arizona State University.
+
+Adapting 3D animation technology from video games, CG simulated crowds from movie special effects, and GIS systems from urban design, Mr. Torrens creates virtual worlds where autonomous agents can interact.
+
+Each agent is built-up from many levels of rules: starting with basic kinematics (the hip-bone is connected to the …), then realistic physics (what happens when a body runs into a wall), then basic movement heuristics (take shortest route to exit), simple social behaviors (leave room if it gets too crowded), all the way up to sophisticated motivations (try to increase well-being by networking). Torrens has created a general toolkit that allows you to define these rules, then wind up your agents, plop them into a 3-D world, and let them run. By watching the results, says Torrens, we get a much better understanding of how crowds behave… and how to control them.
+
+The first example Torrens showed was of hundreds of avatars trying to exit a building through a single doorway. In a process that resembles nothing so much as gas particles moving along a thermal gradient, the avatars egress is incredibly inefficient, with a major jam-up occurring right in front of the doorway.  “The system works far better when a column is introduced off-center in front of the door,” demonstrated Mr. Torrens. “It’s counterintuitive, but the column sends shock waves through the crowds to break up the congestion patterns.”
+
+The next example was more disturbing. The scenario this time is a public demonstration, similar to the WTO protests that occurred in Seattle a few years ago. The model includes such details as tear gas which causes civilians to stampede, extremists who are trying to instigate violence, and mounted police. Torrens shows that changing a few small initial conditions controls whether the protest spins out of control or not, and suggests this simulation is a valuable tool for policing. Indeed. Demonstrating either startling ignorance or touching naïveté, Torrens argues that this scenario is really a public health issue, due to the possibility of injury. Well, yes – but, more importantly, it’s a democratic, human rights issue, and improving the state’s ability to squash demonstrations doesn’t strike me as a desirable development.
+
+
+==Nathan Eagle==
+
+An equally disturbing presentation at ETech was from Nathan Eagle, an MIT Media Lab researcher. While Paul Torrens took a top-down approach, simulating theoretical behaviors to see what happens, Nathan Eagle comes at it from the opposite direction. He takes a huge volume of empirical data on individuals’ locations over time, and from that derives higher-level structures like affinity groups and schedules.
+
+His dataset contains the proximity, location, and communication information from 100 subjects at MIT over the course of the 2004-2005 academic year.  From this fairly innocuous data, Eagle is able to figure out what groups individuals belong to. As he explains, “the clique on the top left of each network are the Sloan business students while the Media Lab senior students are at the center of the clique on the bottom right. The first year Media Lab students can be found on the periphery of both graphs.”
+
+In one experiment, Eagle looked at how well he could predict an individual’s activities over a 12-hour period, based on their data from the previous 12-hours. After training a simple Hidden Markov Model, he could predict people’s behaviors with 79% accuracy. Additional experiments and results can be found at http://reality.media.mit.edu. (Warning: may provoke morose thoughts about just how structured and undynamic our lives really are.)
+
+ 
+==Eric Horvitz==
+
+Admittedly, not all the work in this area has quite as obviously sinister undertones as these two examples. Perhaps the most innocuous bit of crowd theory came – surprisingly? – from Microsoft, at a CI Foo Camp presentation by Eric Horvitz. He spoke about SmartPhlow, an extremely sophisticated traffic monitoring system they have been operating in Seattle since 2003. Besides the normal traffic monitoring functionality, their system can also predict traffic for any day in the future, based on sporting event schedules, holidays, planned maintenance, etc.  The system also has a notion of “surprise”: by modeling what a person is likely to know (eg, that the bridge is always backed up during rush hour), and comparing that to current conditions, the SmartPhlow system can inform you of only surprising developments.
+
+Crowd dynamics are exploited by the system to gather data. For roadways where the DOT hasn’t installed car-counting sensors, the SmartPhlow system tries to contact users who are likely to be on that stretch of roadway at that particular time and asks them to enter their current speed. To avoid bothering an excessive number of users, SmartPhlow uses a model very similar to Nathan Eagle’s to predict user’s current locations. 
+
+Although not currently implemented, Eric Horvitz believes they can go one step further. Most traffic jams are emergent phenomena that begin with mistakes from just one or two drivers. According to Horvitz’s models, they can actually “un-jam” traffic by calling drivers at a particular location, and giving them very specific instructions: “Move to the left-most lane, and then speed-up to 65.”
+(http://blog.steinberg.org/?p=7)
+
+
+=Discussion=
+
+Conclusion from
+
+"These three examples are a start at mapping out the scope of the opportunity, and the potential for danger, posed by this new science of crowds. It’s important to remember that these examples are not truly representative: most of the work in the field has closer ties to military objectives, but that isn’t the kind of work that you’re apt to see at left-leaning conferences. (In general, the work is on higher level rules that define how insurgencies grow and that simulates the complex social substrate found in Iraq. The results of this work are already finding their way to US soldiers. ) I think it’s also important to keep in mind that the real danger with crowd theory has nothing to do with its ties to the military.
+
+The notion that technology is somehow “neutral” was discredited long ago, but it seems to reemerge whenever someone dares declare a new technology harmful. To refresh: we now know that every technology has built-in biases; inherent aspects that make a technology better suited for certain contexts and applications. Because nuclear power, for example, requires enormous facilities operated by highly trained workers at great cost, it goes hand-in-hand with Big Government and a hierarchical society. A flatter culture, that is structured more like a distributed network, will find local energy sources like wind and solar more congenial.  
+
+I believe that crowd theory is inherently pernicious because it fundamentally relies on a simplified model of individual behavior.  I’m not saying these models aren’t useful, or don’t offer real predictive accuracy. They are and they do. But by treating people as statistical stick-figures, we cheapen ourselves and, somehow, become less human."
+(http://blog.steinberg.org/?p=7)
+
+
+[[Category:Science]]

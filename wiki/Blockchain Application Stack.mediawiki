@@ -1,0 +1,61 @@
+=Description=
+
+Joel Monegro:
+
+"This is what I think the architecture of Internet applications is going to look like in 10 years. This is just a simple illustration and it leaves a lot of important insights and issues out. I’ll try my best to explain the thinking behind it below. To keep things short, we’ll run through every part of the stack from the bottom up, and do a deep dive on each in future posts.
+
+The basic idea is that everything inside the gray rectangles is decentralized and open source. For now I’m calling these the shared data and protocol layers. Nobody controls these parts of the system, and they’re accessible by any person or company. If we use bitcoin as an example, the blockchain is the shared data layer and the bitcoin protocol is a decentralized protocol that’s part of the shared protocol Layer.
+
+You’ll notice that each layer gets thinner the higher up you go. You’ll also notice that the shared data and protocol layers cover about 80% of the entire stack. Internet applications today are built on top of open, decentralized technologies like TCP/IP and HTTP, but if you were to graph the current Internet application stack like above, those open, decentralized protocols would probably only make up about 15% with everything on top being private and centralized.
+
+
+'''1. Miners and the blockchain'''
+
+If you know a little about how bitcoin works, you know what miners are. In a nutshell, miners are the nodes in a network of computers who, together, verify all bitcoin transactions. In exchange, the algorithm rewards them with bitcoin. Because bitcoin has real-world value, the operators of these machines are incentivized to keep them running. If you’d like to learn more about mining, this is a great explanation of how they work.
+
+The blockchain is the public ledger that holds a permanent record of all bitcoin transactions, and is maintained by the miners. It’s not controlled by a single entity and it’s accessible by everyone. You can read more about the blockchain here.
+
+
+'''2. Overlay networks'''
+
+This is where things start to get interesting. Developers are starting to build networks that work in parallel to the bitcoin blockchain to perform tasks that the bitcoin network can’t, but that make use of the bitcoin blockchain to, for instance, timestamp or validate their work.
+
+One example is Counterparty. Another might be sidechains. Whatever form these overlay networks take, the one thing they have in common is their connection to the bitcoin blockchain, and how they benefit from its network effects to achieve liquidity without having to bootstrap their own alternative cryptocurrency and/or blockchain like alternative solutions such as Ethereum require.
+
+
+'''3. Decentralized protocols'''
+
+Thanks to the blockchain, for the first time we can develop open source, decentralized protocols with built-in data (thanks to overlay networks and the blockchain), validation, and transactions that are not controlled by a single entity. This is where the traditional architecture of software businesses begins to break down. The best example of a decentralized protocol on top of a shared data layer is bitcoin, and we’re already well aware of how it’s affecting money and finance.
+
+Companies like eBay, Facebook and Uber are very valuable because they benefit tremendously from the network effects that come from keeping all user information centralized in private silos and taking a cut of all the transactions.
+
+Decentralized protocols on top of the blockchain have the potential to undo every single part of the stacks that make these services valuable to consumers and investors. They can do this by, for example, creating common, decentralized data sets to which any one can plug into, and enabling peer-to-peer transactions powered by bitcoin.
+
+In fact, a number of promising teams have already begun working on the protocols that will disrupt the business models of the companies above. One example is Lazooz, a protocol for real-time ride sharing and another is OpenBazaar, a protocol for free, decentralized peer-to-peer marketplaces.
+
+
+'''4. Open source and commercial APIs'''
+
+Protocols are hard for the average developer to build on top of, so there’s an opportunity in making it easy to connect to them. Whether it’s a good business in the long term is up for debate, but I think it’s a very important part of the stack.
+
+Making it quick and easy for developers of any skill set to quickly build an application and experiment on top of these decentralized protocols is paramount to their success.
+
+These will be either commercial services or open source projects. Good examples of this trend are Chain's APIs and Coinbase’s Toshi for bitcoin. They both serve the same purpose, but Chain is a hosted, commercial service, and Toshi is open source.
+
+
+'''5. Applications'''
+
+This is the consumer-facing part of the stack. Applications built atop this architecture will, in most cases, work very similarly to the ones we have today – just like Coinbase works similarly to PayPal.
+
+The big difference to consumers, however, is that because they are built on decentralized protocols, they will be able to talk to each other, just like different email applications and bitcoin wallets can interoperate.
+
+One thing I like about this stack is that it’s growing from the bottom up. First we had miners, the blockchain, and bitcoin, and now we’re building everything else on top. As far as I know, the most significant revolutions in technology have been built this way."
+
+(http://www.coindesk.com/blockchain-application-stack/)
+
+[[Category:Crypto Technology]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:Standards]]
+[[Category:P2P_Infrastructure]]
+[[Category:Technology]]

@@ -1,0 +1,305 @@
+'''= Reputation — as tokens, achievement markers, certifications and many more — is the primary information system that coordinate the flows of trust through the social sphere.''' [http://reputationcurrents.com/blog/archives/7]
+
+=Definition=
+
+'''1.'''
+
+"Reputation is a summary of one's past actions within ... a specific community, presented in a manner that can help other community members to make decisions... whether and how to relate to the individual" 
+
+– Chrysanthos Dellarocas [http://sloanreview.mit.edu/the-magazine/2010-spring/51308/online-reputation-systems-how-to-design-one-that-does-what-you-need/]
+
+
+
+'''2.'''
+
+"Reputation-based systems are used to establish trust among members of on-line communities where parties with no prior knowledge of each other use the feedback from their peers to assess the trust worthiness of the peers in the community."
+(http://whatifacomputerlies.blogspot.com/2007/04/reputation-system-in-p2p-network.html)
+
+See also our entry on [[Reputation - Portability]]
+
+Please note this important distinction by Tom Salfield: "I think its important to distinguish "currency" from a reputation measurement. Implicit in the term currency is the idea that it can be exchanged for something. A system for "recognition" is only a currency if that recognition is exchangable for something." (email, June 2010)
+
+=Description=
+
+From the Wikipedia:
+
+"Reputation is the opinion (more technically, a social evaluation) of the public toward a person, a group of people, or an organization. It is an important factor in many fields, such as business, online communities or social status.
+
+Reputation is known to be a ubiquitous, spontaneous and highly efficient mechanism of social control in natural societies. It is a subject of study in social, management and technological sciences. Its influence ranges from competitive settings, like markets, to cooperative ones, like firms, organisations, institutions and communities. Furthermore, reputation acts on different levels of agency, individual and supra-individual. At the supra-individual level, it concerns groups, communities, collectives and abstract social entities (such as firms, corporations, organizations, countries, cultures and even civilisations). It affects phenomena of different scale, from everyday life to relationships between nations. Reputation is a fundamental instrument of social order, based upon distributed, spontaneous social control."
+(http://en.wikipedia.org/wiki/Reputation)
+
+From Michael Freedman et al:
+
+"Reputation is a tool to predict behavior based on past actions and characteristics. We use reputation regularly in our daily lives --- reputations of individuals, as when we choose a physician; groups, as when we decide that individuals above a certain age can be trusted to purchase alcohol; and collective entities, as when we decide whether Ford is a company that will sell us good cars.
+
+Reputation is based on linkability. When we can link actions to an identity, and link actions by that identity to other actions by that same identity, then we can begin to make predictions about the identity's future actions. We distinguish between the problem of verification (establishing identity and tying it to a real-world entity) and the problem of reputation (judging the behavior of a given identity). This chapter deals mainly with the latter, but we also tackle some of the problems with verification that impact reputation.
+
+The concept of reputation, and the associated themes of building and assessing reputations, are not in themselves new ideas. Reputation, often signaled via a brand such as the New York Times, is an important concept in environments in which there is asymmetric information. Newspapers are a good example -- a reader must pay for the good before evaluating the good, and the seller and publisher likely have better information about the quality of the product. Without the ability to brand a product the newspaper market would likely spiral towards Akerlof's "Market for Lemons", with high quality products unable to differentiate themselves from low quality products and only low quality products surviving in the long-term. Reputation provides what Axelrod refers to as "the shadow of the future", with participants in a system considering the effect of current misbehavior on future interactions, even if future interactions are with different people. Reputation systems (systems that attempt to attach reputation to an identity and make an ongoing assessment of that reputation) promise to "unsqueeze the bitter lemon" (Resnick et al. 2000) by automating word-of-mouth reputation for electronic networks."
+(http://freehaven.net/~arma/jean.html)
+
+
+=Characteristics of Reputation=
+
+
+'''1. From: Manifesto for the Reputation Society by Hassan Masum and Yi–Cheng Zhang'''
+
+
+URL = http://www.firstmonday.org/issues/issue9_7/masum/index.html
+
+
+"Reputation is context–specific. A Ph.D. degree, medical license, or award of merit is meant to certify particular abilities. When a credit agency evaluates your financial history and generates a reputation, the context is your ability to repay loans; this ability may be correlated with but is quite distinct from more general character traits. And reputation could refer to any of these more general traits, like one’s sense of humor or ability to work in a team.
+
+Since there is no absolute objective reputation quantity stamped on people’s foreheads, measurable proxies are necessary, such as book sales rankings, citations in academic papers, Web site visits, and readership of blogs. (Not coincidentally, they have similar highly asymmetric power–law distributions. Many distributions of wealth and of readership of non-electronic resources also follow power–law distributions, a fact noted in Zipf (1949) more than half a century ago.)
+
+Reputation is a surrogate — a partial reflection representing our "best educated guess" of the underlying true state of affairs. Active evaluation by looking behind surface signals can corroborate or disprove reputations, while indiscriminate use degrades their reliability. The challenge is to encourage active evaluation, but also to use it efficiently since it will always be in limited supply.
+
+Emerging information tools are making it possible for people to rate each other on a variety of traits, generating what is really a whole set of reputations for each person. (Information technology is also indirectly increasing the need for such reputations, as we have to sift through more and more possibilities.) You may mentally assign a friend a bad reputation for being on time or returning borrowed items promptly, while still thinking them reliable for helping out in case of real need. No person can be reduced to a single measure of "quality."
+
+So people will have different reputations for different contexts. But even for the same context, people will often have different reputations as assessed by different judges. None of us is omniscient — we all bring our various weaknesses, tastes, bias, and lack of insight to bear when rating each other. And people and organizations often have hidden agendas, leading to consciously distorted opinions.
+
+Reputations are rarely formed in isolation — we influence each others’ opinions. Studying the structure of social connectivity promises to reveal insights about how we interact, and thinking about simple quantities like the average number of sources consulted before an opinion is formed will help us to better filter these opinions.
+
+Are reputations only for people? No, their scope is far wider:
+
+    
+* They can be for groups of people: companies, media sources, non–governmental organizations, fraternities, political movements.
+    
+* They are often used for inanimate objects: books, movies, music, academic papers, consumer products. Typically, whenever we talk about the "quality" of an object with some degree of subjectivity, we can also speak of its reputation, usually as assessed by multiple users — bestseller lists are a simple example.
+    
+* Finally, ideas can have reputations. Belief systems, theories, political ideas, and policy proposals are the bedrock of public discussion. The waxing and waning of idea–reputations directly affects their likelihood of implementation, and thus the environment that we all share
+(http://www.firstmonday.org/issues/issue9_7/masum/index.html)
+
+
+==Typical characteristics of reputation system==
+
+Albert Cañigueral:
+
+“One of keys to success for collaborative consumption and sharing initiatives is that the hassle factor of engaging in such activities has been reduced to a minimum through the use of technology. Therefore, the reputation system needs to be complete, but simple enough for regular use.
+
+Highlight five of the Rachel Botsman list of issues to consider when designing a peer-to-peer reputation system:  
+
+Competition: We love being at the top of the heap. Publish your user rankings to create healthy competition among peers. 
+
+Quality: Celebrate and reward users who take the time to contribute quality feedback; they should become the benchmark for others. 
+
+Sticky ratings: Pick a primary scoring system (stars, ticks, tiers, thumbs, badges, numerical ratings) and give the ratings sticky names, such as “Power Seller”. 
+
+People like me: We like to know, and tend to value, what our friends and people 
+like us think of other people. Integrate “inner-circle” vouching mechanisms (for example, went to the same school, work in the same office) into your reputation system. 
+
+Peer-police: An open reputation system must be peer-policed but if things do go wrong, your organization needs to be on hand quickly to offer support, resolve disputes and weed out the vandals and abusers. 
+
+"Reputation is a summary of one's past actions within ... a specific community, presented in a manner that can help other community members to make decisions... whether and how to relate to the individual" – Chrysanthos Dellarocas 
+One can not forget that business practices, trust and reputation do not work the same way for different people from different cultures. Qifang, the Chinese peer-to-peer lending platform, which caters to students, has lowered default rates by cleverly leveraging cultural norms by requesting borrowers to provide family details, so they'll feel pressure not to shame the family name.”
+(http://shareable.net/blog/can-i-trust-you-really-the-reputation-currency-0)
+
+See also: [[Reputation Banks]]
+
+=Design Characteristics=
+
+
+#See Table 1 and 2 at http://www.firstmonday.org/issues/issue9_7/masum/index.html
+#The [http://developer.yahoo.com/ypatterns/parent.php?pattern=reputation Reputation Design Pattern Library] by Yahoo is stellar.
+
+
+==General Definition==
+
+From http://www.artsjournal.com/artfulmanager/main/005829.php:
+
+"'''[[trust metric]]''' = an attempt to measure, assign, and convey ''trustworthiness'' among millions of strangers. As you might expect, most trust metrics work on '''two primary variables''': 
+
+1) '''the evidence of your actions in the on-line space''' (the comments you post, the time you spend reading or participating, the transactions you complete, etc.) and 
+
+2) '''the assessment by other people of that evidence''' (did you say something smart, did you deliver the product you promised, or did you not, etc.)."
+(http://www.artsjournal.com/artfulmanager/main/005829.php)
+
+==Technical Definition==
+
+From the [[Open Privacy]] project:
+
+
+"Reputation: A value that represents the collective opinion of some reference. A reputation is really just another name for an Opinion, as it is the calculated opinion of a Reference by the issuing Reputation Calculation Engine. Reputations are ephemeral, and the weight applied to an Opinion representing the reputation of some Reference is subjectively applied by the end user (person or program) that requests it. As Principals add their Opinion to a Reference, it accrues (positive or negative) reputation capital that has several useful properties:
+
+'''Secure''': Reputations cannot be subverted, and the source of reputation assertions can always be traced. This provides non-repudiation as well as the mechanism with which to decide which reputation information to trust. 
+
+'''Transitive''': Reputations are transitive (within the constraints of a well-defined domain). For example, if A trusts B as a source of local news, and B trusts C for local news, then it could be determined that A trusts C for local news."
+(http://www.openprivacy.org/opd.shtml)
+
+==Important Design Considerations==
+
+"online reputation systems must consider several issues:
+
+    
+* How broad is the context we're trying to build a reputation for? Are we trying to predict how well a given person will perform at a very specific task (eg delivering a letter to the post office), or are we trying to predict his performance at a broad range of tasks such as delivering letters, running a company, and babysitting our kids?
+    
+* What's at stake? Are we talking about predicting whether he'll put a stamp on his envelope, or whether he'll betray our government's secrets?
+    
+* Can we tie people to their online identities, or is it possible for people to create many online identities that are not obviously related to each other?
+    
+* Assuming we've solved the issue of tying identities to real people, how can we measure reputation?
+    
+* Finally, what algorithms can let us make accurate predictions based on these reputation values?"
+(http://freehaven.net/~arma/jean.html)
+ 
+
+==Reputation in P2P Systems==
+
+"Generally the reputation system in P2P network follows four steps.
+
+Step 1: a requestor r locates available resources sending a broadcast Query message to ask for the files it needs to download. Other peers will answer with a QueryHit message to the requesting node to notify that they have the requested resource.
+
+Step 2: Upon receiving a set of QueryHit messages, r selects an offerer o and polls the community for any available reputation information on o sending a Poll message. As a result of step 2, r receives a set V of votes, some of which express a good opinion while others express a bad one.
+
+step 3: revaluates the votes to collapse any set of votes that may belong to a clique and explicitly selects a random set of votes for verifying their trustworthiness.
+
+step 4: the set of reputations collected in step 3 is computed into an aggregated community-wide reputation value. Base on this reputation value, the requestor r can take a decision on whether accessing the resource offered by o or not.After accessing the resource r can update its local trust on o (depending on whether the downloaded resource was satisfactory of not)."
+(http://whatifacomputerlies.blogspot.com/2007/04/reputation-system-in-p2p-network.html)
+
+=Examples of Reputation Systems=
+
+See also our entry on [[Trust Metrics]]
+
+
+==Stack Overflow==
+
+Rachel Botsman:
+
+'Stack Overflow reports more than 24 million unique visitors a month and around 5,500 questions are submitted to the site every day.
+
+Voting on and editing questions are just two ways in which users can earn reputation points on Stack Overflow. "Reputation is earned by convincing your peers that you know what you are talking about," Spolsky says. "The reason why the site is 100 per cent spam-free and that around 80 per cent of all questions get answered is entirely a function of the community. The way we do that is as you earn more reputation points, you get more powers on the site."
+
+Shortly after the site launched, Atwood and Spolsky heard that programmers were putting their Stack Overflow reputation scores on their CVs, and headhunters were searching the platform for developers with specific skills. "A CV tells you what schools they went to, what companies they worked for and how well they did on a standardised test when they were teenagers," Spolsky explains. "But if you read the writings of someone on Stack Overflow, you immediately know if they are a skilled programmer or not." In February 2011, Stack Overflow launched Careers 2.0, an invitation-only job board where companies can find skilled programmers.
+
+Stack Overflow demonstrates how a person's reputation score created in one community is starting to have value beyond the environments where it was built. By answering questions in an expert forum, you create more opportunities to find a better job." (http://www.wired.co.uk/magazine/archive/2012/09/features/welcome-to-the-new-reputation-economy?)
+
+
+==New York-based banking startup Movenbank==
+
+Founder Damelin:
+
+"Credit scores are a lagging indicator -- they only look at what has happened in the past," he says. "They [credit agencies] don't use data to look into whether your behaviour is risky or not now."
+
+Rachel Botsman:
+
+Movenbank's goal is not just to use technology to personalise the banking experience, but to reinvent the traditional risk model. King spent more than 18 years working for traditional banks and was struck by the opacity of much of the credit assessment process. "Most banks reject around 50 per cent of credit applications. It's a pretty strange business when you reject half of your potential customers and don't even tell them why."
+
+At the heart of Movenbank is a concept call CRED. This takes into account an individual's traditional credit score but also aspects such as their level of community involvement, social reputation and trust weighting. Do they have a good eBay rating? Do they send money peer-to-peer? It also measures their social connectivity -- how many friends do they have on Facebook? Who are they connected to on LinkedIn? Do they have an influential Klout score? It combines this data, not just to assess their risk, but to measure the potential value of the customer. If you refer other customers from your network or pay your bills on time, your CRED score will go up. "It's not about your credit, but your credibility," King says.
+
+A big question mark lies around people's readiness to open up their social data, but King believes consumers are willing to make a trade-off if they know how it is going to be used and what they will gain in return." (http://www.wired.co.uk/magazine/archive/2012/09/features/welcome-to-the-new-reputation-economy?)
+
+
+
+==Applications==
+
+From: Manifesto for the Reputation Society by Hassan Masum and Yi–Cheng Zhang
+
+URL = http://www.firstmonday.org/issues/issue9_7/masum/index.html
+
+
+"The process of filtering information to distill a smaller yet more refined set of usable, verified, trustworthy judgements is not easy. But it is doable. And it is both more feasible and more necessary now than ever before, due to information proliferation, technological advances, and pressing socio–economic problems. Indeed, we already see many types of reputation systems emerging, especially online:
+
+    
+* Slashdot has grown to be a prime tech news site largely because of its inspired combination of open contribution and bottom–up filtering, using a modest amount of effort distributed over a large number of people — ranking the thousands of daily comments so one can choose to read just a few gems or all contributions. Similar communities are arising with different focuses, and figuring out why some fail while others succeed will teach us valuable design lessons.
+
+URL = http://slashdot.org/moderation.shtml
+    
+* Amazon, the online bookselling pioneer that has grown to be a juggernaut, early on made a decision to let users themselves rate each item, optionally accompanied by comments. Browsing through these ratings, suggestions, and warnings can be a gold mine of useful tips, one that is hard to replicate.
+    
+* eBay uses reputations at the heart of its online auction system, for ranking buyer and seller honesty. Without this feedback, weeding out the bad apples who renege on deals would be far more difficult.
+
+URL = http://pages.ebay.com/help/feedback/evaluating-feedback.html
+    
+* Google uses derived reputations from Web page interlinking to decide which search results are most relevant, which proved so effective that it has rapidly grown to become a global information utility. It has no "community boundaries," but extends use of reputation to the Web in its entirety.
+    
+* BizRate and ePinions provide ratings of businesses, seeking to identify those with better product quality and customer service. Both depend on feedback from many consumers, summarizing the experiences of many and in turn influencing future purchasing decisions of consumers in a virtuous feedback loop."
+(http://www.firstmonday.org/issues/issue9_7/masum/index.html)
+
+Other examples:
+
+- The Flickr interestingness algorithm at http://www.flickr.com/explore/interesting/
+
+==Dedicated Reputation Systems==
+
+Overview of online reputation management tools at
+http://www.readwriteweb.com/archives/how_to_manage_your_online_reputation.php
+
+#[[iKarma]]
+#[[Rapleaf]]
+#[[Bazaar Voice]]
+#[http://www.venyo.org/ Venyo]
+#[http://www.thegorb.com/ The Gorb]
+#[http://www.opinity.com/ Opinity]
+#[http://www.coworkers.com/ Co-workers]
+
+==Reputation Systems specific to [[Second Life]]==
+
+#[[TrustNet]]
+#[[BanLink]]
+
+
+==(Brand) Reputation Monitoring and Management Systems==
+
+#10 Brand Reputation Monitoring Systems reviewed at
+http://mashable.com/2008/12/29/brand-reputation-monitoring-tools/
+
+
+==P2PRep==
+
+
+"P2PRep is a reputation-based protocol runs in a completely anonymous P2P networks. In P2PReP, local reputation management and community-wide reputation management are two different levels. Local reputation is defined as one single peer’s opinion of one other peer’s reputation, based on its formal experience. The community reputation means the aggregated general opinion given by multiple peers. P2PRep is generally combine these two factors together.
+
+P2Prep works well in the environments of the percentage of malicious peers’ increasing and decreasing by changing well-behaved ones to rogues ones and changing rogue ones into well-behaved ones. As to the turn over case in peers’ population, P2PReP confirms its robust-ness showing a percentage of malicious downloads greater about 1% than scenario with no change."
+(http://whatifacomputerlies.blogspot.com/2007/04/reputation-system-in-p2p-network.html)
+
+=Discussion=
+
+See: [[Reputation - Discussion]]
+
+
+Reputation Today, by Alison Hearn:
+
+"Reputation is an extremely fluid, contingent, and precarious personal attribute generated entirely by the perception, attention and approval of others. As critic John Rodden argues, building a reputation involves an on-going process of ‘image-making’ and perception management, and, as such, is never given once and for all (Rodden, 2006: 75). Acquiring a reputation begs the question, ‘reputation for what?’ – the answer for which is predicated on a whole host of extremely variable contextual and institutional factors. While historically reputation has been assumed to be a direct reflection of the inherent quality of a person’s work or achievement, these days the acquisition of reputation bears very little relation to any specific skill or accomplishment, but appears to be derived solely from the performance of effective attention-getting itself, by any means necessary (Rodden, 2006: 80), including expressing feelings and opinions online.
+
+Of course, any notion of the ‘inherent quality’ of a person’s achievement is an historical and cultural construction, as, indeed, is reputation itself. A ‘reputation’ is conditioned and, arguably, constituted by cultural and economic institutions that have the power to authorize and direct attention, and transmute that attention back into value. In other words, reputation is a cultural product, and, as such is conditioned by its mode of production. This mode of production is generally marked by the perennially exploitative relations between labour and capital as well as by other relations of power based on forms of identity such as race, sexuality and gender. In the end, what is produced in the form of a reputation inevitably exceeds the control of those individuals who generate it or the individual who must ‘carry’ it; typically, we are ‘subjected to’ a reputation. As women well know, having born the burden of what Linda Williams has called a ‘surplus aestheticism’ for centuries (1999: 41), visibility and the reputation that follows from it is, most often, a trap (Foucault, 1977).
+
+Many have argued that this power of authorizing and validating attention, nowadays primarily enacted by the media industries, which can lead to the growth of a profitable reputation, feeds the lack in all individuals, promising, simultaneously, to recognize our uniqueness and assuage our anomie. As Leo Braudy has famously written, reputation and fame are, at least discursively, marked by contradiction - between uniqueness and acceptance, distinction and commonality, and, most of all, the desire for transparency between what one truly is ‘inside’ and what others see and celebrate (Braudy, 1997). Insofar as we collectively make and break reputations through the processes of engaging in, or withholding, identification with others, the rise of the attention or ‘reputation’ economy online can be read as a social symptom - evidence of a significant shift in modalities of the ‘self’ in the West."
+
+(http://www.ephemerajournal.org/contribution/structuring-feeling-web-20-online-ranking-and-rating-and-digital-%E2%80%98reputation%E2%80%99-economy)
+
+=More Informaton=
+
+A thoughtful and recent analysis from 2025:
+
+* '''Status Games: Social Media and the Gamification of Value. By Samuel Vance-Law.'''
+
+URL = https://thedrcenter.org/blog-status-games/?
+
+* on the relationship between money and reputation as different form of 'currencies': http://reputationcurrents.com/blog/archives/7
+* Negative feedback reputation systems have been shown mathematically to always spiral into chaos [http://www.raphkoster.com/2006/02/02/rep-systems/]
+* [[Ranking and Rating]]
+
+Also: 
+
+#Insightfull commentary by Clay Shirky at
+[http://many.corante.com/archives/2007/01/29/against_welldesigned_reputation_systems_an_argument_for_community_patent.php]
+#See also our entries on [[Reputation - Portability]] and [[Reputation-based Governance]]
+#Extensive Wikipedia article at http://en.wikipedia.org/wiki/Reputation
+#See also our entries on [[Trust]] and [[Identity]]
+#[http://opensource.mit.edu/papers/watson.pdf Reputation in Open Source]. Andrew Watson.
+#Typology of [[Reputation Currencies]] at http://newcurrencyfrontiers.blogspot.com/2009/04/reputations.html
+
+=Key Books to Read=
+
+
+The Reputation Society, forthcoming book by by [[Hassan Masum]] and [[Yi–Cheng Zhang]]
+
+URL = http://reputationsociety.com/
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Governance]]
+
+[[Category:Standards]]

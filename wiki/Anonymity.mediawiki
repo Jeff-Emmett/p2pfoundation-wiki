@@ -1,0 +1,64 @@
+
+=Discussion=
+
+
+==Why Anonymity is Essential==
+
+
+Ben Laurie at http://www.links.org/?p=124
+
+
+"Firstly, when I say anonymity should be the substrate I am not just talking about the behaviour of identity management systems, I also mean that the network itself must support anonymity. For example, currently, wherever you go you reveal your IP address. Any information you give away can be correlated via that address. People sometimes argue that this isn’t true where you have a dynamic address, but in practice that isn’t the case: most dynamic addresses change rarely, if ever - certainly they tend not to change unless you go offline, and the rise of always-on broadband makes this increasingly unusual. Even if the address does change occasionally, you only need to reveal enough information in the two sessions to link them together and then you are back to being correlated again.
+
+    
+Secondly, people seem to think that privacy is an adeqaute substitute for anonymity. I don’t believe this''': privacy is all about voluntarily not linking stuff you could link. Anonymity is about making such linking impossible'''. Microsoft’s Cardspace claims to provide anonymity where, in fact, it is providing privacy. Stefan Brands comes close with his selective disclosure certificates, but they are still linkable, sadly. These systems only provide privacy if people agree to not make the links they could make. Anonymity provides privacy regardless of people’s attempts to undermine it. That’s why you need to have anonymity as your bottom layer, on which you build whatever level of privacy you can sustain; remember that until physical onion routing becomes commonplace you give the game away as soon as you order physical goods online, and there are many other ways to make yourself linkable."
+(http://www.links.org/?p=124)
+
+
+==The dangers of drive-by anonymity==
+
+Tim O'Reilly:
+
+"Another place where we clearly erred in the first draft is in the suggestion that anonymity should be forbidden, as there are most certainly contexts where anonymity is incredibly valuable. (Some that come to mind include whistleblowing, political dissent, or even general discussion where someone might not want to confuse their personal opinions of those of an organization to which they belong. As one commenter remarked, it might even be useful for a shy person to whom anonymity gives a bit of courage.)
+
+That being said, there is a strong connection between "drive-by anonymity" and lack of civility. Jaron Lanier just sent me a pointer to a thoughtful article he wrote for [http://discovermagazine.com/2007/mar/jarons-world-internet-and-the-war-on-drugs Discover Magazine in March], shortly before this controversy erupted:
+
+.."''People who can spontaneously invent a pseudonym in order to post a comment on a blog or on YouTube are often remarkably mean. Buyers and sellers on eBay are usually civil, despite occasional annoyances like fraud. Based on those data you could propose that transient anonymity coupled with a lack of consequences is what brings out online idiocy. With more data, the hypothesis can be refined. Participants in Second Life (a virtual online world) are not as mean to each other as people posting comments to Slashdot (a popular technology news site) or engaging in edit wars on Wikipedia, even though all use persistent pseudonyms. I think the difference is that on Second Life the pseudonymous personality itself is highly valuable and requires a lot of work to create. So a better portrait of the culprit is effortless, ­consequence-free, transient anonymity in the service of a goal, like promoting a point of view, that stands entirely apart from one’s identity or personality. Call it drive-by anonymity''.
+
+    
+..''Anonymity certainly has a place, but that place needs to be designed carefully. Voting and peer review are pre-Internet examples of beneficial anonymity. Sometimes it is desirable for people to be free of fear of reprisal or stigma in order to invoke honest opinions. But, as I have argued (in my November 2006 column), anonymous groups of people should be given only specific questions to answer, questions no more complicated than voting yes or no or setting a price for a product. To have a substantial exchange, you need to be fully present. That is why facing one’s accuser is a fundamental right of the accused''."
+
+Furthermore, sites make traffic tradeoffs when requiring registration versus the additional flow they get from not requiring it. And of course, on the net, identity is very easy to spoof, so even if an email address or other form of identification is required, it doesn't mean that there's a real or easily traceable person on the other side."
+(http://radar.oreilly.com/archives/2007/04/code_of_conduct.html#anonymity)
+
+
+==Why you can't really anonymize your data==
+
+Pete Warden:
+
+
+"One of the joys of the last few years has been the flood of real-world datasets being released by all sorts of organizations. These usually involve some record of individuals' activities, so to assuage privacy fears, the distributors will claim that any personally-identifying information (PII) has been stripped. The idea is that this makes it impossible to match any record with the person it's recording.
+
+Something that my friend Arvind Narayanan has taught me, both with theoretical papers and repeated practical demonstrations, is that this anonymization process is an illusion. Precisely because there are now so many different public datasets to cross-reference, any set of records with a non-trivial amount of information on someone's actions has a good chance of matching identifiable public records. Arvind first demonstrated this when he and his fellow researcher took the "anonymous" dataset released as part of the first Netflix prize, and demonstrated how he could correlate the movie rentals listed with public IMDB reviews. That let them identify some named individuals, and then gave access to their complete rental histories. More recently, he and his collaborators used the same approach to win a Kaggle contest by matching the topography of the anonymized and a publicly crawled version of the social connections on Flickr. They were able to take two partial social graphs, and like piecing together a jigsaw puzzle, figure out fragments that matched and represented the same users in both.
+
+All the known examples of this type of identification are from the research world — no commercial or malicious uses have yet come to light — but they prove that anonymization is not an absolute protection. In fact, it creates a false sense of security. Any dataset that has enough information on people to be interesting to researchers also has enough information to be de-anonymized. This is important because I want to see our tools applied to problems that really matter in areas like health and crime. This means releasing detailed datasets on those areas to researchers, and those are bound to contain data more sensitive than movie rentals or photo logs. If just one of those sets is de-anonymized and causes a user backlash, we'll lose access to all of them.
+
+So, what should we do? Accepting that anonymization is not a complete solution doesn't mean giving up, it just means we have to be smarter about our data releases."
+(http://radar.oreilly.com/2011/05/anonymize-data-limits.html)
+
+
+=More Information=
+
+
+#See our entries on [[Identity]], [[Reputation]] and [[Privacy]]
+#Listen to [[Judith Donath on Identity and Anonymity on the Wiki]]
+#[[Anonymity Tools]]: [[Tor]] , [[I2P]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Policy]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

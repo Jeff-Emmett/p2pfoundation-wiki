@@ -1,0 +1,186 @@
+See also: [[Data Property Rights]] and [[Data Portability]]
+
+
+=The Topic=
+
+Elias Bizannes:
+
+"unless you can prove the ability to deny use by another entity, you do not have ownership. It’s a trap, because data is not like a physical good which cannot be easily copied. It’s like a butterfly locked in a safe: the moment you open that safe up, you can say good bye. If data can only satisfy the ownership definition when you hide it from the world, that means when it’s public to the world, you no longer own it. And that sucks, because data by nature is used for public consumption. But what if you could get the same benefits of ownership - or rather, receive benefits of usage and regulate usage - without actually ‘owning’ it?"
+(http://liako.biz/2008/11/you-dont-nor-need-to-own-your-data/)
+
+
+=Discussion=
+
+
+==The Data Ownership Divide==
+
+Alistair Croll:
+
+"Karl Marx said that the industrial revolution polarized the world into two groups: those who own the means of production and those who work on them. 
+
+Today’s means of production aren’t greasy cogs and steam-spewing engines, but that doesn’t mean they don’t divide us. Industrial data is all around us, and search engines, governments, financial markets, social networks and law enforcement agencies rely on it.
+
+We willingly embrace this “Big Data” world. We share, friend, check in and retweet our every move. We swipe loyalty cards and enter frequent flyer numbers. We leave a growing, and apparently innocent trail of digital breadcrumbs in our wake.
+
+But '''as we use the Internet (Internet) for “free,” we have to remember that if we’re not paying for something, we’re not the customer. We are in fact the product being sold — or, more specifically, our data is'''.
+
+...
+
+Thirty years ago, Stewart Brand observed that, “On the one hand information wants to be expensive, because it’s so valuable. The right information in the right place just changes your life. On the other hand, information wants to be free, because the cost of getting it out is getting lower and lower all the time.”
+
+Data will leak out, as it always does, despite the best efforts of hardware companies. It’ll be around forever, even if we try to impose a statute of limitations on it. And we’ll find new ways analyze it, making still more data. Yesterday’s online chaff may be the cornerstone of tomorrow’s new startup.
+
+'''The important question isn’t who owns the data. Ultimately, we all do. A better question is, who owns the means of analysis? Because that’s how, as Brand suggests, you get the right information in the right place. The digital divide isn’t about who owns data — it’s about who can put that data to work'''."
+(http://mashable.com/2011/01/12/data-ownership/)
+
+==The impossibility of 'owning' data: what counts is access rights==
+
+Elias Bizannes:
+
+"Both property and data are assets. They create value for those who use them. But that’s where the similarity’s end. 
+
+Property gains value through scarcity. The more unique, the more valuable. Data on the other hand, gains value through reuse. The more derivative works off it, means the more information generated (as information is simply data connected with other data). The more information, the more knowledge, the more value created - working its way along the information value chain. If data is isolated, and not reused, it has little value. For example, if a company has a piece of data but is not allowed to ever use it - there is no value to it. 
+
+Data gains value through use, and additional value through reuse and derivative creations. If no one reads this blog, it’s a waste of space; if thousands of people read it, its value increases - as these ideas are decimated. To give one perspective on this, when people create their own posts reusing the data I’ve created, I generate value through them linking back to me. No linking, no value realised. Of course, I get a lot more value out of it beyond page rank juice, but hopefully you realise if you “steal” my content (with at least some acknowledgement to me the person), then you are actually doing me a favour.
+
+Property ownership is based on the concept that you get value from holding something for an extended period of time. But in an age of rapid change, do you still get value from that? Let’s say, we lose the Holy War for people being able to ‘own’ their data. Facebook - you win - you now ‘own’ me. This is because it owns the data about me - my identity, it would appear, is under the control of Facebook - it now owns, that “I am in a relationship”. However, the Holy War might have been lost but I don’t care. Because Facebook owns crap - as six months ago, I was in a relationship. Now I’m single and haven’t updated my status. The value for Facebook, is not in owning me in a period of time: it’s in having access to me all the time - because one way they translate that data into value is advertising, and targeting ads is pointless if you have the wrong information to base your targetting on. 
+
+Our economy is now transitioning from a goods-producing to a service-performing and experience-generating economy. It’s hard for us to imagine this new world, as our conceptual understanding of the world is built on the concept of selling, buying and otherwise trading goods that ultimately ends in us owning something. But this market era of the exchange of goods is making way for “networks” and the concept of owning property will diminish in importance, as our new world is will now place value on the access. 
+
+“Ownership” really, is a new ‘established’ concept to our world - and it’s now ready to get out of vogue again. We’ve now reached a level of sophistication in our society where we no longer need the security of ownership to get the benefits in our life - and these property owners that we get our benefits from, may appear to yield power but they also have a lot of financial risk, government accountability and public scrutiny (unlike history’s aristocracy). 
+
+To bring it back to the topic, access to your data is what matters - but it also needs to be carefully understood. For example, access to your health records might not be a good thing. Rather, you can control who has access to that data. Similarly, whilst no one might own your data, what you do have is the right to demand guidelines and principles like what we are trying to do at the DataPortability Project on how “your” data can be used. Certainly, the various governmental privacy and data protection legislation around the world does exactly that: it governs how companies can use personally identifiable data."
+(http://liako.biz/2008/11/you-dont-nor-need-to-own-your-data/)
+
+==Proposed Legal Solution==
+
+See: [[Data Property Rights]]
+
+==Proposed Technical Solution==
+
+A technical solution to own our own data resources, by Yihong Ding:
+
+"There are two basic paths of resolving this issue of resource portability. One path is to make the resources be presented in more portable formats; and the other path is to produce a mechanism that aligns user-owned resources to particular community standards. While most of the current data portability efforts focus on the first path, I am going to discuss my thoughts on the second path.
+
+'''The key of resource portability is the switch of ownership over resources instead of the deployment of resources.''' For instance, when a user make a comment on a blog, who should own this comment, the commenter or the blog owner? By default, the current mechanism is that the one who owns the physical storage space of the comment owns the comment. Most of the time, the comment belongs to the blog owner. Many other times, however, the comment may actually be owned by a third party who provides the space for the blog owner. In very few extreme cases, the commenter actually owns the comment. This reality theoretically contradicts to the comment logic that the one who makes the comment (i.e. the commenter) should be the unquestionable owner. Will the improvement of portability of comments solve this problem? Not precisely since the problem is not really about whether the comment is portable but it is about who should own this piece of user-generated resources.
+
+The fundamental assumption underneath the current environment indeed has no problem. That is, the one who owns the physical storage of a resource should be granted the ownership of the resource. Following this assumption, we need to let any Web user have a piece of Web spaces that can store their "owned" resources. In our previous example, whenever a Web user leaves a comment in a remote site, the commenter should actually store this comment in his own space instead of the remote site. By contrast, the remote blog site should be added an RSS-type feed that brings the comments to the proper location. This mechanism allows the ownership of the comment clearly belonging to the commenter, and the commenter has the full control of updating or even deleting the comments based on their own interest. At the same time, the commenters might be granted an option to leave their comment out of their own spaces (i.e. storing them on remote site as it is done currently). By choosing this option, the commenters agrees giving up their ownership over their generated resources (the comments in our example).
+
+A center component in this described environment is the home-spaces (comparing to homepages) of the Web users. By storing the resources in their home-spaces, Web users exclaim the ownership over these resources. When users connect to a registered site (i.e. be willing to participating to the social activities in the specific community), it is a process of casting the respective stored resources in home-spaces to the community convention. This process, as I names, is [[Automatic Character Switch]] (ACtS)."
+(http://yihongs-research.blogspot.com/2008/02/resource-portability-path-towards-next.html)
+
+
+==The Report==
+
+(this report does not take a commons-based point of view)
+
+'''* Report: Data Ownership. By Teresa Scassa. Centre for International Governance Innovation, CIGI Papers No. 187 — September 2018'''
+
+URL = https://www.cigionline.org/sites/default/files/documents/Paper%20no.187_2.pdf
+
+
+==Contents==
+
+1 Introduction
+ 
+3 Understanding Data
+
+4 Ownership under Existing Laws
+
+11 Confidential Information/Trade Secrets
+
+13 Personal Information
+
+13 Proposals to Change Rules of Ownership
+
+14 Ownership of Personal Data
+
+14 Data Ownership Right
+
+15 Data Sovereignty
+
+16 Challenges with Data Ownership Rights
+
+
+==Summary==
+
+"The rapid expansion of the data economy raises
+serious questions about who “owns” data
+and what data “ownership” entails. In most
+jurisdictions, data that are kept confidential
+can be protected as confidential information.
+However, such data are vulnerable to exposure
+through hacking or leaking by third parties.
+In many instances, significant stores of data
+cannot be kept confidential, and protection must
+be sought elsewhere. Copyright law has long
+treated facts as being in the public domain, but
+will provide protection for compilations of facts
+that meet the threshold for “originality.” Such
+protection is considered to be “thin,” as it does
+not extend to the underlying facts, applying only
+to their original selection or arrangement. In the
+European Union, database rights offer a more
+robust protection for compilations of data, but
+they also fall short when it comes to protecting
+the facts that make up such compilations.
+
+Debates over ownership rights in data have been
+heating up. In Europe, policy makers have raised
+the possibility of creating sui generis ownership
+rights in data. In Canada, a recent court decision
+has raised the interesting question of whether
+facts and data should be treated differently
+in copyright law, offering a far more robust
+protection for data than for facts. In addition
+to these developments, Europe’s new General
+Data Protection Regulation also appears to
+vest certain rights in data subjects through the
+newly introduced concept of data portability.
+
+If data are capable of ownership, either through
+a sui generis right or copyright law, this raises
+important questions about how to strike a balance
+between the rights of data “owners” and the public
+interest in access to and reuse of data. This paper
+will explore the legal basis for claims of ownership
+of data, the extent of the public interest in access
+to and use of data, and the areas in which public
+policy development is required to address the
+changing needs of the data economy and society."
+
+
+=More Information=
+
+#http://mashable.com/2011/01/12/data-ownership/
+
+
+
+==Bibliography==
+
+Recommended by Katarina Pistor [https://scholarship.law.duke.edu/cgi/viewcontent.cgi?article=4953&context=lcp]:
+
+* Wolfgang Kerber, A New (Intellectual) Property Right for Non-Personal Data? An
+Economic Analysis, 65 GEWERBLICHER RECHTSSCHUTZ UND URHEBERRECHT, INTERNATIONALER
+TEIL [GRUR INT] 989, 992 (2016) (Ger.) (“As regards traditional intellectual property rights such as
+patents and copyrights, the main argument for justifying the grant of temporary monopolistic positions
+is that innovations might suffer from a public good problem leading to insufficient incentives for investing
+in innovation or creative works . . . . In the discussion about data property so far, nobody has claimed
+that we have a general incentive problem.”).
+
+* Lothar Determann, No One Owns Data, 70 HASTINGS L.J. 1, 9 n.43 (2018) (noting the
+potential alignment of social and private incentives).
+
+* Adam Moore, Towards Informational Privacy Rights, 44 SAN DIEGO L. REV. 809 (2007)
+(arguing that individuals have a moral right to their data).
+
+[[Category:Technology]]
+[[Category:IP]]
+[[Category:Standards]]
+[[Category:Peerproperty]]
+
+[[Category:Technology]]
+[[Category:IP]]
+[[Category:Standards]]
+[[Category:Peerproperty]]
+[[Category:Data Commons]]

@@ -1,0 +1,76 @@
+
+'''= OpenUDC aims to define a set of open protocols and standards to exchange new currencies, and to provide a free software1 implementation of them.'''
+
+URL = http://openudc.org/
+
+
+=Description=
+
+"OpenUDC aims to define a set of open protocols and standards to exchange new currencies, and to provide a free software implementation of them.
+
+UDC means Universal Digital Currencies or Universal Dividend Currencies. Both definitions are fair since a currency in line with the Universal Declaration of Human Rights HAVE TO apply the Universal Dividend.
+
+The OpenUDC project has a theoretical reference to the Théorie Relative de la Monnaie (TRM) which can be read to understand why OpenUDC uses Universal Dividend Money System.
+
+The Universal Monetary Dividend as defined in the TRM is more precise than the Basic income as it specifies where the money comes from, how it is created, and why so. But the TRM is not a technical description of how such a money system can be developed concretely, and so the choices of OpenUDC technical tools are totally independent of the TRM.
+
+OpenUDC implementations allow human members to exchange in a spirit of equity, digital goods and services in space, between members, and time, between members and future members."
+(http://www.openudc.org/index.php?pages/About)
+
+
+=Details=
+
+FAQ:
+
+" '''What are the step needed to join an Open-UDC community''' ?
+
+Create a OpenPGP key
+
+Join a commentary to this key based on "udid" format, that is to say the information about you the community has decided to be enough to authenticate you.
+
+Your key must be signed by a known number of yet registered users within the community (at least enough to be valid with GnuPG's default criteria)
+
+Now you are inside the community, the community has recognized you. You and the community you joined are on a "web of trust" which can be checked with OpenPGP key servers. The community know you are not eternal, so this step will have to be done on a regular time basis, in order to be sure that every member of the community is still alive.
+
+An OpenUDC community system provides an easy-to-use free software or web interface to do those steps. Those steps are in a large part independent of the OpenUDC technical implementations since it is an OpenPGP specification. Only the definition of the key commentary "udid" as a set of informations is an OpenUDC specification.
+
+
+
+'''How Universal Dividend is generated within the community ?'''
+
+The community has so his own public servers, which contain the list of public keys of the members, and can alert each member if a key was signed too much time ago (decentralized proof of life in material life, through key signing parties).
+
+Some software has to be installed in every new server, to communicate with the other servers for replication, and with every community members.
+
+Those community servers generate every month a "creation sheet". This creation sheet contains all information about the generation of the next Universal Dividend, following the money rules.
+
+When enough members has signed the creation sheet it is declared as "valid" and so the Universal Dividend units of money (also called "grains") created (signed) by each member, are also declared "valid", and can be used for transactions.
+
+
+
+'''How to manage its money and make transactions ?'''
+
+Each unit of money, or "grain", is a number (grains may be grouped then splitted), that is owned by the owner of the last key indicated in the signing chain (for new money, initialization of signing chain is done through the creation sheet process). So a member has full control of it due to his private key control on it.
+
+A client software synchronize its data (transactions...) with the network (publication servers today, tahoe-lafs cloud tomorrow) ; and may check the history of any account as well as public information (monetary mass, last Universal Dividend, number of members of the community etc... see money rules).
+
+When a transaction is agreed with two members, the owner of the money associate the grains he wants to give with the public key (fingerprint) of the receiver, sign that association of data, and give them to the receiver. Then the receiver may verify the transaction by checking the (end of) signature chain asked to the network, and then should publish the new transaction to the network (publication servers today, tahoe-lafs cloud tomorrow)."
+(http://www.openudc.org/index.php?pages/Frequently-Asked-Questions)
+
+
+=Status=
+
+* On May 2013, Open UDC was forked to [https://github.com/OlivierAuber/open-udc Open HDC] (Open Human Dividend Currency).
+
+
+
+
+=More Information=
+
+* two french-language podcasts with the founders, http://www.openudc.org/index.php?post/2012/10/08/OpenUDC-podcasts
+
+[[Category:Money]]
+
+[[Category:Standards]]
+
+[[Category:Commons Economics]]

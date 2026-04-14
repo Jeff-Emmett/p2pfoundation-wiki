@@ -1,0 +1,96 @@
+=Description=
+
+Katarina Stanoevska-Slabeva:
+
+"While crowdsourcing and open innovation are initiated by companies other forms of Internet-based innovation can be completely initiated and carried out by users.
+
+One of the earlier phenomena of user-initiated Internet-based innovation is open source software communities. They emerged in the late 80s, but spread more intensively after the broad diffusion of Internet. According to (von Hippel and von Krogh, 2009), “Open source software is software that is made freely available to all. Open source software development projects are Internet-based communities of software developers who voluntarily collaborate to develop software that they or their organizations need … Well-known examples of open source software having many users are the GNU/Linux computer operating systems, Apache server software and the Perl programming language.”
+
+The characteristics of open source software communities can be summarized as follows (see also von Hippel & von Krogh 2009):
+
+· They are initiated by one or several users that need certain software for intellectual, personal or business reasons. Thus, open source software communities have no connections to companies.
+
+· The users participate voluntarily and for free in the software development process.
+
+· The functioning of open source software communities is enabled by online platforms providing specific functionalities for cooperative development of software.
+
+· During their existence, open source software development communities create certain organizational and communication structures that enable an efficient and successful coordination of all development activities as well as management of the various software releases.
+
+· The final product is a specific software that can be further developed and used for free not only by members of the development community, but also by any user and company." (http://berlinsymposium.org/sites/berlinsymposium.org/files/crowdsourcingenabledinnovation.pdf) 
+
+
+
+
+=Typology=
+
+by Simon Phipps :
+
+“This model is not suited to every kind of discussion, as there are other ways to think about community layers. Most notably, the model I’m proposing here looks at the community layers from the outside, and it is also appropriate to use a model that looks from inside if the context is a community discussion. But the realisation that there is not just one open source community, nor even one kind of community, is a critical evolutionary step for enterprises wanting to engage in open source collaboration.
+
+In the model I’ve found useful for enterprise discussions, community types are layered around the free software commons like the layers of an onion.
+From the centre outwards, the categories of community are in two groups:
+
+==Co-developer communities== 
+
+— These are the people who directly engage with the core source code for the project. This is the place the project itself is made by a range of people who choose to synchronise an overlapping subset of their interests. Some of the people here may be paid to work on the project code, but all will be here because this is the code they want to work on.
+
+They can be further distinguished into two sub-categories:
+
+•	Core co-developers — These are the people whose contributions implement, evolve and maintain the code in the commons. They will have broad permission to change sensitive parts of the code arising from their track record for excellence. They may also include people who specialise in designing the user experience for the software. Many of them will describe themselves as working on the project rather than working for their employer, and some of them may have worked on the same code for several different employers. They are likely to have a strong culture that you’ll want to approach with respect. Importantly, no-one has an automatic right to admission by or respect from this community, even though your company may be a major source of funding. Your star developer or program manager gets the same rights as anyone else, when she has earned them. Attempts at management control of any aspect of this community layer will be most unwelcome and will likely be considered as damage. Moreover, they won’t welcome marketing messages, “developer programmes” and the like.
+
+•	Extending co-developers (extenders) — These are people who co-develop software and other resources that builds on, enhances or aggregates the work in the commons. They localise the code, port it to different platforms, package it for different operating system distributions and more. They create extensions, plug-ins, prototypes of new features, sample configurations. They work on documentation and training materials. While they will be interested in the tools for doing all these things, they too are unlikely to be welcoming targets for marketing activities.
+
+
+==Deployer communities== 
+
+— These are the people whose main engagement with the code involves a running instance that is configured and deployed by the community members in conjunction with other software that forms a deployment environment or stack. While they will contribute bug reports, test cases and occasional fixes, they don’t write the project code themselves; they are experts at configuring, deploying and using it. They also may train other people to do so.
+
+They can be further distinguished into two sub-categories:
+
+•	Deployer-developers — These are the people who take the contents of the commons and configure and customise them for deployment. They’re likely to be enthusiastic advocates of the project and very familiar with how to install it in particular applications. They will know all the configuration details, the tricks for tuning and perfecting an installation, the ways to secure and protect it. They may well be in-house developers integrating the project with specific enterprise applications. They are likely to be interested in both competing and complementary products, and to be receptive to developer programs. These are the people you are most likely to meet at user groups.
+
+•	Users — These are the people who commission, specify and use — and whose employers may pay for — the work of deployer-developers and put it to productive use. They may well be enthusiastic advocates on behalf of the project. They are likely to be interested in offers of services, training, consulting, complementary and competitive services. They are unlikely to have development skills.
+
+==Discussion: Implications of the model==
+
+This model for community types has gradually developed over time for me. Naming no names, I have especially observed the following points arising from the model:
+
+1. There are four distinct community types here, but people may play different roles in other communities too. For example, package maintainers working on an operating system distribution may be extenders with regard to the code they are packaging from another project and core co-developers with regard to the distribution itself. People offering bug reports as deployers may well be co-developers in other communities.
+
+2. People may play multiple roles within a given community too. A deployer-developer may be contributing code as an co-developer as they address problems during deployment, for example. Testers are likely to span multiple layers, as are documentation authors. Many people in all four of the layers are also users.
+
+3. There are many different ways to contribute to the commons while participating. Users are often a crucial source of documentation, case studies, bug reports and feature requests and the user role is by no means to be considered unimportant. Mature communities will recognise a variety of ways of contributing to the project.
+
+4. The freedoms people need protected vary between the roles. For example, a user is likely to view being protected from lock-in as a primary freedom and to want a choice of deployer-developers working on their behalf as well as the use of open standards in the design. While the original Four Freedoms provide a baseline, I’m increasingly convinced they need interpreting carefully for each “layer” so that the freedoms essential to smooth operation are understood and respected.
+
+5. The way a commercial organisation engages with communities must respect both the role the organisation plays in relation to the community and also the roles of the people they wish to influence. Treating everyone as if they were, for example, deployer-developers, will lead to negative reactions from all the co-developers. There’s no faster way to alienate the most influential members of a community than to broadcast marketing messages to everyone.
+
+6. There are a number of different ways to model open source communities, but I used this model extensively within Sun Microsystems to advise the engineering, marketing and management teams on their community engagements. Having a set of shared terminology to distinguish roles was important for avoiding the assumption that everyone means the same thing when they say “community.”
+
+7. It’s common for software companies to have people who think that “community” is a synonym for “market.” It’s also common for enterprise software consumers to think that “community” is a synonym for “free support.” Both have their place, but a good understanding of community layering will help avoid career-limiting decisions and company-damaging actions resulting from these false associations.”
+(http://radar.oreilly.com/2012/07/open-source-enterprise-strategies.html)
+
+
+
+=More Information=
+
+#[[Free Open Source Research Community]]
+#[[David Eaves on Community Management in Open Source]]
+#[[Open Source Software Development Community]]
+#[[Transition of Governance in a Mature Open Software Source Community]]
+#[[Open Source - Community Building]]
+#[[Autonomous vs Sponsored Open Source Community]]
+#[[Autonomous Open Source Community]]
+#[[Free and Open Source Licenses in Community Life]]
+#[[Emergence of Governance in an Open Source Community]]
+  
+
+
+[[Category:Business]]
+
+[[Category:Collaborative Economy]]
+
+
+[[Category:Peergovernance]]
+
+[[Category:Free Software]]

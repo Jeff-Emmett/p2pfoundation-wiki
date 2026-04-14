@@ -1,0 +1,152 @@
+'''DReaM = proposed open framework for DRM solutions.'''
+
+URL = https://dream.dev.java.net/
+
+
+=Description=
+
+
+"DReaM is an initiative to develop open Digital Rights Management (DRM) solution for multiple domains (media, documents, enterprise, personal, etc.). DReaM specifications are developed through Open Media Commons (http:///www.openmediacommons.org). This open source project develops an end-to-end Reference Implementation for the DReaM Specifications."
+
+Details provided by SUN, selected by Sam Rose at
+http://www.smartmobs.com/archive/2006/04/04/lessig_on_opend.html
+
+
+"The DReaM-CAS client specification defines a complete open conditional access system that enables delivery and consumption of protected content over Internet Protocol (IP) networks, using the MPEG-2 Transport Stream (TS) format. The CAS model utilizes open standard technologies for security such as PKI and SSL, as well as existing content protection technologies such as AES, ECC and 3DES. Inaddition, Sun posted the open source code for a prototype implementation of the DReaM-CASconditional access system at https://dream.dev.java.net.
+
+    
+The DReaM-MMI specification outlines a different approach to managing rights for a variety of client types that are directly or indirectly connected to content networks. The design philosophy underlying DReaM-MMI is that clients should be able to negotiate for rights through standardized protocols rather than downloading a license with an embedded expression of rights. The specification defines the message protocol, message transport and a list of profiles required to ascertain rights by a DRM client from a rights server.
+
+    
+These specific technical measures for content protection form the core of securing and safeguarding content in any DRM solution. DReaM, based on a service oriented architecture system design that leverages open standards, is capable of interoperating directly with other content protection technologies and supports services that enable both Conditional Access System and Digital Rights Management models. The specifications are initially available under the OMC terms at http://www.openmediacommons.org, and Sun ultimately plans to release the implementation code as open source under the OSI-approved Common Development and Distribution License (CDDL).
+
+    
+“With more people and devices participating on the network every day, there is a growing need for the community to develop and implement an open, safe and business-friendly DRM solution," said Tom Jacobs, project lead for Open Media Commons and a director in Sun Microsystems Laboratories. “We're encouraged that participants from across the DRM value chain, from content creators, owners and distributors, to consumer electronics device manufacturers and industry organizations, are coming together to address the issues and propose viable solutions."
+    
+Organizations represented at the workshop include technology companies such as Cisco, HP and IBM; consumer electronics device manufactures such as Motorola, Panasonic and Samsung; content distributors such as Sony BMG and Warner Music Group; network operators such as Telecom Italia; and industry organizations such as MPEG-LA. More information from the workshop, including speaker presentations, transcripts and technical documentation, is expected to be available shortly at http://www.openmediacommons.org.
+
+
+The Sun DReaM Overview White Paper (PDF) states that sun is looking at this from three different variables:
+
+    
+• Number of content producers: Traditional DRM applications such as protection of music and film have relatively few content providers. The potential applications in the business and life categories will involve far broader sources of content. The belief is that eventually everyone will become a producer in addition to being a consumer.
+
+    
+• Binding of licenses: DRM - and conditional access system (CAS) - solutions today only permit licenses to be bound to devices. As business and life applications evolve, it will be essential to provide more flexible models where licenses can be assigned to individuals, based on their identity or their role in an organization or family. An example of such negotiability might be a government agency’s ability to revoke document access/viewing privileges for terminated contractors who might have had documents stored on their computers/laptops.
+
+    
+• Dynamicity of licenses: Today’s DRM and CAS solutions only enable licenses to be assigned in a mostly static mode. For example, cable subscribers are issued a key that enables them to receive cable broadcasts. To enable new business and life applications, the assignment will have to become more dynamic, so that new services or even components of services can be authorized and changed in real time.
+    
+An example of such dynamicity would be the case where a business might grant a consultant rights to view and modify certain confidential documents only to decide later to terminate the consultant and revoke the previously granted rights and thereby render the confidential documents unusable."
+(http://www.smartmobs.com/archive/2006/04/04/lessig_on_opend.html)
+
+
+=Commentary=
+
+
+==In English==
+
+'''From Wired''' at http://www.wired.com/news/columns/0,70548-0.html:
+
+"open-source DRM is exactly what Sun Microsystems has proposed, with its DReaM initiative. Its goal is to promulgate an open-source architecture for digital rights management that would cut across devices, regardless of the manufacturer, and assign rights to individuals rather than gadgets.
+
+Assuming it catches on, this would create a bizarro world version of the copy-protection landscape. Today, consumers largely scorn DRM schemes in favor of unprotected MP3s ripped from CDs or downloaded off P2P networks. One reason for this is because iTunes-purchased music only plays on iPods, and subscription files from services such as Rhapsody only play on Microsoft Janus-compatible MP3 players. If DReaM works, consumers will be able to access their purchased songs through a number of providers, and using a wide variety of devices.
+
+Consumers would no longer have to negotiate separate deals with each provider in order to access the same catalog (more or less). Instead, you -- the person, not your device -- would have the right to listen to songs, and those rights would follow you around, as long as you're using an approved device (more on that later).
+
+The idea of Lawrence Lessig endorsing any DRM scheme is enough to make certain heads explode. But the "fair use" champion approved Sun's plan, because Sun worked with the Creative Commons "pretty much from the outset, to support their license definitions," according to Tom Jacobs, director of engineering at Sun Labs and the project lead of the Open Media Commons.
+
+Lessig's statement read, "In a world where DRM has become ubiquitous, we need to ensure that the ecology for creativity is bolstered, not stifled, by technology. We applaud Sun's efforts to rally the community around the development of open-source, royalty-free DRM standards that support 'fair use' and that don't block the development of Creative Commons ideals."
+(http://www.wired.com/news/columns/0,70548-0.html)
+
+
+'''Critique from Benjamin Wako Hill''' at
+http://mako.cc/copyrighteous/ip/20061115-00.html
+
+
+"I went to a talk today by Sun scientist Susan Landau on Sun's DReaM/Open Media Commons DRM system that I've mentioned in the past. Landau used a variant of these slides to do a rough overview of the Sun system and the problems that it is trying to solve.
+
+Halfway through her talk, Landau showed a slide titled, "Users Matter: Creative Commons." Elaborating, Landau mentioned that she had been talking to a number of people -- both at CC and outside -- about the possibility of using DReaM to enforce the terms of CC licenses.
+
+I interrupted Landau to point out that CC licenses had an anti-DRM clause that, as far I knew, would make her system unusable on CC content. The CC anti-DRM clause, plus the resistance of the CC and iCommons community to accept parallel distribution language, are why it's impossible to play CC-licensed works on an unmodified PlayStation or XBox (these systems only play signed disks) -- even if you include an unencumbered copy alongside! Landau reassured me that I must be mistaken 
+and that she had talked about DReaM in depth with CC leadership, lawyers, and technical advisory board members and she was sure her system was at least possible. Puzzled, I shut up.
+
+For most of the rest of her talk, Landau talked about fair use and how a DRM system might go about respecting it. In his qualified endorsement of the DRM system, Lessig mentioned that DReaM, "would be implemented to allow individuals to assert 'fair use,' and unlock DRM'd content, with a tag to trace misuse." At the time, I had a hard time imagining how fair use could be built into such a system -- separating fair from unfair use is remarkably resistant to technical solutions. Even bright light caseslike verbatim copies every page of the Encyclopedia Britannica might be fair use if I were to make them into a paper mâché bust of Johann Gutenburg or use them to wallpaper a gallery wall.
+
+Landau's acknowledged the trickiness around fair use and suggested a compromise:
+
+By default, works might be encumbered in the ways and to the degrees that the copyright holder wish. However, users could petition for an unencumbered "fair use copy" by identifying themselves and then 
+checking some boxes and explaining (briefly) why they think their use for the work qualifies as fair. Once they've done this, the system would present the user with an unencumbered, watermarked, and fully traceable piece of media.
+
+Conceivably, requests would be subject to some sort of review (at the very least to prevent automated requests) and non-fair uses of watermarked goods would be strictly tracked. If a "fair use" copy is found in the wild, the watermark would be traced and the originator would be heldliable. Of course, anonymous fair use becomes impossible but, as Simson Garfinkel pointed out at Landau's talk, users may have a right to anonymous speech and to fair use but not to anonymous fair 
+use. "Fair" enough.
+
+It is perhaps important to point out that DReaM does not currently implement this "fair use" system and that, one can only assume, the vast majority of DReaM users (e.g., Hollywood movie studios and their ilk) would have no little interest in giving their users a blanket ability to make "fair use copies" and would in most cases choose not to enable such an option.
+
+But let's return to the issue of DRM enforcement of CC license terms. While I was initially quite confused by the idea of DRM enforcement of CC license terms, it made much more sense when I looked at the CC anti-DRM clause itself:
+
+You may not distribute, publicly display, publicly perform, or publicly digitally perform the Work with any technological measures that control access or use of the Work in a manner inconsistent with the terms of this License Agreement.
+
+The emphasis (mine) points to the crux of the issue. The CC anti-DRM clause only blocks technological measures that overstep the boundaries set in the rest of the licensee. For the free licenses, that's a wide boundary that leaves little room for DRM. But as I've pointed out before, CC is a lot more than just free licenses.
+
+Landau mentioned that her group was primarily interested in using the DReaM system to enforce attribution and non-derivative work clauses in CC licenses -- a wise choice as non-commercial use is hard enough for humans to discern. As a result, the DReaM system might be used to make it impossible to remove attribution from CC works or might block modification to works marked as "ND." The catch that led me to believe that CC license blocked all DRM was the fact that I didn't think it 
+would be possible for a DRM system to respect fair use. After all, each CC license includes an explicit affirmation that, "nothing in this license is intended to reduce, limit, or restrict any rights arising from fair use."
+
+The question that the possibility of a CC DRM scheme like DReaM hangs on is: to what degree does Landau's suggestion live up to the fair use legal bargain?
+
+Landau pointed out that a number of lawyers including Pam Samuelson and CC's technical advisory board and legal staff have been generally positive about her fair use permission-asking compromise. Honestly and on CC's own terms, it's hard to see why they wouldn't be. The loss of anonymous fair use was only ever a right we enjoyed by a fortunate accident. Watermarks are only there to "keep honest people honest." If you are not doing anything wrong, what do you have to hide?
+
+But DReaM enforcement of CC licenses is a bad thing and the bad taste that it inevitably leaves in many commoners mouths is not hard to explain:
+
+     
+* Many commoners are not comfortable with the idea of DRM because it shifts power over users' computing devices away from the users and makes computers obey the will of a copyright holder. That's true of DReaM just as much as as it is of Apple iTunes or Microsoft DRM.
+     
+* Many commoners are not completely comfortable with all CC licenses, so the idea of technical protection measures enforcing these terms, even those allowing for fair use lines and in line with the will of the author, is seen as dangerous.
+
+To solve the first issue, CC needs a more strongly worded anti-DRM clause -- ideally one tied to a parallel distribution clause. To solve the second, we will ultimately need a new banner under which only truly free cultural works will reside.
+
+Susan Landau doesn't have it easy but she does seem to have the genuine best interest of consumers and users at heart. That's more than I can say about the vast majority of people in the DRM business. She's trying to walk a fine line and she's almost certainly being abused and heckled by folks in the industry who call her "communist" and by folks like me who feel that she's sacrificing essential principles in an attempt to compromise. The one thing we all agree on is that the ground she's treading is mine field.
+
+Yet while I sympathize with her, I must speak out against both her and DReaM. A DRM compromise at this stage would be insanity."
+(http://mako.cc/copyrighteous/ip/20061115-00.html)
+
+
+==In French==
+
+From Internet Actu at http://www.internetactu.net/?p=6410 
+
+"Le projet Open DRM soutenu par Sun n'est pas nouveau, mais le débat qu'il suscite prend suffisamment d'ampleur pour attirer notre attention. Il y a quelques semaines, Sun Microsystems a publié les premières spécifications de son code pour DReaM, un système de gestion de droit numérique libre et open source basé sur l'initiative de protection de contenu Open Media Commons de Sun (voir DReaM, une vue d'ensemble de l'architecture, .pdf).
+
+Le projet DRM open-source que Sun propose a pour but de promulguer une architecture open-source pour la gestion des droits numériques taillée pour les appareils, quel que soit leur fabricant. Le code de son DRM serait accessible gratuitement à toute l'industrie et assignerait des droits pour les individus plutôt que pour les objets. "Sun parle d'un changement radical, d'une envergure proche de celui du passage de l'économie du troc à celle du papier monnaie. Comme l'argent, un système de DRM standardisé pourrait être reconnu universellement, et ses règles pourraient facilement convertir les autres systèmes (comme le dollar américain pourrait facilement sur le territoire américain être changé rapidement par une autre monnaie). Les consommateurs n'auraient plus à négocier au coup par coup avec chaque fournisseur de contenu afin d'accéder plus ou moi! ns au même catalogue. A la place, vous - la personne, pas l'objet - auriez le droit d'écouter des chansons, et ces droits vous suivraient aussi longtemps que vous utiliseriez des objets agréés" , explique Eliot Van Buskirk's dans Wired.
+
+Même Larry Lessig a approuvé l'idée de Sun, pointant avec satisfaction un mécanisme qui assure un espace pour le respect des droits d'usages ( fair use), intégrés à son architecture, assurant que certains usages comme la citation, la parodie ou la copie pour un usage scolaire ne seraient pas circonvenue. Un satisfecit qui a provoqué une véritable levée de bouclier à l'encontre de son auteur. D'où le besoin de clarifier les choses :
+
+    
+"''Le projet open DRM de Sun devrait permettre aux individus d'affirmer leur fair use et de déverrouiller les contenus, grâce à une balise qui tracera les usages. Ils ont décrit une plate-forme sur laquelle les auteurs gardent la liberté sur leur DRM.
+    
+C'est une bonne chose. Mais certains ont confondu cette louange pour un meilleur DRM avec un éloge des DRM. Donc, laissez-moi être le plus clair possible : nous devrions construire un monde de DRM libre. Nous devrions avoir des lois qui encouragent un monde de DRM libre. Nous devrions manifester des pratiques qui rendraient irrésistible un monde de DRM libre. Tout cela doit, je pense, être clair. On peut détester le Sonny Bono Act, mais il serait plus juste de penser que s'il y a un Sonny Bono Act, il devrait y avoir aussi une loi de renforcement du domaine public. On peut détester les DRM, mais s'il y a des DRM, ils devraient plutôt être au moins comme Sun dit qu'ils devraient être''." 
+
+Pour autant, comme le soulignent bien des commentateurs, le projet de Sun n'est pas encore abouti et laisse planer de nombreuses zones d'ombres, comme le remarque encore Eric Van Burskirk arguant que la protection du fair use est optionnelle et laissée à la discrétion de l'éditeur.
+
+
+Le projet de Sun n'est pas pour autant sans ambiguïté, comme le remarque Samuel Rose sur SmartMobs en citant quelques spécifications du projet :
+
+    
+* Lier des autorisation : Les solutions DRM et les Systèmes conditionnels d'accès (CAS, conditional access system ) permettent à des autorisations d'être liées aux dispositifs. Mais les applications évoluent et il sera essentiel de fournir des modèles plus flexibles où des permissions peuvent être assignés aux individus, basés sur leur identité ou leur rôle dans une organisation ou une famille. Un exemple d'une telle "négociabilité" pourrait être pour un organisme gouvernemental par exemple de retirer des privilèges du document (accès) pour certains types de professionnels.
+    
+* Dynamique des autorisations : Les solutions de DRM et de CAS d'aujourd'hui permettent seulement d'assigner des autorisations en mode statique. Par exemple, des abonnés du câble ont une clé qui leur permet de recevoir des émissions. Or, pour permettre de nouvelles applications, la tâche devrait être plus dynamique, de sorte que de nouveaux services ou des composants du service puissent être autorisés et qu'ils puissent évoluer en temps réel. Un exemple d'une telle gestion dynamique serait de pouvoir autoriser un consultant à accéder et modifier un document et décider, à la fin de sa mission, qu'il n'y ait plus accès. 
+
+Sun classe ainsi ses licences en catégories : Business, Vie et Contenu/divertissement et définit pour chacune un ensemble de profils que gère l'auteur originel du document. Un des exemples qu'ils donnent est de pouvoir accéder à un document selon le rôle personnel ou professionnel des individus. Ainsi, sur un morceau de musique par exemple, on pourrait imaginer pouvoir donner des droits différents au propriétaire, aux membres d'une même famille, aux amis et aux relations. En fait, souligne Samuel Rose, si le système de Sun était appliqué, il pourrait mener à une accélération de la domination des DRM dans tous les aspects de la vie.
+
+En tout cas, le débat autour de DReaM a fait poindre un désaccord entre les partisans de l'affaiblissement des règles du copyright. L'Electronic Frontier Foundation a en effet critiqué le projet de Sun sous prétexte qu'il n'offrait pas assez de garantie pour le fair use en donnant de faux espoirs d'ouverture. "Utilisé le terme "commun" dans le nom est malvenu, car il suggère qu'une communauté en ligne est engagée à partager son travail. Les systèmes DRM restent conçus pour restreindre l'accès et l'usage." 
+(http://www.internetactu.net/?p=6410 )
+
+
+=More Information=
+
+Read the original commentary by Larry Lessig here at http://www.lessig.org/blog/archives/003353.shtml
+
+
+[[Category:Standards]]
+
+[[Category:Policy]]

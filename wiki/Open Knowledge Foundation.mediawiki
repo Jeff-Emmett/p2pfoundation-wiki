@@ -1,0 +1,144 @@
+
+= The Open Knowledge Foundation (OKF) is a non-profit organisation founded in 2004 and dedicated to promoting open data and open content in all their forms
+
+URL = http://okfn.org
+
+=Description=
+
+The Foundation is an international leader in its field and has extensive experience in building tools and community around open material. Our software development work includes some of the most innovative and widely acclaimed projects in the area. For example, our CKAN project is the world’s leading open source data portal platform – used by data.gov, data.gov.uk, the European Commission’s open data portal, and numerous national, regional and local portals from Austria to Brazil.
+
+The Open Knowledge Foundation’s award winning OpenSpending project enables users to explore over 13 million government spending transactions from around the world. We have an active global network which includes Working Groups and Local Groups in dozens of countries – including groups, ambassadors and partners in 21 of Europe’s 27 Member States.
+(http://okfn.org/about/)
+
+=Discussion=
+
+This is from the presentation page of the OKF, at http://www.openknowledgefoundation.org/:
+
+" We live in an information society. How many times have you heard that? And technology has created vast new opportunities for increased and more equitable access to knowledge, as well as for its collaborative development. But we are yet to realize much of this potential, and before we do so there are several major challenges to be met.
+
+First, we must develop the tools and the institutions to take advantage of these opportunities, as well as the increased possibilities for collaboration and dissemination that technology has created. Second, we must ensure that these opportunities are not eliminated by the ever increasing proprietization of knowledge as individuals and corporations seek to fence off knowledge for the sake of short term profit.
+
+The Open Knowledge Foundation exists to address these challenges by promoting the openness of knowledge in all its forms, in the belief that greater access to information will have far-reaching social and economic benefits. In particular, we
+
+* Promote the idea of open knowledge. See the three meanings of open or the forums for more information.
+
+* Campaign against restrictions, both legal and non-legal, on open knowledge. See the Open Knowledge Trail to learn more.
+
+* Develop, support and promote projects, communities and tools that foster and facilitate open knowledge creation, access and dissemination. To this end we sponsor the Open Knowledge Foundation Network."
+
+
+==Details==
+
+The original article has the links to the specific projects:
+
+(see also [http://prezi.com/f8k9_9rnxlap/a-free-software-model-for-open-knowledge/ the prezi] version)
+
+"The best way to talk about the work of the Open Knowledge Foundation is to look at its projects, which form an open knowledge stack similar to the OSGeo software stack.
+
+
+===[[Open Definition]]===
+
+The Open Knowledge Definition is based on the OSI Open Source Software Definition (which OSGeo uses as a reference for acceptable software licenses). No restrictions on field of endeavour - non-commercial-use licenses are not open as in the OKD. An open data license will pass the cake test.
+
+
+===[[Open Data Commons]]===
+
+Open Data Commons is run by Jordan Hatcher, who started work on the Open Database License with support from Talis, later extensive negotiation with the OpenStreetmap community. ODbL is a ShareAlike license for data, that obviates the problems of inapplicability of copyright to facts, and greediness of the ShareAlike clause when it comes to use of maps in PDFs, etc.
+
+PDDL is a license that implements the Science Commons protocol for open access data, explicitly placing it in the public domain.
+
+The Panton Principles are four precepts for publishers of scientific research data who wish that data to be freely reusable. Being openly able to inspect, critique and re-analyse data is critical to the effectiveness of scientific research.
+
+
+===[[Open Data Grid]]===
+
+The Open Data Grid is a project in early incubation; based on the Tahoe distributed filesystem. It’s in need of development effort on Tahoe to really get going. Provide secure storage for open datasets around the edges of infrastructure that people are already running. 4340727578_da9a6671a5_b
+
+People are handwaving about the Cloud, but storage and backup are not problems that it is really meant to solve. People make different claims about the Cloud - cheaper, greener, more efficient, more flexible. Can we get these things in other ways?
+
+There is a saying, “never underestimate the bandwidth of a truck full of DAT tapes”
+
+
+===[[Comprehensive Knowledge Archive Network]]=== 
+
+(CKAN)
+
+CKAN is inspired by free software package repositories, perl’s CPAN, R’s CRAN, python’s PyPi. It provides a wiki-like interface to create minimal metadata for packages with a versioned domain model and HTTP API.
+
+CKAN supports groups, which can curate a package namespace - e.g. climate data - and assess priorities for turning into fully installable packages.
+
+CKAN’s open source code is being used in the data package catalogue for the data.gov.uk project, part of the Making Public Data Public effort in the UK.
+
+
+===datapkg===
+
+The Debian of Data - datapkg takes Debian’s apt tool as inspiration for fully automatable install of data packages, with dependencies between them. This is currently in usable alpha stage with a python implementation."
+(http://blog.okfn.org/2010/03/17/a-free-software-model-for-open-knowledge/)
+
+=Interview=
+
+With co-founder Rufus Pollock:
+
+'''Jed Sundwall: What is the Open Knowledge Foundation?'''
+
+"Rufus Pollock: We were founded in 2004. At the time, things were less developed than they are now and we had a simple purpose: to promote open knowledge, open information. We used the term knowledge because the aim was to go beyond software. We wanted to open stuff that wasn't code. Of course, the distinction between code and other kinds of information is not always a very sharp one, but we felt there was a lot that you could take from the experience of the free and open source software communities and you could almost port directly to other areas, be that science, be that economics, be that geodata, etc.
+
+The foundation itself is there to promote open knowledge, promote means of opening knowledge, tell people what it is for knowledge to be open and why it's a good thing. The Foundation runs events, build tools, facilitate communities, etc
+
+I'm one of the directors of the foundation and I also helped found it. We're fairly open in how we run the foundation, it's pretty peer based, so people are welcome to come in and start projects. They can say, "Well, I want to do this kind of project," and if it fits within the overall purpose they know what they're doing then they can go ahead and start working. In that sense it's a fairly loose governance structure, more or less modeled like the Apache Software Foundation. There again, they have a kind of core but they also have a structure where people come along and run projects within the organization but fairly autonomously. 
+
+
+'''Would you mind sharing with me any examples of particular successes that the foundation has enjoyed and/or particular projects that you've produced?'''
+
+One of the early things we did was define what we mean by openness. It might seem minor but it's a big issue. It's important because by having a good definition of openness we are ensuring we have a real commons of information, a real commons of knowledge with all of the benefits of reuse that implies.
+
+It's particularly important because there has been a fair amount of debate and I think after that debate, it's quite muddy. To take the most obvious example, take a look at Creative Commons. Often people chat and say, my stuff is Creative Commons. But that doesn't mean a lot in the sense that are several Creative Commons licenses, some of which are mutually incompatible and some of which, the non-commercial ones especially, are definitely not open in the sense 'open' in open software
+
+So one big thing we have done is developed a standard the Open Knowledge Definition. This takes the principles from free/open software and applies them to information, data, knowledge, etc. This is important because we don't currently have a clear sense of what openness means in these areas. And, more importantly, we're advocating for a standard that will allow people to communicate and share. Our hope is that we can plug open material together with other open material, knowing that the different sources of material all share the same freedoms. Currently, it can be quite costly to put together lots of different material because we need to sort through the different licenses protecting everything.
+
+Another thing we did, which is more a tool or piece of infrastructure, is the Comprehensive Knowledge Archive Network which I think you mentioned earlier. It's one step, but we think an important one on the road to packaging knowledge and making it truly reusable. What do I mean by packaging here and why is it important?
+
+Well, one day soon we're going to have a lots of material that is open and what's really exciting about open stuff is that it can easily be shared and recombined. That means we can break very complicated problems down into small bits, which people can manage. But then, we can put it back together again. So, let's say you were interested in U.S. unemployment, a hot topic, and you're interested in understanding how it changes. Maybe there's a data site out there just on unemployment itself. But maybe there's another one on house repossessions or the housing market, and then, there's another one on manufacturing. There are a whole bunch of different data sites.
+
+Now, maybe one person could just maintain them all but that might become too big a job. You may need expertise in the housing market to maintain the housing data site, but you really want to bring these together often when you want to do analysis, or compute things, or make pretty pictures, or whatever it is you want to do. This is very similar to building a large building, let's say, or developing an operating system plus all the applications to use. Maybe one person could build them all and make sure they all work together but that would be quite a big task. Even the world's greatest monopolist struggles to do this effectively.
+
+So, the typical way we go about doing this is by exploiting divide and conquer. But when you divide stuff up, there was this question about how you bring it back together. So then, we say we're moving toward a world where you can start getting lots of these data sets and then start putting them out there in the world. They can just start taking this unemployment data or this housing data. But, how do you find that and how do you get a hold of it? So often in software, there's been this tradition of building some kind of registry where you can find things, and then you start to impose some structure on that material, you start packaging. So rather than just saying: here's my website, here's my Wiki, look, there's lots of data on it, you are going to start packaging that data in a slightly more structured form.
+
+The point of CKAN is to start saying, look, there's a better way than just having our stuff in wikis or in some random form on a website. We can start registering this material, and packaging it up a bit. That way other people, when they want them, can come and get hold of them easily and wheel of reuse can start to turn. 
+
+
+'''Could you make three suggestions for what people can do to improve things?'''
+
+First: if you're getting data together or material together, please license it and please license it in an open manner wherever you can. Of course, there are some situations where maybe you can't. Maybe you've got to sell it or there's some licensing deal the people who gave you the data or whatever. But wherever you can, license it and license it openly.
+
+Second: give out raw material. Give out raw data. Don't be scared about doing that and don't worry, don't start getting too worried about the tech stuff of do we need an RDF, do we need it in Open Office versus Word, or all this stuff? Just give it out in the simplest way possible for you to start with. (Maybe it will turn out to be useless to people, in which case, it's good that you spent no effort doing stuff and if it does turn out to be useful and lots of people want it that will be the motivation to put it in some more useful format, or even better, someone else will do that for you for free).
+
+Third: please come along to CKAN. Anyone can come along to CKAN and register a source of data, you don't even need to sign up. You can say, I know about this set of material X and here is it's URL and here're some tags. Anyone can come and do that. And even better, if you want to get more involved, come and be a maintainer and turn some data into a really usable package for other people."
+(http://www.netsquared.org/blog/jedsundwall/interview-rufus-pollock-open-knowledge-foundation)
+
+
+
+=More Information=
+
+* e-mail=mailman@lists.okfn.org
+
+=Location=
+
+|City=International
+|Country=United Kingdom
+|Location=52.2340352, 0.15353719999996
+
+URL = http://www.openknowledgefoundation.org/
+
+
+=More Information=
+
+Interview: [[Rufus Pollock on Open Knowledge]]
+
+[[Category:Movements]]
+
+[[Category:Policy]]
+
+[[Category:IP]]
+
+[[Category:Open]]

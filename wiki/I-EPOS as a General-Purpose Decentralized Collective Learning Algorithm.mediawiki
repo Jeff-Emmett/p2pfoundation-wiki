@@ -1,0 +1,39 @@
+'''= Iterative Economic Planning and Optimized Selections'''
+
+URL = https://epos-net.org/i-epos/
+
+=Description=
+
+I-EPOS, is "designed for highly-participatory and decentralized networks in which agents preserve privacy, autonomy, self-determination and control"
+
+* Self-adaptive Learning for Decentralized Combinatorial Optimization
+
+"By iterating the bottom-up and top-down exchange of messages, agents can learn to monotonously improve the performance by finding more effective solutions. This algorithmic version of EPOS is the I-EPOS, the Iterative Economic Planning and Optimized Selections."
+
+(https://epos-net.org/i-epos/)
+
+
+=Discussion=
+
+Pedro HJ Nardelli, Pedro E Gória Silva, et al. :
+
+"The I-EPOS algorithm and how it is capable of allocate resources in the previously described vision of the communist mode of production, capable of enabling a polycentric commons-based governance system..
+I-EPOS was proposed by Pournaras et al. (2018) as a general-purpose decentralized collective learning algorithm. In I-EPOS, distributed elements called agents in a network self-determine a set of viable options for themselves, for example, resource consumption and production schedules. Each of these options, or “plans,” has an associated “local” numerical quantification referred to as cost following the literature in the field that represents the agent’s preference for that plan. Moreover, these plans collectively have a system-wide impact that is modeled in terms of a “global cost.” Note that cost here is a mathematical function that might represent money (as monetary expenses or profits), but they can also represent other parameters of interest as well, for example, fairness, environmental impacts, emissions, and deviation from desired states. These latter ones are what interest us most. The I-EPOS algorithm is capable of optimizing the global cost alone, implying full cooperation and thereby selflessness; the local costs alone, implying no coordination and thereby selfishness; or their mixture, implying a tradeoff between selflessness and selfishness.
+
+A rigorous mathematical analysis of I-EPOS can be found in articles by Pournaras et al. (2018); Pournaras (2020); here, we only give a brief non-technical explanation. Consider a network of distributed agents; all the agents have a finite set of feasible plans that represent the resource allocation. For example, consider a network of machines in a modern manufacturing industry that can communicate with each other via an Internet of Things network. These machines have to perform certain processes to manufacture a product, and they can do this independently or by coordinating with each other. For such a machine, a plan could be “2.145: 1.339,2.132,1.534,3.685,1.876,4.81,” where 2.145 represents the local cost, that is, the energy consumed by the machine over a 6-h process schedule (given by the energy consumed per hour, kWh). The machine proposes several such plans, each with different preferences (or costs). Every such machine, or agent, is connected to each other in the network, and all of them have their own plans corresponding to their individual schedules and energy consumption. I-EPOS determines an aggregated response by summing up (element-wise) the selected plans and their costs. Thus, the selected plans of all the agents form a global response vector with an associated global cost. The overall objective is to cooperatively select plans that minimize the global cost. Note that this kind of cooperation is particularly useful when the agents’ choices depend on each other. Moreover, in I-EPOS, agents’ and system’s preferences, that is, local and global costs, can be balanced.
+
+I-EPOS has been shown to work well in scenarios involving collective sharing and usage of resources. For example, consider the case of bike sharing that was studied by Pournaras (2020). Here, users visit a nearby bike station to pick up a bike and then deposit the bike in a station close to their destination. For bike sharing scheme to work well, it should always be possible for the users to pick up a bike in a station and return to another, without the station exceeding the capacity of parked bikes, or having stations without bikes when users need them. By using I-EPOS, Pournaras (2020) showed that I-EPOS can reduce the number of manual bike relocations that are materially needed to avoid the problems mentioned above. In addition, the I-EPOS collective learning algorithm has been shown to obtain near-optimal solutions to other scheduling and resource allocation problems such as load balancing in energy demand-response as in the work by Pournaras et al. (2018), uncertainty-based grid planning and operations by Mashlakov et al. (2021), and tasks involving drone swarms by Qin et al. (2022)."
+
+(https://journals.sagepub.com/doi/epub/10.1177/10245294231213141)
+
+
+=More information=
+
+* Article: Evangelos Pournaras, Peter Pilgerstorfer, and Thomas Asikis. [[Decentralized Collective Learning for Self-Managed Sharing Economies]]. ACM Trans. Auton. Adapt. Syst. 13, 2, Article 10 (November2018), 33 pages. [https://doi.org/10.1145/3277668 doi]
+
+URL = https://dl.acm.org/doi/pdf/10.1145/3277668
+
+"Experimental evaluation with real-world data from energy and bikesharing pilots demonstrates the grand potential of collective learning to design ethically and socially responsible participatory sharing economies."
+
+[[Category:Mutual_Coordination]]
+[[Category:Protocols_and_Algorithms]]

@@ -1,0 +1,88 @@
+'''=  a platform on which users may quickly and easily craft, prototype, test, and deploy consensus driven applications. At its core Eris is driven by a desire to explore how organisations go about collectively taking decisions'''.
+
+URL = https://eris.projectdouglas.org/
+
+a blockchain-based decision platform
+
+
+=Definition=
+
+"Eris is a platform which allows developers and users to deploy consensus driven applications which rely on decentralized architecture and a consensus driven blockchain database backend. Eris is meant to be an adaptable software package which is designed to be modular, easily copied, and easily modified – and therefore used in many different applications ...  Eris is a completely serverless product built on a backbone of other products which have designed and built over the course of the last five months. It is our intention that Decentralised Autonomous Organisations, ÐAOs, implemented using the Eris framework will serve as technology demonstrators for a new kind of decentralised and consensus-based organisational governance, on a fully transparent and trustless basis."
+(http://hplusmagazine.com/2014/06/17/eris-the-dawn-of-distributed-autonomous-organizations-and-the-future-of-governance/)
+
+=Description=
+
+"The genesis of the Eris platform was a question: is it possible to make web applications which have all the benefits of interconnectedness which we gain with modern web applications, but without servers? Could such a thing even be done? This answer is that it can be done. Eris is one platform which allows developers to build applications in such a way.
+
+While web technologies have greatly sped up innovation in many areas, the movement of users away from isolated computers using standalone pieces of software toward web applications has raised concerns in some corners as to users' data privacy and resilience of the data silos on which modernity increasingly relies. These concerns are among the design imperatives underpinning the world view which the Project Douglas team collectively has and which led us to build the Eris platform.
+
+
+'''The Idea Behind Our Platform'''
+
+Eris was originally built because we wanted to build an application as a standalone experiment in distributed collective decision-making, but we quickly realized that we needed to first build out the platform on which to build that application. Therefore, Eris, like Janus, serves two purposes.
+
+First, it is the basis on which we intend to provide organisations with the ability to easily deploy consensus governance mechanisms for their organization and management -- which is why we have been thinking of Eris in terms of being a single application which uses a platform.
+
+Second, it is the basis on which we intend to build other distributed applications, such as social networks and integrated messaging services -- which is why we have been thinking of it in terms of a platform which can evolve along numerous convergent or divergent development paths.
+
+As time goes on and as application development matures, we intend for there to be some level of separation between the tools and the application. However, at this particular moment that line is thin because we are only at the very beginning of discovering what decentralised web applications can do.
+
+Eris is a completely serverless product built on a backbone of other products which we (and others) have designed and built over the course of the last five months. It is our intention that applications implemented using the Eris framework will serve as technology demonstrators for a new kind of decentralised and consensus-driven organisational governance, on a fully transparent basis. Our primary goal is not only to design demonstrators which are interesting to discuss at cocktail parties but have no ability to be used in the real world by real users. Instead, one of our overarching design goals is to design and build ÐAOs, DAPPs, DOs, and DACs in such a way that they are capable of abiding in full compliance with legal and regulatory obligations and thereby can have actual impacts outside of simple technology demonstrations.
+
+We set out below the types of functions we have incorporated in Eris version 0.1. Eris has been built from the outset as a platform that maintains the capability of being coupled with a real-world legal entity, with the hope that real world organisations can benefit from the significant efficiencies which distributed technologies enable while also complying with the legal formalities and necessities of the jurisdictions in which they operate and any related enforcement mechanisms such as court orders."
+
+=Discussion=
+
+==Why Would I Want To Use Eris?==
+
+The answer to this question depends on the ultimate intention of the questioner.
+
+If you are an organization seeking to deploy an Eris application to assist with collective decision making there are numerous benefits to using a distributed system such as Eris. For one, it is efficient because the costs of using the application are distributed among the users of the system rather than centralised within the organisation. This reduces overhead for an organization which must usually seek to host such a platform. User and community management is greatly reduced when individual users are responsible for their own accounts and their own data. In addition, the secure and distributed nature of how the Eris system is designed will give organizations the ability to have certainty in how their users are utilizing the platform.
+
+If you are an application developer then there are numerous benefits to building distributed, as opposed to server-first and centralised, web applications. First, it is cheaper for application developers because the users will provide the content distribution network and bandwidth required to distribute the content. In addition, because Eris is built to run on on a user's computer (or on a self-owned cloud droplet) there are limited server costs. Servers, which provide a central point of failure provide difficulties not only for application developers which must harden against DDos attacks and innumerable other attack vectors, but also because users are increasingly skeptical of centralized data silos which retain innumerable pieces of information regarding the state of their affairs. Lastly, there are drastically reduced security costs for application developers because the security of the overall network is distributed among the users of the network rather than isolated with a particular application developer.
+
+
+==Interesting. How Does It Work?==
+
+We have taken a look at how modern web applications are designed and built. Traditionally these have utilized a MVC architecture (model-view-controller) where a database and language-specific wrapper for that database are used to provide the model components, a different set of language specific modules are used as the controller components, and then finally html, css, and javascript provide the view components. This separation of functionality, for those who do not code, is what underpins most modern software applications. 
+
+Eris, on the other hand, operates using two primary components to provide the functionality which is traditionally found in the model and controller components of modern applications. One of these components operates on a blockchain. The other major component operates as a client which individual users run on their computers or on a personal cloud droplet.
+
+Eris's blockchain component is comprised of two major pieces. The first is a series of databases; these databases provide a portion of the traditional model functionality. The second piece of the blockchain component is a set of actors; these actors provide a portion of the traditional controller functionality. The blockchain, an integrated, consensus-optimized, and distributed database, provides some of the connective tissue on which Eris applications rely. In order to build applications which connect individuals, it is necessary that the users of the application all access a database which has a common and shared state. Otherwise, there is no way in which users of an application will be able to connect with one another and be looking at the same set of data. At the current time, blockchains provide one of the more robust distributed options on which to build applications which rely on a shared state.
+
+Eris's offchain (or, client) component is also comprised of two major pieces. The first piece is a cache of peer-to-peer distributed file blobs; these file blobs act as stores of individual pieces of information and as such provide a portion of the traditional model functionality. The second piece of the offchain component is a set of actors.
+
+The difficulty which distributed application developers must overcome is that blockchain technology can be expensive for users. The Eris platform seeks to overcome this by hosting most of the information required to operate a distributed application outside of the blockchain while storing the relationships between those pieces of information in the blockchain. This provides some separation between the information itself and the relationship of that information to other pieces of information. It also does not matter, for example, if the information is large or small -- the cost to the blockchain network is the exact same because all the blockchain databases ever hold are pointers to the file blobs.
+
+The view component is no different than any other view component of a modern web application. Indeed, Eris has been purposefully built to rely upon the wonderful advances in html, css, and javascript technology on which modern web applications rely. Included within the core Eris platform is boilerplate user interface which application developers can use as a starting point for building their own required functionality and design into their own application. As you will see in the screenshot below, the Eris platform is ugly out of the box. This is on purpose, so as to provide an incentive for organisations to make Eris their own by adding their own styles and other requirements to their own Eris deployment.
+
+Out of the box, Eris provides the following functionality for users:
+
+* forums for the discussion of issues;
+
+* voting on issues internal to the organization;
+
+* voting on issues which the organization must communicate outside of its own network (e.g., user communication to the parent, real-world association on issues of significant importance or policy positions);
+
+* moderation of content so as to provide security and assurances to the users of the platform that they are not hosting illegal or infringing content; and
+
+* a method of easily moving between different communities within the overall network.
+
+Each of these functions is provided via a series of modules which rely upon a core set of databases. As such, developers who utilize the Eris platform and customize it to their particular needs will be able to rely upon the core modules (or not) and simply work to modify and extend the core Eris functionality to suit their needs."
+
+
+=More Information=
+
+* video: https://www.youtube.com/watch?v=MIVjAo4vres
+
+* https://www.youtube.com/watch?v=JraYNmE8Ap0
+
+* [[Project Douglas]]
+
+[[Category:Crypto_Governance]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:Democracy]]
+[[Category:Peergovernance]]
+[[Category:P2P_Infrastructure]]
+[[Category:Facilitation]]

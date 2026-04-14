@@ -1,0 +1,84 @@
+
+
+=Context=
+
+"Combining services and data from multiple sources raises several issues related to intellectual rights in mashups. However, the concept of mashups is currently in a nascent stage, and service and data providers often underestimate the relevance of these issues. In this paper we give an overview of open API licensing and provide examples from current open APIs. We then briefly discuss licensing of open APIs."
+
+
+=Objectives= 
+
+"The objectives of an open API license are similar to the objectives of a software license. These objectives can be summarized as follows:
+
+1. To define the extent to which the API can be used without constituting an infringement.
+   
+2. To have a remedy against the con- sumer for complaints which do not constitute an infringement of copy- rights.
+   
+3. To limit the liability of API providers in case of failure of the API."
+
+
+=Characteristics=
+
+The original article by G.R. Gangadharan, comes with examples [http://www.osbr.ca/ojs/index.php/osbr/article/view/861/831]:
+
+
+'''Anatomy of an Open API License''': "In this section we describe the anatomy of an open API license. We do not claim that the given anatomy is complete as it is almost impossible to generalize all the terms of a license. Furthermore, this article is not intended as a substitute for legal advice and we highly recommend service providers and service consumers to obtain appropriate legal counsel to make use of licenses for their open APIs.
+
+   
+1. '''Subject''': the subject of the license relates to the definition of the open API being licensed. It defines some related information about the open API and may include a unique identification code for the API, name, and other relevant information.
+
+   
+2. '''Scope''' of Rights: the following rights in an open API allowing extraction and re-utilization of the whole or a substantial part of services and data:
+
+* usage: indicates a set of methods in which the service and data can be consumed
+          
+* reuse: indicates a set of operations in which the service and data, or portions of it, can be re-utilised
+          
+* transfer: indicates a set of procedures in which the rights over the service and data can be used
+
+      
+The scope of rights of an open API license reflect what can be done with the open API. 
+
+   
+3. '''Attribution''': copyright law refers to attribution as the requirement to acknowledge or credit the author of a work which is used or appears in another work. Attribution signifies a decent sign of respect to acknowledge the creator.
+
+      
+4. '''Non-Commercial use''': commercial uses and non-commercial uses are differentiated.
+
+   
+5. '''Information Rights''': the rights over the data created or modified by an open API based on the input from consumers is owned by the consumers. However, API providers can transfer such information to third parties.
+
+      
+6. '''Financial Terms''': often, open APIs are charged on a pay-per-use or transaction base. This transaction-based model allows API providers to charge for each use, as the license defines the term "use." The use of the API can be continuously recorded and monitored by service management systems. This model of pricing is quite similar to charging for utilities like electricity and water.
+
+Subscription is an alternative financial model that allows consumers to purchase the open API based services for a fixed term, during which time they automatically receive full support from service providers including any upgrades or feature enhancements.
+
+      
+7. '''Warranty''': in general, an open API is licensed by the licensor "as is" and without any warranty of any kind, either express or implied, whether of title, of accuracy, of the presence or absence of errors, of fitness for purpose, or otherwise.
+
+      
+8. '''Limitation of Liability:''' limitation of liability clauses limit the liability of the licensor and the licensee under the license agreement. Under this clause, both parties disclaim liability for unforeseeable damages, such as network errors or hosting server problems, or indirect damages. Limitation of liability clauses often include a ceiling for monetary liability."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/861/831)
+
+
+=Discussion=
+
+G.R. Gangadharan:
+
+"Licenses for open APIs reflect the differences between traditional software and web services as they govern the execution, reuse and composition of services and data exposed by third-party systems. It is common for API providers to offer some of their APIs for free and others for pay. A provider can even use separate terms for the same API by offering different licenses for high-end and low-end versions of the service provided by the API. The common ways for a provider to impose constraints on the execution of a service include limiting requests, results, and quality.
+
+In the future, we believe that more open APIs will begin to be licensed using open source licenses. While the source code of the interface of an open API is always available, open sourcing an open API makes the source code of the API implementation available in addition to the source of its interface. In this case, users would be able to modify an API, or derive new APIs from an open API. However, in order to avoid license forking, providers would like to prevent the new open API from being licensed differently from the parent API. In this way, the value added by the changes can be returned to the community of users of the parent API. At present, very few open APIs fit the description of being open sourced. One example is WikiDot, a wiki service with an open API that is licensed under the GNU Affero General Public License. We expect more open APIs to be available under an open source license in the near future."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/861/831)
+
+=Source=
+
+Licensing of Open APIs, G.R. Gangadharan, http://www.osbr.ca/ojs/index.php/osbr/article/view/861/831
+
+
+=More Information=
+
+# Analyzing Software Licenses in Open Architecture Software Systems, http://www.ics.uci.edu/~wscacchi/Papers/New/ICSE2009-FLOSS-Workshop.pdf
+
+
+[[Category:Standards]]
+
+[[Category:IP]]

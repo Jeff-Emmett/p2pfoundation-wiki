@@ -1,0 +1,76 @@
+
+=Discussion=
+
+Saffron Huang and Divya Siddarth:
+
+===Proposal I: Consortia for monitoring, auditing, and standards-setting.===
+
+Solutions to commons-based problems that rely on the action of individual stakeholders are historically unlikely to work. However, consortia-based solutions, in which stakeholders come together and form collective institutions to provide or fund shared goods necessary to maintain the commons, have been robustly helpful in many domains.
+
+Examples of this include standards-setting bodies, peer review protocols and trade associations. Furthermore, given that GFMs are an early technology, establishing a GFM-governing consortium that develops strategies and agrees on new policies, will help establish best practices for responding to emerging risks or opportunities of future ML development (much like the W3C, which was established early in the Internet’s lifetime). This may look like the Coalition for Content Provenance and Authenticity (C2PA), which focuses on content provenance and authenticity certification standards for media.
+
+The consortium could connect the ecosystem in productive ways, e.g. connecting companies that train and release open-source GFMs with companies that deploy application-specific uses of GFMs. They could also be specific to different parts of the GFM ‘pipeline’ e.g. a consortium that focuses on issues specific to GFM application-deploying companies, rather than issues pertaining to  companies that train them.
+
+A working solution, however, must also avoid standards-capture by incumbents. Among other requirements, this means that those in charge of setting the standards or policies should not all be from GFM companies, and should be broadly representative of different interests.
+
+There are two sides to this proposal:
+
+1) Resourcing:
+
+Voluntary memberships and subscriptions. Much like private organizations contribute to standards-setting for the internet, GFM companies may contribute time and money to collective governance structures due to useful outcomes and good public perception. This is the model pursued by organizations such as the Linguistic Data Consortium and the Partnership on AI.
+
+Regulation and taxation. If the above does not hold, we might want to explore public money, grants or even data-dividend based models for funding such a body. A public funding model is pursued by organizations such as the National Consortium of Intelligent Medical Imaging in the UK. 
+
+2) Organizational duties:
+
+Monitoring. We cannot know what we don’t track, and understanding the risks and opportunities of GFMs will require monitoring and analysis, e.g. setting up data science pipelines to monitor whether they are causing the spreading of misinformation. Researchers have pointed out that we cannot understand systematic harms related to how social media affects society without better monitoring structures in place to collect high-quality data about its effects — the situation is arguably worse in generative AI, which is very new, and where research on information ecosystem impacts is nonexistent. We suggest efforts at identifying and potentially sponsoring such research. 
+
+Auditing: Consortium-based organizations are a natural choice for third-party AI audits, which have been called for by civil society groups, researchers, and even private entities. They are also a possible avenue for setting norms and standards around internal or voluntary audits.
+
+These audits can implement and modify existing proposed frameworks for audits such as SMACTR (for internal auditing), creating audit trails (including documenting specific design and data choices, as well as tests), and documenting organizational processes and accountability structures.
+
+Audits can look for problematic behaviours of discrimination, distortion, exploitation and (likely less applicable to generative rather than classification algorithms) misjudgement, as well as create robust and transparent suites of metrics and establish compelling baselines for behaviour (as noted by Bandy 2021).
+
+Given that a model can be trained/fine-tuned and deployed by different entities, audits can happen at the level of the model or the application (which may involve different organizations).
+
+Note: Auditing could be a separate proposal on its own outside of the consortia context, as it is possible for governments, for-profit and non-profit auditors, or some international organisation to audit. However, a key limitation of AI auditing in general is the lack of an industry ecosystem for doing so, so bundling this under the responsibilities of a more general consortium in order to create a needed home and mandate for auditing, may make sense.
+
+Standards for auditing and transparency: Proposals around algorithmic audits (both processes and metrics), data cards, and model cards for AI in general are gaining traction. However, release and use are not standardized, and datasets on which widely used models are trained are still poorly understood. Without this understanding, both impacts and contributions to the commons cannot be appropriately tabulated. Standards-setting bodies, either for AI at large or GFMs in particular,  can determine appropriate venues and forms of information release and enable industry-wide transparency and accountability.
+
+Developing shared tools. Tools to filter for high-quality data and/or to detect AI-created data will be needed to combat the problems of digital commons pollution. It is not clear if access to such tools will be equitable as they are likely to be developed by the best-resourced companies. For more equitable and widespread development of and access to these tools, consortia-based development of them may be helpful, similar to the approach of the C2PA.
+
+
+===Proposal II: Norms or rules for GFM companies to contribute high quality data to the commons.===
+
+GFM companies could create, as a norm or a rule, gold standard datasets usable by other entities. These datasets could be the datasets they train models on, or datasets related to how models are deployed or used by other parties. Numerous companies creating GFMs do not disclose their datasets or their dataset-cleaning methods, making it difficult to understand the properties of the resulting models or for others to replicate work. In general, information release related to GFMs and how they are deployed is greatly lacking.
+
+Companies could be encouraged to admit data on deployment to a privacy-preserving but accessible repository through a body like NIST, whenever they release a model for use. This would let researchers look at data for different deployments over time, and determine e.g. labour impacts of GFM deployment. They could also be encouraged to admit high quality datasets they use to improve the model, e.g. one with high quality labels of harmful GFM use cases, which will enable other companies to more easily adhere to standards of safe model deployment. Companies would need to follow specified scientific data collection procedures and be transparent about how they sample and process data. There would need to be external scrutiny to ensure the validity of collected data.
+
+Overall, this would decrease “moats” and increase competition, increase transparency and researcher access to understanding what data deployed models are trained on, ensure safer deployment, and also generate useful metadata for tracking labor impacts and economic effects of models.
+
+
+===Proposal III: Governance structures based on input data to model training.===
+
+High quality data is a key bottleneck for training AI, now and in the future, so data governance is a key lever for governing generative models. Data cleaning and processing is critical to training a performant GFM. Another method to ensure high quality data is to focus on actively generating human feedback data to improve models, such as reinforcement learning with human feedback (see here and here). We propose that this could be done in return for ownership stake or governance rights. 
+
+Multiple models are possible:
+
+Human feedback is provided by users to improve the model, in return for stake. (Sam Altman has expressed interest in giving “credits” to those who are giving feedback on utterances and thereby improving ChatGPT; other forms of feedback or stake could be explored here and in other contexts, e.g. direct feedback on content filters beyond feedback on specific utterances, some form of “shares” in the model beyond credits for using the model.)
+
+Individuals or groups with specific expertise could contribute fine-tuning data. Better data provenance, in this way, could enable easier tracking of truth and citations, and thereby combat model hallucinations. 
+
+Organizations with highly private data that is necessary for valuable applications (ex. financial fraud detection and medical diagnosis) could act as fiduciary data intermediaries for inputting that data into models via privacy-aware training approaches. Benefits could be distributed to organizations (to support fiduciary capacity) or back to communities. 
+
+The details of this require further research and comments are welcome.
+
+For GFM applications that require specific data from a clearly-defined constituency (e.g. training or fine-tuning an image generation model on specific artists’ work), non-profit organizations that act as data trusts can be set up to help data-owners interface with companies that train models.
+
+Groups that have specific use cases for GFMs may also come together to collectively create and govern GFMs together themselves, thus governing both data and model. For example, a specific group of artists may come together to jointly train and decide governance of an image model that they are able to monetize themselves.
+
+Early individual case studies of the above structures may provide excellent input to policymaking around feasible data and model governance structures for the broader public."
+
+(https://cip.org/research/generative-ai-digital-commons)
+
+[[Category:Data Commons]]
+[[Category:Policy]]
+[[Category:Commons Policy]]

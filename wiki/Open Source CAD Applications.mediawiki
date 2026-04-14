@@ -1,0 +1,76 @@
+=Examples=
+
+
+== QCAD / FreeDraft ==
+
+"Two open source 2D
+CAD packages already under development, QCAD (http://www.qcad.org) and FreeDraft
+(http://freeengineer.org/Freedraft/index.html). Unfortunately, Open Source solid modeling
+software does not exist at this time, but there may be light at the end of the tunnel.
+OpenCascade (http://www.opencascade.org) is a project to develop a solid modeling kernel.
+An open source solid modeling kernel might establish a standard file format that can be
+exchanged in collaborative open design projects. Until a standard file format or Open Source
+solid modeling exists, open design must depend on translation tools using prescribed
+processes [Kiani] and proprietary CAD systems."
+(http://www.opendesign.org/CHIRP_Open_Design_Mfg_Equipment.pdf)
+
+
+
+==HeeksCAD==
+
+"HeeksCAD is not finished, yet.
+
+HeeksCAD is a free, open source, CAD application written by me, Dan Heeks, danheeks@gmail.com Anyone can download it from http://code.google.com/p/heekscad/
+
+Functionality: Import solid models from STEP and IGES files. Draw construction geometry and lines and arcs. Create new primitive solids, or make solids by extruding a sketch or by making a lofted solid between sketches. Modify solids using blending, or boolean operations. Save IGES, STEP and STL. Printer plot the 2D geometry or to HPGL. Import and export dxf files; lines, arcs, ellipses, splines and polylines are supported. Use the geometric constraints solver to create accurate drawings from rough sketches.
+
+See here for instruction how to use HeeksCAD http://code.google.com/p/heekscad/wiki/UsingHeeksCAD
+
+HeeksCAD can be translated into any language. There are currently English, German, and Itallian translations.
+
+HeeksCAD has been built for Windows, Ubuntu, Debian, and OpenSUSE."
+(http://code.google.com/p/heekscad/)
+
+
+==OpenSCAD==
+
+"OpenSCAD is a software for creating solid 3D CAD objects. It is free software and available for Linux/UNIX, MS Windows and Apples OS X.
+
+Unlike most free software for creating 3D models (such as the famous application Blender) it does not focus on the artistic aspects of 3D modelling but instead on the CAD aspects. Thus it might be the application you are looking for when you are planning to create 3D models of machine parts but pretty sure is not what you are looking for when you are more interested in creating computer-animated movies.
+
+OpenSCAD is not an interactive modeller. Instead it is something like a 3D-compiler that reads in a script file that describes the object and renders the 3D model from this script file (see examples below). This gives you (the designer) full control over the modelling process and enables you to easily change any step in the modelling process or make designes that are defined by configurable parameters.
+
+OpenSCAD provides two main modelling techniques: First there is constructive solid geometry (aka CSG) and second there is extrusion of 2D outlines. As data exchange format format for this 2D outlines Autocad DXF files are used. In addition to 2D paths for extrusion it is also possible to read design parametes from DXF files. Besides DXF files OpenSCAD can read and create 3D models in the STL and OFF file formats."
+(http://openscad.org/)
+
+
+
+
+
+==Other Tools==
+
+#For solid modeling: Open CASCADE. http://www.opencascade.org 
+#Graphical user interface, wxWidgets. http://www.wxwidgets.org
+#pythonOCC is a 3D CAD/PLM development library for the Python programming language, http://pythonocc.org/
+
+=See Also=
+
+Other tools for office documents and analyses are readily available and mature. These tools
+include complete suites of office applications (e.g. word processing, spreadsheets,
+presentations) such as OpenOffice, and numerical programming tools such as SciLab
+(http://www-rocq.inria.fr/scilab/) and Octave (http://www.octave.org/). Although these
+applications were not developed specifically for design purposes, they suit designers needs.
+These applications are Open Source, so the opportunity exists to adapt them to the specific
+needs of the Open Design community."
+(http://www.opendesign.org/CHIRP_Open_Design_Mfg_Equipment.pdf)
+
+* [[FreeCAD]], a directory of free CAD, CAM and CAE programs.
+
+* Elifarley suggests: This is freeware, not open source, but may be worth mentioning: [http://www.artifice.com/free/dw_lite.html DesignWorkshop Lite]
+
+
+[[Category:Open]]
+
+[[Category:Design]]
+[[Category:Software]]
+[[Category:Manufacturing]]

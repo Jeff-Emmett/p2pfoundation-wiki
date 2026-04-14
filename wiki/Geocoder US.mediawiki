@@ -1,0 +1,32 @@
+
+
+'''= Geocoding is the process of estimating a latitude and longitude for a given location. Geocoder.us is a public service providing free geocoding of addresses and intersections in the United States.'''
+
+
+URL = http://geocoder.us/
+
+
+=Description=
+
+
+'''What is geocoder.us?'''
+
+Geocoding is the process of estimating a latitude and longitude for a given location. Geocoder.us is a public service providing free geocoding of addresses and intersections in the United States. The geocoding service relies on Geo::Coder::US, a Perl module available for download from the CPAN.
+
+
+'''How does it work?'''
+
+The US Census Bureau provides location data for nearly every street and highway in the US in the form of the TIGER/Line data set, which runs to over 24 gigabytes uncompressed. Geo::Coder::US condenses the 2004 TIGER/Line data set down to a 750 megabyte BerkeleyDB database. A given address or intersection is parsed into its components, and the matching address range is searched for in the database. The address is then interpolated between the endpoints of the matching address range to estimate its latitude and longitude. For urban addresses, the coordinates given by Geo::Coder::US can be within 10 or 15 meters of the actual location -- which is well within the range of typical GPS accuracy! Other times the coordinates can be off, so use your own judgement when using the data! 
+
+
+'''Is it really free?'''
+
+You bet it is! Commercial US geocoding services can charge up to $1 per lookup, but the TIGER/Line data on which their geocoders (and ours) are based is in the public domain. The Geo::Coder::US suite is made available free for download under either the GPL v2 or the Perl Artistic License. All data from the free services on the geocoder.us website are provided under a NonCommercial-ShareAlike license, which means you can use anything you get from us for any non-commercial purpose, so long as you give us proper credit and extend the same courtesy to others. 
+
+This material is Open Knowledge "A piece of knowledge is open if you are free to use, reuse, and redistribute it". For details read the latest version of the  full definition . (sort of like the Make motto 'if you can't open it, you don't own it.') You are free to use the Geocoder.US code and the data is free from the US government (if you want to use our servers for commercial purposes please sign up for a commercial account :-)
+(http://geocoder.us/)
+
+
+[[Category:Resources]]
+
+[[Category:Geography]]

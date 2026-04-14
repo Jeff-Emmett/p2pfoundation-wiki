@@ -1,0 +1,79 @@
+
+A summary of the main steps,by Smari McCarthy at the Open Manufacturing mailing list, at http://groups.google.com/group/openmanufacturing/browse_thread/thread/7ba44a27f7fcd1d5
+
+Informal, but still useful.
+
+
+=Text=
+
+ 
+'''1. Develop the product concept, plan for target groups, etc.'''
+        
+'''2. Build a prototype.'''
+                
+2a. Plastics could be done by manually milling the casing or creating a cast mold from urethane or wax.
+                
+2b. Electronics can be designed in a program like Eagle
+and either made by hand (for small quantities) or
+purchased from a third party; various companies do
+cheap circuit board fabbing.
+                        
+- 2b1. If your design includes new microchip
+designs, you're going to have a harder time
+prototyping, but I'd suggest writing the
+VLSI and then working with a FPGA for the
+first round. Remember that microchips are
+products in their own right!
+                
+2c. Metal parts required can be machined easily enough,
+just avoid awkward sizes and shapes. If you don't
+know milling/lathing yourself, buy the work from a
+third party. Companies with CNC mills and lathes
+will often output from good CAD files for very
+little money if the design seems interesting to
+them. (These companies are run by enthusiasts who
+suffer horrifying tedium; surprise them)
+                
+2d. Getting the initial prototype 3D printed to some
+extent is not a bad move but beware that it can be
+costly if the object is big. Z-Corp 3D printers are
+everywhere nowadays and give a nice finish, but also keep
+your eye open for SLS's, SLA's, FDM's and other
+acronymic digital fabrication technologies.
+                
+2e. If the assembly of the prototype from the parts
+gathered doesn't work, it's because you didn't do
+the CAD work and the homework well enough.
+        
+
+'''3. Figure out who's going to bankroll the mass-production.'''
+                
+3a. This is where the market analysis stuff comes in
+handy.
+                
+3b. If it's going to be you, try and make sure you
+will be able handle the product flopping.
+        
+
+'''4. Find a fab that's capable of mass producing to your demands.'''
+                
+4a. Many smaller ventures hand-craft each item, but this
+raises price and slices profits.
+                
+4b. Bear in mind that unit cost tends to drop as unit
+number goes up, in part due to externalization of
+the true costs of production (read: larger companies
+use slave labor more liberally)
+        
+'''5. Profit.'''
+
+
+==Adaptations for the Open Path==
+
+  
+The open path, being advocated here, is much the same, except:
+
+#Exchange step 1 for building a website.
+#Exchange step 3 for learning how to do things yourself.
+#Exchange step 4 for uploading the design to the website for free download and stick an ad there offering the object pre-fabricated with a personalized design.
+#Exchange step 5 with the knowledge that you have helped humanity

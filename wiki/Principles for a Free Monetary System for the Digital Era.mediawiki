@@ -1,0 +1,73 @@
+Title: '''Principles for a free, powerful and stable monetary system for the digital era'''
+
+URL = http://spoirier.lautre.net/money.htm
+
+Author: trustforum at gmail dot com
+
+Theoretical work to refine mathematically the concept behind the [[Ripple]] project, and to present an easier implementation method (largely simplifying the problems of material networking and of database decentralisation, showing the conceptual premises of a fast operational algorithm), and to focus on developing a more flexible and complete set of useful operations from an economical viewpoint.
+
+This work is a part of the more general [[infoliberalism]] theory.
+
+=Description=
+
+
+Here is the introduction by the author:
+
+''The object of this article is to express what features, in the author's view, an ideal money system should have to optimize its stability and usefulness for its users and the society. Thus, it would make it the most competitive currency in an economy open to a free choice of currencies, assuming people's rationality. In a way, this competitiveness can be understood as coming from the fact such a system would be in itself a kind of supermarket of currencies.
+
+''The condition for making the best money system, essentially consists of making a good new mathematical theory with 2 parts; then implementing this theory into software.
+
+''Indeed, the problem of making a money system is a mathematically complex problem, and it is clear for me that no solution can be really good and sustainable while getting rid of the central banks'control, unless it involves some huge pack of mathematical formalization. I know there also exists in the world some simple technologies that can be simply developed by anyone without important mathematical work. Unfortunately, it happens that the money problem is not in this situation. So I consider that the huge movement of LETS and other time money, and even Ripple and David Chaum's work, have no future, as, no matter how many million people would use them, they cannot work because all their claims and interests are missing the very whole point, which is the problem of the right mathematical formalization of money as an economical concept, after which the money software needs to be made for working.
+
+(...)
+
+''I plan to implement this money system as a part of my infoliberalism, so it would be based on the infrastructure of the Trust-forum project. Then, there would be many users per web server, grouped so that many connections will be between users of the same server, so, inside a single database. In this way, payments will generally involve only 2 servers, sometimes 3, and no special protocol between servers would be needed.
+
+''Getting rid of this fuss of making a special protocol for money, we can focus the work on more important problems: make the computation most often immediate after a mathematical reformulation of a slightly modified version of the problem that simplifies the calculations by getting rid of the path searching trouble in most operations (long path searching will not even be needed inside a single database !!), involving a small percentage of "cash"; complete the system with other economic functions to solve conflicts, make different sorts of payments adapted to the needs, handle bankruptcies and provide monetary stability.
+
+''The first part, is the theory of credit. It is developed below in 2 drafts I wrote at different moments. A first draft that expresses some general ideas, and a second draft, more recently written, focuses on what to implement concretely.
+
+''The second part, is a theory of defining the value of money based on term markets, that is necessary to stabilize the system. I did not develop it yet.
+
+==Introduction to the concept by a little story==
+
+With few enough participants, computation needs no computer:
+
+''Luke said: "I make coats. I trust Jacques and Paul, and I would be ready to lend a coat to any of them, I have confidence that they will return the value to me thereafter, possibly in the form of boots".
+
+''Jacques said to Luke: "lend me a coat, I need some and will return you the value later". Luke thus granted a coat to Jacques, and announced it.
+
+''Paul manufactured boots, but needed an electric razor, which Claude was selling.
+
+''Claude said to Luke: "I trust my friend Jacques, and I am ready to advance the value of this object to him. I thus will send a razor to Paul, good reception guaranteed. From now on it is Paul who will owe you boots, for since you trust him you know that he will provide them to you".
+
+''Luke reported to Jacques: "from now on, it is towards Claude that you will have a debt".
+
+''All agreed.
+
+''Later, Paul received a pack from Claude, opened it, but did not have satisfaction: the razor was defective and could not function.
+
+''He sent a complaint to Claude, who did not do anything of it.
+
+''He said to Jacques then: "the pack from Claude was not good. Thus do not return this value to him, give it back rather to Luke, to whom I do not owe anything more under such conditions".
+
+''He also forwarded his complaint to Luke, who supported this request towards Jacques.
+
+''But Jacques refused, not to betray his friend Claude. He answered that Claude had made his sending and is not responsible for bad operations from Paul who broke his razor, and so that he will rather return something to Claude.
+
+''Paul said to Luke: "Luke, you trusted me, you know that I do not lie when I say that the pack arrived defective. Jacques is a dishonest person, he did not want to recognize the defective character of the pack of Claude. It is you who said that Jacques was honest, therefore you take the responsibility for the consequences of his bad judgements. Me I do not know you, I do not owe you anything."
+
+''Luke called Jacques: "you betrayed my trust in you by your irresponsible judgement. Thus you refused to return the value of this coat to me after I lent it to you. By your decision I will not get it back. "
+
+''Jacques repented, and said to Claude: "Paul is right, I will return to Luke his due".
+
+''Claude, seing he would get no profit from this business under such conditions, sent a new pack to Paul, in good condition that one. Paul announced it, and all did everything as they said appropriate for this transaction.
+
+=More Information=
+
+See [[P2P Exchange Infrastructure Projects]]
+
+
+[[Category:Money]]
+
+[[Category:Articles]]

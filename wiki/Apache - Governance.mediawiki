@@ -1,0 +1,349 @@
+
+
+=Description=
+
+
+==Summary==
+
+Jeremy Malcolm:
+
+"The case of the ASF illustrates well that there are also various strata of developers underneath the BDFL. One study has categorised these into core members (or maintainers), active developers, peripheral developers, bug reporters, readers and passive users,[84] and confirmed previous findings that the core developers are generally the smallest group but write the majority of the project's code.[85] Whilst developers in lower strata are mostly self-selected,[86] in many projects, including those of the ASF, the core developers are selected by the BDFL, applying stringent meritocratic standards.[87]
+
+The Apache Software Foundation is a non-profit corporation governed by a board of nine directors who are elected by the Foundation's members for one-year terms, and who in turn appoint a number of officers (63, in 2007) to oversee its day-to-day operations. As of 2007 there are 156 members of the ASF, each of whom was invited to join on the basis of their previous contributions to ASF projects, and whose invitation was extended by a majority vote of the existing members.
+
+Each project overseen by the ASF (such as the HTTP Server Project) is in turn governed by a Project Management Committee (PMC) comprised of a self-selected group of ASF members. Whilst non-members can also contribute to project development, they are required to assign copyright in their contributions to the ASF.[88] PMC chairs are officers of the ASF who have power to define the PMC's rules (if any) and the responsibility to report to the board. The ASF itself claims that it
+
+- represents one of the best examples of an open organization that has found balance between structure and flexibility. We have grown from 200 committers to almost 800, and that number continues to grow on a daily basis. We have been able to create several software products that are leaders in their market. We have also been able to find balance between openness and economical feasibility. This has earned us respect from a range of people, from single individuals to multinational corporations. We hope to continue to provide inspiration for businesses, governments, education, and for other software foundations."
+(from the book [[Multi-Stakeholder Governance and the Internet Governance Forum‎]])
+
+==Principles==
+
+
+From http://www.apache.org/foundation/how-it-works.html
+
+" '''Meritocracy'''
+
+Unlike other software development efforts done under an open source license, the Apache Web Server was not initiated by a single developer (for example, like the Linux Kernel, or the Perl/ Python languages), but started as a diverse group of people that shared common interests and got to know each other by exchanging information, fixes and suggestions.
+
+As the group started to develop their own version of the software, moving away from the NCSA version, more people were attracted and started to help out, first by sending little patches, or suggestions, or replying to email on the mail list, later by more important contributions.
+
+When the group felt that the person had "earned" the merit to be part of the development community, they granted direct access to the code repository, thus increasing the group and increasing the ability of the group to develop the program, and to maintain and develop it more effectively.
+
+We call this basic principle "meritocracy": literally, govern of merit.
+
+What is interesting to note is that the process scaled very well without creating friction, because unlike in other situations where power is a scarce and conservative resource, in the apache group newcomers were seen as volunteers that wanted to help, rather than people that wanted to steal a position.
+
+Being no conservative resource at stake (money, energy, time), the group was happy to have new people coming in and help, they were only filtering the people that they believed committed enough for the task and matched the human attitudes required to work well with others, especially in disagreement.
+
+After explaining the structure of the ASF, we will see how the meritocracy relates to the various roles.
+The Foundation structure
+
+As the Apache Web Server started to grow in market share and popularity, due to synergy of its technical merit and to the openness of the community behind the project, people started to create satellite projects. Influenced by the spirit of the community they were used to, they adopted the same traditions of community management.
+
+So, by the time the ASF was created, there were several separate communities, each focused on a different side of the "web serving" problem, but all united by a common set of goals and a respected set of cultural traditions in both etiquette and process.
+
+These separate communities were referred to as "projects" and while similar, each of them exhibited little differences that made them special.
+
+In order to reduce friction and allow for diversity to emerge, rather than forcing a monoculture from the top, the projects are designated the central decision-making organizations of the Apache world. Each project is delegated authority over development of its software, and is given a great deal of latitude in designing its own technical charter and its own governing rules.
+
+At the same time, the cultural influence of the original Apache group was strong and the similarities between the various communities are evident, as we'll see later.
+
+
+'''Philosophy'''
+
+While there is not an official list, these six principles have been cited as the core beliefs of philosophy behind the foundation, which is normally referred to as "The Apache Way":
+
+* collaborative software development
+    
+* commercial-friendly standard license
+    
+* consistently high quality software
+    
+* respectful, honest, technical-based interaction
+    
+* faithful implementation of standards
+    
+* security as a mandatory feature
+
+All of the ASF projects share these principles.
+Operation
+
+All projects are composed of volunteers and nobody (not even members or officers) are paid directly by the foundation for their job. There are many examples of committers that are paid to work on the projects, but never by the foundation themselves, but rather by companies or institutions that use the software and want to enhance it or maintain it.
+
+
+'''Individuals compose the ASF'''
+
+All of the ASF including the board, the other officers, the committers, and the members, are participating as individuals. That is one strength of the ASF, affiliations do not cloud the personal contributions.
+
+Unless they specifically state otherwise, whatever they post on any mailing list is done *as themselves*. It is the individual point-of-view, wearing their personal hat and not as a mouthpiece for whatever company happens to be signing their paychecks right now, and not even as a director of the ASF.
+
+All of those ASF people implicitly have multiple hats, especially the Board, the other officers, and the PMC chairs. They sometimes need to talk about a matter of policy, so to avoid appearing to be expressing a personal opinion, they will state that they are talking in their special capacity. However, most of the time this is not necessary, personal opinions work well.
+
+Some people declare their hats by using a special footer to their email, others enclose their statements in special quotation marks, others use their apache.org email address when otherwise they would use their personal one. This latter method is not reliable, as many people use their apache.org address all of the time.
+Balancing confidentiality and public discussion
+
+We endeavour to conduct as much discussion in public as possible. This encourages openness, provides a public record, and stimulates the broader community.
+
+However sometimes internal private mail lists are necessary. You must never divulge such information in public without the express permission of the list. Also never copy an email between private and public lists (no Cc). Such an event would go beyond the normal need for email ettiquette and be a serious breach of confidence. It could have serious ramifications, cause unneccessary confusion and ill-informed discussion."
+(http://www.apache.org/foundation/how-it-works.html)
+
+
+==Entities==
+
+More details about those two entities at http://www.apache.org/foundation/how-it-works.html
+
+The foundation is governed by the following entities:
+
+* Board of Directors (board) governs the foundation and is composed of members.
+    
+* Project Management Committees (PMC) govern the projects, and they are composed of committers. (Note that every member is, by definition, also a committer.)"
+
+
+" '''The Foundation Infrastructure'''
+
+The ASF does not have offices or buildings, it's a virtual entity that exists only on the internet. It's only physical existence is the technical infrastructure that enables it to operate.
+
+The ASF Infrastructure is mostly composed of the following services:
+
+* the web serving environment (web sites and wikis)
+    
+* the code repositories
+    
+* the mail management environment
+    
+* the issue/ bug tracking
+    
+* the distribution mirroring system
+
+The ASF has an "infrastructure" team that is responsible for the management and day-to-day system administration and operation of the various hardware that runs the above services. Some of the members of the infrastructure team volunteer to be "on call" and be paged in case a system goes down.
+
+The infrastructure team is also responsible for approving the installation of a new system or software on the ASF machines.
+
+
+'''The Foundation Incubator'''
+
+In order for new projects to be created, the ASF created a project called Incubator which is responsible to help new efforts to join the foundation.
+
+Since the meritocratic rules operate across the ASF from bottom to top, it is vital for the long-term stability of such a form of government, that the initial set of committers has to know very well the dynamics of such a system, as well as share the same philosophical attitude toward collaboration and openness that the ASF expects from its projects.
+
+The incubator is responsible for:
+
+* filtering the proposals about the creation of a new project or sub-project
+    
+* help the creation of the project and the infrastructure that it needs to operate
+    
+* supervise and mentor the incubated community in order for them to reach an open meritocratic environment
+    
+* evaluate the maturity of the incubated project, either promoting it to official project/ sub-project status or by retiring it, in case of failure. 
+
+It must be noted that the incubator (just like the board) does not perform filtering on the basis of technical issues. This is because the foundation respects and suggests variety of technical approaches. It doesn't fear innovation or even internal confrontation between projects which overlap in functionality.
+
+The incubator filters projects on the basis of the likeliness of them becoming successful meritocratic communities. The basic requirements for incubation are:
+
+* a working codebase -- over the years and after several failures, the foundation came to understand that without an initial working codebase, it is generally hard to bootstrap a community. This is because merit is not well recognized by developers without a working codebase. Also, the friction that is developed during the initial design stage is likely to fragment the community.
+    
+* the intention to donate copyright of the software and the intellectual property that it may contain to the foundation -- this allows the foundation to obtain an irrevocable and permanent right to redistribute and work on the code, without fearing lock-in for itself or for its users.
+    
+* a sponsoring ASF member or officer -- this person will act as the main mentor, giving directions to the project, helping out in the day-to-day details and keeping contact with the incubator PMC.
+
+The incubation period normally serves to estimate whether or not:
+
+* the project is able to increase the diversity of its committer base and to play with the meritocratic rules of the foundation.
+
+It might seem rather easy to achieve, but it must be remembered that in a volunteer and highly selective environment, attracting new committers is not automatic.
+
+Diversity of committership is important for two main reasons:
+
+* it gives long term stability to the project development: in fact, with all the developers affiliated to the same entity, the chance of seeing all of them moving away from the project at the same time is much greater than with a community of individuals affiliated to unrelated entities.
+    
+* it gives a greater variety of technical visions: something that guarantees a better adherence to environment and user's needs, thus a higher change of finding real-life use of the software.
+
+
+'''Other Foundation Entities'''
+
+After infrastructure and incubator, the foundation hosts several other entities more or less formalized open to ASF members and to invited experts or individuals that do not directly create code but serve for specific purposes. They are:
+
+* the conference organizing committee (aka concom) -- responsible for the organization of the official ASF conference (aka ApacheCon)
+    
+* the security committee -- responsible for the handling of potential security holes in the software produced by the foundation that might impact our users. It gets contacted by the finders of the problems before the problem report is made available to the public, to allow the projects to provide a fix in time for the report, thus reducing vulnerability to a minimum
+    
+* the public relations committee -- responsible for the fund raising (collaborates with the concom since the conference is one of the major sources of income of the foundation) and public relations - including trademark licensing and other issues regarding management of the Apache brand, raising of funds, and is responsible for the press-related issues like press releases for major ASF events or dispatching requests for interviews.
+    
+* the JCP committee -- responsible for the liaison between the ASF and the Java Community Process (the ASF is a member of the JCP Executive Committee)
+    
+* the licensing committee -- responsible for the legal issues associated with licensing and license compatibilities and for the revision of the Apache Software License
+
+The ASF also hosts some foundation-wide mailing lists:
+
+* announcement -- is a moderated mailing list where announcements of releases or major ASF events are made.
+    
+* community -- is the ASF-wide mail list, readable by all, but writable only by ASF committers. It is mostly used to discuss issues that touch that entire foundation.
+    
+* committers -- sends important messages to all Apache committers; it is not used for discussions.
+    
+* infrastructure -- where the roots and the infrastructure team discuss and work on the Apache infrastructure needs.
+    
+* repository -- discussions about the Apache artifact repository.
+    
+* party -- where people plan about how to have fun :-)
+    
+* wikidiffs -- where change notifications for the main Apache wiki are sent."
+(http://www.apache.org/foundation/how-it-works.html)
+
+
+==Project Management Committees==
+
+"Apache projects are managed by Project Management Committees (PMCs), comprised of committers elected within a specific project community to provide oversight for the project for the ASF and to decide the release strategy for the project. PMC members are expected to act as individuals, making decisions for the best interest of the project when acting on PMC or development lists.
+
+Each project’s PMC is independent. PMCs are free to set community and technical direction for their project, and are directly responsible for overseeing releases and the healthy development of their communities. PMCs are responsible for ensuring their project follows certain core requirements set by the board or other corporate officers of the ASF, like following Legal, Branding, and Infrastructure related requirements, along with ensuring their community operates within the basic outline of the Apache Way.
+
+PMC members nominate new contributors to the project as committers, and PMC members cast votes on electing new committers to the project. PMC members also have binding votes on any project matters."
+(http://communityovercode.com/)
+
+=Discussion=
+
+Provided by Stefan Merten in the Oekonux mailing list, January 2008:
+
+"The following is an excerpt from an interview with Roy T. Fielding by
+Kai Tödter. Roy - among other interesting things - is one of the
+founders of the Apache Software Foundation and had a crucial role in
+developing `Apache HTTPD`_. The Apache HTTPD is the Web server
+software from Apache which were their original product and on its
+homepage proudly says:
+
+  
+Apache has been the most popular web server on the Internet since April 1996.
+
+The interview was published in  [http://www.sigs-datacom.de/sd/publications/js/index.htm JavaSpektrum_ 06/07]. I translated two
+answers which are of particular interest here.
+
+'''Kai: Why is the Apache HTTP server so successful?'''
+
+  
+Roy: This has many reasons. We started with a great group of people
+where one half was from commercial organizations and the other were
+PhD students or "fresh" PhDs. Our development team was very diverse.
+A feature needed to be used (and tested) by at least one core
+developer in a live site before it was included in the server.
+Robert Thau developed an excellent modular architecture which was
+designed especially for the Web and which made extensions from third
+parties possible while at the same time kept the robust behavior of
+the server. We had no marketing division which burdened us with
+irrelevant features just because an analyst, a reporter or a manager
+thought it would be important. All our features have been tested on
+real productive sites before they went into the server base. But
+only after they have been checked and acknowledged by three
+independent developers.
+
+Of course in addition the code is free and Open Source which has
+advantages in itself besides the quality of the resulting
+implementation. In the end this [the HTTPD web server -- SMn] is the
+printing press of the modern age. It would have been a tragedy to
+allow this to be controlled by a "for profit" company. In the end
+for a good part the long time success is a result of that we
+insisted on a cooperative development led by the group with a formal
+voting mechanism to settle disputes instead of a single benevolent
+dictator who decides everything. The project had over 50 core
+developers and more than six technical leaders at different points
+during its history. And it still runs with the same basic principles
+we defined in 1995.
+
+  
+'''Kai: Do you think that Open Source changes the (software) world?'''
+
+  
+Roy: It already has and many times. '''The Web is Open Source. The
+whole Internet infrastructure is Open Source.''' Most of the Closed
+Source software contains at least a little Open Source especially in
+the Java world. Day Software [the company where Roy works as chief
+scientist -- SMn] has several closed source products but nearly all
+our infrastructure software in these products is based on Open
+Source projects which we take part in and which in some cases even
+take a good share of the development effort. We used our Open Source
+engagement to attract some of the world best software developers to
+work for Day Software. In addition we get more advanced and
+intelligent feedback about our core software infrastructure. From
+Open Source users we get important feedback with a far higher chance
+than from commercial customers. Often the Open Source users come
+with detailed research and fixes."
+(http://www.sigs-datacom.de/sd/publications/js/index.htm)
+
+
+=Case Study=
+
+History by Christopher Kelty in [[Two Bits]], http://twobits.net/discuss/chapter7/21:
+
+"The Apache Web server and the Apache Group (now called the Apache Software Foundation) provide a second illuminating example of the how and why of coordination in Free Software of the 1990s. As with the case of Linux, the development of the Apache project illustrates how adaptability is privileged over planning [PAGE 223] and, in particular, how this privileging is intended to resolve the tensions between individual curiosity and virtuosity and collective control and decision-making. It is also the story of the progressive evolution of coordination, the simultaneously technical and social mechanisms of coordinating people and code, patches and votes.
+
+
+The Apache project emerged out of a group of users of the original httpd (HyperText Transmission Protocol Daemon) Web server created by Rob McCool at NCSA, based on the work of Tim Berners-Lee’s World Wide Web project at CERN. Berners-Lee had written a specification for the World Wide Web that included the mark-up language HTML, the transmission protocol http, and a set of libraries that implemented the code known as libwww, which he had dedicated to the public domain.15
+
+
+The NCSA, at the University of Illinois, Urbana-Champaign, picked up both www projects, subsequently creating both the first widely used browser, Mosaic, directed by Marc Andreessen, and httpd. Httpd was public domain up until version 1.3. Development slowed when McCool was lured to Netscape, along with the team that created Mosaic. By early 1994, when the World Wide Web had started to spread, many individuals and groups ran Web servers that used httpd; some of them had created extensions and fixed bugs. They ranged from university researchers to corporations like Wired Ventures, which launched the online version of its magazine (HotWired.com) in 1994. Most users communicated primarily through Usenet, on the comp.infosystems.www.* newsgroups, sharing experiences, instructions, and updates in the same manner as other software projects stretching back to the beginning of the Usenet and Arpanet newsgroups.
+
+
+When NCSA failed to respond to most of the fixes and extensions being proposed, a group of several of the most active users of httpd began to communicate via a mailing list called new-httpd in 1995. The list was maintained by Brian Behlendorf, the webmaster for HotWired, on a server he maintained called hyperreal; its participants were those who had debugged httpd, created extensions, or added functionality. The list was the primary means of association and communication for a diverse group of people from various locations around the world. During the next year, participants hashed out issues related to coordination, to the identity of and the processes involved in patching the “new” httpd, version 1.3.16
+
+
+Patching a piece of software is a peculiar activity, akin to debugging, but more like a form of ex post facto design. Patching covers the spectrum of changes that can be made: from fixing security holes and bugs that prevent the software from compiling to feature and performance enhancements. A great number of the patches that initially drew this group together grew out of needs that each individual member had in making a Web server function. These patches were not due to any design or planning decisions by NCSA, McCool, or the assembled group, but most were useful enough that everyone gained from using them, because they fixed problems that everyone would or could encounter. As a result, the need for a coordinated new-httpd release was key to the group’s work. This new version of NCSA httpd had no name initially, but apache was a persistent candidate; the somewhat apocryphal origin of the name is that it was “a patchy webserver.”
+
+
+At the outset, in February and March 1995, the pace of work of the various members of new-httpd differed a great deal, but was in general extremely rapid. Even before there was an official release of a new httpd, process issues started to confront the group, as Roy Fielding later explained: “Apache began with a conscious attempt to solve the process issues first, before development even started, because it was clear from the very beginning that a geographically distributed set of volunteers, without any traditional organizational ties, would require a unique development process in order to make decisions.”
+
+
+The need for process arose more or less organically, as the group developed mechanisms for managing the various patches: assigning them IDs, testing them, and incorporating them “by hand” into the main source-code base. As this happened, members of the list would occasionally find themselves lost, confused by the process or the efficiency of other members, as in this message from Andrew Wilson concerning Cliff Skolnick’s management of the list of bugs:
+
+
+''- Cliff, can you concentrate on getting an uptodate copy of the bug/improvement list please. I’ve already lost track of just what the heck is meant to be going on. Also what’s the status of this pre-pre-pre release Apache stuff. It’s either a pre or it isn’t surely? AND is the pre-pre-etc thing the same as the thing Cliff is meant to be working on? ... Just what the fsck is going on anyway? Ay, ay ay! Andrew Wilson.''
+
+
+To which Rob Harthill replied, “It is getting messy. I still think we should all implement one patch at a time together. At the rate (and hours) some are working we can probably manage a couple of patches a day. . . . If this is acceptable to the rest of the group, I think we should order the patches, and start a systematic processes of discussion, implementations and testing.”
+
+
+Some members found the pace of work exciting, while others appealed for slowing or stopping in order to take stock. Cliff Skolnick created a system for managing the patches and proposed that list-members vote in order to determine which patches be included.21 Rob Harthill voted first.
+
+
+    
+"''Here are my votes for the current patch list shown at http://www.hyperreal.com/httpd/patchgen/list.cgi
+    
+I’ll use a vote of
+    
+-1 have a problem with it
+    
+0 haven’t tested it yet (failed to understand it or whatever)
+    
++1 tried it, liked it, have no problem with it.
+    
+[Here Harthill provides a list of votes on each patch.]
+    
+If this voting scheme makes sense, lets use it to filter out the stuff we’re happy with. A “-1” vote should veto any patch. There seems to be about 6 or 7 of us actively commenting on patches, so I’d suggest that once a patch gets a vote of +4 (with no vetos), we can add it to an alpha''."
+
+
+Harthill’s votes immediately instigated discussion about various patches, further voting, and discussion about the process (i.e., how many votes or vetoes were needed), all mixed together in a flurry of e-mail messages. The voting process was far from perfect, but it did allow some consensus on what “apache” would be, that is, which patches would be incorporated into an “official” (though not very public) release: Apache 0.2 on 18 March.23 Without a voting system, the group of contributors could have gone on applying patches individually, each in his own context, fixing the problems that ailed each user, but ignoring those that were irrelevant or unnecessary in that context. With a voting process, however, a convergence on a tested and approved new-httpd could emerge. As the process was refined, members sought a volunteer to take votes, to open and close the voting once a week, and to build a new version of Apache when the voting was done. (Andrew Wilson was the first volunteer, to which Cliff Skolnick replied, “I guess the first vote is [PAGE 226] voting Andrew as the vote taker :-).”)24 The patch-and-vote process that emerged in the early stages of Apache was not entirely novel; many contributors noted that the FreeBSD project used a similar process, and some suggested the need for a “patch coordinator” and others worried that “using patches gets very ugly, very quickly.”
+
+
+The significance of the patch-and-vote system was that it clearly represented the tension between the virtuosity of individual developers and a group process aimed at creating and maintaining a common piece of software. It was a way of balancing the ability of each separate individual’s expertise against a common desire to ship and promote a stable, bug-free, public-domain Web server. As Roy Fielding and others would describe it in hindsight, this tension was part of Apache’s advantage.
+
+
+    
+Although the Apache Group makes decisions as a whole, all of the actual work of the project is done by individuals. The group does not write code, design solutions, document products, or provide support to our customers; individual people do that. The group provides an environment for collaboration and an excellent trial-by-fire for ideas and code, but the creative energy needed to solve a particular problem, redesign a piece of the system, or fix a given bug is almost always contributed by individual volunteers working on their own, for their own purposes, and not at the behest of the group. Competitors mistakenly assume Apache will be unable to take on new or unusual tasks because of the perception that we act as a group rather than follow a single leader. What they fail to see is that, by remaining open to new contributors, the group has an unlimited supply of innovative ideas, and it is the individuals who chose to pursue their own ideas who are the real driving force for innovation.
+
+
+Although openness is widely touted as the key to the innovations of Apache, the claim is somewhat disingenuous: patches are just that, patches. Any large-scale changes to the code could not be accomplished by applying patches, especially if each patch must be subjected to a relatively harsh vote to be included. The only way to make sweeping changes—especially changes that require iteration and testing to get right—is to engage in separate “branches” of a project or to differentiate between internal and external releases—in short, to fork the project temporarily in hopes that it would soon rejoin its stable parent. Apache encountered this problem very early on with the “Shambhala” rewrite of httpd by Robert Thau."
+(http://twobits.net/discuss/chapter7/21)
+
+=More Information=
+
+#Apache Software Foundation. How the ASF Works. 2005. http://www.apache.org/foundation/how-it-works.html
+#[http://webmink.com/2011/03/11/is-apache-open-by-rule/ Is Apache Open-By-Rule? by Simon Phipps] : an evaluation of the degree of openness of the Apache project, it gets 100%
+#Apache Software Foundation. Contributing to The Apache Software Foundation. 2005. http://www.apache.org/foundation/contributing.html
+#[[Apache Software Foundation]]
+#Apache HTTPD: http://httpd.apache.org/
+
+
+
+[[Category:Governance]]
+
+[[Category:Technology]]
+
+[[Category:Peergovernance]]

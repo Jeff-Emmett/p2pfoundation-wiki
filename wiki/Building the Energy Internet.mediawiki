@@ -1,0 +1,73 @@
+
+'''= Packetized energy for a distributed internet of energy'''
+
+=Description=
+
+'''* Research Project: [[Building the Energy Internet]] as a large-scale IoT-based cyber-physical system that manages the energy inventory of distribution grids as discretized packets via machine-type communications (EnergyNet). Cyber-physical systems group - LUT University. Pedro Henrique Juliano Nardelli, Arun Narayanan et al. Funded by Academy of Finland.'''
+
+URL = https://sites.google.com/view/energy-internet
+
+"The recent development of information and energy technologies has the potential to advance the emergence of groups of non-industrial users that are self-sufficient in their energy needs while fully supplied by renewable sources. This project focuses on the Energy Internet as a large-scale cyber-physical system that virtualizes electric energy in packets to manage supply and demand in distribution grids, considering the existence of batteries and flexible consumption. Packetized energy has been already deployed to control individually specific loads as electric vehicle charging and water boilers via packet requests to an energy server. These requests may be granted, scheduled or not granted depending on the management algorithm. Although already proved in smaller scales, the concept of packetized energy was not designed to allow scaling-up to become a dominant technology. A management algorithm shall be then developed to handle the combinatorial allocation problem related to the server’s decisions while satisfying both the physical grid operational needs and the users’ service requirements. This project is concerned with technological and regulatory issues that would allow the Energy Internet to emerge, sustainably grow and then become the dominant way to manage the distribution grid. In the technological realm, this project will develop the energy management algorithm and investigate the how wireless communication systems shall be deployed to guarantee the diverse requirements imposed by the grid applications. The focus is on machine-type communications following the current research in 5G technologies, mainly massive connectivity, low latency and ultra-reliability. Using the communication-enabled grid facilities available at LUT Green Campus, this project will study the most efficient communication deployments, from data acquisition to end-application, based on traffic modeling, short message communication, new modulations, random-access schemes and statistical signal reconstruction. In relation to regulation, the research will test how different governance models may affect the layout and deployment of the management algorithm, and how different algorithms can co-exist so that the power quality and security of supply are ensured. Agent-based models will be used to study the feasibility and the conditions that would allow for a smooth transition from the existing today’s electricity market to the fossil-fuel-free Energy Internet by 2050."
+
+=More information=
+
+Bibliography / Key publications:
+
+
+==Cyber-physical systems== 
+Nardelli, Pedro HJ; Narayanan, Arun; ,Energy Internet: Cyber-Physical Deployment of Future Distribution Grids, Affordable and Clean Energy,,,1-9,2020,Springer International Publishing Cham
+
+Gutierrez-Rojas, Daniel; Ullah, Mehar; Christou, Ioannis T; Almeida, Gustavo; Nardelli, Pedro; Carrillo, Dick; Sant’Ana, Jean M; Alves, Hirley; Dzaferagic, Merim; Chiumento, Alessandro; ,Three-layer approach to detect anomalies in industrial environments based on machine learning,2020 IEEE Conference on Industrial Cyberphysical Systems (ICPS),1,,250-256,2020,IEEE
+
+Nardelli, Pedro HJ; ,"Cyber-physical Systems: Theory, Methodology, and Applications",,,,,2022,John Wiley & Sons
+
+Gutierrez-Rojas, Daniel, et al. "Improving Fault Detection in Industrial Processes by Event-Driven Data Acquisition." IEEE Access 10 (2022): 80918-80931.
+
+Beattie, Alexander, et al. "A Robust and Explainable Data-Driven Anomaly Detection Approach For Power Electronics." 2022 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm). IEEE, 2022.
+
+Mulinka, Pavol, et al. "Optimizing a Digital Twin for Fault Diagnosis in Grid Connected Inverters-A Bayesian Approach." 2022 IEEE Energy Conversion Congress and Exposition (ECCE). IEEE, 2022.
+
+
+==Packetized Energy Management==
+
+de Castro Tomé, Mauricio; J. Nardelli, Pedro H; Hussain, Hafiz Majid; Wahid, Sohail; Narayanan, Arun; ,A cyber-physical residential energy management system via virtualized packets,Energies,13,3,699,2020,MDPI
+
+Hussain, Hafiz Majid; Nardelli, Pedro HJ; ,A heuristic-based home energy management system for demand response,2020 IEEE Conference on Industrial Cyberphysical Systems (ICPS),1,,285-290,2020,IEEE
+
+Javadi, Mohammad Sadegh; Nezhad, Ali Esmaeel; Nardelli, Pedro HJ; Gough, Matthew; Lotfi, Mohamed; Santos, Sergio; Catalão, João PS; ,Self-scheduling model for home energy management systems considering the end-users discomfort index within price-based demand response programs, Sustainable Cities and Society,68,,102792,2021,Elsevier
+
+Mashlakov, Aleksei; Pournaras, Evangelos; Nardelli, Pedro HJ; Honkapuro, Samuli; ,Decentralized cooperative scheduling of prosumer flexibility under forecast uncertainties, Applied Energy,290,,116706,2021,Elsevier
+
+Vanin, Artem; Ellina, Shchurovskaya; Nardelli, Pedro Juliano; Mashlakov, Aleksei; ,Dispatch optimization of energy communities for collective provision of network congestion management,"2021 3rd International Youth Conference on Radio Electronics, Electrical and Power Engineering (REEPE)",,,1-5,2021,IEEE
+
+Nardelli, Pedro; Hussain, Hafiz Majid; Narayanan, Arun; Yang, Yongheng; ,Virtual microgrid management via software-defined energy network for electricity sharing: Benefits and challenges, "IEEE Systems, Man, and Cybernetics Magazine",7,3,10-19,2021,IEEE
+
+Hussain, Hafiz Majid; Ahmad, Ashfaq; Narayanan, Arun; Nardelli, Pedro HJ; Yang, Yongheng; ,Packetized Energy Management Controller for Residential Consumers,2021 IEEE PES Innovative Smart Grid Technologies Europe (ISGT Europe),,,1-6,2021,IEEE
+
+Javadi, Mohammad Sadegh; Nezhad, Ali Esmaeel; Gough, Matthew; Lotfi, Mohamed; Anvari-Moghaddam, Amjad; Nardelli, Pedro HJ; Sahoo, Subham; Catalão, João PS; ,Conditional value-at-risk model for smart home energy management systems,"e-Prime-Advances in Electrical Engineering, Electronics and Energy",1,,100006,2021,Elsevier
+
+Negri, Cesar A; Daneshvardehnavi, Saeed; Schmitt, Konrad Erich Kork; Nezhad, Ali Esmaeel; Nardelli, Pedro HJ; Bayne, Stephen; Giesselmann, Michael G; ,Centralized Control Topology for PV Farms Shading Detection and GMPP Searching Restarting Condition, IEEE Access,10,,28991-29008,2022,IEEE
+
+Nezhad, Ali Esmaeel; Rahimnejad, Abolfazl; Nardelli, Pedro HJ; Gadsden, Stephen Andrew; Sahoo, Subham; Ghanavati, Farideh; ,A Shrinking Horizon Model Predictive Controller for Daily Scheduling of Home Energy Management Systems, IEEE Access,10,,29716-29730,2022,IEEE
+
+Hussain, Hafiz Majid; Narayanan, Arun; Sahoo, Subham; Yang, Yongheng; Nardelli, Pedro HJ; Blaabjerg, Frede; ,Home Energy Management Systems: Operation and Resilience of Heuristics Against Cyberattacks, "IEEE Systems, Man, and Cybernetics Magazine",8,2,21-30,2022,IEEE
+
+Esmaeel Nezhad, Ali; Nardelli, Pedro HJ; ,Multiple-Criteria Decision-Making (MCDM) Applications in Optimizing Multi-Objective Energy System Performance, Handbook of Smart Energy Systems,,,,2022,"Springer, Cham"
+
+H. M. Hussain, A. Ahmad, A. Narayanan, P. H. J. Nardelli and Y. Yang, "Benchmarking of Heuristic Algorithms for Energy Router-Based Packetized Energy Management in Smart Homes," in IEEE Systems Journal, 2022, doi: 10.1109/JSYST.2022.3208414.
+
+
+==[[Energy as a Commons]]==
+
+Giotitsas, Chris; Nardelli, Pedro HJ; Kostakis, Vasilis; Narayanan, Arun; ,From private to public governance: The case for reconfiguring energy systems as a commons, Energy Research & Social Science,70,,101737,2020,E lsevier
+
+Narayanan, Arun; Nardelli, Pedro HJ; ,Community Renewable Energy Systems, Affordable and Clean Energy,,,1-13,2020, Springer International Publishing
+
+Narayanan, Arun; Nardelli, Pedro; ,Profit Allocation in Renewables Based Community Microgrids with Aggregation and Self-Sufficiency,"2020 IEEE 31st Annual International Symposium on Personal, Indoor and Mobile Radio Communications",,,1-6,2020,IEEE
+
+Giotitsas, Chris; Nardelli, Pedro HJ; Williamson, Sam; Roos, Andreas; Pournaras, Evangelos; Kostakis, Vasilis; ,Energy governance as a commons: Engineering alternative socio-technical configurations, Energy Research & Social Science,84,,102354,2022, Elsevier
+
+
+[[Category:Energy]]
+
+[[Category:Commons Infrastructure]]

@@ -1,0 +1,113 @@
+'''= "a GNU/Linux operating system composed almost entirely of free software" [[Linux Distro]].'''
+
+URL= https://www.debian.org/
+
+=Description=
+
+'''1. By Molly de Blanc, Mathieu O’Neil, Mahin Raissi et al.:'''
+
+"Debian is a GNU/Linux operating system composed almost entirely of free software, originally released in 1993 by Ian Murdock. The project has grown to the extent that between January and May of 2017, 1,368 individuals contributed to the project (Debian Contributor list, 2017). The Debian Project supports a robust community, across more than 60 countries (Perrier, 2014). The Debian operating system is also used all over the world, as well as in the International Space Station (Bridgewater, 2013). Debian is a remarkable EMO, whose robustness and strict adherence to the principles of free software have made it legendary. It also has a highly developed governance structure: Debian has adopted a Social Contract spelling out the project’s goals. Its Constitution defines the process whereby every Developer can launch a petition (‘General Resolution’) to amend it, as well as procedures governing the yearly election of the Debian Project Leader (DPL). DPLs have no powers of control: their role is one of external representation and of synthesis of new proposals (O’Neil 2009, 2014). As the Debian project offers no formal contracts for development or support, it can be assumed that there are people getting paid to work on or implement Debian by their employers. Indeed it is ‘common knowledge’ among Debian Developers (a type of status within the project that denotes formal membership and also grants the right to vote on major project-wide decisions), that participation in Debian will result in a contributor being targeted for recruitment by companies, including Google."
+
+(http://peerproduction.net/issues/issue-10-peer-production-and-work/preliminary-report-debian-survey/)
+
+
+'''2. JPP:'''
+
+"‘It was in August 1993, when Ian Murdock started working on a new operating system which would be made openly, in the spirit of Linux and GNU. He sent out an open invitation to other software developers, asking them to contribute to a software distribution based on the Linux kernel, which was relatively new back then. Debian was meant to be carefully and conscientiously put together, and to be maintained and supported with similar care, embracing an open design, contributions, and support from the Free Software community. It started as a small, tightly-knit group of Free Software hackers and gradually grew to become a large, well-organized community of developers, contributors, and users. There are a lot of reasons to choose Debian as your operating system – as a user, as a developer, and even in enterprise environments. Most users appreciate the stability, and the smooth upgrade processes of both packages and the entire distribution. Debian is also widely used by software and hardware developers because it runs on numerous architectures and devices, offers a public bug tracker and other tools for developers. If you plan to use Debian in a professional environment, there are additional benefits like LTS versions and cloud images.’ "
+
+(http://peerproduction.net/issues/issue-15-transition/jopp-in-transition/interviews-with-peer-producers/)
+
+
+=Interview=
+
+Interview with '''Stefano Zacchiroli''', former Debian Project Leader, 17 June 2019, by Mathieu O’Neil:
+
+
+'''* Mathieu O’Neil (MO): So, in a few words: what is your project about and how does it relate to peer production?'''
+
+Stefano Zacchiroli (SZ): Right, so the project is Debian, making a free software operating system. It’s allowing you to run your computer from down to, you know, making the hardware, up to applications, like Libre Office and productivity tools and games and what not. It is one of the oldest self-organized free software projects, dating back to 1993 and it’s also one of the largest in term of its volunteer base, we estimate that there are still today about one thousand Debian members or Debian developers, we call them, who self-organize to work together and create this operating system. So, it’s kind of historical and also a paradigmatic example of peer production in the context of software and especially free software and open source software.
+
+
+'''MO: How do you organize collaboration in your project?'''
+
+SZ: Debian is pretty much a self-organized project. The creator of the project, Ian Murdock, decided that there was a granularity, that isolated and defined areas of collaboration and in Debian those are our organized packages. A package is a piece of software you can install on Debian. A package can have a single person who is a maintainer of the software, usually it’s a group of people, up to a dozen people. And within a package, maintainers are autonomous. They can do whatever they want, as long as they respect some baseline quality requirements that applies to Debian. To give you an idea of the scale here, Debian is composed of something like tens of thousands of packages. So, when you volunteer, you usually start by noticing that the package you use yourself has some issues. Maybe it is not up to date, maybe it has some bugs, that you want to fix. You start by picking a bugtracker against that package and if you know how to code, the maintainer looks at your patch and may accept it or not. This is the initial step, then you got hooked in, if you keep having an interest in that package you may become one of its co-maintainers. So, this is the site of collaboration and then you can step up the ladder if you wish. Not in terms of authority, but in terms of becoming more interested in Debian as a project, for instance after maintaining many, many packages, I became interested in the infrastructure of Debian projects, so working on quality assurance services, like checking in an automatic way if packages have bugs, and then I also ended up being Debian Project Leader as a kind of ultimate coordinator of activity into the Debian project, but it all starts from packages, which are separate sites of collaboration and then you can move to more cross-cutting responsibilities.
+
+
+'''MO: So that would be one of the benefits of peer production, when compared with more hierarchical systems, that there are less barriers to improving the content, but what are the costs?'''
+
+SZ: This is something which is felt very deeply in Debian, when you want to make a decision, if the decision is within the realm of a specific package, well then it’s clear who has the authority to make the decision. But when you want to make a decision that affects the entire Debian operating system, like changing the way something is done that affects many, many packages, taking the decision might be very challenging, because you end up having a discussion with hundreds of people, who all have their own opinion and who all think that they are very good at making that specific decision, even when they are not. So, how do you organize this discussion, where you have a thousand people? This is a well-known challenge in social movements. Debian has a way to fix that: we try rough consensus, what are the pros and cons of what is being discussed, but in the end if you cannot reach an agreement we have a technical committee, a sort of tribunal, which can settle technical disputes within the project.
+
+
+'''MO: What would in your view characterize a successful peer production project, and why?'''
+
+SZ: This is quite broad and of course my experience of different projects is limited. So, something we have learned recently is keeping disruptive personalities at bay is important. Back in the days in the 1980s and 1990s, in the early days of the Internet, we had this tradition of accepting disruptive personalities in communities, people that will kill discussion and overwhelm every discussion. It is well known now that that will keep new volunteers far from your project and create very toxic environments. So being able to say no and then actually banning those kinds of personalities from your project is something that is needed in every kind of peer production project. Initially you will get some kind of pushback because, you know, “freedom of speech” and that kind of concern, which is actually not really relevant, but it is the typical argument you hear against keeping your community sane. You cannot tolerate intolerance and people who will keep others away from your community, that’s something we have learned and which is very, very important. Keeping a nice, friendly environment is fundamental. It’s a basic requirement. Another one is being clear on where you want to go. Where is the roadmap of your project, where are we within the spectrum of what we are trying to achieve, and then also having easy entryways into your project. The structure of contribution in most peer production projects is well-known now, so you start from people that are contributing very small things. You know, it can be a collaborative writing process, it can be adding bold type, it can be adding a reference or that kind of stuff and then those potentially hopefully high numbers of volunteers on the periphery, some of them become more involved and even fewer of them will become your next leaders. So, you have fun in the process, which starts with a lot of people coming to a group, less people contribute important stuff and very few people contribute very important stuff and you need to reduce the barrier for any sort of contribution along the way. So, having clearly documented ways to make your first contribution and then hooking people in, by making it as simple as possible to contribute something, anything at all. In a software project for instance, it should be very easy to make your first bug report. It should be very easy to make a fix, which is just a typo or something like that, and then everything from there, all the way to becoming an official maintainer of the project, it should be as easy as possible.
+
+
+'''MO: What has changed in the world of peer production in general and/or in your project in particular since you started?'''
+
+SZ: The Internet of course. When Debian started, collaboration over the internet was just beginning. Right now, it’s everywhere. Your potential public of contributors is huge these days. To have tools and to have a number of people with access to the internet, is just incredible. That’s a huge potential. It comes with threats as well, trolls and this idea of clicktivism, the idea that people can contribute something useful by just talking about something, is something that wasn’t really true back then. Back in the day most people connecting over the internet were tech people, so for our software project, they were almost all potential contributors, while these days that’s no longer the case. Anyone can comment on anything. Anyone thinks they are entitled to an opinion, while in a project like Debian the governance model is very much based on who did the job, gets to have a say. People that are not willing to put in work don’t really get a say. Wikipedia and any sort of collaborative project has this kind of issue.
+
+
+'''MO: Imagining the future of peer production, what could it be like in ten years’ time?'''
+
+SZ: That’s a good question. I don’t see any huge change in the tools we are using or the way of contributing we are using today. What I wish is that it would be more possible for people to be activists full-time. Finding a way to do their activism and producing things together, without getting into conflict of interests and so on. So it’s really related more broadly to the question of how do you finance in a socially responsible way to uphold the collaboration and the activism that people are doing. But other than that, I think that in terms of tools, in terms of structure, it won’t be much different from what we have today.
+
+
+'''MO: In case you got the chance to engage in a new peer production project, what would it be?'''
+
+SZ: These days I think it would be very much about open hardware. So essentially, we have opened up a lot of peer production knowledge in software, in arts, in writing, etc. Something which remains relatively segregated is the world of hardware, which is something that is very much controlled by whoever owns the firms, right? These people who own the means to produce physical stuff. We have some improvement there with 3D printing, but I think that’s something that we really care about and are not really involved in any of that today. I know what it is, people are involved in those areas, but it is something I would love to see very much more democratized than it is today."
+
+(http://peerproduction.net/issues/issue-15-transition/jopp-in-transition/interviews-with-peer-producers/)
+
+
+=Discussion=
+
+Mike Chege:
+
+"On 16 August 1993, Ian Murdock, an undergraduate student at Purdue University, announced the “Debian Linux Release” (Murdock 1993). The development of Debian came as a result of Murdock’s disenchantment with GNU/Linux distributions at the time. According to Murdock, though many distributions had started out as fairly good systems, as time passed, attention to maintaining the distribution became a secondary concern (Murdock, 1994). Murdock gave the example of the Softlanding Linux System (SLS) which he described as possibly the most popular distribution at the time. Unfortunately, according to Murdock, SLS was also “quite possibly the most bug–ridden and badly maintained Linux distribution available.” This meant that GNU/Linux users were being subjected to an inferior product and their bad experiences were bound to undermine the prospects of GNU/Linux. To Murdock, the time had come “to concentrate on the future of Linux rather than on the destructive goal of enriching oneself at the expense of the entire Linux community and its future.” The primary purpose of the Debian project therefore was to create a distribution that would “live up to the Linux name” by being carefully and conscientiously assembled, maintained and supported.
+
+Another important aspect of Murdock’s plan was that unlike other distributions “which are developed by individuals, small, closed groups, or commercial vendors”, Debian was to be developed cooperatively by many individuals through the Internet, in the same spirit as the Linux kernel and other free software. This “open process,” Murdock believed, would ensure that the system was of the highest quality and that it reflected the needs of the user community rather than the needs and wants of the constructor.
+
+Finally, for users who were not in a position to download the distribution from the Internet, Debian was to be made available on physical media at little more than cost, and any profits earned would be used to support the further development of free software.
+
+It was an ambitious plan, but thanks to the hard work and enthusiasm of Ian Murdock and the others who succeeded him in the role of Debian project leader, Debian grew from a single PC under a student’s desk at Purdue University, to paraphrase Bdale Garbee (2007), to become a large, worldwide community of developers and users. Currently, the project boasts more than 1,400 developers in over 40 countries collaborating via the Internet, and even though no one gets paid to work on Debian, anecdotal evidence suggests that there is no shortage of applicants wishing to become developers.
+
+Debian is also by far the largest GNU/Linux distribution. Based on source lines of code (SLOC) analysis, the estimated size of the latest release, Debian 4.0, amounts to close to 283 million source lines of code (Amor, et al., 2007). Using the Constructive Cost Model (COCOMO) to estimate the effort and cost that would be involved in building a system the size of Debian 4.0 from scratch, we get an effort equivalent to 73,000 person years and a cost of around US$10 billion (Amor, et al., 2007). The Debian project therefore represents a monumental effort of wealth creation which is barely reflected in the economic statistics, a perfect example of the Midas fallacy.
+
+But size is not the only noteworthy thing about Debian. Thanks to its reputation for stability, which owes much to its stringent quality assurance procedures, many major organizations around the world now rely on Debian. Examples include the Municipal Council of the City of Munich, MIT Computer Science and Artificial Intelligence Lab, and Genome Research Cluster at the Sanger Institute, which is the single largest contributor to the public Human Genome Project. Telegraaf Media ICT BV, which runs some of the most popular Dutch Web sites as well as the two biggest newspapers in the Netherlands, also runs its internet infrastructure on Debian. But perhaps most impressive of all is the claim by Bdale Garbee (2007) that there’s a 30 percent chance that anyone making a cell phone call anywhere in the world will be relying on Debian in some way. This is because HP, which is a major hardware vendor for telecommunications service providers, installs Debian on much of the hardware that it ships.
+
+Debian, like free and open source software in general, appears to defy our preconceptions about how the economy should work. For here is a large and intricate software system which is being developed by a loosely coordinated, globally dispersed community of volunteers, it is being given away for free, and yet it is so highly regarded that major organizations are willing to trust it with some of their most critical operations. One could perhaps say that Debian is proof that the community model can work just as well as the commercial model. But questions about the sustainability of the community model still remain and we will have more to say about the subject shortly."
+
+(http://www.uic.edu/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/2186/2062)
+
+=More Information=
+
+* [[Ethical-Modular Organisations]]
+
+See also:
+
+#[[Women in Open Source - Debian]]
+#[[Debian's Free Software Guidelines]] 
+#[[Study on Debian Governance and Social Organization]] 
+#[[Debian Constitution]] 
+#[[Debian - Governance]] 
+
+* See [[Red Hat]] for another, more commercial model, of a [[Linux Distro]]
+
+
+
+=Bibliography=
+
+#Murdock, Ian. 1994b. “Overview of the Debian GNU/Linux System,” Linux Journal 6es: Article No. 15(October).
+#Murdock, Ian 1994c. “The Open Development of Debian,” Linux Journal 3es: Article No. 7(June-July).
+#Murdock, Ian 2003. “Debian: A Brief Retrospective,”‹http://www.linuxplanet.com/linuxplanet/editorials/4959/1/›.
+#I. Murdock, 1994. “A brief history of Debian. Appendix A — The Debian Manifesto” (1 June), at http://www.debian.org/doc/manuals/project-history/ap-manifesto.en.html, attached 13 December 2008.
+
+Also, from an article by Mike Chege:
+
+#Debian, “Who’s using Debian?” at http://www.debian.org/users/, attached 13 December 2008.
+#L. Nussbaum, 2008. “4 months and 10 days without any new Debian developer. Is Debian dying?” (15 April), at http://www.lucas-nussbaum.net/blog/?p=286, attached 13 December 2008.
+#G. Robles, J.M. Gonzalez–Barahona, and M. Michlmayr, 2005. “Evolution of volunteer participation in Libre Software projects: Evidence from Debian,” In: M. Scotto and G. Succi (editors). Proceedings of the First International Conference on Open Source Systems, pp. 100–107, at http://www.cyrius.com/publications/robles_barahona_michlmayr-evolution_participation.pdf, attached 13 December 2008.
+
+[[Category:Cases]]
+[[Category:Companies]]

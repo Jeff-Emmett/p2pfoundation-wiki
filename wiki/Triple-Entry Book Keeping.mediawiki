@@ -1,0 +1,93 @@
+
+=Description=
+
+Ian Grigg:
+
+"Triple Entry Accounting:The digitally signed receipt, with the entire authorisation for a transaction, represents a dramatic challenge to double entry bookkeeping at least at the conceptual level. The cryptographic invention of the digital signature gives powerful evidentiary force to the receipt, and in practice reduces the accounting problem to one of the receipt's presence or its absence. This problem is solved by sharing the records - each of the agents has a good copy.
+
+In some strict sense of relational database theory, double entry book keeping is now redundant; it is normalised away by the fourth normal form. Yet this is more a statement of theory than practice, and in the software systems that we have built, the two remain together, working mostly hand in hand.
+
+Which leads to the pairs of double entries connected by the central list of receipts; three entries for each transaction. Not only is each accounting agent led to keep three entries, the natural roles of a transaction are of three parties, leading to three by three entries.
+
+We term this triple entry bookkeeping. Although the digitally signed receipt dominates in information terms, in processing terms it falls short. Double entry book keeping fills in the processing gap, and thus the two will work better together than apart. In this sense, our term of triple entry bookkeeping recommends an advance in accounting, rather than a revolution."
+(http://iang.org/papers/triple_entry.html)
+
+
+=Characteristics=
+
+
+==The Requirements of Triple Entry Accounting==
+
+Ian Grigg:
+
+"The implementation of Triple Entry Accounting will in time evolve to support patterns of transactions. What has become clear is that double entry does not sufficiently support these patterns, as it is a framework that breaks down as soon as the number of parties exceeds one. Yet, even as double entry is "broken" on the net and unable to support commercial demands, triple entry is not widely understood, nor are the infrastructure requirements that it imposes well recognised.
+
+Below are the list of requirements that we believed to be important.
+
+1. Strong Psuedonymity, At Least. As there are many cycles in the patterns, the system must support a clear relationship of participants. At the minimum this requires a nymous architecture of the nature of Ricardo or AADS. (This requirement is very clear, but space prevents any discussion of it.)
+
+2. Entry Signing. In order to neutralise the threats to and by the parties, a mechanism that freezes and confirms the basic data is needed. This is signing, and we require that all entries are capable of carrying digital signatures (see 1, above, which suggests public key signatures).
+
+3. Message Passing. The system is fundamentally one of message passing, in contrast to much of the net's connection based architecture. Boyle recognised early on that a critical component was the generic message passing nature, and Systemics proposed and built this into Ricardo over the period 2001-2004 [4].
+
+4. Entry Enlargement and Migration. Each new version of a message coming in represents an entry that is either to be updated or added. As each message adds to a prior conversation, the stored entry needs to enlarge and absorb the new information, while preserving the other properties.
+
+5. Local Entry Storage and Reports. The persistent saving and responsive availability of entries. In practice, this is the classical accounting general ledger, at least in storage terms. It needs to bend somewhat to handle much more flexible entries, and its report capabilities become more key as they conduct instrinsic reconciliation on a demand or live basis.
+
+6. Integrated Hard Payments. Trade can only be as efficient as the payment. That means that the payment must be at least as efficient as every other part; which in practice means that a payment system should be built-in at the infrastructure level. C.f., Ricardo.
+
+7 Integrated Application-Level Messaging. As distinct to the messaging at the lower protocol levels (1 above), there is a requirement for Alice and Bob to be able to communicate. That is because the vast majority of the patterns turns around the basic communications of the agents. There is no point in establishing a better payment and invoice mechanism than the means of communication and negotiation. This concept is perhaps best seen in the SWIFT system which is a messaging system, first and foremost, to deliver instructions for payments."
+(http://iang.org/papers/triple_entry.html)
+
+
+
+=Discussion=
+
+==A Very Brief History of Accounting==
+
+Ian Grigg:
+
+"Accounting or accountancy is these days thought to go back to the genesis of writing; the earliest discovered texts have been deciphered as simple lists of the counts of animal and food stock. The Sumerians of Mesopotamia, around 5000 years ago, used Cuneiform or wedge shaped markings as a base-60 number form, which we still remember as seconds and minutes, and squared, as the degrees in a circle. Mathematics and writing themselves may well have been derived from the need to add, subtract and indeed account for the basic assets and stocks of early society.
+
+===Single Entry====
+
+Single entry bookkeeping is how 'everyone' would do accounting: start a list, and add in entries that describe each asset. A more advanced arrangement would be to create many lists. Each list or 'book' would represent a category, and each entry would record a date, an amount, and perhaps a comment. To move an asset around, one would cross it off from one list and enter it onto to another list.
+
+Very simple, but it was a method that was fraught with the potential for errors. Worse, the errors could be either accidental, and difficult to track down and repair, or they could be fraudulent. As each entry or each list stood alone, there was nothing to stop a bad employee from simply adding more to the list; even when discovered there was nothing to say whether it was an honest mistake, or a fraud.
+
+Accounting based on single entry bookkeeping places an important limitation on the trust of the books. Likely, only the owner's family or in times long past, his slaves could be trusted with the enterprise's books, leading to a supportive influence on extended families or slavery as economic enterprises.
+
+
+===Double Entry===
+
+Double Entry bookkeeping adds an additional important property to the accounting system; that of a clear strategy to identify errors and to remove them. Even better, it has a side effect of clearly firewalling errors as either accident or fraud.
+
+This property is enabled by means of three features, being the separation of all books into two groups or sides, called assets and liabilities, the redundancy of the duplicative double entries with each entry having a match on the other side, and the balance sheet equation, which says that the sum of all entries on the asset side must equal the sum of all entries on the liabilities side.
+
+A correct entry must refer to its counterparty, and its counterpart entry must exist on the other side. An entry in error might have been created for perhaps fraudulent reasons, but to be correct at the local level, it must refer to its counterparty book. If not, it can simply be eliminated as an incomplete entry. If it does refer, the existance of the other entry can be easily confirmed, or indeed recreated depending on the sense of it, and the loop is thus closed.
+
+Previously, in single entry books, the fraudster simply added his amount to a column of choice. In double entry books, that amount has to come from somewhere. If it comes from nowhere, it is eliminated above as an accidental error, and if it comes from somewhere in particular, that place is identified. In this way, fraud leaves a trail; and its purpose is revealed in the other book because the value taken from that book must also have come from somewhere.
+
+This then leads to an audit strategy. First, ensure that all entries are complete, in that they refer to their counterpart. Second, ensure that all movements of value make sense. This simple strategy created a record of transactions that permitted an accountancy of a business, without easily hiding frauds in the books themselves."
+(http://iang.org/papers/triple_entry.html)
+
+
+===Triple Entry===
+
+"Double Entry bookkeeping provides evidence of intent and origin, leading to strategies for dealing with errors of accident and fraud. The financial cryptography invention of the signed receipt provides the same benefits, and thus challenges the 800 year reign of double entry. Indeed, in evidentiary terms, the signed receipt is more powerful than double entry records due to the technical qualities of its signature.
+
+There remain some weaknesses in strict comparison with double entry bookkeeping. Firstly, in the Ricardo instantiation of triple entry accounting, the receipts themselves may be lost or removed, and for this reason we stress as a principle that the entry is the transaction. This results in three active agents who are charged with securing the signed entry as their most important record of transaction.
+
+Secondly, the software ramifications of the triple entry system that are less convenient than that offered by double entry bookkeeping. For this reason, we expand the information held in the receipt into a set of double entry books; in this way we have the best of both worlds on each node: the evidentiary power of the signed entries and the convenience and local crosschecking power of the double entry concept.
+
+Both of these imperitives meld signed receipts in with double entry bookkeeping. As we end up with a logical arrangement of three by three entries, we feel the term triple entry bookkeeping is useful to describe the advance on the older form."
+(http://iang.org/papers/triple_entry.html)
+
+=More Information=
+
+* "brilliantly explained by Ian Grigg in a paper", at http://iang.org/papers/triple_entry.html
+
+
+[[Category:P2P Accounting]]
+
+[[Category:Cryptoledger Applications]]

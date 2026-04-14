@@ -1,0 +1,189 @@
+= Definition =
+
+
+'''Bittorrent = An [[open source]] [[peer to peer]] filesharing protocol written by Bram Cohen. The great thing with bit torrent is that as the number of people downloading something increases, the faster the download speed becomes for all those involved.'''
+
+(also check out [[Dijjer]], an open source alternative)
+
+
+= How Bittorrent works =
+
+
+===1.===
+
+"File-sharing systems (like the original  Napster  and, later,  Gnutella ) work by storing multiple copies of the file on ordinary PCs (called 'peers' in the jargon) and enabling users to locate a copy and download it directly from one of those computers. It is distributed file-serving, if you like. This is  'peer-to- peer' (P2P) networking. I call it File Sharing 1.0. It works by trying to ensure that anything you download from your peers is also available for 'sharing' from your computer. 
+
+Now to get more specific: BitTorrent is a step up: call it File Sharing 2.0. Its most distinctive features are that it was designed to handle big files, and it discourages leeching because the less you share the slower your downloads are - and vice versa. It punishes selfishness and rewards co-operative behaviour, in other words. The great thing about BitTorrent is that it has really important legitimate uses - ones that do not infringe copyright. If you want to distribute copies of a very large file - a new release of an operating system, say - BitTorrent is a terrific way to do it."
+(http://observer.guardian.co.uk/business/story/0,,1774174,00.html)
+ 
+
+===2. ===
+
+"Let's say you want to download a copy of this week's episode of Desperate Housewives. Rather than downloading the actual digital file that contains the show, instead you would download a small file called a "torrent" onto your computer. When you open that file on your computer, BitTorrent searches for other users that have downloaded the same "torrent." BitTorrent's "file-swarming" software breaks the original digital file into fragments, then shares those fragments between all the users that have downloaded the "torrent." Then the software stitches together those fragments into a single file that a user can view on their PC. Sites like Slovenia-based Suprnova offer up thousands of different torrents without storing the shows themselves. Meanwhile, BitTorrent is rapidly emerging as the preferred means of distributing large amounts of legitimate content such as versions of the free computer operating system Linux."
+(http://www.wired.com/news/digiwood/0,1412,65625,00.html?)
+
+===3.===
+
+* BitTorrent is essentially a protocol, a way two computers can talk to each other, like HTTP (that thing your computer uses to talk to web pages), and you can use it to download files (like movies, games and mp3s) from the internet, and onto your computer. I will go over a quick run through, then explain each part a little more in depth. You are going to need:
+
+o a program to access the torrent, such as Azureus or uTorrent
+          
+o And a Bit Torrent search engine web site which can search for torrents of the file you want
+                
++ A torrent is a pointer to all the small parts of the file that will make up the complete file once downloaded
+
+A BitTorrent (BT) client is what makes it possible to access the torrent, and begin downloading the file. There are several different BT clients, the most popular today being Azureus. That is what I will be suggesting here, it works with Windows, Linux and OSX, is simple enough to start out with and leaves you some room to grow and learn (and is also what everyone here uses.) When you head over to the Azureus download page, you’ll notice it first tells you to install something called the JRE. Nothing to fret about, there is a chance you already have it, and the Azureus download page will let you know by saying ‘java detected’ or not. If you don’t have it, no biggie, just go get it, it’s a very simple install."
+(http://www.commonwebsense.com/2006/01/27/the-bittorrent-post/)
+
+
+===4.===
+
+"The BitTorrent protocol addressed the issues of availability and load balancing in a very novel way. In the BitTorrent protocol, a file is broken down into a small number of fixed size packets. A client requesting the file does not necessarily get all the packets from a single source. Rather all the peers with available seeds go about contributing to the download. Simultaneously, the downloading peer can upload packets of the same file that become available locally. Due to this ‘swarm’ effect, even entire movie DVDs can be easily swapped using BitTorrent."
+(http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html)
+
+
+
+===5. Incentivising sharing===
+
+"The problem with most P2P networks is that many people just don't like to share. They open up their program, download their files, then close the program before they can help anyone else. It's called leeching. Behavioral judgements aside, if everyone did this then nothing would ever get shared! To combat this, BitTorrent has gone back to the way of sharing you were probably taught as a young child: trading. Instead of waiting for the complete file to download before it starts to share, BitTorrent downloads the file in small pieces and shares each piece as it finishes. This makes it easier to get the file from many different people at once, thereby increasing the probably that you'll get a good download speed. It also means that downloading a file is more reliable than in some other networks. If Charlie has half of a file and Bob has the other half, Alice can get each half and put them together to get the whole file. Spiff, eh?
+
+But this piecewise downloading doesn't necessarily combat the leech problem. As a backup plan, BitTorrent built in the other half of trading you probably learned as a kid: tit-for-tat. That is, if you give me one piece, I'll give you one piece back. BitTorrent will give you a few pieces of the file for free to help you get started, but after that you need to start giving some pieces back if you want to keep downloading. If you don't share, eventually everyone else will stop talking to you. Just like when you were a kid with your toys on the playground. In fact, BitTorrent goes one step futher and actually starts to favor the people who share the most. This means that the more you upload, the faster you'll download.
+
+For example, Alice gets a few pieces of a file from Bob for free. She can then give those pieces to Charlie, if he doesn't already have them, which will motivate Charlie to return the favor and give her a bunch of pieces that she doesn't have. She then goes back to Bob with those pieces, and the cycle continues and grows. Why don't Bob and Charlie talk directly? Maybe they do but they haven't gotten to those pieces yet. Or maybe their systems aren't configured right and they can't talk directly to each other.
+
+How does all this start? With BitTorrent, it starts with a tracker. Like the name suggests, a tracker keeps track of people who are interested in torrents. When you download a .torrent file it contains a link to a tracker as well as an identifier (hash) which is unique to that specific torrent. Your BitTorrent client then connects to the tracker and asks for a list of all people interested in that torrent. At the same time, the tracker adds you to that list so that other people know that you are interested. Your BitTorrent client will also periodically asks the tracker for an updated list. That's all a tracker does: keep track of that list for each torrent, and give it out to people who are interested. The tracker does not know anything else about the torrent, nor does it send you the file. It just shows you where to go to get the file. (Like an Information Booth at a mall.)"
+(http://userpages.umbc.edu/~hamilton/btclientconfig.html#HowBTWorks)
+
+
+===More Information===
+
+Recommended instruction page at Idealog, http://www.idealog.us/2006/04/how_to_start_us.html
+
+Another explanation can be found here at http://journal.planetwork.net/article.php?lab=pantic0704
+
+A very good how-to step-by-step instruction, at http://www.commonwebsense.com/2006/01/27/the-bittorrent-post/
+
+= Sources for Bittorrent downloads =
+
+Note that they may disappear due to legal action.
+
+* Legal Torrents [http://www.legaltorrents.com/index.htm], which includes a wide selection of electronic music. It also has the Wired magazine Creative Commons CD, which has songs from artists like the Beastie Boys who agreed to release some of their songs under a more permissive copyright that allows free distribution and remixing. 
+* Torrentocracy [http://www.torrentocracy.com/] has videos of the U.S. presidential debates and other political materials. 
+* File Soup offers open-source software and freeware, music from artists whose labels don't belong to the Recording Industry Association of America trade group, and programs from public television stations like PBS or the BBC. 
+* Etree [http://bt.etree.org/] is for devotees of "trade-friendly" bands like Phish and the Dead, who encourage fans to share live recordings, usually in the form of large files that have been minimally compressed to maintain sound quality."
+(http://www.wired.com/news/digiwood/0,1412,65625,00.html?)
+
+
+=Bittorrent Derivatives=
+
+
+==Blog Torrent==
+
+'''an improvement of BitTorrent specially designed for TV-like channels (later renamed the Broadcast Machine and finally Democracy TV)''' 
+
+"Blog Torrent adds features to BitTorrent that make it much easier for people to ‘publish’ files. We’ve made a simple, web-based way to create a ‘torrent’ and upload it in a one step. We’ve also made it easier to install a ‘tracker’ which is necessary on the server side to connect everyone who’s sharing the files. This makes it much easier for video artists, documentarians, or anyone with a camcorder and iMovie, to share their video content on a blog or website. To this point, BitTorrent has been complicated enough that it hasn’t been adopted by artists, which means that most of the content people are sharing is being posted by people who didn’t make it themselves, mostly Hollywood movies and TV shows. But what’s exciting about peer-to-peer is that it’s a free distribution method for people who could never afford distribution. With Blog Torrent, anyone can share what they make and that means totally new alternatives to mainstream media, in this case, television. We ultimately want to see internet “TV Channels" that download video in the background and let you watch at your convenience (a TiVo for the internet).
+
+I know we’re probably talking intuition rather than hard data here, but what is your sense of the potential audience for Blog Torrent (I mean content creators), and why? Is there any particular experience you’ve had which made you think “We have to do this and it is going to be huge."
+
+I think the audience is very, very broad and varied. I have friends, for example, that make artistically serious video work but have never considered offering it online, because it was never practical for them. I hope Blog Torrent will let them jump in. I also expect documentary filmmakers will love this technology– they can make a name for themselves if they’re new, or they can share extra footage and full-length interviews, they can offer old content that they aren’t selling anymore, and I bet they’ll even start to share first-run material for everyone who doesn’t live near an independent cinema. People who make videos and movies always want people to see it and there’s hundreds or thousands of times more content being created than gets out through mainstream channels. Not only that, but the number of content producers is set to explode: video has finally become practical on the desktop and small, hard-drive camcorders are right around the corner. We called it “Blog Torrent" – forgoing our original, and much cooler name “Battle Torrent" – because it makes sharing video as easy as blogging text or photos and, in doing so, might be able to do in the video world what blogs have done in the news world (or more). And whether it’s our software or someone else’s, I think TV is about to face more serious competition than they would ever imagine. There are too many talented people out there that have no space on the dial. And access to television channels is much narrower in terms of access than music, books, newspapers, or magazines– that means new pressures on the system could be even greater when things open up."
+(http://broadbanddaily.gigaom.com/archives/2004/12/06/seeds-of-change-nicholas-reville-on-downhill-battles-blog-torrent-initiative/)
+
+Good French-language summary of P2P TV, in particular the distribution of TV series through Blog Torrent, at http://www.futura-sciences.com/sinformer/n/news5076.php
+
+==Exeem==
+
+"Tom Mennecke, news editor of the popular file sharing news site Slyck, claimed on 1 December (2004) that: "EXeem will marry the best features of a decentralised network, the easy searchability of an indexing server and the swarming powers of the BitTorrent network into one program." He told New Scientist: "Decentralising BitTorrent holds the potential to revolutionise the P2P community." Screenshots posted on another site by a self-proclaimed eXeem beta tester show a client that incorporates a search function and the ability to monitor downloading files. Theodore Hong, a P2P programmer in the UK, says that whether eXeem materialises or not, someone will find a way to decentralise BitTorrent searching and tracking. "Something like it is bound to come eventually," Hong told New Scientist. "It will be a big problem for the major media companies because they will have to confront the underlying fact that millions of people want to share files."
+(New Scientist, http://www.newscientist.com/article.ns?id=dn6830)
+
+==LegalTorrent==
+
+
+Legal Torrents [http://www.legaltorrents.com/index.htm] is a project aimed at the distribution of [[Creative Commons]] licensed music, movies and books.
+
+
+=Discussion=
+
+
+==Some Background==
+
+'''Internet traffic geared to audiovisual content'''
+
+"Researchers singled out peer-to-peer file trading as the single fastest-growing consumer of network capacity. Currently, Mauldin said, the amount of traffic from peer-to-peer trading rivals that generated by regular web surfing.  Growing demand for data-rich files, such as movies, is further boosting bandwidth consumption.  "From mid-2004, we saw a significant shift away from music and on to video," said Andrew Parker, chief technical officer at CacheLogic, a firm based in England that monitors global peer-to-peer traffic. "Before that it was mainly music."  While P2P activity accounts for the lion's share of rising bandwidth consumption, internet traffic analysts said the growing popularity of voice over internet protocol, or VOIP, is a factor, too."
+(http://www.wired.com/news/print/0,1294,67202,00.html )
+
+
+Cory Doctorow: On Chris Anderson's Long Tail blog, some stats on '''the meltdown of mainstream media''':  
+
+* Music: sales last year were down 21% from their peak in 1999
+
+* Television: network TV's audience share has fallen by a third since 1985
+
+* Radio: listenership is at a 27-year low
+
+* Newspapers: circulation peaked in 1987, and the decline is accelerating
+
+* Magazines: total circulation peaked in 2000 and is now back to 1994 levels (but a few premier titles are bucking the trend!)
+
+* Books: sales growth is lagging the economy as whole 
+
+He follows up with the fact that movies, videogames, and the Web are all growing.
+
+==Why Bittorrent is not as good as it sounds==
+
+It's good in theory, and passes tests, but in practice, it generates a lot of problems.
+
+Marc Cuban at http://www.blogmaverick.com/2007/01/11/a-question-about-p2p-technologies/
+
+
+"The premise of the technically is to break up files into pieces and distribute those pieces on to the PCs of end users who have downloaded the BitTorrent type client. Then when a user requests the file to be delivered or streamed to them, rather than having to go to a host server, a tracker determines where all the file pieces are, and defines how the user reassembles them into a copy of the original on his or her computer as a file or a stream.
+Thats the very, very simplific explanation of how it works.
+
+From a business perspective, the important element is that if X number of people request a 1gbs file, rather than a host computer having to deliver files consuming Xgbs, the file is tracked among the peers and delivered using their bandwidth and resources , relieving the host of the bandwidth cost and obligation and hopefully speeding the delivery of the content
+
+All good, right ?
+
+For people creating content. Absolutely. For the end user, not so much.
+
+P2P technology expects the end user to contribute bandwidth, hard drive storage and processing power. Something that in most cases, we all have available to spare. Most of the bit torrent client softwares have a "give to get " algorithm , In other words, it will opportunistically deliver content to you as quickly as the bandwidth you make available to it. So if you make 100k of bandwidht available to upload file segments being hosted on your PC, it will allow you to download up to 100k (there are other variables involved, but this is the simple way to understand).
+
+All of this works very, very well in controlled environments. It also works well on a public internet tests when there are a lot of clients fully participating. In other words, they are offering their bandwidth, and open to seeding all content.
+
+In real world execution however, it doesnt happen that way. There are multiple problems with P2P systems that could kill the golden goose.
+
+1. Conflicting Clients . There are a ton of clients, with the number growing all the time. Although they work on basically the same source code and protocols, they all install and operate as if they had exclusive access. They want to control the PC so that they are in charge of what resources are available. When multiple clients are installed on a PC, not only does that create confusion among users, its a "last installed, first in charge" approach. THat approach and lack of respect for other clients will lead to user configuration problems. Thats not going to work. At some point they get considered to be malware and the clients will get uninstalled
+
+2. End Users dont understand how P2P works, and once they do, they get concerned about giving up bandwidth. Most users dont know how to go in and edit the default settings. So even if they settle on a single client and are happy with just the content available on that network or to that client, they arent going to be happy about their banwidth being in constant use to save a content provider money .
+
+3. The P2P model of seeding is a HUGE problem for those using wireless broadband with bandwidth constraints or per bit or per minute costs. People are going to wake up and find that they owe Verizon, Sprint, whoever a lot more than they ever thought possible because they installed a client on their Laptops. That could lead to these networks blocking the protocol.
+
+4. There is a misconception that there is bandwidth savings for the end user. If you want to download a 1gb size file, 1gb of data will be delivered to your PC. There is no savings of bandwidth on the client side. In fact, the client is charged a bandwidth premium because after they have received the entire file, they are asked to particpate in the peering by delivering parts of the file to other users.
+
+This in turn becomes an issue to services providers, whether DSL, cable, whoever. If quite a few users on a network segment are seeding files, it can slow down the network segment..
+
+Its interesting to note that some feel that more than 55pct of internet bandwidth is consumed by Torrents. I dont know what percentage of internet users are using bitTorrent clients to acquire content, but it has to be relatively small. If that percentage doubles, what happens to performance on the net ?"
+(http://www.blogmaverick.com/2007/01/11/a-question-about-p2p-technologies/)
+
+=More Information=
+
+
+#How to start using Bittorrent files, at http://www.idealog.us/2006/04/how_to_start_us.html
+#Very informative entry in [[Wikipedia:Bittorrent]]
+#A profile of Bram Cohen, designer of Bittorrent, in Wired at http://www.wired.com/wired/archive/13.01/bittorrent.html
+#[[P2P Filesharing]]
+
+
+
+
+=Key Books to Read=
+
+
+Susannah Garnder. [http://www.amazon.com/gp/redirect.html?link_code=ur2&tag=p2pfoundation-20&camp=1789&creative=9325&location=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2F076459981X%2Fqid%3D1151842999%2Fsr%3D2-1%2Fref%3Dpd_bbs_b_2_1%3Fs%3Dbooks%26v%3Dglance%26n%3D283155 BitTorrent For Dummies], 2005
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Resources]]
+
+[[Category:Media]]
+
+[[Category:Audiovisual]]

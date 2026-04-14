@@ -1,0 +1,63 @@
+'''= swift is a multiparty transport protocol. Its mission is to disseminate content among a swarm of peers. It might be understood as BitTorrent at the transport layer.'''
+
+URL = http://libswift.org/
+
+
+
+=Description=
+
+"Current Internet protocols are geared for 1:1 client/server communication. We expanded the TCP/IP protocol suite with swarming. Our protocol is designed to be capable of integration into browsers or operating systems and is able to serve 95% of current Internet traffic.
+
+swift is a multiparty transport protocol. Its mission is to disseminate content among a swarm of peers. It might be understood as BitTorrent at the transport layer.
+
+The TCP+BitTorrent stack consists of 60+90K lines of code (according to SLOCCount). With novel datastructures and refactoring we managed to implement swift in a mere 4,000 lines of cross-platform C++ code .  The libswift library is licensed under LGPL; it runs on Mac OS X, Windows and a variety of Unices; it uses UDP with LEDBAT congestion control. Currently maximum throughput is 400Mbps, but we are working on that: our next target is 1 Gbps. The library is delivered as a part of P2P-Next, funded by the European Union Seventh Framework Programme."
+
+
+=Discussion=
+
+"As  wise people say, the Internet was initially built for remotely connecting scientists to expensive supercomputers (whose computing power was comparable to modern cell phones). Thus, they supported the abstraction of conversation. Currently, however, the Internet is mostly used for disseminating content – and this mismatch definitely creates some problems.
+
+The swift protocol is a content-centric multiparty transport protocol. Basically, it answers one and only one question: 'Here is a hash! Give me data for it!'. Ultimately swift aims at the abstraction of the Internet as a single big data cloud. Such entities as storage, servers and connections are abstracted away and are virtually invisible at the API layer. Given a hash, the data is received from whatever source available and data integrity is checked cryptographically with Merkle hash trees.
+
+
+An old Unix adage says: 'free memory is wasted memory'. Once a computer is powered on, there is no benefit in keeping some memory unoccupied. We may extend this principle a bit further:
+
+    * free bandwidth is wasted bandwidth
+    * free storage is wasted storage.
+
+Unless your power budget is really tight, there is no sense in conserving either. Thus, instead of emphasising reciprocity and incentives we focus on code with a lighter footprint, non-intrusive congestion control and automatic disk space management.
+
+Currently, most parts of the protocol/library are implemented, pass basic testing and successfully transfer data on real networks. After more scrutinized testing, the protocol and the library are expected to be real-life-ready in December 2010."
+
+
+==How Swift Differs from [[Bittorrent]]==
+
+"1. '*The swift project (then named VicTorrent) began by trying to
+understand what would happen if BitTorrent was stripped of any
+Win95-specific, TCP-specific or Python-specific workarounds. As it turned
+out, not much was left.'
+
+2. 'While BitTorrent works at layer 5 (application), we go to layer 4
+(transport). PARC people are bold enough to go to layer 3 and to propose a
+complete replacement for the entire TCP/IP world. That is certainly a
+compelling vision, but we focus on the near future (<10 years) while CCNx<http://www.ccnx.org/> is
+a much more* ambitious rework.' One thing that is interesting is the
+discussion of the network stack and timescales to affect change. Also
+interesting is the discussion of a different network model<http://www.ischool.utexas.edu/~l38613dw/readings/NotesOnInterconnection.html>than the OSI model. This alternate model collapses the top 3 layers of the
+OSI into the 'Application Layer'. This helps us understand why conversations
+can seem to be 'collapsing the OSI model' - because it is a conceptual
+model, and one that is network centric. 'Application layer' in both models
+could just as easily be labelled 'all the other stuff'.
+
+3. 'Unlike BitTorrent swift employs no transmission metadata (the
+.torrent file). The only bootstrap information is the root hash; file size
+is derived from the hash tree once the first packet is received; the hash
+tree is reconstructed incrementally in the process of download."
+(NextNet May 2011)
+
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

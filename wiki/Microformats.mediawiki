@@ -1,0 +1,135 @@
+'''Microformats = a set of simple, open data formats built upon existing and widely adopted standards.''' 
+
+URL = http://en.wikipedia.org/wiki/Microformats
+
+=Definition=
+
+'''1.'''
+
+"Designed for humans first and machines second, microformats are a set of simple, open data formats built upon existing and widely adopted standards."
+(Ihttp://www.microformats.org/)
+
+
+'''2. Technical definition:'''
+
+"Microformats are implemented using existing XHTML or HTML elements. That way they are something that can always be viewed by humans (since they're implemented using existing HTML elements) but can also be parsed by software (like web crawlers) to extract semantic knowledge."
+(http://changelog.ca/log/2005/08/26/microformats-understood)
+
+
+'''3. Wikipedia:'''
+
+"A microformat, a web-based approach to semantic markup, seeks to re-use existing HTML/XHTML tags to convey metadata  and other attributes in web pages and other contexts that support (X)HTML, such as RSS. This approach allows software to process information intended for end-users (such as contact information, geographic coordinates, calendar events, and the like) automatically.
+
+Although the content of web pages is technically already capable of "automated processing", and has been since the inception of the web, such processing is difficult because the traditional markup tags used to display information on the web do not describe what the information means.[2] Microformats can bridge this gap by attaching semantics, and thereby obviate other, more complicated, methods of automated processing, such as natural language processing or screen scraping. The use, adoption and processing of microformats enables data items to be indexed, searched for, saved or cross-referenced, so that information can be reused or combined.
+
+As of 2010[update] microformats allow the encoding and extraction of events, contact information, social relationships and so on. More are being developed."
+(http://en.wikipedia.org/wiki/Microformats)
+
+=Description=
+
+Microformats are meant to enable microcontent publishing, the postmedia mode of writing in microchunks, which can then be re-used and shared in a variety of ways.
+
+For example, book reviews could be more efficiently collated if there was a uniform way to recognize them through microformats.
+
+"Microformats are embedded into webpages and discovered by search engines like Google or Technorati. '''Microformats are creating common definitions for "What is a review or event? What are the specific fields in the data structure?'''" They can also specify what we can do with all this information."
+(Marc Canter at http://www.alwayson-network.com/comments.php?id=12412_0_1_0_C)
+
+
+=Discussion=
+
+Read Matt Webb's [http://interconnected.org/home/2007/12/28/wrapping_up_2007 take] on microformats as an expression of [[Phenotropics]].
+
+
+=Applications=
+
+
+==Business==
+
+'''Microformats for Business'''
+
+"In my reckoning, there are two business propositions right now in microformats: 1) Structuring data for search and business intelligence, already successfully demonstrated by technorati; 2) Structuring content for collaboration, likely monetized through a service similar to BasecampHQ.
+
+Microformats are really just a way to combine human and machine readability in one web page. Microformats are superior to similar infrastructure plays because the average web designer can incorporate them with very little work.
+
+So, what's the business proposition for combining human and machine readability? Right now, I can come up with two.
+
+The most obvious is structuring content for search and business intelligence. For instance, technorati has raised its own search visibility with the reltag microformat. By helping determine the relevance of given content, reltag also enhances technorati's ability to sell its index data for market intelligence.
+
+A less obvious business proposition for microformats is structuring content for collaboration. Over the past month, I've been having conversations with Mike Migurski of reblog fame and various others including Mark Rickerby and Lucas Gonze. In these conversations, we have focused on microformats as easily identified packets of information inside of web pages.
+
+With the right infrastructure, people could pass these packets around and share them. Mike Migurski and his team are already doing this with full blog posts using reblog."
+(http://www.unmediated.org/archives/2005/08/microformats_in.php)
+
+
+=Standard Formats=
+
+
+    
+* hCard
+
+URL = http://microformats.org/code/hcard/creator
+      
+hCard is a simple format used to represent people, companies, organizations and places. The most popular way of putting it to use is for storing personal details, which can then be searched or downloaded to your desktop address book.
+
+      
+You can make your own hCard today with Microformats.org's hCard creator.
+
+
+
+    
+* hCalendar
+
+URL = http://microformats.org/code/hcalendar/creator
+      
+hCalendar is to events and schedules what hCard is to personal details. Easing effective, standardized searching of events and schedules hCalendar has been put to use for conferences , world cup schedules and Yahoo's local events service, among many more.
+
+      
+You can create your own hCalendar events at the hCalendar Creator.
+
+
+
+    
+* hReview
+
+URL = http://microformats.org/code/hreview/creator
+      
+hReview is another Microformat, this time focused on embedding reviews of products, services, businesses or events. Among the sites using it at the moment are UK Film Review, Dinnerbuzz, a restaurant review site, and Cork'd, a wine reviewers community.
+
+      
+You can create your own hReview using the hReview Creator. 
+
+
+=Tools=
+
+#How are microformats related to [[Portable Social Networks]]?, at http://microformats.org/wiki/social-network-portability
+#[http://kitchen.technorati.com/search/ Technorati Microformats Search] is still in beta but it’s a nice example of a microformats search engine.
+#[https://addons.mozilla.org/en-US/firefox/addon/4106 Operator] is the superb plug-in for Firefox that exposes and exports microformats.
+
+
+=Key Books to Read=
+
+#John Allsopp. [http://microformatique.com/book/ Microformats]
+#Brian Suda. [http://suda.co.uk/publications/0596528213/ Using Microformats]
+ 
+
+=More information=
+
+#More information at http://microformats.org/wiki/Main_Page and http://developers.technorati.com/wiki/MicroFormats
+#Reference page 'Getting Microformats' at http://adactio.com/extras/gettingmicroformats/
+#An excellent introduction for beginners, by our collaborator Michael Pick, can be found at Robin Good's Master New Media site, at
+http://www.masternewmedia.org/news/2006/09/20/what_are_microformats_and_why.htm
+#[http://changelog.ca/log/2005/08/26/microformats-understood Microformats Understood]
+
+
+
+[[Category:Business]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Education]]
+
+[[Category:Standards]]
+
+[[Category:Media]]
+
+[[Category:Audiovisual]]

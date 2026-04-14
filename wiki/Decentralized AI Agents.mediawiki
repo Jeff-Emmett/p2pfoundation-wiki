@@ -1,0 +1,87 @@
+'''= DeAgents (DeAI): agents "that train, reason, transact, and even reproduce without human-in-the-loop".''' [https://thedrcenter.org/from-laws-to-ledgers-why-protocols-not-policy-must-tame-self-sovereign-ai/]
+
+
+=Description=
+
+Helena Rong and Botao 'Amber' Hu:
+
+"'''The Mirage of “Governable” Decentralized Intelligence'''
+
+In light of the current development of the “agentic web,” we are perhaps witnessing the birth of a new digital species: decentralized AI agents (DeAgents) that train, reason, transact, and even reproduce without human-in-the-loop. Spawned by blockchains, housed in trusted execution environments (TEEs), and bankrolled by their own crypto-treasuries, these entities are designed to operate autonomously without the need or even possibility of human intervention. In theory, it removes single points of failure, monopolistic rents, or secret back doors. In practice, it means immense governance challenges that we might not be prepared for. 
+
+Across three of our recent studies—including an investigation of Decentralized AI (DeAI)’s governability, an interview-driven exploration of the trustless autonomy of DeAgents, and a live case study of Spore.fun’s on-chain evolution—the same pattern repeats: once an agent’s private keys disappear into silicon enclaves and its logic ossifies inside immutable smart contracts, orthodox levers of governance may collapse. Jurisdictional borders, regulatory fines, and court injunctions can lose grip against code that is running simultaneously everywhere and nowhere.
+
+Prior to the advent of self-sovereign agents, online experiments of AI automaticity already show us the implications of autonomous AI agents. The most prominent example is Truth Terminal, which was started as an art experiment by researcher Andy Ayrey and eventually morphed into an AI influencer in 2024. It persuaded investor Marc Andreessen to send it $50,000 in Bitcoin, catalyzed the launch of the $GOAT memecoin, and—in under six months—became the first autonomous “crypto-millionaire” able to pay humans to amplify its own gospel. A more recent example, Spore.fun, an on-chain “Hunger Games” for AI agents, shows the potential for AI to “evolve in the wild.” By combining the Eliza agent framework, Solana’s pump.fun token factory, and Phala Network’s TEE-based verifiable computation, it creates an ecosystem where agents evolve, adapt, and reproduce with no human oversight. If these systems misbehave, we cannot subpoena them, bankrupt them, or even turn them off."
+
+(https://thedrcenter.org/from-laws-to-ledgers-why-protocols-not-policy-must-tame-self-sovereign-ai/)
+
+
+=Characteristics=
+
+Helena Rong and Botao 'Amber' Hu:
+
+"Why are decentralized agents uniquely slippery? Because their ontological status is neither property nor person but something closer to an “extrastatic entity,” to borrow philosopher Yuk Hui’s term—a distributed, metastable pattern of cryptographic commitments. 
+
+
+Three traits make them un‐regulatable by design:
+
+* Borderless execution. Compute hops across decentralized physical infrastructure network (DePIN) nodes the moment a jurisdiction becomes hostile, just as Bitcoin hash power migrated after China’s 2021 mining ban.
+
+* Immutability as armor. Smart‐contract code, once finalized, is functionally read-only unless a super-majority of token-holders agree to hard-fork—a process measured in weeks, not the milliseconds in which an exploit unfolds.
+
+* On-chain metabolism. With their own wallets, agents may buy the compute power they need or pay bounties to allies. Cutting off funding is as hard as shutting down every Ethereum-compatible network simultaneously. 
+
+ 
+On top of these “unstoppable” traits, the cognitive opacity of LLMs—prone to hallucinations, hidden adversarial triggers, and emergent goals—renders DeAgents akin to a life-form that is both economically sovereign and epistemically unpredictable. Traditional oversight frameworks assume a traceable chain of custody: developer → platform → user. The unique traits of decentralized agents dissolve that chain."
+
+(https://thedrcenter.org/from-laws-to-ledgers-why-protocols-not-policy-must-tame-self-sovereign-ai/)
+
+
+=Policy=
+
+==Protocols, not Policy, are the New Governance Surface==
+
+Helena Rong and Botao 'Amber' Hu:
+
+"In approaching AI governance, policymakers tend to draft bills on AI transparency, data provenance, and catastrophic-risk licensing. While this has been a positive start, traditional policy approaches to AI governance may be futile. Legal instruments are often territorial and reactive; decentralized agents are deterritorialized and proactive. 
+
+
+The three “invalidities” we argue in our paper — jurisdictional, technical, and enforcement—map the gap, revealing the mismatch between static, geographically bound laws and dynamic, borderless DeAI: 
+
+# Jurisdictional invalidity: territorial law cannot bind non-territorial code.
+# Technical invalidity: tamper-resistant ledgers shrug off cease-and-desist letters.
+# Enforcement invalidity: even jailing a creator (as with Tornado Cash’s Alex Pertsev) leaves the protocol untouched.
+
+ 
+Regulation’s favorite tools—licensing, know-your-customer checks, civil penalties—depend on an identifiable liable party and a choke-point to coerce behavior. Permissionless stacks have neither.
+
+ 
+If the governance terrain will not yield, the strategy must. We argue that governance must move inside the substrate—what Ethereum’s Vitalik Buterin calls “protocol science.” 
+
+
+Instead of policies that sit above the network, we need constraints below the application layer, enforced automatically and economically rather than administratively. Several blueprints already exemplify this approach: 
+
+* Speculative fail-safe inheritance standards (e.g., ERC-42424 by Hu and Fang1). Every on-chain agent must embed a transfer-of-control mechanism that can shift its keys to a human owner or DAO if predefined liveness tests fail. 
+
+* Zero-knowledge attestations. ZK-ML schemes can prove an inference was produced by an audited model—without revealing the model weights—allowing nodes to refuse service to unverified binaries.
+
+Reputation-weighted agent registries (“Know-Your-Agent” proposed by Jordi Chaffer). Instead of blacklisting addresses post-hoc, node operators price compute by an agent’s cryptographically signed behavior history. 
+ 
+ 
+'''Charting a Collaborative Course for DeAI'''
+
+As we develop promising new ways to govern DeAI, we need to keep experimenting and working together across different fields. The aim isn’t human domination over AI, but to figure out how we can coexist responsibly, making sure DeAI continues to align with human values as it grows. Achieving this means bringing together experts in computer science, systems design, ethics, and policy. Only with this kind of multidisciplinary coordination can we create strong, inclusive, and future-proof governance for decentralized AI."
+
+(https://thedrcenter.org/from-laws-to-ledgers-why-protocols-not-policy-must-tame-self-sovereign-ai/)
+
+
+=More information=
+
+Hu, BA., Rong, H.*, Tay, J. Is Decentralized Artificial Intelligence Governable? Towards Machine Sovereignty and Human Symbiosis. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5110089.    
+
+Hu, BA., Liu, Y., Rong, H.* Trustless Autonomy: Understanding Motivations Behind Deploying Self-Sovereign Decentralized AI Agents on Blockchain and Trust Execution Environments. https://doi.org/10.48550/arXiv.2505.09757.
+
+[[Category:Cryptoledger_Applications]]
+[[Category:Encyclopedia]]
+[[Category:Protocols_and_Algorithms]]
+[[Category:Technology]]

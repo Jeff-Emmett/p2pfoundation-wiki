@@ -1,0 +1,26 @@
+
+'''* Article: Design principles of the Recursive InterNetwork Architecture (RINA). By Eduard Grasa, Eleni Trouva et al.'''
+
+URL = http://www.future-internet.eu/fileadmin/documents/fiarch23may2011/06-Grasa_DesignPrinciplesOTheRecursiveInterNetworkArchitecture.pdf
+
+
+=Introduction=
+
+"RINA design principles (or patterns) were first presented by John Day in his book ‘Patterns in Network
+Architecture: A return to Fundamentals”. This work is start afresh, taking into account lessons
+learned in the 35 years of TCP/IP’s existence, as well as the lessons of OSI’s failure and the lessons
+of other network technologies of the past few decades, such as CYCLADES, DECNET  or XNS. He has made some key observations that point to a new direction.
+RINA departs from the basic premise that “networking is inter-process communication (IPC) and only
+IPC”. Networking provides the means by which processes on separate computer systems
+communicate, generalizing the model of local inter-process communications. In an operating system, to
+allow two processes to communicate, IPC requires certain functions such as locating processes,
+determining permission, passing information, scheduling, and managing memory. Similarly, two
+application processes residing on different systems communicate and share state information by
+utilizing the services of a Distributed IPC Facility."
+
+
+[[Category:Articles]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

@@ -1,0 +1,42 @@
+'''= a central, open source, free-to-use repository which lets customers of genotyping companies upload their genotyping data and annotate them with phenotypes.''' 
+
+URL = http://opensnp.org/
+
+
+OpenSNP provides its users with the latest scientific research on their genotypes and lets scientists download annotated genotypes to make science more open.
+
+
+=Discussion=
+
+Bastian Greshake and Philipp Bayer:
+
+"We've created openSNP, a central, open source, free-to-use repository which lets customers of genotyping companies upload their genotyping data and annotate them with phenotypes. OpenSNP provides its users with the latest scientific research on their genotypes and lets scientists download annotated genotypes to make science more open.
+
+Companies that perform Direct-To-Customer (DTC) genetic tests have now been around for about six years, with 23andMe – founded in 2006 – and deCODEme being two of the oldest companies on the market. Their customers receive a test tube via mail, spit into this tube and send it back to their DTC company to get their genetic information analyzed. The tests performed by DTC companies do not utilize the more famous DNA sequencing, but rely on faster and cheaper DNA microarrays instead.
+
+Microarrays screen for around 1 million genetic markers, called Single Nucleotide Polymorphisms (SNPs). A SNP is a genomic variation, where a single base is changed at one site between members of a population. Usually a SNP has only two alleles (variants) and occurs with a frequency of at least 1% in the population. Spread over the whole human genome, each of us carries around 10 million variable sites, where 10% are covered by DTC-companies. Because of their uniqueness, SNPs can be used as markers associated with certain conditions. For example, there are variations of SNPs that are associated with elevated risks of developing breast cancer or Alzheimer’s. Other SNPs can be used to predict how a person metabolizes chemicals or drugs.
+
+23andMe uses the results of consenting customers to perform their own genome wide association studies (GWAS). Those studies check for statistical differences between different groups. In a simple example one could have a group that is known to have Alzheimer’s and a control-group that does not have Alzheimer’s. Given enough participants, one can then look for genetical variants that are over- or underrepresented in one of the groups. The variants that are found by this method can then be used as predictors for Alzheimer’s.
+
+We feel that research projects all over the world and science in general would benefit from a rich, freely available source of linked, genetic data. And although genome wide association studies need a minimum number of participants to be able to find significant variations, it is not necessary to have 30.000 participants in your study. There are many publications with significant results with a total number of participants of less than 5000 individuals. Given the current number of 23andMe customers, one only needs 5 % of them to participate in freely sharing their genetic information together with basic information on some medical conditions or other variations to reach the critical mass to be able to perform simple association studies! While many people have already started to publish their results on GitHub et al. and movements like DIYBio are starting to take off, there are no real efforts to create a repository to centrally collect this kind of data.
+
+But what if one could create an open platform to collect this kind of linked data? Is it possible to perform crowd-sourced association studies to create new knowledge about our genes? With the creation of openSNP we have tried (and are still trying) to find out".
+(http://events.ccc.de/congress/2011/Fahrplan/events/4730.en.html)
+
+
+=More Information=
+
+# openSNP blog, http://opensnp.wordpress.com/
+# Delicious link dump on personal genomics , http://www.delicious.com/gedankenstuecke/personalgenomics
+
+Video:
+
+# preesentation at 28C3, http://www.youtube.com/watch?v=C6ktYLuL4pY
+# self-interview on project, http://www.youtube.com/watch?v=p0QTg1eMCLg
+# shows you how you can use the openSNP-frontend to enter your phenotype-data, http://www.youtube.com/watch?v=pHUnTgoHQJk
+# how to query the API's, http://www.youtube.com/watch?v=L5Sgejgp6ZY
+
+
+[[Category:Science]]
+
+[[Category:Open]]

@@ -1,0 +1,63 @@
+
+
+
+'''= aims at allowing software to be discovered and used from any device around you'''
+
+URL = http://www.ebrain.in
+
+
+=Description=
+
+Erle Pereira:
+ 
+"eBrainPool aims at allowing software to be
+discovered and used from any device around you. It enables any user
+running ebrainpool to discover and run software from someone else in
+the shared community resource pool and use it on their own netbook,
+phone or any other device. This means that she doesn't need the
+software installed on her device to use it - simply seek others with
+the software and use it on your device while it runs directly on their
+computer. While the architecture has been designed keeping in mind
+our long term goal of platform independence, it currently runs on
+Linux.
+ 
+The broad goals are to provide software, computing and operating
+environments as a shared resource.
+ 
+We've shared crayons in kindergarten and our toys growing up, we've
+shared our tools and we've benefited from sharing knowledge and our
+lives. Communities are brought closer by sharing, working and playing
+together. The long term vision of eBrainPool is to allow software with
+anyone in the community to be usable throughout the community, across
+boundaries of operating system and hardware capabilities and to not
+just bring us closer but to bind us stronger.
+ 
+A short note on the technologies involved:
+
+The original architecture used P2P to build the network, the current
+implementation has used Meshed Networking (OLSR -- www.olsr.org) to
+achieve a direct connection between the various devices involved. At
+the current time, Xorg (X Windows), SSH and Fuse are the other
+essential elements. Security and data abstraction are essential in the
+architectural design, a combination of ssh (libssh) and Fuse are being
+used to achieve this currently."
+
+
+=Status=
+
+May 2011:
+ 
+"Truthfully, a lot of work remains. Our code is still in development
+alpha stage. Although rough what we would love is for this to be
+tested in a real life large mesh environment so we can study usability
+in a real world scenario. This is one area we need the most help with
+and we would appreciate it profusely if someone here would be willing
+to put a bunch of linux systems together in an ad-hoc mesh and test
+this out. We are currently working hard to clean up our code further
+to reduce the entry barrier for people trying this out and giving us
+valuable usability data."
+(NextNet, May 2011)
+
+
+
+[[Category:P2P Infrastructure]]

@@ -1,0 +1,26 @@
+=Discussion=
+
+==Four Aspects of Data Property Rights==
+
+Nitin Borwankar:
+
+"Current discussions about [[Data Portability]] tend to be rather narrowly focused on a small subset of the problem — namely, the ability to transport a [[Social Graph]] from one social networking site to another. But a large amount of personal data on the Net is not social graph data and a large number of people on the Net may be concerned about data issues not directly connected to social graphs. Additionally, taking a social graph from one social networking site to another may be neither practical nor desirable.
+
+I’d like to suggest an alternate approach, one that supports strong TOS guarantees from web app vendors and includes terms that guarantee four atomic data property rights. (I call these rights “dimensions” due to their orthogonality and fundamental-ness.) And I posit that with these four as TOS guarantees, data portability pretty much becomes a non-issue:
+
+1. '''Data Accessability''': The ability to address each element of my data with a URI when it is in the web app. Zero black-box behavior, data addressable in place. This allows me to upload or create data in a web app and have full, in-place programmatic access to each element of it; it also allows me to mashup at the data level and not have to hack the UI via Javascript shenanigans such as Greasemonkey. Property analog: If I own property I may not be denied access to it.
+
+2. '''Data Visibility''': The ability of the user to control the visibility of the data in their account, so that the web app vendor does not set the default visibility policy, the user does. The default, if at all set by the vendor, must be “private” –- only the user can change it, and user settings always dominate. This prevents web app vendors from exercising intrusive and coercive control over user-generated data. Property analog: If I own property I and only I control who has access to it (i.e. modulo lawful search).
+
+3. '''Data Removal''': On account termination by the user, or by the vendor, all data in the user account must be deleted (possibly after a waiting period). If data is ever restored from backups, accounts terminated must not be reactivated and their data must remain unavailable to business processes, such as targeted advertising, etc. This provides a degree of data privacy and non-intrusiveness. Property analog: If I lease property and the lease terminates then the lessee has no residual rights on my property.
+
+4. '''Data Ownership''': Data created/uploaded by the user belongs to the user, and only to the user; it is not automatically “co- owned by the web app vendor with all rights given in perpetuity,” as is so prevalent today. Property analog: If I own property then no one else, as a side effect of some other contract, can gain automatic co-ownership of my property without my explicit consent."
+(http://gigaom.com/2008/02/06/data-property-rights-not-portability/)
+
+=More Information=
+
+#[[Data Portability]] ; [[Social Graph]]
+#[[Data Ownership]]
+
+[[Category:Standards]]
+[[Category:Data Commons]]

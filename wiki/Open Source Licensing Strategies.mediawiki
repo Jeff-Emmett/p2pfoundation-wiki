@@ -1,0 +1,119 @@
+For a broader treatment, see [[Open Source Business Models]]
+
+By John Koenig at http://www.itmanagersjournal.com/feature/314?theme=print
+
+(excerpts only)
+
+
+=Typology=
+
+==The Optimization Strategy==
+
+"The optimization strategy is an open source manifestation of Clayton Christensen's "law of conservation of modularity." In the OSS application of Christensen's law, one layer of a software stack is "modular and conformable," allowing adjacent software layers to be "optimized." The modular and conformable layers are commodities, and are unprofitable or only marginally profitable software businesses. The Linux operating system is an example. The disruption caused by a modular and conformable operating system such as Linux serves to erode margins for other operating system vendors like Sun, Wind River, and Microsoft. Winners under Christensen's law are the adjacent, interdependent layers of the software stack, the layers where applications are optimized to achieve greater value, and where, correspondingly, better pricing power exists. Oracle provides an example of an optimized adjacent layer, as an ROI assessment by Mainstay Partners illustrates.
+
+
+==The Dual License Strategy==
+
+Under the dual license strategy, a software company offers free use of its software with some limitations, or alternatively offers for a fee commercial distribution rights and a larger set of features. In the dual license approach, free use carries certain conditions; typically, any modifications that are distributed must also be made public in source code form, and companies cannot use the free version as a component of any product or solution they commercialize. This prevents third parties from developing improvements that would rival the original open source software.
+
+This strategy is often associated with the "Free Core, Added-Value on Top" business model.
+
+
+=== Free Core, Added-Value on Top ===
+
+Case study on MIMEDefang (free core), Can-IT Pro (proprietary added value) from Bill White of Roaring Penguin:
+
+"Roaring Penguin Software Inc. started as a one-person consulting company in 1999. A year later, David F. Skoll, the company's President and CTO, was asked to develop an e-mail filtering tool. David developed MIMEDefang, an e-mail filter that used Sendmail's Milter facilities. David donated the code to the open source community, and kept developing MIMEDefang as a free tool for system administrators. Today, the MIMEDefang code is available at at the website.
+
+By 2002, it was obvious that there was a need for a packaged mail-filtering solution suitable for end-users. David decided to go ahead and write what became CanIt-PRO. Whereas MIMEDefang is suited to system administrators who are familiar with Perl and comfortable with writing their filtering policies in Perl, the CanIt product line allows end-users to control their filtering through a simple web-based interface.
+
+The company transformed itself from a consulting company to a product development company. This transformation required significant changes.
+
+There are a number of open source business models touted by open source supporters. Roaring Penguin chose the "free core, value-add on top" model. The core scanning software, MIMEDefang, is free and released under the terms of the GNU General Public License.
+
+All the MIMEDefang code is contributed by Roaring Penguin, which has made minor patches and regular releases based on community feedback; MIMEDefang is estimated to have between 6,500 and 10,000 users.
+
+The commercial products are built on top of MIMEDefang and have a more traditional proprietary software license. However, even the commercial products ship with source code and permission for end-users to modify it. They just can't redistribute the commercial products.
+
+The commercial software extends MIMEDefang by hooking into strategic points in its filter file. MIMEDefang was designed to be extended in this way by system administrators and it proved a natural way to develop CanIt.
+
+Although some businesses offer only free software and generate revenue strictly from support or contract customizations, we did not feel this would generate sufficient revenue to make the company viable. We based this feeling on a number of observations:
+
+   
+1. Having released several applications under the GPL license in the past, we found that people were very reluctant to pay for support. For example, we have over 500 paying customers for CanIt. There are probably more than 20 times that many using MIMEDefang, but we have only sold two MIMEDefang support contracts.
+   
+2. An application released under the GPL licence can be supported by anyone. Thus, you run the risk of someone else offering paid support for your application. This is perfectly legal under the GPL.
+   
+3. Very few companies have made a viable business out of free software with paid support whereas there are tens of thousands of successful proprietary software companies.
+   
+4. Contract work and consulting is labour-intensive. Selling the actual software lets you obtain revenues again and again for the same original work."
+(http://www.osbr.ca/archive.php?issue=7&section=Ar#A3)
+
+==The Consulting Strategy==
+
+According to a 2000 U.S. Department of Commerce report, not since 1962 has packaged software investment reached 30% of total software investment. So Linux or not, software licenses are earning a smaller portion of information technology (IT) investment, while consulting and services continue to rise.
+
+According to Red Hat, the operating system comprises only 4% of the overall revenue of a Linux-based solution. 
+
+
+==The Subscription Strategy==
+
+According to Culpepper, "revenues from services -- both maintenance and consulting -- increase in proportion relative to revenues from licenses. Move out to the 20-year mark, and the typical software company will have $2 of services for every $1 of licenses."
+
+
+==The Patronage Strategy==
+
+Why would a company like IBM, or any company for that matter, contribute time, energy, developers, and code to an open source organization? There are a number of strategic reasons. IBM does it to drive standards adoption and crack entrenched markets. When a company contributes open source software to an independent organization, it anticipates that a de-facto standard and supporting community will converge around that contribution. A company may also use the patronage strategy to commoditize a particular layer of the software stack, eliminate competitors that are extracting revenue from that layer. For example, IBM, as a major corporate patron of Linux, seeks to commoditize the x86 operating system, eliminating server fees for Microsoft Windows and Sun Solaris. This creates an opportunity for IBM to offer value higher up the stack through clustering, availability, provisioning, security, and management software.
+
+To succeed with a patronage strategy, the patron must deliver more than just source code. There must also be leadership and consistency. 
+
+IBM has been very focused on where it applies its open source energies. The company has an Open Source Steering Committee that has approved many OSS initiatives. IBM's OSS initiatives are clearly vested in server strategies as opposed to the desktop. As a result of such focus, IBM has succeeded in commoditizing the Sun Solaris operating system and in slowing down Microsoft server adoption in the datacenter. It has made no headway yet, however, in breaking up the Microsoft Office desktop monopoly.
+
+
+==The Hosted Strategy==
+
+Companies like Salesforce.com, eBay, and Google, are in the software business, but they don't sell their software, they let you use it or rent it. 
+
+==The Embedded Strategy==
+
+Linux is the operating system used in more than half of the embedded systems market. It has been used in consumer products such as TIVO and in devices large and small, from servers to cell phones. Throughout the world it is rapidly becoming the operating system of choice for many low-cost communications products.
+
+The key ... is viewing open source as a platform, not merely using Linux as a product to replace a proprietary operating system."
+(http://www.itmanagersjournal.com/feature/314?theme=print)
+
+
+=Discussion=
+
+Andrew Binstock:
+
+==Copyleft works better for revenue than business-friendly licenses==
+
+"the central issue, which in my view is not technical, but monetary. The OpenSSL team, whose project was the home for the Heartbleed vulnerability, discussed with remarkable candor how much the lack of funding from the product's users has limited their development work and, by extension, their ability to find and remediate such defects. It turns out that major users of OpenSSL, such as Cisco and Google, among others, had incorporated the software into the important products, but sent little or no funds to the developers.
+
+Faced with this embarrassing revelation, the companies quickly got together, pooled some money, and assembled a committee that agreed to dispense funds to worthy projects, starting with OpenSSL. This is a hurried patch — one that will temporarily relieve the problem, but not address its root cause.
+
+The root cause is a fundamental conflict at the heart of open source: the opposing forces of building community vs. deriving a sustainable level of revenue from an open-source project.
+
+The tension between these forces is most acutely felt when choosing a license for the project. Projects that have a greater interest in fostering use of the software or projects that don't care about much about monetization choose the "business-friendly" licenses (such as the Apache Software License, MIT, BSD), which impose nothing but the most minor responsibilities on the user or, more correctly, the licensee.
+
+Projects that look for revenue to sustain themselves often choose the so-called "copyleft" licenses, (GPL, AGPL, etc.), which require that the licensees open their source code under a similar license. The revenue benefit for the project comes from the ability to offer alternative licensing terms to licensees that prefer not to disclose their source code. This arrangement is referred to as commercial multi-licensing. It's a model that works well. MySQL, Qt, and BerkeleyDB are among many examples of such projects that drove their parent companies to be successful businesses.
+
+There is unfortunately no license to straddle the business-friendly vs. copyleft divide. As a result, projects that need a revenue stream to sustain them but opt for a business-friendly license to develop a community face significant difficulties. This was the case with OpenSSL. The team chose an Apache/BSD-style license. This successfully built community but, it turns out, communities simply do not pay for their tools. Even well-heeled users, such as Cisco and Google, don't pay. In the OSS community, this is viewed as no accident, but a matter of policy.
+
+For example, I recently attended Black Duck's Open Source Think Tank, where OSS cognoscenti gather once a year to discuss the business of open source. Among the many discussions was one regarding Google's steadfast refusal to pay for OSS software it uses. Several participants reiterated their experience in this regard, all of which were consistent. While the search giant open sources some of its tools and garners considerable marketing value from sending summer interns to high-visibility projects, the company won't do the one thing projects most need: support them monetarily. It's policy.
+
+It seems that the projects caught in the community vs. revenue bind could find alternate source of funding: paid support, consulting, etc. If you look at the OpenSSL blog post I linked to earlier, though, you'll see the project did all these things and still garnered only insignificant revenue. The service/support model, which appears to be so widespread, is in fact a meager revenue stream."
+(http://www.drdobbs.com/open-source/the-conflict-at-the-heart-of-open-source/240168123)
+
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Peerproduction]]
+
+[[Category:Peerproperty]]
+
+[[Category:Licensing]]
+
+[[Category:Business Models]]

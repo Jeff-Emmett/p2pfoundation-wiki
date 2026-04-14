@@ -1,0 +1,69 @@
+
+=Definition=
+
+"distributed revision control takes a peer-to-peer approach, as opposed to the client-server approach of centralized systems. Rather than a single, central repository with which clients synchronize, each peer's working copy of the codebase is a bona fide repository. Synchronization is conducted by exchanging changesets, which define unique versions of every file, from peer to peer."
+(http://www.linux.com/feature/121157)
+
+
+=Description=
+
+"Distributed revision control (or Distributed Version Control (Systems) (DVCS), or Decentralized Version Control) is a fairly recent innovation in software revision control. It provides some significant advantages over the more traditional centralized approach to revision control, and it has some defining characteristics that separate it from centralized systems. However, the line between distributed and centralized systems is graying in some regards, especially since DVCSs can be used in a "centralized mode".
+
+
+=Characteristics=
+
+Comparison with centralized systems:
+
+'''Differences'''
+
+    * Each developer does work on his own local repository.
+    * Working model epitomizes bazaar-style development in that anyone can create their own branch.
+    * Repositories are cloned by anyone, and are often cloned many times.
+    * There may be many "central" repositories.
+    * Access control lists are not employed. Instead code from disparate repositories are merged based on a web of trust, i.e., historical merit or quality of changes.
+    * Lieutenants are project members who have the power to dynamically decide which branches to merge.
+    * Network is not involved in most operations.
+    * A separate set of "sync" operations are available for committing or receiving changes with remote repositories.
+
+
+'''Advantages'''
+
+    * Allows users to work productively even when not connected to a network
+    * Makes most operations much faster since no network is involved
+    * Allows participation in projects without requiring permissions from project authorities, and thus arguably better fosters culture of meritocracy instead of requiring "committer" status.
+    * Allows private work, so you can use your revision control system even for early drafts you don't want to publish
+    * Avoids relying on a single physical machine. A server disk crash is a non-event with Distributed revision control
+    * Code migration into "pristine environment" can take a different route from developer to its final destination. e.g. through a review process or a continuous integration environment before it gets merged to its final destination.
+
+
+'''Disadvantages'''
+
+    * Will often require many more merge conflict resolution by hand efforts.
+    * Many teams have long used and grown accustomed to the centralized model, and are reluctant to change
+    * Source code is considered the "crown jewels" of a software group. Centralized VCSs have been around much longer and thus perceived to be more stable
+    * Some projects want or need centralized control
+    * Distributed systems can end up with a person as the central point of control, rather than a server
+    * Concepts of DVCSs are slightly more difficult for developers to grasp. They become required to know more about infrastructure.
+
+=Example=
+
+#The first DVCS is Reliable Software's Code Co-op (1997). First generation DVCSes include Arch and Monotone. The second generation was prompted by the arrival of Darcs, followed by a host of others, including Mercurial, Bazaar, and Git.
+#Mercurial at http://www.selenic.com/mercurial/wiki/
+
+
+=More Information=
+
+
+#Full list of revision control software, at http://en.wikipedia.org/wiki/List_of_revision_control_software
+#Essay on various revision control systems, especially the section "Centralized vs. Decentralized SCM", at http://www.dwheeler.com/essays/scm.html
+#,Distributed Version Control Systems - Why and How by Ian Clatworthy, Bazaar/Canonical at http://people.ubuntu.com/~ianc/papers/dvcs-why-and-how.xhtml
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Governance]]
+
+[[Category:Open]]
+
+[[Category:Encyclopedia]]

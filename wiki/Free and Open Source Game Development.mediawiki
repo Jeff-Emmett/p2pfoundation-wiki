@@ -1,0 +1,40 @@
+
+
+Excerpted from '''Contrasting Proprietary and Free/Open Source Game Development''', Alessandro Rossi & Marco Zamarian, at http://www.osbr.ca/ojs/index.php/osbr/article/view/736/702
+
+=Description=
+
+"The interaction between F/LOSS and computer games development goes back at least ten years and can be associated with two distinct, albeit intertwined trends: i) the efforts undertaken by some large industry players to leverage user-base potential into the development of proprietary computer games; and ii) the emergence of user/developer communities pursuing independent gaming projects.
+
+These trends originate with end users modifying the code to enhance and customize their gaming experience. Long before incorporating end users into the production cycle became a common practice, many games, such as Wolfenstein 3D, gained popularity after their formats had been reverse engineered. This unlocked the possibility for the masses to edit default specifications (such as scenarios, maps, characters, and rules of interactions), thus "modding" the game environment according to the user's preference. Some software game companies, such as id Software and Epic Games, became proactive and started to explicitly co-opt their user-bases into the production cycle by eliciting the development and sharing of user-generated content. In most cases, they deliberately opened the peripheral specifications of their gaming platforms or shared part of the code according to liberal licensing terms. Some provided specific tools such as map editors, aimed at easing the participation of technically unskilled users.
+
+The advent of online gaming communities reinforced this tendency. Online gaming allowed individual gamers to share their interests within a community. It is through this superficial involvement that most gamers became first "modders", and, over time, outright developers. Early communities revolved around projects building upon large proprietary software, which was later released as open source. This allowed the modification and development of F/LOSS variants of proprietary versions of games. The emergence of independent open source communities developing original games has since become more frequent.
+
+Computer gaming seems to be very popular among F/LOSS communities: as of October, 2008 the SourceForge repository shows 29,831 game projects. Software developed in these communities includes role-playing games, simulation games, Multi User Dungeons, first person shooters, arcades, and board/card/strategy games. SourceForge's activity rank shows that among the 100 most active projects, 7 belong to the category "Games/Entertainment". Almost 60% of the computer game projects have end users as their intended audience. The remaining ones are software projects such as toolkits, modeling, rendering, and animation engines--frameworks that target developers."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/736/702)
+
+
+=Discussion=
+
+
+==Open Development in Gaming==
+
+"Despite the difficulties in deriving a unified model of the development process, it is still possible to generally describe which processes and practices are popular in F/LOSS computer game projects. In doing so, we will try to highlight the major differences with the proprietary model. A typical project revolves around a community of stakeholders in which end users and developers have overlapping roles and identities. The social structure of the project is onion-like, making it possible to distinguish between different levels of involvement in the project. Central to the project are the core developers that contribute the largest part of the code and who may take part in fundamental decision making for the project, such as the design of the architecture. External layers represent a more partial involvement in the development activities and include co-developers that provide: i) patches and bug fixes; ii) localization activities; or iii) more episodic contributions of a larger piece of code. A more external layer is represented by active users that are involved in various feedback activities, such as testing and bug reporting. Usually, a fundamental role is played by the project leader--often the initiator of the project-- who is strongly involved in the development of the early releases of the software. Over time, the project leader undertakes more general activities of project coordination.
+
+Typically, contribution efforts in a project are skewed and centralized into a very small subset of participants. This has proved particularly true for fundamental activities such as coding, suggesting the existing tension regarding the preservation of conceptual integrity and the development direction of the project. This phenomenon is less evident for less critical activities such as bug tracking and fixing, in which more man-power is always welcomed.
+
+The overall picture is rather distant from Raymond's idea of a "great babbling bazaar of differing agendas and approaches [...] out of which a coherent and stable system could seemingly emerge only by a succession of miracles". Most of the time, contributions to the project are highly monitored and peer-reviewed by various forms of hierarchical control in order to preserve, albeit within a highly decentralized development environment, the conceptual integrity of the project."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/736/702)
+
+
+==Tools Used==
+
+"We observe the emergence of two differentiated sets of tools used by developers. In the F/LOSS world, coordination tools such as mailing lists and CVS repositories are prevalent, but software tools used to directly produce other pieces of code are seldom employed. In the proprietary console software development market, tools bridge high-level, creative software pieces, usually produced by artists or storytellers with a very shallow programming experience, and lower-level code that can be compiled on a given platform. The presence of asymmetries in knowledge domains between the different actors creates room for third parties to introduce tools that reinforce these asymmetries. If a manufacturer stops making lower level software, it will eventually lose that ability either directly, because of a lack of practice, or indirectly, by losing tech savvy personnel or failing to attract competent programmers.
+
+In contrast with what typically happens in F/LOSS communities, proprietary developers have a limited say in the way development tools are reshaped and modified by either the console manufacturer for the inner layers of the software kit, or by the middleware producers for the outer layers that interface with the high level language. In this regard, we might add that middleware mediates between the console hardware producer and the end product software developer not merely from a technical standpoint. In fact, the ability to filter, select and scrutinize the middleware producers' work is one of the main tools that the console producer has to influence the developer's work. By contrast, F/LOSS computer gaming communities can be thought of as an archetypal instance of a user-driven or community based innovation model in which end users are viewed as a fundamental driver in the innovation generation process.
+
+It is apparent that the interplay between property rights on the final code, coordination needs, relative heterogeneity of actors' knowledge domains and the tools they adopt is very complex. However, the analysis of this interplay is central when trying to understand new trends emerging in the proprietary software development world, which seems to be more and more bent towards capturing features typical of F/LOSS development into their production mode."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/736/702)
+
+
+[[Category:Gaming]]

@@ -1,0 +1,19 @@
+
+
+=Description=
+
+Robert Hanneman:
+
+""Ego" is an individual "focal" node.  A network has as many egos as it has nodes.  Egos can be persons, groups, organizations, or whole societies.
+
+"Neighborhood" is the collection of ego and all nodes to whom ego has a connection at some path length.  In social network analysis, the "neighborhood" is almost always one-step; that is, it includes only ego and actors that are directly adjacent.  The neighborhood also includes all of the ties among all of the actors to whom ego has a direct connection.  The boundaries of ego networks are defined in terms of neighborhoods.
+
+"N-step neighborhood" expands the definition of the size of ego's neighborhood by including all nodes to whom ego has a connection at a path length of N, and all the connections among all of these actors.  Neighborhoods of greater path length than 1 (i.e. egos adjacent nodes) are rarely used in social network analysis.  When we use the term neighborhood here, we mean the one-step neighborhood.
+
+"In" and "Out" and other kinds of neighborhoods.  Most of the analysis of ego networks uses simple graphs (i.e. graphs that are symmetric, and show only connection/not, not direction).  If we are working with a directed graph, it is possible to define different kinds of ego-neighborhoods.  An "out" neighborhood would include all the actors to whom ties are directed from ego.  An "in" neighborhood would include all the actors who sent ties directly to ego.  We might want to define a neighborhood of only those actors to whom ego had reciprocated ties.  There isn't a single "right" way to define an ego neighborhood for every research question.
+
+"Strong and weak tie neighborhoods."  Most analysis of ego networks uses binary data -- two actors are connected or they aren't, and this defines the ego neighborhood.  But if we have measured the strength of the relation between two actors, and even its valence (positive or negative), we need to make choices about when we are going to decide that another actor is ego's neighbor.  With ties that are measured as strengths or probabilities, a reasonable approach is to define a cut-off value (or, better, explore several reasonable alternatives).  Where the information about ties includes information about positive/negative, the most common approach is to analyze the positive tie neighborhood and the negative tie neighborhood separately."
+(http://faculty.ucr.edu/~hanneman/nettext/C9_Ego_networks.html)
+
+
+[[Category:Relational]]

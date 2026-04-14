@@ -1,0 +1,53 @@
+'''* Article: Control and Diversity in Company-led Open Source Projects, Michael Weiss. OSBR, April 2011'''
+
+URL = http://osbr.ca/ojs/index.php/osbr/article/view/1306/1250
+
+
+=Abstract=
+
+"A majority of open source development today is carried out by companies. Building on open source allows companies to focus their development effort on the points of difference over their competitors. This article discusses the recent trend towards collectives of companies that develop shared assets in the form of open source projects, and creates a model for company-led open source projects around two dimensions: the level of control over the project and the diversity of applications derived from the project. The article then explores how the model can be interpreted from a product line engineering perspective."
+
+
+=Excerpts=
+
+
+==Evolution of F/LOSS projects==
+
+"Many open source projects start out with a single developer or company with a need. The need is narrowly defined and focuses on resolving an immediate technical challenge (i.e., "scratching an itch") faced by the project initiator. An example of a project started by an individual is Linux; the project started out as a personal project by Linus Thorvalds to build a freely available Unix operating system. An example of a company-initiated project is Eclipse; the project started with IBM donating the codebase for its VisualAge product as open source.
+
+At this point, the project initiator is in full charge of the direction of the open source project. The next stage of evolution occurs when a community forms around the project. Typically, the project initiator is still in charge of the technical roadmap of the project, and the community members (individuals or other companies) create products or services complementary in nature to the project. Growth of the open source project is limited beyond this point, unless it moves from a model where a single entity controls the direction of the project to a model where all community members collectively decide on its course.
+
+Evolution of the project to this model requires that the project initiator is removed at arm's length from the project, as documented by West and Gallagher (2006) for a range of open source projects, and joins the community as just another member. The direction of the project is now set by the member organizations. Often, the relationship between the members and the project is also formalized through a neutral organization or foundation, which acts as the legal representative of the project and facilitates between the community members. For example, the Eclipse project is coordinated by the Eclipse Foundation.
+
+The project members join the project with different needs. They leverage the common codebase of the project to develop a diverse range of applications. As a case in point, Eclipse has 13 top-level projects with over 200 subprojects between them, contributed by more than 50 member companies as well as individual members. The majority of the contributions, or 80% of the commits, are made by member companies. Furthermore, the Eclipse marketplace lists over 1000 applications built on top of the Eclipse core."
+
+
+==How companies participate==
+
+Company-led open source projects differ in significant ways in terms of who controls the project, and the diversity of applications derived from the project. Control refers to decision making, and includes control over the direction of the project, the architecture, commits and releases, and who captures the value created by the project. Control can be hierarchical or shared. In a hierarchically controlled project, a single company makes all the decisions. In a project with shared control, decisions are made jointly by the project members. 
+
+Applications can be either in a narrow domain (such as education) or spread across a variety of domains (such as language training and business intelligence). If the applications are in a narrow domain, the project often has an integral architecture, if the project is controlled by a single company. The reason is that the company has little incentives to divide the architecture into modules, as it requires additional effort. However, when other companies are involved in the project, the architecture needs to be modular to some degree.
+
+There are four basic ways for companies to participate in a company-led open source project as shown in Figure 1. This categorization is based on the experience with the case study and an examination of extensible open source platforms conducted by the author (Noori and Weiss, 2009). As should be apparent from the earlier discussion, the Green project belongs into the top-left quadrant. In the top-right quadrant, a single company exposes an interface to attract third-parties to create applications, for example, the Moodle learning management system. As an example of a company in the bottom-left quadrant, the Zope Europe Association (ZEA) coordinates a group of open source companies, allowing them to compete for large government contracts (Feller, Finnegan, and Hayes, 2006). The bottom-right quadrant is reserved for collectives of companies that jointly control a platform, which provides the basis for a diverse range of applications. The Eclipse project is an example of such a collective.
+
+Hierarchical-wide F/LOSS projects and F/LOSS projects with shared control are organized like product lines: a platform and applications that extend it. Hierarchical-wide and shared-wide open source projects like Moodle and Eclipse have a plug-in architecture that provides variability through extension points and extensions. As observed by Chastek and colleagues (2007), the products in this product line are new plug-ins and products using existing plug-ins. In Moodle, plug-ins can be added to extend the behavior of the open source platform through preconceived extension points under the control of Moodle.com. The Eclipse platform also allows members to define extension points in plug-ins they contribute. Both Moodle and Eclipse support a high diversity of applications. However, the amount of variation supported by Eclipse is much higher than for Moodle.
+
+Shared-narrow projects like ZEA allow small companies to compete for much larger contracts than they could individually by providing the members of the collective with a common brand, pooling their assets, and creating a reliable delivery process. Examples of variation are localization and geographic coverage: member companies of the ZEA collective are distributed across all of Europe.
+
+This article develops a model of the participation structure of company-led open source projects. The differences between the participation structures can be interpreted in terms of the product line concepts of commonality (platforms) and variability (applications). Our analysis adds the notion of shared control by a collective. Future work includes validation of the model through a survey."
+(http://osbr.ca/ojs/index.php/osbr/article/view/1306/1250)
+
+
+=More Information=
+
+Graphic at http://www.osbr.ca/ojs/april11/april11_weiss1.gif
+
+
+
+[[Category:Articles]]
+
+[[Category:Peergovernance]]
+
+[[Category:Governance]]
+
+[[Category:Research]]

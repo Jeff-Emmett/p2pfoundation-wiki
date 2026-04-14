@@ -1,0 +1,399 @@
+"'''A program is said to be open source if the full source code for the program is available publicly, with no constraints on how it can be used.''' That's it. We've looked at so many other possibilities, I've even discussed it publicly with Stallman, and he agrees that his philosophy is not open source, because there are constraints on what you can do with his code."
+
+- Dave Winer [http://davenet.userland.com/2000/09/15/whatIsOpenSource]
+
+'''On the necessity of open collaboration''':
+
+
+" The free sharing of information - in this case code as opposed to software development - has nothing to do with altruism or a specific anti-authoritarian social vision. It is motivated by the fact that in a complex collaborative process, it is effectively impossible to differentiate between the "raw material" that goes into a creative process and the "product" that comes out. Even the greatest innovators stand on the shoulders of giants. All new creations are built on previous creations and themselves provide inspiration for future ones. The ability to freely use and refine those previous creations increases the possibilities for future creativity."
+(http://news.openflows.org/article.pl?sid=02/04/23/1518208 )
+
+==Definition==
+
+'''= "The phrase open source describes practices in production and development that promote free redistribution and access to the end product’s source materials'''.” [http://en.wikipedia.org/wiki/Open_source]
+
+Definition from the Wikipedia article at https://en.wikipedia.org/wiki/Open_source
+
+
+"'''Open source describes practices in production and development that promote access to the end product's sources.''' Some consider it as a philosophy, and others consider it as a pragmatic methodology. Before open source became widely adopted, developers and producers used a variety of phrases to describe the concept; the term open source gained popularity with the rise of the Internet and its enabling of diverse production models, communication paths, and interactive communities.[1] Subsequently, '''open source software became the most prominent face of open source'''."
+
+
+The term is officially defined by the [[Open Source Initiative]] at https://opensource.org/osd
+
+Rob Myers:
+
+"Yochai Benkler describes Open Source as a methodology of commons based peer production. This means work made collaboratively and shared publicly by a community of equals. For Eric Raymond the virtue of Open Source is its efficiency. Open Source can create better products faster than the old closed source model. Many of the most successful software programs in use today, particularly on the internet, are Open Source."
+(http://www.anat.org.au/stillopen/blog/2007/08/19/open-source-ideologies/)
+
+==Applications==
+
+
+[[Open Source Software]]
+
+[[Open Source Hardware]]
+
+
+==Typology==
+
+
+===Proprietary vs. Open Source approaches===
+
+Charles Ferguson, Technology Review, June 2005:
+
+"This because for all its flaws, the open-source model has powerful advantages. The deepest and also most interesting of these advantages is that, to put it grossly, open source takes the bullshit out of software. It severely limits the possibility of proprietary "lock-in"--where users become hostage to the software vendors whose products they buy--and therefore eliminates incentives for vendors to employ the many tricks they traditionally use on each other and on their customers. The transparency inherent in the open-source model also limits secrecy and makes it harder to avoid accountability for shoddy work. People write code differently when they know the world is looking at it. Similarly, software companies behave differently when they know that customers who don't like a product can fix it themselves or switch to another provider. On the available evidence, it appears that the secrecy and maneuvering associated with the traditional proprietary software business generate enormous costs, inefficiencies, and resentment. Presented with an alternative, many people will leap at it."
+(http://technologyreview.com/articles/05/06/issue/feature_linux.asp)
+
+
+
+===Commercial, professional, community===
+
+Dirk Riehle:
+
+"As a researcher, imprecise naming bothers me. The general confusion around the terms commercial open source, professional open source, and community open source warrants closer analysis. 
+
+First my proposal, then some litmus tests, followed by a bit of history.
+
+Commercial open source is software provided as open source where a single legal entity owns the rights to the software (SugarCRM, Alfresco, etc.) 
+Professional open source is software provided as open source where a dominant firm provides services around the software without actually owning it (JBoss, Spring, etc.) 
+Community open source is software provided as open source where multiple stakeholders hold the rights and no player dominates the software (Linux, Apache, etc.) 
+
+So here are some litmus tests: 
+
+It is commercial open source (and not professional open source), if the open source firm can sell you the software under a commercial license. 
+
+It is community open source (and not professional open source), if the services market is fluid and not dominated by one company. 
+It is professional open source, if a single firm dominates the software but where other firms can compete (mostly) fairly on services. Typically this means that the copyright is spread among multiple parties, but the professional open source firm may hold some rights like trademarks that give some some additional leverage. 
+Historically, as far as I know, commercial open source was first practiced by MySQL, even though the term was only invented later by SugarCRM. A core go-to-market approach is the dual-license strategy. Only commercial open source firms can apply this strategy. The term professional open source was invented by Marc Fleury of JBoss to give open source a better reputation; mostly it refers to the provision of (professional) services around some particular open source software.
+
+
+Both commercial and professional open source are go-to-market approaches and core strategies of a firm’s business model. Community open source is not a business model. If employed strategically, all it does is to curtail the revenue gathered from a particular market (like operating systems). It is used to shift revenues from the curtailed market into ancillary markets; basically a share of customer’s wallet ploy for the companies dominating one or more of the ancillary markets."
+(http://www.riehle.org/2008/04/06/commercial-professional-and-community-open-source-resolving-the-naming-confusion/)
+
+
+===Corporate, voluntary, and hybrid===
+
+Giampaolo Garzarelli and Roberto Galoppini [http://papers.ssrn.com/sol3/papers.cfm?abstract_id=482125]:
+
+" Corporate open source is the same as commercial open source. In my understanding, voluntary and hybrid equal first and second generation community open source. First-gen community open source was completely driven by volunteers, second-gen community open source is being driven by volunteers and firms alike. There is no notion of professional open source, though the services business model probably always figures in."
+(http://www.riehle.org/2008/04/06/commercial-professional-and-community-open-source-resolving-the-naming-confusion/)
+
+
+===Other===
+
+Michael Nolan argues that commercial and community open source exist and need to be distinguished. He compares Open Solaris with Eclipse and views the former as a commercial and the latter as a community project. I concur with his point about Eclipse not directly making IBM money but shifting the revenues to ancillary products, as stated above and argued elsewhere in more detail. I disagree, however, that only community open source is viable in the long-run and that it cannot serve commercial purposes. 
+
+Matt Asay also agrees that commercial and community open source are different from each other. He argues that commercial open source has a firm at its center which gives a project focus and momentum, something that may be lacking from community open source. I used to agree with this distinction, but I think the second generation community open source demonstrated by the Apache Software Foundation and the Eclipse Foundation shows that community open source can have focus and momentum right from the start."
+(http://www.riehle.org/2008/04/06/commercial-professional-and-community-open-source-resolving-the-naming-confusion/)
+
+
+==Advantages==
+
+===Re-use of code===
+
+"the amount of code reuse is growing at a substantial rate as well. Recently, Black Duck (a provider of code auditing services) found that, in an analysis of large scale code bases with an average of 700MB of source code, 22% was open source and that 80% of new development is avoided through reuse of F/LOSS code. Thus, open source compensates for the increased complexity of software projects while at the same time containing costs; it also reduces the time to market and maintenance effort."
+(http://timreview.ca/article/514)
+
+
+==Discussion==
+
+===What do we mean by source?===
+
+Peter Hoddinott and Tony Bailetti [http://www.osbr.ca/archive.php?issue=10&section=Ar#A2]:
+
+"The term "open source" was invented as a marketing term in 1998. Proponents of the term "open source" successfully argued that the term "free software" was fraught with challenges that included it being ambiguous and it being disliked by corporations. Several months ago, a talented software professional challenged our use of the term open source when referring to a software application released under the BSD licence, an open source licence which complies with the OSD. The professional argued that the software was "open code", but not "open source". Intrigued, we asked for clarification.
+
+It was explained to us that the code was produced by a single private organization that periodically bundled together a release and published it on Sourceforge.net. While the code was released under the BSD license, the production of the code lacked key open source characteristics such as:
+
+    
+* No external contributors: all code was developed in-house prior to being published on the Internet
+* No visibility of who developed the code and when they developed it
+* No mechanisms were available to the general public for (i) contributing to the production of the code prior to its release in Sourceforge.net or (ii) participating in the governance structure of the organization that produced it
+
+In short, the code was open, but the process used to produce it was closed. There was no public community behind the production of the code, and no accommodation for such a community.
+
+Our discussion then turned to the ambiguity in the usage of the word "source". Does source mean the computer code written in a recognized programming language, or the process used to produce the code, or something else? If we allow source to mean two different things: 
+
+(i) the process used to produce the code, and 
+
+(ii) the computer code, four cases are possible:
+
+   
+1. Open process and open computer code
+   
+2. Closed process and open computer code
+   
+3. Open process and closed computer code
+   
+4. Closed process and closed computer code"
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A2)
+
+
+===What do we mean by open?===
+
+Peter Hoddinott and Tony Bailetti [http://www.osbr.ca/archive.php?issue=10&section=Ar#A2]:
+
+"More recently, we had occasion to find ourselves struggling as we tried to make sense of instances of the word open in the context of community code. For example, we found instances where open meant that releases of the code were made available to the general public (i.e., non-members of a consortium); however, releases to the general public were delayed 12 months from the time it was available to the members of the consortium. We also found instances where what open meant depended upon the level of membership. The more expensive memberships provided these members more privileges to participate in and influence the processes, for example with veto power. In these examples, open is not equated with full access; instead, open is a matter of degree and that degree is metered out in a distinctly defined hierarchy of privilege.
+
+This seeming confusion and differences about what is open and what is source and the use of open source to refer to phenomena that fall well outside the OSD, led us to conclude that we need to better understand the characteristics of the systems in which open source assets are produced, used and distributed.
+
+We conceptualize any such system as being comprised of four components:
+
+   
+1. Network: the network of individuals and organizations that produce, use and distribute an asset
+   
+2. Processes; the processes, approaches, rules and understandings that lead to the production, use and distribution of an asset
+   
+3. Governance: the governance structure of the organization and the projects within the organization
+   
+4. Value: value created through collaboration and value appropriated through competition
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A2)
+
+
+
+===How is Open Source related to [[Free Software]]?===
+
+Rob Myers:
+
+"Yochai Benkler describes Open Source as a methodology of commons based peer production. This means work made collaboratively and shared publicly by a community of equals. For Eric Raymond the virtue of Open Source is its efficiency. Open Source can create better products faster than the old closed source model. Many of the most successful software programs in use today, particularly on the internet, are Open Source.
+
+Applying the ideas of Open Source to other projects, be they political, philosophical or artistic, is more difficult than it might seem. The idea of Open Source as a more efficient means of production has nothing to say about what Open Source politics or art should be like.
+
+To take the example of the Open Congress event at Tate Modern, artists struggled to find an Open Source ideology to apply to their art, activists struggled to find an Open Source ideology to apply to their organisations, and theorists grinned and invoked Deleuze and Spinoza to cover the gaps.
+
+This confusion is not a problem with the idea of Open Source. Rather it is the intended result of it. The name Open Source was deliberately chosen for its meaninglessness and ideological vacuity. This was intended to make the results of a very strong ideology more palatable to large corporations by disguising its origins. That ideology is Free Software.
+
+Free Software is a set of principles designed to protect the freedom of individuals to use computer software. It emerged in the 1980s against a backdrop of increasing restrictions on the use and production of software. Free Software can therefore be understood historically and ethically as the defence of freedom against a genuine threat.
+
+Once software users freedoms are protected the methodology that we know as Open Source becomes possible and its advantages become apparent. But without the guiding principles of Free Software the neccessity and direction of Open Source cannot be accounted for. Open Source has no history or trajectory, it cannot account for itself or suggest which tasks are neccessary or important. Free Software requires freedom, which is a practical goal to pursue.
+
+Free Software is a historical development, a set of principles, and a set of possibilities. Free Software projects have converged on the methodology that Raymond describes as Open Source because of this. To describe this methodology as commons based peer production causes further confusion. There are no peers in a Free Software project. If contributions are deemed to be of acceptable quality, they are added to the project by its appointed gatekeepers. If not, they are rejected and advice given. This methodology is a structured and exclusive one, but it is meritocratic. Any contribution of sufficient quality can be accepted, and if someone makes enough such contributions they themselves may gain the trust required to become a gatekeeper."
+
+(http://www.anat.org.au/stillopen/blog/2007/08/19/open-source-ideologies/)
+
+
+Dave Winer [http://davenet.userland.com/2000/09/15/whatIsOpenSource]]:
+
+"'''A program is said to be open source if the full source code for the program is available publicly, with no constraints on how it can be used.''' That's it. We've looked at so many other possibilities, I've even discussed it publicly with Stallman, and he agrees that his philosophy is not open source, because there are constraints on what you can do with his code."
+(http://www.softpanorama.org/OSS/webliography.shtml)
+
+Dave Winer [http://scriptingnews.userland.com/backissues/2000/09/07]:
+
+"Open source should not have restrictions. Stallman's philosophy is not open source, it's not the spirit of sharing, it's not generous. It has other purposes, it's designed to create a wall between commercial development and free development. The world is not that simple. There are plenty of commercial developers who participate in open source."
+(http://www.softpanorama.org/OSS/webliography.shtml)
+
+
+===Open Source as a development model===
+
+See our entry on [[Open Development]]
+
+===Does its model survive corporate cooptation===
+
+Excerpts taken from an article by Doc Searls in Linux Journal, April 2008, at http://www.linuxjournal.com/content/linux-now-slave-corporate-masters 
+
+To what degree does the fact that free software programmers now get paid, change the internal dynamics of peer production? The following debate, taken from Linux Journal, effectively answers that question,while at the same time confirming the huge commercialization that has been going on.
+
+On April 30, the [http://www.linuxjournal.com/content/linux-now-slave-corporate-masters Linux Journal] asked an important question: Is Linux now a slave to corporate masters? Does it matter who pays the salaries of Linux kernel developers? If so, how much, and in what ways?. 
+
+This question was prompted by a [http://www.linux-foundation.org/publications/linuxkerneldevelopment.php report from the Linux Foundation], on the characteristics of those working on the Linux kernel.
+
+[http://whimsley.typepad.com/whimsley/2008/04/linux-grows-up.html Tom Slee] has summarized the findings:
+
+“One of the highlights: “over 70% of all kernel development is demonstrably done by developers who are being paid for their work”. 14% is contributed by developers who are known to be unpaid and independent, and 13% by people who may or may not be paid (unknown), so the amount done by paid workers may be as high as 85%. The Linux kernel, then, is largely the product of professionals, not volunteers.
+
+So Linux has become an economic joint venture of a set of companies, in the same way that Visa is an economic joint venture of a set of financial institutions. As the Linux Foundation report makes clear, the companies are participating for a diverse set of commercial reasons. Some want to make sure that Linux runs on their hardward. Others want to make sure that the basis of their distribution business is solid. And so on, and none of these companies could achieve their goals independently. In the same way, Visa provides services in many different locations around the world in different sizes and types of stores. Some banks need their service mainly in one country, some in another, but when they work together they all get to provide their services all around the world.
+
+…the Linux Foundation report has made clear that open source has crossed its commercial Rubicon, and there is probably no going back.”
+(http://whimsley.typepad.com/whimsley/2008/04/linux-grows-up.html)
+
+[http://www.roughtype.com/archives/2008/04/open_source_as_1.php Nick Carr] predictably concludes from this: 
+
+“The shift in Linux kernel development from unpaid to paid labor, from volunteers to employees, suggests that the Net doesn’t necessarily weaken the hand of central management or repeal all the old truths about business organization.”
+(http://www.roughtype.com/archives/2008/04/open_source_as_1.php)
+
+
+This specific argument is addressed by [http://www.technologyowl.com/i88997-c134-rss Timothy Lee], who is essentially saying that the corporatization of Linux has not changed its underlying organisational model:
+
+“''For starters, most of the people contributing to the kernel are professional programmers, and most professional programmers have jobs in the software industry. So it’s totally unsurprising that most kernel contributors work for software companies.
+But Carr’s observation also misses the point in a deeper way. What makes the open source model unique isn’t who (if anyone) signs the contributors’ paychecks. Rather, what matters is the way open source projects are organized internally. In a traditional software project, there’s a project manager who decides what features the product will have and allocates employees to work on various features. In contrast, there’s nobody directing the overall development of the Linux kernel. Yes, Linus Torvalds and his lieutenants decide which patches will ultimately make it into the kernel, but the Red Hat, IBM, and Novell employees who work on the Linux kernel don’t take their orders from them. They work on whatever they (and their respective clients) think is most important, and Torvalds’s only authority is deciding whether the patches they submit are good enough to make it into the kernel. Carr suggests that the non-volunteer status of Linux contributors proves that the Internet “doesn’t necessarily weaken the hand of central management,” but that’s precisely what the open source development model has done. There is no “central management” for the Linux kernel, and it would probably be a less successful project if there were''.”
+(http://www.technologyowl.com/i88997-c134-rss)
+
+
+[http://blogs.cioinsight.com/knowitall/content001/decoding_the_professionalization_of_linux.html Ed Cone] confirms:
+
+“What that kind of analysis is missing is that IBM is paying engineers to work on projects that IBM doesn’t own, or solely direct. You pay these engineers — but of all the relationships between senior management and line employees, the fact you are paying them is about the least important, institutionally. The idea that the minute you pay people to do something, you have the right to manage them and the right to completely take over that work for the benefit of the company — that’s not true.
+IBM is not producing that code, IBM engineers are. IBM is paying those people because it’s getting value out of them — Linux creates value for the enterprise, it lowers our cost of managing software, it increases peoples’ budgets for hardware and services — but there’s this crazy middle step where Linux is not now and cannot be owned or controlled by IBM. Linux is a brutal technical meritocracy, and there is no senior manager at IBM who can say, “I don’t care what the kernel engineers think, I want this.” They can’t put it into the product without appealing to people who don’t work for them. If they announced a strategic change in the kernel they would be laughed out of the room. They have given up the right to manage the projects they are paying for, and their competitors have immediate access to everything they do. It’s not IBM’s product.
+
+There is a kind of perverse misreading of the change here to suggest that as long there are paid programmers working on the project, it’s not developing in any way different from what’s going on inside traditional organizations. It badly misunderstands how radical it is to have IBM and Novell effectively collaborating with no contractual agreement between them, and no right to expect that their programmers’ work is going to be contributed to the kernel if people external to those organizations don’t like it. And that’s a huge change.
+
+When people read those statistics, they think, If there’s a salary, then all the other trappings of management must go along with it. Not only is that not true, it’s actually blinds you to the fact that paying someone a salary without being able to direct their work is probably the biggest challenge to managerial culture within a business that one can imagine.”
+(http://blogs.cioinsight.com/knowitall/content001/decoding_the_professionalization_of_linux.html)
+
+
+Doc Searls then concludes the article with some personal observation and especially quoting a personal testimony by Andrew Morton, confirming the indepedence of kernel programmers:
+
+“Andrew went out of his way to make clear, without irony, that the symbiosis between large vendors and the Linux kernel puts no commercial pressure on the kernel whatsoever. Each symbiote has its own responsibilities. To illustrate, he gave the case of one large company application.”
+(http://www.linuxjournal.com/article/8664)
+
+
+===What Are the Long-Term Effects of Open Source?===
+
+Carlo Daffara:
+
+
+"open source compensates for the increased complexity of software projects while at the same time containing costs; it also reduces the time to market and maintenance effort.
+
+What is the indirect effect of such a massive introduction of F/LOSS code within multiple software projects? There are several, interconnected results:
+
+   
+1. The reused code improves faster than the rest of the code base, indirectly increasing the economic value of the F/LOSS projects. This effect is the basis for several research results that demonstrates that large, successful open source projects tend to have a very high code quality in terms of defect per line of code, on par or better than proprietary code. (See Mohagheghi et al., 2004 for details and further observations on the effect of reuse on code quality and maintainability.) This in turn increases the probability that the code will be reused in the future, and reduces the cost of integration – a positive feedback loop for adoption.
+   
+2. Even with a small number of adopters contributing back patches and effort, the increased participation and the positive feedback creates an opportunity for superlinear growth in the affected project – an effect that is not hampered by increased complexity and communication costs, further increasing the value of the reused code.
+   
+3. The implicit support of open standards by open source code facilitates the adoption of open standards in the assembled code as well – thus “osmotically” promoting openness. In fact, this is one of the reasons for the extraordinary support of recent HTML5 engines and libraries and at the same time the maturation of the web as a delivery medium for applications at the expense of non-open additions and protocols.
+
+It is possible to continue further in this little experiment: the “good enough” status of HTML5 as an application delivery platform allows users to reduce the reliance on locally installed apps, up to the point where all apps are delivered this way (eventually with a gateway bridge between legacy apps and the web, like VMware's project AppBlast. At this point, if all you need is a browser, execution platforms become interchangeable – you can use an ARM processor, a MIPS one, whatever. It means that cost-effective alternatives become feasible, such as the RaspberryPi platform, which at $25 can be even embedded directly in a monitor at little added cost.
+
+A further long-term effect will be an increase in structured collaboration across industries and companies participating in F/LOSS development – something that is now restricted mainly to a few horizontal platforms such as Eclipse or embedded Linux. As the economic advantage of F/LOSS becomes more visible, a larger number of participants will start to explore collaboration in vertical frameworks, such as industry specific toolkits or individual packages that may be relevant only to a few. Examples such as Albatross, an air traffic control workstation, that now seem peculiar will become quite the norm, as more and more developers will go from pure integration of open source pieces to reduce development cost to a more structured collaborative participation. This shift will occur especially for companies that are not primarily IT producers, but users; this will further increase the shift from packaged software to reusable components, again reinforcing the movement towards F/LOSS.
+
+Another effect will be changes in revenue per dollar spent: because software can grow faster with more or less the same spending level, the company will grow faster. A dollar invested in F/LOSS collaboration will bring back a real value that is substantially higher, thanks to the sharing of costs across collaborators.
+
+F/LOSS is a game changer in more ways than simple reuse. Reuse at large scales changes the economics of IT in more profound ways, allowing better software, more software, and more affordability for everyone."
+(http://timreview.ca/article/514)
+
+==Status==
+
+===2015===
+
+Nadia Eghbal:
+
+"In 2008, there were an estimated 18,000 active open source projects in the world. SourceForge was estimated to have 150,000 total projects (both active and inactive). Today, there are 29 million projects just on GitHub. That’s 200x what was on SourceForge in just 2008. But what does the supply side look like? The number of software developers in the US alone nearly doubled from 2002–2012 to over 1 million, but that pace (2x) is not commensurate with the exponential growth in projects (>200x)."
+(https://medium.com/@nayafia/we-re-in-a-brave-new-post-open-source-world-56ef46d152a3#.q5cj3gmhm)
+
+
+===Report on Open Source Adoption 2007===
+
+From Andrew Burger [http://www.linuxinsider.com/story/9KMRNBq3L8g6gz/Open-Source-Changing-Models-Changing-Mindsets-Part-1.xhtml] :
+
+===Key Corporate Players===
+
+"Here's an off-the-cuff list of 10 products, services or categories of open source-related tools gaining traction in the corporate world:
+
+   
+1. Linux: IBM, HP, Oracle, Sun, Dell, Novell and Microsoft support it, as do original pioneers such as Red Hat;
+   
+2. Mozilla's Firefox: The open source Web browser has quickly vaulted into the ranks of top competitors to Microsoft's Internet Explorer, and the company isn't stopping there, having launched a series of open source applications;
+   
+3. Wikipedia: The open source encyclopedia is perhaps the archetypal application of open source as a means of organizing collective knowledge, becoming a standard reference for who knows how many;
+   
+4. Application Development: Ajax and Apache have led the way in providing the tools to develop native, open source Web applications and services;
+   
+5. Service-Oriented Architecture: SOA is emerging as an open standards-based framework for developing, deploying and managing Web and on-demand application services, contributing to the emergence of the Software as a Service model of deploying, hosting and distributing them.
+   
+6. Virtualization: In a short period of time, virtualization Learn how SAN/iQ technology works with VMware. has had a major impact on the server side of the hardware market and helped revitalize the mainframe business. Citrix's recent acquisition of XenSource and its open source Xen Hypervisor make the point;
+   
+7. Peer-to-Peer Networking: Decentralized, open source P2P projects, such as Gnutella, just won't go away -- and that's because their applications -- including grid computing and, ironically, enterprise security -- extend well beyond the illegal sharing of digital music and film files;
+   
+8. Voice over Internet Protocol: The open source Asterisk platform is coming into its own and is increasingly being used, in one form or another, by corporations making the move to IP voice services;
+   
+9. Desktop Applications: Open source, networked office application software -- like that set out for electronic documents in the ISO-approved Open Document Format for XML, or Open XML, for which Microsoft is seeking ISO approval -- is gaining adherents. It is set to be a major battleground as competitors attempt to steal some of Microsoft's thunder. Witness Mozillla introducing open source e-mail, a mobile device browser and bug-tracking applications, along with an application suite -- not to mention Google and Sun announcing that they are now ready to collaborate on the latter's StarOffice productivity suite;
+  
+10. Virtual Worlds: They became a reality with the launch and still growing popularity of Second Life, a virtual world where the value of theoretically unlimited real estate is nonetheless increasing rapidly."
+(http://www.linuxinsider.com/story/9KMRNBq3L8g6gz/Open-Source-Changing-Models-Changing-Mindsets-Part-1.xhtml)
+
+
+===Open Source Servers===
+
+"To get a sense of the scope of open source adoption, the number of servers running on Linux operating systems grew at double-digit rates, to 12.7 percent, for a US$1.6 billion share of the total market during this year's first quarter, according to IDC. Those figures very likely underestimate the actual prevalence of Linux, as they are based on sales Email Marketing Software - Free Demo of Linux-based servers and do not include free software downloads -- the original and perhaps still largest means of distribution.
+
+IBM reached an open source milestone recently when it recognized the one-millionth download of its WebSphere Application Server Community Edition (WAS CE). The product, IBM's Carter told LinuxInsider, is one of the most significant open source products to make an impact in the corporate world.
+
+Free to download and use, WAS CE provides a flexible foundation for developing Java applications. Technical support is offered through annual subscriptions, Carter said, a business model that open source pioneers such as Red Hat have used to capitalize on their work with the Linux kernel. WAS CE is based on Apache Geronimo, comes with full Java EE 5 standard support, and is one result of IBM's May 2005 acquisition of Gluecode."
+(http://www.linuxinsider.com/story/9KMRNBq3L8g6gz/Open-Source-Changing-Models-Changing-Mindsets-Part-1.xhtml)
+
+May be updated at [[Open Source Servers]]
+
+===Open Source VoIP===
+
+"Asterisk-based VoIP applications and appliances have been downloaded by business phone system Stay on budget with simple to install HP server technology. users more than 4.4 million times, implying millions of users, according to Digium, whose founder, Mark Spencer, started what has grown to become Asterisk's globe-spanning open source project collaboration.
+
+Following his founding of Linux Support Services in 1999 while a computer engineering student at Auburn University, Spencer turned his attention to PBXs (private branch exchanges). He got the open source Asterisk ball rolling using his Linux-based PC and knowledge of the C programming language to write his own digital PBX. Shortly thereafter, he founded Digium.
+
+The rest, as they say, is history. The Asterisk-based open source PBX project drew contributions from open source developers worldwide, who have formed the open source Asterisk community.
+
+Today, a relatively small but expanding group of young independent digital telecommunications software providers are joining with some larger, established firms to support Asterisk-based digital PBXs, particularly for the small and medium-sized business sector.
+
+Like many early open source community pioneers, "Spencer strongly believes that every technology he creates should be given back to the community. This is why Asterisk is fully open source," Bill Miller, Digium's vice president of product management and marketing, told LinuxInsider.
+
+"This model has allowed Asterisk to remain available free of charge, while it has become as robust as the leading and most expensive PBXs," Miller said. "The Asterisk community includes ambassadors and contributors from every corner of the globe. Major corporations even have teams of developers building Asterisk-based products and solutions."
+(http://www.linuxinsider.com/story/9KMRNBq3L8g6gz/Open-Source-Changing-Models-Changing-Mindsets-Part-1.xhtml)
+
+May be updated at [[Open Source VoIP]]
+
+==Discussion==
+
+===A critique of Open Source===
+
+From the point of view of the Free Software movements' principles.
+
+By [http://robmyers.org/ Rob Myers], cited at 
+http://www.anat.org.au/stillopen/blog/2007/08/19/open-source-ideologies/
+
+
+"Yochai Benkler describes Open Source as a methodology of commons based peer production. This means work made collaboratively and shared publicly by a community of equals. For Eric Raymond the virtue of Open Source is its efficiency. Open Source can create better products faster than the old closed source model. Many of the most successful software programs in use today, particularly on the internet, are Open Source.
+
+Applying the ideas of Open Source to other projects, be they political, philosophical or artistic, is more difficult than it might seem. The idea of Open Source as a more efficient means of production has nothing to say about what Open Source politics or art should be like.
+
+To take the example of the Open Congress event at Tate Modern, artists struggled to find an Open Source ideology to apply to their art, activists struggled to find an Open Source ideology to apply to their organisations, and theorists grinned and invoked Deleuze and Spinoza to cover the gaps.
+
+This confusion is not a problem with the idea of Open Source. Rather it is the intended result of it. The name Open Source was deliberately chosen for its meaninglessness and ideological vacuity. This was intended to make the results of a very strong ideology more palatable to large corporations by disguising its origins. That ideology is Free Software.
+
+Free Software is a set of principles designed to protect the freedom of individuals to use computer software. It emerged in the 1980s against a backdrop of increasing restrictions on the use and production of software. Free Software can therefore be understood historically and ethically as the defence of freedom against a genuine threat.
+
+Once software users freedoms are protected the methodology that we know as Open Source becomes possible and its advantages become apparent. But without the guiding principles of Free Software the neccessity and direction of Open Source cannot be accounted for. Open Source has no history or trajectory, it cannot account for itself or suggest which tasks are neccessary or important. Free Software requires freedom, which is a practical goal to pursue.
+
+Free Software is a historical development, a set of principles, and a set of possibilities. Free Software projects have converged on the methodology that Raymond describes as Open Source because of this. To describe this methodology as commons based peer production causes further confusion. There are no peers in a Free Software project. If contributions are deemed to be of acceptable quality, they are added to the project by its appointed gatekeepers. If not, they are rejected and advice given. This methodology is a structured and exclusive one, but it is meritocratic. Any contribution of sufficient quality can be accepted, and if someone makes enough such contributions they themselves may gain the trust required to become a gatekeeper.
+
+This confusion leads to projects such as Wikipedia trying to create an open space for anyone to use as they wish. This leads to social darwinism, not freedom, as the contents of that space is determined by a battle of wills. Wikipedia has had to evolve to reproduce many of the structures of a real Free Software project to tackle these problems. But people still regard its earlier phase as a model for emulation, whereas it should serve as more of a warning.
+
+It is therefore the condition of Freedom rather than the condition of Open Source that art should aspire to. Prior to the extension of copyright to cover art as well as literature, art was implicitly free. The physical artefacts of art were expensive to own and difficult or impossible to transport. But the content of art was free to use. Michaelangelo could rip off christian and pagan imagery to paint a ceiling, generations of artists could riff on the theme of the cruxifiction, and anyone could carve a statue of Venus. The representational freedom of artists, part of which is the freedom to depict and build or comment on existing culture, to continue the conversation of culture, is the freedom of art.
+
+With photography and now electronic media, copyright and trademarks have increasingly restricted the artists freedom to continue the conversation of culture. Where once artists could paint gods and kings, they must now be careful not to paint chocolate and the colour purple or they will infringe Cadburys trademark. And new computer technology makes it possible to physically lock artists out of mass media imagery, closing off part of the world from arts freedom of representation.
+
+In this context artists are not volunteers when they take on issues of cultural freedom. They are exemplars. Free art, a free culture, is of vital importance for a free society. Part of this freedom may be ideas of commons based peer production. But it is important not to confuse the results of an ideology with its principles. It is these principles that artists should pursue."
+(http://www.anat.org.au/stillopen/blog/2007/08/19/open-source-ideologies/)
+
+
+
+==Key Books to Read==
+
+#[[Open Sources]]. O'Reilly publisher.
+
+
+==More Information==
+
+===External Articles===
+
+#Critique by Tony Prug, inspired by the [[Free Software Movement]]: [http://hackthestate.org/hacking-ideologies-open-source-a-capitalist-movement/ Hacking Ideologies]: Open Source as a capitalist movement. 
+
+===Internal Articles===
+
+
+#[[Open Source Initiative]]
+#[[Free Software]]
+#[[Open Development]]
+#[[Open Source Commercialization]] ; [[Open Source Business Models]]
+#The [[Emerging Economic Paradigm of Open Source]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Politics]]
+
+[[Category:Technology]]
+
+[[Category:Movements]]
+
+[[Category:Open]]

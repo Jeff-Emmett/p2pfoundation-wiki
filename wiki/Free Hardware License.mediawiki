@@ -1,0 +1,139 @@
+=Overview=
+
+On licenses:
+
+#[[Open Hardware License]] 
+
+On the hardware itself:
+
+#[[Free Hardware]]
+#[[Free Software and Free Hardware Design]] 
+#[[Free Hardware Design]] 
+#[[Open Source Hardware]] 
+#[[Open Hardware]] 
+#[[Closed Hardware]] 
+#[[Open Wireless Hardware]] 
+
+
+Business models:
+
+#[[Open Source Hardware Business Models]] 
+
+Resources:
+
+#[[Open Hardware Foundation]]
+#[[Open Hardware Directory]] 
+
+
+=Discussion=
+
+From a May 2008 discussion via email:
+
+Smari McCarthy:
+
+"The clear issue is that hardware design isn't generally considered
+creative and is, as such, not covered by copyright law but by patent
+law, and patents are harmful by design."
+
+Marco Fiorelli:
+
+"the traditional distinction between software
+and digital hardware is disappearing.  Hence, the Freedom to Code and
+the copyright/patent/licensing/redistribution circus you know so
+well still apply here, and yours and/or FSF contribution is really
+welcome (if not due).
+
+Digital integrated circuits are designed writing functional models in
+C-like languages: Verilog and VHDL are the most popular.
+
+Those models are the source code of the circuits: good old ASCII text,
+describing algorithms. They are translated directly, as far as we are
+concerned, to silicon: transistors and the metal strips connecting
+them into the Carnot map corresponding to what you functionally
+described in Verilog or VHDL.
+
+If the process is irreversible, you have a piece of silicon with fixed
+behavior (like CPUs, as you can't change their instruction set or
+registers in the field)
+
+If you can rewire the transistors in the field, loading a different
+set of connections, you have an FPGA: the same board can be a video
+processor today, a crypto engine tomorrow. At full hardware speed. So,
+just as I can buy a whole PC and use a different operating system on
+it every day of the week, I can buy a board without a traditional CPU,
+just hw pieces, stuff it in that PC and have every day a different
+peripheral, depending from my current needs. Today crypto, tomorrow
+mpeg compression, dolby encoding next monday...
+
+Translating C code to verilog or VHDl is quite easy, and there is work
+ongoing to do it automatically. years ago, I personally grabbed
+working C code for a custom CRC made in my office, and made an
+hardware version of it in one afternoon, just changing some keywords
+here and there.
+
+I can download from the net the source code for Gnu Emacs, translate
+it to Verilog, and burn it into an FPGA connected to monitor, hard
+disk and keyboard: a dedicated Emacs computer. I could do the same
+thing with the algorithms of the Gimp or GpG or Hurd.
+
+Now, who owns the Verilog source code for that Emacs computer?  Do I
+have to ship it at no charge with it? Must it be redistributed under
+GPL?  What if, in that single FPGA I mix the Gnu Emacs piece with a
+proprietary hard disk interface? Must the verilog code of that
+interface become GPL too? Why? Was placing two separate functions in
+the same square of silicon dynamic or stating linking?
+
+This is not just a mental exercise. When you have time, search online
+the specs for Tarari Content Processors: these guys sell boards with
+chips which do anti-virus checking, and IIRC scanning for keywords, of
+email. Fully in hardware, real time.  Conceptually, they have taken
+the source code of Perl, awk, sed or something similar, translated it
+to Verilog or VHDL, and transformed it in transistors."
+
+Richard Stallman:
+
+"A hardware design, as a text or image, is copyrightable.
+So you can release it under the GNU GPL.
+(I see no need to design a special license for this.)
+
+However, since the hardware's structure is not covered
+by that copyright, the license on the design text or image
+(whatever that may be) does not apply to the actual hardware
+that is produced from the design."
+
+circuits are not covered by
+copyright.
+
+The source code they started with is covered by copyright.  The
+Verilog code is covered by copyright.  If they generated a drawing of
+a circuit, that is covered by copyright.  But the circuit as an
+abstract structure of wires and components is not covered by
+copyright.  Whether that abstract structure is generated from Verilog
+code is irrelevant.
+
+And the hardware itself is also not covered by
+copyright, so anyone can use the copyrighted diagrams to
+build a physical device.
+
+On the other hand, the program for an FPGA might be covered
+by copyright; it might be considered a work of authorship
+and not a circuit.
+
+That's what I recall of what I learned by talking with lawyers."
+
+Vinay Gupta:
+
+"The problem is for hardware which is not directly protected by copyright law, but would be covered by patent. Getting a patent is expensive and time consuming, certainly for an individual. There isn't a well-established practice for viral patents, although clearly some of the patent pools are coming along quite nicely.
+
+The result is that open hardware is having a hard time getting off the ground because the underlying IP law is just less suited to individuals working on problems in an environment of mutual cooperation. I can't pop a license into a file, and know that a commercial company won't build on top of my work, in the process obtaining patents which prevent subsequent innovation by the Free community. It's just very hard to get the "viral" part right in the hardware domain because of the barrier to entry that patents represent.
+
+This may well just be a transactional overheads issue. If there was a magic agency which I could send things to, and patents would mysteriously appear 20 minutes later, this might not be an issue. But the overhead is significant labor and thousands of dollars of fees, and one never knows the status of a patent until it has been leant on.
+
+This may be a real issue in coming years. The core of the work I'm doing right now is developing a broad platform of free designs for housing, for stoves, for simple electrical lighting systems. Some of these are entirely free, others are free arrangements of proprietary components (such as LEDs.) It would be nice if those were fully protected and fully viral, but there's no easy way to do that, short of some absurd "click-wrap" EULA on the objects themselves. "By owning this object, you swear that you will not take out a patent on an improvement..."
+
+
+=More Information=
+
+Richard Stallman: [http://www.gnu.org/philosophy/not-ipr.html Why the concept of IP induces confusion]
+
+[[Category:Design]]

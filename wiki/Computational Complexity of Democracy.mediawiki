@@ -1,0 +1,83 @@
+(this draft still needs to be corrected for typo's)
+
+=Text=
+
+From [[Alessio Bini]]:
+
+""The foundamental question that I inquire in dept is this: “It's possible a P2P society on large scale?” In the last work I have examined the logical and the ethical possibility of a large scale P2P society.
+And the answer was “not”, because the human beings are free and they can choice between many, but not arbitrary, concepts of “good”. And from a logical point of view, some of these concepts are in contradiction between them.
+The question of a large scale P2P society has many aspects.
+This time I wanna examine if there is a possibility in practise.
+If the greater part of human beings choice the same concept of “good” and choice to associate to it the same concept of “evil”, these humans can live all together in a unique and very large P2P society?
+If we imagine a P2P society in which every individual can dialogue with every other individual, a big problem open to us: the computational complexity of the scene.
+The theory of combinations or combinatorics come in help to us.
+From a mathematical point of view, a P2P society with n individuals is a set S with n elements.
+The possibility of communication between them is a relation and then we can examine in depth the features and the computational complexity of this relation.
+If an individual A communicates to an invidual B, is not the same think that B comunicates to A. In the first case B listens A. In the second case, A listens B.
+So, the order of the elements of a relation is important.
+In combinatorics, we call the ordinate groups “permutations”. We say that a permutation of 2 elements has a depth 2. In general, we say that a permutation has depth k, where k ≤ n, with n = the elements of the set S.
+The communication in not possibile only between two individuals, so is not only a simple one-one relation. But it's possible betwen one to many individuals of from many to one individuals or also between many to many individuals. So communication is a many-to-many relation. And the permutations that it can be generated have depth k. We write:
+Sn,k, with k ≤ n.
+In a ideally P2P society, n = k.
+The number of the permutation in S, is n!, where “n!” is the symbol of n-factorial, i. e. the result of multiplying the successive integers from 1 through n; n! equals n x (n - 1) x (n - 2) x ... x 1.
+The computational complexity of n! is NP-complete.
+A problem P-complete is a problem solvable in a polinomial time respect to the length of the input, in this case respect to n.
+A problem NP-complete is a problem nont solvable in a polinomial time.
+The mathematical searcher believe that a problem NP-complete is solvable, but in a too long time, perhaps in a time longer of the duration of the universe.
+An italian searcher has calculated the time necessary to solve the problem n!3 Using a calculator able to run 1 million of high level operations in 1 second, with n = 30, the time necessary for n! is 10 raised to 25th power years. It's too long!
+With n = 52, the computational complexity for n! is 5.000 billions of time longer the age of the universe.
+This complexity is too much only for representation of the possible combinations, i. e. permutation, between individuals of a society.
+Driving out mathematics, surely, there are naif relation between individuals. For example, if A speak to B, C and D. If C and D agree with B, we can speak about only one permutation of depth 2, between A and B. So in the real life, this cost is decreasible, avoiding naif relations.
+But this result in combinatronics is important.
+It seem that a P2P society cannot exist on large scale.
+Coming back to the good and wise Aristote, in the book VIII of Politics he claims that a State must be sufficiently large to be autonomous, but its people can be embraced with an only glance. The Athenian cityzen was the starter of direct democracy that it's a form of P2P society. To theorize another time direct democracy, for the actual historiografy of phylosophy, must wait 20 century, in 1700 a. C. with Jean Jacque Roussseau. Observing the small dimension of Swiss societies, he claim that only with small dimension is possible direct democracy.
+Mathematical results confirm phylosophycal thesis.
+Let's search, now, another proof analyzing the computational complexity of representative democracy in which an elected leader guides his population.
+If the number of cityzen is 1.000, for example, including the leader, the communication is optimal if the leader communicates with every cityzen, i. e. the number of all possible communications is 999.
+In a hierarchical representative democracy, we have communities represented by a leader, communities of leaders represented by a leader of leader, i. e. a second level leader.
+For example: cityzen are represented by Mayor, Mayors are represented by the President of district, elected between them, Presidents of the districts are represented by Gouvernent, elected between them.
+Continuing in our hypothesis, if we'll have 1.000 Mayors. Supposing that there are 1 President of district every 100 Mayors, we'll have 10 Presidents of districts and 1 Gouvernement.
+We'll have 999 possible relations between every Mayor and his cityzen, in the optimal case: (999x1000). Then, we'll have 99 relations between Presidents of district and his Mayors: (99x10).
+In the end, we'll have 9 relations between Presidents of district and the Gouvernement.
+
+The full set of possible relations is expressed by the algoritm:
+(999x1000) + (99x10) + 9
+Generalizing, if n is the number of cityzen of a city, m is the number of the Mayors, p is the number of the Presidents of district, we say that the computational complexity of a hierarchical representative democracy is espressed by the following algoritm:
+[(n-1) x m] + [(m-1) + p] + (p-1)
+If we suppose an international representative democracy, we extend the algoritm in the following manner:
+[(n-1) x m] + [(m-1) + p] + [(p-1) x g],
+where g is the number of Gouvernements or better the number of the States.
+The polinomial cost persists also if the cityzens form sub-group in the same city, like quarter or commities.
+In both cases, hierarchical or not, the computational complexity of representative democracy is polinomial, i. e. the time necessary to calculating all possible relations is expressed by a polinomial. We call this problem P-complete.
+For mathematical searcher, the P-complete problem are solvable in a acceptable time.
+When a problem is P-complete, the computer scientists start their work searching an efficent algoritm. But it's possible, for mathematical searchers.
+So we see that direct democracy has a overblown complexity, the representative democracy on the other hand has an acceptable complexity.
+From this result emerge some possibilities.
+The first, is the choice of representative democracy that is what the human beings have do in the most part of history. But this doesn't justify it.
+The second choice, is to build a small scale direct society, as theorized by Aristote and by Rousseau.
+The third choice, emerging in last years, is to give custody of democracy to a big calculator. It's the web democracy.
+But it's possible? No, becauce computational complexity is not a tecnological limit, but a mathematical limit.
+A big calculator can increase the dimension of a society, but not much.
+It can manage the democratic life semplifying all possible connections between cityzen.
+Furthermore, giving custody of democracy to a calculator means dehumanize the democracy.
+In the end, giving custody of democracy to a calculator means loose control on the decisions of the other cityzens.
+Who garantee to us that the calculator algoritm are not modified by particular powership interests?
+On the basis of this results, it's possible the exitence of many small P2P societies in which human being is at the center of relations. And every small P2P society is connected in a big network with the other P2P societies."
+
+
+=Discussion=
+
+Michel Bauwens:
+
+"I think your article is based on a false premise, i.e. that in a p2p society, everyone interacts with everyone, but that is NOT the case; in fact, it is based on stigmergic self-allocation between the needs of the system and the skills and offerings of the participants. This is why we have p2p as 'the global coordination of small group dynamics" because the average number in a team in Linux is four, and in Wikipedia, just one ... We already know that at least in production, stigmergy is possible at scale. Of course, this is only valid for what is abundant, where no 'scarcity allocation' is needed. In the field of scarcity, we still need to discuss the hard issues of democracy at scale, but there also there are interesting innovations. First of all open book accounting and open supply chains allow for large scale coordination ; new governance models like sociocracy, holacracy and the Viable System Model are especially designed to scale small groups on a recursive scale."
+
+Alessio Bini: 
+
+"I think my assumption is correct and, increasing the scale of democracy, human being need to create sub-groups in which it's possible arguing own idea whit the other persons. This is the essence of democracy for me. But, it's a logical consequence descending by definition of "sociocracy". In the circle, to obtain the "consent", it's necessary discuss every argument or counter-argument of every participant, relatively to an idea. From a mathematical point of view, it's precisely the case of permutations and we fall in a problem NP-complete. We can organize a large scale discussion only if only one member of the circle claims an idea and the other memebers can only discuss with him his idea, without arguing the counter-idea of the other people. With this limitation, the computational complexity collapse in a problem P-complete.
+In the case of "holacracy", we have hierarchized circle. Hierarchy conflicts with the P2P definition. Hierarchy it's a form of gouvernement, but not a P2P gouvernement. The "P" means peers and not "superior" or "inferior".
+At the end, "stigmergic" case: does it permit a collapse of computational complexity? Sure! The informations paths create sub-groups of dialoguing people. Ethical choices can be the uman version of ants pheromones. This theme is treated in "Good and Evil in a P2P context". 
+If Aristotle and Rousseau, form very distant ages, claims by unison that democracy cannot permit large scale they will have valid arguments.
+If the sum of all sub-groups can be defined as a large scale P2P society, then I agree with this definition".
+
+[[Category:Democracy]]
+[[Category:Complexity]]

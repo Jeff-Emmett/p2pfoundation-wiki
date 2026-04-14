@@ -1,0 +1,36 @@
+
+
+=Description=
+
+Arthur Brock and Eric Harris-Braun:
+
+"Most modern community currency systems have been implemented as mutual credit, but we don’t know of anyone who has built a tokenless crypto-mutual-credit-currency yet, so let’s outline an approach to creating a basic one with minimal supporting infrastructure.
+
+
+Instead of sending a check or wiring money through a bank or Western Union, hundreds of millions people transfer money through the hawala system. Hawala is a network of merchants and businessmen, which has been operating since the middle ages, performing money transfers on an honor system and typically settling balances through merchandise instead of transferring money. It works like this: a laborer building a skyscraper in Dubai wants to send some of his earnings home to his family in Egypt. He goes into a store in Dubai, gives the owner, who is a hawaladar, 1,200 UAE Dirham in cash, and provides a passphrase for collecting the cash. The hawaladar calls a hawaladar he knows in Egypt and arranges for an equivalent sum in Egyptian Pounds to be picked up using that password. The laborer calls his wife and tells her the password and at which store to collect the money. Each hawaladar makes a record on their own books of the debt, which is eventually settled by applying it as a discount to merchandise going from Dubai to Egypt.
+
+Let’s look at building a minimum viable cryptocurrency with the hawala network as our use case. We’ll focus on the processing and data integrity of the transactions, not on user interface, because if the data is stable, and locally accessible, any kind or reporting and widgets could be made available via phone app, web interface, or whatever.
+
+We’re making a few design decisions in the spirit of keeping this example simplified. To minimize key management infrastructure, each hawaladar’s public key is their address or identity on the network. To join the network you get a copy of the software from another hawaladar, generate your public and private keys, and complete your personal profile (name, location, contact info, etc.). You call, fax, or email at least 10 hawaladars who know you, and give them your IP address and ask them to vouch for you. (Yes, IP addresses are inconvenient but in a minimal example we want to show you don’t even need a domain name under the control of any group or individual.)
+
+Once 10 other hawaladars have vouched for you, you can start doing other transactions because the protocol encoded in every node will reject a transaction chain that doesn’t start with at least 10 vouches. Having this requirement accomplishes a few things. It makes manufacturing fake accounts impractical (Sybil Attacks) and it begins building your peer routing table (which stores public keys, last-known IP addresses, names, locations, and contact info for other hawaladars that you interact with) while seeding your information with those other peers so you can be found by the rest of the network.
+
+As described in the Mutual Credit section, at the time of transaction each party audits the counterparty’s transaction chain. This is when they confirm the initial 10 vouches and also validate that their counterparty’s balance(s) are in good standing — that they make good on their debts and are not too far indebted to want to transact with.
+
+Hawala transactions often cross national boundaries and currencies. We don’t specify here a “best” way to approach conversion and accounting of many national currencies. One could store balances using a currency-neutral value-reference like the Terra Trade Reference Currency (TerraTRC) or Rogers International Commodities Index (RICI). For simplicity, we’ll stick with the current frequent practice of just recording the exchange rate of the national currencies at the time of transaction.
+
+Our hawala crypto-clearinghouse protocol has two categories of transactions: some used for accounting and others for routing. Accounting transactions change balances. Routing transactions maintain network integrity by recording information about hawaladar. These two categories of transactions could be stored in a single chain, but it probably optimizes accounting operations and routing operations to store them in two separate chains for each node."
+(http://ceptr.org/whitepapers/mutual-credit)
+
+
+[[Category:Commons Economics]]
+
+[[Category:Money]]
+
+[[Category:Cryptoledger Applications]]
+
+[[Category:Business]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Commons Infrastructure]]

@@ -1,0 +1,16 @@
+
+
+URL = http://www.coralcdn.org/
+
+
+=Description=
+
+"Coral is a free peer-to-peer content distribution network, comprised of a world-wide network of web proxies and nameservers. It allows a user to run a web site that offers high performance and meets huge demand, all for the price of a $50/month cable modem.
+ 
+Publishing through CoralCDN is as simple as appending a short string to the hostname of objects' URLs; a peer-to-peer DNS layer transparently redirects browsers to participating caching proxies, which in turn cooperate to minimize load on the source web server. Sites that run Coral automatically replicate content as a side effect of users accessing it, improving its availability. Using modern peer-to-peer indexing techniques, CoralCDN will efficiently find a cached object if it exists anywhere in the network, requiring that it use the origin server only to initially fetch the object once.
+ 
+One of Coral's key goals is to avoid ever creating hot spots in its infrastructure. It achieves this through a novel indexing abstraction we introduce called a distributed sloppy hash table (DSHT), and it creates self-organizing clusters of nodes that fetch information from each other to avoid communicating with more distant or heavily-loaded servers.
+ 
+A preliminary deployment of CoralCDN has been online since March 2004, running on the PlanetLab testbed. As of January 2006, it receives about 25 million requests per day from more than 1 million unique clients."
+
+[[Category:Technology]]

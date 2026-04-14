@@ -1,0 +1,96 @@
+{{WikiSprint-20M
+|Name=KinoRAW
+|Language=Spanish
+|Main URL=http://www.kinoraw.net
+|Short description=Free & Open Source Cinema Lab
+|Details=Intro
+
+KinoRAW es un proyecto de investigación que arranca en 2011 fruto de una beca de investigación otorgada por la Asoc. Cultural Telenoika, y surge como respuesta a inquietudes profesionales y artísticas en torno a diversas áreas relacionadas con el audiovisual como son la i+d de herramientas de código abierto, la artesanía cinematográfica y la divulgación tecnológica.
+
+Para comenzar el proyecto, hemos escogido dos herramientas abiertas en las que apoyarnos. El archiconocido software libre Blender y las cámaras de código abierto producidas por la compañía Elphel Inc.
+
+'''Blender''' es hoy una opción que cumple con suficientes requerimientos para una edición y post-producción profesional (tanto en animación 3D y juegos, como en edición de vídeo, composición y etalonaje)
+
+Si bien posee algunas carencias al compararse con aplicaciones de edición de vídeo dedicadas (a menudo deliberadamente, por cuestiones técnicas, debido a su orientación como suite de creación 3d) este software aporta una característica fundamental:
+
+La posibilidad del usuario de intervenir en el código y extenderlo para añadirle funcionalidades, de un modo asequible para programadores de distinto nivel, a través de su API en Python o programando en C directamente, con el gran apoyo que supone su extensa y ejemplar comunidad.
+
+Este detalle facilita enormemente el empoderamiento de la herramienta por parte del usuario, desde un nivel relativamente bajo de conocimientos de programación.
+
+La posibilidad de personalizar el programa desde el ámbito de la programación creativa, con un lenguaje asequible como es Python, abre un campo de experimentación no excluyente en el que cualquier aficionado puede poner en práctica sus ideas, a menudo para equivocarse y así aprender más.
+Elphel
+
+La '''Elphel NC353L-369''', producida por Elphel Inc. es una excelente cámara con grandes posibilidades técnicas como:
+
+- una amplia gama de posibilidades en cuanto a tiempos de exposición, resoluciones, framerates y ajustes de valores contínuos (analogización del dispositivo digital)
+
+- generación de archivos RAW que se decodifican a través de una conversión a .DNG en la que los procesos de demosaico y debayer son por cuenta del cliente / usuario
+
+Ofrece por tanto una amplio abanico de posibilidades artísticas.
+
+Sin embargo, una de las características que nos parecen clave en esta cámara reside en el hecho de que en realidad interactuamos con ella del mismo modo que con un ordenador, ya que es un sistema linux el que reside dentro. Además la cámara se gestiona a través de su propio servicio web, y dispone de una api en php con la que programarla.
+
+Esto hace que requiera del usuario una aproximación a conceptos como el sistema operativo linux, las comunicaciones de red (http, telnet, rtsp), la interfaz shell y la programación de scripts. 
+
+'''Objetivos'''
+
+Con Elphel y Blender se puede abarcar el proceso completo de producción audiovisual con herramientas libres, si bien con ciertas limitaciones, pero poniendo a disposición del usuario un amplio abanico de herramientas tecnológicamente muy avanzadas.
+
+Nuestra línea de desarrollo se centra en optimizar el flujo de trabajo entre las dos. Con ello queremos contribuir a hacer más accesible la producción audiovisual con software y hardware libre a cualquiera que se quiera acercar a estas herramientas.
+
+Nuestro objetivo, también es contribuir a crear redes profesionales de i+d en torno a estas herramientas, de este modo los avances y desarrollos fortalecen el el procomún y el código fuente audiovisual.
+
+Al mismo tiempo se pueden crear las condiciones para el desarrollo de nuevos modelos de negocio y de creación artística. En ese sentido nos interesa también divulgar información sobre cualquier herramienta abierta que pueda ser útil para productoras audiovisuales o creadores.
+
+'''Licencias'''
+Todos los contenidos que se generan en torno a Kinoraw son puestos a disposición con las licencias: cc by-nc-sa o cc by-sa para los videos y GPLv3 para el código.
+
+
+'''Crowdfunding'''
+
+En abril de 2012 lanzamos una campaña de finaciación colectiva en Goteo.org que es una red social de financiación colectiva (aportaciones monetarias) y colaboración distribuida (servicios, infraestructuras, microtareas y otros recursos).
+
+Recibimos el apoyo de 36 co-financiadores, de dos productoras catalanas que son Metromuster y Howav con las que hemos cerrado acuerdos para utilizar la cámara en sus proyectos. También recibimos el reconocimiento de los estudios de comunicación audiovisual y multimedia de la Universitat Oberta de Catalunya, gracias este aporte se realiza un taller- seminario “Cine de código abierto” en colaboración con los mentores del proyecto, Telenoika. Agradecemos también el apoyo de la casa matriz de Elphel y de Andrey Filipov a nuestro proyecto que también puede ser el vuestro .
+Presentación de resultados
+
+Entre octubre y noviembre de 2012 presentamos los resultados de nuestra investigación en varias conferencias y seminarios.
+
+Además, gracias al soporte financiero obtenido en la campaña de crowdfunding pudimos asistir a la Blender Conference 2012 y presentar allí una ponencia sobre nuestro proyecto.
+
+'''Continuación del proyecto'''
+Tenemos como reto actualizar toda la información recopilada en esta web, así como desarrollar un proyecto cinematográfico que nos permita poner en práctica el workflow.
+
+Otro de los objetivos del proyecto consiste en el mantenimiento de los addons desarrollados para Blender, de modo que sigan funcionando a medida que van llegando nuevas versiones de este software.
+
+Todo esto lo seguimos haciendo despacio, porque vamos lejos.
+|References/Links=- KinoRaw: Laboratorio de cine de código abierto. En Freepress. coop - http://freepress.coop/blog/kinoraw/
+
+- Apertus goes 4K, KinoRaw to provide workflow. En Libre Graphics World - http://libregraphicsworld.org/blog/entry/apertus-goes-4k-kinoraw-to-provide-workflow
+
+- Comunes. (Programa de Radio del Círuclo de Bellas Artes) - 
+http://archive.org/details/ProgramaRadioComunes26042012
+
+- Machinarium021. KinoRaw, producción de cine con software y hardware libre - http://machinarium021.blogspot.mx/2012/12/kinoraw-produccion-de-cine-con-software.html
+
+- Presentaciones - http://www.slideshare.net/simonimo/presentations
+|Contact's person e-mail=info@kinoraw.net
+|Number of participants=7
+|Start date=2011/12/20
+|Related projects=Apertus.org, Floresta Vermelha
+|City=Barcelona
+|Country=Catalunya / Espanya
+|Location=Barcelona
+|Topics=Art, Education, P2P Education, Relational, Peerproduction, Relational, Relational, Software, Technology, Collaboration Software, P2P Technology
+|Types=Movements
+|Formats=Blog, Films, Documentary films, Interviews, Media, Software
+|Categories/Tags=software libre, open hardware, audiovisual, producción, cine, cinematografía, procomún, P2P, crowdfunding, GNU/Linux
+}}
+{{MC
+|mc1=Non Profit
+|mc2=Reproducible
+|mc3=Reinforcing the Commons
+|mc3e=Nature
+|mc4=Grassroots
+}}
+
+[[Category:Spanish]]

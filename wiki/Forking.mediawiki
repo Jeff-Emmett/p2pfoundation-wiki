@@ -1,0 +1,130 @@
+
+=Description=
+
+'''1. Anil Dash:'''
+
+"There are several related technical concepts that can answer to the name "fork", but the one I reference here is the dramatic moment when a software project undergoes a schism on ideological or technical grounds. Instead of merely taking their ball and going home, those who forked were taking a copy of your ball and going to a new playground. And while splitting a community could obviously cause an open source community's momentum to grind to a halt, even the mere threat of a fork could cause significant problems, by revealing conflicting goals or desires or motivations within a previously-united community.
+
+Still, forks have had important consequences. Firefox (earlier Firebird and Phoenix) was originally a fork of Mozilla, the open source browser that had been mired in indecision for half a decade. WordPress was born as a fork of B2, a neglected early blogging tool.
+
+Outside of tech, forks have an even bigger meaning. You could make a pretty strong argument that the Reformation was a fork, or that Christianity itself is a fork. So clearly, forking a community can have a significant, even profound impact. But in tech, it had largely been seen solely as a violent, schismatic action.
+
+Part of the predicate for forks being so disruptive was the idea that there is One True Version — a creation, like a piece of software, a written work, or anything else, that can only be accurately represented by a single ideal expression. Even some of the most disruptive technological innovations like Wikipedia are still built around the idea of achieving consensus on a definitive work, and striving mightily to avoid forks arising within the community.
+
+Until a git named Linus changed that."
+(http://dashes.com/anil/2010/09/forking-is-a-feature.html)
+
+
+'''2. Linus Nyman, Juho Lindman:'''
+
+"Code forking has often been viewed in a negative light. At the core of this negative view is the continued use of a restrictive, and perhaps outdated, definition of the term forking. Until recently, the term fork was mainly used to describe a situation in which a developer community had split into competing camps, each continuing work on their own, incompatible version of the software (see, for example, Raymond, 1999; Fogel, 2006). Hence, the negative tone found in discussions of forking has been related to concerns regarding the hindered progress, wasted resources, and potential demise of one or both of the projects. In recent years, the term forking has come to be used in a much broader context, encompassing all cases in which one takes an existing code base and implements it in a separate project (see, for instance, GitHub). In the context of this study, we adhere to this broader definition of forking.
+
+While there are many reasons why projects are forked, the most common reason is the desire to modify the original program to better address a specific need (Nyman and Mikkonen, 2011). Forks may also be planned, temporary divergences intended to test new ideas and features, with the intention of later integrating effective improvements back into the original (Nyman and Mikkonen, 2011; see also GitHub). The right to fork code is built into the very definition of what it means to be an open source program. The third criteria of the Open Source Initiative’s (OSI) definition of open source states that the license “must allow modifications and derived works.” Similarly, the Free Software Foundation’s Free Software Definition (FSD) states that users have the freedom to “run, copy, distribute, study, change and improve the software.” All spinoff initiatives can be considered forks as they are “modified or derived” (OSI) or “copied, changed and improved”. The possibility of forking any project affects the governance and sustainability of all open source programs.
+
+Software is editable, interactive, reprogrammable, distributed, and open (Kallinikos et al., 2010). These characteristics dictate that software is prone to being changed, repaired, and updated rather than remaining fixed from the early stages of the design process. The openness combined with the granular composition of the software offer new ways of governance (Benkler, 2006). This governance is not tied to over-appropriating a natural resource (Ostrom, 1991), but rather related to ways in which a group of developers, following institutional rules, collectively produce a public good (Schweik et al., 2010)."
+(http://timreview.ca/article/644)
+
+Source: [[Code Forking, Governance, and Sustainability in Open Source Software]]
+
+=Typology=
+
+==Code Forking in the Context of the Three Levels of Governance==
+
+(in the context of forking); from the article: [[Code Forking, Governance, and Sustainability in Open Source Software]] [http://timreview.ca/article/644]
+
+By Linus Nyman, Juho Lindman:
+
+===Software level===
+
+The nature of the industry dictates that programs cannot maintain a stable steady state for an extended period of time. They must continue to evolve in order to remain useful and relevant. Without continual adaptation, a program will progressively become less satisfactory (Lehman, 1980). Conversely, truly successful software is able to adapt and even outlive the hardware for which it was originally written (Brooks, 1975). Therefore, the ability to change and evolve is a key component of software sustainability. Although stagnation may be a precursor to obsolescence, obsolescence need not creep into a project over time; it is often a design feature.
+
+Popularized in the 1950s by American industrial designer Brooks Stevens (The Economist, 2009), the concept of planned obsolescence stands in stark contrast to the concept of sustainability. Stevens defined planned obsolescence as the act of instilling in the buyer “the desire to own something a little newer, a little better, a little sooner than is necessary” (Brooks Stevens’ biography). Considered “an engine of technological progress” by some (Fishman et al., 1993), yet increasingly problematized in the business ethics literature (Guiltinan, 2009), planned obsolescence is part of every consumer’s life. Although contemporary software development and distribution have characteristics that differ substantially from the industrial products of the 1950s, the revenue models of companies in the software marketplace often welcome elements such as system versioning, to encourage repurchases of a newer version of the same system, or vendor lock-ins that limit the customer choice to certain providers of system or product (for a further review, see Combs, 2000). Newer versions of programs may introduce compatibility problems with earlier operating systems or programs (e.g., lack of backwards compatibility in Internet Explorer, Microsoft Office, or OS X’s OpenStep APIs). Some programs also introduce new file formats, which can cause compatibility issues with earlier versions of the program (e.g., docx vs. doc). Furthermore, end-of-life announcements and concerns over end-of-support deadlines may encourage users to upgrade, regardless of the real need to do so.
+
+The right to fork code makes implementing such elements impracticable in open source. The right to improve a program, the right to combine many programs, and the right to make a program compatible with other programs and versions are all fundamental rights that are built into the very definition of open source. Research has shown these rights are often exercised (Fitzgerald, 2006). The result of this constant collaborative improvement in open source systems is that any program with the support of the open source community can enjoy assured relevance rather than planned obsolescence. Furthermore, with renewed community interest, programs that have decayed and fallen into disuse can be revived and updated by forking the code from the original program. In fact, this is a fairly common practice: of the almost 400 forks studied by Nyman and Mikkonen (2011), 7% involved the reviving of an abandoned project. As long as there is sufficient community interest in a project, forking can allow for constant improvement in software functionality.
+
+
+===Community level===
+
+The possibility to fork is central to the governance of any open source community. The shared ownership of open source projects allows anyone to fork a project at any time. Therefore, no one person or group has a “magical hold” over the project (Fogel, 2006). Since a fork involving a split of the community can hurt overall productivity, Fogel notes that the potential to fork a program is “the indispensable ingredient that binds developers together”.
+
+One of the concerns among open source communities is what Lerner and Tirole (2002) call the hijacking of the code. Hijacking occurs when a commercial vendor attempts to privatize a project’s source code. The 2008 acquisition of MySQL, an open source relational database management system, by Sun Microsystems and subsequent acquisition of Sun by Oracle is an example of a case involving community concern over potential hijacking. It had been argued that such a series of acquisitions would lead to the collapse of both MySQL and the open source movement at large (Foremski, 2006). Responding to such claims, Moody (2009) noted that, while open source companies can be bought, open source communities cannot. Forking provides the community that supports an open source project with a way to spin off their own version of the project in case of such an acquisition. Indeed, this is what happened in the case of MYSQL. The original MySQL developer, Michael (“Monty”) Widenius, forked the MySQL code and started a new version under a different name, MariaDB, due to concerns regarding the governance and future openness of the MySQL code (for details, see Widenius' blog [February 5, 2009 and December 12, 2009] and press release).
+
+Similarly, in 2010, community concerns regarding governance led to a forking of the OpenOffice (OO) project. The Document Foundation, which included a team of long-term contributors to OO, forked the OO code to begin LibreOffice. The spinoff project emphasized the importance of a “transparent, collaborative, and inclusive” government (The Document Foundation). A recent analysis of the LibreOffice project indicates that this fork has resulted in a sustainable community with no signs of stagnation (Gamalielsson and Lundell, 2012). Given that forking ensures that any project can continue as long as there is sufficient community interest, we have previously described forking as the “invisible hand of sustainability” in open source software (Nyman et al., 2011).
+
+Commonly, forking occurs due to a community’s desire to create different functionality or focus the project in a new direction. Such forks are based on a difference in software requirements or focus, rather than a distrust of the project leaders. When they address disparate community needs, different versions can prosper.
+
+In a traditional company, it is the management, headed by the CEO and board of directors, that controls the company and provides the impetus for continued development. While the vision of the leadership is similarly integral to the eventual success of any open source project, their continued control is more fragile and hinges upon their relationship with and responses to the community. Forking cannot be prevented by business models or governance systems. The key lies in appropriate resource allocation and careful community management. Managers must strike a delicate balance between providing a driving force while appeasing and unifying the community. (For an overview of open source governance models, see OSS Watch; for discussion on building technical communities, see Skerrett, 2008; for discussion on open source community management, see Byron, 2009.)
+
+
+===Business-ecosystem level===
+
+Within the dynamic world of open source software, natural selection acts as a culling force, constantly choosing only the fittest code to survive (Torvalds, 2001). However, the right to fork means that any company can duplicate any competitor’s open source software distributions; thus, competitive advantage cannot depend on the quality of the code alone. However, it is worth stressing that possibility does not equal success. The right to fork a commercially successful program with the intention of competing for the same customer base still leaves the would-be competitor with issues regarding trademarks, brand value and recognition, as well as the existing developer and user base of the original program. Even though forking allows companies to compete with identical open source software, it is nevertheless cooperation that is considered to be the key to corporate success (Skerrett, 2011; Muegge, 2011).
+
+Open source software is free, but it is also increasingly developed and supported for commercial gains (Wheeler, 2009). While the right to fork may seem to make for a harsh business environment, open source companies can and do thrive. With its billion-dollar revenue, Red Hat is one such example. While their revenue primarily comes from subscriptions and services related to their software (see Suehle’s [2012] TIM Review Q&A for a more in-depth look at the secret of Red Hat’s success), Red Hat’s programs themselves are largely based on forks of programs by other developers. This phenomenon of combining forked programs is not unique to Red Hat: the hundreds of different Linux distributions are all made possible by the forking of existing products and repackaging them as a new release.
+
+Forking lays the building blocks for innovators to introduce new functionalities into the market, and the plethora of online forges have hundreds of thousands of programs available for forking and reuse in any new, creative way the user can imagine, allowing for the rapid adaptation to the needs of end users. Hence, the practice of forking allows for the development of a robust, responsive software ecosystem that is able to meet an abundance of demands (Nyman et al., 2012).
+
+The old adage, "one man’s trash is another man’s treasure" is particularly salient in open source software development. Soon after Nokia’s abandonment of the MeeGo project in 2011 (press release; MeeGo summary), the Finnish company Jolla announced that it would create a business around its revival, made possible by forking the original code (press release). On July 16, 2012, Jolla announced a contract with D. Phone, one of the largest cell phone retailers in China, and on November 21 they launched Sailfish OS. However, one does not need to be an open source business to benefit from the right to fork. Forking can also aid companies who choose to use an existing program, or develop it for personal use. The requirement in open source to share one’s source code is linked with distribution, not modification, which means that one can fork a program and modify it for in-house use without having to supply the code to others. However, a working knowledge of licenses as well as license compatibility (when combining programs) is crucial before undertaking such an endeavour (for a discussion of licenses, see St. Laurent [2004], Välimäki [2005], or Meeker [2008] for a discussion of architectural design practices in the combining of licenses, see Hammouda and colleagues [2010]."
+(http://timreview.ca/article/644)
+
+
+=Discussion=
+
+Linus Nyman, Juho Lindman:
+
+"Forking sits at the intersection of several different open source topics, such as software development, governance, and company participation in communities and business ecosystems. In the interest of clarity, we have simplified the categorization of the multifaceted concept of forking. In actuality, there is overlap among the categories: a strong community offers better insurance of sustainability of the software level, while better software can more easily attract a bigger community. Both a poorly handled community and an abandoned project can spawn a business ecosystem competitor.
+
+The right to fork code is intrinsic to open source software and is guaranteed by all open source licenses. This right to fork has a significant effect on governance and helps ensure the sustainability of open source software. We have analyzed the effect of forking on three different levels: the software level, the community level, and the ecosystem level. On a software level, code forking serves as a governance mechanism for sustainability by offering a way to overcome planned obsolescence and decay, as well as versioning, lock-in, and related concerns. On a community level, code forking ensures sustainability by providing the community with an escape hatch: the right to start a new version of the program. Finally, on an ecosystem level, forking serves as a core component of natural selection and as a catalyst for innovation. Online forges offer a plethora of publically available programs that can serve as the building blocks of a new creation. Current projects can be forked, abandoned projects can be revived and commercialized, or programs can be combined in novel ways to better meet the needs of both the developers and end users. It is the right to fork that moulds the governance of open source projects and provides the dynamic vigour found in open source computing today."
+(http://timreview.ca/article/644)
+
+Source: [[Code Forking, Governance, and Sustainability in Open Source Software]]
+
+==GiftHub and the Breakout of Ubiquitous Forking==
+
+Anil Dash:
+
+"Often, the very first thing a coder does when she sees an interesting new project on GitHub is to make a fork of it and start tinkering. That's only one of the reasons that GitHub so important, though; The GitHub principle of "see it, make your own version, and then get to work" has started to filter into other disciplines, as exemplified by design sites like Dribbble, and upcoming new sites for creatives such as Forrst.
+
+These new sites are admittedly still in their formative stages — Dribbble just had its breakout moment with the recent popularity of redesigning the iTunes icon — but it's easy to imagine a more mature version where, instead of merely focusing on the pretty pixels on the screen, the designers who frequent the site were encouraged to describe their rationale, and to use the site's replying abilities (called "rebounds"on Dribbble) to do something more akin to forking, where raw Photoshop and Illustrator files were shared.
+
+Most importantly, the new culture of ubiquitous forking can have profound impacts on lots of other categories of software. There have been recent rumblings that participation in Wikipedia editing has plateaued, or even begun to decline. Aside from the (frankly, absurd) idea that "everything's already been documented!" one of the best ways for Wikipedia to reinvigorate itself, and to break away from the stultifying and arcane editing discussions that are its worst feature, could be to embrace the idea that there's not One True Version of every Wikipedia article.
+
+A new-generation Wikipedia based on Git-style technologies could allow there to be not just one Ocelot article per language, but an infinite number of them, each of which could be easily mixed and merged into your own preferred version. Wikipedia already technically has similar abilities on the back end, of course, but the software's cultural bias is still towards producing a definitive consensus version instead of seeing multiple variations as beneficial.
+
+There are plenty of other cultural predecessors for the idea of forking, all demonstrating that moving away from the need for a forced consensus can be great for innovation, while also reducing social tensions. Our work on ThinkUp at Expert Labs has seen a tremendous increase in programmers participating, without any of the usual flame wars or antagonism that frequently pop up on open source mailing lists. Some part of that is attributable to the cultural infrastructure GitHub provides for participation.
+
+Moving forward, there are a lot more lessons we can learn if we build our social tools with the assumption that no one version of any document, app, or narrative needs to be the definitive one. We might even make our software, and our communities, more inclusive if we embrace the forking ourselves."
+
+(http://dashes.com/anil/2010/09/forking-is-a-feature.html)
+
+
+==Forking as an expression of [[Functional Pluralism]]==
+
+Benjamin Life:
+
+"In software development, “forking” is when someone takes an existing codebase and creates a new, independent version. It sounds dramatic, and sometimes it is, but it’s also completely normal and often productive. Linux, one of the most successful open-source projects in history, has been forked thousands of times. Some forks remain independent. Others eventually merge back into the main project, bringing innovations developed in parallel. The possibility of forking creates a kind of evolutionary pressure: projects that don’t serve their users well get forked, and better alternatives emerge.
+
+'''What if we thought about organizational strategy the same way?'''
+
+When a significant strategic disagreement emerges, instead of viewing it as a crisis that must be resolved through debate, compromise, or authority, what if we viewed it as an opportunity for differentiation? Instead of one group winning and another losing, both approaches could be pursued. The “main branch” continues with its current strategy. The “fork” explores an alternative. Both remain in relationship, sharing learnings and resources where appropriate. Over time, evidence accumulates about what actually works. Sometimes one approach proves superior. Sometimes different approaches work better in different contexts. Sometimes the fork and the main branch eventually re-merge, integrating the best of both.
+
+The key is that forking doesn’t represent rupture. It represents creative differentiation. This is perhaps the hardest mental shift to make because we’re so conditioned to see organizational splits as failures. Someone leaving to start their own thing is often viewed as a betrayal or at least a loss. But that interpretation assumes that organizational value is primarily captured through institutional control, that the only way for your work to matter is for it to happen under an officially sanctioned banner.
+
+Functional pluralism suggests something different: that organizational value emerges from the network of relationships, shared learning, and mutual support between independent but connected nodes. When someone forks to explore a different approach, they’re not leaving—they’re differentiating while remaining in relationship. They’re expanding the possibility space that the broader network can explore.
+
+Mechanisms like quadratic funding create ways for forks to be resourced without requiring permission from a central authority. If the main organization’s leadership doesn’t support a proposed strategic direction, but a significant portion of the network does, quadratic funding mechanisms allow that network to directly resource the fork. The fork doesn’t need to “win” the internal debate—it just needs to demonstrate sufficient distributed support to access resources from the shared pool.
+
+This ecological mindset is crucial. Ecologies thrive on differentiation. A monoculture is fragile; a polyculture is resilient. When we embrace forking as a normal, healthy part of organizational evolution, we build in the same kind of resilience. We’re no longer betting everything on a single strategy working out. We’re maintaining optionality."
+
+(https://omniharmonic.substack.com/p/fork-you)
+
+=More Information=
+
+* James Dixon: [http://jamesdixon.wordpress.com/2009/05/07/forking-protocol-why-when-and-how-to-fork-an-open-source-project/ Forking Protocol]: Why, When, and How to Fork an Open Source Project
+
+
+[[Category:Peerproduction]]
+
+[[Category:Governance]]
+
+[[Category:Encyclopedia]]

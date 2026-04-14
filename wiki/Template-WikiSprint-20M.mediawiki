@@ -1,0 +1,67 @@
+<noinclude>
+This is the "WikiSprint-20M" template.
+<pre>
+{{WikiSprint-20M
+|Name=
+|One sentence description=
+|Main URL=
+|Short description=
+|Details=
+|Discussions/Quotes=
+|References/Links=
+|City=
+|Country=
+|Location=
+|Contact person=
+|Contact's person e-mail=
+|Number of participants=
+|Start date=
+|Related projects=
+}}
+</pre>
+</noinclude>
+<includeonly>
+<div id="box-translation">{{Languages/WikiSprint}}</div>
+<div style="float:right; margin: 0 0 20px 20px; width: 250px; padding: 10px; border: 1px solid #b5b4b3; background: #f6f6f6;">
+<h3> {{#switch: {{SUBPAGENAME}} | es = Ubicación | ca = CA | eu = Kokapena | pt = Locacao | Location }} </h3>
+* [[WS_City::{{{City|}}}]], [[WS_Country::{{{Country|}}}]]
+{{#display_map:{{{Location|}}}|width=250|height=250|zoom=2}}
+[[Has coordinates::{{{Location|}}}| ]]
+</div>
+__NOTOC__
+* '''{{#switch: {{SUBPAGENAME}} | es = Nombre | ca = Nom | eu = Izena | pt = Nome | Name }}:''' [[WS_Name::{{{Name|}}}]]
+* '''URL:''' [[WS_URL::{{{Main URL|}}}]]
+* [[WS_Description::{{{Short description|}}}]]. 
+* '''{{#switch: {{SUBPAGENAME}} | es = Fecha de inicio | ca = Data d'inici | eu = Hasiera data | pt = Data de inicio | Start date}}:''' {{{Start date|}}}.
+* '''{{#switch: {{SUBPAGENAME}} | es = Palabras clave | ca = Paraules clau | eu = Gako-hitzak | pt = Palavras chave | Keywords }}:''' {{{Categories/Tags|}}}
+
+; {{#switch: {{SUBPAGENAME}} | es = Participantes | ca = Participants | eu = Parte-hartzaileak | pt = Participantes | Participants }}
+* '''{{#switch: {{SUBPAGENAME}} | es = Personas de contacto | ca = Referents | eu = Harremanetarako pertsonak | pt = Concernentes |Contacts }}:''' {{{Contact person|}}} ([[WS_ContactMail::{{{Contact's person e-mail|}}}]])
+* '''{{#switch: {{SUBPAGENAME}} | es = N° de Participantes | ca = Número estimat de participants | eu = Partehartzaile kopurua | pt = N° de Participantes | Number of Participants}}:''' {{{Number of participants|}}} <small>({{#switch: {{SUBPAGENAME}} | es = hasta el | ca = CA | eu = noiz arte | pt = hasta el | until }} {{REVISIONDAY}}/{{REVISIONMONTH}}/{{REVISIONYEAR}})</small>
+[[WS_Participants::{{{Number of participants|}}}| ]]
+
+== {{#switch: {{SUBPAGENAME}} | es = Detalles | ca = Detalls | eu = Xehetasunak | Details }} ==
+
+{{{Details|}}}
+__NOEDITSECTION__
+== {{#switch: {{SUBPAGENAME}} | es = Citas y menciones | ca = Cites i mencions | eu = Aipuak eta aipamenak | pt = Citações e menções | Quotes and mentions }} ==
+
+{{{Discussions/Quotes|}}}
+__NOEDITSECTION__
+== {{#switch: {{SUBPAGENAME}} | es = Enlaces externos  | ca = Referències i enllaços externs | eu = Kanpoko estekak | pt = Referências e ligações externas: | External links}}==
+{{{References/Links|}}}
+__NOEDITSECTION__
+; {{#switch: {{SUBPAGENAME}} | es = Proyectos relacionados | ca = Projectes relacion | eu = Harremana duten proiektuak | pt = Projetos relacionados | Related projects }}
+
+{{#arraymap:{{{Related projects|}}}|,|x|<li>[[x]]|}}
+
+
+{{#arraymap:{{{Topics|}}}|,|x|[[Category:x]]|&#32;}}
+{{#arraymap:{{{Formats|}}}|,|x|[[Category:x]]|&#32;}}
+{{#arraymap:{{{Types|}}}|,|x|[[Category:x]]|&#32;}}
+
+[[Category:WikiSprint 20/04/2013]]
+[[Category:WikiSprints outputs]]
+[[Category:WikiSprints outputs/{{#switch: {{SUBPAGENAME}} | es = Spanish | ca = Catalan | eu = Basque | pt = Portuguese | English }}]]
+
+</includeonly>

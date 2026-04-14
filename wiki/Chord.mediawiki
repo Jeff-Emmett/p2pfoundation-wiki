@@ -1,0 +1,19 @@
+
+URL = http://pdos.csail.mit.edu/chord/
+
+=Description=
+
+"The Chord project aims to build scalable, robust distributed systems using peer-to-peer ideas. The basis for much of our work is the Chord distributed hash lookup primitive. Chord is completely decentralized and symmetric, and can find data using only log(N) messages, where N is the number of nodes in the system. Chord's lookup mechanism is provably robust in the face of frequent node failures and re-joins.
+
+On top of Chord's routing layer, we have built the DHash block storage system. DHash provides a simple put and get interface to store and retrieve objects. Recent research has focused on developing algorithms to efficiently maintain replicas of these objects over long periods to provide availability and durability.
+
+Systems we have prototyped that use Chord and DHash include CFS (Cooperative File System), UsenetDHT, and OverCite. CFS allows anyone to publish and update their own file system, and provides read-only access to others; UsenetDHT allows Usenet servers to share storage instead of fully replicating articles locally; OverCite is a distributed version of the CiteSeer digital library. These systems all takes advantage of Chord and DHash to distribute the load of serving data very widely to achieve high performance despite flash crowds. DHash abstracts the process of replicating data and maintaining that replication as nodes fail and re-join the system."
+(http://pdos.csail.mit.edu/chord/)
+
+
+=Status=
+
+At this point no official release for Chord is available. 
+
+
+[[Category:Technology]]

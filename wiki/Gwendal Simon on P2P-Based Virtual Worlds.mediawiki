@@ -1,0 +1,35 @@
+==Why develop P2P-based virtual worlds?==
+
+[[Gwendal Simon]]: (2006)
+
+Strolling into magnificent virtual world can now be casually experienced in massively multi-player games. It somehow corroborates the concept of massively shared public virtual world depicted by Neal
+Stephenson in his science fiction novel [http://en.wikipedia.org/wiki/Snow_Crash Snow crash]. In these worlds, users' interactions are not only allowed but empowered, so, in some ways, they outperform the current Web and appear as a possible evolution of our networking experience. However, some issues still.
+
+In a virtual world, every object &ndash; avatar of a player or a virtual object &ndash; should be aware of all objects within its virtual surroundings. Yet, objects are dynamic: their virtual position can
+change. Therefore the system should ensure that an entity is aware of all events occurring nearby. The simplest way to implement such system is to centralize the management of the virtual world. If a "god" knows, at any time, the positions of all entities, it can easily alert entities about main close events.
+
+However, this architecture relies on costly server(s), mostly owned by some private companies. These virtual worlds are not public at all! They just are some private worlds having some rules that are
+unilaterally decided by a company. The behaviours of inhabitants are strictly monitored and some non-expected tendencies could result in  [http://www.slconvention.org/ludlowwallace_chapter.pdf banishments].<ref>Peter Ludlow, Mark Wallace, ''Only A Game: Online Worlds and the Virtual Journalist Who Knew Too Much'', O'Reilly Press, 2006</ref>
+
+Moreover, a centralized virtual world adopts a common graphical appearance that is initially designed by owners. Even the most customizable systems where users can build their home bound users'
+creativity. There is no clear consensus on the graphical shape of a virtual world and there will probably never be.
+
+Furthermore, these systems fail in creating a complete ecosystem about the virtual world. The presence of an unsustainable owner prevents the raise of business opportunities.
+
+Some recent initiatives attempt to implement a peer-to-peer virtual world. Algorithms based on collaboration between participants ensure the consistency of the virtual world that is a public place because nobody owns it, except inhabitants.
+
+The [http://metaverse.sourceforge.net/ Open Source Metaverse Project] builds a world seen as the union of several separate worlds, each one being managed by one user, potentially anybody. This edonkey-like architecture supports some 3d graphical routines. [http://solipsis.netofpeers.net Solipsis] is a one-layer peer-to-peer system in which there is definitely no manager, nor precise implementation yet. Briefly speaking, Solipsis seems to have a greater potential because of its pretty open design, but it is far less enjoyable by now. Both approaches suffer from a bootstrapping issue. A world becomes attractive when it is crowded although they currently are quite empty.
+
+By the way, Using these fully decentralized systems used for gaming seems difficult as long as the lack of referee could be employed by cheaters.
+
+To conclude, most experts claim that the material is now available to build a public virtual place where everybody is welcome. Unfortunately, no initiative has yet prevailed. Although the raise of
+a common shared public territory may occur at any time, the probability that the web could be replaced by such convivial environment decreases as the web enhancements provide richer and easier interaction tools.
+
+==More Information==
+* [[Gwendal Simon]]
+
+===Notes===
+<references />
+
+
+[[Category:Gaming]]

@@ -1,0 +1,135 @@
+
+
+=Source=
+
+Author: Jordan Greenhall
+
+Status: draft
+
+=Text=
+
+'''The Guild'''
+
+The Guild is an innovative business concept that tackles a number of contemporary problems using a combination of new approaches.  In fact, the original concept arose out of an effort to understand what “The New Model” would look like in general.  As such, it is useful to quickly review some of the fundamental assumptions that underlying the concept before digging into the model itself.  
+
+* It used to be easy.  You worked hard in high school so you could get into college.  You worked hard in college so you could get a good job.  You worked hard in your job so you could get a good retirement.  Then you died.  This model - which might have been real for a few minutes in the mid 1960’s - has been under siege for a while.  These days, everybody knows that there is no such thing as job security: the combination of globalization, the economic crisis and the fundamental movements of competition in software have driven the “silicon valley” model of small, nimble teams who take big swings at projects and then break apart to cross-fertilize other small nimble teams.  
+
+Moreover, software companies are embracing the notion that a college degree means much, much less than what you have actually done.  Hiring managers are skipping over even elite University brands in exchange for looking at the code a new hire has actually contributed to some project and their ability to pass whatever tests the hiring team has put together.  Consequently, a talented young person who is anticipating entering the software market (be it as an engineer, a designer, a product manager, etc.) faces an unappetizing prospect at University: upwards of $200k of expenses and four years of life invested in exchange for less and less career credit.  Ten years ago, the trade-off was maybe worth it.  Today, with the job market tight and the return on investment increasingly questionable, far better to invest that time, effort and money in an variety of open source projects - building relationships, gaining skills and creating results that can demonstrate those skills to a prospective employer.  Far better than that: to join The Guild and start getting paid as soon as you can deliver real value.    
+
+The Guild represents a new model (for education, for software development, for organizations) that is appropriate to the modern reality.  It is a heck of a break with the past, but its time has come.
+
+
+==Our Model==
+
+The Guild is not an academic institution.  The Guild is not a company.  It certainly isn’t a non-profit.  The Guild is, well, a guild - most closely related to those mainstays of urban feudalism.  But only in a sense.  It is a collection of highly skilled people who work together to enhance their skills, to create things of value and, in so doing to enrich each-other.   
+
+
+==Reputation==
+
+The central architecture of the Guild is its reputation economy.  Each member of The Guild has a level - from Level 0 (not yet a member) to Level 100 (the highest level possible to attain).  These levels represent the expertise and esteem that the given individual has from their peers as a result of their actual engagement with the Guild community.  
+
+Levels are poly-vocal.  Underneath a Guild members’ level is a deeper sense of their specific expertise: a taxonomy of all of the ways that people can engage in the practices that are the subject of the Guilds’ attention.  In the early days, this will be principally focused on the software development domain.  So the taxonomy will be populated with categories like: architect, designer, coder, quality tester, project manager, product marketer, designer, usability, etc.  The roles that we know people can and do play in the process of crafting a software product/service to market.  As Guild members engage in activity and with their peers, they earn experience points in these (possibly deeply nested) areas of expertise - which then roll-up into a variety of synthetic “typologies”.  Someone who’se expertise tends to fall on the design and marketing side of the taxonomy might, at the top level, be considered a “Designer” while someone who is highly focused on many different computing languages might be a “Coder.”  The taxonomy is designed to provide both richness and simplicity.  If you want to quickly get a sense of someone, you can look at a coarse grained view of their personal reputation.  If you want to drill-down, you can go deep into their reputation and find the difference between someone who is good at logos and someone who is good at color or between someone who is a master of ruby and someone who is a master of php.  
+
+Reputation is assigned via a triple gating system.  As a first pass, Guild members can evaluate the expertise of some other Guild member against any point in the taxonomy.  Think Dave is a good coder, score him highly there.  Think Dave is a good Java coder, go deeper and do your thing.  As a second pass, Guild members can evaluate the capabilities of other Guild members ability to *evaluate expertise* in any point in the taxonomy.  Perhaps you aren’t so sure about Dave’s ability to code - but you do think that he is really good at assessing someone elses ability to code - grade him accordingly.  As a third pass, evaluations will be tied to actual activities.  This is both a prompt and a filter.  Did Dave just check in some code on your project?  You must now go in and a) verify that it was checked in; and b) score it against the appropriate rating system for this kind of activity (clean, elegant, well documented, bug free, etc.).  Moreover, someone cannot “Level Up” (go to the next decimal chunk of levels - from 9 to 10 or from 19 to 20) without having accomplished some set of objective tasks: e.g., check in code that is rated higher than a certain value by at least 3 people who are above the level you are leveling into.  
+
+Provisionally, we believe that the top level Taxonomy will include two broad categories:
+
+1. Practitioner
+
+2. Educator
+
+Both of these will be mapped to the deeper taxonomy - so that someone might be a Level 30 Educator of Java but only a level 10 Practitioner or vise versa.  
+
+
+==Projects:==
+
+Activity in the Guild is driven entirely by a form of shaped “bottoms-up” marketplace, at the center of which are “projects”.   A project is a collection of tasks designed to result in some sort of functional technology/product.  A project can take one of four forms:
+
+1.  A “venture”.  This is a project created by “project team” (i.e., a group of Guild members including at least one member of level 20 or above) which is strictly entrepreneurial in nature.  It has no champion other than the people who started it and will be rewarded by the degree that it finds customers (within or without the Guild).  This is the lifeblood of the Guild and is expected to provide the source of the majority of revenue and experience points within the Guild.
+
+2. An “expedition”.  This is a project proposed by a project team, but solicits commitments of support in the form of cash and experience donations before it is able to launch.  Think of it as a form of kickstarter project: “we will build a widget if we can get $10,000 dollars pledged behind that widget”.  
+
+3.  A “mission”.  This is a project that has been identified by a Guild Master (Level 50 or above) who is able to allocate Guild resources to reward the creation of the technology.  Generally, these projects will be for “shareable” resources such as our cloud computing, code management, or reputation economy architecture.  
+
+4.  A “bounty”.  This is a project that has been defined by some 3rd party and has been associated with some pre-defined reward.  Think of it as an X-prize.  A bounty can be picked up by any project group (i.e. at least one Level 20 member or above) and, if successfully delivered, results in the reward of the cash and experience points associated with the bounty.   Bounties might be full fledged products requested by non-Guild members, or might be particularly meaty tasks of some other project that require the tight definition and reward of a bounty.  
+
+Everyone who participates in a project earns equity in the project (“Gold Pieces”) that is allocated according to their contribution of value to the project.  Every project is made up of tasks - the myriad specific requirements that when completed build up to a final functional result.  These tasks include all of the functions necessary to deliver a technology product: design, architecture, UX, software development, quality testing, wireframes, graphical assets, copy, branding, launch planning, post-launch support, etc.  Tasks are defined and farmed out by the Guild members who are in-charge of the project according to their responsibilities.   Tasks can be restricted to project teams or (preferably) can be made “open” to people with the adequate expertise to attempt the task.  Self-referentially, Tasks are projects - in the sense that a task could be a venture, a mission, a bounty, etc. Typically, tasks will be bounties or missions - defined by the Project Team with discrete rewards in the form of Gold Pieces.  If a given submission to a tasks is accepted by the Project Team member (or members) who Own that task, the contributor qualifies for the associated Gold Pieces - possibly modified up or down by the evaluation of the Project Team (and other Guild members) of the actual quality of their contribution.
+
+For example, Sally has taken a task that is worth 50 gold pieces in “Project Alpha” and checks in her contribution.  Steve Owns that task and, after checking it out, accepts it (and commits it to the project management system).  Steve thinks that Sally nailed it and evaluates her (taxonomically relevant) skills highly.  As a result, Sally will earn 60 gold pieces for an exemplary contribution.  Over time, other members of the project team take a look and agree with Steve’s evaluation - and a random Guild Master happens to look in and is also quite impressed with Sallys work.  Not only is she earning a lot of experience points based on this contribution - her well reviewed contribution might end up being worth, say, 100 experience points.  
+
+Anyone who has adequate skills (as determined by an “entrance exam”) can join the Guild and starts out as a Level 0 Novice with no experience points.   From here, they can begin taking on tasks for which their Level and experience qualifies them.  Initially, their scope of tasks will be limited (to those available to a Level 0 Novice), but as they successfully execute tasks, they earn experience and “level up” - progressively becoming capable of taking on more challenging (and rewarding) tasks - and to being able to create and lead their own pieces of projects or even forming their own project teams if they are so inclined.
+
+
+==Treasure:==
+
+Treasure (i.e. money) in the Guild is allocated in three ways.  All of the net revenue generated by projects is dumped into a common pool.  This pool is divided into three sub-pools. The first pool is allocated specifically to the projects that generated the revenue.  So, by example, if your project team crafts an iPhone game that makes $250,000 a month, some fraction of this revenue (for easy math at this point, lets say 30%) will go directly to your project team and will be allocated to your project team members pro rata based on their gold pieces in the project.  
+
+The second pool is allocated to “general guild maintenance:” the various missions that the Guild Masters have determined are vital to the health and well-being of the Guild.  This can include writing code that is internally facing and widely useable, building cloud computing resources that (again) are for general use - or even purchasing hardware, facilities, living space, that is to be allocated to Guild Members for “sharable” uses [more on this later].  
+
+The third pool is allocated to Guild Members based strictly on their Level.  The concept of the Guild is to move motivation (e.g., compensation) away from a strictly financial/mercenary model to a more pure “creativity motivation” model - with a focus on autonomy, mastery and purpose.  Consequently, the *cash* compensation level of Guild members is designed to meet living standard needs, but not particularly to make anyone rich.  Thus, it is sigmodic.  Even a very low level member, will receive *some* compensation - perhaps only $1 a month, but not nothing.  This grows slowly until they have moved from a “Novice” position into Level 10 and can start really contributing to projects.  At this point, it accelerates through Level 50 and then asymptotes at [$100,000] a year in expected compensation.  Obviously, actual compensation will have to be normalized against Guild resources, so the above model is based on assumptions of revenue, but the basic principle will be the same - a high level guild member will make substantially more than a low level Guild member,  but once they hit a “decent” standard, their compensation will begin to move more and more in the direction of “non financial” comp.
+
+The exact proportion of the three pools will be determined using a “liquid democracy” methodology - as will the actual allocation among the taxonomy for the third pool.
+
+Shareables.  A significant portion of the compensation of Guild members will come in the form of “shareable assets”.  Initially, these include the coding environment and cloud computing infrastructure: Guild members can call on common resources depending on their Guild Level.  A Level Two noob might get some space and some MIPS, while a Level 60 Master might be able to call on substantial resources if she needs them.
+
+Over time, as the Guild grows in size and wealth, it is anticipated that it will come to have access to substantial shareable assets - coworking facilities in high density Guild cities, 3D printing and fabrication machinery, cars, housing, etc.  Over time, it should be possible for a Guild Master to realize a “virtual” wealth that is multiples of his cash compensation due to the wealth of the Guild in general and his access to that wealth.  
+
+
+==Education== 
+
+Education is a principal function of The Guild.  It is expected that low Level members will consume substantial education and that high level members will produce substantial education.  Education can take the form of video lectures, interactive tutorials, direct mentorship, detailed explenation of concepts on the “knowledge taxonomy” associated with the Guild i.e. an internal wikipedia that explains coding, design, etc, etc.
+
+Education can help individuals “level up.”  At the lowest levels, simply completing tasks associated with educational materials can qualify for levels.  As a member moves to Level 9, Leveling-up requires the affirmative evaluation of one or more higher level members who validate and vouch for the members actual skill.  
+
+*Providing* education (through any of the means described above or any other means that is identified by the Guild userbase as providing education) levels the educator up as an educator of the given taxonomic skill.  Mentor someone in user design and level up as a design educator.  Provide a particularly good comment in your code and level up.
+
+Education is compensated out of the second and third pools.  In addition, non-Guild members can subscribe to the educational resources of the guild - and this flow of revenue is allocated to Education providers as if they are members of the “education” project team.  
+
+
+
+==Voice:==
+
+The Guild samples liberally from software geek culture.  We use references to The Matrix, Dungeons and Dragons, World of Warcraft, Pirates, the Simpsons and Internet/Pop culture to connect members of the Guild to our brand values and sense.  Imagine ThinkGeek meets StackOverflow.  
+
+
+
+==Intellectual Property:==
+
+The Guild follows two different strategies with regard to intellectual property.  Everything created within the Guild is avalable to every other Guild member free of charge and free from intellectual property encumbrance.  However, at the same time, we intend to vigorously patent and copyright everything created within the Guild - which Intellectual Property can and will be defended against unlicensed use by non-Guild members.
+
+Generically, Guild technology can be licensed to non-Guild members for personal use just like any other form of consumer software.  However, our relationship with commercial entities who are not Guild members is a little bit more nuanced.  At the heart of this relationship is our Patent Left concept.  The Guild will contribute all of its patents (of which we expect there to be many) to a single Patent Left pool.  Any other external entity that also contributes all of its patents to this Pool will be considered an ally and will not have any of the patents within the pool prosecuted against it.  However, by contrast, any other commercial entity that has patents and is not an ally will be fair game for our specialized sub-branch of the Guild: the Honorable Society of Legal Trolls (“Trolls” for short).  Trolls have the ability and are expected to  vigorously (one might say ruthlessly) prosecute any and all patents within the Patent Left portfolio against any non-ally entity.  
+
+everything created within the Guild is open source - with a wrinkle.  All of it must be made available as uncompiled code free of charge to any other Guild member in good standing.  
+
+
+Guild elements: 1) Platform, 2) Projects (game is the first Project), 3) Verticals (sub-communities grouped by topic.  
+
+Building the first project requires an intensive investment in building the architecture and infrastructure to produce it, but enables serious lift for all subsequent Guild projects.  By analogy, its a huge investment to build the factory to produce the first Model T, but each additional car gets the full benefit of the infrastructure.
+
+
+
+==More on Reputation==
+
+Reputation should be detailed into a very compact taxonomy.  Provisionally, only four basic variables - elegance, creativity, clarity and “gets shit done”.  Each of these variables can be tied to specific areas of work (e.g., architcture, design, coding, user interface, etc.) as those areas of work are actually articulated by the Guild membership.  
+
+Earning reputation in specific languages or tools will be a simple result of the mechanical recognition of what languages (or tools) you’ve submitted work in for peer evaluation.  Thus, if you have a 100 reputation and you’ve earned 80 of that in five different C++ submissions, your reputation with C++ will be 80.  
+
+It is possible that the core variables will turn out to be individual fundamentals - that being creative or elegant in any one area generally means that you will be creative or elegant in any area where you have competence.  In this case, you can imagine a persons’ “character sheet” showing their normative rating in those four variables, their relative seniority in different areas (e.g, Architect) and their discrete areas of proficiency (e.g., LISP).   
+
+Reputation should be able to be earned in two ways: by being evaluated by another person and by having your work evaluated by another person.  
+
+* Work Evaluation - whenever you contribute some sort of work to the Guild (code, QA, lessons, documentation, design, etc.), this work can be evaluated.  In fact, if it is to be checked-in or used by someone or some project, it *must* be evaluated.  Code will always be measured on the four basic variables and on difficulty level.   Being rated highly on creativity for a very easy project is a very different thing from being rated highly on creativity for a very difficult project.  [Should difficulty be indexed to the taxonomy?  I can imagine technically easy but very onerous projects that would be more valuable under ‘get shit done’ or very technically difficult projects that don’t necessarily take much time.]  
+
+* Peer Evaluation - in part in order to allow current experts to be identified quickly in the system and in part to provide a reason for Guild members to recruit their friends and co-workers into the system, we allow Guild members to earn reputation points by being evaluated by their peers.  Peer evaluation is done in a very simple scoring metric: you can rate a peer as “as good as you”, “better than you”, “much better than you”, “a master” or “not as good as you”, “subsantially junior”, “novice”.  Thus, peer review is entirely relative to the reviewer - and the points that the reviewed actually receives to their formal reputation are based on the points currently commanded by the reviewer.  Hence, if I join the Guild and, before I have done anything to earn reputation, I evaluate my friend as “a master”, this review provides no points to his actual reputation score.  However, if I contribute substantially to the Guild and earn a strong reptuation - then my evaluation of him as being “much, much better than me” will flow points to his reputation.   
+
+
+
+
+The submitter of work also evaluates the recipient.  If, say, Cisco submits a bounty and you pick it up.  When you submit your work, you will end up evaluating your experience with “Cisco” by virtue of evaluating the individual or individuals with whom you engaged.  The core variables here are: “Easy to work with”, “Fair”, “Clear and Consistent Communication”.  An individual will carry their “project management” reputation with them - and  projects, groups and 3rd parties will have “project management” reputations that are derived from the total evaluation of the projects that they create.  Thus, if Cisco individuals are consistently evaluated poorly, Cisco itself will have a poor reputation.  However, if a given member of Cisco has a great reputation he will not be dinged for his membership in Cisco (other than by the sheer fact that he is a member of a poorly considered group).  
+
+
+
+Allocation of credit.  In general, the amount of ‘equity’ that you earn in a project is determined by the amount of reputation that you have earned as a result of your contributions to the project (i.e, the ratings of the quality of your work, its difficulty and how much you did).  In the event, that you are contributing to a project by *improving* work that has already been accepted, this can only happen if your work is reviewed as being at least incrementally better than the existing work.  So if someone contributes a very innovative concept to a project and then you come along and improve that concept incrementally (as determined by peer evaluation), your work can replace that previous work, but you will earn equity (and reputation) only to the degree that it is *better* than the previous work (in this case not much)."
+
+
+[[Category:Business Models]]

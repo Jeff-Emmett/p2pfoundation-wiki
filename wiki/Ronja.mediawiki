@@ -1,0 +1,51 @@
+URL = http://ronja.twibright.com/
+
+=Description=
+
+Ronja (Reasonable Optical Near Joint Access) is an User Controlled Technology (like Free Software) project of optical point-to-point data link. The device has 1.4km range and has stable 10Mbps full duplex data rate. Ronja is an optoelectronic device you can mount on your house and connect your PC, home or office network with other networks. Or you can use it as a general purpose wireless link for building any other networking project.
+
+The design is released under the GNU Free Documentation License: you get all the necessary documentation and construction guides free. The material costs are very low, about 100 USD. The operation is immune to interference and quite reliable - interrupted only by dense fog.
+(http://ronja.twibright.com/about.php)
+
+
+=Status=
+
+==Case study of a failed [[Open Hardware]] project=
+
+
+Christian Siefkes discusses the presentation by Johan Soderbergh, of [[Hacking Capitalism]] fame, on the Ronja project, which failed both because a commercial fork, because issues in open hardware licensing, and I would argue, for introducing forced reciprocity into peer production.
+
+
+“Johan Söderberg talked about the Czech open hardware project Ronja. RONJA was developed to provide a cheap, easily producible alternative to Wi-Fi, allowing wireless data transmission between computers. Amazingly, Ronjas use visible light for data transmission, but they are quite fast (10 MBit/s) and allow reliable point-to-point data transmissions, except in case of fog.
+
+The goal of the Ronja project was not only to build affordable open hardware for data transmission, but also to allow the creation of anonymous, censorship-prone networks that can’t be controlled by companies or the state. All design information has been published under the GNU Free Documentation License. The Ronja hardware was sufficiently successful to be employed not only by private people, but also by companies.
+
+But the success also led to tensions in the community which ultimately lead to the decline of the project. Somebody created a commercial fork of Ronja, the Crusader. The Crusader was mass-produced and intended for corporate users; it used a laser instead of a normal light source, which made it faster (100 MBit/s instead of 10 MBit/s) but also more difficult and dangerous to built (you can become blind if you operate a laser the wrong way). The rest of the community didn’t want to switch to this design, in order to keep the design simple and safe for normal users/builders. Their decision was understandable, but it also meant that the regular Ronja hardware ceased to be competitive to normal Wi-Fi, which became faster and cheaper over time.
+
+Another problem was that the copyleft principle doesn’t really work for hardware (as already mentioned in regard to Jacco Lammers in the first part of my report). Copyright (and thus copyleft) only governs information, not the hardware built according to this information. So commercial forks such as the Crusader weren’t forced to contribute their improved designs back to the community. This annoyed the original Ronja maintainer who was unhappy about companies making money on his project without giving back. In order to make money himself, he decided to switch to a “I will free the design after I’ve got enough donations” model for new improvements. He did get donations, but this switch meant that he had to work on new developments in secret, giving up the open, community-based style of development. This in turn annoyed the community members who had enjoyed giving their time and ideas, instead of their money, for Ronja development.
+
+Because of these developments, the project has now largely become inactive.
+
+There are interesting lessons here, I think, about how commercial and noncommercial interests can clash, and about how the lack of suitable licensing model for open hardware projects can harm them. I wouldn’t say that profit-driven and noncommercial participants cannot form successful alliances (free software has shown that they can), but cases such as Ronja make it clear that they don’t get together easily. Regarding the licensing issue, the best scenario would probably be if somebody came up with a “clever hack” that makes the copyleft/share-alike principle work for hardware (just like the GNU GPL was the “clever hack” that invented this principle for software). Another option would be to give up the expectations of “everybody should give back their improvements” and switch to liberal BSD-like licenses (which don’t contain a copyleft clause).”
+(http://www.keimform.de/2009/04/15/ox4-notes-ii-open-hardware-challenges-and-ambitions/)
+
+See also: http://fourth.oekonux-conference.org/program/events/22.en.html
+
+
+=Commentary=
+This seems like a failure of political-economic model, (or "business model"), rather than a failure of technology or licensing. One possible approach could have patent the designs and issue an open license for any non-commercial use, obliging commercial users to get permission and negotiate a royalty agreement. Ideally, this would be implemented through similar techniques to the GNU GPL enforcement discussed by Bradley Kuhn of the Software Freedom Conservancy, where litigation was a last resort, rather than the first response. Commercial re-users are used to factoring licensing fees and royalties into their business models, and once this model demonstrated that it improved the sustainability of the project, and the ongoing work on the designs, they would probably be happy to pay their share, just as the corporate members of the Linux Foundation are happy to pay towards the sustainability of Linux kernel development.  --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 07:37, 22 June 2017 (UTC)
+
+
+=More Information=
+
+[[http://ronja.twibright.com/about.php  Ronja Website]]
+
+[[Twibright Labs]]
+
+[[Category:Design]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Cases]]

@@ -1,0 +1,45 @@
+
+= part of the [[ECSA Stack]] for disintermediated value creation and distribution, being constructed by the [[Economic Space Agency]]
+
+
+=Description=
+
+Gravity is a resilient distributed application runtime that empowers/induces safe computational semantics, cryptographically secure protocols and orthogonally persistent state.
+
+The Gravity protocol is a language based on lambda calculus, prototypes, object capabilities and message passing to create distributed applications. 
+
+
+Gravity nodes are isolated runtime processes connected through cryptographic capabilities. They jointly create a distributed runtime and implement the following protocols:
+
+* A distributed ordered message queue to share an event loop and timeline.
+* A distributed relative address space / scope, to refer to and access objects in the network securely.
+* A distributed development environment, to collaboratively create, debug and share objects.
+
+
+=Applications=
+
+Gravity Applications are executed on top of this runtime, and selectively share protocols, state and computation. Gravity applications are:
+
+* Persistent: The state of the node and its data structures are durable. The state of the node can be recovered after failure, reboot of the Gravity node or moving across nodes.
+* Private: Gravity nodes can create an isolated shared state and event timeline.
+* Verifiable: The integrity of the state, protocol, and execution of a Gravity node is verifiable.
+* Transactional: State transitions are isolated and atomically consistent across Gravity nodes.
+* Distributed: Application state is selectively stored across multiple nodes and doesn’t rely on single global mutable state. Applications are networked and only optionally share state, making them inherently scalable.
+* Secure: A Gravity node can keep secrets. All state is stored and transmitted in an encrypted form.
+* Safe: Gravity applications follow a secure computation model based on object capabilities and the principle of least authority.
+* Redundant: Gravity applications may use multiple nodes to execute/verify code, to send messages through, or to store state. Gravity provides constructs that enable high availability and fault recovery.
+* Portable: Gravity applications and data structures may move across gravity nodes, further improving resilience and adaptability.
+* Reflective: Protocols, state, and computation may be defined, accessed, analyzed and updated from within Gravity itself.
+
+Gravity is an Economic Space Agency project."
+
+([https://docs.google.com/document/d/1yTrjXWTxPINogBRJyWjAfHVmrDW16W5ReLwSrGm3D4I/edit])
+
+
+[[Category:Mutual Coordination]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Crypto Economy]]

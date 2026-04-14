@@ -1,0 +1,296 @@
+'''= We have already helped more than 800 million people map out more than 100 billion connections so far, and our goal is to help this rewiring accelerate.''' (Mark Zuckerberg [http://gigaom.com/2012/02/01/facebook-wants-to-rewire-the-way-the-world-works/])
+
+See also: [[Criticism of Facebook]] [https://en.wikipedia.org/wiki/Criticism_of_Facebook] 
+
+
+=The Facebook Open Source Team=
+
+Via VentureBeat's Jolie O'Dell:
+
+'Some of Facebook’s open-source projects include Phabricator, a suite of web apps for code review, which Facebook uses for its own development; Cassandra, an open source distributed database management system; HipHop, which transforms source code from PHP to C++; the company’s Javascript optimization efforts, called Primer; XHP, a PHP extension that augments the syntax of the language such that XML document fragments become valid PHP expressions; and Thrift, a software framework for scalable cross-language services development, to name but a few.
+
+Today, David Recordon heads up Facebook’s open programs. In the recent past, we conducted a longer interview with Recordon on Facebook’s open source efforts and philosophies.
+
+Due to SEC regulations, Facebook employees are prohbited from discussing the contents of the company’s S-1 filing, so Recordon was unable to talk about Zuckerberg’s “The Hacker Way” comments. But in that last interview, we talked a lot about what it means to be an open-source engineer and advocate at a proprietary software company.
+
+“We release far more of our infrastructure that we develop than any other company like us, Recordon told us in that meeting. “And it’s hard. It requires effort to take software for your own environment and make it something that’s useful to others, too.”
+
+Within Facebook’s engineering team, Recordon described the culture as “very entrepreneurial. We value the impact a single person or a small team can have. Video calling was built by one engineer and one designer. The messenger app was done by a few engineers. Those groups have a huge impact.”
+
+Recordon also told us that the company’s contributions to open-source software are a big part of its recruitment process.
+
+“Engineers enjoy working on open source,” he said. “Culturally, it allows engineers to talk about what they’re working on publicly. Open-source software also allows people to see the kind of infrastructure we build. It gets people in some areas a taste of the code we’re running in production.”
+
+Around the same time, we also talked to Amir Michael, who leads Facebook’s work in open-source hardware hacking via the Open Compute Project.
+
+“It’s natural in an environment where companies are trying to remain profitable to keep some pieces of innovation to themselves,” he said, noting that because Facebook’s advantage lies in its users, not its infrastructure, it was able to be more transparent about certain projects.
+
+“We’ve contributed back a lot in the software world, “Michael said. “If we share these best practices [in the hardware world], we’re hoping that other people can adopt it and have an impact on the environment as well.”
+(http://venturebeat.com/2012/02/06/the-hacker-way-and-facebook/)
+
+=History=
+
+Kate Raynes-Goldie:
+
+"I think the best way to understand how Facebook has gone beyond being just a social networking site is to see how it has evolved from what we meant by social networking site in 2004. Facebook’s three big axes of change can be summarized in terms of access, audience and information the first two of which are closely intertwined. The first Facebook, which was actually officially called thefacebook at the time (pictured courtesy archive.org) was essentially just your profile and a list of your friends, like all good social networks of the time (and still some today).
+
+Access-wise, early Facebook was closed - you needed a valid email address from an approved school to join, which was just Harvard at first. The audience was students exclusively, and had features specifically for that purpose, such as being able to see who was in your classes. Or helping you get laid, as Karel Baloun, one of the first Facebook engineers, suggests in his book on the subject: “Facebook gives users what they want, which for college students is information about their friends and schoolmates for the purpose of… well … sex. And fun social events, which lead to sex” (Inside Facebook, p 91). And lastly, the information on thefacebook was ephemeral. You could change stuff on your profile, and no one would know unless they went looking and could remember what you had there before. As danah boyd puts it, there was security in obscurity. Closed doors, ephemeral information and a student-only audience made people feel safe sharing their real and personal details about themselves. If only other students will see, and only those I want, it’s okay for me to post my dorm room and mobile number on Facebook. In fact, people felt encouraged to do so. There was a pay off - it made socializing easier. People will give up their privacy if they get something in exchange, like free air travel (Air Miles cards) or convenience (putting your thumb and iris on file to cross the border faster, as with the Nexxus card in North America). It was this closed, student only phase in Facebook’s history that created Facebook’s continuing culture of sharing lots of accurate personal information that gives Facebook its tremendous value. I suspect things would not be the same if Facebook had opened up to everyone right away, since it was still unusual to so closely tie one’s offline life and identity with their online one.
+
+Anyway, as we all know, Facebook opened it’s doors to everyone. Slowly at first, with high school kids first being allowed on (September 2005). Then select companies, such as Apple and Microsoft (May 2006), then everyone (September 2006).** This fateful day in September was also the day that Facebook added the News and Mini-Feeds. It was a double whammy. No longer could you feel projected from the rest of the world by Facebook’s walls of valid-email-requirements and that feel relatively assured that those drunken party photos from last night’s kegger would probably not grace the eyes of your boss.*** In fact, now, your boss would probably get notified that the pictures were posted, via her shiny new News Feed. All at once, everything was different.
+
+First, the information on Facebook that had once been ephemeral was now not only artifactual, but was also being actively pushed to your friends. The formerly invisible act of updating your profile was now visible. Activities change when we know people are watching. They become performative. Now, not only was your profile performative, but the act of maintaining it was also a performance. The addition of feeds made it possible to watch snippets of our friends lives, without having to interact with them or even having them know we watching. It’s the replacement of reciprocal interaction with information flows. The recent redesign has reinforced this informational shift. The default thing you see when you view someone’s profile is no longer their personal and contact information, but the activity from their wall and mini-feeds combined. In fact, you could probably say this is an emerging axis of change on Facebook that is strongly related to the informational shift - a shift in focus from personal information to a focus on one’s activity and interactions with others.
+
+Secondly, Facebook had moved from being closed to open access, and in so doing had changed from catering to students to catering to everyone. This change in audience not only meant changes in Facebook’s affordances to make it more appealing to a mainstream audience (for example, getting rid of the courses feature), but a change in every users’ potential audience. Now all the early adopters had to rethink if that profile they had created when Facebook was students-only was appropriate for everyone in their lives to potentially see.
+
+So what is Facebook now? I’m still working on it, but it’s more than a social networking site since creating and articulating our networks is definitely only the foundation of what we’re actually doing on Facebook these days. The front page of Facebook (the one you see when you’re logged out) says it’s a “social utility” that can be used to “keep up with friends and family; share photos and videos; control privacy online; and reconnect with old classmates.” But overall, it “connects you with the people around you.” Baloun (remember that Facebook engineer?) says that “everything social can be transacted inside [Facebook]” (Inside Facebook, p 71). While not yet a reality, it’s certainly Zuckerberg’s fantasy of how he wants Facebook to be, and says a lot about what I think is an inherent believe at Facebook: that everything can be reduced to 1s and 0s. Today, Facebook is social networking, but its also life streaming, photo sharing, video sharing, blogging, event organizing and a bunch of other stuff we haven’t got proper names for yet. But take that thought and add this: some would say that like MySpace, Facebook is “the next generation of marketing, advertising and promotion, exquisitely disguised as social networking.” 
+(http://k4t3.org/2008/09/29/the-changing-faces-of-facebook/)
+
+
+=Status=
+
+Statistics, from Ryan Lanham:
+
+Recent numbers on Facebook's usage and growth:
+
+    * More than 250 million active users 
+    * More than 120 million users log on to Facebook at least once each day. 
+    * More than two-thirds of Facebook users are outside of college. 
+    * The fastest growing demographic is those 35 years old and older. 
+    * 54.6% of users are female. 
+    * There are 16.5% less high school users, and 21.7% less college users. 
+    
+* There has been a staggering increase in the number of 55+ users – with total growth of 513.7% in in the last six months alone. 
+
+    * Average user has 120 friends on the site 
+    * More than 5 billion minutes are spent on Facebook each day (worldwide) 
+    * More than 30 million users update their statuses at least once each day 
+    * More than 8 million users become fans of Pages each day 
+    * Facebook holds 15 billion photos. 
+    * Facebook users are adding photos at a rate of 1 billion photos a month. 
+    * More than 10 million videos uploaded each month 
+    
+* More than 1 billion pieces of content (web links, news stories, blog posts, notes, photos, etc.) shared each week 
+    
+    * More than 2.5 million events created each month 
+    * More than 45 million active user groups exist on the site 
+    * About 70% of Facebook users are outside the United States 
+    * Every month, more than 70% of Facebook users engage with Platform applications 
+    * More than 200 applications have more than one million monthly active users 
+    * There are more than 30 million active users currently accessing Facebook through their mobile devices. 
+    * People that use Facebook on their mobile devices are almost 50% more active on Facebook than non-mobile users.
+
+(every statistic above is sourced, from Ryan Lanham, by email, September 2009) 
+
+
+
+=Discussion 1=
+
+Aral Balkan:
+
+"Facebook’s business model is to be the man in the middle; to track every move you, your family, and your friends make, to store all that information indefinitely, and continuously analyse it to understand you better in order to exploit you by manipulating you for financial and political gain.
+
+Facebook isn’t a social network, it is a scanner that digitises human beings. It is, for all intents and purposes, the camera that captures your soul. Facebook’s business is to simulate you and to own and control your simulation, thereby owning and controlling you.
+
+
+I call the business model of Facebook, Google, and the venture-capital-funded long tail of Silicon Valley startups “people farming”. Facebook is a factory farm for human beings. And Mark’s manifesto is nothing more than a panicked billionaire’s latest sophomoric attempt to decorate an unpalatable business model grounded in the abuse of human rights with faux moral purpose to stave off regulation and justify what is unabashedly a colonial desire: to create a global fiefdom by connecting all of us to Facebook, Inc."
+(https://ar.al/notes/encouraging-individual-sovereignty-and-a-healthy-commons/)
+
+==Does Facebook Exploit Its Users?==
+
+Summary by PJ Rey [http://thesocietypages.org/cyborgology/2012/02/23/panel-discussion-is-facebook-use-a-form-of-labor/]:
+
+
+'''1. Chris Prener''' “Is Facebook “Using” Its Members?” [http://oowsection.org/2012/02/22/is-facebook-using-its-members/]
+
+"Chris Prener initiated the conversation by asking “Is Facebook “Using” Its Members?” Prener claims that, though the company gives users “access to networks of friends and other individuals as well as social organizations and associations,” Facebook—with it’s advertising revenue “somewhere in the neighborhood of $3.2 billion”—” benefits far more in this somewhat symbiotic relationship.” He concludes that Facebook, and social media more broadly, represent “a [new] space where even unpaid, voluntary leisure activities can be exploited for the commercial gain of the entities within which those activities occur.”
+
+My critique of Prener’s piece is that he assert that Facebook benefits more from the online social networking than its 845 million users; this is an empirical question—one that requires further evidence an calculation. If we assume Prener’s $3.2 billion figure is correct, Facebook is making only $3.79 in ad revenue per user. I would guess that many, if not most, users believe Facebook provides them with benefits that exceed that sum. In any case, exploitation still exists regardless of who benefits most."
+
+
+'''2. Christopher Land and Steffen Böehm''' “They are exploiting us! Why we all work for Facebook for free.” [http://oowsection.org/2012/02/22/they-are-exploiting-us-why-we-all-work-for-facebook-for-free/]
+
+Christopher Land and Steffen Böehm echo Prener in their piece: “They are exploiting us! Why we all work for Facebook for free.”  They too see Facebook’s profit model as dependent on exploitation. But they approach the issue from a slightly different theoretical bent. Drawing on Herman and Chomsky’s famous work on mass media, Land and Böehm argue that users (not content) are the primary product that social media creates, since it is users that are being sold to advertisers. They also observe, sardonically, that Facebook users experience a double-freedom insofar as users efforts are non-coerced but also unpaid. But just as Marx noted that capitalism achieved a monopoly over the means of survival (that is to say, people have to sell their labor to survive because that are otherwise denied access to the mean of production), Land and Böehm argue that Facebook (and capitalism, more broadly) have achieved a monopoly over the means of online social networking.
+
+
+3. PJ Rey: “Facebook is Not a Factory (But Still Exploits its Users),” [http://thesocietypages.org/cyborgology/2012/02/15/facebook-is-not-a-factory-but-still-exploits-its-users/]
+
+In my piece, “Facebook is Not a Factory (But Still Exploits its Users),” I argue that Facebook use benefits both users and owners, but, while Facebook gains monetarily, users receive immaterial benefits. This qualitative/quantitative difference in the forms of capital derived from Facebook makes it difficult to compare the relative degree of exploitation between Facebook use and traditional labor. However, we can infer that Facebook is probably not more exploitative than conventional labor and is certainly less alienating."
+
+
+==The weakness of Facebook's advertizing model==
+
+Ethan Zuckerman:
+
+"A back of the envelope analysis from Felix Stalder [https://www.mail-archive.com/nettime-l@mail.kein.org/msg02721.html] gives a sense of how little these ads are worth. Last quarter, Facebook reported that it had 1.32 billion users, collected $2.91 billion in revenue and made a profit of $791 million, for a profit margin of 27 percent. Facebook is clearly doing a great job making money from ads. But the profit per user is just under $0.60. That’s a fascinating figure, because Facebook reports that users spend 40 minutes per day on the site, or roughly 60 hours per quarter.
+
+Stalder is interested in the idea that users are working for Facebook, generating content that the company profits from without getting compensated. But even if we ignore the important idea of “free cultural labor” that makes a business like Facebook (or Tripod!) possible, it’s striking that our attention, as viewers, is worth only a penny an hour to Facebook’s advertisers.
+
+Don Marti uses the same set of Facebook earning numbers to demonstrate that print newspapers make roughly four times as much money in advertising as Facebook does in the United States. Print advertising generates these enviable, if shrinking, numbers despite capturing only about 14 minutes a day of Americans’ attention. This “print dollars, digital dimes” problem is an apparent paradox: Why are targeted digital ads worth an order of magnitude less than untargeted print ads, in terms of “attention minutes”? "
+(http://www.theatlantic.com/technology/archive/2014/08/advertising-is-the-internets-original-sin/376041/)
+
+=Discussion 2=
+
+==The Privacy issue: Facebook will never be safe==
+
+Jacob Appelbaum:
+
+"How to use Facebook safely
+
+Here’s the easy solution: don’t fucking surveil yourself! If you want to stay safe on Facebook, the answer is, you should not use it, and don’t tag people! There are benefits of using it, there are tradeoffs, but in the long run I think it’s going to be pretty bad that you gave a bunch of capitalists all your private information where the US government asserts and has the right to read it without a warrant and with the ability to gag the corporate.
+
+What’s the greatest database of Jews on the planet? Facebook. What will happen when you want the biggest database of leftists on the planet? Or right wing people? That’s really, really scary, so one way to not be part of that dataset is to not put yourself in it voluntarily, and to chastise people who only hang out with you to tag you in facebook as a sort of conspicuous consumption of the 21st Century say: "Hey, if that’s all you get out of our friendship then go fuck yourself!"
+
+There’s an important distinction, this idea of privacy by policy and privacy by design. Privacy by policy is the idea that there is a policy that is like the law. But policy doesn’t really matter because someone can say they’re not going to log, but then they do log. They say they’re not going to give the log data out but someone will copy it, or maybe they’ll sell it.
+
+One way to deal with that is to make that data useless. So let’s say you use a site like Twitter — let’s say @asher_wolf, I hear there’s a subpoena for her Twitter data — so let’s say hypothetically there’s a Twitter legal case about that. One thing you can do is to make that metadata, which they say isn’t protected is to make it worthless. Using a system like Tor when you log into Twitter means that all Twitter gets is IP addresses of Tor routers and they no longer get something that’s valuable. They reason they want that data is to target people and put it into surveillance databases to learn information about you, or to learn where it is in a geolocation sense. So making sure that data is worthless is a fantastic way to slap back at that — you don’t need a warrant for that? There you go, it’s of no use to you.
+
+I was once at Facebook headquarters at Palo Alto, and I saw on one of the network engineer’s tables a Narus pamphlet. Narus is the company that did interception with the NSA and AT&T in the US. Those two companies and Narus did the analysis of the illegal wiretapping of the entire American population’s phone calls and data travelling through AT&T data centres. Facebook’s looking at the same solution. It should give you some idea about what Facebook is."
+(http://newmatilda.com/2012/01/23/why-facebook-never-safe)
+
+
+==Facebook as P2P Infrastructure?==
+
+Techdirt:
+
+"Mark Zuckerberg's letter to shareholders  included in Facebook's IPO filing contains a pretty bold vision for Facebook to not just connect people and enable them to share, but to fundamentally restructure the way that the world works:
+
+- By helping people form these connections, we hope to rewire the way people spread and consume information. We think the world’s information infrastructure should resemble the social graph — a network built from the bottom up or peer-to-peer, rather than the monolithic, top-down structure that has existed to date. We also believe that giving people control over what they share is a fundamental principle of this rewiring. ... '''We have already helped more than 800 million people map out more than 100 billion connections so far, and our goal is to help this rewiring accelerate'''. 
+
+That sounds pretty lofty, but if you recognize that Facebook provides a social networking service that hundreds of millions of people use -- but forget for a moment that it's Facebook -- it's quite a bold "social mission." And there are many examples of how the service has been used as a key tool in affecting change on everything from opposition to the Canadian DMCA to the Arab Spring. There's no doubt that the service makes it easier for people to organize in a more bottom-up way.
+
+But, once you remember that it's Facebook we're talking about, the vision sounds more problematic. Could Facebook ever truly bring about a peer-to-peer, bottom-up network? The notion seems to be an inherent contradiction to Facebook's architecture -- as a centralized, proprietary, walled garden social networking service. Facebook may enable a more bottom-up structure, but it's a bit disingenuous for Zuckerberg to decry a monolithic, top-down structure when Facebook inserts itself as the new intermediary and gatekeeper. As a centralized, proprietary, walled garden service, Facebook is a single point for attacks, control, and surveillance, never mind controversial policies or privacy concerns. Facebook may enable a more bottom-up and peer-to-peer network compared to many things that came before, but there is something fundamentally at odds with a truly distributed solution at the core of its architecture and its DNA.
+
+To realize the full potential of bottom-up, peer-to-peer social networking infrastructure, we need autonomous, distributed, and free network services -- the sort of vision that StatusNet/Identi.ca or Diaspora have tried to bring about. Rewiring the world to create a more bottom-up, peer-to-peer network is a bold vision for Zuckerberg to put forth -- and one that Facebook has advanced in many ways -- yet it's fundamentally at odds with the reality of Facebook as a centralized and proprietary walled garden."
+(http://www.techdirt.com/articles/20120201/16260417630/can-facebook-really-bring-about-more-peer-to-peer-bottom-up-world.shtml)
+
+
+==Openness==
+
+Glyn Moody:
+
+"Facebook is built on free software, as this post notes:
+
+From the day Mark Zuckerberg started building Facebook in his Harvard dorm room in 2004, the site has been built on common open source software such as Linux, Apache, memcached, MySQL, and PHP.
+
+Moreover, it has established a nice track record of releasing its own code as free software. There are now more than 20 packages it has opened up."
+(http://www.computerworlduk.com/community/blogs/index.cfm?blogid=14&entryid=2768)
+
+
+==How Open Source is Facebook?==
+
+Comments collated by VentureBeat:
+
+===PHP creator Lerdorf: Facebook should be doing more===
+
+The social network was built with open-source PHP, a language created by Rasmus Lerdorf in 1995. Because so much of Facebook’s backbone is fortified with this and other open-source projects, Zuckerberg and the Facebook open-source team in particular have long stressed the importance of giving back to the developer community in kind.
+
+In an email exchange with VentureBeat, Lerdorf said that while Facebook’s efforts are not negligible, the company could and should be doing more open-source work, especially within the PHP community.
+
+“Generally, Facebook is a good open source citizen,” Lerdorf said. “They occasionally contribute to the projects they use, and they have open-sourced some things.”
+
+But this reserve praise was tempered by equally reserve criticism.
+
+“We would always like to see more, of course,” he continued. “Specifically I would love to see more direct contributions from Facebook engineers to PHP and perhaps even have an engineer or two assigned exclusively to work with the PHP project.”
+
+Given Facebook’s huge success and heavy reliance on PHP, not only are we certain the company has the talent to spare; it almost seems inappropriate not to give a more substantial offering of time and effort to PHP.
+
+
+
+===EricRaymond: Does Facebook maintain too much control?===
+
+“As a Facebook user, do I have control of the data Facebook keeps about me?” he wrote. “Concretely: can I examine and modify that data using tools of my choosing which are built for my needs?”
+
+He continued, “Does Facebook act as though I own my online life, or as though it does? Concretely: Can I control what data it shares with other users, with advertisers, and with business partners?”
+
+Clearly, users have relatively little control over their own Facebook profile data; most of how that data is used constitutes Facebook’s competitive advantage as a business, so it doesn’t behoove the company to say exactly how, why, and with whom information is shared. The company does say that most profile data is only used in an anonymized, aggregate form, but that’s about it.
+
+“Does Facebook behave like a tool in my hand, or a firehose designed to spew at me in accordance with other peoples’ agendas?,” the hacker continued. “Concretely: can I write my own client to present a filtered view of the Facebook stream, or have other people do that for me?”
+
+Ultimately, Raymond points out, the true hacker way means “to give control to the individual, to respect his or her privacy, to create tools for autonomy and liberty, and to encourage creative re-use of software” — only parts of which make it into Facebook’s product.
+
+“And yes, one of the most basic questions is ‘Does Mr. Zuckerberg publish the source code of his software in a form that can easily be understood, modified, and reused?” Raymond asks. “Because if the answer to that question is ‘no,’ it is very unlikely that users will or ever can have the control of their online lives that they deserve.”
+
+These questions and their inevitable answers formed the foundation of Diaspora, 2010′s open-source answer to Facebook’s handling of user data, privacy, and its own codebase.
+
+Although the Diaspora userbase doubled during 2011, the service is far from mainstream and still constitutes a single tool for the privacy-oriented fringe. Facebook still maintains control of a majority share of the lives of online people.
+
+
+===Richard Stallman: Facebook’s hacking is not good hacking===
+
+“I define ‘hacking’ as ‘playful cleverness,’” said legendary hacker Richard Stallman in an email conversation with VentureBeat.
+
+Stallman has spent the past few decades preaching on freedom in software — not just the freedom to use it, but the freedom to examine it, modify it, and make copies of it, as well. And as the guy who bears the title “The Last True Hacker” — and as a longtime hacker at MIT, where the term was coined in the 1950s to mean “one who creatively tinkers to improve performance” — he’s also been working to reclaim that term from the media.
+
+“I’ve been campaigning since the ’80s to correct the mistake, made by some journalists, which took ‘hacker’ to mean ‘security breaker,’” Stallman said. “I appreciate Zuckerberg’s support for this campaign.”
+
+Stallman continued, “As [Zuckerberg] noted, hacking is not good or bad in itself. It can be done in activities that are good and in activities that are bad. In the case of Facebook, it is bad.”
+
+While Stallman said he believes sharing is good, he doesn’t limit this belief to sharing social updates and photograph; he believes the freedom to share should also apply to copies of published works, including software. “Facebook is no help there,” the hacker wrote to us.
+
+“Facebook is only interested in encouraging people to share their personal data — sometimes with each other, but always with advertisers and Big Brother. Facebook collects lots more personal information than users give it, through surveillance. For instance, every time you look at a web page — on any site! — that shows a Facebook “Like” button, Facebook knows your IP address visited that page.”
+
+In fact, Stallman finds such surveillance so perturbing, he said, “I plan software in the GNU system to block this particular kind of surveillance by blocking ‘Like’ buttons.”
+(http://venturebeat.com/2012/02/06/the-hacker-way-and-facebook/)
+
+==Privacy==
+
+Michael Zimmer has some important [[Privacy]]-related questions to Facebook:
+
+"1. Why aren’t users instructed to review and adjust their privacy settings during the new account creation process? Only if a user happens to click on the tiny “privacy” tag in the upper right corner of the page will they discover how they can control the flow of their personal information.
+   
+2. You state “Facebook does not screen or approve Platform Developers and cannot control how such Platform Developers use any personal information that they may obtain in connection with Platform Applications.” Why not? You have every right and opportunity to screen and approve Platform Developers (note how Apple is controlling third-party iPhone applications), yet you choose not to. How can users trust that if they opt-into a the Zombie application, that these developers aren’t gaining access to all their profile information? Why have you not committed yourself to monitoring and controlling the amount and types of personal information that flows to third-party applications?
+   
+3. What kind of clickstream information do you capture with regards to user activities across the Facebook site? How long is it stored? Is it identifiable to the individual user? How is it used, and who is it shared with? (The Privacy Policy is murky about this, as is the norm)
+   
+4. What do you mean when you say “Facebook may also collect information about you from other sources, such as newspapers, blogs, instant messaging services…in order to provide you with more useful information and a more personalized experience.” Is Facebook actively searching through non-Facebook sites and media to find more information about users? Is it eavesdropping on instant messaging sessions? Scanning my IM archives? Clipping newspaper articles? This is an extremely unorthodox and unclear statement.
+   
+5. Why must users opt-out of having external websites send stories to their profile, as well as from appearing in Social Ads. If you wanted to fully protect user privacy, such “features” should be “opt-in.”
+(http://michaelzimmer.org/2008/04/06/real-questions-for-facebooks-chief-privacy-officer/)
+
+
+==Facebook's limitations for organizers and activists==
+
+
+Adina Levin:
+
+"For organizers, it is valuable to use Facebook to enable information and actions to spread throughout people’s existing networks of friends and family. But for organizers it is also often very important to build a greater sense of community, and cultivate the network of relationships in the community. Helping people get to know each other is important to growing a sense of shared purpose, reducing feelings of isolation and disempowerment, build on people’s social motivations to take action. 
+
+Much of traditional marketing has been focused on attracting individuals to a brand; even social media marketing seems to focus on building a relationship between an organization and its customers and constituents. Thus, coaching about how to stimulate conversations on Facebook pages about topics relating to your organization and your brand. But organizing isn’t just about the relationship of people to your organization, but about their relationships to each other.
+
+In Facebook, where conversations remain in existing cliques and friend networks, it seems much harder to grow the network of relationships. Ethan Zuckerman talks about this issue in this CNN article – does the dynamic of Facebook’s social network, based on existing relationships, make it harder to make new connections. In The Networked Nonprofit, Beth Kanter and Allison Fine talk about the role of “network weavers” who combine traditional and online skills to connect people and organizations; in Share This, Deanna Zandt talks about using social media to deliberately get to know people with diverse cultural backgrounds. But how do you do this using a tool that makes it hard for people to get to know each other?
+
+One way to get around Facebook’s limitations – and an important tool for any community that participates online – is to meet up in person. An organization or organizer can convene meetups and conferences. There, people can meet in person, and after meeting each others’ acquaintance, go back and “friend” each other on Facebook. It’s become quite common for in-person meetings to evolve online acquaintances into closer connections; the inperson connection and online reinforce each other. I’ve met up with Twitter acquaintances at conferences and on vacation. The BlogHer conferences brings together women bloggers, and the Netroots Nation conference developed as a meetup for the Daily Kos political blog online community. 
+
+But in more socially open networks, the in-person meetup bolsters a process of getting to know each other that also progress gradually online. With Facebook, there’s a much higher hurdle until and unless you’ve met in person. This is particularly challenging for geographically distributed communities – spread out regions like the Bay Area, or interest groups and movements that are spread out around a country or around the world."
+(http://www.alevin.com/?p=2425)
+
+=More Information=
+
+Lines of tension between community and governance in Facebook, from Unit Structures blog at
+http://chimprawk.blogspot.com/2007/11/were-not-sheep-youre-just-not-paying.html
+
+The delicious tag at http://del.icio.us/mbauwens/Facebook
+
+The [http://p2pfoundation.net/Privacy#Facebook Economics of Privacy] at Facebook.
+
+*[[P2P Foundation on Facebook]]
+
+* the [[Europe vs. Facebook]]'s campaign summary of what's wrong for users of Facebook: http://europe-v-facebook.org/EN/Objectives/objectives.html
+
+
+==Alternatives to Facebook?==
+
+* [[Diaspora]] ; Lorea ( http://n-1.cc ) Crabgrass ( http://we.riseup.net ) Kune ( http://kune.cc ) BuddyCloud ( http://buddycloud.com ) Noosfero ( http://noosfero.org ) Imagination for People ( http://imaginationforpeople.org
+
+
+[[Category:Resources]]
+
+[[Category:Relational]]
+
+[[Category:Media]]
+
+[[Category:Companies]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Netarchical Capitalism]]

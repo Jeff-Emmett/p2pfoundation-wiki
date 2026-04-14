@@ -1,0 +1,124 @@
+
+'''= " a distributed social network ... based on free and open-source software".'''
+
+URL = https://diasporafoundation.org
+
+=Description=
+
+[https://diasporafoundation.org Diaspora] is a distributed social network. It is based on free and open-source software (GNU-AGPL-3.0). You can choose a [https://wiki.diasporafoundation.org/Choosing_a_pod pod] where your data will be hosted (where you will log in), or you can host your own. You have no obligation to give personal information and can remain anonymous. There are no advertisements. It has private messaging and also "conversations" which can include more than two people. 
+
+You can search and follow tags. You can also view a stream of posts limited to only certain "aspects" (family, friends, or a custom aspect you created).
+
+=History=
+
+From the Village Voice article "[https://www.villagevoice.com/2012/02/15/rise-of-the-facebook-killers/ Rise of the FaceBook killers]" By Nick Pinto:
+
+<blockquote>
+"A few months after Moglen's speech, the group launched a Kickstarter  campaign for a project they called Diaspora*. Diaspora* would be everything Moglen had called for: open-source, respectful of privacy, and controlled by users. Instead of routing all exchanges through a central clearinghouse, Diaspora* users would set up their own nodes, storing their information locally.
+
+The team members quickly raised more than $200,000, plenty to fund a summer in San Francisco and to build the skeleton of their new social network. That fall, they released a "pre-alpha" version, soliciting feedback from other developers. There was plenty of criticism, but most of it was constructive. A year later, last November, the team released a redesigned version that patched the earlier security holes and included a host of new features, many familiar for users of Facebook and Twitter: hashtags, status updates, and "Like" buttons.
+
+Just days later, Zhitomirskiy died suddenly, in what a source close to the company told CNNMoney  was a suicide. The loss of Zhitomirskiy—often described as the most idealistic and privacy-conscious member of the group—was a devastating setback, but Diaspora* continues.
+
+Early on, the team recognized that coding a distributed social network might actually be the easy part. It would be harder to persuade users to move from Facebook—the network where all their friends, (past, present, and future) already were—to their new, sparsely populated network.
+
+Their solution was to make Diaspora* play well with others. Sign up for a Diaspora* account, and your posts can easily be imported into Tumblr, Twitter, and even Facebook. In the early stages of its use, Diaspora* can function as a social aggregator, bringing together feeds from various other platforms. The idea is that this lowers the barriers to joining the network, and as more of your friends join, you no longer need to bounce communications through Facebook. Instead, you can communicate directly, securely, and without running exchanges past the prying eyes of Zuckerberg and his business associates."
+</blockquote>
+
+=Protocols=
+
+Protocols used by Diaspora to create a de-centralised social network include the
+
+#[[Salmon Protocol]], http://www.salmon-protocol.org/
+#[[OStatus]], http://ostatus.org/
+#[[Web Finger]], http://webfinger.org/         
+#[[PubSubHubbub]], http://code.google.com/p/pubsubhubbub/
+#[[AMQP]]
+#[[HTTP]]
+#[[HTTPS]]
+
+=Discussion=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"The Diaspora project was launched by a group of Moglen’s students who were
+inspired by the potential for Freedom Box to support such a federated alternative to
+Facebook. Unfortunately, the project never matured to a point where it was ready to
+integrate into the Freedom Box package. While Diaspora’s idea of an open source
+alternative to Facebook initially receive a lot of interest, the young leaders of the project
+were not prepared to manage the huge influx of volunteers and interest they received.
+
+The alpha release of the Diaspora software was deeply problematic, riddled with basic
+security errors in the code. At the same time, the founders of the project received a lot 64
+of pressure from Silicon Valley venture capitalists to “pivot” the project to a more
+profitable business model. Eventually the core team fell apart and the Diaspora platform
+was handed over to the open source community, who has done a nice job of building
+out a support website to facilitate new users in signing up for the service. Today it
+supports just under 60,000 active participants, but the platform remains very niche and
+turnover of new users is high.
+
+Diaspora illustrates the challenges that open source projects face in developing
+tools and services that offer competitive alternatives to private social media platforms
+like Facebook and Twitter. 
+
+
+These challenges are threefold: 
+
+First, these projects often
+lack sufficient resources for development or it is difficult to coordinate those resources.
+In the case of Diaspora, the challenge was that it was difficult to manage the sudden
+influx of developer interest they received when the project was covered in the media.
+Most open source projects, however, face the opposite problem–they lack the resources
+necessary to develop a product that can compete with private platforms with enough
+money to hire top-notch full-time developers. The median number of developers on
+open source projects is one, and it remains an open question how one might bootstrap
+resources to fund open source projects and protocols that would enable robust
+peer-to-peer alternatives to private services.
+
+Second, maintaining these platforms as open, federated services slows feature
+development because of the effort required to coordinate multiple services and
+implementations. Most services like Diaspora focus primarily on federating nodes, and
+they manage that pretty well… on networks a tiny fraction of the size of Facebook or
+Twitter, In Diaspora, there are over three hundred nodes contributing to the network.
+
+The Diaspora community publishes statistics on the uptime, software version and
+location of each node on the network, so that new users can make an informed decision
+about where node to host their content. While most users tend to opt-in to one of the top
+three nodes on the network, there are hundreds of others around the world for them to
+choose from, in the event that a user wanted to switch to a different geographic location
+or service provider.
+
+But the greater challenge for platforms like Diaspora is to achieve federation
+across networks. Cross-platform federation is important, because it enables individuals
+to speak to each other without subscribing to the same service or relying on the same
+codebase (and thus, the same developers). This is a critical aspect of enabling greater
+agency and choice for users, because it reduces the friction of switching from one
+platform to another. Instant messaging is an excellent example of this -- right now, if a
+user wants to switch to a new messaging application, then it’s unlikely that they’ll be
+able to communicate with their contacts who are using a different service. This wasn’t
+always the case. For example, XMPP is a protocol that lets different messaging
+services exchange messages. Google chat used to support XMPP, but recently opted
+out, possibly due to the fact that most users were not using the federated features to
+speak with their friends across different messaging services."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+
+=More Information=
+
+# Source, https://github.com/diaspora/diaspora/
+# Details about the project, https://wiki.diasporafoundation.org/Main_Page
+# kickstarter page, http://www.kickstarter.com/projects/196017994/diaspora-the-personally-controlled-do-it-all-distr
+# Wikipedia article, https://en.wikipedia.org/wiki/Diaspora_(social_network)
+#[[One Social Web]]
+
+== Related ==
+
+# [[Distributed Social Network Projects]]
+# [[Social Network]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]
+[[Category:NextNet]]
+[[Category:Application Layer]]
+[[Category:Social Networks]]

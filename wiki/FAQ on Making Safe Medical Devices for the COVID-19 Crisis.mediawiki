@@ -1,0 +1,77 @@
+
+
+=Source=
+
+* [[Summary of COVID19 Situation and Supply Needs]]
+
+Overview document,  Version 1.1, last updated 3/20/2020 @ 5:06 PM Pacific Time.'''
+
+URL = https://docs.google.com/document/d/1-71FJTmI1Q1kjSDLP0EegMERjg_0kk_7UfaRE4r66Mg/preview#heading=h.6rcgzhjv3lfe
+
+Updated FAQ significantly, added a link to medical-grade 3D printing standards. Part of the [[Open Source COVID19 Medical Supplies]] project
+
+=Text=
+
+FAQ, copied from the permanently updated version at https://docs.google.com/document/d/1-71FJTmI1Q1kjSDLP0EegMERjg_0kk_7UfaRE4r66Mg/preview#heading=h.6rcgzhjv3lfe
+
+==Why (not) make ventilators?==
+
+Acute Respiratory Distress Syndrome (ARDS), in which breathing is impaired by fluid buildup in the lungs, is one of the most common severe complications of COVID-19. Patients with ARDS frequently require mechanical ventilation to survive. According to the American Hospital Association, it is possible that up to 900,000 people in the United States may need mechanical ventilation during the COVID-19 pandemic. The Society of Critical Care Medicine estimates that approximately 200,000 are currently available, though exact numbers are not known. If ventilator production could be quickly increased, this would make it possible to care for more critically ill patients.
+Mechanical ventilation requires careful supervision by trained respiratory therapists in order to avoid complications, including permanent lung damage. Without sufficient medical professionals to use them, adding to the supply of ventilators will not improve the treatment of COVID-19 patients. 
+This does not mean that no one should be working to increase ventilator supply, but it does mean that other supplies (e.g. PPE) may be of more direct use to those who are treating patients. If you do not have knowledge or experience of mechanical ventilation and are not working with someone who does, you may be better off focusing on other projects. 
+
+==Why (not) 3D print (mass production, etc)? ==
+
+3D printing can be an efficient method of mass-producing needed supplies to prevent shortages. In one example of successful use of 3D printing, respirator valves are already being 3D printed in response to the increased need for mechanical ventilation in Italian hospitals. However, medical devices pose unique problems that require additional precautions in 3D printing.
+
+==Are 3D printed parts sterile?==
+
+Due to the way in which they are manufactured, 3D printed materials are frequently more porous than typical medical device materials, allowing them to harbor microbes if they are not carefully sterilized. Medical sterilization techniques require heat, radiation, and chemical sterilization processes. Any 3D printed device made for use with patients must be able to withstand repeated exposure to these processes. Most common 3D printing materials will warp, melt, or lose tensile strength when exposed to medical sterilization; see previous link for a list of materials that can be sterilized. There is some sterile 3D manufacturing but it is rare, mostly proprietary, and usually already located in a hospitalor research lab. Not usually conducive to mass-scale production.
+
+
+==What about using CPAP or BiPAP machines?==
+
+CPAP (continuous positive airway pressure) is a form of non-invasive ventilation in which mild, consistent air pressure is applied through a mask to keep the airway open and maintain oxygenation. BiPAP (bilevel positive airway pressure) is similar to CPAP, but alternates periods of higher and lower pressure to make it easier for the patient to exhale. While these are being used in the treatment of patients experiencing respiratory distress, these methods have been discouraged for the treatment of COVID-19 patients due to the risk of aerosolizing the virus and thus increasing risk of infection to other patients and caregivers; the risk can be mitigated, but not eliminated, with optimal mask fit. In addition, these approaches are unlikely to prevent the need for mechanical ventilation, though they may postpone it. 
+
+
+==What about building a negative pressure ventilator?==
+
+A negative pressure ventilator (sometimes colloquially called an “iron lung”) is a mechanical ventilator that acts by intermittently lowering the pressure around the patient’s abdomen to less than atmospheric pressure, mimicking the natural function of the muscles and diaphragm to allow the patient to take in air. This can be accomplished with either a large tank surrounding the patient’s body, or a smaller jacket-like device worn by the patient. These have been widely used for breathing difficulties caused by neuromuscular disorders, but their safety and effectiveness in pneumonia and ARDS is poorly studied. In addition, most forms restrict access to the patient’s body, and most medical professionals are not familiar with their use. 
+
+
+==How can I help?==
+
+Educate yourself and your community on how COVID19 is treated, and understand the entire problem at hand, before you start designing or building or ideating anything. 
+
+Continue to grow this group. The goal of this Facebook group is to be a discussion forum and megaphone to the world once safe open source supply solutions are found, and it needs to be as large as possible to reach everyone who will be affected.
+
+Go out and find as many existing solutions as possible to the supply problems we've highlighted, and focus your work on the gaps. Cataloging existing solutions is just as important as designing anything new.
+
+
+==Are home-sewn masks safe?==
+
+
+They are safe by being better than nothing. Here is a design that has been approved by our medical experts: http://project-cloth-masks.com. You can find other vetted designs for masks and other PPE here.
+
+
+==How can I find hospitals that need help in my area?==
+
+You can find hospitals who need help by calling a hospital marketing/PR dept, materials management, or procurement dept. We will also try to post information on this page as we receive it. 
+
+==Is there a Slack/Jira/Wiki/Discord for this group?==
+
+We have a team of over 180 volunteers from all over the globe who are collaborating on the Slack channel that supervises this group. We have moderators, administrators, medical professionals, transcriptionists, engineers, communications specialists, marketing teams, philanthropists, scientists, points of contact for makerspaces and globally distributed manufacturers, and more. The explicit goal of our group is to not design anything ourselves. We believe there are tens of thousands of engineers all over the world already working on the problems we present, and our job is to vet, catalog, present, and soon act upon those solutions. If you would like to join this narrowly scoped and tightly focused team, please let us know in the comments. 
+
+==Can I use coffee filters/vacuum bags/cotton t-shirts/dish towels to make a mask? ==
+
+You can use those materials to make a mask, but the effectiveness and safety will depend on how well they are constructed and fitted to your face. Make sure you can breath through the mask -- don't suffocate yourself.
+
+A HEPA filter (the ones we use for our AC) can be used ( CAUTION while taking apart the filter sheet (white color) from the metal netting to prevent exposure to the fiber glass when cutting) . The particulate size of these filters is the smallest among household items and can be a back up option. Place the HEPA filter sheet between two pieces of cloth and glue with a hot glue gun. Attach two pieces of string on either side to tie them down so it conforms to your face.
+
+==Will I get sued for making things?==
+
+In the United States, Good Samaritan laws offer legal protection from civil lawsuits to people who voluntarily provide reasonable aid to those who are injured, ill, in danger, or otherwise incapacitated. We are providing you with the specifications you will need to manufacture items which are much-needed during this pandemic; however, you are responsible for your creations, so please practice due diligence. We recommend reading OSCMS: 3D Printing - Getting Started, Safety, and Designs.
+
+[[Category:Corona Solidarity Initiatives]]
+[[Category:Health]]
+[[Category:P2P Hardware]]

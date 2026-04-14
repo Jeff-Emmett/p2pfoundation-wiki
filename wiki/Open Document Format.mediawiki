@@ -1,0 +1,91 @@
+'''ODF = Open Document Format, an open document file format for saving and exchanging office documents'''
+
+
+=Definition=
+
+From the extensive Wikipedia article at http://en.wikipedia.org/wiki/OpenDocument:
+
+"The OpenDocument format (ODF), short for the OASIS Open Document Format for Office Applications, is an open document file format for saving and exchanging office documents such as memos, reports, books, spreadsheets, databases, charts, and presentations. This standard was developed by the OASIS industry consortium and based upon the XML format originally created by OpenOffice.org. The ODF was approved as an OASIS standard on May 1, 2005 and a draft for the ISO/IEC 26300 was approved on May 3, 2006.
+
+The OpenDocument standard has been developed by a variety of organizations and is publicly accessible. This means it can be implemented into any solution, be it open source or a closed proprietary product, without royalties. The OpenDocument format is intended to provide an open alternative to proprietary document formats so organizations and individuals can avoid being locked in to a single software vendor.
+
+ODF is the first standard for editable office documents that has been vetted by an independent recognized standardization body."
+(http://en.wikipedia.org/wiki/OpenDocument)
+
+=Description=
+
+From http://www.openrightsgroup.org/orgwiki/index.php/Open_Document_Format :
+
+“Did you ever receive a document you could not open? Chances are the sender used a different programme or version than yours to create it. OpenDocument format avoids users being locked in to particular products or technologies. 
+
+The OpenDocument format (ODF), is an open document file format for saving and exchanging editable office documents such as text documents, spreadsheets, databases, charts, and presentations. The OpenDocument format offers an open alternative to the formats used by all the existing Microsoft Office application versions the file extensions with which people are most familiar are Microsoft's .doc, .xls and .ppt extensions; these reflect the formats most in use today. OpenDocument's main file extensions are .odt (for a text document), .ods (for spreadsheets) and .odp (for presentations). These are analogous to the Microsoft extensions and will be more commonly recognized as people and organizations adopt OpenDocument-ready software.
+ 
+The OpenDocument format guarantees long-term access to data without legal or technical barriers. Governments have become increasingly aware of open formats as a public policy issue. This appears to a be a good issue for ORG to champion as it is easy for MPs to understand the need. 
+
+Organizations and individuals that store their data in an open format such as OpenDocument avoid being locked in to a single software vendor, leaving them free to switch software if their current vendor goes out of business, raises its prices, changes its software, or changes its licensing terms to something less favourable. “
+(http://www.openrightsgroup.org/orgwiki/index.php/Open_Document_Format)
+
+
+"ODF(OpenDocument Format) an ISO standard created with the aim to provide an open XML-based document file format for office applications to be used for documents containing text, spreadsheets, charts, and graphical elements. ODF is defined via an open and transparent process at OASIS and has been approved unanimously by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) as an international standard in May 2006. Instead of trying to reinvent the wheel ODF reuses established standards like HTML, SVG, XSL, SMIL, XLink, XForms, MathML, and Dublin Core. 
+
+ODF leaves space for all present and future vendors do implement it and makes sure that end users won't suffer from any sort of vendor lock-in. In contrast to earlier used binary formats which were cryptic and difficult to process, ODF's use of XML makes accessing the document content simple. 
+
+ODF guarantees long-term viability. The OASIS ODF TC, the OASIS ODF Adoption TC, and the ODF Alliance include members from Adobe, BBC, EDS, EMC, GNOME, Google, IBM, Intel, KDE, Novell, Oracle, Red Hat, Software AG and Sun Microsystems. Since June 2006 the ODF Alliance has already more than 300 members."
+(http://www.documentfreedom.org/Open_Document_Format)
+
+=Discussion=
+
+==Policy Implications==
+
+Sam Bollier:
+
+"Its “openness” means that any software vendor is allowed to create a program that implements ODF.  Furthermore, OASIS, the international organization that created ODF, charges no royalties for the use of its format.
+
+This makes ODF an ideal file format for governments, who are currently reliant on companies who effectively own a given file format (think Microsoft and the “.doc” format).  The dangers of such reliance are clear enough – one should be able to access one’s own files without having to worry that the format in which they’re stored are owned by a single vendor.  
+
+Requiring all government office software to be able to store files in ODF opens up the market to other software vendors who are otherwise locked out of the government software market by proprietary file formats.  When governments open the door to ODF, you can expect more competition – and with that, better software and lower prices.  Indeed, a report by the Danish government estimated they might save $94 million over five years were they to ditch Microsoft’s Office 2007/Open XML for ODF-implementing OpenOffice."
+(http://onthecommons.org/node/1196)
+
+
+=Status Report=
+
+
+==Efforts in the U.S., 2006-2007==
+
+Sam Bollier:
+
+"In the past year, six states – California, Connecticut, Florida, Minnesota, Oregon, and Texas – considered legislation that would have required state governments to implement, or at least consider implementing, software that would allow the storing of documents in open, XML-based formats such as ODF.
+
+Five of the bills never made it out of committee, and the Minnesota bill was passed only after being seriously weakened.  (Instead of being required to implement ODF, the government’s chief information officer now merely has to consider doing so.)
+
+The reason for the utter failure?  Microsoft threw its full weight against ODF advocates, to the extent of flying in witnesses from other states and countries to testify against the legislation.  
+
+It would be inaccurate to portray the situation as some Manichaean battle between an evil software juggernaut and open-source penguineers.  The sponsor of the open formats bill in Texas, Representative Marc Veasey, admitted that his interest in the legislation was piqued after meeting with colleagues who work for IBM.  IBM, along with other major software companies, have vested interests in seeing such legislation passed – and in breaking Microsoft’s stranglehold on office file formats.
+
+An equally salient issue is legislators’ confusion over what OpenDocument Format actually is.  Don Betzold, a Democratic state senator from Minnesota who sponsored the legislation in his state, admitted that he “wouldn’t know an open document format if it bit me on the butt.”  If the co-sponsor of a bill supporting open document formats doesn’t know what ODF is, one can’t expect that the public will know much more.
+
+Given the unfortunate combination of lobbyists’ influence and public unawareness, perhaps the best way to implement ODF at present is through an executive order, which is exactly what Massachusetts did in fall of 2005.  The state’s former Chief Information Officer, Peter Quinn, ordered that by 2007 government computers be equipped with software that can save files in OpenDocument Format.  Facing heavy pressure from both his fellow officials and the software industry, however, he resigned in 2006.  But the executive order remains in place, and Massachusetts remains the only state in which open file formats such as ODF are mandated."
+(http://onthecommons.org/node/1196)
+
+
+
+=More Information=
+
+
+#Wikipedia article at http://en.wikipedia.org/wiki/OpenDocument
+#Groklaw detailed records of almost every thing to do with OpenDocument, at http://www.groklaw.net/staticpages/index.php?page=20051216153153504
+#Open Document Fellowship, at http://opendocumentfellowship.com/ 
+#[[OpenDocument Foundation]]
+#Richard Stalmann: [http://www.gnu.org/philosophy/no-word-attachments.html Why proprietary document formats are bad]
+
+==Technical==
+
+[http://opendocumentfellowship.com/introduction/odf_vs_oxml OpenDocument vs Microsoft OpenXML]
+
+[[Category:Encyclopedia]]
+
+[[Category:Standards]]
+
+[[Category:Policy]]
+
+[[Category:Open]]

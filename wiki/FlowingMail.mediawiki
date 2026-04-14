@@ -1,0 +1,24 @@
+
+'''= FlowingMail is the name of a new decentralized messaging protocol, while FlowingMail Client is an email client that uses the protocol.'''
+
+URL = http://flowingmail.com/
+
+
+=Description=
+
+"When a central server is involved in the communication then it’s easy to identify the parties that have to be searched, closed down or threatened in order to retrieve the messages that are sent through the network.
+FlowingMail is the name of a new decentralized messaging protocol, while FlowingMail Client is an email client that uses the protocol.
+
+The protocol is loosely based on BitTorrent, with some ideas coming from the BitMessage protocol.
+
+The FlowingMail messages are signed and encrypted by the sender: only the receiver is able to decrypt the messages.
+
+Messages and public keys are announced using a variant of the Kademlia DHT, while the encrypted emails are transferred in way similar to the BitTorrent fashion.
+
+All the communications happen over the UDT protocol (UDP based data transfer), which offer high speed for data transfer and partial reliability on point-to-point messages."
+
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Standards]]

@@ -1,0 +1,15 @@
+
+"Certificate Authorities are supposed to validate their users, but in most cases they have failed miserably, and now a whole new class of “highly validated” or “high assurance” certificates is emerging. If we stop and think though, you are supposed to be able to tell the validation level of a cert by looking at the class level. Class 1 certs are email validated, class 2 are “reasonable checking” which varies from CA to CA, and class 3 are “strong checking”, and these class 3 certificates are supposed to be as good as need be. The validity of these things have been watered down by bad practices, but if you could trust that the CA was doing what they are supposed to be doing, then class 3 email certificates would be an excellent place to start your “digital drivers license”.
+
+Well, without mentioning names of Certificate Authorities that haven’t done their job, there are 2 that are definitely trying, StartCom and Thawte. StartCom is following all the “best practices”, including such things as issuing the different class levels of certificates from different Sub-CAs, so it is easy to identify the class level of a certificate simply by looking at the issuing chain."
+(http://startssl.wordpress.com/2006/09/13/identity-and-certificate-authorities/)
+
+
+=More Information=
+
+See our entries on [[Identity]] and [[Trust]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]

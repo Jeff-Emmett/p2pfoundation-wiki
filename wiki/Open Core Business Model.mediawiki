@@ -1,0 +1,84 @@
+
+'''= not to be confused with [[Dual Licensing]]!'''
+
+
+=Description=
+
+Thomas Prowse:
+
+"This somewhat established, but still emerging OSS business model is premised on the open source licensing of the core software offering and the proprietary licensing of certain add-ons to that core product. Good examples of this approach include SugarCRM and Word Press.
+
+At a high level, this business model is designed to use the OSS license (and OSS economics) to drive the large scale adoption of the licensed product and then follow on or supplement that offering with proprietary add-ons. In the case of SugarCRM, this may take the form of new CRM modules or increased scalability. In the case of Word Press, which hosts my personal blog, this may take the form of premium services that it makes available as part of its hosted-service offering.
+
+While the open core model has generated a lot of interesting debate and polarized positions, such as the scathing critique by Brian Prentice of Gartner in his 'Open-Core: The Emperor’s New Clothes' blog post, it does, by most accounts, represent an important evolution in OSS business models." (http://www.osbr.ca/ojs/index.php/osbr/article/view/1157/1107) 
+
+
+=Discussion=
+
+
+==Critique by Henrik Igo==
+
+
+===Open Core is NOT [[Open Source]]===
+
+Henrik Igo:
+
+"In short, open core is a model where a company produces a product that is mostly available as open source, but then there are some closed source components around the open source "core". The point of the model is that it is supposedly easier to sell closed source than open source. Most open core companies (including MySQL, Eucalyptus and JasperSoft) started by being fully open source, but then start adding closed source components as a way to boost sales.
+
+The closed version is often called "Enterprise" version, this terminology was first used by Red Hat (which is not open core) and is the same as used by closed source software companies. (For instance Oracle Enterprise is the costly version of the Oracle database.)
+
+So '''why is open core not an open source business model?'''
+
+I think it is worth repeating again and again that open source is a very well defined concept. You can read the Open Source Definition at opensource.org. This is a definition that was agreed in the last century. It is not being discussed anymore.
+
+And open core does not qualify as open source, as per the definition. It is closed source. It is the opposite of open source."
+(http://openlife.cc/blogs/2010/june/open-core-not-open-source)
+
+
+===Is Open Core Evil?===
+
+Henrik Igo:
+
+"The problem with these open core companies is that they are usually a step in the wrong direction.
+
+MySQL, Eucalyptus and JasperSoft all started as pure open source projects and were then steered into adding closed source pieces by a management team wanting to take the product more proprietary. For instance in MySQL's case this strategy was rather invasive, the plans extended much further into the server itself than just a monitoring tool.
+
+Mårten's argument indeed is that with the revenues derived from selling this closed source software, we can then develop more open source software.
+
+In my opinion, this is a dishonest argument. Also Bill Gates donates a lot of his money to charity, and this is really nice of him, but I still wouldn't recommend any of Microsoft's closed source software because of that.
+
+If your business is to sell closed source software, then your incentives will be not to produce open source software, but to produce as much closed source software as you can get away with. In MySQL's case they eventually had to backtrack on the plans of open source backup, because they didn't get away with it. The public pressure became a burden for Sun and MySQL management had to give up those plans. (Btw, I'm informed that Oracle will have no such regrets and has revitalized the plans for closed source backup tools.)
+
+So if you ask me, we in the open source community should make it as difficult as possible for these companies to "get away with" their plans to take our software and make it closed source. We should openly criticize anyone who markets himself as open source but really just sells closed source software. 
+
+As much as I like the fact that venture capital is flowing into open source companies, if all they want to do is take our software and make it closed source, then thanks, but no thanks. Free Software was not created to benefit venture capitalists, it was created to benefit and protect the freedoms of the users and developers of the software. We welcome them into our community if they want to join, but they are our guests. We should not let them get away with a plan based on taking a nice open source project and making it increasingly closed source."
+(http://openlife.cc/blogs/2010/june/open-core-not-open-source)
+
+
+===Are there alternatives?===
+
+Henrik Igo:
+
+"The final thing that I really don't like about the proliferation of open core is that mostly it is just lack of imagination and effort. It's like someone was put as a manager of an open source company, and after a while realizes selling is tough since most users choose not to pay. After some brainstorming you end up with "so let's just go back to selling closed source software". It just feels so lame, somehow, to me.
+
+If you really wanted to stay open source (as defined by the definition), then you could think of ways to create a profitable business without having to produce closed source software. After all, Red Hat and Canonical are probably our two most successful open source companies today, and they seem to do this just fine. If anything, committing to being fully open source has been beneficial to them, not the other way round."
+(http://openlife.cc/blogs/2010/june/open-core-not-open-source)
+
+
+==Defense of open core by Mårten Mickos ==
+
+Mårten Mickos:
+
+"It seems to me that for an open source company to become commercially successful, it needs to have an unfair advantage against its competition - something that they cannot copy, use, modify or provide to their customers. Red Hat Network is such an example; CentOS and Oracle may copy the bits of the Linux distro, but only Red Hat can provide Red Hat Network. That unfair advantage is nearly always something that goes somewhat against if not the word at least the spirit of FOSS. This has been a traumatic realization for some in the open source world. We would love to see a world equally full of freedom and of successful FOSS businesses. But we don't. Perhaps unfair advantage and lock-in are like salt: it's unhealthy even in relatively modest amounts, but not having it all would be even worse. 
+
+The open core model, where you have a fully functional FOSS product at the core, complete and sufficient for deployment, and a separate "Enterprise" edition with non-open features or add-ons, is in line with the above thinking. The model attempts to create an advantage in the market for the vendor. But FOSS forces are also at play.
+
+For instance, Compiere followed an open core model, and yet at one point a fork emerged based on the open core of Compiere. This indicates that open core companies operate within the major forces of free and open source software, and so it also indicates that the market is self-adjusting. If you go too far into the closed mode, you lose traction among open source users and you expose yourself to the threat of forks. Nothing prevents others from developing as FOSS some feature that the vendor has reserved for paying customers only. If you go too far into the open source mode, you may weaken your business model and fail to attract revenues to pay for your operations. Ultimately, customers are the arbiters of success. If they are ready to pay for access to the product or service, the company will have to be seriously mismanaged in order to fail.
+
+My hope is that there will be many more companies based on open source, experimenting with many more business models. When we see some of those companies having success with customers, let us learn from them. In that way we can keep building a stronger ecosystem around FOSS - one which has room for both the purest and the most pragmatic licensing or business model. The big problem is not the innovative companies experimenting with open source business models, but the much less innovative companies who keep producing nothing but rigid and complicated closed source code or web services lacking openness in APIs and data."
+(http://www.computerworlduk.com/community/blogs/index.cfm?entryid=3048&blogid=41)
+
+
+[[Category:Standards]]
+
+[[Category:Business Models]]

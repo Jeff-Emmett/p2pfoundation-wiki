@@ -1,0 +1,59 @@
+=Description=
+
+Sylvain Poirier:
+
+Matchmaking is the particular case of a [[Open Market|market]] where each of both potential partners is sensitive to the details of the other and has to review the details of many offers before making a choice.
+
+Apart from the usual interpretation of the word as matching for love or marriage, the other important example is the job market.
+
+=Discussion=
+
+==The assessment problem==
+
+The selection of possible partners requires a procedure by which every artner assesses the possible partners'details and quantifies his interest for each of them.
+
+There are 5 categories of criteria, from the easiest to the hardest to review.
+* Doubly formal criteria: where both the data and the other's preferences over the possible values of this data can be expressed by filling standard forms, and where the selection and goodness measure can be processed by computer
+* Common option symmetric criteria: when the criteria is not just over the other's fixed parameters but depends on the other's preferences too, as it concerns the choice of an common option. Examples for dating are the meeting place, future living place, type of relationship, pets and children number.
+* Human parameter, formal review: in job market, it is when candidates have to pass a test whose result will be automatically processed by the recruiters
+* Formal parameter, human review: in online dating, one's picture is a sort of parameter that enters the database but each potential partner has to make a human reviewing effort to assess it.
+* Unformulable criteria: computers are of no help here, people have to meet each other or anyway interact before taking any decision.
+
+Another problem is the problem of trust for the reliability of parameters entered in database.
+
+==The final choice problem==
+In matchmaking problems, the operation of final choice of a partner can't be trivial, because if 2 people are choosing the same partner then this partner will still have to choose between them; if he expressed his preference in advance then the second prefered one would still have a chance if the first made another choice.
+There are two possible paradigms to handle this problem:
+* The static paradigm, where the full set of data is entered at once to the input, then all matches are fixed at once at the output. See the [http://en.wikipedia.org/wiki/Stable_marriage_problem stable marriage problem] for a theoretical study
+* The dynamical paradigm, where people have the option of waiting in case a better opportunity would come later. See Wikipedia [http://en.wikipedia.org/wiki/Search_theory Search theory] for details
+
+==Database decentralisation problem==
+
+For the solution to be an [[Open Market]], it has to work between users registered at different places, with no global database of all users; or at least not a unique global database stored in servers owned by a for-profit company.
+
+==Solution proposal==
+
+The [http://spoirier.lautre.net/en/datingspec dating specification] of the [http://spoirier.lautre.net/trustedforum.html Trust-forum project], proposes a general solution to the main aspects of these problems in the following way:
+
+As the selection happens both ways and automatic reviewing is "cheaper" than human reviewing, the automatic selecting criteria are computed in both ways to eliminate impossible matches before any of the users bothers to review the other. Then, it is also considered that when user A choosed to not select user B, then B won't have to waste time reviewing A anymore.
+
+As a replacement for the "search" function of traditional online dating services (where a user A sends clicks on "search" and gets some 253,689 possible matches B to review), there is a "send profile" function to be reviewed by all possible matches.
+
+There are many advantages to this method:
+
+* For any two users A and B that would be a possible match, they are probably not registering at the same time, and the flow of registrations of new profiles into the network is continuous. Assume that user A registered before user B. We consider that to be best, the system must ensure that A and B will be put in contact as soon as possible. Therefore it should precisely happen soon after B registers. But, just after registering, B would not have the time to review in a short time all existing profiles that satisfy the automatic criteria: there are too many. Things become reasonable if A reviews B first, then B reviews A only if A selected B. This makes more regular the flow of new possible matches that each user has to review.
+
+* Consider the case of dead profiles, where a user started using the system for a small period of time, then forgets about it but did not delete his account. In fact he does not even know whether he'll come back later or not. In the "search" paradigm, many users will find his profile and try to select him or contact him, but he does not respond. This is a waste of time for the users. In the new paradigm, dead profiles do not waste the time of others, as other don't see them, but it will be up to their authors to review the new profiles of others that came in between, ifever they come to use the system again.
+
+* Wanted and/or easy people, who can easily match with a formely registered user, save time, as the work of first preselection rests on others. Others, who can't find or accept a match with the previously resistered and unsatisfied users, will have to take later a larger share of the work doing themselves the first part of the preselection. In exchange, they earn this way the opportunity to match some more interesting and easy users that will register later. 
+
+* This technically works in a decentralised way, where no web server needs to contain all the profiles in the same database, and every automatic testing procedure run at a single time by a single servers is only about checking one profile against a small subset of others (namely, those registered in the local server).
+
+Alternative procedures are also proposed in the above specification for users with special needs: "passive search" for those who won't bother reviewing others first in any way, and "hidden search" for those who want to be always the first reviewing the other, in order to ensure that no known person will discover one's presence while reviewing the picture.
+
+It does not, however, address the final decision problem that is left to the user to manage in an informal way.
+
+
+[[Category:Business]]
+
+[[Category:Relational]]

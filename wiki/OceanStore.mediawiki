@@ -1,0 +1,25 @@
+
+URL = http://oceanstore.cs.berkeley.edu/info/overview.html
+
+
+=Description=
+
+"OceanStore is a global persistent data store designed to scale to billions of users. It provides a consistent, highly-available, and durable storage utility atop an infrastructure comprised of untrusted servers.
+
+Any computer can join the infrastructure, contributing storage or providing local user access in exchange for economic compensation. Users need only subscribe to a single OceanStore service provider, although they may consume storage and bandwidth from many different providers. The providers automatically buy and sell capacity and coverage among themselves, transparently to the users. The utility model thus combines the resources from federated systems to provide a quality of service higher than that achievable by any single company.
+
+OceanStore caches data promiscuously; any server may create a local replica of any data object. These local replicas provide faster access and robustness to network partitions. They also reduce network congestion by localizing access traffic.
+
+We must assume that any server in the infrastructure may crash, leak information, or become compromised. Promiscuous caching therefore requires redundancy and cryptographic techniques to protect the data from the servers upon which it resides.
+
+OceanStore employs a Byzantine-fault tolerant commit protocol to provide strong consistency across replicas. The OceanStore API also allows applications to weaken their consistency restrictions in exchange for higher performance and availability.
+
+A version-based archival storage system provides durability which exceeds today's best by orders of magnitude. OceanStore stores each version of a data object in a permanent, read-only form, which is encoded with an erasure code and spread over hundreds or thousands of servers. A small subset of the encoded fragments are sufficient to reconstruct the archived object; only a global-scale disaster could disable enough machines to destroy the archived object.
+
+The OceanStore introspection layer adapts the system to improve performance and fault tolerance. Internal event monitors collect and analyze information such as usage patterns, network activity, and resource availability. OceanStore can then adapt to regional outages and denial of service attacks, pro-actively migrate data towards areas of use and maintain sufficiently high levels of data redundancy.
+
+Many components of OceanStore are already functioning in isolation. A complete prototype is currently under development."
+(http://oceanstore.cs.berkeley.edu/info/overview.html)
+
+
+[[Category:Technology]]

@@ -1,0 +1,52 @@
+===Qu'est-ce que c'est ?===
+Pour Tim Berners Lee, créateur en d'autres temps du Web lui-même, le projet du Web sémantique consiste à introduire dans la Toile certaines indications de sens, afin de faciliter la recherche de documents et leur traitement automatisé. En effet, à chaque fois qu'on entre un mot dans Google, on se rend bien compte à quel point  il est difficile pour des programmes ou des robots, de comprendre le sens d'une page HTML et donc de retrouver l'information qu'on souhaite. D'où l'intérêt de rendre le Web plus intelligent, plus facilement lisible par des machines, en introduisant des "metadata" (données à propos des données) susceptibles de faire comprendre à un programme le sujet d'un document et ses relations possibles avec d'autres. Ainsi les moteurs de recherche, les agents intelligents,  les outils de commerce électronique pourront-ils se montrer plus efficaces et surtout plus sélectifs.
+
+Les metadata existent déjà dans le code HTML classique: en entrant une série de mots clés dans la balise <META>, un créateur de pages Web se montre capable de faire "monter" sa page dans la liste offerte par les moteurs de recherche. Le web sémantique a pour but de proposer une série d'indications plus avancées sur le contenu d'une page, afin de permettre aux "robots" et autres agents intelligents d'extraire de manière plus fiable les informations contenues dans un document. 
+
+S'agit-il d'intelligence artificielle ? le débat est ouvert car cette expression est interprétée d'une multitude de manières. 
+Pour les auteurs de l'article "Semantic Web" de la wikipedia, la réponse est sans appel: c'est non . 
+Un auteur comme Bijan Parsia n'est pas du même avis: "le projet du web sémantique, explique-til, est un projet d'intelligence artificielle, et il devrait en être fier! Non seulement c'est plus honnête de le reconnaitre, mais cela permet d'être plus clair sur ce qui constitue les travaux antérieurs, la recherche et la littérature en rapport, ainsi que la technologie disponible" (http://www.xml.com/pub/a/2001/04/25/prologrdf/index.html)
+
+En fait, le "web sémantique" se situe à mi-chemin entre l'informatique traditionnelle et l'intelligence artificielle. L'idéal serait bien entendu que les "robots", les agents, sachent lire, autrement dit, qu'ils disposent d'un sens commun: ils pourraient alors directement sélectionner les documents susceptible d'intéresser le lecteur. Comme on est loin de développer de tels programmes, on préfère mâcher le travail: autrement dit, au langage naturel des pages web on ajoute un ensemble d'instructions formelles susceptibles d'être comprises par les machines. Ceci dit, même si une telle opération parait plus simple, on en utilise pas moins des outils directement  issus des recherches en intelligence artificielle, comme par exemple la "programmation logique" issue du Prolog, langage d'origine française susceptible d'aider à l'élaboration des systèmes experts. Et un projet pharaonique comme Opencyc (dont le but est d'enseigner aux programmes informatiques des éléments de sens commun) trouvera probablement ses premières applications avec le web sémantique.
+
+Pour créer ces "metadonnées" lisibles par les agents, on va utiliser divers langages, tous appartenant au couteau suisse du web: XML. Les plus répandus de ces systèmes sont la [[RDF]] (Ressource description framework) et OWL (Web Ontology Language) mais il en existe d'autres, moins usités, et plus expérimentaux, comme RuleML ou SWRL.
+
+===Ontologies===
+
+Les principe de base du web sémantique consiste donc à décrire des relations existant entre des différents concepts dans un domaine de connaissance données. C'est ce qu'on appelle un "ontologie". Par exemple, on peut créer une ontologie concernant la biologie moléculaire, ou les mammifères, ou les institutions européennes, ou les petites fleurs des champs. Ce qui est important, c'est d'établir les termes fondamentaux et de décrire leur relations.
+
+La manière la plus basique de décrire de telles ontologies est d'utiliser la [[RDF]]. Les utilisateurs plus sophistiqués recourront à OWL. 
+
+===Raisonner sur les metadonnées=== 
+
+Une fois établies les différentes ontologies, il devrait être possible au différents "searchbots" de raisonner sur les contenus. Par exemple, s'il trouve une page sur les "chiens", il pourra en déduire que cela peut être intéressant dans le cadre d'une recherche sur les mammifères. Ou il saura qu'une chauve souris "vole" mais n'est pas un "oiseau" car elle "ne pond pas d'oeufs". C'est sur ce point que la recherche sur le web sémantique rejoint vraiment l'intelligence artificielle, et qu'elle commence à utiliser ses outils, comme le Prolog. 
+Ce dernier langage permet de formuler diverses relations logiques, par exemple:
+fils(Pierre, Roger)
+fils(Roger, Gilles)
+constituent une "base de connaissances" grâce à laquelle nous savons que Pierre est le fils Roger et que Roger est le fils de Gilles. 
+Nous pouvons alors entrer un raisonnement logique, par exemple:
+petit-fils(X,Z) :- fils(X,Y), fils(Y,Z)
+ce qui signifie " X est petit fils de Z si X est fils de Y et que Y est fils de Z)". On peut alors entrer une requête:
+petit_fils(Pierre, X),
+ce à quoi le système répondra: 
+Gilles.
+
+Bijan Parsia, encore lui, remarque avec justesse que les "triplets" de la RDF sont quasi identiques à la structure d'une base de connaissance Prolog. De fait, le Prolog, un peu oublié depuis les années 80, époque à laquelle les japonais en avait fait le langage de base de leurs 'ordinateurs de cinquième génération", un projet qui n'aboutit jamais, revient en force avec le web sémantique . Le W3C a même sorti un logiciel spécifique, metalog, (http://www.w3.org/RDF/Metalog/) établissant définitivement le lien entre Prolog et RDF.
+
+===Craintes et critiques===
+S'il existait, le web sémantique permettrait à tout un chacun d'en savoir plus sur les sujets qui l'intéressent. Cela implique aussi, malheureusement, que différentes officines pourraient en savoir plus sur vous!
+Jean Paul Basquiat se fait l'écho de ces craintes:
+" Mais, contrairement à ce que pense Tim Berners-Lee, le Web Sémantique ne risque-t-il pas de se révéler un nouvel instrument permettant aux pouvoirs de police de pénétrer dans l'intimité des comportements et des pensées des citoyens ? Dans un article intitulé « Keep out of MySpace » (N° 30 du 10 juin 2006, p. 30) le NewScientist britannique dénonce le fait que la National Security Agency des Etats-Unis finance des recherches visant à recueillir les données personnelles que les individus publient sur eux-mêmes ou rassemblent, au sein d'espace de documentation qui leur sont offerts à cette fin par des sociétés de service. "
+(...)
+"La NSA espère que le développement du Web Sémantique au sein de ces espaces permettra de rapprocher facilement ces informations personnelles avec d'autres, bancaires, de santé, administratives ou d'achat. Ainsi pourraient être mis en évidence, sans que les intéressés s'en aperçoivent, les profils et donc les personnes qu'à tort ou à raison, les autorités de police jugeraient suspectes. On serait loin alors du scandale provoqué par le fait que la NSA se soit procuré ces derniers mois, via les opérateurs de télécommunication, les contenus des conversations téléphoniques d'un certain nombre d'individus a priori honorables suspectés de pouvoir éventuellement monter des réseaux terroristes. La NSA et autres agences d''intelligence", c'est-à-dire d'espionnage, pourraient pénétrer partout à l'insu des citoyens. " (http://www.automatesintelligents.com/echanges/2006/juil/semanticweb.html)
+
+Une autre critique fréquemment adressée au web sémantique est sa lourdeur. Non seulement RDF et OWL sont des langages imbuvables, réservés de toute évidence à des professionnels, mais en plus la fabrication des ontologies impliquent l'établissement de comités, de normes, etc. Les critiques ont beau jeu de signaler que Berners-Lee a lancé le projet de web sémantique en 2001, et qu'il a à peine avancé depuis. Critiques bien fondées, bien qu'il ne faille pas oublier certains succès: la RSS, qui permet la syndication des blogs descend en droite ligne de la RDF, et les blogs, c'est tout de même une petite révolution !
+
+===Un Web sémantique P2P ?===
+
+Pour éviter cette lourdeur, des chercheurs du Computer Science Laboratory de Sony, sous la direction Luc Steels, ont pris une direction totalement différente. Plutôt que demander aux agents de se référer à une ontologie centrale décidée et codifiée préalablement, pourquoi ne pas laisser les agents ériger leurs propres catégories sémantiques en fonction de leurs communication, dans un esprit tout à fait P2P ? Cette recherche s'inspire largement de "l'expérience des Talking Heads", un travail mené par Luc Steels montrant que deux robots pouvaient communiquer entre eux sur leur environnement en utilisant un langage qu'ils inventaient au fur et mesure de leur interaction...Sony envisage d'utiliser cette technologie dans les systèmes P2P d'échange de contenus multimédia: les agents utiliseraient un système de classification des données (par exemple les genre de musiques) qui, leur serait propre, en lieu et place des catégories mises au point par des experts humains..
+Il est impossible de dire aujourd'hui quelle vision triomphera, le Web sémantique traditionnel, un peu lourd mais déjà très avancé, ou les explorations plus spéculatives de Steels et son équipe. En tout cas, soyons en sûr, l'avenir du Web passe par la sémantique!
+
+
+[[Category:French]]
+[[Category:Définitions]]

@@ -1,0 +1,187 @@
+'''* Report : Foundations of Cryptoeconomic Systems. By Shermin Voshmgir and Michael Zargham. WU Vienna, Working Paper Series 1/20'''
+
+URL = https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf
+
+
+=Summary=
+
+"Blockchain networks and similar cryptoeconomic networks are systems, specifically complex systems. They are adaptive networks with multiscale spatio-temporal dynamics. Individual actions may be incentivized towards a collective goal with “purpose-driven” tokens. Blockchain
+networks, for example, are equipped cryptoeconomic mechanisms that allow the decentralized network to simultaneously maintain a universal
+state layer, support peer-to-peer settlement, and incentivize collective action. These networks represent an institutional infrastructure upon
+which socioeconomic collaboration is facilitated – in the absence of intermediaries or traditional organizations. They provide a mission-critical
+and safety-critical regulatory infrastructure for autonomous agents in untrusted economic networks. Their tokens provide a rich, real-time data
+set reflecting all economic activities in their systems. Advances in network science and data science can thus be leveraged to design and
+analyze these economic systems in a manner consistent with the best practices of modern systems engineering. 
+
+Research that reflects all
+aspects of these socioeconomic networks needs 
+
+(i) a complex systems approach, 
+
+(ii) interdisciplinary research, and 
+
+(iii) a combination of economic and engineering methods, 
+
+here referred to as “economic systems engineering,” for the regulation and control of these socioeconomic
+systems. 
+
+
+This manuscript provides a conceptual framework synthesizing the research space and proceeds to outline specific research questions
+and methodologies for future research in this field, applying an inductive approach based on interdisciplinary literature review and relative
+contextualization of the works cited."
+
+
+=Contents=
+
+"This paper explores why the term “cryptoeconomics” is context dependent and builds up to providing complementary micro, meso, and macro definitions (Section 9). These context dependent definitions are the synthesis
+of examinations of cryptoeconomic systems in terms of complexity (Section 2), interdisciplinarity (Section 3),
+institutional (Section 4), coordination (Section 5), emergence (Section 6), network structure (Section 7), and
+tokenization (Section 8). The final section (10) focuses on potential research directions and serves as an outlook
+rather than a conclusion. It identifies potential future research areas that build on the assumptions and definitions
+provided in this paper."
+
+(https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+
+=Excerpts=
+
+Shermin Voshmgir and Michael Zargham:
+
+"[[Cryptoeconomics]] is an emerging field of economic coordination games in cryptographically secured peer-to-peer
+networks. The term cryptoeconomics was casually coined in the Ethereum developer community, and is generally
+attributed to Vitalik Buterin. The earliest recorded citation is from a talk by Vlad Zamfir [Zamfir 2015], which was
+later loosely formalized in blog posts and talks by Buterin [Buterin 2017a], [Buterin 2017b]. The term has gained
+traction in the broader developer community [Tomaino 2017a] and in the academic community [Catalini and Gans
+2016], but it still remains under-defined, possibly because it is often used in so many different contexts. Using the
+same term in different contexts leads to communication breakdowns and challenges when trying to come up with
+a rigorous definition of that term."
+
+(https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+
+==[[Cryptoeconomic Systems as Institutions with Social and Algorithmic Governance Feedback Loops]]==
+
+Shermin Voshmgir and Michael Zargham:
+
+"The Internet is an institution, and a piece of cultural infrastructure from which many distributed Internet tribes
+have formed over time [Phillips 2000], first around the infrastructural layer of the Internet [Mueller 2010], and
+then on the application layer such as e-commerce platforms [Re 1997], [Zhu and Thatcher 2010], [Schmitz et al.
+2002], knowledge platforms [Adams and Gordon 1989], or social media platforms. The institutional nature of
+the internet is underscored by the emergence of recognizable forms in self-organising communities as social
+activities migrate into digital spaces [Frey and Sumner 2019]. Though platform economies and associated network
+effects have driven the internet toward more centralized power structures, platform cooperativism demonstrates
+that digitalization, when wielded by communities, can be a force for democracy [Scholz and Schneider 2017].
+
+Cryptoeconomic networks enable more fluid organizations to formalize over the Internet - around a specific
+economic, political, or social purpose - commonly referred to as a “Decentralized Autonomous Organizations”
+or “DAOs” by the crypto-community [Buterin 2014], [Wright and De Filippi 2015]. They reinvent the institutional composition of the Internet, allowing distributed Internet tribes to self-organize and coordinate in a more
+autonomous way - steered by purpose-driven tokens (read more on purpose-driven tokens in section 10.1). The
+network protocol and/or the smart contract code formalize the governance rules of the network, regulating and
+enforcing the behavior of all network participants.
+
+As institutional infrastructure, cryptoeconomic networks resemble nation states much more than they resemble
+companies. Their protocols are comparable to the constitution and the governing laws of a nation state [Lessig
+2009], in a combination of formal (on-chain) and informal (off-chain) rule sets. The network protocols and smart
+contract represent the computational constitution, while the adaptive social decision processes represent a body of
+values and rules which govern the collective decision-making process [Zargham et al. 2020], [Voshmgir 2020].
+Cryptoeconomic networks provide an infrastructure that can change the composition and dynamics of existing
+institutions, since the use of such infrastructure can (i) reduce the principal-agent dilemma of organizations providing more transparency, (ii) disintermediate by reducing bureaucracy, and (iii) replace the reactive procedural
+security of the current legal system, with proactive and automated mechanisms that make a potential breach of
+contract expensive and therefore infeasible [Davidson, De Filippi and Potts 2016], [Voshmgir 2017], [Allen et al.
+2020]. Contract theory and the notion of incomplete contracts are an important institutional aspect in this context
+and will be discussed in section 10.3 of this paper.
+
+The institutional economist Thorstein Veblem described socioeconomic institutions as complex adaptive systems, stating that they ”are products of the past process, are adapted to past circumstances, and are therefore
+never in full accord with the requirements of the present” [Veblen 1973] and pointed out the need for a feedback
+mechanism to maintain an institutional integrity in the light of their complex adaptive nature.
+Walter [Hamilton 1919] also pointed out the complex nature of economic systems and ”claimed that institutional
+economics alone could unify economic science by showing how parts of the economic system related to the whole”
+[Hodgson 2000] and that ”economic theory must be based on an acceptable theory of human behaviour.”
+
+(https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+
+==A MULTISCALE PERSPECTIVE==
+
+"Economic systems are often observed to have properties that are not directly attributable to the agents, processes,
+and policies that make up the economic system. Understanding the emergent properties as arising from relationships between the agents, processes, and policies requires a multiscale perspective. Through a synthesis of these
+perspectives on multi-scale systems, a basic formula for framing practical economic models is shown in Figure 4.
+Any model requires assumptions about the properties of its constituent parts and assumptions about the environment or larger system in which the model is embedded. Couched in economic terms the model of the larger system
+provides macro-economic context and the models of the constituent parts provide micro-economic foundations.
+Applying a multiscale perspective to economic systems is not a new idea. It has been addressed implicitly by
+representatives of the Austrian School of Economics, and also other heterodox economic schools including Complexity Economics [Foster 2005], [Montuori 2005], [Bateson et al. 1989] and Ecological Economics [Common and
+Stagl 2005], [Schumacher 2011]. While Ecological Economics was originally motivated by ecology rather than
+systems theory, it also criticized the failings of the orthodox economic canon in addressing the complex dynamics
+that arise when there are interaction effects between parts and wholes with special attention to human activity as
+being a part of the natural world. The Lucas Critique [Lucas 1976] is a relatively recently yet widely accepted idea
+in macroeconomics that explicitly addresses feedback effects between micro and macro scale behavior. The need
+for multiscale representations is further borne out in Evolutionary Economics [Dopfer, Foster and Potts 2004] and
+in the standard practice of systems engineering [Hamelin, Walden and Krueger 2010].
+
+Through the multiscale perspective, it is possible to study interscale phenomena such as emergence as shown
+in Figure 5. “Emergence (...) refers to the arising of novel and coherent structures, patterns and properties during
+the process of self organization in complex systems. Emergent phenomena are conceptualized as occurring on the
+macro level in contrast to the micro level components and processes out of which they arise.” [Goldstein 1999].
+Emergence closes the feedback loop of the macro, meso and micro level activities where policy makers measure
+phenomena on a macro level, decide over new policies on a meso level, and implement these policies impacting
+agent behavior a micro level, which in turn result in systemic effects that can only be measured on a macro level.
+
+An example of Multi-scale feedback in the Bitcoin Network is the interaction between the proof-of-work game
+being played between the agents (miners), and the Bitcoin Network itself. By introducing a feedback loop to
+correct the difficulty
+and maintain the ten minute block time, the system itself becomes part of the game. One
+way of viewing this macro-scale game is as a two player game between the miners as a population and the network
+itself. The miners as a collective have their action space defined by the total hashpower provided and the network’s
+action space is to set the difficulty. Even though all of the miners know what strategy the network is playing, the
+fact that they are still playing a micro-scale game with each other leads to increases in hashpower despite the fact
+that this is objectively more expensive than providing less hashpower for the same predetermined block rewards.
+
+Another example of multiscale dynamics in cryptoeconomic systems are bonding curves [De La Rouviere
+2017], including liquidity pools such as Bancor [Hertzog, Benartzi and Benartzi 2017] and Uniswap [Angeris et al.
+2019]. A detailed analysis of bonding curves shows that they encode nontrivial configurations spaces [Zargham,
+Shorish and Paruch 2019], wherein simple behaviors on the part of individual agents can collectively induce
+emergent changes to the global state. The interplay between local agent and global system state are explored
+further in [Zargham, Paruch and Shorish 2020]. This line of mathematical and computational research is consistent
+with multi-scale systems in robotics, [Kia et al. 2019], [Tsitsiklis 1984]. The Bitcoin network and bonding curve
+examples show the relevance of multiscale models for cryptoeconomic systems because neither the micro-scale
+game played between the entities in these systems, nor observations of the macro-scale properties, are sufficient
+to characterize the system dynamics."
+
+
+==[[Ethics and Governance of Decision Algorithms in Social Systems]]==
+
+Shermin Voshmgir and Michael Zargham:
+
+"Assumptions that are programmed into the cryptoeconomic protocols might be biased and will be subject to a
+line of ethical studies covering how the associated cryptoeconomic systems behave over time. When automated
+systems are envisaged as closed systems they are tantamount to complete contracts–supposing that a prespecified
+algorithm suffices to judge all possible eventualities. All algorithms presuppose some representation or model of
+reality; models are always reductions of reality based on some assumptions, and therefore must be judged by their
+usefulness to some ends[Box 1976][Green and Viljoen 2020]. This places the focus on the assumptions embedded
+in the models and the effects those assumptions have on people. By acknowledging the subjective and performative
+aspects of models, and more broadly the synergies between human and machine decision makers, the domain
+mirrors that of incomplete contracts more closely. The policy-making, machine learning and cryptoeconomic
+systems design communities share a common need to address ethical questions about the social-systemic effects
+of algorithm design and implementation [Orlikowski and Scott 2015] [Loukides, Mason and Patil 2018]. To design
+or govern algorithms which make decisions requires a theory of fairness such as Rawl’s Veil of Ignorance [Rawls
+1958] [Heidari et al. 2018]. Fairness cannot be expected to emerge from purely self-interested agents because
+fairness provides a constraint on profit seeking behavior [Kahneman, Knetsch and Thaler 1986]. As a result, a
+code of ethics for algorithm designers, as found in other engineering disciplines [Pugh 2009], is required.
+
+Furthermore, it is important to note that data governance [Soares 2015] is not equivalent to protocol governance.
+
+Data governance relates to the management of rights to read, write or manipulate data. Emerging data economies
+must respect regulations such as General Data Protection Regulation [Voigt and Von dem Bussche 2017] and
+therefore one cannot simply store private or sensitive information in a public ledger where it cannot be deleted.
+However, data governance can be addressed through business process automation [Ter Hofstede et al. 2009] using
+smart contracts [Christidis and Devetsikiotis 2016], which encode the aforementioned rights to read, write or
+manipulate data which is stored using other cryptographic technologies such as a content addressable distributed
+hash tables [Benet 2014]. Federated machine learning [Bonawitz et al. 2017][Geyer, Klein and Nabi 2017] is a
+growing area of research, but practical implementation is hindered by the ethical and regulatory requirement that
+there are guarantees of privacy preservation [Ahmad, Stoyanov and Lovat 2019]."
+
+(https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+[[Category:Crypto Economy]]
+[[Category:Articles]]
+[[Category:Research]]

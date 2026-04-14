@@ -1,0 +1,195 @@
+=Description=
+
+Max Bronstein:
+
+"I’ve compiled a list of the most exciting financial primitives currently being built out. Each one of these primitives aims to be a 10x improvement across access, censorship resistance, cost-effectiveness, and transparency. While this list is not exhaustive, it should give the reader an idea of how fast the space is evolving and provide a glimpse into what a more open financial world will look like."
+(https://tokeneconomy.co/mapping-the-decentralized-financial-system-7c5af65e0335)
+
+
+
+=Directory=
+
+Max Bronstein:
+
+==Scalable Payments==
+
+"As I previously mentioned, Bitcoin was the first time in history that individuals could send value, peer-to-peer, without the need for a central party. Ethereum allowed for a similar value transfer mechanism, but saw a majority of its use come from payments between individuals and corporations rather than between two individuals.
+
+Bitcoin and Ethereum, in their current state, are relatively inefficient at being both fast and cheap payment networks. Bitcoin has a 1mb cap on the block size and miners are most incentivized by fees to include a transaction in a block. Transaction speeds in Bitcoin are subject to a fee market in which users who offer the highest fee amounts have a greater chance of having their transaction included in the next block. Since demand for Bitcoin blocks is high, the fee market makes Bitcoin more expensive than traditional payment networks that don’t have their own version of a ‘block limit.’ Similarly, the Bitcoin protocol states that a block is propagated about every 10 minutes, making it unusable for micropayments.
+
+Ethereum has run into similar scaling issues. The 2017 ICO craze and a few notable decentralized applications catalyzed on-chain demand, which drastically increased transaction fees. Multiple crowd sales congested the Ethereum blockchain for days at a time and the popular NFT game, CryptoKitties, nearly took down the network when it launched.
+
+We’re still in the early days for the quest to solve scalable on-chain payments. While there are a number of potential solutions, the community has largely shifted focus to layer 2 as the best way to scale blockchains. The primary benefit of layer 2 solutions is that they move a great deal of network activity off-chain and only rely on the main chain for trust enforcement and arbitration. If successful, layer 2 solutions will drastically decrease on-chain transaction bloat while allowing the network to retain a high level of decentralization. The two most promising solutions, the Lightning Network for Bitcoin, and State Channels for Ethereum, are currently garnering a lot of developer attention.
+
+
+===Lightning Network===
+
+The Lightning Network is a decentralized system that leverages smart contracts to enable instant payments. Specifically, the Lightning Network uses Bitcoin’s built-in scripting language to create rules around how money moves within bidirectional payment channels.
+
+To start, users of the Lightning Network have to lock up funds in a ‘channel,’ a multisig bitcoin address, that is represented as an on-chain transaction. Users within the channel can transact between one another as long as both parties sign off on a new updated balance. There is no limit on the size or frequency of payments, and users are economically free to operate how they please. Either user can unilaterally close the channel, an operation that is represented by another on-chain transaction. Payments within a channel are not broadcast onto the Bitcoin blockchain, effectively removing a lot of on-chain bloat.
+
+The Lightning Network benefits greatly from a network effect as its users gain utility as more channels are opened. Given all parties have channels open with many different users on the network, users can send payments to any other party within the Lightning Network, a process called ‘hopping’ between channels.
+
+The development of the Lightning Network will bring a slew of scaling benefits to Bitcoin including instant payments and micro-payments. New business models can be formed like pay-per-view micro-transactions for content and existing payment service providers can begin integrating Bitcoin as a viable point of sale solution. Merchants all over the world will be able to accept Bitcoin instantly and not worry about finality or block confirmation times.
+
+The Lightning network is currently being developed by Lightning Labs along with a number of independent contributors from the Bitcoin community.
+
+
+===State Channels===
+
+State channels are similar to the Lightning Network in that they are a “Layer 2” scalability solution for Ethereum that enables users to take transactions off the base-layer blockchain. As demand for State channels function like a general form of payment channels but also allow blockchain state updates to be executed between two parties. For example, changes inside a smart contract. By moving state transitions off the Ethereum blockchain, users can interact with applications without having to constantly pay on-chain transaction fees and wait for confirmation.
+
+To open up a state channel, part of the blockchain state is locked into a multisig contract, controlled by a defined set of participants. Participants inside the channel can update the state between each other as long as all parties sign off on the most recent state change. All of these state changes are free and instant as they don’t have to be propagated and verified on the main chain. When the participants want to close the channel, they agree on a final state update and submit that as a transaction on the blockchain. The whole process only requires two on-chain operations.
+
+There are a number of teams working on state channel implementations. Both SpankChain and Counterfactual have released high quality summaries and developer documentation for further development.
+
+==Stablecoins==
+
+Another frequently discussed issue with using cryptocurrency as a form of payment or store of value is the asset class’ drastic volatility. Rapidly changing prices exclude a number of use cases including merchant adoption and using crypto to pay employee salaries. Financial planning is difficult and to date, most individuals are better off buying and holding crypto assets. The two most popular and liquid crypto assets, Bitcoin and Ether, have seen weekly volatility spike to 7.71% and 13.18% respectively since 2015.
+
+Stablecoins are crypto assets designed to hold a stable value. Most implementations to date have attempted to remain stable relative to the US dollar, effectively creating digital representations of the US dollar that can be transacted through a blockchain network. There are a number of unique stablecoin designs including a centralized IOU model like Tether or TrueUSD, collateral backed like MakerDAO, and seigniorage shares like Basis. This post will focus on the latter two types as centralized IOU models rely on a central party to hold currency reserves and still retain a high degree of counterparty risk, i.e. Tether’s ongoing investigation.
+
+Stablecoins are an extremely experimental concept and will likely need iteration once released into the wild. It’s important to understand some of the counter arguments against stable crypto assets.
+
+
+===MakerDAO===
+
+Maker is a smart contract platform on Ethereum that operates the Dai stablecoin system, a complex decentralized organization that creates a price stable crypto asset. The Dai stablecoin is a collateral-backed cryptocurrency whose value is stable relative to the US dollar. Dai derives its value from the fact that it’s collateralized in excess by some other crypto asset, currently, only Ethereum. These assets are held in Collateralized Debt Positions (CDP’s), which are smart contracts that generate Dai when collateral is deposited and accept Dai when a debt position is paid off. The system also relies on autonomous feedback mechanisms and incentivized external actors to maintain its dollar peg.
+
+MKR, the other token in the Dai stablecoin system, entitles holders to interest earned from borrowers of Dai and serves as a mechanism for decentralized governance within the platform. MKR will also be used as the recapitalization resource once the platform allows Dai to be collateralized with tokens other than ETH.
+
+Dai has seen increased use across DEXs in the Ethereum ecosystem and is partnering with L4 Ventures to back projects integrating Dai as a payment mechanism within their projects.
+
+
+===Basis===
+
+Basis is a stable cryptocurrency with a decentralized algorithmic central bank that expands and contracts the supply of Basis to stabilize it’s purchasing power. Basis does this by choosing a target asset to stabilize against, like the US dollar or the Consumer Price Index, and defining a target price relative to the pegged asset, say $1 USD for 1 Basis token. Basis then utilizes an oracle system to retrieve an accurate exchange rate and algorithmically adjusts the supply of Basis in attempt to stabilize the price. If Basis is trading higher than the desired peg, the system issues more Basis. If Basis trading below the desired peg, the system creates bonds in an effort to remove coins from circulation.
+
+Basis is still in the early stages and has received a fair amount of constructive feedback for their design. It remains to be seen if a seigniorage shares stablecoin model can flourish in a decentralized manner.
+
+==Asset Issuance==
+
+Blockchains have revolutionized the process by which assets are created, particularly tradable assets like stocks and bonds. In today’s financial system, the issuance process is highly manual, paper intensive, and involves a wide variety of rent extracting intermediaries. Redundant record keeping leads to large internal and external reconciliations which drive up the cost of issuance. Similarly, a number of stakeholders are required to complete the process including investment banks, syndicates, and regulators — all slowing down the process and charging fees.
+
+Smart contracts offer a completely new paradigm for security issuance. They drive costs down, democratize the asset creation process, and expand the design space of what can constitute an asset. Developers can now easily deploy a contract that creates a digital representation of an asset, custodies funds, and exchanges those funds for the new asset.
+
+===Ethereum===
+
+We saw this play out in Ethereum with the proliferation of utility tokens based on the ERC20 token standard. Anyone with access to the internet and some tutorials could deploy a token to the Ethereum mainnet, and while a majority of these tokens were designed to behave like software licenses or medium of exchange assets, they were distributed through public offerings, making them akin to equity in a publicly traded company. ERC20 tokens showed that smart contracts can automate a lot of the manual processes involved in creating company equity and disseminating to the public. It’s uncertain how many of these tokens will accrue sustainable value, but the commoditization of issuance is a big leap forward.
+
+The ERC20 standard abstracted the asset issuance process to such an extent that there are currently 102,624 token contracts on Ethereum. Creating a token on top of Ethereum is actually so easy that anyone can do so through this contract generator, no programming skills required. Although crypto asset market caps don’t definitively represent any inherent value, ERC20 tokens account for over $50 billion USD in market cap.
+
+The Ethereum ecosystem is starting to see a lot of developer activity crowd around the ERC721 token standard, an open standard that describes how to build non-fungible or unique tokens on the Ethereum blockchain. The same way that the ERC20 standard allows developers to tokenize replicable assets, the ERC721 standard allows developers to tokenize any arbitrary data. This opens up the potential for virtually anything of value to be represented on the blockchain.
+
+Tokens built using the ERC721 standard are referred to by the community as Non Fungible Tokens (NFTs). NFTs can represent ownership of almost anything that can be transcribed digitally, making them ripe for new business models and decentralized networks. The most widely discussed use cases have been CryptoCollectibles, blockchain-based games, non-fungible digital art, and social media. There are also a number of shipped products that allow users and developers to interact with the ERC721 token standard. CryptoKitties leverages NFTs to tokenize unique attributes of each cat, Decentraland is creating non-fungible, digital land in the metaverse, Artonomous is a self-sustaining autonomous artist that sells non-fungible digital art to consumers, and Userfeeds plans to create non-fungible avatars that can be used to better track and create value in social networks.
+
+There is a breadth of high quality information out there regarding NFTs. I highly recommend this primer by Jacob Horne as a starting point.
+
+===Tari===
+
+Assets can be created on any blockchain, all that’s required is a scripting language that allows developers to create rules around how value is transferred on the network. Many in the community argue that digital assets should be created on chains that are more conservative and designed more towards being a SoV settlement layer. As such, Monero recently announced as asset issuance platform on top of the main chain.
+
+Tari is an open source, blockchain protocol designed to create digital assets secured by the Monero blockchain. Tari’s go-to-market strategy includes creating digitally native assets like loyalty points, event tickets, and collectibles to show each industry the value of blockchain technology and smart contracts.
+
+
+==Asset Exchange==
+
+There is little question that crypto’s killer app to date has been speculation. Moving crypto assets between user controlled wallets and exchanges comprises a large majority of blockchain transactions. While that’s quickly evolving into more mature uses, most of that activity takes place on crypto exchanges, specifically centralized exchanges.
+
+Centralized exchanges allow users to trade their fiat or crypto assets for other crypto assets. These exchanges provide an easy to navigate interface, match orders, and escrow funds. While the centralized model is fast and reliable, these exchanges face a number of problems including insecurity, lack of liquidity, market fragmentation, and opaque financial infrastructure.
+
+Centralized exchanges expose every individual to a high degree of counterparty risk. Users give full custody of their funds to exchanges that can technically use those assets for lending or other business related activities. Users don’t really have any recourse if something goes wrong, particularly during exchange hacks. Similarly, many of these exchanges are also propped up on undisclosed banking partnerships. Users must trust that the exchange is being serviced by a reputable and liquid bank, which is rarely the case.
+
+Decentralized exchanges are pioneering a new value exchange model in which users can freely transact with one another, but with full custody of their funds. In the DEX model, the exchange never has control of a user’s private key so there’s no risk of having funds stolen or hacked. Another big benefit is shared liquidity. Since every user is posting orders to shared, open infrastructure, they can be matched with virtually anyone else in the world.
+
+
+===0x Project===
+
+0x is an open protocol that facilitates the trading of any token on the Ethereum blockchain.
+
+The core component of the protocol is a set of open smart contracts and a shared messaging format that enable the seamless exchange of Ethereum based tokens. Developers can leverage these tools to create ‘relayers,’ which are essentially application interfaces that allow users to trade in a decentralized manner. Relayers are synonymous with DEXs, making 0x a protocol for building decentralized exchanges.
+
+One of the core differentiators of the 0x protocol is its ‘off-chain order relay + on-chain settlement’ trade execution. Orders are broadcasted and matched off-chain within relayers who take a fee for this service. This reduces blockchain bloat as less on-chain computation is necessary to securely complete a trade.
+
+Exchanges built on top of the 0x protocol exhibit all of the beneficial features of decentralized financial services. Not only can any relayer be accessed through an internet connection, but the 0x team’s focus on developer documentation and onboarding has led to a proliferation of relayers, making it that much easier for global users to access an order book. Users leveraging 0x smart contracts to trade are always in control of their private key and are required to sign orders. Relayers never take custody of funds and order matching is done through a smart contract, eliminating any counterparty risk. 0x protocol is also open source and has a number of independent developers working on it, making it difficult to unilaterally censor the network.
+
+While the original version only supported ERC20 assets, V2 will support the burgeoning ERC721 environment. We’ll see a multitude of new relayers come out that allow users to seamlessly exchange their non-fungible tokens. This will drive new economic behaviors and further evolve the world of crypto collectibles and gaming.
+
+You can monitor all of the activity on the 0x protocol at 0xtracker.com. For a full list of all projects leveraging the 0x protocol, check out the 0x wiki.
+
+
+===AirSwap===
+
+AirSwap is similar to 0x in that the core protocol is a modular set of smart contracts that allow users to sign orders and have them be matched peer to peer. AirSwap similarly employs off-chain negotiation and on-chain settlement. AirSwap does differentiate themselves in terms of their target market, the platform is much more geared towards institutional market makers. Market makers are able to trade without fees if they hold the network token, AST, in a wallet for some certain period of time. This makes the platform much more enticing as traders are able to leverage the security and transparency of decentralized infrastructure with the functionality of a regular exchange.
+
+AirSwap has also begun making strides in becoming an ‘in-app plugin’ that can be inserted whenever a user interacting with a dapp needs to access some digital service. You can see this useful functionality live on the adChain Registry.
+
+
+==Derivatives==
+
+Derivatives make an obvious use for blockchain technology as they rely on intermediaries to enforce the underlying contracts. The VariabL team at Consensys put together a great summary of what derivatives are, what makes them important, and how blockchain technology can be used to make them more efficient.
+
+Derivatives are essentially insurance contracts that allow counterparties to transfer risk between one another. These contracts derive their value from the variation in the price of an underlying asset, for example Facebook stock. The two most common users of derivative contracts are business parties that want to minimize risk and speculators who want to take on that risk for potential profit. In the case of Facebook stock, let’s say Facebook has just finished putting together their quarterly budget and they’re relying on their stock price remaining stable to pay off all of their expenses. Facebook could purchase an insurance contract in the form of a put option on their stock’s price. Fast forward a quarter and the stock falls. In this case, they’re protected from this downside because they’re able to sell a number of shares above the current price.
+
+Blockchains make derivatives more efficient because they lower the barrier to access, decrease costs associated with creating the contracts, and eliminate counterparty risk. In the current model, accessing derivative contracts can be quite prohibitive even if exposure to them would benefit a wider number of parties. Think back to the scene in the Big Short where Michael Burry has to go to a bank and pay millions of dollars to have them make an insurance market on mortgage bonds.
+
+
+===Augur===
+
+Augur is a great example of blockchain technology democratizing access to financial services. Augur is a decentralized platform that allows anyone in the world to create a prediction market around any event. Apart from their ability to unlock the ‘wisdom of the crowd,’ prediction markets also make great hedging tools. In the case of the Facebook stock example, Facebook could get similar exposure to their put option if they participated in the ‘Will Facebook’s Stock Price be Lower than $200 after Q3?’ market.
+
+Augur is particularly innovative because of the level of access they’ve brought to financial instruments. While many investors in today’s system are unable to participate in more robust risk strategies, anyone can create a market on Augur for around $40 USD and trade outcome shares for a few dollars in fees. At scale, this could make global risk allocation much more efficient. Augur also harnesses the power of blockchain technology to eliminate counterparty risk from financial agreements. In Augur, there’s no risk that the party on the other side of the contract can’t fulfil their obligations as all of the funds are escrowed and adjudicated by smart contracts.
+
+
+===dy/dx===
+
+dy/dx is a set of protocols that allows for the creation, issuance, and trading of decentralized derivatives for ERC20 tokens. Similar to Augur, dy/dx allows anyone in the world to access derivative instruments in order achieve superior risk management. Another goal of the platform is to make crypto markets more efficient by offering more complex financial tools like shorting. Imagine what the price of most ERC20 assets would be with deeper shorting markets.
+
+dy/dx is extremely powerful because it gives users access to complex financial tools without sacrificing security and efficiency. Users of the contracts always retain custody of their funds and don’t have to rely on a central clearing house to verify their transactions. Similarly, dy/dx employs off-chain order books with on-chain settlement so users don’t have to pay numerous on-chain tx fees and deal with latency issues.
+
+
+==Indexing==
+
+Indexing is widely used in the traditional finance world as a means tracking the performance of a particular asset sector or the economy as a whole. Indexes give investors a more comprehensive measure of economic activity and help them deduce indicators for what the future might hold. Investors can also purchase index funds, baskets of various assets, in order to gain exposure to a particular asset class while minimizing risk. The most popular indexes in the United States are the S&P 500 and the DJIA.
+
+Investing in index funds has become increasingly popular as ‘passive investing’ has lowered the mental barriers for accessing the stock market. Ordinary investors don’t have the time to conduct proper due diligence necessary to pick individual stocks nor do they have the skills to actively manage their wealth. The theory goes, index funds make capital allocation more efficient as it allows more capital to enter the market.
+
+While using blockchain technology to power decentralized indexes brings all the benefits of self-custody and diminished counterparty risk, they will specifically add value to digital asset investors as there are currently few ways to efficiently track sectors and minimize risk.
+
+=== {Set} Protocol ===
+
+{Set} Protocol is a set of smart contracts that allow for the low-cost, trustless creation of collateralized baskets of ERC20 tokens. Users of the protocol can create {Set}s, which are abstract tokens fully collateralized by some set of underlying tokens. An easy example of a {Set} would be an ERC20 token representing a decentralized exchange index. Investors who want exposure to the DEX ecosystem could buy a {Set} that’s collateralized by ZRX, AST, and KNC. Another important trait of {Set}s is that they leverage all of the existing benefits of ERC20 infrastructure like seamless exchange and broad ecosystem support from wallets and exchanges.
+
+{Set}s are superior to owning individual tokens for many of the reasons index funds are more superior than owning individual stocks. Investors don’t have to expend time researching individual assets, rather, they can choose to allocate capital to a broader asset sector. The hope is that as the market becomes more rational and assets decouple, different sectors will move in response to real world events rather than Bitcoin (this is a big hope). If this ends up being the case, {Set}s will become an integral way of managing risk throughout the asset class.
+
+
+==Lending==
+
+Lending is a core tenet of any functioning economy. Loans help the economy grow at a faster rate as people can more quickly access capital and put it to work. At a high level, every loan has a borrower and a lender who agree on an amount borrowed, an interest rate, and a duration after which the debt has to be repaid. Borrowers usually incur penalty fees in the case of late payments or default.
+
+Today, large debt markets exist for consumers, businesses, and the government — all of which constantly need capital to fund their operations. Common examples include simple agreements like mortgage and auto loans as well as more complex arrangements like debt financing, credit derivatives, and municipal bonds.
+
+Although loans are a boon for economic activity, they suffer from a majority of the previously mentioned problems that plague centralized services. It is well documented that individuals in developing countries can’t access basic financing regardless of how beneficial they’ve been found to be. A lot of lending agreements are opaque by design. Whether it’s predatory penalty rates or purposeful secrecy like we saw in 2008 mortgages, the system thrives on walled gardens around information.
+
+Moving basic debt agreements onto the blockchain can provide a number of efficiency gains including open access, transparency, and programmability. Like previously mentioned, anyone in the world with an internet connection can access blockchain-based loans, all agreements created on public blockchains will be transparent, and the programmable nature of blockchain loans makes them more powerful as they can easily be ported across the web.
+
+===Dharma===
+
+Dharma is a decentralized protocol that makes it easy for anyone in the world to issue and crowdsource debt in the form of an ERC20 token. What this means is that anyone can leverage their development tools and smart contracts to originate, underwrite, issue, and administer debt agreements without a central third party.
+
+German Espitia has a great post summarizing the value of Dharma protocol as well as how it works. In summary, any debtor can approach an underwriter looking for a loan. The underwriter evaluates the debtors creditworthiness and creates a loan offer with specific terms based on their credit rating. Debtors who accept the terms sign a debt order which is forwarded to any number of relayers, which are entities that showcase orders for investors to fund. If a creditor wants to fund the loan, they sign the debt order and receive a non-fungible debt token which can be freely exchanged. All repayments by the borrower automatically go to the owner of that non-fungible token.
+
+Dharma provides an order of magnitude improvements in terms of access to capital, transparency, and programmability. Debtors no longer have to rely on large institutions to raise money, the same phenomenon we saw play out with ICOs in 2017 as it relates to equity markets. Traditional debt markets are also opaque and proprietary, in contrast to Dharma which is built on public infrastructure. Another big benefit is that developers will be able to use Dharma to create an infinite number of loan platforms and businesses around the world.
+
+===Compound===
+
+Compound is a decentralized protocol for creating efficient money markets on the Ethereum blockchain. Users can leverage Compound to lend out their ERC20 tokens in exchange for an algorithmically set interest rate, effectively allowing investors to trade the time value of their assets. Compound extends the benefits of blockchain technology to money markets as users don’t have to negotiate terms such as maturity, interest rate, or collateral with a peer or counterparty. Similarly, the history of each money market is completely transparent and auditable.
+
+Interest rates are necessary for any mature financial market. They make the system more efficient by allowing capital to flow to their most efficient uses. In crypto however, there are few avenues for borrowing and many of these assets actually have negative yield because of high storage costs and risks. This makes the market extremely inefficient as users have little incentive to hold their assets. Increased selling pressure contributes to volatility, which makes crypto assets unusable as both an SoV and MoE.
+
+Compound will drive a number of use cases that will help bring the crypto ecosystem into the utility phase. An obvious use case is borrowing tokens as a way to short a particular ERC20 asset. A more interesting one is crypto sweep accounts. In the same way that financial providers can loan the cash held on their platforms for an overnight rate, Compound will enable exchanges, custodial wallets, and other service providers to lend out their assets for short time intervals. This will create new economic abundance as these companies will now have a new revenue stream to fund their operations and create new services."
+(https://tokeneconomy.co/mapping-the-decentralized-financial-system-7c5af65e0335)
+
+[[Category:Crypto_Economy]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Money]]

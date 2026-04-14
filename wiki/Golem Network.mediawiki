@@ -1,0 +1,94 @@
+'''= "an open-source and decentralized platform where everyone can use and share each other's computing power without relying on centralized entities like cloud computing corporations".'''
+
+URL = https://www.golem.network/
+
+
+=Characteristics=
+
+Via ChatGPT:
+
+Here’s a detailed comparison of Golem Network and NuNet, highlighting their different visions, architectures, and operational models:
+
+==1. Core Concept & Vision==
+
+Golem Network
+
+Positions itself as a decentralized supercomputer running on Ethereum, aimed primarily at batch tasks like rendering, data crunching, and simulations 
+
+Focus: letting providers rent out compute power, requesters submit jobs through smart contracts, and using validators to ensure trust and security 
+medium.com
+
+NuNet
+
+Seeks to enable a compute-sharing marketplace that taps into idle CPU, GPU, IoT, and mobile resources globally—explicitly targeting AI, IoT, and edge computing use cases .
+
+Envisions a “zero-waste paradigm” where unused compute cycles are harnessed for global benefit, with decentralized, governance-driven orchestration 
+
+
+==2. Architecture & Workflow Coordination==
+
+Golem Network
+
+Uses a match-and-split model: jobs are divided into subtasks, matched to providers, executed, and recombined—all orchestrated via smart contracts and off-chain coordination (e.g., Yagna) 
+
+Relatively simpler, modular architecture designed for batch processing, with gradual decentralization of prior centralized control nodes .
+
+NuNet
+
+Offers a rich, self-organizing control plane, where on-chain and off-chain layers co-exist.
+
+Device Management Service (DMS) handles onboarding, identity, resource allocation, and decentralized orchestration across devices, similar to Kubernetes but fully decentralized 
+
+Incorporates graph-based resource matching, autonomous blockchain-based settlements, and dynamic workflow structuring 
+
+
+==3. Token Economics & Incentives==
+
+Golem Network (GNT)
+
+Taskers pay providers in GNT, based on supply-demand pricing; providers can cash out or exchange tokens 
+
+A validator layer certifies trusted tasks to prevent malicious code execution .
+
+NuNet (NTX)
+
+Dynamically priced NTX payments are tied to actual compute performed; includes proof-of-receipt mechanisms to ensure task completion before payment 
+
+Designed as a cross-chain token, initially launched on Ethereum and Cardano, meant to be chain-agnostic and adaptable 
+
+
+==4. Target Users & Use Cases==
+
+Golem Network
+
+Geared toward developers and creatives needing burst compute for offline tasks—e.g., 3D rendering, encryption, compression, scientific simulations 
+
+
+NuNet
+
+Targets broader IoT, AI, data, and ML ecosystems, enabling federated learning, edge processing, secure data orchestration, Web3 dApps, and smart-city systems .
+
+Prioritizes accessibility from a wide range of devices—PCs, smartphones, clusters, and even sensor networks 
+ 
+
+==5. Governance & Decentralization Approach==
+
+Golem Network
+
+Continuously aims to reduce centralized dependencies (e.g., on Yagna), moving toward a trustless, fully peer-to-peer model; payment scalability using Ethereum, Polygon, and zkSync 
+
+
+NuNet
+
+Emphasizes self-governance, decentralization in both infrastructure and ownership, with a structured transition toward public governance (NuNet Foundation, Solutions entity) 
+
+Fully open-source under Apache 2.0, with a moving timeline toward decentralized control by 2026 ."
+
+
+
+
+=More information=
+
+* [[Nunet]]
+
+[[Category:P2P_Infrastructure]]

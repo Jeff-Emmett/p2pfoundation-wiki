@@ -1,0 +1,22 @@
+
+'''= Spotify is the only on-demand music streaming service that’s not web-based. Instead, it uses a peer-to-peer network (p2p) that can scale up to meet the demands of millions of users.'''
+
+
+=Description=
+
+The Peer to Peer Network
+
+"Spotify’s p2p network works like a BitTorrent network to locate peers (other users who have the song you want to listen to). It uses a proprietary protocol designed especially for streaming music.
+
+There’s no “preferred” peers or supernodes, but a future improvement might be to use peer-to-peer overlays to exploit the overlap in interests between users.
+
+The maximum number of peers in the network is 60, with a soft-limit of 50 peers.
+
+The client uploads to at most 4 peers at a time.
+
+Server-side trackers and network queries are used to locate other users who have the music you’re listening to.
+Spotify uses TCP as the transport protocol instead of UDP, since it can take advantage of TCP’s congestion controls and ability to re-send lost packets."
+(http://pansentient.com/2011/04/spotify-technology-some-stats-and-how-spotify-works/)
+
+
+[[Category:Music]]

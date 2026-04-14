@@ -1,0 +1,69 @@
+
+'''= "Block generation is performed by so-called Cooperatively Validated Nodes (CVNs). CVNs are appointed in a democratic process".''' [https://github.com/faircoin/faircoin/blob/master/doc/on-proof-of-cooperation.md]
+
+=Description=
+
+'''0.''' 
+
+"An energy saving blockchain facilitating cooperation instead of competition.
+With FairCoin there is a new generation of cryptocurrency and blockchain functionality. ‘Proof of Cooperation’ (PoC) is the unique consensus algorithm developed for FairCoin. In contrast to other cryptocurrencies FairCoin does not implement any mining or minting functionality, which are only needed for competitive systems. Instead, so called ‘Collaboratively Validated Nodes‘ (CVNs) cooperate to create new blocks and to secure the network. The money supply has been frozen at 53,193,831 FAIR and can not further be changed by creating blocks."
+(https://fair-coin.org/en/white-paper?)
+
+
+
+'''1. By Rachel Rose O'Leary:'''
+
+"Initially built on proof-of-stake, faircoin switched to a new way to protect its cryptocurrency in 2017, named "proof-of-cooperation." Designed by faircoin core developer Thomas König, proof-of-cooperation is an ultra light-weight consensus mechanism that runs on a set of 19 raspberry pies.
+
+"The whole system runs on 60 watts, so two light bulbs," Sporos told CoinDesk.
+
+Seeking to disable the competitive nature of bitcoin mining, proof-of-cooperation requires that all 19 of these nodes must collaborate in order to validate a block – a task for which they're paid for in transaction fees. Compared to other cryptocurrencies, at a mere 19 block-producing nodes, the underlying group responsible for keeping the network moving are less broadly distributed.
+
+And that's because, in order to become one of these nodes, faircoin deploys a social vetting process – intended to protect its economy from bad actors, like hackers or speculators.
+
+The underlying block creators – comprised of what is known as a "cooperatively validated node" – must be approved by the FairCoop assembly, a network of roughly 280 faircoin users responsible for making decisions, to ensure their ideological commitment to the project."
+(https://www.coindesk.com/how-a-left-for-dead-0-22-crypto-asset-became-a-lifeline-for-activists/amp/)
+
+
+'''2. Klenergy:'''
+
+"“Traditional cryptocurrency mining takes an enormous amount of energy — which makes it not only expensive, but also takes a toll on the environment.
+Faircoin operates on a completely different system — it calls itself the “cooperative version of Bitcoin”.
+
+“Proof-of-Cooperation does not have this mining functionality. Instead, there are certified validation nodes (CVNs) which cooperate to secure the network.
+
+How does the proof-of-cooperation algorithm work? The consensus rules determine which CVN has to create the next block. Each CVN approves that CVN by digitally signing a piece of data which contains its unique ID. After the respective CVN received all the necessary signatures, it takes pending transactions and forms a new block, which is then stored in the immutable and distributed blockchain database.
+
+There are no rewards for block creation, besides a very small fee that is awarded for any block creators to compensate for the energy and bandwidth costs of running a CVN.”
+(https://medium.com/@KlenergyTech/pylon-network-faircoop-building-a-scalable-blockchain-consensus-for-the-energy-system-c43950e18ea4)
+
+=Discussion=
+
+Fairly technical discussion, by Thomas König, tom@fair-coin.org, 0x21792bf5
+
+"Two years ago I became aware of the enormous demand for energy and the concentration of power around some pool operators in the Bitcoin network. I thought that there must be a better way to do it. Why not try to let nodes cooperate instead of competing to generate blocks. In many thought experiments I tried to eliminate mining and replace it with something different that serves the same purpose. A profound assumption of the new system is that cooperation is more efficient than competition. The concept of proof-of-cooperation was born and I started work on the white paper.
+
+
+Proof-of-cooperation (in short PoC) is implemented in FairCoin2, which is a fork of the Bitcoin 0.12 branch. All mining related code has been removed and replaced by PoC code. '''Block generation is performed by so-called Cooperatively Validated Nodes (CVNs). CVNs are appointed in a democratic process''' which is out of the scope of this technical document. CVNs can be added or removed from the network dynamically. CVN information is stored in the blockchain. The mandatory transaction fees go to the respective block creators to compensate their efforts for running a CVN. Certain chain parameters, e.g. the time between blocks, the amount of the transaction fee, etc. are dynamically adjustable without the need of releasing a new wallet version. These dynamic chain parameters are also stored in the blockchain. The appointed FairCoin blockchain administrators (not the developers) take on the task of managing these parameters. The FairCoin2 network is comprised of a virtually unlimited number of full nodes and a limited number of CVNs. The maximum hard coded value is 100 but the actual target is 40-50 CVNs."
+(https://github.com/faircoin/faircoin/blob/master/doc/on-proof-of-cooperation.md)
+
+
+=Example=
+
+"In contrast to FairCoin1 which implemented proof-of-stake (PoS) in the creation of new blocks, '''the new FairCoin software implements the innovative proof-of-cooperation (PoC) algorithm'''. The FairCoin code base was forked from the Bitcoin v0.12 code base in March 2016, and the PoC algorithm was implemented on this. This new PoC algorithm is based on a group of authenticated nodes called 'Cooperatively Validated Nodes' (CVNs). These nodes cooperate together to create new blocks in a round robin manner. There is no competitive mining or minting going on anymore. Blocks are created at agreed intervals (initially every 3 minutes). '''Block-creation is effortless and does not waste energy or computing resources.''' 
+
+FairCoin1 and the new FairCoin blockchain have nothing in common other than the balance of the addresses.
+
+In contrast to PoS/PoW coins, in the FairCoin blockchain the money supply is constant. No new coins will be created. The block reward (coinbase transaction) only contains the transaction fees."
+(https://github.com/faircoin/faircoin/wiki/FairCoin2-migration-FAQ)
+
+=More Information=
+
+* More information about proof-of-cooperation can be found in this document: https://github.com/faircoin/faircoin/blob/master/doc/on-proof-of-cooperation.md.
+
+
+[[Category:Cryptoledger Applications]]
+
+[[Category:Energy]]
+
+[[Category:Cooperation]]

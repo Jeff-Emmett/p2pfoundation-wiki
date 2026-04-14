@@ -1,0 +1,127 @@
+See also: 
+
+* [[Open Source Hardware Business Models]] for a more extensive summary.
+
+* [[Business Models for Open Hardware]], the report/overview by Massimo Menichelli.
+
+=Summary=
+
+Jamil Khatib:
+
+The OpenHW concept will lead to the emergence of new business models that depend on: 
+
+#Design distribution where companies can pack set of designs and sell the distribution. 
+#Design support experts can give support for OpenHW designs. 
+#Design implementation companies can implement the designs and sell them. 
+#Programmable logic devices and boards can increase their market.
+(http://www.opencores.org/articles.cgi/view/12)
+
+
+=Typology=
+
+Massimo Menichinelli:
+
+"Salem & Khatib proposed four business models for Open Hardware companies; later Edy Ferreira and Stoyan Tanev further expanded these to seven business models. According to Edy Ferreira and Stoyan Tanev, there is little research on the types of business models specifically related to Open Hardware, just like there is no consensus on the definition of Open Hardware itself as well. The open asset is different from the ultimate market offer, the manufactured hardware device itself, and hence the problems with the adoption of existing Open Source business models. 
+
+
+Ferrera and Tanev examined 4 companies, 88 market offers and 93 Open Hardware projects, and then identified seven business models for Open Hardware:
+
+1. Services (customization, consulting) over owned or third party Open Hardware.
+   
+2. Manufacturing of owned or third party Open Hardware.
+   
+3. Manufacturing of proprietary hardware based on Open Hardware.
+   
+4. Dual-licensing: companies owning Open Hardware designs that are offered for use under either a GPL license or a proprietary license. The design does not contain any proprietary module.
+   
+5. Proprietary hardware designs based on Open Hardware.
+   
+6. Hardware tools for Open Hardware: companies selling the right of ownership of development boards for the testing and verification of hardware devices manufactured on the basis of the Open Hardware assets. The designs of these boards are entirely proprietary (another related example is Sparklelabs).
+   
+7. Proprietary Software tools for developing Open Hardware.
+
+
+Furthermore, there are three more business models for Open Hardware already implemented:
+
+1. Free service for building a greater user base: Adafruit created Adafruit Jobs Board as a marketplace for designers, makers, programmers, artists, engineers and companies who want to meet and work together. This is a free service, but in order to use the job boards users must be Adafruit customers.
+   
+2. Partnership between Long Tail Open and Fabbing businesses: Ponoko has teamed up with SparkFun Electronics to enable its users to build custom electronics products combining Ponoko’s laser cutting technology with a 1500+ strong electronics catalog from open source electronics supplier SparkFun.
+   
+3. Funding Open Hardware projects for getting good Open documentation: In August 2010, Bildr offered to fund original user projects in return for good documentation: in this way it would have promoted a bildr user by showcasing his/her work and paying for the parts to construct it. In return, Bildr would have got more information for its wiki, blog and community under the MIT software license."
+(http://www.openp2pdesign.org/2011/open-design/business-models-for-open-hardware/)
+
+=Status=
+
+==The Market for Open Hardware==
+
+Massimo Menichinelli:
+
+"In May 2010 Philip Torrone and Limor Fried collected 13 examples of companies that are selling open source hardware: according to them, these companies, generate a turnover of about $ 50 million and there are currently about 200 open source hardware projects of this kind. They project the open source hardware community to reach $ 1 billion by 2015. Adafruit, Arduino, Chumby and Liquidware have each one $ 1 million in revenue, and Torrone and Fried estimated them to reach a $ 5 million revenue soon (while many other companies will reach a $ 1 million revenue). Sparkfun alone has even a $ 10 million revenue.
+
+In January 2010, Joseph Flaherty calculated that the Makerbot  (an open hardware 3D printer produced by a 3-person firm) has a revenue of $ 1,350,000-1,710,000 (1,800 * $ 750-950). The industry leader Stratasys (which uses a FDM technology similar to MakerBot) had a total revenue of $ 124,500,000 in 2008, but with a considerably bigger firm and more R&D investments. And MarkeBot has just opened a retail store in New York called the Botcave."
+(http://www.openp2pdesign.org/2011/open-design/business-models-for-open-hardware/)
+
+=Discussion=
+
+
+==The Two Models==
+
+This is a quote from a very interesting treatment of open hardware trends by Wired, which starts with an extensive profile of Arduino. It’s a real must read article.
+
+See: http://www.wired.com/techbiz/startups/magazine/16-11/ff_openmanufacturing?
+
+One of the aspects covered by Clive Thompson’s article are two possible business models for open source hardware:
+
+“'''1.'''
+
+“Right now, open design pioneers tend to follow one of two economic models. The first is not to worry about selling much hardware but instead to sell your expertise as the inventor. If anyone can manufacture a device, then the most efficient manufacturer will do so at the best price. Fine, let them. It’ll ensure your contraption is widely distributed. Because you’re the inventor, though, the community of users will inevitably congregate around you, much as Torvalds was the hub for Linux. You will always be the first to hear about cool improvements or innovative uses for your device. That knowledge becomes your most valuable asset, which you can sell to anyone.
+
+This is precisely how the Arduino team works. It makes little off the sale of each board—only a few dollars of the $35 price, which gets rolled into the next production cycle. But the serious income comes from clients who want to build devices based on the board and who hire the founders as consultants.
+
+“Basically, what we have is the brand,” says Tom Igoe, an associate professor at the Interactive Telecommunications Program at New York University, who joined Arduino in 2005. “And brand matters.”
+
+What’s more, the growing Arduino community performs free labor for the consultants. Clients of Banzi’s design firm often want him to create Arduino-powered products. For example, one client wanted to control LED arrays. Poking around online, Banzi found that someone in France had already published Arduino code that did the job. Banzi took the code and was done.”
+
+'''2.'''
+
+“Then there’s the second model for making money off open source hardware: Sell your device but try to keep ahead of the competition. This isn’t as hard as it seems. Last year, Arduino noticed that copycat versions of its board made in China and Taiwan were being sold online. Yet sales through the main Arduino store were still increasing dramatically. Why?
+
+Partly because many Asian knockoffs were poor quality, rife with soldering errors and flimsy pin connections. The competition created a larger market but also ensured that the original makers stayed a generation ahead of the cheap imitations. Merely having the specs for a product doesn’t mean a copycat will make a quality item. That takes skill, and the Arduino team understood its device better than just about anyone else. “So the copycats can actually turn out to be good for our business,” Igoe says.”
+
+The article also covers the limits of such projects.
+
+Here’s the quote:
+
+“I can’t help but think there are limits to this. Passionate amateurs can create an MP3 player or a synthesizer. But what about a jet engine? Or a car? To pass regulatory tests, these products require expensive laboratory equipment, like wind tunnels for car shapes and airplane parts, or crash labs. That can’t be accomplished by a bunch of loosely connected designers surfing on their laptops in a Starbucks.
+
+Yochai Benkler isn’t so sure. The Harvard professor and author of The Wealth of Networks predicts that smart commercial firms will share resources with open source communities. “If you want to design a car in an open source way, maybe you’ll work with a corporation that has access to an expensive wind tunnel,” he says. This sort of cooperation has become common for open source software. IBM and Sun Microsystems pay staff members to contribute to Linux because it’s in the companies’ interest to have the software grow more powerful, even if competitors benefit.”
+(http://www.wired.com/techbiz/startups/magazine/16-11/ff_openmanufacturing?)
+
+In fact, the [https://sites.google.com/site/multitude2008/Home Multitude Project] proposed a model for such cooperation, the [https://sites.google.com/site/multitudeinnovation/home/discovery-network Discovery Network], which is an open network that can be composed of independent individuals, other Discovery Networks, and any other kind of organization, including classical hierarchical and closed commercial firms. A [https://docs.google.com/document/edit?id=1Ux3LG6g9zObMYKJO_A_c1NL7pNLP6exEOF1na5Atc88&hl=en Value Exchange Mechanism] was specially designed to allow these entities to share resources and to redistribute the value generated by the joint venture, in proportion to their respective contribution. Multitude Project claims that the Discovery Network is, in principle, capable of putting an idea on the market in the form of a material product or a service, regardless of its complexity. A pilot project is already under way, with the aim of commercializing the [https://sites.google.com/site/matchmakingdevice/ Matchmaking Device System], an electronic device. The Discovery Network is also designed to interface with other such networks, enabling them to "polymerize" into super-networks.
+
+
+==Balancing Open and Closed==
+
+"Many of the successful open source hardware projects have in common that they rigorously protect one aspect of their business: arduino gives away the board but keeps the brand and trademark, beagleboard gives away the design by keeps the chip gate array design, bug labs gives away the schematics but restricts the inter-module snap-connect interface, liquidware gives away the hardware at cost, but keeps the analytical algorithms."
+(http://antipastohw.blogspot.com/2010/10/open-source-hardware-summit-debrief.html)
+
+
+=More Information=
+
+#[[Open Hardware]]; [[Open Source Hardware]]
+#[[Open Source Hardware Business Models]] for a more extensive summary.
+#[[Business Models for Open Hardware]], the report/overview by Massimo Menichelli.
+#Video: [[Chris Anderson on Microeconomics for Makers]]
+
+
+[[Category:Business]]
+
+[[Category:Technology]]
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]
+
+[[Category:Open]]
+
+[[Category:Business Models]]

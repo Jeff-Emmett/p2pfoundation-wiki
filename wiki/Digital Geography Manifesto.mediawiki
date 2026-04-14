@@ -1,0 +1,83 @@
+
+'''Article: A digital geography manifesto. Jonathan Raper. Receiver magazine 61. 2008'''
+
+URL = http://www.receiver.vodafone.com/a-digital-geography-manifesto
+
+
+=Context=
+
+Jonathan Raper:
+
+
+"My digital geography manifesto was a tongue-in-cheek statement of some of the challenges that we faced in designing and implementing a new generation of "egocentric" mobile applications that will bring the power of location technology to mobile devices everywhere. As I write this, two and a half years have passed and it is instructive to revisit the manifesto's ten principles and see which of them captured an enduring issue – and which of them has already been solved. "
+(http://www.receiver.vodafone.com/a-digital-geography-manifesto)
+
+
+
+=Text: the 10 principles revisited=
+
+
+Jonathan Raper:
+
+'''1. A digital geography must represent geography responsibly and strive for emancipation'''
+
+The first principle is concerned with who benefits from location technology. If location technology leads to an enslaved population who are tracked and interdicted by a brutalising state, or probed and profiled by unaccountable, corporate monopolies, then we will have unleashed a demon. If, however, "technology is neutral" (to paraphrase the title of Chapman's famous book, The Jungle is Neutral), then both good and bad will come from location technology, and by regulating the latter and encouraging the former we can have the best of both worlds. This reality has not budged since 2006, but the bar gets higher as the market gets bigger, and regulation is still piecemeal, with big differences between nations.
+
+This principle also encourages us to design location based services that are emancipatory, that is, that help and free people from their daily constraints. Our own "LBS4all" project at the Department of Information Science at City University London explored use cases for LBS, with blind and older people. The results were to highlight the desire for blind users to be able to browse their environment, rather than proceed directly from A to B, and older people envisaged LBS as a kind of augmentation to their senses and as a support when going to new places. Notably, these use cases are not the prototypical "where's my nearest cashpoint?" type of query. They remind us of the dangers of designing for urban myths, rather than real needs, elicited by full-scale technology demonstrations.
+
+
+'''2. All consumers of digital geography must also be creators (even if they don't know it yet)'''
+
+One of the fundamentals of geography is that we are immersed in it all the time … you cannot escape! So when we use location technology we must simultaneously situate ourselves and also break cover. We passively create when we are located and connected using location technology: our potential data trail is simultaneously necessary for LBS developers and troubling to users. It is necessary for developers because many applications will only really impress users when their data trail provides the contextual intelligence that is required to produce geographically relevant (GR) output. We have done lots of research on GR and developed a range of tools to characterise and filter context for the mobile user in our Placr startup. This manifesto principle also anticipated the importance of location-based user-generated content that is now exploding on mobile social networking (eg Whereyagonnabe on Facebook) and photo sharing sites like Locr. 
+
+
+'''3. The digital geographic world view states that where you are is what you know'''
+
+It is a measure of the progress in LBS over the last three years that this sounds commonplace because you can consult Google on a mobile. However, this principle hides one of the most intractable issues in LBS development - developing truly ubiquitous but local services. Reports of the "death of distance" (as argued in Frances Cairncross' book of the same name) are greatly exaggerated, and understanding the local aspects of a place of use for mobile information remains a location "grand challenge". Ontology-based approaches are the most widely used solutions at present, where your location is looked up in a gazetteer, and services are instantiated on the basis of what is known about that (usually) administrative zone. This is a very limited understanding of the user's information needs and requires much more work. Mining data trails is one way to address this, especially to try to find natural places where people go, but which are not already known as points of interest. 
+
+
+'''4. Digital geography should aim to reduce the economic cost of ‘lost’'''
+
+Though I have looked hard, I have failed to find any authoritative estimate of the cost to a developed economy of its citizens being periodically lost, on either business or pleasure. It is fair to assume that it is an enormous sum of money, and the huge sales of Sat Nav systems for cars bear testament to the desire of people to reduce this waste of time, effort and money. However, in-car Sat Nav applications are a special case of a general requirement for personal navigation that can encompass public transport augmentation, pedestrian guidance and leisure applications like hiking and running. The best example of location technology in personal navigation must surely be Navitime in Japan, who have 2.5 million users on mobile networks in Japan. Japanese cities are large and complex, so tools like Navitime (fully integrated with public transport information) are a natural response to the need to find your way and be efficient in the face of semi-permanent congestion. Location technologies will be able to make a major contribution to economic efficiency over the next decade, one un-costed but essential reason for massive infrastructural location projects, like Europe's Galileo satellite positioning system. 
+
+
+'''5. The using classes must govern the production of digital geo-content'''
+
+Despite the echoes of Marxism, this principle raised questions about the intellectual property that is invested in location, as well as user generated content and the new dimensions of location privacy that accompany LBS. So, who owns your location information if you create it digitally? You, of course (in Europe you must consent to its use, under Data Protection legislation) but what about derivatives such as the number of times you are close to any given place, or the average speed you have done on a given stretch of road? Should mobile providers use personalised or anonymous tracking data to market services to you or to target advertising about places you go? And does anyone, anywhere in the world, have the right for their location data to remain private in the face of civil misdemeanours, such as traffic offences? These issues have still not been fully explored and publically debated and yet clear answers seem to be necessary for the mass acceptance of location technologies and LBS.
+
+ 
+
+'''6. Information is power; digital geo-information is the power of place'''
+
+I drafted this principle to explore the kinds of power over place and space that is uniquely afforded by (digital) geo-information. If location technologies allow us to know much more about real-time individual and collective behaviour, then a number of new insights become possible. For example, Portuguese water companies operating services in small resorts have used local mobile phone counts to control water supply volume over the year, and Estonian local authorities have used the number of phones crossing bridges to review closure decisions. Capturing mass behaviour has also allowed new insights into traffic patterns (eg TomTom's IQ Streets product for in-car navigation). There are potential problems in the medium term when a large proportion of the users of a service or infrastructure can query its state and make real-time commitments on the basis of the information. For example, so many people may leave a blocked road that the alternative becomes blocked and the original route becomes free. This will require architectures and regulation, or routine use, and will have significant value for emergency management.
+
+ 
+
+'''7. A geo-processor in your hand is worth ten in the office'''
+
+There are questions about processing power available on mobile devices used in LBS, despite the fact that mobile processor speeds are now comparable with desktop machines from around 2000. Moore's Law appears to have broken down on mobile devices since 2005 - the fastest processor on a consumer PDA/smartphone in 2008 is still 624Mhz, as it was three years ago, though on-board RAM and storage memory is still increasing. This means that there is a limit to the processing that can be carried out on mobile devices and there is a need to distribute processing to servers accessible on the network, if they can be accessed quickly and cheaply enough. In our experience of creating the operational LBS 'WebPark' at the Swiss National Park, the costs and latency of network connections are still unfavourable for use in consumer-facing applications, and most of the content and intelligence is cached locally using the Camineo platform. Even 10 seconds to get connected is much too long, and this militates against delivering services requiring on-line processing. Thus, there is a performance envelope for mobile location technology that defines what can be delivered to users, at a quality they will tolerate. Much remains to be done in this area, including the development of on-line content caching, driven by location and positional behaviour. 
+
+
+'''8. There are limits to what you can geo-know; the problem is finding what they are'''
+
+This principle is concerned with the knowledge and skills that users tend to bring to the use of LBS. For example, we have explored the influence of sense of direction on the effort required to use different LBS interfaces in the Locus project. We found, in practical tests, that users navigate faster with a mobile device using a virtual reality interface, compared to the map, but that the VR interface takes more effort. The Ergonomics and Safety Research Institute, at Loughborough in the UK, has shown that using in-car navigation interfaces requires significant cognitive resources – which distracts drivers, leading the UK Department of Transport to consult on whether to regulate or ban in-vehicle information systems in 2006 (they ultimately decided not to). The differential loading of users with different spatial capabilities by the wide range of location technologies, means that developers have to address a very diverse and fragmented market, perhaps by the development of profiles or personalisation tools for the user. 
+
+
+'''9. You can put a digital geography on screen but when you can overlay your current position, correctly, in real-time, then you have really got something'''
+
+I still vividly remember getting my first personal GPS receiver in the late 1990s, and taking it outside to get a position. When it got a fix, it simply showed a rather underwhelming set of cross-hairs on a blank screen as it was not possible to load mapping onto the early devices. The realisation that live positions and maps are both needed to produce location intelligence, was followed by several frustrating years before systems capable of importing standard digital map content became available, around 2002. Only then was it possible to experiment with applications that used real-time, on-line mapping, and professional tools developed back then like ArcPad have given way to Google Maps for Mobile. Although the mapping problems have almost all been solved in the last five years, the broader geospatial content management challenges for mobile have not yet been addressed.
+
+
+'''10. You never truly possess any geo-information unless it is backed up'''
+
+Although this is a real "motherhood and apple pie" statement, there are some specific challenges in preserving tracks, photos and other user generated content from LBS until it can be uploaded, synchronised or backed up. This is achieved in real-time for connected mobile services, but is limited to the places and times when this is possible. We have experienced specific data losses in research and commercial deployments for autonomous devices with low bandwidth data connections, when memory cards have failed or servers have had disk crashes.
+
+We're through. So, what can I say? The digital geography manifesto seems to have stood the test of time quite well, and still defines the key challenges that lie ahead for location technology and LBS. The next two to three years will be critical for location technologies and LBS: now that the infrastructure is falling into place, the environment for delivering consumer location solutions is at last becoming truly favourable."
+(http://www.receiver.vodafone.com/a-digital-geography-manifesto)
+
+
+[[Category:Articles]]
+
+[[Category:Politics]]
+
+[[Category:Geography]]

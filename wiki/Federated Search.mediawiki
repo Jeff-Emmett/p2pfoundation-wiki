@@ -1,0 +1,37 @@
+'''Federated search''' is an information retrieval technology that allows the simultaneous search of multiple searchable resources.  A user makes a single query request which is distributed to the search engines participating in the federation.  The federated search then aggregates the results that are received from the search engines for presentation to the user.
+
+==Purpose==
+Federated search came about to meet the need of searching multiple disparate content sources with one query.  This allows a user to search multiple database at once in real time, arrange the results from the various databases into a useful form and then present the results to the user.
+
+==Approaches to Federated Search==
+Web search is centralized. P2P search engines, like [[YaCy]], exist but are still developing. An intermediate challenge to central search is federation. Smaller players in search like, DuckDuckGo and Ixquick, could bandied together. They would establish open standards and an open API. With open source search software, virtually anyone who can run a server can create a mini search service.
+
+==The Federated Web==
+Federated search would be apart of an intermediate step toward a federated web.  The federated web would include services like federated wikis, blogs, social networks, email, local/regional physical networks, and so on. Many of the services and software provided by the current iteration of the web, would transition over to federated providers. Physical federation of some of the network would eventually take part in the transition to [http://p2pfoundation.net/Free_Network_Movement Free Networks].
+
+[[Unhosted]] versions, or offline web apps, of federated apps would be the next intermediate step before the creation of [[Peer Net]] apps.
+
+==Challenges==
+When federated search is performed against secure data sources, the users' credentials must be passed on to each underlying search engine, so that appropriate security is maintained.  If the user has different login credentials for different systems, there must be a means to map their login ID to each search engine's security domain. Things like [[Federated Identity]] and, potentially, Openid solve this.
+
+Another challenge is mapping results list navigators into a common form.  Suppose 3 real-estate sites are searched, each provides a list of hyperlinked city names to click on, to see matches only in each city.  Ideally these facets would be combined into one set, but that presents additional technical challenges. The system also needs to understand "next page" links if it's going to allow the user to page through the combined results.
+
+But technical problems are unlikely to be a big entry barrier-- socio-political-cultural-economic  challenges are bigger.
+
+==See Also==
+*[[Distributed Search Engines]]
+*[[Federated Social Identity]]
+*[[Federated Social Web]]
+
+==External Links==
+*[https://en.wikipedia.org/wiki/Federated_search Wikipedia on Federated Search]
+*[https://en.wikipedia.org/wiki/List_of_search_engines#Open_source_search_engines List of Open Source Search Engines]
+*[http://www.w3.org/2005/Incubator/federatedsocialweb/wiki/Main_Page W3's Federated Social Web Proposal]
+*[http://federatedsearchblog.com/tag/federated-search/ Federated Search Blog]
+
+
+[[Category:P2P Infrastructure]]
+[[Category:NextNet]]
+[[Category:Application Layer]]
+[[Category:Collaboration_Software]]
+[[Category:Autonomous_Internet]]

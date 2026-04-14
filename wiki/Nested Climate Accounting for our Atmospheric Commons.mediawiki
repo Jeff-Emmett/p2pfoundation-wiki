@@ -1,0 +1,42 @@
+
+'''* Article: Nested Climate Accounting for Our Atmospheric Commons — Digital Technologies for Trusted Interoperability Across Fragmented Systems. By Marco Schletz Angel Hsu, Brendan Mapes, et al. Front. Blockchain, 31 January 2022 [https://doi.org/10.3389/fbloc.2021.789953]'''
+
+URL = https://www.frontiersin.org/articles/10.3389/fbloc.2021.789953/full
+
+=Abstract=
+
+"The Paris Agreement’s decentralized and bottom-up approach to climate action poses an enormous accounting challenge by substantially increasing the number of heterogeneous national, sub-national, and non-state actors. Current legacy climate accounting systems and mechanisms are insufficient to avoid information asymmetry and double-counting due to actor heterogeneity and fragmentation. This paper presents a nested climate accounting architecture that integrates several innovative digital technologies, such as Distributed Ledger Technology, Internet of Things, Machine Learning, and concepts such as nested accounting and decentralized identifiers to improve interoperability across accounting systems. Such an architecture can enhance capacity building and technology transfer to the Global South by creating innovation groups, increasing scalability of accounting solutions that can lead to leapfrogging into innovative systems designs, and improving inclusiveness."
+
+
+=Contents=
+
+'''1.'''
+
+"In this paper, we focus on all processes, mechanisms and tools related to “climate change accounting and reporting” (Gulluscio et al., 2020), which can apply to greenhouse gas (GHG) inventories for the purposes of complying with regulations or international frameworks like the Paris Agreement, or voluntary management. ..  climate accounting issues speak to the need for an integrated system of “nested accounting” - where emissions are accounted for at one level of analysis (e.g., a specific forest conservation project or a specific facility, such as a power plant) and are factored into emissions at a higher level of analysis (e.g., a municipality, region, or country). A “nested accounting” system with this structure has multiple benefits. It can link disparate climate policies by allowing emissions reductions in one jurisdiction to be accurately counted towards mitigation commitments of another, reducing the costs of achieving a particular climate goal (Mehling et al., 2018). It can also allow for the identification of policies and actions that are in addition to (i.e., “additional”) efforts at higher administrative levels (e.g., country-level), where an NSA receives credit or recognition for its ambitious efforts. Such a transparent, nested accounting system can build pressure for national-level increases in ambition where additionality is identified and lessen national-level actor burden for securing climate goals in isolation (Wainstein 2019)."
+
+
+'''2.'''
+
+"The contribution of this paper to DLT-based climate accounting is threefold: First, the paper describes a novel DLT-based architecture that adopts a holistic view to integrating all the currently fragmented data verticals into a shared and interoperable “internet of climate data” architecture. The internet of climate data concept comprises comparing and harmonising data verticals, i.e. remote inventories, source data from NSAs and country legacy inventories that follow the Intergovernmental Panel on Climate Change (IPCC) methodologies. Second, the architecture builds on DLT and other emerging technologies to ensure complete data traceability over the mitigation outcome lifecycle by creating and verifying digitally representative assets of real-world climate action. Third, the integrated data architecture and digital climate assets enhance global coordination and improve decentralized governance among all the heterogeneous and nested climate actors."
+
+
+=Characteristics=
+
+* The Platform of Platforms (PoP) integrates various data sources, i.e. source-specific IoT data, legacy data derived from the actors themselves, and EO data, into a shared, decentralized platform hub (“Interoperability and Harmonization”), such as a “ledger of ledgers” or “meta-registry” (Schletz et al., 2020a). DLT automates data harmonization, processing, and dissemination to create interoperability amongst the fragmented systems and makes data transparent in a tamper-resilient and immutable ledger (Kewell et al., 2017; Beck et al., 2018; Franke et al., 2020). Such harmonization and integration of the heterogeneous accounting systems are essential to allow close to real-time data and create a reporting system that aggregates data from the various sources to generate traceability across the nested actors and data sources to prevent double counting.
+
+* A DLT-based architecture further creates a joint and open structure to distribute data ownership and access, thereby reducing information asymmetry (Cong and He 2019). For example, the World Bank Climate Warehouse (Dong et al., 2018; Jackson et al., 2018; World Bank Group 2019) demonstrated how the country, regional, and institutional databases and registries integrate into a DLT-based meta-registry that surfaces climate data for decentralized verification and reconciliation. In these PoP architectures, DLT works as a “decentralized source of truth” that registers the reference to a specific data recording, such as documents, images or other files, as a hash in a transaction. This approach reduces the requirements for on-chain storage while maintaining tamper-resilience as changes in the off-chain data recording would result in a different hash and would be thus visible. The Inter Planetary File System (IPFS) could be used as an off-chain and decentralized storage system to store these larger data recordings (Franke et al., 2020). In addition, Application Programming Interface (APIs) could act as integrators to link and reconcile records from existing legacy systems and improve interoperability of content sharing across platforms, portals, and websites by connecting the various programming interfaces. The API data streams could then be registered in the DLT system as transactions. However, these APIs depend on using a shared and consistent taxonomy of keyword tags across the different protocols and interfaces (Giuliani et al., 2017; Barrott et al., 2020).
+
+* Digital Trust and Interoperability: The nested accounting data from the PoP would be organized as a decentralized ID (DID) (Figure 2, d.) to create a verifiable, decentralized, and digital identity for each climate actor."
+
+
+[[Category:P2P Accounting]]
+[[Category:Thermodynamic Efficiencies]]
+[[Category:Articles]]
+[[Category:Ecology]]
+[[Category:Policy]]
+
+[[Category:P2P Accounting]]
+[[Category:Thermodynamic Efficiencies]]
+[[Category:Articles]]
+[[Category:Ecology]]
+[[Category:Policy]]

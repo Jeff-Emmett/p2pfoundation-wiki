@@ -1,0 +1,86 @@
+'''The Cathedral and The Bazaar. By Eric Raymond''' 
+
+
+URL = http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/
+
+Book about the process of [[Peer Production]] for [[Open Source Software]] projects, and their forms of [[Peer Governance]]
+
+
+=Description=
+
+
+This classic argument for open source contrasts bottom-up vs. centralized control approaches to developing software.
+
+=Review=
+
+Tim Rayner:
+
+"If not for Linux, where would we be today? If not for Eric S. Raymond’s magisterial book on open source culture, I’d probably still be waffling on about swarms and social change. Raymond puts his finger on the cultural logic that drives open source production: gift culture. When I integrated this insight into my thinking on prosumers, I realized that gift culture was the link between hackerdom and social media prosumption. Mark Zuckerberg’s fondness for hacker culture fed directly into the construction of Facebook and his vision of ‘frictionless sharing’. As I say in a recent post, it is enlightening to think of your Facebook feed as giant, ongoing, potlatch ceremony.
+
+Another mind-blowing insight I took from Raymond was that the mainstreaming of open source that happened around the turn of the millennium was the product of a marketing campaign spearheaded by Netscape’s CEO, Jim Barksdale. In 1998, Netscape, who had been singled out for destruction by Microsoft for their dalliances with open source, made the strategic decision to throw its lot in with the emerging culture, and released the sources of the Netscape client onto the internet. This led to the creation of the Mozilla Foundation and the strategic branding of ‘open source’ as a viable mode of economic production. Raymond, who was employed by Barksdale to head-up the marketing campaign that accompanied this shift, hammers home the irony of this event. Open source culture was marketed to the world by an internet corporation (Netscape). The whole effort was conceived and undertaken in a top down fashion by Barksdale who, as Raymond says, ‘got the clue and imposed that vision on the people below him’.
+
+Which just goes to show, sometimes you need a benevolent dictator."
+(http://philosophyforchange.wordpress.com/2012/11/07/five-books-that-shaped-my-thinking/)
+
+
+=Critique=
+
+The following article challenges the view of Peer Governance as self-organizing.
+
+Originally published at http://www.lotus.com/developers/devbase.nsf/articles/doc2000091200#top, but no longer available at that URL.
+
+Cited here at http://www.softpanorama.org/OSS/webliography.shtml 
+
+"The dust jacket for Eric Raymond's open source manifesto The Cathedral and the Bazaar makes this statement clearly. It says: "…the development of the Linux operating system by a loose confederation of thousands of programmers -- without central project management or control -- turns on its head everything we thought we knew about software project management. … It [open source] suggested a whole new way of doing business, and the possibility of unprecedented shifts in the power structures of the computer industry." This is not just marketing hype on a book cover, Raymond expands the point inside: "… the Linux community seemed to resemble a great babbling bazaar of differing agendas and approaches … out of which a coherent and stable system could seemingly emerge only by a succession of miracles." Other open source adherents make similar statements in trumpeting the virtues of open source programming.
+
+
+is one problem with the statement, open source projects manage themselves. It is not true. This article shows open source projects are about as far as you can get from self-organizing. In fact, these projects use strong central control, which is crucial to their success. As evidence, I examine Raymond's fetchmail project (which is the basis of The Cathedral and the Bazaar ) and Linus Torvalds's work with Linux. This article describes a clearer way to understand what happens on successful open source projects and suggests limits on the growth of the open source method.
+
+
+'''What Really Happened with fetchmail'''
+    
+The Cathedral and the Bazaar revolves around Raymond's experience in creating a program called fetchmail by the open source method. As he describes the software development process, he annotates the story with lessons about open source programming and how well it worked for him. One of Raymond's key points is that the normal functions of management are not needed with open source development.
+
+    
+Raymond lists the responsibilities of traditional software managers as: define goals and keep everybody pointed in the same direction, monitor the project and make sure details don't get skipped, motivate people to do boring but necessary work, organize the deployment of people for best productivity, and marshal resources needed to sustain the project over a long period of time. Raymond then states that none of these tasks are needed for open source projects. Unfortunately, the majority of The Cathedral and the Bazaar describes, in detail, how important these management functions are and how Raymond performed them.
+
+    
+Eric Raymond decided what piece of software he would use as a test for open source programming. He decided what features fetchmail would have and would not. He generalized and simplified its design, defining the software project. Mr. Raymond guided the project over a considerable period of time, remaining a constant as volunteers came and went. In other words, he marshaled resources. He surely was careful about source code control and build procedures (or his releases would have been poor quality) so he monitored the project. And, most significantly, Raymond heaped praise on volunteers who helped him, which motivated those people to help some more. (In his essay, Raymond devotes considerable space to describing how he and Torvalds motivate their helpers.) In short, fetchmail made full use of traditional and effective management operations, except Eric Raymond did all of them.
+
+    
+Another compelling (and often-quoted) section of The Cathedral and the Bazaar is the discussion about debugging. Raymond says: "Given enough eyeballs, all bugs are shallow" and "Debugging is parallelizable." These assertions simply are not true and are distortions of how the development of fetchmail proceeded. It is true that many people, in parallel, looked for bugs and proposed fixes. But only one person (Raymond) actually made fixes, by incorporating the proposed changes into the official code base. Debugging (the process of fixing the program) was performed by one person, from suggestions made by many people. If Raymond had blindly applied all proposed code changes, without reading them and thinking about them, the result would have been chaos. A rare bug can be fixed completely in isolation, with no effect on the rest of the program.
+
+    
+'''Lessons from Linux'''
+    
+In a similar way, on an even larger scale, Linus Torvalds pulled off a great feat of software engineering: he coordinated the work of thousands of people to create a high-quality operating system. Nevertheless, the basic method was the same Raymond used for fetchmail. Torvalds was in charge of Linux. He made all major decisions, assigned subsystems to a few trusted people (to organize the work), resolved conflicts between competing ideas, and inspired his followers.
+
+    
+Raymond provides evidence of Torvalds's control over Linux when he describes the numbering system that Torvalds used for kernel releases. When a significant set of new features was added to the code, the release would be considered "major" and given a new whole number. (For example, release 2.4 would lead to release 3.0.) When a smaller set of bug fixes was added, the release would get just a new minor number. (For example, release 2.4 would become 2.5.) But who made the decisions about when to declare a major release or what fixes were minor? Torvalds. The Linux project was (and still is) his show.
+
+    
+Further proof of Torvalds's key role is the fact the development of Linux slowed to a crawl when Torvalds was distracted. The birth of his daughter and his work at Transmeta corresponded precisely with a period of slow progress for Linux. Why? The manager of Linux was busy with other things. The project could not proceed efficiently without him.
+
+    
+Finally, there is a quote from Torvalds himself during an interview with Bootnet.com. "Boot : You've got a full slate of global developers who are working on Linux. Why hasn't it developed into a state of chaos? Torvalds : It's a chaos that has some external constraints put on it. … the only entity that can really succeed in developing Linux is the entity that is trusted to do the right thing. And as it stands right now, I'm the only person/entity that has that degree of trust."
+
+    
+'''Open Source Revisited'''
+    
+So, if the open source model is not a bazaar, what is it? To the certain consternation of Raymond and other open source advocates, their bazaar is really a cathedral. The fetchmail and Linux projects were built by single, strong architects with lots of help -- just like the great cathedrals of Europe. Beautiful cathedrals were guided by one person, over many years, with inexpensive help from legions of workers. Just like open source software is. And, just as with open source software, the builders of the cathedrals were motivated by religious fervor and a divine goal. Back then, it was celebrating the glory of God, now it is toppling Bill Gates. (Some people think these goals are not so different.)
+(http://www.softpanorama.org/OSS/webliography.shtml)
+
+
+
+=Review=
+
+We strongly recommend reading this (very) critical review at
+http://www.firstmonday.org/issues/issue4_12/bezroukov/index.html
+
+See also: [[Linux - Governance]]
+
+[[Category:Books]]
+[[Category:Governance]]
+[[Category:Technology]]
+[[Category:P2P Technology Theory]]
+[[Category:Peergovernance]]

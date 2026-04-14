@@ -1,0 +1,202 @@
+=Definition=
+
+John Waclawsky:
+
+'''1.'''
+
+P2P being about edge device/application direct co-operation, true P2P has three fundamental behaviors:
+
+1.      Applications share resources through direct exchange (no man in the middle).
+2.      Applications self-organize (no control from the middle)
+3.      Applications use some technique to deal with intermittent connectivity (no master data base in the middle).
+
+
+'''2.'''
+
+From Rajiv Das at http://thothzone.spaces.live.com/Blog/cns!7B788E69E0FD64E2!278.entry?sa=642843378:
+
+"Peer-to-peer (P2P) computing has been envisaged to solve computing scenarios which require requiring spatial distribution of computation, spatial distribution of content, real-time collaboration, ad-hoc networking, scalability or fault-tolerance at reduced costs. P2P systems provide higher storage and access capacity via distribution of resources across peers, improved reliability due to the availability of multiple peer machines and distributed security achieved by distributing partial secrets across peers. Unlike the client-server computing paradigm, where all the computation cycles and data are to be had from a single source, in P2P the participating peers contribute CPU cycles and storage space."
+(http://thothzone.spaces.live.com/Blog/cns!7B788E69E0FD64E2!278.entry?sa=642843378)
+
+=Description=
+
+Jorn de Boever writes that:
+
+"There is still no generally acknowledged unambiguous definition of the concept of peer to peer which causes a discussion about what can, or not, be accepted as peer to peer"
+
+In client/server systems, centralized servers manage and control the network, provide services and resources whereas the clients consume these resources. This model suffers from inefficient allocation of resources and limited scalability. Additional users stand for additional costs as they consume more bandwidth from the system.
+
+Nodes in peer to peer networks do not only act as clients, but they exhibit server functions as well. They have been described as servents (= SERVer plus cliENTS).
+
+P2P systems exhibit positive network externalities in a way that additional users add value to p2p networks by introducing extra resources in the system.  The network is able to self-organize itself in the absence of centralized coordinating components."
+
+
+=Typology=
+
+Contribution from Jorn Deboever [http://elpub.scix.net/cgi-bin/works/Show?_id=128_elpub2007]: 
+
+Source: '''Peer-to-Peer Networks as a Distribution and Publishing Model'''. Jorn De Boever. Centre for Usability Research, Department of Communication Science, K.U. Leuven
+
+
+"We argue that most peer-to-peer architectures distinguish themselves from each other based on the extent of (de)centralization and on the presence of structure in object location and routing. Based on this we distinguish the following combinations: centralized unstructured, pure unstructured, hybrid unstructured and pure structured systems.
+
+==Degree of Decentralization:==
+
+not all peer-to-peer networks are completely decentralized.
+
+Centralized peer-to-peer architectures, such as the former Napster, contain a central server that executes vital functions for the system. This central server is mostly used as a directory server that stores an overview of the available nodes and resources in the network. In this way, the central directory server makes it possible for peers or nodes to find, locate and share resources with other peers … The whole system stops functioning if the central servers cannot be reached for whatever reason.
+
+Pure decentralized architectures consist of nodes that perform functions without the intervention of centralized components. These types of architectures have theoretically unbounded scalability and a high level of fault tolerance. In addition, these systems are autonomous and self organizing in a sense that the peers are responsible for the functioning and viability of the network. In practice, a great deal of these systems has limited scalability because self organization causes a lot of traffic to keep the network running.
+
+Hybrid systems are often hierarchical networks that adopt elements of both centralized and pure decentralized architectures in which they combine the advantages … In hybrid peer-to-peer systems, some peers have more capacities than others. These nodes, that perform more functions in the network, are named super nodes or ultranodes.
+
+
+==Degree of Structure:==
+
+Unstructured. A system is unstructured when nodes and data are positioned without certain rules and in an ad hoc manner in the network. The location of data is not connected with the topology of the network which results in cumbersome and little efficient search methodologies – such as the ‘query flooding model’ (cf. Gnutella) – that hamper scalability. Another advantage is that these systems – e.g. Napster, Gnutella, KaZaA – mostly support keyword-based search.
+
+Structured. In this type of networks, nodes and data are being placed in a structured way in the network as to be able to efficiently locate data which increases the possible scalability. The nodes, data or other resources are connected to specific locations. Distributed routing tables make it possible to efficiently, i.e. in a smaller number of hops, acquire search results. Structured systems are, in comparison with  unstructured systems, more scalable, more reliable and fault tolerant. Another shortcoming is that these systems laboriously handle the transient connectivity of nodes whereby the system needs to reconfigure the structure constantly. Examples of structured systems are Chord, CAN, and Tapestry. Freenet is often called a ‘loosely structured’ network because it is not rigidly structured in that the location of the data is not totally specified.
+
+
+==Centralized Unstructured Systems:==
+
+These peer-to-peer networks (e.g. Napster and Publius) have a centralized topology and display several client/server characteristics. This type of peer-to-peer networks contains a central server that functions as a directory server. But, this directory server has fewer tasks than servers in client/server networks. log in to the system, they announce their presence and give some information … .) to the directory server. In this way, there is one server that keeps an index of all available resources in the network. The disadvantages of the system mainly stem from the possible bottleneck at the server which is also hazardous for a single point of failure.
+
+
+==Pure Decentralized Unstructured Systems==
+
+The most striking feature of pure decentralized unstructured systems – e.g. Gnutella 0.4 – is that there is no centralized component which means that all nodes are directly connected to each other. Nodes function as clients, servers, routers and cache. The advantage of this category of peer-to-peer architectures is that there is no single point of failure and that it is fault tolerant. The failure of one or even several of the nodes has little impact on the performance of the network. the major challenge is to elaborate an efficient search method that is capable of achieving satisfying search results in the presence of transient nodes. Scarce content in a large file sharing network for example might be difficult to find because it is too many hops away.
+
+
+==Hybrid Unstructured Systems==
+
+Hybrid peer-to-peer systems try to cope with problems (of bottlenecks and single points of failure in centralized topologies) by introducing hierarchy in the system via the use of super nodes. Super nodes are peers with more capacity, such as bandwidth or storage capacity, than the average peer and therefore they are chosen to perform more functionality in the system. 
+
+Super nodes mostly have the following tasks:
+
+•	Keep record of a directory list with information of a part of the peers and their data.
+•	Keep record of a directory list with information of some other super nodes.
+•	Search through the directory list in case a peer sends him a query.
+•	Redirect queries to other super nodes to be able to have better search results.
+
+There is not one central server, but there are different servers (super nodes) that all have responsibilities for a part of the node population. The super nodes function as directory servers for a part of the peer-to-peer population.
+
+
+==Pure Decentralized Structured Systems==
+
+These systems are structured because the resources and nodes are mapped into an address space in the network so as to be able to efficiently retrieve them. The indexing of this address space is distributed among the nodes in the system which makes every node responsible for a part of the indexing. These systems utilize Distributed Hash Tables (DHT) to structure the network. A node that receives a query but doesn’t have the sought information locally, routes the query to a node that, according to his routing table, is numerically closer to the destination. It is a challenge for pure structured systems to maintain and update the routing tables in the transient presence of nodes."
+(http://elpub.scix.net/cgi-bin/works/Show?_id=128_elpub2007)
+
+
+
+=Applications=
+
+Jorn Deboever [http://elpub.scix.net/cgi-bin/works/Show?_id=128_elpub2007]: 
+
+(manual transciption from pdf file, may contain some approximate rendering)
+
+==Instant messaging and telephony==
+
+"ICQ, AOL instant messaging and Yahoo Messenger make use of centralized peer to peer systems. The topology of these systems consists of a centralized directory server that contains information such as which nodes are online and who might communicate with whom. The communication then directly takes place between peers without intervention of the server. Skype is a peer to peer VoIP application that provides telephony, IM and audio conferencing via a peer to peer system."
+
+
+==Grid Computing==
+
+"It has been widely debated whether [[Grid Computing]] can be accepted as peer to peer. In either way, grid computing and peer to peer networks are both distrributed systems that are build to share resources. Grid computing is the coordinated use of resources -- computes, processor capacity, sensors, software, storage capacity, and data -- shared within a dynamic and continuously changing group of individuals. In contrasts to p2p systems, grids stress the standardized, secure and coordinated sharing of resources with a better guarantee of Quality of Service. P2P and grids might evolve into a convergence in which the benefits of grid computing (interoperability, security, QoS, and standardized infrastructure) and p2p (fault tolerance, scalability, and self organization) will be combined."
+
+
+==Collaborative Tools==
+
+Toolf for users to collaborate on certain tasks within groups. See [[Groove]] Virtual Office.
+
+
+==Filesharing and Content Distribution==
+
+"Contains both filesharing systems (Napster, Gnutella, eDonkey) and distributed storage applications (Freenet), as well as content delivery networks (Kontiki). File exchange systems are little sophisticated file sharing applications that only contains some basic functionality, and mostly does not address issues such as resource availability and security. Content publishing and storage applications are more elaborate systems to publish, distribute and store content.
+
+Peer to peer streaming is a specific type of content distribution. Traditional streaming technologies, such as unicasting and multicasting, are characterized by the fact that additional consumers of the streaming imply more costs. In p2p streaming applications, clients act as servers as they send units of the stream to other clients in the network. Examples are RawFlow, Octoshape, Coopnet, Splitstream, Peerstreaming, and Abacast."
+
+
+==Wireless and Ubiquitous P2P==
+
+"Wireless communication networks can be considered p2p if the signars are being transferred directly between the appliances. The mobility of users combined with transient connectivity of nodes makes that self-organization is an even bigger challenge for wireless p2p systems".
+
+Ubiquitous computing systems must cope with autonomous communicating systems that are marked by transient connectivity. These parallel features make that it doesn't seem illogical to integrate these systems".
+
+=Aspects=
+
+From Rajiv Das at http://thothzone.spaces.live.com/Blog/cns!7B788E69E0FD64E2!278.entry?sa=642843378:
+
+
+• Availability: In a federated environment, peers provided no uptime or downtime guarantee. It might so happen that the peer hosting some resource goes offline during use. As every peer can act as a server, the client peer should theoretically be able to switch over to another peer and get the resource, if available elsewhere. 
+
+
+• '''Authenticity''': Remote content and behavior have to be verified since files were found not to be what they claimed and at times peers behaved maliciously. Since trust was not usually woven into the software or often ill implemented, users ran the risk of having their solitary home PC being compromised. 
+
+
+• '''Digital Piracy''': The ease with which digital content could be shared in a P2P network meant that users threw caution to the winds and went about creating libraries with thousands of pirated files. In the absence of enforcement, copyright regulations were openly flouted by P2P networks like Napster. Technology was lacking and on top of it, rather than being a taboo, studies indicate that being able to a hyper-rich online media collection – pirated or purchased - became a matter of pride in user circles. 
+
+
+• '''Load Balancing''': Not all content is widely available in the network. In such cases the then P2P networks degenerated to a client-server network with all traffic for the scarcer content being directed to a small number of hosts, usually with little server type resources at their disposal. 
+
+
+• '''Hardware Reliability''': P2P networks usually comprise of cheaper PC hardware. Therefore, in larger networks there would be quite many failures to be dealt with. Even though data loss due to hardware failures can be avoided easily by storing data and backup on different peers, malicious peers might tamper the backup data on their local storage. • Software Reliability: Early clients were either poorly written and were overtly insecure. So it was easy to make the network disreputable among the by poisoning the network with junk files or even viruses."
+(http://thothzone.spaces.live.com/Blog/cns!7B788E69E0FD64E2!278.entry?sa=642843378)
+
+
+==Examples==
+
+#Kontiki, Qtrax, and RawFlow "exploit p2p characteristics for secure content distribution
+
+#[[Bittorrent]]
+#[[Tribler]]
+#[[Skype]]
+#[[Groove]]
+#[[Bitvault]]
+#[[Windows Collaboration]]
+#[[PeerDB]]
+
+==P2P for Business==
+
+"The emergence of the [[Distributed Hash Table]] (DHT) and the [[Bittorrent]] protocol can be taken as the beginning of the “Biz" era in P2P computing. Along with advancements in Digital Rights Management, storage technology, network bandwidth and software security, many niche applications of P2P have been identified and implemented, adding to the momentum. Moreover, studies conducted over the past few years, indicate business models for P2P systems are economically viable"
+(http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html)
+
+
+=More Information=
+
+#L. Jean Camp for the Internet Encyclopedia: [http://www.ljean.com/files/P2P.pdf Peer to Peer Systems]]
+#[http://elpub.scix.net/cgi-bin/works/Show?_id=128_elpub2007 Peer-to-Peer Networks as a Distribution and Publishing Model]: excellent introduction!
+#The [[P2P Filesharing]] Networks are listed [http://p2p.info.pl/eng/mod-subjects-viewpage-pageid-46.phtml here]: [[Bittorrent]], [[Ares]], [[eDonkey2000]], [[Fast Track]], [[Gnutella]]
+#See also the arguments in [[Peer to Peer - Advantages]]
+#[http://www.dp2p.net/ '''DP2P Net'''] monitors decentrazized P2P computing developments and programs.
+
+
+=Discussion=
+
+==Weaknesses of the P2P Model==
+
+"To use P2P you need a P2P client. When you search for content, your client will lookup which other clients already have the content, and will start downloading chunks from each client. When all chunks are downloaded, your P2P client stitches them to a file. The more popular the file, the more clients have it, the faster you can download.
+
+
+1) The first problem here is that P2P is geo unaware. If your client can download chunks from Australia, Brazil, USA and Germany, it will do so. So P2P does exactly the opposite of what a CDN does: it generates more global traffic, even more than with regular hosting from a central server. Some P2P developers have made their technology geo aware. This means that the P2P client will only download chunks from within the same IP range, ISP or country. That helps a lot. But this also brings down the number of peers. You may not find that asset at all. Or the download could be really slow.
+
+2) The second problem is that P2P generates a lot of overhead traffic. P2P clients are constantly seeking for peers with assets. There is also a lot of download overhead communication between peers.
+
+3) The third problem is that P2P generates a lot of upload traffic. Most P2P clients are active and are uploading chunks to other peers, even if the user is not actively using the P2P application. This can saturate their link and can dramatically decrease the performance of other services that the user does want to use at that moment. This upload traffic has to flow over the ISP’s networks. The ISP’s are paying for this traffic.
+
+4) The fourth problem:perhaps the biggest misconception about P2P is that traffic between peers is always distributed 1-on-1. Many DSL broadband providers have one big star based network for the entire country. 
+
+All traffic flows through a central DSLAM. So even if you share content via P2P with your direct neighbour, who is connected to the same ISP, via the same dispatch, all your neighbours traffic has to be uploaded to the central DSLAM and then back to you through hundreds,thousands miles of fiber. That is two times the traffic compared to a central download server that is directly connected to the DSLAM. It doubles the transmission costs. All paid for by the ISP. This is horribly, horribly inefficient."
+(http://jet-stream.com/blog/peer2peer-s-cks-here-s-why/)
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+=Key Books to Read=
+
+
+Four are listed [http://compnetworking.about.com/od/p2ppeertopeer/l/aatp_books_p2p.htm here]
+
+[[Category:Technology]]
+
+[[Category:Encyclopedia]]

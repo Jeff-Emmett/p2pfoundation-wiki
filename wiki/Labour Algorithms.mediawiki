@@ -1,0 +1,165 @@
+
+
+=Discussion=
+
+==Contemporary schools of thought and the problem of [[Labour Algorithms]]==
+
+Nick Dyer-Witheford:
+
+"Despite the fall of actually-existing socialism, the idea of
+computerized economic planning continued to be developed by
+small groups of theorists, who have advanced its conceptual scope
+further than anything attempted by Soviet cyberneticians. Two
+schools have been of particular importance: the ‘New Socialism’ of
+Scottish computer scientists Paul Cockshott and Alan Cottrell
+(1993); and the German ‘Bremen School’, which includes Peter
+Arno (2002) and Heinz Dieterich (2006), the latter an advocate of
+Venezuelan-style ‘Twenty First Century Socialism’. These
+tendencies have recently converged (Cockshott, Cottrell &
+Dieterich, 2010). However, because little of the Bremen group’s
+work is translated, the focus here will be on the New Socialism of
+Cockshott and Cottrell.
+
+The distinguishing mark of the New Socialist project is its classic
+Marxist rigor. Accordingly, its twenty-first century super-computer
+planning follows to the letter the logic of the late nineteenth century
+Critique of the Gotha Program (Marx, 1970), which famously
+suggests that at the first, ‘lower’ stage to communism, before
+conditions of abundance allow ‘to each according to his needs’,
+remuneration will be determined by the hours of socially necessary
+labour required to produce goods and services. In the capitalist
+workplace, workers are paid for the reproduction of the capacity to
+labour, rather than for the labour actually extracted from them; it is
+this that enables the capitalist to secure surplus value.
+The elimination of this state of affairs, Cockshott and Cottrell
+contend, requires nothing less than the abolition of money—that is,
+the elimination of the fungible general medium of exchange that,
+through a series of metamorphoses of money in and out of the
+commodity form, creates the self-expanding value that is capital. In
+their new Socialism, work would be remunerated in labour
+certificates; an hour’s work could be exchanged for goods taking, on
+a socially average basis, an equivalent time to produce. The
+certificates would be extinguished in this exchange; they would not
+circulate, and could not be used for speculation. Because workers
+would be paid the full social value of their labour, there would be no
+owner profits, and no capitalists to direct resource allocation.
+Workers would, however, be taxed to establish a pool of labour-time
+resources available for social investments made by planning boards
+whose mandate would be set by democratic decisions on overall
+social goals.
+
+Labour time thus provides the ‘objective unit of value’ for the New
+Socialism (Cockshott & Cottrell 2003: 3). It is at this point that its
+proponents invoke the capacities of information technology. Such a
+system would require an enumeration of the labour time expended,
+both directly and indirectly, in the creation of goods and services, to
+assess the number certificates for which these goods and services can
+be exchanged, and to enable the planning of their production. The
+basic tool of the input-output table reappears, with special attention
+to labour time, both as an input necessary for the production of
+goods, and as an output that itself requires the inputs of training and
+education. However, here the New Socialists have to confront a
+basic objection. Since the fall of the USSR it has been conventionally
+accepted that the scale of information processing attempted by its
+cyberneticians was simply too large to be feasible. Writing in the
+1980s, Nove (1983) suggested that such an effort, involving the
+production of some twelve million discrete items, would demand a
+complexity input-output calculation impossible even with
+computers. This claim was repeated in recent discussions of Red
+Plenty, with critics of central planning suggesting that, even using a
+contemporary ‘desktop machine’, solving the equations would take
+‘roughly a thousand years’ (Shalizi, 2012).
+
+Cockshott and Cottrell’s answer involves new tools, both conceptual
+and technical. The theoretical advances are drawn from branches of
+computing science that deal with abbreviating the number of
+discrete steps needed to complete a calculation. Such analysis, they
+suggest, shows their opponents’ objections are based on
+‘pathologically inefficient’ methods (Cockshott, in Shalizi, 2012).
+
+The input-output structure of the economy is, they point out,
+‘sparse’—that is to say, only a small fraction of the goods are directly
+used to produce any other good. Not everything is an input for
+everything else: yogurt is not used to produce steel. The majority of
+the equations invoked to suggest insuperable complexity are
+therefore gratuitous. An algorithm can be designed to short-cut
+through input-output tables, ignoring blank entries, iteratively
+repeating the process until it arrives at a result of an acceptable order
+of accuracy.
+
+The time would be further reduced by massive increases in
+computer processing speed yielded by Moore’s Law. Suggesting
+high-level economic planning is done on a ‘desktop machine’ is
+disingenuous. The issue is supercomputing capacity. According to
+an email communication from Benjamin Peters, in 1969, the time of
+Red Plenty, the ‘undisputed workhorse’ of the Soviet information
+economy was the BESM-6 (‘bol’shaya electronicheskaya schetnaya
+mashina’ – literally the ‘large/major electronic calculating
+machine’), which could perform at an operating speed of 800,000
+flops or ‘floating operations per second’ – that is, at 8 megaflops, or
+10^6 flops. By 2013, however, supercomputers used in climate
+modelling, material testing and astronomical calculations are
+commonly exceeding 10 quadrillion flops or ten ‘petaflops’. The
+holder of the crown at the time of writing is Cray’s Titan at the Oak
+Ridge National Laboratory achieving some 17.6 petaflops (10^15)
+(Wikipedia, 2013). Supercomputers with an ‘exaflop’ capacity
+(10^18 flops) are predicted from China by 2019 (Dorrier, 2012).
+Thus, as Peters (2013) says, ‘giving the Soviets a bit generously 10^7
+flops in 1969, we can find (10^18 - 10^7 = 10^11) . . . a
+100,000,000,000 fold increase’ by today.
+
+With these capacities, Cockshott and Cottrell’s suggestion that the
+computer requirements for large scale economic planning could be
+handled by facilities comparable to those now used for
+meteorological purposes, seems at least plausible. The ‘calculation
+problem’, however, involves not just data processing but the actual
+availability of data; Hayek’s claim was not merely that central
+planners cannot crunch economic numbers fast enough, but that the
+numbers in a sense do not exist prior to price setting, which provide
+an otherwise absent measure of production performance and
+consumption activity. Again, Cockshott and Cottrell suggest the
+answer lies in computers being used as a means of harvesting
+economic information. Writing in the early 1990s, and invoking
+levels of network infrastructure available in Britain at the time, they
+suggest a coordinating system consisting of few personal computers
+in each production unit, using standard programming packages,
+would process local production data and send it by ‘telex’ to a central
+planning facility, which every twenty minutes or so would send out a
+radio broadcast of adjusted statistical data to be input at local levels.
+
+This is a scenario too reminiscent of the ramshackle techno-futurism
+of Terry Gilliam’s Brazil. To bring the New Socialists up to date we
+should instead refer to Fredric Jameson’s iconoclastic vision of Wal-
+Mart as ‘the shape of a Utopian future looming through the mist’
+(2009: 423). His point is that, if one for a moment ignores the gross
+exploitation of workers and suppliers, Wal-Mart is an entity whose
+colossal organizational powers model the planned processes
+necessary to raise global standards of living. And as Jameson
+recognizes, and other authors document in detail (Lichtenstein,
+2006), this power rests on computers, networks and information. By
+the mid 2000s Wal-Mart’s data-centers were actively tracking over
+680 million distinct products per week and over 20-million
+customer transactions per day, facilitated by a computer system
+second in capacity only to that of the Pentagon. Barcode scanners
+and point of sale computer systems identify each item sold, and
+store this information. Satellite telecommunications link directly
+from stores to the central computer system, and from that system to
+the computers of suppliers, to allow automatic reordering. The
+company’s early adoption of Universal Product Codes had led to a
+‘higher stage’ requirement for Radio Frequency Identification
+(RFID) tags in all products to enable tracking of commodities,
+workers and consumers within and beyond its global supply chain."
+(http://www.culturemachine.net/index.php/cm/article/view/511/526)
+
+
+=More Information=
+
+* [[Cybernetic Planning]]
+* [[Red Plenty Platforms]]
+
+
+[[Category:Labor]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Economics]]

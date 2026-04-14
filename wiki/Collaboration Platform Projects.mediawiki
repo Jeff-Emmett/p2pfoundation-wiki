@@ -1,0 +1,307 @@
+'''= directory of projects, in progress'''
+
+
+=Typology=
+
+Mayo Fuster Morell suggests the following possible typology:
+
+"Concerning the relationship between platform providers and participants, models can be
+distinguished depending on the level of openness versus closeness of the providers space to
+participant co-involvement, formal and non – formal organization, and profit versus non profit
+approach, resulting in three distinctive models: closed and profit provision model; open and non
+proffit formal provision; and open and non profit informal provisions."
+([http://www.onlinecreation.info/wp-content/uploads/2007/12/outlinethesis_mayofustermorell_onlinegovernance_july2009.pdf])
+
+This would mean efforts here would be open, non-profit, and include both formal and non-formal participation.
+
+=General Platforms=
+
+==[[Crabgrass]]==
+
+URL = http://riseuplabs.org/crabgrass/ ; documentation [https://labs.riseup.net/crabgrass/documentation/]
+
+"We are developing a social networking web application called Crabgrass. Designed for social movements working for social justice, Crabgrass will consist of tools which allow people to connect, collaborate, and organize in new ways and with increased efficiency. In particular, we aim to help groups to communicate securely, network with other groups, and make decisions in a way that is easy to understand, transparent, and directly democratic. Where traditional social networking is about connecting individuals, Crabgrass is social networking to facilitate network organizing.
+
+Crabgrass is Free Software distributed under the GNU General Public License. It is written in Ruby on Rails.
+
+While social movements have grown more adept at using the web to communicate publicly, we are still mostly using inadequate tools to communicate amongst ourselves. Most groups rely heavily on email, lists, and wikis—but these tools are not suited for the complexity of relationships that activist organizations face in the real world.
+
+There are many existing social networking websites out there. However, these offerings are geared toward the needs of advertisers or informal social groups. They are not suitable for organizing work. There are also many existing web services for group collaboration. These sites are typically designed for small businesses and do not match the needs of movement organizations."
+
+Example at https://we.riseup.net/
+
+==[[FLOWS]]==
+
+Sources of information are available as tributaries which can be stored in reservoirs and then hybridized into "mashups" to define a flow which is then sent out via a delta into mouths.
+
+=== Architecture ===
+
+=== Basic Architecture ===
+
+The Flows architecture deploys the crucial concepts of "plurality" and "diversity":
+
+* '''Plurality''' - Components should be as small as conceivably possible and there should be a lot of them.  If your component does two things, then it should be rewritten into two components.
+** There are many ways to implement something.  Flows allows this manifold development.
+** Components are connected in a many-to-many fashion "horizontally".
+** Components are '''context-aware''' and can communicate information about themselves and their environment.
+
+* '''Diversity''' - Flows does not care about the internals of your component, only its communication with other components. Consequently, 
+** Flows components can be coded in '''any language'''.
+** Flows components can be served by '''any http:// server'''.
+** Flows components do not distinguish between '''local''' components and '''remote''' components.(eg "localhost" and remote server)
+*** This is true if component addressing is via http:// (ex. localhost or IP/DNS remote host).
+*** This is true if component addressing is via filesystem path (ex. local filesystem or mounted pseudo-local filesystem via nfs, FUSE, etc.).
+
+=== Design ===
+
+The simplest possible flows component implements the following.
+* listens for '''request'''s (extensible for future development)
+** REST (default)
+** AMF
+** etc.
+* returns '''response'''s (extensible for future development)
+** XML (default)
+** HTML
+** JSON
+** TXT
+** JPG, PNG, etc.
+* a '''"sip"''' method that returns at least the following:
+** basic response metadata including the flows version to which the response form corresponds:
+*** "canonical name" is a reference for this object (the URL of this component)
+*** what '''request types''' the component will respond to
+*** what '''response types''' the component can return
+*** usage information
+**** what parameters (incoming variables) the component will accept
+**** what the default response is (usually is the same as "sip")
+**** what the default response type is (suggested:  XML)
+**** '''Description''' human-readable text with usage explanation
+
+'''Example:'''
+<code>
+        <response flows_version=".1">
+        <canonical_name>URL</canonical_name>
+        <request_types>
+                <request_type>HTTP GET</request_type>
+        </request_types>
+        <response_types>
+                <response_type>XML</response_type>
+                <response_type>HTML</response_type>
+        </response_types>
+        <usage>
+                <parameters>
+                        <param>response_type</param>
+                </parameters>
+                <default_response>sip</default_response>
+                <default_response_type>XML</default_response_type>
+                <description>
+                This Flows component will echo back any text sent to it on the HTTP GET querystring, 
+                using the response_type specified by the requestor.
+                </description>
+        </usage>
+        </response>
+</code>
+
+.
+
+=== RFC Draft ===
+
+* [http://flows.panarchy.com/index.php?title=FlowsRFCDraft FlowsRFCDraft] :: proposed RFC for Flows interoperability
+
+
+==== NECESSARY information for RFCs and Development ====
+
+* "Key words for use in RFCs to Indicate Requirement Levels" http://tools.ietf.org/html/rfc2119
+* "Available Authoring Tools" http://tools.ietf.org//inventory/author-tools
+* "Terminology of CNAME vs 'canonical name'" http://en.wikipedia.org/wiki/Canonical_name#Terminology_of_CNAME_vs_.22canonical_name.22 (Quoting from RFC 2181 section 10.1.1 @ http://tools.ietf.org/html/rfc2181)
+
+
+==[[OddMuse]]==
+
+Another wiki engine, with extremely advanced features for both automatic creation of new workspaces, plus integration with other wiki engines. Can be configured to create weblog, social bookmarking, etc
+
+http://oddmuse.org  and http://communitywiki.org/odd
+
+
+
+==[[Open Atrium]]==
+
+http://openatrium.com/features (to do will fil in)
+
+==[[Wagn]]==
+
+''What makes Wagn different - and the part that gives it its database characteristics - is that its basic unit is not web pages. It's cards. What is a card, you ask?''
+
+''Just like a page, a card is a metaphor. Like playing cards in real life, Wagn cards can be nested together to form stacks (a single page might contain dozens of Wagn cards). Not only can cards be placed inside each other, but they can exist in many places at once, meaning nothing ever need be repeated.''
+
+''Cards can be of any type, but all of them retain the character of a wiki in that they're fully editable and have a revision system. There some basic cards built-in, like Image cards or User cards, but anyone using Wagn can create cards types to suit their purpose.''
+
+''The ability to create whatever cards you like, and then shuffle and reorganize them basically at will, means that people organizing knowledge and developing the patterns to fit an organization's needs can have access to a tool that is truly flexible. Other database features that Wagn employs include its own query language, created to call up dynamic lists of cards. '' --source http://www.readwriteweb.com/enterprise/2009/06/wagn-blazes-a-bold-new-trail-in-wiki-software.php
+
+http://wagn.org/Explore_Organize_Thrive
+
+Example: http://hooze.org/wagn/Hooze 
+
+Hooze.org isn't just another source; it's a hub. We bring together Data Streams from outside sources, making them easy to use and integrate. Our community of users also helps each other digest all the information by writing short, approachable summaries grouped by various metrics.
+
+
+==More==
+
+List compiled by John "Espian" [https://spreadsheets.google.com/ccc?key=0Al-ftfvapjPfdHhhTTNLaGd4TVdCSzR3OU9iNmhpVkE&hl=en]:
+
+
+===App Platform/Development===
+
+
+http://yedda.com/
+http://ejohn.org/blog/web-workers/
+http://incubator.apache.org/thrift/
+http://code.google.com/p/appscale/
+http://code.google.com/p/arora/
+http://bespin.mozilla.com/
+http://www.codeblocks.org/
+http://www.opencroquet.org/index.php/Main_Page
+http://www.eclipse.org/
+http://eyeos.org/en/
+http://hemlock-kills.com/
+http://www.interactivegestures.com/index.php?title=Main_Page
+http://www.jooce.com/
+http://kenai.com/
+https://launchpad.net/
+http://www.libavg.de/
+http://merbivore.com/
+http://moblin.org/
+http://github.com/mojombo/primer/tree/master
+http://www.mono-project.com/Main_Page
+http://nipl.net/
+http://www.oembed.com/
+http://www.ohloh.net/
+http://www.openlaszlo.org/
+http://www.openmoko.com/
+http://unite.opera.com/
+http://www.pagii.com/
+http://peak.telecommunity.com/Articles/WhatisPEAK.html
+http://pinaxproject.com/
+http://pipes.yahoo.com/pipes/
+http://www.pivotlog.net/
+http://www.reactos.org/en/index.html
+http://www.rubyonrails.org/
+http://www.scintilla.org/
+http://scratch.mit.edu
+http://sdf.lonestar.org/index.cgi
+http://www.server2go-web.de/download/download.html
+http://www.libsdl.org/
+http://www.sketchpatch.net/
+http://www.fenrir-inc.com/uk/sleipnir/
+http://www.sourceforge.net
+http://subtextual.org/subtext2.html
+http://subtextual.org/
+http://groups.google.com/group/switchpipe
+http://www.tonido.com/what.html
+http://labs.mozilla.com/projects/ubiquity/
+http://www.pendriveapps.com/2008/02/26/usb-webserver/
+http://www.wowzamedia.com/
+https://www.youos.com/
+
+
+===Collaboration===
+
+http://www.43things.com/
+http://www.backpackit.com/
+http://www.basecamphq.com/
+http://www.campfirenow.com/
+http://www.coactivate.org/
+http://www.collectivex.com/
+http://www.dimdim.com/products/
+http://www.dotproject.net/
+http://dcl.sourceforge.net/
+http://www.ebase.org/home
+http://www.axosoft.com/
+http://www.fogcreek.com/fogbugz/
+http://wave.google.com/
+http://www.localendar.com/elsie
+http://www.meetup.com/
+http://www.mindquarry.com/
+http://www.mixxt.net/
+http://nepomuk.semanticdesktop.org/xwiki/bin/view/Main1/
+http://www.openworkbench.org/
+http://www.opengroupware.org/
+http://pownce.com/
+http://www.project.net/
+http://code.google.com/p/pygowave-server/
+http://www.redmine.org/
+http://www.shiftspace.org/
+http://www.shoulddothis.com/
+http://www.silk-project.org/
+https://addons.mozilla.org/en-US/firefox/addon/8397
+http://www.socialtext.com/products/overview
+http://www.thenag.net/
+http://www.the-organization.com/
+http://divmod.org/trac/about
+http://www.tutos.org/homepage/index.html
+http://wagn.org/Explore_Organize_Thrive
+http://www.wagn.org/wagn/Wagn.org
+
+=Dedicated Platforms=
+
+==Communes: [[We Commune]]==
+A software collaboration platform designed specifically for communes
+
+==Volunteering: [[V2V]]==
+V2V fosters a global collaborative environment for volunteers.
+
+==Legal: [http://www.oneclickor.gs/ One Click Orgs]==
+
+One Click Orgs: a website where groups can quickly create a legal structure and get a simple system for group decisions.
+
+==For Learning: [[Social Media CoLab]]==
+
+Based on http://drupal.org  
+
+
+===Why the classroom?===
+
+In an educational setting, the social media classroom is designed to augment or—when physical co-presence is not possible—to replace face-to-face interaction. The power derived from using social media in group learning processes comes not from a more efficient computerized extension of older communication forms—the classroom discussion, texts to be read, essays and theses to be written. The power of social media in education and elsewhere derives from their affordances for forms of communication and social behavior that were previously prohibitively difficult or expensive for more than a tiny elite to benefit. Forums afford many-to-many, multimedia, asynchronous discussions among small or large groups, regardless of distance, over extended periods; blogging affords the expression of individual voice, the emergence of a market for intelligent information-filtering and knowledge-dissemination, and public interactions in the form of comments; wikis enable collaborative document and knowledge creation as well as web-building as a learning method; social bookmarking makes possible simple, bottom-up, collective knowledge-gathering; microblogging and chat add synchronous online text channels that can be tuned and cultivated for specific purposes. With classes that meet face to face, the Co-Lab can help with co-construction of knowledge (by group editing of wikis), discussions that extend beyond the class meeting time (through forums and blogs), and a constructive backchannel for class meetings through microblogging and chat. The classroom can also be used for classes that are taught completely online. Video can also be used to extend and augment both face-to-face and online classes.
+
+The greatest value that the SMC can add to a learning community is its ability to support critical, collaborative inquiry—a student-centric pedagogy that engages students in actively constructing knowledge together about issues that matter to them, rather than passively absorbing it from texts, lectures, and discussions. The social media collaboratory and classroom began when Howard Rheingold started teaching courses on virtual community and social media, digital journalism, and participatory media/collective action. This subject matter calls for hands-on use online communication media to augment texts, lectures, and classroom discussion. It is easier to understand and to feel engaged with theory about community, identity, collective action, public sphere, social capital, and other issues that arise from the use of Internet-mediated communication when the entire class uses the media they are studying. The first year of teaching the course, using an assortment of free Web 2.0 communication media, led to the conviction that an integrated set of tools would make it far easier to integrated multiple new communication modes into the learning process, and to the discovery that the use of these tools and collaborative inquiry hold the potential for engaging students more actively and passionately in learning, by making them responsible for formulating and pursuing questions,rather than for memorizing a body of knowledge. In regard to the Internet environment, the ability to engage with others in collaborative critical inquiry is an increasingly important skill, so this style of pedagogy is uniquely suited to the subject matter of cyberculture studies. However, interest in constructivism, constructionism, collaborative inquiry, and student-centric learning is not new. What is new is the intersection of these modes of learning, the affordances of social media, and the laptop-carrying, always-on media practices of 21st century students. 
+
+===Why the collaboratory?===
+
+Although the Social Media Classroom project was born of a specific educational need for social media toolkits that are easy to install and use, the same SMC tools and curriculum can be used by businesses and NGOs as well as classrooms. In the enterprise, the SMC becomes a collaboratory where groups, teams, nonprofit organizations, communities of practice can bring the advantages of online media to the purposes of their enterprises. Knowing how to use social media productively is becoming more and more important to business enterprises and civil society.
+
+http://socialmediaclassroom.com/community is an example
+
+==Planning: Collaborative Planning Platform==
+
+[http://collabforge.com Collabforge] has developed a recipe for a website that allows users to collaboratively build planning documents.  The recipe includes:
+* A structured wiki that allows for easy interchange between wiki pages and a printable linear document
+* A social network component that enables informal conversation and friending around the collaborative writing process
+* Tools for moderation and control by the host entity (often required by government agencies who host such projects)
+
+The current recipe for the site is a [http://drupal.org Drupal] install which is integrated with [http://foswiki.org/ Foswiki].  We are investigating ways in which we can improve this platform, in particular whether we can achieve our wiki functionality entirely within Drupal.
+
+Implementations of this recipe are viewable at:
+* [http://weplan.parks.vic.gov.au/ WePlan]: collaborative planning for the parks department of Victoria, Australia
+* [http://www.futuremelbourne.com.au/wiki/view/FMPlan FutureMelbourne]: collaborative writing of city plan for Melbourne, Australia
+
+
+==Sustainability==
+
+* [www.zoes.it Zoes] stands for '''ZOne for solidarity Economy and Sustainability'''. It is a project initiated by the Fondazione Sistema Banca Etica and Fondazione Sistema Toscana to provide a digital platform for e-commerce, social network, geo-reference, exchange of information and participation of communities and in the end contributes to reducing carbon footprints of everyday consumption, improving social conviviality and promoting local economies [http://www.sustainable-everyday.net/codi/?cat=1]
+* [[OneVillage Foundation]] tries to provide a platform for an integrated approach to sustainable development.
+
+=More Information=
+
+#[[Distributed Manufacturing Collaborative Platforms]]
+#[http://autonomo.us/wiki/Wish_list List of potential free network services]: maintained by Autonomo.us
+
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Resources]]
+
+[[Category:Sharing]]
+
+[[Category:P2P Infrastructure]]

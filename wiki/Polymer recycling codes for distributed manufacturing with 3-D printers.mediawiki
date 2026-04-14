@@ -1,0 +1,39 @@
+
+[[image:PLA-symb.jpg|right]]
+==Source==
+* Emily J. Hunt, Chenlong Zhang, Nick Anzalone, Joshua M. Pearce, [http://dx.doi.org/10.1016/j.resconrec.2015.02.004 Polymer recycling codes for distributed manufacturing with 3-D printers], ''Resources, Conservation and Recycling'', '''97''', pp. 24-30 (2015). DOI:10.1016/j.resconrec.2015.02.004 [https://www.academia.edu/11229348/Polymer_recycling_codes_for_distributed_manufacturing_with_3-D_printers open access]
+
+==Highlighting==
+* Cost reductions for 3-D printing give economic advantage to distributed manufacturing.
+* Number of free designs is growing exponentially.
+* Development and commercialization of the recyclebot improved the material selection.
+* This study developed recycling code model capable of expansion.
+* Created OpenSCAD scripts to print resin identification codes into products.
+
+==Abstract==
+With the aggressive cost reductions for [[3D Printing|3-D printing]] made available by the open-source self-replicating rapid prototypers ([[RepRaps]]) the economic advantage of custom distributed manufacturing has become substantial. In addition, the number of free designs is growing exponentially and the development and commercialization of the [[recyclebot]] (plastic extruders that fabricate 3-D printing filament from recycled or virgin materials) have greatly improved the material selection available for prosumer 3-D printer operators. These trends indicate that more individuals will manufacturer their own polymer products, however, there is a risk that an even larger fraction of polymer waste will not be recycled because it has not been coded. The current limited resin identification code available in the U.S. similarly restricts closing the loop on less popular polymers, which could hamper the environmental impact benefits of distributed manufacturing. This paper provides a solution for this challenge by (1) developing a recycling code model based off of the resin identification codes developed in China that is capable of expansion as more complex 3-D printing materials are introduced, (2) creating [[OpenSCAD]] scripts based on (1) to be used to print resin identification codes into products, (3) demonstrating the use of this functionality in a selection of products and polymer materials, and (4) outlining the software and policy tools necessary to make this application possible for widespread adoption. Overall the results showed that a far larger resin code identification system can be adopted in the U.S. to expand distributed recycling of polymers and manufacturing of plastic-based 3-D printed products.
+
+==OpenSCAD Code==
+You need the following files to implement the code:
+* [http://www.appropedia.org/File:Recycling_Symbols.scad SCAD file]
+* [http://www.appropedia.org/File:Font.scad font.scad file]
+* [http://www.thingiverse.com/download:1144381 Teknik font library]
+
+==See also==
+* [[Recyclebot]]
+* [[Evaluation of Potential Fair Trade Standards for an Ethical 3-D Printing Filament]]
+* [[Life cycle analysis of distributed recycling of post-consumer high density polyethylene for 3-D printing filament]]
+* [[Ethical Filament Foundation]]
+
+
+==External Links==
+* [http://3dprintingindustry.com/2014/03/19/mobile-eco-3d-printing-station/ LDPE recycling on a bike with a RepRap] from Taipei-based company [http://www.fabraft.com/ Fabraft]
+* UBC recycling of old prints with blender and liquid nitrogen http://ubc-rapid.com/blog/?p=183
+* [http://3dprintingindustry.com/2014/12/16/filament-filacycle-recycled/ Filament By Filacycle Is 100% Recycled!] - 3D Printing Industry 12-16-2014
+* [http://www.yankodesign.com/2014/12/31/a-beachs-best-friend/ Dr. Recare]- nice concept to have automated plastic beach cleaner/3D printer make recyclebins
+* Haruna Hamod. 2015.Suitability of recycled HDPE for 3D printing filament. Arcada University of Applied Science. [http://theseus32-kk.lib.helsinki.fi/bitstream/handle/10024/86198/Thesis%20final.pdf?sequence=1 Thesis covering recycling HDPE to filament]
+* Tisserat, Brent, Zengshe Liu, Victoria Finkenstadt, Branden Lewandowski, Steven Ott, and Louis Reifschneider. "3D printing biocomposites." [http://www.4spepro.org/pdf/005690/005690.pdf 3D printing biocomposites]
+* [http://3dprintingindustry.com/2015/02/27/close-the-sustainability-cycle-with-innocirlce-recycled-3d-printing-filaments/ Closing the Sustainability Cycle with InnoCirlce Recycled 3D Printing Filaments] - 3D Printing and Industry
+
+
+[[Category:3D Printing]]

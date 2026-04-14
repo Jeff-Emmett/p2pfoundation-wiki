@@ -1,0 +1,46 @@
+= Chicken Game / Game of Chicken / Hawk-Dove Game / Snowdrift =
+
+"The game of Chicken, also known as the Hawk-Dove game, is an influential model of conflict for two players in game theory. The principle of the game is that while each player prefers not to yield to the other, the outcome where neither player yields is the worst possible one for both players." http://en.wikipedia.org/wiki/Game_of_chicken
+
+= Cooperation in Structured Populations =
+
+From http://www.univie.ac.at/virtuallabs/Snowdrift/:
+
+"
+This is an interactive tutorial exploring the conditions for success and failure of cooperative behavior in two simple evolutionary games: the Prisoner's Dilemma and the Snowdrift game (the latter is also known as the Hawk-Dove or Chicken game). Example simulations implemented by Java applets illustrate and highlight the most important aspects of the evolutionary dynamics of cooperation. In addition, the applets provide ample opportunity for veryfications and further investigations of the dynamics with parameter settings of your choice.
+
+We demonstrate that spatial structure, implemented by placing individuals on regular lattices with limited interaction ranges, has different effects on the evolution of cooperation in the two simple games. Based on extensions of the Prisoner's Dilemma to spatially structured populations it is generally believed that spatial extension promotes cooperation. However, spatial structure fails to similarly favor cooperation under the apparently less stringent conditions of the Snowdrift or Hawk-Dove game. In fact, in these games spatial structure actually tends to reduce the readiness to cooperate. Thus, our results caution against the established view that spatial structure is necessarily beneficial for cooperation.
+
+Two aspects are emphasized below: (a) well-mixed populations with random encounters versus structured populations with limited local interactions and (b) pure strategies where individuals either cooperate or defect versus mixed strategies where individuals cooperate with some probability in each interaction. A brief summary of the background and the relevance of our results is given below.
+
+This tutorial complements and illustrates a research article with Michael Doebeli in Nature (2004) 428 643-646. 
+"
+
+=== Summary of Findings ===
+
+"
+The emergence of cooperative behavior in human and animal societies is one of the fundamental problems in biology and social sciences. Cooperation lead to major transitions in the history of life: molecules aggregated to protocells, genes arranged in chromosomes, cells shaped complex organisms or individuals formed societies - to name only a few. All examples have one thing in common: they are apparently at odds with Darwinian selection because they are prone to exploitation by cheaters that take advantage of the favorable conditions without contributing to it.
+
+Over the last decades game theory - which describes strategic interactions between individuals - complemented by evolutionary principles - adding selection and reproduction - has become a powerful framework to investigate the problem of cooperation. A particulalry simple evolutionary game has attracted most attention: the Prisoner's Dilemma is a mathematical metaphor for situations where community and individual performance lead to a conflict of interest. One major theoretical result that was obtained from variations of the Prisoner's Dilemma setup states that any form of associative interactions favor cooperation. In particular, cooperation can thrive in the spatial Prisoner's Dilemma where individuals are confined to lattice sites and interact only within their local neighborhood.
+
+Despite the considerable theoretical achievements the discomfort with the Prisoner's Dilemma as the sole paradigm to discuss cooperative behavior increased because of the considerable gap between theory and experimental evidence. In field and experimental studies it is often difficult to assess the payoffs in terms of fitness for the different behavioral patterns - even the proper ranking of the payoffs is challenging. Therefore, the stringent conditions of the Prioner's Dilemma may not be satisfied in many real natural situations. An interesting and biologically viable alternative is given by the Snowdrift game which equally refers to cooperative interactions but under relaxed conditions. In well-mixed populations with random encounters cooperators and defectors co-exist in a stable equilibrium which is stark contrast to the Prisoner's Dilemma where cooperators would go extinct.
+
+In contrast to the spatial Prisoner's Dilemma, adding spatial structure to the Snowdrift game does not benefit cooperation. In fact, spatial structure tends to reduce cooperative behavior relative to well-mixed populations. In the spatial Prisoner's Dilemma cooperators can thrive by forming compact clusters such that losses of cooperators against defectors along the boundary are outweighed by gains from interactions within the cluster. However, this mechanism does not operate in the spatial Snowdrift game. Ironically the ultimate reason for this is the maintenance of cooperative behavior in well-mixed populations.
+
+In behavioral ecology the Snowdrift game is better known as the Hawk-Dove game which models intraspecific competition - cooperation refers to sharing some resource while defectors escalate conflicts and attempt to monopolize the resource which bears the risk of injury when facing another defector. The two behavioral patterns can be adopted by one individual with certain probabilities and hence refers to mixed strategies. Results for well-mixed populations do not discriminate between pure and mixed strategies. Therefore, cooperative behavior is expected to occur with a certain non-zero probability. Adding spatial structure to the mixed strategy case of the Hawk-Dove game leads to another counter intuitive result: asynchronous population updates favors cooperation whereas synchronous updating increases defection. This contrasts with the established view that increased stochasticity should be detrimental to cooperation.
+
+Therefore, our results for both, pure and mixed strategies, caution against the common belief that spatial structure favors cooperation and thus may not be as universally beneficial as previously believed.
+"
+
+= More Information =
+
+In this essay by Doug Newdick, defending the possibility of ‘anarchist cooperation’ as a model of society, the author reviews the objections of the classic Prisoner’s Dilemma, arguing that they are superseded in case of repeated re-iteration.  Regarding the chicken game, Doug states "with the one-off Chicken game mutual Cooperation is not assured, however, mutual Cooperation is more likely than in a one-off prisoners' dilemma." See http://www.spunk.org/texts/misc/sp000161.txt 
+
+http://www.univie.ac.at/virtuallabs/Snowdrift/
+
+Also see the related entry on the [[Prisoner's Dilemma]] and the [[Assurance Game]].
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Relational]]

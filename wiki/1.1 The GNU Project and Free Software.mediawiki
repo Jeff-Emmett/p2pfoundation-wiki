@@ -1,0 +1,124 @@
+'''Computers greatly influence our daily lives. While they can run proprietary software that big companies develop behind closed doors, there exists also a wide range of software which is open for everyone to examine and which everybody is free to copy, modify and redistribute. This kind of software is called free and open source software.'''
+
+==Description==
+[[Image:City_lights.jpg|thumb|500px|right|If you start thinking about it, a rather huge part of our daily lifes is controlled by digital technology. Wouldn't it be nice if the information running these devices was more transparent to everyone?]]
+[[Image:Earth_night.png|thumb|500px|right|And wouldn't it be nice if not only everyone in the already lightened coutries, but everybody in the whole world could take advantage of this information?]]
+A computer is a machine for manipulating data according to a list of instructions. For example, a digital watch is also a computer. As most technical devices get more complex all the time, computers are becoming ever more important. They have long since started taking over jobs that were previously handled by humans or mechanical devices (e.g. typewriter). As such they greatly influence our daily life. However, for most people they remain a black box, the operation of which they don't understand. This is okay, as in our highly specialised society not everybody has to know (nor is able to know) how everything exactly works. But everybody who is interested in something should be able to find out how it works - the possibility of every individual to learn is a foundation pillar of liberal societies. 
+
+Computers contain a lot of hidden information that usually isn't revealed by just looking at them. For example, while everybody easily managed to understand, reconstruct and improve the workings of a Conestoga wagon and it was still possible for every do-it-yourselfer to fix a broken VW Beetle, modern cars are filled up with computers. Most companies keep the workings of those computers secret to prevent possible spying of the competition and thus lock out everyone but their own developers.<ref>[http://www.freesoftwaremagazine.com/articles/free_matter_economy_2 Towards a free matter economy (Part 2): The passing of the shade tree mechanic], Terry Hancock at the Free Software Magazine</ref>
+
+As an ever larger part of technology is dominated by such closed computer systems, ever more mechanisms influencing our everyday life are held secret. So the question of open or closed computer systems isn't one that affects only techies, but should concern everyone living in our modern society. This comes at a time when individuals are actually empowered by inexpensive technology to make greater use of information - if it is available. The most powerful informational tool available to broad masses is the personal computer. Today's personal computers are general-purpose computers, which means that they can do lots of different things, and most importantly can always be reprogrammed to fulfill other tasks that they weren't originally constructed to do. While it wouldn't make sense that everyone programmed their own personal computer, it is important that they can choose what software to run on it and that the workings of this software are publicly available. That way the user keeps in charge of the computer and the public can play watchdog over what the software does, which are only two of the many advantages of what is called free and open source software. However, today still far from all software running on most computers is free and open source.
+
+In this part of the text, the story of the free and open source software movements and its principles are described. Many later ideas in other domains of information production, which will be described later-on, have built upon the principles and philosophies developed by these pioneers and they thus continue to greatly influence the whole ''digital revolution''.<ref>[http://www.wired.com/wired/archive/11.11/opensource.html Open Source Everywhere], Thomas Goetz at Wired magazine</ref>
+
+[[Image:PDP-10.jpg|thumb|300px|right|The first PDP-10 model, a mainframe computer also adopted by MIT.]]
+===Software sharing users groups===
+Before the 1970s, when there weren't any home computers yet, mainframe computers dominated the market. They filled often entire rooms and could only be purchased by universities or big companies. At that time, software was seen mainly as an add-on to make them useful. [[Wikipedia:Users' group|Users groups]] like SHARE and DECUS were formed in which people that worked with the same, or at least similar, computers could meet each other and exchange experiences and their often hard-won knowledge. The software which kept the computers running got improved and often completely new versions were written, independently of the vendor's programming efforts. This software was then shared in the users groups and the users could improve it together, so that everyone could profit and get the most out of his computer. So, at the beginning of the computer era, most software was what we would consider ''free software'' today. It wasn't called that way, because the term didn't exist yet, but that is what it actually was.
+
+===Richard Stallman===
+[[Image:RMS young.jpeg|thumb|300px|right|An early photo of Richard Stallman.]]
+
+Richard Matthew Stallman (nickname RMS) was born in New York in 1953. Still studying, he started working at the AI Lab (Artificial Intelligence Laboratory) at MIT as a programmer in 1971. There, he became part of the hacker community which had formed around the PDP-10, one of the large computers of the era. This software sharing community was building an own operating system, only for the PDP-10, which they called ITS ([[Wikipedia:Incompatible Timesharing System]]). 
+
+The use of the term ''hacker'' to describe someone who breaks into somebody else's computer was popularized by the mass media after the 70s. Originally the term was just used to describe someone who has a great deal of knowledge or skill in a certain field, or who finds innovative solutions to technical problems. Most computer hackers refuse to recognize the meaning of a security-breaker (who is then often referred to as a ''cracker'') and continue to proudly call themselves hackers. 
+
+===Proprietary Software===
+With the invention of the microprocessor computer hardware got smaller and cheaper and in the late 1970s the first home computers were arriving, and with them the possibility to sell software to broader masses. A paradigm shift in the software developing world was taking place. Software sharing users groups and hobbyist came under increasing pressure as demonstrated by an 'Open Letter to Hobbyists' which Bill Gates, cofounder of Microsoft, wrote in 1976 and in which he argued that the hobbyists were stealing the software he wrote. Software was less seen as something which was shared between hackers and improved upon together, but increasingly as the property of the person or the company that wrote it. This was the advent of what is called '''proprietary software'''.
+
+In the early 1980s, the AI Lab hacker community at MIT, of which Richard Stallman was part, began to fragment. A spinoff company named Symbolics, Inc. was founded and hired most of the AI staff hackers away. They were offered a much higher salary but had to write software which became property of the company and were forced to sign NDAs, non-disclosure agreements which prevent employees from talking to people outside the company about the software they are developing. The depopulation of the MIT hacker community was followed by the discontinuation of the PDP-10, the computer which they had solely written their own operating system for. 15 years of work were rendered useless.
+
+===The GNU Project===
+With the death of his community, Richard Stallman faced a choice: either to work for the proprietary software industry and write code secretly, to leave the software business for good, or to try to do something useful which he could reconcile with his moral conscience. He chose the last one and started writing the most fundamental pieces of software one needs to run a computer from scratch: the operating system. And most importantly, it would be free for anyone to copy, modify and redistribute.
+
+{{Technology Box|Operating system|
+A computer operating system (OS) is a collection of software which performs the most basic tasks of a computer, acting as a platform for higher-level software which wants to use the computer's hardware resources (such as processor power, memory and disk space). An OS provides also a whole lot of different system services that the programs running on top of it can make use of. In most modern operating systems tools such as a text editor, a compiler, programming libraries and a graphical user interface, are included.
+
+Today, the most commonly used operating systems are Microsoft Windows, GNU/Linux, Mac OS X and some other Unix-like operating systems.
+}}
+
+
+[[Image:GNU_logo.png|thumb|170px|left|The logo of the GNU Project, displaying its mascot which is of course a [[Wikipedia:Wildebeest|gnu]].]]
+[[Image:FSF_logo.png|thumb|300px|right|The logo of the Free Software Foundation.]]
+
+Stallman named his operating system GNU (pronounced ''guh-noo''), a recursive acronym for 'GNU's Not Unix',  which was chosen because it was going to be similar in design to Unix, a then (and now) popular, but proprietary operating system.
+
+In 1984, he had started the GNU Project and started promoting the idea of what he called '''Free Software'''. In the English language, the word ''free'' has two different meanings. In this case, ''free'' is not referring to price, but to freedom. To illustrate the concept, Stallman coined the saying ''“Free as in ‘freedom’, not as in ‘free beer’”.'' As more hackers started helping him, he published the GNU Manifesto in which he formulated the goals and philosophical principles of the project and founded 1985 the '''Free Software Foundation''' to support the free software movement and the GNU Project.
+
+===Free Software===
+Free software, as defined by Richard Stallman and the Free Software Foundation (FSF), is software which the user can run, copy, distribute, study, change and improve upon, and redistribute. More precisely, it refers to four kinds of freedom, for you, the users of the software, which all must be granted:<ref>Free Software Foundation, [http://www.gnu.org/philosophy/free-sw.html The Free Software Definition], 1996-2006</ref>
+
+*The freedom to run the program, for any purpose (freedom 0).
+*The freedom to study how the program works, and adapt it to your needs (freedom 1).
+*The freedom to redistribute copies so you can help your neighbor (freedom 2).
+*The freedom to improve the program, and release your improvements to the public, so that the whole community benefits (freedom 3).
+
+This doesn't mean that you aren't allowed to ''sell'' copies (remember, it's about freedom, not price). On the contrary, selling CD-ROMs was and sometimes still is a major source of income for free software developers. ''Free software'' doesn't mean ''non-commercial''. But as everybody else also has the right to spread copies at no charge (freedom 2), this has become increasingly difficult with the rise of the internet. Money is rather made by selling support or offering services concerning the software.
+
+
+{{Technology Box|Source code|
+
+A computer program (e.g. a word processor as ''Word'', a web browser as ''Firefox'', or even a whole operating system like ''Windows XP'') is written in a [[Wikipedia:programming language]]. For the example program ''Hello World'', written in the programming language [[Wikipedia:C (programming language)|C]], which simply prints the sentence "Hello World!" on the screen when executed, this look as followed: 
+
+ <code>
+ int main(){ 
+  printf(??Hello World!??); 
+  return 0; 
+ }
+ </code>
+
+This text is called the source code of the program. It's easily readable by humans and with some knowledge of the programming language you can understand what the program does, how it does it and, if necessary, you can change the program.
+
+But the computer doesn't know what to do with the source code, the application can't yet be executed. That's because the computer does only understand machine language, which is written entirely in zeros and ones. To translate the program from the source code into machine language, there is a tool called the [[Wikipedia:compiler]]. A clip of the ''Hello World'' program above would then look like the following: 
+
+ <code>
+ 1100011110111010100101001001001010101110
+ 0110101010011000001111001011010101111101
+ 0100111111111110010110110000000010100100
+ </code>
+
+The program in this form, which the computer is able to execute, is called a binary. Now you can see why, even for a skilled programmer, it's difficult to figure out what the program can be used for or how it works, not to mention trying to change or improve the application.
+}}
+
+Access to the source code of the software is a precondition for freedoms number 1 and 3 (see above), because without availability of the source code it is almost impossible to modify the program in a useful way and exercise those freedoms. That's why most proprietary software is distributed in binary and source code is a jealously guarded secret.
+
+By guaranteeing these four freedoms to its users, free software has several advantages over non-free, proprietary software: The user is never dependent on a particular person or company. As technology or the needs of the user evolve and he wants to add specific features (like e.g. support for a rare language) or get the software running on a newer generation of computers, he isn't at the mercy of the supplier, but can check out the source code and make the necessary changes himself. And even if he isn't able to do that, he can always ask or pay somebody else to do that for him. There are other advantages of free software, like the fact that you can check the source code to see whether the program is spying on you and sending information over the internet back to its originator (and even if you aren't able to check it yourself, sure somebody else has done so and if he or she had found something suspicious, spread the word). And because the workings of free software are open, everybody can participate in its development. This leads to a whole new model of development (later-on described in further detail in [[2.4 Property and Commons|chapter 2.4]]). Free software is being mostly built by hundreds of highly skilled volunteers which are coordinating over the internet, but also by employees of companies like Red Hat, Novell or IBM. This way, free software usually evolves faster and bugs (errors in the software) are detected much quicker than in the proprietary software world.<ref>Raymond, Eric S.; [http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ The Cathedral and the Bazaar], 1997</ref> That way security holes are also detected much faster and this mechanism outweighs the tiny benefit gained by closed-source software in security because of its secrecy by far.<ref>[[Wikipedia:Security through obscurity]]</ref>
+
+===Copyleft===
+[[Image:Copyleft.png|thumb|197px|right|The copyleft symbol. It is the copyright symbol turned over.]]
+
+If a program is free software, that doesn't necessarily mean that it will be free software for everyone of its users. If someone receives a free program, can't he then make a copy or a modified version of it and redistribute it under proprietary terms, not allowing the users that receive the program from him to exercise the same freedoms he was granted and profit from his improvements? To prevent this, Stallman invented something called ''copyleft''. 
+In the legal system of almost every country, copyright law exists, which reserves the right to copy a ''work'' to its originator. In the past, copyright covered only books, nowadays it covers virtually every kind of information; like drawings, movies and even software. It is usually meant to prevent others from reusing published works. (More on that later in Chapter [[2.1 Copyright and Mass Media]].) But the copyright holder can grant other people licenses which permit them to use or copy his work under conditions determined by that license. Now copyleft, a play on the word ''copyright'', uses copyright law, but flips it over. Instead of leaving all the rights to the originator of the work, copyleft grants everybody a license to study, use, modify, and also redistribute the work, but under the condition that if they modify the work, their derived versions of the work must be redistributed under the same license. This ensures that everybody who receives a copy, receives the same rights and freedoms as everyone before him.
+
+===The GPL===
+For software, the most commonly used copyleft license is the GNU General Public License, or GPL for short. It was written by Richard Stallman who released the first version in 1989 and is now maintained by the Free Software Foundation. However, there exist also other licenses for free software.<ref>The Free Software Foundation maintains a [http://www.gnu.org/philosophy/license-list.html list of free and non-free licenses].</ref> Some of them are compatible to the GPL (which means you can share code between GPLed software and software covered by said license), others aren't. There are also free software licenses which don't use copyleft (e.g. the [[Wikipedia:BSD licenses]]). It can be argued that these licenses grant greater freedom to a single user (because if he wants to redistribute his modified version, he isn't forced to do that under the same terms), however, this comes at the expense that not all users of the software will have those same freedoms (as described above).
+
+In 2000, the FSF released another license which is designed especially for software manuals, documentation and textbooks: the ''GNU Free Documentation License'' or GFDL for short. It is the counterpart to the GPL and gives readers the same rights to copy, redistribute and modify a work, and it is also a copyleft license. Today it is used for many kinds of texts and all the text of Wikipedia, the free encyclopedia, is licensed under the GFDL.
+
+
+==Computers in Everyday Live==
+===Privacy, 'Big Brother'===
+
+==History of the Free Software Movement and the GNU Project==
+
+===External Links===
+
+*[http://www.gnu.org/ GNU project]
+*[http://www.fsf.org/ Free Software Foundation]
+*[http://www.stallman.org/ Richard Stallman's Personal Page]
+
+
+===Internal Links===
+
+Thanks also for improving them:
+
+*[[GNU]]
+*[[Free Software Foundation]]
+*[[Free Software]]
+
+==References==
+<references />
+
+==More Information==
+* [[Overview Texts]]
+
+[[Category:Intro]]

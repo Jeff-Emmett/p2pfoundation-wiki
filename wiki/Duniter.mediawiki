@@ -1,0 +1,215 @@
+'''= a fully decentralized currency based on  the [[Relative Theory of Money]]'''
+
+URL = https://duniter.org/
+
+
+=Description=
+
+'''1. Moul:'''
+
+“Duniter is a cryptographic money project whose aim is to implement free software that creates
+libre money in the sense of the relative theory of money. These libre currencies will allow the
+establishment of an equivalent of the basic income by monetary creation: the universal dividend or
+UD. The Duniter project, originally named uCoin , was started in June 2013 by Cédric Moreau,
+aka cgeek. This project is based on the work of the relative theory of money, RTM, developed by
+Stéphane Laborde, alias Ğaluel. Duniter inherited the operating principles of the OpenUDC
+project . This project initiated by Jean-Jacques Brucker alias JBAR in November 2011 is not as
+advanced as the Duniter project and does not know the same pace of development. OpenUDC is
+written in C language and is based on the lighttpd web server and on OpenPGP for the
+management of the web of trust.”
+(http://www.valeureux.org/blog/wp-content/uploads/2017/05/IV-CIMSC-Free-currency-4-17-ENG-ok.pdf)
+
+
+'''2. Gael:'''
+
+"The Duniter project wants to create a Libre Money, as defined by the Relative Theory of Money. A Libre Money is issued as a Universal Dividend, which is a percentage of the existing monetary mass, shared to all the money members. For a Libre Money to issue a valuable Universal Dividend, it will need a lot of users. We would like the first Libre Money to be issued by 1 million to 10 million users. So Duniter has to be easy enough to use and secure enough to be trusted.
+
+The Duniter network is decentralized. It is using a blockchain to synchronize the money state across its nodes. As opposed to Bitcoin, there is no power race in Duniter. In Bitcoin, because of the CPU race, the power is given to the ones who own the more computing power. In Duniter, it is democratic; because every user is identified as a unique human, they can write in the blockchain in turns. Simply put, each node is associated to a member of the money. When a member writes data in the blockchain, he has to wait before being able to write again. This is what ensures that the blockchain does not end in the hand of a few users, and that it does not burn too much energy.
+
+To identify users, Duniter makes the choice of a self-regulated system by its own members. This is the Web of Trust. Each member can certify new users. When a user receives enough certifications and is not too far away from the existing members in the web of trust, he becomes a member.
+
+For example, if I certified cgeek and that cgeek certifies you, your distance from me is two steps. This distance is checked with all the members of the Web of trust, and if it is below a given limit, let’s say four or five, you join the web of trust and start to issue your own Universal Dividend. Simple as that!"
+(http://basicincome.org/news/2017/01/interview-time-digital-basic-income/)
+
+
+=Related Projects=
+
+Sybille Saint Girons and Carole Fabre:
+
+The creation of blocks is not as in the Bitcoin, in which it is the race to computing power and in-fine
+to the waste of energy and resources. The identification of the members makes possible a
+personalized difficulty. Thus, nodes with very different computing powers will have the same
+chance of writing blocks.
+
+
+Remuniter is a system of remuneration of block generators. To do this, a public key receives
+donations and remuniter redistributes it to the block generators. They are paid for the task of
+securing the currency. This operation makes it possible to remunerate the block generators without
+issuing new money. Like the cryptographic mining currencies that are no longer de facto libre
+currencies.
+
+Transactions are made from sources, in the case of Duniter it is about creating money through
+universal dividends. These UDs are co-created by each member and are added in the blocks of
+the chain by the nodes at a time interval defined by the parameters of the currency.
+
+The web of trust (WoT), based on the principle of decentralization, was put in place to prevent an
+individual from receiving several UDs. Membership allows you to create UDs, certify identities and
+write blocks. The current requirements for membership are to have a minimum number of
+certifications. Certifications have a limited lifespan. This allows, in the event that a member dies or
+wishes to leave the community that he does no produce UD any longer. These parameters are
+configurable at the launch of the currency.
+
+The second version of the Duniter DUP protocol added an additional requirement to be a member.
+Identity must be at a minimum distance from all members of the community. In addition, a stock of
+certifications is set up. An interval of time is required between two certifications to be entered in the
+common register. These parameters are tested in the Test Net currency.
+
+In libre currency [[Ğ1]], it is necessary to be a member, to have five certifications and to be at a
+distance of five certifications steps from all members of the community. It is possible to issue a
+maximum of 100 certifications. These conditions create a web of trust with an average of sixteen
+million members. Duniter allows to set up several libre currencies with which it will be possible to
+make exchanges between them. Certifications expire after two years. Certifications from the same
+member are validated at least once every five days.” 
+
+
+In Mayenne, a collective of alternative currencies, created the SOU, for local exchanges. Le Sou is
+fully connected to Ğ1. Here is their website with all their news
+
+#Http://www.le-sou.org/
+#http://www.le-sou.org/
+
+Twice a year there are Libre Money Meetings organized by the sympathizers of the project.
+Starting in 2012 with two people, they now count more than 100 people and it is exponential. The
+next ones will take place in Le Havre. [Http://rml9-lehavre.tk/]
+
+Two days are still devoted to technical subjects and two days to the general public, with the game
+Ğeconomicus, a game of which we will explain the rules in the following part and see how a
+structure can influence our behavior in currency exchange."
+(http://www.valeureux.org/blog/wp-content/uploads/2017/05/IV-CIMSC-Free-currency-4-17-ENG-ok.pdf)
+
+
+=History=
+
+Gael:
+
+"A first crypto-currency project began, called Open-UDC. But it was complicated and I did not understood exactly how it would work. This is were cgeek forked Open-UDC by creating what was called by then uCoin, now Duniter."
+(http://basicincome.org/news/2017/01/interview-time-digital-basic-income/)
+
+
+=Discussion=
+
+==Theoretical Underpinnings of the Duniter G1 project==
+
+===A cryptocurrency system===
+
+"Duniter uses the crypto-currency concept introduced by Bitcoin, which is to use cryptographic tools such as signatures to create digital currencies. Duniter fits this definition, but it has completely different inspirations than Bitcoin -- the Web of Trust and Universal Dividend -- to do better than Bitcoin. Actually, Duniter has a reference to a theory called Relative Money Theory. This theory demonstrates that a currency which aims to respect each individual's economic liberties MUST implement the Universal Dividend (a.k.a. Basic Income), which is the only way to avoid both spatial and temporal asymmetry toward money issuance."
+
+
+===A space-time asymmetry===
+
+Space-time asymmetry refers to the relative access of individuals to newly created money. Concretely, all existing currencies (c. 2015) are both spatially and temporally asymmetrical for their users. Let's take Bitcoin as an example to understand why.
+
+
+====Spatial-asymmetry====
+
+When new Bitcoins are created, only some Bitcoin users (the miners) are given new Bitcoins, while everyone else get nothing. We believe this is the first injustice. 
+
+
+However, some might say:
+
+"but miners used their electricity and time to get it!"
+
+... we would answer that their work shouldn't have been rewarded by newly created Bitcoins. New Bitcoins should be distributed to the whole Bitcoin community. Miners should be rewared another way, but not by money issuance. Of course, Bitcoin can't create money through Basic Income since Bitcoin users are not strongly identified, and one might benefit from money creation multiple times if he owned several wallets. Duniter gets rid of this problem completely by identifying its users and giving the same amount [of Basic Income] to everyone.
+
+
+====Temporal-asymmetry====
+
+Bitcoin has an absolute limit of 21 million BTC (its unit of currency), which means ever fewer bitcoins will be created over time until 0 are being generated. So, once the first adopters have mined every bitcoin, how will future joiners get Bitcoins? The answer -- just like Euros or Dollars: to get money you have to work for the ones who already own it. We believe this is the second injustice. Every member of a monetary community should be equal with regard to earning money, and get the same relative amount of money over time, even if he is a late adopter. Duniter aims to fix this by making the Universal Dividend (a.k.a. UD) grow by the time according to precise rules, thus making members equal toward money issuance on a half-lifespan.
+
+
+===A solution===
+
+Bitcoin has taught us that it is possible to create a currency system allowing one to both create digital money and to exchange it without a central authority. What we need to change is the way money is issued so we finally have a symmetrical system. We need Bitcoin + Universal Dividend. But Universal Dividend implies that the community consists of only identified people. This is where the Web of Trust (WoT) comes into place. This concept, introduced by cryptography with the OpenPGP format, allows us to identify people in a decentralized manner. It works as follows: each person creates a personal identity that is linked to its cyptographic certificate. The identity must be confirmed by others members who use their own cryptographic key. It is that simple: people choose who is part of the community and who is not, not a central authority.
+
+Duniter however won't use OpenPGP for its cryptographic features: Elliptic Curves will be used instead for the conciseness of its generated keys and its pratical advantages. This requires that we specify our own Web of Trust mechanisms, but we think it is worth the effort.
+
+
+====The Blockchain====
+
+Bitcoin's blockchain mechanism is important for two main reasons: synchronization and security. Duniter will benefit from these two features. However, Duniter's blockchain is slightly different: it not only stores transactions, but community activity for defining the WoT. It also has a different Proof-of-Work (PoW) mechanism made possible by the WoT definition, providing a much more energy-efficient way to compute the blockchain.
+
+
+====Web of Trust====
+
+The Web of Trust is to be written in our shared public ledger, the blockchain, in just the same way Bitcoin's transactions are written in Bitcoin's blockchain, but for us it is the identity of people. Thus, the blockchain constitutes a space-time referential, where space is represented by individuals and time, provided by blockchain units, is the blocks. What we finally have is wot(t): the community at an instant, t.
+
+
+====Transactions====
+
+But that's not all: the blockchain is also the place where transactions, the flow of money, are sequentially stored and define money ownership. In this area, Duniter looks quite a bit like Bitcoin: transactions take inputs (a.k.a. sources) and generate outputs. A transaction is a flow of money. 
+
+However, in Duniter inputs may be:
+
+* money from another transaction [Bitcoin-like]
+* money from a Universal Dividend [Duniter-specific]
+
+
+As you can see, no generation transaction (where a miner earns Bitcoins for solving a block) exists in Duniter. This kind of transaction is replaced by Universal Dividend input. Outputs, on their hand, are always public keys, and not necessarily WoT members' public keys: a company may also have a public key. This lead us to an important fact: companies are also able to use the currency.
+
+Do note carefully that, even if they may participate, companies won't be able to create money. Only individuals will be able to do it. This is a very important point.
+
+
+====Proof of Work====
+
+Like any P2P crypto-currency system, Duniter has a way to synchronize its peers when writing to the ledger (the blockchain). However, Duniter benefits from a different environment than other altcoins: an identified Web of Trust. This little difference has a tremendous impact: while Bitcoin has to make a global challenge using CPU resources to avoid just a few people from hijacking the blockchain, Duniter has the ability to rely on its members to write the blockchain. This allows us to both avoid the energy-wasting problem introduced by PoW and easily prevent the 51% attack in Duniter. Concretely, Duniter has a personalized challenge difficulty for each of its members that gets harder for the member who succeeds in writing a block, while it gets easier - until a given minimum - for the others. This mechanism ensures a rotation in the blockchain's writing, while keeping the advantage of PoW for synchronizing the peers.
+
+It can be noted too that, since a block does not provide extra money creation, members won't be encouraged to compete to write the next block.
+
+
+===To summarize===
+
+Duniter's blockchain can be compared to Bitcoin's blockchain: a great book tracing the history of each membership inside the Community along with the transactions of its users. With the blockchain, we have the fundamental referential of the Relative Money Theory members (humans), and the flow of money through the transactions generated by the currency's users.
+
+====A free economy====
+
+The goal of all this is to allow people to participate in a free economy thanks to a free currency. What is a free economy? 
+
+Relative Money Theory defines it through 4 economic freedoms:
+
+#The freedom to choose your currency system: because money should not be imposed
+#The freedom to access resources: because we all should have access to economic & monetary resources
+#The freedom to estimate and produce value: because value is a purely relative to each individual
+#The freedom to trade with the money: because we should not be limited by the avaible money supply
+
+Those 4 economic freedoms should be understood together, not exclusively. Plus, "freedom" has to be understood as "non-nuisance". So here, freedom does not mean the right to take all of a resource (like water source in a desert) so no more is available to the others. Now you get it, this is the goal: free economy through free currency."
+(https://duniter.org/en/theoretical/)
+
+
+==Duniter and the Basic Income==
+
+From an interview with developer Gael by Tyler Prochazka:
+
+'''* How much of a basic income does Duniter include for each member ?'''
+
+Duniter issues around 10 percent of new money each year. This new money is shared to all the members. The rhythm can be faster: for example, we can issue every day 0.026 percent of new money, and at the end of the year, it will be a growth of 10 percent.
+
+Ten percent is not a number chosen randomly. It respects the symmetry in time. If a new user join the Duniter network in 35 years, he will start to issue the Universal Dividend at the same speed as we did before. Ten percent is calibrated so that in half a human life, 40 years, you create the same share of the monetary mass as every members did before. One should not be privileged and create a bigger share of money during his life just because he joined Duniter earlier or later.
+
+
+'''* What are the reasons Duniter is utilizing a basic income and how did the team first get introduced to the basic income concept?'''
+
+I think most of the team discovered Basic Income before reading about the Relative Theory of Money. One of the biggest debate within basic income community is “how much should we give to individuals?”
+
+The Relative Theory of Money demonstrate that to consider individuals equals and free, a money has to be issued symmetrically between individuals, in space and time. It means that it has to be issued by a Basic Income called Universal Dividend.
+
+Yoland Bresson (an early advocate and participant in the Basic Income Earth Network), who wrote the preface of the Relative Theory of Money, is the author of the theory of “Time-Value”. Interesting enough, both theories, applied to the euro-zone, result in almost the same Universal Basic Income amount.
+
+Another interesting thing is the Theorem of equivalence between a Libre Money and a Universal Basic Income. This demonstration states that a Universal Dividend, based on money issuance, is strictly equivalent to a Universal Basic Income based on a tax with a lower issuance rate of money. Basically, issuing 10 percent of new money each year is strictly the same as issuing three percent of new money and taxing seven percent of every accounts. But the Occam’s razor principle states that the simpler a system is, the better. The Universal Dividend is really simple: no taxation is required, no administration is necessary to check for the redistribution. It is only about issuing new money. And it is strictly equivalent to a Universal Basic Income!"
+(http://basicincome.org/news/2017/01/interview-time-digital-basic-income/)
+
+[[Category:Crypto_Economy]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:Peerfunding]]
+[[Category:Money]]
+[[Category:P2P_Infrastructure]]

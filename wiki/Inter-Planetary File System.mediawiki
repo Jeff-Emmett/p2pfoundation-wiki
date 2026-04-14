@@ -1,0 +1,63 @@
+'''= "an open source project that aims to enable peer-to-peer methods for storing and disseminating information on the web".'''
+
+URL =
+
+=Description=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"The Inter-Planetary File System (IPFS) is an open source project that aims to
+enable peer-to-peer methods for storing and disseminating information on the web. The
+goal of this project is to give users the ability to publish online without having to trust a
+single third party server to host their content. Instead, IPFS provides a verifiable means
+of retrieving content from a distributed network of storage providers. IPFS’s main
+insight is to use hashing functions to point to content, instead of using the IP address of
+a server where the content is housed. A hashing function is a function that can be used
+to map a data file of any size to an output of a fixed size, usually in the form of a series
+of random letters and numbers. The hash produced by a file can serve as a unique
+fingerprint of that information–for any given file, the hash generated will always produce
+the same unique value. Conversely, if any aspect of the file is modified, the hash value
+will change.
+
+The IPFS system uses the hash of a file as its pointer, effectively decoupling the
+physical server that hosts the content from the address that points to where that content
+can be found. It does this by storing files in a distributed hash table (DHT). A distributed
+hash table is a distributed system in which the responsibility of maintaining the mapping
+from key to value is distributed over all nodes in the system. A DHT replicates data, and
+can tolerate nodes entering and leaving the system. Clients are assured of the integrity
+of the data they are receiving by checking the hash of the file they are looking for.
+
+Therefore anyone can easily copy and serve content, making it harder to take that
+content down, and potentially improving latency by making files accessible in multiple
+places. IPFS stands in contrast to the way content is currently discovered online today,
+using URLs and HTTP links to identify a specific server host, where that content lives.
+If IPFS were to gain mainstream adoption, it would make content more resilient in
+contexts where Internet connectivity is weak, or censorship threats are high. IPFS is
+essentially a distributed file system with a simple protocol that enables easy finding,
+caching, and serving of files. If those files are appropriately replicated across the
+network, they could tolerate outages more easily than today’s web. The developers on
+the IPFS project imagine their system could serve as the backbone for a peer-to-peer
+file sharing network, whereby information is exchanged locally via a mesh-like network.
+In this way, important digital content could be disseminated, even if access to the
+Internet is cut off or platforms are pressured to take down specific content.
+
+Not only might IPFS make content more resilient, but it could also enable a more
+competitive landscape for publishing platforms in the future. Agreeing upon a
+peer-to-peer protocol and a way for storing and retrieving content is one way we could
+enable more sharing between applications, as we saw with the web, and thus lower the
+barrier for a more diverse social media landscape. If combined with a shared common
+data format, IPFS might reduce switching costs between applications. Many different
+services could use the same data, thus eliminating the need for the user to replicate the
+same information, such as their social graph, photos, prior posts, and interaction history
+each time they sign up for a new service. If it’s easier for users to switch between
+related platforms, then it makes it easier for new services to bootstrap a network,
+ultimately providing more choices in the market."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+
+=Status=
+
+* As of now, the project has two implementations, in Go and Javascript
+
+
+[[Category:P2P Infrastructure]]

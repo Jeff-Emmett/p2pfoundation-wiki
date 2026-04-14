@@ -1,0 +1,392 @@
+'''= a standard protocol for routing payments through arbitrary currency networks'''
+
+URL = http://en.wikipedia.org/wiki/Ripple_monetary_system
+
+=Definition=
+
+"Ripple is a payment system, which enables global financial transactions of any size with no chargebacks. It is built upon a distributed, open source internet protocol, consensus ledger and native currency called ripples. The Ripple network supports any fiat currency, cryptocurrency, commodity or other unit of value."
+(http://voiceofrussia.com/news/2014_01_30/Ripple-XRP-is-considered-as-something-much-more-than-a-cryptocurrency-1478/)
+
+
+=Description=
+
+'''1.'''
+
+"Ripple is a monetary system based on trust that already exists between people in real-world social networks. By cutting out the institutional middlemen, Ripple is both more community-oriented and more efficient as a means of exchange.
+
+National monetary systems rely on trust in large financial institutions. A bank account balance, stored as electronic bits in a computer, represents a promise by the bank to pay the account holder. That promise is only meaningful if the bank is trustworthy. Banks, in turn, leverage those deposits to issue new money by making loans to trustworthy individuals as determined by an often labour-intensive screening process.
+
+Ripple cuts the banks right out of the picture by allowing anyone to act as a bank and grant credit within the Ripple system to anyone they know. The system keeps track of the source of all IOUs, so that debts that are not repaid are automatically borne by the issuer."
+
+
+'''2. Oksana Teplinskaya:'''
+
+Ripple is considered as something much more than a cryptocurrency. Danny Bradbury, West Coast Editor for CoinDesk.com, shared his view on it with radio VR:
+
+- ...The main asset that ripple has is its payment network, which enables people to send many different currencies to and from each other and ripple as a currency unit is actually used as an enabler to send those currencies. So, you need a small amount of the ripple currency in order to send upper currencies across the ripple network.
+
+One of the key improvements is the consensus ledger, which completely removes the mining’s “wasted electricity” problem and makes it much more difficult to successfully execute an attack against the network. Also, the e-coin has won the cooperation of many mainstream players in the financial system. Ripple Labs does not charge any fees nor has any revenue streams to finance support and promotion of the network, though it has been criticized for retaining 25% of “pre-mined” XRPs. And still, Ripple is considered by many as a frictionless and transparent method of instantly transferring money anywhere in the world, and what is more important in this fast changing world, in any currency."
+(http://voiceofrussia.com/news/2014_01_30/Ripple-XRP-is-considered-as-something-much-more-than-a-cryptocurrency-1478/)
+
+
+=Status=
+
+* Now in operation as [http://ripplepay.com/ Ripplepay], at http://ripplepay.com/ [http://ripple.sourceforge.net/] ; 
+
+* The network became a fully open source as of September 2013.
+
+* '''See also the update: Ripple has been taken over by a private company and is no longer open source.'''
+
+
+Sepp Hasslberger:
+
+"In the beginning, Ripple was a clean transfer utility using trusted relations between friends to find a path for payments. Any currency can be used in it.
+
+Recently, the developer joined up with programmers who are into Bitcoin. Now Ripple has a currency (RPX I believe) that is similar to Bitcoin in that a certain amount of it has been created. That currency has to be acquired (either by gift or by buying it) for Ripple to work. You need a stash of it in your account to be able to hook up with other people and extend trust to them. It is used to guard against malicious attacks (like loops of transfer that clog the works) as each transfer also costs some RPX.
+
+Also, the source code went from open to proprietary. They say they will publish the new source code some time in the future. 
+
+I guess who likes Bitcoin will also like Ripple. For me, that connection is somewhat of a turnoff."
+(Facebook, June 2013)
+
+
+=Explanation=
+
+
+==Ryan Fugger:==
+
+"Ripple is a monetary system that makes simple obligations between friends as useful for making payments as regular money.
+
+Normally, if your friend Alice owed you $10, she would have to pay you back before you could make any use of that debt. If you were creative, however, you might be able to pass the debt on to someone else who knew and trusted Alice, in exchange for something you wanted. For example, you might be able to get a book you want from Bob, who also knows Alice, in exchange for letting Alice know that she now owes Bob $10. Instead of money, you used Alice's IOU to pay Bob. Alice acts as an intermediary between you and Bob.
+
+Ripple does the same thing, only it takes the idea one step further. What happens if you want to get a haircut from Carol, who doesn't know Alice at all? Your $10 IOU from Alice isn't useful because Carol being owed money by Alice doesn't mean anything to Carol. But suppose you had a way to find out that Bob, who knows Alice, also knows Carol. You could talk to Bob and arrange for him to take Alice's IOU in exchange for giving his own IOU for $10 to Carol. Since Alice owes him exactly what he owes Carol, Bob is even on the deal. Both Alice and Bob act as intermediaries between you and Carol.
+
+And that's how Ripple works. You create a profile on the system and indicate who you know and how much you trust them by connecting to people by email address and giving them credit limits. Then whenever you want to make a payment to another Ripple user using only friendly obligations, the system finds a chain of intermediaries connecting you to the person you want to pay, and records the payment in each intermediary's account all the way down the chain. You end up owing one of your "neighbours" on the system, and the payment recipient ends up being owed by one of her neighbours."
+(http://ripplepay.com/)
+
+==Sepp Hasslberger:==
+
+"Paying without cash and without going through a bank may seem an impossible proposition. Not so, says Ryan Fugger, the architect of Ripple, an open source bank-independent peer-to-peer payment system that is now in Beta release, meaning it's open to play with and test.
+
+The proposal is based on the fact that all payments are made through IOUs. While this is obvious in the case of trust between individuals, it is more obscure when considering cash, which is based on trust in the government, or the bank credit, which we obtain by the bank accepting our IOU - collateral - and providing its own IOU - a positive bank balance - for us to use in payment.
+
+The idea of a direct payment system that complements and may eventually make obsolete both bank and government IOUs is simple but it has world-changing potential. It tends to counteract a huge drain on the economy which is operated by the mechanism of interest. Since some 97 % of our money is created a a loan from a bank, it requires continual interest to be paid to its owner, the bank.
+
+Ripple is an account like your bank account or your pay pal account.
+
+The Ripple account is useful because
+
+- it leverages personal trust from friends and family to create credit
+
+- it provides a simple method of payment between Ripple users
+
+Although credit from your friends lets you jump-start the Ripple account by allowing you to go into negative balance, like any other account eventually your Ripple account needs to be balanced, which means you need to put money in to be able to take money out.
+
+To put money in, you either have to get paid through Ripple for something you sold or some service you provided, or you have to convert some of your cash or bank money into Ripple money.
+
+For making payments, Ripple will only be useful if it has wide acceptability.
+
+
+'''There are four distinct layers to the Ripple system.'''
+
+1) The '''system layer''', which is the Ripple program that keeps track of account identities, credits and transactions between accounts and the user interface that allows us to become part of the community and to use Ripple for making and receiving payments.
+
+2) The '''interpersonal layer''', which is an extensive network of friends who grant each other credit as expressed in Ripple currency. Trust between people is converted into liquidity that can be sent here and there to keep track of economic interactions. The network of trust is what provides the route that payments can travel on.
+
+3) The '''business layer''', which connects the Ripple system and our network of friends to the real world, to useful physical products. Businesses that accept payment in Ripple currency are part of that layer.
+
+4) The '''banking interface''', which provides for exchange with the current monetary system. The interface is established by entities like banks or credit unions opening a Ripple account, to provide use of Ripple as an additional service to their customers.
+
+Each one of these four layers has its own problems that need to be solved. Each one needs to be built up to full functionality if Ripple is to be a successful payment system. Although it is conceivable that Ripple could function with only the first three layers, a link in to the "real" money world seems desirable.
+
+
+Layer 1 exists and there is a workable implementation of the program running at http://www.ripplepay.com
+
+Ripple software is open source. The current user interface is browser based and records are kept on the server. Other implementations are possible, such as a network of servers that link between each other to route payments. There could also be a peer-to-peer implementation in the future, which does away with the need for a centralized server, storing records and transactions transparently and redundantly on the users' own computers.
+
+The user interface that allows us to make payments could be brought to mobile phones, extending usability of the system very much.
+
+The transfer method is simple - as simple as ordering a payment from your bank account or through paypal. The mechanism behind the payments is not something the person who uses Ripple needs to know in detail. The Ripple program will look for payment paths and do its job in an unobtrusive way. What's of more immediate concern is how to enter in the Ripple community and to link up with others who are already in it.
+
+
+'''Layer two: The network of friends'''
+
+It is possible to start forming that network of friends by going to www.ripplepay.com, registering as a user and offering credit to some of your friends. It would be normal for those friends to offer you credit in turn. By doing that, both of you immediately have the possibility of using Ripple to settle accounts with each other's friends, but of course the real useful part only comes when businesses join up and you can buy things with Ripple instead of spending cash or bank money.
+
+It is important to know that you can't just enter Ripple without also bringing in [at least some of] your friends. For the system to be able to process payments, there need to be paths of trust. Ripple links and extends these paths of trust to make a payment go from one endpoint to the other, always going through an unbroken chain of direct personal links. That is why you need to be linked with as many people as possible. You need to have given credit to and received credit from your friends, otherwise your way into the payment system is not guaranteed.
+
+
+'''Layer three: The business layer'''
+
+To be widely acceptable, Ripple needs to attract businesses of all kinds to accept its currency as payment. In turn, those businesses have to have some way of spending the accumulated Ripple currency, either with other businesses or by paying their workers and perhaps the owners.
+
+For a business, a Ripple account is like any bank account. Payments can be received into it, payments can be made from it, and there will be credit lines in and a credit lines out that further characterize the account and link it into the system. For accounting purposes, all that is of interest is the correct registration of transactions and the balance of payments, either positive or negative.
+
+In a time of first implementation, businesses could opt to accept Ripple currency for a certain percentage of any sale, demanding cash or bank money for the rest. As Ripple takes hold, some businesses may move to accepting Ripple currency for the full amount of any payment due.
+
+To attract businesses into the Ripple community, there has to be some advantage, something that makes it worthwhile to use this particular system of payment. It should be more profitable to accept Ripple currency than to only accept money. (open question: what would be a good "hook" for recruiting businesses to accept Ripple payments?
+
+
+'''Layer four: The banking interface'''
+
+Banks and credit unions could be persuaded to join the Ripple community to offer an additional service to their clients. Banks could also provide smart cards that allow transfer of ripple currency. (open question: how exactly does a Ripple currency account link to a bank money account or to cash?)"
+(http://blog.hasslberger.com/2006/03/ripple_pay_open_source_cashles.html)
+
+==SourceForge==
+
+"Banking was invented to solve the problem of the trusted intermediary: I'd like to buy something from you on credit, but you don't know if my credit is good, so you can't accept my IOU. If we can find someone who you trust, and I can obtain their IOU, I can use it to pay you. Goldsmiths were trusted by everyone in the region because they held gold in their vaults, and so they were natural candidates for a trusted intermediaries. The catch was, you had to obtain their IOU, which was the original paper money, either by borrowing it at interest, or by earning it from someone who already had it.
+
+We have become so used to our banking system, we do not realize that any trusted intermediary will do. For example, a mutual friend might vouch for me by agreeing to assume the debt if I failed to repay. We might even arrange for the mutual friend to simply assume the debt so that I could just pay her. In general, a chain of more than one trusted intermediaries, each a mutual, trusted friend between the previous and the next, works the same way.
+
+
+'''How Does Ripple Work?'''
+
+Ripple is based on a simple idea that has only recently become feasible, thanks to computer technology and the internet. Each participant indicates which other participants he or she trusts, by offering to accept their IOUs up to a certain amount, like a line of credit. To make a payment to someone who trusts you, you simply adjust your IOU balance with them to indicate that that you owe them the amount of the payment.
+
+To pay someone who doesn't trust you, the Ripple system finds a chain of credit connections between you and the payment recipient. Then you pay the first person in the chain, who pays the second person, and so on until the recipient gets paid.
+
+This is exactly what happens when someone writes a normal cheque. Their bank deducts from his account (which is his IOU balance with the bank), and pays the central bank, who credits the recipient's bank, who further credits the recipient's account. In other words, the payer gives some of his bank's IOUs back to his bank, his bank gives some of the central bank's IOUs (national currency) back to the central bank, who passes them along to the recipient's bank, who issues its own IOUs (bank account digits) to the recipient.
+
+Note that all three intermediaries are banks. Ripple lets everyone act like a bank."
+(http://ripple.sourceforge.net/)
+
+==FAQ==
+
+From the FAQ:
+
+'''What makes Ripple "community-oriented"?'''
+
+In national monetary systems, control over the creation and allocation of money is in the hands of a small group of centralized, hierarchical, corporate institutions. Ask yourself why the government vouches for bank IOUs through deposit insurance but won't vouch for people's IOUs, when bank IOUs are backed by people's IOUs? Corporate banks are given a near-monopoly on intermediating economic exchanges. Is it any wonder that corporations receive economic priority while the human communities in which we all must live slowly disintegrate?
+
+Money is just a way to keep score in the big economic game that we are all playing, so why do only a few people have control of the scorekeeping process? Why keep the units of measurement scarce when needed projects go undone for their lack? It's as though we were carpenters trying to build a house, but the foreman insisted on controlling how many inches each of us was allocated. It makes what could be a cooperative economy into a power game for those seeking control.
+
+Ripple places control of monetary scorekeeping in the hands of the people around us, in our social circles and in your communities. It takes away the excuse, "we didn't have any money in our community," and lets us focus on more fundamental economic and social problems.
+
+The goal of Ripple is to help lessen the gap between what we feel we must do to make money and what we wish we could do to make the world a better place.
+
+
+'''What makes Ripple efficient?'''
+
+Banks employ millions of people to manage the trust relationships which give value to national currencies. The must ensure that account holders are paid on demand, and that loans are only made to creditworthy individuals. Since human beings have evolved to form trust relationships with other human beings, and not with institutions, the whole process is problematic, and requires a gargantuan legal framework of bureaucrats, lawyers, regulators, and accountants to stabilize it.
+
+We all pay for this system in innumerable ways, through interest charges, service fees, taxes, and lost productivity in the economy. Too much of our effort is devoted to regulation and not enough to actual production. Imagine if thousands of bankers and bureaucrats could quit their jobs without hurting the GDP! (This would probably actually improve the GPI.)
+
+Ripple currency is underpinned by natural trust relationships that exist already within families and between friends. Bureaucrats and coercive legal frameworks are completely optional. The currency has value simply because people value their relationships with other people. It's financial capital backed by social capital.
+
+The main expenses of the Ripple system are software development, managing secure webservers, and network bandwidth. These will be negligible compared to the costs of managing a national currency.
+
+A proven example of this efficiency is the Hawala system of currency transfer.
+
+
+'''How is Ripple different from other "virtual currencies"?'''
+
+The promise of internet "virtual currencies" has not been fulfilled largely because no one has designed a stable, usable system that is not mired to our Victorian-era centralized, bureaucratic, and inefficient national currencies. Many efforts so far have been electronic window dressing on top of this behemoth, like building email on top of the postal system.
+
+Ripple currency is fundamentally different from national currency. It is based on debt with anyone you want, not solely on debt with large financial institutions. Ripple payments are not encumbered by the inefficiencies inherent in institutionalizing trust relationships. Ripple is not an institution, it is a tool. Ripple is to regular money what email is to regular mail: free.
+
+
+'''You keep saying "payment", but in Ripple you don't pay anything, only promise to pay! Why doesn't Ripple allow people to pass real money between them instead of only IOUs?'''
+
+That's what "real money" is, promises to pay. Think about what your bank account really is – a sequence of bits in a bank computer representing your bank's promise to pay you in government currency, which is really just the government's promise to award you credit towards your taxes. Money has value because people will exchange it for real goods and services, which they can do just as readily for bits in a Ripple computer as bits in a bank computer or clever etchings on a piece of paper money.
+But Ripple "money" isn't as good as real money because not as many people accept it.
+
+True. However, nothing prevents you from making agreements with your associates on the system to settle all Ripple debts in bank or government currency, say, at the end of every month. Some people who don't like inflation might want to settle in gold, or some other real commodity. Used in this way, Ripple is a payment system that avoids many of the costs inherent in other payment systems.
+
+But, as more people use Ripple, and people begin to trust that the system is secure and consistent, Ripple money will start to become as useful as regular money, and there will be little need for most people to convert Ripple's personal debts into bank debts."
+(http://ripple-project.org/faq.html)
+
+
+=Discussion=
+
+
+==Will It Work?==
+
+By 'webepisteme':
+
+"To understand the point of Ripple, we have to go back and look at an old story about money: credit. Not all money has been based on credit, but many monetary historians believe that debt-based, ledger money predates commodity money. In other words, before money existed as a physical ‘thing,’ it existed as a relation – of debt. Archeological evidence indicates that ledger-based money was used 5,000 years ago in Ancient Sumeria.
+
+Under such systems – the first examples of mutual credit arrangements – money was created as debt whenever somebody received a good or service from someone else. The debt was quantified in an underlying value, such as a weight of silver or wheat, and recorded on a centralised ledger by the local authority, who also set prices. In order to repay the debt, the debtor would be expected to provide equivalent value of goods and services to somebody else in the currency community, bringing their balance back to zero. Today, LETS (Local Exchange Trading Systems) is probably the most prevalent example of mutual credit in action around the world. It tends to be operated in small community settings with a central administrator overseeing transactions.
+
+It’s worth remembering that modern day fiat money is also debt-based money, but with a critical difference. In a mutual credit system, money consists in the credit a community issues to itself. In a debt-based fiat regime, the predominant form of money is bank credit – an IOU for government-printed cash. Government money is, in turn, no more than an IOU against future taxes, backed by the threat of government coercion. Ellen Brown has argued that the cognitive flaw of the banking model resides in the fallacy that money is a ‘thing,’ and that therefore ‘reserves’ in an underlying asset must be built up before credit can be extended. Mutual credit, on the other hand, is based on the powerful insight that money essentially consists in credit between people. As such, it can simply be created whenever people agree to trust each other to pay later.
+
+Mutual credit is championed by people interested in community currency, as well as those seeking a progressive alternative to the modern financial system and its debt-based, fiat money. While LETS has been successful in getting communities to trade on credit, it has never managed to scale to the extent that national money has. In my view, LETS and other mutual credit circles suffer from a paradoxical constraint. On the one hand, if bonds of trust between the community are too weak, individuals will neglect to pay down their negative balances, leading to stagnation and atrophy. On the one hand, if community bonds of trust become too strong, individuals lose the desire to transact with one another, as credit comes to be viewed as an unnecessary obstacle to a gift economy.
+
+This perhaps explains why LETS and similar systems have so far failed to scale significantly. On the other hand, I don’t want to suggest that this will never happen, as it might. There are many people thinking about the problems with LETS and scaling, and some interesting ideas, ranging from guarantor systems to credit ratings are currently floating around the internet.
+
+This brief sketch of mutual credit should now set the scene for explaining what Ripple is, and why it is a unique solution to the scaling problems faced by LETS and other forms of mutual credit. Ripple is mutual credit, but with a twist: credit is extended only between friends or trusted parties, not between individuals and the community. In other words, Ripple’s particular understanding of credit is based on credit relationships which already exist – between friends. In effect, whenever two friends agree that one will pay the other later, they are entering into a credit agreement. We do this when we share daily expenses with friends, but promise to pay back in money, rather than leave the exchange to be completed in a less formal gift economy. For example, an agreement to spot a friend for lunch, buy a theatre ticket, cover half the cost of a holiday, etc., are all examples of credit.
+
+The major advantage of credit relationships between friends, rather than between individuals and a system or community, is that friends have a natural incentive to pay each other back. The credit relationship is embedded in a social relationship which depends on reciprocity to survive. This is another way of putting the statement that prolonged debts turn friendships (and other relationships of trust) sour. We want to pay our friends back because we want to get rid of the feeling of debt towards them.
+
+So, Ripple’s IOU constraint rests on a basic observation: that trust between friends provides a greater incentive to pay down negative balances than a more abstract relationship to a community, which can lead to shirking of obligations and stagnation, as we have seen. Individuals extend credit lines to their friends, up to the limit they are willing to trust them with. But what good is an IOU system between friends? How could this be the basis for a currency?
+
+Ripple really gets interesting when we consider the second major feature of the system: payment routing. Ripple allows you to use your IOUs between friends to pay strangers and acquaintances who you would not trust with a credit line. This works through trusted intermediaries: if person A wants to pay person C for their painting, but person C does not trust person A with a line of credit, they might be able to trade if person B, who is friends with person A and person C, acts as an intermediary between them. Person A will write an IOU to person B, increasing his obligations towards him, while person B will write an IOU to person C. A has paid C, without C needing to trust A.
+
+Payment routing is a powerful idea which allows personal IOUs to become a kind of money based on trust between friends. The more friends you have, and the more credit they are willing to offer you, the more payments you can make and receive within the Ripple network. Payments can be routed through unlimited numbers of intermediaries, as long as there is enough credit capacity (willingness to extend credit) in the chain connecting any two nodes.
+
+The Ripple project aims to create an open source project to create a decentralised, peer-to-peer network based on these ideas. Much like Bitcoin, Ripple would have no centralised issuing authority to keep track of transactions or to issue new money. However, unlike Bitcoin, money will be created between nodes when they extend each other credit. Each node only needs to remember its transactions with its friends, rather than the whole network. Such a network is also quite compatible with LETS – a community credit system could have its own Ripple node, allowing it to transact with and route payments between other LETS systems, for example.
+
+The question of whether Ripple will actually work as a currency is entirely down to whether it can create enough credit capacity to be useful. It’s not hard to see why a simple IOU system would work, as such systems already exist in non-digital form between friends. On the other hand, the ability to use Ripple as payment between strangers really depends on the strength of the connections in the network, both in terms of the quantity of credit extended (depth) and the number of people willing to accept it (breadth.) Could Ripple create enough depth and breadth to work?
+
+I think there are a number of reasons to be optimistic:
+
+
+'''Not just for friends'''
+
+One point about credit lines is that they do not only exist between friends, but also between acquaintances as well as businesses. Its common practice for businesses to hold accounts with each other, which they settle on a periodical basis. This is effectively extending a line of credit which can be repaid in money at a later date, or possibly written off against goods and services received from the debtor.
+
+This suggests that there will be many types of entities interested in taking advantage of a Ripple credit system. Business may use it to trade with each other, relieving them of dependence on fiat money. This helps businesses free up cash flow, as they no longer need cash to settle some of their transactions. Ripple would work particularly well for businesses which participate in close loops of trade, and where fiat money is therefore redundant. It could also encourage such closed loops to form, boosting local trade – the aim of many community currency schemes such as the Brixton Pound. Businesses might also use Ripple to manage their tabs with customers, which they can settle in cash.
+
+
+'''Small worlds'''
+
+Credit capacity depends on the quality and quantity of connections of trust individuals can form with each other, but also the degree of connectedness of each node to every other node. In reality, social networks are often called “small worlds” by network scientists, based on the low average distance between nodes. In lay terms, we speak of “six degrees of separation” between any two people on the planet, in the social graph of acquaintances. In trust networks, there are similar short paths between nodes, meaning high degrees of connectedness.
+
+
+'''Network effect'''
+
+Once Ripple becomes useful as a simple IOU tracking tool, it will start to grow faster, as the possibility for payment routing increases. Such growth is self-perpetuating, as the more useful Ripple is, the more people join, who in turn add more credit capacity to the network. The distributed architecture of Ripple also means that once a tipping point is reached, technical limitations won’t prevent Ripple from growing exponentially, enabling it to become much like money.
+
+
+'''Architecture of Participation'''
+
+Ripple’s ability to scale could be increased by building what Tim O’Reilly calls an architecture of participation. Such an architecture is a system which rewards the very behaviour which creates value for the rest of the network. Bitcoin’s architecture of participation is mining: as nodes lend their processing power to the network for transaction verification and processing, they are rewarded with the chance to generate new coins.
+
+Ripple may need to develop a similar incentive to hubs in credit networks – the people who are disproportionately connected in the network, and who are therefore more critical to payment routing. Transaction fees might incentivise hubs to emerge who build trust relationships with other hubs, and route payments quickly in exchange for fees. Additionally, trust metrics which measure credit worthiness and levels of participation could become important ways for hubs to cash in on their trustworthiness to the network. If such an idea seems far-fetched, consider that Hawala, an ancient mutual credit system for remittances, has operated on a similar principle of trust for centuries already.
+
+
+'''Conclusion'''
+
+Of course, these are just some reasons why I think it is possible for Ripple to succeed. In the end, only practical experience will tell. However, should it work, its consequences would be great. A mutual credit system which could scale around the world would put people in control of the money supply. It would create a decentralised source of credit money freely available whenever individuals and institutions were prepared to trust each other, and immune from the monetary abuse and fiscal policy decisions of governments. Money which was backed by trust between people, rather than the threat of force or the fear of bankruptcy, would be a profoundly disruptive monetary leap."
+(http://www.webisteme.com/blog/?p=428)
+
+
+==Can Ripple be integrated with [[Bitcoin]]==
+
+Interview of Ryan Fugger, conducted by Samuel Benson:
+
+"Ben: Can Ripple and Bitcoin integrate?
+
+Ryan: Sure, they can integrate in lots of ways.  For example:
+
+http://ripple-project.org/Protocol/BlockChainCommitMethod
+
+There’s a discussion on the Bitcoin forums about Ripple being a good way to implement instant Bitcoin transactions.
+
+https://bitcointalk.org/index.php?topic=3557.0
+
+Ben: What plans do you have for Ripple over the next few years?
+
+Ryan: I don’t know…  I’d like to have a working distributed server implementation.  Beyond that, I hope the idea catches on further and more people starting building systems like this.
+
+Ben: Any thoughts on Decentralized currencies and networks growing in India?
+
+Ryan: Ripple would be a great way to build a Hawala network:
+
+https://en.wikipedia.org/wiki/Hawala
+
+You can look at Ripple as Hawala with automated routing.
+
+There is no API to Ripplepay yet and Ripple still has a few problems to solve. It has the strong potential to be a monetary system to work alongside Bitcoin. Similarities can be found in the PayPal exchange website Bitcoinary.com."
+(http://bensonsamuel.com/bitcoin-3/a-decentralized-monetary-system-for-a-decentralized-currency/)
+
+
+
+==Ripple is NOT open source, but CENTRALIZED, PROPRIETARY AND CLOSED SOURCE==
+
+By Ripplescam.org:
+
+"Hi there! I’ve being using Ripple since the closed beta, and I feel that the OpenCoin Inc (the for-profit company behind Ripple) scam and fraud attempt needs to be disclosed. Ripple is an inherently flawed experiment at best, and a con operation at worst. Let’s get started.
+
+'''CENTRALIZED, PROPRIETARY AND CLOSED SOURCE'''
+
+- “Ripple is truly open. No one owns it. Anyone can use it. It’s open source, so anyone can build on top of it.” (“How Ripple Works”, accessed April 2013).
+
+'''Ripple is not open source. No server source code has being released, with the paid developers behind Ripple admitting that it is to prevent others from using building something better than Ripple in true open source fashion.''' You pay to build on top of Ripple, the same way you can build on top of PayPal or Visa. You, Joe Q Coder who want to contribute to Ripple, cannot because it is not open source.
+
+'''Every single Ripple nodes is controlled by a private for profit company. It is centralized, like a bank or PayPal. Not a decentralized currency.'''
+
+Remember, Ripple’s investors are connected to big name banks and payment services like PayPal. They want Ripple, a closed and centralized alternative, to kill Bitcoin – and they support Ripple undisputably lying about key concepts right in the homepage.
+
+Ripple is not open, despite what their website says.
+
+
+'''ALREADY 51% ATTACKED – AND ONGOING'''
+
+Every cryptocurrency is subject to a 51% attack. In Bitcoin and similar cryptocurrencies, miners control the network, and if a miner gains 51% of the total network power, then they can choose to double spend transactions. Some alt coins have tried “trust nodes” or “central checkpointing”, however that only moves the 51% attack vector from miners to another entity – which can be 51% attacked.
+
+In Ripple, it is already 51% attacked by '''the 14 employees of OpenCoin (OpenCon) Inc. They control the server software (written in C++)''', and they can choose to double spend transactions at will. While it’s highly unlikely that they will do that, '''a centralized entity means a single target for law enforcement and court orders.'''
+
+''UPDATE: As of May 16, OpenCoin Inc has changed core network rules with Ripple numerous times, reducing the “base account” amount. This inflates XRP as more ripples can be spent in the economy. No vote or discussion was held, if OpenCoin Inc wants to do something they do it.''
+
+If WikiLeaks started accepting donations on the Ripple network, governments can serve a court order to OpenCoin Inc for them to block and reverse transactions to WikiLeaks. OpenCoin Inc has that power, because the network is centralized. They legally have to. If the Bitcoin Foundation was issued this court order, then all they could do is release a new version of the bitcoin client – and people won’t upgrade, because the code is open source.
+
+I used WikiLeaks as an example. It could be anyone or any entity. Occupy Wall Street. A gambling site. Ripple is under the centralized control of a for-profit, US based corporation – and they have to follow US laws. When they are already 51% attacking the network through the nodes (see this?), all it takes is a court order for them to have to reverse transactions.
+
+
+'''XRPs (“RIPPLES”) ARE PREMINED AND OPENCOIN INC PRINTED 100 BILLION FOR THEMSELVES'''
+
+Cryptocurrencies are decentralized because they distribute their currency units in an open and fair way. '''Ripple, despite claiming to be open, has created 100 billion Ripples, and are giving half of them to themselves.''' The developers took 20 billion XRPs for them to spend on anything they want (sell it for bitcoins, perhaps), and the for-profit company took 80 billion. This isn’t appropriately disclosed on their website. The founders want it to be hidden. They don’t want the users to know about it – to know about it’s a currency where they control – not Bitcoin, where nodes and miners control it.
+
+'''They are giving away 50 billion, to their friends and pals, and a tiny bit to the general public so they promote Ripple.''' Instead of having to use electricity and computational power to earn Bitcoins, you have to be best pals with OpenCoin Inc’s employees (or just be them). Big name investors have also being given XRPs — out of the giveaway pool!
+
+''Update June 25th: It was recently discovered that there was a private deal for 200 million XRPs. Ripple employee Joel Katz has responded to “So this has been a secret for months… ?” with “Yes.”''
+
+Every single premined cryptocurrency has failed, and Ripple is no exception. There’s a quote that’s often attributed to Albert Einstein – “Insanity: doing the same thing over and over again and expecting different results.”
+
+People use Bitcoin because it allows them to get away from centralized banks and money printing Federal Reserve. Code and algorithms decide where Bitcoins go, not people and court orders. Everyone audit the network and make sure all the transactions are correct, not just “validators” which are all OpenCoin Inc sponsored. More importantly, a centralized system will fail because..
+
+
+'''FBI: “UNIQUE FORM OF DOMESTIC TERRORISM”'''
+
+As of writing, we’re seeing widespread attacks on Bitcoin services, from Mt Gox to Blockchain.info. In a FBI press release, they state that they engage in “infiltration and disruption” on voluntary currencies that are not the Federal Reserve Dollar. What does this mean for Bitcoin, and Ripple?
+
+It’s very very difficult to take down Bitcoin because it is decentralized. Everyone who runs the bitcoin client is a peer, and is passing transactions around, and everyone who mines votes with their hashing power. The bitcoin core dev team could be arrested – but new developers will simply take over.
+
+But with Ripple, all it takes is a raid – like what has happened to the Liberty Dollar – to kill the entire network because of it’s centralization. An update could be pushed out to destroy all XRPs and transactions – and it will work because one entity has 51% attacked the network. That simply can’t be done with Bitcoin unless with an international attack on mining pool operators, and when that happens people will simply switch to solo mining.
+
+''UPDATE: As of May 15th, the Department of Homeland Security has seized Mt Gox, the world’s biggest cryptocurrency exchange’s Dwolla account funds. Court orders can seize your debt and fiat – but not your real bitcoins in your blockchain.''
+
+
+INHERENTLY FLAWED “DEBT IS MONEY” MODEL THAT WILL COLLAPSE
+
+Take a look at all the Bitcoin services that have being hacked. MtGox. Bitcoinica. MyBitcoin. Instawallet. You could have lost bitcoins you deposited there – debt – but if you held real bitcoins in your wallet, they were safe. When a Ripple gateway or currency issuer gets hacked, because you can only hold BTC and such as debt .. you lose them. But worse. If you’re unable to repay the debt you owe because someone defaulted on you, then the person you defaulted on might not be able to repay their debtors.
+
+And because Ripple is based around debt being “money”, you have to take on debt to send even through it’s not presented in the UI. Every single bitcoin or dollar you sent has being debt. And as there is no limit to how many chains the debt can go.. Your friend might default because their friend of friend of friend of friend of friend has defaulted and the chain continues.
+
+Ripple supporters (aka OpenCoin Inc Employees “speaking their own views”) point at small scale defaults that haven’t taken down the network. Of course it won’t. But a large enough default from a gateway will cause a collapse – there’s a critical mass.
+
+The limitless “debt is money” model is inherently flawed because debt is not worth as much as money it represents. For a successful currency system, you need to send solid money – when either that’s USD in a bank insured by the US Govt where the risk is nearly none, or bitcoins proven on the public and decentralized blockchain. Not random debt.
+
+'''IN CONCLUSION: I welcome open debate and discussion on the subject. I’m an early adopter of Ripple – having used it before it was publicly announced – but I need to point out what the inherit flaws are, and why Ripple is arguably a scam.'''
+
+Is Ripple a good payment system? I think it’s certainly novel. However, it is not decentralized. It barely has any relevance to Bitcoin. “it isn’t, it’s a for-profit currency run by a corporation”."
+(http://ripplescam.org/)
+
+=Comments=
+
+Francois Rey:
+
+"Ripple (http://ripple.sourceforge.net/) is one of these projects that applies the power of the P2P principle to payment arena. If you ever owed anything to a friend of a friend, then you certainly considered the possibility of having your friend pay for you and then owe the amount to your friend. That same principle is underlying the ripple project. Ripple offers a distributed P2P payment system based on aggregating trust connections between people and transforming them into potential credit intermediaries in order to route payments. The web site gives another good analogy: when you receive a check, you trust your bank to credit the money on your account, your bank trust the other party’s bank, and so on. Therefore when you enter the network you specify the people you trust and to whom you would grant credit.
+
+Although the current implementation at http://ripplepay.com/ is server-based, in theory it requires no centralization and the distributed implementation is being developed. At present the system is nearing 1000 users and 500 payments. Of course this is one of those networks that have a slow growth because for a transaction to take place both parties must be in the network and a path must exist between them. However once a certain critical mass is reached the expansion can quickly reach a stage where one can feel ‘left out’ if they don’t join (network effect as seen with Skype). The distributed is certainly a requirement for this to happen."
+
+====Ripple as a  [[P2P Currency Systems | P2P Currency System]]====
+<onlyinclude>[[Ripple]] allows participants to take part in unlimited arbitrary currency networks and to create new currencies on their own.  This facility, and the low infrastructure entry cost, make Ripple an excellent utility for [[P2P Networks]] that need flexibility, but are able to manage the complexity of providing trust, authentication, and reputation systems for the peers in the network.  Ripple is easy to get into.  In 20 minutes you can create a currency and send a payment.  By itself, Ripple is only as good as the people you know, though, and in smaller networks this can be a boon, but in larger networks some additional information layer that allows users to match wants and needs is important, and if that can work alongside a reputation system, then there's an increased chance of adoption and widespread use.</onlyinclude>
+
+
+=More Information=
+
+See our entry on [[P2P Exchange Infrastructure Projects]] and on [[Infoliberalism]]
+
+Document at http://ripple.sourceforge.net/decentralizedcurrency.pdf
+
+* [[Ripplepay]]
+
+* The Ripple Story:
+
+"In this piece, we briefly look over the history of Ripple and examine various disputes between the founders and partner companies, typically over control of XRP tokens. We then explore elements of the technology behind Ripple. We conclude that the apparent distributed consensus mechanism doesn’t serve a clear purpose, because the default behaviour of Rippled nodes effectively hands full control over updating the ledger to the Ripple.com server. Therefore, in our view, Ripple does not appear to share many of the potentially interesting characteristics crypto tokens like Bitcoin or Ethereum may have, at least from a technical perspective." 
+(https://blog.bitmex.com/the-ripple-story/)
+
+[[Category:Resources]]
+
+[[Category:Money]]

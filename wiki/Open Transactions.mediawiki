@@ -1,0 +1,59 @@
+URL = https://github.com/FellowTraveler/Open-Transactions/wiki ; [https://github.com/FellowTraveler/Open-Transactions]
+
+
+=Description:= 
+
+1.
+
+"Open-Transactions  is about an account system and related financial instruments. It is a library that allows to create a server which doesn't need to keep records of transactions, but works by signed agreements on the current account balance. The library also allows a client to communicate with the server. On top the core functionality other financial instruments are made possible: checques, electronic money etc."
+(http://opencoin.org/workspace/other-projects)
+
+'''2.'''
+
+"It’s a solid, easy-to-use, FINANCIAL CRYPTO and DIGITAL CASH LIBRARY. Including an operational API, SERVER and CLIENT. Transaction processor featuring Untraceable Digital Cash, Anonymous Numbered Accounts, Triple-Signed Receipts, Basket Currencies, and Signed XML Contracts. Also supports cheques, invoices, payment plans, markets with trades, and other instruments... it's like PGP for Money.... Uses OpenSSL and Lucre blinded tokens. ---Mac OS X, Linux, FreeBSD, Android, Windows---Native APIs for Java, Ruby, Python, PHP, Perl, C, C++, Objective-C, C#, Tcl, and LISP"
+
+license : GNU Affero General Public (open source) License
+
+
+'''3.'''
+
+"Provided as a free software library, the Open-Transactions platform is a collection of financial cryptography components used for implementing cryptographically secure financial transactions. The author, Chris Odom also known as “Fellow Traveler” and co-founder of Monetas, the company behind the project, describes it saying, “It’s like PGP FOR MONEY. The idea is to have many cash algorithms. So that, just like PGP, the software should support as many of the top algorithms as possible, and make it easy to swap them out when necessary.”
+(http://www.forbes.com/sites/reuvencohen/2013/11/29/bitcoin-mania-how-to-create-your-very-own-crypto-currency-for-free/)
+
+
+=Discussion=
+
+Reuven Cohen:
+
+"Similar to PGP, Open-Transaction’s user accounts are pseudonymous (can be written under a false name.) A user account is provided as a public key allowing users to open as many user accounts, as they want.  But unlike Bitcoin, the system can be configured to enable true anonymity, but to do so, it is limited to “cash-only” transactions, although it can be setup to offer pseudonymity or more simply, transactions that can be linked to the key that signed them. While the real life identity of the owner is hidden, continuity of reputation becomes possible, while supporting potentially millions of users.
+
+An interesting aspect of the system is that it isn’t limited to any one specific asset or currency (virtual or otherwise). Basically any user can issue new digital currencies and digital asset types by uploading new currency contracts. Want to create a Gold, Silver, Bitcoin, Litecoin or even USD backed currency? Not a problem on OT. Users are able to conduct transactions, verify instruments, and agree on current holdings via signed receipts, all without the need to store any transaction history. 
+
+Open-Transactions can be used for broad variety of purposes including issuing currencies/stock, paying dividends, creating asset accounts, sending/receiving digital cash, writing/depositing cheques, cashier’s cheques, creating basket currencies, trading on markets, scripting custom agreements, recurring payments, and escrow services. The project uses what it calls “strong crypto” with account balances that are unchangeable (even by a malicious server.) The receipts are destructible and redundant with transactions that are unforgeable. The cash is untraceable and cheques are non-repudiable.
+
+There are some potential limitations, for example what if a transaction server attempts to inflate the currency?  According to the developers, this is prevented through auditing, which must be utilized, either by the issuer directly, or by the other members of the voting pool. While the transaction server cannot lie on your receipts, it can potentially inflate the currency itself by using dummy accounts. But the inflated funds cannot be spent without flowing into other accounts, where they will show on an audit.
+
+Recently, the creators of the project formed a company, Monetas to provide commercial services around the OT platform. The company describes its mission as “to empower people to live and do business with greater freedom than ever before.” Monetas is building the world’s first decentralized system for financial and legal transactions. They claim the system has no single point of control or failure—making it immune to abuses of power and resilient to failure. The solution requires only a mobile phone, and makes transactions easy, cheap, instant, global, secure, and private. It is globally available to individuals, merchants, and entrepreneurs everywhere, for free.
+(http://www.forbes.com/sites/reuvencohen/2013/11/29/bitcoin-mania-how-to-create-your-very-own-crypto-currency-for-free/)
+
+=Similar projects=
+
+As endorsed by J. Baach of [[OpenCoin]]:
+
+#[[Open Coin]]
+#[[Blind Bitcoin]]
+
+
+=More Information=
+
+#See the [[Moneychanger]] project
+#radio interview about Open-Transactions on AgoristRadio, [http://agoristradio.com/?p=234 1]; [http://agoristradio.com/?p=246 2] (Introduction to Open-Transactions Financial Crypto System and Integration with Bitcoin)
+#http://monetas.net/
+
+
+
+
+
+[[Category:Money]]
+
+[[Category:Open]]

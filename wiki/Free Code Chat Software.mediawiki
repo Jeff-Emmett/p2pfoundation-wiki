@@ -1,0 +1,147 @@
+A range of software related to voice and video chat, originally aggregated by [[Danyl Strype]] as part of research for [https://web.archive.org/web/20190921181450/https://www.coactivate.org/projects/disintermedia/core-us Core Us], a proposed [[Disintermedia]] project for empowering global scale organizing using free code voice and video chat tools, including increasing the ability of conferences to support remote participation.
+
+Note: This list is probably more useful to developers who want to know what free code is available for implementing voice and video. If you're looking for a list of apps, to get an idea which ones might suit your needs, try [[Free Code Chat Apps]].
+ 
+== Audio only ==
+
+* [https://web.archive.org/web/20190921181450/http://adhearsion.com/foundation/ Adhearsion Foundation]:  a whole stack of web telephony software projects, although as of late 2019, only [https://github.com/adhearsion/adhearsion/ Adhearsion] itself and [https://github.com/adhearsion/blather Blather] have recent commits, and most of them seem to have ceased development in late 2015/ 2016 (including [https://github.com/candy-chat/candy/issues/516 Candy]). There's been no updates on the Foundation website since then either.
+
+* [https://www.gnu.org/software/gnucomm/ GNUComm and GNU Telephony] (GPL 2 or later): A suite of telephony software supported by the GNU Project, which includes 7 GNU projects: [https://directory.fsf.org/wiki/Bayonne Bayonne], [https://directory.fsf.org/wiki/Sipwitch SIP Witch], and their supporting libraries (Common C++ / uCommon, ccAudio, ccScript, ccRTP, and ZRTP / ZRTP4J). The [https://web.archive.org/web/20120424194509/http://www.gnutelephony.org/index.php/GNU_Telephony GNU Telephony website] appears to have gone down and the page on gnu.org has no updates on development progress since 2013. GNUComm is listed in the [https://directory.fsf.org/wiki/Gnucomm Free Software Directory], as are some of the subsidiary projects (see links above).
+
+* [https://wiki.mumble.info/ Mumble/ Murmur] ([https://github.com/mumble-voip/mumble/blob/master/LICENSE New BSD]): an 'IRC with voice' style system, developed for in-game chat. Listed in the [https://directory.fsf.org/wiki/Mumble Free Software Directory].
+
+* [https://www.doubango.org/sipml5/ SIPML5] ([https://github.com/DoubangoTelecom/sipml5/blob/master/LICENSE BSD], formerly GPLv3) and [https://www.doubango.org/webrtc2sip/ WebRTC2SIP]: A SIP client written in Javascript, and a WebRTC back-end allowing the browser to be a phone.
+
+* [https://fdossena.com/?p=voip/index.frag Voicechat] ([https://github.com/adolfintel/voicechat GNU GPLv3+], Java SE 7): a voice chat app that "supports uPnP, conversations with multiple users and basic compression with comfort noise". Last commits 3 years ago, probably discontinued.
+
+* [http://www.yate.ro/ YATE] ([http://yate.null.ro/websvn/filedetails.php?repname=yate&path=%2Ftrunk%2FCOPYING GPL v2]): Internet telephony engine designed to be easily extensible.
+
+== Video only ==
+
+* [http://www.dyne.org/software/hasciicam/ HasciiCam] (C, [https://github.com/jaromil/hasciicam/blob/master/COPYING GPLv2+]): Uses the AA-Lib library to convert video from a camera (eg web cam) into ASCII text, which can be transferred across a network and displayed without much lower use of resources than a full-data video stream. Listed in the [https://directory.fsf.org/wiki/Hasciicam Free Software Directory].
+
+* [https://jitsi.org/jitsi-videobridge/ Jitsi VideoBridge] ([https://github.com/jitsi/jitsi-videobridge/blob/master/LICENSE Apache 2.0], formerly LGPL): video relaying server for multiparty conferences.
+
+== Audio-visual ==
+
+* [https://bigbluebutton.org/ BigBlueButton] ([https://bigbluebutton.org/open-source-license/ LGPL]): voice/video web conferencing server developed for distance education. Currently depends on Flash, but has a rough plan for [https://bigbluebutton.org/2017/05/17/html5-client-dev-release/ full transition to HTML5 and WebRTC].
+
+* [https://www.ekiga.org/ Ekiga] ([https://directory.fsf.org/wiki/Ekiga#tab=Details GPLv2+): originally released as GnomeMeeting, a "SoftPhone, Video Conferencing and Instant Messenger". Later became a SIP client. No releases since 2013. Discontinued?
+
+* [https://github.com/plugorgau/eventstreamr/ Eventstreamr] ([https://github.com/plugorgau/eventstreamr/blob/master/LICENSE GNU AGPLv3], now [https://code.timvideos.us/projects/ discontinued]): "single and multi room audio visual stream management". No new commits on this repo since 2015.
+
+* [https://jami.net/ Jami] ([https://jami.net/discover/ GPLv3+]): A GNU project formerly known as SFLphone and then GNU Ring. A P2P text, voice, and video chat client, cross-platform (desktop and mobile). Listed in the [https://directory.fsf.org/wiki/Jami Free Software Directory].
+
+* [https://jitsi.org/jitsi-meet/ Jitsi Meet] ([https://github.com/jitsi/jitsi-meet/blob/master/LICENSE Apache 2.0], formerly "MIT"): WebRTC client for text, voice and video conferencing, encrypted by default, with desktop and presentation sharing.
+
+* [https://www.linphone.org/ Linphone] (core library: [https://gitlab.linphone.org/BC/public/liblinphone/blob/master/LICENSE.txt GNU GPLv3], desktop, Windows 10, iOS clients: [https://gitlab.linphone.org/BC/public/linphone-desktop/blob/master/LICENSE.txt GPLv2], Android client: [https://gitlab.linphone.org/BC/public/linphone-android/blob/master/LICENSE.txt GNU GPLv3], flexisip server: [https://gitlab.linphone.org/BC/public/flexisip/blob/master/COPYING GNU AGPL]): Clients and server for voice/ video calling, using the SIP protocol.
+
+* [https://nextcloud.com/talk/ NextCloud Talk] ([https://github.com/nextcloud/spreed/blob/master/COPYING AGPL]): a WebRTC plug-in for the [https://nextcloud.com/ NextCloud app suite], based on Spreed (see below). NextCloud is listed in the [https://directory.fsf.org/wiki/Nextcloud Free Software Directory]. 
+
+* [https://opencast.org/ OpenCast] ([https://github.com/lkiesow/opencast/blob/develop/LICENSE Educational Community License 2.0], a variant of Apache 2.0, Java/ HTML): a system developed for use in recording and streaming university lectures by the [https://www.apereo.org/ Apero Foundation].
+
+* [http://openmeetings.apache.org/ OpenMeetings] ([https://github.com/apache/openmeetings/blob/master/LICENSE Apache 2.0]): A full video conferencing server now developed at the Apache Foundation 
+
+* [https://palava.tv/ Palava.tv]: Like Jitsi Meet, a WebRTC audio and video conferencing stack that includes the Palava-portal ([https://github.com/palavatv/palava-portal/blob/master/LICENSE.txt "MIT"], Ruby, Javascript), Palava-client ([https://github.com/palavatv/palava-client/blob/master/COPYING LGPLv3], Ruby, Javascript), and Palava-machine ([https://github.com/palavatv/palava-machine/blob/master/LICENSE.txt AGPLv3], Ruby). Listed on the [https://directory.fsf.org/wiki/Palava FSF Free Software Directory].
+
+* [http://retroshare.cc/ RetroShare] ([https://github.com/RetroShare/RetroShare/issues/1689 current licensing situation is unclear]): An experimental P2P communications client has been developed on top of the Retroshare P2P network stack (see below), intended to support both voice and video chat. They are struggling to find people to work on it: https://github.com/RetroShare/RetroShare/issues/16
+
+* [https://rocket.chat/ RocketChat] ([https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE "MIT]): a web-based chat server billed as a "Slack-like online chat, built with Meteor". It supports WebRTC for voice/ video conferencing, with a plug-in for Jitsi Videobridge to increase the number of users it can support in a conference.
+
+* [https://www.signal.org/ Signal] ([https://github.com/signalapp/ client apps: GPLv3], [https://github.com/signalapp/Signal-Server server: AGPLv3]): Developed by Open Whisper Systems, Signal consists of apps for Android and iOS and a routing server, end-to-end encrypted by default. Listed in the [https://directory.fsf.org/wiki/Signal Free Software Directory].
+
+* [https://www.spreed.me/ Spreed] ([https://github.com/strukturag/spreed-webrtc/blob/master/LICENSE AGPLv3]): A WebRTC server for voice and video calls and conferencing, using Go and Node.JS.
+
+* [https://sylkserver.com/ Sylk Suite] (Server: [https://github.com/AGProjects/sylkserver/blob/master/LICENSE GPLv3+], client: [https://github.com/AGProjects/sylk-webrtc/blob/master/LICENSE AGPLv3+], API: [https://github.com/AGProjects/sylkrtc.js/blob/master/LICENSE "MIT"]): WebRTC client/server for text, voice, and video conferencing, screensharing, and file transfers.
+
+* [https://about.talky.io/ Talky.io]: A WebRTC platform which has released a number of elements of their stack as free code including [https://www.simplewebrtc.com/ SimpleWebRTC] and [https://github.com/otalk OTalk] (although there are still some proprietary bits in the stack).
+
+* [https://tox.chat/ Tox]: encrypted, cross-platform, peer-to-peer, text, voice, and video chat. Client software for various platforms, in various languages, mostly still in alpha/ beta, built around Toxcore (C, [https://github.com/TokTok/c-toxcore/blob/master/LICENSE GPLv3]). Listed in the [https://directory.fsf.org/wiki/Tox Free Software Directory], which also has pages for some of its client apps.
+
+* [https://unhangout.media.mit.edu/ UnHangout] ([https://gitlab.com/unhangout/reunhangout/blob/master/LICENSE GPLv3], Javascript): Developed at MIT, specifically as a replacement for the Goggle product with a similar name. Seems to be a JS-based web interface built around a Jitsi Meet core. As of late 2019, no new commits to the code repo since 2018.
+
+* [https://wire.com/ Wire] ([https://github.com/wireapp/wire-webapp/blob/dev/LICENSE client apps: GPLv3], [https://github.com/wireapp/wire-server/blob/develop/LICENSE server: AGPLv3]):: encrypted one-to-one and group chat, with encryption. Has both web app and desktop/ mobile apps. Listed in the [https://directory.fsf.org/wiki/Wire Free Software Directory].
+
+== Live mixers ==
+
+* [https://web.archive.org/web/20190921181450/https://alioth.debian.org/projects/dvswitch/ dvswitch] (GNU GPL): an audio-visual mixing system that [https://libav.org/ depends on LibAV (LGPL or GPL)]. Listed in the [https://directory.fsf.org/wiki/Dvswitch Free Software Directory], but all links there are dead. Discontinued?
+
+* [https://snowmix.sourceforge.io/ snowmix] (GNU GPLv3): no new releases on the [https://sourceforge.net/projects/snowmix/files/ project's SourceForge page] or [https://snowmix.sourceforge.io/Intro/news.html news updates on the homepage] since 2016. Discontinued?
+
+* [https://github.com/voc/voctomix Voctomix] ([https://github.com/voc/voctomix/blob/master/LICENSE.txt Expat or "MIT"]) a live video mixer wrapped around GStreamer (GNU LGPL), developed by the C3VOC in response to their frustrations with dvswitch, snowmix and gst-switch. Developers of [https://code.timvideos.us/projects/gst-switch/ gst-switch] ([https://github.com/timvideos/gst-switch/blob/master/COPYING GNU GPLv3+], C, [https://code.timvideos.us/projects/ discontinued since 2017]) discontinued it and switched to working on Voctomix.
+
+== Standards/ Protocols ==
+
+'''SIP (Session Initiation Protocol)''': a server/client protocol mainly used for voice chat:
+* [https://tools.ietf.org/html/rfc3261 IETF RFC 3261, the standard];
+* [[Wikipedia: Session Initiation Protocol]]
+
+'''[https://tox.chat/ Tox]''': peer-to-peer, encrypted, text, voice, and video chat.
+* [[Wikipedia: Tox (protocol)]]
+
+'''[https://xmpp.org/about XMPP] (eXtensible Messaging and Presence Protocol)''': client/server protocol for Instant Messaging (short emails in realtime) based on Jabber
+* [[Wikipedia: XMPP]]
+* '''[https://xmpp.org/about/technology-overview.html#jingle Jingle]''' (open protocol extending XMPP): designed for one-on-one voice/ video chat
+** [[Wikipedia: Jingle (protocol)]]
+** '''[https://xmpp.org/extensions/xep-0272.html Muji]''' (open protocol extending Jingle): allow for multi-user voice chat 
+
+'''[https://webrtc.org/ WebRTC]''': An open standard developed by Goggle, Mozilla, and Opera for realtime voice and video conversation, which is being [https://www.w3.org/TR/webrtc/ standardized by the W3C].
+* Some documentation on how to implement can be found in the [http://rtcquickstart.org/ WebRTC Quick Start], last revised in 2015.
+* [[Wikipedia: WebRTC]]
+
+== Codecs ==
+
+If we are going to stream, store and replay audio and video from conferences, we don't want to use patent-encumbered, proprietary formats like MP3, and H.264. Instead, we want to use patent-free/ royalty-free multimedia file formats, developed by [https://xiph.org/ groups like Xiph.org].
+
+Some existing options are:
+
+=== Audio ===
+
+* [https://xiph.org/flac/ FLAC] - developed by Xiph, lossless codec
+* [https://opus-codec.org/ Opus] - developed by Xiph (replaces [https://www.speex.org/ Speex]) 
+* [https://xiph.org/vorbis/ Vorbis] - developed by Xiph, lossy codec. Equivalent to MP3, although it compresses to smaller files with better sound quality. [https://wiki.xiph.org/OpusFAQ#Does_Opus_make_all_those_other_lossy_codecs_obsolete.3F Technically obsoleted by Opus] as well, but there will be an argument for using Vorbis until such time as Opus is more widely supported by hardware and software media players.
+
+=== Video ===
+
+* [http://www.bbc.co.uk/opensource/projects/dirac/ Dirac] - created by BBC Research, "low-resolution web content to broadcasting HD and beyond, to near-lossless studio editing". [https://web.archive.org/web/20190921181450/http://diracvideo.org/about-dirac/ Original homepage], linked from BBC site, now redirects to spam site. No releases added to [https://sourceforge.net/projects/dirac/files/ Sourceforge files page] since 2011. Discontinued?
+
+* [https://www.theora.org/ Theora] - developed by Xiph as the video layer for Ogg video files
+* [https://www.webmproject.org/about/faq/ VP8/ VP9] - bought by Goggle and released as a royalty-free open codec, for use with WebM
+
+=== Containers ===
+
+Formats which allow video, audio, subtitles and other components in different formats to be one included in one file
+
+* [https://xiph.org/ogg/ Ogg] - developed by Xiph
+* [https://www.matroska.org/ Matroska] - developed by the [https://www.matroska.org/info/legal/index.html Matroska organisation] in France
+* [https://www.webmproject.org/ WebM] - developed by Goggle, uses a fork of the Matroska container, VP8 (or 9) video, Vorbis or Opus audio, and WebVTT for text
+
+== Peer-to-Peer Network ==
+
+Whatever end-user applications and codecs are used, it seems reasonable that any conferencing system will be more scalable if it uses some kind of P2P network, where everyone who joins the conference contributes some of their own computing resources to the networking effort. This is how Skype originally worked, before Microsoft acquired it and moved it to a purely client/server model. Some existing open P2P network protocols that could be used:
+
+* [https://www.bittorrent.com/live/ BitTorrent Live] (Can't yet find source code or license information, may not be free code): Originally pitched as a system for [http://blog.bittorrent.com/2016/05/17/bittorrent-live-multichannel-app-for-live-and-linear-programming-unveiled-at-intx/ streaming live events like sports games and concerts], using the same P2P swarming principles underlying BitTorrent downloads. Seems to have pivoted towards a kind of blockchain-powered, P2P, alternative to YT.
+
+* [https://freenetproject.org/ FreeNet] ([https://github.com/freenet/fred/blob/next/LICENSE GNU GPLv2, some components under Apache 2.0 and "BSD", Java): uses standard IP networking in an attempt to create an censorship-resistent alternative to the world wide web, 
+
+* [https://gnunet.org/ GNUNet] ([https://git.gnunet.org/gnunet.git/tree/COPYING GNU GPLv3]): "GNU's Framework for Secure Peer-to-Peer Networking", subsidiary projects include a pre-alpha voice chat app called Conversation.
+
+* [http://retroshare.cc/ Retroshare] ([https://github.com/RetroShare/RetroShare/issues/1689 current licensing situation is unclear]):  "using a web-of-trust to authenticate peers and OpenSSL to encrypt all communication... provides filesharing, chat, messages, forums and channels ...". An experimental voice and video client, under the same name, is being built on top of this network stack.
+
+== Discontinued ==
+
+* [http://www.speakfreely.org/ Speak Freely] (discontinued, license unclear, [https://directory.fsf.org/wiki/Speak_Freely#tab=Details FSD says "public domain"], homepage says GNU GPL) - one of the earliest voice chat apps, "written in 1991 by John Walker, founder of Autodesk, and Brian C. Wiles". 
+
+* [https://github.com/subrosa-io Subrosa] (GPLv3, discontinued): WebRTC client/server for text, voice and video conferencing, encrypted by default. Listed in the [https://directory.fsf.org/wiki/Subrosa Free Software Directory].
+
+== More Information ==
+
+* John Walker explains why Speak Freely development ended in his 2003 essay [[The Digital imprimatur]].
+* [https://libreplanet.org/wiki/Group:Skype_Replacement "Skype replacement" page on LibrePlanet wiki]: has a table of which apps support which protocols, and some testing notes.
+* [https://we.riseup.net/refeman+classes/chatting-audio-video-calls Chatting, Audio and Video Calls]: A document by RiseUp Labs, the folks behind We.Riseup.net
+* [https://kareninaworld.wordpress.com/2008/07/24/74-open-source-voip-apps-resources/ 74 free code telephony projects from 2007] (links to original source which appears to gone offline)
+* [https://www.reddit.com/r/linux/comments/6q5bvt/the_state_of_foss_realtime_communications/ The state of FOSS real-time communications] - a discussion on Reddit
+* [https://doi.org/10.1109/TIFS.2016.2639340 a research paper on 'Scalable, Practical VoIP Teleconferencing With End-to-End Homomorphic Encryption']
+
+[[Category:P2P Infrastructure]]
+[[Category:Free Software]]

@@ -1,0 +1,207 @@
+= '''Rapid Manufacturing is a broad term including the use of [[Rapid Prototyping]], [[Rapid Tooling]], and the direct use of [[Layer Manufacturing]] technologies to produce final products quickly.'''
+
+Synomyms: direct digital manufacturing, solid freeform fabrication, low-volume-layered manufacturing, additive fabrication technologies
+
+
+=Concept=
+
+==Definition 1==
+
+"Rapid Manufacturing is a new area of manufacturing developed from a family of technologies known as Rapid Prototyping. These processes have already had the effect of both improving products and reducing their development time; this in turn resulted in the development of the technology of Rapid Tooling, which implemented Rapid Prototyping techniques to improve its own processes. Rapid Manufacturing has developed as the next stage, in which the need for tooling is eliminated. It has been shown that it is economically feasible to use existing commercial Rapid Prototyping systems to manufacture series parts in quantities of up to 20,000 and customised parts in quantities of hundreds of thousands. This form of manufacturing can be incredibly cost-effective and the process is far more flexible than conventional manufacturing." (from the publisher of the book below)
+
+
+
+==Definition 2==
+
+From the Wikipedia at
+http://en.wikipedia.org/wiki/Rapid_manufacturing
+
+"Rapid manufacturing is a technique for manufacturing solid objects by the sequential delivery of energy and/or material to specified points in space to produce that part. Current practice is to control the manufacturing process by computer using a mathematical model created with the aid of a computer. Rapid manufacturing done in parallel batch production provides a large advantage in speed and cost overhead compared to alternative manufacturing techniques such as laser ablation or die casting. The true definition of rapid manufacturing involves the production of series products or the use of the created part in production (see Hopkins, Hague and Dickens, 2005). Where the part is used in the development process only then the appropriate term is rapid prototyping."
+(http://en.wikipedia.org/wiki/Rapid_manufacturing)
+
+
+
+==A note on terminology==
+
+Frank Piller [http://mass-customization.blogs.com/mass_customization_open_i/2009/01/term-wars-3dprinting-additive-fabrication-fabbing-rapid-manufacturing-layered-manufacturing-.html] and others '''prefer to use [[3D Printing]] and [[Additive Fabrication]] instead of RM''':
+
+" this term is not precise enough, as also a good old injecting molding process is very "rapid"! The term also has been used for very different manufacturing concepts). EOS has been proposing the term "e-manufacturing" to focus on the fact that the parts are produced directly from 3D-data. But also a CNC machine is doing so.
+
+- ... ''A growing number of people are using terms such as "additive fabrication" or "additive manufacturing" ...  The mainstream press -- when our industry is lucky enough to get included in it -- uses "3D printing" most frequently. Among industry insiders, 3D printing refers to a group of AF processes that are relatively low cost, easy to use, and office friendly ...
+
+The term "additive manufacturing" is fine, although because manufacturing is an application and not a technology, I believe it is plagued with problems, similar to "rapid prototyping." Consider, for example, this sentence: "My company is using additive manufacturing for manufacturing." It's confusing. Now, consider this: "My company is using solid freeform fabrication for manufacturing." Much cleaner.
+
+I'm not suggesting that we use "solid freeform fabrication;" I'm using it here to illustrate a point. I believe it works much better when the catch-all term does not include the name of an application. That way it can be used cleanly for all applications of the technology.
+ 
+Since 2005 I've used the catch-all term "additive fabrication" in our company's publications, presentations, and communications. It's not perfect, but it works. In the future, I truly believe that "3D printing" will become the most popular term. When I'm describing AF technology to ... someone I'm seated next to on an airplane, I use 3D printing because there's a better chance that he/she will understand what I'm saying. It's simple and easy to say. I prefer it over alternatives, but 3D printing currently means something else to many people in our industry.
+
+This is likely to change. An estimated 74% of all systems sold in 2007 were classified as a 3D printer and each year this percentage increases''." [http://rapid.lpt.fi/rp-ml-current/0001.html] 
+
+
+=Context=
+
+==How is it related to P2P Theory==
+
+We believe that a new type of economy will be evolving whereby open designs are combined with distributed physical production. This is sometimes described as [[Desktop Manufacturing]], which is partly dependent on the technical advances in rapid manufacturing.
+
+Whereas desktop manufacturing refers more specifically towards the capability by individual designers to produce designs, have them produced by 3D printers in a physical format, and with access to local or distributed labor for producing them; rapid manufacturing refers to the capability of having machines that can rapidly be redesigned or retooled to make subsequent batches of new products.
+
+==The Importance of distributed digital production==
+
+By Lawrence J. Rhoades at
+http://www.nae.edu/NAE/bridgecom.nsf/BridgePrintView/MKEZ-6AHJL5?OpenDocument
+
+
+"Distributed digital production, a category of processes evolving from rapid prototyping, rapid manufacturing, free-form fabrication, and layered manufacturing, is a harbinger of twenty-first-century production, which is dramatically different from the kind of “manufacturing” we know today. The fundamental nature of distributed-digital processes—the construction of functional metal work pieces by assembling elemental particles, layer by layer, with no instructions other than the computer design files widely used to define objects geometrically—is based on different assumptions than those that drove manufacturing and distribution strategies throughout the twentieth century.
+
+As the costs and wait times of tooling, programming, and “designing for manufacturing” are reduced and then eliminated, the perceived advantages of high-production volumes, concentrated manufacturing sites, and complex distribution logistics will yield to the advantages of distributed digital production—products designed to meet the specific preferences of individual customers that can be produced on or near the point of consumption at the time of consumption (e.g., automotive spare parts produced at a dealership).
+
+The design freedom enabled by constructing objects in thin layers from particles with dimensions in microns will significantly reduce a product’s component-parts count. This, in turn, will reduce product weight by eliminating attachment features and fasteners and optimize functionality by eliminating excess material and wasted energy. The particles that are not needed for the part produced can be recycled to become the next—maybe very different—part. The metal in older, no longer useful products can be locally recycled to become metal powder feedstock for tomorrow’s production. Thus, inventory carrying costs and risks and transportation costs can be dramatically reduced, increasing savings in energy, materials, and labor.
+Finally, because these processes are highly automated, the size of the workforce required to produce and deliver manufactured products to the customer will be greatly reduced. Consequently, low-cost, so-called touch labor will lose its competitive advantage in the production of physical objects.
+
+The demand for innovative product designs will expand dramatically. And, because ideas will be delivered electronically, designers can be located anywhere. As design for manufacturing becomes less important, and because design superiority will be gained principally through understanding and responding to customers’ tastes, designers might want to be located near their customers.
+
+Even if products are designed remotely, however, production will be done locally. Physical objects will be produced “at home” or “in the neighborhood” from locally recycled materials. Thus, cities will lose their economic advantage, and urban populations will be dispersed."
+(http://www.nae.edu/NAE/bridgecom.nsf/BridgePrintView/MKEZ-6AHJL5?OpenDocument)
+
+
+=How Does It Work?=
+
+
+
+==Basic Functioning==
+
+From http://www.csa.com/discoveryguides/rapidman/overview.php 
+
+
+“Basically, all layer manufacturing systems consist of a combination of a computer CAD system with an operation machine to perform the fabrication of a layer under computer control. First, a 3D CAD representation of the part is created by a computer software package such as ProEngineer, SolidWorks, or Autocad. The computer representation of the part is then sliced into layers of a certain thickness, typically 0.1 to 0.25 mm, and their two-dimensional (2D) profiles stored in a triangulated (tessellated) format as a .STL file. Second, the software converts the .STL data to machine data, which are sent to the operation machine to generate each layer of the part by the specific fabrication process. The process is repeated many times, building the part layer by layer. The final step is finishing, removing the part from the machine, detaching support materials, and performing any necessary cleaning or surface finishing. Polishing, sealing, or painting the parts can improve their appearance.”
+(http://www.csa.com/discoveryguides/rapidman/overview.php )
+
+
+==The Four Processes of Manufacturing==
+
+By Lawrence J. Rhoades on what it the processes that need to be automated at
+http://www.nae.edu/NAE/bridgecom.nsf/BridgePrintView/MKEZ-6AHJL5?OpenDocument
+
+
+"Nearly all discrete parts are made using a series of steps or processes that, with few exceptions, fall into one of four groups:
+
+    
+* '''Casting or molding produces an object by transforming a material from a liquid to a solid'''. A material in liquid form is poured or injected into a preformed mold (or die), allowed to solidify (normally by cooling, but sometimes by heating or chemical curing), and, once solidified, removed from the mold as a solid object. The mold is typically made from a metal with a higher melting temperature than the formed material. Sometimes the mold is disposable (e.g., sand or ceramic) and is destroyed during the removal of the formed part. In these cases, the mold itself is “molded” from a durable, preformed pattern.
+
+    
+* '''Forming is a process of applying force, and sometimes heat, to reshape, and sometimes cut, a ductile material by stamping, forging, extruding, or rolling'''. Like the tools used in casting or molding, the tools used in forming are preformed and durable.
+
+    
+* '''Machining is used to “cut” specific features into preformed blanks''' (e.g., slabs, bars, tubes, sheets, extrusions, castings, forgings, etc.) by manipulating a fast-moving cutting tool relative to the work piece on a special (usually computer-controlled) machine tool, such as a lathe, mill, or grinder. In the machining process, even though the cutting-tool material is considerably more durable than the work piece material, the tool is subject to wear and tear. Typically, many different tools are used, and a specific “cutter path” is programmed for each feature and each tool. Compensation is made for tool wear.
+
+    
+* '''Joining includes welding, brazing, and mechanical assembly of parts''' (made by molding, forming, or machining) to make more complex parts than would otherwise be possible with those methods. Typically, special fixtures or special tooling and programming of assembly machines or robots are used for each assembled part."
+(http://www.nae.edu/NAE/bridgecom.nsf/BridgePrintView/MKEZ-6AHJL5?OpenDocument)
+
+
+=Typology=
+
+The technologies now available include a variety of different processes, such as Stereolithography, Selective Laser Sintering, Shape Deposition Manufacturing, and Laminated Object Manufacturing.
+
+Glossary at http://www.csa.com/discoveryguides/rapidman/gloss.php 
+
+'''Stereolithography (SL)''' was the first commercialized fabrication process, producing parts from photo-sensitive polymer resin. It operates by scanning the liquid surface of a bath of the resin with an ultraviolet (UV) laser beam that causes the resin to cure in the shape of a layer of the part. The lowest layer is carried on an elevator platform that is lowered by the slice thickness after each new layer is formed at the surface. The layers combine to form the desired 3D shape of the part. The SL process can fabricate plastic molds for pattern making or blocks for metal sheet forming, as well as produce a wide range of polymer prototypes. 
+
+'''Selective Laser Sintering (SLS)''' is another process, with a wider range of material than SL. SLS can produce highly complex parts from materials such as metal, plastic, ceramic, and sand. The material in powdered form is deposited on a platform, and a carbon dioxide (CO2) laser is used to selectively melt or sinter powder into the desired shape for each layer. The layers are lowered on a platform, with loose powder around the growing structure acting as a support for the top powder layer. The strength and porosity of the material can be controlled by adjusting various process parameters, such as laser scanning speed and power. Products have ranged from turbine rotors to medical inserts.
+
+See also: [[Direct Metal Laser Sintering]]
+ 
+'''Shape Deposition Manufacturing (SDM)''' is another layer manufacturing process that combines the techniques of deposition and CNC machining. Each layer is machined after it is deposited, and support material is added and machined to receive subsequent layers. The incremental machining allows a smooth surface to be achieved, even with thick layers, and the use of support material allows layers with overhanging, undercut, and separated features to be supported during the fabrication. The support material is removed at the end by melting or dissolving, and final machining is not usually required. SDM is a good choice for custom tooling, precision assemblies, structural ceramics, and wax molds for casting. It allows a high quality surface finish, intricate undercut features, and multi-material structures with inserts. 
+
+'''The Laminated Object Manufacturing (LOM)''' process was developed by Helisys of Torrance, CA . It produces parts from a sheet material bonded together in layers to form a laminated structure. The original material used for the layers was paper, but several other sheet materials are now available, including plastic, water-repellent paper, and ceramic and metal powder tapes. The process has been used to make casting dies for automotive parts. 
+The 3D Printing process is based on ink-jet printing technology. A group of print heads moves across a powdered material in a scanning pattern, distributing a liquid binder to bond the material in the shape of each layer. The part is lowered, additional powder is added, and the process is repeated. At the end, the part is removed from the powder bed and cleaned. The field of potential application ranges from functional metal parts to small-series parts and mold inserts. Such mold inserts are suitable for plastic injection, metal die casting, extrusion tooling, etc . 
+(http://www.csa.com/discoveryguides/rapidman/overview.php )
+
+=Examples=
+
+
+==Morris Technologies==
+
+"Morris Technologies, specializes in tough-to-manufacture metal components for aerospace, medical and industrial applications. At first glance, Morris seems to operate a conventional machine shop full of high-end CNC machines. Next to the machine tools, though, Morris quietly runs a bank of EOS direct metal laser-sintering (DMLS) machines, which build up parts from successive layers of fused metal powder.
+
+With six machines, Morris has the world’s highest concentration of DMLS capacity. And he has been using those machines not just to make prototypes but also to turn out production parts. It’s a practice that goes by many names — including rapid manufacturing, direct digital manufacturing, solid freeform fabrication and low-volume-layered manufacturing. All of the names refer to the use of additive fabrication technologies, which were initially intended for prototyping, to make finished goods, instead. Morris believes additive fabrication systems will soon occupy an increasingly prominent space on our shop floors."
+(http://www.designnews.com/article/CA6463254.html?industryid=43653#_self)
+
+
+==Other Examples==
+
+"Boeing, for example, has made extensive use of rapid prototyping machines to produce parts, tooling and manufacturing aids for the F18 and other military aircraft. “We’ve just touched the tip of the digital manufacturing iceberg,” says Jeff DeGrange, an engineering manager with Boeing's Phantom Works. 
+
+Direct digital manufacturing has also become standard practice in the hearing aid industry. “Literally millions of hearing aid shells have been produced on our stereolithography systems,” says Abe Reichental, CEO of 3D Systems."
+(http://www.designnews.com/article/CA6463254.html?industryid=43653#_self)
+
+
+==Producers/suppliers==
+
+#[http://www.stratasys.com/ Stratasys]' fused deposition modeling
+#[http://www.3dsystems.com/products/sls/index.asp 3D Systems]’ selective laser sintering
+
+=Discussion=
+
+==Status Report: Benchmarks==
+
+How can you know if the field becomes mature? Two criteria: the ability to make fully functional objects, and to mold metals, not just plastic.
+
+"Digital production (or rapid manufacturing) transforms engineering design files directly into functional objects—ideally, fully functional objects. This technology emerged from rapid prototyping systems that first produced nonfunctional, “appearance models” (limited-use, engineering-design and marketing aids made from nondurable plastic materials). Over time, the plastic materials were strengthened until the models became fairly functional. However, the real-world benchmark materials for full functionality in manufacturing are metals."
+(http://www.nae.edu/NAE/bridgecom.nsf/BridgePrintView/MKEZ-6AHJL5?OpenDocument)
+
+
+==Main challenges or rapid manufacturing:==
+
+
+"'''The biggest barrier in the coming years is seen with regard to materials.''' Some additive parts simply don’t measure up to their molded, machined and cast counterparts when it comes to tensile and other mechanical properties. … Another material issue involves freedom of choice. With additive technologies, engineers currently have to settle for a limited materials line-up. But as the article shows, the scope of applicable materials is fast growing.
+
+'''A second barrier is seen in the persistent lack of design data'''. “it’s not so much that current prototyping materials have some shortcomings as the fact engineers have no way of knowing exactly what those shortcomings are.” The article cites a lack of long-term creep and environmental data for additive plastic parts and fatigue data for metals as the most glaring examples of this data deficiency. But rapid manufacturing observers expect more and more data will become available as direct digital manufacturing becomes more popular. In the meantime, large OEMs with stringent manufacturing requirements have worked to develop their own property data.
+
+'''A third barrier quoted in the report are the capabilities of the existing machinery.''' Making good production parts every day ups the ante on process repeatability, quality control, throughput and reliability. “Today’s additive fabrication systems aren’t completely ready for prime time. They’re still primarily prototyping machines that you can coax into working as manufacturing systems”´, an industry expert is quoted in the report."
+(http://mass-customization.blogs.com/mass_customization_open_i/)
+
+
+==Benefits of 'additive systems'==
+
+"“With all these factors weighing against direct digital manufacturing, you might wonder, why bother? But, these additive systems already offer design benefits that can offset their manufacturing limitations.
+
+For one, additive machines can produce complex part geometries without regard to conventional manufacturing limitations. Additive fabrication methods based on powder metal beds, for example, can enable parts with interior cavities and features that could not be machined or cast — at least not in an economical one-piece part. ... The upshot of all this design freedom, and the benefit most cited by advocates of direct digital manufacturing, is parts consolidation.
+
+How long will it take for engineers to recognize the design benefits associated with additive processes? Todd Grimm, a consultant to the rapid prototyping industry, thinks it could take 10 or even 20 more years given the current lack of familiarity with additive machines and the technical barriers associated with the machines themselves. …
+
+For a handful of applications, though, the future is now. The best known and highest volume direct digital manufacturing niche has, so far, involved applications where mass customization plays a role. 3D Systems’ Reichental points to the hearing aids as one example and also says RM machines have seen use in the production of casting tools for Invisalign braces. And as the additive machines in general become more capable, … they’ll play a stronger role in other kinds of customized medical and dental devices whose geometry is tailored to the requirements of individual patients.”
+(http://mass-customization.blogs.com/mass_customization_open_i/)
+
+Source: Joseph Ogando, [http://www.designnews.com/article/CA6463254.html?industryid=43653#_self Rapid Manufacturing's Role in the Factory of the Future], Design News´, 26 July 2007
+
+
+=Key Book to Read=
+
+'''Book: Rapid Manufacturing: An Industrial Revolution for the Digital Age. Ed. by Philip Dickens et al. Wiley, 2006'''
+
+The book "addresses the academic fundamentals of Rapid Manufacturing as well as focussing on case studies and applications across a wide range of industry sectors."
+(from the publisher)
+
+
+
+=More Information=
+
+See our related entries on [[Desktop Manufacturing]] and [[Personal Fabricators]]
+
+Glossary at http://www.csa.com/discoveryguides/rapidman/gloss.php
+
+Rapid Prototyping at http://www.cc.utah.edu/~asn8200/rapid.html
+
+European collaboration on the topic at
+http://rm-platform.com/
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]

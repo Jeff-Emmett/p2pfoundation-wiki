@@ -1,0 +1,159 @@
+'''= the OGI uses 13 specific governance criteria across four areas of governance: access, development, derivatives and community, to define and measure the governance of open source projects, in other words, the extent to which decision-making in an open source project is "open" or "closed".'''
+
+
+=Context=
+
+Liz Laffan:
+
+"Open source governance models describe the control points that are used to influence open source projects with regard to access to the source code, how the source code is developed, how derivatives are created, and the community structure of the project. Governance determines who has control over the project beyond what is deemed legally necessary via the open source licenses for that project. The purpose of our research is to define and measure the governance of open source projects, in other words, the extent to which decision-making in an open source project is "open" or "closed"."
+
+Analyzing "eight open source projects ... our findings suggest that the most open platforms will be most successful in the long term, however we acknowledge exceptions to this rule. We also identify best practices that are common across these open source projects with regard to source code access, development of source code, management of derivatives, and community structure. These best practices increase the likelihood of developer use of and involvement in open source projects."
+(http://timreview.ca/article/512)
+
+
+=The Index=
+
+"The OGI comprises 13 metrics (Box 1) across the four areas of governance:
+
+1. Access: availability of latest source code, developer support mechanisms, public roadmap, and transparency of decision making
+   
+2. Development: the ability of developers to influence the content and direction of the project
+   
+3. Derivatives: the ability for developers to create and distribute derivatives of the source code
+   
+4. Community: a community structure that does not discriminate between developers
+
+The OGI quantifies how open a project is in terms of transparency, decision making, reuse, and community structure. We ranked projects across each governance parameter and on a scale of one to four on each question from Box 1. The higher the score, the more open the project.
+
+
+'''Access'''
+
+1. Is source code freely available to all developers, at the same time?
+   
+2. Is source code available under a permissive OSI-approved license?
+   
+3. Developer support mechanisms – are project mailing lists, forums, bug-tracking databases, source code repositories, developer documentation, and developer tools available to all developers?
+   
+4. Is the project roadmap available publicly?
+   
+5. Transparency of decision mechanisms – are project meeting minutes/discussions publicly available such that it is possible to understand why and how decisions are made relating to the project?
+
+
+'''Development'''
+
+6. Transparency of contributions and acceptance process – is the code contribution and acceptance process clear, with progress updates of the contribution provided (via Bugzilla or similar)?
+   
+7. Transparency of contributions to the project – can you identify from whom source code contributions originated?
+   
+8. Accessibility to become a committer – are the requirements and process to become a committer documented, and is this an equitable process (i.e., can all developers potentially become committers?). Note that a “committer” is a developer who can commit code to the open source project. The terms “maintainer” and “reviewer” are also used as alternatives by some projects.
+   
+9. Transparency of committers – can you identify the committers to the project?
+  
+10. Does the contribution license require a copyright assignment, a copyright license, or patent grant?
+
+
+'''Derivatives'''
+
+11. Are trademarks used to control how and where the platform is used via enforcing a compliance process prior to distribution?
+  
+12. Are go-to-market channels for applications derivatives constrained by the project in terms of approval, distribution, or discovery?
+
+
+'''Community Structure'''
+
+  
+13. Is the community structure flat or hierarchical (i.e., are there tiered rights depending on membership status?)
+
+
+==Best Practices==
+
+Liz Laffan:
+
+"Based on our research of major mobile open source projects, we have outlined the best practices for governance models. These practices are listed across the four key areas of governance: access, development, derivatives, and community.
+
+===Access===
+
+The minimum requirement for any project to be an open source project is source-code access such that developers can easily read, download, change, and run the code. There should be no developer discrimination; all source code should be available to all developers in a timely manner. Restrictions with regard to source code should be at a minimum, and there should be no preferential access to specific developers because this can cause friction and lead to branching of the project. All open source projects should use open source licenses that are approved by the Open Source Initiative (OSI).
+
+The next most important requirement is ease of access to developer tools, mailing lists, and forums, such that developers can get up to speed on the specifics of the project and build and run the code with minimum effort.
+
+
+===Development===
+
+As much as possible, a simple code contributions process should operate freely and without any hindrance. While we appreciate valid intellectual property concerns, such as the risk of copyright infringement, these should not complicate the contributions process any more than necessary. We also note that none of the projects reviewed in this study mandate copyright assignment; this is a good example of why copyright assignment is largely unnecessary. A broad copyright (and ideally patent) license for use of the work should suffice, provided the project has researched and identified the appropriate open source license under which to distribute the project. Copyright assignment is only ever needed when the project decides to change the terms under which it licenses the source code of the project, and this should be largely unnecessary, provided that the correct open source license is identified in the first place.
+
+Given that the success of open source projects is largely based on the accrual of developer interest and support, we identify the transparency of decision-making and equitable treatment of all developers (such that they can become project committers) as being critical to long-term success. Restriction of commit rights to specific developers or organizations is a sure way to lose developer support in the long run because developers become frustrated with the inability to commit code themselves, especially if their contributions are continually rejected or ignored.
+
+Developers often need to know where the project is headed, how it will get there, and why it is headed in that direction. They also often want the opportunity to influence the project to meet their own needs (i.e., to “scratch their own itch”). The main means by which developers can achieve this influence is by being able to commit code to the project. Therefore, it should be possible for all developers to commit code to the project, once they have shown sufficient knowledge of the code to do so. This is where meritocracy comes into play: those that “do” should be rewarded accordingly. Additionally the project should provide transparent project metrics regarding where contributions come from and who committed them.
+
+With regard to the actual development process itself, the project should have a policy of contribution to up-stream projects first (if the project comprises other open source projects) such that changes and benefits accrue to up-stream and down-stream projects.
+
+
+===Derivatives===
+
+Compliance frameworks are becoming more and more common among open source projects in order to deter fragmentation and ensure that applications are transferable across multiple platforms or operating systems. However, the best mechanism to keep compliance requirements honest is to make the compliance process as independent and transparent as possible such that it cannot be manipulated by any one developer or organization. For example, MeeGo has asked the Linux Foundation to manage its trademark compliance requirements so that they are independent of the project.
+
+
+===Community===
+
+A number of the projects we reviewed use a not-for-profit foundation structure to provide independence, such that the platform is not controlled by any one organization. Other projects have established a formal association with the Linux Foundation, and this lends strong “open source credibility” to the project.
+
+Another aspect of open source communities is the method by which authority is exercised within the community. For example, we note that both Linux and Mozilla use the benevolent dictator model, where decisions regarding disputes are made by one person. Whilst this process may work, it is still centralization of authority and decision-making, and as such it does not easily allow for others to permeate this decision-making process."
+(http://timreview.ca/article/512)
+
+=Discussion=
+
+Liz Laffan:
+
+"A successful open source project demonstrates long-term involvement of users and developers, along with a substantial number of derivatives, and the project continually develops, matures, and evolves over time. Our research suggests that platforms that are most open will be most successful in the long-term. Eclipse, Linux, WebKit, and Mozilla each testify to this through their high OGI scores (Table 2). In terms of openness, Eclipse is by far the most open platform across access, development, derivatives, and community attributes of governance. It is closely followed by Linux and WebKit, and then Mozilla, MeeGo, Symbian, and Qt. Seven of the eight platforms reviewed fell within 30 percentage points of each other in the OGI.
+
+...
+
+'''Conclusion'''
+
+Today, open source software is “business as usual” in the mobile industry. It is proven that open source platforms such as Android can be as successful as proprietary platforms in terms of platform adoption, device sales, and applications development. And while open source plays a key role in developer attraction, it does not predetermine success. 
+
+
+The mobile open source project space is undergoing consolidation to the extent that:
+
+1. Symbian is no longer an active project, having been closed by Nokia and brought in-house while Nokia refocuses its effort using the Windows Mobile platform.
+   
+2. Nokia sold the commercial licensing rights for Qt to Digia in March 2011 and advised in November 2011 that they would “abnegate ownership” of Qt to focus on being maintainers only.
+   
+3. MeeGo is no longer being actively supported by either Nokia or Intel as an open source project, although parts of the MeeGo project are being used in the newly launched Tizen open source platform, which was launched in September 2011.
+
+This consolidation does not detract from the fact that the mobile open source platforms can be very successful – witness Linux, Eclipse, and Android – but it does reiterate the importance of organizational support to the success of any open source project and community. To become a successful opens source project we find that there are best practices, as we have detailed in this article, which should be used to provide the best possible likelihood for success.
+
+“Open governance” goes hand-in-hand with “open source”; it is about ensuring that developers and users have equal freedoms not to just use, but also to modify and build on the project. In many ways, open governance is the missing piece the open source licenses do not cover. Clearly, an open source license alone does not make an open project. It takes an open governance model as well. We hope our research is a step towards a fundamental change in the common understanding of how open source projects are managed and directed, including transparency regarding how decisions are made in open source projects.."
+(http://timreview.ca/article/512)
+
+=Example=
+
+==The [[Android]] Paradox==
+
+Liz Laffan:
+
+"Android ranks as the most closed project we examined, with an [[Open Governance Index]] score of 23%. Yet, at the same time, it is one of the most successful projects in the history of open source. Is Android proof that open governance is not needed to warrant success in an open source project?
+
+Android’s success has little to do with the open source licensing of the public codebase. Android would not have risen to its current ubiquity were it not for Google’s financial muscle and famed engineering team. Development of the Android platform has occurred without the need for external developers or the involvement of a commercial community.
+
+Google has provided Android at “less than zero” cost, since its core business is not software or search, but driving ads to eyeballs. As is now well understood, Google’s strategy has been to subsidize Android such that it can deliver cheap handsets and low-cost wireless Internet access in order to drive more eyeballs to Google’s ad inventory.
+
+More importantly, Android would not have risen were it not for the billions of dollars that OEMs and network operators poured into Android in order to compete with Apple’s iconic devices. As Stephen Elop, CEO of Nokia, said at the Open Mobile Summit in June, 2011, “Apple created the conditions necessary for Android”.
+
+However, there are some very good lessons to learn from Google’s management of the Android open source project. First, Android was released as an open source project at a point in time where it was already a very advanced, complete project. OEMs, operators, and software developers could more or less immediately use it to create derivative handsets and applications. Second, Google kickstarted a developer buzz around the project with the $10 million Android Developers Challenge. Alongside financial incentives, Google sent an alluring message by opening application development within a previously inaccessible mobile industry. Finally, Google’s speed of innovation (e.g., five platform versions were released in 2010) outpaces any external innovation and makes the ecosystem entirely reliant on Google."
+(http://timreview.ca/article/512)
+
+=More Information=
+
+
+* Article: A New Way of [[Measuring Openness]]: The [[Open Governance Index]]. Liz Laffan. TIM Review, January 2012
+
+URL = http://timreview.ca/article/512
+
+
+[[Category:P2P Accounting]]
+
+[[Category:Peergovernance]]
+
+[[Category:Collaborative Economy]]

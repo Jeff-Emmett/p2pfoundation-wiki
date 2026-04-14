@@ -1,0 +1,187 @@
+
+
+
+=Discussion=
+
+
+Sam Putman: [http://mnemnion.wordpress.com/2009/11/22/on-replication/]
+
+
+'''On Replication'''
+ 
+"There is a growing interest in self-replicating machines. Beginning
+with the RepRap project, and now continuing into RepLab, the open
+source FabLab, there is a serious effort to build machines which can
+build themselves.
+ 
+It is a laudable goal. A machine which can make itself can also make
+an unimaginable variety of other machines, each unique if desired, and
+promises an era of material abundance and freedom from scarcity.
+Pursuing that goal, however, has shown the goal itself to be somewhat
+unclear. This is an attempt to remedy this situation.
+ 
+What is replication? The production of a replica, but what is a
+replica? The original meaning was that of a duplicate of a work of
+art, properly one produced by the original artist.
+ 
+I propose we define replication precisely, as the transcription of a
+template into a physical form. This definition is perhaps more general
+than we are used to, but I believe it accurately captures the use of
+the word.
+ 
+Let’s take the test case: an artist producing a replica of her own
+painting. The original painting may have taken many months, while the
+replica may take only a day or two at most. The artist is using tools,
+a brush and palette, and materials, canvas and paint, to make a copy
+of a template, the original work.
+ 
+How about DNA self-replication? We have a toolchain of proteins, from
+DNA Transcriptase on, which transcribe a template, the DNA, into a
+copy of itself, using materials (ATP, other nucleic acids, caffeine if
+there’s some in the organism in question) both extrinsic to the cell
+and fabricated within it.
+ 
+Note that in the first case the template resembles the result, while
+in second case, if we consider the result a new cell rather than new
+DNA, the result doesn’t resemble the template at all. This is
+immaterial to the act of replication; a high-resolution inkjet printer
+and a scanner could replicate the artist’s original work, faster and
+more accurately than she could, and in this case the template would be
+stored as bits within a computer.
+ 
+The rest of this discussion will focus on replication in the context
+of human-tool interaction.
+ 
+This means replication of an object, from a template, through the
+combined efforts of at least one human with at least one tool. We call
+this a ‘tool’ rather than a ‘machine’ for greater generality.
+ 
+The earliest form of replication was a human using a tool to make a
+copy of an object. Our paradigm case for this is a scribe copying a
+scroll. A human can’t do this without the materials (paper, ink) and
+tools (quill, sharpener) required for the act. With those tools, a
+human can copy a scroll in a certain amount of time.
+ 
+A few observations here: the tool enables, the human works. A faster
+tool, let us say a pen rather than a chisel on stone, allows for
+faster work, but more copies will always take more human time. We will
+call this Type 1 replication. It is characterized by modest gains in
+efficiency for mass production and poor scaling characteristics.
+ 
+A second form of replication came about when humans began using tools
+to automate aspects of production. By investing time in setup, many
+copies can be replicated much faster. The work is still done by
+humans, with tools; but by doing the work intelligently, many copies
+can be made with comparatively low effort. We call this Type 2
+replication.
+ 
+The paradigm case for Type 2 is the printing press. By investing
+considerable effort in building a press, casting type, and laying out
+a document, one is rewarded by the ability to print as many copies as
+one wants, with speed and reliability which increase over time. Type 2
+replication has good scaling characteristics and rewards mass
+production. It is characteristic of the Industrial Age.
+ 
+Type 2 production next evolved in two directions the first of which
+we’ll call Type 2a: significant setup time followed by fully automated
+production. Newspaper presses work in this fashion, although the most
+recent ones are Type 3. Type 2a has significantly better scaling
+characteristics than Type 2, and mostly displaces it when developed.
+ 
+Type 2b replication is where there is significant tool investment, but
+negligible setup time and non-automatic production. The matching
+paradigm for this is a Xerox machine, though like newspaper presses
+these have become increasingly Type 3 over time. An early Xerox would
+make a copy of anything that fit on the glass, or even a hundred
+copies, but a human had to stand around feeding it sheets and doing
+things like collation by hand. This has poor scaling qualities, being
+labor intensive, but it favors customization over mass production.
+ 
+Type 3 replication has negligible setup times and fully automatic
+production. Our paradigm case here is a laser printer. Even a desktop
+laser printer can print replicas of stored data, each different, for
+many hours without needing attention. The factory scale printers can
+make entire books without human intervention. Type 3 replication is
+characteristic of the Information Age, or Industrial Revolution 2.0.
+ 
+Type 3 has good scaling characteristics and rewards customization over
+mass production. One can make an arbitrarily large number of copies
+off any given template, but there’s little to no advantage over using
+many different templates.
+ 
+Many FabLab technologies, such as laser cutters, hobby-scale 3d
+printers, and CNC mills, are Type 2b. What’s interesting about 2b
+replication is that it’s often a small step away from being Type 3,
+needing only, for example, a small conveyor belt. I hope that by
+drawing attention to the radical difference in scaling quality between
+Type 2b replication and Type 3 replication, I can encourage
+open-source hardware developers to strive for Type 3 tools whenever
+possible.
+ 
+A Type 2b tool is a creative enabler, while a Type 3 tool is both a
+creative enabler and an economically disruptive force, because it can
+compete effectively with 2a mass-production technologies. It also
+frees human labor for other pursuits, which is an important goal for
+many.
+ 
+So this is replication; what of self-replication? This is the second
+concept I hope to make clear with this essay. Self-replication is not
+different from replication, except that, in the context of human-tool
+interaction, that which is being replicated is a part of the tool
+itself. I refer to this as recursion, because that’s what it is.
+ 
+Note that there are several Type 1 replicators with a high degree of
+possible recursion. The lathe is a classic example: one can hand-turn
+many of the components for a lathe on itself, and even bootstrap a
+lathe by building the spindle and using it to make other components. A
+kiln is another example, since a kiln can be used to fire refractory
+bricks to make another kiln. In fact I might argue that a kiln
+exhibits the highest recursion of any Type 1 replicator, in that a
+kiln can be nothing but stacked bricks and a fire, and the bricks can
+all come from a kiln.
+ 
+Note, however, that this still has poor scaling qualities, though it
+favors custom production. The Dave Gingery approach of contributing
+massive human inputs to a bootstrapped machine shop is noble, but it
+will never be an economic force. It is simply too easy to identify the
+main shapes needed, turn them over to Type 2 or 2a production, and
+swamp the market.
+ 
+The RepRap project faces exactly this dilemma. RepRap knocked the
+bottom out of 3-d printing, but it did this mostly by making the
+MakerBot possible. The RepRap is a 2b replicator, which requires human
+tending during the entirety of the recursion process. This makes it
+easier and cheaper to simply make a chassis on a faster 2b tool,
+namely an Epilog laser cutter that NYC Resistor happens to already
+own, and sell that. If the RepRap were a Type 3, with an automatic
+conveyor, it might be a different story, since a RepRap could then
+print its chassis parts at a rate of a few complete sets a week with
+minimal human inputs. For that matter, a MakerBot with a conveyor belt
+would be a Type 3 replicator, albiet one exhibiting less recursion
+than a Darwin or a Mendel.
+ 
+Let me conclude by suggesting that the RepLab project needs to place
+priority on Type 3 replication, not on a maximum level of recursion
+for the whole system. Recursion, I think I’ve shown, is no great trick
+if it takes a human hand-holding the machine through the whole
+process, since this is how machine tools have always been built, on
+other machine tools.
+ 
+The power of Industrial Revolution 2.0 lies in developing machines
+which exhibit Type 3 replication. If the outputs of those machines are
+sufficiently general than the toolset as a suite can exhibit
+economically significant recursion. An example would be an open-source
+toolchain for automated printing and assembly of PCB boards. Such a
+suite would be able to print its own control hardware in addition to
+any other circuit that can be designed and mounted with a
+pick-and-place, which is most of them.
+ 
+The RepLab project should focus on tools exhibiting Type 3 replication
+for a variety of economically significant goods. Recursion is an
+emergent result which can lend exponential momentum to the deployment
+of RepLab technology. By approaching the project goals in this order,
+we have a rational approach to an open source hardware platform for
+Industrial Revolution 2.0."
+
+
+[[Category:Manufacturing]]

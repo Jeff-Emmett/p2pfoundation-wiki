@@ -1,0 +1,17 @@
+
+=Discussion=
+
+Jaya Klara Brekke, Kate Beecroft and Francesca Pick:
+
+"Consensus Algorithms
+
+Consensus algorithms, such as proof-of-work (PoW) and proof-of-stake (PoS), ensure that the network collectively agrees on contents stored and executed in the blockchain ledger (Nakamoto 2008; Wang et al., 2019; Zhang et al., 2019). PoW organizes consensus about what are considered valid transactions in the network by assigning turns to mining nodes based on their ability to mine. PoS on the other hand organizes consensus and validation of transactions by “staking” (locking) tokens to a protocol so they can be randomly selected by the protocol at specific intervals to create a block.
+
+The intention with consensus algorithms is to ensure that entries to the blockchain cannot be forced or determined by those running the infrastructure. By distributing its operations, the idea is that no single actor will have full control. Any actor in the network can submit a proposal that will be automatically executed if the consensus mechanism is triggered by nodes approving the proposal. This is what inspired the early suggestion that such protocols might do away with issues of coercion. The networks would be open (since renamed permissionless), with the idea that anyone would be able to join as a node or to use the given network, without fear of manipulation or coercion. The fascination with these consensus algorithms and their ability to organize, secure, and enforce consensus across a distributed network meant that governance and security were considered solved. However, in practice, it turned out that there were other aspects to such distributed consensus algorithms that might enable new forms of manipulation, including market manipulation, and new types of economic scams (Gerard, 2017). Furthermore, the very consensus algorithms themselves became sites of conflict, shifting some focus toward who controls and maintains these and through which processes.
+
+The most broadly used consensus algorithms, Bitcoin and Ethereum proof-of-work algorithms, are maintained through reference clients that are updated by core developers that have what are called “commit access.” These are then adopted (or not) by miners and validators running the network. Processes such as BIP (Bitcoin Improvement Proposals) where people can suggest patches and changes to the protocol, as well as open developers’ mailing lists and dev cons (developers conferences), are some of the many mediums through which the reference client governance arrangements take place in practice. But rarely are such nonmarket and off-chain governance processes explicitly considered in discussions and designs of new governance experiments. This lack of interest in some of the actual practical day-to-day governance infrastructure, including email lists and github, is perhaps due to the fact that they do not represent technical solutions to governance, but merely its actual mundane operation."
+
+(https://www.frontiersin.org/articles/10.3389/fhumd.2021.641731/full)
+
+[[Category:Peergovernance]]
+[[Category:Crypto Governance]]

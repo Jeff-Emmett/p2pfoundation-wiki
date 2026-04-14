@@ -1,0 +1,54 @@
+
+
+=Typology=
+
+by Kim Weins:
+
+"The 4 most common types of open source software support models and the implications for enterprises:
+
+
+==Pure Open Source: Sell Support and Services==
+
+           Examples: Drupal, OpenLogic
+
+           Lock-in: None
+
+Vendors with this type of business model provide support and services for software that is offered under an open source license.  The vendors may focus on a single open source project (e.g. Drupal) or provide support services for many open source projects (e.g. OpenLogic).  Because the open source software is freely available under an open source license, you are not locked in to the vendor.  There is nothing that prevents you from deciding later that you want to self-support or choose another vendor, you don’t need to worry about switching out the open source software.  This approach gives you the most flexibility.
+
+
+==Certified Distribution Model: Sell Subscriptions, Tools and Support==
+
+            Examples: Red Hat, CloudEra
+
+            Lock-in: Some
+
+Vendors with this type of business model take an open source project and do additional testing, certification or bundling.  Red Hat Enterprise Linux is the most well-known version of this model.  In the process of “certifiying” a release, the vendor may select or create patches and fixes.  This “certified version” is then branded (e.g. RHEL, Cloudera Distribution of Hadoop) and you are charged for some combination of subscription to this branded, certified release, support and add-on tools or services (e.g. Red Hat Network, CloudEra Manager). In this case, there is some degree of lock-in.  First, if you don’t renew your subscription, you may be required to remove branding, switch off the certified version or stop using the add on tools or services.  While this may be possible, it may require some effort on your part or require you to give up some functionality.  As a result, there is some degree of lock-in associated with these models.
+
+
+==Open Core Model: Sell Subscriptions for a Proprietary Version==
+
+           Examples: EnterpriseDB, Alfresco
+
+           Lock-in: Same as proprietary software
+
+Vendors with this type of business model take an open source project and create a separate version with additional functionality that is provided under a proprietary license.  Often these vendors will only offer support if you use the proprietary version.  When you purchase this version, you have the same degree of lock-in that you would have with a proprietary vendor.  If you no longer purchase the subscription, you can’t get support.  If you want to revert to the open source version of the code, you will need to rip out the proprietary version and make sure you don’t need any of the proprietary features.
+
+
+
+==Dual License Model: Sell Open Source Software Under a Proprietary License==
+
+           Examples: MySQL
+
+           Lock-in: Can cause lock-in depending on license requirements
+
+Vendors with this type of business model take an open source project and offer it under two licenses – an open source license (often GPL) and a commercial license.  If you don’t want to use the project under the open source license (for example when you want to redistribute), then you purchase a subscription for the commercial license.   You can still go back to the open source version later, but you will then be required to use the open source license.  If that license is not compatible with your use case, it may be difficult to change to the open source version.  One of the other challenges of this model is that a vendor must own all of the copyrights in the project in order to be able to offer it under a non-open license.  This means that either employees of the vendor must write all of the code, or any outside contributors must sign a contributor agreement that enables the company to put the code under a commercial license.  This has the practical effect of limiting the number of outside contributions to the code, and as a result, you lose the benefit of community development that is often associated with open source projects."
+(http://www.openlogic.com/blogs/2012/02/selecting-your-open-source-support-vendors-and-what-their-business-model-means-to-you/(
+
+
+[[Category:Open]]
+
+[[Category:Free Software]]
+
+[[Category:Business Models]]
+
+[[Category:Collaborative Economy]]

@@ -1,0 +1,29 @@
+'''= "When I say that a public algorithm is “accountable” I mean that the output produced by a particular execution of the algorithm can be verified as correct after the fact by a skeptical member of the public".''' [https://freedom-to-tinker.com/blog/felten/accountable-algorithms/]
+
+
+=Description=
+
+Ed Felten:
+
+"Public processes often involve algorithms, and the public has an interest in the openness of these processes. Today I want to expand on what we mean when we talk about this kind of openness. In my next post, I’ll work through a specific example, taken from airport security, and show how we can improve the public accountability of that algorithm.
+
+When we talk about making an algorithmic public process open, we mean two separate things. First, we want transparency: the public knows what the algorithm is. Second, we want the execution of the algorithm to be accountable: the public can check to make sure that the algorithm was executed correctly in a particular case. Transparency is addressed by traditional open government principles; but accountability is different.
+Sometimes accountability is easy. If the algorithm is deterministic and fully public, and all of the inputs to the algorithm are known, then accountability is trivial: just run the algorithm yourself, and check that your result matches the output of the public process. But accountability can be more challenging if the algorithm involves randomness, or if one or more of the inputs to the algorithm is (legitimately) secret."
+(https://freedom-to-tinker.com/blog/felten/accountable-algorithms/)
+
+
+=Example=
+
+* https://freedom-to-tinker.com/blog/felten/accountable-algorithms-an-example/
+
+=More Information=
+
+
+* [[Protocollary Power]]
+
+
+[[Category:P2P State Approaches]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Protocols and Algorithms]]

@@ -1,0 +1,34 @@
+===Automation on the P2P Foundation Wiki===
+Building and maintaining lists is a huge chore.  If possible it should be automated, no?  So, here's a few ways it can be so now.
+
+===Category Listings on the Wiki===
+There are several ways to list the contents of a category on the wiki.
+
+====[http://www.mediawiki.org/wiki/Extension:DynamicPageList_(Wikimedia) Dynamic Page List]====
+This extension allows us to enter in a little code and to display a list of articles from a category.  This is a powerful extension that allows you to:
+
+*Choose articles from one category, or multiple categories, where the article is in every category.  This is why the extension was called Intersection at one point
+*Choose what type of list is produced (order, unordered, none, inline)
+*Choose the ordermethod, The value can be categoryadd (default, sort by date pages were categorised for first category) or lastedit (sort by date pages were last edit), length (article length), created (article creation date), categorysortkey (essentially alphabetical. order by the sort key of the first category. sortkey is an alias), popularity (by number of hits).
+*Choose the sort order descending (default, most recent to oldest) or ascending (oldest to most recent). 
+
+The output from DPL is simple.  CategoryTree is prettier.
+You can visit [http://www.mediawiki.org/wiki/Extension:DynamicPageList_(Wikimedia) the extension page for details] on how to use it.
+
+====[http://www.mediawiki.org/wiki/Extension:CategoryTree CategoryTree]====
+Category tree is like DPL with fewer options and a prettier output.  If you want to allow users to browse categories on a page this is the one to use.  [http://www.mediawiki.org/wiki/Extension:CategoryTree Visit the extension page for more information].
+
+===Embedding RSS Feeds===
+Sometimes adding the lastest results from an RSS Feed makes a page complete.  You can read instructions for this feature at [[Help:Adding RSS Feeds]].  This extension is not perfect.  If your feed isn't working and you followed the instructions, then there is nothing we can do about it at the moment.  You'll know it's not working if the page takes forever to load and nothing shows up.  It's a bug, but the extension works for most modern well formatted feeds.
+
+===Creating New Feeds from the Wiki with [http://www.mediawiki.org/wiki/Extension:GoogleNewsSitemap GoogleNewsSitemap]===
+Coming Soon!  This will allow the creation of a feed that, for example, shows the latest 5 new articles from a certain category.
+
+===[http://www.mediawiki.org/wiki/Help:Templates Mediawiki Templates]===
+These are an old standby that can make creating new pages a lot easier.  Simple templates have been added to forms on pages like [[:Category:Bios]] that allow you to add a new article using a template with a single click.  Visit http://www.mediawiki.org/wiki/Help:Templates for more information about templates.
+
+===Labeled Section Transclusion===
+Sometimes you just wish you could copy over a snippet from another article.  Sometimes you also wish that if you edited the original snippet, that the changes would show up everywhere the snippet is used.  The labeled section transclusion extension does this.  
+
+If you'd like some help using it on this wiki you can try out [[Help:Using LST]].  If you want the nuts and bolts behind the scenes checkout the home page for the extension at http://www.mediawiki.org/wiki/Extension:Labeled_Section_Transclusion
+[[Category:P2P Foundation Wiki Administration]]

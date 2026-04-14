@@ -1,0 +1,53 @@
+
+
+=Description=
+
+Data control has many aspects/axes:
+
+    
+'''* data: can you export it?'''
+        
+  
+-o three major types of data; analysis may be different for each:
+                
++++ private data: can others get out your personal/private data? can you take down old personal data that you've published? Potentially (like export control and the GPL) this can just be deferred to relevant national legislation?
+                
++++ public, but personal, data: What about data that has been made public (for example, comments on a blog) but which are still in some sense identified with a particular individual?
+                
++++ collaboratively created data: what about collaboratively created/owned data? e.g., a wikipedia page, or the implicit data of a myspace/facebook/linkedin personal network? 
+          
+
+-o axis ranges from:
+                
++++ can't export data
+
++++ can export data, but in an undocumented binary format
+                
++++ can export data, but in an undocumented text format (e.g., CSV, XML)
+                
++++ can export data in a documented format
+                
++++ can export data in a standardized format 
+          
+
+-o related: is there a source-available, freely-usable implementation of the service? (see, e.g., GPL v3's expanded system library exception for possibly analogous language) 
+    
+
+* '''identity: do you control your identity?''' e.g., can I use 'luis@tieguy.org' to make it easier to leave gmail, or tieguy.org/blog/ to make it easier to leave wordpress.com? How do technologies like openid play into this?
+          
+-o identity tied to service host (e.g., luis.villa@gmail.com)
+          
+-o mixed: public-facing identity not tied to service host, but some services may still be (e.g., public uses luis@tieguy.org, but I retrieve mail from http://gmail.com/ rather than tieguy.org/mail/)
+          
+-o identity not tied to service host (e.g., google hosted, public uses luis@tieguy.org and I use tieguy.org/mail/ to access the mail.) 
+    
+
+'''* DRM: axis is nearly binary:'''
+          
+-o uses DRM or DRM-like controls to prevent distribution of data (i.e., flash video)
+          
+-o doesn't use DRM at all 
+(http://live.gnome.org/FreeOpenServicesDefinition/DataControl)
+
+
+[[Category:Standards]]

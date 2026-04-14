@@ -1,0 +1,84 @@
+= General definition =
+
+From [http://en.wikipedia.org/wiki/Distributed_computing Wikipedia's Distributed Computing article]:
+
+"Distributed computing is a method of computer processing in which different parts of a program run simultaneously on two or more computers that are communicating with each other over a network. Distributed computing is a type of segmented or parallel computing, but the latter term is most commonly used to refer to processing in which different parts of a program run simultaneously on two or more processors that are part of the same computer."
+
+Distributed computing has begun developing in the research area for solving simulation or mass data analysis problems. For a long time, supercomputers had been proving the most powerful computing devices, yet their exceptional cost and lack of scalability did let new approaches appear: since computing production was entering mass production (with associated downpricing), using a lot of mass market computers could eventually achieve the same, if not more performance. As long as you increase the number of participants, you can always add horsepower.
+
+= Distributed computing and P2P =
+
+Peer to peer is a viable architecture for distributed computing, notably in the public space.
+
+= Related subjects =
+
+* Types of distributed computing
+ * Cluster computing
+ * [[Grid Computing]]
+ * P2P systems
+ * [[Cloud Computing]]
+
+These subsidiary distributed computing notions differ on the type of network used to interconnect the computers, the heterogeneous nature of the operating systems they are running, the kind of performance and capabilities they are aiming to tackle (ex: scalability) as well as the processing scheduling mechanisms and networking architecture used.
+
+* [http://p2pfoundation.net/virtualization Virtualization] is often associated with distributed computing
+
+= Examples =
+
+== Early, significant example: Seti@Home (1999) ==
+
+The Seti@Home is one of the earliest distributed computing public project, which involved letting any user participate in the analysis of sound (high wavelenght, radio signals) coming from space (captured using the Arecibo Radio Observatory) in hope of discovering Alien life evidence.
+
+Since the project was lacking results (and still does), computing budgets were cut down; using grid computing let the research go on. A small software application did download samples, perform Fast Fourier Transform calculations and eventually transmit results.
+
+[http://en.wikipedia.org/wiki/Seti_at_home More information on Wikipedia]
+
+= The concurrent computing challenge =
+
+Concurrent computing is the fact to be able to achieve a task on multiple computing cores. Not any task can be easily ''multi-threaded''. Multiple scale hardware systems are using multiple processors.
+
+== Multi-core systems ==
+
+Computers having more than one physical computing core are nowadays a norm on the mass market, even if this was mostly used in the professional market for the last 15 years. Quad-core computing (4 physical processors in the same computer) are already available in the mass market.
+
+Reasons for this switch are mostly because of the apparent lack of scalability and power efficiency of the cores themselves, ass well as the rise of computing needs for modern gaming and media editing.
+
+== "Exotic" parallel computing hardware ==
+
+Recent, mass market devices have been designed for parallel computing tasks.
+
+=== GGPU computing: general purpose GPU computing ===
+
+Although GPUs (Graphical Processing Units) are primarily intended for accelerated 3D rendering, their flexible architecture (optimized to process lots of small operations in parallel, initially on textures, pixel by pixel) has led 3D leading vendors to provide general purpose computing APIs
+
+ * References:
+  * Nvidia's [http://www.nvidia.com/object/cuda_home.html CUDA] enables high-performance computing on higher-end graphics products
+  * [http://gpgpu.org/ GPGPU.org]
+
+=== The Cell processor ===
+
+The [http://en.wikipedia.org/wiki/Cell_%28microprocessor%29 Cell processor] is a custom designed processor for parallel computing. It features one general purpose processor and 8 secondary, computing intensive co-processors. It's being shipped in SONY's PS3 gaming console, as well as in multimedia and scientific-oriented devices.
+
+The PS3 is a cheap, powerful supercomputer, even if it's hardware has been striped down for fitting the gaming market. It even integrates a [http://www.stanford.edu/group/pandegroup/folding/FAQ-PS3.html Folding@Home client] (similar project to Seti@Home, oriented towards protein folding). 10 000 PS3s are said to get the same job done as 100 000 regular computers. Supposedly [http://www.gamespot.com/news/6185555.html?msg_sort=1 1 billion PS3 owners] contribute to the project.
+
+Since SONY lets users run Linux on the device, people use it to:
+ * Accelerate image processing (ex: [http://cell.fixstars.com/opencv/index.php/OpenCV_on_the_Cell OpenCV port] or [http://www.terrasoftsolutions.com/showcase/cellebration/axion/tss.shtml as vision engine for the DARPA racing challenge]
+ * Accelerate video encoding (ex: [http://blog.cell.sijam.com/x264_for_cell_070530_part2/ x264 on the Cell])
+ * Render real time, ray-traced, high definition 3D ([http://www.alphaworks.ibm.com/tech/irt IBM's IRT]) using multiple Cell processors
+
+ * Ressources:
+  * [http://forum.beyond3d.com/showthread.php?p=1053797 General purpose topic]
+  * Products using the Cell:
+   * [http://www.mc.com/products/productdetail.aspx?id=2590&ProductTypeFolder=56 Cell Accelerator board]
+
+= Use cases =
+
+ * Distributed 3D rendering
+ * Scientific computation (molecular interaction simulation, 
+ * Distributed cryptographic cracking
+
+= Ecological benefits =
+
+Distributed computing is said to achieve better overall energy efficiency than centralized supercomputing. Processors such as the Cell are extremely power sparing.
+
+
+[[Category:Technology]]

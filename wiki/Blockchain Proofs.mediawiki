@@ -1,0 +1,56 @@
+=Directory=
+
+#[[Proof of Authority]]
+#[[Delegated Proof of Contribution]]
+#[[Proof of Cooperation]]
+#[[Proof of Existence]]
+#[[Proof of Impact]]
+#[[Proof of Importance]]
+#[[Proof-of-Movement]]
+#[[Proof of Personhood]]
+#[[Proof of Stake]]; [[Delegated Proof of Stake]]; [[Leased Proof of Stake]]
+#[[Proof of Value]]
+#[[Proof of Work]] ; [[Proof-of-Work-by-Renewable-Energy]] ; [[Proof-of-Useful Work]]
+#[[Stellar Consensus Protocol]]
+
+=Discussion=
+
+==Matthew Hutchinson on plutocratic proof design:==
+
+"Proof of Stake and Delegated Proof of Stake systems have been heralded to be better than Bitcoin’s Proof of Work mining algorithm by reducing energy costs and significantly increasing transaction times but one problem still remains with those three consensus systems; plutocracy or ‘Rule of the Rich’.
+
+Bitcoin’s Proof of Work system relies on the collective hashing power of the network to secure Bitcoins. It was intentionally designed to be resource intensive and difficult so that block times would remain relatively stable and so many miners would have the chance to solve the Proof of Work problem. But the problem with Proof of Work is that specialized machines have been created specifically for Bitcoin mining and now Bitcoin mining is no longer possible using your personal computer. Entire companies have sprung up around Bitcoin mining and have sunk vast amounts of fiat into their operations to increase their mining rate. These companies have pushed any regular user out of Bitcoin mining because of the sheer hashing power that they possess; a regular home computer just can’t keep up. Over time, Bitcoin has become almost centralized, with the vast majority of Bitcoins being mined by about 6 companies. In order for someone to become a miner now and compete with those 6, they would have to sink a large amount of money into a Bitcoin mining setup. With a single ASCII machine being about $2000 (or more), and having a requirement of dozens or more machines to be profitable, it’s easy to see that it’s not a cheap endeavor. It’s something that only the rich could jump into; an environment ripe for plutocracy.
+
+Proof of Stake was invented to fix Proof of Work’s shortcomings. Proof of Stake is a democratic system that doesn’t require solving a hard math problem with computer calculations; instead it allows users to vote on practically everything within the blockchain; system variables, Witnesses (what ‘miners’ are called in PoS), system changes and proposals, etc… Proof of Stake delivers on a lot of benefits and can accomplish a lot of things but there’s a key flaw that’s right in the name: Stake. Voters in a Proof of Stake system must have stake to vote and their vote’s weight is the same as the stake they have. This means those with a large amount of stake could easily consolidate power and shutout any competing voice that doesn’t have the stake to back it up; the very definition of a plutocracy."
+(https://www.exeblock.com/proof-of-plutocracy/)
+
+
+==Helen Zhao on [[Low-Energy Blockchain Proofs]]==
+
+Helen Zhao:
+
+"Sirer's team at Cornell is developing a green blockchain algorithm called [[Proof-of-Useful Work]], in which the next computer to validate a block and collect new coins is chosen based on energy expended performing a useful function in the real world.
+
+"For example they might be trying to do protein folding. 'Look, I worked for 10 minutes and solved so many protein fold efforts and that should entitle me to add a block to the end of the blockchain,'" Sirer said.
+
+==Algorand's public blockchain based on [[Proof-of-Stake]]==
+
+His team faces competition from MIT professor of engineering Silvio Micali. Launching its currency in May, his startup Algorand developed a public blockchain that runs on a version of proof-of-stake, which drives electricity consumption to almost zero, Micali said. The blockchain can process thousands of transactions every few seconds, he said.
+
+The money Algorand saves in electricity costs are then passed on to those who transact using the blockchain, resulting in much lower fees than when transacting with bitcoin, Micali said."
+(https://www.cnbc.com/2018/02/23/bitcoin-blockchain-consumes-a-lot-of-energy-engineers-changing-that.html)
+
+=More information=
+
+* Castor. A (Short) Guide to Blockchain Consensus Protocals, CoinDesk 17 May (2017) Accessed 28 May 2018), https://www.coindesk.com/short-guide-blockchain-consensus-protocols/
+
+* Iddo Bentov, Charles Lee, Alex Mizrahi, Meni Rosenfeld. Proof of activity: extending bitcoin’s proof of work via proof of stake. ACM SIGMETRICS Perform. Eval. Rev., 42 (2014), pp. 34-37
+
+*  Iddo Bentov, Ariel Gabizon, Alex Mizrahi. Cryptocurrencies without proof of work. FC 2016: Financial Cryptography & Data Secur. (2016), pp. 142-157
+
+*  Mitar Milutinovic, Warren He, Howard Wu, Maxinder Kanwal. Proof of luck: an efficient blockchain consensus protocol. SysTEX ‘16 Proceedings of the 1st Workshop on System Software for Trusted Execution (2016)
+
+[[Category:Crypto_Technology]]
+
+[[Category:Crypto_Governance]]
+[[Category:Cryptoledger_Applications]]

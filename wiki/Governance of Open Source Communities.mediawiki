@@ -1,0 +1,118 @@
+
+=Overview=
+
+==Typologies and Definitions==
+
+# [[Open Source Community]] ; [[Open Source Software Communities]]
+# [[Free Open Source Research Community]]
+# [[Open Source Software Development Community]]
+# [[Open Source - Community Building]]
+
+
+Typologies:
+
+# [[Autonomous vs Sponsored Open Source Community]], i.e.: [[Autonomous Open Source Community]] and [[Sponsored Open Source Community]]
+# [[Organic vs Synthetic Open Source Communities]]
+
+==Research Articles==
+
+# [[Governance of Sponsored Open Source Communities]]
+# 'Research essay: [[Transition of Governance in a Mature Open Software Source Community]]: Evidence from the Debian Case. by B. Sadowski, G. Sadowski-Rasters 
+# M. Teli and V. D’Andrea, 2008. ‘‘[[Free and Open Source Licenses in Community Life]]: Two empirical cases,’’ First Monday, 13(10), p. 19.'
+# ’Mahony, S. &Feraro, F. ‘The [[Emergence of Governance in an Open Source Community]]’, Academy of Management Journal, 50 (5), pp. 1079-1106.
+# [[Knowledge Management and Innovation in Open Source Software Communities]]
+# The [[Role of Participation Architecture in Growing Sponsored Open Source Communities]].''' By Joel West et al. 
+# Research paper: [[Relationships between Open Source Software Companies and Communities]]: Observations from Nordic firms. By Linus Dahlander, Mats G. Magnusson.
+# Book: [[Organization in Open Source Communities]]. At the Crossroads of the Gift and Market Economies. By Evangelia Berdou.
+# Interactions in the [[Cross-Project Coordination Practices of Open-Source Communities]]. by Adrian Yeow 
+
+==Discussions==
+
+# [[David Eaves on Community Management in Open Source]]
+# [[Bradley Kuhn on Free Software Communities vs. Open Source Companies]]
+# [[How Firms Relate to Open Source Communities]]
+
+
+
+=Typologies=
+
+===Three Levels of Governance=== 
+
+(in the context of forking); from the article: [[Code Forking, Governance, and Sustainability in Open Source Software]] [http://timreview.ca/article/644]
+
+By Linus Nyman, Juho Lindman:
+
+====Software level====
+
+The nature of the industry dictates that programs cannot maintain a stable steady state for an extended period of time. They must continue to evolve in order to remain useful and relevant. Without continual adaptation, a program will progressively become less satisfactory (Lehman, 1980). Conversely, truly successful software is able to adapt and even outlive the hardware for which it was originally written (Brooks, 1975). Therefore, the ability to change and evolve is a key component of software sustainability. Although stagnation may be a precursor to obsolescence, obsolescence need not creep into a project over time; it is often a design feature.
+
+Popularized in the 1950s by American industrial designer Brooks Stevens (The Economist, 2009), the concept of planned obsolescence stands in stark contrast to the concept of sustainability. Stevens defined planned obsolescence as the act of instilling in the buyer “the desire to own something a little newer, a little better, a little sooner than is necessary” (Brooks Stevens’ biography). Considered “an engine of technological progress” by some (Fishman et al., 1993), yet increasingly problematized in the business ethics literature (Guiltinan, 2009), planned obsolescence is part of every consumer’s life. Although contemporary software development and distribution have characteristics that differ substantially from the industrial products of the 1950s, the revenue models of companies in the software marketplace often welcome elements such as system versioning, to encourage repurchases of a newer version of the same system, or vendor lock-ins that limit the customer choice to certain providers of system or product (for a further review, see Combs, 2000). Newer versions of programs may introduce compatibility problems with earlier operating systems or programs (e.g., lack of backwards compatibility in Internet Explorer, Microsoft Office, or OS X’s OpenStep APIs). Some programs also introduce new file formats, which can cause compatibility issues with earlier versions of the program (e.g., docx vs. doc). Furthermore, end-of-life announcements and concerns over end-of-support deadlines may encourage users to upgrade, regardless of the real need to do so.
+
+The right to fork code makes implementing such elements impracticable in open source. The right to improve a program, the right to combine many programs, and the right to make a program compatible with other programs and versions are all fundamental rights that are built into the very definition of open source. Research has shown these rights are often exercised (Fitzgerald, 2006). The result of this constant collaborative improvement in open source systems is that any program with the support of the open source community can enjoy assured relevance rather than planned obsolescence. Furthermore, with renewed community interest, programs that have decayed and fallen into disuse can be revived and updated by forking the code from the original program. In fact, this is a fairly common practice: of the almost 400 forks studied by Nyman and Mikkonen (2011), 7% involved the reviving of an abandoned project. As long as there is sufficient community interest in a project, forking can allow for constant improvement in software functionality.
+
+
+====Community level====
+
+The possibility to fork is central to the governance of any open source community. The shared ownership of open source projects allows anyone to fork a project at any time. Therefore, no one person or group has a “magical hold” over the project (Fogel, 2006). Since a fork involving a split of the community can hurt overall productivity, Fogel notes that the potential to fork a program is “the indispensable ingredient that binds developers together”.
+
+One of the concerns among open source communities is what Lerner and Tirole (2002) call the hijacking of the code. Hijacking occurs when a commercial vendor attempts to privatize a project’s source code. The 2008 acquisition of MySQL, an open source relational database management system, by Sun Microsystems and subsequent acquisition of Sun by Oracle is an example of a case involving community concern over potential hijacking. It had been argued that such a series of acquisitions would lead to the collapse of both MySQL and the open source movement at large (Foremski, 2006). Responding to such claims, Moody (2009) noted that, while open source companies can be bought, open source communities cannot. Forking provides the community that supports an open source project with a way to spin off their own version of the project in case of such an acquisition. Indeed, this is what happened in the case of MYSQL. The original MySQL developer, Michael (“Monty”) Widenius, forked the MySQL code and started a new version under a different name, MariaDB, due to concerns regarding the governance and future openness of the MySQL code (for details, see Widenius' blog [February 5, 2009 and December 12, 2009] and press release).
+
+Similarly, in 2010, community concerns regarding governance led to a forking of the OpenOffice (OO) project. The Document Foundation, which included a team of long-term contributors to OO, forked the OO code to begin LibreOffice. The spinoff project emphasized the importance of a “transparent, collaborative, and inclusive” government (The Document Foundation). A recent analysis of the LibreOffice project indicates that this fork has resulted in a sustainable community with no signs of stagnation (Gamalielsson and Lundell, 2012). Given that forking ensures that any project can continue as long as there is sufficient community interest, we have previously described forking as the “invisible hand of sustainability” in open source software (Nyman et al., 2011).
+
+Commonly, forking occurs due to a community’s desire to create different functionality or focus the project in a new direction. Such forks are based on a difference in software requirements or focus, rather than a distrust of the project leaders. When they address disparate community needs, different versions can prosper.
+
+In a traditional company, it is the management, headed by the CEO and board of directors, that controls the company and provides the impetus for continued development. While the vision of the leadership is similarly integral to the eventual success of any open source project, their continued control is more fragile and hinges upon their relationship with and responses to the community. Forking cannot be prevented by business models or governance systems. The key lies in appropriate resource allocation and careful community management. Managers must strike a delicate balance between providing a driving force while appeasing and unifying the community. (For an overview of open source governance models, see OSS Watch; for discussion on building technical communities, see Skerrett, 2008; for discussion on open source community management, see Byron, 2009.)
+
+
+====Business-ecosystem level====
+
+Within the dynamic world of open source software, natural selection acts as a culling force, constantly choosing only the fittest code to survive (Torvalds, 2001). However, the right to fork means that any company can duplicate any competitor’s open source software distributions; thus, competitive advantage cannot depend on the quality of the code alone. However, it is worth stressing that possibility does not equal success. The right to fork a commercially successful program with the intention of competing for the same customer base still leaves the would-be competitor with issues regarding trademarks, brand value and recognition, as well as the existing developer and user base of the original program. Even though forking allows companies to compete with identical open source software, it is nevertheless cooperation that is considered to be the key to corporate success (Skerrett, 2011; Muegge, 2011).
+
+Open source software is free, but it is also increasingly developed and supported for commercial gains (Wheeler, 2009). While the right to fork may seem to make for a harsh business environment, open source companies can and do thrive. With its billion-dollar revenue, Red Hat is one such example. While their revenue primarily comes from subscriptions and services related to their software (see Suehle’s [2012] TIM Review Q&A for a more in-depth look at the secret of Red Hat’s success), Red Hat’s programs themselves are largely based on forks of programs by other developers. This phenomenon of combining forked programs is not unique to Red Hat: the hundreds of different Linux distributions are all made possible by the forking of existing products and repackaging them as a new release.
+
+Forking lays the building blocks for innovators to introduce new functionalities into the market, and the plethora of online forges have hundreds of thousands of programs available for forking and reuse in any new, creative way the user can imagine, allowing for the rapid adaptation to the needs of end users. Hence, the practice of forking allows for the development of a robust, responsive software ecosystem that is able to meet an abundance of demands (Nyman et al., 2012).
+
+The old adage, "one man’s trash is another man’s treasure" is particularly salient in open source software development. Soon after Nokia’s abandonment of the MeeGo project in 2011 (press release; MeeGo summary), the Finnish company Jolla announced that it would create a business around its revival, made possible by forking the original code (press release). On July 16, 2012, Jolla announced a contract with D. Phone, one of the largest cell phone retailers in China, and on November 21 they launched Sailfish OS. However, one does not need to be an open source business to benefit from the right to fork. Forking can also aid companies who choose to use an existing program, or develop it for personal use. The requirement in open source to share one’s source code is linked with distribution, not modification, which means that one can fork a program and modify it for in-house use without having to supply the code to others. However, a working knowledge of licenses as well as license compatibility (when combining programs) is crucial before undertaking such an endeavour (for a discussion of licenses, see St. Laurent [2004], Välimäki [2005], or Meeker [2008] for a discussion of architectural design practices in the combining of licenses, see Hammouda and colleagues [2010]."
+(http://timreview.ca/article/644)
+
+=Discussion=
+
+==[[Conflict in Open Source Communities]]==
+
+Gil Yehuda:
+
+"Conflict is very much a part of open source communities. It is inevitable and it is sometimes problematic; but there are controls that help mitigate the negative effect.  If you don't thrive in conflict situations, you might not like Open Source communities. It's not like playtime where we all bring cookies to share with each other. Instead, you find rage inspired, long email threads, Godwin's law Nazi analogies, Rage Quit forks. Some of the fights get lampooned in The Register, and the best fights remain in the publicly searchable archives of Apache's email server or in some Yahoo!Group or GoogleGroup.
+
+But if you can negotiate the occasional, inevitable conflict, you'll find that it can be used as creative friction and inspire really great Open Source projects.
+
+Historical context sets the stage; conflict is in the DNA of Open Source.
+The very start of the movement was a result of Richard Stallman's frustrations at the licensing policies related to AT&T Bell Lab's (policies imposed ironically by the Department of Justice against the telephone company aimed at improving market freedom that consequently created commercial licenses for the Unix operating system). In some sense, RMS did a Rage Quit and created the license designed to undermine the whole field of proprietary software because he wanted to improve a printer driver. The movement started with conflict; a gripe.
+
+The watershed period in the popularity of Open Source was the development of a united movement against Microsoft sparked in part by the "Halloween Documents of the late 1990s and early 00s." Open Source became nearly synonymous with being Anti Microsoft at that time (things have changed since, thankfully, in part to some fantastic Open Source people now working at Microsoft). Conflict against Microsoft grew the movement into a mainstream technology reality.
+
+The very term Open Source is not used by the person who created it -- instead he uses the term Free Software as a result of a philosophical refinement and schism in the movement between the Free Software Foundation and the Open Source Initiative (I see it as parallel to the protestant reformation of the Christian Church or the Shi'a-Sunni schism in Islam, resulting in two groups who both agree with many principles but disagree on many important details). And to further the irony, what started as a clever legal idea to annul some silliness related to software licensing turned into about 30 or more software licenses that reflect sometimes conflicting views of what developers expect of people who use their software. You'll find many bloggers still arguing about Open Source licenses. Conflict and confusion remain as Open Source simply added confusion to software licensing.
+
+Open Source has always had conflict as a trusted sidekick. It uses conflict as a creative force. In fact, Open Source has a property that makes it resistant to traditional conflict resolution tactics (the threat of forced shutdown). For example:
+
+After Oracle found that it had purchased the rights to OpenOffice (an Open Source project aimed at providing all the functionality of Microsoft Office without making you pay Microsoft for it), the community (correctly) assessed that Oracle was going to kill the project (not out of a love for Microsoft, but a contempt for Open Source successes). Since OpenOffice was an Open Source project, it was possible for members of the community to fork the project and create LibreOffice -- a very similar effort that was not subject to Oracle's roadmap. Had this not been an Open Source project, this fork could not have happened. The conflict and resolution enabled both OpenOffice and LibreOffice to exist, since you can't force Open Source projects to fail. 
+Similar pattern took place more recently with the Hudson and Jenkins project. And even more recently see: GnuTLS, copyright assignment, and GNU project governance. Being resistant to the thread of forced-shutdown, Open Source projects are receptive to fights to the death, since they can't be killed, they can only get wounded. If you know you can't be killed, you are more likely to fight to the death.
+
+The open source development model differs from the traditional way to build software in that you are receptive to (and invite) many more contributions from people whom you have little control over. Although many people are paid to write open source code, many of the people who contribute a project are not paid by the same entity, so there is automatic dispersion of control. This invites conflict since you don't have a project director who stomps his foot and says "I declare this out of scope" or "You all have to write unit tests instead of new functionality"  You can't force open source contribution, you can only motivate them. And if you have a conflict, you can't use the "hammer of crushed spirits" that many managers like to swing when projects run into deadlines. In fact you have people who work for competitors who are now working together. Strange, there is less conflict than you'd think there should be.
+
+Thus in any given Open Source project you should expect that at some point you'll have a conflict, and it will get emotional and passionate.
+
+A typical conflict pattern I ran into, not that long ago, with a well known Apache project: Some of the companies involved in developing the project had implemented the code into their production environments. They were largely pleased with the general functionality and looked to make incremental improvements at regular intervals. Their implementations were at very large scale, so performance and stability were essential to preserve.
+
+Other companies involved in the project were consulting companies who were looking to sell their consulting services to new clients who wanted to implement this technology. The prospective clients needed new features implemented before they were ready to install the project. The consulting company invested resources to build those features, so they could take on the new clients. They did not care as much about scale or stability -- they needed the new features and they needed them soon, or they'd lose their clients.
+
+As you can imagine, the contributors fought hard to get their way. Which was more important? new features that make the project more attractive to more people (and we can fix the security, performance, and stability problems later), or a delay of features and a slow methodical improvement that does not introduce too many radical changes? Turns out both are right, they are not right at the same time for the same client, and this is a natural source of conflict.
+
+To deal with this (and other patterns of) inevitable conflict, you need strong leadership to inspire the community (not the hammer of project management). A strong leader knows how to send part of the community off to build the new features, part of the community to make the incremental stability improvements, and when to bring them together so that they are not forking, but working a coordinated play. The reality is that many open source developers are not inspiring leaders, but instead they are fantastic coders.  But when your project has that inspiring leader, then you can get though the conflict and sail to success.  Those super successful projects we all know and love have great leaders and loyal communities that trust them.  But getting there is no simple feat."
+(http://www.quora.com/Open-Source/How-much-conflict-exists-in-open-source-communities?)
+
+
+[[Category:Free Software]]
+
+[[Category:Governance]]
+
+[[Category:Peergovernance]]

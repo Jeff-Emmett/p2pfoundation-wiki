@@ -1,0 +1,106 @@
+
+'''= Overview repo for other repos for apps based on the Value Flows [VF] model and vocabulary.'''
+
+URL = https://github.com/valueflows/vf-apps?
+
+This file is a (augmented) copy from the above URL in August 2018
+
+Value Flows is described at https://www.valueflo.ws/ as "a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems."
+
+It is based on the [[Resource-Event-Agent_Model|Resource-Event-Agent economic model]] with amendments from a set of software experiments by the Value Flows project participants. The set of experiments is listed below as Sources of ideas for apps.
+
+=Description=
+
+'''1. Bob Haugen and Lynn Foster:'''
+
+"The Open Cooperative Ecosystem [OCE] intends to create flocks of modular apps that will all work together using the VF vocabulary and a decentralized protocol such as ActivityPub, Scuttlebutt, or Holochain.
+
+We would like the apps to be able to work on any of those three protocols and many others to come.
+
+Some work is already underway in each of those protocols. The one that is closest to deployment might be Moinho-Mesh in Moinho, Brazil. Their repos are currently in the Open App Ecosystem github group. They first announced in the Open App Ecosystem Loomio group.
+
+@bhaugen and @fosterlynn will be writing specs for a suite of apps for federated economic networks in the days to come, in separate repos in the valueflows organization. We will add links for each of those repos to this overview readme as they are published."
+
+'''2.'''
+
+"The OCE  attempts to be a network of inter-connected software and data, especially for the case of cooperative and post-capitalistic environments to bundle the current individualistic approaches of people and collectives into one string and synergize efforts towards the same goals.
+
+To create this framework of inter-connective and decentralized apps and platforms, which are freely available, modular, pluggable and well documented, OCE is using common vocabularies or protocols (currently just „ValueFlows“) to convert data seamlessly and instantly from one instance to the other.
+
+Future developers will be able to create new open­ source applications for a group's specific needs or as technology advances, in their choice of languages, and plug them in. It will also allow existing software apps to create the linkage into the OCE.
+
+Nevertheless, as an ecosystem consists of multiple interconnecting components, there is currently not such a thing as an OCE. Thus, it should be considered work in process development where the software components are developed based on real needs."
+(https://docs.opencoopecosystem.net/)
+
+
+=Characeristics=
+
+Inside OCE any kind of events can be represented:
+
+* flexible networks of networks relationships
+
+* resource management and recipes
+
+* planning and coordination for producing, using, exchanging and sharing value
+
+* tracking events that produce, use, exchange and share value
+
+* tracking contributions from individual network members of work and resources
+
+* connecting value streams from idea to manufacture to end use and following them back
+
+* distributing income according to contributions using "value equation" decided by contributors
+
+* accounting views for a network, organization, project, individual 
+
+
+=Sources of ideas for apps=
+
+"We will mine existing apps using VF-compatible models for ideas and logic."
+
+Those include:
+
+#the Vocabulator
+#Vientos code
+#LinkedFarm
+#Resourceful
+#linked-data-browser
+#Personator
+#Holodex
+#Cobuy
+#The original NRP developed with Sensorica.
+#OCP fork of NRP for FairCoop
+#Agent, first app that is truly part of OCE
+#OCE repos
+#LearnDeep fork of NRP + Agent
+#Sensorica's new fork of NRP for Verdun
+
+
+==The Apps==
+
+"These are meant to be requirements, specifications, and ideas for apps, where different people could implement different software that fills the requirements for each app in the flock. But any implementation of any of the apps should be able to work with any other implementation of any of the other apps.
+
+The central apps will be the Agent apps. All the other apps in the flock will be used by the agents.
+
+For example:
+
+#Recipes
+#Planning.
+#Traversing the value flows. This is not really an app, but an algorithm that can be made into a module potentially usable by many apps."
+
+
+=First user group=
+
+==OpenCoop Work Areas==
+
+"OpenCoop Work Areas is a space where all participants of the FairCoop ecosystem may collaborate and build an organized work flow in a decentralized and efficient way. In addition, it includes a method of logging that work which is divided in tasks among people with the required skills, while distributing a certain value to everyone which contributed. This overall plan is mainly the outcome of the OpenCoop Work Summercamp 2017, where lot of people from around the world, involved in FairCoop’s ecosystem in various ways, gathered and worked on setting this up and kickstarting the new form of selforganizing the open collaborative work for the glocal FairCoop activities.
+
+* Useful links: https://wiki.fair.coop/en:open_coop_work:start​
+
+
+=More information=
+
+* visual graph with the history of these projects and milestones via https://docs.opencoopecosystem.net/introduction/history
+
+
+[[Category:Mutual Coordination]]

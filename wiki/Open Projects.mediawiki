@@ -1,0 +1,56 @@
+
+
+=Characteristics=
+
+Henri Bergius:
+
+Licenses are only a small part of a project being truly open. They are just a layer of insurance comparable to traditional source code escrow.
+
+What we really need is understanding of a bit more wholesome project openness. The actual goals of openness that the license should derive from. Here are some aspects to consider:
+
+
+==Project transparency==
+
+If a project aims to have outside users or contributors, they need to be able to see the history of changes in the software, decisions that have been made, and the open list of bugs or enhancements being worked on.
+
+A released software package answers these questions poorly regardless of a license. Instead, what is needed is the project being developed out in the open, preferably using one of the common project hosting environments like Gitorious, GitHub, SourceForge, Launchpad or GNU Savannah. You can also host the project yourself using something like Trac or GForge but this limits access and visibility to the project.
+
+The project must actually use the service, not just by code dumps at release time, but with constant development activity visible as code commits and active issue tracking. Depending on business goals it is also good to have future plans for the project visible to the public.
+
+All of this is mandatory for others to gauge the viability of a software package to their needs. Josh Berkus presented a good list of things you shouldn't do to create a community around your project.
+
+
+==Contribution policy==
+
+
+Potential users and developers need to know how they can make their changes available to a package. Is it possible at all, are copyright assignments or some contributor agreements necessary, is there a documented process for submitting changes or even becoming an acknowledged developer in the project? Or is the project being developed behind closed curtains of a company?
+
+
+==Requirements and software stack==
+
+Another area some projects fail at is communicating how the software can be built and installed. If the only practical way to run the software is from released binary packages, or through buying consulting, is it truly open? Does the project require additional closed software or specific hardware to run with?
+Specialized licensing concerns
+
+Depending on the type of software other concerns may be being able to provide it as part of a Software as a Service offering, or being able to deploy it on some constrained or closed hardware.
+
+Some software licenses address these questions clearly, like EUPL requiring contributions to be opened also when the software is offered in SaaS manner, or GPLv3 forbidding device manufacturers from locking down or 'Tivoizing' their hardware products."
+(http://bergie.iki.fi/blog/open_source-free_software-what_we_need_is_open_projects/)
+
+
+
+=Example=
+
+According to Henri Bergius, "the Apache Software Foundation that has a well-defined set of rules that projects must follow before they can be adopted under the ASF umbrella"
+
+#http://www.apache.org/foundation/how-it-works.html#management
+#http://incubator.apache.org/guides/proposal.html#template-current-status
+
+
+
+
+
+[[Category:Open]]
+
+[[Category:Governance]]
+
+[[Category:Encyclopedia]]

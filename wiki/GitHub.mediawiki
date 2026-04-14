@@ -1,0 +1,326 @@
+''' GitHub is a centralized hosting service, and community, for users of the distributed version control system Git, and the for-profit company behind it'''
+
+
+URL = https://github.com/
+
+
+=Introductory Citations=
+
+
+'''1.'''
+
+"GitHub, I believe, is doing to open source what the internet did to the publishing industry: It’s creating a culture gap between the previous, big-project generation of open source and a newer, more amateurized generation of open source today."
+
+- Mikeal Rogers [https://www.wired.com/opinion/2013/03/github/]
+
+
+
+'''2.'''
+
+
+"What GitHub has done is taken the practice of open-source collaboration--which is done on something akin to a volunteer basis--and applied them to the organization of their entire company. And the outcome has been a product that is universally beloved and relied upon among technology-industry types and university computer science groups."
+
+- Chris Dannen [http://www.fastcolabs.com/3020181/open-company/inside-githubs-super-lean-management-strategy-and-how-it-drives-innovation]
+
+=Description=
+
+
+'''0.'''
+
+[[Git]] is "a fast, efficient, distributed version control system ideal for the collaborative development of software.
+
+GitHub is the easiest (and prettiest) way to participate in that collaboration: fork projects, send pull requests, monitor development, all with ease.
+
+GitHub was written for public, open source projects and private, proprietary codes — if you use Git, GitHub is for you."
+(http://github.com/)
+
+By Robert McMillan:
+
+'''1.'''
+
+"GitHub.com is best thought of as Facebook for geeks. Instead of uploading videos of your cat, you upload software. Anyone can comment on your code and add to it and build it into something better. The trick is that it decentralizes programming, giving everyone a new kind of control. GitHub has shaken up the way software gets written, making coding a little more anarchic, a little more fun, and a lot more productive."
+
+
+'''2.'''
+
+"GitHub now has more than 1.3 million users, and over 2 million source code repositories — eight times the tally from just two years ago. If you count snippets of code and Wiki pages that are stored on the site, there are more than 4 million repositories. Two years ago, GitHub was a team of eight, holding company meetings in San Francisco cafes. By the beginning of 2011, they’d grown to 14 “hubbernauts” — as GitHub employees are affectionately called — and a year later, they’re at 57. In July, they took over the former digs of blogging outfit Six Apart. GitHub is growing fast — and it hasn’t taken a dime of venture funding.
+
+Once you’ve heard about GitHub, you start to see it almost everywhere. Sometimes, it’s hosting the code that underpins a big-name website. Other times, it’s driving a secret skunkworks project inside a Fortune 500 company. It has brought open source software that much closer to fulfilling its promise — but it doesn’t stop there. It’s also democratizing the creation of web pages and DNA analysis tools and maybe even the law of the land.
+
+“GitHub has changed the way that people approach development,” says Tom Preston-Werner, the company’s chief technology officer. “They realize that it doesn’t have to be so complex.”
+
+
+
+'''3.'''
+
+"At the heart of GitHub is Git, an open source project started by Linux creator Linus Torvalds. Matthew McCullough, a trainer at GitHub, explains that Git, like other version control systems, manages and stores revisions of projects. Although it’s mostly used for code, McCullough says Git could be used to manage any other type of file, such as Word documents or Final Cut projects. Think of it as a filing system for every draft of a document.
+
+Some of Git’s predecessors, such as CVS and Subversion, have a central “repository” of all the files associated with a project. McCullough explains that when a developer makes changes, those changes are made directly to the central repository. With distributed version control systems like Git, if you want to make a change to a project you copy the whole repository to your own system. You make your changes on your local copy, then you “check in” the changes to the central server. McCullough says this encourages the sharing of more granular changes since you don’t have to connect to the server every time you make a change.
+
+GitHub is a Git repository hosting service, but it adds many of its own features. While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features, such as a wikis and basic task management tools for every project.
+
+The flagship functionality of GitHub is “forking” – copying a repository from one user’s account to another. This enables you to take a project that you don’t have write access to and modify it under your own account. If you make changes you’d like to share, you can send a notification called a “pull request” to the original owner. That user can then, with a click of a button, merge the changes found in your repo with the original repo.
+
+These three features – fork, pull request and merge – are what make GitHub so powerful. Gregg Pollack of Code School (which just launched a class called TryGit) explains that before GitHub, if you wanted to contribute to an open source project you had to manually download the project’s source code, make your changes locally, create a list of changes called a “patch” and then e-mail the patch to the project’s maintainer. The maintainer would then have to evaluate this patch, possibly sent by a total stranger, and decide whether to merge the changes.
+
+This is where the network effect starts to play a role in GitHub, Pollack explains. When you submit a pull request, the project’s maintainer can see your profile, which includes all of your contributions on GitHub. If your patch is accepted, you get credit on the original site, and it shows up in your profile. It’s like a resume that helps the maintainer determine your reputation. The more people and projects on GitHub, the better idea picture a project maintainer can get of potential contributors. Patches can also be publicly discussed.
+
+Even for maintainers who don’t end up using the GitHub interface, GitHub can make contribution management easier."
+(http://m.techcrunch.com/2012/07/14/what-exactly-is-github-anyway/?)
+
+
+
+
+'''4. Why the name 'Git'?'''
+
+Linus Torvalds:
+
+"It’s the British slang term for stupid, despicable person — arse. The joke “I name all my projects for myself, first Linux, then git” was just too good to pass up. But it is also short, easy-to-say, and type on a standard keyboard. And reasonably unique and not any standard command, which is unusual."
+
+
+=Governance=
+
+Rachel Emma Silverman:
+
+"Many employees feel it is easier to grow in their careers without layers of management, says Chris Wanstrath, the CEO of San Francisco collaboration-software company GitHub, who insists his title is nominal. The company, whose products let teams work together to develop software, often without the aid of management, has 89 employees.
+
+At GitHub, a small cadre of top brass handles companywide issues and external communications but doesn't give orders to workers. Teams of employees decide which projects are priorities, and anyone is free to join a project in whatever capacity they choose. "You have the power to be where you are most useful," Mr. Wanstrath says.
+
+Tim Clem, 30, was hired at GitHub last year for a back-end coding job. A few months into the job, he persuaded other colleagues that the company needed to develop a product for users of Microsoft Windows. He spearheaded the project, hiring a team of staffers to help him create the recently released application.
+
+The bossless structure can be chaotic at times, he says, but "you feel like there is total trust and an element of freedom and ownership. It makes you want to do more," says Mr. Clem, who had previously worked at a large tech firm and smaller start-ups."
+(http://online.wsj.com/article/SB10001424052702303379204577474953586383604.html)
+
+
+==[[Open Allocation]]==
+
+Chris Dannen:
+
+"At GitHub, people work on an open allocation basis. Unlike traditional companies where projects are assigned top-down, GitHubbers tackle whatever projects they want, without any formal requests or managerial interference. Sure, GitHub is only 175 employees, so there are limitations to this experiment, but [[Valve]] Software (400 employees) has grown to be a $2.5B company with a very similar open allocation structure."
+(http://www.fastcolabs.com/3020181/open-company/inside-githubs-super-lean-management-strategy-and-how-it-drives-innovation)
+
+
+
+=Statistics=
+
+"In 2011, there were 2 million repositories on GitHub. Today, there are over 29 million. GitHub’s Brian Doll noted that the first million repositories took nearly 4 years to create; getting from nine to ten million took just 48 days."
+(https://medium.com/@nayafia/we-re-in-a-brave-new-post-open-source-world-56ef46d152a3#.q5cj3gmhm)
+
+
+=History=
+
+By Robert McMillan:
+
+'''1. From Git to GitHub:'''
+
+"Like so many other successful geek projects, GitHub began with coders scratching their own itch. About five years ago, Wanstrath and fellow programmer P.J. Hyett were both slinging code at Cnet, the tech news and reviews site. Their language of choice was Ruby on Rails, a programming framework that makes it easy to develop Web applications.
+
+As they built out their sites at Cnet, Wanstrath and Hyett wound up making a lot of improvements to Ruby on Rails itself. But they found it wasn’t so easy to get those changes integrated back into the open-source project. Following the then-dominant model of open source development, Rails was managed by a cadre of trusted coders who’d been given permission to “commit” changes to the project’s source code. To get one of their changes added to the central code, Wanstrath and Hyett would have to lobby one of those trusted coders and convince him that their change was worth integrating. That was often more work than writing the code in the first place.
+
+They weren’t the only developers chafing under that Trusted Gatekeeper model of open source. A decade ago, Linus Torvalds found himself struggling to manage his role as gatekeeper of the Linux operating system he invented. In the beginning, Torvalds hosted Linux on a website belonging to the University of Helsinki. If people found a bug in the code, they’d send him a file with the changes via e-mail. If Torvalds read the e-mail and liked the changes, he’d incorporate them into Linux. But Torvalds is notorious for not reading all of his e-mail, so as the project got popular, more and more submissions were slipping through the cracks.
+
+This was the dirty little secret of open-source software. With the average free software project, large amounts of code — maybe even most code — never actually got used. It was often just too hard for casual users to show developers the changes they’d made and then easily merge those changes back into the open-source code base.
+
+So in 2005, Torvalds created Git, version control software specifically designed to take away the busywork of managing a software project. Using Git, anybody can tinker with their own version of Linux — or indeed any software project — and then, with a push of a button, share those changes with Torvalds or anyone else. There is no gatekeeper. In practical terms, Torvalds created a tool that makes it easy for someone to create an alternative to his Linux project. In technical terms, that’s called a “fork”.
+
+Back in the 1990s, forking was supposed to be a bad thing. It’s what created all of those competing, incompatible versions of Unix. For a while, there was a big fear that someone would somehow create their own fork of Linux, a version of the operating system that wouldn’t run the same programs or work in the same way. But in the Git world, forking is good. The trick was to make sure the improvements people worked out could be shared back with the community. It’s better to let people fork a project and tinker away with their own changes, than to shut them out altogether by only letting a few trusted authorities touch the code."
+
+
+'''2. Creating GitHub'''
+
+"For the 99 percent, Git’s command-line interface is notoriously difficult to use. That’s where GitHub comes in. It simplifies Git. A lot. Its first slogan was: “Git hosting: No longer a pain in the ass.”
+
+Tom Preston-Werner dreamed up GitHub and roped Chris Wanstrath into the project one night in October 2007 at a coder’s meet-up at Zeke’s, a San Francisco sports bar a few blocks from the downtown stadium where the San Francisco Giants play.
+
+At first, GitHub was a side project. Wanstrath and Preston-Werner would meet on Saturdays to brainstorm, while coding during their free time and working their day jobs. “GitHub wasn’t supposed to be a startup or a company. GitHub was just a tool that we needed,” Wanstrath says. But — inspired by Gmail — they made the project a private beta and opened it up to others. Soon it caught on with the outside world.
+
+By January of 2008, Hyett was on board. And three months after that night in the sports bar, Wanstrath got a message from Geoffrey Grosenbach, the founder of PeepCode, a online learning site that had started using GitHub. “I’m hosting my company’s code here,” Grosenbach said. “I don’t feel comfortable not-paying you guys. Can I just send a check?”
+
+It was the first of many. In July 2008, Microsoft acquired Powerset, the startup that was providing Preston-Werner with a day job. The software giant offered Preston-Werner a $300,000 bonus and stock options to stay on board for another three years. But he quit, betting everything on GitHub.
+
+“It was a little scary at the time to give up something like that, but I would not change anything about that decision at all,” he says now."
+
+
+==How Git changed everything==
+
+Nadia Eghbal:
+
+"Linux, the open source operating system, was growing in popularity. But Linux was using a proprietary version control, called BitKeeper, to manage its code. Although Linus Torvalds, the original developer of the Linux project, liked BitKeeper (who licensed it to them for free under a “community license”), plenty of other developers were unhappy with this arrangement.
+
+BitKeeper, being proprietary software, had a lot of restrictions on their users. If a developer used BitKeeper on Linux, for example, they weren’t allowed to contribute to other version control tools, like SVN or CVS, in their spare time.
+
+Finally, in 2005, the makers of BitKeeper announced they were ending free support for Linux, citing license violations, and the maintainers were forced to either accept a commercial contract or come up with a new solution.
+
+Linus Torvalds didn’t like any of the free version control systems out there. So he decided to make his own. In 2005, he released a new version control system, called Git.
+
+Of the name, Linus joked that he was an “egotistical bastard” who “named all projects after myself” — “git” being British slang for “unpleasant person”.
+
+It turned out that Linus wasn’t the only person who wanted a better, free version control system. Other developers liked Git, too. It was faster, and 
+it was decentralized, able to handle workflows from multiple contributors.
+
+It wasn’t intuitive, though. Git was markedly different from anything else out there. SourceForge chose not to support it.
+
+Within a few years, however, SourceForge was facing new competition. Two new collaboration platforms launched in 2008: GitHub and Bitbucket.
+
+Both were good products. But there was a key difference: Bitbucket only supported Mercurial as a version control system, whereas GitHub only supported Git.
+
+Matt Mackall had announced Mercurial after the BitKeeper fiasco, right at the same time that Linus had announced Git. The rivalry between Mercurial and Git was fierce.
+
+But in the end, GitHub bet on the right horse.
+
+Linux and other prominent open source projects had already switched to Git. And GitHub made the non-intuitive Git much easier to understand.
+
+In 2010, SVN was still the top version control system, used in 60% of software projects, while Git was used in just 11%. But today, Git has nearly matched SVN’s market share.
+
+Mercurial, the version control system that BitBucket launched with, is used in just 2% of projects today.
+GitHub became the obvious choice to collaborate on code. 
+
+Open source needed:
+
+(1) a standard way to communicate, and
+
+(2) a standard way to manage code
+
+GitHub had both of those. And it even went a step further, popularizing then-new social mechanics, like following other developers and seeing project changes in a news feed. Now developers even had:
+
+(3) a standard place to socialize on the web ."
+
+(https://medium.com/@nayafia/we-re-in-a-brave-new-post-open-source-world-56ef46d152a3#.q5cj3gmhm)
+
+=Status=
+
+* "As of late 2014, there are approximately 8 million registered users working on over 17 million projects, making it the largest hosting platform of its type." [http://www.brookings.edu/blogs/techtank/posts/2014/12/16-github-government-use-longo]
+
+==GitHub Today 2012==
+
+By Robert McMillan:
+
+"GitHub is now profitable. Users can sign up for free and start contributing, but they pay money if they want to privately host code there — starting at $7 per month. GitHub also sells an enterprise product that lets companies run your own version of GitHub behind the corporate firewall. That starts at $5,000 per year, but can cost hundreds of thousands annually for companies with hundreds of coders.
+
+Ironically, though, GitHub’s die-hard fans don’t include Torvalds, who briefly moved Linux kernel development to GitHub last September following a security breach at its old home.
+
+“I like GitHub a lot,” he says. “There’s a reason it became one of the biggest source code repositories rather quickly.” But he then unfurls a long list of all the “serious” problems he had with it when he hosted his code on the site — many of which have since been fixed. He couldn’t filter comments, the e-mail interface dropped attachments, the web interface messed up code contributions, and so on. The bottom line: GitHub makes it easy to code. But it can also make it easy to generate crap.
+
+That may be true, but it hasn’t held the site back. GitHub users are seemingly everywhere. On recent afternoon in San Francisco’s North Beach neighborhood, Wired was discussing the site with GitHub director of engineering Ryan Tomayko. Suddenly the guy at the next table leaned over and interrupted, like a teenager overhearing two strangers talk about his favorite band. “I just have to tell you,” he said, “GitHub is amazing.”
+
+
+==2013: GitHub, not just for software!==
+
+MIKEAL ROGERS:
+
+“Anyone can now change the data when new bike paths are built, when roads are under construction, and new buildings are erected,” the city of Chicago recently announced. People are managing home-renovation projects on GitHub. One law firm also just announced a couple days ago that it’s posting legal documents for early-stage startup funding on GitHub. Someone even published all of the laws in Germany on GitHub last year. (Perhaps not so surprisingly, he has about 17 open “pull” requests for changes.) And of course, GitHub is still used by programmers and developers flying AR Drones with Node.js or building websites with jQuery."
+(http://www.wired.com/opinion/2013/03/github/)
+
+=Examples=
+
+* "One GitHub user, Manu Sporny, published his DNA information to the site last year, in the hope of spurring development of open-source DNA analysis software by providing real test data to analyze."
+(http://www.wired.com/wiredenterprise/2012/02/github/all/1)
+
+
+* Books and even transcripts of talks have popped up on the site. ... When Scott Chacon wrote a book about Git, the first fork appeared within a month. It was a German translation of his book. Now, three years later, it’s been translated into 10 languages, with another 10 translations in the works. Half of the traffic to the book’s website comes from China. “Tons of people in China are learning Git because they can read [the book] in Chinese on my website, because somebody provided that,” he says."
+(http://www.wired.com/wiredenterprise/2012/02/github/all/1)
+
+==[[Public Service Collaboration on Github]]==
+
+Justin Longo and Tanya Kelley:
+
+"The Center for Policy Informatics at Arizona State University has experimented with and conducted research on the use of GitHub for other purposes beyond collaboration around software development, looking to cases where GitHub is being used to facilitate collaboration amongst a number of co-contributors to non-code outputs — documents written in text, rather than software written in code.
+
+There are several interesting examples of novel GitHub uses. One case saw dozens of mathematicians rapidly complete a major book-length project. Another math project has attracted over 150 contributors. A Congressional candidate made his platform available on GitHub and invited constituents to comment and suggest edits to the documents. Some have used GitHub to collaboratively write legislation. An academic effort to co-create a literature review article presented an abstract and structure for the article, along with guidelines for contributing and a framework for evaluating contributions. A magazine article that profiled the GitHub corporate culture was posted to GitHub itself where readers were invited to improve the article and add translations."
+(http://www.brookings.edu/blogs/techtank/posts/2014/12/16-github-government-use-longo)
+==[[GitHub and Occupy]]==
+
+By Robert McMillan:
+
+"It’s even feeding the Occupy movement. When Jonathan Baldwin wanted to write a cell-phone version of the People’s Microphone, used by Occupy to pass messages around big crowds, he posted his code straight to GitHub. The site let him share his code easily, and quickly connect with other developers to hammer out technical issues. “GitHub is the best thing ever. If you don’t host on GitHub, it doesn’t exist,” says Baldwin, a student at Parsons the New School for Design in New York."
+(http://www.wired.com/wiredenterprise/2012/02/github/all/1)
+
+
+==How government uses GitHub==
+
+Ben Balter:
+
+"When government works in the open, it acknowledges the idea that government is the world's largest and longest-running open source project. Open data efforts, efforts like the City of Philadelphia's open flu shot spec, release machine-readable data in open, immediately consumable formats, inviting feedback (and corrections) from the general public, and fundamentally exposing who made what change when, a necessary check on democracy.
+
+Unlike the private sector, however, where open sourcing the "secret sauce" may hurt the bottom line, with government, we're all on the same team. With the exception of say, football, Illinois and Wisconsin don't compete with one another, nor are the types of challenges they face unique. Shared code prevents reinventing the wheel and helps taxpayer dollars go further, with efforts like the White House's recently released Digital Services Playbook, an effort which invites every day citizens to play a role in making government better, one commit at a time.
+
+However, not all government code is open source. We see that adopting these open source workflows for open collaboration within an agency (or with outside contractors) similarly breaks down bureaucratic walls, and gives like-minded teams the opportunity to work together on common challenges.
+
+It's hard to believe that what started with a single repository just five years ago, has blossomed into a movement where today, more than 10,000 government employees use GitHub to collaborate on code, data, and policy each day. Those 10,000 active users make up nearly 500 government organizations, from more than 50 countries. Government code on GitHub spans more than 7,500 repositories with @alphagov, @NCIP, @GSA, and @ministryofjustice being the top open source contributors with more than 100 public repositories each."
+(https://github.com/blog/1874-government-opens-up-10k-active-government-users-on-github)
+
+=Discussion=
+
+
+==How Git(Hub) facilitates [[Forking]]==
+
+Linus Torvalds on Git:
+
+"The old regime “makes it very hard to start radical new branches because you generally need to convince the people involved in the status quo up-front about their need to support that radical branch,” Torvalds says. “In contrast, Git makes it easy to just ‘do it’ without asking for permission, and then come back later and show the end result off — telling people ‘look what I did, and I have the numbers to show that my approach is much better.’”
+
+It may have been built for Linux, but Git quickly proved to be a godsend for any large organization managing giant code bases. Today, Facebook, Staples, Verizon and even Microsoft  are users. At Google, Git is so important that the company pays Junio Hamano – who took over the project from Torvalds – to work on Git fulltime, and also pays the salary for the project’s second-in-command, Shawn Pearce."
+(http://www.wired.com/wiredenterprise/2012/02/github/all/1)
+
+
+==The principle of contribution vs the principle of community==
+
+Mikeal Rogers:
+
+"On GitHub the language is not code, as it is often characterized, it is contribution. GitHub presents a person to person communication system for contributions. Documentation, issues, and of course code, travel between personal repositories.
+
+The communication medium is the contribution itself. Its value, its merit, its intentions, all laid naked for the world to see. There is no hierarchy or politic embedded in the system. The creator of a project has a clear first mover advantage but the possibility is always there for its position to be supplanted by a fork, creating a social imperative to manage contributions in a satisfactory manor to her community.
+
+GitHub is truly a system of anarchism, in the most classic sense of the term. It is a system of communication and contribution that is without a central organization or institution of governance. Sure, it is hosted, developed, and maintained by someone but they do not enforce any set of governance or process over the users of the system.
+
+It is my belief that we are, right now, in the middle of a very large evolution in the ecology of open source. The language of contribution has infected a new generation of open source contributors. Much of the potential first imagined by open source pioneers is being realized by high school kids on a daily basis who contribute effectively with less effort than has ever been required.
+
+The reason I am so convinced of the importance of this change is so simple it took me nearly a year to identify it. While the ethos of Apache may have been "Community over Code" it required those in the community to understand and internalize that ethos for it to be fully realized. Social problems became political problems because the ethos had to be enforced by the institution.
+
+The new era, the "GitHub Era", requires no such internalization of ethos. People and their contributions are as transparent as we can imagine and the direct connection of these people to each other turn social problems back in to social problems rather than political problems. The barrier to getting a contribution somewhere meaningful has become entirely social, in other words it is now the responsibility of the community, whether that community is 2 or 2000 people.
+
+A system that enforces its principles without intervention is a tremendous achievement and GitHub's adoption trend should not be a surprise to anyone.
+Git at Apache
+
+GitHub's decentralized nature is built, in large part, on git. Many of the social principles I described above are higher order manifestations of the design principles of git itself."
+(http://www.mikealrogers.com/posts/apache-considered-harmful.html)
+
+
+
+==GitHub is making peer production more peer-produced!==
+
+Mikeal Rogers:
+
+"Before GitHub, I spent a lot of my time thinking and talking about how to best manage open source projects because the coordination cost of an open source project was significant. So significant, in fact, that when a project did well and grew a big enough community, it made more sense for the project to grow rather than fracture into smaller projects. But the bigger and more complex a software project got, the harder it became to contribute. So an assortment of members — or “committers” — were tasked with managing and producing the project. This often led to rifts between those producing and those consuming a project.
+
+GitHub closed this rift by making open source much more decentralized. It became less about the project and more about the individuals.
+
+The workflow for using GitHub is very personal. A person (I’m github.com/mikeal) has an account, and everything they publish exists one level below them. If someone else wants to fix something, they “fork” it, which puts a copy of it under them.
+
+This workflow is very empowering: It encourages individuals to fix things and own those fixes just as much as they own the projects they start. It also gives all users an identity in the new open source culture; GitHub is actually the number-one identity provider for peer-based production over the internet in more than just code.
+
+I’ve been contributing to open source projects for over 10 years, but what’s different now is that I’m not a “member” of these projects — I’m just a “user,” and contributing a little is a part of being a user. Little interactions between me and the project maintainers happen several times a week on all kinds of little projects I use.
+
+And it happens even more often in the other direction: People I’ve never heard from send me little bits of code on all the little projects I’ve published.
+
+
+The first versions of GitHub did one thing very well: They made it much easier to publish — than to not publish — your code. This was enough for many notable projects, including Ruby on Rails, to move to GitHub almost immediately.
+
+But what happened next was even more interesting: People started publishing just about everything on GitHub…. Pushing code became almost as routine as tweeting. By reducing barriers to entry and making it easier to coordinate and contribute to open source, GitHub broadened the peer production to casual users.
+
+Today a vast landscape of simple and understandable software is accessible to a creative class of people who did not have the depth of technical knowledge necessary to participate in the large open source projects of the past.
+
+This blurring of relationships between producers, contributors, and consumers naturally values smaller and more easily understood projects — and has led to a long tail of contributions. In the entire month of September 2012, for example, half of all active GitHub users who pushed a “changeset” pushed fewer than five changesets, with 22 percent (about 44,000 people) pushing only a single changeset that month."
+(http://www.wired.com/opinion/2013/03/github/)
+
+
+==A GitHub for the Law?==
+
+By Robert McMillan:
+
+'Ryan Blair, a technologist with the New York State Senate, thinks it could even give citizens a way to fork the law — proposing their own amendments to elected officials. A tool like GitHub could also make it easier for constituents to track and even voice their opinions on changes to complex legal code. “When you really think about it, a bill is a branch of the law,” he says. “I’m just in love with the idea of a constituent being able to send their state senator a pull request.”
+(http://www.wired.com/wiredenterprise/2012/02/github/all/1)
+
+[[Category:Technology]]
+[[Category:Peerproduction]]
+[[Category:P2P Infrastructure]]
+[[Category:Companies]]

@@ -1,0 +1,66 @@
+
+=Discussion=
+
+Julia Rosenberg, Chase Chapman, et al. :
+
+"Contracts, laws, charters, constitutions, and other such agreements are mechanisms that organizations use to set rules between agents in a system in order to assure certain behaviors. This assurance can come from two places:
+
+* Socialware - Mechanisms that create assurances through human relationships, incuring a high social coordination cost
+
+* Trustware - Mechanisms that create assurances through technology, incurring a low social coordination cost."
+
+(https://orca.mirror.xyz/T70CmuhX95ubkw_JHOxSEy8d_EFeYXgtJnF13mPtaZE)
+
+
+==Socialware and Trustware in DAOs==
+
+Julia Rosenberg, Chase Chapman, et al. :
+
+"Blockchain and smart contracts are a massive technological level-up for trustware. Through code, we are able to create strong assurances that members of a given system will behave as the system permits them. They cannot lie, cheat, steal, or manipulate by breaking or bending the rules.
+
+By using blockchains as our underlying assurance mechanism, we can codify organizational governance through code and not purely documented principles that rely on humans to coordinate around. In doing so, we foster greater trust between parties by minimizing trust in people and maximizing trust in technology.
+
+This is the great “promise” of DAOs - code at the center, humans at the periphery. This is the idealistic model that allows us to maintain flat organizations that rely on consensus because we can outsource the execution of decisions to code. DAOs were envisioned as mostly trustware.
+
+However, anyone that has worked within a DAO in the past year knows this is rarely the case. In reality, many DAOs operate using socialware, relying on documented practices and hoping there is sufficient human attention and coordination to follow these written rules.
+
+...
+
+The high social coordination cost of socialware often results in a gap between how a system is supposed to operate vs how it actually operates.
+
+
+'''Trustware in DAOs''' means bringing rules on-chain. Using blockchain and smart contracts, rules defined at the social layer can be brought on-chain and enforced without reliance on human coordination.
+
+There are a number of examples of trustware in DAOs - Juicebox, Moloch, Governor, and Pods to name a few. 
+These tools allow humans to make decisions at the periphery and rely on code to execute the consequences of their decisions, as defined by the rules of the governing smart contracts.
+
+This type of technology is different from simply digitization. Digitization takes something analog and makes it digital, including all sorts of redundant human tasks. Trustware is a subset of digitization that focuses specifically on trust agreements that incur a social cost through coordination. Digitization often reduces social coordination costs, but it doesn’t focus specifically on trust. We cannot digitize trust until we have sybil and censorship resistance - both qualities of blockchains.
+
+Take, for example, the Governor contract. As mentioned above, many DAOs use a combination of Snapshot and multisig, including BanklessDAO and Yearn. In these cases, token holders vote on Snapshot, but rely on coordination between multisig signers to execute their decision - a form of socialware. The governor contract automates this step, automatically executing a transaction as soon as a vote reaches certain governance parameters, like quorum or submission thresholds. The governor contract provides equal assurances as the Snapshot + multisig combination with less social coordination. In other words, trustware.
+
+The trust-minimized environment that trustware creates is what allows strangers to raise $40 million to buy a copy of the Constitution. Such outcomes would likely not be feasible if relying on legal assurances and not smart contract assurances."
+
+(https://orca.mirror.xyz/T70CmuhX95ubkw_JHOxSEy8d_EFeYXgtJnF13mPtaZE)
+
+
+==Balancing Trustware & Socialware==
+
+Julia Rosenberg, Chase Chapman, et al. :
+
+"Trustware is not the end-all-be-all for DAOs. DAOs are inherently human organizations that will require systems that adapt to how humans relate and behave, not robots. But successful DAOs will have a combination of socialware and trustware, each with its own healthy balance depending on the needs of the DAOs.
+
+
+As of now, most DAOs orient heavily towards socialware, for apparent reasons:
+
+* Socialware is flexible and can adapt to changing circumstances much faster than trustware
+
+* Socialware is easier to implement, requiring less technical knowledge and execution
+
+* Trustware can leave a DAO susceptible to governance attack vectors
+
+* Trustware is still underdeveloped and cannot adapt to the granular needs of human governance."
+
+(https://orca.mirror.xyz/T70CmuhX95ubkw_JHOxSEy8d_EFeYXgtJnF13mPtaZE)
+
+
+[[Category:Crypto Governance]]

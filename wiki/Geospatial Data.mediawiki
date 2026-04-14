@@ -1,0 +1,40 @@
+
+
+=Description=
+
+"Geospatial Data
+
+There are two types of geospatial data: raster data and vector data. Raster data are essentially pictures, although not always in the visible spectrum. Satellite or aerial images are examples of raster data. Vector data are a mathematical representation of real life. Vector constructs include points, lines, polygons, and other shapes which can be used to represent houses, roads, rivers, parks, lakes, and more.
+
+The industry standards were published by the [[Open Geospatial Consortium]] (OGC) and describe how raster, vector, and combined map data can and should be represented. These standards include Web Coverage Service (WCS), Web Feature Service (WFS), and Web Map Service (WMS) which describe serving raster data, vector data, and maps respectively. OGC also defines how relational databases should store and provide interfaces to act upon spatial data. Adhering to these standards means systems can interoperate more easily. This enables using raster data from one source, vector data from another, and combining them into a map service that can be consumed by a large choice of software."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/853/822)
+
+
+
+=Discussion=
+
+
+Andrew Ross:
+
+'''Coordinate Systems'''
+
+Most of us are familiar with the concept of latitude and longitude with zero degrees longitude centered on Greenwich, England. There are other systems that have zero degrees centered on Moscow, Paris, and other major cities. Each of these systems is a coordinate system. Since geospatial data may be stored in any one of a number of coordinate systems, it is important to be able to convert between them. The Open Source Geospatial Foundation (OSGeo) sponsored software projects Proj.4 and csmap provide this functionality. Another name for a coordinate system is a spatial reference system.
+
+
+'''Geodetics'''
+
+We have all been told that the closest distance between two points is a straight line. But on the surface of a sphere, that straight line is actually an arc. To complicate things further, most planets are not perfect spheres but ellipsoids with imperfections. The science of geodetics deals with the measurement of the earth.
+
+
+'''Why Use a Relational Database for Spatial Data?'''
+
+There are a number of formats for storing spatial data, including several that are just files on a disk. So, why burden oneself with the overhead of a relational database? With one user, one set of data, and fairly simple and unchanging demands for data, it is easy to make the case for storing data as files on a disk. However, once you need to share that data with a team of people, things become more complex. A relational database management system (RDBMS) provides atomicity, consistency, isolation, and durability (ACID). In short, this means that the database will ensure that your data is not corrupted. An RDBMS also provides a client/server architecture that allows shared data over a network. The security model of a RDBMS enables roles defining who can view, modify, or delete data. These are all important considerations when sharing data."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/853/822)
+
+
+=More Information=
+
+#[[Geospatial Web]]
+
+
+[[Category:Geography]]

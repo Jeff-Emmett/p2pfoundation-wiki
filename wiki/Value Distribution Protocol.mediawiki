@@ -1,0 +1,32 @@
+
+'''= "VDP is a simple protocol that defines how value should be divided amongst various stakeholders".'''
+
+URL = https://github.com/ktorn/vdp
+
+The core element of the protocol is the VDP configuration file, which defines stakeholders and their relative value allocation.
+
+=Example=
+
+"Free/Libre Software (FLS) and Open Source Software (OSS) Funding
+
+Many for-profit projects, especially software, depend on a variety of FLS/OSS projects. The creators of these businesses and projects know this, yet cannot identify who they should donate to, given the huge variety of projects and their contributors.
+
+In this context VDP can be used to fairly distribute donations to the FLS/OSS stack. Each company simply needs to define their top-level stack, and link to the various projects' existing VDP files.
+
+Each project will take care of maintaining their own VDP files, attributing credit to both sub-dependencies, as well as direct contributors.
+
+In an ideal scenario, e-commerce sites can automatically donate small percentages of incoming sales, with each sale triggering a cascade of VDP payments resulting in automatic micropayments to the developers of the stack, who will benefit from a new recurring revenue stream."
+(https://github.com/ktorn/vdp)
+
+=More Information=
+
+*  Implementations: http://subsatoshi.org - currently only contains the PoC code used at the hackathon.
+TODOs:
+
+* Previously known as: "Cascading Revenue Sharing Protocol" (CRSP) and "Value Chain Distribution Protocol" (VCDP)
+
+* Value Distribution Protocol by Filipe Farinha is licensed under a Creative Commons Attribution 4.0 International License.
+
+[[Category:P2P Accounting]]
+
+[[Category:Peerfunding]]

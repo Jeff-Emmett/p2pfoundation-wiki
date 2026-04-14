@@ -1,0 +1,33 @@
+
+
+=Discussion=
+
+==Michael Nielsen on the need for a "[[Conscious Modularity]]" for [[Open Science]]==
+
+Michael Nielsen:
+
+"I’ve recently been reviewing the history of open source software, and one thing I’ve been struck by is the enormous effort many open source projects put it into making their development modular. They do this so work can be divided up, making it easier to scale the collaboration, and so get the benefits of diverse expertise and more aggregate effort.
+
+I’m struck by this because I’ve sometimes heard sceptics of open science assert that software has a natural modularity which makes it easy to scale open source software projects, but that difficult science problems often have less natural modularity, and this makes it unlikely that open science will scale.
+
+It looks to me like what’s really going on is that the open sourcers have adopted a posture of conscious modularity. They’re certainly not relying on any sort of natural modularity, but are instead working hard to achieve and preserve a modular structure. 
+
+
+Here are three striking examples:
+
+* The open source Apache webserver software was originally a fork of a public domain webserver developed by the US National Center for Supercomputing Applications (NCSA). The NCSA project was largely abandoned in 1994, and the group that became Apache took over. It quickly became apparent that the old code base was far too monolithic for a distributed effort, and the code base was completely redesigned and overhauled to make it modular.
+    
+* In September 1998 and June 2002 crises arose in Linux because of community unhappiness at the slow rate new code contributions were being accepted into the kernel. In some cases contributions from major contributors were being ignored completely. The problem in both 1998 and 2002 was that an overloaded Linus Torvalds was becoming a single point of failure. The situation was famously summed up in 1998 by Linux developer Larry McVoy, who said simply “Linus doesn’t scale”. This was a phrase repeated in a 2002 call-to-arms by Linux developer Rob Landley. The resolution in both cases was major re-organization of the project that allowed tasks formerly managed by Torvalds to be split up among the Linux community. In 2002, for instance, Linux switched to an entirely new way of managing code, using a package called BitKeeper, designed in part to make modular development easier.
+    
+* One of the Mozilla projects is an issue tracking system (bugzilla), designed to make modular development easy, and which Mozilla uses to organize development of the Firefox web browswer. Developing bugzilla is a considerable overhead for Mozilla, but it’s worth it to keep development modular. 
+
+The right lesson to learn from open source software, I think, is that it may be darned hard to achieve modularity in software development, but it can be worth it to reap the benefits of large-scale collaboration. Some parts of science may not be “naturally” modular, but that doesn’t mean they can’t be made modular with conscious effort on the part of scientists. It’s a problem to be solved, not to give up on."
+(http://michaelnielsen.org/blog/?p=591)
+
+
+=More Information=
+
+#[[Modularity in Open Source]]
+
+
+[[Category:Science]]

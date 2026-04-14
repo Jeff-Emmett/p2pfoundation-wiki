@@ -1,0 +1,23 @@
+
+
+=Description=
+
+"The Android 3.1 platform (also backported to Android 2.3.4) introduces Android Open Accessory support, which allows external USB hardware (an Android USB accessory) to interact with an Android-powered device in a special “accessory” mode. When an Android-powered device is in accessory mode, the connected accessory acts as the USB host (powers the bus and enumerates devices) and the Android-powered device acts as the device. Android USB accessories are specifically designed to attach to Android-powered devices and adhere to a simple protocol (Android accessory protocol) that allows them to detect Android-powered devices that support accessory mode. Accessories must also provide 500mA at 5V for charging power. Many previously released Android-powered devices are only capable of acting as a USB device and cannot initiate connections with external USB devices. Android Open Accessory support overcomes this limitation and allows you to build accessories that can interact with an assortment of Android-powered devices by allowing the accessory to initiate the connection.
+
+    
+A USB micro-controller board that is based on the Arduino Mega2560 and Circuits@Home USB Host Shield designs (now referred to as the ADK board), which you will later implement as an Android USB accessory. The ADK board provides input and output pins that you can implement through the use of attachments called “shields.” Custom firmware, written in C++, is installed on the board to define the board’s functionality and interaction with the attached shield and Android-powered device. The hardware design files for the board are located in hardware/directory."
+(http://blog.makezine.com/archive/2011/05/why-google-choosing-arduino-matters-and-the-end-of-made-for-ipod-tm.html)
+
+
+=Discussion=
+
+* What Is the Bad News About the Android Open Accessory Kit? By Phillip Torrone, at [http://blog.makezine.com/archive/2011/05/why-google-choosing-arduino-matters-and-the-end-of-made-for-ipod-tm.html]
+
+
+[[Category:Open]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:P2P Hardware]]

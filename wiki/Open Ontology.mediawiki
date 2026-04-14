@@ -1,0 +1,70 @@
+=Description=
+
+
+'''Open Ontology, by Paola Di Maio''' 
+
+
+While different definitions for ontology exist, it can be said that Ontologies are conceptual and semantic frameworks representing models of the world, as well as explicit and complete knowledge representations of a model of reality, expressed using different formalisms and artifacts. When trying to understand what makes up an ontology, different authors have different views. Mike Uschold et al. say that an ontology may take a variety of forms, but it will necessarily include a vocabulary of terms and some specification of their meaning, such as definitions and an indication of how concepts are interrelated, which collectively impose a structure on the domain and constrain the possible interpretations of terms. Particularly in Web based environments, an ontology delimits the boundary of the system's knowledge and functional domain, and serves as conceptual and semantic reference for software development. In practical terms, entities and attributes, classes, objects and properties, as well as data models, data schemas, metadata and vocabularies and their extensions, when 'normalized' all contain information that models a view of the world, for the purpose of a given system, and constitute the representation of such domain, in short, an ontology. 
+
+
+The expression ''''open ontology'''' is not new, and it is used generically to reference ontologies which are in the public domain, and sometimes to ontologies that have been developed using collaborative processes. 
+
+In our work, we have come across  the need to define and qualify, at least to  some extent the degree of ontology 'openness': 
+
+To be ‘useful’ (fit for purpose) in complex loosely coupled scenarios, where the cooperation of diverse and geographically dispersed agents is required, it is necessary for the ontology to display at least the following properties 
+
+•	It must be accessible to all the agents/agencies (this means shared, viewable, understandable) 
+•	It must be ‘acceptable’ to all the agents/agencies from the different perspectives, in terms of culture, language, conformance to policy and protocols 
+•	It must be ‘usable’ in terms of compatibility with local information systems used by agents/agencies 
+
+Such characteristics, as far as we have observed, are often underestimated and taken for granted. 
+With the term 'open ontology' we define any given set of agreed 'terms', both in terms of conceptualization and semantic formalization, that has been developed based on ‘public’ (open) consultation, that embodies and represents and synthesizes reasonably complete, valid knowledge that is deemed to pertain to a given domain, and that is necessary to fulfill a given functional requirement. Its documentation must be publicly available, accessible and with minimal barriers to adoption. Among the barrier to adoption for Ontology, research identifies not only different linguistic, conceptual and cultural differences, but also knowledge and point of view differences that set apart academics – who generally develop ontologies and related tools and methodologies – from experts – who understand lingo and the dynamics - system developers – programmers, systems designers and end users at large. 
+
+By 'open' we indicate 'perfectly flexible', extensible, and with adaptive boundaries that dynamically adjust to constantly changing parameters and also 'open’ as opposed to 'closed', whereby an ontology is developed internally by an organization or consortium, with the purpose of imposing a single view of the world. 
+
+Considering 
+
+a) the nature of the collaborative environments and 
+
+b) the emergence of novel ontology engineering methods, 
+
+the case for defining parameters and criteria for an ‘Open Ontology’ is becoming compelling, whereby specifications, guidelines, references, documentation should follow 'open processes' and should have minimal barriers to participation and accessibility. 
+
+In order to be 'open' ontologies should be accessible and platform neutral, that is they should be designed for being adopted by a variety of user roles, without requiring special nor advanced technology or knowledge skills.
+
+Usability, accessibility, implementation independence and low barriers to adoption are overall requirements for an open, collaborative ontology, (as well as should be for semantic technologies as a whole, if the semantic web has to take off). In particular, given the current global and culturally diverse landscape, usability and 'good design', are paramount also to engineering development and methodologies to create working documents, tools and deliverables that can actually be referenced by distributed and heterogeneous teams of developers and users alike.  
+
+Working towards 'Open Ontology' entails probing axioms and assumptions of any given view of the world, eliciting and validating relevant knowledge, making choices regarding goals, functions, boundaries, terms and definitions, and creating legible technical diagrams such as E/R, DFD, LD. Then opening up the process for all the relevant stakeholders and communities of developers and users, and creating sets of documents and guidelines that can be easily referenced and used irrespective of role, level of domain knowledge and IT expertise.
+
+=Characteristics=
+
+'''Top level requirements for an Oont'''
+ 
+The criteria below, enlisted in no particular order, have emerged as possible candidate high level requirements that should be met for an ontology to be defined 'open'. They are intended not to be a prescription of any sort, at this stage, rather points for further analysis and discussion. An Open Ontology should:
+
+•	•declare what high level knowledge (upper level ontology) it references 
+
+•	•state explicitly the 'sources of knowledge' (aka , provenance of axioms) 
+
+•	•state what kind of reasoning/inference supports/it is based on, support queries via natural language as well as machine language,
+
+•	be visible, searchable and support queries via a Web based interface that does not require any plug-in and API for users to download,
+
+•	allow users to provide feedback that should be taken into account in subsequent iterations, be documented and annotated, and available in different file formats including Open Document 
+
+•	•be 'easy to understand' by generic users without specialized skills and guidelines should be provided as how it can be used to support development practices, include instructions on how to relate 'high level knowledge' to standard knowledge representation artifacts used in software and systems engineering, such as entities, attributes, classes, objects, properties, sub-properties, values and relationships, 
+
+•	be implementation and platform independent; this means, for example that an ontology should not only exist  encoded as OWL/RDF but expressed and formalized in a format that can be understood and reused by alternative ontology languages 
+
+•	support one view of the world if required, and allow for simultaneous multiple views, meaning that it should aim to be perfectly elastic, flexible and adaptable, 
+
+•	take into account language and cultural diversity, and corresponding different value systems and knowledge representation requirements, 
+
+•	be supported by tutorials and educational materials at different levels of specialization. 
+  
+In addition to the generic requirements above, any conventional requirements should be specified depending on the target system and goals.
+
+
+[[Category:Open]]
+
+[[Category:Intelligence]]

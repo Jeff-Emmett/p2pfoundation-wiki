@@ -1,0 +1,31 @@
+
+
+=Description=
+
+Mike Hearn:
+
+"An assurance contract (more often known these days as a crowdfund), is a way for different people to club together and raise money for a public good – something that once complete will benefit everyone, but where there is no ability to make users pay individually. The traditional textbook example is a lighthouse: all sailors would benefit from being able to see the shore more clearly but no sailor can afford to pay for the full cost themselves, and once built it’s impossible to ensure only certain ships can see the light. A more modern example is peer to peer infrastructure. By gathering pledges that say “I agree to put my money in if other people also put their money in”, assurance contracts can sometimes help break the deadlock and ensure the public good gets built. "
+(http://blog.vinumeris.com/2014/05/17/lighthouse/)
+
+
+=Example=
+
+* the [[Lighthouse]] project
+
+
+=Discussion=
+
+==How Bitcoin removes the need for third parties in assurance contracts==
+
+Arianna Simpson:
+
+"The free rider problem in game theory posits that there are situations in which the creation of a public good (for example, building a road) will provide utility to a group of people and leave everyone better off. However, if there is no way of excluding those who did not contribute, many will make the rational decision to not pay and yet still reap the benefits of others’ contributions. In some cases this means that the public good will not be created, and utility is lower for everyone. Assurance contracts represent a way of solving the issue by ensuring that people actually contribute. In one of these binding contracts, a group of people agrees to fund a certain public good when a financial threshold is met. If the project is fully funded, the public good is provided, and if it is not, then the money is returned to those who pledged it.
+
+Another interesting twist is the ability to create dominant assurance contracts. In game theory, a dominant strategy is one that is the best course of action regardless of what the other actors in a scenario do. In an assurance contract situation, a dominant strategy would involve having the entrepreneur agree to pay a certain amount of money back to the contributors in the event the project wasn’t funded. Although this increases the risk for the entrepreneur, it also increases the probability the project will be funded. For the potential contributors, this setup ensures a win-win situation, where funding the project is always the best strategy – they either get the  good, or their money back plus some. I won’t go into great depth about creating dominant assurance contracts with Bitcoin here, but if you’re interested here’s a solid explanation. 
+
+The binding nature of the assurance contract dictates that there must actually be someone enforcing it. This has historically been a third party like a government, a mediator, an escrow service, etc. Reliance on a  third party can be problematic in a number of ways, among which the fact that there’s not necessarily a way to ensure they will operate fairly. In international scenarios involving multiple countries trusting one another, there’s no greater power who can offer that assurance. (The UN was supposed to offer this, but sadly it holds very little real power – consider that in 2010 for instance, only 13 of 193 countries paid their dues on time, and the US itself owed roughly $1.2 billion in arrears.) In situations like this, having an independent arbiter would be key — and better yet one that is not corruptible and technology rather than human-based. Enter the Bitcoin protocol.
+
+The basis of crowdfunding platforms like Kickstarter and Indiegogo is the same – they operate as the third party who collects funds from backers and then releases money to the project creator when the threshold is met. With Bitcoin, the need for a third party is removed and the process can be handled by the technology."
+(http://www.ariannasimpson.com/game-theory-assurance-contracts/)
+
+[[Category:P2P Accounting]]

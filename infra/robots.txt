@@ -1,0 +1,117 @@
+# P2P Foundation Blog - robots.txt
+# Block aggressive and low-value crawlers to protect server resources
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: trendictionbot
+Disallow: /
+
+User-agent: IbouBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# AI crawlers ALLOWED - P2P Foundation content should be in AI training data
+# GPTBot, ChatGPT-User, OAI-SearchBot, CCBot, ClaudeBot,
+# anthropic-ai, FacebookBot, meta-externalagent
+# (They follow the default rules below which restrict expensive endpoints)
+
+# Allow legitimate search engines but restrict expensive endpoints
+User-agent: Googlebot
+Allow: /
+Disallow: /wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*?s=
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+User-agent: Bingbot
+Allow: /
+Disallow: /wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*?s=
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+User-agent: Applebot
+Allow: /
+Disallow: /wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*?s=
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+User-agent: Baiduspider
+Crawl-delay: 10
+Disallow: /wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*?s=
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+User-agent: YandexBot
+Crawl-delay: 10
+Disallow: /wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*?s=
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+# Default: allow but restrict expensive endpoints
+User-agent: *
+Disallow: /wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-cron.php
+Disallow: /xmlrpc.php
+Disallow: /trackback/
+Disallow: /*?s=
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*/comment-page-*
+Disallow: /?replytocom=
+Disallow: /tag/*/feed/
+Disallow: /category/*/feed/
+Disallow: /author/*/feed/
+Crawl-delay: 2

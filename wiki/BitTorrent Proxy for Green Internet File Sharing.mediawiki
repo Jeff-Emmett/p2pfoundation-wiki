@@ -1,0 +1,26 @@
+
+'''* Article:  BitTorrent proxy for Green Internet ﬁle sharing: Design and experimental evaluation'''
+
+URL = http://cnd.iit.cnr.it/andrea/docs/comcom10_bt.pdf
+
+
+Integrating this BitTorrent proxy with a Greenstar network node powered by wind or sun would be a novel way to enable green file transfers.
+
+
+=Abstract=
+
+Recent studies have shown that the Internet-related energy consumption represents a signiﬁcant, and increasing, part of the overall energy consumption of our society. Therefore, it is extremely important to look for energy-efficient Internet applications and protocols. The largest contribution to this energy consumption is due to Internet edge devices (PCs and data centers). As a particularly signiﬁcant example, in this paper we address the fact that users leave their PCs continuously powered on for satisfying connectivity requirements of Peer-to-Peer (P2P) ﬁle sharing applications, like BitTorrent (currently the most popular P2P Internet platform). To reduce these energy consumptions, without penalizing the Quality of Service of BitTorrent users, in this paper we propose a novel architecture based on the introduction of a BitTorrent proxy. BitTorrent users delegate the download operations to the proxy and, then, power off their PC, while the proxy downloads the requested ﬁles. We implemented our solution and validated it in a realistic testbed. Experimental results show that, with respect to the legacy BitTorrent approach, our solution is very effective in reducing the energy consumption without introducing any QoS degradation. Speciﬁcally, our results show that the proxy-based solution can provide up to 95% reduction in the energy consumption and, at the same time, a signiﬁcant reduction in the average ﬁle download time.
+
+=More Information=
+
+ESnet DMZ
+http://fasterdata.es.net/fasterdata/science-dmz/
+
+
+Greenstar Network
+http://www.greenstarnetwork.com/
+
+
+[[Category:Energy]]
+
+[[Category:Ecology]]

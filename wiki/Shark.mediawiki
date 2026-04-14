@@ -1,0 +1,41 @@
+
+'''= "Shark applications store user data only on user devices. We don't use any server or cloud architecture. Each Shark application is a peer".''' [http://www.sharksystem.net/index.html]
+
+URL = http://www.sharksystem.net/
+
+"We have created Shark to re-create the Web 2.0 applications without Internet."
+
+=Description=
+
+"Shark is an acronym. It stands for Shared Knowledge. Shark applications store user data only on user devices. We don't use any server or cloud architecture. Each Shark application is a peer - an independent and self-contained entity which can directly communicate with others.
+
+Does that sound familiar? It should. Most living beings on that planet communicate in that manner. We communicate directly with each other when we speak. Shark brings that very old and very flexible behavior directly into soft- and hardware. No mediating server or whatever is required. Communication can be encrypted and signed.
+
+Shark uses the Internet paradigm: Internet is based on the idea that independent computers exchange data via an adaptable network. Internet replaced client-server architecture from the 1960th in which the dominant mainframes did the job and lucky clients got access. Cloud computing and all those huge social network portals use the old client-server model, though. That's usually implied by their business plans: They commercialize private user data which must be collected first - on a server. We don't like that idea very much. Watch our little mp4 movie which introduces Alice and Bob and illustrates differences between C/S and P2P.
+
+Communication in Shark based systems can be based on Internet protocols like TCP, HTTP and the e-mail protocols. Data can also be exchanged with e.g. Wifi direct (Wireless LAN in ad-hoc mode). Such applications work even without an existing infrastructure which is quite sufficient and effective e.g. for local based services but also in situations in which infrastructure isn't available, too expensive or not secure.
+
+Shark is a developer framework for building semantic P2P applications. It has to major parts: A semantic data model and a communication protocol stack. The data model is a subset of RDF and Topic Maps. The communications model was inspired by software agent communications languages. We have created a very slim protocol stack that works on Internet protocol as well as in ad-hoc networks. An overview can be found in a paper . A detailed description and step-by-step introduction can be found in our developer guide.
+
+We have implemented or are about implementing collaboration tools and even social networks applications based on that paradigm and that framework, see partner page. There is just one 'drawback': The usual business plans cannot be applied: There is no server that stores personal data. There isn't even a single entity that knows all others entities in a Shark network."
+
+
+=Characteristics=
+
+* Shark applications behave like Web 2.0 and sometimes even look like Web 2.0 but they are pure P2P.
+
+* Shark applications don't have a server. They cannot be found with Google or other search engines. Shark applications are not part of the WWW. 
+
+* Shark applications using ad hoc networks are don't even part of the Internet.
+
+* Shark applications cannot be switched off - there is no single server that is to be stopped. Shark works as long as one peer is active.
+
+* Shark uses multiple protocols and end-to-end security. Tracing and network analysis is hardly feasible when using protocol switching.
+
+** Any data is created and stored in owners device. 
+** No data leaves the device without a reason and without the explicit owner permission. 
+** There is no hidden data drain. 
+** There is no server that does whatever it likes to do with our private data.
+
+
+[[Category:P2P Infrastructure]]

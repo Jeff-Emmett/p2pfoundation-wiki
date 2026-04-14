@@ -1,0 +1,68 @@
+Text by Thomas Lord, from http://radar.oreilly.com/2009/05/the-question-concerning-social.html (appears in the comment field)
+
+
+=Text=
+
+" '''Background'''
+
+The concept of software freedom relies on an assumption that users will normally have control over the computers they use. A user with control over his computer decides what programs to run on that computer and when.
+
+Software freedom is the principle that users should always have complete control of the programs they run. Control over the computer itself isn't enough: the user must also have control over the programs. Without control over the programs, control over the computer is nearly meaningless. The only choice that wouldn't give up control of the computer would be to run nothing.
+
+The four software freedoms - to run, study, share, and improve software - are conditions that describe what "control over a program" means. They help to define the concept of software freedom.
+
+Copyleft is a legal mechanism that helps to defend software freedom. It makes it more difficult for someone to receive a copy of a program offered in freedom but then pass that program along in ways that harm the software freedom of others. It does so by refusing to give copyright permission for that kind of theft of freedom.
+
+
+* '''A New Challenge to Software Freedom'''
+
+The cause of software freedom faces a new challenge in the era of the World Wide Web and of the rising popularity of centralized web services.
+
+A centralized web service is one in which many users access and run programs on a shared central server but control over the server computer or computers is limited: most users do not enjoy that control.
+
+
+
+With a centralized service users run programs on the server but don't control the server. Consequently users do not have software freedom over their running of those programs.
+In and of itself, a user's lack of software freedom over a server is not automatically a problem. Sometimes it is very sensible and seemingly necessary. For example, if I send a web request to my bank to check today's balance, obviously I mean this request to cause some program or subroutine to run on the bank's own computers. I don't expect control over the bank's computers in return. Software freedom is absent in this case but for overriding reasons that are not objectionable.
+
+The problem arises when users give up their software freedom on servers without any real need. 
+
+
+Here are some examples:
+
+- hosted email - many users have no control over their email servers, for no good reason beyond momentary convenience
+
+- document sharing - many users use document sharing services with web based word processors, spreadsheet programs and so on, yet have no control over these services
+
+- social networking - blogging, network home pages, friend declarations, instant messages, and so forth all take place on centralized web services
+
+
+Technologically and economically there is no good reason for those programs to be implemented as centralized web services. There is no need for users to give up software freedom in all of those cases.
+
+The problem of users giving up freedom over servers becomes a tragedy when those who do control the servers exercise that power to take advantage of the users. For example, the operator of a server might spy on users and inappropriately share a user's private data with a third party. For another example, the operator of a server may refuse to let a user enjoy certain features of the server software unless the user pays a ransom to the server operator.
+
+
+* '''Copyleft Alone is No Help; Technology Matters'''
+
+Copyleft is not, in and of itself, a solution to the problem of inappropriately centralized services. It is not enough even if users are able to obtain a copy of the programs a server runs, if users generally can't count on controlling the servers.
+
+The technical design of web service software also matters. A copyleft, free software program that needlessly implements a centralized service is a setback to freedom.
+
+For example, consider a hypothetical free software program that implements a server for a kind of instant messaging. Users can broadcast short messages on this service. Users can search through messages that others have broadcast. Users can "subscribe" to other users and receive all of the broadcasts of those others.
+
+If a service like that is written as a program that assumes all users use the same servers, then the program creates a centralized web service - needlessly, in this case. It doesn't help that the program is free software (unless someone takes a copy and modifies it to no longer be a centralized service).
+
+
+From that and many similar examples an inference can be made:
+
+Copyleft is not enough. Free software web services must technologically resist needless centralization of services."
+(http://radar.oreilly.com/2009/05/the-question-concerning-social.html)
+
+
+[[Category:Articles]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Peerproduction]]

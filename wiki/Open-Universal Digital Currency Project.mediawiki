@@ -1,0 +1,162 @@
+'''Open-UDC is based on TRM (Théorie Relative de la Monnaie, by Stéphane Laborde) and Universal Digital Currency project (UDC project), which aims to create a new digital currency based on individual members and the digital world.'''
+
+URL = http://www.open-udc.org [http://www.open-udc.org/en/start]
+
+
+=Description=
+
+'''1.'''
+
+"Develop a free system for money management between individuals, named Open-UDS.
+
+Develop a free currency named Open-UDC, individuals based money with no emission center : based on a Universal Dividend/Universal Digital Income.
+
+Open-UDS is the software system, and Open-UDC is the money with its creation rules."
+
+(http://www.open-udc.org/en/about?DokuWiki=27cbcb8eb4c1d320507a4b4d8e3c3595)
+
+
+'''2.'''
+
+"Open-UDS is the independant technological part of Open-UDC.
+
+Open-UDC and Open-UDS system have been initially developped to allow members to exchange in a spirit of equity, digital goods and services in space (between members) and in time (between members and future members).
+
+Each member of Universal Digital System community receives a monthly Universal Digital Income (UDI) described in the fourth and fifth rule of Open-UDC money issuance rules."
+
+(http://www.open-udc.org/en/start)
+
+
+=Details=
+
+
+==License==
+
+* GNU Affero LGPL licence for Open-UDC
+
+
+==Principle==
+    
+* Open-UDC assumes that a free money, which allows each individual the liberty of producing, exchanging and undertaking, must be based on a Universal Dividend.
+
+
+==Strategy==
+
+
+"Open-UDC go with a a progressive goal following three steps :
+
+1) Implementation with centralised server
+
+2) Implementation with hierarchical organisation
+
+3) Implementation with P2P System"
+
+
+==Technical Rules==
+
+From: Open-UDC money issuance rules 1.0
+
+"During initial phase, registration of new members in Universal Digital System community will feed the system with money creation, according to a strict parity with members. Fine tuning of Universal Digital Income / niversal Dividend paid monthly to all can therefore control overall system. Wise and prudent management over time of Universal Digital Income/Universal Dividend avoids both glut and scarcity of UDC money, based on minimum open and fixed relative growth rate as described in the fourth rule."
+
+
+* First Rule
+
+“Open Universal Digital Currency (Open-UDC) is governed by democratic principles. Its members can decide to change the rules and evolution of the system in accordance with its basic principles.”
+
+Money Rules will change only by a democratic decision based on majority of 2/3 or more of all members.
+
+
+* Second Rule
+
+A new Open-UDC member must be approuved by 2/3 or more of all members
+
+
+* Third Rule
+
+Open-UDC assumes a Universal Dividend money system (Universal Digital Income). That is to say that each individuals present and future community member, will create the same relative amount of money [ Relative means : Money created / (Monetary Mass / Individual)] during a long time period.
+
+
+* Fourth Rule
+
+Open-UDC assumes a “ Pud = 1% / Month” of the “Monetary Mass / Individual” Universal Dividend amount as minimum amount of money created per individual.
+
+Pud = minimal % of Universal Dividend (UD) growth
+
+
+* Fifth Rule
+
+At the start of the Open-UDC system, the Universal Dividend start with an initiliazed amnount of 100 UDC / month / individual. Universal Dividend stay fix (in UDC amount) if Pud, the level of % growth decided in the 4th rule is not reached, and will be updated at that level when it will reach it.
+
+So the full evolution is determined by :
+
+- UD(0) = 100 UDC
+    
+- UD(n+1) = MAX { UD(n) ; Pud*M(n)/N(n) }
+
+Where n is the past month. UD(n) is the UD of past month. Pud is the minimal % UD growth as defined in the 4th rule. M(n) is the existing monetary mass, and N(n) is the total amount of members. All are values just before calculation of new monthly UD(n+1)."
+
+(http://www.open-udc.org/en/money_rules)
+
+
+* Sixth Rule
+
+Universal Digital System must publish and update every month the following open data :
+
+- Total amount of money (Monetary Mass)
+- nTotal number of members
+- Monetary Mass per member
+- Active amount of Universal Dividend in UDC
+- Active Universal Dividend in % / Month of Monetary Mass / Member
+- Minimum Universal Dividend as fixed in the fourth rule
+- Archive of those data for all months
+
+
+=Discussion=
+
+
+==Sepp Hasslberger==
+
+"I have looked at the English introduction pages, unfortunately my French is not good enough to understand something fairly technical and complex. 
+
+While I am happy to see that there is a universal dividend incorporated into this money system, I am not sure that it will work. As far as I can understand, there is monthly money creation by all members of the system, and with time the monetary mass will grow, actually the graphic for growth of monetary mass assuming a fixed number of members on this page
+
+http://www.open-udc.org/en/money_rules
+
+shows that there is a rather steep increase of the monetary mass, all serving the same number of members. This means that the currency will be inflationary by design. More money for the same amount of business means that products, or anything that is exchanged in this economy, will come to cost more and more as time passes. One could also say that each unit of money will be worth less and less as time passes. This is not a good basis for a monetary system. 
+
+It would be rather  easy however, to engineer the system for price stability. All that would need to be done is for the money to be created with a date of expiry. Each unit on monetary value, once it has been created, would need to start losing some of its nominal value every month, until it expires (has no more value) at the end of a period to be determined. This would make sure that the monetary mass could be stable in the case of a fixed number of members. After the period of initialization, money created equals money lost to expiry. No inflation of prices would ensue, because the monetary mass stays constant. Such a mechanism would also mean that the monetary mass could grow in line with a growing number of members. The total monetary mass would thus depend on the number of participants, and prices in the system would tend to be stable. 
+
+Without such a mechanism, I am afraid the system would not be workable. Money, to be used for real commerce, should have reasonably stable value over time. Only by limiting the total monetary mass in accordance with the number of members, can this goal be reached."
+(email, 2/2011)
+
+==Thomas Greco==
+
+"I've only taken a cursory look at the website but it seems that there is no solid underlying rationale that assures reciprocity, which is basic objective of any monetary system/currency--give as much value as you get over a reasonably short period of time.
+
+I am an advocate of a universal dividend but it is not something that should be incorporated into an exchange (money) system.
+Any dividend must be allocated out of the aggregate production and accumulated wealth of a community, which is something that is NOT reflected in the supply of exchange media (money).
+
+Anyone who has read my latest book, The End of Money, should realize that the amount of money outstanding (total credits or debits in a credit clearing system) is determined by the amount of trading, not by the number of participants. It is the total amount of credit that has been extended by sellers to buyers that has not yet been cleared by those buyers having reciprocated by selling. The supply of "money" (credit) outstanding, therefore, is automatically determined by the needs of the traders, increasing and decreasing in accordance with transaction (economic) activity.
+There must, of course be limits on the amount of credit that can be granted to each account, those limits being determined mainly by the sales history of each account..
+
+E.C. Riegel is quite eloquent in expressing the fundamental principles. I wish more people would read his books."
+(email, 2/2011)
+
+
+
+=More Information=
+
+* Theory: http://www.creationmonetaire.info/2010/11/theorie-relative-de-la-monnaie-10.html
+
+* For contributors:
+
+# Sources repositories and issues trackers: http://github.com/Open-UDC
+# Mailing list : http://groups.google.com/group/open-udc
+# Chatroom Jabber/XMPP: open-udc@muc.jappix.com
+
+==French-Language==
+
+Stéphane Laborde's book, [http://www.creationmonetaire.info/2010/11/theorie-relative-de-la-monnaie-10.html] and blog [http://www.creationmonetaire.info/]
+
+
+[[Category:Money]]

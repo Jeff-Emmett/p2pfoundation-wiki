@@ -1,0 +1,22 @@
+
+T. Bray [http://www.tbray.org/ongoing/When/200x/2006/01/08/No-New-XML-Languages advises] against developing any new XML languages, and recommends using the following big five mark-up languages:
+
+" the Big Five: XHTML, DocBook, ODF, UBL, and [http://www.ietf.org/html.charters/atompub-charter.html Atom].
+
+XHTML + Microformats · If you’re delivering information to humans over the Web, even if you don’t think of it as “Web Pages”, it’s almost certainly insane not to use XHTML. Yes, XHTML is semantically weak and doesn’t really grok hierarchy and has a bunch of other problems. That’s OK, because it has a general-purpose class attribute and ignores markup it doesn’t know about and you can bastardize it eight ways from center without anything breaking. The Kool Kids call this “[[Microformats]]” and in fact I accidentally invented one on ongoing last November; look at that template and its class attributes. 
+
+And of course, if you use XHTML you can feed it to the browsers that are already there on a few hundred million desktops and humans can read it, and if they want to know how to do what it’s doing, they can “View Source”—these are powerful arguments.
+
+DocBook · Suppose you’re building something that needs to go bigger and deeper and richer than XHTML is comfy with, and you want to repurpose it for print and electronic and voice, and you need chapters and sections and appendices and bibliographies and footnotes and so on. DocBook is what you need. It’s got everything you could possibly begin to imagine already built-in, and there are lots of good tools out there to do useful things with it. 
+
+ODF · Suppose you’re working with material that’s going to have a lot of workflow around it, and be complex, visually if not structurally, and maybe some day will be printed out and have signatures at the bottom. ODF is what you want. Not the most Web-oriented approach, but on the other hand the authoring tools are more human-friendly than anything else on this list. 
+
+UBL · If you’re working with invoices and purchase orders and that kind of stuff (and who isn’t?), do not even think of inventing anything. A whole bunch of smart people have put hundreds of person-years into pulling together the basics, and they did a good job, and it’s ready to go today. Look no further. 
+
+Atom · Suppose you think of your data as a list of, well, anything: stock prices or workflow steps or cake ingredients or sports statistics. Atom might be for you. Suppose the things in the list ought to have human-readable labels and have to carry a timestamp and might be re-aggregated into other lists. Atom is almost certainly what you need. And for a data format that didn’t exist a year ago, there’s a whole great big butt-load of software that understands it."
+(http://www.tbray.org/ongoing/When/200x/2006/01/08/No-New-XML-Languages)
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]

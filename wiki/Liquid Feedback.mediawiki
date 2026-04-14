@@ -1,0 +1,203 @@
+'''= an open-source software created to facilitate Liquid Democracy. It enables policy discussions and decision-making with a kind of proxy voting system.'''
+
+URL = http://liquidfeedback.org/
+
+LiquidFeedback is an open source project of Public Software Group e. V. See also: [[Liquid Democracy]]
+
+
+=Description=
+
+"LiquidFeedback is an open-source software, powering internet platforms for proposition development and decision making.
+
+    
+LiquidFeedback is an independent open source project published under MIT license by the Public Software Group of Berlin, Germany. The developers of LiquidFeedback have joined together in the Interaktive Demokratie association to promote the use of electronic media for democratic processes.
+
+
+=Concepts=
+
+    
+[[Liquid Democracy]] | The basic idea is a democratic system in which most issues are decided (or strongly suggested to representatives) by direct referendum. Considering nobody has enough time and knowledge for every issue, votes can be delegated by topic. Furthermore delegations are transitive and can be revoked at any time. Liquid Democracy is sometimes referred to as Delegated or Proxy Voting.
+    
+Proposition development process | Structured feedback is intended to organize communication between an initiative and the voters. Initiatives shall get an idea how successful a proposition is likely to be and what to change in order to gain more support. Likewise voters can try to influence propositions by their feedback or instigate a new initiative with an own proposition if they so wish.
+    
+Preferential voting | We neither want to force people to compromise in case they may not want this nor encourage them to vote based on majorities and chances rather than political objectives. In order to allow voters to express preferences we implemented a very advanced voting system based on Cloneproof Schwartz Sequential Dropping (CSSD) also known as the Schulze method.
+    
+Interactive Democracy | LiquidFeedback introduces a new communication channel between voters and representatives, delivers reliable results about what the participants want and can be used for information, suggestion, or directive depending on the organizational needs and the national legislation."
+(http://liquidfeedback.org/)
+
+
+=Interview=
+
+Interview of 4 co-founders by Marco Deseriis:
+
+"MD. Would you say that LF makes it possible to implement a large-scale participatory democracy that might eventually replace our current representative system?
+
+AN. Not really. While Liquid Democracy can be scaled up, it comes at a price: the vote of every participant is recorded and therefore documented. As far as representatives are concerned, accountability is desired. Liquid Democracy, however, doesn’t differentiate between voters and representatives. A Liquid Democracy society would need to treat every citizen like a representative in the existing parliamentary systems. Furthermore, the system of checks and balances would need to be completely readjusted. It would be irresponsible to give up secret elections – a security mechanism to ensure free elections and protect democracy. This is why we do not endorse calls for replacing representative democracy with Liquid Democracy and conclude: Liquid Democracy provides no alternative to the parliamentary constitutional republic, the presidential republic or the parliamentary constitutional monarchy for that matter. Besides the binding use in political parties and CSOs, it may be used in civic participation as an additional communication channel between citizens and their administration, or in constituency participation for better connecting representatives to their electoral district.
+
+MD. Do you think that political parties should always protect their members’ privacy on certain voting decisions? If so, where do you draw a line between the decisions that should be subject to public scrutiny and those that shouldn’t?
+
+AN. This depends on the situation and the society we are talking about. I would personally wish for a society allowing everybody to express his or her point of view free of fear. But if a party actually feels the need to protect its members, it should not use computers for decision-making as this creates a form of knowledge that can lead to domination. This is a knowledge that is accessible to a few and opens the door for misuse (in the worst case even blackmailing).
+
+MD. Are you suggesting that LD should only be implemented within political formations whose members can firmly trust those in a position of power?
+
+AN. I am only warning against creating a false sense of security. A database containing ‘secrets’ will become a target as soon as interest is high enough--neither the Internet nor any personal computer can be fully trusted. On top of that, all practicable encryption methods have an expiry date, an unknown expiry date, potentially already in the past, which someone may have already exploited, unbeknownst to everyone."
+(https://www.opendemocracy.net/can-europe-make-it/jan-behrens-axel-kistner-andreas-nitsche-bj%C3%B6rn-swierczek-marco-deseriis/liquid-de)
+
+=Characteristics=
+
+By JAN BEHRENS, AXEL KISTNER, et al.:
+
+"LiquidFeedback's distinctive feature is the possibility for users to delegate their vote to other users by topic. Rather than assuming that all participants are equally knowledgeable and equally invested in every political issue, Liquid Feedback (LF) lets them decide whom to delegate on specific initiatives. Those who hold proxy votes can in turn transfer them to other delegates, facilitating the emergence of networks of trust. Such trust, however, is not a blank check as proxies can be revoked at any given moment. The fluidity of the delegation process implemented by LF is an emerging political protocol, whose roots lie in the decentralized nature of the Internet. As we will see in the following interview, the authors of LF see their software as a concrete instantiation of the idea of liquid democracy, which allows individual constituents to retain their prerogatives without compromising effective decision-making.
+
+Another far-reaching property of LF is that the platform does not allow for the use of secret ballots. In order to ensure transparency and protect against electronic frauds LF implements a voting system that is recorded and verifiable by anybody. The public nature of voting, however, comes at a cost. Because in modern democracies the privacy and anonymity of voting are considered essential to protect individual autonomy and freedom of choice LF is not suitable for consultations where secret voting is desired or required. Yet this limitation has not prevented the German counties of Friesland and Rothenburg and the cities of Wunstorf and Seelze from adopting the software to consult their citizens on a wide range of issues.
+
+For the LF developers, the transparent and public nature of Internet voting is a necessary condition for implementing a system that can be trusted."
+(https://www.opendemocracy.net/can-europe-make-it/jan-behrens-axel-kistner-andreas-nitsche-bj%C3%B6rn-swierczek-marco-deseriis/liquid-de)
+==[[Transitive Delegations]]==
+
+'''1.'''
+
+"It’s not always possible for everyone to make a well-founded decision on every topic. To overcome this problem of direct democracy, LiquidFeedback provides the possibility to delegate your vote to someone else – and to revoke those delegations at any time. This leads to
+
+- transparent division of work within the democratic process, while keeping everyones ability to directly participate in any issue at any time
+
+- nondiscrimination of those people who do not have the time or ability to vote for each issue themselves
+
+Delegations in LiquidFeedback are transitive. That means, if you don’t know who is the most skilled person to decide about a particular topic, you may delegate your vote to someone else you trust. If your trustee feels confident to participate in the subject him- or herself, your voting weight may be used directly. But if your trustee knows another person, who is better suitable to decide about the issue, then he or she can further delegate your vote to someone else, and so on. Knowing that these rules are in effect, people are not obligated to delegate their vote directly to a final decision maker (e.g. a prominent politician known for dealing with a given issue).
+
+Do transitive delegations lead to a concentration of power?
+
+Transitive delegations create chains of trust.
+
+As delegations are revokable at any time, each person within such a chain of trust can break the chain and reclaim the power, taking away many votes from the final representative at once.
+
+Yet it is sometimes argued that transitive delegations can still lead to a few delegates, who over-rule many other directly voting individuals. While at a first glance it might appear undemocratic, it is a desired effect: Only if delegating members are counted in the same way as directly voting members, their vote is taken into account equally. Treating directly voting members in a different way than delegating members (i.e. canceling the voting weight of delegating members under certain predefined conditions) would actually undermine the democratic principle of “one man, one vote”."
+(http://liquidfeedback.org/2012/07/07/transitive-delegations-in-liquidfeedback/)
+
+
+2. From an interview:
+
+"AN. LF’s decision-making is deliberative and driven by initiatives. We acknowledge differences between people and value individual contributions. We also factor in competing ideas. Though we would encourage everybody to cooperate we don’t believe you can always count on cooperation. Members empower each other and the unfolding power structure can be quite stable but will only last as long as those who contribute to individual power are happy with the situation (or more precisely: as long as they don't become unhappy). This also redefines the concept of leadership: less detached and less solitary. In a way we adapt the idea of a multiparty system to the inner-party context. If there are different interest groups they can always work together on one initiative or work on alternatives.
+
+Further, there are different forms of leadership. We can see three types of leaders. Type A are opinion leaders who shape the program of the party but very often don't need the limelight, don’t run for any office and are widely unknown to the public (although the public could know these people if they wanted). (In their function they are comparable to the people referred to as gray eminence in more traditional parties.) Type B leaders are mostly "presenters" who sometimes appear as the actual leaders in the media. And type C would be formal leaders such as a board member or the chairman, mainly responsible for administrative tasks such as registering the party for public elections, campaign logistics, and keeping the member database up to date. All types are important, sometimes overlapping in a person and form a symbiosis. Traditional media reception practices sometimes valorize a combination of types B and C. Only type A emerges in and through LF.   
+
+AK. Leadership follows psychological aspects. Usually human conflicts in the "real world" can be only solved partly by technical solutions and need an agreement of the participants to accept certain rules of procedure provided by a system like LF.
+
+We implemented the four main aspects into the software that are essential for true self-organization in an equal discussion process: 1) Scalability through division of labor (realized by transitive delegations / liquid democracy); 2) Proportional representation of minorities (realized by collective moderation = no moderator / no leader needed); 3) Protection against non-transparent lobbying (realized by a fully transparent decision process); 4) Equal treatment of competing alternatives (realized by preferential voting).
+
+These four essential principles of LiquidFeedback guarantee a fair process of proposition development and decision-making. Even the "delegates" (people who receive many proxies through LF) are not leaders in a traditional sense. The division of labor does not empower people who give voice to an opinion—there are no “opinion leaders.” The status of opinion-leader is a real-world experience based on psychological aspects of life has nothing to do with LF. Any person within the system may lose delegations immediately if he or she starts to do odd things that are not accepted by the participants delegating their vote to them. That is why the system is not static but dynamic ("liquid")."
+(https://www.opendemocracy.net/can-europe-make-it/jan-behrens-axel-kistner-andreas-nitsche-bj%C3%B6rn-swierczek-marco-deseriis/liquid-de)
+
+=How It Works=
+
+BY DAVID MEYER:
+
+"f PiratePad is about collaboration and discussion, Liquid Feedback is about competition and decision-making. Any of the 6,000 members that use it can propose a policy. If the proposal picks up a 10 percent quorum within a set period, such as a week, it becomes the focus of an almost 'gamified' revision period. Any member can also set up an alternative proposal, and over the ensuing few weeks these rival versions battle it out, with members voting their favorites up or down.
+
+"In the ideal case you have five or six people working on alternative initiatives, and everyone tries to be the better one so they can win the poll in the end," Berlin Pirate Party spokesman Ingo Bormuth explains. "We hope it's healthy competition, but we want people to compete against each other so they stay [involved] in the topic."
+
+Each member has one vote, but most are not interested in marking up endless reams of policy papers. So the system allows every vote to be entrusted to another member – for everything, or for certain topics or specific proposals, or not at all. What's more, the person who has been delegated the votes of others can then re-delegate all those votes, plus their own, to someone else.
+
+It's a trust-based approach and the nearest thing Liquid Feedback has to a reputation system. Members don't get points-based kudos for their involvement and expertise; they collect real votes. In theory, votes being passed up the chain like this could lead to a crony elite or even a dictator, but there is a failsafe mechanism. Every delegated vote can be reclaimed at any time, so no high-flying Pirate can operate without a continuous mandate. "We want effective people to be powerful and do their work, but we want [the grassroots] to be able to control them," Bormuth says.
+
+This is liquid democracy: a sliding scale between direct democracy and representative democracy, where each member can decide where they sit in the spectrum at any given time."
+(http://techpresident.com/news/wegov/22154/how-german-pirate-partys-liquid-democracy-works)
+
+
+
+'''2.'''
+
+Luis Daniel:
+
+"Any member can propose policy. For the proposal to be taken to a revision period, it needs to gather 10 percent quorum within a certain amount of time. Once in the revision period, any member can set up an alternative proposal and over the next few weeks members vote up or down on the available proposals until a winner emerges. The voting is where it gets interesting. A member can decide to vote individually on an issue, but it would be a daunting task to read and go through every policy paper available.
+
+Liquid feedback allows you to give your vote to someone you trust would vote on your side of the issue. Additionally, the person you delegate your vote to can also give his vote, along with all of his votes, to someone else. Very quickly, people could gain a lot of voters and hence a lot of power, but the system allows members to reclaim their votes at any given time, so if someone wants to keep their voters, they need to keep constantly working for them. “We want effective people to be powerful and do their work, but we want [the grassroots] to be able to control them,” says Ingo Bormuth, the spokesman for the Berlin Pirate Party.
+
+Liquid Feedback allows members to delegate their votes in three ways. Global delegation is where members give their vote to a representative on every issue. The second is subject delegation, where people give their vote on specific subjects only, like health or education. The last one is issue delegation, where a member only entrusts another member with their vote on specific issues.
+
+
+'''Limitations'''
+
+The software does have its limitations. In its mission statement, Liquid Feedback says it is an “online system for discussing and voting on proposals in an inner party (or inner organizational) context and covers the process from the introduction of the first draft of a proposal to the final decision.” This means that the software is only intended to be used to decide on policy papers within a party, and is not meant to replace a legislative body’s core function. Germany’s Pirate Party is one of Liquid Feedback’s largest adopters. For now, the software is only used by the party to finalize position papers that then inform decisions at the party’s conventions. Some members would like to see it used to make decisions within the party, but for now, it seems the software is still in its trial period for the Pirate Party. This doesn’t mean only few users have tried out the platform. Almost 10,000 pirates are LQFB members. Yet for now, use of the platform is limited to condensing results and bringing them to a vote at the party’s convention.
+
+There also seems to be a small tech literacy barrier. As is typical of open-source software, the interface and user experience are far from award-winning. Political science professor, Christophe Bieber, says the interface may be “seen as ‘nerdy or geeky’ by many new recruits, especially when compared with the familiar mechanisms of wikis and collaborative text editors. It has an interface only a developer could love”. If Germany, with a high digital literacy might find it a little challenging to gather participants, countries with low digital literacy might be long ways away from adopting such technology."
+(http://www.thegovlab.org/democratizing-policymaking-online-liquid-feedback/)
+
+
+
+
+=Examples=
+
+* [[Tu Parlamento]], Italy
+
+
+=History=
+
+From an interview with the 4 co-founders:
+
+"Marco Deseriis (MD): Let us begin from the origins of the idea of Liquid Democracy. To my knowledge, this concept was first formulated in the year 2000 by John Washington Donoso (aka Sayke) in online forums that are no longer online. Donoso claims that he designed Liquid Democracy as a “knowledge sorting system” that could recommend answers to a question based on the shared knowledge of the community. In his mind, LD was meant to determine the best answer to a common problem--e.g. how to maintain civil infrastructure. Sayke also claims that because answer recommendation does not force a community to choose the most recommended answer, it is fundamentally different from an LD system based on proxy voting like LF. In his words, “rather than a mechanism through which we are informed by others, vote proxying (and traditional democratic representation) acts as a mechanism through which we cede power to others.” Do you agree with Sayke that his idea of LD is fundamentally different from yours? 
+
+Björn Swierczek (BS): So far as we know, the idea of Liquid Democracy dates as far back as Lewis Caroll’s Principles of Parliamentary Representation (1884), a short book that puts forward the idea of delegate voting in a modern democracy. However, this idea could be utilized and implemented in many different ways for many different purposes. In the text you cite, Sayke says the very same thing: “Liquid Democracy stands as an alternative to direct and representative democracy, but they each can be implemented in 17 hojillion ways - all kinds of voting systems can be designed which use direct, liquid, or representative democracy.”
+
+In 2009, we learned that no useable implementation of Liquid Democracy was available. To give the idea of Liquid Democracy a chance, we started creating LiquidFeedback to actually allow people to use it. As we had political parties in mind, the main task was to create a structured discussion process and the possibility of making solid decisions. Therefore, we created the unique LF proposition development and decision-making process, including predictable scheduling of the four phases of a decision (admission, discussion, verification and voting) and a hierarchical structure of units, areas, issues, initiatives, and suggestions. Furthermore, we created the Harmonic Weighting algorithm to ensure a fair share of representation for minorities by allocating display space. In addition, LF utilizes further algorithms to process the users actions accordingly and features a clone-proof preferential voting system. 
+
+Sayke's paper on how he would like to utilize the idea of Liquid Democracy for answer recommendation is something very different. LF goes far beyond the simple dream of Liquid Democracy and provides a feasible implementation for proposition development and decision-making."
+(https://www.opendemocracy.net/can-europe-make-it/jan-behrens-axel-kistner-andreas-nitsche-bj%C3%B6rn-swierczek-marco-deseriis/liquid-de)
+
+=Status=
+
+'''0. 2015:'''
+
+"Frustrated at the Pirates’ impasse, the four developers decided to focus on the development of the software and to leave the party in January 2011. Since then, the four have continued to develop LF and to promote digital democracy through the Association for Interactive Democracy, which has held workshops in Burma, Pakistan, Georgia, and Colombia. In 2014, the four co-authored The Principles of LiquidFeedback, a book that details the design principles, voting theory, and political philosophy behind the software."
+(https://www.opendemocracy.net/can-europe-make-it/jan-behrens-axel-kistner-andreas-nitsche-bj%C3%B6rn-swierczek-marco-deseriis/liquid-de)
+
+'''1. Penetration of LF, October 2012, by Axel Kistner:'''
+
+"Q: As far as I am aware only the German Pirate Party is using the software at present. Is this correct? Have you spoken to other groups about the software?
+
+A:There is Slow Food Germany, an association with more than 11,000 members, some pirate parties outside Germany, the youth organization of the F.D.P. (liberals) in the state of Baden-Württemberg (for the latter we don’t know exactly what they are doing because their system is in private mode), there are some test instances in NGOs and there are enterprises using it for allowing employees to create, discuss and vote on ideas for the board to finally decide. We gave presentations for the SPD (social democrats), Grüne (green party) and a commission of the German parliament."
+(Facebook excerpt 10/2012)
+
+
+'''2. June 2013:'''
+
+"After its initial deployment by the German Pirate Party, the software has gained a lot of popularity over the past few years, and most recently it has been adopted by several M5S groups in regions such as  Lombardy, Lazio and Sicily. True to their principles of participatory democracy and free access to the internet and information (and in response to criticism about how they run their business), it is no surprise that these two parties have been searching for a platform to engage their members more directly."
+(http://www.thegovlab.org/democratizing-policymaking-online-liquid-feedback/)
+
+
+'''3.'''
+
+"Simone Weiss says Liquid Feedback has always been “intended as a prototype for a future version of democracy” and they are currently experimenting with it themselves. But Liquid Feedbacks problems might be evident already. By October 2012, Der Spiegel wrote “In North Rhine-Westphalia, meanwhile, the Pirate Party’s parliamentarians have used the software to gather general opinions on just two issues so far. A poll of Pirate Party voters there concerning a proposed law to regulate circumcision showed …  20 votes in a federal state with nearly 18 million inhabitants. It’s a grassroots democracy where no one is showing up to participate.” It seems that we cannot know for certain whether the software can scale or not because we have not seen a large enough participation by LQFB members to know for sure."
+(http://www.thegovlab.org/democratizing-policymaking-online-liquid-feedback/)
+
+=Discussion=
+
+==Liquid Feedback is no miracle cure==
+
+Evgeny Morozov:
+
+"Where exactly would Johnson’s “liquid democracy” lead us? In a footnote, he notes that “the German Pirate Party has implemented ‘liquid democracy’ techniques with some success in recent years.” “Some success” is a gross overstatement, as their unlikely success in Germany appears to have been rather short-lived. Yet in many ways, the Pirates have self-consciously adopted all the imagery and rhetoric of the Internet; they are the living embodiment of Internet-centrism. Obsessed with process—decentralized and horizontal, of course—they offer little by way of goals and policy positions. Worse, they think that such vacuousness is actually an asset; as the party’s spokesperson declared in 2011, “What we’re offering is not a program, but an operating system.”
+
+A party with no strong stance on issues beyond copyright, censorship, and privacy, the Pirates remain a mystery to most German voters, who have lost their early enthusiasm for the cool young kids. Once polling in the double digits, the Pirates today are unsure of even passing the 5 percent threshold needed to get into the Bundestag in the upcoming elections. The lack of leadership and basic discipline within the party—some of its members show up at legislative sessions in shorts—has turned them into a national joke.
+
+
+The Pirate Party of Western Germany finds itself losing political power. (Getty/Patrik Stollarz) The Pirates’ rhetorical embrace of “liquid democracy,” where everyone can participate and delegate votes to each other, has not worked in practice; even almighty software cannot excite ordinary citizens about the humdrum and arcane issues of which most politics is made. By October 2012, in North Rhine-Westphalia—a region with eighteen million inhabitants—the Pirates used their trademark Liquid Feedback software to gather opinions on only two issues. A poll on one such issue—the controversial ban on circumcision—attracted only twenty votes. As Der Spiegel dryly put it, “It’s a grassroots democracy where no one is showing up to participate.”
+
+Anyone familiar with critiques of direct democracy would not find this surprising. The attempt to reform politics needs to start with some basic account of the very limitations of politics itself, and not just salivate over the infinite opportunities of digital technologies. The Pirates took the idea of the Internet seriously—only to discover that the rhythms and rituals of old-school politics do not stem merely from inferior technologies, but rather reflect assumptions about human nature, power, and justice. Relations among humans have many more layers of complexity than those among ants; there are inequalities, asymmetries, and grievances to be found at all layers—and what might seem like inefficiencies or gaps in participation or transparency might, on second look, prove to be the very democracy-enabling protective tissues that allow liberal societies to function."
+(http://www.newrepublic.com/article/112189/social-media-doesnt-always-help-social-movements)
+
+
+=More Information=
+
+#Visualization: http://cdn4.spiegel.de/images/image-323133-galleryV9-svsf.jpg  [[How the Liquid Feedback System Works]]
+#Interaktive Demokratie e. V., Verein zur Förderung des Einsatzes elektronischer Medien für demokratische Prozesse
+#info@interaktive-demokratie.org
+#[[Liquid Democracy]]
+
+
+
+[[Category:Facilitation]]
+
+[[Category:Democracy]]
+
+[[Category:Peergovernance]]

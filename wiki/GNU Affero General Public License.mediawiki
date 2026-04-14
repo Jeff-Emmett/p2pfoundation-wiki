@@ -1,0 +1,44 @@
+''' AGPL = based on version 3 of the GNU General Public License (GNU GPLv3), but has an additional term to allow users who interact with the licensed software over a network to receive the source for that program.''' 
+
+See also: http://en.wikipedia.org/wiki/Affero_General_Public_License
+
+=Description=
+
+Why is it needed on top of the GPL?
+
+"By publishing this license, the FSF aims to foster user and development communities around network-oriented free software.
+The GNU GPL allows people to modify the software they receive, and share those modified versions with others, as long as they make source available to the recipients when they do so. However, a user can modify the software and run the modified version on a network server without releasing it. Since use of the server does not imply that people can download a copy of the program, this means the modifications may never be released. Many programmers choose to use the GNU GPL to cultivate community development; if many of the modifications developed by the programs' users are never released, this can be discouraging for them. The GNU AGPL addresses their concerns. The FSF recommends that people consider using the GNU AGPL for any software which will commonly be run over a network."
+(http://www.fsf.org/agplv3-pr)
+
+
+=Status=
+
+From Free Software Magazine:
+
+"an attempt to modify the GPL, adding '''a clause to require reciprocity for users accessing the program over a network'''. The FSF considered adopting this clause into GPLv3, but dropped it during the revision process. However, they did adopt the Affero GPL as a new FSF license, updating it with the improvements in GPLv3 and making it possible to link AGPL-licensed programs with those licensed under the GPL. Unfortunately, adoption seems to be slow.
+(http://www.freesoftwaremagazine.com/articles/free_software_vs_software_service?page=0%2C2)
+
+Current examples of usage: "a few Web apps have begun using the AGPL, such as Wikidot and the FSF’s own stet"
+[http://www.freesoftwaremagazine.com/articles/free_software_vs_software_service?page=0%2C2]
+
+=Discussion=
+
+Benjamin Mako Hill:
+
+"Things have changed. A large part of many people's computing experience involves running web applications. These include email clients (e.g., GMail or other webmails), office applications (e.g., Google Docs), social network systems, and others. These applications all run on servers -- i.e., on other people's computers. The providers of these services, the Googles and the FaceBooks, build upon, modify and improve GPL software without giving back to their users or the community that they took their software from.
+
+The AGPL was created several years ago by FSF board member Henri Poole as a way to address this issue. The license took the form of the GPLv2 with one extra clause. It was a first stab at a license and was imperfect. The language and methods were clunky and, most problematically, the license was incompatible with software under the GPL.
+
+The new AGPL is based on the GPLv3 and the extra clause has been rethought and rewritten. It has been vetted using the GPLv3 comment process and dozens of insightful comments from dozens of lawyers, hackers, and users of free software have been incorporated. The new license fixes the issues that many folks -- including myself -- had with the first version of the license. More importantly it can now be linked to GPLv3 code which makes the license a whole lot more practical."
+(http://mako.cc/copyrighteous/20071119-01.comment)
+
+=More Information=
+
+#[[Open Licenses]] and specifically: [[Network Service Licenses]]
+#Wikipedia: http://en.wikipedia.org/wiki/Affero_General_Public_License
+
+[[Category:IP]]
+
+[[Category:Standards]]
+
+[[Category:Licensing]]

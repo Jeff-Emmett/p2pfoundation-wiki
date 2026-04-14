@@ -1,0 +1,103 @@
+'''* Article:  Decarbonizing Bitcoin: Law and policy choices for reducing the energy consumption of Blockchain technologies and digital currencies. By Jon Truby. Energy Research & Social Science, July 2018'''
+
+URL = https://doi.org/10.1016/j.erss.2018.06.009
+
+=Abstract=
+
+"The vast transactional, trust and security advantages of Bitcoin are dwarfed by the intentionally resource-intensive design in its transaction verification process which now threatens the climate we depend upon for survival. Indeed Bitcoin mining and transactions are an application of Blockchain technology employing an inefficient use of scarce energy resources for a financial activity at a point in human development where world governments are scrambling to reduce energy consumption through their Paris Agreement climate change commitments and beyond to mitigate future climate change implications.
+
+Without encouraging more sustainable development of the potential applications of Blockchain technologies which can have significant social and economic benefits, their resource-intensive design combined now pose a serious threat to the global commitment to mitigate greenhouse gas emissions. The article examines government intervention choices to desocialise negative environmental externalities caused by high-energy consuming Blockchain technology designs.
+
+The research question explores how to promote the environmentally sustainable development of applications of Blockchain without damaging this valuable sector. It studies existing regulatory and fiscal policy approaches towards digital currencies in order to provide a basis for further legal and policy tools targeted at mitigating energy consumption of Blockchain technologies. The article concludes by identifying appropriate fiscal policy options for this purpose, as well as further considerations on the potential for Blockchain technology in climate change mitigation."
+
+
+=Excerpts=
+
+==On the need for cost internalisation==
+
+Jon Truby:
+
+"Internationally accepted environmental principles advocate the need to internalise negative externalities such as from polluting industries. Within the EU (European Union) this polluter-pays principle is enshrined in Article 191 (2) of the Treaty on the Functioning of the European Union, the Organisation for Economic Cooperation and Development have for long been an advocate of this principle [39], and is endorsed by virtue of Principle 16 of the Rio Declaration. The purpose is not simply to raise revenue, but making polluters financially responsible for the harm caused encourages a switch in the activity to a less polluting method as well as de-socialising the cost. The OECD refer to this as a “continuous incentive for pollution abatement and technical innovation”. Taxing plastic bags, for example, leads to a switch to paper bags. The design of the tax has to take account of who should ultimately be responsible for the charge or where “final incidence” should fall, in this case the consumer shopper, as opposed to the supermarket.
+
+The decision to internalize such costs ought to be an easy one. Every signatory to the UN Paris Agreement [3] has not only agreed to attempt to hold global temperatures within 2 °C above pre-industrial levels (Article 2(a)). They have also agreed that global finance ought to flow towards enabling low greenhouse gas emissions, (Article 2(c)) so arguably those nations enabling finance to flow towards a highly polluting industry are violating the Agreement. Furthermore, the Agreement mentions numerous times that technology should be utilized to achieve greenhouse gas mitigation, whereas a highly polluting use of technology would very much go against the spirit of the agreement, if not the commitments made. Stiglitz makes the case that by not pricing global external costs that are harmful to the environment, nations are actually contributing a de facto subsidy to the polluter since the external costs are then costs to the public at large and thus the responsibility of the taxpayer. Such failure to charge would meet the OECD definition of “implicit subsidies".
+
+...
+
+The purpose of any fiscal policy would be to compel the industry to recognize and take account of the negative environmental impacts caused by the technology. By doing so, the objective would be to motivate a switch in the type of technology to a less energy intensive model. Regulation is one possible choice as is using fiscal tools to incorporate the costs to the environment in the design of the Blockchain technology, encouraging the production of more sustainable models.
+
+In order to do this, it would be necessary for any policy tool to differentiate between energy intensive Blockchain technologies and less intensive versions. For example, some digital currency transactions do not require verification based upon the solution of a cryptographic algorithmic puzzle, or if they do, they can utilise more efficient versions with lower computational energy demands. Some do not require the acquisition of a physical computing device such as the Bitcoin mining device, and if they do, there are low energy versions available.
+
+It is also possible that the technology could produce an environmental positivity that could be rewarded or subsidized. For example, Gogerty and Zitoli proposed “solarcoin,” a digital currency that rewards investments in renewable energy.
+
+A report by ING bank demonstrates the considerable and unsustainable usage of electricity in Bitcoin transactions, and argues that a less energy intensive method of verifying the transaction ought to be introduced.10 It suggests for example, a switch to “Proof of Stake,” which would be a less energy intensive process than proof of work; this was a model proposed by Bentov et al. Differing types of consensus algorithms dependent on varying computational energy levels are explored in Zheng et al., such as “proof of work,” “practical byzantine fault tolerance,” and “delegated proof of stake” as explained therein. While determining the most efficient technological design options exceeds the ambit of this article, there are clearly less energy intensive options available for Blockchain designers.
+
+,,
+
+Giungato points to The Long Future Foundation’s proposals to differentiate technologies based upon the required energy consumption for the system to run effectively. Greater hash rates are equated to more powerful miners. It is suggested this could be electricity consumption per gigahash. A second differentiation would be country-specific, considering the source of the energy used; if renewable, then it is less harmful.16
+
+To simplify this, this author proposes an alternative measure of computational energy required to add to the Blockchain based upon CO2 emissions per gigahash (CO2 /Gh). Recognising F.W. Geels et al.’s observation that “energy efficiency improvements are considered to be the most promising, fastest, cheapest and safest means to mitigate climate change,”17 the measurement proposed would ultimately have several assessment factors related to electricity efficiency but lowering CO2 emissions would be the overall goal.
+
+With existing Blockchain applications, the objective of any measure focusing upon developers can be to instigate the developer to amend the protocol’s consensus algorithm requiring less computational energy. Some proof types are more sustainable than others. As indicated at 4.1, the proof method could otherwise be amended to also require less computational energy. Zheng et al. explain that for example “Proof of Work” requires much greater energy usage than alternatives. The Long Future Foundation are further critical of this method, stating “Proof of Work cryptocurrencies have no place on a planet with a biosphere. With that said, some of the cryptocurrencies that use different proofs could prove to be very valuable for the transition to a sustainable economy”.
+
+Recognising inefficiencies in both time and energy consumption in existing protocols, technology designers actively seek to propose new types21 of protocols [106]. If measures can successfully achieve such an amendment of a developer’s protocol consensus algorithm, both the policy measures and path dependence theory will come into play to also minimise the chances of future developers developing energy intensive technology.
+
+..
+
+Differentiating between devices based upon their energy consumption can be undertaken in a similar manner as other electronic appliances are treated. Major jurisdictions tend to have the structure in place already to limit the import and production of energy inefficient products for households and businesses. The EU, not having the jurisdiction to introduce taxation in member states, instead utilises regulatory rules to achieve this. The EU’s Ecodesign Directive imposes mandatory energy efficient standards [118] on products, and complements this with its Energy Labelling Regulations [119] which provides information on associated energy costs for consumers, enabling informed choices. Harmonised European standards through technical specifications apply to different products, such as on the energy efficiency of refrigerators in the EU [120]. Sensibly it introduces such regulations in consultation with stakeholders, which would help improve the soundness of measures if introduced to the financial technology sector.
+
+Technical standards imposed on the energy efficiency of mining devices or verification processors that are manufactured or imported in a country could prove highly effective with a jurisdiction. Rather than banning them completely at the point of importation, it would facilitate the purpose of distinguishing between efficient and inefficient types of mining machinery. This option is attractive and can work to achieve decarbonisation goals when the Blockchain technology relies on physical machinery, but not when it is electronic or otherwise.
+
+A limitation of the regulatory options are that due to electricity prices, much of the mining globally is undertaken in countries offering cheaper energy costs which are often low regulation countries, lacking the necessary structure to impose technical specifications. The majority of mining activity is reported to take place in China. A further possible option is to introduce a voluntary code of technical standards with manufacturers, such as the U.S. Energy Star programme. Again this would require the countries hosting the manufacturers to introduce such a programme. China has itself determined to reduce the consumption of miners through regulation; by instructing local governments to gradually reduce power consumption of miners, though it is unclear how this can happen."
+
+
+==From the Conclusion==
+
+"The possibilities of Blockchain are endless and incentivisation can help solve various climate change issues, such as through the development of digital currencies to fund climate finance programmes. This type of public-private finance initiative is envisioned in the Paris Agreement, and fiscal tools can incentivize innovators to design financially rewarding Blockchain technology that also achieves environmental goals. Bitcoin, for example, has various utilitarian intentions in its White Paper, which may or may not turn out to be as envisioned, but it would not have been such a success without investors seeking remarkable returns. Embracing such technology, and promoting a shift in behaviour with such fiscal tools, can turn the industry itself towards achieving innovative solutions for environmental goals.
+
+This article has sought to find options for policymakers worldwide without focusing upon a particular jurisdiction. As such it has explored the benefits and drawbacks of each option without proposing any as a definitive choice since it certainly depends on the economic reality of the country in question. Some nations are more able to affect technological design choices than others. There have been limits to the article’s potential to provide universal solutions which could be expanded in further research.
+
+While determining the most efficient technological design options exceeds the ambit of this article, there are clearly less energy intensive options available for Blockchain designers. One limitation has been as to how to determine the correct price or rate of any fiscal tool to make a difference without damaging the sector, and this can be explored in further studies by building on existing literature [163,164] related to sustainable growth and environmental policy tools [165]. The policy tools examined also assume rational decision making by businesses and consumers, though this is subject to the limitations highlighted in Stern et al. there could also be further research as to how earmarking revenues to fund sustainable growth in the sector could be effective.
+
+Though there is no perfect solution, there are certainly options to achieve the internalization of such negative externalities with a view to switching the type of technology developed to more sustainable alternatives. Since a catch-all for all types of Blockchain technology may not be possible, the products of the technology (such as digital currencies or smart contracts) can be targeted to affect demand to limit the development and application of the most energy consuming technologies and promote more sustainable alternatives. The options to target physical machines such as miners easily fall within the remit of the existing excise powers, enabling both importation and sales charges. This would reduce such consumption within a jurisdiction but may drive it overseas to the benefit of other nations, though the overall demand would be reduced especially when introduced in a major market such as the EU or U.S. The EU’s fees on motor vehicles has impacted upon the type of vehicles being manufactured globally.
+
+Targeting ownership and transactions through existing or new legislation, can also serve effective in altering the demand for such technology. Profits surcharges relative to existing taxation may be introduced which can also reduce the profitability of using such technologies. Where administratively possible, registration fees on ownership that differentiate in cost based upon energy consumption of the Blockchain technology, could prove effective with digital currencies and even smart contracts but not be possible for other applications.
+
+All such tools can be designed unilaterally by an environmentally conscious State, but the limitations overwhelmingly point to the need for an international response. The purpose would not be to harm the industry overall, but to develop sustainable alternatives: this is already happening due to electricity costs, but the greater the value of the product of the technology (such as holding Bitcoin), the greater the incentive to participate and the worse the harm caused to the environment. A common theme found with all policy tools available has been the global mobility of the economic actors in question. This provides a strong base for international cooperation to jointly implement measures, as has already happened in the efforts to regulate digital currencies for financial stability and to reduce money laundering."
+
+
+=More information=
+
+==Energy Usage==
+
+* One Bitcoin Transaction Now Uses as Much Energy as Your House in a Week
+Vice (2017) 1 Nov, https://motherboard.vice.com/en_us/article/ywbbpm/bitcoin-mining-electricity-consumption-ethereum-energy-climate-change
+
+* T. Brosens. Why Bitcoin Transactions are More Expensive Than You Think (2017)
+https://think.ing.com/opinions/why-bitcoin-transactions-are-more-expensive-than-you-think/
+
+* Pasquale Giungato, Roberto Rana, Angela Tarabella, Caterina Tricase. Current trends in sustainability of bitcoins and related blockchain technology. Sustainability, 9 (2017), p. 2214, 10.3390/su9122214
+
+* The Environmental Costs of Bitcoin are Not Worth the Candle, Financial Times (2017)
+Nov. 7, https://www.ft.com/content/c166aa1e-c303-11e7-a1d2-6786f39ef675
+
+* Janine Morley, Kelly Widdicks, Mike Hazas. Digitalisation, energy and data demand: the impact of internet traffic on overall and peak electricity consumption. Energy Res. Soc. Sci., 38 (2018), pp. 128-137; https://www.sciencedirect.com/science/article/pii/S2214629618301051/pdfft?md5=56278e7182c4fd3f9bc02aa14115daa2&pid=1-s2.0-S2214629618301051-main.pdf 
+
+* Harald Vranken. Sustainability of bitcoin and blockchains. Curr. Opin. Environ. Sustain., 28 (2017), pp. 1-9 ; https://www.sciencedirect.com/science/article/pii/S1877343517300015/pdfft?md5=ae5d86c4bd0555fbf29e22df191c9284&pid=1-s2.0-S1877343517300015-main.pdf
+
+* Cryptocurrency Mining in Iceland is Using so Much Energy, the Electricity May Run Out
+The Washington Post (2018); 13 Feb ; https://www.washingtonpost.com/news/worldviews/wp/2018/02/13/cryptocurrency-mining-in-iceland-is-using-so-much-energy-the-electricity-may-run-out/?noredirect=on&utm_term=.fc89d0482254
+
+* Alex de Vries. Bitcoin’s growing energy problem. Joule, 2 (2018), pp. 801-805 ; https://www.sciencedirect.com/science/article/pii/S2542435118301776/pdfft?md5=fff89f40847dbd61c934fee2f98aaaad&pid=1-s2.0-S2542435118301776-main.pdf
+
+
+==Other==
+
+*  Sarah Jeong. The Bitcoin Protocol as Law, and the Politics of a Stateless Currency
+(2013), 10.2139/ssrn.2294124, 8 May 2013.
+
+[[Category:Crypto_Ecology]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Ecology]]
+[[Category:Energy]]
+[[Category:Policy]]
+[[Category:Articles]]

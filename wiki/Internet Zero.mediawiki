@@ -1,0 +1,54 @@
+'''= open standards using protocol for linking smart objects, i.e. I0 is intended for interdevice internetworking'''
+
+URL = http://cba.mit.edu/projects/I0/
+
+2004 project by Neil Gershenfeld, Raffi Krikorian, Danny Cohen.
+
+==Description==
+
+"The Internet is appearing everywhere. Phones speak it, appliances process it, coffee shops and even coffee pots serve it. But we'll be doomed if your coffee pot demands the services of an IT department. As remarkable as its growth has been, Internet implementations that were appropriate for mainframes are not for connecting everything everywhere.  Yet there are compelling reasons for a light bulb to have Internet access, ranging from construction economics to energy efficiency to architectural expression. Accomplishing this with the cost and complexity expected for installing and maintaining a light bulb rather than a mainframe raises surprisingly fundamental questions about the nature of scalable system design. The success of the Internet rests on the invention of "internetworking" across unlike networks; the Internet zero (I0) project is extending this insight to enable "interdevice internetworking" of unlike devices."
+
+Frank Coluccio [http://www.siliconinvestor.com/readmsg.aspx?msgid=20568731]:
+
+* Giving everyday objects the ability to connect to a data network would have a range of benefits: making it easier for homeowners to configure their lights and switches, reducing the cost of complexity of building construction, assisting with home health care. Many alternative standards currently compete to do just that – a situation reminiscent of the early days of the Internet, when computers and networks came in multiple incompatibly types.        
+* To eliminate this technological Tower of Babel, the data protocol that is at the heart of the Internet can be adopted to represent information in whatever form it takes: pulsed eclectically, flashed optically, clicked acoustically, broadcast electromagnetically or printed mechanically.        
+* Using this Internet-0 encoding, the original idea of linking computer networks into a seamless whole – the Inter in "Internet" can be extended to networks of all types of devices, a concept know as interdevice internetworking.
+* The seventh and final attribute of I0 is the use of open standards. The desirability of open standards should not need saying, but it does. Many of the competing standards for connecting devices are proprietary. The recurring lesson of the computer industry has been that proprietary businesses should be built on top of, rather than in conflict with, open standards."
+(http://www.worldchanging.com/archives/001286.html)
+
+==Example==
+
+*Hyperhabitat, at http://www.hyperhabitat.net
+
+==Characteristics==
+
+"architecture for Internet 0:
+
+'''IP to leaf nodes'''. Each device in the Media House used the Internet protocol, rather than switching to a different standard for the last hop. Historical concerns about bringing IP to the leaf nodes of a network have been rooted in a fear that the IP protocols impose unacceptable resource requirements on both the device and the network, hence incompatibilities have been built in at the edges of the network. But the IP stack used in the Media House fit in just a few kilobytes of code running on an inexpensive microcontroller, corresponding to a fraction of a square millimeter of silicon and pennies of added cost in a custom chip. Using IP added about 200 bits to each data packet; most any kind of custom addressing scheme would need something comparable. And because Internet routers have grown from having thousands to billions of bytes of memory in their routing tables they can accommodate this extra layer of hierarchy in the Internet.
+
+
+'''Compiled standards'''. It was possible to implement the Internet in a few kilobytes by recognizing that a light bulb doesn't need to do everything that a mainframe does. The Arpanet's layers were frozen in the International Standard Organization's (ISO) Open System Interconnect (OSI) network model, which defines 7 of these, from the physical communication medium through to the application. But for a given task the whole does less work than is apparent from the sum of the parts. They can be simplified by implementing them jointly rather than separately, just as a computer compiles a program written in a general-purpose language into an executable that does a particular thing. This not only removes the overhead of passing messages between layers, it's also possible to take advantage of knowledge of the application; a switch whose only job is to create control packets does not need to know how to route them. The steady march of VLSI scaling will not eventually obviate the need for this kind of optimization, because even as transistors get smaller there are still fundamental costs associated with algorithm complexity, including power consumption and device packaging.
+
+
+'''Peers don't need servers.''' In a world of clients and servers, small devices present and gather information for a larger machine. But centralized networks have a single point of failure; without the central server, the clients are useless. Even relatively simple devices can now hold, manage, and communicate their own state. In the Media House, each switch was responsible for keeping track of the things that it controlled, and each light for the switches that it listened to. Servers could add value to the network, aggregating data and implementing more complex control functions, but they weren't necessary for it to operate. No one device needed any other device in order to do its job.
+
+
+'''Physical identity.''' A switch in the Media House had three kinds of names: an Internet address ("192.168.1.100"), a hardware address ("00:12:65:51:24:45"), and a functional address ("the switch by the door"). The first depends on which network the switch is connected to. If that network is not connected to the rest of the Internet then a random address can be chosen (so that a name server is not required), but if there is an Internet connection with a name server available then that can be used. These addresses are associated with networks rather than tied to devices because routers need to be able to use them to direct packets properly. The second name is fixed for a particular device. In Ethernet chips these are called MAC (Media Access Control) addresses; blocks of them are assigned to manufacturers to burn into their chips. Since that system would be unwieldy to centrally manage for anyone who wanted to develop or produce any I0 device, random strings are generated as MAC addresses; the probability of two 128-bit random strings being the same is just 1 part in 1038. The Internet and network addresses can be associated through use of the device without requiring a server, such as the example of installing a light and then operating a switch. When that happens the light and switch communicate their addresses, and then can agree on establishing a logical connection. Or a handheld remote, which is just a portable I0 node, can be used to carry the logical identity between separated physical devices to associate them. An important application of that capability is carrying a cryptographic key to establish one more kind of name, a secret string of bits that is shared between devices based on having physical access to them. This can then be used in a Message Authentication Code protocol to encrypt, for example, the time to day, so that a switch can prove to a light that it knows the right private key to work it, but an eavesdropper can't later replay the message to control the light. As we'll see, even a conventional key can contain a mechanically-encoded I0 packet with a cryptographic key for a secure electronic lock.
+
+
+'''Open standards.''' While this should not need saying, it does. Compare the explosive growth of the Internet with the relative chaos in the US of the cellular phone network, where there are multiple redundant proprietary systems battling for the same subscribers. The same thing threatens to happen with the competing standards for connecting things; the recurring lesson in the IT industry has been that proprietary businesses should be built on top of rather than in conflict with open standards.
+
+
+'''Big bits.''' A bit in a network represents a unit of information (a 1 or a 0), and is represented by some kind of traveling excitation (electrons in a wire, photons in a fiber, electromagnetic waves in the air). The disturbance has a speed, which depends on the medium but for electrical signals is typically on the order of the speed of light (~3x108 meters per second). That may sound fast, but if the bits are being sent at the current Ethernet speed of a gigabit per second this corresponds to a size per bit of about a foot. If a network is bigger than that then spurious bits will be created by scattering from any interfaces in the network, and two nodes could begin transmitting simultaneously and not realize it until after their bits collide. This is why high-speed networks require special cables, active hubs, and agile transceivers. If, on the other hand, a bit is bigger than the network, then it will fill the network independent of how it is configured. For a 100m building this corresponds to about a million bits per second, equivalent to a DSL connection, which is plenty for a light bulb. If bits are sent at this rate then they have time to settle over the network, which greatly simplifies how they can be encoded.
+
+
+'''End-to-end modulation.''' For two devices to communicate they must agree on how to represent (modulate) information. This choice depends on the range of available frequencies, as well as the amount of noise and time delay at each of those frequencies. The frequency response can be measured by sending in a short spike and then recording the response to the impulse, analogous to hitting it with a hammer and then listening to it ring. The goal of high-speed network design is to keep that ringing as short as possible."
+(http://www.media.mit.edu/physics/publications/papers/04.10.sciam/)
+
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Manufacturing]]

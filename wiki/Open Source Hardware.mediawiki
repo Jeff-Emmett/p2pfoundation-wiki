@@ -1,0 +1,476 @@
+'''Open Source Hardware is hardware that keeps its designs available in a way similar to the open source in software.''' 
+
+
+== Definition ==
+
+'''1. Hod Lipson & Melba Kurman:'''
+
+"Open source hardware is a growing
+movement in the personal fabrication community. If an inventor chooses to open source her hardware design, she makes publicly available all the schematics,
+detailed description of needed parts and software, drawings and “board” files – basically all the information anybody would need to identically re-create the product or object."
+(http://web.mae.cornell.edu/lipson/FactoryAtHome.pdf)
+
+
+
+'''2. Graham Seaman:'''
+
+To fully qualify as 'open hardware':
+# The interface to the hardware must be explicitly made public, so the hardware can be used freely.
+# The design of the hardware must be made public, so that others can implement it and learn from it.
+# The tools used to create the design should be free, so that others can develop and improve the design. 
+(http://opencollector.org/Whyfree/open_hardware.html)
+
+
+
+'''3. Edy Ferreira:'''
+
+"any piece of hardware whose manufacturing information is distributed using a license that provides specific rights to users without the need to pay royalties to the original developers. These rights include freedom to use the hardware for any purpose, freedom to study and modify the design, and freedom to redistribute copies of either the original or modified manufacturing information.
+
+This definition fits what McNamara calls "[[Open Implementation Hardware]]", described as "hardware for which the complete bill of materials necessary to construct the device is available."
+
+In the case of open source software (OSS), the information that is shared is software code.In OSH, what is shared is hardware manufacturing information, such as hardware definition language descriptions, and the diagrams and schematics that describe a piece of hardware."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/570/523)
+
+
+
+'''4. From the Wikipedia:'''
+
+"Open source hardware refers to computer and electronic hardware that is designed in the same fashion as free and open source software (FOSS). Open source hardware is part of the open source culture that takes the open source ideas to fields other than software.
+
+The term has primarily been used to reflect the free release of information about the hardware design, such as schematics, bill of materials and PCB layout data, often with the use of FOSS to drive the hardware.
+
+With the rise of reconfigurable programmable logic devices, the sharing of logic designs is also a form of open source hardware. Instead of sharing the schematics, hardware description language (HDL) code is shared. HDL descriptions are commonly used to set up system-on-a-chip systems either in field-programmable gate arrays or directly in application-specific integrated circuit designs. HDL modules, when distributed, are called semiconductor intellectual property cores, or IP cores."<br />
+([[Wikipedia: Open source hardware]])
+
+== Principles ==
+
+Proposed by Dam Mellis:
+
+"Some general principles for the development of open-source hardware that I hope to elaborate on in the future:
+
+* Use common components
+* Use standard layouts and connectors
+* Provide clear instructions
+* Distribute widely (especially internationally)
+* Introduce in person (workshops are good)
+* Grow your community
+* Meet a real need
+* Help others make money
+* Build a brand
+* Keep innovating"
+(http://dam.mellis.org/2009/02/principles_for_open-source_hardware/)
+
+==Discussion==
+
+Edy Ferreira & Stoyan Tanev [http://www.osbr.ca/ojs/index.php/osbr/article/view/827/800]:
+
+"There is no consensus on the definition of OSH. 
+
+* With [[Open Sparc]], Sun Microsystems defines OSH from a development perspective as "a collaborative process around developing new chips." 
+
+* Jeffrey Rowe [http://manufacturing.cadalyst.com/manufacturing/article/articleDetail.jsp?id=420352 defines] OSH as "hardware for which all the design information is made available to the general public". [http://manufacturing.cadalyst.com/manufacturing/article/articleDetail.jsp?id=420352]
+
+* [[Open Collector]] [http://opencollector.org/Whyfree/freedesign.html points out] that in addition to design information, information on how to use the hardware, including documentation about its interfaces and the tools used to create the design, must be freely available. [http://opencollector.org/Whyfree/freedesign.html]
+
+* Jamil Khatib of [[Open Cores]] [http://www.pldworld.net/_hdl/2/_ip/free.chips.for.all.html suggests] that: "All design files should be available for free. This includes schematic, [[Hardware Description Language]] (HDL) code, and layout files. Software and firmware interfaces such as drivers, compilers, instruction set, and registers interfaces should be available and open source. All information and documentation, like application notes and interfacing information, should be also openly available". [http://www.pldworld.net/_hdl/2/_ip/free.chips.for.all.html]
+
+
+* Gregory Pomerantz [http://homepages.nyu.edu/~gmp216/papers/bmfosh-1.0.html provides] '''another OSH definition with more emphasis on license characteristics'''. [http://homepages.nyu.edu/~gmp216/papers/bmfosh-1.0.html]
+
+He points out that OSH licenses must: 
+
+i) grant permission to freely distribute the source code and any hardware device design based on it; and 
+
+ii) grant permission to create derivative works based on the source code and distribute them under the same license. 
+
+* Phillip Torrone [http://www.makezine.com/blog/archive/2007/04/open_source_hardware_what.html explains] that OSH must use a license that permits users to study, change, and improve the design, and to redistribute it in modified or unmodified form." [http://www.makezine.com/blog/archive/2007/04/open_source_hardware_what.html]
+
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/827/800)
+
+==Typology==
+===1===
+
+Edy Ferreira & Stoyan Tanev [http://www.osbr.ca/ojs/index.php/osbr/article/view/827/800]:
+
+"Torrone organizes electronic hardware into six layers and explains that the license terms and the information that is shared in each of the layers is different. 
+
+The six layers are:
+
+1. Hardware diagrams including the physical dimensions for enclosures and mechanical subsystems. Designs in this layer are normally described by vector graphic files.
+   
+2. Schematics and circuit diagrams including images in PDF, BMP, GIF or other formats.
+   
+3. Parts list of needed components.
+   
+4. Layout diagrams including electronic circuit designs, copper prints of circuit boards and drill files.
+   
+5. Core and firmware including the source code that runs on an Integrated Circuit (IC). It could also refer to the design of the IC itself described in Hardware Description Language (HDL) files.
+   
+6. Software or Application Programming Interface (API) including the source code that is used in a computer to communicate with the OSH."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/827/800)
+
+===2===
+
+Developed by Make magazine at
+http://www.makezine.com/blog/archive/2007/04/open_source_hardware_what.html
+
+The original article has many examples with diagrams.
+
+
+'''Electronic hardware can be divided up into layers, each of which has different document types and licensing concerns. Each level can be open sourced, but the exact nature of what it means to open it varies. In practice, not every layer is fully open. Often only a subset of the layers are released, documented or open source.'''
+
+'''1/ Hardware (Mechanical) diagrams'''
+
+Dimensions for enclosures, mechanical subsystems, etc. For 2d models, preferred document type is vector graphics file, with dimension prints, DXF or AI, etc.
+
+
+'''2/ Schematics & Circuit diagrams'''
+
+Symbolic diagrams of electronic circuitry, includes parts list (sometimes inclusively). Often paired with matching layout diagram. Preferred document type is any sort of image (PDF, BMP, GIF, PNG, etc)
+
+
+'''3/ Parts list'''
+
+What parts are used, where to get them, part numbers, etc.
+
+
+'''4/ Layout diagrams'''
+
+Diagrams of the physical layout of electronic circuitry including the placement of parts, the PCB copper prints and a drill file. This is often paired with a schematic. Preferred distribution is Gerber RS274x and Excellon (for drills). These are like PostScript for printers but the primitives aren't text and arcs, they're lines of solder and components.
+
+
+'''5/ Core/Firmware'''
+
+The source code for that runs on a microcontroller/microprocessor chip. In some cases, the code may be the design of the chip hardware itself (in VHDL). Preferred distribution: text file with source code in it, as well as compiled 'binary' for the chip.
+
+
+'''6/ Software/API'''
+
+The source code that communicates or is used with the electronics from a computer.
+
+
+==Business Sectors==
+
+===[[Open Source Hardware Distributors]]===
+
+Gabrielle Levine:
+
+"For example, Seeed Studio, Sparkfun and Adafruit are distributing inexpensive, small run supplies of open source hardware tools, sensors, components, and goods. They are all dedicated to providing their users with documentation, tutorials and Beginner kits, as well as providing a platform for forums and wikis where people can collaborate together online. These three companies are innovating in a unique way that really shows this reciprocation between the community and the company: as the users and community members implement sensors and components, the companies see what is popular. Then, they in turn curate their inventory and make their own sensor platforms based on community needs as well as community designs. This type of sales and distribution of electronics has proven quite successful."
+
+
+===Open Source Hardware Platform Technologies===
+
+Gabriel Levine:
+
+"Companies that are proliferating tools for others to use seems to be trending. These types of platforms include:
+
+====Robotic platforms====
+
+, think to OpenROV (open source hardware underwater unmanned submarines for purposes such as underwater photography, plastic trash sensing, fisheries monitoring, and educational tools) or DiyDrones (the largest community for modular flying robots, the biggest distributor being from the company of the founder, Chris Anderson @ 3D robotics)
+
+====Prototyping platforms==== 
+
+are going to continue to expand, including microcontroller platforms like from Arduino and more complex linux based systems like BeagleBone.  The derivatives of both microcontrollers and linux based boards have increased so much and branched so many derivative companies and products.
+
+====Open Hardware toolkits==== 
+
+for things like 3D fabrication and laser cutting (such as the Lasersaur) are also super impactful for the education platforms as well as for open and local manufacturing.
+
+====Open Source Hardware for educational platforms==== 
+
+(such as Little Bits), more non traditional educational facilities are sprouting up that are using hands-on engagement, learning through play, peer-based learning."
+(http://www.open-electronics.org/interview-to-gabriella-levine-oshwa-president/)
+
+==Distribution Models==
+
+See Dam Mellis on the 3 [[Open Source Hardware Distribution Models]]
+
+=Examples=
+
+==Base-level hardware devices with schematics to hack them==
+
+Matt Harley [http://itmanagement.earthweb.com/osrc/print.php/3700366]:
+
+"One of the most daring developments within open source hardware world is start-up companies that provide base-level hardware devices, complete with schematics to hack or alter them to meet users' needs."
+
+
+===Chumby===
+
+The [[Chumby]] information device 
+
+URL = http://www.chumby.com/ 
+
+A "friendly household Internet appliance. Chumby is a concept based on the belief that some people out there would be thrilled to have access to the Internet without the need for more traditional devices. Chumby provides the end user a unique means of accessing online maps, tracking auctions – nearly anything you might want from the Internet. For about $200, this widget-using Net appliance provides you with all the Internet you’d ever want, even from the strangest locations.
+
+What makes Chumby different from any other Internet appliance running created widgets is that it allows users themselves to create widgets to further extend Chumby's functionality. Once Chumby has been connected to a LAN, it uses a user-defined 'widget playlist' as an interactive view screen. It’s something like you might find with Apple's Dashboard feature in OS X, but on a less powerful computing appliance."
+(http://itmanagement.earthweb.com/osrc/print.php/3700366)
+
+
+===[[Daisy MP3 Player]]===
+
+Open source MP3 player, at
+http://www.makezine.com/daisy/
+
+
+supported by MAKE.
+
+"Unlike the more consumer-friendly Chumby, Daisy opens itself up to new revenue possibilities by allowing the builder the opportunity to build the device into a customized appliance. Even though this is not likely the goal of the project itself, it does present the possibility of customized MP3 players for a variety of enterprise applications. Entrepreneurs would likely start out by targeting industries that need access to a low cost, custom-built music player than can be implemented to users’ specs." 
+(http://itmanagement.earthweb.com/osrc/print.php/3700366)
+
+
+===[[Buglabs]]===
+
+URL = http://www.buglabs.net/
+
+"The modular device offered by Buglabs is, at its core, a full-featured Linux computer known appropriately enough as a 'BUG'. Complete with all the abilities of a PC, the BUG allows budding computing enthusiasts to play hobbyist engineer so they can create a device with their own specifications in mind. A clever idea, considering most consumer products always seem to be lacking that one killer feature. Also a great remedy for those who tend to dream of how they would have built any given device 'better' or differently."
+(http://itmanagement.earthweb.com/osrc/print.php/3700366)
+
+ 
+==More Examples==
+
+Compiled by Makezine at
+http://www.makezine.com/blog/archive/2007/04/open_source_hardware_what.html
+
+We now maintain a fuller list in our entry on [[Product Hacking]]
+
+Arduino - physical computing platform at
+http://www.arduino.cc/
+
+Chumby -  information device at
+http://www.chumby.com/ 
+
+RepRap / Fab@Home / Ultimaker / Makerbot - Open source 3D printers, at
+# [http://www.reprap.org/ RepRap]: A (partially) self-replicating Rapid Prototyper
+# [http://www.Ultimaker.com/ The Ultimaker: the fastest, high-resolution open source 3D printer]. Ultimaker uses official Arduino's only.
+# [http://www.makerbot.com Makerbot]
+
+OpenEEG - an EEG design that is OS & available as a kit, at
+http://openeeg.sourceforge.net/doc/
+
+x0xb0x - Roland 303 clone MIDI synth at,
+http://www.ladyada.net/make/x0xb0x/ 
+
+See also:
+
+#[[OpenSPARC Initiative]]
+#[[Open Circuits]]
+#[[Free Telephony Project]]
+#[[Open Graphics Project]] and the [[Open Hardware Foundation]]
+
+==Status==
+
+===The State of (Commercial) Open Source Hardware in 2013===
+
+Gabriela Levine, interviewed by Simone Cicero:
+
+* [SC] New fields for open source hardware are growing day by day: many new projects bring Open Source Hardware to new markets (automotive, furniture,etc…). Some important, cross-sector, projects were born in 2013 (see the link): what are the new fields you expect Open Source Hardware to thrive with?
+
+[GL] There are a number of types of companies that I see thriving within the Open Hardware community.
+
+Distributors: For example, Seeed Studio, Sparkfun and Adafruit are distributing inexpensive, small run supplies of open source hardware tools, sensors, components, and goods. They are all dedicated to providing their users with documentation, tutorials and Beginner kits, as well as providing a platform for forums and wikis where people can collaborate together online. These three companies are innovating in a unique way that really shows this reciprocation between the community and the company: as the users and community members implement sensors and components, the companies see what is popular. Then, they in turn curate their inventory and make their own sensor platforms based on community needs as well as community designs. This type of sales and distribution of electronics has proven quite successful.
+
+Platform technologies: Companies that are proliferating tools for others to use seems to be trending. These types of platforms include:
+
+Robotic platforms, think to OpenROV (open source hardware underwater unmanned submarines for purposes such as underwater photography, plastic trash sensing, fisheries monitoring, and educational tools) or DiyDrones (the largest community for modular flying robots, the biggest distributor being from the company of the founder, Chris Anderson @ 3D robotics)
+
+Prototyping platforms are going to continue to expand, including microcontroller platforms like from Arduino and more complex linux based systems like BeagleBone.  The derivatives of both microcontrollers and linux based boards have increased so much and branched so many derivative companies and products.
+
+Open Hardware toolkits for things like 3D fabrication and laser cutting (such as the Lasersaur) are also super impactful for the education platforms as well as for open and local manufacturing.
+
+Open Source Hardware for educational platforms (such as Little Bits), more non traditional educational facilities are sprouting up that are using hands-on engagement, learning through play, peer-based learning."
+(http://www.open-electronics.org/interview-to-gabriella-levine-oshwa-president/)
+
+==Discussion==
+
+===The Double IP Conundrum===
+
+Hod Lipson & Melba Kurman:
+
+"alternative IP models for personal fabrication technologies are in their infancy,
+and much more development of alternative IP models is needed in order to find the
+right balance between openness and commercial profitability. Products and objects
+fabricated from electronic blueprints will raise an additional challenge to intellectual
+property issues since there are two components that could be considered intellectual
+property: the electronic blueprints and the resulting physical object. As software
+designs proliferate and anybody with a machine can make anything, IP concerns
+threaten to block the free flow of new design ideas. Our patent system will be
+challenged by the deluge of legal questions generated when regular people get a hold
+of powerful design and manufacturing tools."<br />
+(http://web.mae.cornell.edu/lipson/FactoryAtHome.pdf)
+
+===Viability===
+
+The viability of the open source development methodology for physical objects, is discussed in detail in the thesis [[On the Viability of the Open Source Development Model for the Design of Physical Objects]]. Digitization of the design process, affordable fabricators, (prosumer oriented) manufacturing service providers can aid in the emergence of an open hardware ecosystem. Fabricators, in particular, affect the cost of development, production, reproduction and distribution of physically embodied innovations. The rapid diffusion of these technologies, as seen in the RepRap and related projects suggest that this may become a more general phenomenon.
+
+===Problems holding back Open Source Hardware===
+
+Mohamed A. Salem and Jamil I. Khatib:
+
+"There are problems that face designers and prevent them from developing open-source hardware.
+
+'''Cost of EDA tools:''' Designers can't afford the cost of EDA tools. The suggested solution is to pursue development of open-source EDA tools and improve them with feedback from the design community. Alliance [19]and gEDA [20] are good models for open EDA tools.
+
+'''Manufacturing cost:''' Hardware manufacturing is relatively expensive. The suggested solution is implementation on FPGA-based prototyping boards or simulation of designs using formal verification techniques.
+
+'''Design protection:''' The suggested solution is the protection of the open designs using GPL-like licenses that reserve rights for original designers, according to particular terms and rules.
+
+'''Market:''' Market competition is mainly based on patents and intellectual property that maintain all rights for the originator firm. Companies may oppose aspects of open source that generate alternatives for commercially protected products.
+
+The suggested solution is that companies might take advantage of open source as a way of bridging the gap for time and cost absorbed in R&D. The researchers might find they don't have to reinvent already existing wheels. Companies may find adoption of an open-source design with large base of customers as a win-win deal. Companies can refine the open-source design with affordable prices and make use of bug fixing provided from the community. The end result is cutting-edge reliable products with affordable prices.
+
+'''Credibility:''' Open source has to build confidence. The suggested solution is that designers produce high quality and completely documented designs. It will be only a matter of time to convince the user community of the credibility of open designs. For instance, the Linux operating system has become reliable and competitive due to efforts exerted to enhance quality and performance from the developing community."
+(http://www.eetimes.com/news/design/features/showArticle.jhtml?articleID=22103383)
+
+===Making Money with Open Source Hardware===
+
+Edy Ferreira:
+
+"we identified 56 market offers. '''These were classified using four dimensions: i) type of market offer; ii) ownership of OSH project; iii) type of OSH asset transformation; iv) and importance of OSH to the market offer'''. Our findings can be summarized as follows:
+
+'''Type of market offer''': forty four of the market offers were for manufactured products, such as printed circuit boards. Six of the market offers were for intellectual property, such as electronic circuit designs and software. The remaining six offers were for services, such as consulting, custom designs and training.
+
+'''Ownership of the OSH project''': fifty three of the companies own the OSH projects upon which their market offers are based. There were three cases of companies whose one market offer was related to an OSH project owned by another company or individual. Type of transformation of the OSH asset into the market offer: this dimension refers to the type of activity that is needed to transform the initial OSH asset into the final market offer. Our analysis revealed four market offers requiring software development, fifty one offers requiring hardware development and manufacturing, and one market offer for the same OSH asset without any transformation.
+
+'''Importance of the OSH for the functional integrity of the market offer''': this dimension has three possible options. The design of thirteen market offers did not include any open source component and were classified as "pure-close offers". The designs of twenty eight market offers are completely based on open source components, and were classified as "pure-open offers". The core of fifteen of the market offers are based on open source designs but also include additional proprietary components; these were classified as "open-driven offers".
+
+
+Using these four dimensions, we found eight different ways of making money with OSH in the listed companies. Those eight methods are summarized as follows:
+
+1. Consulting and custom designs over owned OSH (three market offers): this category includes companies which sell services related to the OSH projects that they own. Those services could be custom designs or consulting.
+   
+2. Consulting and custom designs over third-party OSH (three market offers): this category is similar to the previous one, but the services sold are for OSH designs owned by other companies. As an example, Polarismicro sells consulting and custom designs based on OpenSparc, an OSH project owned by Sun Microsystems.
+   
+3. Proprietary hardware designs based on OSH (one market offer): this category includes companies that sell modified versions of OSH projects that they own. The market offer is intellectual property in the form of schematics, diagrams or any other type of hardware design information. The OSH assets are transformed into the market offer by designing proprietary hardware modules (hardware development) that modify the OSH asset (open-driven offer). Gaisler Research sells the netlist information for Leon-3FT, a fault-tolerant processor code based on Leon-3.
+   
+4. Proprietary hardware based on OSH (eight market offers): this category includes the sale of modified versions of owned OSH projects. The market offer is the result of proprietary hardware modules (hardware development) that modify the OSH asset (open-driven offer). The difference from the previous classification is that the market offer is not intellectual property based on hardware design information, but physical manufactured products. emQbit sells a physical board that is an improved version of an open source single board computer called ECB-AT91 v1.
+   
+5. Manufactured OSH (twenty seven market offers): this category includes companies that sell a physical manufactured hardware based on pure-open hardware designs that they own. This category includes more companies and seems to be the first step most organizations take to start making money with OSH.
+   
+6. Software tools for OSH (four market offers): includes companies that sell pure-closed software tools for testing and working with OSH assets that they own. Gaisler Research sells simulation and debug monitor software for Leon 3.
+   
+7. Hardware tools for OSH (nine market offers): this category is similar to the previous one, but these pure-close market offers are not software but hardware tools for an owned OSH asset. For example, Gaisler Research also sells development boards for Leon 3.
+   
+8. Dual-Licensing (one market offer): this way of making money with OSH is similar to the dual-licensing model used by some OSS companies. The idea is to offer the same pure-open hardware design that is owned by the company with two difference licenses. The first license is a GPL-like license, which is free but forces users to disclose the source code of any modified version of the original design. The second is a commercial license, which has a fee but allows buyers to conceal the source code of any modified version.
+
+
+'''Conclusions:'''
+
+"Some authors have cited the costs associated with manufacturing hardware as one of the biggest disadvantages of OSH in comparison with OSS. Users who download software code can compile and use it without any cost. Users who download source for an open microprocessor cannot use it unless they pay for its manufacture. However, most of the companies working with OSH have taken this disadvantage as a business opportunity by selling manufactured OSH.
+
+Secondly, companies, as seen with Gaisler Research, may successfully combine more than one way of making money with OSH to diversify their sources of income. It is also possible for companies to expand revenues by combining OSH with OSS, especially in cases where symbiotic relationships between OSH and OSS projects exist.
+
+As an example, Corgan Enterprises offers training and consulting for both the USRP, an OSH project, and GNU Radio, an OSS project.
+
+Additionally, this study shows that some ways of making money with OSS can be used with OSH. Dual-licensing, consulting, and customization of open source projects are such examples.
+
+The classification presented here is just the first step towards a more systematic understanding of how companies build business models around OSH. More research is needed to study which models are likely to generate higher incomes and the profitability of the market offers related to OSH."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/570/523)
+
+===Phasing in of Open Source Hardware===
+
+Mohamed A. Salem and Jamil I. Khatib for the EETimes (2007):
+
+"The open source hardware roadmap can be divided into three main stages as follows:
+
+'''Phase I (Primary)'''
+
+The primary stage objective is to start the development of a set of simple and generic FPGA-based prototyping boards that can be used to test and implement simple open-source IP cores. Open EDA development tools would be used, such that designers can provide feedback to open-source tools developers. The communication between FPGA-based board designers, open IP core designers, and open EDA developers will improve the whole development process of open source- hardware and lead to the next phase.
+
+'''Phase II (Advanced)'''
+
+This advanced stage assumes that open-source hardware publicity has taken place. Designers will release advanced open-source designs, including FPGA prototyping boards. The market demand for prototyping boards will boom, which encourages vendors to produce volumes at low prices. The low price exists because the board designs are originally open source, and there is large market demand.
+
+The vendors could produce open-source device programming tools in order to enlarge their market base. The objective of this stage is to allow an open-source hardware user to download open designs from Internet, and implement designs on prototyping boards, just as computer users download open-source software and run it on general-purpose processors in personal computers.
+
+'''Phase III (Run time configuration)'''
+
+At this stage, the complexity and density of designs would reach the limitations of conventional programmable logic devices. The dynamic reconfigurability of certain programmable devices is characterized by their ability to reconfigure subsets of their logic and routing resources at runtime, while continuing to operate normally. This intrinsic dynamic reconfiguration results in accommodation of complex and dense designs while maintaining high performance.
+
+The objective of this phase is open-source complex systems design and implementation. This assumes a seamless architecture of system models in which boundaries between software and hardware vanish. For instance, there is an effort to run a Linux kernel as a pure hardware platform that depends mainly on dynamic reconfigurability "<br />
+https://www.eetimes.com/document.asp?doc_id=1217816#
+
+==Is Open Source Hardware In Our Future? (2007)==
+
+Is Open Source Hardware In Our Future?
+
+http://manufacturing.cadalyst.com/manufacturing/article/articleDetail.jsp?id=420352
+
+Thinking of open source hardware in the same way as open source software may be comparing apples and oranges.
+
+Apr 19, 2007
+
+By: Jeffrey Rowe (jrowe@cairowest.com)
+
+
+I’m sure that by now most of our readers are familiar with the concept of open source software, and many may have had actual experience with it. From the beginning I’ve been intrigued by the idea of open source software. And, yes, there are a number of open source and free MCAD and ECAD tools out there.
+
+As a refresher, open-source software is software whose source code is available under a license (or arrangement such as the public domain) that permits users to study, change and improve the software, and to redistribute it in modified or unmodified form. It is usually developed in a public, collaborative manner, comparable to user-generated content.
+
+Around 1998, the expression free software was replaced with open source software, a term that many believed to be less ambiguous and, they hoped, would make corporate software vendors feel more comfortable and less vulnerable. The term is most commonly applied to the source code of software that is made available to the general public with either relaxed or nonexistent intellectual property restrictions. The "open source" label came in response to Netscape's announcement of a source code release for Navigator. Netscape eventually licensed and released their code as open source under the name of Mozilla. 
+
+Time For Open Source Hardware?
+
+For some time I’ve wondered: If open source describes the principles and methodologies used to promote open access to the design and production processes for various technologies, products and resources, could its basic principles be applied to hardware in a manner analogous to software? After all, the aim of open source anything is to let the product be more understandable, modifiable, copyable, reliable or accessible, while it is still marketable as a viable product for payment, so why not apply it to hardware? Although I’d had thoughts on this from the hardware side, I really hadn’t seen or heard much that echoed my sentiments -- that is, until last week. 
+
+I received an interesting email from Mitch Free, president and CEO of Mfg.com. He posed the question, "Should certain product manufacturers publish their designs for anyone to download and move toward an open source (hardware, not software) model?"
+
+He thinks so. Why? Because it would enable the masses to proliferate their low-margin hardware platform and allow them to sell the high-margin consumables or data content.
+
+This notion of open source hardware is not exactly new, but it hasn't gathered nearly the momentum that we've seen in the software community. Can hardware designs be free in the same sense that software can be free? In many cases, I would have to say yes.
+
+Open source hardware refers to hardware for which all the design information is made available to the general public. Open source hardware may be based on a free hardware design, or the design on which it is based may be restricted in some way. Thus far, some of the most notable open source hardware projects have included computers and computer components, telephones, vehicles and even a self-replicating 3D printer.
+
+One of the first and leading proponents of open source hardware was Richard Stallman, an acclaimed software freedom activist, hacker and software developer. In September 1983, he launched the GNU Project to create a free UNIX-like operating system, and has been the project's lead architect and organizer. So it was only natural that he carry over his philosophy of open source software to the hardware side.
+
+He says, “Free software is often available for zero price, since it often costs you nothing to make your own copy. Thus the tendency to confuse free with gratis. For hardware, the difference between free and gratis is more clear-cut; you can't download hardware through the Net, and we don't have automatic copiers for hardware. (Maybe nanotechnology will provide that capability.) So you must expect that making fresh a copy of some hardware will cost you, even if the hardware or design is free. The parts will cost money, and only a very good friend is likely to make circuit boards or solder wires and chips for you as a favor.
+
+"Because copying hardware is so hard, the question of whether we're allowed to do it is not vitally important. I see no social imperative for free hardware designs like the imperative for free software. Freedom to copy software is an important right because it is easy now -- any computer user can do it. Freedom to copy hardware is not as important, because copying hardware is hard to do. Present-day chip and board fabrication technology resembles the printing press. Copying hardware is as difficult as copying books was in the age of the printing press, or more so. So the ethical issue of copying hardware is more like the ethical issue of copying books 50 years ago, than like the issue of copying software today.”
+
+However, Stallman thinks that a number of hardware enthusiasts are interested in developing free hardware designs, either because they have fun designing hardware, or because they want to customize it.
+
+Another early strong proponent of open source hardware was Graham Seaman, although he's not as visible as he once was in this movement. In Seaman’s mind, to fully qualify as “open hardware,” the product must adhere to the following conditions:
+Information on using the hardware must be available and the interface to the hardware must be explicitly made public, so the hardware can be used freely.
+The design of the hardware must be made public, so that others can implement it and learn from it.
+Design software for hardware must be available and the tools used to create the design should be free, so that others can develop and improve the design.
+
+So, while I wouldn’t say that open source hardware is exactly poised to take off in a big way right now, I think that over time it will come into its own as a force to be reckoned with, just as open source software has attracted a devoted and increasingly large audience.
+
+==More Information==
+Related pages:
+* [[Open Hardware]]
+* [[Open Design]]
+* [[Open Cores]]
+* [[Product Hacking]]
+* [[Open Hardware License]]
+
+* [[Wikipedia: Open-source hardware]]
+* Trend review article by MIT's Technology Review at http://www.technologyreview.com/article/21495/
+
+===Business Models===
+
+* See: [[Open Source Hardware Business Models]]
+* Edy Ferreira & Stoyan Tanev [http://www.osbr.ca/ojs/index.php/osbr/article/view/827/800 How Companies Make Money Through Involvement in Open Source Hardware Projects]
+* A business model for open source hardware, at http://pages.nyu.edu/~gmp216/papers/bmfosh-1.0.html
+
+===Directories===
+
+" [http://www.opencores.org/ Opencores] and  [http://www.opencollector.com/ Opencollector] are two Internet repositories of OSH projects. These two sites list more than 600 projects, from designs for printed circuit boards to hardware description language (HDL) code for microprocessors."
+
+See our own listing under the entry: [[Product Hacking]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Design]]
+
+[[Category:Open]]
+
+[[Category:Manufacturing]]
+
+[[Category:P2P Hardware]]

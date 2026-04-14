@@ -1,0 +1,57 @@
+'''Essay: Tragedy of the FOSS commons? Investigating the institutional designs of free/libre and open source software projects by Charles M. Schweik and Robert English. First Monday, volume 12, number 2 (February 2007),'''
+
+URL: http://firstmonday.org/issues/issue12_2/schweik/index.html
+
+
+== Description ==
+
+"An important distinction between natural resource commons and FOSS commons is that the “tragedy” to be avoided in natural resources is over-harvesting and the potential destruction of the resource. '''In FOSS commons the “tragedy” to be avoided is project abandonment and a “dead” project.''' Institutions – defined as informal norms, more formalized rules, and governance structures – are mechanisms that have been shown to help overcome tragedies in some environmental commons situations. The goal of this paper is to more formally describe the concept of FOSS institutions and to conduct a preliminary examination of FOSS projects in order to shed light into institutions, their composition and importance to the projects. We report findings from an initial set of interviews of FOSS developers and find that in commons settings that need to encourage contribution rather than control over-appropriation, the institutional designs appear to be extremely lean and as unobtrusive as possible. To the FOSS programmers we interviewed, institutional structure adds transaction costs and hinders collective action. This is markedly different from traditional environmental commons settings."
+(http://firstmonday.org/issues/issue12_2/schweik/index.html)
+
+
+== Discussion ==
+
+
+=== Three Important Attributes of FOSS Commons ===
+
+In order to study FOSS institutions and their influence on the success or failure of projects, there are three important attributes that need to be considered: (1) Evolutionary Stage of the Project; (2) Development Team Size; and, (3) Measures of Success or Tragedy. Short descriptions of each follow.
+
+Evolutionary Stage of the Project. In earlier papers (Schweik and Semenov, 2003; Schweik, 2005) we noted that FOSS projects go through two stages, Initiation and Growth. We define the Initiation Stage as the initial period of time a project goes through where people are collaborating on software code but there has yet to be a public release of this code. We define the Growth Stage as the period after the first public release. Obviously, any empirical study of FOSS projects will find projects in each of these two stages. We suspect that the variables that influence success or failure (tragedy) in FOSS projects differ in these two stages.
+
+Developer Team Size. Projects will also differ in the number of developers associated with the project (as shown in Table 1). From an institutional design standpoint, we expect FOSS projects with larger numbers of people collaborating to have more complex institutional designs. In addition, it is likely that the different developer team sizes in Table 1 probably reflect different stages of growth of the project. That is, many of the very large projects, in terms of developers, probably went through earlier periods where they had much smaller development teams. For this reason, we think studying these mid-range group sizes may be informative in terms of how FOSS projects evolve and grow larger.
+
+Measures of Success or Failure. Research already exists that has worked to identify measures of success or failure of FOSS projects (Stewart and Ammeter 2002; Crowston, et al., 2003; Capiluppi, et al., 2003). Building on these efforts, we think that measures of success or failure of FOSS commons probably depend upon what evolutionary stage they are in. This means there are four possible outcomes: Initiation Stage success or failure and Growth Stage success and failure.
+
+We define Success in the Initiation Stage as “a project producing a first public release.” This can be easily measured by seeing if the project has produced a first release of the code.
+
+As we see it, Failure in the Initiation Stage occurs when a project is abandoned before producing a first release. Preliminary data we have analyzed from Sourceforge.net indicates that projects over a year old that have not had a release are generally abandoned. This can be measured since many project hosting sites like Sourceforge or BerliOS provide information on when the project was started and when the first release was launched. Abandonment can be measured by (1) no code “commits” or changes in lines of code in the concurrent versioning system (CVS) or other repository over the course of a year, or (2) little or no activity on developer e-mail lists and forums over the course of a year. An often repeated saying about FOSS culture is “release early and often” and therefore, a one-year timetable for this measure seems sufficient.
+
+We define a project as Successful in the Growth Stage if the project has produced “several releases of a software product that performs a useful computing task for at least a few users (it has to be downloaded and used).” A measure of “subsequent releases” should be fairly easy to compile for many FOSS projects because this information is stored on many of the prominent project hosting sites (Sourceforge, BerliOS, etc.). Measuring “a useful computing task” is harder and a bit more subjective. Acquiring the number of downloads recorded on project Web sites is probably the easiest measure, since this too is recorded on some of the leading project hosting sites. Other more time consuming measures to generate, include: (1) a content analysis of user forums or e-mail archives on utility of the software; (2) an actual download, installation and use (for some software); or, (3) interviews with users who have downloaded the product. The final parameter of this definition, “a few users” is also measured by the number of downloads.
+
+Finally, we define Failure in the Growth Stage to be when a project appears abandoned (very few downloads, little development activity, such as code commits, going on, etc.) without achieving several subsequent releases.
+
+We recognize that there will be some projects that will not easily fit into these categories. For example, an Indeterminate in the Initiation Stage project might be one that has yet to produce a first public release but shows significant developer activity. Indeterminate in the Growth Stage might be a project that shows development activity but has not yet produced several releases. Nonetheless, having a measurable definition of success and tragedy for various stages that can be operationalized for most projects is an important component for this and our broader FOSS research . In English and Schweik (2007) we describe out efforts to operationalize these concepts and classify success and failure of all Sourceforge projects that were available as of August 2006."
+(http://firstmonday.org/issues/issue12_2/schweik/index.html)
+
+
+=== Three “Levels” of Institutions that may exist in FOSS projects ===
+
+Studies of the institutional design of natural resource commons have focused on three institutional “levels” (Ostrom, et al., 1994; Ostrom, 2005; Schweik, 2005). '''The first level, the “Operational-level”, is a general name for rules that influence the everyday decisions and actions made by project participants.''' In a FOSS setting, these are the norms or rules that specify how the further development and support of the software may proceed. The type of FOSS license used and the collaborative platform used for version control (e.g., CVS, subversion) establish some operational-level rules.
+
+'''The second institutional level, “Collective-Choice,” (Ostrom, et al., 1994) is the generic name for two types of rules. The first type defines who is eligible to undertake certain operational-level activities.''' For example, in most projects there is probably some kind of norm or rule that specifies who has authority to promote or “commit” some code to the “next release” library. In some projects, this authority might be highly centralized; in other projects, the authority might be quite distributed, allowing each developer to promote their code when they feel it is ready. '''The other type of collective-choice rules specifies who can change operational-level rules and the procedure to follow to make such a change.''' For instance, as more developers join a project, there may be a need to change the operational-level rule on how code is reviewed before being promoted. Collective-choice rules would determine how a new operational procedure would be agreed upon and changed.
+
+'''Constitutional-level rules are the third tier of institutions. Constitutional-level rules specify who is allowed to change collective-choice rules and the procedures for making such changes.''' One example in a FOSS setting might be when the recognized leader of a project decides to move on to a new opportunity. Constitutional-level rules might specify who takes over in this person’s absence. Another example is the case where a FOSS project operating entirely by volunteer developers becomes “embraced” by a commercial firm. This entry by a firm may (or may not) change who is involved in collective-choice processes."
+(http://firstmonday.org/issues/issue12_2/schweik/index.html)
+
+
+[[Category:Articles]]
+
+[[Category:Governance]]
+
+[[Category:Commons]]
+
+[[Category:Free Software]]
+
+[[Category:Peergovernance]]
+
+[[Category:Peerproduction]]

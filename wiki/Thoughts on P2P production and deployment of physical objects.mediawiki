@@ -1,0 +1,223 @@
+'''Thoughts on P2P production and deployment of physical objects'''
+
+by [http://digifreedom.net/ Marco Fioretti]
+
+
+=Abstract=
+
+These days there is a great interest in finding ways to build a more open and balanced society through social structures, legal frameworks, proper education and innovative technical practices. The goal is to enable as many people as possible to produce, independently or directly collaborating with other individuals without any intermediary or delegation of power, everything one needs to live happily, creatively and sustainably. P2P networks for digital distribution and the P2P Free/Open Source software development model are often taken as examples to apply to other fields, due to their evident success.
+
+'''This article is an edited summary of two email conversations which took place among a few subscribers of the p2p-research mailing list during spring of 2008 about the applicability of P2P development models to physical objects and infrastructures'''. It first sums two independent P2P visions or proposals: microelectronics manufacturing and deployment of telecom networks. Next follow my (Marco F.) comments and objections to each case study. The last chapter presents some general conclusions and questions about intrinsical limits of P2P production of physical objects or about its very necessity in some areas: if, to which extent, how and (maybe the more important part) where and when the P2P production models for immaterial products and services can be applied to the production and deployment of physical objects and infrastructures.
+
+
+=Case study 1: P2P integrated circuits and other (micro)electronics components=
+
+Projects like the [http://openfarmtech.org/weblog/?p=91 CEB machine] or the [http://www.p2pfoundation.net/Hexayurt Hexayurt] aim to free people from the need of large sums of money and from any other dependency by any centralized economic or political power when it comes to shelters and other necessary buildings. It is just natural to try to do the same with electronics. Imagine being able to produce from raw materials, in full independence, as it happens with software like Linux, your own computers, microcontrollers, temperature sensors, batteries and so on. This would eliminate a great deal of dependence from external powers which want to control people's money and resources. Configurable hardware like the [http://parallax.com/Default.aspx?tabid=407 Parallax kits] is seen as an evidence that we are close to such freedom.
+
+According to several people one major obstacle along this path is, as in other fields, the existence of patents. Apart from patents, however, M. Jakubowski asked:
+
+- ''Based on the most appropriate scale - what is the program that would yield open and participatory production of ICs - as a means to make sure that this area of human endeavor does not suffer from potential negative consequences of centralized economies. I am not comfortable with simply accepting a centralized program. If we base on thinking on biomimicry, then we can easily fathom distributed production even of the so-called highest technology items. I'd just like to push the thinking forward a few decades on this issue - what I am speaking about is all forthcoming''. 
+
+Alternative, innovative ways to apply P2P methods to design and manufacturing of microelectronics components were suggested by S. Rose:
+
+- ''Thinking about this, not from a current industrial/technology thinking frame, but instead from a complex adaptive perspective will yeld results. Mimicing biology really means mimicing self-replication, reproduction, and complex adaptation, to some extent''. 
+
+    
+"''You have a very small machine that can very efficiently produce and connect transistors on a relative massive scale. A small efficient robotic system that can take different building block materials shape and connect them into simple patterns based on simple rules. The tiny little machines work somewhat like DNA in this respect. They operate from very simple instruction sets, and churn out building-block electrical components based on a few simple operations that they hold in a very small memory system. Different tiny machines do different operations, all of them very simple, and all of which add up to the construction of a highly adaptable IC core. The tiny machines themselves use simple physical properties of materials to detect where they are to operate. IC cores are wired in a parallel way so that it doesn't matter if there are "extra" components of any kind (like extra transistors). 
+
+    
+- The IC core design, the design of the tiny little machines that make them, can all be optimized using evolutionary computing, like [http://devolab.cse.msu.edu/ Avida]. Simulations of the self-assembly system can be run over and over in parallel on many computers around the world, using a system like [http://boinc.berkeley.edu/ this] which would report desired results (and surprise results!) back "home" to developers. 
+
+- In order to recognize desired results we need the building blocks that make this possible: open source nanotechnology. Open source nanotech could actually speed up the evolution of nanotechnology, once the design and testing infrastructure is available widely. Open source nanotech is path to a biomimicry of living nervous-system-style creation of information processing technology that would be within reach of many people. Clean "rooms" could be reduced to clean chambers, and the development platform I suggest lowers the cost and makes 1-off customization and low overhead cost for design and development possible (through virtual design and testing). Computers are the primary platform here, they can simulate, they can test, they can design and control output mechanisms''. "
+
+S. Rose also said:
+
+- ''These ideas... would end up producing a different type of integrated circuit than what currently exists. More along the lines of neural net, or massively parallel processing. 
+
+- But, we are not far away from modeling and simulating much, or even all of what I talked about on a computer model. This is within our reach, using existing open source software. I think what is needed is some chaotic experimentation with information-processing circuit design/construction, and that this would open up possibilities beyond the narrow spectrum that people are now viewing this technology through. 
+
+- What if design of information could be driven by unique local conditions? What if I could design a simple circuit, and release it under and open license, that is specifically designed for easy production and out of readily available materials, and that can be chained together to create a massively parallel processor? 
+
+- This can become a pattern-based, and "object-oriented" design of information processing technology. It can start with the simple circuit, and how it is made, and what it is made out of. The testing of the circuit design can be done on existing computers. I really believe that many construction materials could be recovered from existing electronic waste. Designer/Fabricators at MIT have explored this over the last decade. 
+
+- I can imagine a device that is the size of a cellphone, but that could be used to control an xyz table, or used to process information about it's environment, using add-on devices software that are plugged into it (like soil ph, etc), and wirelessly broadcast that info to other computers or devices, or work as an ad-hoc parallel "super" computer when many of them are brought together in close proximity''. 
+
+S. Rose also provided some links (listed in Appendix 1) to resources he finds relevant for alternative P2P electronics design and finally added:
+
+- ''If you start out exploration on a simple scale, with basic building block components, you can then use the power of "search" (using simulation, and/or "searching" the [http://www.stephenwolfram.com/publications/talks/architecture/ simple models built into the atlas Wolfram is outputting] not yet finished) to rapidly produce and test many variants. This can be used to test variants of building blocks, but also to test the ways that they connect and pass information. The idea here is that we could use something like Boinc or inexpensive rent-a-grids to produce and test and optimize simple machines (circuits)''. 
+
+
+=Case Study 2: Telecom networks, Wimax, grid routing=
+
+[http://p2pfoundation.ning.com/xn/detail/u_8wbjqz2kevz8 S. Hasslberger] asked on the P2P-research list: "[http://p2pfoundation.ning.com/forum/topic/show?id=2003008%3ATopic%3A1067 This] is really a very important discussion and I hope the experts in cc can contribute to it, in the ning network, in the blog comments, or in the p2p research list?" 
+
+
+Here are some edited excerpts from that web page and from the discussion which followed:
+
+    
+"''I see real peer-to-peer connectivity starting with consumer driven mesh networks based on WIFI or WIMax or a combination, and a gradual separation from today's internet even for long range connectivity, which could in a first instance be driven by P2P radio bridges. 
+
+    
+Mobile device mesh networks could be part of this. As almost everyone has a mobile phone today, it would take little to hack the system these things run on to allow them to form networks among themselves 
+
+(it is possible to) put together a (network of) real long radio bridge(s) without licenses? Maybe concatenatings the 1.4 km hops you could build with [http://ronja.twibright.com/ Ronja optical data links?] Also, it is possible actually get licenses too. Sure, its not free, but if it was deemed worthwhile by a P2P infrastructure funding project, why not? 
+
+Would you agree that a consumer driven open source massive mesh network could take some worries off the providers of connectivity (bridging the "last mile") and allow them to maintain or increase revenue as more and more people get connected, while constructing a solid base for p2p interactions at the grassroots level? 
+
+Perhaps we don't need to talk about completely replacing today's telecom networks. But it seems possible that the telecoms could be pushed back towards providing connectivity to the cloud of a p2p 'peernet' through a number of access points 
+
+We would have a win-win situation both for the users who gain increased connectivity and the providers who maintain or increase business without having to do all the expenditure of constructing the last layer of the network. 
+
+Perhaps that change is completely natural and is already underway. And perhaps it is needed to allow ubiquitous connectivity, which the telecoms have difficulty providing today. 
+
+What would be wrong with leaving the last layer of interconnection to consumer-generated and maintained wireless networks''?"
+
+=Comments and objections to Case Study 1=
+
+Let's start with a little digression about energy, because it's a general issue not restricted to IC manufacturing. This and many other medium to large scale complex manufacturing processes require abundant energy from a reliable source. According to an article mentioned in the original discussion, it could soon be possible to produce also that energy in a P2P way: [http://www.internationalistmagazine.com/2007-earlyfall/2007-earlyfall_commentary.html "when peer-to-peer hits energy, we can be sure it will change life as we know it"]. No doubt about this. 
+
+
+However, that article:
+
+* quotes scenarios where little players do not produce enough extra energy to produce by themselves all they need, but only have some spare energy to share (ie scenarios where many individuals could convey their extra energy towards one large factory which needs lots of it: this may look P2P but on the whole is not "self-production" nor "small scale"),
+    
+* either refers to really advanced technology so far in the future to not make any difference for anybody living when it was first written, or hopes that the laws of termodynamics will be proven wrong very soon: "this will really take off when we figure out how to produce cars that generate power instead of consume it"
+
+
+Back to IC manufacturing now. Since their base ingredient is silicon, that is basically sand, it may seem that all you need to make chips is lots of energy (but from where?, see above) and lots of sand. If you have sand and energy, however, all you are ready to self-produce are glasses and windows panes. If and when some really, really innovative technology breakthrough comes (be it what S. Rose describes or something totally different) we'll be able to dump everything we do or know today in this field. In the meantime, in order to free yourself of the system, that is to substitute in a P2P/do-it-yourself way the ICs which make it possible to read this page and all the other devices you use, you'd still need:
+
+* Real good clean rooms [http://www.cleanroom-technology.co.uk/story.asp?storyCode=8733 ($2,500 per square foot to over $6,000 per square foot in 2002)] which aren't even clean for humans, that is they [http://www.motherjones.com/news/feature/2002/03/clean_room.html cost even more if they are to be safe].
+    
+* [http://www.elettra.trieste.it/experiments/beamlines/lilit/htdocs/people/luca/tesihtml/node41.html machines for e-beam litography] (see also [http://www.siliconfareast.com/lith_electron.htm this])
+    
+* generally speaking, all the machinery and procedures described in the [http://www.intel.com/museum/online/funfacts.htm Intel online museum]
+
+
+To have an even better idea of what we're talking about, here are some relevant factoids about [http://news.softpedia.com/news/AMD-Opens-a-New-Facility-in-Germany-10596.shtml Fab36, the state-of-the-art AMD microprocessor foundry in Dresda] (source: Pc Professionale magazine, issue July/August 2008):
+
+* A $2.5 billion initial investment to first open it
+    
+* currently produces CPUs made of millions of transistors which are 45 nanometers wide.
+    
+* One nanometer is one millionth of a millimeter. A human hair has a diameter of 60000 nanometers
+    
+* 45 nanometers is the WIDTH of each transistor. The thickness of its internal gate is ONE nanometer
+    
+* 1 nanometer thickness means gates high no more than 4 or 5 atoms of silicon
+    
+* the sharpest laser beams producible today have a wavelength of 193 nanometers: in other words, the thinnest lines (=circuit elements) they could draw are about 4 times the (larger) dimension of each transistor
+    
+* the only way to make such small transistors (but only together with many equally sophisticated others) is [http://amdevice.blogspot.com/2006/12/immersion-lithography.html immersion litography]: put silicon wafers just below a liquid which, thanks to extremely sophisticated pumps, flows in such a way to create a perfect lens which focuses the laser beam
+
+Being able to design something hi-tech can be terribly different from being able to manufacture it. P2P is about doing without centralized mass production, it's about producing only depending on yourself or a few peers only what you or your peers really need for yourself, sharing as much as possible.
+
+
+Coupling these facts, the conclusion seems obvious to me. Do you already have, or are sure you can have in the useful future some totally new way to make microprocessors which doesn't require such precision? If not, are you technically and financially able to build a living-room equivalent of all the stuff above starting from simple tools and raw materials? One which, even producing only the few chips you'd need for yourself and your own peers (this isn't about mass production, is it?):
+
+* doesn't do it at a unit price which would make a computer cost like a 100 ft yacht
+    
+* guarantees that your chips aren't much bigger, much more energy hungry, more polluting and much less reliable than what you can buy from Intel, AMD, IBM Xilinx, Altera and (pretty few) others.
+
+If you answered yes to any of those two questions, OK, then it's time to start worrying about where to find both the energy to power that machinery and patent-free open designs to produce with it. Until that moment, you don't have P2P production of ICs, you only have P2P design. Which is absolutely great, but doesn't free you from multinational chip makers.
+
+This isn't even a legal or scale issue: all the necessary software tools and knowledge to design ICs at home already exist or indeed could be developed (ignoring patents!) in a P2P way and are relatively cheap. No need, on that front, to wait for open source nanotech or anything similar. Places like [http://www.opencores.org Opencores] already connect all the people, structure, tools and know-how necessary to design "a simple circuit... that can be chained together to create a massively parallel processor" or whatever is needed.
+
+The real problem is that we aren't talking bricks or anything else which is, basically, 19th century technology, that is objects you can see with your eyes and touch and model with your own hands or very simple tools, starting from simple raw materials. A P2P network of backyard brick manufacturers is all is needed to produce all the bricks which make a cathedral. Even when high-tech raw-materials are involved, as it happens with some custom equipment for extreme sports, we're talking of objects with much bigger tolerances than silicon transistors.
+
+Any "service organization" that actually manufactures P2P designed ICs, however, may have to be of a much bigger size, or at least complexity and cost, than a CEB machine or ski-making business. A P2P network of specialized small factories or clean chambers would still need very complex, really expensive machinery in each site. Patents would be the least problem.
+
+Mixing biomimicry, nanotechnology, massive parallel computing, evolutionary computing and what not is a wonderful and necessary activity, but it is long-term Research, that is advancing basic, essential knowledge. It is not Development, that is solving some concrete problem as soon as possible, in the most efficient way possible, even if it isn't glamorous or P2P. Both are necessaries, mind you. All I'm saying is that, in order to avoid frustration and not waste energies, it is essential to not mix these two parts of R&D.
+
+This doesn't mean that there is no hope or need for the P2P designer of electronic hardware of today. You can already do wonderful P2P-like hardware things if you look in the right direction. To S. Rose who said "I can imagine a device that is the size of a cellphone, but that could be used to control an xyz table, or used to process information about it's environment, using add-on devices... plugged into it (like soil ph, etc), and wirelessly broadcast that info", I answer "let's learn and teach how to use FPGAs, and check out the [http://bits.blogs.nytimes.com/2007/12/28/building-your-own-high-tech-bug/ BUG] from [http://buglabs.net/ Buglabs] (see it also on [http://www.linuxjournal.com/article/10125 Linux Journal] and at [http://www.ddj.com/embedded/206101045 Dr. Dobbs])".
+
+We can already build very useful and advanced technology today with the BUG, FPGAs or similar objects in a P2P way; I find this great, the more the better. Of course, doing so means to be still "trapped" inside the non-P2P system, either directly (by buying new computer, FPGAs or BUGs from multinationals) or indirectly (e.g. reusing recycled PCs). You couldn't in any way call this as already "outside", "independent" or "totally alternative" to the current system of big corporation and centralized mass manufacturing.
+
+
+=Comments and objections to Case Study 2=
+
+Personally, I find two types of problems in the specific proposals and questions of Case Study 2: the first one is underestimation of both the limits enforced by current regulations and of their reasons, and of the real motivations, practices and business requirements of current telecom operators.
+
+At least for Wimax, current regulations [http://www.wimax.com/education/faq/faq48 "largely relegate license-free providers to LOS coverage only"]: how do you put together a (network of) real long radio bridge(s) without licenses? What about finding enough suitable sites and permissions to use them?
+
+Radio spectrum is scarce. Much scarcer than statistically multiplexed bandwidth on an existing fixed line broadband or narrowband network, so when it comes to doing things on a large scale it's you or me. That's why [http://www.wimax.com/education/faq/faq52 licenses exist, even for Wimax]. A "P2P infrastructure funding project" should not only hand out millions or billions dollars for licenses, it should convince incumbent operators that they should step aside or the FCCs of the world that a bunch of disconnected amateurs are more reliable than a tightly controlled group of professionals.
+
+A "consumer driven open source massive mesh network" would not take some worries off the providers of connectivity. Competition and interference from consumers for consumers would only create worries for providers, rather than taking them off: first off, it encourages people to do by themselves and may reduce their revenues (less direct subscribers). It would also be a nightmare for law enforcement agencies ("Your Honour, I didn't upload that child porn from my computer: the mesh made my computer do it").
+
+Even from a purely technical point of view, operators would not like such a scenario for the same reason why any loving parent wouldn't like his toddler kids helping him with the circular saw while he's building the kitchen cabinet. A large number of different transmitters operated by more or less qualified amateurs can create lots of technical problems quite difficult to diagnose and expensive to manage.
+
+If this weren't the case, all operators would already encourage today their subscribers to bring in their neighbours through home Wi-Fi access points. Reality, instead, is that many contracts explicitly forbid such options, for the very concrete reasons I just listed, or only provide them for an extra price.
+
+Let's now look at the second problem I find in the Peernet and similar initiatives. Let's forget the political and legal problems I just mentioned to answer the last question of Chapter 3: "What would be wrong with leaving the last layer of interconnection to consumer-generated and maintained wireless networks?" Easy: I don't trust consumer-generated and maintained wireless networks. Not as a mass solution or a complete last-mile replacement. They are likely to be far less reliable than professionally made and maintained networks, they may constitute health hazards in extreme but unpredictable cases or interfere with important services, they would probably consume more energy and raw materials to build and function.
+
+One 100 KM radio bridge with N:1 protection, 10E-12 or similar guaranteed Bit Error Rate even in bad weather etc... is much more reliable and probably quite cheaper too to build and maintain, when you factor in all the variables, than 100 1-km bridges, each home made in a slightly different way.
+
+When it comes to access networks, how do you guarantee or regulate that the total radiated power in any given area never exceeds safety limits, if everybody and their dog start pointing WiFi / Wimax repeaters at each other?
+
+"Almost everybody has a mobile phone today, let's make a mobile mesh": let's ignore for the moment how quickly the battery would dry if your phone were to spend all the energy bridging other people communications: what does exactly mean "it would take little to hack the system" and who should do it? The cell phone owners? And, above all, in which way? How can you transform a cell phone into something that communicates directly with other cell phones like WiFi devices could (without, again, draining the battery real quick, of course)?
+
+Think pullmans versus many cars on a highway, even if the analogy isn't completely fitting: what's the more reliable, cheaper, safer, environmentally sound way to move people back and forth from their homes to the city station? A few buses ran by professional drivers or hundreds of cars more or less poorly maintained, with the possibility that if one of those cars breaks it clogs the whole street?
+
+All this, of course, doesn't mean at all that activities in this field or things like Ronja should be abandoned. They are great didactical tools, wonderful auxiliary or backup solutions and also have a huge value in many cases where the existing network won't do the job or would be much more expensive (connecting the several buildings inside one campus or farm?).
+
+
+Telecom networks must serve people, not control them, no doubt about this. But completely replacing today's telecom networks with billions of home made pieces and a lot of good will is:
+
+* quite more difficult than it may seem from certain estimates at all levels, from making it as reliable as what we have today but cheaper to getting the powers in charge to let it happen
+    
+* above all, maybe not really necessary to build a better world. It may be much cheaper, much more efficient, much more realistic and politically tolerable to set up secure/redundant channels inside one well planned single network (as long as Net Neutrality is respected, of course) than aiming for some totally alternative network, especially if it isn't really so easy to actually do it well.
+
+So, should a Peernet happen because it is necessary and actually better (technically, environmentally, economically, safety-wise, politically) than current networks... or because P2P in general and Peernet in particular are such cool concepts that we can't resist to remake everything we see the P2P/Peernet way?
+
+
+=Conclusion=
+
+Before concluding, let's remind where we started from: are there limit to "P2P production and deployment of physical objects"? Is it possible and desirable in any field? What is the best scale for production, deployment and management of (networks of) complex physical objects? Can centralization be thoroughly substituted by appropriate scale as in the P2P movement? (the two last questions were asked to me by other participants in the threads). 
+
+
+Let's first sum up a few key points:
+
+* With immaterial objects, design (and compilation when applicable) is also all it takes to manufacture and maintain. In those cases, design is production.
+    
+* If you cannot manufacture something you need by yourself in a sustainable way (whatever "sustainable" means for you), it doesn't matter much if you can design it.
+
+Generally speaking, I agree that decreasing the scale of some human enterprises would increase the quality of life for everyone and that more P2P than there is today would be a good thing. This said, I think that the comments and objections to the two case studies highlight a few general issues which deserve attention.
+
+The first is that, in any given age, P2P production of physical objects is only possible and economically meaningful where the complexity of those objects and of all the tools needed to build them from raw materials is NOT so high as is the case of microelectronics today. Using in a P2P way sophisticated integrated circuits, instead, to build something new, is already possible today and maybe should receive more attention. Of course, "complexity" is a function of the state of technology: what is impossible today may very well become absolutely ordinary bricolage some time in the future. What matters is not to underestimate the limits of current technology, that is to not confuse Research with Development.
+
+The second, very general advice that comes from this analysis is that accepting as good, or proposing, P2P-only societies or lifestyles on assumptions like "today, cost of software is zero and cost of computer hardware is nearing zero" may generate frustration, to say the least. Computer hardware, FPGAs and things like the BUG or any other microelectronics device, are "nearing zero cost" only because produced in diametrically opposed ways to P2P philosophy and techniques, and this is not going to change in the near/medium term.
+
+With respect to "the cost of software being zero"... Linux, mass access to the Internet and all the empowerment this implies, digital creative works and P2P networks were and remain cheap to produce, use, distribute and co-develop in innovative ways just because they rely on (should we say "live completely inside"?) a huge quantity of physical objects (computers and networks) which are affordable only because of mass, centralized production.
+
+This may be a temporary inconvenient, of course, but let's move to the third and most interesting general point, which is: maybe there are some areas of human activity where, regardless of the technology level of any given period, the ideal scale may not be the P2P one, but something much closer to the much larger one used to produce the same good and services today.
+
+While this should not be meant in any way as a full endorsement of the current system, the fact that many "centralizations" of today do more harm than good is not a rigorous proof that any conceivable centralization is always bad period. Couldn't it be that P2P, which remains a good thing, isn't really doable nor desirable in some areas, telecom networks being one of them, because it wouldn't really improve quality of life? Are we really sure that "anything large in scale should be broken down, decentralized"?
+
+Look at the Internet or at mobile phone networks. They make P2P and Free Software development possible and can greatly lower the costs of many self-entrepreneurs, from African fishermen to web 2.0 gurus, or make public officials more accountable and easier to control. But in order for all this to physically work at the smallest possible cost, the physical infrastructure must be as homogeneous and obeying to centralized technical specifications as possible. Ditto for the specs of the single parts constituting it. What you need to decentralize on the Internet, in order to build a fairer world and to make the P2P culture prosper, is things like DNS management, Net neutrality, production of application software. Let's decentralize the right things at the right level.
+
+I wonder if this last point may be some sort of general "law", if you'll forgive me this term, which puts some intrinsical, upper limit on what P2P can do or on what it should be used for. As Einstein put it, "everything should be made as simple as possible - but not simpler".
+
+Living cells, ants or bees can organize themselves spontaneously in a P2P-like manner without any supervisor or mass-produced machinery. Human beings, on the other hand, have both physical and intangible needs which are a tiny bit more complex than those of bees. Think to affordable and open access to quality education, culture in all its forms, communication or advanced health care. Think to services like weather forecasts reliable enough to minimize human casualties or food waste.
+
+Oh, and of course there always are energy distribution grids, since I guess we all want a better quality of life than what was possible before electricity. The day when everybody will be able to produce everything he needs by himself using no more energy than it takes to bake biscuits, or the day when it will be possible to furnish every hut with some really cheap, renewable energy microgenerator able to produce the hundreds of kilowatts you'd need to make your own computer... OK, that will be the wonderful day when we won't need any grid anymore. Until then, however, we'll need a centrally planned and supervised grid, one to which, in my opinion, all the comments I made about the Internet or phone networks still apply, and for the same reasons.
+
+Unlike food, clothes and shelter all these things demand (at least) lots of physical objects which cannot be made from scratch at home, together with very large and sophisticated (=expensive) physical networks like the Internet, professionally built and managed.
+
+Even if the cost problem didn't exist, technologically sophisticated activities imply specialization, which sooner or later brings the need for coordination and some form of centralization. Is there any way to completely escape this fact without giving up all the real benefits on quality of life which are possible with today's technologies?
+
+What about aiming directly for a mixed model, instead, one where decentralized (P2P) and centralized activities mutually enforce each other? It may be not only much easier to build (by forcing the current system to evolve, instead of starting over): it may actually be the best possible solution, even better than a 100% P2P one."
+
+==Commentary on the Conclusion==
+
+by Marcin Jakubowski
+
+We can all agree in principle on this. The discussion is, however, much broader to give it just treatment. Human ethics, land stewardship, and spirituality need be mixed into the above discussion. Until spiritual evolution of humanity as a whole occurs, the best case - by design - is that of localized, small scale production - for whatever the physical good. There are items, of course, such as titanium, that may not be available in a local economy. Trade may occur for these items - but by and large - there is absolutely no reason to go global on ''essential'' needs - which can and should be provided locally. 
+
+A discussion of consequences is missing. There are global and geopolitical consequences that arise in 'large scale production'- such as poor wealth distribution, monopoly, resource degradation - which the small-scale economy addresses by design. Namely, one does not crap in their own living room.
+
+
+
+[[Category:Articles]]
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]

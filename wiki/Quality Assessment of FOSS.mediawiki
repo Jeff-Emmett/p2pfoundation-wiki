@@ -1,0 +1,245 @@
+=Source=
+
+Compendium: INF5780 H2011: Open Source, Open Collaboration and Innovation
+
+
+=Introduction=
+
+by Arne-Kristian Groven, Kirsten Haaland et al.:
+
+"Each year, large amounts of money are spent on failed software investments. Selecting
+business critical software is both a difficult and a risky task, with huge negative impact
+on business if the wrong choices are made. Uncertainty is high and transparency is low,
+making it hard to select candidate software.
+
+The widespread development and use of Free/Libre and Open Source Software, FOSS,
+enable new ways of reducing risk by utilising the inherent transparency of FOSS. Transparency
+is related to the fact that the source code is available on the Internet. In addition,
+most of the communication about the software takes place on the Internet. Hence, a pool
+of information is available to anyone wanting to reduce risk when selecting business critical
+software among FOSS candidates.
+
+Tools and methods for assessing FOSS software, based on measuring data available on
+the Internet, have been a research issue the last decade. The name FOSS quality (and maturity)
+model or FOSS quality (and maturity) assessment method appear in the literature
+to describe such methods. Alternatively, they could also have been referred to as FOSS
+trust/risk assessment models. There exist two generations of FOSS quality assessment
+methods, where the first generation was published between 2003 and 2005. About four
+or five methods were introduced, having a rather limited set of metrics and manual work
+procedures. In most cases the only software tool support consists of excel-templates for
+calculations. A second generation of methods was published between 2008 and 2010, following
+extensive research funding from the European Community. These methods differ
+from the first generation in increased complexity, both regarding the number of metrics
+used and the fact that they are semi-automatic approaches with associated software tool
+support.
+
+In the following text, one first and one second generation FOSS quality model are presented,
+discussed, and compared with the other. This is done in order to give the reader
+a brief introduction into such methods; their structure, they work context, their strengths
+and weaknesses. The intension is not to give a detailed tutorial of any of the methods,
+but instead to indicate the principles. The text presented here is based on comparative
+studies and experiments performed in 2009/2010 (Glott et al., 2010; Groven et al., 2010;
+Haaland et al., 2010).
+
+
+==Software Quality Models==
+
+"After briefly introducing traditional software quality models we give a short overview of
+first and second generation FOSS quality models. The latter will be presented in-depth in
+the following sections.
+
+...
+
+'''First Generation FOSS Quality Models'''
+
+While the traditional software quality models have a history of around four decades,
+the first FOSS quality and maturity models emerged between 2003 and 2005. While traditional
+quality models originate in the context of traditional software industry and its
+proprietary business models, FOSS characteristics are not covered by such models.
+Among the first generation FOSS quality models are: (i) the Open Source Maturity Model,
+OSMMCapgemini, provided under a non-free license, (Duijnhouwer andWiddows, 2003);
+(ii) the Open Source Maturity Model, OSMM Navica, provided under the Academic Free
+License and briefly described by Golden (2004); (iii) the Qualification and Selection of
+Open Source software1, QSOS, provided by Atos Origin under the GNU Free Documentation
+License; and (iv) the Open Business Readiness Rating2, OpenBRR, provided by
+Carnegie Mellon West Center for Open Source Investigation, made available under the
+Creative Commons BY-NC-SA 2.5 License. All the above quality models are drawing on
+traditional models, which have been adapted and extended to be applicable to FOSS.
+All models are based on a manual work, supported by evaluation forms or templates.
+The most sophisticated tool support can be found for QSOS, where the evaluation is supported
+by either a stand-alone program or a Firefox plug-in, which also enables feeding
+results back to the QSOS website for others to download. But still, the data gathering and
+evaluation itself is a manual work process.
+
+As of 2010, none of these FOSS quality models have seen a wide adoption and they can
+really not be considered a success, despite that the QSOS project shows a slow growth in
+popularity (Wilson, 2006b). The OSMM Capgemini model has a weak public presence for
+the open source community (osm, 2007); for the OSMM Navica model the web resource
+are no longer available, while OpenBRR for a long time has had a web site announcing
+that a new and better version is under way.
+
+The reasons for this lack of success are probably a combination of the following (Groven
+et al., 2010): (i) The approaches have shortcomings; (ii) the knowledge about the approaches
+are not properly disseminated; (iii) the success stories are not properly disseminated;
+and (iv) the business expectations of the originators of these models were possibly
+unrealistic. But despite of shortcomings and lack of community support, it is our belief
+that these quality models could play a role when evaluating candidate FOSS. These views
+are supported in literature, e.g., byWilson (2006a). There are some success stories, such as
+the Open University’s use of OpenBRR to select a Virtual Learning Environment (Sclater,
+2006). The fact that several enterprises3 use OpenBRR, underlines its (potential) role. Further,
+the simplicity of a first generation FOSS quality and maturity model is intuitively
+appealing and may have some advantages compared to second generation models.
+
+
+'''Second Generation FOSS Quality Models'''
+
+Recently, a second generation of FOSS quality models has emerged, partly as a result of
+several EC funded research projects. They all draw on previous methodologies, both traditional
+quality models as well as the first generation FOSS quality and maturity models.
+Two main differences between the first and second generation FOSS quality models are
+more extensive tool support and more advanced metrics.
+
+Second generation quality models include (i) the QualOSS quality model4 – a semiautomated
+methodology for quality model drawing on existing tool support, explained
+in greater detail in this text; (ii) the QualiPSo OpenSource Maturity Model (OMM)5, a
+CMM-like model for FOSS. QualiPSo OMM “focuses on process quality and improvement,
+and only indirectly on the product quality” (Qualipso, 2009). The project aims at
+providing supporting tools and assessment process together with the OMM, being a part
+of a larger EU-initiative which is still under development. QualiPSo draws more strongly
+on traditional quality models, in this case CMM. Another second generation model is
+(iii) the SQO-OSS quality model6 – the Software Quality Observatory for Open Source
+Software (SQO-OSS) which is a platform with quality assessment plug-ins. SQO-OSS has
+developed the whole assessment platform from scratch, aiming at an integrated software
+quality assessment platform. It comprises a core tool with software quality assessment
+plug-ins and an assortment of user interfaces, including a web user interface and
+an Eclipse plug-in (Samoladas et al., 2008). The SQO-OSS is being maintained, but the
+quality model itself is not yet mature, and developers focus mostly on an infrastructure
+for easy development of plug-ins."
+(http://publications.nr.no/Compendium-INF5780H11.pdf)
+
+
+=Discussion=
+
+
+==Comparing the Assessment Methods==
+
+QualOSS and OpenBRR both cover different views of quality, (i) the product view on
+quality, (ii) the manufacturing, or process view on quality, and, to some smaller extent,
+(iii) the user view on quality.
+
+When the scope is defined, QualOSS has a large set of predefined metrics and indicators
+based on GQM, the Goal Question Metrics approach. OpenBRR has a much smaller metrics
+set, containing 27 different metrics, which are predefined like for QualOSS. However,
+flexibility arises in OpenBRR when defining the feature set for the Functionality category,
+both in choosing the actual features (whether to include them as standard or extra), and
+setting their importance (1-3). This involves human experts into the OpenBRR process.
+Such type of interaction is not present in the QualOSS assessment, where detailed metrics
+(e.g., involving coding standards) are defined (at least for some programming languages).
+While the QualOSS assessment is a highly automated measurement and uses a number of
+measurement tools, OpenBRR is based solely on the skills of the evaluators. There is also
+a difference in the output of the two quality assessment models: while OpenBRR outputs
+a score, QualOSS also outputs trend indications, e.g., the evolution of the number of lines
+of code between releases.
+
+The risk of basing the whole assessment on manual work is that critical information can
+be missed. This is also the case for QualOSS, especially in the cases where no suitable
+tools are present. Then the options are either to perform the assessment on a manual
+basis or to do the assessment without full coverage of topics. Since the metrics and measurements
+are more complex than for OpenBRR the last option might sometimes be the
+right one. Whenever the tool support is working as intended the QualOSS is a source of
+more insight compared to a method like OpenBRR.
+
+The role of proper quality assurance should be emphasised for both models, including
+interviews and discussions before and after the assessment. This in order ensure that the
+assessment methodology captured the relevant items, and to check if the results of the
+highly automated QualOSS assessment are good and understandable enough to convince
+people with expertise knowledge of the FOSS endeavours under scrutiny.
+
+In the case of OpenBRR, it is assumed by the model that there is a real need and specific
+business case as basis for the rating to answer questions like: Who is the customer? What
+are his/her needs? What is the level of technical knowledge of the customer? What is the
+available or preferred technical platform to run the software on? Without the answers to
+these questions, the final score becomes too much a product of the opinions and assumptions
+of the evaluators, especially obvious when choosing functionality set, evaluating
+the user experience, and of course setting all the weights for relative importance. The
+QualOSS Standard Assessment (version 1.1.), which was used in our case, did choose to
+configure the evaluation towards the needs of a company making business of Asterisk
+services to end user organisations. But context granularity and fine tuning prior to the
+assessment could also be higher in this case.
+
+Another challenge and potential problem when working with measurements and metrics
+is to define the difference between a good result, a bad result, and a neutral result. In
+the case of metrics related to release cycles in “Software Technology Attributes: Quality”
+in OpenBRR, they might be too rigid in the view of preferable release cycles. The same
+applies to QualOSS, when it comes to, e.g., reporting of bugs and vulnerabilities. A trend
+indicating a rise in bug or vulnerability reporting has several potential interpretations,
+and all of them are not necessarily negative. Asterisk has experienced extreme growth
+in number of users the last couple of years. As a consequence, more functionality options
+have been explored and more hidden errors are found. A challenge for assessment
+models like QualOSS and OpenBRR is not to punish more complex systems and systems
+with a large user community. Large projects with active communities will probably get
+many bug and vulnerability reports while a small project with very few users may not get
+many. This does not in any way mean that the smaller project is more business-ready or
+mature. The assessment results on bug and vulnerability reporting should be calibrated
+against the size of the user community, not only the developer community. A rising trend
+in reporting might indicate a rise in users, which is not necessarily bad.
+The question whether or not the second generation quality model can outperform the
+first generation model can only be answered with ambiguity. Both quality models have
+different strengths and weaknesses.
+
+
+'''Concluding Remarks'''
+
+We have presented two so-called FOSS quality and maturity models aimed at assessing
+quality and risks related to FOSS. Results from practical application of the two methods
+have also been presented and discussed, using OpenBRR and QualOSS. Both models
+(methods) are quantitative, based on data measurements related to predefined metrics.
+The data sources, covering both the software and its community, are reachable on the
+Internet. Based on the actual measurements (data collection on the Internet), scores are
+computed according to predefined score schemes. The aim of both models is to assess the
+quality and the risks associated with some piece of FOSS software, intended to be used
+in a specified business context.
+
+OpenBRR allows assessment of a limited set of quality metrics, based on manual data
+collection. QualOSS, in contrast, involves hundreds of quality metrics. Here, supporting
+software tools play a prominent role in the data collection. Both models can to some extent
+be configured towards certain business needs: For OpenBRR by altering the weights
+of quality characteristics and their associated metrics, and by the addition of a feature
+list. For QualOSS by configuring the GQM template for each of the leaf characteristics
+according to predefined viewpoints, modes, and usage value sets.
+
+Based on our experiments we find OpenBRR to be a useful tool with small resource requirements
+and low time consumption. It needs general knowledge about where to find
+information on the Internet combined with deep domain knowledge on the part covering
+functionality. The QualOSS assessment is a highly automated measurement and
+uses several software measurement tools. Expert skills on functonality are not needed"
+here, compared to OpenBRR. But there has to be experts on the collection tools present.
+Whenever the tool support is working as intended, the QualOSS is a source of more insight
+compared to a method like OpenBRR. Whenever the automated tool support is not
+sufficient, which happened in parts of the QualOSS assessment, we needed to perform
+relatively time-consuming manual work.
+
+Overall, it appears that human expertise, especially knowledge of context conditions and
+development trends with a FOSS endeavour, is decisive for the usability of both quality
+models. OpenBRR relies on this input by design. QualOSS tried to largely eliminate such
+direct input on the measurement process but, occasionally, seems to rely on it when tools
+are not available or when the results of the assessment must be interpreted.
+Unfortunately, the reported OpenBRR activities are low and the community inactive.
+
+This is disappointing as it seems to be potentially a useful tool with small resource requirements.
+Similarly, the community support for QualOSS has still not reached its full
+potential, and there is scope to further develop this methodology. Time will show if an
+active community will grow around QualOSS or be regenerated around OpenBRR, or if
+another quality model will appear. It is at in any case clear that there is a real need for
+sound quality models in the market, helping actors make their decisions."
+(http://publications.nr.no/Compendium-INF5780H11.pdf)
+
+=More Information=
+ 
+# [[Open Business Readiness Rating]]: The Open Business Readiness Rating model, OpenBRR, consists of a set of themes or categories each containing a set of metrics.
+# [[QualOSS]] 
+
+
+[[Category:Peerproduction]]
+
+[[Category:Free Software]]

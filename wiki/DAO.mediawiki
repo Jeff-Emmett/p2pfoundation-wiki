@@ -1,0 +1,609 @@
+'''= this page refers both to a generic concept, i.e. the [[Decentralized Autonomous Organization]] 
+
+Not to be confused with a specific (failed) investment project, [[The DAO]]'''
+
+
+=The concept=
+
+'''1.'''
+
+"A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community, which backs its future growth by purchasing DAO tokens using ETH, the fuel of the Ethereum network."
+(https://slock.it/dao.html)
+
+
+'''2.'''
+
+"The DAO phenomenon is an example of the networked firm in practice. It has been described as an organizational structure with an automated centre (standardized protocol) and human edges. This organization is powered by smart contracts which many believe, due to the nexus of contracts theory of the firm, can replicate the governance capabilities of the firm. For this reason, it has been speculated that blockchains will kill the traditional firm, rendering its boundaries porous and fluid and decentralizing the activities that once resided within its hierarchies."
+
+(https://daobase.org/orgtech-and-the-networked-firm/)
+
+
+==Description==
+
+'''0. Adrien Book:'''
+
+"DAOs are how humans come together as a group to make decisions in the digital world. They do so with the help of two key tools. Firstly, the rules that govern the organization are expressed as a series of digital “IF/THEN” statements, that are then coded directly into a blockchain (thus rendering them both auditable and permanent). Secondly, voting shares are issued to stakeholders in the form of “digital governance tokens” — also recorded on a blockchain. Doing things this way replaces, in theory, both the legal mumbo-jumbo of today’s organizations (rules are coded) and their hierarchical nature (everyone has a voice)."
+
+(https://cult.honeypot.io/reads/everything-wrong-with-daos/)
+
+
+
+'''1. Ananth Natrajan and Nitin Gaur:'''
+
+"A broad definition of a DAO would be an organization that records its membership, rules and responsibilities on an immutable ledger enabled by blockchain technology. Its charter and evolution are public and unchangeable. Generally, joining requires resources and community membership of sorts, in the form of tokens, to either participate or vote as a participant. Tokens are denominated in monetary assets (fungible or nonfungible tokens), whether crypto or fiat. Acquisition of tokens, in most cases, requires either time and talent participation, or a buy-in using fiat or crypto.
+
+DAOs provide a unique structure that naturally supports a creator economy, in which an economic model supports a structure through which you rent your talent and time, obtain flexibility and earnings, and leverage it to facilitate fractional ownership in the system supported and governed by the community. Blockchain and, by association, DAOs embody a natural governance structure for borderless online collaboration on crypto-native projects by digital natives which, incidentally, can be leveraged by traditional organizations that embrace the principles, similar to how brick-and-mortar businesses found an on-ramp to digital equivalents in the Web 2.0 era."
+
+(https://cointelegraph.com/news/daos-are-the-foundation-of-web3-the-creator-economy-and-the-future-of-work)
+
+
+'''2. [[Primavera De Filippi]]:'''
+
+"While some argue that Bitcoin is effectively the first DAO (Buterin 2014)(Hsieh et al., 2019), the
+term is today understood as referring not to a blockchain network in and of itself, but rather to
+organisations deployed as smart contracts on top of an existing blockchain network. Although there
+have been several attempts at instantiating a DAO on the Ethereum blockchain (Tufnell, 2014), the
+first DAO that attracted widespread attention is a 2016 venture capital fund confusingly called
+“TheDAO” (DuPont, 2017). Despite the short-life of the experiment , TheDAO has inspired a variety
+of new DAOs (e.g. MolochDAO, MetaCartel), including several platforms aimed at facilitating DAO
+deployment with a DAO-as-a-service model, such as Aragon, DAOstack, Colony or DAOhaus.
+The DAO concept has enabled other derived terms: the term Decentralized Collaborative
+Organization (DCO) is typically referred as a DAO with strengthened collaborative aspects (Hall,
+2015)(Schiener, 2015)(Davidson, de Filippi and Potts, 2018); a more elaborate concept derived from
+those attempts is “Distributed Cooperative Organization” (DisCO), which highlights its co-op and
+democratic nature (DisCO Manifesto, 2019).
+
+...
+
+
+There are multiple coexisting definitions of DAOs in use within the industry. The most relevant are
+the following:
+
+● Buterin, in the Ethereum white paper (Ethereum, 2013), defines a DAO as a “virtual entity
+that has a certain set of members or shareholders which [...] have the right to spend the
+entity's funds and modify its code”. That is, the aim is to replicate “the legal trappings of a
+traditional company or nonprofit but using only cryptographic blockchain technology for
+enforcement”.
+
+● Some of the most popular DAO platforms, such as DAOstack and Aragon define a DAO
+similarly as ”a network of stakeholders with no central governing body” (https://daostack.io),
+“which is regulated by a set of automatically enforceable rules on a public blockchain”
+(https://aragon.org/dao). Conversely, other DAOs platforms have opted to use a different
+terminology as a proxy to a DAO, such as the “colonies” of Colony (https://colony.io) or
+DAOhaus’ “magic internet communities” (http://daohaus.club).
+
+In the academic literature on DAOs, although some works avoid picking a definition (Norta et al
+2015) or refer to industry definitions (DiRose and Mansouri, 2018), multiple attempts have been made
+at providing a specific definition of DAOs."
+
+([https://eprints.ucm.es/62306/1/IPR%20Glossary%20-%20Decentralized%20Autonomous%20Organizations.%20Glossary%20of%20Distributed%20Technologies..pdf])
+
+
+'''3.'''
+
+"DAOs can be defined as “non-hierarchical organizations that perform and record routine tasks on a peer-to-peer, cryptographically secure, public network, and rely on the voluntary contributions of their internal stakeholders to operate, manage, and evolve the organization through a democratic consultation process” (Hsieh et al., 2018). '''The DAO thereby has two governance components'''. The first is ''the internal governance component, which is characterized by non-hierarchical modes of governance and has quasi-democratic features''. These features are quasi-democratic rather than democratic because there is no guarantee of the principle “one person, one vote.” For example, an actor can accumulate more votes than others, thus tipping voting balance in its favor. Dependent on its design, the weight of voting rights can be based on several different parameters. Within the DAO, voting weight can be dependent on the ownership of tokens, the weight can be capped at certain levels, etc. (Quiniou, 2019, p. 84). ''The external governance component is the reliance on clusters of servers and individual nodes for the functioning of the network and decision-making''. In essence, actors can exert undue influence on decision-making, and in a stronger way than other actors, if they control more nodes and server capacity. Furthermore, developers themselves can offer code upgrades through open participation and self-selection, and miners can vote on protocol changes based on computing power (Hsieh et al., 2018)."
+
+(https://www.frontiersin.org/journals/blockchain/articles/10.3389/fbloc.2020.00012/full)
+
+==Characteristics==
+
+'''1. [[Primavera De Filippi]]:'''
+
+"Most of these definitions include the following distinctive
+characteristics:
+
+● DAOs enable people to coordinate and self-govern themselves online. Although no
+mention is made as to the minimum size of the group, the term “organization” is generally
+understood to refer to an entity comprising multiple people acting towards a common goal ,
+rather than a legally registered organization.
+
+● A DAO source code is deployed in a blockchain with smart contract capabilities like
+Ethereum—arguably always a public blockchain.
+
+● A DAO’s smart contract code specifies the rulesfor interaction among people —although it
+is unclear to which extent there may be other governance mechanisms that can affect or
+overrule such code.
+
+● Since these rules are defined using smart contracts, they are self-executed independently of
+the will of the parties.
+
+● The DAO governance should remain independent from central control: e.g. some
+definitions specifically refer to self-governed (De Filippi and Hassan 2018), self-organizing
+(Singh & Kim 2019), peer-to-peer and democratic control (Hsieh et al., 2018).
+
+● Since they rely on a blockchain, DAOs inherit some of its properties, such as transparency,
+cryptographic security, and decentralization."
+
+([https://eprints.ucm.es/62306/1/IPR%20Glossary%20-%20Decentralized%20Autonomous%20Organizations.%20Glossary%20of%20Distributed%20Technologies..pdf])
+
+
+'''2. Roxine Kee:'''
+
+"The essay quotes art curator Ruth Catlow as saying, “We need to be building cultures before structures,” while commenting that regardless of the organizational structure, “DAOs ultimately coordinate through collective vibes.”
+
+And this is true. At their bones, DAOs are just a group chat and a multi-signature bank account or wallet. These chats tend to happen on Discord, the multisig through Gnosis Safe. The token comes much later when, as Kruetler notes, the DAO needs it as a mechanism for 3 functions:
+
+#Bootstrapping funding
+#Distributing governance rights
+#Aligning ecosystem of DAOs
+
+
+Kreutler, borrowing from Vitalik Buterin, describes DAOs as organizations where a software protocol sets the rules for how the DAO operates, “placing automation at its center and humans at its edges.”
+
+They go on to describe the latest iteration of DAOs as “a voluntary association with the operating principles of digital cooperativism.“ The only difference between DAO contributors and church volunteers is that the former get rewarded in token and the latter in ethereal, congregational brownie points. 
+
+Even if DAOs wouldn’t describe themselves as hippie co-ops, they definitely subscribe to the principles of one, particularly when they highlight member ownership. One interesting reference in the essay was to the Rochdale Principles from 1844. Modern cooperatives still use these 7 principles that can serve DAOs, as well: 
+
+#Voluntary and Open Membership
+#Democratic Member Control
+#Member Economic Participation
+#Autonomy and Independence
+#Education, Training, and Information
+#@Cooperation among Cooperatives
+#Concern for Community "
+
+(https://www.roxinekee.com/blog/-a-prehistory-of-daos-annotated)
+
+
+===DAO's are institutions===
+
+Joshua Tan:
+
+"Institutions are defined as stable patterns for regulating human behavior. Lots of things are institutions, including many things that one does not normally think of as institutions. Courts, markets, and contracts are institutions, but so is the design of the aisles in your local supermarket or even a baby’s reflex to cry. Code, too, is a kind of institution, insofar as it regulates human behavior. DAOs are computational institutions — they facilitate governance through a series of smart contracts — and like any institution they should be designed with those being governed in mind. The modern approach to institutional design was pioneered by Elinor Ostrom and others in the context of common-pool resources, but here we’ll focus explicitly on DAOs and other computational institutions. Further, we will distinguish between classes of institutions (e.g. markets, legal associations, DAOs) that follow an institutional pattern, and actual instances of institutions (the Superior Court of New Jersey, the reputation feature on Reddit). When we talk about DAO institutions in this article, we’ll be examining them as an “institutional pattern”, a class of institutional design that can have widely varying instantiations.
+From an institutional perspective, DAOs are not just bundles of smart contracts; they are also social organizations, entities composed of individuals gathered for a common purpose. This implies that the bundle of smart contracts that defines the DAO is not a complete representation of that DAO; the same code, used by different groups of people, can lead to vastly different organizations. The group of people participating in the DAO can choose to abide (or not abide³) by the rules as they are set out, and they can also collectively decide to change how the organization behaves by amending the DAO’s rules. In MolochDAO, for example, decisions regarding funding grants or accepting new members would be made and executed according to the predefined rules, whereas a decision to switch from 1-token-1-vote to 1-person-1-vote would be an adaptation to those rules. The process of constitutional amendment is amongst the most sensitive aspects of an organization’s rules."
+
+(https://medium.com/commonsstack/exploring-daos-as-a-new-kind-of-institution-8103e6b156d4)
+
+
+===DAO's have [[Computational Constitutions]]===
+
+Joshua Tan:
+
+"Collectively, these on-chain (and off-chain) rule sets, smart contracts, and social decision processes are described by a constitution: a body of values and rules which govern the collective decision-making process of an organization. A constitution may be organized into one centralized document, but in many organizations it is distributed across several documents and instructions, from formal charters to codes of conduct to pinned posts by authoritative members. In an opt-in organization like a DAO, a constitution serves as a contract for participation — by participating, one implicitly or explicitly agrees to abide by the organization’s constitution. By regulating decision making in an organization, constitutions help us set the principles and rules for how we make rules (e.g. rules of order for a legislature), modify existing institutions (e.g. amendments to voting eligibility), and even design new institutions (e.g. creating an independent monitoring body). Good constitutions help institutions adapt to new circumstances, new memberships, and even new code.
+
+Lastly, a computational constitution, implemented via constitutional code, is that portion of a constitution which is made up of software. For example, the way that a DAO runs its online voting processes (including user authentication, quorums, token weighting, proposal timing, etc) is part of its computational constitution. The underlying blockchain of a DAO has its own computational constitution, namely its consensus protocol. A computational constitution (for example, a smart contract) automates the administration of the decision-making procedure; this enforces the process but not the outcome. Among other benefits, the digital nature of DAO governance allows us to capture and translate repeatable governance patterns — constitutions as well as more basic rules and proposals — to serve as best practices for applications in various contexts. It is within the context of these patterns that we wish to develop an ontology of institutional economics that fits the DAO ecosystem, along with a map of how various projects could collaborate on and across these different layers of patterns."
+
+(https://medium.com/commonsstack/exploring-daos-as-a-new-kind-of-institution-8103e6b156d4)
+
+
+===The [[Principal Agent Problem]]===
+
+Roy Walker:
+
+"The principal-agent problem occurs when one person (“the agent”) makes decisions on behalf of another person or entity (“the principal”) and does not proportionately take on the risk of those decisions. The classic example is a public company with a traditional top-down organizational structure. In this case, the CEO often takes on much more risk than the owners (shareholders) want him to because he is poised to benefit from the upside and will not experience as much of the downside if his risky decisions do not pay off. [[DAO]]s seek to mitigate this by democratizing management and requiring consensus for each decision."
+
+(https://medium.com/all-things-venture-capital/intro-to-vc-the-history-of-blockchain-17ec65dfcf78)
+
+==Typology==
+
+Coopahtroopa:
+
+===DAO Operating Systems===
+
+The first chapter of DAOs are the operating systems used to create them.
+
+These projects offer different templates, frameworks and tools for communities to pool resources and start their first DAO.
+
+They commonly offer smart contracts and interfaces to facilitate on-chain actions for decentralized communities.
+
+DAO Operating Systems make it easy for anyone to start a DAO with limited technical skills.
+
+
+===Grants DAOs===
+
+The first real use case for DAOs were grants.
+
+Communities donate funds and use a DAO to vote on how that capital is allocated to various contributors in the form of governance proposals.
+
+Governance of Grants DAOs was originally conducted through non-transferable shares, meaning participation was largely motivated by social capital over financial returns.
+
+Grants DAOs show that niche communities are more nimble in capital allocation than formal bodies.
+
+
+===Protocol DAOs===
+
+Protocol DAOs transition power from a core team into the hands of the community, spawning a new way for projects to issue fungible tokens into the market.
+
+Whereas the first chapter of DAOs featured non-transferable shares, Protocol DAOs were the first to issue transferable ERC20 tokens with a secondary market value.
+
+These tokens are commonly used to govern protocols, meaning tokenholders have the sole authority to propose, vote on and implement changes to the underlying mechanics of the network.
+
+Projects commonly vote on how to distribute tokens, thus opening the doors to liquidity mining, yield farming, fair launches and everything in between.
+
+Protocol DAOs provided a framework for any network to issue a token that was (hopefully) owned and operated by its community.
+
+
+===Investment DAOs===
+
+With Protocol DAOs bringing new tokens into the world, it only seemed logical that groups band together to invest in them.
+
+After a long period of non-profit DAOs, investment clubs flipped the switch for members to focus on generating a return.
+
+While these DAOs come with a lot more legal restrictions than a Grants DAO, they showed that any group of individuals could come together to invest larger amounts of capital with low barriers to entry.
+
+Investment DAOs allow members to pool capital and invest in projects at their earliest stages.
+
+
+===Service DAOs===
+
+With so many tokens coming into the world, projects need talent. Service DAOs are talent allocators, using on-chain credentials to funnel and allocate resources from one DAO to another.
+
+Service DAOs create decentralized working groups for individuals to work for the open internet - essentially acting as crypto-native talent agencies.
+
+From legal to creative, governance to marketing, development to treasury management, Service DAOs create funnels to contract web3 mercenaries. Work is often rewarded with ERC20 tokens - providing ownership over the value created for a network.
+
+Service DAOs explore the future of work, and what employment looks like in crypto-native world.
+
+
+===Social DAOs===
+
+What does it mean to be a member of a DAO?
+
+In an industry dominated by speculation, Social DAOs focus on social capital over financial capital. Social DAOs are the natural evolution of group chats, where friends become co-workers.
+
+Where social media turned everybody into a media company, Social DAOs turn every group chat into a digital business.
+
+They challenge what it means to be a part of a community and offer ways to lean into becoming a part of a digitally-native tribe.
+
+Social DAOs show that there is more to crypto than making a quick buck, and that the internet is the best place to meet people with similar interests.
+
+
+===Collector DAOs===
+
+NFTs. You’ve heard of them - and for a while, you couldn’t ignore them.
+
+On the back of mainstream adoption, Collector DAOs popped up to collect them.
+
+Curator groups act as the underlying glue behind a specific artist, platform or series to help establish longevity.
+
+Collector DAOs seek to curate which NFTs have long-term value.
+
+
+===Media DAOs===
+
+In an age when information is globally accessible, ownership of the narratives through which they are distributed should be, too.
+
+Media DAOs give that power back to those who consume the content.
+
+They break down the way in which writers, streamers, and readers engage with the content they release. Whether it be media mining programs to incentivize contributions or governance over which topics make the front page, Media DAOs turn consumption into a two-way street.
+
+Media DAOs share an outlet’s open agenda to spread awareness and news."
+
+(https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw)
+
+
+More:
+
+*  Types of DAO, https://www.alchemy.com/blog/types-of-daos
+
+==Example==
+
+===What are some interesting DAO projects?===
+
+Theodor Marcu:
+
+'''What are some interesting DAO projects?'''
+
+“Like traditional organizations, DAOs come in all shapes and sizes. However, there are a few categories of DAOs that have been particularly popular during the past few years. These categories include decentralized funds for investments and grants, crypto projects focused on decentralized finance (DeFi), and art (using Non-Fungible Tokens, aka NFTs).
+
+MakerDAO is a prominent example of a DeFi project governed by a DAO. Maker is a stablecoin protocol that allows users to lend and borrow crypto without the help of third parties. Maker is governed by a DAO that allows the holders of its token to change the rules of the protocol as well as provide the team with a mandate when it comes to community decisions. Currently, over $6.5 billion is locked into Maker.
+
+Besides Maker, other DeFi projects use or have adopted DAOs for their governance. These include Compound, which is a protocol for algorithmic interest rates on your savings, and Yearn.finance, which helps users navigate the increasingly complex landscape of DeFi products (similar to a robo-advisor like Wealthfront). Together, these projects have over $11 billion locked in their tokens.
+
+Another class of projects that leverage DAOs is that of automated market makers (AMMs). This class notably includes projects like Curve and Uniswap, which use liquidity pools in order to enable users to trade assets without the help of a centralized order book. Unlike a centralized exchange, using a DAO allows the most active and energetic users of these projects to help steer the direction of their organization, which leads to more active community involvement.
+
+In addition to financial instruments, DAOs have also been used to manage funds that seek to invest in specific types of projects. One of these funds is MolochDAO, which seeks to fund projects that advance the Ethereum blockchain ecosystem and increase collaboration between different parties. Similarly, PleasrDAO is a group that leverages a DAO with the goal of buying art in the form of NFTs. Most members of this group have never met, and some are still anonymous, but this hasn’t stopped them from buying an NFT of Edward Snowden for over $5M in April.”
+ 
+(https://1729.com/daos)
+
+
+==DAO Tools==
+
+See also: [[DAO Governance Tools]]
+
+
+'''1. Theodor Marcu:'''
+
+“The popularity of DAOs has also led to the appearance of projects focused on helping people set up DAOs. For example, Aragon is a DAO focused on building tools for creating and managing DAOs. Aragon’s products include a protocol for creating DAOs as well as a voting solution for managing community proposals and enacting them. DAOs like Aragon enable users to add DAO-like capabilities to their own projects without having to worry about the complexities of writing smart contracts.
+
+The set of popular DAO tools includes DAOHaus, which allows users to find other DAOs. DAOHaus users can also create a DAO using a predefined set of parameters like the primary token, the proposal velocity, the voting period, and proposal mechanics like deposits and rewards. Other tools that focus on enabling DAOs include Snapshot (proposal voting management) and DAOStack (tools for launching a DAO).
+
+A few projects also focus on providing high-level information about other DAO-related projects. These include defillama.com, which provides information about the amount of money locked in the top DAOs, and llama.community, which is a hub that allows users to find interesting DAO projects.”
+ 
+(https://1729.com/daos)
+
+
+'''2. Kei Kreutler:'''
+
+"In its simplest form, DAO tools have been described as a group chat and a bank account (11). In 2021, this generally takes the form of a Discord server and a Gnosis Safe Multisig, which is a web3 platform for creating multi-signature accounts. Multi-signature accounts allow pseudonymous groups, across jurisdictions, to pool and manage funds within minutes, a capacity far beyond a traditional joint bank account. This “minimum viable” DAO, or MVD, tooling shone in the first half of 2021 with initiatives like PleasrDAO.
+
+...
+
+Though a group chat and multi-signature account may be enough to initialize a DAO mission, a token often becomes the next step toward embracing the principles of a digital cooperative. For example, PleasrDAO issued $PEEPS, a token distributed internally to represent members’ stake in the collection (12), which they are considering making public to fractionalize ownership of their collection."
+
+(https://gnosisguild.mirror.xyz/t4F5rItMw4-mlpLZf5JQhElbDfQ2JRVKAzEpanyxW1Q)
+
+
+===DAO Tool Examples===
+
+Kei Kreutler:
+
+"PleasrDAO is a collective that came together to bid on an NFT by the artist pplpleasr. Given escalating NFT digital art auction prices, the idea behind PleasrDAO was simple: a collective of fans using a multi-signature account could pool funds to place bids, and through holding in common, compete with other major bidders to win the auction. After winning their first eponymous auction, PleasrDAO went on to collect other works such as Stay Free, the NFT by Edward Snowden charitably supporting independent press, for a total of 2.2K ETH or USD 5.4 Million equivalent at the time. Their repeatedly successful missions means that while still acting as collectors, PleasrDAO will broaden their scope to begin incubating projects by their community. Initiatives like PleasrDAO most promisingly challenge institutional collectors through their expanded membership, inviting artists they collect like pplpleasr to become members of the collective in turn."
+
+"Similar experiments like PartyDAO employ a token, with the $PARTY token representing membership to a group chat, governance rights, and co-ownership of productive value managed by the DAO. It’s important to note PleasrDAO and PartyDAO are not flat hierarchies, as they both have elected groups of individuals that manage their multi-signature account treasuries. Though PleasrDAO and PartyDAO focused on shorter missions initially, they are both evolving toward a longer term vision, as collectors, investors, and incubators that use tokens to represent co-ownership in the spirit of a digital cooperative. Tokenization creates both opportunities and challenges for the networks to come."
+
+(https://gnosisguild.mirror.xyz/t4F5rItMw4-mlpLZf5JQhElbDfQ2JRVKAzEpanyxW1Q)
+
+
+===Directory===
+
+Via Coopahtroopa:
+
+"Across the board, a suite of tools are acting as the defacto standard for most DAOs today.
+
+Gnosis Safe - Multisig wallets commonly used to manage community treasuries.
+
+Snapshot - Off-chain voting platform for easy token-based governance.
+
+Discourse - Forum commonly used to discuss governance proposals.
+
+CollabLand - Bots providing token-gated access and tipping to community chat groups.
+
+Coordinape - Coordination game to determine which contributors(s) deserve token rewards.
+
+Parcel - Treasury management to easily track and send payments.
+
+SourceCred - Instance to track community participation and reward active members.
+
+Mirror - Finance creative projects through tokenized crowdfunds.
+
+Tally - Governance dashboard to track on-chain voting history across different protocols.
+
+Boardroom - Governance hub for tokenholder management to empower key decision making.
+
+Sybil - Create and track on-chain governance delegation.
+
+RabbitHole - Reward tokens for completing specific on-chain tasks.
+"
+
+(https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw)
+
+
+==Status==
+
+Igor Calzada, 2023:
+
+(in the context of [[E-Diasporas]])
+
+"DAOs are organizations run by rules encoded as computer programs on a blockchain network, enabling decentralized decision-making and management (Zichichi et al., 2022). They can empower diaspora communities to collaborate, pool resources, and make collective decisions without relying on centralized authorities (Nabben, 2022). DAOs provide opportunities for diaspora members to engage in governance, investment, and philanthropic initiatives, fostering a sense of ownership and active participation. More recently, Spelliscy et al., (2023, p. 10) define DAOs as “community-led organizations with no formal central authority that use blockchain technology in some capacity, usually to establish the rules of the organization, to record and execute decisions made by members, or to manage a treasury controlled by members.” As such, they have the potential to provide e-diasporas with a more democratic and transparent way to manage their affairs. DAOs and DAO tooling have developed at an exponential rate. There are more than 12,000 DAOs, and in 2022 the total value of DAO tokens stood at $21 billion (Spelliscy et al., 2023). However, there is still much research to be done on the potential impact of DAOs on e-diasporas. DuPont (2017) traced the discursive strategies of the developers and the community of investors and found that many community members acknowledged the enormous complexity of DAOs. The World Economic Forum (WEF, 2023) has recently published reports on DAOs and their potential impact on various industries, including finance, supply chain management, and healthcare. To illustrate the potential of this disruptive technology, this article presents the ongoing DAO that is being developed around the HanHemen e-diaspora platform (www.hanhemen.eus/en). This e-diaspora platform has been developed in collaboration with the DAO Research Collective at Stanford University, where the author of this article has been regularly working with scholars, practitioners, and policymakers (Stanford DAO Workshops 2022 and 2023, 2023). This case study and illustration have been thoroughly examined (Calzada, 2023a) as part of a Fulbright Award to carry out fieldwork and action research in California, Idaho, and Nevada (Calzada & Arranz, 2022). The basic decentralized infrastructure is driven by blockchain to ensure the implementation of privacy wallets. Following the rationale presented in the insightful article by Mahula et al. (2021), HanHemen is currently being designed through an action research-driven early-adopters online workshop scheduled for April 25, 2023 (https://preview.mailerlite.com/p7a2k6k8t0). This process involves co-production with end-users, offering each of them a blockchain-driven wallet to establish varying levels of data privacy (https://xd.adobe.com/view/9358fb5f-b8bf-4575-a69b-1c2044fe81b0-c60b/screen/a4020027-80ee-4cd7-8016-f647fa942bde/). As a result, HanHemen end-users may progressively become part of a blockchain-driven DAO. In the next methodological and comparative section, these cases will be included in the analysis (Table 1): DAOstack, Democracy Earth, and DeepDAO.
+
+...
+
+
+DAOs are a relatively new phenomenon — DAOstack, DeepDAO, and Democracy Earth are among the cases presented in Table 1 — but they have the potential to make a significant impact on e-diaspora development (Spillescy et al., 2023). Here are some ways in which DAOs can be measured in relation to their contribution to e-diaspora development, either hampering or exacerbating the impacts of HD:
+
+
+DAOs can contribute positively as follows:
+
+1. Democratization of decision-making: DAOs enable e-diaspora communities to make collective decisions in a decentralized and democratic manner, can empowering diasporic citizens and increasing their engagement and investment in e-diaspora projects (Hubbard, 2023).
+
+2. Transparency: DAOs operate on a transparent, public ledger, which can enhance trust and accountability within e-diaspora communities (DuPont, 2017).
+
+3. Incentivization: DAOs provide incentives for community members to contribute their time, skills, and resources to e-diaspora projects, driving innovation and accelerating development (WEF, 2023).
+
+4. Community-driven development: DAOs are typically driven by community members with shared goals and values, leading to the development of solutions tailored to the specific needs and challenges of e-diaspora communities (Zichichi et al., 2022).
+
+
+In contrast, negative contributions can also be identified:
+
+1. Regulatory challenges: The decentralized nature of DAOs can create legal and regulatory challenges, particularly in countries where cryptocurrency and blockchain are not yet fully regulated (WEF, 2023).
+
+2. Technical complexity: DAOs can be technically complex and require significant technical knowledge to set up and maintain, limiting their accessibility to e-diaspora communities with limited technical expertise (Spelliscy et al., 2023).
+
+3. Risk of exploitation: DAOs can be vulnerable to exploitation and manipulation by bad actors, posing a risk to the security and stability of e-diaspora projects (Mathew, 2016).
+
+4. Lack of accountability: While DAOs operate on a transparent, public ledger, challenges may arise in holding community members accountable for their actions and decisions (Toscano, 2021)."
+
+(https://www.sciencedirect.com/science/article/pii/S0016328723001623)
+
+
+===What is the legal status of DAOs?===
+
+Theodor Marcu:
+
+“While DAOs are very similar to regular organizations, only a few places around the world recognize them as legal entities that benefit from the protections usually afforded to traditional organizations like LLCs. One of these places is the US state of Wyoming, which passed legislation in April that allows DAOs to register as LLCs. Similarly, the European country of Malta also recognizes DAOs as valid legal entities.
+
+However, while there is some interest in recognizing DAOs as new legal entities, these are still early days, so most DAOs operate under general partnership rules that may burden DAO members with any debts or liability faced by the DAO. To counteract this issue, people have started projects like OpenLaw, which promise a liability wrapper around DAOs that allows them to operate safely. Nevertheless, most DAOs still operate without any kind of traditional liability protection for their members.”
+
+(https://1729.com/daos)
+
+
+==Research==
+
+===On DAOs as Institutions===
+
+"Summary: As DAOs create political institutions, they confront classic coordination puzzles such as preference aggregation, credible commitments and audience costs, information asymmetry, or representation and accountability. As a unique empirical setting, DAOs can help political scientists (1) study foundational theories about political institutions and (2) generate novel theories to be tested in digital governance settings.   
+
+The potential problems of tokenized governance raise interesting questions concerning the design of durable and representative political institutions. Political institutions tend to refer to “the formal and informal rules, procedures, and organizations that govern the behavior of individuals and groups in a political system” (Hall and Taylor, 1996)—that is, the “rules of the game in a society, or more formally, the humanly devised constraints that shape human interaction” (North, 1990). Scholars have debated the implications of different types of institutional design, including separation of powers, federalism, the strategic design of non-democratic institutions, or institutional change. How might these theories map onto the design of digitally-native governance institutions? For example, does separation of powers in DAOs prevent any one entity from becoming too powerful (Montesquieu, 1748), increasing transparency and accountability (Lijphart, 2012), or does this instead result in gridlock and indecisive government action (Tsebelis, 2002)? Does dividing power between central and “regional” entities in DAOs lead to greater democratic participation, as the threat of regional secession (forking?) can create incentives for the central government to compromise and increase responsiveness (Riker, 1964)? In order for institutional change to occur in DAOs—where change can occur much more rapidly—must there still be significant buy-in from political elites and a credible commitment by political actors to respect the new institutional rules (Weingast, 1995)? 
+
+How can DAOs avoid elite interest capture? For example, non-democratic regimes will sometimes create electoral institutions in order to gain information about who to trust among the ruling elites, meaning these institutions are little more than performative “window-dressings” of democracy designed to promote non-democratic regime survival (Gandhi, 2008).
+
+Other research has examined how despite the same institutional composition, variation in the levels of “civicness” explains why some regional governments are more efficient and more responsive (Putnam, 1993). Recent scholarship has also argued that the disruptive Schumpeterian consequences of blockchains make it an institutional technology rather than a general purpose technology, and that blockchains themselves are an instance of institutional evolution (Davidson et al., 2018)."
+
+([https://docs.google.com/document/d/1LvqvarU951r9dHMif4dhXanmkq_eQ_k5xTZC5-t7lkM/edit])
+
+
+==Discussion 1==
+
+[[Primavera De Filippi]]:
+
+"The use of the term “decentralized autonomous organisation” or DAO is now fairly established in the
+blockchain space, yet there are still many misconceptions and unresolved issues in the discussion
+around the term. 
+
+(1) First of all, with regard to the “decentralization” aspect of a DAO, it is unclear
+whether decentralization only needs to be established on the infrastructural layer (i.e. at the level of the
+underlying blockchain-based network) or whether it also need to be implemented at the governance
+level (i.e. the DAO should not be controlled by any centralized actor or group of actors). 
+
+(2) Second, it is unclear whether a DAO must be fully autonomous and fully automated (i.e. the DAO should operate without any human intervention whatsoever), or whether the concept of “autonomy” should be
+interpreted in a weaker sense, (i.e. while the DAO, as an organization, may require the participation of
+its members, its governance should not be dependent on the whims of a small group of actors). 
+
+(3) Third, there are some debates as to when the community of actors interacting with a smart contract can
+be regarded as an actual “organization” (independently on the legal recognition). For instance, it is
+unclear whether the mere act of transacting with a smart contract qualifies as an organisational activity,
+or whether a stronger degree of involvement is necessary, such as having a governance model or
+collective interactions amongst participants.
+
+
+The latter has triggered important discussions in the blockchain and legal field, as regards whether a
+DAO could be considered as an entity separate from the human entities that operate it (i.e. as a legal
+person) or whether it can only be considered as an entity when it is identified as such by the law (i.e.
+the law should identify a DAO as a legal person for the DAO to be considered as such). Yet, the
+common understanding today is that the “autonomous” nature of a DAO is incompatible with the
+notion of legal personhood, as legal personhood can only be established if there is one or more
+identified actors responsible for the actions of a particular entity. The discussion on whether a DAO
+should be recognized as a legal person has important implications in the legal field, as it can determine
+the extent to which a DAO can be considered as a separate legal entity from its human actors, and
+therefore the extent to which these actors can be shielded from the liabilities of the DAO."
+([https://eprints.ucm.es/62306/1/IPR%20Glossary%20-%20Decentralized%20Autonomous%20Organizations.%20Glossary%20of%20Distributed%20Technologies..pdf])
+
+
+===As a network, the DAO is in fact a state, and it needs democratic governance===
+
+Read the full article here: [[Why Networks Are States That Need Democratic Government]]
+
+Curtis Yarvin:
+
+"What's the right lesson for the decentralization community to learn from the collapse of the DAO?
+
+Perhaps the simplest lesson is that even decentralized networks need governments, and have governments. Every network is a state. Every state has a government.
+
+In Dijkstra's terms: decentralization theater considered harmful.
+
+Decentralization theater means any system that produces not decentralization, but the appearance of decentralization. Security theater is the enemy of real security; decentralization theater is the enemy of real decentralization.
+
+A network without decentralization theater is one that admits:
+* any network is a digital state with a central government.
+* any new state is born at war with full emergency powers.
+* limiting and/or eliminating governance is a slow, hard task."
+(https://urbit.org/blog/dao/)
+
+
+===[[DAO's as Digital Cooperativism]]===
+
+Kei Kreutler:
+
+"In 2021, a DAO could be described as a voluntary association with the operating principles of digital cooperativism. As voluntary associations, they are a cross-jurisdictional way for strangers, friends, or unlikely allies to pseudonymously come together toward common goals, supported by a token model, incentives, and governance. Members of a DAO can have representative ownership of its digital assets through a token, which often simultaneously acts as a governance right.
+
+Although many DAOs would not embrace the label of digital cooperative, one could say DAOs embrace cooperativism as a protocol, meaning an evolving set of relational practices that are distinct from traditional corporate structures or decentralized autonomous corporations, because they prioritize member ownership. The label cooperative is further qualified here by digital because today DAOs act primarily to coordinate around digital assets. However, as the concept of DAOs evolves in practice, its digital primacy will fade. DAOs, as we will see, also introduce new dimensions that exceed what the operating principles of a digital cooperative notionally encompass.
+
+Decentralized technology ecosystems tend to describe a phenomenon through its technical products. Yet as Ruth Catlow, co-founder of Furtherfield and DECAL decentralized arts lab, notes, “We need to be building cultures before structures” (10). While the overview below of DAO tools provides a concrete description of the concept in practice, it feels critical to keep in mind that DAOs ultimately coordinate through collective vibes."
+
+(https://gnosisguild.mirror.xyz/t4F5rItMw4-mlpLZf5JQhElbDfQ2JRVKAzEpanyxW1Q)
+
+
+===We are creating an over-monetized & over-teched society===
+
+Adrien Book:
+
+"DAOs take the concept of online communities, which have always been wild, insane places, and try to apply financial and technological rules to them. I’m not sure this improves anything. We created great things like Wikipedia and other open resources out of the sheer will to build cool things. Many in Silicon Valley believe this to be heresy. According to them, everything needs to be tracked and monetized. Smart contracts finally give them the tools to do so.
+
+After many conversations with DAO creators, I’m most worried that they continuously forget that organizations, whether decentralized or not, are human endeavors. No amount of money and tech changes this. We believe in people and leaders, in missions. We also need to care for the people in the organization. DAOs are nothing but a means to an end. Most founders need to be reminded of this.
+
+Without going into Luddite territory, we must have an open discussion about whether the internet is meant to be open and free, as it was in the 90s, or if it needs to be endlessly monetized for the sake of “democratization” (lol). I hope this article starts this conversation.
+
+...
+
+We haven’t reached a point where all these problems become apparent to all. That’s because no DAO has reached a scale at which they become existential. They are usually taken out by a scam or human greed after a few months, or become more centralized over time to enable better decision-making.
+
+I believe that DAOs have a future, as they allow us to experiment with new concepts that are sorely needed if we are to save capitalism. We need to learn from them and from the people that aim to build them. 
+
+I however have two caveats. Firstly, DAOs need to become more inclusive by offering more financial and social stability to the people who may wish to join them. Secondly, founders must realize that large corporations are not inherently evil. They have good elements; things we can learn from, and improve on. At the end of the day, DAOs are a sign of growth in the system, not a break in it."
+
+(https://cult.honeypot.io/reads/everything-wrong-with-daos/)
+
+
+=Discussion 2=
+
+
+==The Limitations of Blockchain and DAOs for Complex Economic Processes==
+
+Tiberius Brastaviceanu:
+
+ < ''smart contracts are excellent for certain trustless operations (e.g., escrows, auctions) but fail to capture the dynamics of real-world production, collaboration, and adaptive planning'' >
+
+
+===Smart Contracts: Deterministic, Rigid, and Passive===
+
+Smart contracts are finite state machines. While they enable conditional logic and self-enforcing agreements, they suffer from key constraints:
+
+
+===Lack of agency===
+
+Smart contracts cannot initiate actions; they passively await external transactions.
+
+
+===No adaptivity===
+
+They cannot learn or evolve in response to new contexts.
+
+
+===Low expressiveness===
+
+They model narrow rule-based interactions but cannot handle rich workflows, commitments, or evolving plans.
+
+
+===High operational cost===
+
+Every interaction incurs gas fees, limiting granularity and frequency of updates.
+
+
+==DAOs Are Only a Good Model for Governance Without Production==
+
+Tiberius Brastaviceanu:
+
+ < ''DAOs were designed to manage funds and collective decisions. While conceptually intriguing, most DAOs reduce governance to token-weighted voting and budget allocation'' >
+
+
+"DAOs lack:
+
+* A production grammar: DAOs manage treasuries, but not the economic processes that generate and transform valuables.
+Contextual roles and coordination: All agents are flattened to token holders; there is no representation of task-specific expertise or social embeddedness.
+
+* Traceability of contributions: There is no natively supported way to account for who contributed what, how, and with what impact.
+
+In essence, DAOs are governance shells with limited economic depth. They serve as digital cooperatives but do not embody operational infrastructures for economic activity.'
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+
+==The Blockchain Architecture's Global State Creates Consensus Bottleneck Inappropriate for the Coordination of Physical Production==
+
+Tiberius Brastaviceanu:
+
+Blockchain relies on a globally shared ledger, secured by consensus. This introduces:
+
+* Scalability issues: All agents must agree on the same state, which limits throughput.
+
+* Privacy limits: All state changes are visible to all participants.
+
+* Poor fit for diverse local contexts: Global rules enforced via consensus do not adapt well to context-sensitive collaboration.
+
+This model is inherently brittle for complex organizations with multi-scale, asynchronous, and context-specific workflows. Moreover, blockchain-based architectures are grounded in a low-level computational model (deterministic, transactional, state-machine driven) that is ill-suited for expressing complex, adaptive, multi-agent economic systems. In formal terms, blockchains are positioned near the low end of a spectrum of computational expressivity. At best, they enable finite state automation with strict constraints on complexity, timing, and semantic nuance."
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+==More information==
+
+* [[DAObase]] is a knowledge base for the Organizational Technology (OrgTech) sector.
+
+* The [[Decentralized Compensation of Labor in DAOs]]
+
+[[Category:Crypto_Governance]]
+[[Category:Crypto_Technology]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Encyclopedia]]
+[[Category:Peerfunding]]
+[[Category:Technology]]

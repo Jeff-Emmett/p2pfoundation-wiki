@@ -1,0 +1,115 @@
+<noinclude>
+<b>Formulario del P2P WikiSprint del 20 de Marzo</b>.
+
+Sartu esperientzia P2P esperientzia oinarri hartuta, besteak beste, izena.
+
+{{#forminput:form=WikiSprint20M-eu}}
+</noinclude>
+<includeonly>
+__NOTOC__
+<div id="wikiPreview" style="width: 600px; display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|WikiSprint-20M}}}
+{| class="formtable"
+! Izena:
+| {{{field|Name}}}
+| {{{field|Language|input type=text|hidden|default=Basque}}}
+|-
+! URL:
+| {{{field|Main URL|rows=90|input type=url}}}
+|-
+! Deskribapen laburra:
+| {{{field|Short description}}}
+|-
+! Xehetasunak:
+| {{{field|Details|input type=textarea|autogrow}}}
+|-
+! Zitak eta aipamenak:
+| {{{field|Discussions/Quotes|input type=textarea|autogrow}}}
+|-
+! Erreferentziak eta kanpo estekak:
+| {{{field|References/Links|input type=textarea|autogrow}}}
+|-
+! Kokapena:
+| {{{field|Contact person}}}
+|-
+! Harremanetarako emaila:
+| {{{field|Contact's person e-mail|input type=url}}}
+|-
+! Partehartzaile kopurua (gutxi gora behera):
+| {{{field|Number of participants|input type=number}}}
+|-
+! Hasiera data:
+| {{{field|Start date|input type=date}}}
+|-
+! Harremana duten proiektuak:
+| {{{field|Related projects|input type=text|autogrow|placeholder=Balioen separados por coma}}}
+|}
+
+== Kokapena informazioa==
+
+{| class="formtable"
+! Herriaren:
+| {{{field|City}}}
+|-
+! Herriko:
+| {{{field|Country}}}
+|-
+! Kokagune zehatza:
+| {{{field|Location|input type=map|zoom=1|default=0,0}}}
+|}
+
+== Kategoria ==
+
+{| class="formtable"
+|-
+! Gaiak:
+| {{{field|Topics|input type=categories|top category=P2P Domains|height=200|hideroot=on|depth=3}}}
+|-
+! Proiektu mota:
+| {{{field|Types|input type=categories|top category=P2P Entity Type|height=200|hideroot=on|depth=3}}}
+|-
+! Formatoa / Euskarria:
+| {{{field|Formats|input type=categories|top category=P2P Multimedia Directory|height=200|hideroot=on|depth=3}}}
+|-
+! Hitz gakoak:
+| {{{field|Categories/Tags|placeholder=Balioen separados por coma}}}
+|}
+{{{for template|MC}}}
+== Kategorizatu MoveCommons ==
+<img style="float:right; margin: 0 0 10px 10px;" src="http://movecommons.org/mc/0.1/images/logo-pp.png">
+Galderak erantzun beheko ekimena proiektua [http://movecommons.org/es/ MoveCommons] proposatutako eskema kontuan izateko. Duzu nola Markatze sistema buruzko galdera baduzu, [http://movecommons.org/es/preview/ esteka honetan] bisitatzea gomendatzen dugu.
+
+=== Ditu irabazi-asmorik gabeko (Profit) irabazi-asmorik gabeko ekimen bat da (irabazi-asmorik gabeko)? ===
+{|
+| {{{field|mc1|values=Non Profit,For-Profit|input type=radiobutton|mandatory|default=Non Profit}}}
+|}
+
+=== Ekimen honen emaitza jolastu edo esklusiboak dira? ===
+{|
+| {{{field|mc2|values=Exclusive,Reproducible|input type=radiobutton|mandatory|default=Reproducible}}}
+|}
+
+=== Indartzea Commons (Commons) edo ez (Other Aims)? ===
+{|
+| {{{field|mc3|values=Reinforcing the Commons,Reinforcing other aims|mandatory|default=Reinforcing the Commons|input type=radiobutton|show on select=Reinforcing the Commons=>type}}}
+|}
+<div id="type">
+{|
+! Nolako commons lotutako?:
+| | {{{field|mc3e|values=Nature, Body/Health,Town/Community/Society,Digital|input type=radiobutton|mandatory|default=Nature}}}
+|}
+</div>
+
+=== Gobernuaren ordezkari / bertikala edo horizontala (Grassroots) formulario bat ditu? ===
+{|
+| {{{field|mc4|values=Representative,Grassroots|input type=radiobutton|mandatory|default=Grassroots}}}
+|}
+{{{end template}}}
+
+
+{{{end template}}}
+
+{{{standard input|summary}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

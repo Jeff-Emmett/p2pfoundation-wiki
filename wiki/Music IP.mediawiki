@@ -1,0 +1,52 @@
+= [[Music Recommendation]]service to identify musical tracks. ("a global search engine for music")
+
+URL = http://www.musicip.com
+
+
+The service includes a database of 26 million fingerprinted audio tracks. The public domain track metadata from MusicBrainz returned by MusicDNS can be used freely for any applications by developers, organizations or enterprises. 
+
+
+=Description=
+
+Crhis Dahlen:
+
+"In the 1990s, everybody talked about consuming music-- but we rarely talked about understanding it. Today, if music recommendation tools want to take the next step, they have to learn more. While Last.fm's collaborative filtering model has reliable success, it doesn't understand the music it's recommending; and Pandora's expert opinions give you more to chew on, but a roomful of people will never keep up with all of the music that's coming online. 
+
+So why not give the job to a computer? This year, a mini-boom of startups is taking this path, including Audiobaba, Echo Nest, and MusicIP, which launched in March at South by Southwest. All of the firms rely on a computer's expert analysis of music, and if you talk to the people working on these projects, you keep hearing the same prediction: This could be the moment when someone finally makes a music discovery tool that works-- and when they say that, they're thinking about Google. 
+
+If you spent much time with search engines before Google, you'll remember that they did the job, and eventually gave you the sites you wanted, but it took patience and skill to get what you needed out of them. By contrast, Google pretty much just works. It can't read your mind, but it seems to intuit what you want, and more often than not, deliver. If music discovery engines could reach the same state, they would grow from a novelty to a serious tool. 
+
+(If you're wondering why Google doesn't jump into this space themselves, now that they're already searching books, television shows, and the entire surface of the Earth, well-- none of the people I spoke with is really sure, either.) 
+
+MusicIP, of Monrovia, Calif., has launched several products, from a vast song-matching search engine, to a portal where musicians can post their own music with the hope that it'll match the tastes of some listeners. But this March they debuted with the MusicIP Mixer, which actually guides you to music in your own collection. That's right, our hard drives and iPods have grown so bloated that we finally need a tool to help us sort through our own music. 
+
+"We invent new ways to deal with superabundance," explains MusicIP CEO and president Matthew Dunn, who has a 17-year career as a technologist, a PhD in Digital Media from the University of Washington, and a reasonable, clear way of explaining technology in a voice that resembles Alan Alda's. "I don't have the time and interest to micromanage every song in a 100-track list, and I don't think I've talked to anybody who says, 'Every dinner party, I sit down and pick every track.'" Instead, MusicIP's algorithms set the mood for you by sifting through the thousands of files in your collection-- or eventually the couple of million, or even the tens of millions of songs around the world that it currently recognizes. 
+
+The first time you launch MusicIP, it browses the music on your hard drive-- which can literally take hours, depending on whether it already knows the tracks. "We look at dozens of factors that we can measure from the waveforms," explains Dunn. "And they're a mix of what we describe as acoustic and psychoacoustic properties. Acoustic stuff is literally sound patterns-- do we see a lot of energy in this particular slice of the song, is the signal to noise ratio really high. Psychoacoustic is sort of a higher order concept: It's what people's brains make of sound. To give you a simple example: A lot of popular songs-- a lot of songs period-- tend to have repeated patterns, especially repeated melodic patterns." This, too, is easy for a computer to spot in a digital music file. 
+
+After the analysis, the mixer affixes a signature to the header of each file containing all the information it needs to compare that song with any other. The signature takes up a tiny 100 bytes-- which is less memory than this sentence-- and though the Mixer took hours to get to know your songs, when you ask it to come up with a playlist, it performs the task in a split-second. Start with Elvis Costello's "Clubland" and the Mixer will give you a playlist of bouncy pop songs. But start with atmospheric electronic music, and it'll match that as well. I wanted a mix that followed the hiccuping beat and eerie pauses of Boards of Canada's "The Devil Is in the Details", and the songs it pulled from my library-- which ranged from David Sylvian to Kate Bush to Jorge Ben to Pulp-- all fit that same strange tone, and often the same rhythmic pattern. On the other hand, it also makes weirdly culture-blind decisions: I threw in a copy of the Chicago cast recording, and for some reason almost every mix MusicIP gave me included cuts from the musical, maybe because the distinct rhythms were so easy to match. 
+
+MusicIP records nothing about your listening habits, your preferences, or the origin of the music it's playing. This lets the Mixer break through what Dunn calls "the genre barrier," and overcome our assumptions about which songs belong with which. But the drawback is that while MusicIP taps some "cultural factors"-- such as weighting your search results by the music in your collection, or the country you live in-- its mixes feel strangely utilitarian; they're great for mood, but they miss the flow and associations that make a truly great mix. It also can't necessarily find good music-- just music that sounds similar to music you already like. For example, did you know that XTC's "Making Plans for Nigel" sounds like tunes by Squeeze, Boz Scaggs, Aerosmith-- and "Say You'll Be Mine" by adult contemporary nimrod Christopher Cross?"
+(http://www.pitchforkmedia.com/article/feature/36524-better-than-we-know-ourselves)
+
+
+=Commentary=
+
+Boing Boing calls it the free and open alternative to Gracenotes. MusicIP belongs to the MusicBrainz Foundation. '''It's a content identification service'''.
+
+"MusicIP's free service joins a market that includes the commercially available offering from Gracenote, whose CDDB music identification database is the standard used by most media players, including iTunes. Other applications include All Media Guide's commercially available AMG LASSO, and the open-source freedb."
+(http://www.dmwmedia.com/news/2007/01/11/musicip-challenges-gracenote-with-free-music-identification-service)
+
+
+
+=More Information=
+
+#Competitor of [http://www.gracenote.com Gracenote]
+#Commentary at http://www.dmwmedia.com/news/2007/01/11/musicip-challenges-gracenote-with-free-music-identification-service
+#Full review of [[Music Recommendation]] at http://www.pitchforkmedia.com/article/feature/36524-better-than-we-know-ourselves; compare with [[Last FM]] and [[Pandora]]
+#See also the general treatment of [[Recommendation Engines]]
+
+
+[[Category:Music]]
+
+[[Category:Resources]]

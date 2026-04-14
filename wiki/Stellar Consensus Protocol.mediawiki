@@ -1,0 +1,28 @@
+
+=Description=
+
+Tomi Kalmi:
+
+"At the core of Stellar’s stellar performance is its own consensus protocol, the Stellar
+Consensus Protocol (SCP). It is based on Federated Byzantine Agreement system,
+but instead of a predetermined set of trusted nodes, every node is able to pick the
+nodes they trust to validate transactions. For instance, user A could determine
+that in order for it to accept a transaction, user B and user C must also accept it.
+This way the consensus is built of many "quorum slices", which should intersect and
+together yield a system-wide consensus. This gives the benefit requiring only a small
+subset of the nodes to validate transactions, they are resolved very fast on average
+while still maintaining decentralization. 
+
+In practice the most commonly trusted nodes would probably be ran by some large
+institutions, such as banks and other financial institutions, but also some NGOs.
+
+Instead of explicitly choosing individual nodes which to trust, users can specify larger
+groups of nodes, from which they want enough validating nodes. For example, there
+could be a group of nodes operated by major banks, lets call this "Tier 1". Another
+group, lets call it "Tier 2", could consist of nodes operated by major NGOs. Users
+could then specify, e.g., that they want 40% of Tier 1 nodes and 50 of Tier 2 nodes
+to validate a transaction before agreeing that it is valid. This mitigates the risk of
+blocked state in the case that one of the user-specified nodes is offline."
+(https://wiki.p2pfoundation.net/Comparison_of_Blockchain-Based_Technologies_for_Implementing_Community_Currencies)
+
+[[Category:Cryptoledger Applications]]

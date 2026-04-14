@@ -1,0 +1,144 @@
+
+
+=Description=
+
+Bob Haugen:
+
+"Features and Rights:
+
+The term resource has two flavors; the rights associated with the resource
+and the features the resource has. Both the rights and the features have
+certain values for the economic agents.
+
+In the application model (an instance of the model in Fig. 7), it is usually
+intuitive to model features as attributes of the resource entities, see for
+example Fig. 8. In the approach we follow in this book these attributes will
+be implemented as aspects, such as value aspect (see part two of the book).
+
+Resource can also be seen as a collection of certain rights associated
+with this resource: ownership rights, usage rights, copy-rights.
+
+Purpose of the exchange process is to transfer some of the rights associated
+to the resource from the provider economic agent to the recipient economic agent.
+
+The model for resource rights has different structure than the model for resource
+features. The main reason is that while resource features can change
+on their own, the rights an economic agent has to the resource can be
+changed only by economic events. Therefore, it is necessary to store the
+features on the resource, while rights are determined by relationships to the
+economic events.. "
+(https://docs.google.com/document/d/1mFnWLuYWpZ-UL-aIgA-I5dvBmgqJco_1S8ljXXXww4g/edit)
+
+
+=Characteristics=
+
+Via [http://valuenetwork.referata.com/wiki/Physical_resource_governance]:
+
+* Are scarce - they are finite, or have a limited capacity, they get worn in use (need maintenance or repairs) and/or need to be replenished.
+
+* Have costs associated with their use.
+
+* Have scope - related to the domain a resource can affect, can be project specific,network specific or public, responds to the question "Who benefits?"
+
+* Have ownership - responds to the question "Who owns it?"
+
+==General considerations about access to resources==
+
+Main categories for accessibility
+
+* free - public, anyone can use/consume
+
+* protected or regulated - requires permission related to skills, role, reputation, priority of use, payment, ...
+
+* formally restricted - very restricted, related to ownership, reputation or role, requires formal access.
+
+
+==Resource management==
+
+There are multiple types of needs for resource management - ownership, rules setting, access management, value accounting, insurance, maintenance and repairs, and custodianship:
+
+1) Ownership - An individual, a group of individuals, a network, one or more custodians and/or external entities can have ownership of the resources.
+
+More explanation:
+
+Individual: I can own one or more pieces of equipment
+
+Individual or group part of the same OVN: a few members of the same OVN can co-own an equipment
+group or network: Ex. Bricobio (an informal group of biologists who don't describe themselves as an OVN) can own equipment
+
+custodians - an OVN is not a legal entity, therefore it needs a custodian to own equipment accessible to all active contributors, as part of the pool of shareables.
+
+External entities: any network affiliate (academic lab, company, etc.) can own equipment and share it for specific projects under specific conditions. 
+
+Examples:
+
+Tactus can own an equipment
+
+Philiip Comptois' lab owns equipment and shares it with SENSORICA members
+
+ACES-Canada (a charitable organization offering services to SENSORICA OVN)
+
+2) Rules setting - the owner sets the rule
+
+Ex: Tool X available between 9:00 am - 10:00 Mondays and Saturdays between Feb 1st and 20th for Projects A, B and C and active contributors X, Y and Z that may have undergone a XYZ training and verified by an accredited active contributor or a custodian or ...
+
+3) Access - meet the rules and obtain access
+
+Relies on individual profile. Ex: the individual that wants to use the equipment might need to be a member of a network and be accredited to use that specific equipment. Access is dependent on governance.
+
+4) Value accounting
+
+Sometimes tools and equipment part of a pool of shareables legally owned by a custodian are offered for free, and the use doesn't need to be logged into the value accounting system, depending on the mandate of the custodian. Ex: the custodian can be a legally registered fab lab or a charity with the mandate to create social value (offer free education or training). Under an OVN agreement, the fab lab might get access to equipment for its members for free on a limited time. In exchange, the fab-lab provides value for the commercial side of the OVN, as new members (exposing fab lab members to market-oriented projects and having a conversion rate from the fab lab to the commercial wing of the OVN), education (of fab lab members but also any OVN active contributor).
+
+5) Insurance - Risk prevention and rules for misuse
+
+Insurance may change based on tools. Ex: you break you pay; or you can break it, it is covered; or certain groups or entities are covered but not others; or if it breaks, we will all pay for it; or if it breaks, there is no replacement; or if you break it, you may get kicked out; or if you break it, you would need to repair it but no contribution for that work, etc. (I could also be and/or instead of just or, in certain instances)
+
+6) Maintenance and repairs
+
+Maintenance and repair in general are contribution unless stated in the rules (ex: the rule of you break it, you fix it without contribution). Tools could be shared with external non-OVN entities hence, maintenance and repair might be based on exchange based relationships as oppose to value-based relationships. Ex: manage the tools for ACES-Canada or a partner lab for a fee. Maintenance and repairs could be a role or a task
+
+7) Custodianship
+
+Ensures that the ownership rules, access and value accounting rules are executed as defined (multiple entities, individuals or groups can play this role - ex: could be dynamic but could be that a legal entity takes on this responsibility). Ex: Provides services - you want to use the tools XYZ, here are the rules and explain them; you need training to use XYZ tool, talk to ABC person for training; here is how you sign-up to get access to the tools(Services could be a role or a task rather than custodianship). The custodian enforces rules, resolves ambiguity about the rules (the rule is not very clear to me so the custodian would ask the owner for clarification), resolves conflict based on the rules identified
+
+==About sharing==
+
+"We need to distinguish between equipment that is shared from outside the network into the network and equipment that is shared within the network (and possibly to the outside)
+
+Ownership and rules being set by owners for example is relevant for outside in shared assets. For inside-inside or inside-out shared assets there is a contributor of the equipment, but the equipment is held in nondominium so they may or may not have governance control over how that resource is used (they would probably start with it, but the operation of the governance equation on that asset would determine longer term decision making authority)."
+(http://valuenetwork.referata.com/wiki/Physical_resource_governance)
+
+
+=Discussion=
+
+Bob Haugen:
+
+"below from the REA Patterns book (Pavel Hruby and Christian Scheller, hereafter called P&C):
+
+In this book, we follow the approach in which the stockflow relationships at the application model level determine the 
+rights transferred from one business agent to another. 
+
+
+The other possible approaches to modeling rights are:
+
+• Rights are properties of resources.
+• Rights are components of resources, attached to the "main" resource to which they give rights. [In this approach, rights are also resources.]
+• Rights are properties of stockflow relationships between economic resources and economic events. [This is what they describe above…]
+• Rights are types of commitments.
+• Rights are refinements of the custody relationship between economic agents and economic resources.
+• Rights are defining characteristics of events.
+
+
+All approaches have their advantages and disadvantages, and also combinations of these approaches maybe possible."
+(https://docs.google.com/document/d/1mFnWLuYWpZ-UL-aIgA-I5dvBmgqJco_1S8ljXXXww4g/edit)
+
+
+=More Information=
+
+* a discussion at Sensorica: https://docs.google.com/document/d/1mFnWLuYWpZ-UL-aIgA-I5dvBmgqJco_1S8ljXXXww4g/edit
+
+
+[[Category:Mutual Coordination]]
+
+[[Category:P2P Accounting]]

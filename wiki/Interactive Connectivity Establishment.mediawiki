@@ -1,0 +1,22 @@
+
+= a framework to allow your web browser to connect with peers. 
+
+
+=Discussion=
+
+Excerpted from Louis Stowasser:
+
+"There are many reasons why a straight up connection from Peer A to Peer B simply won’t work. It needs to bypass firewalls that would prevent opening connections, give you a unique address if like most situations your device doesn’t have a public IP address, and relay data through a server if your router doesn’t allow you to directly connect with peers. ICE uses some of the following techniques described below to achieve this:
+
+* Session Traversal Utilities for NAT (STUN) (acronym within an acronym) is a protocol to discover your public address and determine any restrictions in your router that would prevent a direct connection with a peer.
+
+* Network Address Translation (NAT) is used to give your device a public IP address. A router will have a public IP address and every device connected to the router will have a private IP address. Requests will be translated from the device’s private IP to the router’s public IP with a unique port. That way you don’t need a unique public IP for each device but can still be discovered on the internet.
+
+* Traversal Using Relays around NAT (TURN) is meant to bypass the Symmetric NAT restriction by opening a connection with a TURN server and relaying all information through that server. You would create a connection with a TURN server and tell all peers to send packets to the server which will then be forwarded to you. This obviously comes with some overhead so is only used if there are no other alternatives.
+
+* Session Description Protocol (SDP) is a standard for describing the multimedia content of the connection such as resolution, formats, codecs, encryption, etc so that both peers can understand each other once the data is transferring. This is not the media itself but more the metadata."
+(https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

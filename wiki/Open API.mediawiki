@@ -1,0 +1,120 @@
+= An '''open API''' or '''free API''' is an Advanced Programming Interface that is freely available to third parties. Google Maps is a well known example.
+
+"The era of Web 1.0 was characterized by Web sites that were bastions of independence. They had their own authentification systems, their own e-commerce systems, and their own offerings. According to panelists at the conference, that business model is out. Customers want integration, interoperability, and congruent authentification." [http://www.pcmag.com/article2/0,1895,2053036,00.asp]
+
+
+=Definition=
+
+From the Wikipedia:
+
+"Open API (often referred to as OpenAPI) is a word used to describe sets of technologies that enable websites to interact with each other by using SOAP, Javascript and other web technologies. While its possibilities aren’t limited to web-based applications, it’s becoming an increasing trend in so-called [[Web 2.0]] applications. The term API stands for Application programming interface."
+
+
+=Discussion=
+
+==Why Open API's are so important==
+
+
+'''1.'''
+
+
+"Many popular web applications now open their web APIs, which allow other applications to access their data. These APIs allow users to build complex tools that collect data from multiple sources, similar to the way UNIX allows you to stack smaller applications and connect them together. Even if the back-end source code of these web applications was released, the application is often so heavily dependent on the information that it stores that it won’t necessarily be useful. That is not an argument for or against releasing back-end code, but is just to say that we’ve reached a point in software that accessing the data is more important than the process of how it is generated.
+
+So as data becomes cheaper to process, the value appears to be in its analysis; making creative connections and correlations between dispersed data and unrelated pieces of information. '''The dominant paradigm is shifting from the individual’s ability to process data towards the individual’s ability to access the preprocessed value created by large networks'''.
+
+What does all this mean for free and open source licenses? Well, as the boundary between local and remote applications gets blurred, it’s becoming clear that the licenses devised for local software are not well suited to the latest wave of web-based applications.
+
+A new standard must be defined for these applications, one that considers the vast amounts of user data they are processing, storing and transmitting. A new standard has to strike a balance between the rights of the individual user and the right of the service provider to control and leverage the user’s data as an integral part of their networked application."
+([http://www.nailchipper.com/weblog/2006/11/12/implications-of-the-web-on-free-and-open-source-licenses/])
+
+
+The next wave of ethical software must address the following issues:
+
+    
+* Individual ownership of data - Who owns personal information?
+    
+* Individual’s privacy - How is information shared? How anonymous is broad analysis?
+    
+* Redistribution of reprocessed data - Can I reuse the data in a new application?
+    
+* Cross compatibility between related networks - How easily can I move between competing services?
+    
+* Data Removal - How much information is retained after unsubscribing from the service?
+    
+* End of Service - What is the strategy for the stored data if the service fails?
+
+
+'''2.'''
+
+"Opening an API to an application creates opportunities for external innovation. Giving third-party developers programmatic access to an application allows them to add value in unanticipated ways, and adds resources to your development effort that you would not otherwise have access to. You can thus tap into the  long tail of underserved users who write their own applications to meet their specific needs, if given the opportunity. With external development, the risk of development is carried by others, but you can nonetheless reap the benefits from successful innovations. This is what Google does when it gives users access to its vast computing infrastructure when providing such services as Google Maps, or any of its other .
+
+When you open an API, follow established standards where they exist. Jakob's law implies that the biggest opportunity to increase site traffic is to give users an easy way of integrating your content into their sites. This can take the form of a widget or an open API which other developers can use to build widgets and mashups that leverage your API. Increased traffic provides opportunities to monetize your application through other avenues, such as advertising. If your application or service collects information from users, such as photos or profiles, users expect to get access to their information through an open API. They don't want to be locked into a particular service, and will base their decision on which service to use, in part, on the existence of an open API. "
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/859/829)
+
+==The Competitive Advantage of using Open API's==
+
+From http://www.readwriteweb.com/archives/web_30_when_web_sites_become_web_services.php
+
+"Bringing together Open APIs (like the Amazon E-Commerce service) and [[Web Scraping]] / [[Mashup]] technologies, gives us a way to treat any web site as a web service that exposes its information. The information, or to be more exact the data, becomes open. In turn, this enables software to take advantage of this information collectively. With that, the Web truly becomes a database that can be queried and remixed.
+
+There are several good reasons why Web Sites (online retailers in particular), should think about offering an API. The most important reason is control. Having an API will make scrapers unnecessary, but it will also allow tracking of who is using the data - as well as how and why. Like Amazon, sites can do this in a way that fosters affiliates and drives the traffic back to their sites.
+
+The old perception is that closed data is a competitive advantage. The new reality is that open data is a competitive advantage. The likely solution then is to stop worrying about protecting information and instead start charging for it, by offering an API. Having a small fee per API call (think Amazon Web Services) is likely to be acceptable, since the cost for any given subscriber of the service is not going to be high. But there is a big opportunity to make money on volume." 
+(http://www.readwriteweb.com/archives/web_30_when_web_sites_become_web_services.php)
+
+
+==The dangers of using [[Free API]] 's==
+
+From http://radar.oreilly.com/archives/2007/04/six_rules_for_a.html:
+
+"
+#Free APIs are not a god-given right. Businesses offer them for their own self-interested reasons. If you build on top of the API but aren't delivering the value for the business that provides the API, your use of the API will probably go away.
+#If you build your own business on top of an API, you need a contractual relationship to ensure the service doesn't get taken away from you. These generally cost money.
+#If you find a way to get something from a site that isn't explicitly offered as something for you to build on, your use of it will probably be fought unless you're delivering value as in (1).
+#The provider of your API will find it easier to implement services on top of their API than you will. Therefore you have to add something of your own that's difficult to replicate, something beyond a simple UI tweak or a feature like "search", so that the business that provides the API doesn't simply compete with you when you look like you're succeeding.
+
+
+For these reasons, free APIs are a very poor substitute for having the source and the data and thus owning and controlling every piece of your application.  For these reasons, there's no such thing as a free API if you're looking to build a business."
+(http://radar.oreilly.com/archives/2007/04/six_rules_for_a.html)
+
+
+Additional comment from http://glinden.blogspot.com/2007/06/truth-about-free-apis.html:
+
+"Companies offer web services to get free ideas, exploit free R&D, and discover promising talent.
+
+That's why the APIs are crippled with restrictions like no more than N hits a day, no commercial use, and no uptime or quality guarantees.
+
+[Companies] offer the APIs so people can build clever toys, the best of which the company will grab -- thank you very much -- and develop further on their own."
+(http://glinden.blogspot.com/2007/06/truth-about-free-apis.html)
+
+=Definitions=
+
+"An application programming interface (API) is a source code interface that a computer system or program library provides in order to support requests for services to be made of it by a computer program."
+
+Definition from the Wikipedia article at 
+http://en.wikipedia.org/wiki/Application_programming_interface
+
+
+"Open Service Interface Definitions (OSIDs) are programmatic interface specifications describing services. These interfaces are specified by the Open Knowledge Initiative (O.K.I.) to implement a Service-Oriented Architecture (SOA) to achieve interoperability among applications across a varied base of underlying and changing technologies."
+
+From the Wikipedia article at
+http://en.wikipedia.org/wiki/Open_Service_Interface_Definitions
+
+
+=More Information=
+
+#Article: '''How to Roll out an Open API''', recommendations from a API programmers to providers, at http://radar.oreilly.com/archives/2005/05/web_services_es.html
+#The [http://www.okiproject.org/ Open Knowledge Initiative] at http://en.wikipedia.org/wiki/Open_Knowledge_Initiative
+#Tag at http://del.icio.us/mbauwens/Open-API
+#Panel: can you be competitive with an open API?, at http://www.pcmag.com/article2/0,1895,2053036,00.asp
+#Podcast: [[Open API and the Commons]]
+#[[Open API License]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Open]]

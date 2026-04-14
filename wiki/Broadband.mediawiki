@@ -1,0 +1,286 @@
+
+
+=Broadband Primer=
+
+==What is broadband?==
+
+By Tom Evslin [http://blog.tomevslin.com/2007/10/broadband-prime.html]:
+
+"What’s broadband? Good Question. There is no consensus on the answer except that it involves a connection which is better than dialup. Most people use the term to mean a connection which can be setup for an indefinite period of time (persistent), which has enough bandwidth (discussed below), and low enough latency (also discussed below) and jitter (below) for whatever use they intend to make of the connection. In practice the requirements for minimal useful broadband keep ratcheting upward since Internet services are designed for users with about 50th percentile capabilities.
+
+What’s bandwidth? That’s an easier question. Bandwidth (in its common but not engineering use) is a measure of how much data can be delivered over a connection in a given period of time. Usually bandwidth is quoted in bits per second (bps). The top speed of most dialup connections in the downlink direction (towards you) is 56 kilobits per second (a kilobit is a thousand bits).
+
+Basic DSL (the broadband you get on your phone line) usually has a downlink speed (synonymous with the colloquial usage of bandwidth) of 768kbps (kilobits per second) but an uplink (from you) speed of only 128kbps.
+
+Cable service these days often offers at least 3 megabits per second (a megabit is a million bits) down and 1.5 mbps (megabits per second) up.
+
+Is a bit the same as a byte? (told you this wasn’t for nerds). No; a byte consists of eight bits. File sizes are usually measured in bytes so an 8 megabyte file has 64 megabits in it. In a perfect world (which assuredly doesn’t exist), it would take 64 seconds (plus a few more for some control bits) to download this 8 megabyte file over a connection which has 1 mbps of downlink bandwidth.
+
+Then what DOES it mean that I pay for an x megabit connection if I can’t count on it to download x millions of bits per second? What AM I paying for? Why can’t I count on downloading at rated speed? Isn’t there any kind of “truth in bandwidth”? Starting with the last question first, no, there is no truth in bandwidth. Most vendors describe the MAXIMUM capacity of the link between you and them (not between you and the Internet) when they quote bandwidth. The fine print almost always says that experience will vary.
+
+Why? First of all, many Internet links are actually shared even between the subscriber and the Internet Service Provider (ISP). Cable is shared; DSL is not; dialup is not; some radio connections are shared and others aren’t; satellite is shared on the downlink side only. So, if every user who is connected is trying to run at maximum speed on a party line, no one is gonna achieve maximum speed. If everyone gets on the freeway at once, no one gets to drive at the speed limit. Note that even when connections are nominally not shared like DSL, there are technical reasons why too many connections at once can still degrade service through various types of interference.
+
+Second, even if you are not sharing the connection between your computer and your ISP, you are usually accessing web sites located somewhere on the Internet other than on the network of your own ISP. Those web sites are connected to the Internet through their own ISPs. And then there are intermediate ISPs (the Internet backbone) between your ISP and the ISP of the website you’re trying to download from. If your ISP has, for example, exactly one thousand customers each with one mbps of download capacity, the ISP’s connections to the rest of the Internet may total only 25 mbps (or less) even though all of you downloading together could theoretically use a gbps (a gigabit is a thousand million or one billion bits).
+
+This isn’t fraud; it’s the way the Internet is built. The highways system wouldn’t work if every driveway disgorged a constant stream of cars. The phone system can’t handle more than a fraction of the phones being in use at once; it gives busy signals. The Internet doesn’t give busy signals; it just gets slow.
+
+The third reason you may not get the speed you imagined you paid for is that the computer which runs the website you’re accessing is too busy to feed you data as fast as you think you ought to get it. Of course that computer also faces bottlenecks in any shared connections it has and on its ISP’s connection to the Internet backbone.
+
+Fourth major reason for below-rated performance is the portion of the Internet backbone between your ISP and the ISP of your data provider may be congested. The Internet tends to route around congestion but TENDS is the operative word.
+
+And a fifth reason, in case you still want one, may be the quality of your connection or some intermediate connection. A poor quality connection or even a very congested one will lose data. Most uses of the Internet have a way to request the retransmission of lost data but retransmission takes time and reduces the effective bandwidth available to you."
+(http://blog.tomevslin.com/2007/10/broadband-prime.html)
+
+==Downlink - Uplink Asymmetry==
+
+"why downlink (to you) and uplink (from you) speeds are often different and why you might care.
+
+Most American’s didn’t get on the Internet until the WorldWideWeb made online information easily accessible and appealing. When you request a page from a website, you send a simple line of text on the uplink (like http://blog.tomevslin.com which is 27 bytes long counting the carriage return you don’t see) and you usually get back lots of pictures and text; over a quarter of a million bytes of text is returned by this simple page request for my blog and the embedded pictures probably bring the whole page size up to over two million bytes. So 27 bytes up, two million bytes down.
+
+If you were designing a road where most of the traffic went in one direction, you’d put more lanes in that direction than in the other. The “pipes” that link you to the Internet can be partitioned to separate the bandwidth devoted to downlink and uplink. Given the huge imbalance during web browsing, it made a lot of sense for consumer Internet access to be designed with more capacity – often most of the capacity – devoted to downlink. This is called asymmetric use of bandwidth.
+
+This asymmetry persists today, Basic DSL, for example, usually has an downlink speed of 768 kbps (kilobits per second if you skipped yesterday’s lesson) and an uplink speed of 128kbps. Most cable plans offer two or three times as much downlink capacity as uplink.
+
+But we are changing the way we use the Internet. When we send email, the downlink usage and the uplink usage are almost the same (not quite because one upload can reach multiple recipients and because of spam). Our emails are getting much, much bigger. When we work at home, we often have a need to send huge emails including PowerPoint presentations, architectural drawing etc. If we have kids, we’ve got to email their pictures to grandma – and the videos we now send are even bigger.
+
+Increasingly WE supply the content we care about on the Web. WE upload the videos to YouTube. WE “share” music. WE populate Flickr with pictures. WE post the blogs and the comments on the blogs. Some of us have web cams sending new pages up very frequently. All of this adding content requires uplink capacity.
+
+When we use online backup (turned out to be a lifesaver for us), we upload millions of bytes every night and download almost nothing unless and until we have a catastrophe.
+
+If we make Voice Over IP (VoIP) calls or video call, we use as much uplink bandwidth as downlink.
+
+Michael Birnbaum, who runs the Vermont WISP (Wireless ISP) Cloud Alliance, comments:
+
+“Most users upload rarely in relation to their downloads. This is changing, though. As more and more users upload their videos to YouTube, for example, upstream needs will increase. We try to deliver the most usable product the economics dictate. Right now, we offer twice as much downstream speed as up. This leaves less purchased speed fallow from the subscriber's point of view. As the demands change, we will adjust.”
+
+He adds that they can give business customers who need it symmetrical access today. (We’ll be hearing more from Michael’s comment in a later post).
+
+Many ISPs are not as forthcoming as Michael about their uplink speeds and just feature the faster downlink speed. But, if you are anything but a very passive viewer of pages, you want to make sure that your ISP (should you be lucky enough to have a choice) offers you substantial uplink as well as downlink speed. "
+(http://blog.tomevslin.com/2007/10/broadband-pri-2.html)
+
+
+==Latency==
+
+"Low latency is crucial for some uses of the Internet – and doesn’t matter at all to others. Latency used to be a problem only for Voice over IP (VoIP) and other highly time-critical applications; now it is a problem for routine web browsing as well.
+
+Latency is the time it takes to get something from your computer to where it’s going on the Internet and to get a response back to your computer. Long latency is bad; short latency is always good. Don’t you hate it when you have to drum your fingers waiting for a web page to image and the pictures take forever to show up or perhaps don’t show up at all and are replaced by boxes with little red x’s in the top left corner? If you have a slow connection (low bandwidth – see Part 1), this is par for the course; but, if you have a reasonably fast connection, latency may be the problem.
+
+The major cause of persistent high latency is the connection between you and your ISP. The good news is that DSL, cable, fiber, WISP (Wireless ISP) service, and even dialup all provide reasonably low latency (assuming there is not much congestion – we all see latency when there is congestion). Typically with any of these connections, the connection itself won’t add even as much as 20 milliseconds (twenty thousands of a second) to round trip times.
+
+The bad news is that satellite service has terrible latency AND the problem can’t be fixed. This is a physics problem; not an engineering one.
+
+As you know, your satellite dish, whether its for TV or for Internet access, was installed pointed at a specific spot in the sky. That means the satellite it is aimed at has to stand still with relation to spots on the surface of the earth; its speed has to match the rotational speed of the earth allowing for the fact that the orbit has a larger diameter than the earth. This only possible with satellites which orbit 22,000 miles high. If they are lower, they will have to move faster and, if higher, have to move slower in order to stay in orbit and not either crash or soar off into space. In either case, they would appear to move as far as your dish is concerned. Sometimes they would even go under the horizon. So 22,000 miles it is.
+
+Radio signals move at the speed of light – 182,262 miles per second in a vacuum. Unfortunately no way to speed that up. Data goes from your computer up to the satellite, back down to the rest of the Internet, to whichever other computer you’re communicating with, back to a satellite uplink, back up to the satellite, and back down to your computer before you see a response. That’s 88,000 miles of up and down traveling so almost half a second MINIMUM latency.
+
+So what’s the big deal about half a second? Well, a lot if you’re using VoIP since the human ear can detect delays of a fifth of a second or more. You get annoying pauses between what you say and the answers from whomever you’re talking too. You start to talk over each other. For technical reasons, delay causes echo and you often hear yourself instead of your friend. If you are trapped and need rescue or are far at sea or exploring a wilderness, VoIP over a satellite Internet connection is fine. Otherwise you don’t want to do it.
+
+It used to be that only VoIP and other very time-critical applications like gaming were badly affected by latency. Email is not noticeably affected since you have no idea whether it took an extra half second for your email to begin to download; most of the time is in the actual downloading. Same thing with downloading files; latency is no big deal. When you’re watching satellite TV you don’t care about latency because you have no way to know the broadcast is actually a quarter of a second ahead of you and you couldn’t care less (it’s only doing one up and down so it’s not a half second difference).
+
+It USED to be that web surfing wasn’t affected by latency. Most delay was caused by the time it took a page to download which depends on speed and not latency. Unfortunately for those using satellite access, web browsing is NOW seriously affected by latency. What’s happened is that web pages are written and designed to be as flashy and customizable as possible given the kind of Internet access that MOST people have.
+
+When you request a page from a modern website, there is very little chance that all of the data needed to create a page on your screen will be sent at once. Instead, the first data downloaded contains instructions for various interactions between your computer and the website. The site wants to know if there’s a cookie on your computer indicating you’ve visited before (“Welcome back, Tom”); what purchases you may have made before (“Here are some recommendations for you”); perhaps what type of computer monitor you have so it can format optimally. Pictures are downloaded in batches after the text to request them gets to your computer and one graphic element may contain the request for another. Ads appropriate to you (maybe) are gathered from various sites as part of building your page.
+
+Meanwhile, if you have high latency, many half seconds have passed while the page builds and you’re there drumming your fingers. Some parts of the page may decide that something is broken because of the long interval and simply not show up. It’s not fun.
+
+You can say that websites should be designed knowing that some people have a lot of latency in their connection. You can say that but it isn’t going to happen. Most Internet users don’t use satellite and the designers of web pages want them to be as appealing as they can be to the majority of people who access them – that leaves you out if you have satellite access; they’re not going to dumb down the pages just because of you and they’re not going to create special versions of pages just for you; they’re way too busy trying to make tiny pages for cellphones.
+
+Note to nerds who may have read these-nontechie posts: yes, there are low earth orbit satellites (LEOS) which, being much closer, don’t cause significant latency. They are used for sat phone service and extremely low bandwidth and expensive (altho also low latency) data. They do move through the sky and pop under and over the horizon which means that antennas which receive and send to them can’t be directional. The consequence of this is that the power required to send broadband data streams to them is very high and interference between uplinks would be a significant problem if they were widely used. Also, they’re expensive because they burn up quickly in the upper edges of the atmosphere and fall down. Maybe, though, this is where an engineering breakthrough for satellite access could occur."
+(http://blog.tomevslin.com/2007/10/broadband-pri-2.html)
+
+
+=Discussion=
+
+A broadband truth in advertising regulatory proposal, by Tom Evslin at
+http://blog.tomevslin.com/2007/10/broadband-truth.html#trackback
+
+
+==Broadband Technologies vs P2P==
+
+Kragen Javier Sitaker:
+
+"an ADSL line is a connection to the rest of the network that
+is statically partitioned between a high-bandwidth part outwards for
+data being sent *to* you, and a low-bandwidth part inwards for data
+being sent *from* you, typically about an order of magnitude smaller.
+In this environment, peer-to-peer programs really are inherently
+inefficient: on average, they use just as much of your inwards
+bandwidth as your outwards bandwidth, but your inwards bandwidth costs
+you ten times as much.
+
+So, **on an ADSL network, peer-to-peer networking is an order of
+magnitude less efficient** than data-center-based applications.
+
+But it gets worse.
+
+[Skype]: http://www.stevenlevy.com/index.php/05/10/why-google-does-not-own-skype
+  (Why Google does not own Skype, 2011-05-10, by Steven Levy)
+
+
+===ADSL networks are almost twice as efficient as SDSL networks.===
+
+
+When ADSL started to roll out in the late 1990s, I was horrified and
+opposed.  It seemed like an unthinkable violation of the egalitarian
+ethics of the internet, designed for brainless consumers of “content”
+rather than full participants.
+
+In July 2011, I changed my mind.  Here’s why.
+
+### Content-centric networking models actual internet use better than TCP. ###
+
+Van Jacobson’s “Content-Centric Networking” work is based on the
+premise that almost all of our internet usage today consists not of
+people connecting to remote computers that provide them some service
+(the designed purpose of TELNET) or sending a message to a single
+other person (like email or Skype or other VOIP) but rather retrieving
+named pieces of data from some cloud storage space, or adding them to
+it.
+
+That is, it’s much more publish-and-retrieve (and possibly subscribe)
+than request-response or send-and-receive; it’s one-to-many
+communication spread over time, rather than synchronous one-to-one
+communication.  But it’s built on top of the distributed synchronous
+one-to-one communications provided by TCP and UDP, plus a lot of
+ad-hoc barely-working multi-centralized server software, so it doesn’t
+work as well as it could.  VJ’s plan is to put the
+publish-and-retrieve into the network as much as possible instead of
+endpoints.
+
+I believe he is correct.
+
+### SDSL is almost twice as costly as ADSL for content-centric use. ###
+
+Let’s look at a simplified egalitarian internet. *All* the
+communication is ultimately between ordinary people in their houses,
+looking at each other’s cat photos and home videos; none of it is to
+Hulu.  They are connected to interconnected telephone central offices
+over long and expensive limited-bandwidth “last mile” links; the
+central offices themselves are interconnected over
+much-higher-bandwidth links.
+
+'''How can we design our internet to make efficient use of scarce resources?'''
+
+One scarce resource in this scenario is last-mile bandwidth.  Assume
+that the bandwidth of the last mile must be partitioned statically
+between inwards (towards the CO) and outwards (towards the house)
+directions, rather than negotiated dynamically.
+
+The SDSL home-server story is that the bandwidth should be symmetric
+because every time I download a cat photo on the outward half of my
+connection, someone else has to upload it on the inward half of
+theirs, so the average number of cat photos per second is the same on
+inward and outward links.
+
+But wait!  Consider all the cat photos that at least one person has
+looked at over the internet.  Most of them have been looked at by only
+one person over the internet.  But many of them have been looked at by
+more than one person over the internet.  (None of them, by definition,
+have been looked at by less than one person over the internet.)
+
+That means that the **average number of views-over-the-internet per
+photo** is greater than 1.  In fact, it’s probably substantially
+greater than 1.  Say, 5 or 10.
+
+In the SDSL home-server scenario, when people look at a particular cat
+photo 5 times, the home server sends the cat photo inwards to the
+central office 5 times, which then sends it outwards to the
+link-clicker.
+
+But that’s silly.  It would be more efficient to cache the cat photo
+in the central office the first time it gets sent out from the home
+server, then serve it from cache.  You’d get better latency and, at
+least in theory, better reliability.  Right now we do this by storing
+the cat photo in a data center on the disk of some broken-ass web app
+that’s probably built on top of MySQL (Facebook, say), but you could
+do it with Van Jacobson’s content-centric networking protocols, too,
+or by putting a Varnish instance in front of the inward half of your
+connection.
+
+But, once you do this caching, however you do it, you have several
+times as much bandwidth being used outward as being used inward.
+Every cat photo only goes over an inward link a single time, and on
+average goes outward several times, like 5 or 10.  Most of your inward
+bandwidth necessarily goes idle.
+
+This isn’t limited to asynchronous communication like posting a cat
+photo on your page and hoping people will look at it later.  The same
+thing holds for things like chat rooms: it uses less last-mile
+bandwidth to have a server in a data center receive a single copy of
+your line of chat, then send copies of it to everyone else in the chat
+room, rather than forcing your client on your machine to send a copy
+directly to each of the people in the room over your DSL connection.
+(Multi-person videoconferencing is probably a more compelling
+example.)
+
+So, as long as you have to allocate the last-mile bandwidth
+statically, you might as well allocate most of it to outward
+bandwidth, rather than inward bandwidth.
+
+The horrifying existence of abominations like Hulu and the iTunes
+Music Store, then, is not the root of ADSL.  ADSL is just a more
+efficient way of allocating limited last-mile bandwidth, but it
+requires that the bulk of communications between people be mediated
+through some kind of co-located “cloud” that avoids the need to upload
+more than one copy of each file over your limited last-mile
+connection.
+
+The current legal and social structure of the “cloud” is far more
+horrific than Hulu, though.  Instead of having a content-neutral
+distributed publish-and-retrieve facility, we have Facebook
+arbitrarily deleting photos of women breastfeeding and discussion
+groups where Saudi women advocate for public transit in Riyadh,
+YouTube selling your eyeballs to the highest bidder, and MySpace
+forcing “terms of service” on you that you can’t possibly have time to
+read, but which Lori Drew was nevertheless criminally prosecuted for
+violating.
+
+
+===Better alternatives require redesigning the physical layer.===
+
+
+Both ADSL and SDSL are inefficient compared to the way Wi-Fi works,
+which is typical of radio networking.  In Wi-Fi, data is only
+traveling in one direction over the connection at any time: either
+inwards or outwards.  That means that you don’t have to settle for
+uploading your cat photos at 10% or 50% of the link’s bandwidth; you
+can use 100%.  (In theory, anyway.  Wi-Fi itself has a lot of protocol
+overhead.)
+
+The static FDM bandwidth allocation used in SDSL and ADSL, in which
+some frequency channels are reserved for each direction of the
+communication, is primitive, obsolete 20th-century technology.  New
+equipment that used adaptive CDMA or dynamic TDMA could provide
+marginally better downstream bandwidth when upstream is little-used,
+and dramatically better upstream bandwidth when needed.  I don’t know
+of any such equipment in the market.
+
+Another alternative, better adapted to the realities of
+content-centric networking, is to adopt a more physically-based
+topology.  As an example, it’s absurd that the block I live on has
+hundreds of separate 3MHz copper pairs to it, perhaps totaling a
+gigabit, mostly carrying duplicate traffic: many of the same cat
+photos, news stories, and Wikipedia articles everyone else is reading.
+Properly-thought-out content-centric networking --- still a pipe-dream
+--- would enable us to cache those items locally and securely,
+communicate with each other when necessary without routing our packets
+through a phone-company central office, and use the entire bandwidth
+of that gigabit when it’s left idle.  We ought to be able to use
+multi-gigabit LAN connections to back up encrypted copies of our
+important files to each other’s computers so that we don’t lose them."
+(http://lists.canonical.org/pipermail/kragen-tol/2011-August/000935.html)
+
+=More Information=
+
+How broad is your broadband, at http://blog.tomevslin.com/2006/09/how_broad_is_yo.html
+
+More on uplink/downlink speeds at http://blog.tomevslin.com/2006/12/you_needs_more_.html
+
+How to measure latency, at http://blog.tomevslin.com/2006/10/how_broad_is_yo.html
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Encyclopedia]]

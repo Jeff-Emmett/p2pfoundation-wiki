@@ -1,0 +1,79 @@
+'''Metcalfe's law states that the value of a telecommunications network is proportional to the square of the number of users of the system (n2).'''
+
+URL = http://en.wikipedia.org/wiki/Metcalfe's_law
+
+=Definition=
+
+"The foundation of his eponymous law is the observation that in a communications network with n members, each can make (n–1) connections with other participants. If all those connections are equally valuable—and this is the big "if" as far as we are concerned—the total value of the network is proportional to n(n–1), that is, roughly, n  2. So if, for example, a network has 10 members, there are 90 different possible connections that one member can make to another. If the network doubles in size, to 20, the number of connections doesn't merely double, to 180, it grows to 380—it roughly quadruples, in other words."
+(http://www.spectrum.ieee.org/jul06/4109/2)
+
+
+=Historical Context=
+
+
+"By seeming to assure that the value of a network would increase quadratically—proportionately to the square of the number of its participants—while costs would, at most, grow linearly, Metcalfe's Law gave an air of credibility to the mad rush for growth and the neglect of profitability. It may seem a mundane observation today, but it was hot stuff during the Internet bubble.
+
+Remarkably enough, though the quaint nostrums of the dot-com era are gone, Metcalfe's Law remains, adding a touch of scientific respectability to a new wave of investment that is being contemplated, the Bubble 2.0, which appears to be inspired by the success of Google. That's dangerous because, as we will demonstrate, the law is wrong. If there is to be a new, broadband-inspired period of telecommunications growth, it is essential that the mistakes of the 1990s not be reprised.
+
+The law was named in 1993 by George Gilder, publisher of the influential Gilder Technology Report. Like Moore's Law, which states that the number of transistors on a chip will double every 18 to 20 months, Metcalfe's Law is a rough empirical description, not an immutable physical law. Gilder proclaimed the law's importance in the development of what came to be called "the New Economy."
+
+Soon afterward, Reed E. Hundt, then the chairman of the U.S. Federal Communications Commission, declared that Metcalfe's Law and Moore's Law "give us the best foundation for understanding the Internet." A few years later, Marc Andreessen, who created the first popular Web browser and went on to cofound Netscape, attributed the rapid development of the Web—for example, the growth in AOL's subscriber base—to Metcalfe's Law.
+
+There was some validity to many of the Internet mantras of the bubble years. A few very successful dot-coms did exploit the power of the Internet to provide services that today yield great profits. But when we look beyond that handful of spectacular successes, we see that, overall, the law's devotees didn't fare well. For every Yahoo or Google, there were dozens, even hundreds, of Pets.coms, EToys, and Excite@Homes, each dedicated to increasing its user base instead of its profits, all the while increasing expenses without revenue.
+
+Because of the mind-set created, at least in small part, by Metcalfe's Law, even the stocks of rock-solid companies reached absurd heights before returning to Earth. The share price of Cisco Systems Inc., San Jose, Calif., for example, fell 89 percent—a loss of over US $580 billion in the paper value of its stock—between March 2000 and October 2002. And the rapid growth of AOL, which Andreessen attributed to Metcalfe's Law, came to a screeching halt; the company has struggled, to put it mildly, in the last few years."
+(http://www.spectrum.ieee.org/jul06/4109)
+
+
+=Discussion=
+
+==Difference between Metcalfe's Law and [[Reed's Law]] of [[Group Forming Networks]]==
+
+Mark Cooper:
+
+"Reed identifies three types of networks that create value.   
+
+First, there are one-way broadcast networks.   Also known as the Sarnoff “push” network, the value of one-way broadcast networks is equal to the number of receivers that a single transmitter can reach.    An example of a one-way broadcast network is the wire service.   
+
+Second, there are Metcalfe networks.   In a Metcalfe network, the center acts as an intermediary, linking nodes.   Classified advertising is an example of the Metcalfe network.   
+
+Third, there are [[Group Forming Networks]], also known as Reed Communities.   In this network, collateral communications can take place.   The nodes can communicate with one another simultaneously.   Chat groups are the classic example of this type of network.
+
+The key difference between the Metcalfe network and the Group Forming Network is multi-way communications.  Group Forming Networks use group tools and technologies such as chat rooms and buddy-lists that “allow small or large groups of network users to coalesce and to organize their communications around a common interest, issue, or goal.”   The exponentiation increases value very quickly and may cause the number of connections/communications to exceed the ability of individuals to maintain them.  Thus, it is a theoretical upper limit.  On the other hand, as Reed points out, the formation of even a small subset of the theoretically possible groups would dramatically increase the value of the network - N3 in Exhibit 3.  Even if not all groups form, the potential value in the option to form groups is higher.  The critical point is that to capture the value of group forming networks, the members of the network must have the freedom to self-organize groups.  With that freedom, they create the groups of greatest value to the users."
+(http://cyberlaw.stanford.edu/system/files/From+Wifi+to+Wikis+and+Open+Source.pdf)
+
+==Critique==
+
+In an article by  By   Bob Briscoe, Andrew Odlyzko, and Benjamin Tilly, in IEEE Spectrum Magazine, at http://www.spectrum.ieee.org/jul06/4109
+
+
+"The fundamental flaw underlying both Metcalfe's and Reed's laws is in the assignment of equal value to all connections or all groups."
+
+"There are common-sense arguments that suggest Metcalfe's and Reed's laws are incorrect. For example, Reed's Law says that every new person on a network doubles its value. Adding 10 people, by this reasoning, increases its value a thousandfold (210). But that does not even remotely fit our general expectations of network values—a network with 50 010 people can't possibly be worth a thousand times as much as a network with 50 000 people.
+
+At some point, adding one person would theoretically increase the network value by an amount equal to the whole world economy, and adding a few more people would make us all immeasurably rich. Clearly, this hasn't happened and is not likely to happen. So Reed's Law cannot be correct, even though its core insight—that there is value in group formation—is true. And, to be fair, just as Metcalfe was aware of the limitations of his law, so was Reed of his law's."
+
+The alternative and more realistic formulation: "if we search for a cogent description of a network's value, then n log(n) appears to be the best choice."
+(http://www.spectrum.ieee.org/jul06/4109/3)
+
+
+=More Information=
+
+Important: [http://news.zdnet.com/2100-1035_22-141783.html Metcalfe's Law over-optimistic]: Two University of Minnesota researchers have written a paper arguing that Metcalfe's Law, a rule of thumb that computes the value of communication networks, is overly optimistic.
+
+Also:
+
+#See [[Reed's Law]] and the entry on [[Group Forming Networks]]
+#Also: [[Moore's Law]]
+#[[Metcalfe's Plateau]]: when Metcalfe's Law stops operating
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Relational]]
+
+[[Category:Technology]]
+
+[[Category:Patterns]]

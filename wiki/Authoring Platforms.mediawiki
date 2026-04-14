@@ -1,0 +1,472 @@
+'''"We want to have a clear idea of what tools are already out there for online collaborative authoring of documents.'''   [...] At this point, this list may include some platforms and programs that are really more orientated towards collaborating on code than documents (eg GITLab). I'm including these in case some components of their stack may be useful to us, but after I've done some more testing and evaluation, I will start separating code and documenting platforms into separate tables." &mdash; [[Danyl Strype|Strypey]]
+
+The maintained version of a [https://web.archive.org/web/20200808004144/https://www.coactivate.org/projects/disintermedia/existing-authoring-platforms table of collaborative authoring platforms] originally created on the [[Disintermedia]] wiki.
+
+==Server-Based Software==
+
+{| class="wikitable"  
+|-
+!Platform
+!Publisher
+!Language
+!License
+!Database
+!Business model
+!Notes
+|-
+|
+[https://atlas.oreilly.com/ Atlas]
+|
+O'Reilly Media
+|
+?
+|
+?
+| GIT-based
+|
+commercial with gratis trial
+|
+aimed at people writing technical manuals. "On the Atlas platform, you write, design, and publish in one environment and workflow. Produce print or digital content without an expensive “retooling” of fundamental processes—and even publish content that is “born digital” in print." Supports multiple output formats (MOBI, ePub, Print and Web PDF, HTML). "You can always access or move your own content—it’s in a non-proprietary, open format, so you can’t get locked in."
+|-
+|
+[https://www.authorea.com/aboutus Authorea]
+|
+Authorea
+|
+Ruby on Rails
+|
+?
+| GIT-based
+|
+gratis for open access articles, commercial for private
+|
+aimed at people doing academic writing, supports writings in LaTeX, Markdown, HTML, Javascript, and more, some free code components
+|-
+|
+[http://www.booki.cc/ BookType]
+|
+[http://sourcefabric.booktype.pro/booktype-20-for-authors-and-publishers/what-is-booktype/ SourceFabric ]
+|
+Python
+|
+GNU AGPL
+|
+|
+gratis to run on your own server, Pro commercial hosting
+|
+evolved out of in-house software used by FLOSSmanuals.net to facilitate the accelerated production models enabled by book sprints. 
+|-
+|
+[http://www.collatebox.com/ CollateBox] 
+|
+CollateBox Inc.
+|
+|
+|
+|
+commercial with gratis trial
+|
+more of a shared spreadsheet/ database than an authoring tool 
+|-
+|
+[https://cryptpad.fr/ CryptPad]
+|
+XWiki Labs
+|
+JavaScript
+|
+[https://github.com/xwiki-labs/cryptpad/blob/master/LICENSE GNU AGPL]
+|
+[https://github.com/xwiki-contrib/chainpad ChainPad]
+|
+Selling proprietary licenses to anyone who wants to opt-out of the share-alike conditions of the AGPL.
+|
+Similar to Etherpad but with the difference that only invited collaborators can edit the pad, not just anyone who stumbles across it.
+|-
+|
+[https://www.dbook.org/ DBook]
+|
+|
+|
+|
+|
+commercial, gratis for limited use
+|
+"Structured and collaborative writing for large documents" 
+|-
+|
+[https://draftin.com/ Draft]
+|
+|
+|
+|
+|
+|
+"Easy version control and collaboration for writers" 
+|-
+|
+[http://etherpad.org/ EtherPad] 
+|
+Etherpad Foundation
+|
+Scala
+|
+Apache 2.0
+| ?
+|
+free code with many gratis instances
+|
+The base software for PiratePad and many other instances, EtherPad allows for real-time editing, with a chat sidebar. No registration required, just enter a name, choose a colour, and edit/chat. Timeline visualises the full edit history of each pad. 
+|-
+|
+[https://firepad.io/ FirePad]
+| Google
+| ?
+| "MIT"
+| [https://firebase.google.com/docs/database/ Firebase]
+| ?
+| FirePad is intended to make it very easy for web developers to integrate a rich text editor into their site, without running a full server package like Etherpad or CryptPad, but leaving them totally dependent on Google servers for their site to continue working.
+|-
+|
+[http://forkthecookbook.com/ ForktheCookbook]
+|
+|
+|
+| GIT-based
+|
+|
+aimed at people who like sharing and modifying recipes
+|-
+|
+[https://gathercontent.com/ GatherContent]
+|
+|
+|
+|
+|
+commercial with free trial
+|
+"Content planning, production &amp; workflow software" 
+|-
+|
+[https://gingkoapp.com/ GinkoApp]
+|
+|
+|
+|
+|
+|
+uses Adobe Flash! Aimed at creative and academic writers, "Gingko is a new kind of tool, that lets you shape your ideas with lists, outlines <em>and</em> cards, all in the same clean interface." 
+|-
+|
+[https://www.gitbook.com/ GITBook]
+|
+FriendCode
+|
+|
+Apache 2.0
+| GITHub?
+|
+gratis for public projects, commercial for private projects
+|
+authoring front-end for GITHub? Has a server-side component and a desktop component.
+|-
+|
+[https://pages.github.com/ GITHub Pages]
+| 
+GitHub
+|
+|
+| GITHub
+|
+|
+hosting for blogs and homepages
+|-
+|
+[https://gitlab.com/ GITLab]
+|
+GitLab
+|
+Ruby
+|
+[https://gitlab.com/gitlab-org/gitlab-ce Expat License] with some proprietary "extras"
+| GIT-based
+|
+gratis for public projects, commercial for private projects
+|
+mainly intended for software projects, and the interface is non-intuitive to someone who isn't use to code forges
+|-
+| [https://www.graphitedocs.com/ Graphite Docs]
+| Graphite Docs
+| Javascript, ?
+| [https://github.com/Graphite-Docs/graphite/blob/master/LICENSE.md GPLv3]
+| Blockstack
+| free code with a gratis test instance at http://app.graphitedocs.com
+|-
+|
+[http://kune.ourproject.org/ Kune]
+|
+[http://comunes.org/ Comunes Collective]/ [http://ourproject.org/ OurProjects]
+|
+Java
+|
+[http://kune.ourproject.org/faq/#is-kune-100-freelibre-software-was-kune-built-using-any-proprietary-framework-or-library GNU AGPL]
+|
+|
+some gratis demo sites like Kune.cc
+|
+based on the same underlying technology as Apache Wave, Kune offers collaborative documents, live chat, and group messaging (unlike email messages stay on the originating server more like the way the web works with RSS), and federation using the Wave Protocol built on XMPP, but with more of a focus on groups of users than individual users
+|-
+|
+[https://leanpub.com/ LeanPub]
+|
+|
+|
+|
+|
+royalties on e-book sales
+|
+writing platform, one-click-publishing to mulptiple formats, and e-book sales
+|-
+|
+[http://onword.co/ OnWord]
+|
+|
+|
+|
+|
+|
+requires Twitter login, "No formatting. No toolbars. No folders, file formats, or compatibility problems." 
+|-
+|
+[https://www.penflip.com/ Penflip] 
+|
+MadebyLoren.com
+|
+|
+| GIT
+|
+gratis for public projects, commercial rates for private
+|
+"I'm building Penflip, a collaborative writing platform. It's similar to GitHub, but designed for writing instead of coding."
+|-
+|
+[https://poetica.com/ Poetica]
+|
+Poetica
+|
+|
+|
+|
+gratis to use
+|
+"content collaboration for WordPress", UI resembles working on paper with pen, also integrate with Slack
+|-
+|
+[http://pressbooks.com/ PressBooks]
+|
+PressBooks
+|
+PHP 5.6.X and WordPress 4.4.1
+|
+GPLv2
+| ?
+|
+gratis with watermark on digital files, or one-off charge per book for ad-free
+|
+built on [http://mashable.com/2012/07/26/beginner-guide-wordpress-multisite/ Wordpress Multisite]
+|-
+|
+[http://prose.io/#about Prose]
+|
+Development Seed
+|
+Javascript, CSS, and MarkUp
+|
+BSD
+| GitHub
+|
+gratis
+|
+"a web-based interface for managing content on GITHub"
+|-
+|
+[http://prosemirror.net/ ProseMirror (beta)]
+|
+?
+|
+?
+|
+"MIT"
+| ?
+|
+gratis
+|
+"represents changes to documents as well-defined pieces of data. Such changes can be stored, inverted (for undo), analyzed (think git blame), and filtered (to implement more complex types of content restriction). And most importantly, they can be sent over the wire to implement real-time collaborative editing."
+|-
+|
+[https://quip.com/ Quip]
+|
+|
+|
+|
+|
+commercial, gratis for limited use
+|
+documents, spreadsheets, lists, chat
+|-
+|
+[http://scalar.usc.edu/scalar/ Scalar]
+|
+The Alliance for Networking Visual Culture
+|
+homepage uses some Flash
+|
+Educational Community License, Version 2.0
+|
+|
+gratis to use
+|
+"Scalar enables users to assemble [http://scalar.usc.edu/anvc_site/features/media-support/ media] from multiple [http://scalar.usc.edu/anvc_site/features/archive-partners/ sources] and juxtapose them with their own writing in a variety of ways, with minimal technical expertise required."
+|-
+|
+[https://stackedit.io/ StackEdit]
+|
+|
+|
+|
+|
+|
+" In-browser markdown editor" 
+|-
+|
+[https://typewrite.io/ TypeWrite]
+|
+Josh C
+|
+|
+|
+|
+gratis to use
+|
+"A simple, real-time collaborative writing environment"
+|-
+|
+[https://writeapp.me/ WriteApp]
+|
+|
+|
+|
+|
+gratis to use
+|
+"Write. In private. With your own free online notebook" 
+|-
+|
+[http://incubator.apache.org/wave/demo-servers.html Apache Wave/ Wave in a Box] (formerly Google Wave)
+|
+Apache Foundation
+|
+Java
+|
+[http://kune.ourproject.org/faq/#is-apache-wave-and-the-wave-protocol-free-software Apache 2.0]
+|
+|
+gratis to run on your own server, various gratis hosted services including [http://www.kune.cc Kune.cc]
+|
+Combines a collaborative document editor with live chat and group messaging, federated using Wave Protocol, an extension of XMPP.
+|-
+|
+[http://weeva.com/ Weeva]
+|
+|
+|
+|
+|
+|
+aimed at gift-giving 
+|}
+
+==Desktop and Mobile Client Software==
+
+{| class="wikitable"
+|-
+!Application
+!Publisher
+!Language
+!License
+!Supported Platforms
+!Notes
+|-
+|
+[http://pad.haroopress.com/ HarooPad]
+|
+|
+|
+|
+GNU/Linux, OSX, Windows      
+|
+"The Markdown enabled Next Document Processor" 
+|-
+|
+[https://ia.net/writer/ios/ IA Writer]
+|
+Information Architects
+|
+Cocoa
+|
+proprietary
+|
+iOS, OSX, Android      
+|
+|-
+|
+[http://sigil-ebook.com Sigil]
+|
+|
+|
+GPLv3
+|
+OSX, and Windows (Vista or above)      
+|
+"multi-platform EPUB ebook Editor"
+|-
+|
+[http://www.sublimetext.com/ SublimeText]
+|
+|
+|
+|
+|
+"a sophisticated text editor for code, markup and prose." 
+|-
+|
+[http://substance.io/composer/ Substance Composer]
+|
+|
+|
+|
+|
+cross-platfrom, currently in beta (as of May 2014), "Do-It-Yourself Publishing for everyone", "Write for the web. The web just turned 25. And still, most writing tools available are only simulating print."
+|-
+|
+[http://uberwriter.wolfvollprecht.de/ UberWriter]
+|
+Wolf Vollprecht
+|
+Python
+|
+GPLv3
+|
+GNU/Linux      
+|
+Inspired by IA Writer
+|}
+
+==More Information==
+* [[Disintermedia]]
+
+* Kathi Fletcher has a Shuttleworth Fellowship grant to develop [http://kefletcher.blogspot.co.nz/2012/09/collaboration-xor-offline-editing.html collaborative authoring tools for OER Textbooks]
+* Using GIT as a file server: '[http://docs.saltstack.com/en/latest/topics/tutorials/gitfs.html Git Fileserver Backend Walkthrough]'
+
+[[Category:P2P_Infrastructure]]

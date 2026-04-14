@@ -1,0 +1,33 @@
+'''= the [[Social Engineering-Knowledge Database]] (SKDB) project provides the means for specifying dependencies and applying standards that can be shared by open source DIY makers'''
+
+
+URL = http://designfiles.org/dokuwiki/skdb
+
+=Description=
+
+"the Social Engineering-Knowledge Database (SKDB) project provides the means for specifying dependencies and applying standards that can be shared by open source DIY makers. You don’t need to reinvent the wheel every time you begin a new project. Someone may have already done most or all of the work for whatever you are trying to do, and then released the plans on the internet. And there are many common tools and parts involved in making things. The SKDB project directly tackles the challenge of packaging and distributing these plans.
+
+The SKDB project simplifies the process of searching for free hardware designs, comparing part compatibility, building lists of materials and components, and determining where to get them by organizing them into packages.
+
+The SKDB project is like apt-get (in Debian) or [http://en.wikipedia.org/wiki/Apache_Maven Maven] (in Java), but for real stuff. In the SKDB project, hardware specifications are organized into packages. Packages are a standard and consistent way for programs to find data.
+
+For each part in a package, there are a number of interface definitions that describe how the part can connect with other parts, even parts from other packages. Each package also lists dependencies which have to be bought or built in order to successfully carry out a project. For example, a drill press is required to make holes with a certain level of accuracy. The SKDB project downloads all of the dependencies automatically and compares them to your existing inventory, and generates instructions for your computer numerical controlled (CNC) machinery, if you have any. "
+(http://hplusmagazine.com/articles/toys-tools/hackerspace-your-garage-downloading-diy-hardware-over-web)
+
+=Assessment=
+
+Suresh Fernando:
+
+"Takes things into right direction of creating "hardware source"
+- describing hardware designs in consistent manner in code or
+pseudocode which a) allows automatic generation of all kinds of
+derivative data such as instructions for machining, assembly etc; and
+b) allows the use of existing revision tracking systems." (February 2010)
+
+
+=More Information=
+
+#Explanatory videos: 1) http://www.youtube.com/watch?v=-n39RK4inzg&feature=player_embedded ; 2) http://www.youtube.com/watch?v=3S9z6H_EFqQ&feature=player_embedded
+
+[[Category:Manufacturing]]
+[[Category:Software]]

@@ -1,0 +1,64 @@
+
+=Definition=
+
+From the Wikipedia [http://en.wikipedia.org/wiki/Distributed_Transient_Network]:
+
+"Distributed Transient Network (DTN) is defined as: the type of network which is inherently decentralized by nature and consists mainly of nodes which are not per se constantly a part of the network and are able to join or leave at any time at any place in the network.
+
+It is a well known paradigm within computer science."
+(http://en.wikipedia.org/wiki/Distributed_Transient_Network)
+
+
+=Characteristics=
+
+"A DTN has the following properties that define its paradigm:
+
+    
+* Decentralized network architecture
+    
+* Transient node/network behavior (both physical and logical)
+    
+* Heterogenity of network node resources
+    
+* Self managing/healing network
+    
+* Nodes are autmotically discovered and added to the DTN
+    
+* One node is able to reach all other nodes within the DTN"
+(http://en.wikipedia.org/wiki/Distributed_Transient_Network)
+
+
+=Related Technologies=
+
+[http://en.wikipedia.org/wiki/Mobile_ad-hoc_network Mobile ad-hoc network]
+
+extract :
+
+A mobile ad-hoc network (MANet) is a kind of wireless ad-hoc network, and is a self-configuring network of mobile routers (and associated hosts) connected by wireless links – the union of which form an arbitrary topology. The routers are free to move randomly and organize themselves arbitrarily; thus, the network's wireless topology may change rapidly and unpredictably. Such a network may operate in a standalone fashion, or may be connected to the larger Internet.
+
+
+[http://en.wikipedia.org/wiki/Mesh_network Mesh network]
+
+Mesh networking is a way to route data, voice and instructions between nodes. It allows for continuous connections and reconfiguration around broken or blocked paths by "hopping" from node to node until the destination is reached. A mesh network whose nodes are all connected to each other is a fully connected network. Mesh networks differ from other networks in that the component parts can all connect to each other via multiple hops, and they generally are not mobile. Mesh networks can be seen as one type of ad hoc network. Mobile ad-hoc networking (MANet), and mesh networking are therefore closely related, but mobile ad hoc networks also have to deal with the problems introduced by the mobility of the nodes.
+
+Mesh networks are self-healing: the network can still operate even when a node breaks down or a connection goes bad. As a result, a very reliable network is formed. This concept is applicable to wireless networks, wired networks, and software interaction.
+
+
+
+=Discussion=
+
+==Relation of DTN with P2P==
+
+From the Wikipedia article:
+
+"well known DTN implementations are p2p and ad hoc computer networks. These networks however are implemented at very different layers of the OSI model. p2p is mainly software operating in the Application layer of the OSI model and forms a DTN which can be spread over the entire world. ad hoc computer networks however operate in the Network layer and are mostly networks that are physically close to each other."
+(http://en.wikipedia.org/wiki/Distributed_Transient_Network)
+
+
+
+=More Information=
+
+See [[P2P Computing]]
+
+
+[[Category:Technology]]

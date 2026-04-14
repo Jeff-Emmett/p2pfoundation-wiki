@@ -1,0 +1,147 @@
+'''* Book: Internet Architecture and Innovation. Barbara van Schewick. MIT Press, 2010'''
+
+URL = http://netarchitecture.org/ [http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=12162] [http://books.google.com/books?id=hwCU2yEKbk4C&lpg=PP1&dq=schewick&pg=PP1#v=onepage&q&f=false Google Books version]
+
+Sample chapters via http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=12162&mode=toc
+
+
+=Abstract=
+
+"The Internet's remarkable growth has been fueled by innovation. New applications continually enable new ways of using the Internet, and new physical networking technologies increase the range of networks over which the Internet can run. Questions about the relationship between innovation and the Internet's architecture have shaped the debates over open access to broadband networks, network neutrality, nondiscriminatory network management, and future Internet architecture. In Internet Architecture and Innovation, Barbara van Schewick explores the economic consequences of Internet architecture, offering a detailed analysis of how it affects the economic environment for innovation.
+
+Van Schewick describes the design principles on which the Internet's original architecture was based—modularity, layering, and the end-to-end arguments—and shows how they shaped the original architecture. She analyzes in detail how the original architecture affected innovation—in particular, the development of new applications—and how changing the architecture would affect this kind of innovation.
+
+Van Schewick concludes that the original architecture of the Internet fostered application innovation. Current changes that deviate from the Internet's original design principles reduce the amount and quality of application innovation, limit users' ability to use the Internet as they see fit, and threaten the Internet's ability to realize its economic, social, cultural, and political potential. If left to themselves, network providers will continue to change the internal structure of the Internet in ways that are good for them but not necessarily for the rest of us. Government intervention may be needed to save the social benefits associated with the Internet's original design principles."
+
+
+=Table of Contents=
+
+See: http://netarchitecture.org/wp-content/uploads/2010/08/van-Schewick-Contents.pdf
+
+
+=Overview=
+
+
+==Internet Architecture, Innovation and Network Neutrality==
+
+“The original architecture of the Internet fostered innovation. It is now changing in ways that are bad for innovation. Regulators need to intervene to protect the beneficial environment for innovation that the architecture of the Internet originally created.”
+
+These claims have formed the basis for calls for regulatory intervention since the late 1990s. Today, they are at the core of the network neutrality debate, the debate over whether governments should establish rules limiting the extent to which network providers can interfere with the applications and content on their networks.
+
+While intuitively appealing, the notion that the Internet’s internal structure has contributed to the explosion of new applications is not obvious from an economic perspective. In Internet Architecture and Innovation, Barbara van Schewick carefully evaluates whether and why these claims are true, using insights from economics, management science, engineering, networking and law.
+
+
+She demonstrates:
+
+* how the Internet’s internal structure, or architecture, has fostered innovation in the past;
+    
+* why this engine of innovation is under threat;
+    
+* why the “market” alone won’t protect Internet innovation;
+    
+* and which features of the Internet’s architecture we need to preserve so that the Internet continues to serve as an engine of innovation in the future.
+
+van Schewick puts the international calls for network neutrality regulation on a solid theoretical foundation. In the process, she addresses many questions that are hotly debated in the network neutrality debate: Does it matter whether users can decide freely how to use the network? Do network providers have an incentive to exclude applications and content from their networks, and does competition remove this incentive? How important is innovators’ ability to innovate at low costs? 
+
+
+==The End-to-End Arguments and the Architecture of the Internet==
+
+See the excerpt on [http://netarchitecture.org/content/#e2e end-to-end arguments from a technical perspective] 
+
+“The end-to-end principle is one of the fundamental design principles on which the Internet was based.”
+
+Most network engineers agree with this statement; many legal academics don’t. Beyond that, even network engineers tend to disagree. Often, both proponents and opponents of a specific technical solution point to the end-to-end arguments to justify their view.
+
+In Internet Architecture and Innovation, Barbara van Schewick uncovers the source of this confusion. There is, she argues, no single version of the end-to-end arguments, but two different ones that embody different rules for architectural design.
+
+The first version, which she calls the “narrow version,” was presented by Jerome Saltzer, David Reed, and David Clark in the 1981 paper in which the end-to-end arguments were first named and identified as a design principle; the second version, which she calls the “broad version,” is the focus of later papers by these authors. The difference between the two versions is not immediately apparent, and Saltzer, Reed and Clark never explicitly drew attention to the change in definition. There are, however, as van Schewick demonstrates, real differences in scope, content, and validity that make it necessary to distinguish between the two versions. At the same time, the silent coexistence of two different design principles under the same name explains some of the confusion that surrounds the end-to-end arguments.
+
+Tracing specific design decisions to the end-to-end arguments, van Schewick shows how the two versions of the end-to-end arguments shaped the original architecture of the Internet. She also discusses many of the questions that often come up in discussions of the end-to-end arguments: Do the end-to-end arguments prohibit quality of service? Do they make it impossible to make the network more secure? How do they relate to current architectural developments such as the evolution of applications towards a more distributed structure and the proliferation of middleboxes? And should the end-to-end arguments continue to guide the evolution of the Internet in the future? (Get a PDF overview of the technical aspects of the end-to-end arguments addressed by the book).
+
+
+==Architecture and Economics==
+
+* “Architecture is politics.” Mitch Kapor’s insight, made popular by Lawrence Lessig’s Code and Other Laws of Cyberspace, has become central to many discussions of Internet policy.
+
+* “Architecture is quality.” That the architecture of a complex system determines whether the actual system will be able to exhibit the desired qualities is a central insight in the field of software architecture and product architecture.
+
+* Architecture is economics.” Building on work that explores the economic implications of the architecture of physical products, Internet Architecture and Innovation focuses on a consequence of architectural decisions that we are just beginning to understand: The architecture of a complex system fundamentally affects the economic system that drives its development, production, and use. It influences which actors will be able to develop, produce, or use the system, what they do, and how they interact.
+
+
+Understanding how architectures influence economic systems and are influenced by them, van Schewick argues, will be critical for businesses, law and public policy. From the book’s introduction: “These insights open new opportunities for businesses, for law, and for public policy. Businesses may want to engage in “strategic design” by creating architectures that shape the competitive environment in their favor. In the future, being able to design architectures that further a firm’s strategic interests or knowing how to evaluate other firms’ architectural strategies and react to them may be as important to a firm’s success in the marketplace as a firm’s ability to engage in more conventional forms of competition.
+
+For law and public policy, the economic impact of architecture seems to be empowering and challenging at the same time. Traditionally, policy makers have used the law to bring about desired economic effects. Architecture may provide an alternative way of influencing economic systems. Apart from using architecture to realize their own economic goals, policy makers may have to constrain the extent to which private actors can use architecture to further their private economic interests. This is particularly relevant to communications policy, a field in which certain architectures may seriously restrict regulators’ ability to regulate at a later stage. Moreover, as communications networks continue to permeate more and more sectors of the economy, the negative effects of an architecture that strongly favors a few economic actors may be particularly long-term and severe.
+
+To exploit the effect of architecture on the economic system in practice, to design architectures that further our interests, or to understand what other people’s architectures may mean for us, we need to understand exactly how an architecture influences the economic system and what features of an architecture we must tweak to create a specific economic effect. This book is a step toward that goal.”
+
+Readers interested in the approach to “architecture and economics” (see box I.1) advanced by the book can follow a specific thread through the book. From the introduction: “Within the framework described in chapter 1, the book focuses on the effect of one constraint (architecture) on one specific activity (innovation), and sets aside consideration of other factors (such as the effect of non-architectural constraints (i.e. laws, norms or prices), or the mechanisms by which architectures are influenced by economic systems) that are relevant within the framework. This thread ties together the portions of the book that touch on these other factors (see table I.3). In doing so, it complements the detailed analysis (in chapters 4-8) of how architectures—particularly that of the Internet—affect innovation.”
+(http://netarchitecture.org/content/overview/)
+
+
+=Excerpts=
+
+See the introduction via http://netarchitecture.org/wp-content/uploads/2010/08/van-Schewick-Intro.pdf
+
+In addition:
+
+* excerpt on [http://netarchitecture.org/content/#e2e end-to-end arguments from a technical perspective] ; table at http://netarchitecture.org/wp-content/uploads/2010/08/van-Schewick-End-to-End-Arguments-Guide.pdf
+
+* excerpt analyzing the social value of architectures based on the broad version of the end-to-end arguments and the resulting policy implications (see [http://netarchitecture.org/wp-content/uploads/2010/08/van-Schewick-Network-Neutrality-Guide.pdf table I.2]). It guides the reader to those parts of the book that are [http://netarchitecture.org/content/#iainn relevant to the network neutrality debate].
+
+* The third thread explores aspects of the approach to “architecture and economics” (see [http://netarchitecture.org/wp-content/uploads/2010/08/van-Schewick-Architecture-and-Economics-Guide.pdf box I.3])
+
+
+=Reviews=
+
+
+'''1'''. Marvin Ammori, Internet Policy: 
+
+“There’s a new book out on Internet policy that is essential reading for anyone interested in Internet policy—and probably for anyone interested in the law, economics, technology, or start-ups. I recommend it to everyone. …
+
+Barbara van Schewick’s new book, “Internet Architecture and Innovation,” is one of the very few books in my field in the same league as Larry Lessig’s Code, in 2000, and Yochai Benkler’s Wealth of Networks, in 2006, in terms of its originality, depth, and importance to Internet policy and other disciplines. I expect the book to affect how people think about the Internet; about the interactions between law and technical architectures in all areas of law; about entrepreneurship in general. I also think her insights on innovation economics, which strike me as far more persuasive than lawyers’ usual assumptions, should influence “law and economics” thinking for the better. …
+
+This is one of those rare books where every chapter is full of novel and important ideas. But I’ll tell you about my very favorite part. In the eighth chapter, beginning with “The Value of Many Innovators,” van Schewick presents the stories of how several major technologies were born: Google, Flickr, EBay, 37Signals, Twitter, and even the World Wide Web, email, and web-based email. I had always suspected that the “accidental” beginnings and unexpected successes of these technologies were a series flukes, one fluke after another. Rather, van Schewick explains, it’s a pattern. Her models actually predict the pattern accurately–unlike other academic models like the efficient market hypothesis and theories on valuing derivatives. These entrepreneurial stories (or case studies, to academics) are eye-opening; they’re also counter-intuitive unless you consider the management science and evolutionary economics van Schewick applies to analyze them. So if you wondered what the invention of Flickr, Google, Twitter, and the World Wide Web had in common, van Schewick answers the question.”
+(http://ammori.org/2010/08/11/vanschewic/)
+
+
+'''2'''.
+
+Christopher Parsons, Review: Internet Architecture and Innovation, Technology, Thoughts, and Trinkets, December 1, 2010:
+
+“I have a suspicion that this book will become one of the centrepieces for Internet governance literatures in coming years, and likely to be as influential Benkler’s The Wealth of Networks: How Social Production Transforms Markets and Freedom with regards to the economics of the Internet. If issues around Internet governance, innovation, and control are your cup of tea then consider this book an absolute must buy.”
+(http://www.christopher-parsons.com/blog/politics/review-internet-architecture-and-innovation/)
+
+
+
+
+3.
+
+"Barbara van Schewick’s book is an extended — and I do mean extended  — love letter to the “end-to-end” principle and Net neutrality.  Weighing in at almost 600 pages, van Schewick goes on much longer than she needed to make her core argument: The structure of the current Internet is sacrosanct and must be preserved. Deviations from end-to-end or “neutrality,” however defined, are to be discouraged or disallowed. “[D]ifferent ways of structuring the Internet result in very different environments for its development,” she argues.  “If left to themselves, network providers will continue to change  the internal structure of the Internet in ways that are good for them, but not necessarily for the rest of us,” she says. (p. 377)
+
+Of course, we’ve heard all these arguments made ad nauseam in the Net neutrality wars, but to her credit, van Schewick makes them far more eloquently in this book than they have ever been made before.  She does a particularly good job of walking the reader through the guts of the Internet’s current architecture.  The layman will find the book quite challenging in light of its highly technical nature, however.  But her grasp of the subject is impressive."
+(http://techliberation.com/2010/12/10/the-10-most-important-info-tech-policy-books-of-2010/)
+
+More excerpts from reviews at http://netarchitecture.org/coverage/read/
+
+=About the Author=
+
+Barbara van Schewick is Associate Professor of Law at Stanford Law School, Director of Stanford Law School's Center for Internet and Society, and Associate Professor (by courtesy) of Electrical Engineering in Stanford University's Department of Electrical Engineering.
+
+
+=More Information=
+
+#Summary: http://netarchitecture.org
+#more detail on the issues covered by the book: http://netarchitecture.org/content/overview/
+#excerpts from the book, http://netarchitecture.org/content/excerpts/
+#book blog, http://netarchitecture.org/blog/
+#excerpts from reviews at http://netarchitecture.org/coverage/read/
+#Berkman video presentation: [[Barbara van Schewick on Internet Architecture and Innovation]]
+
+
+[[Category:Books]]
+
+[[Category:Governance]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]

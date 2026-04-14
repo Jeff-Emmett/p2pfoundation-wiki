@@ -1,0 +1,67 @@
+Initial commentary by [[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 09:29, 24 October 2016 (UTC)
+
+= Free Code In-Vehicle Computer (ICC) or "In-Vehicle Infotainment" (IVI) =
+
+Essentially a built-in tablet or "smartphone" that people can user for navigation, entertainment, communication and other functions while in their car. The advantage of having the IVC built-in, as opposed to simply having a mount for a standard handheld device, is that it can be integrated more smoothly with the car's control systems, such as volume or on/off controls mounted on the steering wheel. As more companies and drivers make the switch to electric vehicles, the IVC also creates opportunities for tight integration with car's deeper electrical systems, for example the IVC serving as the display user interface for diagnostic checks on the electric engine and other control systems.
+
+== Relevant Projects ==
+
+* [https://www.android.com/auto/ Android Auto]: sometimes known as Automotive Grade Android (see Swedspot)
+
+* [https://www.automotivelinux.org/ Automotive Grade Linux]: an official project of the Linux Foundation aiming to standardize a variant of Linux for use in IVC systems. Hard to tell at first glance whether they mean the Linux kernel itself or an OS that uses the kernel (eg GNU/Linux, Android/Linux, ChromeOS/Linux, Sailfish/Linux), but according to an article by [http://hackerboards.com/automotive-grade-linux-group-releases-tizen-based-ivi-stack/ Eric Brown posted on HackerBoards] the Tizen/Linux project is the base for their new ICC standard.
+
+* [https://www.genivi.org/ GENIVI Alliance]: a not-for-profit consortium consisting mostly of automotive and electronic manufacturing companies, that similarly aims to help the industry standardize on an open source ICC. Projects include [https://at.projects.genivi.org/wiki/pages/viewpage.action?pageId=11568933 Smart Device Link] for interfacing between a handheld and the integrated electronics in the car.
+
+* [http://www.swedspot.com/open-infotainment/ Swedspot Open Infotainment]: Swedspot is Swedish an automotive software start-up, spun off in 2012 from car manufacturer [http://www.swedspot.com/#about Saab Automotive]. According to them, "much of the Automotive Grade Android code and ideas were Swedspot contributions".
+
+== Research Publications ==
+
+* 'Study on Open Source In-Vehicle Infotainment (IVI) Software Platforms': [http://publications.lib.chalmers.se/records/fulltext/218477/218477.pdf Masters thesis] by Anders Klavmark and Terje Vikingsson at Chalmers University of Technology, University of Gothenberg, submitted in 2015.
+
+
+= Free Code Vehicle Control Systems =
+
+Unlike the ICC, control systems are inherently critical to the safety of a vehicle, as well as factors like fuel efficiency. While some pundits, like [http://www.greencarreports.com/news/1075447_open-source-electric-cars-umm-no-not-a-good-idea Antony Ingram of GreenCarReports], express concerns about doing this with "open source" components, these are mostly based on commons misunderstandings about what "open source" means, many of them key messages from Microsoft's decade of anti-Linux FUD, that continue to float in the toilet bowl of tech commentary. Tesla's electric cars control systems are based on embedded Linux kernels, and the Automotive Grade Linux project intends to eventually expand into control systems, "[such as instrument clusters and telematics systems "such as instrument clusters and telematics systems]".
+
+== Relevant Projects ==
+
+* [http://sourceforge.net/projects/tumanako Tumanako] (LGPLv3): a project targeting drive and recharge systems for EVs. Regular contributors and re-users include NZ-based EV start-up [http://greenstage.co.nz/projects.html Greenstage]
+
+
+= Free Hardware Designs for Vehicles =
+
+These are designs that can be freely used by companies to built products for sale, or by home tinkerers to create products for their own use. Documentation of such designs are usually published under a license explicitly permitting sharing and re-use of the designs, such as [[CreativeCommons]] licenses, or sometimes free code software licenses like the [[GNU General Public License]].
+
+== Relevant Projects ==
+
+* [http://neilblanchard.blogspot.co.nz/2010/09/carbn-concept-ev-open-source-project.html CarBEN] (CC-BY-SA 3.0): a project by designer Neil Blanchard, last updated in 2010. Featured in an [http://hackaday.com/2014/06/11/open-source-electric-car-carben-produces-no-carbon/ article on Hackaday].
+
+* [https://www.osvehicle.com/company/ OSVehicle] (CC-BY-SA 4.0): CAD files for creating your own version of their TABBY EVO vehicle are available on their site, along with copies of [http://directory.fsf.org/wiki/FreeCAD FreeCAD] (LGPLv2), the cross-platform, free code, [[Computer-Aided Design Software]] application they use.
+
+* [[Trexa]]: a start-up offering vehicles based on free designs. Articles on Trexa were published on a number of website in 2010, including [http://newatlas.com/trexa-vehicle-development-platform/14023/ Gizmag (now New Atlas)], [http://inhabitat.com/design-your-own-electric-vehicle-with-the-trexa-ev-platform/ Inhabitat], and [https://www.engadget.com/2010/01/20/trexa-ev-development-platform-is-modular-extremely-customizable/ Engadget]. Their Trexa.com url now points nowhere and their [https://twitter.com/trexa Twitter feed] was last updated in 2013. Sadly, both the company and the project appear to be dead.
+
+* [http://velocar.cc/ Velocar] (beware: pushy website, demands registration for viewing): a 3-wheeled, electric micro-vehicle which has been adopted as the official passenger transport project by [http://opensourceecology.org/wiki/Velocar OpenSourceEcology]
+
+* [http://wikispeed.org/car/ Team WikiSpeed]
+
+* [http://www.zwheelz.com/about.html ZWheels]
+
+= Defensive Patent Approaches for Electric Vehicles =
+
+== Relevant Projects ==
+
+* [https://www.tesla.com/blog/all-our-patent-are-belong-you Tesla Motors]: Elon Musks' announcement that Tesla would "open source" its EV patents in a 2014 blog post, "Tesla will not initiate patent lawsuits against anyone who, in good faith, wants to use our technology", was treated with suspicion by commons advocates because of the "good faith" loophole. But a 2015 article on [https://www.techdirt.com/articles/20150217/06182930052/elon-musk-clarifies-that-teslas-patents-really-are-free-investor-absolutely-freaks-out.shtml TechDirt] confirms that this a typical "defensive patent" strategy, similar to the [https://www.google.com/patents/licensing/#tab=opn Open Patent Non-Assert (OPN) Pledge] used by software companies like Google, and defensive patent pools like the [http://www.openinventionnetwork.com/about-us/ Open Innovation Network].
+
+== Research Publications ==
+
+* Tesla Motors’ Open Source Revolution: Intellectual Property and the Carbon Crisis: [https://medium.com/@DrRimmer/tesla-motors-open-source-revolution-intellectual-property-and-the-carbon-crisis-95259ff867e6 Professor Matthew Rimmer] of QUT provides an analysis of the Tesla patent decision in the context of the "patent thicket" around "green technology".
+= Some Useful links =
+
+==Open source EV's==
+*http://automotivelinux.org
+*https://wikispeed.org/
+==modelica model of an EV==
+*http://omwebbook.openmodelica.org/SMEHV
+
+[[Category:Open]]
+[[Category:Manufacturing]]

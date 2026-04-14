@@ -1,0 +1,264 @@
+See also: [[Wikipedia: Open-source software]]
+
+=Definition=
+
+1. From the Wikipedia:
+
+"Open-source software (OSS) is computer software that is available in source code form for which the source code and certain other rights normally reserved for copyright holders are provided under a software license that permits users to study, change, and improve the software. Open source licenses often meet the requirements of the Open Source Definition. Some open source software is available within the public domain. Open source software is very often developed in a public, collaborative manner. Open-source software is the most prominent example of open-source development and often compared to (technically defined) user-generated content or (legally defined) open content movements.  The term open-source software originated as part of a marketing campaign for free software."
+(http://en.wikipedia.org/wiki/Open-source_software)
+
+
+
+'''2. Definitions from within the community:'''
+
+"Open source software is typically free and comes with the source code needed to adapt it to users' needs. Most open source licenses let users redistribute the software, including possible changes, and charge for redistribution as long as source code changes are publicly available" 
+(http://www.opensource.org).
+
+
+Cited by Joel West at http://www.firstmonday.org/issues/issue12_6/west/index.html
+
+
+"In the narrowest sense, open source software is defined by a particular form of software license approved by the non–profit Open Source Initiative. In practical terms, the concept of open source has three dimensions: an IP license, a virtual development process and a system of shared governance."
+(http://www.firstmonday.org/issues/issue12_6/west/index.html)
+
+
+Note that some [http://feather.planetapache.org/2006/03/08/should-osi-redefine-the-label-open-source/ suggest] that the true [[Open Development]] practices should be defined and projected as well, not just the licensing aspect.
+
+
+==Discussing the Definition==
+
+From a discussion with industry leaders at
+http://opensource.sys-con.com/read/342346.htm
+
+'''1.'''
+
+"The defining characteristics of 'open' are:
+
+- a genuine, recognized open source license. The Apache License, which Spring uses, is very liberal and does not lock out any commercial use
+- visible repositories: free information about what is developed and by whom
+- open issue tracker: free information about bugs and resolution. Ability for anyone to file issue reports
+- a real community, perhaps funded by one or more companies but with wide participation
+- the ability for anyone to gain committer status through merit and dedication"
+
+Rod Johnson – CEO and founder, Interface21 
+
+'''2.'''
+
+there has been the suggestion within the Apache Software Foundation to use the more specific term 'open development.' By referring to 'open development', a company (or rather, community) very clearly states that it is developing and releasing its software in a very specific way that allows anyone to download, build and run the code. And that is exactly what the more abstract wording of 'open source' is currently unable to do."
+
+Arjé Cahn – CTO, Hippo
+
+
+
+'''3.''' 
+
+"Commercial open source product companies are continuing to edge away from the 'official' definition of open source, perhaps because it doesn't provide a way to prevent a new competitor from using the original source code as the basis for a new, competitive offering. In addition, while most of the commercial open source companies follow an open source distribution model, very few of them follow an open source development model that includes community contributions.
+
+So I agree with Nat that the term 'open source' by itself does not describe today's spectrum of open source projects. I routinely distinguish 'commercial open source' from 'community-based open source,' where the former includes those companies trying to generate revenue from open source software and the latter are non-commercial, including 'free/libre' software."
+
+Tony Wasserman – Executive Director, Center for Open Source Investigation, Carnegie Mellon West 
+(http://opensource.sys-con.com/read/342346.htm)
+
+
+
+=(Counter-) Examples=
+
+Sam Rose:
+
+There are some software products out there that claim to be "open
+source", yet do not respect the definition of "free as in freedom"
+that Stallman is talking about.
+
+Examples:
+
+http://www.zimbra.com/
+
+http://www.atlassian.com/
+
+http://www.pentaho.com/
+
+http://www.socialtext.com/ (has recently obscured the "community" edition)
+
+http://www.igniterealtime.org/projects/openfire/
+
+
+=Players=
+
+==Communities vs. Firms==
+
+
+"Certainly there is open source software that is developed for shared benefit by altruistic volunteers. However, the provision of labor and other resources for major open source projects has been increasingly driven by contributors working to advance the goals of their employers, i.e. corporate interests (Hars and Ou, 2001). When firms sponsor open source projects, they have an easier time providing transparency to outsiders than sharing control with them (O’Mahony and West, 2005)."
+(http://www.firstmonday.org/issues/issue12_6/west/index.html)
+
+
+==Evaluating Communities==
+
+Nelson Ko [http://www.osbr.ca/archive.php?issue=10&section=Ar#A6]:
+
+"Understanding the nature of the community that produces the open source software is a critical part of evaluation that is often overlooked by users who are new to open source software. Unlike closed source alternatives, key support options for open source software include non-commercial channels provided by an extended community. Therefore, important criteria that should be considered when evaluating open source software include the size and vibrancy of the community, the availability of online documentation, and access to support via mailing lists, forums, and IRC (Internet Relay Chat). One source for such information is statistics on sites such as  SourceForge and Ohloh. However, both sites focus on the contribution of developers and it is important to note that contribution to an open source community is more than just commits to the codebase. As in commercial software, production of good open source software also requires documentation, testing, support, training, and the incorporation of user feedback. An understanding of the maturity of the community can help to answer questions such as "what support mechanisms are available if we roll out this software?" and "how difficult will it be to install and use this software?"An evaluation of an open source community should also consider the broader ecosystem in which it exists. An environment in which open source is prevalent results in consumer choice that is arguably unparalleled in closed source ecosystems. Open source software has a clear advantage in some domains, for example, in the area of wikis. Freely downloadable open source solutions are plentiful and comparable in terms of quality to their expensive, closed source counterparts.
+
+A deeper understanding of the nature of the community is also critical in determining the nature of support that will be available for an open source software. It is important to consider the nature of the resources the community has to offer in relation to the capabilities of your organization. For example, the Tikiwiki and Drupal communities have a large number of highly technical members who can provide support at a high level of technical sophistication. On the other hand, another popular content management system  Joomla, has a relatively smaller team of technical experts combined with a larger community of less technical but more design oriented individuals such as graphic designers and web designers. Largely as a result of this structure, the Joomla support forums tend to become somewhat overwhelmed with questions of a "how-to" nature. Discussions over more complex technical issues are therefore less prominent. On the other hand, it is much easier to find consultants that are able to make low cost design customizations for Joomla than it is for Drupal or Tikiwiki. Another benefit of open source software like Joomla that is exposed to a wider swath of mainstream users is that they tend to be more user-friendly, although this usually comes at a price of reduced functionality."
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A6)
+
+
+==Users vs. Customers==
+
+Stephen Walli [http://stephesblog.blogs.com/my_weblog/2007/03/debating_open_s.html]:
+
+"First, software projects are interesting buckets of technology.  These projects have users and contributors, i.e. a community.  Open source has a definition.  So does free software.  If these projects are open source or free software, then they meet one (or both) of these definitions.  Pretty simple really. 
+
+Second, products are packaged, installable, tested, documented, supported, and maintained for customers.  Companies build products as part of their value proposition to their customers.  Another way to say this is that customers buy solutions, not software.  Still pretty simple.
+
+These two paragraphs are orthogonal.
+
+I am not suggesting that a project's community does not build packages, test, document, support, or maintain their project software, BUT once a commercial transaction between a customer and an organization takes place, the customer's expectation needs to be met.  It requires a customer and a company and money to change hands. 
+
+Until the buyer puts their money where there mouth is, they're not a customer.  For an open source project, they're simply a user.  Contrast customers with community (users and contributors).  Love them both.  Respect each of them for what they bring to your company.  Do not mistake one for the other.  [Insert my favourite Mårten Mickos quote here.]
+
+Companies can use free and open source software as part of their solution.  To "build" versus "buy" in their product development processes, they can now add "borrow" and "share".  A company can use collaborative development as a community engagement technique.  Instead of traditional push selling they can hopefully develop a large user community (which has tremendous value in its own right) that they can then turn into customers.  It is a set of techniques (tactical or strategic depending upon the company's use).  Nothing more; nothing less.  Mike Olson is right -- there is no "open source business model". 
+
+Customers care that they're buying "open source" and "free (Libre!) software" or that your product is "disruptive to the incumbent" as much as they care about how many patents you filed, the language you wrote the software in, or your accounting practices.  They do care that you provide value for money, and that the solution meets their needs."
+(http://stephesblog.blogs.com/my_weblog/2007/03/debating_open_s.html)
+
+
+==Venture Capital Endorses Open Source as default option for the future==
+
+"We fundamentally believe that open source is a new distribution model, but it is also a new software development model that is here to stay," said Bernard Dalle, general partner with Index Ventures. "We anticipate it's going to be very hard going forward to invest in closed source, because we don't think it's a good development model."
+
+Dalle said the company believes open source delivers better code, due to a broader level of QA testing, faster innovation, due to broader requests for new features, and a cheaper development model.
+
+"We don't see this as a space, we're not calling this a category. We think this is an integral part of the industry today," agreed Robin Vasan, managing director at the Mayfield Fund, explaining that the decision is based on the experience of customer purchasing demands for software. "Customers are saying 'I'm going to try it before I buy it, I'll try it and if it does what you say it should do, then we'll think about having a conversation about paying for it'," he said.
+
+Wellington Partners: We expect to invest in open source, but not because it is open source but because we expect it to be part of every software company in the future,"
+(http://www.cbronline.com/article_news.asp?guid=288BD3F2-E55F-49CC-A284-43926C5F66A5)
+
+=Typology=
+
+
+==Community vs. Proprietary==
+
+"There are two types of open source software. 
+
+'''Community open source is software that a community develops.''' Rather than a single corporate entity owning the software, a sometimes broad community of volunteers determines which contributions are accepted into the source code base and where the software is headed. Individual developers, the committers, and not a specific company, make decisions about the software, as in the case of the Apache Web server (http://httpd.apache.org)
+
+'''Commercial open source is software that a for-profit entity owns and develops.''' The company maintains the copyright and determines what is accepted into the software code base and what to implement next, as in the case of MySQL and its MySQL database (http://www.mysql.com)."
+(http://www.riehle.org/computer-science/research/2007/computer-2007-article.html)
+
+See also our typology of [[Open Source Business Models]]
+
+==By Purpose==
+
+"There are basically  three types of open source products: 1) Actual software like Linux or OpenOffice, 2)  scripting languages like PHP, or 3) web services or applications like WordPress."
+(http://www.e-strategyblog.com/2007/06/open-source-vs-.html) 
+
+
+=Discussion 1: Business Aspects=
+
+Moved to: [[Open Source Software - Business Aspects]]
+
+
+==Open Source can supplant the firm in the production of complex creative objects==
+
+by F. Gregory Lastowka and Dan Hunter:
+
+"Open-source software—like Linux or MySQL
+—provides the model for distributed production
+of complex creative objects. Microsoft spends
+hundreds of millions of dollars producing an
+operating system, yet open-source methods
+mean that a superior operating system can be
+built by amateurs collaborating around the
+world. There are, by now, a sufficient number of
+examples of this type of open-source creativity—
+in areas including software, newspapers, and
+commentary—to allow us to conclude that this
+type of organization can supplant the firm in the
+production of complex creative objects. That is
+not to say that the firm is necessarily dead; rather,
+a new form of social and community organiza-
+tion can produce content that once was the
+province solely of the centralized, heavily capital-
+ized industries."
+(http://www.cato.org/pubs/pas/pa567.pdf)
+
+=Discussion 2: Community Aspects=
+
+
+==The Philosophy of open source==
+
+By Eben Moglen at
+http://old.law.columbia.edu/publications/maine-speech.html
+
+
+
+"The idea of ``Open Source Software'' is software that people can read, and I am for that. But it is important to understand that that inadequately describes what we were trying to do, or why. Dylan Thomas refers in ``The Child's Christmas in Wales'' to the ideal Christmas present of the book that told everything about the wasp, except why. This is, from my point of view, the problem with the discussion about Open Source: it tells you everything, except why. I have now told you why.
+
+Free software is an invocation for particular social purposes of the ability to develop resources in commons. This is not, as I have pointed out, an economic novelty. It is the single way in which we have produced the most important works of Western intellectual achievement since the Renaissance. It is also the way in which we have managed for all time fisheries, surface water resources, and large numbers of other forms of resource beyond human production. Free software presents an attempt to construct a commons in cyberspace with respect to executable computer code. It works. It works, with one interesting subdivision of structural decision-making on how to construct the commons. When we come to the technicalities of licensing, we will observe that there are two philosophies in the construction of the commons, one of which is characterized, oddly enough, by a license with the three-letter name BSD, the Berkeley Systems Division license, which originally covered the distribution of a Unix-like operating system, written on free-sharing principles, primarily at the University of California. The BSD license says: ``Here is a commons. It is not defended by copyright against appropriation. Everything in the commons may be taken and put into proprietary, non-commons production as easily as it may be incorporated into commons production. We encourage people to put material into commons, and we are indifferent as to whether the appropriative use made of commons resources is proprietary, or commons-reinforcing.''
+
+The second philosophy for the production of software in commons is embodied in the GNU General Public License of the Free Software Foundation, known universally throughout the world by another three-letter abbreviation, GPL. The GPL says: We construct a protected commons, in which by a trick, an irony, the phenomena of commons are adduced through the phenomena of copyright, restricted ownership is employed to create non-restricted, self-protected commons. The GPL, whose language you've been referred to, is not quite as elegant a license as I would like but it is pretty short; yet I can put it more simply for you. It says: ``Take this software; do what you want with it--copy, modify, redistribute. But if you distribute, modified or unmodified, do not attempt to give anybody to whom you distribute fewer rights than you had in the material with which you began. Have a nice day.'' That's all. It requires no acceptance, it requires no contractual obligation. It says, you are permitted to do, just don't try to reduce anybody else's rights. The result is a commons that protects itself."
+(http://old.law.columbia.edu/publications/maine-speech.html)
+
+
+==How Companies can help their communities==
+
+EntrepriseDB:
+
+"We are building a successful company on the shoulders of one of the world’s most successful open source projects, and we have a responsibility to give back to that community to the maximum extent possible, while still protecting our ability to generate revenue. In addition to our ethical responsibility, we also “do well by doing good” because we promote the wider spread of PostgreSQL, the world’s most advanced and enterprise-class open source database (albeit only the second most popular).
+
+Our efforts at being excellent citizens of the PostgreSQL community are wide-ranging, but tend to fall into the following broad categories:
+
+    
+* Identify important and difficult development community projects, and get these projects done with EnterpriseDB staff
+    
+* Employ community leaders, including both titled members (i.e., core team) and thought leaders
+    
+* Sponsor non-employee community developers
+    
+* Be a major sponsor of community gatherings and other activities
+
+This balanced approach of selling commercial software on one-hand and aggressively supporting the community on the other is our answer to the conundrum of creating a commercial company on a BSD code base."
+(http://robertogaloppini.net/2007/06/02/open-source-firms-enterprisedb-business-model/)
+
+
+=Key Books to Read=
+
+#[[Open Sources]]
+
+
+=More Information=
+
+
+#Critique by Tony Prug, inspired by the [[Free Software Movement]]: [http://rabelais.socialtools.net/24c3.HackingIdeologies.OpenSource.a.capitalist.movement.pdf Hacking Ideologies]: Open Source as a capitalist movement. 
+#Podcast: [[Edmund J. Walsh and Andrew J. Tibbetts on the Benefits and Risks of Open Source Software]]
+
+==Resources==
+
+#David Wheeler maintains a [http://www.dwheeler.com/oss_fs_refs.html reference page] on [[Free Software]] and [[Open Source Software]].
+#Open Source players in [http://www.news.com/Year-in-review-New-players-enliven-open-source/2009-7344_3-6223153.html 2007]
+#[https://directory.fsf.org Free Software Directory] is the [[Free Software Foundation]] database of free code/ open source software
+
+==Internal Articles== 
+#[[Open Source Appropriate Technology]]
+#[[Open Development]]
+#[[Open Source]]
+#[[Open Source Business Models]]
+#[[Open Source Service Companies]]
+
+==Research==
+
+#Stephanos Androutsellis-Theotokis, Diomidis Spinellis, Maria Kechagia, and Georgios Gousios. Open source software: A survey from 10,000 feet. Foundations and Trends in Technology, Information and Operations Management, 4(3–4):187–347, 2011. (doi:10.1561/0200000026) [http://www.dmst.aueb.gr/dds/pubs/jrnl/2010-TOMS-OSS-Survey/html/ASKG10.pdf]
+#Study: [[Economic Impact of Free Software]]
+#Thesis: [http://opensource.mit.edu/papers/lindman.pdf Effects of Open Source Software on the Business Patterns of Software Industry]
+Juho Lindman.
+
+==Miscellaneous==
+
+#[http://talk.bmc.com/blogs/blog-whurley/whurley/seven-reasons-microsoft-loves-open-source Seven reasons why Microsoft loves open source]
+
+
+[[Category:Encyclopedia]]
+[[Category:Business]]
+[[Category:Technology]]
+[[Category:Open]]
+[[Category:Peerproduction]]
+[[Category:Free Software]]

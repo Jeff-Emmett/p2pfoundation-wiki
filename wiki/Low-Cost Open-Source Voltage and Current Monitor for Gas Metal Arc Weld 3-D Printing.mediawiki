@@ -1,0 +1,43 @@
+==Source==
+A. Pinar, B. Wijnen, G. C. Anzalone, T. C. Havens, P. G. Sanders, J. M. Pearce. [http://www.hindawi.com/journals/js/aip/876714/ Low-cost Open-Source Voltage and Current Monitor for Gas Metal Arc Weld 3-D Printing]. ''Journal of Sensors'' Vol. 2015, Article ID 876714, 8 pages, 2015. doi:10.1155/2015/876714 [https://www.academia.edu/15282691/Low-cost_Open-Source_Voltage_and_Current_Monitor_for_Gas_Metal_Arc_Weld_3-D_Printing open access]
+
+Full hardware source available at: https://osf.io/k2jcv
+
+==Abstract==
+[[image:power-weld.jpg|right]]
+[[Arduino]] open-source microcontrollers are well known in sensor applications for scientific equipment
+and for controlling [[RepRap]] 3-D printers. Recently low-cost open-source gas metal arc weld (GMAW)
+RepRap 3-D printers have been developed. The entry-level welders used have minimal controls and
+therefore lack any real-time measurement of welder voltage or current. The preliminary work on
+process optimization of GMAW 3-D printers requires a low-cost sensor and data logger system to
+measure welder current and voltage. This paper reports on the development of a low-cost open-source
+power measurement sensor system based on Arduino architecture. The sensor system was designed,
+built and tested with two entry-level MIG welders. The full bill of materials and open source designs
+are provided. Voltage and current were measured while making step-wise adjustments to the manual
+voltage setting on the welder. Three conditions were tested while welding with steel and aluminum wire
+on steel substrates to assess the role of electrode material, shield gas and welding velocity. The results
+showed that the open source sensor circuit performed as designed and could be constructed for <$100
+in components representing a significant potential value through lateral scaling and replication in the 3-
+D printing community.
+
+==Keywords==
+[http://www.appropedia.org/3-D_printing 3-D printing], gas metal arc weld, GMAW, metal inert gas welding, MIG welding, [[power]]
+monitoring
+
+==See also==
+*[http://www.appropedia.org/Open-source_metal_3-D_printer Open-source metal 3-D printer]
+* [http://www.appropedia.org/MOST_open-source_metal_3-D_printer_v2 MOST open-source metal 3-D printer v2]
+* [http://www.appropedia.org/3D_Metal_Printing_Slicer_Plugin 3D Metal Printing Slicer Plugin]
+* [http://www.appropedia.org/Integrated_Voltage%E2%80%94Current_Monitoring_and_Control_of_Gas_Metal_Arc_Weld_Magnetic_Ball-Jointed_Open_Source_3-D_Printer Integrated Voltage—Current Monitoring and Control of Gas Metal Arc Weld Magnetic Ball-Jointed Open Source 3-D Printer]
+* [http://www.appropedia.org/Substrate_Release_Mechanisms_for_Gas_Metal_Arc_Weld_3D_Aluminum_Metal_Printing Substrate Release Mechanisms for Gas Metal Arc Weld 3D Aluminum Metal Printing] - how to get your print off the substrate with a hammer
+* [http://www.appropedia.org/In_Situ_Formation_of_Substrate_Release_Mechanisms_for_Gas_Metal_Arc_Weld_Metal_3-D_Printing In Situ Formation of Substrate Release Mechanisms for Gas Metal Arc Weld Metal 3-D Printing]
+* [http://www.appropedia.org/Hypoeutectic_Aluminum%E2%80%93Silicon_Alloy_Development_for_GMAW-Based_3-D_Printing_Using_Wedge_Castings Hypoeutectic Aluminum–Silicon Alloy Development for GMAW-Based 3-D Printing Using Wedge Castings]
+* [http://www.appropedia.org/Aluminum_substrate_cleaning_for_3-D_printing:MOST Aluminum substrate cleaning for 3-D printing:MOST]
+* [http://www.appropedia.org/Open-source_Lab Open-source Lab]
+* [[Open source 3-D printing of OSAT]]
+* [[Life-cycle economic analysis of distributed manufacturing with open-source 3-D printers ]]
+* [http://www.appropedia.org/Environmental_impacts_of_distributed_manufacturing_from_3-D_printing_of_polymer_components_and_products Environmental impacts of distributed manufacturing from 3-D printing of polymer components and products ]
+* [http://www.appropedia.org/Building_research_equipment_with_free,_open-source_hardware Building research equipment with free, open-source hardware ]
+* [http://metal2014.weblog.tudelft.nl/ Delft University of Technology - MIG+ Prusa I3]
+* [http://www.weld3d.com/ Weld 3D] - 1st commercial spin off
+* see literature on "wire arc additive manufacturing" (WAAM)

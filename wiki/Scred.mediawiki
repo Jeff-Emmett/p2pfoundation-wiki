@@ -1,0 +1,63 @@
+= a [[Open Book Accounting]] banking project geared to communities. It allows you to create MiniCorps and monitor funding and expenses for a group of people.
+
+See also: [[Holvi]]
+
+
+=Description=
+
+Kristoffer Lawson, co-founder:
+
+“we are aiming to be a new kind of bank for communities distributed around the world and online, but which is also open to actual services (via the API or internally).
+
+Technically we can do a lot of this already, but we have been careful with regulation. Actual banks have very high capital requirements and loads of bureaucracy which, as a startup, would likely be impossible to manage. So the options are either to ignore regulation for now, or to try to build some services towards our goal, but without having to move actual money through us (which somewhat limits what we can do).
+
+At the moment we have basically two services: normal pools and MiniCorps. They are actually based on the same code and core, but with different requirements:
+
+* Normal pools are for tracking debt and shared expenses as a group of people. So if you are planning an activity together, and certain people are paying for parts of it, they can easily be added and everyone knows who owes money and who is expecting. It works with multiple currencies and offline on most mobile phones (synchronised to server). Eventually this can end up being used as just a running balance, without money ever moving inside the community. So with a bunch of friends it might be that the one with the largest negative balance should be paying for the movie tickets next weekend — the group exists continuously and people never physically pay back.
+
+* MiniCorps are basically virtual corporations. People from anywhere in the world can form a MiniCorp together and begin to sell items with their integrated shop. These can be tickets, merchandise, art, donations or anything. They also track other income, expenses and debt, just like any business would do. The difference is that they are super lightweight, don’t require official incorporation, are distributed globally and are social: everyone can participate.
+
+Target groups for MiniCorps are young and participatory communities: bands, indie film crews, indie game developers and houses, event organisers, artists, societies and associations. They can be for-profit or not. F.ex. the P2P Foundation itself is probably a good candidate for a Scred MiniCorp.
+
+MiniCorps are currently in closed beta, as they are still being developed, but we are working to get them into public beta as soon as possible. If you like, you can try with this beta code: SF.
+
+At the technical core of all of this is Meaningful Money — the ability to add information to transactions taking place. Where did it take place? What was it for (donation, investment, loan …)? What group was involved?”
+(http://blog.p2pfoundation.net/scred-open-accounting-and-meaningful-banking-for-communities/2009/04/17)
+
+
+=Status Update=
+
+Kristoffer Lawson:
+
+"We have taken a lot of experience we got from running Scred and used that to build a new service, Holvi ( http://holvi.com/ ).
+
+It is soon launching in Finland, followed by the rest of Europe (finances allowing). It is a complete replacement for a traditional bank, and targeted specifically at people doing group activities together. Ie. people running conferences, art projects, indie film projects, sports clubs etc. As it does replace traditional banks you can use it for normal credit transfer, both in and out. But the really sweet thing is that it's a group account, so multiple people can view what is going on. You can attach any kind of metadata to payments, meaning that accounting is completely automatic and in realtime, plus it offers great opportunities for linking to social networks. You can also share your budget, and the realtime status, with the world if you want to be totally open.
+
+Finally it offers easy ways to raise and collect funds, with a built-in shop (registrations, donations, merchandise) and invoicing system. Again, all tied to the core account, so everything updated in realtime. When someone pays a sponsorship fee, you immediately see it reflected in your budget.
+
+The user interface is absolutely gorgeous. We brought in a brilliant designer to help with that and while it's meant a lot of very hard work, I think it's absolutely worth it.
+
+We're currently regulated in Finland and would need further investment to expand Europe-wide. We're riding on brand new EU regulation which allows us to do this without a bank license, so the investment amount is much less than what a bank would require. The EU is actually a great place to do this.
+
+We think there is a lot of activity out there, in people's minds, which is not getting done because managing and collecting money is way too difficult."
+(email, January 2012)
+
+
+=Differences between [[Scred]] and Holvi==
+
+"Scred does still run, in maintenance mode. It can't really be replaced by Holvi, as Holvi is quite different (Scred is about sharing expenses with people, and is thus more p2p), whereas Holvi really is a bank replacement. The groups that use Holvi are generally a bit more organised than with Scred, which are generally a bunch of friends travelling or doing something together."
+
+
+=More Information=
+
+There was a great article about MiniCorps on Arctic Startup:
+
+* www.arcticstartup.com/2009/01/20/set-up-a-business-with-zero-cost-scred-introduces-minicorps/
+
+
+
+[[Category:Money]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Peerfunding]]

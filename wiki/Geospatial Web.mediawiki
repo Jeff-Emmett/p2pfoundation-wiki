@@ -1,0 +1,182 @@
+'''Geospatial Web = use of the web to overlay the physical world with enhancing virtual data'''
+
+See also the entry on [[Geo-Location Services]]
+
+
+=Description=
+
+From a report on a conference by Mike Liebhold at 
+http://blog.wired.com/monkeybites/index.blog?entry_id=1501546
+
+
+"The Geospatial Web," a term that describes a new paradigm in handling web data like the "semantic web" or "Web 2.0." In the geospatial web, annotations and attributes that are invisible in the real world become visible on our web-enabled devices. His prediction is that in five or ten years, we will have been able to build an infrastructure into our real-world environment that will allow our devices to connect to geodata services and do all of our navigation for us. Also, Liebhold hopes that this new "geo web" will be created by all of us as we tag our own environments. 
+
+Liebhold's presentation included a dramatic slide that showed a person holding up a Treo like he was taking a photo of a street corner. The Treo's display showed tags overlaid on top of the real world image. The tags could be linked to things like restaurant reviews, train schedules, and distances to landmarks. He likened this functionality to something like the TriCorders from Star Trek. He also extended his predictions into on-the-spot comparison shopping tools that tell you how far you have to travel to get the better deal (and provide directions)."
+(http://blog.wired.com/monkeybites/index.blog?entry_id=1501546)
+
+
+=Context=
+
+Juan Martín Prada:
+
+"All the tools and applications on the Web currently are
+quickly adapting this link to physical space, the place and the territory.
+ 
+  
+The growing interest in geotagged information is strongly reinforced by a
+rising public awareness of environmental data like pollution or climate
+change effects, as well as by new needs for information linked to physical
+spaces such as the traceability of consumer goods, that is, tracking the
+location and geographic route of a product throughout its production,
+manipulation and sale.
+ 
+  
+Great progress has occurred in Web applications related to the field of
+geographic information systems (GIS), that is, those designed to manage
+geographically referenced information, which usually function as databases
+generally associated with digital maps. The boom in services like MapQuest
+or Google Maps, or the acquisitions by large Internet companies of Keyhole,
+GeoTango and Vexcel are proof of users’ growing interest in geographic data
+and information and spatial navigation. Among all the “geobrowsers”
+(applications for consulting geospatial data and managing geolocalized
+information), some of them, such as NASA World Wind, Google Earth or
+Microsoft Live Local 3D, have taken on great relevance and are used by a
+huge number of people, as well as the vast proliferation of blogs and
+websites related to these geobrowsers, e.g. Google Earth blog or Google Maps
+Mania.
+ 
+  
+Given that the majority of geobrowsing platforms offer APIs (Application
+Programming Interfaces) or XML scripting for carrying out services on their
+platforms, creating applications to generate geographic contents is a
+booming field today. A “geospatial web” can be said to exist now, made up of
+all these types of applications and geographic data management services.
+
+There is also a boom in the development of mapping tools based on “open
+standards” and “open-data” services such as Geonames, which consist of vast
+geographic databases available for download under Creative Commons licence
+that users can edit and expand using a wiki interface. There are certainly
+numerous communities for “open source” geosoftware and there are countless
+areas open for work: “GMAP hackers”, “OpenMappers”, “MapServers”,
+“GPSmappers”, “GeoServers”, “RDF mappers”, “terrain mappers”, “geobloggers”,
+etc. There are also companies like GeoCommons that enable anyone to generate
+maps that geographically represent the data that interest them, also using
+data contributed by many other users.
+ 
+  
+Linking certain geographic points to the photos and videos taken there,
+historical data, and all types of personal comments and anecdotes has become
+an everyday practice among the multitude of users of social networks.
+
+Therefore, '''[[Geotagging]] activities are becoming more habitual on the Web, that
+is, assigning spatial coordinates to certain files, such as georeferencing
+photographs on platforms such as Flickr, Google Earth, etc. or assigning
+geographic identifiers to text files and even video and audio documents
+(geoparsing).''' Geo-referencing images is an activity already performed by
+photographic cameras that include GPS systems: the date, place, or type of
+event photographed are metadata included in the photographic document at the
+time it is created. There are even “in-site” applications such as GeoNotes
+that allow users to “tag” physical space, leaving notes in the places where
+they are located or reading the notes other users have left there.
+ 
+  
+The popularization of actions to “annotate the planet” is one of the most
+significant processes in the development of the second era of the Internet.
+
+'''The expression “The Earth as universal desktop”is even becoming popular.'''
+
+'''[[Geo-referencing]] practices understand geographic localization not only as a
+coordinate, a dot on a map, but also in relation to the experiences of the
+persons who were there.''' 
+
+The result is generally the generation of open maps,
+a sort of update of maps showing “points of interest”. Actually, the
+“Geo-spatial Web” brings depth and richness back to geography after many
+years when the field provided merely cartographic, objective descriptions of
+places. The texts and other information added to satellite photographs of
+the territory inevitably invite comparisons with the plaques on buildings
+that mark where someone was born or died, just as the thumbtacks marking
+spots on geobrowsers bring to mind the flowers that relatives place
+periodically at the site of a car accident where they lost a family member.
+ 
+  
+All of this is accompanied by proposals that are the beginning of a phase
+in which the great communicative potentials of pervasive computing, or
+“ubicomp”, are evident, that is, of all those technologies that enable the
+management of digital information anywhere, as well as connections and
+interaction among different strata of spatially localized data."
+
+
+=Status=
+
+Paul Ramsey, on the state of the market:
+
+"The progress of open source geospatial on the desktop has been very slow. Desktop geospatial software already has an entrenched proprietary incumbent, ESRI's ArcGIS, with a long history. The amount of quality code required to reach feature-parity with the incumbent is very high as ESRI has been working on their desktop software for decades. Simple desktop implementations are available with QGIS,  uDig, and gvSIG, but are mostly consigned to the niche of extremely low budget organizations. As a result, financial resources are not available to speed up development, and the pace of progress remains slow. The exception has been gvSIG, which is heavily funded by Spanish government organizations, but it is still mostly a niche development used in Spain.
+
+In all cases, the growth of open source geospatial has been slowed by matters of scale. Open source products generate much smaller revenue streams from user populations than proprietary products. In large markets with well-capitalized customers, companies can make good money even on the smaller revenue flow of open source.
+
+However, in a small vertical market, it is difficult for companies to get a foothold. A customer will usually deploy several open source geospatial products to create a solution, so a support provider has to have extensive in-house experience to support the whole solution. In a traditional model, start-up costs would be capitalized by a venture funder, but the size of the geospatial market-place makes the 10:1 returns required by venture capital unlikely.
+
+OpenGeo is breaking the geospatial support log-jam by building a social enterprise using philanthropic funding to bootstrap an organization that contains the breadth of expertise necessary to support a variety of open source geospatial applications. OpenGeo's motivation is not to maximize profit, but to maximize social good, while covering costs. This allows the organization to build a sustainable market while surviving on the smaller revenue streams available in the open source geospatial arena. The products OpenGeo supports such as Geoserver, OpenLayers, PostGIS, and GeoExt, make a top-to-bottom deployment stack for geospatial applications."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/850/819)
+
+
+
+=Examples=
+
+Examples of new Internet companies using open source geospatial include:
+
+* Redfin, a real-estate information company
+    
+* GeoCommons, a data sharing community
+    
+* Zonar, a fleet management and vehicle tracking company
+    
+* GlobeXplorer, a satellite imagery re-seller
+    
+* Urban Spoon, a restaurant review site
+    
+* Whereyougonnabe, a spatial add-on for Facebook
+
+(links via http://www.osbr.ca/ojs/index.php/osbr/article/view/850/819)
+
+
+=Technology=
+
+The open source geospatial stack includes:
+
+* the [http://www.postgis.org/ PostGIS] geospatial database
+    
+* [http://www.geoserver.org/ GeoServer] to provide web map services and web feature services
+    
+* the [http://gdal.org/ GDAL programming library]
+    
+* the [http://geotools.codehaus.org/ Geotools Java GIS toolkit]
+    
+* the [http://www.codeplex.com/SharpMap SharpMap geospatial application framework]
+    
+* the web interfaces provided by [http://openlayers.org/ OpenLayers]
+
+
+
+=More Information=
+
+#See also the entry on [[Geo-Location Services]]
+#See/hear the podcast/webcast with [[Michael Liebhold on the Geospatial Web]]
+#[[Local Web 2.0]]
+#Special March 2009 issue of OSBR, at http://www.osbr.ca/ojs/index.php/osbr/issue/view/83
+#[[OS Geo]]
+
+
+Special issue #21 of [http://www.receiver.vodafone.com/category/21 Receiver magazine]:
+
+#Arno Scharl: [http://www.receiver.vodafone.com/the-geospatial-web The geospatial web] – blending physical and virtual spaces
+
+
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Geography]]

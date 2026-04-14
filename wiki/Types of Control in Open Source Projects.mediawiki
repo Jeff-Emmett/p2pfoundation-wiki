@@ -1,0 +1,94 @@
+
+'''* Going Open: Does it Mean Giving Away Control? By Nadia Noori and Michael Weiss. Technology Innovation Management Review, January 2013.''' 
+
+URL = http://timreview.ca/article/647
+
+
+=Abstract=
+
+"Nadia Noori, a graduate from the Technology Innovation Management (TIM) program at Carleton University in Ottawa, Canada, and Michael Weiss, an Associate Professor and TIM faculty member, move beyond a community perspective to explore platform sustainability. The sustainability of a platform depends on what form of governance is exercised over the platform, and the authors identify three types of governance model: tight-control, loose-control, and hybrid-control. Their article creates a link from the community (or individual, organizational perspective) to a platform and finally to the larger ecosystem."
+
+
+=ExcerptS=
+
+By Nadia Noori and Michael Weiss:
+
+From the conclusion:
+
+"Open source is a living example of the viability and sustainability of the open-innovation model. The process of going open and maintaining growth and success of the open source platform is not chaotic or a set of random actions. Throughout the years, the open source community has learned how to organize itself and provide collaboration models and tools that fit within the free/libre open source software context. These communities needed such control mechanisms in place to ensure quality and maintain growth. Open source platforms had evolved from voluntarily initiatives to sustainable entities alongside commercial equivalents inside the software industry."
+
+
+==Introductory Discussion==
+
+"Conventional research on open innovation and collaboration examines how organizations open up the innovation process and how they control the collaboration with others. The research also identifies the need for governance models and architecture of participation in collectives that embrace open innovation practices to help maintain momentum and ensure continuity. Existing research on systemic innovation and platform ecosystems helps us understand the structure of platform-complement product systems (Boudreau and Hagiu, 2009; Baldwin and Woodard, 2009; Dahlander and Gann, 2010). Studies examine the types of relationships and information transactions among the members of a platform ecosystem, the importance of platform owners as regulators of the ecosystem, and regulatory instruments available to them.
+
+Iyer (2006) describes how software companies are operating in a small world of interconnected networks and how innovation is increasingly taking place in such networks. The question is no longer whether or not to open the innovation process and collaborate, but how to best leverage a network of external parties (Tuomi, 2002; Moore, 2006; Pisano and Verganti, 2008; Vujovic and Ulhoi, 2008).
+
+In most open source projects, there is a focal organization that acts as that platform owner (or keystone in a project ecosystem) that provides the platform and facilitates contributions by other members in the community (Iansiti and Levien, 2004; Noori and Weiss, 2009). A platform can be a product, service, or technology that provides a foundation for other parties to develop complementary products. The platform can be owned by a single player, as in the case of Apple's control over the iPod and iPhone application ecosystems, or it can be developed and influenced by a group of players, as in the case of the Eclipse software development platform (des Rivieres and Weigand, 2004; Shuen, 2008; Hagiu and Yoffie, 2009).
+
+The literature on how platform owners manage complementary markets is focused on complements that build on the platform but not on complements that integrate with the platform, such as extensions. Platform extensions extend the functionality of a platform beyond its core capabilities and can integrate at different levels with the platform and other existing extensions, and this integration reflects upon the integrity of the platform. So, the quality of platform extensions contributed by community members has become a concern for platform owners because it can comprise the overall quality of the platform and other complements as well (Messerschmitt and Szyperski, 2003; Gawer and Cusumano, 2008; Bosch, 2009).
+
+We studied six open source projects (Eclipse, Firefox, Apache HTTP, Spring, OpenOffice, and MySQL) to examine the strategies followed by the platform owners to manage contribution by external parties and to manage the quality of the complements developed by those parties. We limited the research to one type of complement, platform extensions, because of the direct effect of the quality of extensions on platform integrity as well as to keep the study to a manageable size."
+
+
+==The Typology==
+
+By Nadia Noori and Michael Weiss:
+
+"Within the sample cases, we found three types of governance models: tight-control, loose-control, and hybrid-control.  Each governance model consists of the following attributes: community structure, extension types, and governance structure and network openness. Each model was associated with non-trivial trade-offs in terms of governance, openness, quality, and flow of ideas.
+
+Furthermore, different levels of governance and openness may be applied to different types of extensions. Internal extensions, which are more widely used and usually deployed together with the platform core, are often more tightly controlled than external extensions, which are developed to meet more specialized needs. In the case of internal extensions, there is a significant impact of low quality of those extensions on the platform and on each other; a reduced flow of new ideas is traded off against higher quality. As for the external extensions, it is more important to allow new ideas to develop than to monitor their quality. Yet, the distinction between internal and external extensions is not fixed; over its life, an extension may change its type.
+
+The governance structure of a network can be either hierarchical, flat, or a hybrid between these extremes. 
+
+'''In a hierarchical governance structure, the platform owner both defines problems and selects which solutions are adopted, whereas in a flat structure a community decides on both problems and solutions. The case between those two extremes is a hybrid of hierarchical and flat structures: although the community decides on problems, the platform owner selects solutions.'''
+
+Openness of a platform network refers to the degree to which participation in the network is open. In an open network, any party (partners, customers, or even competitors) can contribute to the platform.  Open source projects are examples of this type of network. In a closed network, the platform owner selects who can participate based on the capabilities and resources required for the innovation (Pisano and Verganti, 2008).
+
+Table 1 summarizes the governance models, their attributes, and their associated effects on the quality of extensions and flow of ideas. Table 2 summarizes the advantages and disadvantages of each of the three governance models with an emphasis on the quality of extensions and flow of ideas. "
+
+
+==Regulatory Instruments to exerce control over open source projects==
+
+"To support the governance models and enforce control over  the development process of the platform extensions, the platform owners needed to use a number of regulatory instruments in conjunction with the governance model. In our reseach we found that regulatory instruments enabled platform owners to manage information transactions in the platform network, support the process of developing extensions, and control the quality of the product by providing the community with tools to develop, test, and integrate extensions, and to share the experience among the platform members.
+
+The regulatory instruments help platform owners to establish barriers of entry to the developer community such as pricing or the development process. Instruments such as platform architecture and toolkits help to create technical boundaries between the platform and the developer community.
+
+Regulatory tools such as pricing and membership refer to a pricing schema set by the platform owner to charge third-party developers for gaining access rights to the platform, information, and service. Pricing and membership programs enable platform owners to filter the inflow of ideas as well as the quality in the network. Although using the pricing instrument enables the platform owner to control the flow of ideas, there is no guarantee of eliminating poor-quality contributions because it depends on the pricing structure and the platform owner’s need to access external resource (Hagiu, 2008).
+
+Development toolkits are another form of regulatory tool. Toolkits are a combination of software infrastructure and development frameworks that reduce the time and effort required to develop, provision, and operate extensions; they also contribute to quality. For example, to ensure the quality of extensions, the Mozilla project offers a toolkit consisting of several tools that include a testing framework to test the performance and quality of Firefox extensions. Also, the Eclipse platform provides a plug-in development environment, a comprehensive series of build and user-interface creation tools, and tools for API maintenance. 
+
+Sandboxes are another type of regulatory tool in which extension developers are allowed to test their extensions in the actual deployment environment. For example, Firefox provides a sandbox review process on its Firefox add-on site, where extensions are available for trial and testing by the community. The sandbox review process enables the developers to test their extension before moving it to the general-availability phase.
+
+Introducing a development process is also another regulatory tool used by platform owners to control the quality of developed extensions and filter the inflow of ideas into the platform ecosystem. An example of the development process used as a regulatory instrument is the incubation process, which is another method used by platform owners to control the quality of extensions developed by external parties. The incubation process enables the platform owners to filter the flow of ideas in the internal-extensions community of contributors (Duenas et al., 2007).  For some platforms, such as Mozilla, the incubator is a working directory that is considered a testing ground for experimenting with new ideas and it is a workspace where lead developers or module owners work with inexperienced developers."
+
+
+=Tables=
+
+As available in the article:
+
+* Summary of governance models and associated extensions types, governance structure, and network openness
+
+* Advantages and disadvantages of the three types of governance models
+
+
+=Source=
+
+* Special Issue: Open Source Sustainability. Ed. by Chris McPhee and Maha Shaikh. Technology Innovation Management Review, January 2013.
+
+URL = http://timreview.ca/article/643
+
+Maha Shaikh:
+
+"This issue contains seven articles relating to the theme of open source sustainability. The authors come from diverse backgrounds and geographical locations, including Canada, Finland, France, Spain, the United Kingdom, and the United States."
+
+
+[[Category:Peergovernance]]
+
+[[Category:Peerproduction]]
+
+[[Category:P2P Hierarchy Theory]]
+
+[[Category:Articles]]
+
+[[Category:Governance]]

@@ -1,0 +1,176 @@
+
+
+=Source=
+
+From  Hellekin O. Wolf <hellekin@cepheide.org>, Sun, May 2, 2010, Social-discuss list, '''A User Perspective of GNU Social'''
+
+=Text=
+
+
+1.0 - Universal Access
+
+1.1 - Device Independent
+
+My account should be accessible via any device I happen to use: my
+personal computer, a public (insecure) computer, a telephone, etc.
+
+1.2 - Platform Independent
+
+Whether it is from a GNU/Linux OS, an Android, a Mac OS or a Windows,
+I should be able to access my account.
+
+1.3 - Trust-Based Access Restrictions
+
+When I'm using my personal computer, I expect to have the optimal
+security features: I know that I'm not spying on my own keystrokes,
+that I have my personal GPG key or SSL certificate locally and I can
+trust them. Hence, in that case, I get full access to all my
+functionalities and data.
+
+But if I'm connecting from a public computer, I cannot give it the
+same trust: I'm not using my secret keys there, nor do I know if the
+computer is logging my keystrokes. In that case, I expect the
+application to ask me for a password, or an out-of-band challenge to
+grant me potentially harmful functionality (changing password) or data
+(whole contact list, personal history, etc.).
+
+In that case, I expect the application to grant me a one-time access
+to the account, maybe using OTP or similar one-time authentication
+mechanism, that would at least ensure backward and forward secrecy for
+that account.
+
+2.0 - Seamless Contact List
+
+2.1 - Protocol Independent
+
+When I want to send a message to my Mom, I don't care if she's using
+Facebook or XMPP or IRC or email or her phone. Although it might make
+sense technically to know what service is used, the user just doesn't
+want to know. The application should hide all that and provide a
+seamless contact list.
+
+2.2 - Support Free
+
+So, if I have "Mom" in my contact list, she would have an email
+account, an XMPP account and a phone number. Even a snail mail address
+could work, provided the application is hooked up to a postal mail
+delivery service.
+
+Imagine I want to send her a message on that video I made last
+evening. It comes with a comment, and the video file attached. When I
+hit "send", the system can match my preferences for that contact
+(rather xmpp than sms, rather html mail than text, etc.), the
+perceived urgency for that message (it's urgent, I need her to approve
+it before i can propagate it to the rest of the family), and according
+to my contact's delivery settings (as I'm her son, my messages are
+doubled to email and SMS, but as she's hiking in the mountains, only
+email delivery is available at that point).
+
+And the message is sent through the different media, according to
+simple rules: the message being too long for SMS, the title is sent
+along with a link to the rest of the message, including the video. The
+email receives the whole thing, except the video, 240MB, is not
+attached, but linked. Etc.
+
+2.3 - Synchronous And Asynchronous
+
+My contact list should cover both synchronous (e.g. chat) and
+asynchronous (e.g. email) contacts, with easy merge capability (the
+machine might not know how to recognize Hellekin from HK or HOW or
+Hellekin O. Wolf, but the user will know and make the link. So, the
+contact list would include a unique identifier across the network
+(what PSYC calls the Uniform Name Location AKA UNL, or UNI, or
+Uniform), the different associated endpoints (online services, IRC,
+XMPP, PSYC, email, phone, etc) including sending/receiving rules for
+that contact, with sensible defaults (huge attachments stripped from
+emails, no attachment to the phone, "preferred" mean of contact, etc.)
+
+3.0 - Seamless Data
+
+3.1 Local & Remote Are Obsolete
+
+I don't want to "synchronize" my bookmarks. Instead, I want to access
+them all at once, from Delicious or from my local browser, from my FTP
+server and that other app where I share bookmarks with my friends.
+
+I don't want to "upload" or "download" files. Instead, I want to be
+able to select files on my local computer and drag'n'drop them to my
+chat window so that a torrent is automagically created and shared
+among that group.
+
+3.2 - Raw Data vs. File Formats
+
+People don't care about the file format, it's a techie issue. What we
+want is seamless integration of raw data. If I stumble upon a text
+online, I want to be able to select part of it, include it in some
+"box" and share that box with others. For example, that could take the
+form of an RDF description of all the sources used to compose that new
+document. But at this point, from the user perspective, the technical
+implementation doesn't make sense.
+
+That approach breaks free from a paradigm that has been dominating the
+computing world so far, that exposes the data type, and especially the
+file format, which is completely irrelevant to the user: she doesn't
+deal with MP3 or OGG, with JPEG or PNG, with MKV or DIVX, but with
+sound, images and video.
+
+I think the current approach to exposing technical details to the user
+inherits from the legacy of proprietary software, where a proprietary
+format appears as a brand, a differentiator on the market. When
+dealing with free software, the file format is only a technical
+fact/constraint, and does not bring any value-added to the user.
+
+4.0 - Memory, Intimacy, Privacy
+
+4.1 - The Social Network as Extended Memory
+
+Within the vision of McLuhan that tools are extensions of the human
+(e.g. a hammer is an extension of the hand, a shoe an extension of the
+foot), and John Licklider's (and others) view of the computer as a
+mind-amplifier tool, we can consider the computer as an extension of
+the mind. It helps us keep track of a lot of details that our memory
+would filter out, such as precise dates, re-occurrences of events, etc.
+
+One of the most private things is memory. Humans have a right to keep
+that to themselves, and in fact, what's on your mind is inaccessible
+to anyone else unless you chose to share it.
+
+The explosion of social networking makes available a lot of that to
+other people, including services that you're using to distribute your
+private data to your friends. Until now, the drive to share has got
+the priority over the drive to keep things private: the tools provided
+makes it easy to share, and most social networking services rely on
+the possibility to aggregate data and filter it to expose patterns,
+and create detailed profiles of a person's behavior, that has a lot of
+value for marketers (and intelligence agencies).
+
+4.2 - The Right To, and Necessity of Intimacy
+
+Most people don't care too much about privacy, as they're told that if
+they don't do anything wrong, they don't have anything to fear or
+hide, and that if you have something to hide, it's probably because
+it's wrong. Of course, this is a fallacious argument. If you look at
+it closely, you'll find out that the people promoting transparency of
+your data are the first ones to use secrecy. Transparency of public
+and market data is important, respectively, for democracy and fair
+competition. But opacity of private data not only protects the
+citizens from abusive governments, but also proceed from a natural
+need for privacy and intimacy (think about toilets.)
+
+4.3 - Building Memory for the Future
+
+When you don't have control over your data, you take the risk of
+losing your intimacy, as well as your memory. The time passed in front
+of a computer, or online, is growing. It's important to realize that
+for many, sharing that intimacy online also builds their memory for
+the future, to share with their grand-kids...
+
+That aspect of social networking, that you open the intimacy of your
+mind to others, should be emphasized.
+
+
+[[Category:Articles]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]

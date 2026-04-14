@@ -1,0 +1,50 @@
+'''= anonymous digital banking system'''
+
+=Description=
+
+"eCache is an anonymous bank operating through interfaces in the Tor network. The bank issues cryptographic certificates, digital bearer certificates, that can be exchanged among the bank's users. The certificates can be bought and sold for real money through the bank. The owners and operators of the bank are unknown, and the bank is said to operate outside the laws of any country. The name eCache was suggested by Steven Schear to eCache's operators from a prior bearer digital money venture."
+(http://en.wikipedia.org/wiki/ECache)
+
+
+=Interview=
+
+" Logan: Okay, can you tell me in one sentence
+what eCache is?
+
+the-guy: eCache is a digital cash-equivalent that
+brings the methods of meatspace cash payment
+to the Internet.
+
+aragon: The formal definition would be anony-
+mous, traceable digital bearer certificates resembling paper IOUs.
+
+Logan: Please elaborate on what that means. What is eCache for? What makes it different from other systems on the market?
+aragon: eCache is a highly anonymous way to
+transfer value over the Internet. It’s actually the digital version of your greenback. We issue digital cash, backed by gold, that can be used to pay
+for anything you could pay cash for… so long as the other party accepts it, of course. The main difference between eCache and other digital payment systems is that it does not know any “clients”
+or “accounts.” It only knows Digital Bearer Certificates that can be transferred to another party just like any other data on the Internet. One other dif- ference is that we are working on a raid- and theft- safe issuing and backing infrastructure.
+
+Logan: All right, let’s explore some of the things you’ve said. You mentioned that eCache is anonymous but traceable. What does that mean?
+aragon: Anonymous means that we do not attach
+any identity to the certificates we issue, nor do we
+undertake steps to identify clients. Our system requests no login, no account opening and it is meant to be accessed via anonymous communi-
+cation networks like Tor (http://tor.eff.org/).
+
+So, nothing links a person to the money and transactions involved. However eCache is traceable… at least in theory. That means that transactions can be linked to each other. But although this is technically possible, we do not record transaction links.
+the-guy: And, we offer methods to break traceability with Mixes.
+
+Logan: What are Mixes and how do they help
+with breaking traceability?
+
+the-guy: Imagine you have a big magic jar sitting
+on the counter. Anyone can throw in some bills
+and take some bills out in return. The magic of the
+jar is that it verifies that the bills are actual money
+and that you cannot take out more money than you put in. This is what a Mix does. It allows you to exchange a DBC which might be traced with
+a random certificate. By doing this several times
+with several mixes you can rapidly decrease the
+risk of your transactions being traceable."
+(http://www.scribd.com/doc/27467097/Interview-With-Operator-of-eCache/)
+
+
+[[Category:Money]]

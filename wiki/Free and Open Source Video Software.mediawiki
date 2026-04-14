@@ -1,0 +1,41 @@
+
+
+=Status Report=
+
+From Robin Miller:
+
+"Free software for video is currently in sad shape. The only two widely distributed free video editing programs, [http://www.kinodv.org/ Kino] and [http://cv.cinelerra.org/about.php Cinelerra], are nowhere near as capable as competing commercial software. Hardly any professional video producers use either one. But most people aren't as concerned with the software used to make video as with the software they need to play it, especially in their Web browsers, and on this side of the video equation it looks like things are going to get a lot better for free software enthusiasts in 2008.
+
+The two most prominent video codecs currently available under free software licenses are [http://www.xvid.org/ Xvid] and [http://www.theora.org/ Ogg Theora]. In a technical sense, Xvid is clearly the better of the two. Any videomaker who renders a work in Xvid, then renders that same work in Theora with settings that produce a similar file size for the resulting video, will instantly prefer Xvid not only for output clarity but also for rendering speed. Xvid is not just an excellent free software video codec, but is an excellent video codec, period. It is often used in commercial video production, and many proprietary video editing programs render directly into Xvid format, while I have found none that directly render Ogg Theora files."
+
+- The problem with Xvid is that it works within the MPEG-4 framework, which is so patent-encumbered that today no one really knows who has "rights" to it. 
+
+- In 2002 ON2 open-sourced VP3 and handed its maintenance and future development to [http://xiph.org/ Xiph.org], which was already the steward of the non-proprietary Ogg Vorbis audio format.
+
+[http://en.wikipedia.org/wiki/Ogg_vorbis Ogg Vorbis] has developed a user base that, while nowhere as large as the one for the patent-encumbered MP3 audio format, is certainly respectable. Virtually all Linux audio players handle Vorbis, and so do many that run on Windows and Mac OS.
+
+- But when we move from talking about Vorbis to talking about Theora, we come to a screeching halt. Outside of Linux-land, hardly anyone uses it, and Theora encoding is in a sad state, especially for those computer users (estimated at 95%+) who prefer a GUI to command-line work. Not only that, the DirectShow filters for Theora don't work correctly, so Windows-based video editing programs can't render directly to Theora by using simple plugins the way they render to Xvid or QuickTime once you install the correct codecs for those formats.
+
+- Monty says the Theora converter is "obsolete by 10 years," that he's now writing a "real encoder" for Theora, and that it will "be another couple of months until its mainline release." He also says a lot of the problems with the original Theora code and encoder aren't because they're buggy in the usual sense, but because the original codebase was "written by people who were self-taught," and that their lack of experience shows.
+
+=Webcast=
+
+Session at WOS 2004
+
+URL = http://wizards-of-os.org/index.php?id=555&L=3
+
+
+"Digital Video Desktop Editing has been a domain for AVID, Premiere and Final Cut for many years. In what league will their Open Source alternatives play? How do you convince professional video editors to leave the tools that they have grown up with? Can Open Source tools deal with patent-burdened user interfaces and background technologies? Will these tools integrate into existing production environments where imports from and exports to closed proprietary formats are required? "
+
+
+[[Category:Podcasts]]
+
+[[Category:Webcasts]]
+
+[[Category:Audiovisual]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Free Software]]

@@ -1,0 +1,55 @@
+'''= OpenMenu is a standard format for storing and sharing restaurant menu information'''
+
+URL = 
+
+
+=Description=
+
+ 
+Danielle Gould:
+
+"‘Standards’ and  ’interoperability’ are fast becoming restaurant industry buzz words, at least from the tech side. Restaurants still largely operate in a very ‘Web 1.0′ way, with flash websites and PDF, word, or scanned menus. This is fueling an explosion in restaurant-related online food ordering, review, and recommendation websites, who are all trying to come up with creative ways to digitize and keep restaurant menus current. This entrepreneurial activity, however, has resulted in an entire ecosystem of apps and websites that have invested significant resources in work that’s already been done (sound familiar?).
+
+Is this the largest problem? On the surface no, but it does have wide-ranging implications affecting much more than the consumer who wants to order food or locate a restaurant.
+
+Menus contain a wealth of data that could be used in a variety ways, such as helping farmers, health professionals, restaurants get better insight into ingredient trends, or for building apps that help consumers make dining choices that are better for their health and inline with their values. Yet currently, each system describes the same information in different ways, making it impossible or extremely difficult for them to communicate and for companies to collaborate.
+
+Challenges related to the accuracy, completeness, and format of this data have severely hampered innovation in an industry that could really use it. Now,  a growing number of technologists like OpenMenu founder Chris Hanscom are trying to change all of this. OpenMenu has developed a standard format for storing and sharing restaurant menu information. The website offers tools that make it easy for restaurants to seamlessly update multiple networks and web applications, and for developers to build off of the data. To date, the website has over 50K menus with 2.4 million menu items in their database. I got a chance to speak with Hanscom about the OpenMenu, developing the standard, and his business model."
+(http://www.foodandtechconnect.com/site/2011/08/25/openmenu-brings-interoperability-to-restaurant-industry/)
+
+
+
+=Interview=
+
+with the founder of OpenMenu, conducted by  Danielle Gould:
+
+"Chris Hanscom:  It all started with one simple question asked by my wife; “Where do you want to go eat for your birthday?”  The question was simple but the search was not.  All I wanted that day was a piece of death-by-chocolate cake. So I started searching for a restaurant, looking at websites, loading menus.  Loading menu after menu in formats that where large, clunky and often difficult to search through.  PDFs, scanned-in images and Flash based. All things I consider user-unfriendly.  There had to be a better way.
+
+I thought about this idea for almost 2 years. I thought about how things should work, how the information should be structured and what else would be required for OpenMenu to provide a platform that meets the needs of restaurants and developers.
+
+
+DG: How does the site work?
+
+CH:  OpenMenu is broken into two main parts, one for restaurants and one for developers, all built off the OpenMenu Format specification.
+
+Restaurants create their menu, and detailed restaurant information, in our standard which is called an OpenMenu.  This OpenMenu is the version of their menu which becomes plugged into the internet and drives their online presence.  Make a change to your OpenMenu and all services connected to this publically available menu instantly gets the change either directly  by watching the OpenMenu or indirectly via our API.  For example: add specials at 9:00am and they are instantly reflected on a restaurant’s website, Facebook page and any website in our distribution network.  One menu, maintained in one location, driving a restaurant’s complete online presence.
+
+Developers get access to the complete specification as well as a powerful API to assist in powering their solutions.
+
+
+DG: You call OpenMenu a regulatory system, could you describe what you mean by that?
+
+CH:  The difficultly in any open data system is the integrity of the data. OpenMenu has the specification, the central repository for requests and the API to extract data.  We’ve created a system that balances between remaining open and controlling the information enough to maintain the integrity of the data. The regulation we’ve put into place is the OpenMenu Registrar system.  In short, an OpenMenu Registrar is the only place to get menus into the OpenMenu Platform and the trusted sources for menus and restaurant information. We handle the routing of requests, via the API or direct connect to an OpenMenu, to the proper OpenMenu Registrar.
+
+This system in place provides a level of confidence to developers in the quality of the information they receive and gives restaurants a single point of access into the OpenMenu Platform.
+
+
+DG: How did you develop the standard?
+
+CH:  I looked at the standard from both a developers perspective and a restaurants perspective.  I reviewed many menus and developed the first release.  Then I watched how things were used and most importantly listened to others.  The standard is a dynamic entity that needs to adapt and change to meet our internal goal of a standard that can handle 98% of the world’s menus all the while protecting developers with backwards compatibility."
+(http://www.foodandtechconnect.com/site/2011/08/25/openmenu-brings-interoperability-to-restaurant-industry/)
+
+
+[[Category:Agrifood]]
+
+[[Category:Standards]]

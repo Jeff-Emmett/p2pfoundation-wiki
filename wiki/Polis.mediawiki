@@ -1,0 +1,87 @@
+
+'''= a Taiwanese tool for collective deliberation and decision-making, Pol.is;'''
+
+For the Greek city-state, see: [[Polis - Ancient Greece]]
+
+
+=Description=
+
+Jess Scully:
+
+" [[vTaiwan]]. (The “v” stands for virtual.) A mixed-reality, scaled listening exercise, it was an entirely new way to make decisions. The platform invites citizens into an online space for debate that politicians listen to and take into account when casting their votes. Government would start a new vTaiwan process on a political question it was deliberating, and Taiwanese people from across the full spectrum of opinion would join one another to discuss it online.
+
+Crucially, however, the discussants found themselves in an entirely new kind of online space – exactly the opposite of a social media platform that encourages strife. vTaiwan used a platform called Polis, designed by Seattle-based technologists, that turned the engineering of the tech giants on its head. Like any other social media platform, Polis would let anyone share their feelings on the issue with everyone else, and agree and disagree with the opinions of others. But that’s where the similarity ended.
+
+
+As the debate began, Polis drew a map showing all the different knots of agreement and dissent as they emerged. As people expressed their views, rather than serving up the comments that were the most divisive, it gave the most visibility to those finding consensus – consensus across not just their own little huddle of ideological fellow-travellers, but the other huddles, too. Divisive statements, trolling, provocation – you simply couldn’t see these.
+
+
+“People spend far more time discovering their commonalities rather than going down a rabbit hole on a particular issue,” Audrey Tang tells me. “Invariably, within three weeks or four, we always find a shape where most people agree on most of the statements.” They found that re-engineering the online space had exposed a deeper human truth. In politics, humans spend most of their time concentrating on what they disagree upon. But if you gamify consensus, you expose points of unity that were previously hidden.
+
+Soon, vTaiwan was being rolled out on issue after issue, especially those related to technology, and each time a hidden consensus was revealed. Underneath an angry debate about Uber regulation, for instance, it emerged that everyone really just cared about safety. Then there was the extremely angry debate about whether to change Taiwan’s time zone. But what initially had all the hallmarks of geopolitics (closer to China, or further away?) really wasn’t about that at all – everyone wanted Taiwan to maintain its autonomy, they just disagreed on whether a time zone was the way to do it. The participants even began to change the questions themselves – rather than argue over whether drunk drivers should be beaten with canes, everyone began to focus on how to prevent drunk driving in the first place.
+
+
+Most valuable of all, by clearing away the noise and divisiveness, vTaiwan created outcomes that the government could actually act on. It has formed the core of around a dozen pieces of laws and regulations now implemented in Taiwan, on everything from revenge porn to fintech regulation. More are waiting to be passed."
+
+(https://www.theguardian.com/world/2020/sep/27/taiwan-civic-hackers-polis-consensus-social-media-platform?)
+
+=Discussion=
+
+"Polis seeks to give citizens a dynamic overview of the entire spectrum of opinion around a discussion topic and has been seen as a highly effective direct and deliberative democracy social media tool [42]. It allows the government to pose policy questions to the public and then uses statistical summarization to provide graphical feedback on what the population as a whole believes or desires. The system claims to be effective at achieving popular consensus around contentious issues over a period of two or three weeks with anywhere from 100 to tens of thousands of participants or more.
+
+Polis has been used to generate consensus on climate issues in Austria (2022), in Uruguay on a national referendum (2020–2021), in New Zealand to facilitate the development of government policy (2016–2019), in the Philippines to generate municipal policy (2020–present), in the US to counteract polarization in a Kentucky town (2018), in the UK as a part of a government polling effort (2020), and in Germany to develop a political party’s platform (2018) [43]. In addition, it has been used for Twitter’s Community Notes and by Anthropic to draft a publicly sourced constitution for an AI system [44][45]. Taiwan’s deployment of Polis (divya-vtaiwan) is widely believed to be the most effective example of achieving popular consensus around contentious issues [42]. While case studies featuring the achievements of Polis and other deliberative and direct democracy platforms are promising, it is unclear to what extent failures of these platforms in practice have simply not been documented to the same extent.
+
+The way Polis operates is that a topic is put up for debate. Anyone with an account can post comments on the topic, and can also upvote or downvote other people’s comments. Unusually for online media, users cannot reply to other users’ comments, making it difficult to engage in trolling. The upvote/downvote mechanism creates a citation network, similar to citation networks used in scientific papers, patent applications, and legal decisions, in which the upvotes and downvotes are analogous to citations. Polis does not use NLP or the identification of topics raised within the content of comments. Instead, this network of ‘citations’ drives citizen interaction on the platform.
+
+This citation mechanism enforces an important constraint that is likely critical to the success of the system. The process of surveying comments made by others for upvoting and downvoting forces people to learn about others’ opinions, which has been shown to reliably promote ‘wisdom of the crowd’ effects and better decision-making [46].
+
+The Polis system also uses the upvotes and downvotes to generate a citation map of all the participants in the debate, clustering together people who have voted similarly. Although there may be hundreds or thousands of separate comments, like-minded comments cluster together in this map, showing where there are divides and where there is consensus. According to the theory of how Polis works, participants then naturally try to draft comments that will win votes from both sides of a divide, gradually eliminating the gaps.
+
+The Polis visualization of the comments, as shaped by citations, seems to be very helpful in promoting convergence of opinion, and is much like the visualizations that have proven very effective in domains such as finance [47]. In this regard, Taiwanese Minister of Digital Affairs, Audrey Tang, declared, “If you show people the face of the crowd, and if you take away the reply button, then people stop wasting time on the divisive statements” [48].
+
+MIT research has shown that there is reason to believe that the Polis-style approach could have a very significant impact on decreasing polarization. We use this type of approach to achieve significant increases in democratic attitudes among partisans in America [41], and recent related MIT papers show convergence of opinion in financial decisions by providing users with a visualization of the range of opinion and action [46][47][49]. MIT research also shows that outreach to citizens is associated with higher trust in government and higher levels of citizen cooperation and engagement."
+
+
+=Examples=
+
+==Bowling Green, Kentucky==
+
+Jess Scully:
+
+"The Taiwan model may be catching on.
+
+Polis was used to bring 2,000 people together at a virtual town hall in Bowling Green, Kentucky. Asked how to improve the local area, residents found consensus around improving traffic flow, adding bike lanes, beautification of the waterfront, even access to broadband internet services.
+
+The local government of Newham in the UK used it to help inform parking policy. And in Singapore, the government used it to hear from young people about their views on active citizenry, inclusivity, and awareness around mental health.
+
+The system’s potential to heal divisions, to reconnect people to politics, is a solution made for the problems of our age."
+
+(https://www.theguardian.com/world/2020/sep/27/taiwan-civic-hackers-polis-consensus-social-media-platform?)
+
+
+=Discussion=
+
+By Lily L. Tsai, Alex Pentland et al.:
+
+"Polis seeks to give citizens a dynamic overview of the entire spectrum of opinion around a discussion topic and has been seen as a highly effective direct and deliberative democracy social media tool [42]. It allows the government to pose policy questions to the public and then uses statistical summarization to provide graphical feedback on what the population as a whole believes or desires. The system claims to be effective at achieving popular consensus around contentious issues over a period of two or three weeks with anywhere from 100 to tens of thousands of participants or more.
+
+Polis has been used to generate consensus on climate issues in Austria (2022), in Uruguay on a national referendum (2020–2021), in New Zealand to facilitate the development of government policy (2016–2019), in the Philippines to generate municipal policy (2020–present), in the US to counteract polarization in a Kentucky town (2018), in the UK as a part of a government polling effort (2020), and in Germany to develop a political party’s platform (2018) [43]. In addition, it has been used for Twitter’s Community Notes and by Anthropic to draft a publicly sourced constitution for an AI system [44][45]. Taiwan’s deployment of Polis (divya-vtaiwan) is widely believed to be the most effective example of achieving popular consensus around contentious issues. While case studies featuring the achievements of Polis and other deliberative and direct democracy platforms are promising, it is unclear to what extent failures of these platforms in practice have simply not been documented to the same extent.
+
+The way Polis operates is that a topic is put up for debate. Anyone with an account can post comments on the topic, and can also upvote or downvote other people’s comments. Unusually for online media, users cannot reply to other users’ comments, making it difficult to engage in trolling. The upvote/downvote mechanism creates a citation network, similar to citation networks used in scientific papers, patent applications, and legal decisions, in which the upvotes and downvotes are analogous to citations. Polis does not use NLP or the identification of topics raised within the content of comments. Instead, this network of ‘citations’ drives citizen interaction on the platform.
+
+This citation mechanism enforces an important constraint that is likely critical to the success of the system. The process of surveying comments made by others for upvoting and downvoting forces people to learn about others’ opinions, which has been shown to reliably promote ‘wisdom of the crowd’ effects and better decision-making [46].
+
+The Polis system also uses the upvotes and downvotes to generate a citation map of all the participants in the debate, clustering together people who have voted similarly. Although there may be hundreds or thousands of separate comments, like-minded comments cluster together in this map, showing where there are divides and where there is consensus. According to the theory of how Polis works, participants then naturally try to draft comments that will win votes from both sides of a divide, gradually eliminating the gaps.
+
+The Polis visualization of the comments, as shaped by citations, seems to be very helpful in promoting convergence of opinion, and is much like the visualizations that have proven very effective in domains such as finance [47]. In this regard, Taiwanese Minister of Digital Affairs, Audrey Tang, declared, “If you show people the face of the crowd, and if you take away the reply button, then people stop wasting time on the divisive statements”.
+
+MIT research has shown that there is reason to believe that the Polis-style approach could have a very significant impact on decreasing polarization. We use this type of approach to achieve significant increases in democratic attitudes among partisans in America [41], and recent related MIT papers show convergence of opinion in financial decisions by providing users with a visualization of the range of opinion and action. MIT research also shows that outreach to citizens is associated with higher trust in government and higher levels of citizen cooperation and engagement."
+
+(https://mit-genai.pubpub.org/pub/mn45hexw/release/1)
+
+[[Category:Taiwan]]
+
+[[Category:Democracy]]
+[[Category:Taiwan]]
+[[Category:Facilitation]]
+[[Category:Politics]]

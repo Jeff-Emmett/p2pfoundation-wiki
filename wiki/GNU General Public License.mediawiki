@@ -1,0 +1,188 @@
+Correct name of the license is [[GNU General Public License]].
+
+=Definition=
+
+
+'''The GPL license explained''':
+
+"The GPL governs the programming instructions called source code that developers write and then convert into the binary files that computers understand. At its heart, the GPL permits anyone to see, modify and redistribute that source code, as long as they make changes available publicly and license them under the GPL. That contrasts with some licenses used in open-source projects that permit source code to be made proprietary.  Another requirement is that GPL software may be tightly integrated only with other software that also is governed by the GPL. That provision helps to create a growing pool of GPL software, but it's also spurred some to label the license "viral," raising the specter that the inadvertent or surreptitious inclusion of GPL code in a proprietary product would require the release of all source code under the GPL."
+(http://news.com.com/Sprucing+up+open+sources+GPL+foundation/2100-7344_3-5501561.html?tag=nefd.lede)
+
+An article about the 'copyleft attitude' and the emergence of the free art license, at http://infos.samizdat.net/article301.html
+
+
+=Description=
+
+Explanation on some common misunderstandings, from the IT Managers Journal at
+http://www.itmanagersjournal.com/article.pl?sid=06/08/21/1659203
+
+
+" 1. The GPL is viral
+
+The idea that any software that comes into contact with GPL-licensed software also becomes subject to the GPL seems to have originated with Craig Mundie, a senior vice president of Microsoft, in a speech delivered at the New York University Stern School of Business in May 2001. Since then, David Turner reports, many people have come to believe that even having GPL software on the same computer brings other software under the license. In extreme cases, Turner says, this belief has lead to bans on all GPL software at some companies.
+
+This misunderstanding stems from section 2 of the current GPL, which states only that modified versions of GPL software must also be licensed under the GPL. However, the section clearly states that if a program "can be reasonably considered independent and separate works in themselves, then the GPL does not apply to it" and that being on the same "storage or distribution medium does not bring the other work under the scope of this License." As Fontana points out, the definition of a derivative work could be clearer -- and should be in the third version of the license -- but the general principle is unmistakable.
+
+2. The GPL is unenforceable
+
+At the opposite extreme from the idea that the GPL is viral is that it is unenforceable -- or, in Turner's words, "It's just a bunch of hippies. How are they going to force us to do anything?" Turner attributes this misconception at least partly to the Free Software Foundation's preference for helping violators come into compliance rather than resorting automatically to lawyers and the courts. Yet this preference can also be reversed; the fact that violators consistently prefer compliance to a legal battle strongly suggests that they believe the license would be enforced. More importantly, in the few cases where the GPL has gone to court, such as Welte v. Sitecom in Germany or Drew Technologies, Inc. v. Society of Automotive Engineers, Inc. in the United States, the license has been indirectly or directly upheld.
+
+3. You can't charge for GPL software
+
+Some of the first words in the GPL are, "When we speak of free software, we are referring to freedom, not price." Yet despite repeated reminders from the Free Software Foundation, including one on its home page, even some members of the free software communities believe that charging money for GPL software is illegal. Dozens of companies, including Red Hat and Novell, who continue to charge for free software, daily prove otherwise.
+
+The only mentions of price in the GPL come in section 1, which states that, "You may charge a fee for the physical act of transferring a copy, and you may at your option offer warranty protection in exchange for a fee," and section 3b, which states that source code must be provided "for a charge no more than your cost of physically performing source distribution."
+
+4. The "liberty or death" clause applies absolutely
+
+Section 7 of the GPL is sometimes tagged as the "liberty of death" clause because it states that conditions imposed by court orders or allegations of patent infringement do not release users of the license from following its conditions. Instead, if they cannot meet both the imposed conditions and the GPL's conditions, they must stop distributing.
+
+According to Fontana, many users interpret section 7 far too rigorously. Although the section applies only to patent licenses that prohibit users from passing on full GPL rights, Fontana says, "Some read the section as prohibiting distribution of GPLed code under the benefit of any non-sublicensable patent license." In addition, "some have worried about the existence of a possibly-applicable patent, or of some law or regulation that might potentially be applied to everyone in a particular jurisdiction is enough to trigger this jurisdiction." Neither reading is supported by the actual text of the license.
+
+5. Distributors only need to ship the source code they alter
+
+Section 5 of the GPL states that "by modifying or distributing the Program (or any work based on the Program), you indicate your acceptance of this License to do so, and all its terms and conditions." These conditions include the obligation to provide the source code of the works distributed. However, many maintainers of software derived from other works conveniently believe that, so long as the distributors of the original work are distributing source code, they only need to provide the source code for the works that they modify. As mentioned in a recent NewsForge article, this assumption seems especially widespread among maintainers of derivative GNU/Linux distributions. Unfortunately, while the need for all distributors to provide source code sometimes seems redundant and often onerous, the GPL does not allow any provisions for exceptions. Nor is it likely to in the future, according to Turner.
+
+6. Distributors only need to supply source code, and not the means to use it
+
+Under section 3 of the GPL, providing the source code is only part of a distributor's obligation. The section defines the complete source code as not only "the source code for all modules" and "any associated interface definition files," but also "the scripts used to control compilation and installation of the executable" -- in other words, the tools needed to make the source code useful to anyone. Within the free software community, many people will already have those tools, but distributors cannot assume that all recipients will.
+
+7. Distributors don't need to provide offers of source code
+
+The GPL in section 3 permits users to either distribute source code with binary files, or to include an offer to provide the source code. To do neither and wait for requests may be less work, but is a straightforward violation.
+
+8. Distributors only need to offer source code to their customers
+
+If distributors opt to provide an offer for source code, then under section 3b, the offer must be good for three years, and must apply to "any third party." No distinction is made between commercial customers and anyone else who might be interested in the source code.
+
+9. Distributors only need to link to the license text
+
+Providing only a link to the GPL is easy for the distributor, but a clear violation of section 1, which grants the right to distribute GPL software "provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice." Welte explains that this provision is necessary because all users may not always have Internet access to read the license. If they cannot read the license, they cannot understand the terms under which they are allowed to distribute the software."
+(http://www.itmanagersjournal.com/article.pl?sid=06/08/21/1659203)
+
+
+=Commentary=
+
+
+'''Stefan Meretz on some misconceptions:'''
+
+"First, you can always take code, but
+not "away", the code remains "there" after taking. Second, you don't
+have to give your additions back (this seems a perpetuated myth*).
+Third, the first is by no means linked with the second: taking and giving
+are de-coupled.
+
+*The contrary is true: If you _want_ to give back your code, then you
+have to maintain the GPL. But you are not forced to do so.
+
+Prevention of code enclosure does not limit access. On the contrary,
+code enclosure prevents access to code. (Not only) Copyleft guarantees
+open access. This is the purpose."
+(Commoning mailing list, January 2011)
+
+
+
+'''Richard Stallman on the free software principles''':
+
+"My work on free software is motivated by an idealistic goal: spreading freedom and cooperation. I want to encourage free software to spread, replacing proprietary software that forbids cooperation, and thus make our society better. That's the basic reason why the GNU General Public License is written the way it is--as a copyleft. All code added to a GPL-covered program must be free software, even if it is put in a separate file. I make my code available for use in free software, and not for use in proprietary software, in order to encourage other people who write software to make it free as well. I figure that since proprietary software developers use copyright to stop us from sharing, we cooperators can use copyright to give other cooperators an advantage of their own: they can use our code.:"
+(http://www.gnu.org/philosophy/pragmatic.html )
+
+French-language interview with Stallman: http://multitudes.samizdat.net/article.php3?id_article=214
+
+
+  
+
+'''Richard Stallman on why it is okay to charge for free software''':
+
+"The word ``free'' has two legitimate general meanings; it can refer either to freedom or to price. When we speak of ``free software'', we're talking about freedom, not price. (Think of ``free speech'', not ``free beer''.) Specifically, it means that a user is free to run the program, change the program, and redistribute the program with or without changes. Free programs are sometimes distributed gratis, and sometimes for a substantial price. Often the same program is available in both ways from different places. The program is free regardless of the price, because users have freedom in using it."
+(http://www.gnu.org/philosophy/selling.html )
+
+  
+'''The Consensus of the Open Sources Initiative'''
+
+Open Source projects are fundamentally similar to Free Software in that they both forbid any restriction on the free distribution of the software and on the availability of the source code. The following principles are accepted to define an Open Source project:
+
+-	no restriction on the free distribution is allowed (but payment is allowed)\
+-	the source must be freely available to all at no cost
+-	changes must be accepted and distributed
+-	the author can request a protected version number
+-	no discrimination in usage is allowed, for every activity, including commercial usage
+-	the rights attached to any program are for all the users all of the time
+-	the license cannot be program specific (to avoid commercial restrictions)
+-	the license cannot be applied to other code (such as proprietary additions)
+-	the license must be technologically neutral (not restricted to certain devices or operating systems)
+
+=Discussion=
+
+==Patrick Anderson on the GNU GPL as a [[Peer Property]] license==
+
+"the license is a legally binding constraint that disallows trade
+(sharing or selling) of the commodity (object code) unless the virtual
+capital (source code) is made available "at cost" to the consumer (end
+user) of that product.
+
+Free Software could never have achieved the commercial stance it has
+without such a trade agreement because the Capitalists would continue
+to splinter the community by building on the work of others while
+removing freedom from those new users such as happens with the BSD
+style (non-copyleft) licenses.
+
+The GNU GPL is a semi-permeable cell membrane that only allows entry
+to those that respect the freedom of all current and future users,
+while stopping those that would try to remove any of those freedoms.
+
+The GNU GPL is a protective coating that goes unnoticed (is not "in
+the way") until someone disallows access to the virtual Means of
+Production (the source code) in an attempt to subjugate others for the
+purpose of increasing and/or perpetuating profit."
+(Oekonux mailing list, September 2008)
+
+
+
+==GPL as Global Civil Society-based Legislation==
+
+J. Martin Pedersen:
+
+"Because it is a global network of communities composed of members residing in respective jurisdictions, each subject to different specificities of local copyright law, the GPL is also an experiment in global(ised) law making beyond the nation state through voluntary associations5. A property law made within global civil society by a social movement. The global dimension is reflected in the recently completed process to update the GPL to Version 3, which includes efforts of “denationalization”, in order to position the GPL within global civil society, in an “attempt to cut the language of the license loose from any particular system’s copyright law” (Moglen 2006), so as not to confine it to any specific nation state’s legal system and its terminology."
+(http://commoning.wordpress.com/2011/01/04/misunderstanding-the-gnu-general-public-license-reciprocity-in-perpetuity/)
+
+=More Information=
+
+See also at http://www.opensource.org/ ; Background on the Open Source definition, by Bruce Perens, at http://www.perens.com/Articles/OSD.html 
+
+General info on the GNU GPL at http://www.gnu.org/licenses/gpl-faq.html and http://en.wikipedia.org/wiki/GNU_GPL
+
+==GNU GPL Version 3==
+
+1. http://gplv3.fsf.org/
+2. http://www.fsf.org/news/gplv3_launched
+3. http://www.gnu.org/licenses/gpl-3.0.html
+4. http://www.gnu.org/licenses/lgpl-3.0.html
+
+
+Information on GNU GPL version 3 at http://gplv3.fsf.org/ ; and here is a good overview of the [http://www.osbr.ca/archive.php#A5 changes].
+
+As this more correct concept is used mainly by people already familiar with free software culture, we  have located most of our material here at: [[General Public License]]
+
+==About the GPL==
+
+" The success of the GPL is due to its fundamental design principle: the protection of users' freedom to work individually or together to make software do what they wish. To carry the GPL into the future, we have undertaken to adapt the license to uphold this principle through the opportunities and menaces of today's technological and legal environment.
+
+The core legal mechanism of the GNU GPL is that of copyleft, which requires modified versions of GPL'd software to be GPL'd themselves. Copyleft is essential for preventing the enclosure of the free software commons, today as it was in 1991."
+(http://gplv3.fsf.org/)
+
+
+==More Information==
+
+The history of the GPL, at http://www.free-soft.org/gpl_history/
+
+Free Software/Open Source Literature, at http://www.free-soft.org/literature/
+
+
+[[Category:Policy]]
+[[Category:Encyclopedia]]
+[[Category:Resources]]
+[[Category:Business]]
+[[Category:IP]]
+[[Category:Standards]]
+[[Category:Licensing]]

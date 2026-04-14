@@ -1,0 +1,245 @@
+From a text at http://dasht-brk.livejournal.com/28013.html?nc=1
+
+This text explains why the traditional corporate model is difficult to implement in case of free software, with some exceptions. Read the whole article for insight into this rule and its exceptions.
+
+See also our entry on [[Open Source Business Models]]
+
+
+=Definitions=
+
+
+From: http://dasht-brk.livejournal.com/28013.html?nc=1
+
+
+'''"* What is A Software Business?'''
+
+  
+We adopt a simple model of a "software business" as one which
+provides three services:
+
+           
+'''1) Basic Suppor'''t
+              
+Customers can report bugs or other problems with
+the software products.  The software business
+responds with fixes or work-arounds.
+
+           
+'''2) Critical Maintenance'''
+               
+Customers have already installed and are using
+the software product.  The software business
+proactively supplies the customer with essential
+patches.   Patches for bugs with security
+implications are an important example of what is
+supplied by critical maintenance.
+
+            
+'''3) Inventing the Future'''
+              
+Computing systems evolve rapidly -- faster than the
+rate at which they can be deployed and replaced.
+               
+A customer often can not buy a software product
+today unless the customer is reasonably assured that
+in future years, progressive upgrades to the product
+will be available.   Upgrades must keep up with
+changes in hardware.  Often upgrades must add new
+features that help a customer to compete.
+
+If a business model can *break even* by performing these three tasks
+in combination, we define that to be a "software business".
+
+If a software business can return a *profit* by performing the three tasks in combination, we define that model to be suitable for
+a corporate software business: one which can return a profit to
+shareholders.
+
+
+'''* What is a Free Software Business?'''
+
+  
+We define a "free software business" to be a software business
+in which all software is exchanged under a free software license
+such as the GPL.
+
+In contrast, a "proprietary software business" is one which supplies
+software to customers only under terms which do not permit the
+customer (or supplier) to freely examine and modify the source, make
+copies, use the software without restriction, and redistribute the
+software (modified or not)."
+
+
+
+=Typology=
+
+Carlo Daffara:
+
+"A recent update (february 2009) of the FLOSSMETRICS study on Free Software-based business model is presented here, after an analysis of more than 200 companies; the main models identified in the market are:
+
+
+'''[[Dual Licensing]]''': the same software code distributed under the GPL and a proprietary license. This model is mainly used by producers of developer-oriented tools and software, and works thanks to the strong coupling clause of the GPL, that requires derivative works or software directly linked to be covered under the same license. Companies not willing to release their own software under the GPL can obtain a proprietary license that provides an exemption from the distribution conditions of the GPL, which seems desirable to some parties. The downside of dual licensing is that external contributors must accept the same licensing regime, and this has been shown to reduce the volume of external contributions, which are limited mainly to bug fixes and small additions. 
+
+
+'''[[Open Core]]''' (previously called “split Free Software/proprietary” or “proprietary value-add”): this model distinguishes between a basic Free Software and a proprietary version, based on the Free Software one but with the addition of proprietary plug-ins. Most companies following such a model adopt the Mozilla Public License, as it allows explicitly this form of intermixing, and allows for much greater participation from external contributions without the same requirements for copyright consolidation as in dual licensing. The model has the intrinsic downside that the Free Software product must be valuable to be attractive for the users, i.e. it should not be reduced to “crippleware”, yet at the same time should not cannibalise the proprietary product. This balance is difficult to achieve and maintain over time; also, if the software is of large interest, developers may try to complete the missing functionality in Free Software, thus reducing the attractiveness of the proprietary version and potentially giving rise to a full Free Software competitor that will not be limited in the same way. 
+
+
+'''Product specialists''': companies that created, or maintain a specific software project, and use a Free Software license to distribute it. The main revenues are provided from services like training and consulting (the “ITSC” class) and follow the original “best code here” and “best knowledge here” of the original EUWG classification [DB 00]. It leverages the assumption, commonly held, that the most knowledgeable experts on a software are those that have developed it, and this way can provide services with a limited marketing effort, by leveraging the free redistribution of the code. The downside of the model is that there is a limited barrier of entry for potential competitors, as the only investment that is needed is in the acquisition of specific skills and expertise on the software itself. 
+
+
+'''Platform providers''': companies that provide selection, support, integration and services on a set of projects, collectively forming a tested and verified platform. In this sense, even GNU/Linux distributions were classified as platforms; the interesting observation is that those distributions are licensed for a significant part under Free Software licenses to maximize external contributions, and leverage copyright protection to prevent outright copying but not “cloning” (the removal of copyrighted material like logos and trademark to create a new product)1. The main value proposition comes in the form of guaranteed quality, stability and reliability, and the certainty of support for business critical applications. 
+Selection/consulting companies: companies in this class are not strictly developers, but provide consulting and selection/evaluation services on a wide range of project, in a way that is close to the analyst role. These companies tend to have very limited impact on the Free Software communities, as the evaluation results and the evaluation process are usually a proprietary asset. 
+
+
+'''Aggregate support providers''': companies that provide a one-stop support on several separate Free Software products, usually by directly employing developers or forwarding support requests to second-stage product specialists. 
+
+
+'''Legal certification and consulting''': these companies do not provide any specific code activity, but provide support in checking license compliance, sometimes also providing coverage and insurance for legal attacks; some companies employ tools for verify that code is not improperly reused across company boundaries or in an improper way. 
+Training and documentation: companies that offer courses, on-line and physical training, additional documentation or manuals. This is usually offered as part of a support contract, but recently several large scale training center networks started offering Free Software-specific courses. 
+
+
+'''R&D cost sharing''': A company or organization may need a new or improved version of a software package, and fund some consultant or software manufacturer to do the work. Later on, the resulting software is redistributed as open source to take advantage of the large pool of skilled developers who can debug and improve it. A good example is the Maemo platform, used by Nokia in its Mobile Internet Devices (like the N810); within Maemo, only 7.5% of the code is proprietary, with a reduction in costs estimated in 228M$ (and a reduction in time-to-market of one year). Another example is the Eclipse ecosystem, an integrated development environment (IDE) originally released as Free Software by IBM and later managed by the Eclipse Foundation. Many companies adopted Eclipse as a basis for their own product, and this way reduced the overall cost of creating a software product that provides in some way developer-oriented functionalities.
+
+
+Indirect revenues: A company may decide to fund Free Software projects if those projects can create a significant revenue source for related products, not directly connected with source code or software. One of the most common cases is the writing of software needed to run hardware, for instance, operating system drivers for specific hardware. In fact, many hardware manufacturers are already distributing gratis software drivers. Some of them are already distributing some of their drivers (specially those for the Linux kernel) as Free Software. "
+(http://carlodaffara.conecta.it/?p=216)
+
+
+=Discussion=
+
+==Proprietary Software has higher margins that Free Software==
+
+Thesis: '''One can always make more money with proprietary software than Free Software'''
+
+Michael Bernstein:
+
+"An objective and narrow reading of this statement is actually true.
+Margins on Proprietary software are higher than Free Software. The
+successful Free Software vendors are in many cases deliberately
+disrupting the market they target, shrinking its size (in terms of $$$)
+and taking a larger share of a market with thinner margins, which the
+more bloated incumbents are ill-suited for. Overall, less money is made.
+
+It is only un-true for upstart entrants to those markets that don't have
+any other reasonable way of entering a pre-existing market with
+established proprietary vendors. This assumes that the dominant
+proprietary offerings are actually 'good enough' in some sense, which
+they usually are.
+
+The only other reliable strategy that works for existing markets is
+entering it from an adjacent one that you dominate (which, obliquely, is
+one reason new companies frequently try to establish new markets,
+however small). So in theory, if you dominate one market with a FLOSS
+product you could enter an adjacent market with a proprietary offering."
+(Autonomo.us mailing list, May 2009)
+
+
+=Case Study: Red Hat=
+
+"* The Case of Red Hat
+
+  
+Red Hat's pricing scheme for typical deliveries of their
+
+Enterprise-targeted versions of GNU/Linux behave much like licensing
+fees for proprietary software.  Customers are charged per "Installed
+System" to run this software and the Critical Maintenance patches
+delivered against it. {note: RH Subscription} {note: RH pricing}
+
+Paradoxically, the software itself is essentially free software
+(much of it licensed by the GPL, some licensed by various "open
+source" licenses). {note: FSF Licensing Commentary}
+
+How is this possible?  Well, actually, it appears to be temporary
+market irrationality and we predict its eventual correction.
+
+One problem concerns the subscription agreement which appears to
+promise to deliver free software to customers but with restrictions
+on how that customer may copy and use the software.   If that is
+a correct interpretation of the contract (we are not a lawyer!) then
+the contract clearly implies that Red Hat's distribution of software
+covered by the GPL is in violation of the GPL.   The legal
+consequence would be that Red Hat therefore has, in fact, no legal
+right to copy, use, modify, or distribute that GPLed software.
+
+Another problem concerns the possibility of free riders.  Red Hat
+is obligated to make source code for the software they deliver 
+available to customers.  (In fact, they make the source publicly
+available.)   Customers have every incentive to expect source code
+for distributions and maintenance patches to be available very
+quickly.   While it requires a delicate dance around contractual
+issues, ultimately Red Hat's core "Inventing the Future"  and
+"Critical Maintenance" work products are subject to rapid 
+redistribution which Red Hat can not legally prevent and for 
+which Red Hat receives no fee.   Indeed, the CentOS project
+appears to be headed in that direction. {CentOS}
+
+A third problem concerns the Red Hat brain drain.  Red Hat is
+able to be a leader in "Inventing the Future" and "Critical
+Maintenance" because it hires so many of the best programmers.
+As the supply of programmers increases, wage pressures will
+encourage the creation of not-for-profit organizations which
+duplicate or surpass Red Hat's work.   "Brain workers" will
+be able to command higher wages if no part of the revenue 
+they help generate is returned to shareholders.
+
+In short, a market optimizes allocation of resources *including*
+those resources used to modify the market to improve the current
+optimization.   While Red Hat's levels of profit are relatively
+low, optimizing that unjustified profit away is unimportant and
+unlikely to happen.   Should Red Hat grow too far, attacks already
+underway against Red Hat's business model are likely to
+significantly advance.
+
+This puts Red Hat management in a curious position with respect to
+"Inventing the Future" -- free software R&D.  They have incentive to
+keep Red Hat at a comfortable level of profit: one large enough to
+survive as a public company but small enough to postpone the
+inevitable attack as long as possible.  What this specifically
+implies is that, unlike proprietary software companies, Red Hat has
+only *negative* incentive to invest in the kind of R&D that can
+generate significantly disruptive breakthroughs.  If there were a
+sudden discontinuous spike in the marginal utility of GNU/Linux and
+other free software, Red Hat would not expect a corresponding spike
+in its profits: it would expect to be driven out of
+business. 
+
+So the proprietary software business model gives a firm incentive to
+create true revolutions in software.  Red Hat's model does just the
+opposite.  This factor, too, creates an opportunity for others to
+construct competing models, either corporate or otherwise, which
+will eventually displace Red Hat's model."
+(http://dasht-brk.livejournal.com/28013.html?nc=1_
+
+=More Information=
+
+Two classic essays are:
+
+#Frank Hecker. [[Setting Up Shop]]
+#Bruno Perens. The [[Emerging Economic Paradigm of Open Source]]
+
+More:
+
+# Our entry on [[Open Source Business Models]] is a useful summary of such insights by Janet Hope.
+# [http://www.ocri.ca/events/presentations/partnership/April1907/PeterCarbone.pdf Value Derived from Open Source is a Function of Maturity Levels]: excellent presentation with many overview tables
+#[http://www.cospa-project.org/Assets/resources/daffara-OSWC2.pdf Sustainability of FLOSS-Based economic models] presentation by Carlo Daffara which focuses on the role of firms.
+#[[Open Source Software and the Private-Collective Innovation Model]]. Eric von Hippel and Georg von Krogh
+
+Report:
+
+#[[New Economic Models, New Software Industry Economy]]. By RTNL, the French National Network for Software Technologies.
+
+
+==Audio/Video==
+
+Listen to [[Mark Shuttleworth on the Business Ecology of Ubuntu]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Business Models]]
+
+[[Category:Free Software]]
+
+[[Category:Collaborative Economy]]

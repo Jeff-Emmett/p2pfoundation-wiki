@@ -1,0 +1,43 @@
+
+'''= Tonika is a "physical" social network, in contrast to existing networks like Facebook, LinkedIn, etc. which are "virtual".'''
+
+URL = http://blog.5ttt.org/quick-overview
+
+==Description==
+
+"Tonika is a desktop software for individuals. It starts by assigning an anonymous numeric ID to every user.
+
+The key feature of Tonika is a low-level functionality (API, if you will) that enables the design and development of various social-type apps (or add-ons), which by virtue of running on top of Tonika are guaranteed to have a range of strong privacy and anonymity preserving properties for its users.
+
+The API provides two fundamental functions: short- and long-distance links. A short-distance link is a direct (peer-to-peer), secure (private) communication channel to a specified (by ID) friend. (These links are realized via direct peer-to-peer transport over the Internet, protected by cryptographic authentication and data encryption.)
+
+A long-distance link, the more unusual kind, is a communication channel to any desired other user (potentially not an immediate friend), specified by their anonymous ID. These long-distance links are automatically pieced together by sequences of short-distance links, that we can think of as paths along friend-to-friend contacts.
+
+Better yet, long-distance links in fact comprise multiple paths connecting the end points in order to achieve optimal throughput and resilience to network failures, while ensuring fair bandwidth allocation to all users.
+
+
+
+'''But what is the magic?'''
+
+Long-distance links are special: They enable any user to disseminate information to any other user in the world, while at the same time ensuring that neither party can learn anything about the physical identity of the other. This is a consequence of the fact that long-distance links are not realized via a direct Internet connection, rather by a string of connections between pairs of trusted acquaintances.
+
+
+
+'''And some applications, please?'''
+
+The applications of Tonika span the whole spectrum, from friend-to-friend sharing (like DropBox, Flickr, Facebook) to content distribution where a single source, like WikiLeaks, publishes to a large audience.
+
+Friend-to-friend apps built on Tonika allow their users to own their data by storing it locally, while at the same time being able to deliver it privately to designated friends or others (non-friends).
+
+Content distribution apps can reach an unlimited audience at a low-cost by taking advantage of automatic content caching in areas of the social network that exhibit high demand for the content.
+
+
+'''Who is interested in our technology?'''
+
+Besides home users who can benefit directly from Tonika's social sharing apps, social app developers are also interested. Their projects can benefit from Tonika by leveraging its technology as a transport layer for friend-to-friend and other social data communications, without requiring costly, centralized and failure-prone cloud solutions."
+
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Relational]]

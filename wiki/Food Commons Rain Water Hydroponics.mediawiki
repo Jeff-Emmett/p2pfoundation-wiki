@@ -1,0 +1,25 @@
+
+
+'''= gravity-fed rain water irrigation system, using Arduino as controller/timer'''
+
+
+URL = http://www.appropedia.org/Food_Commons_Rain_Water_Hydroponics
+
+=Description=
+
+"This is a two tank, gravity-fed rain water irrigation system, using Arduino as controller/timer. The system can be used for indoor or outdoor production. Bottom tank is "collection tank", top tank is "water tower". Water level sensors exist in both tanks, when collection tank has water, and water tower needs water, water will be pumped up to water tower until it is full.
+
+Plantings are sectioned off into "zones". Solenoids control flow of water to zone (one solenoid per zone). Water is time released according to species in each zone. An option is to place a flow meter in output hose from water tower and release water based on gallons or liters per second/minute, per zone.
+
+The zones are controlled through a web-based software interface (can run online or on local computer) which is connected to the Arduino controller.
+
+Plants in zones at development site are planted outdoors in typical soil (this is not a fully hydroponic system. It is using rainwater as irrigation).
+
+This same system can be used for rainwater-fed full hydroponic system.
+
+This is a collaboration between Russell Bauer http://rabwork.com and Sam Rose http://forwardfound.org "
+
+(http://www.appropedia.org/Food_Commons_Rain_Water_Hydroponics)
+
+
+[[Category:Agrifood]]

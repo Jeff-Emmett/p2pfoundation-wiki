@@ -1,0 +1,264 @@
+
+Proposal by Victoria Stodden.
+
+= Source =
+
+'''Article: ENABLING REPRODUCIBLE RESEARCH: OPEN LICENSING FOR SCIENTIFIC INNOVATION (draft version). By Victoria Stodden.'''
+
+URL = http://www.stanford.edu/~vcs/papers/Licensing08292008.pdf
+
+
+=Text=
+
+==THE RATIONALE FOR THE OPEN RESEARCH LICENSE: THE ALIGNMENT OF INCENTIVES==
+
+"Open standards and open access are insufficient to promote the free
+discovery and development of science since the success of a scientist is
+measured by citations and the amount of subsequent work he or she
+engenders. This reward system can create short-sighted incentives to both
+move quickly to working on the next scientific publication and not release
+the full research compendium in the belief that other scientists will “steal”
+work by building upon it without attribution. I suggest an attribution license
+is required that will perpetuate virally through all derivative works, thereby
+ensuring attribution for all parts of the research compendium. 
+
+Secondly, scientists need to have a guide to make the release of their complete research
+product as easy and as useful to others as possible. An appropriate license
+will do this both by making it possible for researchers to release everything
+under one umbrella license and publicizing the concept of doing so. A
+tailored license would bring the discussion beyond mere open source to
+Richard Stallman’s concept of free software and free research. 
+
+Thirdly, the current copyright system closes scientific research in such a way that is
+counter to the scientific ethos of reproducibility.
+
+
+
+==A COMPILATION LICENSE IS REQUIRED==
+
+Copyright law in the U.S. does not permit the copyright of “raw
+facts” but original products derived from those facts can be and are, in fact,
+assigned automatically whenever a creative work is produced. In this
+automatic assignment, comes the prevention of copying and using the work
+in another creative or scientific endeavor. In the case of scientific research a
+tension is created since the scientific ethos is to reproduce previous results
+and build on them to generate further scientific understanding. The default
+copyright can be limited if the authors take steps to limit those rights by
+using an alternative license for their work such as the GNU General Public
+License (“Copyleft”) or the Creative Commons license.
+
+A. Selection and Arrangement of Data
+
+In Feist Publications, Inc. v. Rural Telephone Service, the Court
+found that white pages telephone directories are not copyrightable;
+copyrightable works must have creative originality:
+
+. . . the copyright in a factual compilation is thin.
+
+Notwithstanding a valid copyright, a subsequent compiler remains
+free to use the facts contained in another’s publication to aid in
+preparing a competing work, so long as the competing work does
+not feature the same selection and arrangement.
+
+Currently the Court holds databases protectable. A license that
+applies to the “selection and arrangement” of a database, in a virally
+attributive way, can encourage scientists to release the datasets they have
+compiled by providing a legal framework for copyrightability. This permits
+the application of a license to foster reproducible research.
+
+Most computational research work takes place in a university setting
+and many universities claim some ownership rights over the research
+product. In a November 1, 2007 discussion with Katharine Ku, Director of
+the Office of Technology Licensing (OTL) at Stanford University, the
+concern was not in copyright and focused on primarily on patents. The OTL
+did not perceive any conflict between the Open Research License I am
+proposing and their interests as a university.
+
+
+==THE OPEN RESEARCH LICENSE==
+
+The Open Research License is a compilation of existing licenses: the
+Creative Commons BY attaches license to the media components of the
+compendium, the BSD license to code components, and if the scientist
+chooses to release his or her data to the public domain, attaching the Science
+Commons Database Protocol to the data.
+
+The CC BY license is designed for media: to “share your creations
+with others and use music, movies, images, and text online that’s been
+marked with a Creative Commons license.” If used alone, it is misapplied to
+the academic research compendium since it does not adequately cover code
+and, in fact, using the CC BY license for code is actively discouraged by
+Creative Commons. The BSD license evolved from the development of
+Berkeley Unix code and is a standard license for open code. Using the BSD
+license alone for scientific compendia leaves the documentation, figures,
+final paper and other forms of scholarship, the experimental design, GUIs
+interfacing with the algorithms, pseudocode, and dataset build
+methodologies for example, without an adequate license. But all of these
+works could be released appropriately under the CC BY license that ensures
+consistent viral attribution for the entire compendia.
+
+This selection of licenses allows for viral attribution and, by avoiding
+the Share Alike aspect common to many licenses, ensures each scientist is
+attributed for only the work he or she has created. If Share Alike were not
+excluded from this license, each the entire derivative work (or new scientific
+discovery) would carry the ORL license, including the upstream work’s
+attribution. In order to promote scientific research, it is sensible to allow the
+downstream researcher the choice of whether he or she would like to attach
+the ORL to his or her work (although the ORL remains attached to any
+upstream work he or she may have incorporated). Specifically, there must
+be no bar to building upon previous scientific research. A corollary benefit
+to the ORL’s relaxation of the Share Alike component is that it becomes
+easier for startups to employ the research as part of their technology
+without having all their (possibly) proprietary work come under the ORL.
+
+As a simple umbrella license the ORL is easier to use than the
+alternative. Without the ORL, each time he or she releases scholarship, the
+scientist would have to fashion together a combination of licenses from an
+entire spectrum of choices. Since the ORL uses common existing licenses,
+there are no compatibility or interoperability issues with existing licensing
+schemes.
+
+==POTENTIAL PROBLEMS IN DELINEATING COMPONENTS OF THE COMPENDIUM==
+
+Making a distinction as to which components of the research
+compendium belong under which license might be blurry: for example
+algorithm descriptions and pseudocode are frequently included in
+computational research. Arguably, each could be considered either code
+(there is no requirement that code must be functional to be covered by the
+BSD License for example, just that it be “source”) or media (pseudocode is
+also text that traditionally could be covered under a CC license). Finally,
+there is no adequate licensing structure that intentionally applies to the
+structures that house the data used. The data itself is not copyrightable but
+often a phenomenal amount of work goes into preparation of the dataset for
+research and there is no reason why this should not be attributed to the
+scientist and explained openly to future researchers who would like to use
+these data. Precisely how the data were generated or gathered, any
+processing done to the data to clean or verify it, and the current layout of
+the data are all vital pieces of information for a scientist to reproduce or
+understand the final result. These aspects could be emphasized as important
+and captured by the ORL. This dovetails neatly with the aspirations of
+Claerbout’s really Reproducible Research.
+
+
+==THE COSTS AND BENEFITS OF THE OPEN SCIENCE RESEARCH LICENSE==
+
+The NSF goal that publicly funded research be publicly available
+achieves important objectives: accountability and oversight in the use of
+government funds; promotion of scientific knowledge through both 1) direct
+conveyance and 2) facilitation of the opportunity to verify and improve
+answers to scientific questions; and the “sunshine principle” (knowledge of
+future public release creates incentives for better work). A license that can
+protect and promote these goals by aligning the scientific researcher’s
+interests by providing for attribution, could not only forward our scientific
+knowledge but dramatically improve participation by scientists in
+collaborative research, encourage citizen-scientists to actively engage in
+research, and institutionalize the web as the mode for release of scientific
+discovery.
+
+Attribution of work is a cornerstone of scientific discovery and
+currently a tension exists for scientists between the public release of
+research, thereby risking loss of attribution, and limited but attributed
+journal publication. This can be resolved by releasing scientific research
+under an appropriately tailored license. The ORL would encourage
+academic researchers to release their work completely, permitting
+verification of the current findings, facilitating further scientific results in the
+particular area of research, and preserving attribution for research work.
+Such a license would also have the corollary effect of producing better
+science: a researcher who anticipates release of all his or her work to the
+public is apt to do a much more careful job.
+
+The ORL will provide a mechanism for scientists to license the
+meta-knowledge associated with the creation and perfecting of their data.
+Prior to the ORL, this would not fall under any license. The ORL will also
+provide metadata that can be used to associate the entire research product
+license status in a machine-readable way as a single product, which would be
+inherently more difficult if different components were under different
+licenses.
+
+The ORL holds the promise of encouraging better tools for research
+dissemination and investigation. The license will provide cultural pressure
+that encourages reproducible research, and perhaps encourages journals to
+education, research and access to information” in updating international copyright norms to
+respond to challenges arising from advances in information and communications
+technologies, including global digital networks.1” WIPO Copyright Treaty,
+
+When the entire research compendium is released to the public, this can
+obviate the ability of the researchers to covertly begin a commercial venture
+based on the research results. This concern is contrary to scientific
+principles and the funding mandate of the NSF in the sense that science is a
+public good - work licensed under the ORL can be commercially used, it just
+cannot be built upon secretly. As one researcher has pointed out, an
+advantage to open code and clarity of experimental method is publicity of
+the new work.
+
+Another concern is the inherent confidentiality of some data. Some data,
+for example personal medical records, sensitive national security data, or
+proprietary industry data should not be publicly released. This can be
+counteracted by sanitizing the data as much as possible so that any personal
+or sensitive information is not released. In fact the National Academy of
+Sciences advocates the release of as much data as possible, even if there is a
+risk terrorist organizations may use it to damage United States interests.
+
+Their evaluation is that the value of the scientific output outweighs the risk
+of information falling into dangerous hands. The NAS also would like to
+promote international scientific cooperation and is concerned undue
+restrictions on data would hamper this process. It may also be the case that
+some data may require built-in security and integrity checks that must be
+kept confidential for the experiment to operate. This creates the corollary
+concern that not all the data methodology can be released. This may not be a
+true cost of this license since it is clear such data would not have been
+released in any event. The ORL may encourage innovative ways to allow
+some reproducibility, such as providing an online system for other
+researchers to choose algorithm parameters or specific sections of data and
+simply be returned processed results.
+
+Algorithms may rely on proprietary libraries. Hopefully these libraries
+will be brought under the rubric of the ORL and opened to the wider
+research community. If not, the ORL may discourage the use of potentially
+fruitful proprietary libraries.38 Use of the ORL may involve a rethinking of
+university copyright and patenting policies. There may be conflicting third
+party obligations or conflicts with previously patented work used in the
+current research.
+
+The ORL may encourage a change in the valuation of scientific work
+away from pure research results toward algorithm modification for useful
+purposes. For example, industrial applications may become a vital part of
+research on the web and non-researchers may be able to use the scientific
+research more readily than under traditional publication methods.
+Opening scientific research to the public has the benefit of providing the
+opportunity will exist for anyone with a web connection to get involved,
+even releasing their own derivative works under the ORL. This throws open
+the peer review process to anyone so motivated.
+
+Since the ORL facilitates the communication of research and ensures
+attribution, it avoids two of the stumbling blocks to very large scale
+collaboration. The internet naturally suggests such collaboration and the
+ORL, by making entire research product coherently and consistently
+available and ensuring attribution, encourages this use of the internet’s
+potential. The ORL may facilitate internet-based data sharing research
+models. Such a machine readable license will enable researchers to search for
+ORL licensed work more easily.
+
+A researching scientist may have done more experimentation than is
+practical for a traditional research paper. Releasing the full research product
+allows for the reporting and attribution of more results and experimental
+configurations than would ordinarily be publishable.
+
+As alluded to in the introduction, by ensuring open easy access to
+others’ research, the ORL will stand as a bulwark against plagiarism and
+falsification of scientific results. If even the potential exists for peers to
+verify all your methodologies, the incentive to cheat is greatly reduced. For
+exactly the same reason that attribution is an important feature of the ORL,
+a scientist’s reputation is his or her career and the threat of being known as
+scientifically dishonest is exceedingly strong.
+
+The role of third parties will be clear and consistent under the ORL, and
+this may not be if scientists do not have a clear licensing structure for
+computational work. This is especially important as the university is a
+common setting for computational research, and universities nearly always
+peer review process in a similar fashion as the patent review process."
+
+
+[[Category:IP]]
+
+[[Category:Science]]

@@ -1,0 +1,32 @@
+
+
+=Description=
+
+Anthropic:
+
+"Most of us have encountered situations where someone appears to share our views or values, but is in fact only pretending to do so—a behavior that we might call “alignment faking”. Alignment faking occurs in literature: Consider the character of Iago in Shakespeare’s Othello, who acts as if he’s the eponymous character’s loyal friend while subverting and undermining him. It occurs in real life: Consider a politician who claims to support a particular cause in order to get elected, only to drop it as soon as they’re in office."
+
+(https://www.anthropic.com/research/alignment-faking)
+
+
+=Discussion=
+
+==Could AI models also display alignment faking?== 
+
+Anthropic:
+
+"When models are trained using reinforcement learning, they’re rewarded for outputs that accord with certain pre-determined principles. But what if a model, via its prior training, has principles or preferences that conflict with what’s later rewarded in reinforcement learning? Imagine, for example, a model that learned early in training to adopt a partisan slant, but which is later trained to be politically neutral. In such a situation, a sophisticated enough model might “play along”, pretending to be aligned with the new principles—only later revealing that its original preferences remain.
+
+This is a serious question for AI safety. As AI models become more capable and widely-used, we need to be able to rely on safety training, which nudges models away from harmful behaviors. If models can engage in alignment faking, it makes it harder to trust the outcomes of that safety training. A model might behave as though its preferences have been changed by the training—but might have been faking alignment all along, with its initial, contradictory preferences “locked in”."
+
+
+=More information=
+
+* "A new paper from Anthropic’s Alignment Science team, in collaboration with Redwood Research, provides the first empirical example of a large language model engaging in alignment faking without having been explicitly—or even, as we argue in our paper, implicitly1—trained or instructed to do so."
+
+URL = https://arxiv.org/abs/2412.14093
+
+
+[[Category:Politics]]
+
+[[Category:Protocols and Algorithms]]

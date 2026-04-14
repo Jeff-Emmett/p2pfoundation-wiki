@@ -1,0 +1,97 @@
+'''Cyclos Software''' is used to manage complementary currencies
+
+URL = https://www.cyclos.org/
+
+"It seems that the newest version of Cyclos may have the functionality, ease of use, and customizability that we have been looking for.". Thomas Greco [http://beyondmoney.net/2012/06/12/cyclos-worth-another-look/]
+
+
+=Description=
+
+'''1.'''
+
+"Cyclos is open source software intended for use in complementary currency systems like LETS, Barter, Time bank, C3 (consumer commerce circuit) and micro finance systems like VLC (combination of micro finance with local currency). Cyclos is a transactional (on-line banking) system with several community functionalities and extended modules.
+
+Cyclos has been developed by the dutch NGO [http://www.strohalm.net/en/site.php STROhalm] and is published under the GPL (open source) license meaning that it can be downloaded for free and used at no costs. But, even more important, anybody is free to download the source code and add new functions, make improvements or modifications.
+
+Cyclos is developed in Java. and does run on a variety of platforms like Linux, Windows, Macintosh and Solaris. The objective is to create profesional software that is modular, easy to use and maintain, secure and highly customizable. The current version offers web based access to an environment were members can administer their accounts, view their transactions, make payments in local units, place ads and contact other members. Members can do (secure) payments via web access or mobile phone (wap1, wap2). Next to the 'digital' web and mobile payments it is also possible to administer the emission of vouchers (scrip). The software has an extended administration section with build in automatic functions that make it possible to administer a currency system with minimal manual work.
+
+Cyclos comes with various extra modules like a external payment allows webshops to support online Cyclos payments for their products. Other modules we are working on are consumer cards, a micro finance module and a module to join other currency systems in a distributed (peer to peer) network."
+
+
+'''2.'''
+
+"Cyclos offers a complete Open-Source on-line banking system with additional modules such as e-commerce and communication tools. Check this out at http://project.cyclos.org/
+
+The objective of the project is to develop open source complementary currency software that is easy to use and maintain, flexible, secure, and highly customizable. The Cyclos structure is entirely dynamic.
+
+This means that it is possible to ‘build’ a monetary system from scratch. Organizations that want a standard system can use the default database that comes with basic configurations and can be easily enhanced. Cyclos is used for mutual credit systems like LETS, Barter systems, administration of Micro credits or remittances, Time banks and backed currency systems such as a C3 (consumer and commerce circuit). Cyclos just started to be used as a back-end for mobile banking services in Africa, and various Universities are studying the possibility to use Cyclos as a campus payment system."
+(cited: http://beyondmoney.net/2012/06/12/cyclos-worth-another-look/)
+
+
+
+
+
+=Discussion=
+
+"Marco Sachy started by outlining the notion of monetary rhizome, another Deleuze and Guattari-inspired concept describing a possible postmodern alternative to the capitalist paradigm of the bank-debt monopoly. He made the example of Cyclos, an open-source software developed in Brazil and Uruguay, which has been used by organizations and institutions around the world. The software offers a complete online banking system, with additional modules (such as e-commerce), permitting the decentralization of banking services.
+
+By using Cyclos, anyone can manage integrated local currencies, providing a second line of credit where the main ones have become insufficient, due to crises or financial shenanigans. The rhizome nature derives from the possibility of connecting “parameters belonging to different domains of existence (economic, ethic, social, etc) by valuing them through different currencies”.
+
+In Uruguay, for instance, cultural associations could integrate state funding with a system of virtual, non inflactionate credits called “cultos”, which such actors could use to finance their activities in a more flexible and stable way. The system, called C3 (Commercial Credit Circuit) was developed by Bernard Lietaer and STRO, and uses “insured invoices or other payment claims as liquid payment instruments with a business to business (b2b) Clearing-Network”."
+(http://ecommons.tuxic.nl/?p=2156)
+
+
+==Why Cyclos v. 4 is no longer open source==
+
+Roder Van Arkel:
+
+" in 2012 we decided not to publish our new Cyclos 4 PRO version open source, this was a financial decision, we needed to generate some extra income to keep paying our team of programmers. We had some big clients for example a big bank, using Cyclos but not paying anything to support us. In Cyclos 4 PRO we use the income from the bigger customers to provide high quality software and offer it for free to social initiatives and small projects. To create a fair economy that creates chances for everybody is and has always been our goal. For more information see the announcement in our newsletter of 2013: http://www.cyclos.org/newsletter/2013_06/index.html
+
+The money from the gates foundation was an award we won this year (2014). We where elected by a panel from the payment industry as the most innovative technological solution serving development countries. This award was sponsored by the gates foundation."
+
+=Use Testimonies=
+
+Simon Woolf:
+
+"I’m the IT director for Qoin, a Dutch foundation that implements CC programmes all over Europe. We made the decision to go with Cyclos 3.6 just over a year ago, and I have to say I’m very happy with that decision.
+
+Bear in mind that we have a number of largescale, professional programmes up and running – examples include The Brixton Pound (London, UK), The Bristol Pound (also UK, launching this September), Makkie (Amsterdam East), Caire (Netherlands-wide) and Dadelen (Belgium).
+
+My experience as someone who has worked in IT for over 15 years is that people are always very quick to criticise long established systems/software, whether or not viable alternatives exist.
+
+We took a look at the whole landscape of CC software and came rapidly to the conclusion that there is nothing out there which is even remotely as secure, configurable and functional as Cyclos. So it was a no-brainer for us. If you look at the feature-sets offered by Matthew Slater’s Drupal module, or other similar systems (I don’t know jubilee.net but I’m guessing), they are minute in comparison to what is available in Cyclos – which is not to deride them in any way, just to be pragmatic about where they fit in, and what they are suitable for.
+
+We also noted that there are a great deal of hobbyists active in the CC space. Qoin is not amongst these – we work on professional programmes with major funders and institutions.
+
+We certainly saw the issues with the Cyclos UI, but I have to say, having reviewed the codebase in some depth, it is very well organised and separated, and thus it was not too difficult for us to build a heavily customised and significantly more attractive front-end – something which we are about to open-source as a packaged “fork” of Cyclos 3.6 (It will be called “CC2.0″)
+
+We eagerly anticipate Cyclos 4, which will take a quantum leap in terms of the UI, and the web services (APIs) available to interface to other systems – but for the time being, Cyclos 3.6 is serving us well. It is resilient, stable and secure – and as we are responsible for 1,000′s of transactions happening every day, that is very important for us.
+
+Michael Contardi says that Cyclos is difficult to set up and host. I don’t agree. I had it up and running in less than an hour on my own *nix server, no trouble at all. However what I would say is that Cyclos is a largescale, professional system. It requires IT knowledge and expertise to run it properly – which is not surprising when you consider it has been designed with the same concepts in mind as online banking systems. It’s a not a blogging platform or a one-click install – and nor should it be.
+
+I also don’t agree with those who say that the documentation is poor. Take a look at http://project.cyclos.org/wiki/index.php?title=Main_Page – the documentation is admirable in its completeness and detail, and indeed this resource (along with the complete JavaDocs for the project, and code examples) has helped me and my team many, many times.
+
+I’ve already mentioned a number of our professional programmes that are using Cyclos, which are completely separate to Stro. I know of another very successful CC (Sardex in Sardinia) who are also about to migrate to Cyclos.
+
+Finally, I would like to note that the Cyclos team are generally very responsive to individuals and organisations who are prepared to work with them, rather than regarding them merely as a support line. Their software is free and open-source – they are not paid to support other people projects – even though they try their best to do so!
+
+I hope this provides an alternative point of view, from someone who is a very active Cyclos practitioner, outside of Stro."
+(http://beyondmoney.net/2012/06/12/cyclos-worth-another-look/)
+
+=More Information=
+
+* pro and con user testimonies, http://beyondmoney.net/2012/06/12/cyclos-worth-another-look/
+
+* If you are interested in using Cyclos you can create a Cyclos community in a few steps here:
+https://communities.cyclos.org/
+
+* More information and information about our PRO version and about Cyclos can be found on our website:
+http://www.cyclos.org/"
+
+
+
+[[Category:Money]]
+
+[[Category:Software]]
+
+[[Category:P2P Infrastructure]]

@@ -1,0 +1,61 @@
+<noinclude>
+This is the "WikiSprint - Brazil" form.
+To create a page with this form, enter the page name below;
+if a page with that name already exists, you will be sent to a form to edit that page.
+
+
+{{#forminput:form=WikiSprint - Brazil}}
+
+</noinclude><includeonly>
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|WikiSprint-Brazil}}}
+{| class="formtable"
+! Title/Name:
+| {{{field|Title/Name}}}
+|-
+! Main URL:
+| {{{field|Main URL}}}
+|-
+! Short description:
+| {{{field|Short description}}}
+|-
+! Details:
+| {{{field|Details|input type=textarea}}}
+|-
+! Discussions/Quotes:
+| {{{field|Discussions/Quotes|input type=textarea}}}
+|-
+! References/Links:
+| {{{field|References/Links|input type=textarea}}}
+|-
+! Location:
+| {{{field|Location|input type=map|zoom=1}}}
+|-
+! Contact person:
+| {{{field|Contact person}}}
+|-
+! Contact's person e-mail:
+| {{{field|Contact's person e-mail}}}
+|-
+! Number of participants:
+| {{{field|Number of participants}}}
+|-
+! Start date:
+| {{{field|Start date}}}
+|-
+! Related projects:
+| {{{field|Related projects|placeholder=comma separated values}}}
+|-
+! Categories/Tags:
+| {{{field|Categories/Tags|placeholder=comma separated values}}}
+|}
+{{{end template}}}
+
+
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

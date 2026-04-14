@@ -1,0 +1,33 @@
+'''= GamingFreedom.org: a gaming orientated social network which promotes Free culture'''
+
+URL = http://gamingfreedom.org/
+
+
+
+=Interview=
+
+
+"Chris Woolfrey: '''Can you explain what GamingFreedom.org is, and it’s relationship with Gluon?'''
+
+'''Dan Leinir Turthra Jensen''': GamingFreedom is a social network for makers and players of games, based on the concept that there are very few people who make games who don’t also play them. So, rather than view game distribution as a way of pushing a product to the users in order to make back the money that was invested, GamingFreedom views it as a social thing: you have an idea for a game, you build that game, and you distribute the game to some repository, which in our case is GamingFreedom.org. From there you can download the game and play it, and you can then provide feedback if you want; through ratings, commenting, even user submitted screenshots and other such things.
+
+Gluon comprises the technologies we have created to support these concepts; a set of libraries and applications which support you all the way through this. And, interestingly, there’s basically nothing like this out there right now which does this in a general way. Bits of it exist already, but there isn’t anything else that connects it all. That is, with Gluon, once you get the idea for a game, you just open up Gluon Creator and use that to build the game. Once you’ve got it playable, you go to the publishing pane in Gluon Creator and publish the game directly from there. No need to package it up manually and such and upload it to a website: the tool does that for you.
+
+
+Gluon Player is then the collective name for a set of applications on a bunch of different platforms and form factors: Gluon Player Touch for tablets and the like, Gluon Player for the desktop, Gluon Player Mobile for touch based smartphones. These apps all connect to GamingFreedom.org and let you both download and play the games uploaded there, but also comment on them, rate them, even donate to the people who made the game if you think that they’re deserving.
+
+Back inside Gluon Creator, the author of the game then gets this information showing up in the publishing pane – which is a sort of Gluon Player just for a single game – and thus, the circle is complete.
+
+
+'''CW: So part of playing Gluon-based games is being involved in what the game becomes through a peer review process?'''
+
+DJ: It’s still based around being a team who creates a game, but Gluon makes it much, much easier to get feedback from your users and such. And the creation part of it is something else, which is what we’re gearing up towards now. Building the games is something where we provide a whole lot of functionality, basically everything that can be done without knowing the concept of the game; things like rendering sprites on screen, input handling, game UI, all that sort of stuff. All of that can be made ahead of time, and then put together using Gluon Creator. This allows games to be created entirely using non-compiled assets including textures, sounds, vertex and pixel shaders, javascript for game logic, and so on.
+
+
+'''CW: It’s in many ways a model inspired directly by the way Free Software (FS) works, right?'''
+
+DJ: It is indeed. We even suggest that people use one of the creative commons licenses for games they create."
+(http://blogs.fsfe.org/fellowship-interviews/?p=267)
+
+
+[[Category:Gaming]]

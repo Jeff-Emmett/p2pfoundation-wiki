@@ -1,0 +1,38 @@
+A '''Federated Blog''' is new type of blogging software. It'a hosted, edited, administrated, and operated in a part-distributed way by users and hosts. It has asynchronous and (and one day) real-time text editing, a distributed conflict management system, like the ability to fork, branch and merge blog pages and so on.
+
+[[P2P Wiki]]s, [[Federated Wiki]]s and [[Federated Blog]]s, conceptualize text documents (and data) differently than current software. Today we mentally separate instant messages, IRC, Chat, Blog posts, Comments and Wiki articles as different types of text "documents"--we have separate programs for each. In reality they're all just forms of text data. And whether real-time or asynchronously shared, they can be thought of as a part of a big discussion, happening everywhere. Various protocols and standards can integrate that cross-platform.
+
+Creating a federated blog would potentially be as easy as creating an email account. Just choose a blog site/federated blog provider you want to join, create an account and start using it. But another option is be a provider yourself. Just install the software and run it on a server. The key to understanding how federated blogs work is that, page changes (comments, posts, updates) can be pushed or pulled cross-blogosphere. All blogs involved in the federation can share changes.
+
+Federated blogs only exist in concept at this point. But are conceptually similar to [[Federated Wiki]](s), [[Distributed Social Networks]] like, [[Diaspora]] and other real and proposed distributed web services.
+
+===Federated Blogs: Technical Overview===
+Several modifications to [https://www.wordpress.org Wordpress], or other open source software, would allow support for federated content. These include support for protocols: Salmon [https://code.google.com/p/salmonpress/], XMPP [https://im.wordpress.com/], AtomPub [https://codex.wordpress.org/AtomPub], OStatus [https://wordpress.org/extend/plugins/ostatus-for-wordpress/] and the [http://www.w3.org/2005/Incubator/federatedsocialweb/wiki/Protocols like]. Revision history [https://wordpress.org/extend/plugins/revision-history/], offline editing [http://en.support.wordpress.com/xml-rpc/] [http://wordpress.org/extend/plugins/bee-offline/] and realtime posts [https://wordpress.org/extend/themes/p2] [https://wordpress.org/extend/plugins/rsscloud/] [https://wordpress.org/extend/plugins/livefyre-comments/] are also possible.
+
+Another approach is to develop a stack of protocols and standards that allow cross platform communication. For instance instant message software, which already has realtime text editing, can be integrated with backend revision history software, and can (via protocols) pull/push that to another text editing platform.
+
+===Why Federated Blogs?===
+Why should you use federated social web tools?
+
+* '''Choose where your data is''' - if at any point you are unhappy with the server that stores your data, then you can switch providers
+* '''Choose tools and features''' - if at any point you are unhappy with the application features you have, then you can switch providers too
+* '''Robustness''' - if at any point there is a technical failure or a provider goes out of business, then you can switch providers
+* '''Free market consumer rights''' - given the ease with which you can switch, providers are forced to make the customer King to stay in business
+* '''Jurisdiction over your data''' - if for instance you choose a European provider, then you are data is safe from government peeking by the Patriot Act. Even if you live in the USA, then in case you run a federated social web server in your own home, the fourth amendment applies, and third parties (including big companies and governments) need either your explicit permission, or a police warrant before they are allowed to peek at your data
+* '''Your data in one place''' - if you want to use more than one tool in your online social life, then you can choose a provider who offers all the tools you need, and have your data in one place, always working with your one same contacts list, one same calendar, and same news stream, regardless of which tool you are using with it
+* '''I use my tool, you use yours''' - if some of the people you want to communicate with happen to use other tools than you, then thanks to the federated social web, you will still be able to interact. There are no walls that lock conversations to tools
+* '''Depend on open technology''' - you depend on the tools you use, but not on the specific businesses developing those tools. Any competitor can at any point take over the development of a specific tool (although they may have to change its name), keeping you in control of your data and what you can do with it.
+
+===Blog Coop===
+A blogging cooperative is a group of bloggers who pool resources to collectively own a blog to their benefit. They share the duties of hosting, editing, administrating and operation. Cooperative blogs share the surface features of newspaper columns; they have multiple authors featured on the same site. Blog Coops take things further, what if the columnists owned the paper? [http://www.realitysandwich.com/about Reality Sandwich] is a near example. It is cooperatively edited and administrated but partly-peer owned. It has peer funding aspects.
+
+==Internal Links==
+*[[Federated Social Web]]
+*[[Federated Search]]
+*[[Unhosted]]
+
+[[Category:P2P Infrastructure]]
+[[Category:NextNet]]
+[[Category:Application Layer]]
+[[Category:Collaboration_Software]]
+[[Category:Autonomous_Internet]]

@@ -1,0 +1,88 @@
+'''= a personal server running a free software operating system, with free applications designed to create and preserve personal privacy. Freedom Box software is particularly tailored to run in "plug servers," which are compact computers that are no larger than power adapters for electronic appliances'''
+
+
+URL = http://www.freedomboxfoundation.org/
+
+==Definition==
+
+"FreedomBox is a community project to develop, design 
+and promote personal servers running free software for 
+distributed social networking, email and audio/video 
+communications."
+(http://www.freedomboxfoundation.org/ )
+
+==Description==
+
+
+'''1.'''
+
+"Freedom Box is the name we give to a personal server running a free software operating system, with free applications designed to create and preserve personal privacy.
+
+Freedom Box software is particularly tailored to run in "plug servers," which are compact computers that are no larger than power adapters for electronic appliances.
+
+Located in people's homes or offices such inexpensive servers can provide privacy in normal life, and safe communications for people seeking to preserve their freedom in oppressive regimes.
+
+Why Freedom Box? Because social networking and digital communications technologies are now critical to people fighting to make freedom in their societies or simply trying to preserve their privacy where the Web and other parts of the Net are intensively surveilled by profit-seekers and government agencies. Because smartphones, mobile tablets, and other common forms of consumer electronics are being built as "platforms" to control their users and monitor their activity.
+
+Freedom Box exists to counter these unfree "platform" technologies that threaten political freedom. Freedom Box exists to provide people with privacy-respecting technology alternatives in normal times, and to offer ways to collaborate safely and securely with others in building social networks of protest, demonstration, and mobilization for political change in the not-so-normal times.
+
+Freedom Box software is built to run on hardware that already exists, and will soon become much more widely available and much more inexpensive. "Plug servers" and other compact devices are going to become ubiquitous in the next few years, serving as "media centers," "communications centers," "wireless routers," and many other familiar and not-so-familiar roles in office and home.
+
+Freedom Box software images will turn all sorts of such devices into privacy appliances. Taken together, these appliances will afford people around the world options for communicating, publishing, and collaborating that will resist state intervention or disruption. People owning these appliances will be able to restore anonymity in the Net, despite efforts of despotic regimes to keep track of who reads what and who communicates with whom.
+
+Freedom Box is a collaborative project of programmers around the world who believe in Free Software, Free Society. Many of its members will come from the Debian community, and many will come from other corners of the Free World. In coming weeks we will be announcing here the technical leads for Freedom Box and its component projects.
+
+The [[Freedom Box Foundation]], which will support the Freedom Box Project and conserve the free software it makes, is led by Eben Moglen, Professor of Law at Columbia Law School and founder of the Software Freedom Law Center."
+(http://www.freedomboxfoundation.org/)
+
+
+'''2.''' Commentary from the NYT:
+
+"[[Eben Moglen]] ... (is) ... putting together a shopping list to rebuild the Internet — this time, without governments and big companies able to watch every twitch of our fingers. 
+
+The list begins with “cheap, small, low-power plug servers,” Mr. Moglen said. “A small device the size of a cellphone charger, running on a low-power chip. You plug it into the wall and forget about it.”
+
+Almost anyone could have one of these tiny servers, which are now produced for limited purposes but could be adapted to a full range of Internet applications, he said.
+
+“They will get very cheap, very quick,” Mr. Moglen said. “They’re $99; they will go to $69. Once everyone is getting them, they will cost $29.”
+
+The missing ingredients are software packages, which are available at no cost but have to be made easy to use. “You would have a whole system with privacy and security built in for the civil world we are living in,” he said. “It stores everything you care about.”
+
+Put free software into the little plug server in the wall, and you would have a Freedom Box that would decentralize information and power, Mr. Moglen said. This month, he created the [[Freedom Box Foundation]] to organize the software.
+
+“We have to aim our engineering more directly at politics now,” he said. “What has happened in Egypt is enormously inspiring, but the Egyptian state was late to the attempt to control the Net and not ready to be as remorseless as it could have been.
+
+...
+
+In response to Mr. Moglen’s call for help, a group of developers working in a free operating system called Debian have started to organize Freedom Box software. Four students from New York University who heard a talk by Mr. Moglen last year have been building a decentralized social network called Diaspora. ” 
+(http://www.nytimes.com/2011/02/16/nyregion/16about.html)
+
+==Status==
+
+By James Vasile, April 2011:
+
+"The FreedomBox just raised $80K in donations via Kickstarter (the campaign is still going on, if you want to donate) on the strength of positive press in the NYTimes, WSJ, Wired  and CBS Evening News. We’re at the very beginning of putting together a team to build this thing. This week we will announce our tech lead, an A+ name with the experience and contacts to lead our architecture design.
+
+The FreedomBox is a net appliance that sits between your computer and the Internet. Ideally, it replaces your wireless router. It does routing, both locally and to the wider net, with an eye toward preserving your anonymity, privacy and security.
+
+It knows when to onion route messages, how to use bit torrent and encrypted, verified messaging to allow one-to-one and one-to-many communication. And if your internet plug is pulled (maybe you live in Libya), the box will use mesh routing to talk to other boxes like it. If any of them can get a packet across the border, they all can. We call these capabilities the Freedom Stack.
+
+With that stack in place, you can build first class, privacy-enabled, decentralized applications. This includes services like Identi.ca and Diaspora, but instead of having each app roll its own (incompatible) decentralizing, privacy-respecting, secure capability, you can use the (better) stack already on the box.
+
+All that plus automatic, distributed secure backup, a print server and NAS features.
+
+Most of this already exists in free software packages. The real challenge will be to assemble the right packages on our target hardware (plug computers), make them work together, bulletproof the configuration and create a UI so simple it will make Steve Jobs jealous."
+(http://hackervisions.org/?p=894)
+
+==More Information==
+
+CBS video reportage, http://www.youtube.com/watch?v=JrRhnxadDQw&feature=player_embedded
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:NextNet]]

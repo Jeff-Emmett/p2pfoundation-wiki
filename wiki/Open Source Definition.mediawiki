@@ -1,0 +1,93 @@
+URL = http://www.opensource.org/docs/osd
+
+
+=Text=
+
+Open source doesn't just mean access to the source code. The distribution terms of open-source software must comply with the following criteria:
+
+
+'''1. Free Redistribution'''
+
+The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale.
+
+
+'''2. Source Code'''
+
+The program must include source code, and must allow distribution in source code as well as compiled form. Where some form of a product is not distributed with source code, there must be a well-publicized means of obtaining the source code for no more than a reasonable reproduction cost preferably, downloading via the Internet without charge. The source code must be the preferred form in which a programmer would modify the program. Deliberately obfuscated source code is not allowed. Intermediate forms such as the output of a preprocessor or translator are not allowed.
+
+
+'''3. Derived Works'''
+
+The license must allow modifications and derived works, and must allow them to be distributed under the same terms as the license of the original software.
+
+
+'''4. Integrity of The Author's Source Code'''
+
+The license may restrict source-code from being distributed in modified form only if the license allows the distribution of "patch files" with the source code for the purpose of modifying the program at build time. The license must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
+
+
+'''5. No Discrimination Against Persons or Groups'''
+
+The license must not discriminate against any person or group of persons.
+
+
+'''6. No Discrimination Against Fields of Endeavor'''
+
+The license must not restrict anyone from making use of the program in a specific field of endeavor. For example, it may not restrict the program from being used in a business, or from being used for genetic research.
+
+
+'''7. Distribution of License'''
+
+The rights attached to the program must apply to all to whom the program is redistributed without the need for execution of an additional license by those parties.
+
+
+'''8. License Must Not Be Specific to a Product'''
+
+The rights attached to the program must not depend on the program's being part of a particular software distribution. If the program is extracted from that distribution and used or distributed within the terms of the program's license, all parties to whom the program is redistributed should have the same rights as those that are granted in conjunction with the original software distribution.
+
+
+'''9. License Must Not Restrict Other Software'''
+
+The license must not place restrictions on other software that is distributed along with the licensed software. For example, the license must not insist that all other programs distributed on the same medium must be open-source software.
+
+
+'''10. License Must Be Technology-Neutral'''
+
+No provision of the license may be predicated on any individual technology or style of interface. 
+=Background=
+
+Origins of the OSD:
+
+"The term 'open source' emerged from the efforts of this group of people frustrated by the multiple meanings of 'free' and its failure as a marketing term. On the one hand, 'free' is good, because everybody wants to get something for free. To the Free Software Foundation 'free' does not mean the absence of a price tag; they want 'free' to mean  freedom. Further, when businessmen look at what they get for 'free', they may think 'worth what I spent' and equate zero cost with zero value. The term 'open source' aims to lose that luggage.
+
+The other source of frustration has been the insistence that the free software movement is about morality and that 'free' software is the only moral choice. As soon as you say that, you put off people who disagree. "Oh, you mean I'm a bad person?" "No, you're just doing a bad thing." "As if that's any better!" If you want to sell a foreign idea to people, you have to start by not judging them as immoral.
+
+Two members of the group that picked the name open source as a marketing term for free software were more excited than the others: Eric Raymond, author of the Cathedral and the Bazaar, and Bruce Perens, former leader of the Debian GNU/Linux project. They wanted to be an organization, not just two individuals, so they sought board members to guide an organization to stand behind their efforts. As a marketing term, 'open source' is great; they decided to harden its meaning a bit, by seeking a trademark to be licensed to anyone who met a fixed definition. Bruce had put a lot of effort into Debian's Free Software Guidelines or DFSG, so he imported those guidelines into the Open Source Definition or OSD. In time, the decisions to seek a trademark and be based on the DFSG would be seen as flawed. The United States Patent and Trademark Office objected to 'open source' as being too descriptive, and refused to grant the OSI a trademark. As the OSI discovered, a trademark cannot simply describe the good or service being trademarked; there needs to be more creativity involved. While open source is very descriptive, which is part of its power and attractiveness, a good trademark it is not. Instead, the OSI established the "OSI Open Source Approved License" standard.
+
+Reuse of the DFSG has also proved problematic. First, it created resentment on the part of Debian, whose members felt it was improperly reused. Second, it was never meant to be a bulwark against hostile redefiners. Many would-be open source abusers have pointed out that the OSD doesn't require distribution of the source code. In the form of guidelines for Debian, the DFSG never needed such completeness. Due to its culture and underlying philosophy, the Debian project would never begin to consider the inclusion of software without source code."
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A2)
+
+
+=Discussion=
+
+Beyond the Definition, by Russell Nelson of the [[Open Source Initiative]]:
+
+"Open source has proven to be such an alluring concept that you see open source hardware, open source radio, and open source movies. The concept is applicable to anything which has separable design elements. So open source hardware would be fully documented, modular, with separate parts available for sale. The Lego Group has adopted this idea with its Lego Mindstorms and NXT products. People have created alternate devices and even alternate firmware to download into this hardware. Open source radio acknowledges that radio, while a stream of audio, occurs in a context, and the quality is improved when that context is open to contributions from all listeners. Open source movies such as Elephants Dream, consist of many elements such as audio tracks, animation models, textures, and plot. By distributing the movie not just as a finished product, but in separable design elements, watchers can contribute changes, or even compose their own movie from the elements.
+
+Our success in promoting open source processes is a blessing and a curse. The more people who understand what open source means, the less likely anyone is to succeed at corrupting the term. On the other hand, we risk losing control over the use of the term and thus the meaning of it. That's why we have the "OSI Approved Open Source" program.
+
+We've been so successful in propagating the open source brand that some people say there are too many open source licenses. From the perspective of somebody who wants to redistribute a distribution, this makes sense. They have to do the due diligence of researching the import of every license on every piece of software that the distribution includes. We appreciate both views: that there aren't enough open source licenses and that there are too many licenses. Even Microsoft wants their own open source license pair (public and community) approved. We try to seek a balance by assigning attributes to licenses depending on what categories they fit into. We've even convinced some license stewards to deprecate the use of their licenses; they're still open source licenses, but they shouldn't be used. All this open sourcing is also at risk from patents on ideas rather than mechanisms. Software being fundamentally an idea, it seems improper to patent it. Yet that's where we are, and the patent juggernaut seems to roll on. The patent system is supposed to be used to protect mechanisms, so that people who invest in building these mechanisms can have exclusive rights to these mechanisms. Unfortunately, in the USA, that a mechanism which can be built using software has been interpreted to mean that software can be patented. Unfortunately, many previously invented software mechanisms have been patented. Software patents are allowed even when they are obvious to any skilled practitioner of the art. This is very bad when software patents get written into standards documents, because that prohibits open source implementations. We're pushing back with our "[[Open Standards Requirement for Software]]". This is a new program whose details are not completely settled yet."
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A2)
+
+=More Information=
+
+#[[Debian's Free Software Guidelines]]
+#Book chapter: The [http://www.oreilly.com/catalog/opensources/book/perens.html Open Source Definition]. Bruce Perens in the book [[Open Sources]]
+
+
+
+[[Category:IP]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]

@@ -1,0 +1,65 @@
+==From the P2P Foundation Blog==
+
+*Follow the feeds from the P2P Foundation's Main Blog
+**[http://feeds.feedburner.com/P2pFoundation RSS]
+
+==RSS Feeds from the P2P Foundation Community Site==
+
+*All latest activity
+**[http://p2pfoundation.ning.com/activity/log/list?fmt=rss RSS]
+*All forum entries
+**[http://p2pfoundation.ning.com/forum?feed=yes&xn_auth=no RSS]
+*All blog entries
+**[http://p2pfoundation.ning.com/profiles/blog/feed?xn_auth=no RSS]
+*Latest Video
+**[http://p2pfoundation.ning.com/video/video/rss?xn_auth=no RSS]
+
+==From the P2P Foundation Wiki==
+
+*Recent changes
+**[http://p2pfoundation.net/w/index.php?title=Special:Recentchanges&feed=rss RSS]:
+**[http://p2pfoundation.net/w/index.php?title=Special:Recentchanges&feed=atom Atom]: 
+*New Pages
+**[http://p2pfoundation.net/w/index.php?title=Special:Newpages&feed=rss RSS]:
+**[http://p2pfoundation.net/w/index.php?title=Special:Newpages&feed=atom Atom]:
+
+*For advanced users
+**History of a page
+**DIY - This is possible for every page.   The link below gives you the changes for this page.  Use the code on the next line in your page to give you a link especially for that page.
+**[{{SERVER}}{{localurl:{{FULLPAGENAME}}|action=history&feed=atom}} Atom]:
+**<nowiki>{{SERVER}}{{localurl:{{FULLPAGENAME}}|action=history&feed=atom}}</nowiki>
+
+==Creating Category Feeds==
+We use [http://www.mediawiki.org/wiki/Extension:GoogleNewsSitemap GoogleNewsSitemap] to create category feeds on the site.  Edit this page to see examples of how they are created.
+
+===Examples===
+====P2PCC Category RSS Feed====
+This feed shows the most recent 10 articles that were added to the P2PCC category in an RSS feed.  It hides errors, and also includes redirected pages.
+  *[[Special:GoogleNewsSitemap/&category=P2PCC | P2PCC RSS Feed]]
+
+Code for example:
+<pre><nowiki>
+*[[Special:GoogleNewsSitemap/&category=P2PCC | P2PCC]]
+</nowiki></pre>
+
+===Options for Category Feeds===
+You can use the following options to create a feed.  These are not necessary though and simply posted here for reference.  I fyou need to override the defaults you can do so with the following parameters.   All of these should be in a single line with no spaces.  Check the examples below if you have questions.  Parameters in [ ] are optional, stuff in ( ) means potential choices.  The extension uses (basically) the same parameters as [http://www.mediawiki.org/wiki/Extension:DynamicPageList_(Wikimedia) DPL] so that's a good place to look for clarification.
+<pre><nowiki>
+*[/(rss|atom|sitemap)]
+*[&category=Catname]
+*[&notcategory=OtherCatName]
+*[&namespace=0][&count=10]
+*[&ordermethod=lastedit]
+*[&order=ascending]
+*[&redirects=only]
+*[&stablepages=only]
+*[&qualitypages=only]
+*[&supresserrors=true]
+*[&usenamespace=true]
+*[&usecurid=true]
+</nowiki></pre>
+
+<pre><nowiki>
+
+</nowiki></pre>
+[[Category:P2P Foundation Publishing]]

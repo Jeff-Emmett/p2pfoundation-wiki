@@ -1,0 +1,52 @@
+= In active development =
+
+{| class="wikitable"
+|-
+! Name !! Supported OS !! Can be used offline !! Map data source(s) !! License !! Notes
+|-
+| [https://github.com/heldersepu/GMapCatcher/ GMapCatcher] ||GNU/Linux, MacOS, Windows || Yes || CloudMade, OpenStreetMap, Yahoo Maps, Bing Maps, Nokia Maps || [https://github.com/heldersepu/GMapCatcher/blob/master/LICENSE GNU GPLv2] || 
+|-
+| [https://www.digital-democracy.org/mapeo/ Mapeo] ||GNU/Linux, MacOS, Windows (Android in development) || Yes || OpenStreetMap || [https://github.com/digidem/mapeo-desktop/blob/master/LICENSE GNU GPLv3] ||
+|-
+| [https://maps.me/en/download/ Maps.me] || Android, iOS || Yes || OpenStreetMap || [https://github.com/mapsme/omim/blob/master/LICENSE Apache 2.0] ||
+|-
+| [https://marble.kde.org/ Marble] || GNU/Linux, MacOS, Windows, Android || ? || OpenStreetMap || [https://cgit.kde.org/marble.git/tree/LICENSE.GPL-3 GNU GPLv2] || Built around the Marble library (license: GNU LGPL 2.1), to get directions while offline requires a plugin
+|-
+| [http://www.modrana.org/ modRana] || Sailfish, Maemo5, Android 4.0+, MeeGo Harmattan, GNU/Linux (packaged for Fedora) || Yes, with OSM Scout Server || ? || [https://github.com/M4rtinK/modrana/blob/master/COPYING.txt GNU GPLv3] || [https://wiki.openstreetmap.org/wiki/Rana forked from Rana]
+|-
+| [https://www.navit-project.org/ Navit] || Android, iOS, Windows, MacOS, Linux || Yes || OpenStreetMap || [https://github.com/navit-gps/navit/blob/trunk/COPYRIGHT GPLv2] || [https://github.com/navit-gps/navit/blob/trunk/COPYING some modules under LGPLv2]
+|-
+| [https://framagit.org/tom79/openmaps OpenMultiMaps] || Android || ? || [https://framagit.org/tom79/openmaps/-/blob/develop/LICENSE.md GNU GPLv3] ||
+|-
+| [https://github.com/Pygmalion69/OpenTopoMapViewer OpenTopoMap Viewer] || Android || No || OpenTopoMap || [https://github.com/Pygmalion69/OpenTopoMapViewer/blob/master/LICENSE Apache 2.0] ||
+|-
+| [https://osmand.net/ OSMand+] || Android, iOS || OpenStreetMap || Yes || [https://github.com/osmandapp/Osmand/blob/master/LICENSE GNU GPLv3] || source repository contains non-free artwork licensed under CC-BY-NC-ND 4.0, removed from F-Droid version
+|-
+| [https://rinigus.github.io/osmscout-server/en/ OSM Scout Server] || developed for use with Sailfish || yes || OpenStreetMap || [https://github.com/rinigus/osmscout-server/blob/master/LICENSE GNU GPLv3] || local map server allowing ordinary map apps to be used offline, known to work with: Pure Maps, WhoGo Maps, Poor Maps, modRana
+|-
+| [https://github.com/junjunguo/PocketMaps PocketMaps] || Android || Yes || [https://github.com/junjunguo/PocketMaps/blob/master/LICENSE Expat/ MIT] ||
+|-
+| [https://github.com/rinigus/pure-maps Pure Maps] || Sailfish, GNU/Linux (desktop and mobile) || Yes (with OSM Scout Server) || OSM Scout Server, HSL, Sputnik, Photon (also Mapbox and others with API key) || [https://github.com/rinigus/pure-maps/blob/master/COPYING GNU GPLv3] || forked from WhoGo Maps
+|-
+| [https://github.com/Maproom/qmapshack/wiki QMapShack] || MacOS, Windows || Yes || ? || [https://github.com/Maproom/qmapshack/blob/dev/LICENSE GNU GPLv3] (or later, according to wiki) || [http://www.qlandkarte.org/ active fork of QLandkarte]
+|}
+
+= Discontinued =
+
+{| class="wikitable"
+|-
+! Name !! Supported OS !! Can be used offline !! Map data source(s) !! License !! Notes
+|-
+| [https://github.com/diedricm/MapEver MapEver] || Android || Yes || ? || [https://github.com/diedricm/MapEver/blob/master/LICENSE GNU GPLv3] ||
+|-
+| [https://github.com/otsaloma/poor-maps Poor Maps] || Sailfish || Yes, with OSM Scout Server || OpenStreetMap || [https://github.com/otsaloma/poor-maps/blob/master/COPYING GNU GPLv3] ||
+|-
+| [https://github.com/otsaloma/whogo-maps WhoGo Maps] || Sailfish || Yes, with OSM Scout Server || OpenStreetMap || [https://github.com/otsaloma/whogo-maps/blob/master/COPYING GNU GPLv3] || forked from Poor Maps
+|}
+
+
+Further resources:
+
+* [https://search.f-droid.org/?q=maps&lang=en Map apps available for Android via the F-Droid repository]
+
+[[Category:Software]]

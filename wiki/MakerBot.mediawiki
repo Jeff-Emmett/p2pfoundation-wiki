@@ -1,0 +1,180 @@
+'''= [[Open Source 3D Printer]]'''
+
+URL = http://www.makerbot.com/
+
+
+=Definition=
+
+"The MakerBot CupCake CNC is a kit and can be printing things out after a weekend of assembly with a friend.“ Along with commercially distributing the MakerBot assembly kit, the founders of MakerBot also run a platform for sharing and exchanging 3D designs – [[Thingiverse]]."
+
+
+Bre Pettis:
+
+“The main difference between a MakerBot Cupcake CNC and a RepRap is how much
+time it takes to make one. The RepRap project is an academic research
+project and it can take a few months to gather the materials and then put
+a RepRap together and then a lot of experimentation to get it to print. The
+MakerBot CupCake CNC is a kit and can be printing things out after a
+weekend of assembly with a friend.“
+(http://issuu.com/openp2pdesign/docs/cis.doc_open-design)
+
+=Description=
+
+'''1.''' Chris Anderson:
+
+"It all starts with the tools. in a converted brewery in Brooklyn, Bre Pettis and his team of hardware engineers are making the first sub-$1,000 3-D printer, the open source MakerBot. Rather than squirting out ink, this printer builds up objects by squeezing out a 0.33-mm-thick thread of molten ABS plastic. Five years ago, you couldn’t get anything like this for less than $125,000.
+
+During a visit in late November, 100 boxes containing the ninth batch of MakerBots are lined up and ready to go out the door (as a customer, I’m thrilled to know that one of them is coming to me). Nearly 500 of these 3-D printers have been sold, and with every one, the community comes up with new uses and new tools to make them even better. For example, a prototype head delivers a resolution of 0.2 mm. Another head can hold a rotating cutter, turning the printer into a CNC router. (CNC is short for computer numerical control, which simply means that the machines are driven by software.) And yet another can print with icing, for desserts.
+
+Out of the box, the MakerBot produces plastic parts from digital files. Want a certain gear right now? Download a design and print it out yourself. Want to modify an object you already have? Scan it (a researcher at the University of Cambridge has developed a technology that will allow you to create a 3-D file by rotating the object in front of your webcam), tweak the bits you want to change with the free SketchUp software from Google, and load it into the ReplicatorG app. Within minutes, you have a whole new physical object: a rip, mix, and burn of atoms."
+(http://www.wired.com/magazine/2010/01/ff_newrevolution/all/1)
+
+
+'''2.''' New Scientist:
+
+"It could be a revolutionary age. MakerBot is one of a range of desktop manufacturing plants being developed by researchers and hobbyists around the world. Their goal is to create a machine that is able to fix itself and, ultimately, to replicate.
+
+To find out how close we are to that goal, I have come to the London Hackspace, a communal workshop where Russ Garrett, a software developer by day, keeps his MakerBot. Like 900 other enthusiasts, Garrett bought a mail-order kit from MakerBot Industries of New York for $750, and built the machine himself.
+
+MakerBot and most of its kin are essentially a cut-price reinvention of the 3D printer. While professional machines still cost upwards of tens of thousands of dollars, a coalition of academics and tinkerers has created versions that do much the same thing for much less. Anyone with a few hundred dollars and some spare time can build their own 3D printer from a set of plans distributed free on the internet."
+(http://www.newscientist.com/article/mg20627621.200-rise-of-the-replicators.html)
+
+
+=History=
+
+"The MakerBot lineage is descended from RepRap (see "The replicant") - the first machine designed to replicate parts of itself and brainchild of Adrian Bowyer, a mechanical engineer at the University of Bath, UK. In 2006 he started the project with two goals: to create a 3D printer that anyone could make and use, and to make it capable of self-replicating. Most importantly, it would have an open-source design to encourage anyone to modify and improve it.
+
+At the moment, RepRap can build about half of its own parts, including joints and casings. Some components, such as steel rods and microprocessors, are beyond its capabilities as yet. Still, Bowyer's mechanical progeny reached a major milestone in November 2008, when Canadian Wade Bortz announced he had used his RepRap to create all the parts of a replica that it was possible to print - the first time this had been done "in the wild" outside Bowyer's lab. It was sold online a few months later for a case of beer.
+
+Bowyer's first design, called Darwin, has since been replaced by Mendel, which is smaller and more reliable. "Mendel can, if you discount nuts and bolts, print 50 per cent of the machine's parts in under three days," says Bowyer. Mendel can make about the same proportion of its own parts as Darwin, but Mendel is a simpler, smaller and more reliable machine. It can also make much larger things than Darwin can.
+
+Since then, tens of others have made mothers out of their machines, sometimes selling their offspring for hundreds of dollars to other enthusiasts keen to get a machine of their own. This has led to a veritable ecosystem of RepRap-type machines - an estimated 3000 exist - and while Bowyer is now focused mainly on making Mendel more robust and user-friendly, the RepRaps in the wild have begun evolving into different forms.
+
+While exploring the RepRap forums, I come across one with the potential to be more self-replicating than any before, and it is provoking some excited comments. The poster, Frank Davies, based in Houston, Texas, is the proud owner of a RepRap ingeniously built using parts salvaged from a dot matrix printer and a Xerox photocopying machine, and he is now working on making his RepRap totally printable."
+(http://www.newscientist.com/article/mg20627621.200-rise-of-the-replicators.html)
+
+
+=Discussion=
+
+==When Makerbot goes closed source with the Replicator 2==
+
+Josef Prusa:
+
+"But surprise, surprise, we now have a Replicator 2 and it is closed source. Hey look, we took all your improvements you shared on thingiverse, compiled it into one package and closed it for you :-D . Same with MakerWare. (They finally, after several years, stopped using Skeinforge, software done by Brazilian who doesn’t even have a printer :-D )
+
+And you know what is the biggest, sneaky move? Not mentioning it while they announced it. My guess is, that they will mention it when first pre-orders ship out. Which is after OPEN HARDWARE Summit where Bre gives a talk (I wonder about what, lol) and Makerfaire and all magazines writes about them as Open Hardware heroes :-D . That is the sickest move. I had to call their support and ask them directly. I got the answer, that Replicator 2 is closed source. Call them yourself, I wonder if the guys already got instructions to bluff :-D ? +1-347-334-6800
+I asked on their facebook page, asked Bre directly and tried to ask some other employees but didn’t get any answer. If it’s Open, why don’t they say it, right?
+
+Open Letter to Bre Pettis.
+
+Hi Bre,
+
+we know each other for some time. I want to ask you about the Replicator 2, and if it’s closed source? If so, then why? I would also love to shoot an interview with you for my RepRap interviews show on youtube, I promise I will be neutral. But you have to explain weird behavior I wrote about in the linked article.
+
+Bre released statement  here http://www.makerbot.com/blog/2012/09/20/fixing-misinformation-with-information/. Basically saying “We might be open or might be not.” I don’t know how you can already sell stuff to ppl you are not sure about license.
+
+Zachary Smith, one of the Makerbot original founders, published an article about this incident. He is concerned about Makerbot future. Even to the point that he added sad kitty picture to the post! http://www.hoektronics.com/2012/09/21/makerbot-and-open-source-a-founder-perspective/
+
+UPDATE 22.9.2012 7:26 CET
+
+As I’m going deeper, I find more and more interesting stuff. Did you know that Makerbot has patent? Surprise for me too :-|  Automated build platform. Idea pitched year before patenting by Adrian on RepRap blog? Continuous belt production.
+
+Well in the meantime I looked at MakerWare if it can be made to work with older Makerbots. It turned out it is possible and ridiculously simple. Adding support officially would  take minutes. But It seems noone want’s you to see that. Makerbot had to buy commercial Qt license (if they didn’t they are violating Qt license) to be able to make MakerWare closed source. Qt is library for making user interface. I’m starting to think, that closed source is not misinformation but was planned for some time. But this is a speculation and my personal feeling. 
+
+UPDATE: Official support should come “soon” according to http://www.makerbot.com/docs/makerware/use/
+
+...
+
+Update 24.9.2012 6:18 CET
+
+New statement released by Makerbot. Saying “What was open stays open, new stuff will be close.” Which is what we expected as the worst case. And we were completely right with our predictions.
+
+What enrages me is this statement “Specifically the one that states that “cloning ain’t cool”. The electronics are nearly identical to our original Mighty Board electronics, the extruder is nearly identical to our original Replicator extruder with only minor tweaks to optimize manufacturing of injection molded parts.” "
+
+(http://josefprusa.cz/open-hardware-meaning/)
+
+
+==How the acquisition of [[MakerBot Industries]] by Stratasys destroyed the company==
+
+Personal testimony by Isaac Anderson:
+
+"A little over a month after I’d joined, everyone was called into an all-hands meeting in which it was announced that we’d been acquired by Stratasys, nefarious corporate overlords a company that effectively invented the process integral to the kind of 3D printing MakerBots did, in a deal averaging over $1 million in stock for every employee at the company. Pop the champagne! No, seriously, there were dozens of bottles of sparkling wine provided for us. And why not? This was great! We were one of the lucky startups that made it! We even got a couple of extra vacation days. And who were we to object?
+
+The acquisition didn’t affect us much, or so it seemed at first. For a while MakerBot just kept being MakerBot, and Stratasys kept on being Stratasys, and we got to keep innovating away while the parent company took care of their own business affairs. There was an overarching collective feeling of conviviality and camaraderie between coworkers, who were as eager as ever before to geek out about what they knew and learn from fellow coworkers who knew what they didn’t know.
+
+
+The better part of a year before the acquisition, MakerBot pivoted towards closing its source code and keeping its intellectual property cards closer to its chest, and we stayed the course after being bought out. Part of closing our source was scrapping the open-source platform we had previously iterated on every annual product development cycle. Instead of tweaking and improving on a design honed over the course of half a decade, we pulled out all the stops and redesigned our own proprietary hardware, electronics and software from the ground up over the course of a single year. We also decided, while we were at it, to jam-pack our 3D printers with more features than they’d ever had before—cameras, wifi, apps, “smart” everything. Rather than design, test, and build, it was design, design, design some more, and then quick — build!
+
+In the past, with our open-source platform, our customer base had been limited to a smaller group of capable hobbyists who provided tech-savvy feedback and suggestions for improvement. By the time this newest (and under-tested, according to my fellow employees) product had shipped, most people buying our product were largely incapable non-hobbyists with no useful feedback, only unrealistic expectations, and had little idea of how to fix things under the hood when they (inevitably) broke due to flashy new features malfunctioning and debilitating the printers. Customers were up in arms over their multi-thousand dollar paperweights, our repair team couldn’t fix broken printers fast enough, our support department was drowned in an onslaught of complaints, a class-action lawsuit from customers was threatened, and our parent company’s stock price started to decline.
+
+.
+We just chalked this all up to startup craziness, rolled our eyes, and carried on. The work was still plentiful and engaging! I still felt incredibly productive, learning more than I ever had before as I pushed myself to design the most innovative and robust 3D printer subsystems I could dream up. I trusted my coworkers every step of the way, and we all had a good time shooting the shit while we encouraged and abetted one another along in our respective projects. I even got to play the part of mentor to some interns.
+
+And then, seemingly out of nowhere, work dried up.
+
+While we at MakerBot were distracted either putting out fires left and right or just taking care of business, Stratasys had been going through some mergers and acquisitions of its own, with some corporate restructuring. We were newly barred from making even minor changes to products that were very clearly broken in our eyes and therefore very rapidly damaging the reputation of our company. Morale was dropping fast across the company, and last-ditch efforts were made by management to retain talent they were afraid of losing; in what was in retrospect may have been an obvious bread-and-circuses tactic, my salary as well as those of a few select coworkers was suddenly bumped up by 30 percent, and yet while making markedly more money that I ever had before in my life, I was about the least satisfied I’d ever been with my job.
+
+I started penning what I termed “therapeutic job applications” for positions elsewhere and once cried openly in front of my boss in a one-on-one meeting, telling her plainly that I feared for the future of our department and the company in general considering the course we were on. I was upset because MakerBot was more than just a workplace: it was a community I adored and a dream I’d fallen in love with. And the dream, I could plainly see, was dead.
+
+
+Two months later, our former-president-turned-CEO (yeah, remember her?) handed the reins over to the hyper-privileged son of the chairman of the board of Stratasys. His first action as CEO, as shared on the company internal social network, was to learn how to use one of our printers. The second was to fire a fifth of the company. I still remember that Friday: I was ambling through the large glass doors de rigueur for any well-heeled tech company, half-asleep and bracing myself for the daily slog, when someone from HR approached me to tell me I had a meeting with the director of engineering. I made my way over to the cramped meeting room and found the director of engineering sitting next to the head of the company’s legal department. I was given the spiel, told it wasn’t a reflection of my performance, yada yada. Honestly, I couldn’t bring myself to care that much. Between the month and a half of severance and my total job dissatisfaction, I saw getting laid off at that point as getting paid to quit.
+
+Firing a fifth of the company has since become a sort of semi-annual ritual at MakerBot, and this latest round of layoffs complete with outsourcing to China is reported to have cost 100 people their jobs, according to Gothamist. It shouldn’t come as a shock for a company that sold out to the corporate capitalist short-term profit maximization machine. Only a year ago, the company was heralded for opening a bigger factory in Brooklyn. Brooklyn Borough President Eric Adams said then: “For many years folks in this community, instead of making screws, felt that they were being screwed.” Oh, the irony.
+
+It is still, however, an affront to and inversion of the founding principles of the company, a place that put a premium on innovation, was willing to invest in its employees and infrastructure, and wanted to give back to the community from whence it came. As to the question of MakerBot’s continued presence in Brooklyn now that it’s repeatedly shed good chunks of its workforce and sent its manufacturing to China, don’t worry, it’s still here — for now. It’s just shirked back into its corporate shell near the top of a skyscraper in the part of the borough that fancies itself the next Midtown.
+
+Stratasys’s corporate strategy hasn’t made itself more profitable: its stock price bled out in the wake of the first round of layoffs in April 2015 and has flatlined ever since. The majority of MakerBot employees never saw much of that million-dollar-a-head buyout, but then again, maybe Robert Frost — or was that Ponyboy? — was right. Nothing gold can stay: it just gives way to more gold. Gold to line the coffers of the fat cats who don’t give a fuck about dreams, anyway."
+(http://brokelyn.com/makerbot-sells-out-as-seen-from-the-inside/)
+
+=Interview=
+
+Interview of Bre Pettis :
+
+"In a interview with cnn, you where talking about democratizing manufacturing - could you describe what you mean by that?
+
+Our mission with MakerBot is to bring the tools of
+manufacturing to the masses. We‘re dedicated to supporting
+creative people so they can make anything.
+We got started hacking on 3D printers so that we
+could afford to have a 3D printer and then we decided
+to make it so that everyone could have one.
+
+
+Makerbot is a huge success - who is buying this machine?
+
+It‘s a mix. It‘s mostly programmers, engineers, tinkering
+moms and dads, and regular folks that want to
+live in the future.
+
+
+How do people use it in their business - or do people create new business opportunities by using a Maker-Bot?
+
+Most people use a MakerBot for their own satisfaction
+and to make the things that they need but there
+are a bunch of people using a MakerBot in their business.
+
+My favorite is when people come up with a product
+and sell it. I‘ve seen everything from camera
+accessories to iPod docks. People also use it to make
+parts for other 3D printers like the RepRap and then
+sell those parts on eBay. Also, when used in design
+shops it gets used to make prototypes for mass manufactured
+things."
+
+(http://issuu.com/openp2pdesign/docs/cis.doc_open-design)
+
+
+
+
+=More Information=
+
+#[[Product Hacking]]
+#[[RepRap]]
+#[[Personal Manufacturing]] ; [[Personal Fabrication]] ; [[3D Printing]]
+
+
+[[Category:Manufacturing]]
+
+[[Category:Interviews]]
+
+[[Category:Design]]

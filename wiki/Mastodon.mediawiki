@@ -1,0 +1,158 @@
+
+URL = http://joinmastodon.org
+
+=Description=
+
+'''1.'''
+
+"Mastodon is a microblogging & social network based on open protocols and free, open-source software.
+
+As a decentralized (like e-mail) alternative to commercial platforms, it combats the risks of a company monopolizing your communication. You can interact with everyone else on Mastodon, GNU Social, or other compatible software (together called the "fediverse"), no matter what provider each of you are using."
+(https://social.coop/about)
+
+
+'''2. From the Wikipedia:'''
+
+"Mastodon is a distributed, federated social network that forms part of the Fediverse, an interconnected and decentralized network of independently operated servers.
+
+Mastodon has microblogging features similar to Twitter. Each user is a member of a specific Mastodon server, known as an "instance" of the software, but can connect and communicate with users on other instances as well. Users post short messages called "toots" for others to see, subject to the adjustable privacy settings of the user and their particular instance. The Mastodon mascot is a brown or grey Proboscidean sometimes depicted using a tablet or smartphone.
+
+The software seeks to distinguish itself from Twitter through its orientation towards independently operated small communities and hence a community-based, rather than top-down, moderation and service operation. Like Twitter, Mastodon supports direct, private messages between users, but unlike "tweets" posted on Twitter, Mastodon’s "toots" can be either private to the user, private to the user's followers, public on a specific instance, or public across a network of instances.
+
+Mastodon servers run social networking software that uses either the OStatus protocol or the newer ActivityPub standard. A Mastodon user can interact with users on any other server in the Fediverse."
+(https://en.wikipedia.org/wiki/Mastodon_(software))
+
+
+=Discussion=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Mastodon, a project begun by German software
+developer Eugen Rochko in October 2016 as a decentralized alternative to Twitter.
+
+Mastodon uses OStatus, an open protocol for federation of microblogging and status
+update services, which is also used by identi.ca, GNU Social and other distributed
+publishing platforms. Rochko’s key innovation was around user-experience. Mastodon
+looks almost identical to Tweetdeck, a popular interface to Twitter initially developed by
+Iain Dodsworth using Twitter’s API, acquired by Twitter in 2011. (Rochko told a reporter
+that he kept a window with Tweetdeck open in it while developing the software .) 
+
+With an interface familiar to advanced Twitter users, Mastodon experienced a
+wave of popularity in April 2017. In a single week, Quartz , Vice , Engadget and Wired 
+wrote about the service, identifying it as an alternative and threat to Twitter. Driven by
+this publicity, the userbase expanded quickly, and now features between 800,000 and
+1.5 million users on between 1,200 and 2,400 servers . While the precise number of 
+users changes as servers go up and down, Mastodon has been significantly more
+successful than any other distributed social network to date, but is still orders of
+magnitude smaller than successful commercial social networks.
+
+What’s particularly interesting about Mastodon is the geographic concentration of
+users. Three of the five largest Mastodon instances are based in Japan , and those 
+three sites host roughly 60% of all Mastodon users. The users are not only concentrated
+geographically and linguistically - they are concentrated in terms of interest.
+
+The largest Mastodon instance globally - pawoo.net - was set up by a Japanese
+company called Pixiv, and configured so that Pixiv users can easily create accounts on
+pawoo.net. Similar to US site DeviantArt, Pixiv invites users to share art, often art with
+strong sexual themes. One of the most popular categories of art on Pixiv is ロリコン -
+“lolicon”. Short for “Lolita complex”, lolicon is a form of anime imagery that portrays
+children in sexual situations, sometimes including explicit graphical depictions of sex.
+
+Child pornography is illegal in Japan, but lolicon, which generally features manga-style
+illustrations instead of photographs, is legal and common in Japan.
+
+
+Because Mastodon is a decentralized network, it is difficult to maintain an accurate count of users and
+instances. The Mastodon Network Monitoring Project offers a dashboard that tracks active instances of
+Mastodon [https://dashboards.mnm.social/dashboard/db/mastodon-network-overview?refresh=1h&orgId=1]. Those
+figures can vary wildly. In the morning of August 17, 2017, the dashboard was reporting 1.48m registered
+users, while by that evening, it reported only 781,552. In addition, because Mastodon is open source
+software configurable by users, some administrators have tinkered with code to make their sites misreport
+user numbers. While MNM filters out the obvious fakes, it is possible that some sites are modestly
+misreporting their userbases to increase their prominence. 
+
+Matthew Scala, who writes about Japanese online culture, argues that growth of
+Mastodon in Japan is closely related to lolicon . Twitter is extremely popular in Japan, 
+but routinely censors lolicon accounts. When Pixiv made Mastodon accessible to its 20
+million users, many quickly adopted the platform as a space to socialize and share
+imagery. A cursory glance at timelines of the other major Japanese Mastodon instances
+suggest that lolicon is popular in those communities as well.
+
+This use case for Mastodon confirms our hypothesis that usability matters. Not
+only did Mastodon make OStatus-based distributed publishing platforms more
+accessible by wedding them to the familiar Tweetdeck interface, but Pixiv helped build
+the user base by making it easy for existing users to register for the service. The
+popularity of Mastodon in a subcommunity suggests another rule for adoption: existing
+communities may turn to decentralized solutions when they can no longer communicate
+due to getting barred from centralized social networks. This path to adoption may turn
+out to be a stumbling block for Mastodon in the long term, as stigma associated with
+sub-communities that adopt the tool may prove a barrier to wider adoption of the
+platform."
+
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+
+==Reverse Engineering Twitter==
+
+Robert Gehl:
+
+"A wide range of decentralized social media projects, including diaspora*, GNU social, and Mastodon, use the federated model. Inspired by the ideas of Columbia law professor and decentralization advocate Eben Moglen, diaspora* appeared in 2010 as a challenge to Facebook. Around the same time, Free Software Foundation employees developed GNU social as an alternative to Twitter. Mastodon, which is a newer implementation of GNU social, is arguably the most popular among them, boasting roughly three million users and thousands of servers (called “instances” in Mastodon parlance) that function as individual micro-blogging nodes that can connect to one another. 
+
+Developed in 2016 by Eugen Rochko, Mastodon is a textbook example of critical reverse engineering. It provides features that are familiar to Twitter users: microblog posts, the follower/followed relationship, and a timeline of posts with the newest on top. But it also includes innovations that build on Twitter’s model: server administrators gain a great deal of power in how their instances are run and which other Mastodon instances they connect to. Users can shop around, finding an instance that they prefer to use. Paid advertising — and the whole infrastructure of user surveillance that drives it — is nonexistent on Mastodon.
+
+Mastodon’s critical reverse engineering of Twitter is largely driven by the developers who contribute to the open-source project. 
+
+“It always seemed to me that Twitter’s core product is fairly simple, and could’ve just as easily been implemented with an open/free protocol similar to email, which would allow a larger group of people to work on improving or customizing it as well as finding new use-cases,” Patrick Figel, a former Mastodon administrator, told me. “This is, to me, the most exciting aspect of Mastodon.” 
+
+Along with coding new features, skilled Mastodon developers also take time to help new people set up servers to contribute to what they call the “fediverse.” Federation, however, isn’t fully decentralized. Individual servers can become large, giving their administrators a smaller-scale version of the power that Facebook enjoys."
+
+(https://thereboot.com/creating-decentralized-social-media-alternatives-to-facebook-and-twitter/)
+
+
+==An assessment of Nathan Schneider of Social.coop==
+
+Interview, conducted after the Musk takeover of Twitter, by Joe Lindsey:
+
+'''* A lot of people are searching for alternative platforms right now. Is there a direct replacement for Twitter, and is Mastodon that?'''
+
+'''NS''': Mastodon is a different beast. After our Twitter shareholder campaign finished, a group of us started a user-operated server on Mastodon called social.coop. And I’ve used it every day for years and love it. (Editor’s note: Like Twitter, Mastodon is a social-media network for short-form messages up to 500 characters.)
+
+But I still use Twitter, and they’re very different. Mastodon has been much more of what essayist bell hooks called a “homeplace”—or a site of care and comfort, a group of people aligned around certain values and a community in the fullest sense. But it’s not the same as Twitter with the world as your feed, and that difference is critical. (Editor’s note: Mastodon’s timeline feature may seem familiar, but because it’s distributed, it’s more work to build your feed and communicate with other users.)
+
+There’s an important place for decentralized technologies like Mastodon, though. One that everyone is familiar with is email. One reason for the persistence of email is that no one company is controlling the whole system. Even though Google has a lot of power with Gmail, users can leave to another service at any time. There’s a lot of value, especially in an internet with so much centralized control, to have certain spaces and networks where you really can choose your own adventure, and approaches like Mastodon’s that enable people to make those choices and go where they most want to be.
+
+
+'''* Are there structural limitations to what platforms like Mastodon can be, based on the fact that they are decentralized?'''
+
+The technology is, I think, perfectly capable of achieving that Twitter replacement. The problem is really the economics. When Tim Berners-Lee created the World Wide Web, he said, “There’s no way anybody can capture it because we have this beautiful, decentralized network.” Well, what he didn’t understand was money. If you have enough money, you can capture anything. What drives this system is venture capital. Just in these last few weeks, Twitter co-founder Jack Dorsey texted Elon Musk and said that Twitter never should have been a company. But to grow and really compete, they had to take on venture capital and grow at all costs. And that forced them to sacrifice their mission.
+
+So in order for a more decentralized and democratic social media to emerge, we need the capacity to finance it. When Mastodon is one guy with open code and some people contributing, and Twitter is a $44 billion company with thousands of employees, it’s no competition, right? We need to enable new kinds of financing. That includes public financing and private financing—like electric co-ops. Shared ownership can be a reasonable business; we just have an economic system in which it is, in many cases, actually illegal. In 2008, Uber and Airbnb both tried to share stock with their users, and the government wouldn’t let them."
+
+(https://www.5280.com/so-youre-thinking-of-quitting-twitter-and-heading-to-mastodon/)
+
+=Example=
+
+==[[Social Coop]]==
+
+"social.coop: a coop-run corner of the fediverse,  a co-operative and transparent approach to operating a social platform
+
+What makes social.coop different from other Mastodon instances?
+
+* Your data in a place you control and trust
+* Cooperatively co-own the instance
+* Co-create policies, code of conduct, etc (see our bylaws)
+* Democratically run our operations (see our Loomio group)
+* Co-finance expenses transparently (see our OpenCollective page)
+* Participate in a #platformcoop case-study
+* Join a community of like-minded people "
+
+(https://social.coop/about)
+
+=More information=
+
+* an inquiry into the commons-centric business models of Mastodon and Social.coop, at https://loomio-uploads.s3.amazonaws.com/documents/files/000/152/026/original/mh_2018_07_01_-_reading_group_notes.pdf?
+
+* [[Twister]]
+
+[[Category:Media]]
+[[Category:P2P Infrastructure]]

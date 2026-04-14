@@ -1,0 +1,33 @@
+'''P2P Distribution Grids = broadband distribution using peer to peer models.'''
+
+They are seen as necessary if we want massive video distribution via the internet.
+
+
+=Description=
+
+An overview of commercial players in the U.S., March 2006, by Cringely:
+
+"Last week, I wrote about Seattle-based '''Grid Networks''', which has many of the networking components in place. Grid, which already has more than 100,000 active nodes, can reliably deliver massive amounts of data at bit rates as high as clients are capable of receiving. That's a key differentiator -- being able to aggregate bandwidth to deliver not only lots of data, but lots of data FAST. Grid also appears to be the only major player in this new space that plans to offer Windows, Linux, and Macintosh clients, while most of the other services seem to be Windows-only.
+
+Another emerging player in this space is '''Network Foundation Technologies''' (NFT), a startup in Louisiana that is taking the very non-Bit Torrent approach of using a binary-tree (one parent) distribution model rather than Bit Torrent (or Grid's) multi-parent distribution. Binary-tree distribution means that every node in the network has a single parent and no more than two children, which limits the total available bandwidth per connection. So where Grid and Bit Torrent can dump a lot of data very quickly on a given client, NFT is limited to half the capacity of the node above it in the distribution tree. While this would appear to be a disadvantage, there is one very good reason for doing it: NFT's binary distribution trees support live video.
+
+NFT's binary trees form and re-form dynamically as client nodes appear and disappear from the network. The system is based on TCP, not UDP, and has been shown to support 14 or more levels, which is enough for tens of thousands of nodes, all fed from a single master connection equivalent to DSL. That means if you are willing to live with sub-megabit bandwidth, you could start an NFT video channel from your cable modem. Every man a TV network. System delay varies from 30 seconds to two minutes, but you could watch a live football game on NFT, where you couldn't easily do so on the multi-parent systems.
+
+The emerging Big Kahuna in commercial peer-to-peer seems to be '''Wurld Media's Peer Impact''', which has similar technology to Grid Networks (though Windows-only), but where Grid is a networking company, Peer Impact is a media company and actually has a pretty compelling business model.
+
+Peer Impact is up and running right now, though most of what the network has available isn't TV or music, but video games. About 1,100 video games from most major publishers except Electronic Arts are available through Peer Impact. The network has also announced it is adding video content and movies from NBC/Universal, and says it will have all major film studios and all major record companies onboard by the end of this year.
+
+Peer Impact is similar to iTunes in that Apple sets the price ($0.99 per song and $1.99 per show). Where Peer Impact is different is in its use of Microsoft DRM, Windows client software, and a peer-to-peer distribution scheme. But where the company is REALLY different is in its relationship to participating nodes: Peer Impact pays users.
+
+Ten percent of gross revenue for Peer Impact goes back to the participating nodes through two different programs. The first program is simple carriage: If someone downloads a song through your node, you get paid based on what percentage of the total bytes you provided, with five percent of gross revenue devoted to that task. The other five percent is for people who actively promote certain content through fan sites, for example. If you run a web site honoring the works of John Cassavetes, it could include links to his movies. If someone downloads "Minnie and Moskowitz" through your site, you get five percent of the download fee even if you don't actually carry any of the bits. If you carry some or all of the bits, you can get up to another five percent. All this is handled through PayPal and Peer Impact assumes most participants will spend most of that on more movies, which is part of their reason for doing it this way.
+
+Here, finally, is a business model for video distribution that makes some sense. Nobody gets rich, but members are at least partially compensated for their participation, which ought to make the network robust and explains all those content deals with studios and record companies.
+
+The best way to make money with Peer Impact, it seems to me, is through video games, which cost up to $30 or more and can be downloaded as 30-day demos. The trick, then, is to have a game fan site, stock it with demos that establish you in the distribution system without having to actually buy the games, and collect $1.50 to $3.00 every time someone downloads through your site."
+(http://www.pbs.org/cringely/pulpit/pulpit20060302.html)
+
+[[Category:Encyclopedia]]
+
+[[Category:Resources]]
+
+[[Category:Business]]

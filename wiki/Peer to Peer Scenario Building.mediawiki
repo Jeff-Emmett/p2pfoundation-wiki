@@ -1,0 +1,74 @@
+=Description=
+
+Scenario building, though traditionally thought of as an end-user application practiced within a single research exercise, can be profitably extended to be a peer-to-peer platform in many ways:
+
+• Users can share and build on each other's scenarios.  Given the right representation, the users may even build their own scenarios in isolation, and then discover the common aspects with the scenarios built by others. 
+
+• Collaborative filtering is a useful aspect of many peer-to-peer tasks.  By grounding the scoring mechanisms of collaborative filtering in scenario construction, users can see whether or not their scores are bringing them information salient to their long-term interests.
+
+• Scenarios serve in a peer role with other applications for a given user.  Scenario content can be connected to-and-from web browsers via plug-ins, to-and-from extensible editors such as Eclipse, and even to-and-from computer games (providing the scoring system, and seeing what paths people choose under those conditions).
+ 
+
+=The ScenConnect Project=
+
+ScenConnect (http://scen-connect.sourceforge.com) is an open-source project aimed at constructing such a peer-to-peer scenario building platform.  If you would like to know more specifically, you should contact John Benjamin Cassel (reach him at at john dot benjamin dot cassel at gmail, or just write on the talk page of JohnC).  
+
+The following is the project summary:  
+
+''ScenConnect is an implementation of a scenario connector. A scenario connector is a peer-to-peer software tool for communicating scenario information (such as plans, procedures, and predictions) in an easy-to-use and secure way.''
+
+
+'''How are scenario connectors different from other collaboration tools?'''  
+
+Scenario connectors represent scenario information in a unique way.  Roughly speaking, a scenario is a story where the teller tries to communicate all of the possible endings. Scenarios attempt to discover all of the situations that might occur as events unfold. ScenConnect makes scenario creation simple by allowing situations and events to be described as combinations of tags, which are short text labels. Then, situations and events are joined together in networks that illustrate the possibility of events transforming one scenario into another. Scenarios can be quickly assembled from existing tag sets, from scenarios the user has previously created, from scenarios that other users have shared, and by tags provided by the system on installation.
+
+What technologies drive scenario connectors?  Scenario connectors open and distribute the scenario methodology. Originally developed by Shell in the 1970s, it helped them discover the possibility of an oil slowdown, which helped them dodge the 1970s recession. The scenario methodology is a technique for doing deep research on potential “black swans”: rare and unexpected events that are difficult to imagine, but have potentially high impact. Scenario connectors are a direct offshoot of the work of Jamais Cascio, who opens up scenarios and breaks them down into their component parts, allowing users to reassemble them for their own purposes. Scenario connectors achieve this remixing effect via a networked tagging system, and makes strategic openness a pragmatic possibility through limited-exposure public-key cryptography in the context of peer-to-peer file sharing systems. Complimentary technologies, such as voice over IP, webbrowser plug-ins, prediction markets, collaborative filtering, and chat rooms all add to a rich scenario-sharing experience. However, scenario connectors will truly come of age after the emergence of RFID, geotagging, mobile social planning, and other technologies that can annotate the real world. Users will then be able to search for scenarios related to their current surroundings.
+
+
+'''Who Uses Scenario Connectors?'''   
+
+Core users for scenario connectors include:
+
+• Regional entrepreneurs who want to see business models that have worked in other similar regions and what factors may have prevented this business from working in their region.
+
+• Professional commercial and government scenario builders who want to save time and money in compiling similar scenarios for different customers. This will also allow them to interact with others who can contribute to their work, such as domain experts, technologists, and science-fiction writers.
+
+• Employee-owned businesses and volunteer organizations who need to negotiate the direction of their institution. Instead of time-wasting meetings, scenarios and positions can be fleshed out, scored, and discussed online, allowing meetings to be reduced to core issues.
+
+
+'''How will ScenConnect be developed?''' 
+
+ScenConnect will be developed as an open-source project in an academic context. The project will grow slowly, with content being added by carefully selected foresight professionals and others they would like to have on board. This will also give trust time to form between existing participants, creating a robust collaborative filtering network, and also allowing the software to be gracefully adapted to increasing scales of participation. Eventually, the project may support small companies focused around custom scenario creation, tailored software development, prediction market arbitration, and other services."
+
+
+'''What does the ScenConnect project currently need?'''
+
+
+The communications layer for exchanging scenario connector information should be a separate, prerequisite technology to ScenConnect for many reasons:
+
+1) to control project scope.
+
+2) to ensure additional layers of trust of the overall system, by assuring that parts are developed in separate groups, and so that individual users can pick the communications layer they trust most.
+
+3) that local scenario connectors can communicate over all the p2p address spaces the user trusts, creating a wider audience and an implicit robustness to changing underlying technologies
+
+
+A secure peer-to-peer communications layer under it that would ideally support (in order of necessity)
+
+1)  A well-managed virtual address space that generates unique names with certainty under most conditions, and with a high probability otherwise.
+
+2)  Fault-tolerant overlay networks that make sure that recently used content is always available barring local failure, popular public content is always quickly available except under very unlikely circumstances, and that all public content is always available except under extremely unlikely conditions.
+
+3)  Public key cryptography for assuring message authenticity (and privacy as required), ideally so that sustained smaller group communications uses separate public keys that aren't widely exposed
+
+4)  VOIP infrastructure
+
+
+
+[[Category:Resources]]
+
+[[Category:Governance]]
+
+[[Category:Policy]]
+
+[[Category:P2P Futures]]

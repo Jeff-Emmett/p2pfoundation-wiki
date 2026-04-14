@@ -1,0 +1,59 @@
+'''Search engines based on P2P-methods, also called 'collaborative crawling and indexing''''
+
+
+=Definition=
+
+"In P2P search (a.k.a. distributed search), each individual connected to the network serves its local index as a source of search. Instead of having a central company and a central server, each participant of the network is a search repository. Since we are talking about web indexing and web searching, a user's internet cache might be their contribution to the search database. When they execute a query, firstly their local system is queried; than if the results are not satisfactory, the next peer is queried, and so on. The difficulty is the selection of good peers to provide satisfactory results."
+(http://www.readwriteweb.com/archives/p2p_potential_future_applications.php)
+
+
+=Description=
+
+"A P2P application is different from the traditional client/server model because it acts both as a client and a server. That is to say, while they are able to request information from other servers, they also have the ability to respond to requests for information from other clients, at the same time. 
+
+[http://www.ist-chorus.org/_events_RTF/images/clip_image004.jpg Figure 1] shows the architecture of a P2P network, where each node acts as a user interface, service provider, message router, and –possibly partial- resource repository. The links between nodes tend to be dynamic. The advantage of a peer-to-peer architecture compared to traditional client-server architectures is that a machine can assume the role that is most efficient for the performance of the network. This implies the load on the server is reduced/distributed, which allows for more specialized services."
+(http://www.ist-chorus.org/_events_RTF/eventitem.asp?id=82)
+
+
+=Characteristics=
+
+"A typical peer-to-peer application has the following key features:
+
+•	'''Peer discovery'''. The application must be able to find other applications that are willing to share information. Historically, the application finds these peers by registering to a central server that maintains a list of all applications currently willing to share, and giving that list to any new applications as they connect to the network. However, there are other means available, such as network broadcasting or discovery algorithms.
+
+•	'''Querying peers for content'''. Once these peers have been discovered, the application can ask them for the content that is desired by the application. Content requests typically come from users, but it is possible that the peer-to-peer application is running on its own and performing its query as a result of some other routed network request.
+
+•	'''Sharing content with other peers'''. In the same way that the peer can ask others for content, it can also share content after it has been discovered. 
+
+A typical P2P search system can be seen as consisting of two parts — the underlying distributed system and its mechanisms for transfer and delivery, and the search tool on top. There is little doubt today that the p2p model for distribution is a very powerful solution for distributing content around the web. While BitTorrent and similar systems clearly announce their p2p nature, peer-based solutions are also used behind the scenes by many applications, with Skype as a large and notable example."
+(http://www.ist-chorus.org/_events_RTF/eventitem.asp?id=82)
+
+=Examples=
+
+==The [[Minerva Project]]==
+
+URL = http://www.mpi-inf.mpg.de/departments/d5/software/minerva/index.html
+
+""Each peer is considered autonomous and has its own local search engine with a crawler and a corresponding local index. Peers share their local indexes (or specific fragments of local indexes) by posting meta-information into the P2P network. This meta-information contains compact statistics and quality-of-service information, and effectively forms a global directory. However, this directory is implemented in a completely decentralized and largely self-organizing manner."
+(cited in http://www.readwriteweb.com/archives/p2p_potential_future_applications.php)
+
+
+==More examples==
+
+Open-Search, at http://www.open-search.net/Opensearch/OpenSearchFoundation
+
+[[Majestic-12]]
+
+[[GPU P2P Crawler]], open-source based
+
+Faroo, at http://www.faroo.com/
+
+
+=More Information=
+
+Peer to peer architectures for multimedia retrieval, report of the [[CHORUS P2P Workshop 1P2P4mm]], at http://www.ist-chorus.org/_events_RTF/eventitem.asp?id=82
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]

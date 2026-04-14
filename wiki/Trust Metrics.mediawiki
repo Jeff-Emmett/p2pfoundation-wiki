@@ -1,0 +1,96 @@
+'''A trust metric is a measure of how a member of a group is trusted by the other members.'''  
+
+
+=Definition=
+
+See http://www.trustlet.org/wiki/Trust_metrics
+
+
+=Description= 
+
+Since the definition of trust and reputation, as well as of trust metrics and reputation systems is partially interchangeable, see also our entry on [[Reputation]] where we discuss reputation systems.
+
+The [http://en.wikipedia.org/wiki/Trust_metric Wikipedia article on trust metrics] notes that such systems must exhibit "Attack resistance, i.e. the ability to handle agents who participate in bad faith (i.e. who aim to abuse the presumption of trust).
+
+
+=Characteristics=
+
+==Local vs. Global==
+
+"A local trust metric predicts trust scores that are personalized from the point of view of every single user. For example a local trust metric might predict "Alice should trust Carol as 0.9" and "Bob should trust Carol as 0.1", or more formally trust(A,C)=0.9 and trust(B,C)=0.1
+
+On the other hand, a global trust metric computes a single global trust value for every single user. 
+
+Local trust metrics start from the assumption that every single trust statement is an equally worthy subjective opinion and that there are no wrong opinions and that there are no global reputation values on which all the users must agree. This characteristics is especially useful when dealing with controversial users which receive very different trust statements from the other users.
+
+Local trust metrics are particularly useful also in order to avoid the tyranny of the majority risk. However they might suffer from a risk on the other side of the personalization scale, daily me or echo chamber, that means that the user loses the point of view of the community at large but just relies on the opinions of few trusted users."
+(http://www.trustlet.org/wiki/Local_trust_metric)
+
+==Objective vs. Subjective==
+
+Objective:
+
+"Objective trust is sometimes used as synonym of reputation. In reality the trust cannot be defined objectively simply because every principal is free to express a level of trust in a certain trustee different from the level of trust expressed by the other principals on the same trustee. For this reason, it is better to use the term "reputation" when referring to an aggregated value computed by a global trust metric trying to represent what the community as a whole thinks about a certain principal. Of course different global trust metrics can compute different values of reputation for every principal and so not even the reputation can be called "objective" but simply an aggregation of the subjective trusts expressed by principals aggregated according to the characteristics of the global trust metric (simple majority vote, average, progation of trust on the social network, ...).
+
+For example, Ebay and Pagerank are 2 global trust metrics that compute a single reputation value for every principal, but of course this is not the objective trust value since trust cannot be objective."
+(http://www.trustlet.org/wiki/Objective_trust)
+
+Subjective:
+
+"Subjective trust is just the normal state of trust, since trust is always subjective: Alice is free to trust Bob at every level (for example full trust) just as Carol is free to trust Bob at every level (for example full distrust). In this case this concept would be better called simply "trust".
+
+Subjective trust is sometimes used in opposition to objective trust, even if there is no "objective trust" by definition and so objective trust would be better called reputation or global reputation."
+(http://www.trustlet.org/wiki/Subjective_trust)
+
+
+=Examples=
+
+"Trust metrics are currently applied in:
+
+    
+* Peer to Peer file exchange and others computer based cooperative infrastructures usually very automated trust system with little manual intervention
+    
+* Internet Pages Ranking, totally automated systems consider page view count or link count as an implicit trust data, other systems are based on explicit users feedback.
+    
+* E-Commerce Users declare a feedback for each transaction, the reputation is then calculated using trust metric algorithm"
+(http://www.trustlet.org/wiki/Where_trust_metrics_are_useful)
+    
+* Recommender Systems 
+
+* [http://pages.ebay.com/help/feedback/evaluating-feedback.html eBay's Feedback Rating]
+* The Slashdot introduced [http://slashdot.org/moderation.shtml ''karma'' system]
+* The free software [http://www.advogato.org/ Advogato]
+* The [[Center for Adventure Economics]] at [[Couchsurfing]] ''was'' working on trust metrics, check the [http://wiki.couchsurfing.com/en/Trust CouchSurfing wiki].
+
+Summary of work being done on trust systems for the Wikipedia, at
+http://trust.cse.ucsc.edu/Related_Work
+
+=More Information=
+
+#See our entries on [[Trust]] and [[Reputation]]
+#[[TrustLet]] is a collaborative research effort with comprehensive information on the issue, there's also a [http://trustlet.org  wiki] whose goal is to review, understand, code and compare on same data all the trust metrics proposed so far. 
+#Definitional work at http://www.trustlet.org/wiki/Trust_metrics
+#An example of [[Content-driven Reputation]] 
+#[[P2P Metrics]]: collation of various metrics available
+
+
+==External links==
+
+Provided by the Wikipedia article at 
+http://en.wikipedia.org/wiki/Trust_metric
+
+*[http://trustlet.org/wiki/TrustMetricsEvaluationProject Trust Metrics Evaluation Project] of Paolo Massa.  The [http://trustlet.org/wiki/AnalyzedTrustMetrics Analyzed Trust Metrics page] provides an extensive bibliography of work on the theory and implementation of trust metrics.
+*[http://www.trustcomp.org Trustcomp.org] is an online community of more than 150 academic and industrial members who research computational trust management and online reputation. There is also a [http://groups.yahoo.com/group/trustcomp/ mailing list].
+*Raph Levien, 2000. [http://www.advogato.org/trust-metric.html Advogato's trust metric].  Electronic manuscript.
+*Raph Levien, 2002.  [http://www.levien.com/free/tmetric-HOWTO.html Attack Resistant Trust Metric Metadata HOWTO].  Electronic manuscript.
+
+
+[[Category:Resources]]
+
+[[Category:Relational]]
+
+[[Category:Governance]]
+
+[[Category:Standards]]
+
+[[Category:P2P Accounting]]

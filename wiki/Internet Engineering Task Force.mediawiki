@@ -1,0 +1,69 @@
+
+
+
+=Background=
+
+From Scott Bradner in the book [[Open Sources]].
+
+URL = http://www.oreilly.com/catalog/opensources/book/ietf.html
+
+==The History of the IETF==
+
+The IETF started in January of 1986 as a quarterly meeting of U.S. government funded researchers. Representatives from non-government vendors were invited, starting with the fourth IETF meeting in October of that year. Since that time all IETF meetings are open to anyone who would like to attend. The initial meetings were very small, with less than 35 people in attendance at each of the first five meetings and with the peak attendance in the first 13 meetings only 120 attendees, at the 12th meeting in January of 1989. The IETF has grown quite a bit since then, with more than 500 attendees at the 23rd meeting in March 1992, more than 750 attendees at the 29th meeting in March 1994, more than 1,000 attendees at the 31st meeting in December 1994, and almost 2,000 attendees at the 37th meeting in December 1996. The rate of growth in attendance has slowed to the point that there were 2,100 attendees at the 43rd meeting in December 1998. Along the way, in 1991, the IETF reduced the number of meetings from four to three per year.
+
+The IETF makes use of a small Secretariat, currently operating out of Reston, VA, and an RFC Editor, currently operated by the University of Southern California's Information Sciences Institute.
+
+The IETF itself has never been incorporated as a legal entity. It has merely been an activity without legal substance. Up until the end of 1997, the IETF's expenses were covered by a combination of U.S. government grants and meeting fees. Since the beginning of 1998 the expenses have been covered by meeting fees and the Internet Society.
+
+The Internet Society was formed in 1992, partially to provide a legal umbrella over the IETF standards process and to provide some funding for IETF-related activities. The Internet Society, an international membership-based non-profit organization, also evangelizes for the Internet in parts of the world that the Internet has not yet reached. At this time the IETF can be best described as a standards development function operating under the auspices of the Internet Society.
+
+The concept of working groups was introduced at the 5th IETF meeting in February 1987 and there are now over 110 working groups operating within the IETF.
+
+
+==IETF Structure and Features==
+
+The IETF can be described as a membership organization without a defined membership. There are no specific criteria for membership other than to note that people and not organizations or companies are members of the IETF. Any individual who participates in an IETF mailing list or attends an IETF meeting can be said to be an IETF member.
+
+At this writing there are 115 officially chartered working groups in the IETF. These working groups are organized into eight areas: Applications, General, Internet, Operations and Management, Routing, Security, Transport, and User Services. Each of the areas is managed by one or two volunteer Area Directors. The Area Directors sitting as a group, along with the chair of the IETF, form the Internet Engineering Steering Group (IESG). The IESG is the standards approval board for the IETF. In addition there is a 12-member Internet Architecture Board (IAB), which provides advice to the IESG on working group formation and the architectural implications of IETF working group efforts.
+
+The members of the IAB and the Area Directors are selected for their two year terms by a nominations committee randomly selected each year from among volunteers who have attended at least two out of the previous three IETF meetings.
+
+
+==IETF Working Groups==
+
+One of the principal differences between the IETF and many other standards organizations is that the IETF is very much a bottom-up organization. It is quite rare for the IESG or the IAB to create a working group on their own to work on some problem that is felt to be an important one. Almost all working groups are formed when a small group of interested individuals get together on their own and then propose a working group to an Area Director. This does mean that the IETF cannot create task plans for future work, but at the same time it helps ensure that there is enough enthusiasm and expertise to make the working group a success.
+
+The Area Director works with the people proposing the working group to develop a charter. Working group charters are used to list the specific deliverables of the working group, any liaison activities that might be needed with other groups, and, often most important, the limits on what the working group will explore. The proposed charter is then circulated to the IESG and IAB mailing lists for their comments. If significant issues do not arise within a week the charter is posted to the public IETF list and to a list of liaisons from other standards organizations to see if there is work going on in other forums which the IETF should be aware of. After another week for any additional comments, the IESG can then approve the charter and thereby create the working group.
+
+
+==IETF Documents==
+
+All IETF documents are public documents freely available over the Internet. The IETF does get a limited copyright from the authors when the documents are published to ensure the document remains freely available (the author can not decide to withdraw the document at some future time), republishable in its entirety by anyone, and, for most documents, that the IETF can make derivative works within the IETF standards process. The author retains all other rights.
+
+The basic publication series for the IETF is the RFC series. RFC once stood for "Request for Comments," but since documents published as RFCs have generally gone through an extensive review process before publication, RFC is now best understood to mean "RFC." RFCs fall into two basic categories: standards track and non-standards track. Standards track RFCs can have Proposed Standard, Draft Standard, or Internet Standard status. Non-standards track RFCs can be classified as Informational, Experimental, or Historic.
+
+In addition to RFCs, the IETF makes use of Internet-Drafts. These are temporary documents whose purpose is close to the original "request for comment" concept of RFCs and which are automatically removed after six months. Internet-Drafts are not to be cited or otherwise referenced other than as works in progress.
+
+
+==The IETF Process==
+
+The IETF motto is "rough consensus and running code." Working group unanimity is not required for a proposal to be adopted, but a proposal that cannot demonstrate that most of the working group members think that it is the right thing to do will not be approved. There is no fixed percentage support that a proposal must achieve, but most proposals that have more than 90% support can be approved and those with less than 80% can often be rejected. IETF working groups do not actually vote, but can resort to a show of hands to see if the consensus is clear.
+
+Non standards track documents can originate in IETF working group activity or from individuals who would like to make their thoughts or technical proposals available to the Internet community. Almost all proposals for RFC publication are reviewed by the IESG, after which the IESG will provide advice to the RFC Editor on the advisability of publishing the document. The RFC Editor then decides whether to publish the document and, if the IESG offers one, weather to include a note from the IESG in the document. IESG notes in this case are used to indicate discomfort with the proposal if the IESG feels that some sort of warning label would be helpful.
+
+In the normal case of a standards track document an IETF working group will produce an Internet-Draft to be published as the RFC. The final step in the working group evaluation of the proposal is a "last call," normally two weeks long, where the working group chair asks the working group mailing list if there are any outstanding issues with the proposal. If the result of the working group last call indicates that the consensus of the group is that the proposal should be accepted, the proposal is then forwarded to the IESG for their evaluation. The first step in the IESG evaluation is an IETF-wide last call sent to the main IETF announcement mailing list. This is so that people who have not been following the working group work can comment on the proposal. The normal IETF last call is two weeks for proposals that come from IETF working groups and four weeks for proposals not originating from IETF working groups.
+
+The IESG uses the results of the IETF last-call as input to its deliberations about the proposal. The IESG can approve the document and request its publication, or it can send the proposal back to the author(s) for revision based on the IESG's evaluation of the proposal. This same process is used for each stage of the standards track.
+
+Proposals normally enter the standards track as Proposed Standards, but occasionally if there is uncertainty about the technology or if additional testing is felt to be useful a document is initially published as an Experimental RFC. Proposed Standards are meant to be good ideas with no known technical flaws. After a minimum of six months as a Proposed Standard, a proposal can be considered for Draft Standard status. Draft Standards must have demonstrated that the documentation is clear and that any intellectual property rights issues with the proposal are understood and resolvable. This is done by requiring that there be at least two genetically independent, interoperable implementations of the proposal with separate exercises of licensing procedures if there are any. Note that it also requires that all of the separate features of the protocol be multiply-implemented. Any feature not meeting these requirements must be removed before the proposal can advance. Thus IETF standards can get simpler as they progress. This is the "running code" part of the IETF motto.
+
+The final step in the IETF standards process is Internet Standard. After being at Draft Standard status for at least four months and demonstrating significant marketplace success, a proposal can be considered for Internet Standard status.
+
+Two major differences stand out if one compares the IETF standards track with the process in other standards organizations. First, the final result of most standards bodies is approximately equivalent to the IETF Proposed Standard status. A good idea but with no requirement for actual running code. The second is that rough consensus instead of unanimity can produce proposals with fewer features added to quiet a noisy individual.
+
+In brief, the IETF operates in a bottom-up task creation mode and believes in "fly before you buy."
+
+
+[[Category:Movements]]
+
+[[Category:Governance]]

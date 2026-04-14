@@ -1,0 +1,174 @@
+
+
+=Text=
+
+Gordon Cook:
+
+"Unless we all go back to dial-up USENET or FidoNet of the 1980s, the
+Internet of 2011 in reality is far more fragile than most people realize.
+Sending and receiving information rely on the availability of an IPV 4
+number. The last remaining five blocks of IP 4 were assigned to the
+respective registries I believe on February 3.. There is something called
+IPv6, it is "being rolled out" but Internet content has for example the P2P
+foundation that wiki that we all love so much is right now I believe
+available in IPV4 alone. If this is the case and six months to a year from
+now you are a newcomer to the Internet and you have only IPv6 as an
+endpoint, you will not be able to see any content that is their only in IPV
+four. I expect it will be the end of this year before any serious
+consequences become readily apparent but I would predict that 2012 is going
+to be rough very rough. If these issues are not handled well the Internet
+will fragment into groups reachable through v4 versus v6. and furthermore
+the way the Internet routes its packets may become quite messed up.
+ 
+We all know and love peer-to-peer insofar peer to peer has been very
+difficult to choke. But it is not at all impossible to do so. Remember that
+Comcast several years ago tried to choke peer-to-peer and got into some
+serious trouble. But it is quite chokable. there are things called flow
+routers that can identify the flows of different protocols of which peer to
+peer is only one but if you route by one of these boxes you can effectively
+deny peer-to-peer transmission. And then there is something called Naurus.
+this can be used to do deep packet inspection and identify traffic that you
+might not want to have identified.
+ 
+You need to be well aware that thanks to the Bush regimes deregulatory
+fervor which Obama has done nothing to contradict while local dial-up phone
+service is still regulated virtually no other means of communication in
+United States is regulated. That means if AT&T or Verizon or federal
+government agency or Comcast or any other multiple system operator decides
+that he doesn't like you, he does not have to serve you. He can charge you
+whatever he wants. And again if he decides to he can refuse to carry your
+traffic.
+ 
+Before talking about a new Internet and again I say this respectfully, you
+really need to understand how Internet service providers work and are linked
+together. Before George Bush came to power and deregulated everything there
+were 6 to 7000 independent Internet service providers in the United States
+now I would hazard a guess that the number of significant Internet service
+providers is down to about twenty. All of these are deregulated and they
+don't have to do anything to please the customer. Be they a service provider
+the size of Comcast with more than 6 million customers or be they some
+wireless service provider in Wyoming they all have to have assigned to them
+blocks of IP v4 numbers. To become a customer who can send and receive data
+they have to be able to give you on a temporary basis at least your own
+personal IPV4 number.
+ 
+Now any entity such as for example Verizon or Boeing operation or the FBI or
+a university that wishes to be able to exchange traffic directly with any
+other such entity in the global Internet must have what is known as an
+autonomous systems number ASN. globally I believe there are somewhere
+between 30 and 40,000 such numbers and they are just about used up. But
+let's say you have one and you have a business plan that you are able to go
+to your routing registry which in North America is ARIN, in Europe and
+middle east is RIPE, Asia pacific APNIC, Latin America LacNic and Africa
+Arfrinic. Fill out the proper paperwork that can show the proper bank
+accounts andshow business plan as to why you need X number of IPV four
+numbers and you're in business.
+ 
+If you want company like Boeing you run a huge global largely optical
+network with likely several thousand separate locations in 30 or 40 or 50
+separate countries. This in effect is your rival network and you can use a
+device called network address translation to route as much as you want
+within the boeingnetwork. However if you want to send to the outside world
+you need to run something called the border Gateway protocol. This enables
+you to send packet-based communications to perhaps as many as 1 billion IPV
+four addresses elsewhere in the world. Now there is much technical
+discussion of what size network is appropriate to advertise by means of
+border Gateway protocol to the core global Internet. The total number of
+globally independently routed networks is right now about 340,000. This
+number can grow but as it gets larger the cost of routers capable of
+handling the full routing table can reach several hundred thousand dollars
+each- with some more than a million
+ 
+Remember when Egypt dropped out of the Internet? Mubarak's police entered
+the Egyptian network providers and told him in the fact to turn off border
+Gateway protocol. That drops the Iron Curtain down. Egypt became a with out
+internationally routed addresses. If one is extremely geeky, one can use IPV
+four tunneling and if I understand it correctly one has to be able to do it
+virtually in real time in conjunction with a colleague at some other network
+on some other place in the globe.
+ 
+you have a functioning gray market in IPV four addresses right now and the
+IPV four addresses that become valuable will be those that are guaranteed to
+be routable via the border Gateway protocol on the global Internet. You have
+some fierce division in the technical community with the one side
+libertarians who take the position that the market can solve everything and
+never mind. And on the other they take the position if it goes to the market
+then the ownership and routability conditions of an IP before number will
+become uncertain.
+ 
+There is such a thing as a who-is directory., with this you can go by ASN
+number and look up the owner and contact information of the operators of all
+globally routable networks in the world. If a network routes and IP before
+number belonging to another network which routes the same number in a
+different way you get a real follow-up. The packets loop they drop
+connection is lost all hell breaks loose. I know people far wiser than I
+who are deeply worried that we are headed toward a situation where we no
+longer have a globally uniform ASN registry also known as who is and that
+without this the Internet will indeed will enter into segments that cannot
+be bridged from one to the other.
+ 
+Now you talk about different architectures which is fine. You're not the
+only ones doing this.. Van Jacobson has been at Xerox Parc for five or six
+years working on a content delivery architecture. And a couple of years ago
+he gave an outstanding 90 min. long lecture on this at Google that can be
+listened to. The National Science Foundation has given I think at least $100
+million in grants to a new architecture called GENI, one of the chief
+grantees is a Chinese woman and I apologize I can't remember her name at the
+moment but she is on my mail list almost never says anything. I had a
+conversation with her maybe nine months ago in which I asked her to try to
+explain what she was doing and I'm sorry to say that I didn't get it.
+ 
+But if you're going to talk about new architectures and there is a man
+named I believe John Day who even has something to replace TCP/IP you are
+going to run headlong into a multi-hundred billion dollar embedded base.
+ 
+So what's possible? One thing that might be possible is understanding the
+significance of the optical research networks and eight just being built
+Obama spinoff called United States community anchor institution network that
+is designed to connect some 200,000 libraries hospitals K-12 schools junior
+colleges city governments museums and performing arts institutions. This
+network will I'm sure run a TCP/IP layer on top of the optical paths. But it
+is the emergence of dynamic lightpaths from PC to PC that are possible and
+are beginning to fall into place. These are circuit-switched from
+point-to-point unbelievable bandwidth 100 Mb here is considered puny and
+indeed most lightpaths have to be a Gigabit or they can be considered to be
+curcuit switchable.
+
+...
+
+So for me right now the bottom line is that sadly the Internet is held
+together much more by chewing gum and bailing wire than people realize. Will
+it collapse anytime soon? Oh you better believe that the commercial sites
+reached by Verizon AT&T Comcast and the other cable goes will still be there
+and you'll still be able to shop there but it made get to be a great deal
+more difficult to reach the ordinary Egyptian or Tunisian.
+ 
+Does that mean that we cannot build our own networks? No. But folks need to
+understand that wireless mesh networks although I'd sure rather have them
+than nothing are not going to be anything like the global Internet that we
+have now. You're not going to go wireless over and over an option but to get
+to the rest of the world you had better if you really want to do that be
+able to reach an exchange point in New York Washington Atlanta Miami Chicago
+Denver Houston Salt Lake City Seattle Portland San Francisco Los Angeles and
+San Diego and similar places to that in particular for international
+FiberNet works the two most important exchanges in the US are in New York
+City and Chicago and in Europe Amsterdam
+ 
+NTIA has given recovery act grants to Internet to and to a group of 20 to 30
+state and regional networks to lay fallow's and this thousands of miles of
+so-called middle mile fiber in those fibers are to be interconnected to the
+United States community action community anchor network backbone which is
+been allocated 100 Gb of bandwidth. We are talking about approximately 1 1/2
+billion dollars being spent over the next 2 to 3 to 4 years primarily over
+the next two years delay this new infrastructure that my friends is the
+opportunity because if we can't help fthings get built right in the only
+choice will be community by community over years many years I'm afraid tried
+to build our own networks and even should we do that without the guarantees
+proper interconnection the dividends paid back to us will not be what we'd
+like."
+(building-a-distributed-decentralized-internet mailing list, 3/2011)
+
+
+[[Category:Articles]]
+
+[[Category:P2P Infrastructure]]

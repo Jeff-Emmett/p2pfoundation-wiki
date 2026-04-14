@@ -1,0 +1,113 @@
+'''= primer on making things controlled by a computer, and how this can be used in the whole world, to leapfrog development.'''
+
+URL = http://smari.yaxic.org/blag/category/the-digital-fabrication-primer/
+
+
+=Description=
+
+==Introduction==
+
+From the introduction by smari:
+
+
+"Digital fabrication technologies are rapidly coming into existence. With projects such as MIT’s Fab Labs and RepRap and Flex Fab Multimachine, the technology needed to leapfrog any country into a 21st century nation complete with wireless telecommunications, social networking, a market economy and sustainable agriculture is at hand.A Modella
+
+All over the place manpower is being wasted on doing things manually because the people there can’t afford technology to improve their way of life. Yet it has been shown in those places where Fab Labs have come into existence, like India, Ghana, South Africa, and so on, that with the right tools to easily build that which they need, they have been able to optimize their way of living significantly. Not just there. Everywhere. Everybody who has ever done a job has thought of a way to do it differently. Do it better.
+
+    
+* A coconut-tree climber in India fashioned himself legstraps that let him climb the trees at three times the speed in a much safer way than before.
+    
+* In Ghana villagers are building solar power generators to make electricity.
+    
+* In Norway, a sheep herder built cellular phones for his sheep so their precise location and status could be determined at the touch of a button.
+
+
+Personal fabrication is said to be the killer app of the 21st century, and it’s not just because people like to make things, it’s rather because everybody has a problem they can solve.
+
+    
+* In India, light bulbs are expensive and the poor electrical system lowers the durability of traditional bulbs. So people with digital fabrication tools built LED-based light bulbs that are cheap to make, use a lot less energy, are just as bright, last virtually forever and can survive the fluctuations in the power grid.
+    
+* In Spain, architects designing furniture have had to perfect their work in the minds eye before making the prototype. Digital fabrication tools have allowed them to do more, cheaper, faster than before.
+    
+* In the Netherlands, toy makers have used digital fabrication technologies to enable rapid design, manufacture and deployment of high tech playthings.
+
+
+Here we have a technology that’s rapidly coming of age, and it has been shown to be enabling in all the ways that the less developed world has been lacking all this time. What we’re given here on a silver plate is a method of revolutionizing the situation in the world with regard to poverty, sustainability, and so on. Insert your favorite buzzword here.
+
+
+What’s being advocated here is not a system that’s never been seen or tested, but a system that’s been shown to work and now just needs two little nudges to change the way we see the world:
+
+    
+* Large scale deployment
+    
+* Lowered entry level costs
+
+Fabrication is simply the act of making that which you need. It’s what humans have been doing for ages. It wouldn’t be far fetched to say it’s one of the defining points of humanity. Fabrication is what makes us human. But we can always improve our methods. That’s where the “digital” prefix comes along.
+
+'''So what makes fabrication digital? Isn’t the world all analog?'''
+
+The term “digital” is used here to mean “controlled by computers”. For example if you consider an analog watch versus a digital watch, essentially there’s very little difference. The key variation is that the analog watch uncoils a physical spring to turn a gear train which divides time while the digital one uses electricity to power a crystal that pulses periodically to divide time. The end result is the same, and the only thing that allows us to call the digital watch digital is the fact that it uses a discrete electronic component rather than a physical one.
+
+So in traditional fabrication techniques what you do is use analog controllers for making things. Your hand controls a saw or steers the block of wood into an electric jigsaw. Your hand controls the shovel or drives the Caterpillar. In digital fabrication we offload most of the work to computers. We’re not removing the human factor—that would be terrible. No, what we’re doing is pushing the hard work, the repetitive work, the pointless number crunching and thoughtless behavior over to the computer so that you have more free time to be creative or tend to other business. We’re not killing the human factor, we’re maximizing its potential.
+
+One obvious benefit of this is that computers are far better suited than humans to decide things like how to make the best use of a limited supply of material given a certain project, and they’re definitely better at doing the exact same thing a hundred times over than we are. Computers don’t get bored. They don’t get tired. They just work.
+
+Both of these can be achieved easily."
+(http://smari.yaxic.org/blag/category/the-digital-fabrication-primer/)
+
+
+=Discussion=
+
+==What Materials can be manipulated?==
+
+Smari:
+
+"One of the more important questions is exactly which materials can be manipulated using this technology? There are two conflicting answers and both of them are correct.Theoretically speaking there is no limit to what materials can be manipulated. At an atomic level it simply doesn’t matter, and fifty years from now the devices we use for digital fabrication will probably be able to change matter at the atomic level, giving us something like Star Trek style replicators where you just feed the atomic pattern of whatever it is you’re making in and the computer will do the rest.
+
+Practically though, our limitations are based on the machines you’re using each time. The first thing you have to understand here is there’s two categories of machine for digital fabrication: additive machines and subtractive machines.
+
+Currently a typical set up consists of several species of subtractive machine: CNC routers, a laser cutter and vinyl cutter. More high end labs would have a plasma cutter and possibly a supersonic water jet.
+
+
+These machines can handle most wood, with an obvious preference for plywood since it’s cheap, strong, flexible and far easier to cut than denser woods like balsa. The laser cutter can do a number of flat materials such as cardboard, plywood, plastics and can etch glass and anodized aluminum.
+
+Most aluminum sheets of up to 5mm can be cut by the larger CNC router. “Most” here refers more to the blending types—aluminum can be bought in several hundred different blends. Modeling wax (perfect for molding and casting), etchable circuit boards and so on can also be done easily using a CNC router. The vinyl cutter can cut most sheet material like felt, thin sticky copper (for flexible circuit boards—think wearable electronics), and if you feel inclined, paper.
+
+While this list may seem extremely short compared to the idyllic “everything”, the limitations of the materials have not been a significant detriment to development so far. If anything, the limitations have forced people to think up ways of doing things in a slightly cheaper way.
+
+Additive machines are currently far more expensive, but that’s changing. Additive machines provide a far greater level of flexibility than subtractive machines, namely that they have no predefined notion of what anything is shaped like.
+
+Your typical additive machine just mechanically (or magnetically or, somehow) deposits material according to the program given to them. This can be either discrete blocks such as electronics components, or a viscous liquid such as plastic that will harden in place, or anything in between. These are far more complicated and flexible and essentially these are what will be used in the future but currently they’re a bit tricky and not cost effective."
+(http://smari.yaxic.org/blag/category/the-digital-fabrication-primer/)
+
+
+==Cost and Location Considerations==
+
+Smari:
+
+"So what’s all this going to cost? Entry level fabrication laboratories are still costing in the scale of $100.000 with everything set up and ready to go. Equipment costs are roughly half of that, the other fifty thousand USD being shipping, materials and training. Currently, that’s way too high. I can’t afford it, you can’t afford it, and people making less than $1 per day certainly can’t (and they account for about a third of the global population). So somehow we’re going to have to pull that number down very dramatically. We somehow need to lower the bar. But how?
+
+It happens virally over a long period of time. The key thing we have to realize here is that there’s a few categories of costs. Equipment, materials, shipping, training. Each category comes with its own set of overheads and lower limits, but more importantly each category is becoming cheaper at a different rate. The price of equipment is falling more slowly than the price of materials. The price of shipping is falling very slowly indeed (having been falling since the 1500’s). So what we do is take advantage of the different rates. This is called linear optimization. What we’re dealing with is a system of differential equations.
+
+So by lowering shipping costs and dropping equipment costs entirely but accepting significantly higher materials and training costs everything will get cheaper for us much faster. This is okay too, since training propagates naturally in this environment—those who use the technology learn how to use it—we’re going to have to teach people this stuff anyway. And the materials we use are used again and again in the laboratories anyway.
+
+So how do we drop the equipment costs? By using so called von Neumann machines: machines that build machines. It won’t happen overnight, but starting with traditional machines we build machines that can self-replicate, such as the RepRap. Then each lab can be used to produce the necessary equipment for the next lab. They literally grow out of each other. This follows a 2n growth curve, which basically means from two you get four, from four you get eight, and so on. Doubling each time. Your tenth generation has 1024 labs. This is assuming you only make one of each thing each time.
+
+You start off by selecting a hub, a point where materials are available in some abundance. You set up your mother lab there. The primordial goo of digital fabrication in the area. Then you stand on the street corner and wave your hands about franticly and shout, “who wants to make almost anything?”
+
+Several nearby suburbs, villages or areas will probably respond, in which case you bring their people over and charge them a nominal fee, something reasonable, and you teach them how to use the equipment. As part of their course work at your lab they build one item of each machine for themselves. Then not only will they have created all that is needed for the next lab over but they will also understand the inner workings of each machine well enough to give other people the same tutorial.
+
+They then go to their homes and take their new machines with them, paying the mother hub for having taught them the trade and supplied the materials. Then they will purchase materials of their own, possibly from the mother hub, and repeat the process."
+(http://smari.yaxic.org/blag/category/the-digital-fabrication-primer/)
+
+=More Information=
+
+For the full primer see here at
+http://smari.yaxic.org/blag/category/the-digital-fabrication-primer/
+
+
+[[Category:Design]]
+
+[[Category:Books]]
+
+[[Category:Manufacturing]]

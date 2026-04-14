@@ -1,0 +1,46 @@
+
+'''= "a decentralized peer-to-peer database for storing and editing OpenStreetMap nodes, ways, and relations".'''
+
+URL = 
+
+=Description=
+
+'''1. Gregor MacLennan:'''
+
+"OpenStreetMap tools are a great fit for our partners: they allow anybody in the community to learn and collaborate to create a map, and OSM makes no assumptions about what is mapped or how. However, collaborating on OSM requires an internet connection, and the global OSM database is not the appropriate place for more sensitive community information.
+
+That is why we have created osm-p2p, an OpenStreetMap database that does not require a server or central source of truth. Every device – laptop, phone or tablet – can have its own database with a copy of the map. Users can synchronize edits with other users over the internet, a local network connection, or synchronize edits to a USB drive and send it on a canoe downriver to the next village."
+(http://www.digital-democracy.org/blog/openstreetmap-without-servers/)
+
+
+'''2. James Halliday:'''
+
+"osm-p2p is a decentralized peer-to-peer database for storing and editing OpenStreetMap nodes, ways, and relations. It includes a node.js server that implements the core functionality of the OSM API, or it can be used completely in the browser using IndexedDB for persistent storage.
+
+osm-p2p development was driven by the needs of the Amazonian indigenous communities with whom we work. Our partners want everybody to be able to participate and collaborate in the process of creating a map, in remote regions without an internet connection."
+(http://www.digital-democracy.org/blog/osm-p2p/)
+
+
+=Characteristics=
+
+"We built osm-p2p in response to the needs of the indigenous communities we work with:
+
+* Editing and collaborating on map data should not require an internet connection.
+
+* Every community should have a full copy of the data to inform the local political process and to increase redundancy
+
+* Decisions about what data to share with whom are up to the local communities, not the software nor a remote hosting provider
+
+* Collecting and editing map data should not require specialized expert skills."
+(http://www.digital-democracy.org/blog/openstreetmap-without-servers/)
+
+=More Information=
+
+* technical intro: http://www.digital-democracy.org/blog/osm-p2p/
+
+
+[[Category:Geography]]
+
+[[Category:Maps]]
+
+[[Category:P2P Infrastructure]]

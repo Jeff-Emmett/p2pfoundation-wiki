@@ -1,0 +1,141 @@
+
+'''= " a method by which a cryptocurrency blockchain network aims to achieve distributed consensus".''' [https://en.wikipedia.org/wiki/Proof-of-stake]
+
+
+=Description=
+
+'''1. From the Wikipedia:'''
+
+"Proof-of-stake is a method by which a cryptocurrency blockchain network aims to achieve distributed consensus. While the proof-of-work method asks users to repeatedly run hashing algorithms to validate electronic transactions, proof-of-stake asks users to prove ownership of a certain amount of currency (their "stake" in the currency). Peercoin was the first cryptocurrency to launch using Proof-of-Stake. Other prominent implementations are found in BitShares, Nxt, BlackCoin, NuShares/NuBits and Qora."
+(https://en.wikipedia.org/wiki/Proof-of-stake)
+
+
+'''2. From the Bitcoin wiki:'''
+
+"Proof of Stake is a proposed alternative to Proof of Work. Like proof of work, proof of stake attempts to provide consensus and doublespend prevention (see "main" bitcointalk thread, and a Bounty Thread). Because creating forks is costless when you aren't burning an external resource Proof of Stake alone is considered to an unworkable consensus mechanism.
+
+It was probably first proposed here by Quantum Mechanic. With Proof of Work, the probability of mining a block depends on the work done by the miner (e.g. CPU/GPU cycles spent checking hashes). With Proof of Stake, the resource that's compared is the amount of Bitcoin a miner holds - someone holding 1% of the Bitcoin can mine 1% of the "Proof of Stake blocks".
+
+Some argue that methods based on Proof of Work alone might lead to a low network security in a cryptocurrency with block incentives that decline over time (like bitcoin) due to Tragedy of the Commons, and Proof of Stake is one way of changing the miner's incentives in favor of higher network security."
+(https://en.bitcoin.it/wiki/Proof_of_Stake)
+
+
+'''3. Gleb Kostarev:'''
+
+"Due to the amount of computational power required, PoW is costly and energy intensive. A whole industry has grown up around creating custom chips designed only for mining. Proof of stake (PoS) is an alternative approach that has gained popularity in recent years and that requires no specialist hardware. In PoW, hashrate determines how likely a participant is to add the next block of transactions to the blockchain. In PoS, the participant’s coin stake determines their likelihood. That is, each network node is linked to an address, and the more coins that address holds, the more likely it is that they will mine (or ‘stake’, in this instance) the next block. It is like a lottery: the winner is determined by chance, but the more coins (lottery tickets) they have, the greater the odds. An attacker who wants to make a fraudulent transaction would need over 50% of coins to process the required transactions reliably; buying these would push the price up and make such an endeavour prohibitively expensive.
+
+The PoS system was pioneered by Nxt. Because it is not energy-intensive, like PoW, the costs do not need reimbursing in the same way as they do for bitcoin. Thus PoS systems are well suited to platforms where there is a static coin supply, without inflation from block rewards. Stakers’ rewards consist only of transaction fees. This is the approach taken by most crowdsale-funded platforms, where tokens are distributed based on investment, and diluting this with more coins would be viewed unfavourably.
+
+Proof of stake is now a well-established consensus mechanism, but is not often used in its original form. Two variations, LPoS and DPoS, offer certain advantages."
+(https://blog.wavesplatform.com/review-of-blockchain-consensus-mechanisms-f575afae38f2)
+
+
+=Typology=
+
+Everest Pipkin:
+
+"Proof of stake coins use a variety of mechanisms to determine “lottery ticket” allocation, but it essentially boils down to: 1 coin in your wallet, one lottery ticket.
+
+* Proof of capacity gives you a lottery ticket per available hard drive segment.
+
+* Proof of assignment gives you a lottery ticket per smart device / internet of things consumer electronics good you own.
+
+* Proof of donation gives you a lottery ticket per donation to a charitable organization."
+
+(https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3)
+
+
+=Example=
+
+==Using P-o-S for the Energy-related Blockchain projects: [[PowerLedger]]==
+
+Max Opray:
+
+" He claims the energy-consumption issue has been averted by adopting a vastly more efficient form of blockchain than that which is used by bitcoin.
+
+Whereas most blockchain relies on proof-of-work processes, Power Ledger employs something called proof-of-stake. The former consumes vast amounts of energy as it involves solving ever-more complicated mathematical equations, but proof-of-stake blockchains are based on pseudo-random chance.
+
+“It uses the fraction of energy of conventional blockchain. Proof-of-stake is ideally suited for energy,” Martin says.
+
+One of the leading critics of blockchain’s energy-consumption backs the approach. Michel Berne, the director of economics studies at Telecom management school in Paris, has been highly critical of the carbon footprint of blockchain, but he thinks, for energy markets at least, proof-of-stake could be a solution.
+
+“Yes, I believe that proof-of-stake blockchain applications can validly compete with other non-blockchain based solutions in energy trading,” he says.
+
+“Peer-to-peer energy trading is nascent, notoriously difficult to manage and blockchain solutions might be useful.”
+
+He questions whether proof-of-stake could completely phase out proof-of-work blockchain in other sectors however, as he is unconvinced it offers the same level of security that is the point of blockchain in the first place."
+(https://www.theguardian.com/sustainable-business/2017/jul/13/could-a-blockchain-based-electricity-network-change-the-energy-market)
+
+=Discussion=
+
+==The unfairness of proof of stake==
+
+Enric Duran writes:
+
+"Proof of stake creates money for those who have savings. Who
+has more savings creates more money. For example if someone has 1
+milion of coins and the % of money creation is 3%, this person can
+create 30000 coins per year; if someone have 10000 coins, she only can create
+300 coins per year. Just as with interest in the conventional banking world. Proof
+of stake makes the rich richer."
+(email, July 2017)
+
+see [[Proof of Cooperation]], the proof used in Faircoin2, for a just alternative.
+
+
+==Proof of Stake is Oligarchic and Inferior to PoW==
+
+(In defense of Proof of Work in the context of the switch by Ethereum)
+
+
+Bryan Daugherty:
+
+"In an ideal world, proof-of-stake solves one of the digital currency industry’s biggest problems—the infamously high carbon footprint of block reward mining. Digital currency’s excessive energy consumption is a well-known fact and one that has led to proof-of-work (PoW) becoming synonymous with outrageously high energy expenditures. But this conflation doesn’t provide an accurate picture of PoW or PoS.
+
+Proof-of-work blockchains were designed to scale to provide the security and interoperability required to improve and replace existing currency exchanges. Scaling proof-of-work to allow more transactions per block per second significantly reduces energy consumption by default. That a simple change in consensus mechanism will provide a more sustainable, affordable, and scalable protocol than proof-of-work is baseless.
+
+That’s because proof-of-stake networks like Ethereum’s Beacon Chain aren’t blockchains. They’re distributed ledger networks that mimic the structure and processes of real blockchains without any utility, security, or scalability. So, what does PoS actually do? Precisely what its name suggests—it centralizes power back into the hands of rich stakeholders.
+
+Proof-of-stake is nothing more than proof of oligarchy. It establishes a validation system through which a small group of people with the most money has control over the network. Where PoW distributed objective consensus to miners outside of the network, PoS consolidates power to a subjective, in-network minority. This is clearly the opposite of a decentralized, peer-to-peer network.
+
+What’s more, even though the transition to the PoS Beacon Chain was seemingly smooth, Ethereum is still sacrificing the robust security protocol needed to protect its users. Proof-of-work was created to be the most secure system in the world. It eliminates the possibility of double spending, protects against Sybil attacks, and allows for a system of validation that exists outside of the network. Switching to any other consensus model is sacrificing security, and in the case of PoS, you get nothing in return.
+
+Yes, PoS is assumed to use 99% less energy than PoW, but this is little more than an idealistic theory because no system yet exists to measure the carbon footprint of PoS. This means that as damaging cybersecurity breaches continue to make headlines, Ethereum owners accept substantial risk in exchange for ‘projected returns’ that aren’t based on any factual assumptions of the new economic dynamics.
+
+Imagine if Visa was using too much energy to protect its customers’ data and switched to a system that claimed to use less energy but provided a fraction of the security. Would you continue to trust Visa or take your business elsewhere? That’s what’s happening here. We all want a more sustainable and eco-friendly future, but it can’t be at the cost of necessary security. 
+
+Insufficient protection is not the only price Ethereum users will pay for improbable sustainability. Hefty “gas fees,” which have reached up to $194 per transaction, aren’t going away with The Merge. Ethereum’s own website says that The Merge will not result in lower gas fees or noticeably faster transactions because the transition is not an expansion of network capacity. Realistically, the probability of forks and reduced rewards means The Merge will likely lead to increased gas fees.
+
+If the network has already reached its maximum capacity and still can’t scale, what problems do transitioning to proof-of-stake actually solve? None. That’s why The Merge requires an upgrade called layer 2, which will attempt to lower fees, increase security, and expand utility by, you guessed it, addressing scalability issues.
+
+They know that scaling is the answer, yet they seek it in all the wrong places. To add salt to the wound, Ethereum cites the Buterin coined blockchain trilemma as an excuse for the network’s inability to provide the unmatched properties of PoW. This theory suggests that while a perfect blockchain is decentralized, secure, and scaled, no such blockchain exists because in order to have two of these three properties, you have to sacrifice one. 
+
+This theory falls apart at the seams by simply understanding the intended use case for proof-of-work. With PoW all three properties are achieved because they exist simultaneously, and the more transactions there are on the network, the more decentralized and secure it becomes."
+
+(https://coingeek.com/proof-of-stake-is-proof-of-misunderstanding/)
+
+==From Proof of Work to [[Proof of Value]]?==
+
+
+
+Julian Feder:
+
+"The PoW protocol allows the Bitcoin network to reach consensus regarding the contribution of each node in the system to the authentication process needed to verify transactions. The moment such a consensus is reached, contributors are rewarded with freshly minted Bitcoins.
+
+The PoW model restricts itself to an algorithmically quantifiable and verifiable action, e.i how much computing resources you’re investing into the network, other value creating actions – like suggesting improvements to the system, writing code, creating software updates or anything their like, which geniune people have to do, are entirely of the scope. Bitcoin knows how to create and distribute value in a decentralized fashion, as long as no dirty humans with opinions are involved.
+
+There’s another major problem with the Proof of Work scheme, especially if one would use it to determine the future of the entire system the way Hearn and his colleges from Bitcoin XT suggested (Voting with hash power to decide on the blocksize): Computing resources are a tradable commodity. Everyone with enough resources is capable of centralizing the entire system under his dominion, both in terms of the revenue stream created through mining, and in deciding how the system behaves, given voting with hashpower would become a thing. This is probably the reason why some consider Bitcoins “Lack of democracy” being such a great trait.
+
+In the early days, many were terrified that some financial interest group like the Fed or some other statist syndicate, consisting of cigar smoking man in black, might bring Bitcoin down in exactly this way. Luckily, that didn’t happen. You only have a hashpower triopol generating about ⅔ of the network’s total hashrate, most of which resides in the People’s Republic of China, behind a stasi-type firewall, making the system painfully slow.
+
+There are alternatives to PoW, like “Proof of Stake”, where the amount of minable blocks is restricted to the amount of Bitcoins a miner holds. This would make it very costly to establish a monopoly position, but would officially transfer the ownership of the network to the 1% Bitcoin oligopoly, which currently holds about 99% of the entire Bitcoin supply (sounds familiar?).
+
+So it seems that all of these schemes do a very good job in decentralizing the technical contribution needed to keep the network up and running, but have very little to do with making decisions, improvements and progress. However, it should be self evident that every system that involves genuine people, as automated and well designed as it first may appear to be, will at some point require adjustments, all of which will most probably necessitate decisions, have consequences for various interest groups and be subject to criticism. All these decisions and adjustments do not only require means to form an informed conesus, they also require a compensation mechanism that encourages improvement and gains the attention of highly skilled professionals – and above all – a sybil proof scheme to keep the system truly decentralized.
+
+But is that even possible? Could we play the same trick, PoW plays on computing power, on human contributions to an evolving organisation? Including assessment of value, establishment of consensus and compensation via cryptocurrency?
+
+At Backfeed we believe that the answer to this question is yes, and we’ve developed exactly such a mechanism, which not by accident goes under the name Proof of Value, or PoV, " (http://magazine.backfeed.cc/the-bitcoin-debacle-making-the-case-for-decentralized-governance/)
+
+[[Category:Cryptoledger Applications]]
+[[Category:Technology]]
+[[Category:Encyclopedia]]

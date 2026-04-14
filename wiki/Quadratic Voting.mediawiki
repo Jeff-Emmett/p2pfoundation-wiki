@@ -1,0 +1,118 @@
+'''= "a collective decision-making procedure where each voter is endowed with a budget of vote credits to spend to influence the outcome of a range of decisions".'''
+
+
+=Contextual Citation=
+
+"Quadratic voting, such as that implemented by Democracy Earth, allows people to express strong preferences for specific issues in situations where there is equality of representation to begin with. However, when it comes to cryptocurrency and funding of DAOs, representation is always relative to the amount of money that someone donates, even in quadratic funding, and the funding is independent of the people who are affected by the voting and funding."
+
+- Grace Rebecca Rachmany [https://www.coindesk.com/daos-govern-world-pace]
+
+
+=Description=
+
+'''1. Julien Carbonnell:'''
+
+"Quadratic Voting is a collective decision-making procedure where each voter is endowed with a budget of vote credits to spend to influence the outcome of a range of decisions. It has been imagined by Stephen P. Lalley, professor of Statistic and Mathematics at the University of Chicago, and Glen Weyl, economist and principal researcher at Microsoft Research New England.
+
+Created in the context of governing crypto-currency leaned communities, the term quadratic refers to the possibility to buy supplementary votes for the cost of the square of the number of the votes bought. It means: 1 vote costs 1 credit, 2 votes cost 4 credits, 3 votes cost 9 credits, 4 votes cost 16 credits, etc. In this model, participants express how strongly they feel about an issue rather than just if they are in favor or opposed to it. The quadratic nature of the voting means that a voter can use his votes more efficiently than by spreading them across many issues. For example, with a budget of 16 credits, a voter can apply 1 vote to 16 issues or if he feels very concerned by a single issue, apply 4 votes, at the costs of 16 credits, to this unique issue. In bigger communities, or in the sense to shorten the delay of voting phases, it’s possible to implement a model in which the network nominates a random number of voters for each voting proposal. This scenario would avoid the speculation behaviors too, and prevent strategic alliances because it make the voters prevision uncertain.
+
+The beauty of quadratic voting is that the cost of buying votes increases very rapidly, which prevents the temptation by the richest members to continuously steal the decision-making to the others. But it keeps subject to the collusion attack, in which multiple voters conspire to achieve a specific outcome. Finally, the major problem in the application of this voting model is that it could work only with a secured validation identity system while most of the blockchain and crypto-currency users operate under pseudonymity or anonymity."
+
+(https://medium.com/@julien.carbonnell/civil-society-futures-of-citizenship-and-democracy-through-digital-era-24e28c27276)
+
+
+'''2. Benjamin Life:'''
+
+"Functional pluralism isn’t just an armchair philosophy or consultant-speak for organizational designers, it’s becoming increasingly practical thanks to new mechanisms for collective decision-making that move beyond binary choices.
+
+Traditional voting mechanisms force binary outcomes. Even when we vote on multiple options, we typically use methods (from ranked choice voting to majority rule) that produce individual winners. This works fine when there genuinely should be only one outcome—when we’re electing a single mayor, for instance. But it’s terrible when we’re trying to allocate resources across multiple valuable initiatives or signal varying levels of support for different strategies.
+
+Enter quadratic voting and quadratic funding—mechanisms explicitly designed to surface and support plural preferences.
+
+Quadratic voting allows people to express not just binary preferences but weighted intensity of preference. Instead of one person, one vote, participants receive a budget of “voice credits” that they can allocate across multiple options. The brilliance of the mechanism is that, unlike dot voting, votes cost quadratically. Your first vote on an option costs 1 credit, your second vote on that same option costs 4 credits, your third costs 9 credits, and so on. This creates a natural check on tyranny of the majority: you can feel very strongly about something and spend many credits to express that intensity, but you pay an increasing price for doing so, which prevents a bare majority from completely dominating outcomes.
+
+The result is a much richer signal about collective preferences. Instead of “51% want A, 49% want B, so we do A,” you might learn that “people moderately support A, but a significant minority feels very strongly about B, and actually quite a few people see value in both.” That’s actionable information for plural outcomes.
+
+Quadratic funding takes this insight and applies it to resource allocation. Originally developed by Vitalik Buterin, Zoë Hitzig, and Glen Weyl, quadratic funding is particularly powerful for supporting public goods. Here’s how it works: individuals contribute to projects they care about, and a matching pool amplifies those contributions based on the breadth of support rather than just the total amount contributed. The matching formula rewards projects that have many smaller contributors over projects that have a few large contributors.
+
+The effect is elegant: a project with 100 people contributing $1 each receives more matching funds than a project with 1 person contributing $100, even though the raw totals are the same. The mechanism is essentially saying: “broad-based support is more meaningful than concentrated support” and allocating resources accordingly.
+
+Why does this matter for functional pluralism? These are structural mechanisms that create a way to fund multiple approaches simultaneously based on distributed preference rather than centralized decision-making. Instead of an organization’s board or leadership team deciding which strategic initiative to fund, the community or network can signal support for multiple initiatives, and resources flow accordingly."
+
+((https://omniharmonic.substack.com/p/fork-you)
+
+
+'''3. Adam Rogers:'''
+
+"The result of some concept work by a Microsoft Research economist named Glen Weyl, quadratic voting is designed to force people to express their honest opinions about their choices by attaching a cost. One vote costs one unit of value—in its purest form, you would literally buy that vote with your own hard-earned American dollars. But not so fast, because the cost of a vote increases—by the number of votes times itself, to be precise. (That's the "quadratic" part.)2 So two votes cost four dollars; three votes cost nine. Ten votes? One hundred dollars. The point is, you can yell as loudly as you want, but louder yelling costs more—so you have to be really incentivized to do it.
+
+“Fundamentally, quadratic voting addresses the problem of the tyranny of the majority, a standard criticism of democracy,” Weyl says. “Standard rules are based on the notion that everybody is exactly the same and cares the same amount. If you doubt that’s a problem, think about the plight of African Americans in the United States, or the drug war, which dramatically affects certain groups of people.” But with quadratic voting, you can vote harder on what’s closer to home. And when the vote is over, all the money in the pot gets distributed to each voter equally, which is supposed to sort of re-grade the playing field for next time.
+
+Like a lot of other similarly intricate ideas, quadratic voting sets out to solve a fundamental problem in the field of “social choice,” which is to say, how groups of people choose what they want. It may seem like the purest solution is one-person-one-vote, sometimes delightfully abbreviated as “1p1v.” But it doesn’t work as well as it should. Like, a “plurality election” is where the candidate with the most votes wins, but when you have multiple candidates, it’s possible for someone to get a small number of votes but still win if his or her total was higher than the next candidate down. (That happens in a crowded presidential primary.) The American Electoral College system allocates points on a state-by-state, winner take all basis, which means someone can lose the 1p1v “popular” vote by quite a lot and still win. (Hello, Mr. President.) And in the US, slightly more than half of voters, or half of congress, can enforce their will over the other less-than-half—even if the numbers are really close or the will is really disproportionate.
+
+Plenty of other options exist. In a “Borda Count,” named after the French scientist Jean-Charles de Borda, people put candidates in order of preference. There’s an approach called “antiplurality,” where everyone chooses their least favorite candidate, and whoever gets the fewest votes wins. And what you’d like in any multi-choice election is for the “Condorcet winner” to also be the actual winner—which is to say, the thing that would beat all other things in head-to-head races should also win the overall race."
+
+(https://www.wired.com/story/colorado-quadratic-voting-experiment/)
+
+=Characteristics=
+
+Ralph Horat and Jan Baeriswyl:
+
+"Quadratic voting is a collective decision-making mechanism that
+proposes an alternative to one-person-one-vote. Individuals allocate votes to express the degree or strength of their preferences, not just a binary direction of their preferences. 
+
+
+The mechanism works as follows:
+
+1. Each citizen gets the same (yearly) budget of Vote Tokens
+
+2. The more strongly the voter feels about an issue, the more
+Vote Tokens she can allocate to increase her voice.
+
+3. The number of Vote Tokens required for an incremental
+vote increases quadratically (e.g. 1 Vote Token to get 1
+vote, 4 Vote Tokens to get a second vote, etc.)."
+
+(https://cdn.prod.website-files.com/62dbb0618642e951d91a0032/640080c27d68f806147d703a_Whitepaper_Cosmo-localism.pdf)
+
+
+=Examples=
+
+* Colorado: https://www.wired.com/story/colorado-quadratic-voting-experiment/
+
+
+==Quadratic Voting in Art/Culture DAO's==
+
+"“Launay: ''And in order to do this, '''both CultureStake and Black Swan use quadratic voting'''. Can you expand on this relatively new conception of voting?''
+
+Rafferty: When using quadratic voting (QV) for decision-making, each user has multiple votes that can be allocated to various positions, or they can abstain from voting until the next round without omitting their vote. This is interesting in relation to seeing voting as more of a social force than just a point system. It offers collective decisions to be made without the tyranny of the majority, by allowing people to vote on how strongly they feel about an issue, rather than if they are in favour or not. This also means that marginalised voices could in effect put all of their votes in one place to see one proposal go through, whereas someone else may distribute their funds equally to two proposals rather than just choosing one. This is a new way of looking at voting principles which unearths preconceived ideas and tropes that are rooted in our make-up.
+
+Catlow: By forcing people to indicate not just their preference, but also the strength of their support for a proposition, QV puts more information into the system, making a vote less vulnerable to interpretation by the powers that be. Also, because it “costs” voters more of their voting credits to express a strong opinion, it promotes a more nuanced and reflective decision-making. Quadratic voting challenges the idea that democracy has reached its pinnacle with the current one-person-one-vote system. It prompts a conversation about motivations, incentives and obstacles for engaging in collective decision-making processes, at a time when we desperately need better ways to coordinate at scale.
+
+However, one of the big problems with QV is that unless you’re someone who has a feeling for numbers, it’s quite hard to really understand the impact of your voting. One person, one vote feels much more straightforward — you can visualise it as an analogue process — tick a box on a piece of paper and put it in a ballot box. With QV you have to estimate the results, calculate how you want to distribute your votes, and work out how this will affect your influence as an individual in a collective decision. QV only really becomes intelligible to most people through well-designed digital interfaces, so there is an access problem.”
+
+(https://so-far.online/many-headed-hydras/)
+
+
+=Discussion=
+
+=Potential Advantages=
+
+Ralph Horat and Jan Baeriswyl:
+
+"Quadratic voting (QV) can have the following advantages over
+the one-person-one-vote system:
+
+▪ QV avoids pitfalls of traditional voting systems such as
+majority rule and voter apathy by allowing voters to express how important a given issue is to them.
+
+▪ Focus on core issues is built into the voting system, acting
+as a curation function for the political discourse.
+
+▪ More granular understanding of trade-offs and relative
+preferences required in QV can lead to improved decision making.
+
+(https://cdn.prod.website-files.com/62dbb0618642e951d91a0032/640080c27d68f806147d703a_Whitepaper_Cosmo-localism.pdf)
+
+[[Category:Crypto_Governance]]
+[[Category:Democracy]]

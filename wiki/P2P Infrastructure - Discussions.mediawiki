@@ -1,0 +1,626 @@
+Curated selections from the discussions on P2P Infrastructure at the Google Group: [http://groups.google.com/group/building-a-distributed-decentralized-internet Building a Distributed Decentralized Internet]
+
+
+This documentation project is related to the [[ContactCon]] conference to be held on October 20, 2010 in NYC.
+
+
+=Contributions=
+
+==Venessa Miemis==
+
+Venessa Miemis:
+
+- As we identify and bring in various projects, it is crucial to list
+them according to what layer they address. (you can see the layers of
+OSI here http://en.wikipedia.org/wiki/OSI_model )
+ 
+- Most of the projects I've seen are simply software that has some p2p-
+ish aspect. Slapping that onto a network with ISP's and a backbone,
+and an oligopoly of router equipment isn't going to solve either
+provisioning/bandwidth or governance issues. We need to support
+interest in both hardware and software solutions in order to really
+build a new p2p net.
+ 
+- I think when people feel that the pieces of the distributed internet
+puzzle are resolved, they are mostly referring to a software layer,
+and we have a lot of variations on the software layer. Generally they
+depend on a functioning 'hardware' stack, usually up to the transport
+layer (e.g. ~TCP role in the OSI model). I agree that the hardware/
+software division is a good one. The point about the distinction being
+fuzzy is valid, although we can probably expect anything up to TCP to
+be a hardware implementation (http://en.wikipedia.org/wiki/
+TCP_Offload_Engine), or 'firmware'.
+ 
+- distributed hardware a big issue, and until solved no amount of
+cleverness in P2P software protects against the Egypt attack at the
+ISP (or cutting the big wire, or shooting down the satellite etc.)
+ 
+- A truly general purpose P2P implementation - as opposed to the
+specific use cases currently addressed by a lot of existing P2P
+software (file sharing, social interaction, processor pooling & memory
+sharing) is a very hard problem. This is where the redundancy and
+coherence algorithms really get tricky, especially if the network has
+high latency & low reliability, which would seem to be a necessary
+design constraint. We're really talking about a distributed filesystem
+and probably OS. The current extent of our technology seems to suggest
+we can really only do that usefully in a data centre, and somewhat
+less effectively between data centres.
+ 
+- Problem: A user enters in a URL, and brings up a web page that
+behaves in an application-like fashion, communicating frequently with
+an OLTP datastore to send and receive significant amounts of data.
+Potential first step to solution: assume that the OLTP datastore and
+associated web host is *not* distributed - i.e. it exists in a big
+data centre (like it does now). What *is* distributed is the hardware
+route to that data centre. Trying to implement the whole hog here is
+just not yet within our grasp from bandwidth, connectivity, latency
+and other perspectives. Implementing the simpler solution protects
+against the Egypt attack (i.e. an Egyptian can tweet). That said, the
+simpler solution is still staggeringly difficult, because our problem
+is really the hardware one, not the software one
+ 
+----
+ 
+What is really possible, given a society dominated by hostile forces?
+ 
+Problem: Network topologies robust to random failures are NOT robust to
+targeted attacks.
+Network topologies robust to targeted attacks are NOT robust to random failures.
+ 
+Potential Solution: Move beyond a singular topology to a plural one.
+ 
+In other words, Imagine a dual-network with TWO routing methods and
+TWO topologies, and requests are sent in parallel along both networks,
+so that if nodes are down in one network, data is routed via the
+other.
+ 
+TWO is a minimum, though.
+ 
+The pluralization of networks goes back to the pluralization of
+politics taken up by Connolly in his work The Ethos of Pluralization
+( http://www.upress.umn.edu/Books/C/connolly_ethos.html )
+ 
+It is another example of why code people should know theory, and
+theory people should learn code. Cross-domain knowledges.
+ 
+scale-free networks are robust to random failures, but vulnerable to
+targeted attacks because you can simply take out the hubs first and
+isolate most of the network parts
+from the other parts
+ 
+Potential Solution: A mesh network using a single routing method/topology. This
+architecture does not preclude multiple routes (in fact in a network
+with a lot of nodes, there should be multiple routes). This would seem
+to be an architecture robust to random failures, but I'm not sure why
+that architecture would make it any less robust to targeted attack
+than our current internet - in fact it is probably more robust (from a
+failure/attack perspective).
+ 
+---
+ 
+I think there is a tendency for stagnation on the 'next steps' angle
+because we aren't clear enough on the problem yet, and nailing a
+solution in this situation is more or less impossible.
+ 
+- I'm not sure the goals/requirements are clearly defined. For example
+- 'an internet that can't be shut down' and 'distributed internet'
+aren't synonymous.
+ 
+- 'An internet that can't be shut down' isn't actually possible in the
+strictest sense, we're talking about varying scales of catastrophe/
+attack - we need to define what we expect to survive and what we don't
+- i.e. what is the worst case scenario we should be trying to design
+for. e.g. Do we expect both 'Egypt shutdown' and/or 'Libya shutdown'
+to not be possible?
+ 
+- What does 'shut down' mean. Do we mean everyone can always access
+the internet if they want to? e.g. in the Egypt scenario, the internet
+was still operational, but Egypt was unable to get access to it.
+ 
+- I think we do want a distributed internet (hardware and software),
+as it will be more resilient, but that can take many forms - indeed
+what we have now is distributed to a large degree. What do we mean by
+distributed? An increase in resilience may deliver a reduction in
+performance and micro-level reliability.
+ 
+- We don't really identify the characteristics of the new internet -
+it seems implicit that we expect it will operate much the same as the
+current internet in terms of what we can do with it, but if this is
+actually a design constraint we have, then our options are
+significantly reduced. e.g. performance and reliability in our new
+network will be exceedingly difficult to match to our current network.
+ 
+My feeling is that when we define those things above clearly, we will
+discover we don't have the technology to achieve them. As we scale
+back our expectations, to something we can achieve, we may discover
+that the wins we get aren't worth it yet - the internet we have is our
+best option for the moment, or that the direction of our technological
+advancement is naturally destined for the architecture we describe -
+we are already on the best path.
+ 
+Regardless of the result of the analysis (achievable or not) defining
+the problem and goals clearly will make it much easier to work out the
+next steps - even if that next step is to 'eagerly await the future,
+keep oiling its cogs, and make sure nefarious interests don't hinder
+it'
+
+
+
+==Colin Hawkett: P2P as Utopian for the Cloud==
+
+
+Colin Hawkett <hawkett@gmail.com>  Apr 22 12:59AM :
+ 
+"Firstly, my take on this is that cloud is not an optional architecture - we
+didn't make a mistake and build yet another single-point-of-failure
+architecture. Yes it is a single point of failure (sort of), but there is no
+current alternative. Before AWS-style cloud there were insurmountable
+hardware costs for a software startup that wished to operate at the massive
+scale required for 'global brain' style software. VC ruled, because that was
+(more or less) the only way to get the money to get the hardware to scale.
+The current energy and diversity and enthusiasm and belief in possibilities
+in the tech space is a direct result of the commoditisation of the large
+scale server infrastructure. This is the bleeding edge of commodity tech,
+not a brain-fart architecture. We exist right now in a chaotic space where
+problems and ideas and possibilities and capabilities are colliding in crazy
+new ways. Fresh meat. That crucible doesn't come for free, and the single
+point of failure in cloud architecture is by no means the only issue we will
+encounter. Interestingly, I think the empowerment of tech startups over VC
+means that we can start seeing efforts that target sociological and ethical
+goals rather than the same old business imperatives. This is a good thing,
+and will finally allow us to leap out of that local minima that has business
+and ethics at loggerheads, and start proving that good society and good
+ethics is also good business.
+ 
+When I say there is no alternative, I mean right now we do not have the
+technology to do what is done in a data center any other way. I'm sure many
+would say: 'but that is why we want a mesh system, this is exactly the
+point, we don't want this single point of failure/control hassle'. You can't
+do what a data center does with a geographically distributed P2P mesh
+system. Not yet. The problem is latency and bandwidth - especially at range.
+Yes we have various distributed and P2P systems that do all sorts of things
+- but the problems they solve are all edge cases in the overall world of
+distributed computing. No P2P system can handle high volatility data outside
+a data center - data that changes frequently and unpredictably and must
+remain consistent and accessible by all clients within reasonable time
+bounds. This is, more or less, what a data center (cloud computing) can do.
+ 
+I'm totally on-board with the utopian architecture being a P2P one. In fact,
+a decent model for our ideal P2P distributed open mesh system already exists
+- internally within a data center. What goes on in there is a shedload of
+nodes distributing work across the system in a highly fault tolerant way.
+But it cannot do this effectively between data centres. It is the reason why
+Amazon AWS has availability zones - you deploy your cloud app to Europe, US
+or Asia Pacific etc. Not to 'AWS' as a global entity. Essentially, Amazon
+asks you - which data centre do you want to run at? You have to choose
+because the technology does not exist on this earth for them to synchronise
+effectively between data centers for the high volatility data most web apps
+deal in. If you look at the outage, it is actually at the US-EAST-1
+datacenter<http://eu.techcrunch.com/2011/04/21/amazon-ec2-goes-down-taking-with-it-reddit-foursquare-and-quora/>.
+Not AWS as a whole. So in some ways, the limitations imposed by geography
+have forced an AWS architecture whereby total system failure does not bring
+everything down. This is a good thing, and perhaps an architecture we should
+retain even after the tech constraints disappear.
+
+
+
+==Miles Fidelman: Arrogance and Naivite of some discussions on NextNet==
+
+'''1.'''
+
+"Somehow, it seems to me that starting from scratch, and/or reinventing 
+the wheel (both technically, and organizationally) is antithetical to 
+what seems to be the underlying theme here (seems to me that the bigger 
+open source projects - Debian Linux, Apache, Drupal, the Internet and 
+Web as a whole - embody the spirit of cooperative infrastructure 
+development; while going off and starting from scratch embodies just the 
+opposite).
+ 
+As the Declaration of Independence puts it: "When in the Course of 
+human events it becomes necessary for one people to dissolve the 
+political bands which have connected them with another and to assume 
+among the powers of the earth, the separate and equal station to which 
+the Laws of Nature and of Nature's God entitle them, a decent respect to 
+the opinions of mankind requires that they should declare the causes 
+which impel them to the separation."
+ 
+Or in a narrower context: People fork open source projects all the time 
+- sometimes for good reasons, sometimes not. Some forks survive, some 
+prosper, some go nowhere. Generally, at least in the world of Linux 
+distributions, the folks who create a fork give credit, and make a 
+statement about what they're doing different, and why (be it a technical 
+avenue, a different packaging model, a different model for releasing new 
+versions, etc.).
+ 
+What's being proposed here sounds a lot like both starting from scratch 
+and reinventing the wheel - rather than building on stuff that's already 
+around, and contributing to / working with existing groups. Which 
+brings us back to the questions of what and why? What requirements are 
+not being met? What's being done currently that gets in the way of 
+larger goals?
+ 
+Before setting off on a major effort (and believe me, developing and 
+then supporting a new platform is a huge effort), what's the rational? 
+Why not simply pick an existing platform, or platforms, (Drupal, Plone, 
+Wordpress, Joomla, Media Wiki all jump to mind) and start writing 
+plug-ins - seems like a far more effective way to try new ideas."
+
+
+
+
+'''2.'''
+
+"I can't quite put my finger on it, but there's this strange combination
+of arrogance ("wow, we discovered this big problem of
+building a censorship- and disruption-resistant distributed,
+decentralized Internet") and naivete ("we can solve this problem
+quickly and easily by building global infrastructure, with just a few
+dollars, and a few volunteer engineers.")
+ 
+The reality is that people have been both working on these problems, and
+building operational networks of various sorts for over 40 years - all
+the way back to the wireless ALOHAnet linking University of Hawaii sites
+across the Hawaiian islands. For that matter, the original Internet was
+highly distributed and decentralized - still is actually. What's
+changed is a shift toward an environment where packet routing has become
+more centralized - as a result of both technical limitations to the
+scaling of routing algorithms, economics (backbone networks make sense,
+both technically and economically), and the resulting concentration of
+control over routing policies in backbone routers controlled by a small
+number of organizations. (Of course, in the home/consumer space,
+there's also the matter of a small number of firms controlling the
+cables serving the "last mile.")
+ 
+There's been huge amounts of work on secure, disruption-resistant
+wireless networks for military use dating back to the 1940s (the
+original spread spectrum patent was issued to Hedy Lamarr, yes that Hedy
+Lamarr, in 1942). Secure military networks - both wired and wireless -
+have been around for decades, and a lot of the technology is readily
+available.
+ 
+There's a huge amount of wired and wireless infrastructure in place -
+ranging from carriers, to private corporate networks, to university
+owned, to municipal and cooperative utilities, to ad hoc networks
+assembled by individuals.
+ 
+A huge variety of technology is being used every day - again, ranging
+from commercial networks, to military networks carried behind enemy
+lines, to ad hoc networks assembled in response to natural disasters, to
+amateur radio and citizens band gear, to experiments in "pocket switched
+networks" (mesh networks of smart phones and other pocket-sized
+devices), to various assemblages of technology assembled for use during
+demonstrations and revolutions dating back to Tienanmen Square.
+ 
+At the software level, we have all kinds of (relatively) secure,
+private, disruption-resistant software - ranging from the original
+Napster, to Freenet, to Gnutella and Gnunet, to various eCash networks,
+to various "darknets," to steganography - used for everything from
+sharing music (and porn) to communications among drug cartels and
+terrorist cells.
+ 
+One might argue that there is no problem - just a number of people
+trying to reinvent the wheel; but that's not quite right. There remain
+quite a few serious technical problems to be solved for applying any of
+these technologies on a large scale. What's rather naive is not
+recognizing that these are hard problems, and that despite large numbers
+of people working on them, progress is slow.
+ 
+One might argue that there's a lot of technology in search of a
+problem. But that's not quite right either. The technology is being
+applied - in both ongoing and reactive modes (in China, Iran, etc.,
+every time the government closes down one communications channel,
+someone opens up another).
+ 
+(IMHO) if there are problems to be solved, they are not at all
+technical, they are more in the realms of:
+ 
+- Marketing (or motivation): Any one of us can turn our laptop into a
+mesh router in about an hour - just by changing a configuration setting;
+and there are a half dozen or more software packages that allow for
+building large mesh networks. But why should we? More important, what
+will motivate our neighbors to do so as well (it doesn't help very much
+if only isolated individuals enable nodes)? Why should people invest
+time and money in building/operating a piece of a network? Those who
+care about serious private/secure networks have them (the military, drug
+cartels, ...). The mass of people seem perfectly willing to spend a few
+dollars a month with their local telco or cable company or ISP. Even
+large corporations and government agencies, who have resources, and
+should know better, seem quite happy to push their computing and
+networking "into the cloud" (i.e., hand it over to other people over
+whom they have little or no control). You'd think that the numerous
+failures of Gmail would get people to rethink such things, but
+apparently not.
+ 
+- Politics and Regulation: In places where there are large
+concentrations in network and spectrum ownership, there are ways to
+circumvent central controls, but what's really called for are serious
+anti-trust measures that prevent concentration of control in small
+numbers of hands. And then there are issues of access to radio spectrum
+(if one wants to operate outside the law, there are lots of ways to do
+so, but they tend to fall down if one is building large-scale
+infrastructure - revolutions operate at the cell level for a reason).
+ 
+- Threats of Violence: In places where people care a lot about evading
+government censorship and disruption (e.g., China, Iran), the real
+threat isn't that networks will be shut down (there seem to be lot of
+ways of circumenting this); the real threat is what happens if you're
+caught (both the personal threat of jail or worse, and the threat of
+exposing those whom you've been communicating with).
+ 
+- Organizational models that take advantage of networking: Since some
+of this discussion seems to focus on "digital cities," economic impacts,
+and such - it's worth pointing out that pretty much everyone has
+Internet access these days, but as a society we continue to do things
+largely in pre-network ways. Schools spend a lot of money buying
+computers and smartboards and network connections, but not a lot on
+rethinking how to teach/learn in ways that leverage new technologies.
+Most business is conducted the way it was a century ago. The changes
+seem to come from folks like Amazon, and eBay, and Orbitz - none of
+which represent particularly fancy technology - but which represent
+major changes to market structures. Perhaps the most radical changes
+are seen in the open source software arena - but again, there are lots
+of development and version control tools available - the real
+innovations are things like the Debian social contract, and formation of
+the Apache Software Foundation.
+
+
+'''...'''
+
+
+I keep coming back to the fundamental questions: What problem is being
+addressed? What solutions are being proposed? Where's the beef? Is
+there any "there" there?
+ 
+From where I sit, I see a surfeit of technology, and large numbers of
+people working to advance the state-of-the-art and state-of-the-practice
+even further. I also see technology being adopted in various ways to
+change the ways that we do things as a society - the paradigm shifts are
+happening, but slowly (perhaps too slowly, in the face of things like
+climate change).
+ 
+I was drawn to this list looking for either new technology (after all, I
+am an engineer by background, and work on projects that involve
+scalability and decentralization). So far, all I've seen are statements
+about needing to build "something" different, without any clear
+statement of why, for what purpose, what current technology/networks
+aren't doing; and little understanding of what technology is already
+available but not being used. I read conversations about "is this
+technology interesting," or "let's integrate this collection of
+software," - but I've yet to read a clear statement of why, what problem
+is being solved, why anybody should care?
+ 
+I was also drawn to this list looking for new paradigms - how to apply
+the technology in new ways, how to solve organizational issues. But all
+I've seen are somewhat nebulous and theoretical statements.
+ 
+There are plenty of examples, in the real world, of technologies being
+applied in new and creative ways to support a society that struggling to
+become global and sustainable - but the discussion here seems to lack
+knowledge of them.
+ 
+Maybe I'm dense, and missing something - but I know what the folks at
+Wikipedia are doing, and why; I know what the folks at Wikileaks are
+doing, and why; I know what the folks at Ushahidi are doing and why; for
+that matter, I know what the folks at 100s of university research groups
+are doing around the world, and why. When they ask for donations, or
+participation, or some other form of involvement - it's very clear what
+they're talking about, what they're asking for, why they're asking, and
+why I should care. I haven't seen that here. Again, it could be me."
+(NextNet, May 2011)
+
+
+ 
+==Miles Fidelman: Three Problems and Four Strategies for Solutions==
+
+Miles Fidelman:
+
+"So far, I've heard people discuss at least three problems, and a whole
+slew of solutions that may or may not address any of those problems.
+ 
+ 
+1. There's the problem of scaling. There's no doubt that the current
+global Internet is under stress, and certainly there's a credible school
+of thought that there are some fundamental limits to the current
+architecture, beyond which incremental evolution won't work (the "we're
+heading for a cliff" point of view).
+ 
+Personally, I'm not of that school. I see lots of room for evolution
+rather than wholesale replacement of current infrastructure. The
+Internet has grown to a scale that it resembles an organism or an
+ecosystem - and I'm not a big fan of slash, burn, and replace. Rather,
+I think the future of the Internet infrastructure lies with stewardship
+and husbandry. IMHO, the Internet is going to be like the global phone
+grid - ongoing evolution, technology insertion (wireless, VoIP),
+eventual evolution into something new (the decline of landlines and
+analog technology for example), without any point where there's a
+wholesale replacement. (First there was the ARPANET, then the ARPANET
+was the backbone for the early Internet, then the NSFnet backbone and
+regionals came on, then more and more networks attached, at some point
+the ARPANET was turned off, and nobody noticed.)
+ 
+If there are limits, they're ones of scale, and it's going to take a LOT
+of work to discover solutions, and then to figure out how to transition
+from what we've got, to something new, better, and BIGGER. That's not
+an ad hoc effort. Right now, there are multiple efforts looking at next
+generation architectures and technologies - both in the academic world
+(e.g., GENI, Next Generation Internet, Internet2) and behind close doors
+in the corporate world. My expectation is that most of what comes out
+of these efforts will be incorporated, incrementally, into the Internet
+that we already have. Plan B would be to start from scratch using
+technologies that emerge from these efforts - and would both incredibly
+painful, and expensive, on a global scale.
+ 
+In the 80s, I worked on pieces of the problem at BBN (mostly network
+management and network security). I know and respect a lot of the
+people working these efforts today. and there seems to be a whole new
+generation of researchers and engineers who are publishing very solid
+work. Even more encouraging is that this work seems to have multiple
+clusters of researchers on almost every continent.
+ 
+Anybody who wants to work this problem is well advised to either work
+the legal/regulatory issues, or join an academic or corporate R&D
+group. This is not a set of problems for basement hackers.
+ 
+ 
+2. Access at the edges is a different set of problems - be those edges
+rural, developing countries, areas devastated by crisis, war zones, or
+bypassing monopoly carriers in urban/suburban areass.
+ 
+By and large, these are NOT problems of technology - you can do a lot
+with basic, ad hoc wifi networks, as built into everyday laptops and
+cell phones - though lots of people continue to work on newer and better
+technologies (e.g., software defined radios, cognitive radios, better
+and better mesh networking algorithms, intercept and disruption
+resistant technologies).
+ 
+As far as I can tell, the issues here are those of deployment, and need
+to be addressed on a case-by-case basis -- be that by Marines deploying
+off carrier decks to build ad hoc wifi networks for first responders, in
+Tsunami-ravaged areas; or rural residents (e.g. FOS Farm) trying to
+access the backbone from the boonies; or groups trying to bring access
+to slums or the outback.
+ 
+The issues come down to things like: Finding lines-of-site for radio
+signals, getting access to poles or rights-of-way for fiber and
+antennas, putting up towers. And the obstacles are also situation
+specific - basic population density (mesh networks need a basic level of
+density to work), uncooperative neighbors and property owners, legal and
+regulatory obstacles, lawsuits, protecting equipment from hazards
+(weather, terrorists, thieves), power and maintenance for unattended
+equipment, and so forth. For disaster response, the issues are more
+those of ruggedized equipment, power sources, and managing the
+relationships between organizations (NGOs, military, civilian
+government, volunteers).
+ 
+Clearly some on this list are directly working these issues locally.
+Sounds like a few people on the list have experience building local
+networks. I spent 6 years working with local governments municipal
+electric utilities around building municipally owned fiber networks
+(which was leading edge then, now its a job for politicians, lawyers,
+and construction crews).
+ 
+Personally, I find the most interesting and challenging work to be in
+the crisis response arena - mostly involving organizational challenges,
+rather than technical ones. The folks doing the most interesting and
+useful work range from the military, to folks like Crisis Commons,
+Crisis Mappers, Ushahidi, and the Amateur Radio community. As far as I
+can tell there's only one person here actively working in that space,
+and he's sort of quiet (hi Dave). Some of the stuff on my current
+project is targeted for application in this space.
+ 
+Note: Ultimately, these networks all end up connecting to backbone
+networks. The vision of lots of local wireless networks converging into
+one big global mesh is certainly an appealing one - but way beyond any
+current routing technology, and practical experience pretty much leads
+everybody toward constructing and using backbone networks. (Put another
+way, backbone networks appear to be an emergent phenomenon as mesh
+networks grow.)
+ 
+ 
+ 
+3. Of particular concern to me (and as far as I can tell, at least
+several others on this list) are the problems associated with security,
+privacy, and particularly corporate and/or government disruption of
+(classes of) network users/traffic - such as we've seen in China, Iran,
+Iraq, etc., (as well as problems associated with attacks - by hackers,
+criminals, terrorists, adversaries, etc.).
+ 
+It's certainly not clear to me that building a whole new infrastructure
+is the solution (as some seem to be advocating). Besides being a
+massive effort, any large-scale infrastructure becomes a highly visible
+target for those who might wish to censor or otherwise disrupt its use
+(if you can see it, you can shoot it, or send people in to pull the
+plug). By the time anybody builds something on a massive scale, one's
+opponents will have had plenty of time to position to destroy it.
+Further, large scale efforts, in places like China, Iran, Iraq, Egypt,
+...., simply expose their participants to arrest, torture, and death (as
+well as exposing anyone who can be found by examining people's phones
+and computers).
+ 
+I'm of the opinion that these issues are better addressed through a
+combination of:
+ 
+- making the existing infrastructure essential to day-to-day business
+(the Chinese couldn't shut off corporate fax machines during Tienanmen
+Square, similarly it's pretty hard for repressive governments to shut
+down cell phones when the establishment depends on them) - and nobody is
+going to shut down the satphone services
+ 
+- legal and political measures (do you realize that Hosni Mubarak has
+just been fined $90million for shutting off Internet access during the
+recent demonstrations?)
+ 
+- making the network infrastructure more resilient: The original
+Internet was essentially a mesh network - if portions went down, the
+routing algorithms routed around them. Today's Internet is more
+centralized - partially because routing protocols don't scale well;
+partially because we've evolved to depend on a small number of backbone
+networks, and a number of very big carriers (e.g. Comcast) dominate
+local access. Here the answers lie in both better technology (research
+continues), and more diversity of ownership - through competition
+(entrepreneurial, municipal, cooperatively owned, ad hoc), and serious
+anti-trust enforcement. (I spent 6 years of my life supporting local
+governments in various aspects of planning and building municipal
+networks, as well as quite a bit of time doing policy work in that
+space, and writing a book on the subject.)
+ 
+- "overlay networks" - software such as Napster, Gnutella, Freenet,
+Gnunet, as well as Tor and other "onion routers" - that leverage
+Internet infrastructure but provide a serious measure of privacy and
+resiliency (the area where I'm currently working, though my current
+project is too new to talk about - I'd rather have working prototypes)
+ 
+- under-the-radar efforts -- be they ad hoc and opportunistic use of
+whatever is available (e.g., fax machines, twitter, sat phones, ...), or
+technology efforts so that when someone blocks twitter, there's
+something else ready to pull out of the toolbox (note that a lot of
+these technologies come right out of the military arena - developed for
+use behind enemy lines by folks who don't want to be found - and an
+amazing amount is readily available as open source technology) (also
+note that both terrorists and drug cartels make extensive use of this
+kind of stuff, not to mention the darknets haunted by botnet operators
+-- so it's not as if this stuff isn't available, or lying unused by
+people who really have to worry about getting hunted down)
+ 
+ 
+4. New economic and social models is another area that some of the
+discussion seems to cluster around - and the one that I particularly
+find most interesting (and intractable). In addition to the question of
+who pays to build and operated new network infrastructure, there are the
+more fundamental questions of how do "we," both locally and an
+increasingly global civilization, adapt to the changes that the Internet
+is wreaking on our social and economic systems?
+ 
+As someone who contributed to building the Internet, I now look aghast
+at the outsourcing in the tech industry (among others), and the
+decimation of jobs for print journalists (my wife is one), and wonder
+what have we wrought. In the early days, we were predicting an
+empowerment of small businesses ("electronic cottages" was the term then
+in vogue), and loose networks of small businesses replacing large
+corporations. While we've certainly seen some of that, we see
+outsourcing, whole industries going away, concentration of wealth and
+power (particularly in the media and telecom arenas), and so forth.
+(Sort of like the old communists who predicted the withering of the
+state. Didn't quite work out that way.)
+ 
+To me, the big questions are those of what a sustainable, 21st century
+economy and society look like; and how we get there.
+ 
+On this list, more than a few people seem to have opined that throwing
+technology at the problem is the answer - to which I will emphatically
+argue "been there, done that, we have plenty of technology" and that
+technology seems to be causing as many problems as its solving.
+ 
+It seems to me that what we need are are new mindsets, new business
+models, new social models. And, more than hand waving and ideas on
+paper, we need working demonstration that can be copies, adapted, and
+scaled up. We need more local currencies, more Mondragen Corporations."
+(NextNet, June 2011)
+
+ 
+ 
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Autonomous Internet]]

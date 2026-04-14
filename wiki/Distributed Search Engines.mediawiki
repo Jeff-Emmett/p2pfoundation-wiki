@@ -1,0 +1,68 @@
+
+URL = http://en.wikipedia.org/wiki/Distributed_search_engine
+
+Additional info from: [https://www.coactivate.org/projects/disintermedia/sharedwebguide Disintermedia] (this info now actively maintained on this P2PF page)
+
+= Definition =
+
+From the Wikipedia:
+
+"A distributed search engine is a search engine where there is no central server. Unlike traditional centralized search engines, work such as crawling, data mining, indexing, and query processing is distributed among several peers in decentralized manner where there is no single point of control."
+(http://en.wikipedia.org/wiki/Distributed_search_engine)
+
+Emre Sokullu sketched out the basic concepts and advantages of an open p2p search platform in '[http://readwrite.com/2007/05/10/how_to_build_an_open_source_google How To Build an Open Source Google]', a 2007 article on ReadWriteWeb called . [http://www.searchtools.com/info/peer-to-peer.html SearchTools.com] offers a useful introduction to the concept of applying peer-to-peer to search, and a few references to projects current at the time, but the page states that it's not been updated since 2012. 
+
+= Directory =
+
+Via [http://en.wikipedia.org/wiki/Distributed_search_engine Wikipedia] (since modified on this wiki):
+
+== Grub (GPLv2) ([http://sourceforge.net/projects/grub/ defunct]) ==
+
+Kord Campbell, Igor Stojanovski, and Ledio Ago started Grub as an open source project in [https://web.archive.org/web/20001209024900/http://www.grub.org/archives.html January 2000]. LookSmart acquired Grub in 2003, and in July 2007, sold it to the short-lived [https://web.archive.org/web/20070821061921/http://www.wikia.com/wiki/Search_Wikia_OSCON Wikia Search project].
+
+== InfraSearch (defunct) ==
+
+In April 2000 three programmers built a prototype P2P web search engine based on Gnutella called InfraSearch. It was meant to run inside the participating websites' databases creating a P2P network that could be accessed through the InfraSearch website. InfraSearch was [http://www.openp2p.com/pub/d/234 acquired by Sun Microsystems in 2001] to become part of the search system for the open source https://java.net/projects/jxta/ JXTA] project. Sun, and most its various subsidiaries and open source projects, was acquired by Oracle in 2009. Sadly,  InfraSearch founder Gene Kan [https://web.archive.org/web/20020711182805/http://www.xcflabs.com/~yaroslav/gene/ passed away] on June 29th, 2002. 
+
+== Opencola (founding company [https://web.archive.org/web/20020721214044/http://opencola.com/ defunct]) ==
+
+On May 31, 2000 Steelbridge Inc. announced development of OpenCOLA a collaborative distributive open source search engine. It runs on the user's computer and crawls the web pages and links the user puts in their opencola folder and shares resulting index over its P2P network. Steelbridge was [http://www.copernicanshift.com/tag/steelbridge/ renamed Opencola], and the Opencola company was [http://uscpublicdiplomacy.org/users/cory_doctorow/ sold to the Open Text Company] in 2003, after [http://www.openp2p.com/pub/a/p2p/2001/05/24/swarmcast_beta.html releasing Swarmcast] under the GNU GPL.
+
+== [http://www.faroo.com/hp/p2p/p2p.html FAROO] ([http://www.faroo.com/hp/p2p/faq.html#opensource Proprietary freeware]) ==
+
+In February 2001 Wolf Garbe published an idea of a peer-to-peer search engine, started the Faroo prototype in 2004,[10] and released it in 2005.
+
+== [http://www.yacy.net/ YaCy] ([https://github.com/yacy/yacy_search_server/blob/master/COPYRIGHT GNU GPLv2+], GNU LGPLv2+ for Cora library) ==
+
+On December 15, 2003 Michael Christen announced development of a P2P-based search engine, eventually named YaCy, on the heise online forums. As of the January, 2016, the latest stable version was 1.8, released September 16, 2014.
+
+== [https://nutch.apache.org/ Nutch] (Apache 2.0) ==
+
+In June 2003, Doug Cutting, and Mike Cafarella completed a 100-million-page test system, and in 2005, the project was accepted into the Apache Foundation Incubator program. Later that year it became a sub-project of the Lucene project, and in 2010, become an independent Apache project. Hadoop began as a MapReduce system and distributed file system that were implemented in the early years of the Nutch project. Current development of Nutch is not orientated towards p2p search so much as distributed search across supercomputer clusters.
+
+== [https://sourceforge.net/projects/seeks/ Seeks] (GNU AGPL) (defunct) ==
+
+Unless it's moved off SourceForce, Seeks never got out of beta. The latest version on SF (0.4.1) was released in 2013.
+
+== Wowd (defunct) ==
+
+Some time in 2006 Borislav Agapiev started thinking about a distributed search engine. Then on October 20, 2009 he publicly launched Wowd. In 2011, having failed to get traction, Wowd was split up and [http://allthingsd.com/20110721/wowd-assets-split-up-between-three-companies-including-facebook/ acquired by three different companies] including FaceBook, a start-up called Jildy, and an anonymous third company which bought the Wowd software patents.
+
+== [http://www.open-search.net/ Open Search] (defunct) ==
+
+In 2007 a group funded by the Digital Pioneers Stimulation Fund set up an Open Search Foundation, but it went into hibernation after the 6 months of funding was up, producing only [http://www.open-search.net/Software/ClientReleases.html one beta release].
+
+= Discussion =
+
+[[Danyl Strype]]:
+
+It seems clear from all the defunct projects that litter the pathway towards distributed search, including the companies above and the various defunct or moribund efforts to create user-edited directories ([https://www.dmoz.org/ DMoz], [http://www.coactivate.org/projects/disintermedia/blog/2010/09/12/crowdsource-search-a-wicked-problem/ Wikia Search]), that p2p search is a difficult technical problem. Of those projects that have survived, with the exception of Faroo, all are free code projects with open source communities behind them. However, just adopting a free code license is not enough to save a project without a stable stewardship organisation to keep development moving.
+
+The free code Dooble browser has integrated YaCy into its desktop software, and if a more popular browser such as Mozilla Firefox took the same approach - a more likely strategy now they're no longer receiving funding from Google - this may be the only way a p2p search engine can get the critical mass to become useful. It the p2p search project chosen followed the DuckDuckGo example of integrating metasearch of popular sites Wikipedia, YouTube, IMDB, and so on, this could also help to populate the index with enough information to make it useful, and give it a starting point for ongoing web crawling.
+
+= More Information =
+* [[Disintermedia]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

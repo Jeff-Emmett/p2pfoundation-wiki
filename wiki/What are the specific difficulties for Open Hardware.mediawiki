@@ -1,0 +1,115 @@
+
+'''Various excerpts to illuminate the specific difficulties of achieving open hardware.'''
+
+=Discussion: Specific difficulties of Open Hardware= 
+
+
+==Pro: Graham Seaman==
+
+By Graham Seaman, at http://opencollector.org/Whyfree/open_hardware.html
+
+An important comment about the difficulty of developping it, as compared to open source:
+
+
+"At first blush, the open source model doesn't necessarily seem like a good fit for physical objects. The reason comes down to replication: with open source software, I can give you a copy of (for example) Firefox without losing my own. With open source hardware, at present the best I can give you a copy of the instructions as to how to make your own (for example) microprocessor with your own equipment; it's the functional equivalent of saying "you want Firefox? Here's the source code -- go find a compiler and learn how to read and modify the code to work with your hardware." While this is hardly a barrier for people who already do have the necessary tools and skills, it's a major hurdle if open source hardware is ever to move beyond a few niche fields.
+
+But replicability is something of a secondary effect of open source -- if you give someone a copy of a program's source code, it's hard to prevent them from giving away complete versions. The key elements of open source, accessibility and modifiability of the underlying instructions, apply just as readily to hardware designs as they do to software code. Moreover, the lack of replicability is something of an artifact of technology; that I can't send you a copy of a computer chip (or mobile phone, or fabber, or bacteria), only a design, is important only in that you can't just double click something and see that microchip (etc.) pop up in front of you.
+
+As fabrication technologies take on an increasingly digital form, this distinction will become less clear. When I send you a copy of Firefox, what I'm actually sending is a set of instructions telling your computer how to organize bits of magnetic material on a hard drive to create another instantiation of Firefox. Similarly, at some point in the next decade or two, I will be able to send you a "copy" of my phone simply by sending a set of instructions telling your computer how to organize bits of carbon in a desktop nanofactory to create another instantiation of a phone. Very soon, a more software-like open source physical world paradigm will become possible.
+
+But what will really make a big difference will be the emergence of tools allowing you to take that set of instructions for the phone and modify it to meet your particular needs prior to it being printed out.
+
+I don't mean a requirement that you design your own phone from basic parts on up, or can only get a bare-bones phone that you then must seek out and add on (potentially conflicting) modules to give it any kind of real utility. I'm talking instead about an interface to the code that makes it easy for amateur designers to tweak the instructions without running the risk of easily breaking the final result. In effect, I imagine that we'll soon be in a world of "skins," "plug-ins," and "overlays" for the material world."
+(http://www.worldchanging.com/archives/004155.html)
+
+
+==Pro==
+
+From http://w:ww.rowetel.com/blog/?p=14
+
+"1. I think open software has been a good thing for the world, so I think open hardware is also good.
+   
+2. If closed IP makes a small amount of people a lot of money - does '''opening the IP make a moderate amount of money for a large amount of people?''' The latter seems a better outcome to me. It also suggests that open hardware benefits small companies more than large ones.
+   
+3. I think the specific benefit of open hardware is '''lower R&D costs'''. This is what is happening with my project - there is a small team of people designing DSP boards, BRI-ISDN hardware, doing Asterisk ports etc. So far I would estimate about 5 man-years of hardware R&D I now have available for free. If I like I can now re-use this open hardware in my local market, potentially without hurting the business of my co-developers. There is a spirit of cooperation rather than competition.
+   
+4. A common perception is that “if the hardware design is open, people will just copy it and put you out of business”. Well after some thought I disagree. A business is much more than just the product design - for example you need support, capital, manufacture, service, and relationships with customers. So '''even if the whole design is open, you can still build a nice little business''' (but perhaps not a $100M business). You can also add proprietary components and build on the open technology, or focus on your local market.
+   
+5. My pet favourite - '''open hardware allows us to invent new business models''', for example developing countries could build advanced telephone systems for cost price. This is so much better than buying technology from a first-world profit-oriented business that must charge a 70% mark up to cover their overheads. This is the business model behind the one laptop per child project. A $100 laptop is possible if u remove the overheads, use community input and sponsership for R&D and build volume. Well a $100 IP-PBX is also possible. Another benefit is that the hardware can be built locally (remember the hardware design is free) overcoming import tariff problems and building local industry. Combining these elements means lots of people getting connected cheaply. And that is a very good thing for the world."
+(http://www.rowetel.com/blog/?p=14)
+
+
+==The Benefits of Open Hardware==
+
+"Today's hardware development is split into separate hardware divisions across
+the industrial landscape resulting in individual development branches and only
+little innovation.
+
+OpenHardware will bring about dialogs between all parties involved - the producers,
+the customers and the consumers. By directly communicating with customers /
+communities / free developers, producers can access innovative input from outside
+the company itself on advices to improve their products thereby working closer
+on the consumers needs and ultimately widen their market.
+
+The customer could express needs for adaptation of old products or even lead
+the way to the creation of a totally new product altogether. These synergy effects
+drastically reduce the research & development costs, increase the number
+of potential customers and most importantly form the fundamental basis for a
+level of customer satisfaction demanded in the 21st century."
+(http://openpattern.org/drupal/?q=node/11)
+
+
+==Contra: Review of sceptical arguments by Janet Hope==
+
+From http://rsss.anu.edu.au/~janeth/OSBiotech.html
+
+"The first point is that no generally accepted open hardware licences yet exist. As noted in an earlier section, copyleft licences (and other forms of open source software licence) rely on copyright: the copyright owner uses his or her exclusive rights to guarantee certain freedoms for users of the software program covered by the licence. However, as with biotechnology research tools, computer hardware is mostly protected by patent. In contrast to copyright protection, which is quick, cheap and simple, obtaining a patent is a costly, time-consuming process; moreover, maintaining a patent requires the payment of substantial renewal fees. (There may be other relevant differences between patent protection and copyright protection besides cost -- if so, they will be explored as part of this project.) The costs of obtaining patent protection may make patent owners less willing than copyright owners to give up the income stream associated with standard proprietary licensing, and/or it may discourage otherwise willing contributors to an open source biotechnology project who are not in a position to obtain patent protection for their contributions. The question of how to translate open source licences into the context of patent protection (and other types of protection that may apply to biotechnology research tools) is an important one for open hardware, and also for open source biotechnology. Licensing experiments in the open hardware context continue: for example, the Indian Simputer is subject to a lawyer-drafted GPL-like licence.
+
+The second point made by open hardware sceptics that may also apply to open source biotechnology is that hardware is not as modular and compartmentalised as software. Benkler has emphasised modularity as an important feature of successful open source projects, in particular in connection with contributors' motivation. However, open hardware sceptics have raised a different point, which is that unless the technology itself is highly modular and compartmentalised, small changes to one part are likely to interact in unforeseen ways with the rest. Whether this is in fact a difference between software and hardware is not clear. However, the general point may be particularly relevant to biotechnology research tools, as many are living organisms or components of living organisms: unpredictable, delayed side-effects in response to apparently small changes are established characteristics of living organisms as a class of complex systems.
+
+The third point is that capital costs associated with hardware manufacture are higher than for software, so that human creativity costs are a smaller proportion of the total costs in the hardware context. (As we saw earlier, Benkler suggests that the advantages of the peer production mode relative to other modes relate to information about and allocation of human creativity, and become salient when human creativity is a salient component of production.) Capital costs for hardware manufacture are higher than for software manufacture in relation to both development (for example, tools for developing, testing and debugging software are much cheaper and more easily made accessible -- e.g. by Internet and open source software licensing, as many such tools are themselves software -- than tools for developing hardware) and production (for example, silicon for making chips costs money). Open hardware sceptics have suggested that there are therefore minimal start-up costs for software programmers but not for hardware developers, and further, that resulting reliance on institutional funding for hardware manufacture makes the process more vulnerable to conservative institutional attitudes and employment-related legal constraints. (As noted in an earlier section, the latter problems may be partially solved by top-down influence on institutional thinking by, for example, funding agencies such as the NIH, and by direct participation in open source biotechnology projects by institutions or companies, as distinct from individual employees.)"
+
+
+=Caste Study: the Open Graphics Project=
+
+Free Software Magazine has an interesting [http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_2_technical_and_social_issues conversation/interview]  with members of the [[Open Graphics Project]] [http://www.freesoftwaremagazine.com/node/1665], an open hardware initiative, in which they talk about what difficulties make open hardware more challenging.
+
+FSM introduces the topic:
+
+"The tools and techniques for creating hardware designs are very different from those used for software; and because of this, developing open hardware is a significantly different and greater challenge than creating free software. In the second part of my interview with the developers of the Open Graphics project, I wanted to explore these factors and the solutions this one open hardware project has found ... '''For a moment, rewind to the world of the 1980s, when the GNU project began, before all of that ((free software) infrastructure was created. That’s exactly where hardware design still is today'''."
+
+
+A '''selection of the key questions asked''', especially those that have a more general relevance beyond the specific project:
+
+"'''Q. What technological changes have led to the recent boom in open hardware development?'''
+
+AK: There are two things that made open hardware possible: the possibility to cheaply produce electronics (A PCB that would have cost $100 twenty years ago can now be produced for $10, even in low quantities); and the availability of powerful computers in every home to run EDA software without the need of special workstations.
+
+
+'''Q. How does the much greater cost of replication and derivation make things harder for hardware than software?'''
+
+AK: If open hardware wants to use the same methods that FLOSS profited from, building hardware must become a lot cheaper. Note that I do not speak about producing hardware as this can not get cheaper than a certain level. But if we would be able to use some hardware building blocks that are mass-produced just to put together a new device, we could use the same hardware over and over again to build new devices, just like software uses the very expensive computer it runs on to build new “devices”.
+
+
+'''Q. Any advice for future open hardware projects on how to manage the above resources? Is it really any different from software projects?'''
+
+AF: It is very different from software. For software, all you need is Vim; for hardware, a lot of tools are proprietary and they are not cheap. You can simulate to a certain degree, but when the actual hardware is here, you need some expensive equipment plus many years of experience to troubleshoot it. This will prevent you from working together unless you are really physically together. The challenge is then the huge start-up cost when developing hardware. So, if you can partner with a company which can provide these kinds of resources, it will make it a lot easier.
+
+LV: I think that technically there is not all that much difference between a hardware design and the source code for a piece of software. Both are a collection of files that are modified collectively to create different versions and branches. What seems to be lacking is tool support. We have tools that let you browse a Subversion repository online and compare different versions of the source of a piece of software. That will work for HDL as well, but it will not work for a board layout. Another example of something that we need software for is a fail safe part number registry.
+
+
+'''Q. Is there a problem finding enough people who are technically qualified to work on an open hardware project like Open Graphics?'''
+
+TM: There is a small handful of people with the OGP who actually know chip design or how to write HDL. It’s a very specialized thing that even the smartest people take many years to learn, so it’s hard for new people to just jump right in. Thinking about everything happening in parallel is something that takes a lot of getting used to.
+
+AF: As I said earlier, not only there are less hardware people, but also many times, you really need to sit together and stare at the problem and try to come up with a solution. However, I think people are out there. Look at the gEDA mailing list and OpenCores.org.
+
+
+'''Q. Is the recent boom in open hardware more about the increased need of consumers for control of their hardware, or about the increased ease in designing and producing hardware?'''
+
+TM: Open hardware has always been around. The Apple I was built by hand by Steve Wozniak, and he and Jobs were members of the Home Brew Computer Club. Those tinkerers have never gone away. But back in the 70s, electronic end products actually contained large circuit boards with discrete ICs. You could see the logic. As circuit integration grew, however, we ended up with more and more black boxes that people couldn’t learn from or hack, and they certainly couldn’t afford to make their own.
+
+This manufacturing gap, you might call it, has been discouraging to the hardware hacker, because the guy with a breadboard full of 74138s can’t compete in any way with the guy with the chip fab. Still, in the 70s and 80s, there were lots of black box chips, like CPUs. But at least you could stick one on a breadboard. The shift from DIPs to surface mount and particularly BGAs has made it impossible for the enthusiast to put common off the shelf chips into a custom design, unless they can make their own custom PCBs with 1/100 inch precision.
+
+However, as certain kinds of hackable devices—like FPGAs, microcontrollers, and boards like the Arduino—become cheap and plentiful, a new breed of hardware hackers has arisen. In fact, the hardware hacking community has never gone away; it’s just adapted to the changes in technology."
+([http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_2_technical_and_social_issues])

@@ -1,0 +1,56 @@
+
+'''= "the goal of this document is to help developers and product managers design and implement algorithmic systems in publicly accountable ways".'''
+
+URL = http://www.fatml.org/resources/principles-for-accountable-algorithms
+
+=Principles=
+
+Automated decision making algorithms are now used throughout industry and government, underpinning many processes from dynamic pricing to employment practices to criminal sentencing. Given that such algorithmically informed decisions have the potential for significant societal impact, the goal of this document is to help developers and product managers design and implement algorithmic systems in publicly accountable ways. 
+Accountability in this context includes an obligation to report, explain, or justify algorithmic decision-making as well as mitigate any negative social impacts or potential harms.
+
+
+
+We begin by outlining five equally important guiding principles that follow from this premise:
+
+Algorithms and the data that drive them are designed and created by people -- There is always a human ultimately responsible for decisions made or informed by an algorithm. "The algorithm did it" is not an acceptable excuse if algorithmic systems make mistakes or have undesired consequences, including from machine-learning processes.
+
+==Responsibility==
+
+Make available externally visible avenues of redress for adverse individual or societal effects of an algorithmic decision system, and designate an internal role for the person who is responsible for the timely remedy of such issues.
+
+
+==Explainability==
+
+Ensure that algorithmic decisions as well as any data driving those decisions can be explained to end-users and other stakeholders in non-technical terms.
+
+
+==Accuracy==
+
+Identify, log, and articulate sources of error and uncertainty throughout the algorithm and its data sources so that expected and worst case implications can be understood and inform mitigation procedures.
+
+
+==Auditability==
+
+Enable interested third parties to probe, understand, and review the behavior of the algorithm through disclosure of information that enables monitoring, checking, or criticism, including through provision of detailed documentation, technically suitable APIs, and permissive terms of use.
+
+
+==Fairness==
+
+Ensure that algorithmic decisions do not create discriminatory or unjust impacts when comparing across different demographics (e.g. race, sex, etc).
+
+
+We have left some of the terms above purposefully under-specified to allow these principles to be broadly applicable. Applying these principles well should include understanding them within a specific context. We also suggest that these issues be revisited and discussed throughout the design, implementation, and release phases of development. Two important principles for consideration were purposefully left off of this list as they are well-covered elsewhere: privacy and the impact of human experimentation. We encourage you to incorporate those issues into your overall assessment of algorithmic accountability as well."
+(http://www.fatml.org/resources/principles-for-accountable-algorithms)
+
+=More information=
+
+See also:
+
+* [[Social Impact Statement for Algorithms]]
+
+
+[[Category:Protocols and Algorithms]]
+
+[[Category:Social Charters]]
+
+[[Category:Standards]]

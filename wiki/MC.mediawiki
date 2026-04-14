@@ -1,0 +1,39 @@
+<noinclude>
+MoveCommons form.
+{{#forminput:form=MC|size=25|button text=Create or edit}}
+</noinclude><includeonly>
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+
+{{{for template|MC}}}
+__NOTOC__
+=== Profit or non profit? ===
+{|
+| {{{field|mc1|values=Non Profit,For-Profit|input type=radiobutton|mandatory|default=Non Profit}}}
+|}
+
+=== Closed or open? ===
+{|
+| {{{field|mc2|values=Exclusive,Reproducible|input type=radiobutton|mandatory|default=Reproducible}}}
+|}
+
+=== "For the Commons" or "For the enclosures"? ===
+{|
+| {{{field|mc3|values=Reinforcing the Commons,Reinforcing other aims|mandatory|default=Reinforcing the Commons|input type=radiobutton|show on select=Reinforcing the Commons=>circulation}}}
+|}
+<div id="circulation">
+{|
+! Which area is the main focus of your initiative?:
+| | {{{field|mc3e|values=Nature, Body/Health,Town/Community/Society,Digital|input type=radiobutton|mandatory|default=Nature}}}
+|}
+</div>
+
+=== Vertical or Horizontal?===
+{|
+| {{{field|mc4|values=Representative,Grassroots|input type=radiobutton|mandatory|default=Grassroots}}}
+|}
+
+
+{{{end template}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

@@ -1,0 +1,24 @@
+=Definition=
+
+
+Michael Zargham:
+
+“* A data structure: the “ledger” in crypto jargon. For the Ethereum network, the data structure is the state of the EVM. The network maintains the history of all changes to data structure, and thus the current state of the data structure.
+
+* A set of methods which operate on the data structure. In the simplest case this is a transaction sending tokens from one address to another, but more generally defines the set of legal changes to the data structure.
+
+* A consensus protocol: a set of rules for agreeing on the true state of the data structure, based on verifying the validity of transactions or more generally that the methods above were applied appropriately.
+
+* A community: the set of agents (human or machine) which are participating in the network. Lightweight clients may broadcast transactions but full nodes are required to participate in validation process (consensus protocol).
+
+Please note that this definition covers more than just Bitcoin and Ethereum, but rather a broad class of models for coordinating to agree on changes to the state of a data structure.“
+
+(https://medium.com/block-science/on-engineering-economic-systems-1cff055d3a5f)
+
+[[Category:Crypto_Technology]]
+
+[[Category:Crypto_Governance]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Encyclopedia]]
+[[Category:P2P_Infrastructure]]
+[[Category:Technology]]

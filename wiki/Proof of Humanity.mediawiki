@@ -1,0 +1,51 @@
+'''= "Proof of Humanity, a system combining webs of trust, with reverse Turing tests, and dispute resolution to create a sybil-proof list of humans".'''
+
+URL = https://www.proofofhumanity.id/
+
+
+=Description=
+
+Via J.P. Morgan:
+
+"(PoH) The most essential identity attribute is one that proves that you are, in fact, a person. In an increasingly online-based world, where physical in-person interaction is often non-existent, bots and scam accounts create significant risks for people and online service providers. PoH is an Ethereum-based social identity verification system that uses various protections to authenticate a person during enrolment. PoH enables users to prove that there is a live, real human linked to a specific public Ethereum address. This proof can then be used to open online accounts, to vote or to join an online community. Following a photo upload and video verification, a person will need to be vouched for by another human that has already been registered with PoH. This provides a strong web of trust to this identity verification framework and adds to one’s set of identity attributes, by enabling them to prove that they are real. "
+
+(https://www.jpmorgan.com/onyx/documents/Digital-identity-assessing-web3s-building-blocks.pdf)
+
+
+=How-To=
+
+Andrei (Circles):
+
+"To register on Proof of Humanity, you have to make a request using your wallet, take a photo and a video of yourself following the instructions, put some deposit, get a vouched from someone else and then wait for challenging period to pass. If you are challenged in that period, a Kleros dispute is created. If you win any challenge or are not challenged at all, you are registered to PoH.
+
+To check whether a wallet address belongs to someone registered on PoH, one can simply call isHuman(address) on the contract. In PoH v2 there will also be a soulbound id for each human (when re/registering the requester always have to point to the soulbound id corresponding to him, otherwise would be challenged). 1 human <-> 1 wallet address <-> 1 soulbound id. This could be used as social recovery."
+
+(https://aboutcircles.com/t/proof-of-humanity-group-token/489)
+
+
+=Discussion=
+
+Daniel Pinchbeck on Proof of Humanity from Democracy.Earth:
+
+"Proof of Humanity seeks to address one of the core problems of the Internet – in fact, the essential flaw that led to the current catastrophe in which corporations like Google and Facebook control our personal data and sell it to advertisers as their product. The problem is that the founders of the Internet didn’t develop protocols around personal identity. The original pioneers were scientists and engineers who developed the basic Internet protocols for purposes of research and sharing information. Personal identity was not their focus. 
+
+When I started my company, Evolver, back in 2007, we wanted to address this problem of identity by implementing technologies that were being developed back then, such as the Identity Commons. The idea was to flip the logic of the Internet: Each user would have a secure holder for their identity and personal data. They would be able to choose what parts of their identity they wanted to share with any company or organization – instead of corporations building “walled silos” to data-mine their user base. But the financial incentives supporting the current extractive model were too powerful to allow for alternatives. 
+
+With Proof of Humanity, you undergo a verification process designed to prove you are a human being, not a Bot or AI. Once you have successfully passed the registration process, you start to receive a regular Universal Basic Income (UBI). I am not sure exactly how the funds for the UBI are generated, but apparently it amounts to several hundred dollars per month. This is already making a major difference in the lives of old people in Latin America who are signing up for it. If Proof of Humanity is scalable, it could help to bring about a more egalitarian restructuring of society."
+
+(https://danielpinchbeck.substack.com/p/crypto-criticism-part-two?)
+
+
+=More information=
+
+* Article: Proof of Humanity : ethnographic research of a “democratic” DAO. By COSSAR, Sofia; MERK, Tara; KAMALOVA, Jamilya; DE FILIPPI, Primavera. EUI, RSC, Research Project Report, 2024
+
+URL = https://cadmus.eui.eu/handle/1814/76793
+ 
+"The Proof of Humanity (PoH) project emerged in 2021, introducing the first Sybil-resistant registry of individuals on the Ethereum network, incentivizing human participation through the distribution of $UBI cryptocurrency tokens. The project founders introduced the PoH Decentralized Autonomous Organization (DAO), which laid the foundations for the emergence of what was presented as “the first democratically governed DAO” running on the Ethereum network. Despite garnering fame and recognition with over 17,000 registrants within two years, the PoH DAO encountered governance challenges that ultimately led to its decision to fork in November 2022, sparking this research inquiry. This ethnographic research aims to unveil the governance dynamics underlying the PoH DAO's crisis, employing theoretical frameworks from modern nation-state democracies and liberal democratic theory. By analyzing community interactions, interviews, and public documents, the research sought to understand why the governance system struggled to reconcile diverse interests, leading to polarization and eventual fork. The research findings indicate that a lack of robust democratic governance mechanisms exacerbated community divisions, highlighting the importance of inclusive governance frameworks in DAOs. These findings contribute to both the understanding of DAO governance and the broader discourse on democratic theory in decentralized systems. This report presents an updated version of the initial findings shared with the PoH DAO community in early 2023, incorporating received feedback."
+
+[[Category:Cryptoledger_Applications]]
+
+[[Category:Democracy]]
+
+[[Category:Crypto Governance]]

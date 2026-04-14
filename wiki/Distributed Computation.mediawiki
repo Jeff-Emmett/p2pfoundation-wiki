@@ -1,0 +1,98 @@
+'''= distributed computation" = geographically dispersed machines all working to solve a computational problem.'''
+
+=Description=
+
+"The basic premise behind distributed computation is to spread computational tasks between several machines distributed in space, most of the new projects focus on harnessing the idle processing power of "personal" distributed machines, the normal home user PC. This current trends is an exciting technology area that has to do with a sub set of distributed systems (client/server communication, protocols, server design, databases, and testing).
+
+This new implementation of an old concept has it's roots in the realization that there is now a staggering number of computers in our homes that are vastly underutilized, not only home computers but there are few businesses that utilizes their computers the full 24 hours of any day. In fact seemingly active computers can be using only a small part of it processing power. Using a word processing, email, and web browsing, require very few CPU resources. So the "new" concept is to tap on this underutilized resource (CPU cycles) that can surpass several supercomputers at substantially lower costs since machines that individually owned and operated by the general public."
+(https://en.wikibooks.org/wiki/The_World_of_Peer-to-Peer_%28P2P%29/Print_version)
+
+=Overview=
+
+"The emergence of P2P networks reminded researchers that in addition to instant messaging and file sharing, computation could also be shared. As a result, an increasing number of projects have been formed that are classified under the banner of distributed computing, and more specifically within a subcategory known as distributed computation. We will use the term "distributed computation" throughout this article to refer to distributed computing projects, which specifically involve geographically dispersed machines all working to solve a computational problem.
+
+The past decade as been incredibly fast-paced, and a significant cross-pollination of ideas has occurred. We're currently seeing P2P evolve to include grid-like capabilities and grids evolving to assimilate all things distributed computing."
+(http://www.smartmobs.com/archive/2006/04/01/tapping_the_mat.html)
+
+
+'''How It Works:'''
+
+
+" At a fundamental level, a large majority of distributed computation projects work similarly. Let's examine a typical project from a 30-thousand-foot view:
+
+A central computer subdivides a problem into millions of smaller tasks. It then proceeds to dispatch each task to a remote machine. As each machine completes its assigned task, it returns a result back to the central computer, which may further subdivide (or create new) tasks. The process continues until a solution is found or all subtasks have been processed.
+
+This process, while overly simplified, does reveal that a central entity dispatches work to remote entities, which later return results. For the sake of simplicity, I'll refer to the central computer as a "SuperNode," the remote machines as "PeerNodes," and subtasks as "work units." Note, however, that a SuperNode may consist of several physical servers, such as a scheduling server, database server, and other intermediate servers, to help balance network load.
+
+You may have realized that the relationship between a PeerNode and SuperNode bares a striking resemblance to the relationship between web browsers and web servers. This similarity is no coincidence, because both have client/server attributes. We will examine this relationship later in this article; for now, keep in mind that PeerNodes can be considerably more dynamic than any modern-day web browser. Also, distributed computation projects are not restricted to client/server relationships and one-to-many network topologies. Indeed, some projects support the presence of multiple SuperNodes, which in turn cluster communities of PeerNodes. In addition, DC projects such as Electric Sheep are exploring the use of P2P networks using protocols such as Gnutella. "
+(http://www.openp2p.com/pub/a/p2p/2004/04/16/matrix.html)
+
+
+=Examples=
+
+==[[Folding@Home]]==
+
+"One such project, Folding@Home, set out to use large-scale distributed computing to create a simulation involving the folding of proteins. Proteins, which are described as nature's nanobots, assemble themselves in a process known as folding. When proteins fail to fold correctly, the side effects include diseases such as Alzheimer's and Parkinson's.
+
+The Folding@Home team described their protein simulation in the form of a computational model suitable for distribution. The result is now a tool that allows them to simulate folding using timescales that are thousands to millions of times longer than were previously possible."
+(http://www.smartmobs.com/archive/2006/04/01/tapping_the_mat.html)
+
+
+==[[SETI@Home]]==
+
+"One of the most famous distributed computation project, , hosted by the Space Sciences Laboratory, at the University of California, Berkeley, in the United States. SETI is an acronym for the Search for Extra-Terrestrial Intelligence. SETI@home was released to the public on May 17, 1999.
+
+In average it used hundreds of thousands of home Internet-connected computers in the search for extraterrestrial intelligence. The whole point of the programs is to run your free CPU cycles when it would be otherwise idle, the original project is now deprecated to be included into BOINC."
+(https://en.wikibooks.org/wiki/The_World_of_Peer-to-Peer_%28P2P%29/Print_version)
+
+
+==[[BOINC]]==
+
+"BOINC has been developed by a team based at the Space Sciences Laboratory at the University of California, Berkeley led by David Anderson, who also leads SETI@home.
+
+Boinc stands for Berkeley Open Infrastructure for Network Computing, a non-commercial (free/w:open source software), released under the LGPL, middleware system for volunteer computing, originally developed to support the SETI@home project and still hosted at ( http://boinc.berkeley.edu/ ), but intended to be useful for other applications in areas as diverse as mathematics, medicine, molecular biology, climatology, and astrophysics. an open-source software platform for computing using volunteered resources that extends the original concept and lets you donate computing power to other scientific research projects such as:
+
+    Climateprediction.net: study climate change.
+    Einstein@home: search for gravitational signals emitted by pulsars.
+    LHC@home: improve the design of the CERN LHC particle accelerator.
+    Predictor@home: investigate protein-related diseases.
+    Rosetta@home: help researchers develop cures for human diseases.
+    Cell Computing biomedical research. (Japanese; requires nonstandard client software)
+    
+As a "quasi-supercomputing" platform, BOINC has over 435,000 active computers (hosts) worldwide. BOINC is funded by the National Science Foundation through awards SCI/0221529, SCI/0438443, and SCI/0506411.
+
+It is also used for commercial usages, as there are some private companies that are beginning to use the platform to assist in their own research. The framework is supported by various operating systems: Windows (XP/2K/2003/NT/98/ME), Unix (GNU/Linux, FreeBSD) and Mac OS X."
+(https://en.wikibooks.org/wiki/The_World_of_Peer-to-Peer_%28P2P%29/Print_version)
+
+
+==[[World Community Grid]]== 
+
+(WCG)
+
+"Created by IBM, World Community Grid ( http://www.worldcommunitygrid.org/ ) is similar to the above systems. Fourteen IBM servers serve as "command central" for WCG. When they receive a research assignment from an organization, they will scour it for security bugs, parse it into data units, encrypt them, run them through a scheduler and dispatch them out in triplicate to the army of volunteer PCs.
+
+To be a volunteer one only needs to download a free, small software agent (similar to a screensaver).
+
+Projects get selected based on the potential to benefit from WCG technology and address humanitarian concerns, and chosen by an independent, external board of philanthropists, scientists and officials.
+
+The software is OpenSource (LGPL), C/C++ and wxWidgets and is available for Windows, Mac, or Linux."
+(https://en.wikibooks.org/wiki/The_World_of_Peer-to-Peer_%28P2P%29/Print_version)
+
+
+=More Information=
+
+Tapping the Matrix, a two-part primer, at http://www.openp2p.com/pub/a/p2p/2004/04/16/matrix.html 
+
+O'Reilly P2P Directory, directory of projects, at http://www.openp2p.com/pub/q/p2p_category 
+
+"The O'Reilly Open Peer-to-Peer Directory and The AspenLeaf DC web site currently list several dozen active projects, ranging from analytical spectroscopy to the Zeta grid, specializing in areas such as art, cryptography, life sciences, mathematics, and game research."
+(http://www.smartmobs.com/archive/2006/04/01/tapping_the_mat.html)
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Collaborative Economy]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

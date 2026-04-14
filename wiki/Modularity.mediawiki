@@ -1,0 +1,294 @@
+'''= What is a Modular System? Modularity is an essential condition for [[Peer Production]]'''
+
+
+=Context=
+
+The two key conditions for [[Peer Production]] to emerge are [[Abundance]] and [[Distribution]].
+
+Distribution is also dependent on modularity, which means the break up of the raw materials into smaller modules, so that there is both an abundance of choice in terms of remixing them, and a very low treshold for participation, since the individuals can have access to the modules, rather than to centralized forms of capital.
+
+=Source=
+
+'''Article:  Of Hackers and Hairdressers: Modularity and the Organizational Economics
+of Open-source Collaboration.''' By Richard N. Langlois. (The University of Connecticut, Richard.Langlois@UConn.edu) and Giampaolo Garzarelli (Università degli Studi di Roma, ggarzarelli@tiscali.it). Journal Industry & Innovation, Volume 15 Issue 2 2008
+
+URL = http://web.uconn.edu/ciom/Open1C.pdf (2005 draft version)
+
+Excerpts are from the above 2005 draft version.
+
+=Description=
+
+
+'''0. Shilling:'''
+
+"Modularity is a general systems concept: it is a continuum describing
+the degree to which a system’s components can be separated and recombined, and it refers both to the tightness of coupling between components and the degree to which the “rules” of the system architecture enable (or
+prohibit) the mixing and matching of components."
+
+(https://www.econstor.eu/bitstream/10419/290382/1/9781003805588.pdf)
+
+Cited p. 30 in [[Capital Redefined]]
+
+'''1.'''
+
+“The term modular system takes on many meanings in the literature; but one
+important candidate definition, which we adopt here, is that a modular system is
+a nearly [[Decomposable System]] that preserves the possibility of cooperation by
+adopting a common interface. The common interface enables, but also governs
+and disciplines, the communication among subsystems.
+
+Let us refer to a common interface as lean if it enables communication
+among the subsystems without creating a non-decomposable system,
+
+As we will see, an
+interface may become standardized; it may also be “open” as against “closed.”
+But it is the leanness of the interface, not its standardization or openness, that
+makes a system modular.
+
+Baldwin and Clark (2000) suggest thinking about
+modularity in terms of a partitioning of information into visible design rules and
+hidden design parameters. The visible design rules (or visible information) consist
+of three parts. (1) An architecture specifies what modules will be part of the
+system and what their functions will be. (2) Interfaces describe in detail how the
+modules will interact, including how they fit together and communicate. And (3)
+standards test a module’s conformity to design rules and measure the module’s
+performance relative to other modules."
+
+(http://web.uconn.edu/ciom/Open1C.)
+
+
+
+'''2. Fenwick McKelvey:'''
+
+
+"Drupal, like most FOSS content management systems, breaks itself down into a series of modules. A module is a snippet of code that modifies the Drupal source code. Appendix I lists the core modules of Drupal and the other modules included by default. Manovich lists modularity as one of his five principles of new media. He defines it as occurring when ‘media elements, be they images, sounds, shapes, or behaviours, are represented as collections of discrete samples’ (Manovich, 2002: 30). Modularity, in his definition, not only refers to the granularity of computing components, but also their capacity to relate. The concept of modular design began in computer hardware as IBM streamlined its bloated product line by creating a modular product line consisting of relatable hardware and software components (Campbell-Kelly and Aspray, 2004: 117-137). IBM’s innovations, as Andrew Russell (2008) points out in his history of modularity, spread across the computer industry and inspired the current modular design of desktop computers. The computer is an assemblage of standardised components, such as the CPU and the hard drive (Grove, 1996). As websites transitioned from simple text files to complex software, developers translated the concept of modularity from computer programs. Many popular FOSS platforms, such as Drupal, Joomla, and WordPress, use modules in their development.
+
+Modularity is a standard form of programming that divides an application into the sum of many independent and linked components (Manovich, 2002). The concept is highly prevalent in FOSS projects. Modularity eases participation in development in their distributed operations. Contributors only need to specialise in certain parts of the code to make a contribution to the project, allowing ‘different individuals to contribute vastly different levels of efforts commensurate with their ability, motivation, and availability’ (Benkler, 2006: 103). The resulting modular code is ‘a highly distributed object’ comprised of ‘a loose corpus of source code’ consisting ‘of several thousand files organized in an intricate tree-like hierarchy’ that ‘provisionally stabilizes’ in the form of a ‘release’ and, at the same time, under ‘constant modification’ by ‘patches’ that modifies the source code’ (Mackenzie, 2006: 70). Modularity and open source creates an ‘open’ object, constantly evolving.
+
+Modularity also allows its developers to extend the program without the input or approval of the core by creating new, optional modules. So long as the module’s code speaks the same language as the platform, such as both using the standards of Drupal version 5, then development occurs without the consent or involvement of core development. By installing and running Linux, its users enrol in this a networked platform of module creation and distribution. Thus, the programming of Linux includes both a programming community expanding and honing the code base and an end user conjuring their own kernel, and in doing so, expressing their vision of the platform based on the available modules. Web modules further accelerate the spread and impact of modularity because their programming languages do not need to be compiled so the central core of the platform does not need to be recompiled to add or change modules.
+
+Where modularity has commonly been understood as a form of software production, modularity also alters the resonance between the end user (or, as Mackenzie puts it, the code subject) and the platform (the code object) (Mackenzie, 2006: 70). Linux famously allows users to compile their own kernel, a badge of honour among technical gurus. Various interfaces allow users to include, exclude, and modularise parts of the kernel. An instance of Linux includes an open platform, a developer community, and an end user creating their own version of the object. They too become part of this networked object, watching and benefitting from the modules uploaded. Various interfaces have adopted modularity as part of programming (Myers, 1998). One of the first popular programs to adopt a modular interface was MAX/MSP, a popular music composition software for the early Apple computer (Déchelle et al., 1999). Users composed music by connecting modules to create and modify sounds."
+
+(http://eighteen.fibreculturejournal.org/2011/10/09/fcj-128-programmable-platform-drupal-modularity-and-the-future-of-the-web/)
+
+=Discussion=
+
+See our separate entry for an extensive discussion of [[Modularity in Open Source]]
+
+
+==Glyn Moody: On the connection between Modularity and [[Sharing]]==
+
+"If the stuff to hand isn't modular, you can't really share, because your stuff isn't compatible with other people's stuff. If it isn't modular, you can't share out tasks and scale. If you can't share out tasks, you can't have people working independently, at their own pace and in their own way, which means the project isn't really open. If it isn't modular, you can't swap in some new elements while leaving everything else untouched, which means no "release early, release often", no experimentation, no rapid evolution. Modularity is indispensable."
+(http://opendotdotdot.blogspot.com/2010/03/open-sources-not-so-secret-sauce.html)
+
+
+==Eric Hunting on the relation between modularity and creativity==
+
+The example relates mainly to architecture:
+
+
+"I think of modularization and standardization as a way of creating new vernaculars, which were not merely regional styles but a way of encoding as a cultural tradition a collection of knowledge of things that were known to work so that, as shelter become more sophisticated in technology with time, the ease and speed of building a home could be increased by eliminating experimentation. In engineering, modularity functions as a way of encoding and compartmentalizing knowledge into the topology and architecture of components so that someone farther down the chain of development doesn't need to know all that knowledge to use it. This is how we get to the point today where a child can successfully assemble a computer with ease.
+
+Modernist architects in the past employed modularity for a number of reasons. Some sought to adapt construction to accommodate industrial mass production so as to apply its benefits to the reduction of the cost of housing, making it as close to universally affordable as possible and improving the base standard of living for all. Some sought to 'automate' design and engineering through the reduction of the functional elements of a home to spatially interchangeable units of standardized -pre-tested or proven- individual design -the closest they got to the idea of a vernacular. And, of course, some just employed it as as style. A way of being deliberately different and unusual for its own sake.
+
+Later designers abandoned modularity in architecture because they considered it a folly stifling creativity for the sake of mass-production industrialization. (which, of course, never did pan out because designers of the era wouldn't employ modularity at a level and scale low enough to where it might threaten the loss of their own professional control over design -like in the early computer era when everyone thought 'standards' were such a great idea that every company wanted to 'own' one while still exploiting deliberate non-interoperability as a means to control market shares) And yet the example of the PC shows that, instead of stifling creativity, the compartmentalization of knowledge through modularity enables creativity by lowering the bar of engineering knowledge needed to perform different kinds of 'hacking'. And so while the PC has become very 'standardized' in underlying architecture, it has diversified endlessly in physical form. You see today this wild and strange diversity of PCs manufactured and home-made that range from simple mass-produced pocket devices, laptops, tablets, and monitors to the most outrageous objet d'art such as picture frames, Chinese urns, steampunk contraptions, stuffed animals (http://www.instructables.com/id/Compubeaver---%3e-How-to-case-mod-a-beaver---in-29-e/), elegant hand-crafted wooden artifacts akin to classic radios, pieces of furniture, recyclable cardboard boxes, hardcover books, and statues of cartoon characters and anime pin-ups. As silly as some of these things are (personally, I'd be happy if they were all black boxes and seamless ceramic tablets -http://tmp2.wikia.com/wiki/File:Geode.jpg), it's in this process that 'standards' evolve, hacks turning de rigueur to become the basis of later standards, the iterative design of the technology collecting and concentrating knowledge through its use -and mis-use.
+
+The key here is _whose_ creativity is being enabled by this. Modernist use of modularity generally wasn't concerned with enabling the creativity of the inhabitants of buildings and so was indeed folly. But post-modernists still didn't offer anything better in that they were still not enabling creativity outside their professional community based on the very same presumption that experts always know best. Most of the architecture in the world isn't designed by architects -just as most of the clothes in the world isn't haute couture. Thinking about where building technology has the most impact in terms of social empowerment is what matters here. I'm not suggesting the obsolesce of architectural design by new building technology. I'm suggesting something far more fundamental to the way we house ourselves and the basic access to housing -obsolescence of bankers...
+
+When we deliberately devise any sort of modular standard it should be with the anticipation of losing control of it to its users and of its evolving in ways we can't always expect -and we should consider that the sign of its success, a proof of it being alive. Given the way our culture is so rapidly evolving today, I think the contemporary architect should consider his role as something more akin to the genetic engineer than the simple designer producing a discrete 'perfect' artifact. We are in an age where the notion that the function and role of anything stays the same over time is an anachronism. We should think of 'ways of habitation' occupants 'engage in' and the 'platforms' they use instead of discrete buildings as products or some kind of public sculpture. In the future the physical structure may not matter much. It may all be as ephemeral as the architecture in Second Life -it's persistence based not on how durable it is -skyscrapers built to last centuries are torn down daily- but rather on the persistence of its social function in a particular place and time. Like eddies in the flow."
+
+
+==Technical compatibility of modularity obfuscates its social formations==
+
+Fenwick McKelvey:
+
+"Technical compatibility of modularity obfuscates its social formations. What are the implications of disconnecting certain cultural practices from a specific context? Modularity depends on reducing complex social practices into simple pieces of code. The instrumental logic of modular compatibility seems to exclude the complexity of cultural artefacts. What are the conditions of circulating cultural practices embedded in technical modules? How do cultures become reified within modules? The process of modularity then encourages the circulation of socio-technical practices as fixed and unquestioned. The Drupal project itself suffers from a lineage of open source development with a male-dominated hacker culture (Jordan and Taylor, 2004; Mackenzie, 2006; Ross, 1991). An internal Drupal project has sprung up to attempt to address its lack of gender diversity.  This questioning is critical to reveal the cultural tendencies circulating with modules. Modules inscribe limits on the programmability of the platform because they transplant practices that have been encoded in a specific, perhaps problematic, way. Downloading and installing a module transplants code without much consideration of its specific politics. A module for voting on stories, for example, might deploy a binary ‘yes/no’ poll appropriate for its development context, but inappropriate for other sites. The technical compatibility ignores social incompatibilities."
+(http://eighteen.fibreculturejournal.org/2011/10/09/fcj-128-programmable-platform-drupal-modularity-and-the-future-of-the-web/)
+
+
+==The costs of modularity in the context of [[Transaction Costs]]==
+
+“The first of these is the (fixed) cost of establishing the visible design rules (Baldwin and Clark 2000). A (nearly) decomposable system may solve coordination problems in an elegant way, but designing such a system may take a considerable amount of time and effort.32 There may also be costs to communicating the design rules to participants and securing agreement on them. Another cost is that, at least in principle, it may not be possible to finetune a modular system as tightly as an integral one. For many kinds of software, this may no longer be an important issue in the face of Moore’s law. But for other kinds of systems, there may be important performance losses from building a system out of modules. Automobiles, for example, may be have an inherent “integrality” that prevents automakers from taking advantage of modularity to the same degree as, say, makers of personal computers (Helper and MacDuffie 2002). One can’t swap engines like one swaps hard drives, since a different engine can change the balance, stability, and handling of the entire vehicle. Clayton Christensen and his collaborators (Christensen, Verlinden, and Westerman 2002) have argued that integral designs, which can take advantage of systemic fine-tuning, have an advantage whenever users demand higher performance than existing technology can satisfy. As the fine-tuned system continues to improve in performance, however, it will eventually surpass typical user needs. At that point, these authors argue, production costs move to the fore, and the integral system (and the integrated organization that designed it) will give way to a network of producers taking advantage of the benefits of modularity discussed earlier.
+
+A third, closely related, cost of modularity (benefit of integrality) is the tendency of modular systems to become “locked in” to a particular system decomposition. At least to the extent that knowledge gained creating one modularization of the system cannot be reused in generating a new decomposition, it is a relatively costly matter to engage in systemic change of a modular system, since each change requires the payment anew of the fixed cost of setting up visible design rules. If in addition an interface has become a standard, the problems of lock-in are compounded in the way popularized by Paul David (1985), since in that case many people would have simultaneously to pay the fixed cost of change. “ (http://web.uconn.edu/ciom/Open1C.pdf)
+
+==Vasilis Kostakis on commons-based peer production and modularity==
+
+Modularity is a fundamental aspect of digitalness. It has existed since the creation of ancient human-made  artifacts;  however,  it  is  in  the  digital  era  that  the  division  of  human  labor  is  increasingly  infused  with  modularity.  Much  discussion  has  been  taking  place  around  new  technology-focused buzzwords and concepts, arguably without paying enough attention to the organizational potentialities of modularity. Commons-based peer production (CBPP) exemplifies one of these potentialities.
+
+CBPP  presents  dynamics  that  harness  digital  technologies  by  promoting  non-coercive  
+cooperation.  CBPP  questions  the  basic  mainstream  economics  mantra  that  humans  seek  
+individual profit maximization when engaging in productive activities. It also challenges the 
+conventional organizational structures of property-based, market-regulated organizations. To  take  advantage  of  “clean”  and  more  “inclusive”  modularity,  we  need  major institutional  innovations   that   require   tremendous   political   support   both   top-down   and   bottom-up.   
+
+The  CBPP  communities  are  already  here,  so  are  the  prefigurative  forms  of  a  new  mode  of  production.  If  the  goal  is  the  deployment  period  of  the  "digital revolution"  to  be  democratic,  innovative, and environmentally sustainable, CBPP appears as a qualitative leap that could inspire  policy-makers,  scholars,  and  practitioners  to  build  institutions  for  the  deployment  period and a new paradigm yet to come.
+
+
+''For the full argument and the discussion of instrumental case studies see: Kostakis, V. (2019). [http://halduskultuur.eu/journal/index.php/HKAC/article/view/228/177 How to Reap the Benefits of the “Digital Revolution”? Modularity and the Commons]. Halduskultuur: The Estonian Journal of Administrative Culture and Digital Governance, 20 (1): 4-19.''
+
+=Examples of Modularity in Industry and Culture=
+
+The following treatment is by Lev Manovich at
+http://www.manovich.net/DOCS/Remix_modular.doc
+
+
+
+
+
+==Modularity in Industry==
+
+Excerpt from an in-depth essay by Lev Manovich on remixability and modularity at
+http://www.manovich.net/DOCS/Remix_modular.doc
+
+"Modularity has been the key principle of modern mass production. Mass production is possible because of the standarisation of parts and how they fit with each other - i.e. modularity. Although there are historical precedents for mass production, until twentieth cenrtuy they have separate histroical cases. But soon after Ford installs first moving assembly lines at his factory in 1913, others follow, and soon modularity permuates most areas of modern society. ("An assembly line is a manufacturing process in which interchangeable parts are added to a product in a sequential manner to create an end product.") Most products we use are mass produced, which means they are modular, i.e. they consist from standardised mass produced parts which fit together in standardised way. Moderns also applied modulary principle outside of factory. For instance, already in 1932 – longe before IKEA and Logo sets – belgian designer  Louis Herman De Kornick developed first modular furniture suitable for  smaller council flats being built at the time. 
+
+Of course, modularity principle did not stayed unchanged since the beginning of mass production a hundred years ago. Think of just-in-time manufacturing, just-in-time programing or the use of standardized containeres for shippment around the world since the 1960s (over %90 of all goods in the world today are shipped in these containers). The logic of modularity seems to be permuating more layers of society than ever before, and computers – which are great to keeping track of numerous parts and coordinating their movements – only help this process. 
+
+The logic of culture often runs behind the changes in economy – so while modularity has been the basis of modern industrial society since the early twentiteh century, we only start seeing the modularity principle in cultural production and distribution on a large scale in the last few decades. While Adorno and Horkheimer were writing about "culture industry" already in the 1940s, it was not then - and its not today - a true modern industry. In some areas such as production of Hollywood animated features or computer games we see more of the factory logic at work with extensive division of labor.  In the case of software enginnering (i.e. programming), software is put together to a large extent from already available software modules - but this is done by individual programmers or teams who often spend months or years on one project – quite diffirent from Ford production line assembling one identical car after another. In short, today cultural modularity has not reached the systematic character of the industrial standardisation circa 1913. 
+
+
+===[[WikiSpeed]]===
+
+Benjamin Tincq:
+
+"From Joe’s words, “this was only possible because the car was modular”. Like modern software applications are comprised of several modules, the WikiSpeed car is a combination of 8 parts that can be dismantled and assembled back quickly.
+
+- ''I don’t know whether we will need gasoline, electric or hydrogen cars tomorrow. I don’t have to know, because I designed my car so that I can change the motor in about the same time that it takes to change a tire''.
+
+This allows the team to iterate the entire car in hours, or to work on specific parts without impacting the rest of the work. For instance, as a result of feedback from their first crash test, a WikiSpeed volunteer and his son teamed up to build a better front crash structure. They came up with a better design in a few days. The whole car can transform from a race car, to a commuter car, to a pickup truck, by changing only the necessary parts.
+
+
+
+The eight parts are bound by a modular contract, or a set of specifications ensuring that they will always fit together, whatever changes are brought to one part or another. Joe also imagines customers or third party manufacturers coming up with custom parts that sit upon the chassis, through what you might call an AMI, or Application Manufacturing Interface. This “LEGO mindset” is reminiscent of other modular manufacturing projects, such as the OpenStructures manufacturing grid community, or the Objectomie project (modular kitchen appliances).
+
+To enable interoperability, modular manufacturing calls for Open Source / Free Hardware. On this topic, which might scare your average engineer, Joe Justice is unequivocal:
+
+- ''I don’t understand people that tell me that open source hardware does not make any sense from a business perspective. The minute they ship their blueprints to China for manufacturing, clones start popping up because there is no IP protection there. Since it’s open source “by default”, why not open up everything from start, build a true community around your product and co-design it for real impact'' ?
+
+With this mindset, the blueprints of the car, as well as the WikiSpeed methodology are shared freely with the community, so that anyone can start building a WikiSpeed car in their garage. Like Arduino, the only thing that is not open source is the brand – to ensure quality control."
+(http://magazine.ouishare.net/2012/10/wikispeed-agile-manufacturing/)
+
+
+==Modularity in Culture==
+
+
+Excerpt from an in-depth essay by Lev Manovich on remixability and modularity at
+http://www.manovich.net/DOCS/Remix_modular.doc
+
+See the related entry on [[Remix Culture]] which discusses Remixability or read the full essay.
+
+
+"Will the separation between libraries of samples and “authentic” cultural works blur in the future? Will the future cultural forms be deliberately made from discrete samples designed to be copied and incorporated into other projects? It is interesting to imagine a cultural ecology where all kinds of cultural objects regardless of the medium or material are made from Lego-like building blocks. The blocks come with complete information necessary to easily copy and paste them in a new object – either by a human or machine. A block knows how to couple with other blocks – and it even can modify itself to enable such coupling. The block can also tell the designer and the user about its cultural history – the sequence of historical borrowings which led to the present form. And if original Lego (or a typical twentieth century housing project) contains only a few kinds of blocks that make all objects one can design with Lego rather similar in appearance, computers can keep track of unlimited number of different blocks. At least, they can already keep track of all the possible samples we can pick from all cultural objects available today. 
+ 
+The standard twentieth century notion of cultural modularity involved artists, designers or architects making finished works from the small vocabulary of elemental shapes, or other modules. The scenario I am entertaining proposes a very different kind of modularity that may appear like a contradiction in terms.  It is modularity without a priori defined vocabulary.  In this scenario, any well-defined part of any finished cultural object can automatically become a building block for new objects in the same medium.  Parts can even ‘publish’ themselves and other cultural objects can “subscribe” to them the way you subscribe now to RSS feeds or podcasts. 
+ 
+When we think of modularity today, we assume that a number of objects that can be created in a modular system is limited. Indeed, if we are building these objects from a very small set of blocks, there are a limited number of ways in which these blocks can go together. (Although as the relative physical size of the blocks in relation to the finished object get smaller, the number of different objects which can be built increases: think IKEA modular bookcase versus a Lego set.) However, in my scenario modularity does not involve any reduction in the number of forms that can be created. On the contrary, if the blocks themselves are created using one of many already developed computer designed methods (such as parametric design), every time they are used again they can modify themselves automatically to assure that they look different. In other words, if pre-computer modularity leads to repetition and reduction, post-computer modularity can produce unlimited diversity.
+ 
+I think that such “real-time” or “on-demand” modularity can only be imagined today after online stores such as Amazon, blog indexing services such as Technorati, and architectural projects such as Yokohama International Port Terminal by Foreign Office Architects and Walt Disney Concert Hall in Los Angeles by Frank Gehry visibly demonstrated that we can develop hardware and software to coordinate massive numbers of cultural objects and their building blocks: books, bog entries, construction parts. But whether we will ever have such a cultural ecology is not important. We often look at the present by placing it within long historical trajectories.  But I believe that we can also productively use a different, complementary method. We can imagine what will happen if the contemporary techno-cultural conditions which are already firmly established are pushed to their logical limit. In other words, rather than placing the present in the context of the past, we can look at it in the context of a logically possible future. This “look from the future” approach may illuminate the present in a way not possible if we only “look from the past.” The sketch of logically possible cultural ecology I just made is a little experiment in this method: futurology or science fiction as a method of contemporary cultural analysis.
+ 
+So what else can we see today if we will look at it from this logically possible future of complete remixability and universal modularity? If my scenario sketched above looks like a “cultural science fiction,” consider the process that is already happening on the one end of remixability continuum. Although strictly speaking it does not involve increasing modularity to help remixability, ultimately its logic is the same: helping cultural bits move around more easily. I am talking about a move in Internet culture today from intricately packaged and highly designed “information objects” which are hard to take apart – such as web sites made in Flash – to “strait” information: ASCII text files, feeds of RSS feeds, blog entries, SMS messages. As Richard MacManus and Joshua Porter put it, “Enter Web 2.0, a vision of the Web in which information is broken up into “microcontent” units that can be distributed over dozens of domains.  The Web of documents has morphed into a Web of data. We are no longer just looking to the same old sources for information. Now we’re looking to a new set of tools to aggregate and remix microcontent in new and useful ways.” And it is much easier to “aggregate and remix microcontent” if it is not locked by a design. Strait ASCII file, a JPEG, a map, a sound or video file can move around the Web and enter into user-defined remixes such as a set of RSS feeds; cultural objects where the parts are locked together (such as Flash interface) cant. In short, in the era of Web 2.0, “information wants to be ASCII.”
+ 
+If we approach the present from the perspective of a potential future of “ultimate modularity / remixability,” we can see other incremental steps towards this future which are already occurring. For instance, Orange <orange.blender.org> (an animation studio n Amsterdam) has setup a team of artists and developers around the world to collaborate on an animated short film; the studio plans to release all of their production files, 3D models, textures, and animation as Creative Commons open content on a extended edition DVD.
+ 
+Creative Commons offers a special set of Sampling Licenses which “let artists and authors invite other people to use a part of their work and make it new.”[5] Flickr offers multiple tools to combine multiple photos (not broken into parts – at least so far) together: tags, sets, groups, Organizr. Flickr interface thus position each photo within multiple “mixes.” Flickr also offers “notes” which allows the users to assign short notes to individual parts of a photograph. To add a note to a photo posted on Flickr, you draw a rectangle on any part of the phone and then attach some text to it. A number of notes can be attached to the same photo. I read this feature as another a sign of modularity/remixability mentality, as it encourages users to mentally break a photo into separate parts. In other words, “notes” break a single media object – a photograph – into blocks.
+ 
+In a similar fashion, the common interface of DVDs breaks a film into chapters. Media players such as iPod and online media stores such as iTunes break music CDs into separate tracks – making a track into a new basic unit of musical culture. In all these examples, what was previously a single coherent cultural object is broken into separate blocks that can be accessed individually. In other words, if “information wants to be ASCII,”  “contents wants to be granular.” And culture as a whole? Culture has always been about remixability – but now this remixability  is available to all participants of Internet culture.
+
+cultural modularity  seems to be governed by a diffirent logic than industrial modularity. On the one hand, “mass culture” is made possible by a complete industrial-type modularity on the levels of packaging and distribution. In other words, all the materials carriers of cultural content in the modern period have been standarised, just as it was done in the production of all goods - from first photo and films formats in the end of the nineteenth century to game catridges, DVDs, memory cards, interchangeable camera lenses, etc. But the actual making of content was never standardised in the same way.[8] So while mass culture involves putting together new products – fims, television programs, songs, games – from a limited repertoir of themes, narratives, icons using a limited number of conventions, this is done by the teams of human authors on a one by one basis. And whiile more recently we see the trend toward the resuse of cultural assets in comercial culture, i.e. media franchising – characters, settings, icons which appear not in one but a whole range of cultural products – film sequals, computer games, theme parks, toys, etc. – this does not seem to change the basic “pre-industrial” logic of  the production process) For Adorno, this individual character of each product is part of the ideology of mass culture: “Each product affects an individual air; individuality itself serves to reinforce ideology, in so far as the illusion is conjured up that the completely reified and mediated is a sanctuary from immediacy and life.”
+
+On the other hand, what seems to be happening is that the "users" themselves have been gradually "modularising" culture.  In other words, modularity has been coming into modern culture from the outside, so to speak, rather than being built-in, as in industrial production. In the 1980s musicans start sampling already published music; TV fans start sampling their favorite TV series to produce their own “slash films,” game fans start creating new game levels and all other kinds of game modifications. (Mods “can include new items, weapons, characters, enemies, models, modes, textures, levels, and story lines.”) And of course, from the verry beginning of mass culture in early twentieth century, artists have immediately starting sampling and remixing mass cultural products – think of Kurt Schwitters, collage and particularly photomontage practice which becomes popular right after WWI among artists in Russia and Germany. This continued with Pop Art, appropriation art, and video art."
+(http://www.manovich.net/DOCS/Remix_modular.doc)
+
+
+==The [[Separation of Concerns]] modularity in Wikipedia==
+
+"The implementation of separation of concerns increases the “modularity” of software systems, technical networks,
+online encyclopedias, and more. The knowledge product is built into a cohesive whole out of a set of disparate parts
+or modules. This approach allows for many different knowledge creators to work on a similar task, without deep
+personal interaction, while still knowing that the knowledge created (whether wiki articles into an encyclopedia, or a
+web browser) will “snap together” if everyone involved follows the community and technical standards.
+
+...
+
+Separating concerns is a subtle
+concept, but a very powerful one. It runs through the worlds of distributed innovation and peer
+production, from the human level – edits to one article within Wikipedia do not affect other
+articles inside Wikipedia – to the technical level, in which one can simply install a piece of
+software on a computer without a deep knowledge of the levels of software already in
+operation."
+
+"In a cultural knowledge product like Wikipedia, the technical stack of infrastructure is embedded, and invisible to the end user. Wikipedia exists at one level because of the existence of the Internet itself, because the creator of wiki
+software did not have to ask permission of the creators of the Web for permission to run software on it, just as Tim
+Berners-Lee did not have to ask permission of the creators of the Internet to release the Web to run on it, and so on.
+
+The technical design of the Internet separates the issues of how to move information around from the issues of how to run applications and to present information. The system is designed from the beginning to allow for technologies that were not yet imaginable by the creators to flourish, for unintended uses to be enabled by default. Wikipedia sits
+atop this structure, technically, as do the end-user interfaces on users’ computers, cell phones, and other network access points."
+(http://cyber.law.harvard.edu/commonsbasedresearch/sites/commonsbasedresearch/images/Genomics_Knowledge_Governance.pdf)
+
+==Modularity in Open Source==
+
+See the article:  [[Of Hackers and Hairdressers]], and excerpts from it in the extensive treatment of [[Modularity in Open Source]]
+
+
+The case of [[Drupal]]:
+
+Fenwick McKelvey:
+
+"Modularity at the interface helps because it divides code into discrete functions that are easily signified. Simply put, modules break complex code down into digestible bites. I depended on these little hints when I configured my first Drupal site in Argentina. Logging in as the site administrator gives a user access to add and remove modules. The Drupal interface, depicted in Figure 1, provides a simple menu to enable and configure modules. It allows users to exclude and include modules on their site. To use a module in Drupal, a user downloads and installs modules from Drupal.org onto their version of Drupal. The list of modules shows their names and a brief description that explains what they do. Modules feature their own configuration menus allowing users to tweak their functions. Through these menus and modules, a user begins a process of individuation with their local installation. The platform individuates through the enabling and disabling of different modules together in a particular configurations, what Simondon would call a phase.
+
+Modules connect the individuation of a local Drupal site by connecting the user to the wider open source development community. The developing community alters a local installation by generating new modules, versions of modules, and eventually new versions of the core. Drupal features a highly diverse range of modules. Figure 2 depicts the diversity of modules available for Drupal 5. At the time of my study, Drupal had 2,411 modules that Drupal.org divided into 30 categories. The average category has 80 modules. Each module extends and modifies the capacities of Drupal, from common tasks, like improving the software’s search engine or the type of media it can handle, to the obscure, such as allowing Drupal to become a bibliographic tool. If the possibilities of a Drupal site depend on the range of modules available, then the growing community continually expands and mutates the relationship between user and running code.
+
+Where the act of writing once described the act of programming, the cut-up technique (Burroughs and Gysin, 1978) provides a better description of modular programmability. William S. Burroughs popularised the technique of cutting up texts into short sentences or words and then re-assembling these cut-ups into new works (Hansen, 2001). Modules are like cut-ups—snippets of code assembled together by the author. Katherine Hayles notices a similar pattern in her description of new media. ‘Fragmentation and recombination,’ she mentions, ‘are intrinsic to the medium’ (Hayles, 2004: 76). 
+
+
+She compares these characteristics to writing techniques similar to the cut-up, through the following helpful example—
+
+    
+… Raymond Queneau’s Cent mille milliards de poèes (1961), a book in which each page may be cut into several strips corresponding to the lines of a poem. By juxtaposing the cut strip on one page with strips from other pages, large numbers of combinations are possible, as indicated by Queneau’s title. (Hayles, 2004: 76-77)
+
+The pre-cut lines resemble the thousands of Drupal modules that users can include or omit. The Drupal.org website becomes its own book of poems, comprised of the 2,411 modules. Once written, modules become potential cut-ups for users to program at the Drupal interface. Like the reader or editor of Queneau’s book of poems, users arrange modules in various ways to program the platforms. This form of programming resembles John von Neumann’s definition of programming as assembling. The cut-up captures a type of programming as act of assembling snippets into new formations. The cut-up technique appears in Drupal as user piece together modules. Modules function as signs that ‘not only point to—or signify—other documents and resources, they enable material effects, for example, taking us to other signs, or in the case of web browser cookies, storing a remote ID file on our own PC hard drives’ (Elmer, 2006: 16). When a user enables a module in the interface, it injects a bit of code during various events of the Drupal process. The injection of code is a transduction that changes the form of the Drupal site. A user creates an event when they click a hyperlink. Drupal itself also creates an event when it runs a script automatically (through Linux’s job scheduler cron). Events trigger functions in the Drupal code. These two examples illustrate how both users and code trigger software functions. Developers refer to events and their resulting functions—‘the things Drupal does’—as actions. [8] Modules hook into actions. Drupal actually uses the term hook to designate how ‘modules interact with the Drupal core’. [9] Each module defines a list of hooks to alter actions. VanDyk and Westgate (2007) give the following example of how hooks allow modules to alter the Drupal process,
+
+Suppose a user logs into your Drupal web site. At the time the user logs in, Drupal fires the user hook. That means that any function named according to the convention module name plus hook name will be called. For example, comment_user() in the comment module, locale_user() in the locale module, node_user() in the node module, and any other similarly named functions will be called. If you were to write a custom module called spammy.module and include a function called spammy_user() that sent an e-mail to the user, your function would be called too, and the hapless user would receive an unsolicited e-mail at every login. (2007: 4-5)
+
+The example details the event (logging in), Drupal’s response (the hook announcement), and the capacity of the module to intervene (its hook function). By enabling a module, the user spawns a process that interjects new code when executing Drupal core code. The resonance between user and modules creates transductions that alter the Drupal installation, creating new phases of its individuation as Drupal. Through its modularity, Drupal remains in-formation—always with a potential for the platform to change even when installed and running. Modularity, in short, enables a particular form of programmability; however, the limits of Drupal too must be considered if this line of critique proves to be productive for future developments on the web. Modularity, as argued, is the specific transduction of Drupal, but what are the ramifications of modularity and the cut-up technique?
+
+
+The open development process leads to a highly divergent and complex code base for Drupal. Problems arise since Drupal 5.0 assumes the compatibility of modules. Inevitability, conflicts arise between modules operating together. The risk arises from the disjuncture between code and its representation at the interface. Bad interactions can occur between code that the interface cannot represent, except as an error. The user does not have the luxury of a pharmacist to advise against taking two modules at the same time. The metastability of the Drupal platform does not preclude crisis and failure. Modules may break, stopping the individuation of a site."
+(http://eighteen.fibreculturejournal.org/2011/10/09/fcj-128-programmable-platform-drupal-modularity-and-the-future-of-the-web/)
+
+
+==[[Open Modular Hardware]]==
+
+Kris De Decker:
+
+"Reverting to traditional handicrafts is one way to sabotage the throwaway society. In this article, we discuss another possibility: the design of modular consumer products, whose parts and components could be re-used for the design of other products.
+
+Initiatives like [[Open Structures]], [[Grid Beam]], and [[Contraptor]] combine the modularity of systems like LEGO, Meccano and Erector with the collaborative power of digital success stories like Wikipedia, Linux or WordPress.
+
+An economy based on the concept of re-use would not only bring important advantages in terms of sustainability, but would also save consumers money, speed up innovation, and take manufacturing out of the hands of multinationals."
+(http://www.lowtechmagazine.com/2012/12/how-to-make-everything-ourselves-open-modular-hardware.html)
+
+=More Information=
+
+* '''Article:  [[Of Hackers and Hairdressers]]: Modularity and the Organizational Economics of Open-source Collaboration.''' By Richard N. Langlois. (The University of Connecticut, Richard.Langlois@UConn.edu) and Giampaolo Garzarelli (Università degli Studi di Roma, ggarzarelli@tiscali.it). Journal Industry & Innovation, Volume 15 Issue 2 2008
+
+URL = http://web.uconn.edu/ciom/Open1C.pdf (2005 draft version)
+
+*'''Article: How to Reap the Benefits of the “Digital Revolution”? Modularity and the Commons.''' By Vasikis Kostakis published in ''Halduskultuur: The Estonian Journal of Administrative Culture and Digital Governance'', 20 (1): 4-19.
+
+URL = http://halduskultuur.eu/journal/index.php/HKAC/article/view/228/177
+
+
+* See also: 
+
+# [[Composability]]
+# [[Decommonization]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Relational]]
+
+[[Category:Governance]]
+
+[[Category:Peerproduction]]

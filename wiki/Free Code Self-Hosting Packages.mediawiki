@@ -1,0 +1,206 @@
+= introduction = 
+
+In response to the increasing concern among users about both the potential for surveillance, and the growing power of a handful of tech corporations (particularly Microsoft, Apple, Yahoo, Google, Amazon, and FaceBook), there has been explosion of activity over the last few years to develop free code software packages to allow users to host their own "cloud computing" services, or host services for other users without any dependencies on proprietary software. This list includes software that uses a server/ client approach, not software that runs only on the users computer using a peer-to-peer approach (eg FreeNet, BitTorrent, Tox, Jami). --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 15:00, 1 May 2018 (UTC)
+
+
+----
+= sources =
+
+Information for the original version of this page was sourced from [[Disintermedia]] pages on [https://www.coactivate.org/projects/disintermedia/fyre-exyt leaving FaceBook] and [https://www.coactivate.org/projects/disintermedia/leaving-the-googleverse leaving Google]. 
+
+
+----
+= packages =
+
+== web search ==
+Common proprietary examples: Google, Bing, Yahoo
+
+Free code packages:
+* [http://www.yacy.net/ YaCY] (GNU GPLv2+, GNU LGPLv2+ for Cora library, Java) - a free code P2P search engine (or "distributed search engine"), where each user installs and searches with their own copy of the YaCy progam, but all the copies form a P2P network that shares the index of websites they search through. There is a demo search portal but the project ask that you run a copy of YaCy on your own computer rather than using that as a replacement for Google.
+* [https://asciimoo.github.io/searx/ Searx] (GNU AGPLv3, Python) - a free code packages that powers independent meta-search portals like Searx.me. A Searx instance can act as a meta-search portal for YaCy (P2P network - see above, technical details here). If there was a Searx instance that did that, and implemented !bang search, I would definitely make this my goto search engine. 
+
+== document and file storage, synchronization, transfer, and publication ==
+Common proprietary examples: DropBox, GoogleDrive, OneDrive
+
+Free code packages:
+* [http://www.kloudspeaker.com/ KloudSpeaker]
+* [https://owncloud.org/ ownCloud]
+* [https://nextcloud.com/ NextCloud]
+* [https://reep.io/ Reep]: unlike most server apps in this categroy, Reep ("peer" backwards) uses WebRTC protocol to initiate a session between two peers, then leaves them to it. Can be used to download a permanent copy of a file, or if its an audio/ video file, it can be streamed.
+* [https://www.seafile.com/ SeaFile]
+* [http://sparkleshare.org/ SparkleShare]
+* [https://www.syncany.org/ Syncany]
+* [https://syncthing.net/ SyncThing]
+* [https://tahoe-lafs.org/trac/tahoe-lafs Tahoe-LAFS]
+
+== document editing ==
+Common proprietary examples: GoogleDocs, Office365
+
+Free code packages:
+* [https://github.com/xwiki-labs/cryptpad/ CryptPad] ([https://github.com/xwiki-labs/cryptpad/blob/master/LICENSE AGPL]): collaborative document editing only, like Etherpad, but allows pads to be limited to an approved group of users
+* [http://etherpad.org/ EtherPad] (Apache 2.0): collaborative document editing only
+* [https://firepad.io/ FirePad]("[https://opensource.org/licenses/MIT MIT]")
+
+See also:
+[[Authoring Platforms‎‎]]
+
+== online office suite ==
+
+* [https://wiki.documentfoundation.org/Development/LibreOffice_Online/ LibreOffice Online]: co-developed by the Document Foundation, who develop LibreOffice, and Collabora who provide commercial services to enterprise LibreOffice users
+* [http://www.fengoffice.com/ Feng Office] (AGPL): a full web-based office suite
+* [http://www.onlyoffice.com/ OnlyOffice]: pitched as a full web-based office suite, server-side source code was released under the GNU AGPLv3 license in 2014 (according to Wikipedia article), and client-side desktop editors [http://www.onlyoffice.com/blog/2016/10/onlyoffice-desktop-editors-go-open-source/ released in 2016].
+* [https://www.zimbra.com/ Zimbra]([https://blog.zimbra.com/2014/06/osi-licenses-zimbra-collaboration-open-source-edition/ GPLv2 backend, Common Public Attribution License v1 frontend]) - as well as the usual office suite apps, Zimbra also include email and calendar, providing the functions of both MS Office and Outlook Express in one web-based package
+
+See also:
+[[Authoring Platforms‎‎]]
+
+== events calendars ==
+Common proprietary examples: Google Calendar, Meetup
+
+Free code packages:
+* [http://cozy.io/ Cozy]: also offers contact synchronization and webmail 
+* [http://www.davical.org/ DAVical] (GPL)
+* [https://friendi.ca/about/features/ Friendica]
+* [https://gettogether.community/about/ getTogether]: goals include enabling sharing of event data between GetTogether instances, and possible federation with ActivityPub has been mentioned
+* [https://project.hubzilla.org/wiki/hubzilla/Feature%20Articles/Host%2Band%2Bsync%2Byour%2Bcalendars%2Bwith%2BHubzilla Hubzilla]
+* [Mobilizon](https://joinmobilizon.org/): goals include enabling sharing of event data between instances and federation with ActivityPub
+* [http://radicale.org/ Radicale]: also offers contacts synchronization
+* [https://upcoming.org/about Upcoming]:
+
+== group text chat ==
+Common proprietary examples: Slack, Discord
+
+Free code packages:
+* [http://www.mattermost.org/ MatterMost] ([https://github.com/mattermost/platform/blob/master/LICENSE.txt "MIT" for compiled versions, GNU AGPL or Apache 2.0 or commercial for derivatives])
+* [https://rocket.chat/ Rocket.Chat] ("[https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE MIT]"): Demo available at open.rocket.chat. Messages can be edited after sending. 
+
+See Also:
+Disintermedia [https://www.coactivate.org/projects/disintermedia/slacking-off Fyre Exyt page on Slack replacements]
+
+== voice/video chat ==
+Common proprietary examples: Skype, Hangouts, FaceTime
+
+* [http://meet.jit.si/ Jitsi Meet]
+* [https://www.wire.com/ Wire]
+
+See also:
+Disintermedia [https://www.coactivate.org/projects/disintermedia/core-us Core-US page on voice and video conferencing]
+
+== webmail ==
+Common proprietary examples: GMail, Yahoo Mail
+
+Free code packages:
+* [https://mailinabox.email/ Mail-in-a-Box]
+* [https://www.rainloop.net/ RainLoop]
+* [https://roundcube.net/ RoundCube]
+
+== social media ==
+Common proprietary examples: Twitter, FaceBook, LinkedIn
+
+Free code packages:
+* [https://diasporafoundation.org/ Diaspora]
+* [http://friendi.ca/ Friendica] (formerly Friendika, Mistpark)
+* [https://gnu.io/social/ GNU Social] (GNU AGPL)
+* [https://joinmastodon.org/ Mastodon] ([https://github.com/tootsuite/mastodon/blob/master/LICENSE GNU AGPL])
+* [https://project.hubzilla.org Hubzilla] 
+* [http://pump.io/ Pump.io]: replaced StatusNet (now GNU Social) as the new engine for [https://identi.ca/ Identi.ca]
+
+More examples:
+[[Distributed Social Network Projects]]
+[https://fediverse.party/ fediverse.party]
+
+== photo hosting ==
+Common proprietary examples: Google Photos, PhotoBucket, FlickR
+
+* Chevereto (PHP, AGPLv3) - free code version has only some of the features of the proprietary premium version, although all the essential ones are there.
+* Coppermine Gallery (PHP, GPLv?)
+* [https://mediagoblin.org/ GNU MediaGoblin] (Python/ SQL, GNU APGLv3) - created by hackers associated with the [http://mediagoblin.readthedocs.io/en/latest/siteadmin/about.html#what-is-gnu-mediagoblin Free Software Foundation], aimed to support federation via [https://activitypub.rocks/ ActivityPub], although as of 2019-05 development seems to have stalled.
+* Jirafeau (AGPLv3)
+* Lutim (AGPLv3) - originalled developed for use at Lut.im, now maintained by hackers associated with Framasoft.
+* Lychee ("MIT") - originally developed by electerious.com
+* PictShare (PHP, Apache 2.0)
+* Piwigo (GPLv2)
+* zenphoto (GPLv2+)
+
+See also:
+[https://www.coactivate.org/projects/permaculture/image-hosting-software Image Hosting Software] on the Permageeks wiki.
+
+== video hosting ==
+Common proprietary examples: YouTube, Vimeo, DailyMotion
+
+* [http://www.plumi.org/ Plumi] (Python/ Plone, GPL) - created by video activists [http://www.engagemedia.org/ EngageMedia.org], in association with [https://unweb.me/ Unweb.me].
+* [https://mediagoblin.org/ GNU MediaGoblin] (Python/ SQL, GNU APGLv3) - supports video as well as photos, audio, and other types of media files
+* [https://mediadrop.video/ MediaDrop] (Python, GNU GPLv3+) - used by [http://www.openstreamer.org/ OpenStreamer.org].
+* [https://github.com/Chocobozzz/PeerTube PeerTube] - federated video hosting using WebTorrent and ActivityPub
+
+See also:
+[https://www.coactivate.org/projects/permaculture/video-hosting-software Video Hosting Software] on the Permageeks wiki.
+
+== project management ==
+Common proprietary examples: Asana
+
+Free code packages:
+* [https://we.riseup.net/crabgrass/about#crabgrass-web-application Crabgrass] (GNU AGPL): developed by RiseUp Labs for use by activist groups
+* [https://kune.cc/ Kune]: an experimental fork of Apache Wave, created by the Comunes Association who also run OurProject.org
+
+== code forge ==
+Common proprietary examples: GitHub
+
+Free code packages:
+* [https://allura.apache.org/ Apache Allura]: the package now used to host SourceForge.
+* [https://fossil-scm.org/ Fossil]
+* [http://fusionforge.org/ FusionForge]: modeled on the 1990/2000s version of SourceForge, aimed at software project management, but used by the Comunes Association to run OurProject.org, which is targeted at non-software projects.
+* [https://gitea.io/ Gitea]
+* [http://gitlab.com/ GitLab]: aimed at software project management, but like GH, can also be used to collaboratively write documentation, or create and deploy static websites. Like GH it has spaces for working on code/ text, discussing bugs/ issues with the project, and so on.
+* [https://gitolite.com/ Gitolite]
+* [https://gogs.io/ GOGS]
+* [https://kallithea-scm.org/ Kallithea]: forked from Rhodecode in 2014 by the Software Freedom Conservancy
+* [http://kunagi.org/ Kunagi] (GNU AGPL): aimed at software project management using Agile/ Scrum practices 
+* [https://pagure.io/ Pagure]: developed by the Fedora project
+* [https://www.openproject.org/ OpenProject]: popular fork of RedMine
+* [https://phacility.com/phabricator/ Phabricator]: the code forge component of the Phacility project management suite
+* [http://www.redmine.org/ RedMine]
+* [https://tuleap.net/ Tuleap]
+
+See also:
+[[List of Community-Hosted Code Forge Instances]]
+
+== integrated library system (ILS) ==
+Common proprietary examples: SirsiDynix, Apollo
+
+Free code packages:
+* [https://koha-community.org/ Koha]: founded by Horowhenua Library Trust and Katipo Communications in 1999.
+* [http://evergreen-ils.org/ Evergreen]
+* [https://opalsinfo.net/ OPALS]
+
+== online portfolio ==
+
+Free code packages:
+* [https://mahara.org/ Mahara]
+
+== platform ==
+Combines a number of the packages and functions listed above into a unified package, complete with an OS, ready to install and use out-of-the-box on a spare desktop PC (or a blank virtual machine in a datacentre).
+
+Common proprietary examples: Google Apps, FaceBook
+
+Free code packages:
+* [http://freedombone.uk.to/ FreedomBone]: developed for [http://beagleboard.org/black BeagleBone Black], can also sit on top of a server OS (eg Debian Jesse)
+* [https://freedomboxfoundation.org/ FreedomBox]
+* [https://yunohost.org/#/whatsyunohost YUNOHost]
+
+== hardware ==
+
+Hardware projects supportive of software freedom and often used as personal "cloud" servers: 
+* [http://beagleboard.org/black BeagleBone Black]
+* [https://www.kickstarter.com/projects/1598272670/chip-the-worlds-first-9-computer CHIP]
+* [https://cloudfleet.io/ CloudFleet]: offers both a hardware device and a software platform offering a range of user services
+* [https://www.raspberrypi.org/ Rasberry Pi]
+
+
+----
+= See also: =
+
+* [[Authoring Platforms]]
+* [http://libreprojects.net/ libreprojects.net] - community directory of software that can be self-hosted
+[[List of Community-Hosted GitLab Instances]]
+* [https://github.com/Kickball/awesome-selfhosted Self-hosted alternatives to popular services] - directory of self-hosted, free code software, associated with the [https://www.reddit.com/r/selfhosted/ r/selfhosted subreddit]

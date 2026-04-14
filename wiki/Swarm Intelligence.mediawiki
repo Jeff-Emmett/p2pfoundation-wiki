@@ -1,0 +1,96 @@
+'''book & concept''' = The main property of swarm intelligence is the ability to show an intelligent behavior without individuals in charge of the group. They can act in a coordinated way even without an external coordinator.  [http://www.ledface.com/blog/2010/11/swarm-intelligence-to%E2%80%A6-people/]
+
+URL = http://en.wikipedia.org/wiki/Swarm_intelligence
+
+See also our entry on [[Stigmergy]]
+
+=Concept=
+
+From the Wikipedia:
+
+"Swarm intelligence (SI) describes the collective behaviour  of decentralized, self-organized systems, natural or artificial. The concept is employed in work on artificial intelligence. The expression was introduced by Gerardo Beni and Jing Wang in 1989, in the context of cellular robotic systems.
+
+SI systems are typically made up of a population of simple agents or boids interacting locally with one another and with their environment. The agents follow very simple rules, and although there is no centralized control structure dictating how individual agents should behave, local, and to a certain degree random, interactions between such agents lead to the emergence of "intelligent" global behavior, unknown to the individual agents. Natural examples of SI include ant colonies, bird flocking, animal herding, bacterial growth, and fish schooling.
+
+The application of swarm principles to robots is called swarm robotics, while 'swarm intelligence' refers to the more general set of algorithms. 'Swarm prediction' has been used in the context of forecasting problems."
+(http://en.wikipedia.org/wiki/Swarm_intelligence)
+
+
+==Characteristics==
+
+“Perhaps the most powerful
+insight from swarm intelligence is that complex collective behavior can emerge from
+individuals following simple rules.” By studying swarm intelligence and implementing
+such rules, managers can take advantage of three important characteristics shown by social
+insect colonies:
+
+1. flexibility (ability to adapt to a changing environment),
+
+2. robustness (even if some individuals fail, the group can still perform),
+
+3. self-organization (work is neither locally supervised nor centrally controlled).
+
+The word stigmergy coming from old Greek stigma (sting) + ergon (work)
+
+(http://en.wikipedia.org/wiki/Stigmergy )
+
+=Book=
+
+'''Book: Swarm Intelligence: From Natural to Artificial Systems. Eric Bonabeau, Marco Dorigo and Guy Theraulaz. New York, NY: Oxford University Press, Santa Fe Institute Studies in the Sciences of Complexity, 1999'''
+
+
+    
+"Ants, Bees or Termites - all social insects - show impressive collective problem-solving capabilities. Properties associated with their group behaviour like self-organisation, robustness and flexibility are seen as characteristics that artificial systems for optimisation, control or task execution should exhibit. In the last decade, diverse efforts have been made to take social insects as an example and develop algorithms inspired by their strictly self-organised behaviour. These approaches can be subsumed under the concept of "Swarm Intelligence". With their book Swarm Intelligence: From Natural to Artificial Systems Eric Bonabeau, Marco Dorigo and Guy Theraulaz - pioneers of so called ant optimisation and the simulation of social insects - do not only provide an overview of the state of the art in swarm intelligence. They go further by outlining future directions and areas of research where the application of biologically inspired algorithms seems to be promising.
+
+    
+Every chapter of the book describes a special phenomenon in social insects that can be observed in nature and explained by models. The book also provides examples of the latter being transferred successfully to algorithms, multi-agent systems and robots, or at least describes promising approaches for doing this. The authors discuss phenomena involving the following behaviours:
+
+
+==Ant Foraging==
+
+    
+A colony of ants is able to adapt its foraging efforts to the nearest, most promising food source. Recruitment of other foragers is realised by pheromone trails. A successful ant returns to the nest leaving behind a "smell" on the ground. This smell biases the movements of other foragers. When the latter also find a food source at the end of the pheromone trail they reinforce the trail by depositing new pheromone marks.
+
+    
+A network of pheromone trails emerges, constructed in a self-organised manner and based on positive feedback. An adaptive distribution of foragers between different food sources is the result. This distribution avoids such phenomena as over-recruitment. The authors describe not only the trail following, updating behaviour and the resulting patterns, but also present models that are able to explain these phenomena. The models of adaptive and robust foraging form the basis for algorithms used in combinatorial optimisation e.g. applied to routing in communication networks. These algorithms form the heart of a new research field called "ant optimisation". They are applied to problems like the Travelling Salesman and related network-based problems. Reinforcement of edges that are rated as "good", combined with a mechanism for pheromone decay leads to the robust discovery of optimal solutions. The results of these methods are not overwhelmingly better than already established algorithms but they impress by their elegance and self-organisation based on purely local decisions. The authors describe this algorithm and diverse variants in detail: about a quarter of the book is dedicated to the phenomenon of ant foraging and its transfer to optimisation. That is not surprising as these methods form the most mature applications of swarm intelligence.
+
+==Division of Labour and Task Allocation==
+
+    The next chapter is dedicated to another impressive achievement of social insects: their adaptive division of labour. Again, the authors begin by describing empirical experiments. An ant colony is able to adjust its task allocation to external perturbation. It maintains its functions, even when a huge partition of (specialised) workers is artificially removed. This adaptation apparently occurs without any central control, conscious evaluation of the global situation or direct communication. A model that reproduces this colony level behaviour based on self-organisation deals with response thresholds. Every ant perceives the need for the fulfilment of some task - brood care or storage of incoming food. If this stimulus is strong enough - it is increasing when the task is not carried out - the ant has a higher probability to engage in the task associated with the stimulus. Ants with low thresholds for one task respond on lower levels of stimuli. Having terminated a task successfully, the ant may adapt its threshold for that task. This reinforcement of the bias to repeat kinds of work that the ant has often done before, leads to specialisation in a population of formally identical workers. This model of "foraging for work" can serve as a basis for a task allocation mechanism in an artificial multi-agent system. Possible applications for online differentiation, e.g. as a distributed control algorithm for robots are sketched.
+
+
+==Cemetery Organisation and Brood Sorting==
+
+    Another self-organised behaviour observed in ant colonies is the aggregation of corpses or larval sorting. Distributed objects are loaded and deposited in clusters without any central plan indicating where to unload the items. A simple agent-based model explains this phenomenon. An agent carrying an item drops it when it perceives many similar objects. Conversely, an agent without any load picks up an item when it perceives that most objects in its surroundings are of a different kind. This model can be directly implemented in a swarm of robots driving around and moving pucks. It also can provide a mechanism for data analysis or graph partitioning. According to a similarity measure data items or graph nodes can be clustered in a two-dimensional space.
+
+
+==Self-Organisation and Templates==
+
+    
+A problem with the clustering model above is the fact that the location of the clusters cannot be determined a priori. By combining the clustering model with an additional stimuli dependent bias this becomes possible. An example is the formation of protective walls around the body of an ant queen. Items are dropped with the highest probability in an area defined by a certain concentration of the pheromone that the queen exudes. Thus the body of the queen serves as a template, a pattern that is used to construct another pattern. An analogous extension can be made to the algorithms for data clustering or graph partitioning. The formerly homogenous plane is modified by the addition of a template that represents areas having different probabilities for dropping items. The interaction of these two mechanisms results in a clustering of data items or graph nodes at previously defined locations.
+
+
+==Nest Building==
+
+    
+One of the most fascinating achievements of social insects is their complex nest architectures, constructed without any global representation. An explanation can be found using the framework of micro-rules. The configuration of bricks surrounding (for example) a simulated wasp indicates whether an agent deposits a new brick or moves on. A set of such rules determines the building behaviour of a single entity. The authors examine a large number of these rule sets: resulting in more or less random space filling activities, but also in highly structured architectures. Some of them are intriguingly similar to natural nest forms. The authors observe relations between constraints provided by the rules and the existence of repeated sub-modules. Their procedure for scanning the search space of possible architectures is a genetic algorithm with a genome consisting of the micro-rules as genes. The phenotypes constructed according to the rules are evaluated with some kind of "beauty measure" describing properties of structured patterns which can be found in natural nest architectures. The authors then briefly present some examples of self-assembling or self-reconfigurable robots.
+
+
+==Co-operative Transport==
+
+    
+This chapter is a little bit different than the others. There are no simulation models given that try to explain the phenomena. The authors begin with the statement that the examination of co-operative transport is not really interesting for research on swarm intelligence but must be dealt with because it is generally seen as an important benchmark for robotic systems. Observations in nature or experiments with real ants show that co-operative prey retrieval is not yet fully understood. Nonetheless, there are some studies concerning recruitment of nest mates (the process in which a single worker determines that it cannot retrieve prey without help), positioning around the item and object alignment carried out by the ants and the actual transport with its adaptation to external perturbations like obstacles. The authors describe a robotic implementation of co-operative transport that replaces other formalised models.
+
+    
+Throughout the book one mechanism for communication and co-operation is present: '''[[Stigmergy]] is indirect communication based on modification of the environment.''' If one insect reinforces a pheromone trail or deposits an object, other insects are able to perceive the modified environment, adapt their responses or start new activities. The authors distinguish between quantitative stigmergy (the perceived concentration of a pheromone influences whether there is a reaction or not) and qualitative or discrete stigmergy (different stimuli trigger different responses). The main problem with the application of this form of co-ordination in artificial systems is its development: one agent has to modify its environment so that the others respond to stimuli in the intended way. Thus it is important to understand the corresponding mechanisms in naturally co-ordinated systems like social insects. Sociality is not the key concept in the book, but the interaction of local rules resulting in self-organised behaviour or emergent patterns.
+
+    
+Finally, one can state that the book Swarm Intelligence is an impressive, integrated collection of examples for simple models of self-organisation and emergent behaviour found in social insects. It even can serve as an introduction to agent-based insect models as used in theoretical biology. Every illustrative model is presented in so much detail that one might directly be able to reproduce their simulation results. Every algorithm is given in pseudo-code. It is very fascinating to see how the shift is made to artificial swarms for problem solving. The book is full of new ideas, new concepts produced by a research direction that is at a rather early stage. If one expects "wonders", new algorithms that solve hard problems in ways we never expected, the book may be a little bit disappointing. The book sums up a new, fascinating way of developing algorithms, multi-agent systems and robot swarms based on examples of maybe the most successful social systems found on earth. That makes it well worth reading."
+(http://jasss.soc.surrey.ac.uk/4/1/reviews/kluegl.html)
+
+
+[[Category:Books]]
+
+[[Category:Intelligence]]
+
+[[Category:Relational]]

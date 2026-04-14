@@ -1,0 +1,95 @@
+'''= The GNU Social P2P effort attempts to create a distributed, privacy-enhanced and privacy-enforcing, user-controlled social network.'''
+
+URL = http://groups.fsf.org/wiki/Group:GNU_Social/P2P
+
+=Description=
+
+Ted Smith:
+
+"For the past few weeks, Miron Cuperman and I have been thinking about
+how to do social networking in a p2p and privacy-enhanced way. We've
+come up with some code and documents that describe a distributed social
+networking system that is able to make and enforce strong guarantees
+about user privacy while still providing usability in the same vein as
+traditional, centralized or hub-and-spoke services. We've collected this
+into an effort to build a P2P GNU Social.
+
+The GNU Social P2P effort attempts to create a distributed,
+privacy-enhanced and privacy-enforcing, user-controlled social network.
+
+
+The goals of the P2P effort include:
+
+* User Control - The user can run their own node on their own machine
+with maximal ease of use and maintenance - it shouldn't take a sysadmin
+to be social
+
+* Privacy controls are not merely stated, but are enforced by strong
+cryptography and time-tested protocols. All user data, including the
+social graph, is private by default.
+
+* Transparent developer access to other social networking systems,
+including OStatus - the modular transport/translation system of the P2P
+GNU Social will ensure that from the point of view of the end-user and
+developer, there is only One Big Network.
+
+* Modularity - Components in the node stack should be separated such
+that it is simple to add and remove components. A full, working GNU
+Social P2P node will be composed of several different individual
+programs, and several different user interfaces. A strong client-side
+API should enable developers to integrate P2P GNU Social into all
+relevant existing desktop applications. 
+
+* Composition - Whenever possible, P2P GNU Social will borrow/loot from
+existing Free protocols and implementations, though all code written by
+us will be licensed under the AGPL."
+
+
+=Status=
+
+Ted Smith:
+
+"We need people to help make this system a reality, by hacking on it and
+fleshing out the protocol. Some things that people could get started
+with include transport layers or translators for pre-existing networks,
+and building user interfaces, ranging from a basic prototype to
+integration with existing "social desktop" initiatives and mobile
+devices.
+
+We'd like to emphasize that this is **NOT** a fork of the mainline GNU
+Social. StatusNet GNU Social and P2P GNU Social fulfill different niches
+in the social networking space and should interoperate fully. If you
+have to choose on one implementation to work on, it's probably better
+for you to work on StatusNet GNU Social - there's more maturity and
+it'll be possible to create free social networking systems faster. We
+expect that P2P GNU Social will be more of a "research" effort - a
+vanguard into privacy-enhanced social networking - which other social
+networking systems, including and especially StatusNet GNU Social, will
+be able to learn and build from. We have signed copyright assignment
+papers with the FSF and expect contributors to do so as well.
+
+We hope that many of the questions people have about how the network
+works and how it guarantees privacy can be answered by our design
+documents on groups.fsf.org, but please feel free to ask further
+questions."
+
+
+=More Information=
+
+* To learn more about the P2P GNU Social design and structure, visit
+<http://groups.fsf.org/wiki/Group:GNU_Social/P2P>. 
+
+* Currently, we have a
+prototype for the GNU Social "core", written in Java, hosted on
+Gitorious here: <http://gitorious.org/social-p2p/core>. 
+
+*We also have our
+own mailing list at <http://lists.gnu.org/mailman/listinfo/social-p2p>
+and an IRC channel at <irc://irc.freenode.net/social-p2p>.
+
+* http://groups.fsf.org/wiki/Group:GNU_Social/P2P/Node_Architecture
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]

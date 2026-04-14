@@ -1,0 +1,150 @@
+
+
+=Discussion=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Identity and naming are key aspects of publishing online, because they are what
+enable people who want to read a user’s content to find it and verify that the content
+was really created by the user they intended to find, as opposed to someone pretending
+to be them. Verifiable identity is an important aspect of engaging with one another and
+consuming content online. The most prevalent way to handle identity management on
+the web today is by creating a new set of login credentials for each new service one
+wants to use. Users share, publish, and link their usernames across these services
+together to form a connected “identity”. Most websites have their own
+username/password based login systems. They verify that you are really “you”–the
+person who originally signed up with that username–by ensuring that you know a secret
+only that person should know, the associated password.
+
+It has become increasingly popular for applications to outsource this functionality
+to large, reputable sites like Google and Facebook, so users can use their existing
+Google or Facebook credentials to login to many different applications. Using Facebook
+or Google for authentication makes it easier for a new user to experiment with a service,
+as they don’t have to go through the time consuming process of creating a new user
+identity.
+
+However, as we discussed in the risks section, the overreliance on a single
+identity provider can have worrisome ripple effects. If a dominant identity provider
+disappeared or, perhaps more likely, if a user’s account were suspended or
+compromised, then the user would be locked out of all other sites that depend on those
+credentials for identity authentication. This could make it very challenging for users to 80
+publish and consume content across the web.
+
+Another technique for establishing identity online is public key cryptography,
+though this is rarely used. In this paradigm, a user has two important pieces of
+information -- a public key, which everyone knows, and a private key, which only the
+user knows, and never shares with anyone. The user can use her private key to
+decrypt messages encrypted with her public key, and to sign messages, by showing
+that she is the owner of the private key (without revealing what it is). For example, if
+Jane registers her public key at a well-known public key directory, like pgp.mit.edu, then
+anyone can verify that content she has signed was in fact created by her. It is nearly
+impossible for someone else to pretend to be Jane without compromising her private
+key, or the public key directory.
+
+Though cryptographic keys can be generated independently and thus are entirely
+under the user’s control, putting identity firmly in their own hands, they are not a
+common way for users to authenticate on the web–perhaps because it’s a confusing
+model to users who are used to usernames and passwords, and there aren’t a lot of
+easy-to-use public key directories that enable users to find one another based on their
+cryptographic identity. However, many applications use public key cryptography under
+the hood, without direct user involvement, like encrypted messaging systems Signal and
+WhatsApp. Also, more applications are being developed to make public key
+cryptography easier to use, like keybase.io.
+
+There are other forms of identity, naming, and user authentication that leverage
+domain names, or URLs, as the basis for a user controlled identity. DNS is an important
+protocol on the Internet used for registering and resolving domain names: it solves the
+problem of resolving a human-readable name (i.e. google.com) to a specific IP address,
+or server location (i.e. 69.89.31.226). Users register domain names via domain name
+registrar through an independent multi-stakeholder organization called the Internet
+80 One of the examples we described in the first section involved someone losing access to multiple
+applications when she was banned from Facebook. Facebook Connect has become one of the most
+popular ways of logging into websites, and as such, if a user violates Facebook’s terms of service, he or
+she could lose access to many different sites.
+
+Corporation of Assigned Names and Numbers (ICANN), formerly under the US
+Department of Commerce. So if Jane wants to establish her own online identity using
+DNS she can pay a domain registrar like GoDaddy to register JaneDoe.com, and then
+use that domain as her “home” on the web. For example, Jane might keep a blog, a list
+of updates, a picture gallery, and her biography at janedoe.com. Similarly, a publication
+or aggregator could register a domain name like toptechstories.net and publish articles;
+by having and sharing a human-readable domain name, it is much easier for users to
+find them.
+
+There are some projects that aim to help users utilize their websites as a way of
+creating a user-owned identity and using that to authenticate with third party websites.
+Once a user obtains a domain name, she can use an open protocol, such as OpenID,
+IndieAuth, webID, or Mozilla Personas, to authenticate her identity to another
+application that accepts this form of credentialing. Although this model gives users a lot
+of autonomy and control over their own identity (a user can put anything they want on
+their own website, up to what is allowed by their hosting provider; and it isn’t too difficult
+to find alternative hosting providers), it has some weaknesses we must consider.
+Security is not an integral part of DNS’s design; it’s possible for people to spoof a
+domain name and redirect traffic to a different IP address. To overcome this challenge,
+most websites employ certificates, which are dispensed via a hierarchy of certificate
+authorities. 
+
+A certificate authority binds cryptographic public keys to a specific domain or
+identity (like a person or an organization) through a process of issuing certificates (this
+functionality is actually similar to what a public key directory might provide, through
+certificate authorities often go one step further and actually verify a relationship to a
+real-world identity). This process enables a user’s browser to verify that the website
+they are visiting belongs to the owner who has registered that domain, by validating the
+server’s certificate–when you see a green lock in the browser URL bar, this means the
+website has a valid certificate. There are different levels of certificate validation, ranging
+from domain validation, a relatively simple validation which is granted when the
+requestor can prove access to the domain, usually by email, to extended validation, in
+which the certificate authority does more real-world validation, like showing the domain
+really corresponds to the company or organization it implies. There are a few large
+certificate authorities, like Verisign, which serve as the roots of a hierarchical structure
+of certificate authorities.
+
+Previously, websites had to purchase a signed certificate from a reputable
+certificate authority in order to provide secure connections and work well with modern
+browsers. In 2016 a new, free certificate authority was released: Let’s Encrypt. Let’s
+Encrypt is a free, automated, and open certificate authority, provided by the non-profit
+Internet Security Research Group. The project’s aim is to provide an easy-to-use, 82
+automated way for any website to obtain valid certificates, supporting a more secure
+web. Both Chromium and Mozilla have named it as important to their plans to phase out
+non-secure HTTP. Let’s Encrypt only offers the lowest level of certificate validation, 8384
+domain validation, but it can be set up in a completely automated way and provides a
+viable path for all websites to upgrade to the more secure HTTPS. A major goal of the
+project is to be as transparent as possible; Let’s Encrypt regularly publishes
+transparency reports and publicly logs all certificate change transactions.
+
+The existing certificate authority system is far from perfect, and there are many
+calls to re-architect or replace it. Certificate authorities can get compromised and start
+issuing reputable certificates for disreputable servers. For example, in 2011, a Dutch
+certificate authority, Diginotar, was compromised and issued many fraudulent
+certificates for common domain names like google.com and facebook.com. This was
+used to snoop on the web traffic of over 300,000 users in Iran. In 2015 the certificate
+authority China Internet Network Information Center (CNNIC) was removed from the
+trusted certificate authority list in Google’s Chrome browser due to insecure practices.
+Also in 2015, Symantec got in trouble with Google for issuing unauthorized certificates
+for Google domains.
+
+
+...
+
+
+Without a system like certificate authorities putting appropriate security in place,
+users would not be able to trust the websites they visit, and might have their credentials
+stolen. As we discussed before, concentrating user credentials and authentication
+power in a few hands is troublesome for freedom in publishing–it is a way for
+mega-platforms to restrict users’ ability to participate in a trusted online publishing
+environment. But at the same time, expecting every user to manage their own security
+(and recover in the case of compromise) is also dangerous. In order for users to
+aggregate and disseminate their own content, we need an authenticated naming
+scheme that enables others to easily find trustworthy content. Creating an independent
+system for identity and naming, one that is easy to use and doesn’t suffer from the
+same limitations as public key directories or DNS and certificate authorities, might make
+it feasible for users to self-publish and push their content across different applications."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+=More information=
+
+* [[Certificate Transparency]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Standards]]

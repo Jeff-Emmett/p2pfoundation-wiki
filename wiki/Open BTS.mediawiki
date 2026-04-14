@@ -1,0 +1,54 @@
+'''= working on a new kind of cellular network that can be installed and operated at about 1/10 the cost of current technologies, but that will still be compatible with most of the handsets that are already in the market.'''
+
+URL = http://openbts.sourceforge.net/ ; http://en.wikipedia.org/wiki/OpenBTS
+
+
+=Definition=
+
+From the Wikipedia:
+
+"OpenBTS is a software-based GSM access point, allowing standard GSM-compatible mobile phones to make telephone calls without using existing telecommunication providers' networks. OpenBTS is notable for being the first free software implementation of the industry-standard GSM protocol stack."
+(http://en.wikipedia.org/wiki/OpenBTS)
+
+
+
+=Description=
+
+"OpenBTS is an open-source Unix application that uses the Universal Software Radio Peripheral (USRP) to present a GSM air interface ("Um") to standard GSM handset and uses the Asterisk software PBX to connect calls. The combination of the ubiquitous GSM air interface with VoIP backhaul could form the basis of a new type of cellular network that could be deployed and operated at substantially lower cost than existing technologies in greenfields in the developing world.
+
+In plain language, we are working on a new kind of cellular network that can be installed and operated at about 1/10 the cost of current technologies, but that will still be compatible with most of the handsets that are already in the market. This technology can also be used in private network applications (wireless PBX, rapid deployment, etc.) at much lower cost and complexity than conventional cellular."
+
+
+=Discussion=
+
+OpenBTS is used at Burning Man:
+
+"The system is only "as big as a shoebox," Edens says, and requires a mere 50 watts of power "instead of a couple of thousand" so it is easily supported by solar or wind power, or batteries. It performs as well as any other GSM base station which has a maximum range of 35 kilometers and a typical range of 20 kilometers, depending on geography, antennae height, etc. 
+
+It can use a wireless backhaul, too. "We’re working with UC Berkeley on a really interesting project on super long distance wireless backhaul. We can also use private microwave and all the usual backhaul technologies," Edens says. A full‐power base station with software costs around $10,000. Compare that to the typical $50,000 - $100,000 investment for base station controllers, mobile switching centers and "a whole lot of plumbing" to bring in power, backhaul, etc., in a traditional cellular network. 
+
+Like other GSM cell networks, OpenBTS networks can connect to the public switched network and the Internet. Because it converts to VoIP, it "makes every cell phone look like a SIP end point … and every cell phone looks like an IP device. But we don’t touch anything in the phone … any GSM phone will work, from a $15 refurbished cell phone all the way up to iPhones and Androids."  Low cost phones are particularly important for projects in impoverished areas, where people can benefit most from better communications services. 
+
+"The UN and ITU studies show that when you bring communications services to an area, healthcare goes up, economic well being goes up, education goes up," Edens says, noting that costs and power needs are low enough that even a small village can afford to do this. Users may need to pay $2 or $3 a month. 
+
+He brags that setup is downright trivial. "After the Haiti earthquake, we sent a system that was installed at the main hospital in Port Au Prince. They had it working an hour after unpacking it from the box. The hospital PBX was down. They used it as their phone system for about two weeks." 
+
+Kestral has sold about 150 units, hardware and software, since last January, with trial systems installed in India, Africa, the South Pacific and a number of other countries. The team has also done a few private installations like oil fields, farms, and ships at sea. They are also providing a system to the Australian Base in Antarctica. Plus OpenBTS has been downloaded about 4,000 times, mostly by researchers able to build their own base stations. It is also of interest for military communications, law enforcement and DARPA projects. 
+
+Because OpenBTS relies on licensed bandwidth, the team hasn't been targeting enterprises wanting private campus-wide cell phone networks, though that’s not out of the question. Still, Edens says there's plenty of work to be done for the 60% of the world’s landmass and the 40% of the world’s population that don’t have service, he says, quoting number from the ITU. Carriers such as Telefonica to T-Mobile have expressed interest."
+(http://www.networkworld.com/news/2010/083010-open-source-voip-cell-phones-at-burning-man.html) 
+
+
+=More Information=
+
+#[http://www.phibetaiota.net/2010/09/reference-openbts-open-access-cellular-ham-hack/ Primary Source on OpenBTS at Burning Man with Six Links]
+#[http://www.phibetaiota.net/2011/01/openbts-egypt-need-to-flesh-out-openbts-usa/ Related Link: OpenBTS Egypt — Need to Flesh Out OpenBTS USA with links]
+
+
+[[Category:Technology]]
+
+[[Category:Open]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

@@ -1,0 +1,51 @@
+URL = http://sciencecommons.org/projects/data/
+
+
+=Description=
+
+From http://sciencecommons.org/projects/data/: 
+
+"The Neurocommons project is creating an Open Source knowledge management platform for biological research. The first phase, a pilot project to organize and structure knowledge by applying text mining and natural language processing to open biomedical abstracts, was released to alpha testers in February 2007. The second phase is the development of a data analysis software system. The software will be released by Science Commons under the BSD Open Source License. These two elements together represent a viable open source platform based on open content and open Web standards.
+
+We are launching this effort in neuroscience – thus, calling it the Neurocommons – to create network effects within a single therapeutic area and to leverage the connections we have developed with neurodegenerative disease funders through our MTA project. The long-term elements of the Neurocommons revolve around the mixture of commons-based peer editing and annotation of the pilot knowledge project and the creation of an open source software community around the analytics platform."
+(http://sciencecommons.org/projects/data/)
+
+
+=Context=
+
+From: http://sciencecommons.org/projects/data/:
+
+'''The reason behind all of this …'''
+
+"The Neurocommons project comes out of Creative Commons history with the Semantic Web. Executive Director John Wilbanks founded the Semantic Web for Life Sciences project at the World Wide Web Consortium and led a semantics-driven bioinformatics startup company to acquisition in 2003. Science Commons Fellows Jonathan Rees and Alan Ruttenberg play key roles in the Semantic Web development efforts for science.
+
+The scope of knowledge in the public and private domains has led many experts in the field of pharmaceutical knowledge management to embrace commons-based production methods and pre-competitive knowledge sharing. No one company, even one such as Pfizer, can capture, represent, and leverage all the available knowledge on the Web.
+
+Our research meshed with emergent efforts and interest from the pharmaceutical industry in technology to harvest common terms and relationships from unstructured text and databases to provide a “map” of the implicit semantics shared in and across domains. Pfizer and Biogen both contributed significant input to early discussions, and the system is modeled part on a service already in use at Novartis, though proprietary.
+
+'''Where we are now …'''
+
+Currently, our Neurocommons team is working to release, improve and extend an open knowledgebase of annotations to the biomedical abstracts (in RDF), debugging and tailoring an open-source codebase for computational biology, and gradually integrating major neuroscience databases into the annotation graph. All the while using these efforts to further bring together the community within neuroscience around open approaches to systems biology.
+
+With this system, scientists will be able to load in lists of genes that come off the lab robots, and get back those lists of genes with relevant information around them based on the public knowledge. They’ll be able to find the papers and pieces of data where that information came from, much faster and more relevant than Google or a full text literature search, because for all the content in our system, we’ve got links back to the underlying sources. And they’ve each got an incentive to put their own papers into the system, or to make their corner of the system more accurate for the better the system models their research, the better results they’ll get.
+
+We’ll be inviting the bioinformatics community to work on both the content and the analytic software. Neither one can easily reach potential in a single organization. The scale of the knowledge-mapping effort is vast, and for the foreseeable future it’s going to require human input at some level to make it as accurate as possible (text mining is necessary but not sufficient). The model here is a machine-seeded Wikipedia, not unlike the way translations sometimes work for wikipedia content, where humans come in and tend to the patches of knowledge they care about. Because it’s all in RDF, it all hooks up into a single usable network, and decentralized, incremental edits turn into a really accurate knowledge model.
+
+'''Looking into the future …'''
+
+In the short term this is most valuable to people who already know how to use it. The skill set is rare and still considered a specialty. But over time the use of machine-annotation should evolve into a mainstream part of biology, just as the use of machine-generated data has evolved.
+
+The longer term social goal is to bring the kind of advanced techniques that are common in pharma to more researchers and improve the quality of the information that’s available across the entire space of research, from pharma to university to industry to government. Right now, pharma can try to cobble together all of the information across its own enterprise, but that is so expensive it’s not available to the other four stakeholders. It doesn’t draw on the other three stakeholders in any meaningful way, much less an automated way. This will allow all the researchers involved in high throughput systems biology efforts to ask good questions, using all the information available, regardless of financial position. That means more knowledge moving back into the canon, faster, that will lead to a more systemic understanding of disease and cell activity for industry to call on.
+
+The second phase is the development of a data analysis software system to be released by Science Commons under the BSD Open Source License. Without the software, we’d have the current state: a hodgepodge of software that lets you view networks, software tied to a specific protein network, and a couple of expensive closed platforms. A web without a browser and a search engine. This is akin to Mozilla for the life sciences Semantic Web, letting normal non-bioinformatics researchers input massive data sets and get back a sense of what’s really going on in the data, what pieces of the cell are activated or deactivated, when, and where. The result is better hypotheses coming out of experiences, which translates to more good experiments, and more papers to feed back into the system. And since it’s open and RDF, it again all hooks up, and feeds directly into the modern pharma IT systems to make decisions better there, too."
+(http://sciencecommons.org/projects/data/)
+
+=More Information=
+
+#Technical overview at http://sciencecommons.org/projects/data/nc_technical_overview
+#Background briefing paper at http://sciencecommons.org/projects/data/background-briefing 
+#[[Science Commons]]
+
+[[Category:Movements]]
+
+[[Category:Science]]

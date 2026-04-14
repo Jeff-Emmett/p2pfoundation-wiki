@@ -1,0 +1,104 @@
+'''= " A movement advocating for transparent, modifiable, and democratically governed artificial intelligence systems, rooted in the ethos of digital commons."'''
+
+
+=Definition=
+
+OSI:
+
+"What is Open Source AI
+
+When we refer to a “system,” we are speaking both broadly about a fully functional structure and its discrete structural elements. To be considered Open Source, the requirements are the same, whether applied to a system, a model, weights and parameters, or other structural elements.
+
+
+An Open Source AI is an AI system made available under terms and in a way that grant the freedoms1 to:
+
+# Use the system for any purpose and without having to ask for permission.
+# Study how the system works and inspect its components.
+# Modify the system for any purpose, including to change its output.
+# Share the system for others to use with or without modifications, for any purpose.
+
+These freedoms apply both to a fully functional system and to discrete elements of a system. A precondition to exercising these freedoms is to have access to the preferred form to make modifications to the system."
+
+(https://opensource.org/ai/open-source-ai-definition)
+
+
+=Characteristics=
+
+
+==Model Openness==
+
+Releases include weights (open-weight), training data, and code (e.g., Mistral AI, LLaMA 2). See: [[Open Weights]]
+
+Contrasts with "open API" models (e.g., OpenAI) that hide core infrastructure.
+
+==Governance==
+
+Hybrid licenses (e.g., CreativeML Open RAIL-M) impose ethical use clauses.
+
+Community-driven oversight (e.g., EleutherAI, LAION).
+
+
+==Ecosystem==
+
+Tools for federated training (Flower), ethical datasets (The Stack), and local deployment (Ollama).
+
+
+=Timeline=
+
+Timeline of Open Source AI, via DeepSeek:
+
+==2000–2010: Pre-Open AI Foundations
+
+2001: GNU Free Documentation License – Early model for open knowledge sharing, later influencing AI licenses.
+
+2007: Launch of Apache Mahout – Open-source machine learning library, emphasizing collaborative development.
+
+
+==2011–2019: Open AI Emerges==
+
+2015: TensorFlow released by Google (open-source, but with corporate control).
+
+2019: EleutherAI forms – Grassroots collective building open LLMs (e.g., GPT-Neo).
+
+
+==2020–2022: Community-Led Models==
+
+2020: BigScience (France) – Hosts BLOOM, the first multilingual open LLM 
+
+2021: LAION releases OpenCLIP – Open dataset for image-text models, critical for Stable Diffusion.
+
+2022: CreativeML Open RAIL-M License – Ethical use clauses for open models (used by Stable Diffusion).
+
+
+==2023: Corporate Co-optation & Backlash==
+
+March: Meta releases LLaMA 1 ("open" but with restrictions).
+
+June: French Mistral AI founded – Advocates for open-weight models in EU policy
+
+July: LLaMA 2 released – Sparks debate over "open-washing" 
+
+
+==2024: Policy Battles & Commons Alternatives==
+
+
+January: EU AI Act amendments target open-source exemptions (French NGOs lobby for commons protections).
+
+April: Mistral 7B – French model outperforms proprietary alternatives, fueling sovereignty debates.
+
+June: Open Source AI Summit (Paris) – Co-organized by La Quadrature du Net 
+
+
+=Examples=
+
+# [[Mistral AI]]	French startup lobbying for EU-wide open-weight AI standards.	https://mistral.ai
+# Pythia	Transparent LLM by EleutherAI, with documented training data.	https://eleuther.ai
+# OpenRAIL Licenses	Ethical use licenses for AI, co-designed by civil society.	https://www.licenses.ai
+
+
+[[Category:Standards]]
+
+[[Category:Free_Software]]
+[[Category:Protocols_and_Algorithms]]
+[[Category:Technology]]
+[[Category:Open]]

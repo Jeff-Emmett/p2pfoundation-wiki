@@ -1,0 +1,130 @@
+
+
+=Discussion=
+
+On the occasion of MediaWiki's move from volunteer to professional development, Aryeh Gregor comments on the distinction between the two models:
+
+
+"Let me begin with definitions.  I will draw a basic distinction
+between community development and centralized development.  I'll start
+with two motivating examples.
+
+Firefox is developed by a community.  Everything involved in the
+project and its development is open.  Most of the work is done by
+employees of Mozilla, and all important decisions are made by
+employees of Mozilla, but anyone on the Internet can view what's
+happening and get involved.  Bugs you open might get ignored forever,
+and you might have to poke people a bunch to get patches reviewed, and
+you might have to tolerate a considerable amount of bluntness and
+follow other people's marching orders if you want to contribute
+anything.  But in principle, any random person in the world can make
+largely the same contributions as a Mozilla employee.
+
+Internet Explorer is developed by a centralized team.  They have blogs
+where they sometimes share detailed info about their development
+process and reasoning.  They very carefully read all user feedback
+left in the comments.  They have a bug tracker where anyone can file
+bugs, and they guarantee that they'll look at and attempt to reproduce
+every single bug filed in a timely fashion.  But although they pay
+close attention to feedback, giving feedback is the only way you can
+really participate without getting hired by Microsoft.  You can't
+write any code, or have a voice in discussions at all comparable to an
+IE team member.
+
+These examples illustrate some important things:
+
+* Community development does not mean democracy.  Even in a totally
+community-oriented project, all decisions might ultimately be made by
+a small group of individuals.  (For instance, in the case of the Linux
+kernel, one person.)
+* Community development does not mean community members do most of the
+work.  From what I've heard, employees of Mozilla write most of
+Firefox's code, but it's still completely community-oriented
+development.
+* Listening to feedback is not the same as actually involving the
+community.  Even a totally closed project can be extremely attentive
+to feedback.  In fact, it's common for community projects to be *less*
+receptive to feedback, taking a "we'll listen to you when you write
+the code" attitude.
+
+Keeping these in mind, I'll characterize a perfectly community-based
+development process like this: your say in the project is proportional
+to your contributions, and nothing prevents you from contributing as
+much as your time and ability allow.  If you happen to be paid, it
+doesn't give you any additional say -- you just happen to be able to
+spend more time contributing.  The decision-making process is open and
+transparent, and arguments are weighed on the basis of their merits
+and the speaker's history of contributions.  This is of course not
+fully attainable in practice, but one can see how close or far a
+project is from the ideal.
+
+
+Centralized and community development processes both have advantages
+and disadvantages.  Some of the advantages of centralized development
+(as relevant to open-source projects) are:
+
+* Paid employees don't have to spend time reviewing code from a lot of
+people who will only ever contribute a few patches, so they don't
+duplicate effort teaching everyone their project's coding conventions,
+or even educating them on basic things like XSS.
+* Because discussion can be private and everyone is more likely to be
+in similar time zones, it's possible to rely heavily on face-to-face
+or voice communication, which a lot of people are more comfortable
+with and which is a lot more efficient.
+* Since there are many fewer developers, they can socialize and get to
+know each other, reducing conflict and argument.
+* Full-time developers don't have to try coordinating with volunteers
+who may only be available at odd times or who may disappear randomly
+for weeks.
+
+In short, centralized development allows employees' time to be spent
+more on actual coding, and less on communication.  It's (at least
+superficially) more efficient.  On the other hand, community
+development has advantages as well:
+
+* You get work done for free.  If it's easier to volunteers to make a
+meaningful difference, you'll get many more volunteers.  Once they're
+up to speed, you don't have to watch over them much more than you
+would an employee, but you get their work for free.
+* You can hire community developers.  You already know how good they
+are and they don't need to be brought up to speed with your codebase,
+saving you a lot of money and trouble compared to advertising for
+applicants.
+* Your software becomes more versatile, because volunteers will work
+on aspects that interest them even if they aren't in the interest of
+the controlling organization.  This gets you more users and more
+developers.
+
+Although there are superficial efficiency advantages to centralizing
+development, experience indicates that community-based development can
+be much more cost-effective in practice.  Projects like Mozilla and
+Apache (and for that matter Wikimedia until recently) make software
+that's very competitive with centrally-developed competitors at a
+fraction of the cost.
+
+On top of that, of course, the idea of centralized development is
+contrary to Wikimedia's ideals.  Just as the Board is trying to pursue
+individual donations over corporate sponsorship, it fits with
+Wikimedia's goals and structure to have as community-oriented a
+structure as possible.  Projects like Mozilla make it clear that this
+is attainable and productive.
+
+
+Returning to the concept of community development, let's look at two
+key things: actual coding, and decision-making.  In community-based
+development, anyone who's willing to write good code can get it
+submitted and included into the product.  Someone with a greater
+history of contributions will be able to get their code included more
+easily, but only because the development community is willing to trust
+them more.  They get by with less review, and the review is more
+readily given because of a greater expectation that it will be
+productive.  Similarly, when it comes to decision-making, anyone has
+an equal opportunity to try convincing the decision-makers (who might
+be only one or a few people) of their point of view.  In the end, the
+decision is made by appointed decision-makers, but with great
+deference toward the opinions of other established contributors."
+(http://lists.wikimedia.org/pipermail/wikitech-l/2010-September/049190.html)
+
+
+
+[[Category:Peerproduction]]

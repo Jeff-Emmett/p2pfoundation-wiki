@@ -1,0 +1,150 @@
+
+'''= vTaiwan is a "conglomeration of civic technologies, government commitments, and mass media dedicated to the public conversation needs of a nation’s democratic process".'''
+
+URL = https://vtaiwan.tw/
+
+
+=Contextual Citation=
+
+Liz Barry:
+
+"Thanks to the rise of the Internet, many people around the world are today sending many signals to many other people and/or governments with many tools, most of which were never designed for diverse constituencies to democratically govern themselves at scale. The tools we’re using at scale generally accentuate polarization and conflict ... Taken as a whole, the process vTaiwan has created amounts to a rethinking of how citizens send signals on complex issues, and how government listens and decisions result. Consensus-building combined with facilitation '''to derive “coherent, blended volition,”''' (as worded by Audrey Tang) can renew the value of public discourse, and leverage the true strengths of diversity in a civil society."
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+
+=Description=
+
+'''1. Peter Jia and Wei Cui:'''
+
+"vTaiwan emerged after the Sunflower Movement as an initiative from the g0v (gov-zero) community with the aim to establish effective public participation mechanisms through collaboration with civil society. Despite its achievements with successful legislative reviews, vTaiwan faced challenges after 2019, such as member attrition, the government opting for other public participation mechanisms, and the impact of the pandemic, leading to a halt in activities and the necessity of a community transformation. Fortunately, due to the project's open-source nature, willing community contributors revived it."
+
+(https://www.freiheit.org/taiwan/how-public-participation-can-improve-ai-governance-vtaiwans-initiatives)
+
+
+'''2. Liz Barry:'''
+
+"By May 2016, when I was back in Taiwan to speak at Summit.g0v.tw, I discovered that ever since the Sunflower Movement, members of the open source community and Taiwan’s government had been collaboratively developing a novel, effective conglomeration of civic technologies, government commitments, and mass media dedicated to the public conversation needs of a nation’s democratic process. They call it vTaiwan. Taiwan — a 30-year old democracy that just went through its 3rd change of power by election this May — is on the way to creating a something new under the sun. If the rule, born of hard experience, is that all the code written for deliberative democracy will never find traction in formal government, here finally is an example that disproves that rule.
+
+The vTaiwan process now routinely leads to passage of laws by Taiwan’s national legislature. And it’s gaining momentum: on July 26, Taiwan’s new premier declared in a cross-ministry meeting that “all substantial national issues should go through a vTaiwan-like process.” There are many reasons why Parliament has been willing to embrace this process, but the primary one is that it had been occupied for 22 days in 2014, and the government had lost its credibility as a governing body to an occupation who had outperformed it at demonstrating democracy. Legislators wanted to show goodwill.
+
+...
+
+While vTaiwan was finding its legs, open-source conference organizers in Taiwan were dealing with a divisive issue within their own community. Chia-Liang Kao, a co-founder of the g0v.tw community, introduced pol.is and found that it visually defined and gave space to divergent opinion groups and broke the community’s deadlock by identifying the points of consensus.
+
+Based on that success, the second and current version of vTaiwan now uses pol.is. Pol.is is a survey technology where the user clicks “agree,” “disagree,” or “pass” in response to statements others have contributed. The user can also enter their own statement for others to take positions on. Pol.is clusters users who voted similarly into opinion groups using realtime machine learning (artificial intelligence), and visualizes those groups in real time. Once vTaiwan deployed pol.is, participation scaled a hundredfold, the complexity of issues grappled with increased, and the volunteer moderators were no longer needed during the “crowd-sourced agenda setting” phase. After years of closely iterating with the vTaiwan team, pol.is was recently open sourced, greenlighting its longterm integration into governing processes.
+
+
+...
+
+
+vTaiwan couldn’t have emerged without the prior development of the g0v community, which describes itself as a “civic movement by informed netizens toward participatory self-government, borne out of frustration at the government’s blithe lack of transparency at the end of 2012.”
+
+Attendees of the biennial Summit.g0v.tw include a wide age range of mid-career technology and creative professionals with a high level of technical proficiency. This excerpt from a 2013 report reveals that Taiwanese civic hacking has long taken an all-terrain approach toward supporting rational public discourse, including crowdsourced browser plugins for identifying erroneous news, gorgeous (and revealing) interactive visualizations of government economic data, and iterations on leaderless public deliberation processes (Loomio, airesis, occupy.here, and other liquid democracy platforms). As of August 2016, there are almost 2,000 members in g0v.tw’s Slack channel.
+
+In the immediate aftermath of the Sunflower Movement, this civic technology community had higher public credibility than the government itself due to its having successfully demonstrating how to conduct transparent democratic process at scale. (Public opinion polls showed that confidence in Taiwan’s president was barely above single digits, by contrast.)"
+
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+=How it works=
+
+'''1. Liz Barry:'''
+
+"Originally vTaiwan — v is for “virtual” — was used only for developing cyberpolicy (e.g. sharing economy apps, telework, crowdfunding, etc) but it is now being expanded into other domains. Over its two years of development, vTaiwan has matured into a four phase process with a set of methods that integrate technology, media, and facilitation:
+
+* First, an artificial-intelligence facilitated conversation tool called pol.is is distributed through Facebook ads and stakeholder networks;
+
+* Then a public meeting is broadcast where scholars and officials respond to issues that emerged in the conversation;
+
+* This is followed by an in-person stakeholder meeting co-facilitated by civil society and the government, and broadcast to remote participants;
+
+* Finally, the Government agrees to bind its action to points that reached consensus, or provides a point-by-point explanation of why those consensus points are not (yet) feasible."
+
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+
+'''2. Peter Jia and Wei Cui:'''
+
+" Its mechanism consists of four stages: Proposal, Opinion Collection, Deliberation, and Realization. During the Proposal stage, the community focuses on the issue to be deliberated and identifies stakeholders of that issue. In the Opinion Collection stage, vTaiwan will openly call for and gather public opinion, and  identify the most agreed-upon and contentious perspectives among citizens' opinion. During vTaiwan’s previous process of deliberating laws and regulation, it would also invite relevant authorities to respond and systematically compile and prepare information for the Deliberation stage. During Deliberation, stakeholders will be invited to discuss the most contentious points to form a consensus. Finally, in the Realization stage, the discussions are compiled and the preliminary consensus is implemented in the form of draft regulations or reports.
+
+The vTaiwan mechanism's flexibility in connecting various digital tools makes it a platform to experiment with different digital tools and discuss and evaluate the effectiveness of these digital tools when it comes to participation and deliberation. Recently, vTaiwan community members experimented with using generative AI for transcript recording, opinion clustering, and analysis during deliberation and collection activities, and they are also applying these new methods and the strength of such flexibility to integrate public participation into the development of artificial intelligence."
+
+(https://www.freiheit.org/taiwan/how-public-participation-can-improve-ai-governance-vtaiwans-initiatives)
+
+=Example=
+
+Liz Barry:
+
+"The first issue tackled by vTaiwan, how to regulate “closed companies” (similar to Delaware LLCs), took three months and involved about 2000 viewers on livestream, about 200 suggestions, and about 20 face-to-face contributors. Public consultation began February 1, 2015 and on May 1, 2015, the consensus position was signed into law by parliament.
+
+vTaiwan’s first stakeholder meeting was facilitated according to Cornell’s RegulationRoom methodology. RegulationRoom offered important insights even to a group already well-versed in facilitation: a process for stakeholder discovery, lexicons to avoid pointless wars over definitions, and a dedicated moderation team. To this, the Taiwanese cyber democracy activists added working groups composed of stakeholders, and made sure that the participants themselves wrote the final synthesis document. They even experimented with IETF-style “humming” for non-verbal signaling. A multimodal livestream+transcription+chat format was used to bring in-person and remote participants into the same conversation; mixed-reality is currently the most active development area for the vTaiwan team.
+
+This first version of vTaiwan used Discourse, a forum-based technology that emerged in 2011. Each ministry had its own @username and agreed to reply within seven days when cued by moderators. Ministries could cue other ministries, enabling direct cross-ministry conversation. To operate Discourse’s discussion board on the scale of Taiwan (23 million people), three volunteers worked fulltime to moderate new posts and responses. Despite that investment, results were mixed: the number of people being consulted averaged in the tens (10s) and the complexity of topics about which public opinion could be gathered was limited."
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+
+==Regulating Uber==
+
+Liz Barry:
+
+"A year ago, vTaiwan started tackling its 12th topic: how to regulate the entry of Uber into Taiwan. The process played out—people offered statements for others to agree or disagree on, government ministers addressed the points of consensus on television, co-facilitators from the government and g0v held mixed-reality stakeholder meetings, and the government pledged to ratify the consensus points:
+
+* Taxis no longer need to be painted yellow.
+
+* High-end app-based Taxis are free to operate, as long as they don’t undercut existing meters.
+
+* App-based dispatch systems must display car and driver identification, estimated fare, and customer rating.
+
+* Per-ride taxation is required to report to the Ministry of Finance.
+
+With city-level pilots expected in August 2016, the new regulation would allow other Uber-like apps as well as some created by the civil society to enter the market."
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+
+
+=Status=
+
+Liz Barry:
+
+"Combined, vTaiwan and Talk to Taiwan are hearing from an average of 1,000 people per issue as a result of distributing Pol.is surveys to a couple thousand people through Facebook ads on the Talk to Taiwan page (20,000+ members) and through other groups. The survey outcomes are then deliberated through live video broadcasts, attended by around 20,000 participants per issue."
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+
+=Discussion=
+
+==Implications for the Democratic Process==
+
+Liz Barry:
+
+"On July 26, as mentioned at the top of this piece, Taiwan’s new premier declared in a cross-ministry internal meeting that “all substantial national issues should go through a vTaiwan-like process.”
+
+Now with plans to include non-net-enabled citizens, the process is spreading to other levels of the Taiwanese political system, including the city of Taipei, and multiple countries outside of Asia. Audrey Tang says she has been “non-stop running training camps for public servants. We—the 3 civil society advisors to the National Development Council’s civic participation team …—trained 37 ‘seed’ trainers as a joint effort between the academic Taiwan E-Governance Research Center (TEG) and the NDC operation team. Then we work with the seeds on another wave of 6 training classes, after which they can hold their own training camps.” Public servants describe this experience as “eye-opening” and/or “revolutionary,” with a 97.2% satisfaction rating in post-class surveys. 
+
+The vTaiwan project is focused on scaling human facilitation skills as a critical component of this massive democratic participation. In the early days, they went through several generations of electronic whiteboards—first with eBeam, eventually re-training folks who facilitated with whiteboard-and-paper to use iPad Pro + Apple Pencil + GoodNotes (taking photos; splicing them on a virtual wall for remote participants to more clearly see). Now they are onto VR and wearables. They are experimenting with 360° recording to possibly replace the labor-intensive livestreaming of stakeholder meetings that currently requires a crew of volunteers."
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+=More Information=
+
+* [[Pol.is]]
+
+* sister-project, Talk to Taiwan, by Liz Barry:
+
+" Talk to Taiwan is a sibling project of vTaiwan, a broadcast talk show where government ministers, mayors and scholars show up to respond to citizen ideas and concerns expressed via pol.is. It’s another project born out of a g0v hackathon, with its own governance structure but many principles and project contributors that overlap with vTaiwan. Media continues to be a site of experimentation; so far six shows have been broadcast in virtual reality."
+
+(http://civichall.org/civicist/vtaiwan-democracy-frontier/)
+
+
+* Video: [[Peter Cui on vTaiwan]]
+
+Video via https://www.youtube.com/watch?v=qkXxcwUkdyw
+
+"Taiwan is a recognised global pioneer in civic-technology & participatory democracy. vTaiwan emerged after the Sunflower Movement in 2014 as an initiative from the g0v (gov-zero) community as a decentralized open consultation process that combines online and offline interactions, bringing together Taiwan's citizens and government to deliberate on national issues. Since its introduction in 2014 it has been used in a number of ways to include citizen voices on important national issues such as regulating Uber. vTaiwan also experiments with novel uses of AI to facilitate consensus making with large-scale conversations. In 2023 vTaiwan was relaunched as a community-based project to tackle the challenge of creating inclusive AI.
+
+vTaiwan core contributor and legal scholar Peter Jiawei Cui joined our monthly meetup, on a visit to Chiang Mai in January 2025, to share Taiwan's experience with vTaiwan and civic tech enabled digital democracy."
+
+
+
+[[Category:Facilitation]]
+
+[[Category:Taiwan]]
+
+[[Category:Democracy]]

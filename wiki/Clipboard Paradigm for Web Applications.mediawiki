@@ -1,0 +1,36 @@
+
+
+
+=Definition=
+
+Ray Ozzie:
+
+"In its simplest form, the clipboard enabled the user to simply grasp the concept of moving a copy of the information from one application to another (i.e. by value).
+ 
+In its most advanced form, the clipboard enabled users to set up “publish and subscribe” relationships among applications – dynamically interconnecting a “publisher” with a “subscriber” (i.e. by reference)."
+(http://rayozzie.spaces.live.com/blog/cns!FB3017FBB9B2E142!285.entry)
+
+
+=Description=
+
+From an extensive discussion by Bill Burcham at
+http://lesscode.org/2005/10/21/baby-steps-to-synergistic-web-apps/:
+
+"In the clipboard paradigm a platform-wide set of gestures is supported by all applications. Those gestures enable a user to designate content, to copy that content to a clipboard, and to later “paste” that content into a different location — either in the original application or in a separate application. The range of gestures was expanded on some platforms to include drag and drop with added semantics at the drop location to support the notion of linking in addition to the traditional copy-paste and cut-paste a.k.a. “move”.
+
+Fundamental to the notion of clipboard is the idea that there are potentially many representations for a given piece of content. This is where the bridging between presentation and domain model takes place. The clipboard can capture many representations at once — allowing the receiving application, in concert with the user to select precisely the level of presentation versus domain meaning desired. When pasting a circuit diagram (model) into an engineering report a presentational representation may be chosen, whereas when pasting the same content into a circuit simulation tool, a domain-specific (circuit modeling) representation may be chosen.
+
+Could the original notion of the clipboard be updated to fit the Web Application architecture? Clearly the benefits would be significant. A new model, allowing web applications to leverage one another under user control means that smaller bets and therefore more bets can be made (by product vendors). More bets means more vendors, more applications, and more functionality delivered sooner to the 2.0 Web. While less can certainly be a competitive advantage to a product vendor, that advantage is only amplified in an environment where users can combine the functions of multiple products. If cut and paste and even Compound Documents were useful in the old platforms then they’re potentially much more useful now given the explosion of open, standard XML vocabularies.
+
+What needs to be done for a web applications clipboard paradigm
+
+"If a source application could somehow get a standard “web application clipboard” structure onto the desktop clipboard, and if that structure could be sent by the user to a destination web application then the opportunity would arise for users to create “on the fly” Mash Ups. Users would recapture their lost ability to bridge applications requiring various levels of meaning (remember the circuit diagram example?) Web Applications could be combined by mere mortals in ways unforeseen by the original designers."
+(http://lesscode.org/2005/10/21/baby-steps-to-synergistic-web-apps/)
+
+
+=More Information=
+
+Ray Ozzie's [[Live Clipboard]] project.
+
+
+[[Category:Standards]]

@@ -1,0 +1,1253 @@
+'''a new open source P2P e-cash system''', originally developed by Satoshi Nakamoto 
+
+URL = https://bitcoin.org/ ; [http://en.wikipedia.org/wiki/Bitcoin Wikpedia] ;  [https://en.bitcoin.it/wiki/Main_Page Bitcoin Wiki]
+	
+
+=Status Update=
+
+* [[Blockchain Technology and Polycentric Governance]] is a soon to be published report on how the multiple stakeholder groups are aligned in the Blockchain space.
+
+
+=Contextual Quote=
+
+"Assets, by themselves, are neither feudalist nor capitalist. Whether we are talking about gold, cucumbers, or Bitcoin, assets are assets – end of story. What makes an asset feudal or capitalist or socialist is the manner in which it interacts with a society’s social relations of production, the pattern of property rights it shores up, etc. My point, when referring to Bitcoin’s early adopters as a crypto-aristocracy, as crypto-lords, was that, when an asset like Bitcoin (whose exchange value is built on engineered scarcity) is embedded in any oligarchic exploitative system (capitalism, kleptocracy, techno-feudalism, etc.), it acquires the basic character of the (pre-capitalist) feudal order: a small minority are empowered to collect rents in proportion to the chunks of the asset that they began with. '''To recap, Bitcoin is neither feudalist nor capitalist per se. It is simply oligarchic".'''
+
+- Yanis Varoufakis [https://metacpc.org/en/crypto-blockchain/]
+
+
+=Definition=
+
+'''1. From Wikipedia:'''
+
+"Bitcoin is an open source peer-to-peer electronic cash system developed by Satoshi Nakamoto. The system is decentralized with no central server or trusted parties. Bitcoin relies on cryptographic principles to create unique, unreproducible, and divisible tokens of value. Users hold the cryptographic keys to their own money and transact directly with each other, with the help of the network to check for double-spending."
+(http://en.wikipedia.org/wiki/Bitcoin)
+
+
+'''2. Springwise'''
+
+
+"Bitcoin bills itself as “the first digital currency that is completely distributed.” In essence, that means that it’s managed collectively by a global network of users, so no bank or payment processor is required between buyers and sellers in any transaction. Users begin with Bitcoin by downloading its client program for Linux, Mac or Windows, thereby creating a digital wallet and associated Bitcoin address for themselves. Next, very small quantities of Bitcoins are available for free from the Bitcoin faucet, but to get larger ones, users can visit various currency exchanges and sites. They can also accept Bitcoins as payments for goods and services. Either way, once they have Bitcoins — abbreviated “BTC” — users can spend them at various participating online merchants  for a wide variety of goods and services. It’s free for merchants to accept Bitcoins, and there are no chargebacks or fees. Currently, there is no charge for processing Bitcoin transactions, but eventually a small fee of about one bitcent will be charged every transaction to one of many competing Bitcoin “miners,” who create Bitcoins in a controlled way by running a dedicated program."
+(http://www.springwise.com/financial_services/bitcoin/)
+
+=Description=
+
+'''1.''' Satoshi writes:
+
+    
+"It’s completely decentralized, with no central server or trusted parties, because everything is based on crypto proof instead of trust.
+
+The root problem with conventional currency is all the trust that’s required to make it work. The central bank must be trusted not to debase the currency, but the history of fiat currencies is full of breaches of that trust. Banks must be trusted to hold our money and transfer it electronically, but they lend it out in waves of credit bubbles with barely a fraction in reserve. We have to trust them with our privacy, trust them not to let identity thieves drain our accounts. Their massive overhead costs make micropayments impossible.
+
+A generation ago, multi-user time-sharing computer systems had a similar problem. Before strong encryption, users had to rely on password protection to secure their files, placing trust in the system administrator to keep their information private. Privacy could always be overridden by the admin based on his judgment call weighing the principle of privacy against other concerns, or at the behest of his superiors. Then strong encryption became available to the masses, and trust was no longer required. Data could be secured in a way that was physically impossible for others to access, no matter for what reason, no matter how good the excuse, no matter what.
+
+It’s time we had the same thing for money. With e-currency based on cryptographic proof, without the need to trust a third party middleman, money can be secure and transactions effortless.
+
+One of the fundamental building blocks for such a system is digital signatures. A digital coin contains the public key of its owner. To transfer it, the owner signs the coin together with the public key of the next owner. Anyone can check the signatures to verify the chain of ownership. It works well to secure ownership, but leaves one big problem unsolved: double-spending. Any owner could try to re-spend an already spent coin by signing it again to another owner. The usual solution is for a trusted company with a central database to check for double-spending, but that just gets back to the trust model. In its central position, the company can override the users, and the fees needed to support the company make micropayments impractical.
+
+Bitcoin’s solution is to use a peer-to-peer network to check for double-spending. In a nutshell, the network works like a distributed timestamp server, stamping the first transaction to spend a coin. It takes advantage of the nature of information being easy to spread but hard to stifle. For details on how it works, see the design paper here at http://www.bitcoin.org/bitcoin.pdf.
+
+The result is a distributed system with no single point of failure. Users hold the crypto keys to their own money and transact directly with each other, with the help of the P2P network to check for double-spending."
+
+
+'''2.''' Aran explains:
+
+Bitcoin is an open source peer-to-peer (a.k.a "p2p") electronic cash system that's completely decentralised, with no central server, trusted authorities or middle men. The availability of bitcoins can't be manipulated by governments or financial institutions. Bitcoin already has a number of exchanges for converting to and from other currencies; BitcoinFX, New Liberty Standard, Bitcoin Exchange and Bitcoin Market.
+
+Bitcoin may last for years and become a popular global currency, or it could be just a flash in the pan, but either way I think this is an important sign of the times to come. This is one of the first truly decentralised currencies and has paved the way for hundreds more to compete together in the new arena of Cipherspace over the coming years. This is one of the key factors in the transition of global society into the post-nation-state economy talked about in The Sovereign Individual.
+
+In a p2p computer network there are no servers, the entire network is composed of users running instances of the application on their computers. Each running instance offers a small amount of processing and storage resource to the network so that it can deliver the services it was designed for such as redundant storage, anonymity or voice-over-IP applications.
+
+In the case of a p2p currency system, some of the services the network is designed to offer are privacy, verification, authentication, currency creation and transfer of ownership. To ensure a reliable and tamper-proof system requires a lot of resource, and that amount is proportional to the amount of coins in the network. The network is able to pay the users for the resource they offer by making the coin-creation process part of the network protocol itself instead of being handled by a central trusted authority. This creates a natural and incorruptible link between the supply of currency in the network and the demand for it.
+
+Even aside from the ability to exchange bitcoins for other currencies, it still makes a very useful tool for independent organisations and groups because it allows them to trade and settle accounts amongst themselves independently and privately. It effectively gives them a "bank" that has a trustworthy system of accounts that can't be tampered with and requires no corruptible central authority to operate. See the Bitcoin Whitepaper for more detail about how it works.
+
+To try Bitcoin, download the Bitcoin software, then once it's running, click 'Generate Coins' which will pay you bitcoins in exchange for your computer working to validate bitcoin transactions. Check the exchange rate to calculate how many bitcoins need to be sent. The payer can purchase additional bitcoins if needed. The payer's previously generated bitcoins allow for a lower out of pocket payment. The payer then sends the bitcoins to the receiver using the Bitcoin software. The receiver can then sell their bitcoins for dollars. The receiver's previously generated bitcoins allow a higher dollar payout."
+(source?)
+
+
+==How does Bitcoin work==
+
+Graphics at http://spectrum.ieee.org/img/06Bitcoin-small-1338414276746.jpg and http://thumbnails.visually.netdna-cdn.com/bitcoin-infographic_5029189c9cbaf.jpg
+
+
+'''1. FAQ'''
+
+"Q. '''What is Bitcoin?'''
+
+A. Bitcoin is a peer-to-peer currency. Peer-to-peer means that no central authority issues new money or tracks transactions. These tasks are managed collectively by the network.
+
+Q. '''How does Bitcoin work?'''
+
+A. Bitcoin utilises public-key cryptography. A coin contains the owner's public key. When a coin is transferred from user A to user B, A adds B’s public key to the coin, and the coin is signed using A's private key. B now owns the coin and can transfer it further. A is prevented from transferring the already spent coin to other users because a public list of all previous transactions is collectively maintained by the network. Before each transaction the coin’s validity will be checked."
+(https://en.bitcoin.it/wiki/Main_Page)
+
+
+'''2.''' IEEE Spectrum's By Morgen E. Peck:
+
+"The simplest way to understand Bitcoin is to think of it as a digital ledger book. Imagine a bunch of people at a table who all have real-time access to the same financial ledger on laptops in front of them. The ledger records how many bitcoins each person at the table has at a given time. By necessity, the balance of each account is public information, and if one person wants to transfer funds to the person sitting across from him, he has to announce that transaction to everyone at the table. The entire group then appends the transaction to the ledger, which they all need to agree on. In a system like this, money never has to exist in a physical form, and yet it can’t be spent twice.  
+
+This is basically how Bitcoin works, except that the participants are spread across a global peer-to-peer network, and all transactions take place between addresses on the network rather than individuals. Address ownership is verified through public-key cryptography, without revealing who the owner is.  
+
+The system turns traditional banking privacy on its head: All transactions are made in public, but they’re difficult to link up with a human identity. Maintaining the dissociation takes vigilance on the part of the Bitcoin user and careful decisions about which outside applications and exchange methods to use, but it can be done. “Anonymity is typically compromised by means outside of Bitcoin’s control, in other words,” says Jeff Garzik, who is on the team of programmers now responsible for developing the Bitcoin software. Bitcoin is often described as providing pseudoanonymity, by creating enough obfuscation to provide users with plausible deniability. 
+
+People who own bitcoins have a program—called the Bitcoin client—installed on their computers to manage their accounts. When they want to access their funds, they use the client to send a transaction request. The innovation of Bitcoin is to use the processing of these transaction requests as the mechanism for creating new currency. 
+
+As requests pile up in the system, individual computers, running “mining” programs, bundle them into chunks called transaction blocks. Before each block of transactions becomes part of the accepted Bitcoin ledger, or block chain, the mining software must transform the data using cryptographic hash equations. The Bitcoin client accepts the resulting hash values only if they meet strict criteria, so miners typically need to compute many hash values before stumbling upon one that meets the requirements. That process costs a lot of computing power—so much that it would be prohibitively difficult for anyone to come along and redo the work. Each new block that gets added and sealed strengthens all the previous blocks on the chain.  
+
+The “miner” whose computer first finds an acceptable hash value is rewarded with newly minted bitcoins. The Bitcoin system adjusts the difficulty of the hashing requirements to control the minting rate. To its proponents, this is one of Bitcoin’s biggest attractions: Unlike the printing of “fiat” currency, which can be done on demand, the creation of Bitcoins will gradually taper until it reaches a limit of 21 million coins.  
+
+As more and more miners compete to process transactions, mining requires more computing power. Brock Tice, who mines bitcoins in St. Paul, Minn., has a whole room stuffed full of enough mining computers to heat his office in the winter. But Tice first became interested in the network for a different reason. He thought it would be a better way to accept money from customers online."
+(http://spectrum.ieee.org/computing/software/bitcoin-the-cryptoanarchists-answer-to-cash/3)
+
+
+'''3. Data-driven intelligence by Michael Nielsen:'''
+
+"It may seem surprising that Bitcoin’s basis is cryptography. Isn’t Bitcoin a currency, not a way of sending secret messages? In fact, the problems Bitcoin needs to solve are largely about securing transactions — making sure people can’t steal from one another, or impersonate one another, and so on. In the world of atoms we achieve security with devices such as locks, safes, signatures, and bank vaults. In the world of bits we achieve this kind of security with cryptography. And that’s why Bitcoin is at heart a cryptographic protocol."
+(http://www.michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/)
+
+=Details=
+
+"The total number of bitcoins is programmed to approach 21 million over time. The money supply is programmed to grow as a geometric series every 210,000 blocks (roughly every 4 years); by 2013 half of the total supply will have been generated, and by 2017, 3/4 will have been generated. To ensure sufficient granularity of the money supply, bitcoins are divisible down to eight decimal places (a total of 2.1 × 10^15 or 2.1 quadrillion units)."
+(http://en.wikipedia.org/wiki/Bitcoin#Monetary_differences)
+
+Note: the eight decimal places are only an artifact of the datatype used in current implementations.  Should the need ever arise, this can be changed in the code. [http://www.quora.com/Bitcoin/What-are-the-ramifications-of-an-infinitely-divisible-currency-like-Bitcoin]
+
+=Context=
+
+Rainey Reitman (EFF):
+
+"To understand digital currency, one must first note that money in the digital age has moved from a largely anonymous system to one increasingly laden with tracking, control and regulatory overhead. Our cold hard cash is now shepherded through a series of regulated financial institutions like banks, credit unions and lenders. Bitcoin, created in 2009 by Satoshi Nakamoto, is a peer-to-peer digital currency system that endeavors to re-establish both privacy and autonomy by avoiding the banking and government middlemen. The goal is to allow individuals and merchants to generate and exchange modern money directly. Once the Bitcoin software has been downloaded, a user can store Bitcoins and exchange them directly with other users or merchants — without the currency being verified by a third party such as a bank or government. It uses a unique system to prevent multiple-spending of each coin, which makes it an interesting development in the movement toward digital cash systems.
+
+The model proposed by Bitcoin is in many ways a response to some of the privacy and autonomy concerns surrounding our current financial system. Current money systems now increasingly come with monitoring of financial transactions and blocking of financial anonymity. A peer-to-peer currency could theoretically offer an alternative to the bank practices that increasingly include sharing information on their customers who don't actively opt-out, and who may even then be able to share data with affiliates and joint marketers. Bitcoin is particularly interesting in the wake of recent events that demonstrated how financial institutions can make political decisions in whom they service, showcased by the decisions of PayPal, Visa, Mastercard and Bank of America to cut off services to Wikileaks. Bitcoin, if it were to live up to the dreams of its creators, might offer the kind of anonymity and freedom in the digital environment we associate with cash used in the offline world.
+
+But Bitcoin's current implementation won't resolve all of the issues surrounding autonomy and privacy. Notably, the anonymity on Bitcoin is not entirely secure at this time, which makes its merits as a more private form of currency tenuous at best. There are also other weaknesses to the system, some significant, which should be understood before using Bitcoin. And as of this writing, Bitcoin can't be used to donate to Wikileaks. But even more important than these concerns is the fact that governments around the world may raise legal issues with any digital cash scheme — ranging from money laundering to tax evasion to a range of other regulatory concerns. Nonetheless, Bitcoin is an intriguing project and worth watching to see how it develops in the coming years."
+(https://www.eff.org/deeplinks/2011/01/bitcoin-step-toward-censorship-resistant)
+
+
+
+=Characteristics=
+
+
+==Bitcoin as Stateless Money==
+
+Andrew Bailey et al. :
+
+"We've introduced a substantive question about monetary policy: should it tend towards inflation, or deflation, or
+what? A procedural question also lurks nearby. Who is to oversee all this? Bitcoin's full answer here resists easy classification. But this much is clear: '''it assigns no essential oversight role to the state'''.
+
+Money without state is controversial, to put the point mildly. Economists agree more often than do philosophers
+– but not by much. So it is striking to observe the orthodox status of the view that issuing money is a critical state
+function.43 The standard argument for orthodoxy is simple. Powerful market forces engender the creation of too much
+money. If Schrute Bucks have any value at all, Dwight has an incentive to print more. The incentive remains until the
+value of a Schrute Buck equals the marginal cost of printing a new Schrute Buck.44 This result holds even if Stanley is also printing Stanley Nickels; competition between private issuers is no solution. What is needed, says orthodoxy, is a currency issued by an actor that responds to other incentives (political forces and elections), which prevents
+over-issuance.
+
+There is some irony here since state-issued currencies are not obviously immune to over-issuance.46 Bitcoin, furthermore, is provably free of such over-issuance, by design. Bitcoin's architecture answers a standard objection to
+privately issued currency.
+
+Another standard argument for state issuance of money stems from the idea that the supply of money must be
+responsive – someone must be able to adjust supply up or down to, for example, maintain stability of nominal prices
+in that currency, or ensure optimal employment. And the state is the best institution to respond, the thought goes.
+
+Central banks implement this idea through such measures as quantitative easing or adjusting interest rates.
+
+There is no room for such discretionary adjustment within the Bitcoin framework; its supply schedule is inelastic, settled at birth, and ultimately capped. Other projects differ along this dimension, however, and through various
+mechanisms maintain an elastic money supply. Ampleforth and other “rebasing” cryptocurrencies, for example, contain measures that automatically adjust aggregate supply (and even the nominal amount of tokens held by individual
+users) in an effort to dampen volatility. Other projects allow token holders to collectively opt for adjustments in
+supply through a voting mechanism.
+
+The supply of a currency is just one variable at play here. Also important is who gets to adjust the supply and how.
+Disputes here implicate various schools of macroeconomic thought, the competing convictions they espouse about
+parallel questions in traditional monetary policy, and related normative issues. There is considerable variety among
+cryptocurrency projects. In the remainder of this section, we will focus on the merits or demerits of an automated,
+strict supply schedule like Bitcoin's and connections to inflation and its effects."
+
+(https://andrewmbailey.com/MoneyWithoutState.pdf)
+
+
+==Bitcoin's Technological Infrastructure==
+
+Tim Swanson:
+
+"The Bitcoin system utilized novel approach by combining existing technologies to create the Bitcoin network, most of which were at least a decade old.   
+
+According to Gwern Branwen, the key components necessary to build this system were:     
+
+2001: SHA-256 finalized     
+
+1999-present: Byzantine fault tolerance (PBFT etc.)     
+
+1999-present: P2P networks (excluding early networks like Usenet      
+or FidoNet;    MojoNation & BitTorrent, Napster, Gnutella, eDonkey, Freenet, etc.)     
+
+1998: Wei Dai, B-money     
+
+1998: Nick Szabo, Bit Gold     
+
+1997: HashCash     
+
+1992-1993: Proof-of-work for spam     
+
+1991: cryptographic timestamps     
+
+1980: public key cryptography     
+
+1979: Hash tree "
+
+(https://www.ofnumbers.com/wp-content/uploads/2014/04/Bitcoins-Public-Goods-hurdles.pdf)
+
+
+==Bitcoin's problematic deflationary design==
+
+Dan Kervick:
+
+"The Bitcoin system has what appears to be a built-in deflationary architecture.
+
+
+When the Federal Reserve System was created, it was charged with providing the US with an “elastic currency”.  That means that the quantity of Fed-issued dollars in circulation is supposed to vary in response to the changing dynamics and needs of the real economy.   The Fed is expected to monitor economic activity, and conduct a monetary policy that provides us with a stable but flexible medium of exchange.
+
+Bitcoin, by contrast, is much more rigidly designed so that new bitcoins are introduced into the system at a mathematically predictable rate that is almost completely independent of any economic activity for which bitcoins might be used.   New bitcoin production is supposed to take place at an exponentially decreasing rate so that production decreases by about 50% every four years.  As a result, the number of bitcoins in existence will effectively flatten out at 21 million in about 2040 – if anybody is still using the Bitcoin system by then.  But long before 2040 the rate of bitcoin growth will slow very dramatically.
+
+The Bitcoin system therefore possesses a hard-coded and extremely rigid monetary policy determined by the software itself, software which lives on the computers of everyone who is participating in that system.  Now, you could say this means Bitcoin’s monetary policy is decentralized.   That’s certainly how Bitcoin enthusiasts tend to describe it.   But another way of looking at it is that it is that Bitcoin’s monetary policy is highly centralized in the persons of the people who wrote the Bitcoin code, and who established a weirdly inflexible Bitcoin monetary policy regime in advance – determined for all time.
+
+Now what does this mean for the future value of Bitcoin as a medium of exchange?  That all depends on whether the Bitcoin economy – the universe of producers of goods and services who accept bitcoins in payment – continues to grow, or instead settles into a small and unchanging niche economy for a limited number of enthusiasts.   But suppose as a thought experiment that the Bitcoin economy continues to grow, and that the volume of goods bought and sold with bitcoins continues to increase, as the rate of bitcoin creation first slows and then flattens.  Then one of two extremes might occur: either (i) prices in bitcoins remain stable as the rate of bitcoin transactions increase, or (ii) the rate of transactions stays roughly the same, but bitcoin prices fall as the finite quantity of bitcoins is spread over more and more transactions.  Since the pace of transactions depends on real-world constraints on production and consumption, the effect that is likely to be the dominant one is that prices will fall.  In other words, there will be a deflationary spiral in the Bitcoin economy.  This makes Bitcoin a poor long-term candidate for a stable, alternative medium of exchange.
+
+Deflation might appear to be an attractive thing at first look.   Wouldn’t it be nice for our money to appreciate in value as the prices for goods and services continually fall?   But economists associate deflation with two negative phenomena:  First, if prices are falling then the incentive to hoard the currency increases, since anybody who possesses that currency is seeing its value increase each day.  Thus, the currency itself becomes an appreciating investment vehicle for its owner, so long as it isn’t spent.  Hoarding by an individual agent is no big deal, but it is clearly bad news for the economy when hoarding is widespread, since if people stop buying things, then producers stop producing things and stop paying workers to produce things.  That’s one reason why downturns are often associated with deflation, and growth is usually associated with modest inflation.
+
+The other problem with deflation is that contracts and debts are usually fixed in nominal terms, and so deflation makes debt more onerous.  Imagine an office worker, Sal, with a $50,000 annual salary and a $200,000 debt, such as a mortgage debt.  Now suppose there is a general deflation, and both consumer prices and wages drop 20% over some period of time.  Sal’s wages fall to $40,000.  Sal’s ability to buy groceries is unaffected since grocery prices have also fallen by 20%, but the $200,000 debt is now worth five times Sal’s annual salary rather than four times the salary, and has become much more burdensome.   If the deflation continues, Sal will be wiped out.   But before that happens, Sal’s creditor makes out handsomely as the real value of Sal’s monthly payments increases.
+
+Bitcoins are infinitely divisible, so while there is an ultimate cap on the quantity of bitcoins, there is no lower limit on Bitcoin denominations: there is no Bitcoin “penny” that can’t be subdivided further.  So Bitcoin’s designers seem to have built these deflationary prospects into the system as a feature, not a bug.   And here we must look at another curious feature of the Bitcoin system, the feature its developers decided to call “mining”.   As we have noted, Bitcoin has a built-in mechanism for adding new bitcoins to the system at a decreasing geometric rate.  But note that new bitcoins are not simply sprinkled evenly among all bitcoin users when they are added to the system.  They are awarded to “miners” – in practice, people who have substantial computing power and computing speed at their disposal – in exchange for those miners using some of their computer power to win online races to authenticate new blocks of bitcoin transactions.
+
+So you can see why you would very much like to be a miner in a thriving Bitcoin economy and why early adopters of Bitcoin are so fanatical about keeping the system going.  Those who manage to accumulate bitcoins in the earlier stages when the pace of bitcoin creation is high, could profit handsomely when the deflationary phase kicks in.  These miners would, if the world-conquering dreams of the Bitcoiners ever came to pass, be something like the descendants of medieval vassals who acquired some poor land from their lords in an early era when there was still much land to be claimed and settled, and who then became fabulously wealthy over time by hanging onto their holdings as the finite stock of land was all brought into private owner ship and production while the population continued to increase.
+
+So it looks to me like the developers of Bitcoin were thinking like this:  “Mining system + deflationary architecture = we’re rich!!!”
+(http://neweconomicperspectives.org/2013/04/talking-bitcoin.html)
+
+
+
+==Bitcoin is not Anonymous==
+
+Jeff Garzik notes: 
+
+If you visit the bitcoin wiki page on anonymity [https://en.bitcoin.it/wiki/Anonymity]], the first sentence is
+
+- ''While the Bitcoin technology can support[link] strong anonymity, the current implementation is usually not very anonymous''.
+
+With bitcoin, every transaction is written to a globally public log, and the lineage of each coin is fully traceable from transaction to transaction. Thus, /transaction flow/ is easily visible to well-known network analysis techniques, already employed in the field by FBI/NSA/CIA/etc. to detect suspicious money flows and "chatter."  With Gavin, bitcoin lead developer, speaking at a CIA conference this month, it is not a stretch to surmise that the CIA likely already classifies bitcoin as open source intelligence (no pun intended).
+
+Further, if Silk Road truly permits deposits on their site, that makes it even easier for law enforcement to locate the "hub" of transactions.
+
+Attempting major illicit transactions with bitcoin, given existing statistical analysis techniques deployed in the field by law enforcement, is pretty damned dumb."
+(private email, cited  [http://www.theatlantic.com/technology/archive/2011/06/libertarian-dream-a-site-where-you-buy-drugs-with-digital-dollars/239776/])
+
+
+
+==A 'Commons Aspect': Triple Accounting and the Verification by the whole network of peers==
+
+Jaromil:
+
+"The most remarkable innovation brought by Bitcoin deals with the system of accounting that we use today. 
+
+Double-entry bookkeeping is what we use today to make sure that earnings and expenditures match, basically authenticating the ﬂow of money and making sure “nothing is duplicated”.
+
+From an historical perspective, the double-entry bookkeeping system is very ancient and barely actualised
+through the ages: it was described by an Italian mathematician and Franciscan friar named Luca Pacioli in his book “Summa de arithmetica, geometria, proportioni et proportionalità” published in 1494 in Venice. 
+
+The second half of his book, dedicated to geometry, is a section titled “Trattato de computi e delle scritture” in which he
+describes the necessity of mathematics in accountancy. Those principles were certainly not invented by Pacioli, but mostly actualised, formalised and translated in his tractatus, as demonstrated by the existence of a previous book
+“Della mercatura e del mercante perfetto” by Benedikt Kotruljević published in Latin some decades before, or as hinted by the presence of another ﬁgure behind his portrait in the famous painting attributed to Jacopo de’ Barbari who is believed to be Albrecht Dürer, an artist and traveler who shared Pacioli’s passion for geometry and magic.
+
+Such a system is still, as of today and despite its ﬂaws, the one in use on large scale around the world by most accountancy systems. Being a system that ensures the univoque matching of what is written with what is real, it
+can be seen as gateway to the digital dimension and can undoubtedly beneﬁt from the technical innovation through digital tools. Hence my argument that Bitcoin is basically this innovation or, more precisely, the implementation of an innovation as the triple-signed receipt method. 
+
+
+Quoting Ian Grigg:
+
+- The digitally signed receipt, with the entire authorisation for a transaction, represents a dramatic
+challenge to double entry bookkeeping at least at the conceptual level. The cryptographic invention
+of the digital signature gives powerful evidentiary force to the receipt, and in practice reduces the
+accounting problem to one of the receipt’s presence or its absence. This problem is solved by sharing the
+Dyne.org Digital Press – 7 – 6 April 2013Bitcoin, the end of the Taboo on Money D.J. Roio
+records - each of the agents has a good copy. In some strict sense of relational database theory, double
+entry book keeping is now redundant. 
+
+The accounting system of triple-signed receipts in Bitcoin respects the original role of money as contract (and digitized speech, I’d argue). 
+
+
+Quoting Marco Sachy’s research on complementary and alternative currency:
+
+- The ontology of money is as relational, abstract and cogent as agreements are in general and the possibilities to formulate these agreements are unimaginable, bearing in mind that the orthodox process of
+currency design and creation is - drawing from Adorno and Horkheimer’s Dialectic of the Enlightenment
+- an arbitrary and historically determined one.
+
+
+It is the very substance of those cogent agreements that money represents and can be veriﬁed by matching
+declarations on two books or, as Bitcoin does, calling the whole network of participating peers to witness every contract and entangling it into a cryptographic blockchain. Simply put, this is bookkeeping in the age of Bitcoin."
+(http://jaromil.dyne.org/writings-files/Bitcoin_end_of_taboo_on_money.pdf)
+
+=Governance=
+
+
+==Bitcoin's Three-pronged Governance system: miners, businesses, developers==
+
+Buck Perley:
+
+"How do you account for a system meant to take a diversity of opinions and priorities into account and how do you coordinate changes where if the network isn’t in unanimous agreement it suffers a split that can cause real financial harm?
+
+Just as the founders devised mechanisms to allow for change in a system absent an absolute ruler, so too did Satoshi take this problem into account:
+
+- ''The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it.''
+
+
+The analogy would be:
+
+* proprietary code = absolute dictatorship
+* open source projects for non-distributed systems = parliamentary monarchy
+* decentralized consensus networks (like Bitcoin) = constitutional republic (or popular democracy depending on the implementation)
+
+
+If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary  — James Madison, Federalist #51
+
+
+The system of checks and balances devised by the founders represented an important mechanism to both enable governance while also inhibiting overreach from any of the competing branches of government.
+
+In Bitcoin, Full Nodes are those “participants” in the network that contain the full history of the blockchain and the UTXO set (Unspent Transaction Outputs) that are needed to verify transactions. Like the executive branch of the U.S. government, it is their job to “faithfully execute” the rules of the underlying protocol and “to the best of [their] Ability, preserve, protect and defend” the network.
+
+Next up is the Proof of Work security provided by miners. Similar to the American judiciary, it is the job of miners to enforce the rules of the network and ensure its continued smooth operation. Without the security brought by miners to the transmission of transactions, the value of the underlying token (e.g. Bitcoin) decreases thus decreasing the value of the rewards they receive for bringing the security in the first place. This is a dual incentive relationship that undergirds much of the game theory for most stakeholders in the system.
+
+Finally we get to the third branch of a constitutional republic- the legislature. Much as in the U.S. system, this has evolved into a two pronged, and sometimes competing, structure. Playing the role of the House of Representatives are the entrepreneurs, businesses, infrastructure developers (wallets, graphical interfaces, etc.), and investors. Like their governmental counterparts in the U.S., these will tend to be the most “democratic” of the branches representing the widest diversity of viewpoints as they are in more regular and direct contact with every day users of the currency. Some conflicts may arise in the area of short-term profits vs. long-term health of the system, but, overall, businesses both bring long term viability to the network by providing services such as exchanges, marketplaces, wallets, and accessible security and most benefit the more useful the currency becomes in the long term.
+
+The final arm of the legislature in the U.S. system is the Senate, a role played in Bitcoin by the developers. As originally envisioned by the founders this chamber was meant to be one more step removed from the people than the House of Representatives as they were elected by the state legislatures (until the very misguided 17th Amendment which transitioned to direct popular election of Senators and is likely a large contributor to our present increased partisanship and misguided populist movements). Similarly, developers can be supported by companies in the ecosystem or can contribute from their own free time. Much of their authority comes from their experience in the space."
+(https://medium.com/@BuckPerley/crypto-governance-f1318affbbe0)
+
+
+==Bitcoin is not decentralized==
+
+'''0. Aleksi Grym, Bank of Finland:'''
+
+"For all intents and purposes, that ledger is a centralised ledger. The fact that there are multiple synchronised copies of it, distributed across a network, is irrelevant, as each one has the same data.”
+(https://helda.helsinki.fi/bof/handle/123456789/15564)
+
+
+'''1. Arthur Brock:'''
+
+""Why would I call a “decentralized” system like bitcoin centralized? Because it is taken out of the hands of participants and relegated to an elite, privileged class of algorithm designers or large-scale miners for the determining rules, creating the money supply, approving transactions, and managing records. "
+([https://docs.google.com/document/d/1xX5yoqegfLNw3__VSOPDdiayibXlE2XGLDapg-Bi3tc/edit?usp=sharing])
+
+
+
+'''2. Bob Haugen:'''
+
+"Short version: the concentration in mining is a consequence of the architectural features that were bound to de facto re-centralize the platform. There is one and only one Bitcoin core codebase that all miners use, and one and only one blockchain, although there are many replicas of the same blockchain. And the increasingly difficult proof of work was made to order for ASICs, expensive hardware chips that are designed specifically to solve them. (Thus the mining concentration.)" [https://github.com/valueflows/valueflows/issues/30#issuecomment-172564098]
+
+"A lot of blockchain developers are working on remedies to some of the re-centralizing architectural features: for example, side chains, ASIC-unfriendly alternatives to proof of work, and some attempts at interoperability between different blockchains. Here's an example of that kind of discussion in an analysis of Ethereum from LeastAuthority, the group behind Zcash, where Vitalik Buterin of Ethereum is one of their advisors:
+[https://github.com/LeastAuthority/ethereum-analyses/blob/master/PoW.md]
+
+So people in the know are aware of these problems. They are actively working on them. But often not on Bitcoin.
+
+By the way, I think the Bitcoin design was brilliant, and the architectural features that led to re-centralization may be necessary for a global digital currency. I'm not sure they foresaw the re-centralization, though. But lotsa people did. I am just picking up on their analyses.﻿"
+(google plus, february 2016)
+
+
+'''3. Matthew Slater:''' 
+
+"There is much confusion in the cryptocurrency discourse about the decentralisation of money and payments. All cryptocurrencies are built on a singleton ledger which is distributed across many machines. Thus the data is distributed but the ledger itself could still be seen as a point of centralisation, as is a single currency, even if there are many copies of the ledger in a distributed data architecture. Advocates of economic and financial decentralisation are very pleased to have witnessed the arrival of blockchain technologies, but cannot celebrate all the focus on a single currency with a single issuance policy (or algorithm) on a singleton ledger. "
+([https://docs.google.com/document/d/1B9DO8b7Kzh4evbvU-63bHFw9iPfa9PUetESmTLwjWyI/edit?])
+
+=="A Call for Decentralized Governance": On the Lack of Democracy in Bitcoin==
+
+Julian Feder:
+
+"Since Hearns post mid january, the Bitcoin price has more or less recovered and an avalanche of advocacies in defense of Bitcoin’s future has rained upon the blogosphere, sounding at least as convincing as Mike Hearn himself. Seems like Bitcoin isn’t dead yet, and as the saying goes: Those declared dead live the longest. However, one crucial point remains standing without a doubt – The Bitcoin community suffers from serious communication issues and lack of maneuverability to say the least. 
+
+One of the most influential centers of power in the Bitcoinsphere is the Bitcoin Core Project, which essentially develops the software protocol that operates miners and enables Bitcoin wallets to communicate and exchange value.
+
+Bitcoin Core is not an incorporated entity of any kind. It’s an opensource project that in theory allows for the participation of anyone who’s interested and capable of contributing to it, but since it enjoys a sort of monopoly position, originating in the need of the Bitcoin network to be synchronized with itself, this principle of permissionless participation stays very much in the realm of mere theoreticality, or as Hearn phrases it –     
+
+“[…] Bitcoin Core is an open source project, not a company. Once the 5 developers with commit access to the code had been chosen […] there was no procedure in place to ever remove one. And there was no interview or screening process to ensure they actually agreed with the project’s goals.”
+Now, let us make one thing clear – Bitcoin being a decentralized entity, running on forkable open-source software and operating without corporate structures is obviously a feature, not a bug. This is exactly why anyone was interested in it in the first place. If that wasn’t the case most of us would have sent it to hell a long time ago. But there’s one crucial point that’s being missed all to often: Decentralization doesn’t mean lack of governance, neither does it mean that everyone has to agree with everyone else in order to get things done, nor does it imply that centralized special interest groups have their way in buying overwhelming influence through brute and unintelligent market mechanisms.  If anything, decentralization aims to achieve the complete opposite of all these.
+
+Decentralization simply means building mechanisms which allow for a group of peers to efficiently arrive at decisions without having to rely on fixed hierarchies, central coordination and single points of failure. This, obviously, can’t be achieved by merely pretending that they’re abolished or irrelevant to begin with, but rather by developing tools which make them obsolete. Bitcoin Core and various other groups which together could be called the “Bitcoin establishment” lack most, if not all of these tools. Hence the civil war and stagnation we’re witnessing.     
+
+In an attempt to deal with this situation, Hearn and his colleges from BitcoinXT proposed to allow Bitcoin miners to vote on the controversial blocksize, a proposition perceived as outright heresy among many leading figures in the Bitcoin scene, or as Hearn cites the admins at bitcoin.org:
+
+''- “One of the great things about Bitcoin is its lack of democracy”'''
+
+Could BitcoinXT have prevented or solved the Bitcoin crisis? Maybe. It could have made things worse as well. A lot of brilliant minds differ on this point and the argument won’t be settled here, anyways that’s entirely beside the point. Even if miners were allowed to vote on a specific update with their hashpower, the governing institutions of the bitcoin community themselves lack any kind of truly efficient decentralized apparatus that would allow for further managing the system and improving it, not to speak of a decent compensation scheme to encourage large scale participation in such an improvement and governance process.
+
+The irony of this situation should scream sky high, since it was Bitcoin itself that introduced the Proof of Work algorithm in order to tackle a very similar problem: The PoW protocol allows the Bitcoin network to reach consensus regarding the contribution of each node in the system to the authentication process needed to verify transactions. The moment such a consensus is reached, contributors are rewarded with freshly minted Bitcoins.
+
+The PoW model restricts itself to an algorithmically quantifiable and verifiable action, e.i how much computing resources you’re investing into the network, other value creating actions – like suggesting improvements to the system, writing code, creating software updates or anything their like, which geniune people have to do, are entirely of the scope. Bitcoin knows how to create and distribute value in a decentralized fashion, as long as no dirty humans with opinions are involved.
+
+There’s another major problem with the Proof of Work scheme, especially if one would use it to determine the future of the entire system the way Hearn and his colleges from Bitcoin XT suggested (Voting with hash power to decide on the blocksize): Computing resources are a tradable commodity. Everyone with enough resources is capable of centralizing the entire system under his dominion, both in terms of the revenue stream created through mining, and in deciding how the system behaves, given voting with hashpower would become a thing. This is probably the reason why some consider Bitcoins “Lack of democracy” being such a great trait.    
+
+In the early days, many were terrified that some financial interest group like the Fed or some other statist syndicate, consisting of cigar smoking man in black, might bring Bitcoin down in exactly this way. Luckily, that didn’t happen. You only have a hashpower triopol generating about ⅔ of the network’s total hashrate, most of which resides in the People’s Republic of China, behind a stasi-type firewall, making the system painfully slow.   
+
+There are alternatives to PoW, like “Proof of Stake”, where the amount of minable blocks is restricted to the amount of Bitcoins a miner holds. This would make it very costly to establish a monopoly position, but would officially transfer the ownership of the network to the 1% Bitcoin oligopoly, which currently holds about 99% of the entire Bitcoin supply (sounds familiar?).
+
+So it seems that all of these schemes do a very good job in decentralizing the technical contribution needed to keep the network up and running, but have very little to do with making decisions, improvements and progress. However, it should be self evident that every system that involves genuine people, as automated and well designed as it first may appear to be, will at some point require adjustments, all of which will most probably necessitate decisions, have consequences for various interest groups and be subject to criticism. All these decisions and adjustments do not only require means to form an informed conesus, they also require a compensation mechanism that encourages improvement and gains the attention of highly skilled professionals – and above all – a sybil proof scheme to keep the system truly decentralized.   
+
+But is that even possible? Could we play the same trick, PoW plays on computing power, on human contributions to an evolving organisation? Including assessment of value, establishment of consensus and compensation via cryptocurrency?  
+
+At Backfeed we believe that the answer to this question is yes, and we’ve developed exactly such a mechanism, which not by accident goes under the name Proof of Value, or PoV, "
+(http://magazine.backfeed.cc/the-bitcoin-debacle-making-the-case-for-decentralized-governance/)
+
+==Bitcoin as an Open Consensus Mechanism==
+
+PETER VAN VALKENBURGH:
+
+"Bitcoin, aside from being an asset, is also a network of connected computers on the Internet that, together, keep a record of all bitcoin transactions between the participants. You join the network by running freely available software on an Internet connected machine, and when you join, your computer will let you send and receive payments in bitcoin to and from other computers, and it will also help store and update a continually growing list of everyone’s transactions, called the blockchain. People trust Bitcoin as a store of value and medium of exchange in part because everyone can see this blockchain and see all the historical transactions (including their own) going back to the launch of the network in 2009.
+
+Now what about this “open consensus mechanism” mentioned earlier? Consensus in this context just means agreement; we’re just trying to get a bunch of computers to agree. Mechanisms for generating consensus between several computers have been around since the 1980s. Those old mechanisms would allow, for example, six data centers owned by IBM to stay in sync with each other, storing and updating some data that IBM cares about and wants redundantly stored on multiple machines.
+
+Bitcoin’s network is also redundantly storing data (the transactions) across a bunch of machines, and it needs these machines to stay in consensus. Bitcoin’s core computer science innovation was the invention of the world’s first open consensus mechanism. Our IBM consensus example only allows a set number of computers (i.e. Six data centers) to participate at a time, and only computers that IBM authorizes can join (kind of like an intranet). Bitcoin’s consensus mechanism allows an unlimited number of computers to participate and anyone can join (more like the internet)! That’s what is meant by an open consensus mechanism. This is also why people say that bitcoin is “decentralized,” and why it’s accurate to call bitcoin peer-to-peer digital cash, as compared with the centralized digital money created by a company, like PayPal or Venmo, that secures the payments data and decides who can add new payments data.
+
+Older, closed consensus mechanisms stay in sync because identified participants take turns adding new data to the record, and they are secure because only identified participants are allowed to add data. If you have an unlimited number of unknown participants how do you have them take turns and how do you know they aren’t committing fraud? 
+
+
+This is where bitcoin mining comes in: ...
+
+* Miners are picked by lottery,
+* A winner is picked every 10 minutes by algorithm,
+* To be picked you have to perform some costly and verifiable computing work (lottery tickets have a non-trivial cost).
+* Miners who try to put invalid transactions into the blockchain will not be picked.
+
+
+This mechanism makes fraud non-viable because miners suffer a cost to even be eligible in the lottery and they lose their eligibility if they try to submit invalid transactions. Your attack won’t work and you’ll lose money in the process.
+
+To keep the lottery fair, the price of a ticket rises as people buy more of them; in other words miners have to compete. So if a lot of people are willing to spend computing effort to join the consensus, then the costs of participation will rise as the computing work you need to perform becomes more and more difficult. More computations means more electricity and that, after some adieu, is why bitcoin’s electricity usage has been going up."
+(https://coincenter.org/entry/five-myths-about-bitcoin-s-energy-use)
+
+==Manipulation by Miners==
+
+By JEFF JOHN ROBERTS:
+
+"Bitmain may now be the most influential company in the bitcoin economy by virtue of the sheer amount of processing power, or hash rate, that it controls. Its mining pools, Antpool and BTC.com, account for 28.9% of all the processing power on the global bitcoin network.
+
+The piece, which describes Bitmain’s plans to move into artificial intelligence, profiles the company’s co-founder Jihan Wu, a controversial figure in the bitcoin world—in part over allegations he manipulates the crypto-currency for his own ends. This includes the recent schism that saw bitcoin’s blockchain (the record of all transactions) split in two, creating a new currency called “Bitcoin Cash.”
+
+
+Critics of Bitmain suspect that Wu was behind the recent, somewhat related split of bitcoin called the bitcoin-cash hard fork. That split was supported by a miner in Shenzhen named ViaBTC—which happened to be a company that Bitmain has invested in.
+
+If the allegation is true (for the record, Wu denies them), it suggests bitcoin is vulnerable to market manipulation not just by traders who hold large stores of bitcoin, but also by miners like Bitmain."
+(http://fortune.com/2017/08/25/bitcoin-mining/)
+
+=History=
+
+See also the detailed historical review here at https://medium.com/all-things-venture-capital/intro-to-vc-the-history-of-blockchain-17ec65dfcf78
+
+Benjamin Wallace:
+
+"Nakamoto himself mined the first 50 bitcoins—which came to be called the genesis block—on January 3, 2009. For a year or so, his creation remained the province of a tiny group of early adopters. But slowly, word of bitcoin spread beyond the insular world of cryptography. It has won accolades from some of digital currency’s greatest minds. Wei Dai, inventor of b-money, calls it “very significant”; Nick Szabo, who created bit gold, hails bitcoin as “a great contribution to the world”; and Hal Finney, the eminent cryptographer behind RPOW, says it’s “potentially world-changing.” The Electronic Frontier Foundation, an advocate for digital privacy, eventually started accepting donations in the alternative currency.
+
+The small band of early bitcoiners all shared the communitarian spirit of an open source software project. Gavin Andresen, a coder in New England, bought 10,000 bitcoins for $50 and created a site called the Bitcoin Faucet, where he gave them away for the hell of it. Laszlo Hanyecz, a Florida programmer, conducted what bitcoiners think of as the first real-world bitcoin transaction, paying 10,000 bitcoins to get two pizzas delivered from Papa John’s. (He sent the bitcoins to a volunteer in England, who then called in a credit card order transatlantically.) A farmer in Massachusetts named David Forster began accepting bitcoins as payment for alpaca socks."
+(http://www.wired.com/magazine/2011/11/mf_bitcoin/all/1)
+
+
+==Prehistory: the dream of anonymous digital currencies==
+
+By Morgen E. Peck:
+
+"The dream of an anonymous, independent digital currency—one where privacy is maintained for buyers and sellers—long predates Bitcoin. Despite obituaries in magazine articles from Forbes, Wired, and The Atlantic, the dream is far from dead. 
+
+The pursuit of an independent digital currency really got started in 1992, when Timothy May, a retired Intel physicist, invited a group of friends over to his house outside Santa Cruz, Calif., to discuss privacy and the nascent Internet. In the prior decade, cryptographic tools, like Whitfield Diffie’s public-key encryption and Phil Zimmermann’s Pretty Good Privacy, had proven useful for controlling who could access digital messages. Fearing a sudden shift in power and information control, governments around the world had begun threatening to restrict access to such cryptographic protocols. 
+
+May and his guests looked forward to everything those governments feared. “Just as the technology of printing altered and reduced the power of medieval guilds and the social power structure, so too will cryptologic methods fundamentally alter the nature of corporations and of government interference in economic transactions,” he said. By the end of the meeting, the group had given themselves a name—“cypherpunks”—and the superhero-like task of defending privacy across the digital world. In just a week, cofounder Eric Hughes wrote a program that could receive encrypted e-mails, scrub away all identifying marks, and send them back out to a list of subscribers. When you signed up, you got a message from Hughes:  
+
+- Cypherpunks assume privacy is a good thing and wish there were more of it. Cypherpunks acknowledge that those who want privacy must create it for themselves and not expect governments, corporations, or other large, faceless organizations to grant them privacy out of beneficence. 
+
+Hughes and May were deeply aware that financial behavior communicates as much about you as words can—if not more. But outside of cash transactions or barter, there’s no such thing as a private transaction. We rely on banks, credit card companies, and other intermediaries to keep our financial system running. Will those corporations save and even share a dossier of your spending habits? Even using cash requires trust that the bill will maintain its worth. Will governments print too much currency or too little? Many cypherpunks would say that the only way to answer these questions is to build an entirely new system. 
+
+Gradually, their mistrust germinated into an anarchist philosophy. Most simply wanted to be able to buy things without someone looking over their shoulders. But others on the mailing list imagined liberating currency from governmental control and then using it to lash back at their perceived oppressors.  
+
+Jim Bell, a onetime Intel engineer, took these fancies further than anyone, introducing the world to an odious thought experiment called an assassination market. Citizens needed an effective way to punish politicians who acted against the wishes of their constituents, he reasoned, and what better punishment than murder? With an anonymous digital coin, argued Bell, you could pool donations from disgruntled citizens into what amounts to bounties. If a politician made enough people angry, it would only be a matter of time before the price pushed him out of office or cost him his life. Bell’s essay, “Assassination Politics,” eventually attracted the attention of federal agents. His spiral through the U.S. court system started with an IRS raid in 1997 and ended this March with his release from prison.  
+
+While cypherpunks like Bell were dreaming up potential uses for digital currencies, others were more focused on working out the technical problems. Wei Dai had just graduated from the University of Washington with a degree in computer science when he created b-money in 1998. “My motivation for b-money was to enable online economies that are purely voluntary,” says Dai, “ones that couldn’t be taxed or regulated through the threat of force.” But b-money was a purely personal project, more conceptual than practical. 
+
+Around the same time, Nick Szabo, a computer scientist who now blogs about law and the history of money, was one of the first to imagine a new digital currency from the ground up. Although many consider his scheme, which he calls “bit gold,” to be a precursor to Bitcoin, privacy was not foremost on his mind. His primary goal was to turn ones and zeros into something people valued. “I started thinking about the analogy between difficult-to-solve problems and the difficulty of mining gold,” he says. If a puzzle took time and energy to solve, then it could be considered to have value, reasoned Szabo. The solution could then be given to someone as a digital coin.
+
+In Szabo’s bit gold scheme, a participant would dedicate computer power to solving cryptographic equations assigned by the system. “Anything that works well as a proof-of-work function, producing a specific binary string such that it can be proved that generating that string was computationally costly, will work,” says Szabo. In a bit gold network, solved equations would be sent to the community, and if accepted, the work would be credited to the person who had done it. Each solution would become part of the next challenge, creating a growing chain of new property. This aspect of the system provided a clever way for the network to verify and time-stamp new coins, because unless a majority of the parties agreed to accept new solutions, they couldn’t start on the next equation.  
+
+When attempting to design transactions with a digital coin, you run into the “double-spending problem.” Once data have been created, reproducing them is a simple matter of copying and pasting. Most e-cash scenarios solve the problem by relinquishing some control to a central authority, which keeps track of each account’s balance. DigiCash, an early form of digital money based on the pioneering cryptography of David Chaum, handed this oversight to banks. This was an unacceptable solution for Szabo. “I was trying to mimic as closely as possible in cyberspace the security and trust characteristics of gold, and chief among those is that it doesn’t depend on a trusted central authority,” he says.  
+
+Bit gold proved that it was possible to turn solutions to difficult computations into property in a decentralized fashion. But property is not quite cash, and the proposal left many problems unsolved. How do you assign proper value to different strings of data if they are not equally difficult to make? How do you encourage people to recognize this value and adopt the currency? And what system controls the transfer of currency between people? 
+
+After b-money and bit gold failed to garner widespread support, the e-money scene got pretty quiet. And then, in 2008, along came a mysterious figure who wrote under the name “Satoshi Nakamoto,” with a proposal for something called Bitcoin."
+(http://spectrum.ieee.org/computing/software/bitcoin-the-cryptoanarchists-answer-to-cash)
+
+
+==Seven succeeding dominant narratives on Bitcoin==
+
+By Hasufly and Nic Carter:
+
+"We want to more granularly explore the prevalence of key narratives. We identify seven distinct major themes that have held positions of prominence among Bitcoiners throughout its history. Note that these do not necessarily have to be the most influential narratives — we are instead focusing on major strains of thought that have characterized Bitcoin users.
+
+In rough order of appearance, these are:
+
+* '''E-cash proof of concept''': the first major narrative, this was the general view of Bitcoin in its earliest days. Back then, cypherpunks and cryptographers were still appraising the nascent project and determining whether it worked, if at all. Since all prior e-cash schemes had failed, it took a while for people to be convinced of its technical and economic viability and move on to more expansive conceptions of the protocol.
+
+* '''Cheap p2p payments network''': an extremely popular and pervasive narrative. Some believe this is what Satoshi had in mind — a straightforward currency for peer to peer internet transactions. A decentralized Paypal or Venmo, if you will. Since microtransactions are a key component of internet commerce, proponents of this view generally believe that low fees and convenience are an essential characteristic of such a currency.
+
+* '''Censorship-resistant digital gold''': the counterpoint to the p2p payments narrative, this is the view that Bitcoin primarily represents an untamperable, uninflatable, largely unseizable, intergenerational wealth store which cannot be interfered with by banks or the State. Proponents of this view de-emphasize Bitcoin’s use for everyday transactions, arguing that security, predictability, and conservatism in development are more important. We’re callously lumping in sound money believers into this camp.
+
+* '''Private and anonymous darknet currency''': the view that Bitcoin is useful for anonymous online transactions, in particular to facilitate black market online commerce. This is not necessarily mutually exclusive with the e-gold position, as many proponents of the digital gold view believe that fungibility and privacy are important attributes. This was a popular narrative before the chain analysis companies had success de-anonymizing Bitcoin users.
+Reserve currency for the cryptocurrency industry: this is the view that Bitcoin serves an essential purpose as the native currency for the cryptocurrency/cryptoasset industry more generally. This is a view espoused by traders for whom BTC is the numeraire — the currency in which the prices of other assets are quoted. Additionally, traders, businesses, and distributed networks that hold reserves in BTC de-facto endorse this view.
+
+* '''Programmable shared database''': this is a slightly more niche view, and generally involves the understanding that Bitcoin can embed arbitrary data, not just currency transactions. Individuals holding this view tend to see Bitcoin as a programmable, expressive protocol, which can facilitate broader use-cases. In 2015–16, it was popular to express the notion that Bitcoin would eventually absorb a diverse set of functionalities through sidechains. Projects like Namecoin, Blockstack, DeOS, Rootstock, and some of the timestamping services rely on this view of the protocol.
+
+* '''Uncorrelated financial asset''': this is a view of Bitcoin that treats it strictly like a financial asset and finds its most important feature to be its return distribution. In particular, its tendency to have a low or nonexistent correlation to all manner of indexes, currencies, or commodities makes it an attractive portfolio diversifier. Proponents of the view are generally not too concerned about owning spot Bitcoin; they are interested in exposure to the asset. Put another way, they want to buy Bitcoin-flavored risk, not necessarily Bitcoin itself. As Bitcoin has become more financialized, this conception has gained steam.
+
+
+...
+
+In this chart, we lay out the relative influence of the seven narratives we identified above. As you can see, the e-cash proof of concept was the dominant view at the start, although the p2p payments network and digital gold views were also espoused at the time. Later, Bitcoin as an anonymous darknet currency gained steam with the Silk Road. The idea never really died off, and Bitcoin is still used on the darknet today, even though other privacy-oriented alternatives exist.
+
+As ICOs were invented and a broader market of altcoins began to proliferate, BTC became the reserve asset for that larger economy. This grew to become a significant feature of Bitcoin, especially in the bull markets of 2014 and 2017. We note that the p2p payments contingent remained influential until mid 2017, when they largely migrated to Bitcoin Cash (some had already left for Litecoin and Dash). However, with the emergence of Lightning in 2018, there has been an upswing of enthusiasm for online microtransactions and fee-less internet payments.
+
+In 2015 and 2016, sidechains became a popular talking point, and it was assumed that Bitcoin would soon boast a much-expanded functionality, obsoleting most altcoins. Related functionality-extending projects like Mastercoin (now Omni), colored coins, Namecoin, Rootstock, Blockstack, and Open Timestamps, contributed to this general view. However, as sidechains proved complicated to implement, non-money uses of Bitcoin fell out of favor.
+
+As Bitcoin emerged from the 2014–15 bear market, analysts began to contemplate its status as a differentiated commodity-money. In November 2015, Tuur Demeester published an investment note entitled “How to Position for the Rally in Bitcoin,” arguing that it had unique characteristics as a portfolio asset. In mid-2016, Burniske and White influentially argued that Bitcoin represented an entirely new asset class. These analysts noticed Bitcoin’s stubbornly low correlations with traditional assets, and as this persisted, Bitcoin as a portfolio diversifier gained steam among certain forward-looking corners of the asset management industry. Today this is a popular view, driving much of the demand for financial products which would give traditional investors exposure to Bitcoin.
+
+Throughout all these regimes, the digital gold conception has remained influential, and now is the consensus view, predominating over the p2p petty cash faction, which largely departed with Bitcoin Cash. Today, after years of strife and infighting, this is the majority view. However, not all Bitcoin users are ideological bitcoiners, and wanted to reflect this in the chart. Many Bitcoin holders hold it as a portfolio diversifier, some still use it for anonymous darknet transactions, and the p2p cash contingent has re-emerged alongside Lightning."
+(https://medium.com/@nic__carter/visions-of-bitcoin-4b7b7cbcd24c)
+
+=Status=
+
+* Bitcoin functions as a reserve currency in the Cypriot crisis, http://www.newyorker.com/online/blogs/elements/2013/04/the-future-of-bitcoin.html
+
+
+==2024==
+
+Archie Chaudhury:
+
+"The Bitcoin that we use today is vastly different from the Bitcoin that Satoshi Nakamoto and his fellow contributors created in the late 2000s and early 2010s. Beyond the numerous technical upgrades and hard forks, the network itself has grown significantly, with more and more people taking the proverbial “orange pill” and deciding to use bitcoin in some capacity.
+
+There is another way in which Bitcoin has changed: the core network, and asset (BTC), is thought of more as a store of value rather than a platform for micropayments. Indeed, there was a significant cultural schism within the Bitcoin community that led to this change: the famous, and aptly titled, “Blocksize Wars” approximately five years ago led to this change, with forks such as Bitcoin Cash and later Bitcoin SV being created by community members who believed in scalability over all else, and the core Bitcoin chain being upheld by members who sought to preserve decentralization and to look at alternative methods such as Layer 2 payment channels to support scalability. The Lightning Network, which is the most popular payment channel, has slowly gained popularity, recently reaching a capacity of 5000 bitcoin.
+
+Despite these changes, the core technological tenets espoused by Nakamoto in 2008 (Nakamoto Consensus with proof-of-work mining and a static maximum supply of 21 million) remain constant."
+
+(https://bitcoinmagazine.com/culture/reflecting-on-satoshi-white-paper)
+
+=Statistics=
+
+* "According to the MIT Technology Review, bitcoin was four times more volatile in 2013 than the average stock, and the dollar-bitcoin exchange rate was 10 times more volatile than the dollar rate with major currencies like the euro or yen." [http://blogs.reuters.com/breakingviews/2014/02/24/facebook-stock-is-not-so-different-from-bitcoin/]
+
+
+==Bitcoin energy statistics==
+
+* "in 2015 it took 5000 times as much electricity to process a bitcoin transaction as a visa payment" [https://motherboard.vice.com/en_us/article/ae3p7e/bitcoin-is-unsustainable]
+
+* “A recent report suggests that at current prices, Bitcoin miners will consume an estimated 8.27 terawatt-hours per year. That might sound like a lot, but it’s actually less than an eighth of what U.S. data centers use, and only about 0.21 percent of total U.S. consumption. It also compares favorably to the currencies and commodities that bitcoin could help replace: Global production of cash and coins consumes an estimated 11 terawatt-hours per year, while gold mining burns the equivalent of 132 terawatt-hours. And that doesn’t include armored trucks, bank vaults, security systems and such. So in the right context, bitcoin is positively green.”
+(https://tokeneconomy.co/token-economy-26-reflections-on-pow-energy-consumption-cryptokitties-erc-721-tokens-1e6e2ea3d413) ; Source: [http://blog.zorinaq.com/bitcoin-electricity-consumption/]
+
+* "We saw the first peer-reviewed study that confirmed just that. What’s more, the environmental toll is about to get worse. According to this study by economist Alex de Vries, which was reported in Grist, bitcoin’s energy usage is expected to double by the end of this year–which would represent an energy footprint roughly equal to that of the Netherlands. Already, according to the paper, current bitcoin usage represents nearly the energy output of Ireland. As blockchain becomes more normalized, this insane energy footprint will only grow. De Vries foresees a near future where bitcoin consumes as much a 5% of the world’s energy."
+(https://www.fastcompany.com/40574256/bitcoin-is-unsustainable-and-we-now-have-peer-reviewed-proof)
+
+==Bitcoin inequality statistics==
+
+See the graphic at [http://www.cryptocoinsnews.com/news/owns-bitcoins-infographic-wealth-distribution/2014/03/21 Who Owns All the Bitcoins – An Infographic of Wealth Distribution] and also the [http://bitcoinrichlist.com/charts/percent-bitcoins-owned-by-richest Bitcoin Rich List]
+
+*  "Bitcoin’s ‘One Percent’ Controls Lion’s Share of the Cryptocurrency’s Wealth. New research shows that just 0.01% of bitcoin holders controls 27% of the currency in circulation
+The top bitcoin holders control a greater share of the cryptocurrency than the most affluent American households control in dollars, according to a study by the National Bureau of Economic Research. The study showed that the top 10,000 bitcoin accounts hold 5 million bitcoins, an equivalent of approximately $232 billion." [https://www.wsj.com/amp/articles/bitcoins-one-percent-controls-lions-share-of-the-cryptocurrencys-wealth-11639996204]
+
+
+* '''97% of all bitcoins are held by 4% of addresses'''
+[https://finance.yahoo.com/news/97-bitcoins-held-4-addresses-163800148.html?]
+
+
+* "It turns out that the distribution of bitcoins among users is even more skewed than the distribution of traditional wealth across the globe. This is understandable, since bitcoin favours early adopters who either mined or purchased their coins a few years ago. Furthermore, the amount of bitcoins in circulation is capped at 21 million, which also helps create an unequal distribution of wealth. Interestingly, the FBI has the second largest known stash of bitcoins, a whopping 174,000 BTC from the Silk Road seizure."
+(http://www.cryptocoinsnews.com/news/owns-bitcoins-infographic-wealth-distribution/2014/03/21)
+
+
+* "North America has twice the number of Bitcoin-related, venture-backed businesses that Asia does. Overall, Canada and the United States account for 60 percent of such companies, according to a study released last week by Coindesk. Seventy percent of all Bitcoin venture capital goes to U.S.-based firms." [http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/03/forget-the-1-percent-in-the-bitcoin-world-half-the-wealth-belongs-to-the-0-1-percent/]
+
+
+* "the drawback to consolidation is that those benefits will be concentrated in the hands of a relative few. That dynamic is already playing out among individual holders of Bitcoin, with a growing gulf between the Bitcoin-rich and the Bitcoin-poor. According to Risto Pietilä, a Finnnish entrepreneur, the overwhelming share of Bitcoin wealth is held in just a few dozen wallets. Half of all bitcoins belong to around 927 "individuals." If those figures are right, then half of the world's 12 million or so bitcoins is held by a tenth of a percent of all accounts. That's a stunning statement of inequality, since in the real world 46 percent of the world's wealth belongs to 1 percent of the global population. The Bitcoin world, then, is even less equal than the real world."[http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/03/forget-the-1-percent-in-the-bitcoin-world-half-the-wealth-belongs-to-the-0-1-percent/]
+
+
+* "The “average Bitcoin user” is male (95.2%), 32.1 years old, libertarian / anarcho-capitalist (44.3%), non-religious (61.8%), with a full time job (44.7%), and is in a relationship (55.6%). [http://simulacrum.cc/2013/03/04/the-demographics-of-bitcoin-part-1-updated/]
+
+
+Discussion, by Alice Martin, NEF:
+
+"Often when Bitcoin is written about we’re given the impression it’s ‘us’ – the general public – who have the ability to participate in the new digital public. But this vision of egalitarianism is far from the truth. With 95% of transactions being made by men  – and we can assume, as I will go on to explain, fairly well-off men – Bitcoin is not a currency of ‘the people'. It’s a currency for those already most well represented in politics, business, and generally any position of power. If you are a woman, if you are not white, if you do not have significant wealth – you are probably not a player in the Bitcoin world.
+
+The fact that the average Bitcoin user is a white man in his mid-thirties is probably not a surprise to many. Brett Scott’s valuable contribution to this debate lays out possible reasons for the stark gender imbalance – and others have pointed to why it appeals to a relatively affluent, internet savvy group. But beyond discussions of who is able to play in the tech game, the Bitcoin story points to two more systemic issues about who has economic power, and how it’s set to reproduce itself:
+
+* Without capital you won’t get a look in. Each time bitcoins are mined, more processing power is needed to mine the next. Custom-built mining machines are expensive to purchase, and expensive to operate. Unsurprisingly then, bitcoin procurement is a lucrative business.
+
+* Make profit now, think later. In this story we see a good demonstration of how the wider financial system is programmed to encourage speculation and a never ending search for new markets. Two of the top five Bitcoin trends to have emerged so far this year are “big name retailers jumping on board” and “venture capital firms betting big”. With a booming sector of start-ups providing payments systems, mining pools and currency exchange platforms, London and New York, home to the two biggest financial sectors in the world, are emerging as incubators for this new industry. Fuelling this boom, global investment in the fintech industry has tripled since the 2008 banking crisis and currently stands at nearly $3 billion. With so much money going in – extracting profits out from these technologies is high on the agenda."
+
+More at http://www.businessinsider.com/bitcoin-inequality-2014-1
+
+'''Gini Coefficient Based Wealth Distribution in the Bitcoin Network: A Case Study'''
+
+'''Abstract:''' Bitcoin has gained widespread attention globally in 2013 and is the first online currency based on a peer to peer network without any central authority or third parties. Its market capitalization reached US$ 8.5 billion in December 2013. However, despite its popularity some issues like network security (thefts), anonymity (privacy) and wealth distribution (inequality) have plagued it. Of considerable importance is the last issue of unequal wealth distribution as it may create a huge socio-economic burden for the society. A group of researchers estimated that the GINI coefficient for the network was at an all time high of 0.985 in Jan 2013 and that the rich were getting richer as the network grew. In the present work it has been strived to determine how the GINI actually increases or decreased depending upon the wealth distribution. For doing this a raw transaction of data of more than 36 million transactions has been sourced and a list of all users and their wealth in the network has been computed. The final results are very alarming as GINI has increased to 0.997 by the end of 2013 and the market share of top 10 holders alone has reached 6.6% of the entire market. Therefore, the rich have actually got richer and steps should be taken to curb such a wealth accumulation model in the network.
+
+Access: https://www.researchgate.net/publication/326239358_Gini_Coefficient_Based_Wealth_Distribution_in_the_Bitcoin_Network_A_Case_Study
+
+=[[Bitcoin Alternatives]]=
+
+See in our entry on [[Bitcoin Alternatives]], i.e. other currencies
+
+* 1 The second wave: Bitcoin forks
+
+* 2 Is Freicoin in competition with Bitcoin?
+
+* 3 Can Ripple be integrated with Bitcoin
+
+* 4 What is the difference between Coinbase and every other Bitcoin wallet service?
+
+* Ethereum: Cryptocurrency 2.0
+
+=Interview=
+
+Excerpted from a more detailed interview:
+
+"Klint Finley: Could you give us a brief overview of what Bitcoin is for the unfamiliar?
+
+Gavin Andresen: Sure. Bitcoin is the first peer-to-peer currency - it is money created by people instead of by a central bank or government.
+
+
+'''And how does it work?'''
+
+Everybody trying to create bitcoins and everybody trading bitcoins is connected by a peer-to-peer network. And the code everybody is running makes sure nobody else is cheating - nobody else is creating more bitcoins than are allowed, nobody is trying to spend their bitcoins more than once, and that bitcoins are only being spent by their rightful owners.
+
+The really novel idea is a mechanism for preventing bitcoins from being spent more than once WITHOUT relying on a central authority.
+
+The other mostly new idea is limiting the supply of bitcoins without relying on a central authority.
+
+
+
+'''How do you accomplish these things without a central authority? And how do Bitcoin clients and servers find each other?'''
+
+
+Let me tackle the easy one first - how do Bitcoin clients find each other:
+
+All p2p networks have "the bootstrapping problem" - without central servers, nodes (machines) on the network need to be able to find each other. Bitcoin solves it using three mechanisms:
+
+1. By default, Bitcoin clients join an IRC chat channel and watch for the IP addresses and ports of other clients joining that channel. The name of that channel (and the name of the IRC chat server) is hardcoded into the Bitcoin software.
+   
+2. There is a list of "well known" Bitcoin nodes compiled into the software in case the IRC chat server is unreachable for some reason.
+   
+3. You can manually add (via configuration file or command-line option) IP addresses of other machines running Bitcoin to connect.
+
+
+Once you're connected to the Bitcoin p2p network, other machines send you messages containing IP addresses (and ports) of other machines they know about, so after bootstrapping you find other Bitcoin nodes via the Bitcoin network itself.
+
+There is a lot of discussion about alternative bootstrapping mechanisms, so I wouldn't be surprised if alternative Bitcoin implementations that use something else pop up in the next year or so.
+
+
+'''I'm guessing you can also change the IRC server and channel manually as well?'''
+
+No, actually, you can't - you'd have to recompile Bitcoin to do that."
+(http://www.readwriteweb.com/hack/2010/12/interview-bitcoin.php)
+
+
+
+
+
+=Aspects of Bitcoin=
+
+
+==Bitcoin as a Game==
+
+'''1. JP Koning:'''
+
+"The thing that fooled us all for a while, myself included, is that we all thought bitcoin was solving a monetary or payments problem. It was labelled a coin, after all, and coins fall within the realm of monetary economics. To further complicate matters, Satoshi told his story using phrases like "electronic cash system" and "non-reversible transactions". Perhaps we deserve to be forgiven for not seeing bitcoin's underlying nature. After all, tearing down the existing monetary system and building a new one was a fresh and exciting narrative.
+
+Anyways, Coinbase still believes this old tale. "As with other technologies, money has gone through many upgrades over the years," its marketing team writes. "Bitcoin is the latest breakthrough in a technology that’s millennia old."
+
+What is now apparent is that bitcoin was never a monetary phenomenon. No, bitcoin is a new sort of financial betting game. It is a digital, global, highly-secure, and fairer version of the old-fashioned chain letter.
+
+The premise behind bitcoin-the-game is that the current wave of buyers must guess when (or if) a subsequent wave of buyers will emerge, this second next wave's participation being contingent on when (or if) they believe a third wave of buyers to emerge. If they guess right, the early birds win at the expense of the late ones. And they can win a lot of money, as Coinbase points out.
+
+Think of bitcoin as a pure mind game, a Keynesian beauty contest in which we "devote our intelligences to anticipating what average opinion expects the average opinion to be." Those old fashioned chain letters that you (or your parents) used to get in the mail were an early type of beauty contest. The price that Alice was willing to place on a chain letter was a function of whether she expected the next recipient, Bill, to play by the rules and send it on, Bill's expectation in turn depending on the odds that Jack would join the game.
+
+But chain letters had a major flaw. The chain order could be easily compromised by a fraudster who miscopied the list and put their name at the front. Bitcoin fixes this by introducing robustness to chain letter-type games. Bitcoin's blockchain is an unbreakable public record of where in line game players stand. Altering this chain order would require tremendous amounts of computer power, as Coinbase illustrates.
+
+Bitcoin-the-game has been spectacularly successful. As Coinbase points out, it "went from an idea in 2008, and a first transaction in 2009, to over 27 million users in the US alone in 2019, or 9% of Americans." 
+
+Why did bitcoin-the-game succeed?
+
+First, it's a fun and cutting-edge game. Many people dream of thrusting themselves out of financial obscurity into millionaire land. Bitcoin is a technologically-sophisticated way to get there. No one wants to play grandpa's lottery.
+
+Secondly, the way that bitcoin is designed helps it spread. Most of the legacy financial games that bitcoin competes with (poker, lotteries, sports betting) are regulated by the government. Strict rules prevent game providers from reaching a wide audience. For instance, online casinos may be prevented from serving out-of-state players, problem gamblers may be banned, and those who are under 18 must be excluded. These financial games are usually centralized. This means they are hosted on a single website, or at a physical location like a casino, or by a government-run lottery corporation. Which makes it easy for regulators to shut down game providers who break the rules.
+
+But bitcoin is different. Because it is a decentralized and digital financial game, it can't be regulated or shut down. And so it can serve the entire globe with impunity. Which it has done by spreading into every crack and cranny on earth.
+
+Based entirely on whisps and storms of psychology, the price of bitcoin is inherently volatile. Its core volatility has stayed pretty much constant over the last 11-years. Users should expect the same for the next 11 years. Even if more people join a Keynesian beauty contest, the average opinion of the average opinion will always be a fickle, inconsistent thing, and so price will always be jittery.
+
+So what about bitcoin-as-money? Yes, people do use bitcoin for payments. But this gets dwarfed by its popularity as a financial game. The problem is this. Bitcoin payment functionality is implemented on top of a highly volatile chassis, a fun but fickle beauty contest. Which hobbles the effectiveness of the payments platform. Regular folks won't use the stuff to pay. They don't want the value of their spending stash to fall by 20% overnight. And game players don't want to waste their tokens on buying goods & services. That could mean potentially missing out on a life changing jackpot. That's why the promise of mainstream bitcoin payments has died a thousand deaths over the last 11 years.
+
+That being said, the demand for bitcoin in economically volatile regions such as Venezuela has hit record highs. Coinbase suggests that thanks to inflation and capital controls, bitcoin is finally being used as the electronic cash for which it was originally designed."
+
+(http://jpkoning.blogspot.com/2019/11/bitcoin-11-years-in.html)
+
+
+2. Dr. Nick A. :
+
+"Satoshi Nakamoto released the Bitcoin whitepaper (in 2008). As it happens, Bitcoin represents the purest realization of Nash’s theories, particularly the "Nash equilibrium".
+
+In this context, a Nash equilibrium occurs when all players in a system continue to adopt the same strategy because deviating would result in a worse outcome for them. Bitcoin’s monetary system operates as a highly stable, non-collaborative Nash equilibrium: participants act out of economic self-interest, reinforcing the system’s rules, because any deviation would be a losing strategy.
+It’s fascinating that this system exists and is a perfect example of the power of well constructed games. A fairly simple piece of code has managed to bootstrap trillions of dollars in value, a vast coordination of millions of people and inspire an entire industry to be fore. And to do it, people just needed to chase the coins. 
+
+Bitcoin is the conceptual substrate of this industry and the attitude of the non-collaborative Nash equilibrium permeates everything. The “code is law” digital Wild West attitude all arises out of this perfect realisation of rational self interest. Put simply, everything has turned into a game of “F**k you buddy.”
+
+This, by the way, is basically what upsets the lefties so much about this industry, they can see it as the perfect realisation of neoliberal economics, which it is.
+
+Why? because there is super quick liquidity, vast opportunity, informational advantages and lots and lots of pure visceral greed. Crypto is actually a very real insight into the future of how this game plays out."
+
+(https://x.com/DrNickA/status/1832086698483708308)
+
+==General Aspects==
+
+* see the overview of [[Needed Improvements for Bitcoin]]: [http://blog.p2pfoundation.net/the-15-weaknesses-of-bitcoin-and-what-is-being-done-about-it/2014/01/07 The 15 weaknesses of Bitcoin and what is being done about it]; by [[Jem Bendell]] [http://jembendell.wordpress.com/2014/01/06/crypto-at-the-ok-coral/]
+
+===Its basic design flaw: gold-like design===
+
+Anthony Migchels:
+
+"Notwithstanding these revolutionary breakthroughs, Bitcoin does suffer from a basic flaw. It’s designed to behave like Gold. Nakamoto clearly believes Austrian Economics to the last word, including the idea that hyperinflation is the main threat to the system.
+
+As a result Bitcoin suffers from the same problems as Gold: it is deflationary and expensive. There is never enough of it. True, Bitcoins can be divided in ever smaller denominations, so ‘physically’ there will never be a shortage, but it means Bitcoin is designed to appreciate for ever and this is the definition of deflation.
+
+Worse still, Bitcoin does not address the interest issue. There is no possibility for cheap credit and if the unit matures, a banking system will be necessary to provide credit based on deposits.
+
+Not only will this exacerbate the scarcity of money, it will also lead to very high cost for capital.
+
+Yet another problem is that with a full reserve banking system as required by bitcoin (and Gold too, by the way) would allow the Money Power to mop up the money supply through compound interest within one or two decades, as you can find out here..
+
+The basic conceptual flaw is, that Austrian Economics believes a currency should be a good store of value first and foremost. This is the fatal mistake: money is a means of exchange, and it is the agreement to use it as such that gives it value, not the other way around. This is even true of Gold today: the reason Gold is now expensive, is because many investors are speculating it will be currency again.
+
+Because of this design flaw, Bitcoin is being hoarded by its users. They prefer to have it sit in their ‘account’, instead of spending it, hoping it will appreciate. As a result turnover is lower than it could be. The unit is already an object of speculation, hindering its primary function: to finance normal trade."
+
+(http://realcurrencies.wordpress.com/2012/05/18/bitcoin-impressive-but-flawed/)
+
+===Rich get Richer effect empirically observed===
+
+"In 2011, however, BitCoin began to get significant media coverage which attracted many more users. The currency also became more attractive after an exchange was set up that allowed bitcoins to be traded for dollars. During this second phase, bitcoins started to function as a real currency.
+
+The team’s key finding from this second phase is related to wealth accumulation. Kondor and co say that the network grew by preferential attachment. In other words, a node with a large number of links is likely to attract more links than a node with only a few links.
+
+This is a well-known effect in network science. Economists call it the Matthew effect after the biblical observation that the rich get richer.
+
+Examples of the Matthew effect occur in many networks. Popular websites are likely to grow more rapidly than less popular ones, for example. And a similar process is thought to occur in real economies where the rich really do seem to get richer.
+
+The Matthew effect is thought to be the origin of the 80:20 distribution of wealth– that 20 per cent of the population own 80 per cent of the wealth.
+
+Kondor and co say a similar phenomenon is clearly observable in the BitCoin network. Not only are popular nodes likely to attract more links, their wealth is also likely to grow more quickly than less popular nodes. “The ability to attract new connections and to gain wealth is fundamentally related,” they say. “The “rich get richer” phenomenon is indeed present in the system.”
+
+An interesting aspect of this currency is that the transactions are largely anonymous. As a result, the buying and selling of illegal goods and services is probably overrepresented in the network.  If so, the Matthew effect must be at work even in this shadowy world.
+
+This kind of approach has significant potential for future studies. Kondor and co say the transparency of the network means that this system could be hugely valuable for econophysicists wishing to evaluate and refine their models. In no other system of currency is it possible to study what goes on in such detail.
+
+Could bitcoins eventually replace ordinary cash? Kondor and co avoid making any predictions, but the evidence they have unearthed is that the BitCoin network already functions in a way that is uncannily similar to real world currencies. So in that respect, there is nothing to stop it being more widely adopted."
+(http://www.technologyreview.com/view/518541/rich-get-richer-effect-observed-in-bitcoin-digital-currency-network/)
+
+Ref: arxiv.org/abs/1308.3892 : Do The Rich Get Richer? An Empirical Analysis Of The Bitcoin Transaction Network
+
+See also:
+
+*  Gini Coefficient = 0.87709 ; Bitcoin Wealth Distribution extremely unequal (Bitcoinica data) http://ow.ly/trKoy, the 1% own 50%
+
+* the top 100 have gone from holding 1,776,434 coins to holding 2,254,634 Bitcoins, a whopping 27% increase! [http://www.thebitcointrader.com/2011/10/is-it-time-to-occupy-bitcoin-street.html]
+
+
+===Bitcoin Research===
+
+Publications including research and analysis of Bitcoin or related areas, https://en.bitcoin.it/wiki/Research
+
+list of researchers, via [http://www.quora.com/Who-has-thought-deeply-about-Bitcoin-as-a-currency]
+
+* Jerry Brito (@JerryBrito), senior research fellow at the Mercatus Center at George Mason University.  [http://surprisinglyfree.com/2011/04/19/gavin-andresen-on-bitcoin/]
+* Russell Roberts (@EconTalker) of the Library of Economics and Liberty.  He hosted an EconTalk episode on Bitcoin: [http://www.econtalk.org/archives/2011/04/andresen_on_bit.html]
+* economist Jon Matonis (@JonMatonis) who recently presented on using Bitcoins as a currency to monetize game play: [http://www.slideshare.net/jonmatonis/monetising-game-play-on-social-network-sites]
+
+Critics:
+
+* Timothy B. Lee (@BinaryBits) sees problems with Bitcoin (bubbles, vulnerable to cartel, etc.): [http://timothyblee.com/2011/04/19/bitcoins-collusion-problem]
+
+===The problems of Bitcoin===
+
+"What Bitcoin doesn't provide or doesn't provide in an effective manner:
+
+    * Cost of creating money
+    * Method of reaching a consensus, based on computing power
+    * No "real value" to back it
+    * Settlement risk not covered
+    * Scalability issues
+    * All the lacking features of a "soft" currency."
+(http://events.ccc.de/congress/2011/Fahrplan/events/4668.en.html)
+
+
+==Energy Usage Aspects==
+
+* Statistics at http://digiconomist.net/bitcoin-energy-consumption
+
+* "a recent study out of the University of New Mexico estimated that in 2018 every $1 of Bitcoin value was responsible for $0.49 in health and climate damages in the US, costs that are borne by those who will, for the most part, never see any return from cryptocurrency mining whatsoever." [https://www.sciencedirect.com/science/article/abs/pii/S2214629619302701]
+
+Read: 
+
+#Malmo, C. (2015). Bitcoin is unsustainable:      https://motherboard.vice.com/en_us/article/ae3p7e/bitcoin-is-unsustainable
+#In defense of Bitcoin's energy usage: https://coincenter.org/entry/five-myths-about-bitcoin-s-energy-use
+
+==The energy catastrophy that is bitcoin mining==
+
+David Gerard:
+
+""Proof-of-work Bitcoin mining is built around wasting resources as fast as you possibly can.
+
+You may have read in the papers about Bitcoin mining involving “complex calculations.” This is incorrect — none of the calculations are complicated. It’s working out a hash — a number calculated from a piece of data — like the check digit on your credit card number, but longer.
+
+It’s very quick to go from the data to the hash, but impossibly slow to start from a desired hash and guess the data that would generate it.
+
+A miner puts together a block of transactions that are waiting to be processed. They also tack on the hash of the previous block, and a random number (the “nonce”). They calculate the hash of the resulting block. If that hash is a small enough number … they win the bitcoins! And their block is added to the ledger — the blockchain.
+
+The calculations required to build the blockchain ledger could be done on a 2007 iPhone or a Raspberry Pi — all the rest of the electricity is literally wasted, just to run a lottery to decide who gets the bitcoins this time.
+
+All those computers doing Bitcoin mining just buy 14 sextillion lottery tickets every ten minutes, with one winner.
+
+That’s the “work” that mining wants “proof” of — generating lottery tickets. You show your commitment, and how much you deserve the Bitcoins, by wasting power faster than everyone else."
+(https://davidgerard.co.uk/blockchain/2018/05/22/bitcoins-stupendous-power-waste-is-green-apparently-bad-excuses-for-proof-of-work/)
+
+
+===Bitcoin's Energy Use===
+
+ 
+'''1. Brad Plumer:'''
+
+"Blockchain.info, a site that tracks data on Bitcoin mining, estimates that in just the last 24 hours, miners used about $147,000 of electricity just to run their hardware, assuming an average price of 15 cents per kilowatt hour … That’s enough to power roughly 31,000 U.S. homes, or about half a Large Hadron Collider.
+
+It’s a stunning stat, but does this really count as a “disaster”? That’s less clear. After all, we need to consider the counterfactural: Is it possible that these computers would be used for other activities and calculations anyway, if they weren’t mining Bitcoins?
+
+In any case, Gimein’s piece does touch on a red-hot topic in energy circles — how much electricity does all of our computing and Internet infrastructure actually consume? A 2011 study by Stephen Ruth of George Mason University estimated that the entire global information and communications technology industry accounts for “only about 3–5 percent” of the world’s electricity use. So it has a much smaller environmental footprint than, say, cars, trucks, and planes (which account for 25 percent of all energy demand.)
+
+On the other hand, the Internet’s energy needs are expected to swell significantly in the coming years — even though computing keeps getting more energy-efficient. An interesting new study in Science by Diego Reforgiato Recupero finds that Internet traffic volume tends to double every three years. But network energy-efficiency isn’t keeping pace. As a result, the world’s IT infrastructure will consume 19 percent more energy in 2013 than in 2012.
+
+Interestingly, as Alexis Madrigal explains here, most of the energy used by our computing infrastructure comes from wireless and cellular networks — by contrast, data centers themselves only use about 10 percent of the electricity involved. What’s more, those wireless networks don’t seem to be improving their energy efficiency all that quickly. That’s why overall energy use could keep growing, particularly as cloud computing becomes more widespread.
+
+Bottom line: On the vast scale of environmental disasters, Bitcoin barely registers. And, in the grand scheme of things, the Internet is still relatively green (that’s particularly true if it cuts into other activities, like driving). But it’s also true that our computing infrastructure is becoming an increasingly significant part of the world’s energy demand."
+(http://www.washingtonpost.com/blogs/wonkblog/wp/2013/04/12/what-bitcoin-teaches-us-about-the-internets-energy-use/)
+
+
+'''2. Eric Limer:'''
+
+"According to Bitcoin Watch, the whole Bitcoin network hit a record-breaking high of 1 exaFLOPS this weekend. When you're talking about FLOPS, you're really talking about the number of Floating-point Operations a computer can do Per Second, or more simply, how fast it can tear through math problems. It's a pretty common standard for measuring computer power. An exaFLOPS is 1018, or 1,000,000,000,000,000,000 math problems per second. The most powerful supercomputer in the world, Sequoia, can manage a mere 16 petaFLOPS, or just 1.6 percent of the power geeks around the world have brought to bear on mining Bitcoin. The world's top 10 supercomputers can muster 5 percent of that total, and even the top 500 can only muster a mere 12.8 percent.
+
+And that 1 exaFLOPS number is probably a little low. Because Bitcoin miners actually do a simpler kind of math (integer operations), you have to do a little (messy) conversion to get to FLOPS. And because the new ASIC miners—machines that are built from scratch to do nothing but mine Bitcoins—can't even do other kinds of operations, they're left out of the total entirely. So what we've got here is a representation of the total power spent on Bitcoin mining that could theoretically be spent on something else, like real problems that exist naturally.
+
+Because of the way Bitcoin self-regulates, the math problems Bitcoin mining rigs have to do to get more 'coin get harder and harder as time goes on. Not to any particular end, but just to make sure the world doesn't get flooded with Bitcoins. So all these computers aren't really accomplishing anything other than solving super difficult and necessarily arbitrary puzzles for cyber money. It's kind of like rounding up the world's greatest minds and making them do Sudokus for nickels.
+
+Projects like Folding@Home and SETI@Home use similarly networked power for the less-pointless practices of parsing information that could lead to more effective medicines or finding extra-terrestrial life, respectively, and either are hard-pressed to scrounge up even half of a percent of the power the Bitcoin network is rocking. And with specialized Bitcoin-mining hardware on the rise, there's going to be an army of totally powerhouse PCs out there that are good for literally nothing but digging up cybercoins.
+
+It's incredible to think about the amount of power being directed at this one, singular purpose; power that's essentially being "donated" by thousands of people across the globe just because they have skin in the game. It's by far the most computational effort that has ever been devoted to a single purpose. And sure, Bitcoins are fine and all, but can you imagine what we could do if this energy was put behind other tough problems? We'll you're going to have to imagine, because so long as mining Bitcoins can earn you money and folding proteins can't, it's pretty clear which one is gonna get done."
+(http://gizmodo.com/the-worlds-most-powerful-computer-network-is-being-was-504503726?)
+
+
+'''3. BY MICHAEL CARNEY:'''
+
+"At today’s value of roughly $1,000 per bitcoin, the electricity consumed by the bitcoin mining ecosystem has an estimated carbon footprint – or total greenhouse gas emissions – of 8.25 megatonnes (8,250,000 tonnes) of CO2 per year, according to research by Bitcarbon.org. That’s 0.03 percent of the world’s total greenhouse gas output, or equivalent to that of the nation of Cyprus. If bitcoin’s value reaches $100,000, that impact will reach 3 percent of the world’s total, or that of Germany. At $1 million – which seems farcical but which may not be out of the realm of possibility given the artificially limited bitcoin supply – this impact rises to 8.25 gigatonnes, or 30 percent of today’s global output, and equivalent to that of China and Japan combined.
+
+Bitcoins aren’t mined from the earth’s crust like most physical commodities – although at least that leaves tangible evidence of its environmental impact. Rather, they are “mined” by computers solving a set of complicated computational problems. These problems are designed to get more difficult over time, until the year 2140 when the 21 millionth (and final) bitcoin is mined. Early in bitcoin’s existence, it was feasible to run a successful mining operation with a standard PC. Now the task requires custom mining rigs that can run orders of magnitude more processes per second.
+
+The top of the line model, which is currently made by a Swedish company called KnCMiner, costs around $13,000 and can mine at a rate 550 gigahashes per second: They’ve sold $28 million worth, and soon these too will be obsolete. The total computational power of the global bitcoin mining network today is more than seven million gigahashes, and climbing. That’s 256 times greater than the world’s top 500 supercomputers, combined.
+
+These computers are consuming so much electricity that it’s already unprofitable to mine in some regions of the world. According to Blockchain.info the total electricity cost of all mining acticity conducted over the last 24 hours was $19,652,986.38, as the system consumed 131,019.91 megawatt hours. In April, Bloomberg Sustainability called bitcoin mining it a “real-world environmental disaster.” At the time, the system was consuming just 7,000 megawatt hours per day – things have increased 142-fold in the last eight months."
+(http://pando.com/2013/12/16/bitcoin-has-a-dark-side-its-carbon-footprint/)
+
+
+===The tremendous [[Environmental and Human Costs of Bitcoin and the Blockchain]]===
+
+Darin Stevenson:
+
+"What is bitcoin, really? You can think of it as a machine contagion—a network of devices amped to their performance tolerances—machines that do nothing but reprocess every transaction that ever occurred on their network (thus achieving ‘consensus’) while, at the same time, ‘mining’ new blocks of coins (currently worth about 25 btc) by solving a purposefully cumbersome mathematical formula which doesn’t actually accomplish anything other than enforcing computational difficulty. That is: making millions of machines grind away madly at nothing.
+
+This mining process is both the reprocessing of transactions, and a ‘weight’ factor that is incremented to insure that the average time for the entire network to ‘solve’ a block (that is, to produce an accurate guess close enough to a mathematically supplied target) is ‘about 10 minutes’.
+When you initiate a new machine into the network, you download the current transaction record (a 6-gigabyte file) of the entire history of bitcoin and reprocess it (this takes around 24 hours). You then either ‘mine’ alone (an almost useless endeavor which would take ~98 years to solve a block) or you join a pool of machines. By joining a pool, you get statistically better performance in terms of satoshi (currently: USD $0.0000046543 each) earned as you are ‘rewarded’ for work done by your machine’s participation in the pool.
+
+The more processing power (raw computational force over time) you can bring to bear on ‘the problem’ … the better a chance you have to earn incremental additions to your ‘wallet’ or account. Of course, most of the problem is invented… to be this kind of problem—one that requires more and more computational activity to qualify as complete. And we have now invented specialized machines and chips just to solve this problem.
+
+Machines involved in mining are pressed to the limits of their power consumption and performance profiles; they are ‘pinned’ at 100%+ of their computing power, ceaselessly, and thus generate heat (as well as consuming copious quantities of electrical power).
+
+Because they remain hot, they have to be electronically ventilated. This process of power-heating something we must in turn power-cool, for the phony ‘sake’ of mathematical processes intended to make more work each time they are implemented is deranged. We’re essentially turning computers into heaters that we have to cool to recompute previous computations with. On purpose. A single day of the environmental costs of this process are so catastrophic that if we ever did the accounting — if anyone did — we would immediately understand that this entire idea is a mode of ‘fracking the whole environment’ whose costs rise explosively with every moment we continue the process.
+Only a species that had gone entirely insane, and consciously intended to wipe out life on Earth would ever consider such a process. But any species that could actively celebrate and expand it — must be understood as both emphatically suicidal and openly omnicidal. In short: they intend to kill everything, anything, and themselves — and are hell-bent on the continuous and unlimited expansion of this agenda.
+
+The activity of the blockchain networks are not only burning down the future; they are also obliterating the history of humanity and life on Earth, faster and more aggressively every moment, by destroying the living results and opportunities established by this history, and insuring that the benefits that might otherwise blossom into astonishing ‘interest on investment’, are killed off by the necessity of breeding, operating, heating and cooling millions of machines that do makework for a resource that only exists as numbers in machines."
+(https://medium.com/ill-ixi-lli/-da9326e97d1f)
+
+==Business Aspects==
+
+See our page: [[Bitcoin - Business Aspects]] 
+
+* 1 Bitcoin Business and Economics
+
+* 2 Bitcoin as a legitmate investment vehicle
+
+* 3 Bitcoin's Business Uptake, 2013
+
+* 4 What are Bitcoins spent on?: September 2013 calculation
+
+* 5 Bitcoin Speculation as a 'Greater Fool' Pump and Dump scheme
+
+* 6 Warren Buffet: Bitcoin has no intrinsic value
+
+* 7 Bitcoin's Business Potential
+
+
+''(and see also: [[Bitcoin Startups]])''
+
+
+===Can Bitcoin function as a means of payment ?===
+
+[[Adam Tooze]] (interviewed by Evgeny Morozov):
+
+* "EM: '''Before we delve into the specifics, perhaps you could give us a short outline of how you read cryptocurrencies and their broader political and economic import. Are they money? Why or why not?'''
+
+AT: In a simple functionalist way, you can define the role of money as consisting in some combination of three things: means of payment, store of value, unit of account. Clearly, in certain circuits folks have begun to price things in cryptocurrencies – NFTs, digital art objects, etc. – so crypto is serving as some kind of unit of account. But crypto is not a particularly useful unit of account because its value in terms of other units of account fluctuates so much, which also means that crypto is a bad store of value (unless you have a high preference for speculative gambles) and is unlikely to become widely accepted as means of payment. (In an upswing, the risk is that, in using it, you undervalue your tokens. In a downswing in crypto prices, only a highly risk-tolerant merchant would accept payment in crypto, unless at a large discount.)
+
+If we depart from such functionalist accounts of money and stress instead the role of money in constituting community, founding polities, etc., then crypto has clearly gained purchase in certain communities and helped to configure and constitute them. The question then is, how stable, robust, and widespread are these social groupings that have organized themselves around this money and/or how powerful are their opponents?"
+
+(https://the-crypto-syllabus.com/adam-tooze-on-macrofinance/)
+
+==Technological Aspects==
+
+===Review of incidents related to Bitcoin===
+
+by Benjamin Wallace:
+
+"Even the purest technology has to live in an impure world. Both the code and the idea of bitcoin may have been impregnable, but bitcoins themselves—unique strings of numbers that constitute units of the currency—are discrete pieces of information that have to be stored somewhere. By default, bitcoin kept users’ currency in a digital “wallet” on their desktop, and when bitcoins were worth very little, easy to mine, and possessed only by techies, that was sufficient. But once they started to become valuable, a PC felt inadequate. Some users protected their bitcoins by creating multiple backups, encrypting and storing them on thumb drives, on forensically scrubbed virgin computers without Internet connections, in the cloud, and on printouts stored in safe-deposit boxes. But even some sophisticated early adopters had trouble keeping their bitcoins safe. Stefan Thomas had three copies of his wallet yet inadvertently managed to erase two of them and lose his password for the third. In a stroke, he lost about 7,000 bitcoins, at the time worth about $140,000. “I spent a week trying to recover it,” he says. “It was pretty painful.” Most people who have cash to protect put it in a bank, an institution about which the more zealous bitcoiners were deeply leery. Instead, for this new currency, a primitive and unregulated financial-services industry began to develop. Fly-by-night online “wallet services” promised to safeguard clients’ digital assets. Exchanges allowed anyone to trade bitcoins for dollars or other currencies. Bitcoin itself might have been decentralized, but users were now blindly entrusting increasing amounts of currency to third parties that even the most radical libertarian would be hard-pressed to claim were more secure than federally insured institutions. Most were Internet storefronts, run by who knows who from who knows where.
+
+Sure enough, as the price headed upward, disturbing events began to bedevil the bitcoiners. In mid-June, someone calling himself Allinvain reported that 25,000 bitcoins worth more than $500,000 had been stolen from his computer. (To this day, nobody knows whether this claim is true.) About a week later, a hacker pulled off an ingenious attack on a Tokyo-based exchange site called Mt. Gox, which handled 90 percent of all bitcoin exchange transactions. Mt. Gox restricted account withdrawals to $1,000 worth of bitcoins per day (at the time of the attack, roughly 35 bitcoins). After he broke into Mt. Gox’s system, the hacker simulated a massive sell-off, driving the exchange rate to zero and letting him withdraw potentially tens of thousands of other people’s bitcoins.
+
+As it happened, market forces conspired to thwart the scheme. The price plummeted, but as speculators flocked to take advantage of the fire sale, they quickly drove it back up, limiting the thief’s haul to only around 2,000 bitcoins. The exchange ceased operations for a week and rolled back the postcrash transactions, but the damage had been done; the bitcoin never got back above $17. Within a month, Mt. Gox had lost 10 percent of its market share to a Chile-based upstart named TradeHill. Most significantly, the incident had shaken the confidence of the community and inspired loads of bad press.
+
+In the public’s imagination, overnight the bitcoin went from being the currency of tomorrow to a dystopian joke. The Electronic Frontier Foundation quietly stopped accepting bitcoin donations. Two Irish scholars specializing in network analysis demonstrated that bitcoin wasn’t nearly as anonymous as many had assumed: They were able to identify the handles of a number of people who had donated bitcoins to Wikileaks. (The organization announced in June 2011 that it was accepting such donations.) Nontechnical newcomers to the currency, expecting it to be easy to use, were disappointed to find that an extraordinary amount of effort was required to obtain, hold, and spend bitcoins. For a time, one of the easier ways to buy them was to first use Paypal to buy Linden dollars, the virtual currency in Second Life, then trade them within that make-believe universe for bitcoins. As the tone of media coverage shifted from gee-whiz to skeptical, attention that had once been thrilling became a source of resentment.
+
+
+More disasters followed. Poland-based Bitomat, the third-largest exchange, revealed that it had—oops—accidentally overwritten its entire wallet. Security researchers detected a proliferation of viruses aimed at bitcoin users: Some were designed to steal wallets full of existing bitcoins; others commandeered processing power to mine fresh coins. By summer, the oldest wallet service, MyBitcoin, stopped responding to emails. It had always been fishy—registered in the West Indies and run by someone named Tom Williams, who never posted in the forums. But after a month of unbroken silence, Wagner, the New York City bitcoin evangelist, finally stated what many had already been thinking: Whoever was running MyBitcoin had apparently gone AWOL with everyone’s money. Wagner himself revealed that he had been keeping all 25,000 or so of his bitcoins on MyBitcoin and had recommended to friends and relatives that they use it, too. He also aided a vigilante effort that publicly named several suspects. MyBitcoin’s supposed owner resurfaced, claiming his site had been hacked. Then Wagner became the target of a countercampaign that publicized a successful lawsuit against him for mortgage fraud, costing him much of his reputation within the community. “People have the mistaken impression that virtual currency means you can trust a random person over the Internet,” says Jeff Garzik, a member of bitcoin’s core developer group."
+(http://www.wired.com/magazine/2011/11/mf_bitcoin/all/1)
+
+
+===Vitalik Buterin on the 11/12 March 2013 blockchain fork===
+
+"The other aspect of Bitcoin’s decentralization that this incident calls into question is that of mining pools. The reason why the controlled switch to the 0.7 fork was even possible was that over 70% of the Bitcoin network’s hash power was controlled by a small number of mining pools and ASIC miners, and so the miners could all be individually contacted and convinced to immediately downgrade. Another article on the fork reads [Russian]: “the real problem is not even in the code supporting the Bitcoin network; bugs are everywhere. Rather, it’s the matter of who controls it. This event clearly showed that even such a well thought-out system is controlled by the will of a very small number of people – particularly, the operators of mining pools. Over 70% of new blocks right now are being found on pools, and not on individual solo miners. The underlying idea of the system was that the benevolent majority can stop a small number of attackers, but in the present time it is simply not working. The winner in a possible takeover will be the one with greater computing power, and no one else.” Bitcoin is clearly not at all the direct democracy that many of its early adherents imagined, and, some worry, if a centralized core of the Bitcoin community is powerful enough to successfully undertake these emergency measures to set right the Bitcoin blockchain, what else is it powerful enough to do? Force double spends to reverse million-dollar thefts? Block or even redirect transactions known to originate from Silk Road? Perhaps even modify Bitcoin’s sacred 21 million currency supply limit?
+
+However, a strong argument can be made that such fears are very unlikely to materialize. The reason why has nothing to do with the specific identities of the Bitcoin mining pool operators or the cohesiveness of the Bitcoin mining community; rather, it’s the fact that Bitcoin mining is still in fact quite decentralized; it simply is decentralized in a different way. Taking a political analogy, the closest equivalent would be a liquid democracy: a hybrid of direct and representative democracy where people can either vote for individual bills by themselves or assign politicians – with the proviso that if they do not like what a given politician is doing they can switch to assigning their voting power to someone else at any time. Back in the world of Bitcoin, although much of the Bitcoin network’s hash power is concentrated with mining pool operators in practice, every individual miner can switch from one pool to another almost instantly, so if a coalition of mining pool operators decides to start violating the Bitcoin protocol miners can simply switch to any pool that remains honest, instantly depriving the miscreants of their power. Although no mining pool has attempted to actively subvert the Bitcoin protocol so far, this kind of “voting” has been done before; in 2011, there were several incidents where the mining pool Deepbit pushed above 50% of the total network hash power, and in each case there was a mass exodus of miners toward other pools to balance things out. Although the nominal power may rest with the mining pool operators, the feedback of the community is always only one step away."
+(http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/)
+
+
+===Bitcoin as cryptograpic breaktrhough===
+
+by Benjamin Wallace:
+
+"In November 1, 2008, a man named Satoshi Nakamoto posted a research paper to an obscure cryptography listserv describing his design for a new digital currency that he called bitcoin. None of the list’s veterans had heard of him, and what little information could be gleaned was murky and contradictory. In an online profile, he said he lived in Japan. His email address was from a free German service. Google searches for his name turned up no relevant information; it was clearly a pseudonym. But while Nakamoto himself may have been a puzzle, his creation cracked a problem that had stumped cryptographers for decades. The idea of digital money—convenient and untraceable, liberated from the oversight of governments and banks—had been a hot topic since the birth of the Internet. Cypherpunks, the 1990s movement of libertarian cryptographers, dedicated themselves to the project. Yet every effort to create virtual cash had foundered. Ecash, an anonymous system launched in the early 1990s by cryptographer David Chaum, failed in part because it depended on the existing infrastructures of government and credit card companies. Other proposals followed—bit gold, RPOW, b-money—but none got off the ground.
+
+One of the core challenges of designing a digital currency involves something called the double-spending problem. If a digital dollar is just information, free from the corporeal strictures of paper and metal, what’s to prevent people from copying and pasting it as easily as a chunk of text, “spending” it as many times as they want? The conventional answer involved using a central clearinghouse to keep a real-time ledger of all transactions—ensuring that, if someone spends his last digital dollar, he can’t then spend it again. The ledger prevents fraud, but it also requires a trusted third party to administer it.
+
+
+Bitcoin did away with the third party by publicly distributing the ledger, what Nakamoto called the “block chain.” Users willing to devote CPU power to running a special piece of software would be called miners and would form a network to maintain the block chain collectively. In the process, they would also generate new currency. Transactions would be broadcast to the network, and computers running the software would compete to solve irreversible cryptographic puzzles that contain data from several transactions. The first miner to solve each puzzle would be awarded 50 new bitcoins, and the associated block of transactions would be added to the chain. The difficulty of each puzzle would increase as the number of miners increased, which would keep production to one block of transactions roughly every 10 minutes. In addition, the size of each block bounty would halve every 210,000 blocks—first from 50 bitcoins to 25, then from 25 to 12.5, and so on. Around the year 2140, the currency would reach its preordained limit of 21 million bitcoins."
+(http://www.wired.com/magazine/2011/11/mf_bitcoin/all/1)
+
+
+
+===The problem with mining===
+
+Nathan Schneider:
+
+"As the value of bitcoins swelled against the dollar over the course of 2013, a mining arms race began. People realized that their computers’ graphics chips were better suited to Bitcoin's mining algorithms than standard CPUs, so they built specialized machines overloaded with graphics processors, which increased their chances of reaping a reward. Starting in the first months of that year, ASICs arrived—application-specific integrated circuits designed with the sole purpose of mining coins. Before long the lone miner with a regular computer was a lost cause, unable to compete with the new mining syndicates, or “pools,” and multi-million-dollar data centers in places around the world with the most profitable combination of cold weather and cheap electricity—45,000 miners in a Swedish helicopter hangar, for instance, or 20 million watts in the Republic of Georgia. Together Bitcoin's miners amount to hundreds of times more computing power than the combined output of the world’s top 500 supercomputers. Processing and protecting the more than $3 billion worth of bitcoins in circulation requires more than $100 million in electricity each year,3 generating a volume of carbon emissions to match.
+
+“From a technological perspective, the Bitcoin network is unprecedented,” says Dave Hudson, an analyst who blogs about mining at hashingit.com. “As far as I'm aware there's never been anything as big in the past.” All that computing power, which could be curing cancer or exploring the stars, is locked up in machines that do nothing but process Bitcoin-type transactions.
+
+The prospects for democracy in the system have grown dimmer still. By the middle of last year, the largest mining pools came within reach of a 50 percent market share—making it possible for them to endanger the whole system by falsifying transactions. What prevents them from actually doing so, apparently, is that it would reduce confidence in the value of the bitcoins they invest so much to mine. They also prevent changes to the Bitcoin software that would lessen their dominance. A distributed network of users now has to trust an oligarchy of capital-intensive miners."
+(https://newrepublic.com/article/121089/how-small-bitcoin-miners-lose-crypto-currency-boom-bust-cycle)
+
+
+===Bitcoin Storage Options===
+
+By Tom Metcalf:
+
+"The first rule of owning Bitcoin is to securely keep your private key -- the code that lets you spend your coins. If thieves get it, they can loot your holdings in an instant, with no hope of recovery. Putting keys on a device connected to the Internet is both convenient and perilous: Hackers have proven adept at obtaining them from afar.
+
+
+The most popular alternative is called cold storage, keeping the key in an offline device such as a thumb drive. But risks remain: Hackers have also proven adept at setting traps on computers to access cold-storage devices the moment they’re online. More traditional criminals have committed home invasions and kidnappings. Some Bitcoin tycoons have resorted to hiding their identities, fortifying their homes and studying self-defense.
+
+Xapo’s solution is to bury a cold-storage device in a mountainside and layer on electronic safeguards.
+
+“They’re the first folks who recognized custodial and security functions would be key,” said Hoffman, whose venture capital firm Greylock Partners led a $20 million investment in Xapo in 2014, a couple of years after Casares persuaded him to buy his first Bitcoin. “He made the pitch in the morning and in the afternoon I called him with an offer.”
+
+
+At Xapo, retrieving Bitcoin from the vault takes about two days. The company verifies a client’s identity and authenticates the request before manually signing the transactions with private keys from multiple vault locations. Approval from three separate vaults is required for any transactions to be authorized. The company also offers customers a trading desk to buy and sell Bitcoin and created the first Bitcoin debit card to spend it."
+(https://www.bloomberg.com/news/articles/2018-05-09/bunkers-for-the-wealthy-are-said-to-hoard-10-billion-of-bitcoin?)
+
+==Political Aspects==
+
+
+===The Blockchain as a path towards centralized control by the state and corporations===
+
+Ian Bogost:
+
+"Instead of defanging governments and big corporations, the distributed ledger offers those domains enormous incentive to consolidate their power and influence. For people like Eddie Lee Holloway, Jr, who’s African American, that might mean even greater exclusion, as the very institutions that locked him out of the voting booth might suppress his transformation into a digital-ledger citizen in the first place.
+
+Or if not, other traumas might yet face citizens like Holloway in a society run by blockchain. A mandated DNA-test could accompany citizens’ blockchainification, allowing their ethnic origins and medical predispositions to become attached to an identity record. Financial assets would also be connected, thanks to an underlying cryptocurrency account through which they make debits and credits. Not to mention all the personal insights already consolidated by services like Facebook.
+
+Businesses might subscribe to this data. Thanks to distributed ledger, it could be used to prevent their automated doors from opening for people whom a smart-contract risk-assessment service rates below a threshold of desirability. Left outside, privately-contracted security robots might deploy ledger-backed ID scanners to sweep loiterers from private property. Once delivered and booked into jails, smart courts could automate sentences based on an automated assessment of future crime potential."
+(https://www.theatlantic.com/technology/archive/2017/05/blockchain-of-command/528543/)
+
+
+
+===[[Bitcoin and the Blockchain Are Firmly Anchored in Anarcho-Capitalist Visions of a Hyper-Capitalist Society]]===
+
+Ian Bogost:
+
+"Bitcoin is an expression of extreme technological libertarianism. This school of thought goes by many names: anarcho-capitalism (or ancap for short), libertarian anarchy, market anarchism. Central to the philosophy is a distrust of states in favor of individuals. Its adherents believe society best facilitates individual will in a free-market economy driven by individual property owners—not governments or corporations—engaging in free trade of that private property.
+
+Imagining the end of both nation-states and corporations is even harder than imagining the end of capitalism itself.
+
+Anarcho-capitalism is far more extreme than Silicon Valley’s usual brand of technological individualism. For one, the tech sector’s libertarianism is corporatist in its bent, and amenable to government, if in a strongly reduced capacity. And Silicon Valley takes a broader approach to the liberating capacity of technology: Facebook hopes to connect people, Google to make information more accessible, Uber to improve transit, and so on.
+
+The ancap worldview only supports sovereign individuals engaging in free-market exchange. Neither states nor corporations are acceptable intermediaries. That leaves a sparsely set table. At it: individuals, the property they own, the contracts into which they enter to exchange that property, and a market to facilitate that exchange. All that’s missing is a means to process exchanges in that market.
+
+Ordinarily, money would be sufficient. But currency troubles market anarchists. The central banks that control the money supply are entities of the state. Financial payment networks like Visa are corporations, which aren’t much better. That’s where Bitcoin and other cryptocurrencies enter the picture. They attempt to provide a technological alternative to currency and banking that would avoid tainting the pure individualism of the ancap ideal.
+
+This makes Bitcoin’s design different from other technology-facilitated payment systems, like PayPal or Apple Pay. Those services just provide a more convenient computer interface to bank accounts and payment cards. For anarcho-capitalism to work in earnest, it would need to divorce transactions entirely from the traditional monetary system and the organizations that run it. Central banks and corporations could interfere with transactions. And yet, if individuals alone maintained currency records, money could be used fraudulently, or fabricated from thin air.
+
+To solve these problems, Bitcoin is backed by mathematics instead of state governments. The Bitcoin “blockchain” is a shared, digital record of all the transactions (or “blocks”) that have ever been exchanged. Every transaction contains a cryptographic record of the previous succession (the “chain”) of exchanges. Each one can thus be mathematically verified to be valid. The community of Bitcoin users does the work of verification. To incentivize the onerous work of cryptographically verifying each transaction in the chain that precedes it, the protocol awards a bounty—in Bitcoin of course—to the first user to validate a new transaction on the network. This is the process known as “mining”—a confusing and aspirational name for what amounts to computational accounting.
+
+
+There’s a lot more detail that I am omitting. But the key to Bitcoin is that the network distributes copies of one common record of all Bitcoin transactions, against which individuals verify new exchanges. This record is the blockchain, which is sometimes also called the “distributed ledger”—a much more elucidating name. This is the missing element that’s supposed to allow the hypothetical anarcho-capitalist techno-utopia to flourish."
+(https://www.theatlantic.com/technology/archive/2017/05/blockchain-of-command/528543/)
+
+
+=== Yanis Varoufakis: Bitcoin’s two fundamental flaws ===
+
+As with all things digital, there are a number of concerns to do with security; with the fear of hackers and e’spivs. Imagine a world that has shifted entirely to bitcoin. Would we not live in fear that some ingenious hacker will get the better of Nakamoto’s algorithm and manipulate it to his benefit? Would it be wise for humanity simply to assume that the bitcoin algorithm is un-hackable (especially so in the absence of some authority that can intervene and save the day if something horrible happens to the algorithm)? Besides, even if the algorithm is safe, there is always the danger of waking up to the realisation that one’s bitcoin stash was e’looted during the night. And if one entrusts one’s stash to some company with better firewalls and computer security, what happens (in the absence of a bitcoin Central Bank) if that company goes broke or simply disappears into the Internet’s darker crevices (with its customers’ bitcoins)?
+
+These concerns would probably suffice to put a dent in bitcoin’s prospects. But they are not the main drawbacks of the currency. No, there are two insurmountable flaws that make bitcoin a highly problematic currency: First, the bitcoin social economy is bound to be typified by chronic deflation. Secondly, we have already seen the rise of a bitcoin aristocracy (a term ‘coined’ by Greek blogger @techiechan) which, besides the issues of distributive justice which it raises, evokes serious fears about the capacity of very few entities or persons to manipulate the currency in a manner that enriches them at the expense of financial instability. Let us look at these two problems in some detail.
+
+First, deflation is unavoidable in the bitcoin community because the maximum supply of bitcoins is fixed to 21 million bitcoins and approximately half of them have already been ‘minted’ at a time when very, very few goods and services transactions are denominated in bitcoins. To put simply, if bitcoin succeeds in penetrating the marketplace, an increasing quantity of new goods and services will be traded in bitcoin. By definition, the rate of increase in that quantity will outpace the rate of increase in the supply of bitcoins (a rate which, as explain, is severely constricted by the Nakamoto algorithm). In short, a restricted supply of bitcoins will be chasing after an increasing number of goods and services. Thus, the available quantity of bitcoins per each unit of goods and services will be falling causing deflation. And why is this a problem? For two reasons: First, because an expected fall in bitcoin prices motivates people with bitcoins to delay, as much as they can, their bitcoin expenditure (why buy something today if it will be cheaper tomorrow?). Secondly, because to the extent that bitcoins are used to buy factors of production that are used to produce goods and services, and assuming that there is some time lag between the purchase of these factors and the delivery of the final product to the bitcoin market, a steady fall in average prices will translate into a constantly shrinking price-cost margin for firms dealing in bitcoins.
+
+Secondly, two major faultlines are developing, quite inevitably, within the bitcoin economy. The first faultline has already been mentioned. It is the one that divides the ‘bitcoin aristocracy’ from the ‘bitcoin poor’, i.e. from the latecomers who must buy into bitcoin at increasing dollar and euro prices. The second faultline separates the speculators from the users; i.e. those who see bitcoin as a means of exchange from those who see in it as a stock of value. The combination of these two faultlines, whose width and depth is increasing, is to inject a massive instability potential into the bitcoin universe. While it is true for all currencies that there is always some speculative demand for them, as opposed to transactions demand, in the case of bitcoin speculative demand outstrips transactions demand by a mile. And as long as this is so, volatility will remain huge and will deter those who might have wanted to enter the bitcoin economy as users (as opposed to speculators). Thus, just like bad money drives out good money (Gresham’s famous ‘law’), speculative demand for bitcoins drives our transactions demand for it.
+
+Can these two flaws be corrected? Would it be possible to calibrate the long-term supply of bitcoins in such a way as to ameliorate for the deflationary effects described above while tilting the balance from speculative to transactions demand for bitcoins? To do so we would need a Bitcoin Central Bank, which will of course defeat the very purpose of having a fully decentralised digital currency like bitcoin."
+
+(http://yanisvaroufakis.eu/2013/04/22/bitcoin-and-the-dangerous-fantasy-of-apolitical-money/)
+
+
+==== Bitcoin's Disastrous Macro-Economics ====
+
+[[Yanis Varoufakis on Bitcoin's Economic Fallacy of Composition]]:
+
+"Capitalism nearly died in 1929, and tens of millions did die in the war that ensued, because of this toxic fallacy that underpinned the Gold Standard then and Bitcoin now. Which fallacy? The fallacy of composition, as John Maynard Keynes called it.
+
+Its essence is a tendency to extrapolate from the personal realm to the macroeconomic one. To say that if something is good for me – if a practice is sound at the level of my family, business, etc. – it must also be good for the state, government, humanity at large. For example, yes, parsimony is a good thing for me, personally. If I can’t make ends meet, I need to tighten my belt; otherwise, I shall sink more and more into debt. However, the exact opposite holds for a macroeconomy: If, in the midst of a recession, the government tries to tighten its belt as a means of eliminating its budget deficit, then public expenditure will decline at a time of falling private expenditure. And since the sum of private and public expenditure equals aggregate income, the government will be – inadvertently – magnifying the recession and, yes, its own deficit (as government revenues fall). This is an example of one thing (belt-tightening) being good at the micro-level and catastrophic at the macro level.
+
+Similarly with gold, Bitcoin, and all other ‘things’ of exchange value: If you have gold, it is good for you if its supply is limited, fixed if possible. Same with Bitcoin, silver, dollars. (Nb. It is why the rich and powerful traditionally opposed expansionary monetary policy, crying ‘hyperinflation’ at the drop of a hat.) So, yes, if you are invested in Bitcoin, or for some reason you are elated every time its dollar exchange rate rises, you have every reason to think that its algorithmically fixed supply is a good thing, a feature. But, there is a price for that: A fixed money supply translates into a deflationary dynamic which, in a system prone to under-employing its people and under-investing in things society needs (i.e. capitalism), is a catastrophe in the making.
+
+The Gold Standard is, indeed, a great source of insight into how dangerously primitive Bitcoin maximalist thinking is. Suppose Bitcoin were to take over from fiat currencies. What would banks do? They would lend in Bitcoin, of course. This means that overdraft facilities would emerge allowing lenders to buy goods and services with Bitcoins that do not yet exist. What would governments do? At moments of stress, they would have to issue units of account linked to Bitcoin (as they did under the Gold Exchange Standard during the interwar period). All this private and public liquidity would cause a boom period before, inevitably, the crash comes. And then, with millions of people wrecked, governments and banks would have to abandon Bitcoin. In short, just like gold, Bitcoin is eminently… abandonable (once it has done enormous damage). Put differently, either Bitcoin will never take over from fiat money or, if it does, it will cause huge unnecessary pain (before being abandoned)."
+
+(https://metacpc.org/en/crypto-blockchain/)
+
+===The Political Vision behind the ledger===
+
+Brett Scott:
+
+"When asked about why Bitcoin is superior to other currencies, proponents often point to its 'trustless' nature. No trust needs be placed in fallible ‘governments and corporations’. Rather, a self-sustaining system can be created by individuals following a set of rules that are set apart from human frailties or intervention. Such a system is assumed to be fairer by allowing people to win out against those powers who can abuse rules.
+
+The vision thus is not one of bands of people getting together into mutualistic self-help groups. Rather, it is one of individuals acting as autonomous agents, operating via the hardcoded rules with other autonomous agents, thereby avoiding those who seek to harm their interests.
+
+Note the underlying dim view of human nature. While anarchist philosophers often imagine alternative governance systems based on mutualistic community foundations, the ‘empowerment’ here does not stem from building community ties. Rather it is imagined to come from retreating from trust and taking refuge in a defensive individualism mediated via mathematical contractual law.
+
+It carries a certain disdain for human imperfection, particularly the imperfection of those in power, but by implication the imperfection of everyone in society. We need to be protected from ourselves by vesting power in lines of code that execute automatically. If only we can lift currency away from manipulation from the Federal Reserve. If only we can lift Wikipedia away from the corruptible Wikimedia Foundation.
+
+Activists traditionally revel in hot-blooded asymmetric battles of interest (such as that between StrikeDebt! and the banks), implicitly holding an underlying faith in the redeemability of human-run institutions. The Bitcoin community, on the other hand, often seems attracted to a detached anti-politics, one in which action is reduced to the binary options of Buy In or Buy Out of the coded alternative. It echoes consumer notions of the world, where one ‘expresses’ oneself not via debate or negotiation, but by choosing one product over another. We’re leaving Earth for Mars. Join if you want.
+
+It all forms an odd, tense amalgam between visions of exuberant risk-taking freedom and visions of risk-averse anti-social paranoia. This ambiguity is not unique to cryptocurrency (see, for example, this excellent parody of the trustless society), but in the case of Bitcoin, it is perhaps best exemplified by the narrative offered by Cody Wilson in Dark Wallet’s crowdfunding video. “Bitcoin is what they fear it is, a way to leave… to make a choice. There’s a system approaching perfection, just in time for our disappearance, so, let there be dark”.
+
+
+...
+
+
+But where exactly is this perfect system Wilson is disappearing to?
+
+Back in the days of roving bands of nomadic people, the political option of ‘exit’ was a reality. If a ruler was oppressive, you could actually pack up and take to the desert in a caravan. The bizarre thing about the concept of ‘exit to the internet’ is that the internet is a technology premised on massive state and corporate investment in physical infrastructure, fibre optic cables laid under seabeds, mass production of computers from low-wage workers in the East, and mass affluence in Western nations. If you are in the position to be having dreams of technological escape, you are probably not in a position to be exiting mainstream society. You are mainstream society.
+
+Don’t get me wrong. Wilson is a subtle and interesting thinker, and it is undoubtedly unfair to suggest that he really believes that one can escape the power dynamics of the messy real world by finding salvation in a kind of internet Matrix. What he is really trying to do is to invoke one side of the crypto-anarchist mantra of ‘privacy for the weak, but transparency for the powerful’.
+
+That is a healthy radical impulse, but the conservative element kicks in when the assumption is made that somehow privacy alone is what enables social empowerment. That is when it turns into an individualistic ‘just leave me alone’ impulse fixated with negative liberty. Despite the rugged frontier appeal of the concept, the presumption that empowerment simply means being left alone to pursue your individual interests is essentially an ideology of the already-empowered, not the vulnerable.
+
+This is the same tension you find in the closely related cypherpunk movement. It is often pitched as a radical empowerment movement, but as Richard Boase notes, it is “a world full of acronyms and codes, impenetrable to all but the most cynical, distrustful, and political of minds.” Indeed, crypto-geekery offers nothing like an escape from power dynamics. One merely escapes to a different set of rules, not one controlled by ‘politicians’, but one in the hands of programmers and those in control of computing power.
+
+It is only when we think in these terms that we start to see Bitcoin not as a realm ‘lacking the rules imposed by the state’, but as a realm imposing its own rules. It offers a form of protection, but guarantees nothing like ‘empowerment’ or ‘escape’.
+
+Technology often seems silent and inert, a world of ‘apolitical’ objects. We are thus prone to being blind to the power dynamics built into our use of it. For example, isn’t email just a useful tool? Actually, it is highly questionable whether one can ‘choose’ whether to use email or not. Sure, I can choose between Gmail or Hotmail, but email’s widespread uptake creates network effects that mean opting out becomes less of an option over time. This is where the concept of becoming ‘enslaved to technology’ emerges from. If you do not buy into it, you will be marginalised, and thatis political.
+
+This is important. While individual instances of blockchain technology can clearly be useful, as a class of technologies designed to mediate human affairs, they contain a latent potential for encouraging technocracy. When disassociated from the programmers who design them, trustless blockchains floating above human affairs contains the specter of rule by algorithms. It is a vision (probably accidently) captured by Ethereum’s Joseph Lubin when he says “There will be ways to manipulate people to make bad decisions, but there won’t be ways to manipulate the system itself”.
+
+Interestingly, it is a similar abstraction to that made by Hobbes. In his Leviathan, self-regarding people realise that it is in their interests to exchange part of their freedom for security of self and property, and thereby enter into a contract with aSovereign, a deified personage that sets out societal rules of engagement. The definition of this Sovereign has been softened over time – along with the fiction that you actually contract to it – but it underpins modern expectations that the government should guarantee property rights.
+
+Conservative libertarians hold tight to the belief that, if only hard property rights and clear contracting rules are put in place, optimal systems spontaneously emerge. They are not actually that far from Hobbes in this regard, but their irritation with Hobbes’ vision is that it relies on politicians who, being actual people, do not act like a detached contractual Sovereign should, but rather attempt to meddle, make things better, or steal. Don’t decentralised blockchains offer the ultimate prospect of protected property rights with clear rules, but without the political interference?
+
+This is essentially the vision of the internet techno-leviathan, a deified crypto-sovereign whose rules we can contract to. The rules being contracted to are a series of algorithms, step by step procedures for calculations which can only be overridden with great difficulty. Perhaps, at the outset, this represents, à la Rousseau, the general will of those who take part in the contractual network, but the key point is that if you get locked into a contract on that system, there is no breaking out of it.
+
+This, of course, appeals to those who believe that powerful institutions operate primarily by breaching property rights and contracts. Who really believes that though? For much of modern history, the key issue with powerful institutions has not been their willingness to break contracts. It has been their willingness to use seemingly unbreakable contracts to exert power. Contracts, in essence, resemble algorithms, coded expressions of what outcomes should happen under different circumstances. On average, they are written by technocrats and, on average, they reflect the interests of elite classes.
+
+That is why liberation movements always seek to break contracts set in place by old regimes, whether it be peasant movements refusing to honour debt contracts to landlords, or the DRC challenging legacy mining concessions held by multinational companies, or SMEs contesting the terms of swap contracts written by Barclays lawyers. Political liberation is as much about contesting contracts as it is about enforcing them."
+(http://furtherfield.org/features/articles/visions-techno-leviathan-politics-bitcoin-blockchain)
+
+
+===Bitcoin's Political Sociology===
+
+Alex Waters:
+
+"“You have bitcoin purists, who are just about bitcoin because it’s a technology that will help the world,” he said, explaining how some evangelists believe bitcoin will allow citizens of third-world countries to protect their money, free from the interests of financial institutions. (As the popular site We Use Coins puts it, “There’s no wallstreet [sic] banker getting rich by standing between you and the people you want to send and receive money from.”)
+
+The second group, Mr. Waters continued, comprises those who are politically motivated. “A lot of libertarians,” he said.
+
+As for the third group: “You have people with profit incentive. They want to be involved in bitcoin to make a lot of money.”
+(http://observer.com/2013/04/its-all-about-the-bitcoin-baby/)
+
+
+==Global Monetary Governance Aspects==
+
+===[[Bitcoin as the Successor to the Dollar as Global Reserve Currency]]===
+
+Alex Gladstein:
+
+"Writing in the late 1970s, Hudson predicts that “without a Eurocurrency, there is no alternative to the dollar, and without gold (or some other form of asset money yet to be accepted), there is no alternative to national currencies and debt-money serving international functions for which they have shown themselves to be ill-suited.”
+
+Thirty years later, in 2002, he writes that “today it would be necessary for Europe and Asia to design an artificial, politically created alternative to the dollar as an international store of value. This promises to be the crux of international political tensions for the next generation.”
+
+It’s a prescient comment, though it wasn’t Europe or Asia that designed an alternative to the dollar, but Satoshi Nakamoto. A new kind of asset money, bitcoin has a chance to unseat the super-imperial dollar structure to become the next world reserve currency.
+
+As Hudson writes, “One way to discourage governments from running payments deficits is to oblige them to finance these deficits with some kind of asset they would prefer to keep, yet can afford to part with when necessary. To date, no one has come up with a better solution than that which history has institutionalized over a period of about two thousand years: gold.”
+
+In January 2009, Satoshi Nakamoto came up with a better solution. There are many differences between gold and bitcoin. Most importantly, for the purposes of this discussion, is the fact that bitcoin is easily self-custodied and thus confiscation-resistant.
+
+
+...
+
+Bitcoin, however, is notably easy to self-custody. Any of the billions of people on earth with a smartphone can, in minutes, download a free and open-source Bitcoin wallet, receive any amount of bitcoin, and back up the passphrase offline. This makes it much more likely that users will actually control their bitcoin, as opposed to gold investors, who often entered through a paper market or a claim, and not actual bars of gold. Verifying an inbound gold payment is impossible to do without melting the delivery bar down and assaying it. Rather than go through the trouble, people deferred to third parties. In Bitcoin, verifying payments is trivial.
+
+In addition, gold historically failed as a daily medium of exchange. Over time, markets preferred paper promises to pay gold — it was just easier, and so gold fell out of circulation, where it was more easily centralized and confiscated. Bitcoin is built differently, and could very well be a daily medium of exchange.
+
+In fact, as we see more and more people demand to be paid in bitcoin, we get a glimpse of a future where Thier’s law (found in dollarizing countries, where good money drives out the bad) is in full effect, where merchants would prefer bitcoin to fiat money. In that world, confiscation of bitcoin would be impossible. It may also prove hard to manipulate the spot price of bitcoin through derivatives.
+
+...
+
+If governments cannot kill bitcoin, and it continues its rise, then it stands a good chance to eventually be the next reserve currency. Will we have a world with bitcoin-backed fiat currencies, similar to the gold standard? Or will people actually use native Bitcoin itself — through the Lightning Network and smart contracts — to do all commerce and finance? Neither future is clear.
+
+But the possibility inspires. A world where governments are constrained from undemocratic forever wars because restraint has once again been imposed on them through a neutral global balance-of-payments system is a world worth looking forward to. Kant’s writings inspired democratic peace theory, and they may also inspire a future Bitcoin peace theory.
+
+Under a Bitcoin standard, citizens of democratic countries would more likely choose investing in domestic infrastructure as opposed to military adventurism. Foreigners would no longer be as easily forced to pay for any empire’s wars. There would be consequences even for the most powerful nation if it defaults on its debt.
+
+Developing countries could harness their natural resources and borrow money from markets to finance Bitcoin mining operations and become energy sovereign, instead of borrowing money from the World Bank to fall deeper into servitude and the geopolitical equivalent of subsistence farming.
+
+Finally, the massive inequalities of the past 50 years might also be slowed, as the ability of dominant capital to enrich itself in downturns through rent-seeking and easy monetary policy could be checked."
+
+(https://bitcoinmagazine.com/culture/bitcoin-replacing-us-super-imperialism)
+
+=Discussion=
+
+See: [[Bitcoin - Discussion]]
+
+Amongst the issues raised in our separate discussion entry are:
+
+*Social Issues
+**How the Bitcoin 1%'s manipulate the currency
+*P2P / Commons Issues
+**A possible p2p critique of the current p2p protocol?
+**Is Bitcoin truly p2p?
+*Economic Issues
+**Jon Matonis on the "Austrian economics" background
+**The deflationary economics behind Bitcoin's design are libertarian
+*Political Issues
+**The fallacy of a non-political currency
+**The (a)political economy of Bitcoin
+**Bitcoin is incompatible with the state system and should not seek legitimation
+**The Blocksize Limit Decentralist - Centralist Debate
+*Monetary Issues
+**Why Bitcoin is Flawed from a Monentary Reformers' Point of View
+**Scarcity Aspects of Bitcoin
+**The Difference between Bitcoin and Open Coin
+**Is Bitcoin a deflationary currency?
+*Technical Issues
+**Mining Privileges associated with Bitcoin
+*Energy Issues
+**Bitcoin wastes energy
+*Is Bitcoin Legal?
+
+This very important essay in French, Le bitcoin contre la revolution des communs, explains '''why Bitcoin is not a Commons''', https://hal.archives-ouvertes.fr/hal-01169131/document
+
+=Bitcoin Resources=
+
+* https://bitcointalk.org/ - Official discussion forum with a large enthusiast community
+* https://www.weusecoins.com/ - Explains bitcoin basics
+* http://www.coinbuzz.com/ - Breaking news
+* http://bitcoinmagazine.com/ - News and discussion
+* http://www.bitcoinreward.net/ - Opportunities for Bitcoin beginners
+
+=More Information=
+
+Extensive bibliography on bitcoin and [[Blockchain]] matters, maintained by Geert Lovink: [http://networkcultures.org/moneylab/2018/05/07/link-list-on-bitcoin-blockchain-demonitization-and-other-moneylab-issues-part-3/ part 3]
+
+* A New Yorker report, http://www.newyorker.com/online/blogs/elements/2013/04/the-future-of-bitcoin.html
+
+* Graphic: [[How a Bitcoin Transaction Works]] [http://spectrum.ieee.org/img/06Bitcoin-1338412974774.jpg]
+
+* Bitcoin for beginners
+
+* Beginner's info http://bitcoinme.com.
+
+* Book: [[Anatomy of a Money-Like Informational Commodity]]. Tim Swanson. [https://s3-us-west-2.amazonaws.com/chainbook/The+Anatomy+of+a+Money-like+Informational+Commodity.pdf]
+
+* Paper: Andrychowicz, Marcin et. al. [http://cacm.acm.org/magazines/2016/4/200175-secure-multiparty-computations-on-bitcoin/fulltext Secure Multiparty Computations on Bitcoin]. Communications of the ACM, Vol. 59 No. 4, Pages 76-84
+
+
+==Critiques of Bitcoin==
+
+# The (A)Political Economy of Bitcoin. [http://www.triple-c.at/index.php/tripleC/article/view/606 link]
+# http://www.pds.ewi.tudelft.nl/~victor/bitcoin.html
+# Bank of Finland paper by Aleksi Grym, released June 21, 2018: titled “The Great Illusion of Cryptocurrencies [https://helda.helsinki.fi/bof/handle/123456789/15564]
+
+==Video documentation==
+
+#TWIST Bitcoin episode, Full show: http://thisweekin.com/thisweekin-startups/bitcoin-discussion-with-gavin-andresen-and-amir-taaki-on-this-week-in-startups-140/
+#Gavin explains the fundamentals of Bitcoin, http://www.youtube.com/watch?v=Ta73DofiT7o
+#Who is Satoshi, the mysterious bitcoin founder? http://www.youtube.com/watch?v=RDRwgbWkxFw
+#The million-dollar bitcoin question: Can the system be hacked? http://www.youtube.com/watch?v=G2837h-85O4
+#Jason sets his software to generate bitcoins and Gavin explains why that's a bad idea, http://www.youtube.com/watch?v=jix4MG5V0-E
+#WSJ, What's a bitcoin, http://live.wsj.com/video/what-a-bitcoin/D79FF38C-7816-435B-B3B0-F9B177BCA0A8.html
+
+==Other Digital Currencies==
+
+"While Bitcoin is relatively young, digital currencies have been around a long time. Digicash, released in 1994, is considered a pioneer of electronic cash using cryptography  to maintain anonymity. The Ripple currency project relies on interpersonal relationships to allow communities to create their own money systems (which is similar to the Local Exchange Trading System). There is also the anonymous digital cash system eCache, which can only be accessed via the anonymous onion routing network Tor. There are also numerous other digital money projects that have been proposed over the years; Bitcoin is just the newest chapter in the ongoing effort to create wholly digital currency."
+(https://www.eff.org/deeplinks/2011/01/bitcoin-step-toward-censorship-resistant)
+
+Of interest to p2p/commons community:
+
+#[[Freicoin]]
+#[[Occcu]]
+
+
+* Other [[Anonymous Internet Banking]] services are:
+
+#[http://en.wikipedia.org/wiki/ECache eCache]: an anonymous bank operating over the Tor network.
+
+==Miscellaneous==
+
+* [[Banking Without Banks]]
+
+
+==In Other Languages==
+
+This very important essay in French, Le bitcoin contre la revolution des communs, explains '''why Bitcoin is not a Commons''', https://hal.archives-ouvertes.fr/hal-01169131/document
+
+[[Category:Crypto_Governance]]
+
+[[Category:Crypto_Economy]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Global_Governance]]
+[[Category:P2P_Class_Theory]]
+[[Category:Money]]
+[[Category:P2P_Infrastructure]]

@@ -1,0 +1,76 @@
+GitLab is one replacement for proprietary 'code forge' (software project management) platforms like GitHub. [https://gitlab.com/explore/ GitLab.com] is the flagship instance hosted by the company that develops the software, using its Enterprise Edition (EE). Unlike GH, GitLab also offers a fully free code Community Edition (CE) that can be self-hosted as a ready-to-use code forge, although it lacks some "enterprise" features available in EE. Developers have a choice to either host their code on GitLab.com (both gratis and commercial options available), or they can host their own instance for their own use, or for a community of developers. Because all project data can be exported and imported, they can switch from one option to the other, and back again, as their circumstances require. --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 08:39, 26 April 2018 (UTC)
+
+Note: The lists of instances that use code forge software other than GitLab were out of the scope of this page, so the full list has been moved to [[List of Community-Hosted Code Forge Instances]]. This page may not be updated as often as that one. --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 19:44, 11 October 2019 (UTC)
+
+== List of Independent GitLab instances ==
+
+* Briar: https://code.briarproject.org/explore/ - used for development of the Briar P2P chat/social network app for mobile devices.
+
+* Debian: https://salsa.debian.org/public - available for any free code software or any software that can be included in the Debian distribution or its repos.
+
+* e Foundation: https://gitlab.e.foundation/explore/ - used for development of the /e/ project (formerly Eelo), which includes the /e/ OS mobile OS (forked from Android via LineageOS), and a suite of privacy-friendly apps and hosted services (mostly forked from bits of Android, and existing free code Android apps and server packages) designed to create a complete replacement for the mobile devices, apps, and services run by Apple, Google, etc.
+
+* Federated Networks Association: https://git.feneas.org/explore/projects/ - used for a range of federated social networking projects that support the federation protocols used by Diaspora.
+
+* FOSSCommunity.in: https://git.fosscommunity.in/explore/ - used for various projects supported by free software hackers in India
+
+* FramaGit: https://framagit.org/public/projects/ - used for projects people involved in FramaSoft contribute to
+
+* FreeDesktop.org: https://gitlab.freedesktop.org/explore/groups/ - used for projects people involved in the freedesktop.org community contribute to
+
+* Gajim: https://dev.gajim.org/explore/projects/ - used development of the Gajim XMPP client and related projects
+
+* Git.coop: https://git.coop/explore/projects/ - for members of the UK based multi-stakeholder cooperative WebArchitects 
+
+* Gitgud.io: https://gitgud.io/explore - open access instance run by a user-supported company called Sapphire
+
+* GNOME Project: https://gitlab.gnome.org/explore/projects/ - used for the development of the GNOME desktop environment and its many subsidiary projects
+
+* GNU Project: https://git.gnu.io/explore/projects/ - used for development of various GNU social media projects, including the MediaGoblin media-hosting package, and the GNU Social micro-blogging server (and web client).
+
+* Haskell: https://gitlab.haskell.org/explore/ - used for the development of various tools involved in the Haskell programming language
+
+* Ind.ie: https://source.ind.ie/explore/projects/ - used internally by Ind.ie developers for their own projects
+
+* Instant Infrastructure for Cooperation: https://gitlab.ii.coop/explore/projects/
+
+* Jami (a GNU project, formerly Ring): https://git.jami.net/explore/projects/ - used for development of the various components of the GNU Ring P2P voice/ video chat app developed by the savoirfairelinux team
+
+* Libreho.st: https://lab.libreho.st/explore/ - used for a suite of hosting packages developed and used by members of the librehosters network
+
+* linux-kernel.at: https://git.linux-kernel.at/explore/ - a mostly private instance used for the development of ivatar, a decentralized replacement for Gravatar 
+
+* Mastodon: https://source.joinmastodon.org/explore/projects/ - for developers of Mastodon micro-blogging sever (and web client), and associated projects.
+
+* NZ Open Source Society: https://git.nzoss.org.nz/explore/projects/ - available for developers associated with NZOSS to host their dev, or a mirror of their own repo elsewhere
+
+* Open Educational Resources Universitas: https://git.oeru.org/explore/ - used by some developers and projects associated with the OERU and OER Foundation.
+
+* 0xacab: https://0xacab.org/explore/projects/ - used by some developers and projects associated with RiseUp labs
+
+* Pleroma: https://git.pleroma.social/explore/projects/ - used for development of the Pleroma micro-blogging server (and web client)
+
+* Silence: https://git.silence.dev/explore - used for the development of Silence, a fork of Signal used for encrypting SMS/MMS on Android devices, and its website.
+
+* Trisquel: https://devel.trisquel.info/groups/trisquel/ - used for development of the Trisquel GNU-linux distribution
+
+* VideoLAN: https://code.videolan.org/explore/projects/ - used for development of the VLC media player and other VideoLAN projects
+
+=== Hosted by GitLab on GitHost.io ===
+
+[https://about.gitlab.com/gitlab-hosted/#githost-is-shutting-down-on-june-1st-2019 GitHost.io was shut down by GitLab] in June, 2019. Projects hosted there used to appear to be self-hosted, using their own domain name. They have all had to either move to GitLab.com, as did [https://gitlab.com/snowdrift Snowdrift.coop]), or move to self-hosting like git.gnu.io (see above).
+
+== Enabling federation across instances ==
+
+There are three projects working on ways to enable self-hosted code forges like to form a federated network, allowing them to compete with the network effect of large, centralized services like GitHub and BitBucket:
+
+* ForgeFed: https://notabug.org/peers/forgefed - extending the ActivityPub standard for code-sharing purposes. The reference implementation is a code forge called Vervis: https://dev.angeley.es/
+
+* Sr.ht: https://drewdevault.com/2018/07/23/Git-is-already-distributed.html - using email protocols for code-sharing between web forges, the demo site is: https://sourcehut.org/
+
+* Salut-à-Toi: https://salut-a-toi.org/ - using the XMPP standard for federated chat to allow federated access to code repositories and issue tickets. The demo site is: https://www.libervia.org/
+
+An open standard for collaboration between code forges - like ForgeFed or Sr.ht - would theoretically enable projects to inter-operate across any code forge platform implementing the standard, not just GitLab.
+
+[[Category:Software]]
+[[Category:P2P Infrastructure]]

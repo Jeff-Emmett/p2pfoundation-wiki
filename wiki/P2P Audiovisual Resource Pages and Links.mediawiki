@@ -1,0 +1,666 @@
+
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+''Back to content overview: [[P2P Audiovisual Guide]]''
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+= '''Useful Software''' =
+
+=== '''Audio/Video Players/Aggregators, Web TV and Codec''' ===
+
+==== '''Audio/Video Players''' ====
+
+The '''VLC media player''' (or '''[[VideoLAN]]''') http://www.videolan.org/ is an open-source '''video (and audio) player''' available '''for all major platforms''' and capable of '''playing back almost all video formats found online'''. The VLC '''can be used as a streaming server''' http://www.videolan.org/streaming/ and also for '''transcoding video(streams)'''. '''(*)'''
+
+The '''MPlayer''' http://www.mplayerhq.hu/design7/news.html, open-source, is "the '''Movie Player for Linux'''", but there is also the MPlayer OS X http://mplayerosx.sourceforge.net/.
+
+==== '''Aggregators, Web TV''' ====
+
+'''[[Miro]]''' http://www.getmiro.com/, open-source, brings '''independent internet tv''' (and using the '''[[Broadcast Machine]]''' http://www.getmiro.com/create/broadcast/ anyone can publish media - also via '''[[Bittorrent]]'''). Available for all major platforms.
+
+'''[[FireAnt]]''' http://getfireant.com/ is - like Miro or Apple's iTunes http://www.apple.com/itunes/ - a '''feed aggregator''', meaning a user can subscribe to a particular channel via a publisher's '''[[RSS]]''' feed and the app will automatically download the latest episode of a particular programme. FireAnt is specially popular with parts of the videoblogging community, and it also offers one of the best ways of playing back downloaded .flv (Flash Video) files. ('''KeepVid''' http://keepvid.com/ lets users '''download Flash Videos''' from sites like YoutTube.) Available for Windows and Mac OS X.
+
+'''PenguinTV''' http://penguintv.sourceforge.net/, open-source, is "not just another RSS feed reader. It is designed from the ground up '''to work seamlessly with podcasts and video blogs'''". Available for Linux.
+
+'''Tribler''' https://www.tribler.org/, licensed under the [http://en.wikipedia.org/wiki/LGPL '''LGPL'''] (en.wikipedia.org) , "is a '''social community''' that facilitates '''filesharing through a so called peer-to-peer (p2p) network'''." Available for all major platforms.
+
+'''Adobe Media Player''' http://labs.adobe.com/downloads/mediaplayer.html, commercial software, "is a '''prerelease'''" and "being made available for consumers '''to test the user experience''', and for content publishers '''to test the compatibility of their existing Media RSS feeds with Flash-based video''' content." This might be of interest since the '''Flash Player 9''' http://labs.adobe.com/technologies/flashplayer9/ now '''supports H.264'''. Available for Windows and Mac OS X.
+
+==== '''Codec''' ====
+
+'''FOSS Codecs For Online Video''' http://wiki.transmission.cc/index.php/FOSS_Codecs_For_Online_Video:_Usability_Uptake_and_Development_1.2 "'''Usability Uptake''' and '''Development''' 1.2"
+
+'''Flip4Mac''' http://www.flip4mac.com/wmv_download.htm is a commercial but free (there is a pro/to buy version) that '''allows Mac users to watch (newer) .wmv encoded files''' either via the web browser or with the QuickTime Player. Since the latest version of the open-source VLC (0.8.6) - see above - now also plays back videos encoded with the newer Windows Media 9 codec (on the Mac), Flip4Mac might not be so important any more for some Mac users.
+
+'''QTAmateur''' http://www.mikeash.com/?page=software/qtamateur/index.html is "a small, simple QuickTime video player. It can play any format that QuickTime can understand, handle '''fullscreen video playback''', and '''export files to any format that QuickTime can write''' ...'''includes a Batch Export function''' which can convert any number of movies at a time to another format."
+
+'''Perian''' http://perian.org/ is "a free, open source '''QuickTime® component that adds native support for many popular video formats'''" (like .avi and .flv). Requires '''OS X 10.4.7'''.
+
+'''Xiph QuickTime Components''' http://www.xiph.org/quicktime/ is "the solution for '''Mac and Windows users''' who want to use Xiph formats in any QuickTime-based application, e.g. '''playing Ogg Vorbis in iTunes'''."
+
+'''[[Ogg Vorbis]]''' http://www.vorbis.com/ (for audio) and '''Ogg Theora''' http://www.theora.org/ (for video) are '''open-source alternatives for media encoding''', also interesting for commercial online publishing since they are '''patent free''' and '''no license fees will have to be paid'''.
+
+'''(*)''' '''VLC 0.8.6''' (December 2006): '''Windows Media 9 and Flash Video''' now also '''supported under OS X'''. The only major format '''not supported yet''' on any platform is the increasingly unpopular '''RealVideo'''.
+
+=== '''Audio/Video/Image Editing and 3D''' ===
+
+'''Audacity''' http://audacity.sourceforge.net/ is an open-source '''audio editor''', available for all major platforms. '''(*)'''
+
+'''Ardour''' http://www.ardour.org/ "is a '''digital audio workstation'''. You can use it to record, edit and mix multi-track audio. ... If you've been looking for a tool similar to ProTools, Nuendo, Cubase SX, Digital Performer, Samplitude or Sequoia, you might have found it." For Linux and OS X (no Windows version), source code available.
+
+'''Inkskape''' http://www.inkscape.org/ is an open-source '''vector graphics editor''', available for all major platforms.
+
+The '''Gimp''' http://www.gimp.org/ is an open-source '''image manipulation programme''', available for all major platforms. To make the transition easier for Photoshop users there is also the GimpShop http://plasticbugs.com/?page_id=294.
+
+'''CinePaint''' (Film Gimp) http://www.cinepaint.org/ is an open-source programme for '''deep paint manipulation and image processing''' (e.g. motion picture frame-by-frame retouching). An upcoming update is expected to support all major platforms.
+
+'''ffmpegX''' http://www.ffmpegx.com/ is a popular shareware programme for '''transcoding video''' on the Mac, maybe not a tool that is easy to use, but works well once configured to one's needs. (The open-source '''VLC media player''' http://www.videolan.org/ can also be used for '''transcoding video''' and is available for '''all major platforms'''.)
+
+'''Jashaka''' http://www.jahshaka.org/ is "the worlds first OpenSource '''Realtime Editing and Effects System'''", available for all major platforms.
+
+'''LiVES''' http://lives.sourceforge.net/ is "a Free, Open Source '''video editor *and* a VJ tool'''." It is "fully cross platform for Linux and many flavours of Unix (e.g. BSD, openMosix, IRIX, OSX/Darwin)."
+
+'''Kdenlive''' http://kdenlive.org/ is "a '''non linear video editor''' for the '''KDE''' environment running on '''Linux'''. It is based on the MLT video framework which relies on the FFMPEG project".
+
+'''Cinelera''' is a "'''non-linear video editor and compositor''' for Linux", there are two versions http://www.heroinewarrior.com/index.php3 and  http://cvs.cinelerra.org/.
+
+'''Ubuntu Studio''' http://ubuntustudio.org/ is "A '''multimedia creation flavor of Ubuntu'''" and "aimed at the '''GNU/Linux audio, video and graphic enthusiast as well as professional'''. We provide '''a suite of the best open-source applications available for multimedia creation'''. Completely free to use, modify and redistribute. Your only limitation is your imagination."
+
+'''Blender''' http://www.blender.org/ is an open-source '''3D modeling/animation programme''', available for all major platforms.
+
+'''See also''' the Wikipedia [http://en.wikipedia.org/wiki/IMovie '''iMovie'''] and [http://en.wikipedia.org/wiki/Windows_Movie_Maker '''Windows Movie Maker'''] entries for basic (commercial) '''video editing software''' (en.wikipedia.org). A basic '''DV video editing software''' for '''Linux''' is the open-source [http://www.kinodv.org/ '''Kino'''] (www.kinodv.org).
+
+'''(*)''' '''Mac OS X Audacity bug''': if you hear '''no sound''' when watching .flv videos (e.g. '''YouTube''') after using Audacity: Open Audio MIDI Setup (/Applications/Utilities/) and '''change the "Audio Output setting"''' from "96000.0Hz" '''back to "44100.0Hz"''' (see also [http://docs.info.apple.com/article.html?artnum=300832 '''Mac OS X: No audio from certain multimedia content''']). (docs.info.apple.com)
+
+=== '''Audio/Screen Capturing''' ===
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f4f8fd;"|
+Tip: '''Flash videos''' like on YouTube '''are always downloaded''' to the '''browser's cache''' when watching them! You can either search for them (if they are not in the "Cache" folder include "invisible items" or similar to your search) or download them again using a service like '''KeepVid''' http://keepvid.com/. In any case the '''file's extension .flv has to be added'''. For '''playback''' use e.g. the '''VLC''' http://www.videolan.org/.
+
+|}
+
+'''''Mac/PC/Linux:'''''
+
+'''Audacity''' http://audacity.sourceforge.net/ '''for free audio capturing''' on OS X and Windows '''explained''' in this [http://digg.com/software/MP3myMP3_Recorder_saves_any_audio_you_hear_on_your_computer '''digg discussion'''] (digg.com).
+
+The open-source '''Streamripper''' http://streamripper.sourceforge.net/ lets users '''record e.g. webradio as .mp3 files'''. For OS X users: StreamRipperX http://streamripperx.sourceforge.net/ (the old StreamRipperX 1.0.5 still works under OS X 10.3.9, not only 10.2 as mentioned).
+
+'''KeepVid''' http://keepvid.com/ or '''Video Downloader''' http://javimoya.com/blog/youtube_en.php let users '''download Flash Videos''' from sites like YoutTube.
+
+'''PodTube''' (OS X) and '''iTube''' (Windows) are for [http://www.epicempire.com/software/youtube-to-ipod.html '''YouTube to iPod''']. (www.epicempire.com) '''Note''': If this link is not working also try [http://www.indianwebmaster.org/showthread.php?t=174 '''The Amazing YouTube Tools Collection''']. (www.indianwebmaster.org)
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f4f8fd;"|
+
+'''See also''' (in this P2P Wiki section):
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Subpage_2#.28Pro.29_Audio_Tutorials.2FInformation '''(Pro) Audio Tutorials/Information'''] to '''learn about DRM removal'''.
+
+|}
+
+'''''Mac:'''''
+
+'''Wiretap''' http://www.ambrosiasw.com/utilities/wiretap/ "allows you to '''record audio from any running applications''', as well as from any microphone, line-in, headset...". Commercial software. ('''Free''' option '''via Audacity''': see above)
+
+'''Snapz Pro X''' http://www.ambrosiasw.com/utilities/snapzprox/ "allows you to effortlessly '''record anything on your screen''', saving it as a QuickTime® movie or screenshot". Commercial software.
+
+'''Copernicus''' http://danicsoft.com/projects/copernicus/ "doesn't just take '''screenshots'''... allows you to '''save''' directly to RAM, increasing movie framerates significantly for '''shorter movies'''". Requires OS X 10.4. Free commercial software.
+
+'''Screen Mimic''' http://www.polarian.com/products/ScreenMimic.php "allows you to '''create screencasts (recordings of your Mac OS X desktop)''' that can be saved as Adobe Flash (SWF), Flash Video (FLV), or Quicktime (MOV) files". Requires OS X 10.4. Commercial software.
+
+'''''PC:'''''
+
+'''CamStudio''' http://www.camstudio.org/ is an open-source '''"Free Screen Recording Software"'''. Download via http://sourceforge.net/projects/camstudio/.
+
+'''VH Screen Capture Driver''' http://www.free-codecs.com/download/VH_Screen_Capture_Driver.htm "is a DirectShow filter, which emulates Video Capture card and '''captures screen activity'''." Freeware.
+
+List of '''Video Recording''' software from Softpedia http://www.softpedia.com/catList/112,0,1,0,1.html. Mainly commercial software, some freeware.
+
+'''SnagIt''' http://www.softwarecasa.com/pprod/212401dd.htm "All the '''screen capture and editing functionality''' you’ll ever need, in one simply powerful program." Commercial software. ('''Free''' option '''via Audacity''': see above)
+
+'''Camtasia Studio''' http://www.softwarecasa.com/pprod/212402dd.htm  "'''Full-Motion Screen Recording''' Software". Commercial software.
+
+'''''Linux:'''''
+
+'''recordMyDesktop''' http://recordmydesktop.sourceforge.net/ is an open-source software that "offers also the ability to '''record audio, along with video'''."
+
+'''''Mac/PC/Linux:'''''
+
+'''See also''' the related online article [http://www.therealcaffeine.com/how-to/rip-dvd-with-vlc/ '''How-to: Rip DVDs with VLC''']. (www.therealcaffeine.com, 21.01.07)
+
+=== '''YouTube Tools''' ===
+
+'''The Amazing YouTube Tools Collection''' http://www.indianwebmaster.org/showthread.php?t=174 lists "'''YouTube third party tools''' which enhance your YouTube experience" (scroll down to see the tools collection).
+
+=== '''Telephony (VoIP)/Video Calls''' ===
+
+'''Gizmo''' http://www.gizmoproject.com/ is "A '''free phone for your computer'''", offers '''free voicemail and conference calls''', calls can be recorded and it supports the open-source [http://www.asterisk.org/ '''Asterisk'''] (www.asterisk.org) PBX software. Gizmo currently has no video. Available for all major platforms.
+
+'''Skype''' http://www.skype.com/ lets you "'''Free your conversations'''", offers conference calls for up to five participants and '''free video calls'''. Available for all major platforms.
+
+|}
+
+|}
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+= '''Media to/from Mobile Phones/Digital Movie Distribution''' =
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+=== '''Media to/from Mobile Phones''' ===
+
+'''Note:''' Since these '''distribution channels''' might '''not''' be '''in place yet''', but are said to be '''important for media distribution in the years to come''', we will provide links and examples, but '''indie content distributors should look themselves carefully at all the details''' before using any of these services - they '''might or might not be useful''', this is '''* untested * territory''':
+
+'''Zannel''' http://www.zannel.com/ wants to offer '''"Zillions of Channels"''' and "will be the easiest way to '''share your content on mobile phones'''."
+
+See also the '''related online article''':
+
+[http://mashable.com/2007/02/09/youtube-vodafone/ '''YouTube, Vodafone Hook Up'''] (mashable.com, 09.02.07)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+=== '''Digital Movie Distribution''' ===
+
+'''CinemaNet Europe''' ("DocuZone") http://www.cinemaneteurope.com/ "is bringing '''documentaries to the big screen by transforming independent cinemas across several countries into digital cinemas'''. These screens will receive films by hard discs or ADSL instead of reels."
+
+|}
+
+|}
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+= '''Related Links/Resources''' =
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''remixlinks: open media culture''' ==
+
+'''remixlinks: open media culture''' is a bookmark project that collects '''open media culture''' related links. '''Social bookmarking''' services let users '''tag links''' - all entries can be '''searched via tags'''. Here '''audiovisual related tags''' used by the maintainer of the '''''P2P Audiovisual Guide''''' - some links are mentioned in this Wiki text, but there are more to be found on the linklist that might be worth exploring (ning.com):
+
+[http://remixlinks.ning.com/index.php?tag=opensource&user=realdigirev '''opensource'''] [http://remixlinks.ning.com/index.php?tag=audio&user=realdigirev '''audio'''] [http://remixlinks.ning.com/index.php?tag=video&user=realdigirev '''video'''] [http://remixlinks.ning.com/index.php?tag=3d&user=realdigirev '''3d'''] [http://remixlinks.ning.com/index.php?tag=web2.0&user=realdigirev '''web2.0'''] [http://remixlinks.ning.com/index.php?tag=blog&user=realdigirev '''blog''']
+[http://remixlinks.ning.com/index.php?tag=remix&user=realdigirev '''remix'''] [http://remixlinks.ning.com/index.php?tag=links&user=realdigirev '''links''']
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Computers: Multimedia (Open Directory)''' ==
+
+The '''Open Directory's''' [http://dmoz.org/Computers/Multimedia/ '''Computers: Multimedia'''] '''page''' is a good starting point for finding '''audiovisual related links and software'''. (dmoz.org)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Video Production (Wikibooks)''' ==
+
+[http://en.wikibooks.org/wiki/Video '''Video Production'''] gives a more '''technical detailed introduction to internet video''' and related topics. (en.wikibooks.org)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Movie Making Manual (Wikibooks)''' ==
+
+[http://en.wikibooks.org/wiki/Movie_Making_Manual '''Movie Making Manual'''] attempts to cover '''every aspect of film making''' - the project might still be a work in progress, but some sections like [http://en.wikibooks.org/wiki/Movie_Making_Manual-Linux_in_film_production '''Linux in film production'''] could already be '''of use for the dedicated indie film maker'''. (en.wikibooks.org)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Filmmaking (Wikiversity)''' ==
+
+[http://en.wikiversity.org/wiki/Filmmaking '''Filmmaking'''] from ''' Wikiversity''' attempts to offer a '''full''' and free '''film making''' online '''course''' (in the making). (en.wikiversity.org)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Personalize MediaPedia''' ==
+
+[http://personalizemedia.com/wiki/index.php/Main_Page '''Personalize MediaPedia'''] ("This '''wiki covers everything from''' resonant '''interactive services to global personalization'''." - personalizemedia.com)
+
+|}
+
+|}
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+= '''Related Online Articles''' =
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Blogging''' ==
+
+(13.11.06) [http://www.pronetadvertising.com/articles/my-50-favorite-blogging-resources.html '''My 50 favorite blogging resources'''] (www.pronetadvertising.com)
+
+(14.07.05) [http://www.ojr.org/ojr/stories/050714gardner/ '''Time to check: Are you using the right blogging tool?'''] (www.ojr.org)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''(Online) Image''' ==
+
+(24.01.07) [http://www.masternewmedia.org/news/2007/01/24/visual_communication_and_online_image.htm '''Visual Communication And Online Image Editing Tools'''] (www.masternewmedia.org)
+
+(05.09.06) [http://www.readwriteweb.com/archives/web_photo_sharing_faceoff.php '''The Web Photo Sharing Site Faceoff'''] (www.readwriteweb.com)
+
+(28.07.06) [http://www.smileycat.com/miaow/archives/000267.html '''Online Image Editors Compared'''] (www.smileycat.com)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''(Online) Audio''' ==
+
+(08.11.07) [http://mashable.com/2007/11/08/tools-independent-musician/ '''25 Tools For The Independent Musician'''] (mashable.com)
+
+(31.10.07) [http://mashable.com/2007/10/31/free-and-legal-music/ '''Top Places To Get Free and Legal Music'''] (mashable.com)
+
+(13.08.07) [http://www.techcrunch.com/2007/08/13/strayform-tries-a-indie-new-music-model/ '''Strayform Tries New Indie Music Model'''] ("...like SellaBand and the recently funded Amie Street, is giving unsigned artists a way to promote and sell their music." - www.techcrunch.com)
+
+(19.06.07) [http://www.rollingstone.com/news/story/15137581/the_record_industrys_decline '''The Record Industry's Decline'''] (www.rollingstone.com)
+
+(21.05.07) [http://www.wired.com/software/coolapps/news/2007/05/playogg '''How To Live an Open-Source Musical Life With Ogg Vorbis'''] (www.wired.com)
+
+(05.2007) [http://www.keyboardmag.com/story.asp?sectioncode=29&storycode=17973 '''Linux: It's Not Just For Computer Geeks Anymore'''] (Linux audio/music overview - www.keyboardmag.com)
+
+(14.03.07) [http://www.masternewmedia.org/audio_music_publishing/internet-radio/how-to-create-your-own-web-radio-station-guide-20070314.htm '''How To Create Your Web Radio Station: A Mini-Guide'''] (www.masternewmedia.org)
+
+(05.02.07) [http://www.techcrunch.com/2007/02/05/social-music-overview/ '''Social Music Overview'''] (See also "Comments" for the reader's suggestions.) (www.techcrunch.com)
+
+(16.06.06) [http://www.ghacks.net/2006/06/16/how-to-boycott-the-music-industry-and-still-enjoy-music/ '''How to boycott the Music Industry and still enjoy music'''] (www.ghacks.net)
+
+(30.01.06) [http://www.stevekrause.org/steve_krause_blog/2006/01/pandora_and_las.html '''Pandora and Last.fm: Nature vs. Nurture in Music Recommenders'''] (www.stevekrause.org)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''(Online) Video''' ==
+
+(20.11.07) [http://gizmodo.com/gadgets/video-wars/tv-on-your-pc-hulu-joost-and-miro-reviewed-323787.php '''TV on Your PC: Hulu, Joost and Miro Reviewed'''] (gizmodo.com)
+
+(10.10.07) [http://www.techcrunch.com/2007/10/10/happy-1st-anniversary-youtube-and-google-now-move-over-a-bit/ '''Happy 1st Anniversary YouTube and Google; Now Move Over a Bit'''] (www.techcrunch.com)
+
+(20.08.07) [http://www.kaourantin.net/2007/08/what-just-happened-to-video-on-web_20.html ''' What just happened to video on the web?'''] (www.kaourantin.net)
+
+(08.08.07) [http://www.last100.com/2007/08/08/a-collection-of-appletv-resources/ '''A collection of AppleTV resources'''] (www.last100.com)
+
+(07.08.07) [http://www.time.com/time/arts/article/0,8599,1650633,00.html '''MTV's Desperate Video Music Awards'''] ("Even though it's been years since the channel has shown the videos it honors, the MTV Video Music Awards persist." - www.time.com)
+
+(22.07.07) [http://newteevee.com/2007/07/22/ten-p2p-distribution-platforms-for-online-video-makers/ '''Ten P2P Distribution Platforms for Online Video Makers'''] (newteevee.com)
+
+(27.06.07) [http://mashable.com/2007/06/27/video-toolbox/ '''Video Toolbox: 150+ Online Video Tools and Resources'''] (mashable.com)
+
+(25.06.07) [http://mashable.com/2007/06/25/internet-tv/ '''4 Major Internet TV Apps Compared'''] (mashable.com)
+
+(22.06.07) [http://www.techcrunch.com/2007/06/22/will-live-video-catch-on-like-youtube/ '''Who Will Be The YouTube Of Live Video?'''] (www.techcrunch.com)
+
+(10.05.07) [http://www.linuxinsider.com/story/8HJeVrma2LSXEa/Open-Source-Ready-for-Its-Closeup.xhtml '''Open Source: Ready for Its Closeup'''] (www.linuxinsider.com)
+
+(30.04.07) [http://www.masternewmedia.org/video_internet_television/internet-tv-streaming-tv-streamcast-player/create-your-own-streaming-internet-tv-20070430.htm '''Online Video Publishing: Create Your Own Streaming Internet TV Channel With Streamcast Player'''] (www.masternewmedia.org)
+
+(24.04.07) [http://www.masternewmedia.org/video_internet_television/live-video-streaming/broadcast-yourself-live-with-video-streaming-20070424.htm'''Broadcast Yourself Live On The Web: Best Tools To Create Your Own Live Web TV - A Mini-Guide'''] (www.masternewmedia.org)
+
+(23.04.07) [http://www.masternewmedia.org/video_internet_tv/internet-tv-online-video-web-tv/internet-television-resource-20070423.htm '''Learn How To Create, Publish And Promote Your Online Video: Make Internet TV'''] (www.masternewmedia.org)
+
+(01.03.07) [http://www.masternewmedia.org/online-video/video-sharing-and-publishing/how-to-watch-online-video-with-free-software-20070301.htm '''Publish And View Online Video Using Free Software: A Present To Richard Stallman'''] (www.masternewmedia.org)
+
+(13.02.07) [http://www.readwriteweb.com/archives/online_video_index.php '''Online Video Industry Index'''] (video sharing, search, editing etc. - www.readwriteweb.com)
+
+(08.02.07) [http://splashcastmedia.com/the-17-most-talked-about-online-video-companies-and-how-they-differ '''The 17 Most Talked About Online Video Companies and How They Differ'''] (video about, incl. promotion of own service, and blog entry - splashcastmedia.com)
+
+(25.01.07) [http://www.techsoup.org/learningcenter/internet/page6106.cfm?rss=1 '''Understanding Video-Sharing Sites' Terms of Service'''] (www.techsoup.org)
+
+(25.01.07) [http://www.masternewmedia.org/news/2007/01/25/video_search_engines_and_online.htm '''Video Search Engines And Online Video Directories: A Mini-Guide'''] (www.masternewmedia.org)
+
+(11.2006) ''' Online Video: Getting Paid, Open-Source Storytelling/Film Making ''' [http://indiworks.blogspot.com/2006/11/online-video-getting-paid-open-source.html '''Part 1'''], [http://indiworks.blogspot.com/2006/11/online-video-getting-paid-open-source_23.html '''Part 2'''], [http://indiworks.blogspot.com/2006/11/more-about-open-source-storytelling.html '''Part 3'''], [http://indiworks.blogspot.com/2006/11/open-source-film-making-contest.html '''Part 4'''] (indiworks.blogspot.com)
+
+(11.2006) [http://www.scottkirsner.com/webvid/gettingpaid.htm '''Getting Paid: Sites that Help Video Producers Make Money'''] (www.scottkirsner.com)
+
+(17.10.06) [http://www.technologyevangelist.com/2006/10/innovators-nicholas-reville.html '''The Innovators - Nicholas Reville of The Participatory Culture Foundation'''] (blog entry and video - www.technologyevangelist.com)
+
+(16.09.06) [http://blog.blip.tv/blog/2006/09/16/openness-matters-rss-can-help/ '''Openness Matters. RSS Can Help.'''] (blog.blip.tv)
+
+(14.09.06) [http://www.getdemocracy.com/articles/future_of_video.php '''The Future of Online Video - Openness Matters. RSS Can Help.'''] (www.getdemocracy.com)
+
+(07.04.06) '''[http://www.dvguru.com/2006/04/07/ten-video-sharing-services-compared/ Ten video sharing services compared]''' (www.dvguru.com)
+
+(06.04.06) '''[http://www.masternewmedia.org/news/2006/04/06/video_editing_publishing_and_remixing.htm Video Editing, Publishing And Remixing Online Is Here]''' (www.masternewmedia.org)
+
+(14.03.06) '''[http://maketelevision.com/log/why_ogg_theora_matters_for_internet_tv Why Ogg Theora Matters for Internet TV]''' (maketelevision.com)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Online Media in General''' ==
+
+(23.07.07) [http://mashable.com/2007/07/23/online-media/ '''ONLINE MEDIA GOD: 400+ Tools for Photographers, Videobloggers, Podcasters & Musicians'''] (mashable.com)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Remix Culture''' ==
+
+(18.06.07) [http://www.readwriteweb.com/archives/video_editing_20_8_ways_to_remix_videos.php '''Video Editing 2.0: 8 Ways to Remix Online Videos'''] (www.readwriteweb.com)
+
+(13.04.07) [http://www.masternewmedia.org/video_internet_television/online-video/collaborative-movie-production-Basement-Tapes-20070413.htm '''Collaborative Film-Making: The Basement Tapes And The New Wave Of Online Movie Mash-Ups'''] (www.masternewmedia.org)
+
+(27.09.06) [http://p2pnet.net/story/9957 '''Remix Hollywood movies ...'''] (p2pnet.net)
+
+(30.08.06) '''[http://www.lifehacker.com/software/creative-commons/geek-to-live-6-ways-to-find-reusable-media-197538.php Geek to Live: 6 ways to find reusable media]''' (Creative Commons search and more - www.lifehacker.com)
+
+(08.2005) [http://www.wired.com/wired/archive/13.08/tech_pr.html '''We Are the Web'''] (www.wired.com)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Technology: DRM, P2P, RSS TV, etc.''' ==
+
+(13.02.07) [http://www.boingboing.net/2007/02/13/bluray_and_hddvd_bro.html '''Blu-Ray AND HD-DVD broken - processing keys extracted'''] (www.boingboing.net)
+
+(06.02.07) [http://www.apple.com/hotnews/thoughtsonmusic/ '''Thoughts on Music'''] ("Imagine a world where every online store sells DRM-free music ... Apple would embrace it in a heartbeat." – Steve Jobs - www.apple.com)
+
+(15.01.07) [http://arstechnica.com/news.ars/post/20070115-8616.html '''Privately, Hollywood admits DRM isn't about piracy'''] (arstechnica.com)
+
+(10.01.07) [http://www.p2p-blog.com/item-227.html '''Coming to your TV: RSS'''] (describes an alternative use for Apple's upcoming AppleTV - www.p2p-blog.com)
+
+(10.01.07) [http://www.techcrunch.com/2007/01/10/the-inevitable-death-of-drm/ '''The Inevitable Death of DRM'''] (www.techcrunch.com)
+
+(27.11.06) [http://www.wired.com/news/columns/0,72172-0.html?tw=wn_index_19 '''Zune, Creative Commons Don't Mix'''] (www.wired.com)
+
+(18.11.06) [http://www.learnoutloud.com/content/blog/archives/2006/11/the_top_10_argu.html '''The Top 10 Arguments Against DRM'''] (www.learnoutloud.com)
+
+(03.11.06) [http://www.theregister.co.uk/2006/11/03/peter_jenner/ '''Big labels are f*cked, and DRM is dead - Peter Jenner'''] ("Clash, Pink Floyd manager lifts the lid" - www.theregister.co.uk)
+
+(31.10.06) [http://www.boingboing.net/2006/10/31/fairgame_cracks_itun.html '''FairGame cracks iTunes using iMovie'''] (www.boingboing.net)
+
+(23.10.06) [http://www.wired.com/news/technology/0,71979-0.html?tw=wn_index_17 '''The Best of BitTorrent'''] (www.wired.com)
+
+(03.10.06) [http://www.lifehacker.com/software/bittorrent/hack-attack-get-your-tv-season-pass-with-democracy-204057.php '''Hack Attack: Get your TV season pass with Democracy'''] (www.lifehacker.com)
+
+(23.02.06) [http://soylentfoo.jnewland.com/articles/2006/02/22/how-to-subscribe-to-tv-shows-using-the-democracy-player-bittorrent-rss '''How to Subscribe to TV Shows Using The Democracy Player, Bittorrent, and RSS'''] (soylentfoo.jnewland.com)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Industry, Activism, Copyright''' ==
+
+(27.07.07) [http://www.defectivebydesign.org/blog/BBCcorrupted '''BBC Corrupted'''] "Today the '''BBC''' made it official -- they have been '''corrupted by Microsoft'''. With today's '''launch of the iPlayer'''..." (www.defectivebydesign.org)
+
+(02.05.07) [http://photosandponders.blogspot.com/2007/05/pandora-to-block-international.html '''Pandora to block international listeners from May 3rd.'''] ("Due to international licensing constraints, we are deeply, deeply sorry to say..." - photosandponders.blogspot.com)
+
+(10.10.06) [http://arstechnica.com/news.ars/post/20061010-7946.html '''Disney-ABC: "We understand piracy now as a business model"'''] (arstechnica.com)
+
+(17.08.06) '''[http://freenetproject.org/ John Gilmore donates US$15,000 to the Freenet Project]''' (freenetproject.org)
+
+(14.08.06) '''[http://www2.piratpartiet.se/nyheter/press_release_pirate_party_launches_worlds_first_commercial_darknet/ PRESS RELEASE: Pirate Party Launches World's First Commercial Darknet]''' (www2.piratpartiet.se)
+
+(14.08.06) '''[http://thebighack.org/modules.php?op=modload&name=News&file=article&sid=622&mode=nested&order=0&thold=0 Closing Letter to the Copyright Industry Associations of America]''' ("... we announce a massively distributed copy-less file system." - thebighack.org)
+
+(27.07.06) '''[http://www.pbs.org/cringely/pulpit/2006/pulpit_20060727_000366.html What goes on the Net stays on the Net]''' (about YouTube: "They could refuse to take down your video... ...charge YOU for your own video. ...insert ads in the video..." - www.pbs.org)
+
+(03.05.06) '''[http://www.wired.com/news/culture/0,70795-0.html?tw=wn_index_16 Soderbergh: Burn, Hollywood, Burn]''' (www.wired.com)
+
+|}
+
+|}
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+= '''Related Blogs/Sites''' =
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Video/Film/3D''' ==
+
+'''DV Guru''' http://www.dvguru.com/ is '''no more''' (January 31st, 2007: "...today marks the '''last day of DV Guru'''."), but some of the '''former DV Guru bloggers''' have moved to camcorderinfo.com:
+
+'''The CamcorderInfo Blog''' http://www.camcorderinfo.com/d/blog.htm is "All About '''Shooting, Editing and Polishing Your Videos'''" and has a notable [http://www.camcorderinfo.com/content/ethics.htm '''Ethics Policy'''].
+
+'''Self-Reliant Filmmaking''' http://www.selfreliantfilm.com/ "'''is what makes a filmmaker independent'''"
+
+the '''Workbook Project''' http://workbookproject.com/ is '''"a social open source experiment''' for content creators"
+
+'''CinemaTech''' http://www.cinematech.blogspot.com/ is about "'''Digital cinema, democratization''', and other trends remaking the movies"
+
+'''NewTeeVee''' http://newteevee.com/ focuses on the more '''mainstream aspects''' of the '''online video''' evolution.
+
+'''HD For Indies''' http://www.hdforindies.com/ is about "'''High Definition Video''' for Independent Filmmakers"
+
+'''BlenderNation''' http://www.blendernation.com/ brings "Fresh '''Blender News''', Every Day"
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Audio/Music''' ==
+
+'''Dave's Imaginary Sound Space''' http://soundblog.spaces.live.com/ is "A '''Virtual Playground for Audio and Music''' Enthusiasts". Has a '''very good selection of links''' sorted by categories.
+
+'''The Future of Music, Media & Entertainment''' http://www.gerdleonhard.net/ is where "Gerd Leonhard explores the ''''convergence zones' of music / entertainment and technology'''"
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Media/Networks/3D Web''' ==
+
+'''Robin Good''' http://www.masternewmedia.org/ is about "'''Independent Publishing News''', e-Marketing Articles, Online Collaboration Reviews"
+
+'''Techcrunch''' http://www.techcrunch.com/ '''reviews "new Internet products'''" and profiles "'''companies that are making an impact (commercial and/or cultural)''' on the new web space"
+
+'''Mashable!''' http://mashable.com/ is "The '''Social Networking''' Blog"
+
+'''3pointD''' http://www.3pointd.com/ is about "'''The Metaverse and 3D Web''', as blogged by Mark Wallace and friends"
+
+No more updates since June 2007 but possibly still of interest (10/07):
+
+'''unmediated''' http://www.unmediated.org/ is "Tracking the '''tools''' that '''decentralize''' the '''media'''"
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Videoblogging''' ==
+
+'''Video Blog / Podcast Map''' http://community.vlogmap.org/ is about "'''The World of Video Blogs'''"
+
+'''Have Money Will Vlog''' http://havemoneywillvlog.com/ '''promotes''' "'''projects''' we believe in to potential donors"
+
+'''realpeoplenetwork''' http://www.realpeoplenetwork.com/ is "A '''Hollywood-free''' vlog"
+
+No more updates since Dezember 2006 but possibly still of interest (10/07):
+
+'''loaded pun''' http://loadedpun.com/ is about "'''vlogs''' vodcasts and '''online''' digital '''video'''".
+
+No more updates since March 2007 but possibly still of interest (10/07):
+
+'''We Are The Media''' http://wearethemedia.com/ brings "'''News''' from the '''Vlogosphere'''"
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''VR/Gaming''' ==
+
+'''Terra Nova''' http://terranova.blogs.com/terra_nova/ is "a blog about '''virtual worlds and their implications'''." (Academic) game research and virtual worlds in general.
+
+'''GameTunnel''' http://www.gametunnel.com/ is "the '''web's home for independent video games'''." Other '''indie game sites linked''' at the bottom of the main page.
+
+'''See also''':
+
+The [http://p2pfoundation.net/Category:Gaming '''Gaming'''] section '''in this Wiki'''.
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+== '''Media Archives''' ==
+
+'''What’s New at the Internet Archive''' http://internetarchive.wordpress.com/ is "A '''blog''' from the '''Collections Team at www.archive.org'''"
+
+|}
+
+|}
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+= '''P2P Related Media''' =
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+=== '''Video''' ===
+
+[http://www.videobomb.com/posts/show/2121 '''Who Owns Culture?'''] by '''Lawrence Lessig''' - A talk about copyright and (remix) culture - '''20 min. 5 sec.''' - Google Video via www.videobomb.com
+
+[http://www.youtube.com/watch?v=6gmP4nk0EOE '''Web 2.0 ... The Machine is Us/ing Us'''] by '''Michael Wesch''' - " Web 2.0 in just under 5 minutes." '''4 min. 31 sec.''' - www.youtube.com
+
+[http://www.archive.org/details/criminal02mov '''Copyright Criminals Preview'''] by '''Benjamin Franzen and Kembrew McLeod''' - A work in progress - '''10 min. 29 sec.''' - www.archive.org
+
+[http://www.centerforsocialmedia.org/videos/many_to_many/ '''Many To Many'''] produced by the '''Center for Social Media''' - Public Media and the Blogosphere - '''12 min. 40 sec.''' - www.centerforsocialmedia.org
+
+[http://www.ourmedia.org/node/9237 '''We Are The Media'''] by '''Josh Leo''' - A video mash-up about the Vlogging movement - '''2 min. 20 sec.''' - www.ourmedia.org
+
+[http://www.archive.org/details/FreeCultureFreeCulturempg '''Free Culture'''] by '''Maggie Hennefeld and Thessaly La Force''' - A documentary about the Free Culture New York Summit 2006 - '''9 min. 23 sec.''' - www.archive.org
+
+[http://alternativefreedom.org/?page_id=7 '''Alternative Freedom'''] (Trailer) by '''Twila and Shauna''' - A documentary about the invisible war on culture - '''3 min. 54 sec.''' - alternativefreedom.org
+
+[http://www.archive.org/details/what_is_peer_to_peer_320x240_h264 '''What is Peer to Peer?'''] produced by the '''P2P Foundation''' - An interview with Michel Bauwens featuring CC licensed music - '''4 min. 6 sec.''' - www.archive.org (or: [http://www.youtube.com/watch?v=zL5hhlV94GI on YouTube] - www.youtube.com)
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+=== '''Audio''' ===
+
+'''Podcasts and Webcasts''' (from the '''P2P Resources''' section in this Wiki):
+
+[http://www.p2pfoundation.net/Category:Podcasts '''Podcasts'''] "This is a '''directory''' of topical '''podcasts''' (audiofiles) '''related to Peer to Peer''' topics."
+
+[http://www.p2pfoundation.net/Category:Webcasts '''Webcasts'''] "A '''directory''' of '''webcasts''' on '''Peer to Peer''' related topics." '''*** New ***''' in the Webcast section: [http://www.p2pfoundation.net/Category:Webcasts#Our_Thematic_Indexes '''Our Thematic Indexes'''].
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+=== '''Text''' ===
+
+[http://wiki.creativecommons.org/Welcome_To_The_Podcasting_Legal_Guide '''The Podcasting Legal Guide'''] by '''Colette Vogele, Mia Garlick, The Berkman Center Clinical Program in Cyberlaw'''; Creative Commons - Wiki or '''.pdf''', '''1.9 MB''' - wiki.creativecommons.org
+
+'''[http://www.rsf.org/rubrique.php3?id_rubrique=542 Handbook for bloggers and cyber-dissidents]''' from '''Reporters sans frontières''' (Reporters Without Borders) - '''.pdf''', '''1.6 MB''' - www.rsf.org
+
+[http://www.law.duke.edu/cspd/comics/digital.html '''Bound By Law?'''] by '''Keith Aoki, James Boyle, Jennifer Jenkins'''; Center for the Study of the Public Domain - to buy or e.g. free '''.pdf''', (8) '''16 MB''' - www.law.duke.edu
+
+[http://turre.com/index.php?option=com_content&task=view&id=20&Itemid=41 '''Community Created Content'''] by '''Herkko Hietanen, Ville Oksanen, Mikko Välimäki''' - to buy or free '''.pdf''', '''1.9 MB''' - turre.com
+
+|}
+
+|}
+
+{| cellpadding="10" cellspacing="5" style="width: 99%; background-color: inherit; margin-left: auto; margin-right: auto"
+|-
+| style="width: 60%; background-color: #ffffff; border: 1px solid #777777; vertical-align: top;" <!--rowspan="2"--> |
+
+= '''The Directory''' =
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f4f8fd;"|
+
+Here you can explore '''The Directory''' or go '''back''' to the '''first page''' and the [http://www.p2pfoundation.net/Category:Audiovisual#P2P_Audiovisual_Guide '''Content Overview:''' '''P2P Audiovisual Guide''']!
+
+|}
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+'''Note''': We plan to move "Articles in category 'Audiovisual'" (currently at the bottom of the main [http://www.p2pfoundation.net/Category:Audiovisual P2P Audiovisual Wiki page]) to the following 14 subdirectories - until this is done those directories are empty!
+
+|}
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Business '''BUSINESS''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Conferences '''CONFERENCES''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Education '''EDUCATION''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Interviews '''INTERVIEWS''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Licensing-Legal '''LICENSING/LEGAL''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Media '''MEDIA''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Movements '''MOVEMENTS''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_OpenSource '''OPEN SOURCE''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Podcasting '''PODCASTING''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Software '''SOFTWARE''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Technologies '''TECHNOLOGIES''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Theory '''THEORY''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Web2.0 '''WEB 2.0''']
+
+[http://www.p2pfoundation.net/Category:Audiovisual_Webcasting '''WEBCASTING''']
+
+{| cellspacing=3 width="100%"
+|colspan="2" style="border: 1px solid black;padding-left:1em;padding-right:0.5em; background: #f9f9f9;"|
+
+The "Articles in category 'Audiovisual'" (bottom main [http://www.p2pfoundation.net/Category:Audiovisual P2P Audiovisual Wiki page]) have been '''collected by individual Wiki authors''' and are '''linked in various sections''' of the P2P Wiki. These articles are - even more than the text above - a work in progress. '''Some entries''' may '''only''' consist of '''a short description''' and an URL, while '''others''' may have been '''developed much further'''.
+
+|}
+
+|}
+
+[[Category:Audiovisual]]

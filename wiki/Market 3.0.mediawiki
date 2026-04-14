@@ -1,0 +1,158 @@
+'''= A concrete and complex proposal for a market, using internet technologies, where every partner would be equal and have direct access to each other, developed by Chris Cook.'''
+
+For more information, see https://mondovisione.com/exchanges/handbook-articles/market-30-the-final-version/?
+
+==Short Description==
+
+"The first generation of markets -- Market 1.0 -- was decentralised but disconnected, and 'market presence' required the physical presence of buyer and seller, typically in local and regional exchanges.
+
+Market 2.0, which has now reached its zenith, is centralised but connected, with market presence through intermediaries such as Exchanges or proprietary Alternative Trading Systems (ATSs).
+
+Market 3.0 represents the final evolution of markets: decentralised but connected, with market presence being through a 'network presence' on a dedicated market network. Understanding Market 3.0 requires consideration of the architecture of the Internet itself and how this relates to the communications, security, technological and legal infrastructure of markets."
+
+==Text==
+
+'''Chris Cook on Why Market 3.0?:'''
+
+The first generation of markets -- Market 1.0 -- was decentralised but disconnected, and 'market presence' required the physical presence of buyer and seller, typically in local and regional exchanges.
+
+Market 2.0, which has now reached its zenith, is centralised but connected, with market presence through intermediaries such as Exchanges or proprietary Alternative Trading Systems (ATSs).
+
+'''Market 3.0 represents the final evolution of markets: decentralised but connected, with market presence being through a 'network presence' on a dedicated market network. Understanding Market 3.0 requires consideration of the architecture of the Internet itself and how this relates to the communications, security, technological and legal infrastructure of markets.'''
+
+The Internet is nothing more -- and nothing less -- than a network of connected networks. Every 'client' device which accesses the Internet is allocated an Internet Protocol (IP) address which may be fixed or 'dynamic', i.e. temporarily allocated for the duration of the connection to the Internet.
+
+At the core of the Internet are root servers specific to top level domains such as 'dot com'. These are powerful computers whose function it is to enable users to be routed to the destination device. They do so by comparing the dot com name requested with a list of IP addresses of the server(s) upon which the relevant website is maintained.
+
+A key event in the evolution of the Internet was the arrival of instant messaging (IM) services such as Microsoft Messenger. This works through the maintenance of a 'virtual network', comprising all users registered at a given moment in time with the instant messaging system server as 'present on the network'. This is accomplished through an agreed protocol/methodology whereby users' devices report to the system server when they establish or break their connection. Such direct connection of device to device is known as 'peer to peer' networking. All the IM server does is reconcile the registered identity of the user with the IP address of the device being used to access the Internet.
+
+A further revolutionary step in the evolution of the Internet was Napster: the music-sharing system which within 18 months acquired some 60 million users. The Napster architecture was also 'peer to peer', allowing Napster users seeking music MP3 data files to be connected to other users who held these files and then to access and download them free of any charge other than the cost of the connection.
+
+The Market 3.0 network will be an instant market messaging network. Market messages largely consist of market 'chat', and standardised message forms such as bids, offers, requests for quote; trade details, settlement details and payment details. There will be a dedicated market server which exists to relate the market IDs of the individuals and/or their corporate backers, with their IP addresses.
+
+The final step will be the establishment of a private market-specific domain, accessible exclusively to market users who have downloaded a tiny addition to the Internet browser software on their access device thereby creating 'dot market'.
+Market channels
+
+The dot market network allows market participants to access and take part in the market through a direct connection with each other. Note that it is a simple matter to suppress or reveal the market identities of participants at any stage of the trading cycle. Furthermore, 'intelligent agent' software programs now exist whose function it is to interrogate the other devices in the market network and even to negotiate with them according to the parameters set by the trader.
+
+However, in order to make trading decisions, participants require access to market data, news, research and analysis. This data, particularly the provision of 'streamed' video, consumes vast amounts of network capacity -- 'bandwidth'. Worse, delivery of the data through the Internet is subject to a fundamental architectural constraint. If ten users on a network request data via the Internet then it can only arrive in ten separate 'unicast' streams of data: essentially data with a delivery IP address attached to it. The result is that ten users will use ten times as much network capacity as one: exemplified by a large City-based bank whose traders recently accessed a somewhat risqué source of streamed video and crashed the network.
+
+Data broadcast by satellite, wireless or digital TV, on the other hand, has no delivery IP address attached to it. In practical terms, such data can be received by and then delivered within a network by 'multicasting' it, which allows an unlimited number of users to access the same data with no increase on the original bandwidth requirement. It is possible to encrypt such data and provide the user with a 'key' allowing him to decode it. This technique enables the business model of broadcasters such as BskyB.
+
+However, the further revolutionary step that makes a 'market channel' possible is the transmission of the decryption key via the Internet. The result is an interactive 'peer to peer' market network with a 'one-to-many' broadcast market channel overlay.
+
+Certain markets have a core community of liquidity providers/market-makers and 'clearers' who take financial responsibility for market participants' trades. The market channel communications platform enables the instant global dissemination from this core group of 'one-to-many' market messages such as requests for quote and/or bids/offers, inviting participants to submit bids or offers in response. Such a 'broadcast market' model is particularly relevant to the global benchmark/ settlement price-setting auction mechanisms such as the London bullion 'fix' or London Metal Exchange 'rings'.
+Security
+
+The principal reason for the relatively slow growth of the Internet for 'e-commerce' is that users, quite rightly, just do not trust it. The solution lies in the integration of two complementary communications layers into one.
+
+Firstly, it is necessary, wherever possible, to segregate the transmission of encrypted data from the transmission of the key. So encrypted data may be broadcast, with the key transmitted on the terrestrial Internet; or conversely, encrypted data may be transmitted via the Internet, while the key is communicated by wireless or other means.
+
+Secondly, it is necessary to strengthen the authentication of the user's ID. In a world of digital money, crime will involve the 'theft of identity' -- exemplified by the epidemic of 'cloned' credit cards. Here the key lies with geo-location. Individuals commit crime, and individuals cannot be in more than one geographical location. This means that the geo-location capability always available using satellite technology and now becoming standard in wireless communications will, when combined with the introduction of geo-location into IP addressing (planned for the next generation of browser software), give rise to very powerful authentication.
+
+It will be seen therefore that this overlay of complementary communications networks, linked by geo-located individuals and ground stations (which is all that a 'set top box' is), will provide the level of market security which the Internet is structurally unable to provide.
+
+Essentially, there are two generic market functions:
+* contract formation -- which defines a market;
+* exchange of value -- which underpins a market.
+
+In a spot transaction the two functions take place contemporaneously and the exchange of value is conditional: if I don't have the shares, I can't offer them for sale, and if I don't have the money, I can't bid for the shares.
+
+The consequence of this is that for true real-time settlement of a spot transaction, there is no requirement for a risk intermediary such as a central counterparty because there is no risk. Where there is an element of time between the conclusion of the contract and its settlement, then this introduces the requirement for risk management, and the interpolation of a risk intermediary such as a central counterparty or insurer.
+
+The requirement for Market 3.0 is for what has been termed a 'shared transaction repository' and a 'shared title repository'. In other words, a market-specific transaction registry database, and a market-specific title database. Note that these databases will not be held at a centralised point in some monstrous mainframe or cluster of servers, but will consist of a distributed network of the connected databases of market participants themselves -- in technical terms, a 'filespace'.
+
+It is possible to connect the disparate market databases through the use of market-specific versions of the technical protocol XML. This means that the market messages travelling through the market network find their way from and to the individual users' databases of origin and destination.
+
+Equally, Market 3.0 may be characterised as an 'exchange of exchanges' or meta-exchange incorporating, in addition to exchanges, all proprietary mechanisms (alternative trading systems -- ATSs) by which contracts may be legally concluded. Here the requirement is for a global legal protocol -- a market user agreement -- incorporating a market standard jurisdiction enabling users to transcend the disparate jurisdictions incorporated in national exchange contracts, or proprietary ATS-generated contracts. So in the same way that exchange members are bound legally in respect of disparate individual listed contract terms, so will Market 3.0 users be bound in respect of listed exchange or proprietary ATS contract terms. The outcome of shared market title and transaction repositories @ dot market is to create what is to all intents and purposes an open market 'general ledger'.
+Dot market structure
+
+There is a paradox at the heart of Internet market development:
+* initiatives by neutral service providers lack liquidity;
+* initiatives by liquidity providers lack neutrality.
+
+The result to date has been fragmentation into competing proprietary networks, with consequent adverse effects upon market liquidity.
+
+True neutrality in the global market trading platform denominated Market 3.0 can only arise if it is operated, and is seen to be operated, for and on behalf of all market participants equally. So a market may be divided into two constituencies: those who provide market services and those who utilise them.
+
+The former consortium may be described as 'market service provider' or MSP. An MSP will provide via the Internet all of the services market participants require: market access; market data; trading, settlement and payment; training and education; risk management and accounting services; dispute resolution and so on. An example of such an MSP in embryo is Camelot, which is essentially a consortium of providers of technology, communications and expertise serving a national gaming market via a proprietary network
+
+'''Any market is defined by those who enter into contracts in it: here the market user agreement -- the global legal protocol linking market members together creates the potential for the formation of international trade associations (ITAs). ITAs form the basis for a new decentralised regulatory regime -- Regulation 3.0.'''
+
+===Regulation 3.0===
+
+Mutual trust is the glue that binds markets together. Regulation engenders trust, and the setting and enforcement of market standards of behaviour and propriety are the essence of successful regulation. At the dawn of markets -- Market 1.0 -- this trust was based upon self-regulation: upon subjective judgments by one individual of another, backed by a fundamental regulatory concept -- 'mutual reference'.
+
+Mutual reference essentially consists of the collective experience of the market community in respect of their dealings with each other. Any individual who offended against accepted standards of market behaviour, and was thereby in breach of trust, would be judged by his peers and subject to penalties up to and including exclusion from the market -- if not to a grimmer fate under the harsher laws of those times.
+
+Intermediation and centralisation have led to centralised markets -- Market 2.0 -- and to centralised regulation, exemplified by Regulation 2.0 regulators such as the SEC/CFTC and the FSA.
+
+In the UK the advent of self-regulatory organisations in 1987 -- such as the AFBD and TSA -- was remarkably successful in raising the standards of UK exchanges and financial intermediaries. This was because prior to that point no-one was looking at what the intermediaries were doing. That, on a global basis, is the position to which we have returned -- the 'Sumitomo Gap' -- no-one is looking at what the customers are doing.
+
+Centralised national regulation -- Regulation 2.0 -- can go no further. There is no access to global market data; there are no global market standards; and even if there were, no-one has the ability to enforce them. A new architecture is required. Regulation 3.0 is a return to self-regulation, but this time by market participants themselves in the form of an ITA. An ITA will set market standards:
+* the crucial market standard jurisdiction;
+* standard contract terms (cf. ISDA, ISMA);
+* standards of behaviour;
+* standards of 'fitness and properness';
+* standards of transparency.
+
+The all-important regulatory 'teeth' derive from the fact that anyone suspended or expelled from an ITA has no access to the market, becoming an 'outlaw' consigned to the 'outer darkness'.
+
+Perhaps the most important regulatory tool in internet markets is the 'mutual reference' function. A good example of this function in action was, until 1995, the London Stock Exchange's 'Mutual Reference Society'. This was essentially a database of customer identities kept in card index files which LSE members were obliged to check when opening a new client account. While this was primarily aimed at clients who had defaulted in payment (whose card would be flagged appropriately), not all undesirable clients are unable or unwilling to pay, as the regulatory requirement for anti-money laundering 'due diligence' makes clear. Nevertheless, LSE closed down the mutual reference service, apparently on cost and data protection grounds and in view of the perceived prohibitive cost of automation.
+
+However, the function, which is little more than the operation of a database to be maintained by brokers themselves, is perfect as an internet application and mutualreference.com was therefore set up in 1999 to meet the continuing regulatory requirement for due diligence by brokers.
+
+One example will suffice of mutual reference in practice: where a proprietary 'e-marketplace' has evolved, by way of quality control, a form of genuine and effective self-regulation into its business model. eBay is a retail auction-based marketplace connecting individuals to a centralised server-based marketplace: in essence, a cross between an automated electronic car boot sale and an auction. There are literally millions of auctions, in every conceivable kind of goods, being operated by eBay at a given point in time, each probably lasting several days. In fact thousands of businesses, particularly in areas such as antiques and collectibles, operate exclusively on eBay.
+
+As the business evolved it became apparent that there were some serious 'conduct of business' issues involved:
+* were the goods actually the property of the seller?
+* even if they were the seller's goods, were they what he/she said they were?
+* did the buyer have the money to pay for the goods?
+* was he/she in a position to take delivery?
+
+Beyond these issues were questions of public policy in relation to the nature of the items for sale, such as the offer for sale of securities, or firearms.
+
+The regulatory model developed by eBay was based upon 'feedback forums' whereby buyers and sellers would post positive or negative feedback in respect of their dealings on eBay. This in turn has led to 'star ratings' whereby regular eBay users acquire a rating based upon the aggregate of feedback received, where +1 is a positive; 0 is neutral; and --1 denotes negative feedback. eBay then awards star ratings banded by the number of points received.
+
+In addition actual feedback, in terms of comments, may be posted by buyers, sellers or both and these comments may be made publicly available with the consent of the person in receipt of the relevant comments. eBay actively encourages such disclosure. The outcome of this model can be fairly draconian in practice: miscreants are given short thrift by their peers.
+
+Because markets are by definition open, there are important issues in relation to the enforcement and disciplinary process which may not apply to a proprietary system where someone unfairly excluded may perhaps take his business elsewhere. Clearly, ITAs would therefore have to take care in drafting their rules/user agreement to meet appropriate regulatory standards of fairness and transparency.
+
+===Market corporations===
+
+We have seen how two distinct consortia comprise Market 3.0. How is it possible to link them together into a seamless enterprise with a viable business model?
+
+Virtually all markets were until relatively recently run by cartels of intermediaries (i.e. exchanges) in their own interests. They were typically constituted as not for profit or mutual entities which would return any surplus of income over expenditure to members. 
+
+The recent trend among exchanges in response to the threat posed by ATSs has been demutualisation into for profit entities; the reasons being:
+* the requirement for capital to fund development of the exchange's own dealing systems and networks;
+* more flexible management, free of the factionalism that plagues exchanges;
+* the prospect for executives and shareholders alike of mouthwatering returns on their investment from exploitation of a dominant position.
+
+A moment's reflection on the latter leads to the conclusion that the 'shareholder value' thereby generated has to be at someone's expense, i.e. the constituency of customers, now including the ex-members. In other words, the flaw (which is a fundamental flaw of capitalism itself, excused by the fact that alternatives have to date proven to be worse) lies in the divergence of interest between the providers of this capital and the users. At this point, an innovation is proposed which may square the circle. The 'open corporate' entity suggested is not rooted in the UK body of Companies Act legislation, but rather in the unintended potential of a recent innovation in UK Partnership Law. It has been possible in the UK since 1907 for a partner to introduce capital and limit his liability but at the price of being unable to participate in management. The key UK legislation in the creation of the open corporate was the Limited Liability Partnerships Act 2000 which came into effect on April 6, 2001. This Act effectively enables partnerships, typically of professional firms such as accountants and lawyers, to protect the assets of the individual partners in the event of insolvency -- itself increasingly likely in the face of massive claims of compensation. It reflects similar US Limited Liability Partnerships (LLPs).
+
+A UK LLP is a corporate body with members/partners who may be individual or corporate (or a mix of the two). It is governed by a member agreement which sets out the rights and obligations of the members inter se. However, it is doubtful that the use to which it may now be put was ever conceived when the Act was drafted.
+
+A Market Corporation will be a UK (or possibly for tax reasons Jersey) LLP.
+
+Members of Market Corporation LLP will own proportional shares in the value of the enterprise rather than the shares in a for profit joint stock company, which are created and issued with a nominal value --typically GBP1.00.
+
+Such proportional shares are infinitely divisible: a partner with a half share therefore has 500 thousandths or 500,000 millionths and so on, and the value of such a share may be determined at any time as a proportion of the value of the enterprise. The member agreement of Market Corporation LLP will allow such proportional shares to be freely tradeable between members or constituencies of members. New members will be invited to contribute capital or services in return for shares. Most revolutionary of all, it will be possible to raise additional capital without relinquishing control by lending or pledging shares.
+
+This will be accomplished through the use of the 'repo' agreement -- the sale and repurchase of shares. Repos -- which are relatively little known for a multi-trillion pound industry -- allow institutional investors to generate an income by lending shares to each other for a period of time. The Repo price would reflect a benchmark cost of money plus a risk premium. A default gives rise to a very simple outcome, which is that the financier would automatically acquire full ownership of the shares. The outcome is that the utility cash-flow received by the Market Corporation from its ITA members and remitted to its MSP members may thereby be simply and effectively securitised. In an open corporation, debt is equity traded forward.
+
+===Summary===
+
+Market 3.0 is based upon a simple market architecture where, for example, members of the International Petroleum Trade Associationwould access the oil market, using whatever proprietary trading software they wish, @ dot oil. They would receive market data, news and intelligence from their preferred sources via the Oil Channel.
+
+The oil market transaction and title repositories, connected by clearing and settlement software, would provide paperless straight-through processing generating massive savings for IPTA Members. If a guarantee is required in respect of a contract then this will be available.
+
+The IPTA members would be partners, with the Oil Market Services consortium providing this oil market infrastructure, in Oil Corporation LLP-- an Open Corporation which is neither mutual nor for profit, but rather 'for value'.
+
+[[Category:Encyclopedia]]
+[[Category:Articles]]
+[[Category:OpenCapital]]
+[[Category:P2P Market Approaches]]
+[[Category:Business]]
+[[Category:Governance]]
+[[Category:Open Company Formats]]

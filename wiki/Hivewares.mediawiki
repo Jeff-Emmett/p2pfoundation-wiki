@@ -1,0 +1,23 @@
+
+
+=Description=
+
+From http://www.hivenetworks.net/tiki-index.php?page_ref_id=87 :
+
+Hardware "functionality should be available with a single software installation and with minimal configuration, and to achieve this we have created a concept of a “personality”. The idea is that the hardware system as a whole cannot be described just in terms of a a single software application, but a series of applications and methodologies that have been specifically configured to act together – to create a system with determinable character, hence a personality.
+
+We also want these devices to have the ability to switch personalities at the click of a button, as we want the devices to be as flexible as possible. This all puts the user in control and that requires having an easy interface into the system, which is provided with a web console, as each personality has a dedicated web configuration page. Full access is always available via the usual console access (ssh), for those with command line skills, but what will they need to access to create or modify a personality? The system is a complex hierarchy of software that collectively define a personality.
+
+At the top level is the basic configuration page on the web console. This coordinates and manages the various software applications that, for example, control the webcam and ftp server operations. These must agree on a directory convention and filename format in order to achieve inter-operability. The applications may all be used by other personalities and so need to be configured for a variety of different uses – all this is controlled by the software 'glue' that defines a personality. Furthermore, at a level below the application management, there is the system management that needs to be considered. This is responsible for maintaining a stable system, that ensures that directories don't get too full (thereby running out of disk space), that the personality will start a boot time, loads the correct kernel modules in the correct order with the correct parameters and so on. All this is taken care for the user with each personality."
+(http://www.hivenetworks.net/tiki-index.php?page_ref_id=87)
+
+
+=More Information=
+
+#[[Hive Networks]]
+#[[Open Embedded]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]

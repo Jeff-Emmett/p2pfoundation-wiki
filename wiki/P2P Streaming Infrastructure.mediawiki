@@ -1,0 +1,41 @@
+An overview article on '''P2P 'streaming' infrastructure''' at http://open4all.info/up2speed.pdf It mentions the '''Open Source Streaming Alliance''' and the '''Direct Video Network'''.
+
+
+=Discussion=
+
+==We do not need streaming for video==
+
+From Andrew Odlyzko's essay at http://www.dtc.umn.edu/~odlyzko/doc/net.neutrality.delusions.pdf:
+
+"Even if we allow video the dominant role in shaping the future of the Internet, we have
+to cope with the second delusion captured in Cicconi’s quote, namely that movies should
+be streamed. This is an extremely widely shared assumption, even among networking
+researchers, as is discussed in Section 4. However, there is an argument that except for
+a very small fraction of traffic (primarily phone calls and videoconferencing), multimedia
+should be delivered as faster-than-real-time progressive downloads (transfer of segments
+of files, each segment sent faster-than-real-time, with potential pauses between segments).
+That is what is used by many P2P services, as well as YouTube. This approach leads to far
+simpler and less expensive networks than real-time streaming. And there is a noticeable
+minority of the technical community that regards this approach as the only sensible one.
+A truly astonishing phenomenon is that this group and the far larger streaming advocacy
+group do not seem to talk to each other, or even be aware that the other alternative is to
+be taken seriously. This is discussed in Section 3.
+
+Section 4 outlines '''why the faster-than-real-time transmissions of video (or music) are
+the best solution''', and require a far less expensive network that requires neither any fancy
+new technologies, nor any fancy new network management policies. Section 5 sketches out a
+particular view of the history and present state of data networks, which suggests a scenario
+of future evolution that supports the vision of faster-than-real-time multimedia transfers
+in preference to the streaming mode of the evolution of data networks
+The general conclusion is that the story presented by service providers, that they need
+to block net neutrality in order to be able to afford to construct special features in their
+networks for streaming movies, is simply not credible. If lack of net neutrality requirements
+is to be exploited, it will have to be done through other, much more intrusive means. This
+is discussed in the conclusions section."
+(http://www.dtc.umn.edu/~odlyzko/doc/net.neutrality.delusions.pdf)
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:Media]]

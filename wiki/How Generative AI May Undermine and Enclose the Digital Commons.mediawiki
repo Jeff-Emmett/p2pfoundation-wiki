@@ -1,0 +1,304 @@
+'''* Article: GENERATIVE AI AND THE DIGITAL COMMONS. By Saffron Huang and Divya Siddarth. Collective Intelligence Project,''' 
+
+URL = https://www.researchgate.net/publication/369379874_Generative_AI_and_the_Digital_Commons
+
+
+=ABSTRACT=
+
+"Many generative foundation models (or GFMs) are trained on publicly available
+data and use public infrastructure, but 
+
+1) may degrade the “digital commons” that they depend on, and 
+
+2) do not have processes in place to return value captured to data producers and stakeholders. 
+
+
+Existing conceptions of data rights and protection (focusing largely on individually-owned data and associated privacy concerns) and copyright or licensing-based models offer some instructive priors, but
+are ill-suited for the issues that may arise from models trained on commons-based
+data. We outline the risks posed by GFMs and why they are relevant to the digital
+commons, and propose numerous governance-based solutions that include investments in standardized dataset/model disclosure and other kinds of transparency
+when it comes to generative models’ training and capabilities, consortia-based
+funding for monitoring/standards/auditing organizations, requirements or norms
+for GFM companies to contribute high quality data to the commons, and structures
+for shared ownership based on individual or community provision of fine-tuning
+data."
+
+=Discussion=
+
+==Identifying Risks==
+
+By Saffron Huang and Divya Siddarth:
+
+"The growth and expansion of these technologies carry with them risks that need to be investigated and mitigated where appropriate, including:
+
+1. Poisoning the information sphere with easy-to-create low-quality data. GFMs can generate text/code/images much faster than humans, but can output untrue, biased or otherwise
+low-quality material. This may lead to a proliferation of both accidental and deliberate
+mis/dis-information and biased, inappropriate, or low-value content. Research has shown
+that stereotypes tend to be amplified through text-to-image GFMs (Bianchi et al., 2022).
+Outputs may also be subtly incorrect and difficult to evaluate, making quality assurance a
+difficult task without dedicated auditing capabilities.
+
+2. Eroding self-determination and democracy. GFMs could be used for personalized persuasion or disinformation, churning out harmful information at low cost (Goldstein et al.,
+2023). As GFMs are used in a greater number of applications, their black-box decisionmaking may affect material outcomes for many. Content filters and other design decisions
+are generally determined by a small team with little participation or calibrated input, even
+if models are later open-sourced.
+
+3. Homogenizing content. Generated information becomes more homogenous, with similar
+properties (e.g. sentiments on popular issues) due to being based on one or a few widelyused models.
+
+4. Misaligning incentives for humans to contribute to the open digital ecosystem. People
+may stop producing text/code/images in favor of using generative models, or never visit the
+websites from which data is sourced (like Reddit or Wikipedia) in favor of using GFMs as
+search engines, and thus lead to decreased contributions to them (a phenomenon which has
+been referred to as the “paradox of reuse”) (McMahon et al., 2017) People may also decide
+against releasing non-GFM-enabled creations into the commons e.g. due to fears of labor
+replacement or lack of attribution.
+
+5. Driving further economic concentration. If certain capital-intensive models are privately
+owned with limited or no outside access (e.g. Google’s PaLM, DeepMind’s Gopher, OpenAI’s DALLE-2) or significant control over applications built on top, this could contribute
+to economic concentration. Access may be limited particularly if the high costs of creating
+GFMs don’t decrease soon.
+
+6. Contributing to precarious labor conditions and large-scale automation. For certain
+industries the automation of some or many parts of human work could contribute to precarious labor conditions and potentially lead to large-scale automation (e.g. digital/concept
+art, copywriting), issues which labor policy must then address.
+
+7. Accelerating unpredictable risks from highly capable AI systems. Black-box, highly
+capable artificial intelligence systems can be dangerous in unpredictable ways. GFMs are
+not necessarily built as autonomous agents, but others can add the ability to use software,
+traverse the internet or manipulate physical objects which can extend the possible domain
+of risks (Reed et al., 2022).
+
+(https://www.researchgate.net/publication/369379874_Generative_AI_and_the_Digital_Commons)
+
+
+== THE CORE OF MANY RISKS IS THE EFFECT OF GFMS ON THE DIGITAL COMMONS==
+
+By Saffron Huang and Divya Siddarth:
+
+"GFMs both depend on and contribute to what is often known as the “commons” (Ostrom, 1990).
+Commons, more specifically common-pool resources, are resources that are both rival and nonexcludable, and may thus fall prey to ‘tragedy of the commons’ style exploitation, in which individual actors can free-ride on, poison, or otherwise damage shared resources at great collective cost.
+
+Effective multi-stakeholder governance and management thus determines the sustainability of these
+common-pool resources. We limit analysis primarily to the digital commons, as that is the realm in
+which GFMs are primarily created and deployed. 
+
+
+The digital commons comprises two things:
+
+1. The online commons of information resources that we all benefit from, own and contribute to together. This traditionally includes things like wikis, Internet archive snapshots, Creative Commons (CC) licensed images and public software repositories, but online
+discussion spaces such as Reddit and news sources such as The Guardian are also part of
+this information commons. Much of this data or copies are technically hosted by someone
+(e.g. a private entity, the government, individuals) and authority/management over them
+vary in their level of collective control/ownership. But these generally have reasonably
+open and shared access, with few barriers to people contributing to or using these digital
+resources.
+
+2. The collective infrastructure that underpins the commons. This infrastructure includes
+the physical (e.g. Internet cables), the institutional (e.g. organizations like the IETF, W3C,
+and IEEE), and the technological (e.g. open-source libraries). As we see increasingly more
+GFMs and other AI being deployed, we may see more ML models, datasets, libraries and
+platforms, ML-tailored computing hardware, as well as various AI building or governing
+institutions come under this umbrella. For example, if GFM products begin to replace traditional software products, machine learning libraries such as Pytorch may become a critical
+piece of digital infrastructure supporting an increasing amount of online functionality.
+
+
+The existence and quality of the digital commons can be threatened by “undersupply, inadequate
+legal frameworks, pollution, lack of quality or findability” and needs to be maintained against
+such outcomes (Dulong de Rosnay & Stalder, 2020) For example, people, such as coders, artists,
+Wikipedians and bloggers, contribute and maintain high quality material in our information commons. Spam filters keep undesirable solicitations out of inboxes, the Creative Commons non-profit
+provides a multiplicity of licenses to make flexible copyright terms possible, internet archivists keep
+information available and open-source contributors create tools to support much of the world’s software.
+The idea of digital commons can lend well to ML governance in particular:
+
+- ''"Digital commons could also be an answer to the need for new governance
+structures for resources such as data or artificial intelligence. . . Data lends itself especially well to a commons framework: both inputs and impacts are fundamentally shared, distributing access to these resources provides a foundation for further bottom-up innovation and technological progress, siloing or privatizing these erodes the possibility of stewarding collective benefit. . . [forming] a shared layer necessary for economic growth and democratic participation."'' (Siddarth & Weyl, 2021)
+
+
+With respect to each of the risks detailed above, risks 1)-4) are most straightforwardly related to the
+commons-based approach, as they are directly concerned with the impact on common resources
+and the public sphere. Risks 5)-6), concerned with economic concentration and labour precarity/automation, raise questions around what obligations are tied to common resources. In short,
+to what extent does public data generate obligations whereby the people who created it should receive value from the resulting AI? If the data is included in the production of GFMs used for private
+interests and against the interest of those very people that created it, questions of compensation and
+reward become more salient.
+
+(https://www.researchgate.net/publication/369379874_Generative_AI_and_the_Digital_Commons)
+
+
+==THE INTEGRITY OF THE DIGITAL COMMONS MATTERS==
+
+By Saffron Huang and Divya Siddarth:
+
+"The digital commons enables broadly shared access and benefits from digital technologies. The economic and ethical benefits of open-source have been studied repeatedly (Ghosh, 2007; Wright et al.,
+2021; Blind et al., 2021), open access policies amplify the diffusion of science and Wikipedia is one
+of the most visited websites in the world. Because these are common resources and are not monetized, their value is difficult to measure, but accessibility seems clearly to lead to shared benefit,
+especially with non-rivalrous digital goods. Without shared collective infrastructure, it is possible
+that current and future innovations can be easily dominated by private entities. For example, in
+the 20th century, AT&T gained a leading monopoly over cable and radio due to its existing infrastructural monopoly over long-distance telephone lines (Wu, 2012)). A lack of collective digital
+infrastructure would potentially lead to monopoly dynamics rather than healthy competition that
+drives innovation.
+
+The digital commons is critical to modern knowledge-sharing. Knowledge in general is also seen
+as a shared, common-pool resource, referred to as “the knowledge commons” and analyzed as such
+(kno, 2007) The digital commons, in this age, is a key part of the contemporary knowledge commons. Accurate, accessible, comprehensive and diverse sources of knowledge are widely acknowledged as necessary to culture, welfare, science and technology. Both the training data underlying
+GFMs and the outputs are part of this knowledge commons, and the GFM itself can be seen as a
+kind of interface to the knowledge in its training data.
+
+The digital commons underpins democracy. High quality knowledge and genuine debate between
+humans is important in itself, but also to democracy. Good information and public discourse are
+necessary for making good decisions on who to vote for or what policies to enact, and for holding
+representatives accountable. 
+
+
+As pointed out:
+
+- ''"The foundational mechanism upon which all others depend is the maintenance
+of a healthy epistemic commons within a democracy—an epistemically healthy
+public sphere where widely trusted norms, processes, and institutions for
+making sense out of and reaching consensus on raw information lead to certain
+facts being accepted as true."'' (Consilience Project, 2021)
+
+
+Nowadays, as many of these interactions move online, we have seen how degradation of the digital
+knowledge commons can harm democracy, e.g. through misinformation, polarization, and other
+means Del Vicario et al. (2016); Barrett et al. (2021); Anderson & Rainie (2020)."
+
+(https://www.researchgate.net/publication/369379874_Generative_AI_and_the_Digital_Commons)
+
+
+==GENERATIVE FOUNDATION MODELS RELY ON, BUT MAY ALSO ERODE, THE DIGITAL COMMONS''
+
+By Saffron Huang and Divya Siddarth:
+
+"GFMs are trained on the digital commons. Generative foundation models leverage large databases
+of scraped information (text, code, images) from the internet to train highly capable models. This depends on the availability of public, scrapable data and leverages the “collective intelligence” of
+humanity, including the painstakingly edited Wikipedia, millennia’s worth of books, billions of
+Reddit comments, hundreds of terabytes’ worth of images, and more. They also rely on nonprofits like Common Crawl (which build and maintain open repositories of web crawl data), Creative
+Commons (for open licenses for the data used), open source libraries, and other digital infrastructure.
+They also take advantage of aggregated user preferences; e.g. the WebText dataset underlying the
+GPT family of models uses Reddit “karma scores” to select content for inclusion. All of this is
+common digital information and infrastructure that many people contribute to.
+
+The dependence of GFMs on digital commons has economic implications: much of the value
+comes from the commons, but the profits of the models and their applications may be disproportionately captured by those creating GFMs and associated products, rather than going back into
+enriching the commons. Some of the trained models have been open-sourced, some are available
+through paid APIs (such as OpenAI’s GPT-3 and other models), but many are proprietary and commercialized. It is likely that users will capture economic surplus from using GFM products, and
+some of them will have contributed to the commons, but there is still a question of whether there are
+obligations to directly compensate either the commons or those who contributed to it.
+
+In addition, there are legal and moral implications. Laws to do with copyright and fair use have
+little precedent when it comes to generative AI, but there are already multiple lawsuits challenging
+the use of public data in a variety of such GFMs, including Github Copilot, Stability AI and Midjourney (Field, 2023). Some companies, such as DeviantArt, are training models on user images,
+requiring them to opt-out (rather than opt-in) to the training set. Furthermore, artists who have released work have unwittingly been subjected to others training image models on their creations and
+creating outputs that they feel are invasive/don’t reflect the style or intent of their actual work (Baio,
+2022).
+
+GFMs put material back into the digital commons much faster than humans can, and this
+material is of unknown quality. As GFM applications proliferate, copywriting tools start to fill the
+internet with AI-generated marketing text, website copy and blog posts. Image generation tools are
+used for blog posts, presentations, and website decoration. Everyday people use language GFMs
+to help them write blog posts and articles. The large-scale characteristics of this text for many use
+cases is as yet unknown, and there are potential effects of large-scale biasing or misinformation.
+
+
+'''...'''
+
+It is difficult to determine the criteria for what generations are desirable, and to detect and
+counter undesirable generations. There are wide disagreements over the extent and criteria of
+what generations should be allowed or not (McGee, 2023). Furthermore, even if there was agreement, it is difficult to discover and mitigate all harms. Many generations are wrong or otherwise
+undesirable in subtle ways, as stated above, or ways that vary depending on context, making the
+creation of classifiers and content filters a hard task. Furthermore, the technical problems of permanently tagging/stamping data as machine-generated vs. human-generated is difficult, and there
+may be race dynamics between those developing methods to detect AI-generated content and those
+trying to outwit detectors (Yu et al., 2022). This contributes to the difficulty of ensuring safety.
+
+These generated outputs start to become part of the information commons. Conversational
+response and code auto-completion are common uses of GFMs among other products Zhang et al.
+(2020), students are already using GPT-3 tools to write convincing school essays (Woodcock, 2022),
+and people can automate the creation of mis/dis-information e.g. via fake news generation, fake
+product reviews, and spamming/phishing (Buchanan et al., 2021; Zellers et al., 2020; Adelani et al.,
+2019). Given the many undesirable properties of generated outputs, this might “pollute” Internetbased datasets, including training for future generative models.
+
+The outputs of state-of-the-art GFMs tend to be much more indistinguishable to that of humans than
+previous algorithms (Weiss, 2019). It will become increasingly difficult to tell what is AI-generated
+vs. human-generated content, and to filter one from the other. Countermeasures for distinguishing
+GFM outputs could be developed, as could new attacks that overcome those countermeasures, but
+it is likely that much GFM-created content will join the information commons as plausibly human-created content.
+
+Issues of training data quality are already cropping up with low-resource languages on Wikipedia,
+where content in Scots turns out to be patently wrong (Rivero, 2020), or most Cebuano and Swedish
+articles turn out to be bot-generated (Lokhov, 2021). Researchers generally take Wikipedia to be
+a good source of high-quality human-written content, and hence train AI on this low-quality, bot-generated content, resulting in models with lower quality output (Kreutzer et al., 2022).
+
+If GFM outputs join the commons and become part of future datasets for newer GFMs, this may
+bias newer models towards older, established patterns and make future quality improvements more
+difficult, especially if input datasets are not carefully filtered or utilized.
+
+...
+
+GFMs may erode self-determination and democracy. In many ways, GFMs could be used against
+self-determination, democracy, and even by state or semi-state actors in warfare operations e.g. by
+being used for personalized persuasion or disinformation. Genuine popular movements could also
+be discredited by being accused of being composed of GFM-generated material. Additionally, the
+content filters and other design choices are generally determined by a small team with little participation or diverse input which arguably creates an insufficiently democratic situation, especially as
+GFMs pertain to issues that impact political discussion (e.g. Meta’s Galactica AI filtered out legitimate scientific research to do with race or AIDs (Heaven, 2022)). Some of these problems may
+become less salient given the trend of open-sourcing models.
+
+GFMs may disincentivize contributions to the digital commons. People may stop writing and drawing in favor of using generative models, decreasing the production rate of new human-written material. (On the other hand, more people might engage with creating material with the aid of GFMs,
+with still significant human input, or with greater overall creative output.) Additionally, people may
+not want to release their non-GFM-enabled creations into the commons as much. Incentives to, for
+example, open-source one’s code or publish high-definition versions of one’s artwork may decline,
+because of fears of labor replacement or dislike of adding to training data e.g. not getting attribution
+or publicity, feelings of misalignment with the purpose of GFMs.
+
+It may also decrease incentives for artists to make their work legible to algorithms (e.g. artist
+Greg Rutkowski’s work has been popular for use in GFMs, because he adds alt-text to his images
+(Benzine, 2022)), which is bad for data science and ML, accessibility, and for having a free and open
+art commons. More may be hosted on private, non-scrapable services and less completely publicly,
+which gives more power to companies that wall off information (e.g. Facebook content cannot be
+scraped and used in training sets; people may publish there instead of on more open platforms like
+Artstation). This closes the digital commons off further. Overall, the digital commons may receive a
+large amount of lower quality AI-generated content, whereas the release of human-generated content
+is disincentivized."
+
+(https://www.researchgate.net/publication/369379874_Generative_AI_and_the_Digital_Commons)
+
+
+=Excerpts=
+
+==[[Generative Foundation Models]]==
+
+By Saffron Huang and Divya Siddarth:
+
+"We will use the phrase “generative foundation models” (GFMs) to refer to machine learning systems
+that are: 
+
+1) “generative” — they generate text, images, or other sequences of information based on
+some input prompt, and 
+
+2) “foundation models” — neural network models trained on a large dataset
+comprising diverse origins and content, and can be adapted to a wide range of tasks. (Machine
+learning, or ML, is sometimes also referred to as artificial intelligence, or AI). 
+
+Examples of well-known GFMs are: OpenAI’s GPT family of language models (including ChatGPT) that take in text and generate text; DALLE-2, which takes in text/images and generates images; BERT, which takes
+in text and generates text, Stable Diffusion, which takes in text and generates images; Codex, which
+takes in code (a specific kind of text) and generates code.
+
+We speak of “generative” foundation models, rather than foundation models at large, per
+Bommasani et al. (2022), because we are concerned primarily with the applicability of these models
+for generating content, such as generating text, code or images. This may include tasks such as summarization (generating a summary of a text) or text continuation (continuing the text by iteratively
+predicting the next word) or creating images and videos.
+
+Generative foundation models are a general technology, although they benefit from adaptation to
+the “downstream” tasks they are used for, e.g. by “fine-tuning” them by training on more specific
+datasets such that they can generate the appropriate material for the use context. The structure of the
+nascent industry is likely to greatly change, but at the moment there are a few key actors creating
+more general-purpose GFMs, such as OpenAI, Midjourney, EleutherAI, BigScience, and Stability.
+More-specialized companies often build off the technology released by the actors above, applying
+the technology."
+
+(https://www.researchgate.net/publication/369379874_Generative_AI_and_the_Digital_Commons)
+
+[[Category:Protocols and Algorithms]]
+[[Category:Technology]]
+[[Category:Existential Risk]]
+[[Category:Articles]]

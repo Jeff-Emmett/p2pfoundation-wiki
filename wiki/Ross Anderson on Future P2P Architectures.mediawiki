@@ -1,0 +1,26 @@
+
+
+Keynote speech on [[P2P Computing]] at WOS 2004
+
+URL = http://wizards-of-os.org/index.php?id=1420&L=3
+
+
+=Description=
+
+	
+'''Future Peer-to-Peer Architectures'''
+Saturday, 12 June 2004, 18:00, Track 1
+
+'''Ross Anderson'''. Professor in Security Engineering, Cambridge University & Chair, Foundation for Information Policy Research (FIPR), Cambridge, UK
+
+"In this talk, I will report some analysis of the foundations of peer-to-peer systems, and the development of a prototype of a next-generation system that might replace Usenet.
+
+Early peer-to-peer work, such as gnutella and my own Eternity Service, assumed a principle of solidarity -- all the content was put in one virtual container, so a censorship attack on one was an attack on all. However, the systems that prevailed in the marketplace have assumed a principle of diversity -- that each peer stores and serves its own choice of resources. We therefore analysed the tradeoffs between solidarity and diversity in defending distributed systems and can show how, past a certain cost point, users will abandon solidarity for diversity. We have also explored the mathematics of reputation systems and their vulnerability to manipulation. (See our two papers, The Economics of Censorship Resistance, and On Dealing with Adversaries Fairly.)
+
+We are now building a prototype next-generation P2P system with a view to fixing the problems of current systems. Our first target is Usenet, which exemplifies the diversity approach; each site runs only those newsgroups that are lawful locally or which, in case of doubt, the system owners are prepared to defend in court. Our design concept is that users who post articles will store them locally and submit pointers to them. A distributed hash table based on Chord will provide a high-performance cache of recently posted articles. Moderators or spam filters then provide signed lists of links to articles. Where content is subject to attack, its providers might provide local censorship-resistance using mechanisms such as Eternity servers. ISPs will host Chord servers in order to cut bandwidth demands. By providing a framework that deconstructs the component security and reliability services in an incentive-compatible way, we hope to provide a better combination of performance, scalability, spam-resilience and resistance to malicious attack."
+
+[[Category:Podcasts]]
+
+[[Category:Webcasts]]
+
+[[Category:Technology]]

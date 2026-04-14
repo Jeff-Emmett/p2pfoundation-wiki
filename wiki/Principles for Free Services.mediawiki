@@ -1,0 +1,52 @@
+
+This is from a draft document by Evan Prodromou, listed here at http://autonomo.us/wiki/Free_Service_software
+
+
+
+=Context=
+
+Evan Promodrou, 11/2008:
+
+"I was thinking about some best practises for Free Service software. By this, I mean software that's suitable for creating an [[Open Software Service]]. I've put a draft checklist on the autonomo.us wiki.
+
+http://autonomo.us/wiki/Free_Service_software
+
+Some of these guidelines might not be applicable to all kinds of software; for example, an anonymous file-sharing package  that doesn't have user accounts or identity. (Admittedly, it was hard for me to come up with a kind of Web software that didn't have some idea of user identity...)
+
+Eventually I expect to make this a blog post on autonomo.us."
+
+
+
+=Principles=
+
+This is an outline of some best practices for software to be deployed as Free Services.
+
+   
+1. It should have a Free Software license. The AGPLv3 makes a good license since it insists on sharing source with users of network services.
+   
+2. It should have features to make it easy to share the source of the running instance, especially if the software is modified. Example: Identi.ca software has a prominent "source" link on every page. (Not easy to get source of modified software, however.)
+   
+3. It should make it easy to add a license for Free Cultural Works. Ideally, the software should ship with a Free Culture license as the default.
+   
+4. It should let users select alternate licenses for their own contributions.
+   
+5. It should make data available in standard, open formats where possible.
+   
+6. It should make data available in bulk for a particular user, so they can "back up" their personal data. Example: all my blog posts.
+   
+7. It should make data available in bulk for all users, so that third-parties can fork, republish, or just analyze the site-wide data. Example: all blog posts for all users on a server. Example: XML exports of Wikipedia.
+   
+8. It should let users easily import their data from another server. Example: Carrie sets up a new blog on blogs.example.com and copies the data from her old blog to the new blog.
+   
+9. It should allow users in one security domain to communicate with users in another security domain. Example: fred@example.net can send email to jennifer@example.org.
+  
+10. It should let users on one server interact with objects on another server. For example, JackH at wikihow.com can edit pages on Wikitravel using OpenID.
+  
+11. It should let users assign an existing identity to their account. For example: Fred owns the example.net domain. He has an account on Gmail, and he can fairly easily configure that software so that email to fred@example.net will come to his Gmail inbox, and email he sends from Gmail will have "From: fred@example.net". Another example: Carrie owns the example.org domain. She gets a blog from wordpress.com, and assigns the blog.example.org name to her WordPress blog.
+  
+12. It should let users move their identities to a new account on their own server or on a competitor's server. Example: Fred can move his example.net email from Gmail to another server. Example: Carrie can move her blog to a different server, and keep the domain name she owns.
+  
+13. It should use a badge from the OKFN: http://www.opendefinition.org/ossd "
+
+
+[[Category:Standards]]

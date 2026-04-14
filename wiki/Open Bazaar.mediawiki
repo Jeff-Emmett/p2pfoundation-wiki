@@ -1,0 +1,102 @@
+'''= a pseudonymous censorship-resistant marketplace: OpenBazaar allows peers to directly and securely connect to make transactions, rather than go through a centralized marketplace (formerly DarkMarket).''' 
+
+URL = [http://go.airbitz.co/airbitz-dark-wallet-win-bitcoin-hackathon-darkmarket/]
+
+
+=Context=
+
+From a history of [[Decentralized Commerce]], by Ori Shimoni:
+
+"OpenBazaar, the most technically ambitious early cryptocurrency marketplace, emerged from a 2014 Toronto hackathon project called “DarkMarket.” The project aimed to create a censorship-resistant marketplace in response to Silk Road’s closure.
+The platform aimed to decentralize every marketplace function. It used IPFS for content hosting and a Bitcoin multisig escrow system with a buyer, seller, and participant-chosen moderator for transactions. This created a “2-of-3” signature requirement that protected both buyers and sellers while keeping funds out of platform control. For curation and discovery, it relied on a network of third-parties to index listings according to their own content policies, rather than running a centralized listings service. This separated the marketplace protocol from content moderation, allowing different search providers to serve different communities while preserving the underlying permissionless architecture.
+
+OpenBazaar and other bitcoin-based marketplaces struggled to expand beyond cryptocurrency enthusiasts. Despite lower fees and trust-minimizing mechanisms, these platforms faced significant adoption barriers: interfaces requiring technical knowledge of Bitcoin payments and wallet management, cryptocurrency volatility complicating pricing and increasing risk, and ultimately failing to provide compelling advantages over conventional e-commerce for mainstream users."
+
+([[https://docs.google.com/document/d/1kQ44sPFO2IFhz_4Vw-nGMWEScS-Dla-eeihr_xv0O2Q/edit?]])
+
+
+=Definition=
+
+"OpenBazaar is a different way to do online commerce. Instead of visiting a website, you download and install a program on your computer that directly connects you to other people looking to buy and sell goods and services with you. This peer to peer network isn't controlled by any company or organization - it's a community of people who want to engage in trade directly with each other."
+(https://openbazaar.zendesk.com/hc/en-us/articles/207982443-How-does-OpenBazaar-work-)
+
+
+=Description=
+
+'''1.'''
+
+"The technology has no centralized headquarters, meaning authorities would have to track down every OpenBazaar user individually and making it virtually impossible to shut down the entire network." [http://cointelegraph.com/post/what_s_in_a_word_darkmarket_becomes_openbazaar]
+
+"As with other goods and services on OpenBazaar, the loan is drawn up as a Ricardian-style contract that I will refer to as the loan contract for the rest of the article. The loan contract is initially written by the borrower and distributed/published on the OpenBazaar network, as the borrower is trying to convince the market to purchase their unmaterialized future good (a interest markup of the original loan amount)."
+(https://gist.github.com/drwasho/2c40b91e169f55988618)
+
+
+'''2. S. Kumar:'''
+
+"Unlike its predecessor, OpenBazaar is completely decentralized and exists wholly within the network of users themselves. In other words, even if a criminal buys guns over the peer-to-peer system, he can’t be shut down without shutting down every computer in the network (which isn’t really feasible) since there’s no central hub for law enforcement to target.
+
+The company has repeatedly made it clear that it isn’t trying to create a “Silk Road 3.0,” and lead developer Brian Hoffman told Business Insider that the company wouldn’t tolerate “misuse” of the platform, yet it’s unclear how the company would prevent illegality given its diffused architecture and professed desire to stay out of their users’ way."
+(https://fortune.com/2015/06/16/openbazaar-could-be-americas-most-dangerous-tech-startup/)
+
+=Status=
+
+This anarcho-capitalist project has not been (fully?) developed yet.
+
+
+=Discussion=
+
+'''1. by Doug Coughlin:'''
+
+"What’s in a word? 
+
+Well, looking at difference between a “free market” and a “black market” is a start. In an effort to highlight this difference, a reddit petition was initiated to better the image of Dark Market. The petition reads: 
+
+“Dark Market, the project that took first place at hackathon, should be renamed Free Market. We know that this project will get press coverage, and eventually reach major media outlets. By calling this important invention the Dark Market I'm afraid Amir et all are playing into the systems hands. If the name of the exchange is changed to Free Market, imagine the implications. News anchors will have to say on tv, "Officials are looking into banning the free market." 
+
+"The free market is an online exchange where anything can be traded tax free." "Governments are attempting to come down hard against the free market." By renaming the exchange it will FORCE a philosophical conversation about rights upon any explanation in the mainstream media. Please upvote this if you like this idea. To the moon!” 
+
+At first Taaki, who has since left the project to focus on others, including Dark Wallet, was reluctant to listen. He stated in his first reaction to the petition “People need to stop being afraid and reclaim these words of power used to control us. The Dark name evokes great imagery and sounds cool. It’s like when they used to call us pirates to shame us and the pirate party stood up and said, ‘Yeah! we are pirates!” 
+
+However, less than a week later DarkMarket has become OpenBazaar. The philosophy of the technology, whether it’s called OpenBazaar, DarkMarket, or Suzie’s Fresh Baked Cookies, should not change the focus of the software hoping to bring secure decentralized markets to the masses. Other implications can be highlighted out from the Silk Road shadow, like the fact that some this will open up a market trading products illegal in one country but not in another. An example given at the Toronto Hackathon was the purchase of asthma inhalers in the US without a prescription. 
+
+The focus of OpenBazaar will no doubt be the amount of illegal drugs that could potentially be traded on the market, hence the Silk Road comparisons. Is this the price we should pay for the sake of free markets?"
+
+(http://cointelegraph.com/post/what_s_in_a_word_darkmarket_becomes_openbazaar)
+
+
+'''2. Andy Greenberg:'''
+
+"With its distributed model, OpenBazaar would be far more resilient (than Silk Road). Instead of storing bitcoins in a hackable or seizable central repository, they would be held in so-called “multi-signature” accounts designed to prevent fraud. When an OpenBazaar user attempts to buy something, the buyer and seller choose a “notary” who serves as an independent third party in case of disputes. And two out of three of those parties—the buyer, the seller and the notary—would have to sign off on a transaction before it could be completed or the money refunded to the buyer. Notaries will be incentivized with small fees on every purchase they oversee.
+
+To keep everyone honest, buyers, sellers, and notaries all will have reputation scores stored in “web of trust” model that allows users to keep their own assessments of sellers and notaries and query each other to find out how their friends have rated those users. New users can bootstrap their reputation by “burning” a certain amount of bitcoin—permanently destroying it in a way that anyone can check on the public ledger of bitcoin transactions called the blockchain. That sort of sacrifice is designed to make serial scamming unprofitable, since ditching a reputation and creating a new one would become much more costly.
+
+Despite those clever safeguards, users should approach OpenBazaar’s untested code with caution. Patterson suggests that in its beta, no one should spend more than small amounts of bitcoin on the market, or better yet, they should use the “testnet” set up to simulate bitcoin transactions instead of real money. But the project has a two dozen contributing developers, and hopes to iterate quickly to patch its flaws. “We don’t expect people to be running store fronts any time soon,” he says. “This is really just to get a sense of what needs to be fixed.”
+
+If OpenBazaar does prove reliable and users aren’t turned off by its complexity, it could someday become a marketplace that flouts all forms of regulation, just as its filesharing equivalent Bittorrent has become a nearly unstoppable tool for copyright-infringing pirates. Patterson suggests that OpenBazaar’s creators may create a voluntary whitelist option that allow users to prevent themselves from seeing illegal products. But that filter could be turned off by any user interested in exploring OpenBazaar’s darker side.
+
+In fact, OpenBazaar’s peer-to-peer design means its creators won’t be able to stop anyone from selling anything they’d like. Hoffman admits that if users obscure their listings from the software’s search function, the developers may not even know what’s being sold. “What happens if the market turns on us and becomes flooded with [black market] material?” he asks. “Unless we go on their computers, we can’t do anything about it. The network is the network. We may never even know what it’s being used for.”
+
+(http://www.wired.com/2014/08/openbazaar-not-for-drugs/)
+
+
+==Why are there nofees to use OpenBazaar?==
+
+"Unlike eBay or other ecommerce platforms, OpenBazaar doesn't require any fees to use. It is open source and free to download and use.
+
+Users should expect to pay for services from third parties such as moderators in the case of a dispute. However, moderators aren't forced to charge fees, nor are users forced to use moderators.
+
+How can there be no fees?
+
+Because there's no company or organization running OpenBazaar, there's no one to charge you fees to list your products and no one to register an account with. The "terms and conditions" of the trade are up to the buyer and seller individually, not a one-size-fits-all policy. It's like buying or selling with someone in person - except you're online."
+
+(https://openbazaar.zendesk.com/hc/en-us/articles/203196635-Are-there-fees-to-use-OpenBazaar-)
+
+
+=More Information=
+
+* risk and trust in lending solutions at OpenBazaar: https://gist.github.com/drwasho/2c40b91e169f55988618
+
+[[Category:Business]]
+[[Category:Cases]]
+[[Category:P2P_Market_Approaches]]
+[[Category:Sharing]]

@@ -1,0 +1,62 @@
+
+
+=Discussion=
+
+==The [[People’s Cloud]] and the inevitable talent migration to P2P: the future of cloud computing is p2p!==
+
+
+Vinay Gupta argues that Bitcoin and Bittorrent show that the future of Cloud Computing is P2P:
+
+
+'''“1> Computer power is an ever-more-abundant resource.'''
+
+As a result, the data center is doomed for a variety of reasons. Yet even in such times, the temporary efficiency of the data center is bought at the price of centralization and inevitable monitoring. Capital costs of providing data center space is paid for by investors, who then greatly constrain the space of possibility in their search for the 1/1000 shot which makes a billion dollars. The inevitable collusion between large corporate interests and the State makes it all too possible that whatever data we give to social sites of various kinds will be reused later in unexpected ways. However, simply encrypting the data in the data centers leaves the pathological incentives of centralization right on the table for people to use, particularly investors looking for their next eBay.
+
+
+'''2> Bitcoin and Bittorrent’s two new products, a video streaming and file syncing utility show that P2P architectures are now mature.'''
+
+I don’t want to discuss Bitcoin as the holy grail of Libertarian currency (it isn’t) or the copyright issues around bittorrent. I just want to note that operations once considered natural targets for a data center type architecture (I’m looking at PayPal, Youtube, Dropbox) are now implemented using an architecture without massive centralized computer resources and the attendant commercial-political-intelligence risks. While these are very sophisticated products from very serious technologists, the nature of open source (well, Free Software) is that the hard parts will be standardized into reusable code libraries, and they will mature into an “environment” or “stack.”
+
+The common-carrier data center stack was called LAMP (linux, apache, mysql, php) and programmers got used to using a couple of million lines of ultratechnology as if it was Perl in the 1980s quickly enough. So once the P2P stack matures there will inevitably be easy-to-program P2P stacks which enable the construction of complex P2P applications without horrendous legwork going on under the surface being visible to the common-or-garden programmer. We really can do this: it happened with databases, it happened with heavy math libraries, it happened with 3D graphics, it happens all the time. Libraries get written, easy to use stacks are created, ordinary programmers work wonders. So P2P will go.
+
+
+'''3> There is an inevitable talent migration to P2P.'''
+
+The flow has been:
+
+* Desktop programs, to
+
+* Web sites, to
+
+* Mobile apps, to
+
+* P2P networks like bitcoin and bittorrent.
+
+As people prove you can make a lot of money on the new platform, smart young programmers move into the new territory. There’s a bloom as people throw resources at it, and then a prune as the stuff which did not work or pay dies. However, P2P apps derive most of their benefits from not needing a data center, and the dotcom industrial model is very, very good at data centers. So it’s not at all clear that conventional dotcoms will benefit much from P2P.
+
+On the other hand, applications which scale their computer resources as more and more people use them are inherently appealing to the hard-to-monetize but socially important stuff like, say, social networks which don’t spy on you and backup services which cannot reveal your data to the police. It could well stray into a replacement for DNS (domain names) as objects are referenced by their contents, or alternative ways of naming and finding things which are more suited to a P2P environment evolve. It’s likely that account-based identity systems will be replaced by object capability schemes to handle the multifaceted Confused Deputy problems inherent in P2P networking. If a sufficiently strong computational sandbox can be found, apps could even move other apps / compute tasks around. The goal, really, is to never have a computer on the network idle. The reward is killing the data center and the financial structures that created it and all the eyes which go with it. Your computers collectively form the #peoplescloud and there’s no reason not to leave them on all night. Shared abundant resources create new ecologies.
+
+
+'''4> #PeoplesCloud is a logical extension of Free Software.'''
+
+It is now practical to share computing power to get rid of the data center, in much the same way that it became practical (with time and effort) to get away from the monopoly OS vendors for at least a substantial subset of people. Stallman always said that the dotcom boom was produced by a bug in the GPL: it did not cover “software as a service” as “distribution” and therefore did not force dotcoms running on the LAMP stack to release source code to their users, even if every component on which they built was Free Software. Only a fool would allow closed-source P2P applications on to their computers (I’m looking at Spotify and Skype right now, open on my desktop, and yes, I am a fool.) But the long term trend in a People’s Cloud environment is going to be towards Free Software simply because People’s Cloud empowers Free Software vastly more than it empowers dotcoms which could pay for data centers will all that lovely investor’s money. People’s cloud differentially empowers people without money for data centers. People’s cloud makes it possible to scale to global reach without having millions of dollars of donations as for wikipedia.
+
+The crux of this is that People’s Cloud architectures extend the basic concepts of Free Software to the data center. It’s self-reliance, Swadeshi, for the internet age. And it’s coming, whether people like it or not.
+
+You may also enjoy Petascale Urban Computing which examines how mesh networking could work in cities. People’s Cloud on Petascale Urban Computing is the next logical step in this progression, where the semantic indexing of the People’s Cloud meets the need for network-topological indexing in the Petascale Urban Computing environment.
+
+The result is Meshes which function like Metacomputers."
+(http://vinay.howtolivewiki.com/blog/other/peoples-cloud-architecture-and-futures-in-1000-words-3383)
+
+
+=More Information=
+
+Compiled by Smari McCarthy:
+
+#Infrastructure for the distributed cloud: https://pagekite.net/
+#Cloud computing: Centralization and data sovereignty: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2167372
+#Cloud computing: Legal issues in centralized architectures: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2097146
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

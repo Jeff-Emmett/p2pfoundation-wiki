@@ -1,0 +1,397 @@
+'''Linux is a [[Free Software]] based operating system for computers.'''
+
+It uses [[Peer Production]] methods and can be considered a [[Virtual Network Organization]].
+
+The material below especially looks at its [[Peer Governance]] structure.
+
+More similar cases via the entry on [[Open Source Software - Governance]]
+
+
+== Definition ==
+
+"Linux is the *kernel* of an [[Operating System]] very similar to Unix originally authored by Linus Torvalds.  Some insist the name [[GNU/Linux]] be used when referring to the entire [[Operating System]] because the kernel alone is almost unusable without the [[GNU]] libraries and tools that make up most of the rest of a [[Distro]]."
+
+== History of Linux ==
+
+====1. By George Dafermos====
+at http://www.firstmonday.org/issues/issue6_11/dafermos/
+
+"In 1971, Richard Matthew Stallman (RMS), started working at MIT's AI Lab. At the time, the AI (artificial intelligence) Lab was regarded as the heaven for most computer programmers as it gave rise to many innovations, contributing to the development of ARPAnet in 1969 (the ancestor of the Internet). Around MIT, an entire culture was built that defined programmers as scientists and members of a networked tribe because ARPAnet enabled researchers everywhere to exchange information, collaborate and hence, accelerate technological innovation (Raymond, 1999a). After all, one of the motivations for launching ARPAnet was to connect communities of computer programmers in order to share their programs and knowledge.[1]
+
+Programming for 'hackers' was the ultimate pleasure and nothing but programming mattered. Their home had become the AI Lab. They defined themselves through programming and the hacker culture was their religion (Levy, 1984). They were scientists and as such, their creations-discoveries (software) should be available to everyone to test, justify, replicate and work on to boost further scientific innovation. Software is code (or source code) and the code they developed was available to everyone. They could not conceive that software would have been copyrighted some day.
+
+RMS was fascinated by this culture and spent nearly ten years at the AI Lab until in 1981 a company called Symbolics hired all AI Lab programmers apart from two: one of them was RMS. The era of commodification of software had begun and increasingly more hackers entered the payroll to develop proprietary software whose source code was well guarded as a trade secret. RMS was so frustrated that his community had been destroyed by Symbolics and proprietary software. He decided to embark on a crusade that has not been matched before or since: re-build the hacker community by developing an entire free operating system. For him, "free" means that the user has the freedom to run the program, modify it (thus the user needs to be provided with the source code), redistribute it (with or without a fee is irrelevant as long as the source code is been provided with the copy) or redistribute the modified version of it. The term "free software" has nothing to do with price. It is about freedom.[2]
+
+In 1984, he started his GNU (it stands for GNU's Not Unix) project which meant to become a free alternative of the Unix operating system and in 1985 he founded the Free Software Foundation (FSF). To ensure that GNU software would never be turned into proprietary software, he created the GNU General Public License (GNU GPL).[3]
+
+The GNU GPL outlines the distribution terms for source code that has been "copylefted" with guidelines from the FSF. Copylefting involves copyrighting a program and then adding specific distribution terms that give everyone the right to use, modify and redistribute the code. The distribution terms of the GPL are 'viral' in the sense that derivative works based on GPL'd source code must also be covered by the GPL. As a result, other programs that use any amount of GPL'd source code must also publicly release their source code. Therefore, GPL'd code remains free and cannot be co-opted by proprietary development.[4] In fact, the Linux OS is licensed under the GNU GPL and uses most of the GNU programs. That is why it is often referred as GNU/Linux.
+
+During his crusade, he wrote powerful, piece-of-art software that could be both used by programmers as programming tools and also provide 'pieces' that when combined would eventually make up his dream: the GNU operating system. His software appeals to many programmers and so, the pool of GPL'd software grows constantly bigger. He remains a strong advocate of all aspects of freedom, and he sees free software as the area he can contribute the most.[5]
+
+However, at a historic meeting in 1997, a group of leaders in the Free Software Foundation came together to find a way to promote the ideas surrounding free software to large enterprises as they concluded that large companies with large budgets were the key drivers of the software industry. "Free" was felt to have too many negative connotations to the corporate audience and so, they came up with a new term to describe the software they were promoting: Open Source.[6] Stallman was excluded from this meeting because "corporate friendly" is no compliment in his book.[7]
+
+They concluded that an Open Source Definition and license were necessary, as well as a large marketing-PR campaign. The "Open Source Definition and license[8] adhere to the spirit of GNU (GNU GPL), but they allow greater promiscuity when mixing proprietary and open source software".[9]
+
+Apparently this strategy has worked wonders since then: key players of the industry (IBM, Netscape, Compaq, HP, Oracle, Dell, Intel, RealNetworks, Sony, Novell and others) have shown great interest in the Open Source Movement, its development and business model and open source products. These days, an equivalent economic web around Open Source exists, in which for example, many companies offer support services and complementary products for Open Source products [10]. In addition, there is plenty of favourable press coverage and even Microsoft regards Open Source as a significant competitive threat (Valloppillil, 1998).
+
+In 1991, Linus Torvalds made a free Unix-like kernel (a core part of the operating system) available on the Internet and invited all hackers interested to participate. Within the next two months, the first version 1.0 of Linux was released. From that point, tens of thousands of developers, dispersed globally and communicating via the Internet, contributed code, so that as early as in 1993, Linux had grown to be a stable, reliable and very powerful operating system."
+(http://www.firstmonday.org/issues/issue6_11/dafermos/)
+
+====2. Eric Raymond, on the historical importance of Linux:====
+
+"Linux was the first project for which a conscious and successful effort to use the entire world as its talent pool was made. I don't think it's a coincidence that the gestation period of Linux coincided with the birth of the World Wide Web, and that Linux left its infancy during the same period in 1993 - 1994 that saw the takeoff of the ISP industry and the explosion of mainstream interest in the Internet. Linus was the first person who learned how to play by the new rules that pervasive Internet access made possible. While cheap Internet was a necessary condition for the Linux model to evolve, I think it was not by itself a sufficient condition. Another vital factor was the development of a leadership style and set of cooperative customs that could allow developers to attract co-developers and get maximum leverage out of the medium. But what is this leadership style and what are these customs? They cannot be based on power relationships - and even if they could be, leadership by coercion would not produce the results we see."
+(http://www.catb.org/%7Eesr/writings/cathedral-bazaar/cathedral-bazaar/index.html#catbmain)
+
+== Linux Organization ==
+
+From George Dafermos at http://www.firstmonday.org/issues/issue6_11/dafermos/
+
+"Linus cultivated his base of co-developers and leveraged the Internet for collaboration. The Open Source self-appointed anthropologist, E. Raymond explains that the leader-coordinator for a 'bazaar style of effort' does not have to be an exceptional design talent but to leverage the design talent of others (Raymond, 1998a).
+
+However, "the Linux movement did not and still does not have a formal hierarchy whereby important tasks can be handled out ... a kind of self-selection takes place instead: anyone who cares enough about a particular program is welcomed to try" [11]. But if his work is not good enough, another hacker will immediately fill the gap. In this way, this 'self-selection' ensures that the work done is of superb quality. Moreover this "decentralisation leads to more efficient allocation of resources (programmers' time and work) because each developer is free to work on any particular program of his choice as his skills, experience and interest best dictate" (Kuwabara, 2000). In contrast, "under centralised mode of software development, people are assigned to tasks out of economic considerations and might end up spending time on a feature that the marketing department has decided is vital to their ad campaign, but that no actual users care about".[12]
+
+The authority of Linus Torvalds is restricted to having the final word when it is coming to implementing any changes (code that has been sent to him). On the other hand, he cannot be totalitarian since everything is done under perfect transparency. Most communication takes place at the Linux mailing list (which serves as a central discussion forum for the community and is open to the public) and Linus has to justify all his decisions based on solid technical arguments. The management's accountability is essential and only by earning the community's respect, leadership can be maintained.[13]
+
+There is only one layer between the community of Linux developers and Linus: the "trusted lieutenants". They are a dozen hackers that have done considerably extended work on a particular part of the kernel to gain Linus' trust. The "trusted lieutenants" are responsible to maintain a part of the Linux Kernel and lots of developers sent their patches (their code) directly to them, instead of Linus. Of course, apart from Linus that has encouraged this to happen, this informal mechanism represents a natural selection by the community since the "trusted lieutenants" are recognised [by the community] as being not owners but simple experts in particular areas [14] and thus, their 'authority' can always be openly challenged. This does not mean that Linus has more influence than they have. Recently, "Alan Cox (one of the "trusted" ones) disagreed with Linus over some obscure technical issue and it looks like the community really does get to judge by backing Alan and making Linus to acknowledge that he made a bad choice".[15] 
+
+What made this parallel, decentralised development feasible is the highly modular design of the Linux kernel. "It meant that a Unix-like operating system could be built piecemeal, and others could help by working independently on some of the various components".[16] Modularity means that any changes done, can be implemented without risk of having a negative impact on any other part of the kernel. Modularity makes Linux an extremely flexible system and propels massive development parallelism [17] and decreases the total need for coordination.[18]
+
+Open Source programmers write software to solve a specific problem they are facing, 'scratching their personal itch' as E. Raymond points out (Raymond, 1998a). Once they have done so, they can choose either to sit on the patch or give it away for free and hope to encourage reciprocal giving from others too (Raymond, 1999c). But it is the 'hacker ethic' and the community dynamics that provide strong incentives to contribute. First of all, the process of developing such software is quite pleasurable to them. "They do not code for money, they code for love"[19] and they tend to work with others that share their interest and contribute code. They enjoy a multiplier effect from such cooperation (Prasad, 2001) and "when they get the opportunity to build things that are useful to millions, they respond to it".[20]
+
+In addition, the Linux community has dealt with the lack of centralised organisation through an implicit reputation system that characterises the Open Source (OS) community (Kuwabara, 2000). OS programmers have always being unconsciously keen on gaining the community's respect ("seek peer repute") and the best way to do so is by contributing to an already existing project that is interesting enough or has created enough momentum within the community (Raymond, 1998b).
+
+Massive parallel development is evident in the case of Linux. "In a conventional software development process, because of economic and bureaucratic constraints, parallel efforts are minimized by specifying the course of development beforehand, mandated by the top. In Linux, such constraints are absent since Linux is sustained by the efforts of volunteers. In the 'Cathedral', parallelism translates to redundancy and waste, whereas in the 'Bazaar', parallelism allows a much greater exploration of a problem-scape for the global summit and the OSS process benefits from the ability to pick the best potential implementation out of the many produced". Thereafter, (apart from quality and innovation), social learning is maximized in a 'bazaar style' of development (Figure 10) [21].
+
+Linux has a parallel release structure: one version (1.2.x and 2.0 series) is stable and 'satisfies' the users that need a stable and secure product, and another version (2.1.x series) is experimental and 'cutting-edge' and targets advanced developers [22].
+
+The significance of the parallel release structure should not be underestimated. All decision-making situations face a trade-off: exploration versus exploitation. This principle states clearly that the testing of new opportunities comes at the expense to realising benefits of those already available and vice versa (Holland, 1975; March, 1991; Axelrod and Cohen, 1999). The obvious organisational implication is that whenever resources are allocated to the search for future innovation, resources dedicated to the exploitation of existing capabilities are sacrificed and vice versa. This trade-off is fundamental to all systems and vital to their ability to evolve and survive; a favourable balance is therefore critical (Kauffman, 1993).
+
+Surprisingly, this trade-off is not applicable to Linux: the parallel release structure ensures that both present and future (potential) capabilities are harnessed and this renders Linux extremely adaptive to its environment and also ensures the highest level of innovation and organisational learning."<br />
+(http://www.firstmonday.org/issues/issue6_11/dafermos/)
+
+== Linux Governance ==
+
+=== Jeremy Malcolm on the balance between hierarchy and control ===
+
+From the Book, [[Multi-Stakeholder Governance and the Internet Governance Forum]]. Jeremy Malcolm. Terminus, 2008, draft of chapter 4:
+
+"In the case of the Linux kernel, Torvalds who is perhaps the archetype of a [[Benevolent Dictator]] For Life, possesses ultimate authority to decide which contributions (”patches”) to the Linux operating system kernel should be accepted and which should be refused. Torvalds no longer personally manages the whole of the kernel and has delegated authority to a number of trusted associates to manage particular subsystems and hardware architectures, but it remains his authority to appoint these so-called “lieutenants” and to supervise their work. A document distributed with the Linux kernel source code that is subtitled “Care And Operation Of Your Linus Torvalds” describes him as “the final arbiter of all changes accepted into the Linux kernel.”
+
+Thus contrary to what might be assumed from Raymond’s claim about “the Linux archive sites, who’d take submissions from anyone,” the Linux kernel development process is neither anarchistic nor consensual: if Torvalds does not like a patch, it does not go in to the kernel. This has often antagonised other kernel developers, one of them commencing a long-running thread on the kernel development mailing list by saying:
+
+- Linus doesn’t scale, and his current way of coping is to silently drop the vast majority of patches submitted to him onto the floor. Most of the time there is no judgement involved when this code gets dropped. Patches that fix compile errors get dropped. Code from subsystem maintainers that Linus himself designated gets dropped. A build of the tree now spits out numerous easily fixable warnings, when at one time it was warning-free. Finished code regularly goes unintegrated for months at a time, being repeatedly resynced and re-diffed against new trees until the code’s maintainer gets sick of it. This is extremely frustrating to developers, users, and vendors, and is burning out the maintainers. It is a huge source of unnecessary work. The situation needs to be resolved. Fast.
+
+Torvalds’ initially unapologetic response recalls another classic example of his sardonic view of his position as BDFL, when announcing the selection of a penguin logo for Linux. Acknowledging the comments of those who had expressed reservations about it, Torvalds concluded with the quip, “If you still don’t like it, that’s ok: that’s why I’m boss. I simply know better than you do.”
+
+=== George Dafermos on the four-fold structure ===
+
+"Linux relies on four structural layers that are comprised by the leader (Torvalds), the "trusted lieutenants", the "pool of developers" and the Open Source community. Even though the community layer does not appear to be part of the Linux structure at first glance, it is in fact incorporated in it and has significant influence over the Project. The pattern of the layers cannot be said to be vertical but rather horizontal if there has to be a hierarchical classification.
+
+This structure is not paradox if we consider the technical objectives of Linux as a project: quality and flexibility. For such quality and flexibility to be achieved, a system ensuring the highest quality and flexibility had to be in place. This mechanism takes shape in the form of emergent leadership and emergent task ownership which implies that all decisions and hierarchical positions can be openly challenged so as the best decision is reached and the most capable individual is chosen. Naturally, the prerequisites for such a style of managing are product and decision-making transparency and Linux has embraced both from its inception.
+
+Consequently, this transparent 'collaborative-community centred' management is by far the greatest innovation of Linux and the key enabler for limitless value extraction out of the 'knowledge functions' since all organisational members including the surrounding community are encouraged to freely share information.
+
+The "trusted lieutenants" is a support value stream/function and not an additional layer since the developers (can) go directly to Torvalds, and the developers are the primary value stream. This is a pure network structure as all the participants have access to all the nodes of the system. Accordingly, the flow of information is 'networked' since all stakeholders have access to every occurring communication through the mailing list.
+
+The Linux Project is characterised by flow of information within the entire organisation, implying among the thousands of developers, Linus Torvalds and the "trusted lieutenants". All of them have access, can engage into all occurring conversations and can communicate directly with every other member-implementer through discussion forums, mailing lists, and newsgroups. But the flow of information is not restricted only within implementers but it extends to the global community reaching virtually everyone interested, including commercial companies (i.e. Sygnus Solutions, SuSe, Red Hat, VA Linux) that provide support services and packaged distributions, computer scientists that may have not been involved directly (as implementers), companies that consider adopting open source software for their own internal use, users that need help from experts and anyone interested or curious enough to observe or even participate in any given conversation. Access to the various open source-related Web sites, discussion forums, etc. is open to the public and all interested parties."
+(http://www.firstmonday.org/issues/issue6_11/dafermos/)
+
+=== Business Week on The Professionalization of Linux ===
+
+The following article by Business Week is the result of an in-depth investigation regarding the actual production of Linux:
+
+“Little understood by the outside world, the community of Linux programmers has evolved in recent years into something much more mature, organized, and efficient. Put bluntly, Linux has turned pro. Torvalds now has a team of lieutenants, nearly all of them employed by tech companies, that oversees development of top-priority projects. Tech giants such as IBM (IBM ), Hewlett-Packard (HPQ ), and Intel (INTC ) are clustered around the Finn, contributing technology, marketing muscle, and thousands of professional programmers. IBM alone has 600 programmers dedicated to Linux, up from two in 1999. There's even a board of directors that helps set the priorities for Linux development. Not that this Inc. operates like a traditional corporation. Hardly. There's no headquarters, no CEO, and no annual report. And it's not a single company. Rather, it's a cooperative venture in which employees at about two dozen companies, along with thousands of individuals, work together to improve Linux software. The tech companies contribute sweat equity to the project, largely by paying programmers' salaries, and then make money by selling products and services around the Linux operating system. They don't charge for Linux itself, since under the cooperative's rules the software is available to all comers for free."
+(http://www.businessweek.com/magazine/content/05_05/b3918001_mz001.htm?)
+
+The article also explains that in essence, the cooperative methodologies are intact, we paraphrase: “it’s still a pure meritocracy, with code open for all to see, it’s the best and most dedicated who rise to the top of being Torvarld’s top aides. No orders are given, everybody knows what they want to do, and just do it . Linus has power, but he doesn’t have it by fiat, but because people trust him. The process is: 1) individuals submit patches; 2) maintainers, responsible for specific functions improve them; 3) Torvalds and top aide Morton review them, suggest changes, and eventually add them to the kernet, aided by management software; 4) every 4 to 6 weeks, a new test version is sent out and thousands of individuals test it. It’s managed by a series of contentric circles. The first circle is a venture capital backed Open Source Development Labs with a board of directors which sets priorities; the second circle are the Linux distributors such as Red Hat and Mandrake, who pick up a new version once a year and sent it to their corporate customers. However, there is no bowing and scraping to the rich and powerful, and corporate managers do not directly pressure the community. ‘Software coups’ are rejected by the community."
+
+=== Nicholas Carr on the Cathedral that governs the Bazaar ===
+
+"the open source model — when it works effectively — is not as egalitarian or democratic as it is often made out to be. Linux has been successful not just because so many people have been involved, but because the crowd’s work has been filtered through a central authority who holds supreme power as a synthesizer and decision maker. As the Linux project has grown, Torvalds has gathered a hierarchy of talented software programmers around him to help manage the crowd and its contributions. It’s not a stretch to say that the Linux bureaucracy forms a cathedral that coordinates the work of the bazaar and molds it into a unified product."
+(http://www.strategy-business.com/press/article/07204?pg=1)
+
+== Special Governance Topics ==
+
+=== Virtual Roofs ===
+
+Concept to characterize the management structure in [[Peer Production]] projects such as Linux.
+
+George Dafermos:
+
+"The virtual roof is the common denominator of the users, the implementers and the surrounding community and acts as intermediary (as a trusted third party) to ensure trust in a largely anonymous virtual marketplace by providing an electronic platform whereby network communication is nurtured.
+
+However, the virtual roof has no power to delegate authority or abuse its power in favour of either the implementers, the users or the surrounding community by establishing asymmetries of information.[23]
+
+The main reason is its transparent nature - open to the public and all "transactions" are visible. It is based on the mutual realisation (among the various members) of the long-term benefits that are impeded by a potential abuse of power and asymmetries of information. This is the organisational 'copyleft'. Deep down, it is the system of 'lean production' modified to create trust in the public, hence it extends its reach to include also the users and the global community.
+
+All the virtual roof can do, is enforce common standards-rules of practice (that facilitate collaboration and decentralised development) that are approved by the community.
+
+In a virtual roof, people can gather, talk, share ideas, spread information, announce projects and get community support.[24] These online communities, once formed, make new relationships possible: direct user-implementer interaction. The 'implementers talking to the users mechanism' is possible in any project depending on one thing: the level of dedication by the surrounding community to the project [25], and this is why virtual roofs exist: to establish trust, enable critical relationships that would be otherwise impossible on any significant scale and orchestrate decentralised efforts towards a centralised goal.
+
+Virtual roofs dedicated to global (user-oriented) communities are essential to the life of projects whose success depends on the dedication of the surrounding global community and utilising geographically dispersed resources under no central planning. In such places, leadership is emergent and has a dual objective: give direction and momentum to the project."
+(http://www.firstmonday.org/issues/issue6_11/dafermos/#note21)
+
+=== How IBM contributes to Linux ===
+
+"IBM's contributions to the Linux “community” are shaken by an IBM document as follows:
+Participation in communities involves not only contributing code developed at IBM, but also augmenting,
+testing, and deploying code developed by others to ensure that it meets community and user expectations.
+IBM engineers also contribute to other aspects of open source development required to deliver enterpriselevel
+functionality. They develop documentation for open source projects and the IBM Information Center, an
+online repository for Linux and open source-oriented information. Engineers from the LTC actively contribute
+best practices to IBM developerWorks. Additionally, IBM engineers also have been involved in developing
+Linux test suites and methodology, including the Linux Test Project, which IBM maintains. The goal of the
+Linux Test Project is to deliver test suites to the open source community that validate the reliability,
+robustness, and stability of Linux. In addition to IBM-sponsored / hosted efforts, it also contributes to parallel
+community efforts such as developing autotest as part of test.kernel.org. Furthermore, IBM collaborates with
+the academic community on Linux and Open Source development for higher platforms by contributing
+System z and System p platforms, simultaneously providing learning opportunities to ensure continuity of
+skills and University-hosted access to these platforms for the broader Open Source development community.(IBM: 2008:2)
+(http://www-03.ibm.com/linux/)
+
+Case study: [[IBM and Linux]]
+
+== Discussion 1: Challenging interpretations of Linux as self-governing ==
+
+=== The co-dependence of Linus Torvalds ===
+
+By Lee Fleming (Harvard Business School), David M. Waguespack (University of Maryland):
+
+Rivlin (2003) illustrates how
+Linus Torvalds (the original author of LINUX) realizes
+that his authority is technically derived, tenuous, and
+constantly in need of collective reaffirmation:
+
+
+“''His hold over Linux is based more on loyalty than legalities.
+He owns the rights to the name and nothing else.
+Theoretically, someone could appropriate every last line
+of his OS [operating system] and rename it Sally. “I
+can’t afford to make too many stupid mistakes,” Torvalds
+says, “because then people watching will say, hey, maybe
+we can find someone better. I don’t have any authority
+over Linux other than this notion that I know what I’m
+doing.” He jokingly refers to himself as “Linux’s hood
+ornament,” and he’s anything but an autocrat. His power
+is based on nothing more than the collective respect of
+his cohorts''.”<br />
+(http://orgsci.highwire.org/cgi/content/abstract/18/2/165)
+
+=== A contrarian view: Linux as a dictatorship ===
+
+By Dr. Nikolai Bezroukov [http://www.softpanorama.org/People/Torvalds/index.shtml]
+
+We recommend reading this alternative profile of Linus Torvalds, which is highly critical at
+http://www.softpanorama.org/People/Torvalds/index.shtml:
+
+"Another very popular fairytale is that Linus Torvalds was a volunteer -- this might be true only for the first two years of development. The development of Linux kernel quickly switched to the model of "sponsored software" development. The first sponsor was University of Helsinki which gave Linus semi-official possibility to develop kernel in working hours. Later he got non-disclosed Transmeta salary and stock options (association with Linus was a bad move for Transmeta that probably prevented potentially fruitful partnership with VMware, but it did ensured a successful IPO). Crazy Linux IPO gold rush remunerated Linus quite nicely, probably on the level very few leading commercial Unix developers enjoy: in just three years after arriving in California Linus Torvalds became a multimillionaire. I would say that since 1999 Linus Torvalds was probably the most highly paid developer in the Unix world. So much for a volunteer fairy tail.
+
+This chapter also offers support for the hypothesis that Linux startups never operated in true market. It's some kind of artificial market as artificial as the existence of Red Hat after 2000. For those that eventually manage to get to IPO (Red Hat, VA Linux, Caldera) from the beginning it  was as close to the typical "Internet bubble" financial scam as one can get. Most startups that survived the burst of Internet bubble were essentially front-ends of bigger companies (Red Hat and Suse are two examples).
+
+Yet another fairytale (that actually is a part of "Raymondism") is that Linus invented new software development model: a  democratic (bazaar) distributed development. Actually Linus operated and operates like a dictator and rules the development of the kernel with an iron fist, especially since version 2.0. What was really new is that along with technical talent Linus Torvalds proved to be a brilliant PR person who played a significant role in Linux gold rush (Red Hat and VA Linux IPOs) and in the controversial success of the Transmeta IPO. I would argue that the real role of Linus Torvalds in Transmeta (up to the IPO) had a significant (or may be even primary) marketing load. 
+
+Another popular myth is the Linus was invented Linux -- actually at the beginning Linux was a pretty straightforward reengineering project. Technically it was interesting until version 1.x when it was both tiny and capable OS. After that in no way Linux kernel can be considered a technical achievement in a way the original Unix kernel and Unix environment were. Yes it was and is an important social achievement, but technically speaking Linux is a pretty boring, conservative reimplementation of Unix. Moreover, during the first ten years of development covered in this chapter Linux definitely failed to surpass in quality FreeBSD that used for development a tiny fraction of resources in comparison with Linux. Some kernel subsystems remained inferior to FreeBSD up to 2002 (the end of the period covered in the chapter). It's also important to understand that Linux, while an exciting example of collaborative Internet-based development of a Unix clone, doesn't really have a design. It's a software development project based on a 'reference model'.
+
+I would argue that with all its great democratic social value, technically Linux looks more like neo-conservative revolution similar to Newt Gingrich "Contract with America" thing (fight corruption, waste in government spending, tax reform and a balanced budget, etc.), largely directed against Microsoft. It's difficult to see Linux as a technological advance. True innovators explore ideas that will render something obsolete – as automobiles made livery stables obsolete. I think that scripting languages like Perl, Python and TCL are the only real and significant innovation that can be attributed to open source movement. At the same time classic monolithic kernel that Linux is based upon are CS orthodoxy and are much less innovative than, say, Plan 9 or Be OS, or even Amiga. The most innovative things in Unix space for the last 10 years were domain of commercial developers (Sun's RPC, proc filesystem, Pluggable authentication modules (PAM), NFS, Trusted Solaris RBAC implementation,  Solaris on the fly updates, AIX Volume manager, to name a few) as well as research institutions (Kerberos, Amoeba, Plan 9, etc. ).  Linux record in innovation looks extremely unconvincing for such a mature stage of development (over 10 years).
+
+This orthodoxy -- the fundamental resistance to anything non-traditional makes Linux success really a neo-conservative type of success. You can consider Linux to be a new super BIOS for PC and that in this role the conservatism is of  paramount importance. Although it serves as an democratic alternative to Microsoft, Linux in its own turn inhibits grows of alternative OSes, contributing to the lack of diversity, and ultimately lack of innovation that are so characteristic for present stage of software engineering. For example OS/2 has a very neat idea of using the same scripting language both as a shell and as a macrolanguage as well as the idea of user-defined (extended) attributes in the filesystems.  Both Amiga and BeOS contained innovative features (for example, it was Amiga which introduced REXX as an OS shell),  Nothing similar can be said about Linux. Neither Linux kernel  not any distribution were able to introduce any innovations worth mentioning. All Linus Torvalds was concerned was the speed of running on Intel hardware and as Knuth aptly observed "premature optimization is the root of all evil."  That's essentially the tragedy of Linus life: he have spend way too much time on premature optimization. From this point of view the success of Linux is a manifestation of a deep crisis in system engineering as Bob Pike noted in his paper. It's a definite sign that computer science is coming into its middle age and is experiencing "middle age crisis". 
+(http://www.softpanorama.org/People/Torvalds/index.shtml)
+
+=== Linus Torvalds admits he's a dictator ===
+
+"Open source may sound democratic, but it isn't. At the LinuxWorld Expo on Wednesday, leaders of some of the best-known open source development efforts said they function as dictators.
+
+The ultimate example is Linux itself. Creator Linus Torvalds has final say over all changes to the kernel of the popular open source clone of Unix. Because the Linux development community has grown so large, most software patches are reviewed by many different people before they reach him, Torvalds said.
+
+If he rejects a patch, it can mean a lot of other people threw a lot of effort down the drain, he said. However, it enables him to keep Linux organized without spending all of his time on it, he added.
+
+"''My workload is lower because I don't have to see the crazy ideas," Torvalds said. "I see the end point of work done for a few months or even a year by other people''."
+
+One can immediately see elements that are foreign to the Bazaar style in the current stage of the Linux kernel development as described by the principal author of the kernel. It looks more like a highly centralized (Cathedral) development model. For example you cannot communicate with Linus directly but need to supply patches to his trusted lieutenants. If the patch is rejected, there is no recourse, which sounds pretty un-democratic."
+(http://www.firstmonday.org/issues/issue4_12/bezroukov/index.html)
+
+=== Linus was a manager ===
+
+The following article challenges the view of Peer Governance as self-organizing.
+
+Originally published at http://www.lotus.com/developers/devbase.nsf/articles/doc2000091200#top, but no longer available at that URL.
+
+Cited here at http://www.softpanorama.org/OSS/webliography.shtml 
+
+"Linus Torvalds pulled off a great feat of software engineering: he coordinated the work of thousands of people to create a high-quality operating system. Nevertheless, the basic method was the same Raymond used for fetchmail. Torvalds was in charge of Linux. He made all major decisions, assigned subsystems to a few trusted people (to organize the work), resolved conflicts between competing ideas, and inspired his followers.
+
+Raymond provides evidence of Torvalds's control over Linux when he describes the numbering system that Torvalds used for kernel releases. When a significant set of new features was added to the code, the release would be considered "major" and given a new whole number. (For example, release 2.4 would lead to release 3.0.) When a smaller set of bug fixes was added, the release would get just a new minor number. (For example, release 2.4 would become 2.5.) But who made the decisions about when to declare a major release or what fixes were minor? Torvalds. The Linux project was (and still is) his show.
+
+Further proof of Torvalds's key role is the fact the development of Linux slowed to a crawl when Torvalds was distracted. The birth of his daughter and his work at Transmeta corresponded precisely with a period of slow progress for Linux. Why? The manager of Linux was busy with other things. The project could not proceed efficiently without him.
+
+Finally, there is a quote from Torvalds himself during an interview with Bootnet.com. "Boot : You've got a full slate of global developers who are working on Linux. Why hasn't it developed into a state of chaos? Torvalds : It's a chaos that has some external constraints put on it. … the only entity that can really succeed in developing Linux is the entity that is trusted to do the right thing. And as it stands right now, I'm the only person/entity that has that degree of trust."
+
+So, if the open source model is not a bazaar, what is it? To the certain consternation of Raymond and other open source advocates, their bazaar is really a cathedral. The fetchmail and Linux projects were built by single, strong architects with lots of help -- just like the great cathedrals of Europe. Beautiful cathedrals were guided by one person, over many years, with inexpensive help from legions of workers. Just like open source software is. And, just as with open source software, the builders of the cathedrals were motivated by religious fervor and a divine goal. Back then, it was celebrating the glory of God, now it is toppling Bill Gates. (Some people think these goals are not so different.)"
+(http://www.softpanorama.org/OSS/webliography.shtml )
+
+== Discussion 2: Generalities about [[Peer Governance]] ==
+
+=== Political behaviour and power in [[Open Source]] Communities ===
+
+"Ignoring political behavior and hierarchical structures in the open source community means ignoring reality. In the OSS community as a whole, and in each project in particular, there are political systems with corresponding and sometimes fuzzy hierarchical structures. That fact can explain many of the irrational behaviors in the OSS movement. Why else would some distort or withhold information, restrict their output, overpublicize their successes, hide their failures, distort statistics or otherwise engage in activities that appear to be at odds with OSS goals?
+
+Power in social relationships is usually defined as the ability to force the other persons to do something that they would not do otherwise. It is symbolized in status. Power is a function of dependence, enabling one to manipulate the behaviors of others. For example, Linus Torvalds has considerable power because he can accept or reject patches from other developers. Power is a complex phenomenon that has many dimensions. Among them I would like to mention persuasive power- control on allocation and manipulation by symbolic rewards valued by the group (the open source press has this kind of power and from this point of view is a political superstructure) and knowledge poweror access to unique information. If an individual controls unique information and that information is needed to make important decisions than that individual has knowledge-based power and can exercise it. When people get together in open source activities power links and coordinates will be established. It's only a matter of time when power will be exerted.
+
+We will define political behaviors as those activities that are not required as part of one's role in a given open source project or movement, but that influence, or attempt to influence, behavior of other members within the group. Some of these acts are trivial like flaming, bypassing chain of commands, forming coalitions, obstructing unfavorable decision of the leader or developing contacts outside the group to strengthen one's position within the group. Other are borderline like in-fighting, sabotage, whistle blowing and public protests that affect status of the project or movement as a whole. Most politics in open source communities is trivial although some individuals try to play "hardball". It's quite pragmatic; borderline political behaviors pose a very real risk of group sanctions, including loss of both status and membership in the project or group.
+
+As more status in open source becomes more connected with reward allocation there will be more political maneuvering. This is a typical problem for leaders in any kind of project. CatB describes the leaders of OSS projects as democratic individuals. But, in practice, key developers tend to see their position as a license to make unilateral decisions. These leaders fought hard and often paid high personal costs to achieve their status. Sharing their power with others runs directly against their own aims and ambitions, although too tight of a grip can lead to undesirable consequences. The notion that the "principle of command" is abolished and of an "anarchist's paradise"in CatB are oversimplifications. The history of OSS projects provide plenty of convincing counterexamples.
+
+Actually all major OSS projects are hierarchically structured. This structure allows the head of a given project to dictate his will, which if necessary can be defended by political means - by direct exercise of power as in the example above. The claim that "They cannot be based on power relationships" has pretty superficial connections with reality.
+
+For the same reason, knowledge sharing has its limits in OSS. We will discuss this later in more detail when I examine the concept of "egoless programming". Knowledge-based power is one of the most effective means to force others to perform as desired. Competence is the most legitimate source of political power and status in the OSS movement. No leader will ever distribute all the information he possess because ultimately it undermines his power. Actually, it is often physically difficult for a given leader to distribute all information given that any leader is usually overloaded. Open source is not immune from politically enforced limits on information sharing within a project. The mere availability of source code does not automatically translate into access to the most critical information.
+
+Those with insufficient power are often seeking it, forming coalitions with others to enhance power and status. Coalitions are a natural phenomenon and cannot be avoided; there is a strength in numbers. The natural way to gain influence is to became a member of a coalition. Once a given coalition gains sufficient members it can challenge a single leader and promote any desirable changes. In this sense this sort of coalition becomes a collective dictator."
+(http://www.firstmonday.org/issues/issue4_12/bezroukov/index.html)
+
+=== Corporate vs. Community Dynamics ===
+
+How IBM had to adapt to community dynamics, Mathieu O'Neil:
+
+"In fact, when differences between the corporate logic and collaborative production logic emerged, the
+company had to accept the way of doing things of the community. Take the example of the communications
+speed.
+
+- Free software communities work based on an alternation of instant and transparent communications, and
+rapid product iterations. For conversations they use instant messaging or email, or whatever fast mean. In
+comparison, the company's internal communications and attention to the internal sensitivities are often slow
+and measured. “When we answered slowly, with default responses, we lacked the necessary speed and
+transparency. There was no level of technical exchange that would be attractive to developers of Linux”
+(Wikinomics, Tapscott and Williams, 2005: 129)
+
+The example is illustrative. The communicative modality of a company, even in a network company
+which works on projects, involves certain delays related to consulting appropriate authority, or the team of the
+company. In contrast, the collaborative production is characterized by the immediacy of communications. IBM
+decided to subordinate the information flows regarding the organization of the production process to the rhythms
+of the Linux Developer Network, and this expresses the modality of integration between a given company and
+the rest of the collaborative network of producers. Of course, IBM has not adopted a horizontalist philosophy or
+anything like that. But in order to consistently appropriating of the digital information, the company had to obey
+certain rules."
+(http://cspp.oekonux.org/scientific-committee/latest-submissions/regular-issue-p2p-theory/Collaborative%20production.pdf/at_download/file)
+
+== Reference Section ==
+
+===Notes===
+
+[1] E.E. David, Jr. and R.M. Fano, 1965. "Some thoughts about the social implications of the accessible computing," excerpts reprinted in IEEE Annals of the History of Computing, volume 14, number 2, pp. 36-39, and at http://www.multicians.org/fjcc6.html, accessed 27 October 2001; J. Abbate, 1999. Inventing the Internet. Cambridge, Mass.: MIT Press; and, J.J. Naughton, 2000. A Brief History of the Future: From Radio Days to Internet Years in a Lifetime. Woodstock, N.Y.: Overlook Press.
+
+[2] R.M. Stallman, 1999. "The GNU operating system and the free software movement," In: C. DiBona, S. Ockman, and M. Stone (editors). Open Sources: Voices from the Open Source Revolution. Sebastopol, Calif.: O'Reilly.
+
+[3] Accessible at www.gnu.org/licenses/gpl.html 
+
+[4] P. Hood and D. Hall, 1999. Lighthouse "Open source software: Lighthouse case study," Toronto: Alliance for Converging Technologies, p. 9.
+
+[5] G. Moody, 2001. Rebel Code: the Inside Story of Linux and the Open Source Revolution. Cambridge, Mass.: Perseus, p. 29.
+
+[6] DiBona, Ockman, and Stone (editors), 1999, p. 4; Hood and Hall, 1999 p. 24.
+
+[7] M. Lewis, 2001. "Free spirit in a capitalist world: Interview with Richard Stallman," Computer Weekly (20 April), at http://www.cw360.com/, accessed 27 October 2001.
+
+[8] Accessible at www.opensource.org/docs/definition.html.
+
+[9] DiBona, Ockman, and Stone (editors), 1999, p. 4.
+
+[10] For a discussion of the business models based on Open Source, see Hood and Hall, 1999; Raymond, 1999c; and, DiBona, Ockman, and Stone (editors), 1999.
+
+[11] Moody, 2001, p. 62.
+
+[12] Interview with Philip Charles.
+
+[13] Interview with Chris Dibona.
+
+[14] Moody, 2001, pp. 81, 84.
+
+[15] Interview with Glyn Moody.
+
+[16] Moody, 2001, pp. 14, 82.
+
+[17] L. Torvalds, 1999a. "The Linux edge," Communications of the ACM, volume 42, number 4, pp. 38-39; L. Torvalds, 1999b. "The Linux edge," in C. DiBona, S. Ockman, and M. Stone (editors). Open Sources: Voices from the Open Source Revolution. Sebastopol, Calif.: O'Reilly, pp. 101-119.
+
+[18] J.Y. Moon and L. Sproull, 2000. "Essence of distributed work: The Case of the Linux kernel," First Monday, volume 5, number 11 (November), at http://www.firstmonday.org/issues/issue5_11/moon/, accessed 28 October 2001.
+
+[19] Interview with Glyn Moody.
+
+[20] Interview with Richard M. Stallman.
+
+[21] K. Kuwabara, 2000. Linux: A Bazaar at the edge of chaos, First Monday, volume 5, number 3 (March), at http://www.firstmonday.org/issues/issue5_3/kuwabara/, accessed 28 October 2001; T. Nadeau, 1999a. "Learning from Linux: OS/2 and the Halloween Memos," Part 1 - Halloween I, at http://www.os2hq.com/archives/linmemo1.htm, accessed 28 October 2001.
+
+[22] C.B. Browne, 1998. "Linux and decentralized development," at http://www.firstmonday.org/issues/issue3_3/browne/, First Monday, volume 3, number 3 (March), accessed 27 October 2001; J.Y. Moon and L. Sproull, 2000. "Essence of distributed work: The Case of the Linux kernel," First Monday, volume 5, number 11 (November), at http://www.firstmonday.org/issues/issue5_11/moon/, accessed 28 October 2001.
+
+[23] Interview with Chris Dibona.
+
+[24] Interview with Dan Barber.
+
+[25] Interview with Dan Barber.
+
+===References compiled by George Dafermos===
+
+
+R.M. Axelrod and M.D. Cohen, 1999. Harnessing Complexity: Organizational Implications of a Scientific Frontier. New York: Free Press.
+
+J.H. Holland, 1975. Adaptation in Natural and Artificial Systems: An Introductory Analysis with Implications to Biology, Control, and Artificial Intelligence. Cambridge, Mass.: MIT Press.
+
+S.A. Kauffman, 1993. The Origins of Order: Self-organization and Selection in Evolution. New York: Oxford University Press.
+
+K. Kuwabara, 2000. Linux: A Bazaar at the edge of chaos, First Monday, volume 5, number 3 (March), at http://www.firstmonday.org/issues/issue5_3/kuwabara/, accessed 28 October 2001.
+
+S. Levy, 1984. Hackers. London: Penguin.
+
+J.G. March, 1991. "Exploration and exploitation in organizational learning," Organization Science, volume 2, number 1, pp. 71-87.
+
+G. Prasad, 2001. "Open Source-onomics: Examining some pseudo-economic arguments about open source," at http://www.freeos.com/printer.php?entryID=4087, accessed 28 October 2001.
+
+E.S. Raymond, 1998a. The Cathedral and the bazaar, First Monday, volume 3, number 3 (March), at http://www.firstmonday.org/issues/issue3_3/raymond/, accessed 28 October 2001.
+
+E.S. Raymond, 1999a. A Brief history of hackerdom, at http://www.tuxedo.org/~esr/writings/hacker-history/, accessed 28 October 2001.
+
+E.S. Raymond, 1999b. A response to Nikolai Bezroukov, First Monday, volume 4, number 11 (November), at http://www.firstmonday.org/issues/issue4_11/raymond/, accessed 28 October 2001.
+
+E.S. Raymond, 1999c. The Magic cauldron, at http://www.tuxedo.org/~esr/writings/magic-cauldron/, accessed 28 October 2001
+
+V. Valloppillil, 1998. "Open source software: A (new?) development methodology," also referred as the Halloween document, unpublished working paper, Microsoft Corporation.
+
+
+== More Information ==
+
+* '''Linux and Decentralized Development'''. By Christopher Browne at http://www.firstmonday.org/issues/issue3_3/browne/
+
+This article discusses the relative advantages and disadvantages of centralized and decentralized governance, gives details about the current ecology of support organizations around Linux, and whic new ones would be needed.
+
+* Linus Torvalds: [http://www.oreilly.com/catalog/opensources/book/linus.html Linux' Edge]]. From the book [[Open Sources]]
+
+* See our entry on the [[Linux Foundation]]
+
+
+===Research===
+
+* [http://opensource.mit.edu/papers/watson.pdf Reputation in Open Source]. Andrew Watson.
+
+* Federico Iannaci: [http://opensource.mit.edu/papers/iannacci3.pdf Coordination Processes in Open Source Software Development: The Linux Case Study]: large-scale open source projects exhibit three main coordination mechanisms, namely standardization, loose coupling and partisan mutual adjustment. 
+
+* Lee, Gwendolyn K. and Cole, Robert E, 2003. “From a Firm-Based to a Community-Based Model of Knowledge Creation: The Case of the Linux Kernel Development,” Organization Science, 14 (6), 633-649.
+
+===Bibliography on [[Open Development]]===
+
+"#A [http://repp.anu.edu.au/GlaeserTASA.pdf Highly Efficient Waste of Effort: Open Source Software Development as a Specific System of Collective Production] by Jochen Gläser (Research School of Social Sciences; The Australian National University)
+
+"It appears to be very difficult to capture the distinctness of open source software production in a general theoretical framework. The only theoretical framework that compares alternative modes of collective production is transaction cost theory, which is an economic rather than sociological approach to the organization of work and therefore tends to neglect the problem of coordination. This paper describes open source software production in a sociological framework of collective production, i.e. in a framework that emphasizes the actor constellations and the systems of actions that characterize modes of collective production. A generalized sociological description of open source software production is derived from published empirical studies. On the basis of this description, open source software production can be compared to the known systems of collective production, namely markets, organizations and networks. The comparisons reveal necessary conditions for the functioning as well as specific advantages of producing communities."
+
+#[http://www.srijith.net/publications/cs5212_report.pdf Study on Management of Open Source Software Projects]
+
+"The ideology of open source software development is spearheading a shift in the way we
+approach the process of software development. Not only is it changing the perception of costs associated with
+projects, but also the management aspect of these development processes. The management of open source
+projects is very different from a traditional project due to the inherent nature of the objectives, team structure
+and the benefits involved. Several studies have examined various issues related to the management of these
+projects. However there is a lack of a study that puts together all the findings so that the interrelationships
+between these findings can be explored. This study tries to overcome this shortcoming and present the findings
+of other studies in a comprehensive manner and at the same time look at the entire process from a bird' eye
+point of view."
+
+[[Category:Governance]]
+
+[[Category:Encyclopedia]]

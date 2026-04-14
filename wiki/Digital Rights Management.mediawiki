@@ -1,0 +1,179 @@
+=Definition=
+
+'''DRM system: A system of Information Technology components and services which strives to distribute and control content and its rights. This operates in an environment driven by law, policies and business models.'''
+(http://camorra.org/swann/2007/07/11/daniels-drm-dilemma/)
+
+
+=Citation=
+
+"'''The bottom line of digital rights management is the idea that you do not actually own a book, an audio or video file, or even the disk it is printed upon; rather you have actually licensed it from its copyright holder. That license is very limited in scope'''."
+
+- Rita Lewis [http://firefox.org/news/articles/1045/1/What-is-DRM-and-why-should-I-care/Page1.html]
+
+
+=Description=
+
+From the Wikipedia article [http://en.wikipedia.org/wiki/Digital_rights_management]
+
+"Digital rights management (DRM) is the umbrella term referring to any of several technologies used to enforce pre-defined policies controlling access to software, music, movies, or other digital data. In more technical terms, DRM handles the description, layering, analysis, valuation, trading and monitoring of the rights held over a digital work. In the widest possible sense, the term refers to any such management.
+
+The term is often confused with copy protection and technical protection measures (TPM). These two terms refer to technologies that control and/or restrict the use and access of digital media content on electronic devices with such technologies installed. There are technical measures that could be used not to restrict use or access, such as to monitor use in order to record rights of a content consumer, DRM critics argue that the phrase "digital rights management" is a misnomer and the term digital restrictions management is a more accurate characterization of the functionality of DRM systems. Some digital media content publishers claim DRM technologies are necessary to prevent revenue loss due to illegal duplication of their copyrighted works. However, others argue that transferring control of the use of media from consumers to a consolidated media industry will lead to loss of existing user rights and stifle innovation in software and cultural productions."
+
+
+=Discussion=
+
+==Why (eBook) DRM cannot work==
+
+Cory Doctorow:
+
+'The first thing you need to know about ebook DRM is that it can't work.
+
+Like all DRM systems, ebook DRM presumes that you can distribute a program that only opens up ebooks under approved circumstances, and that none of the people you send this program to will figure out how to fix it so that it opens ebooks no matter what the circumstances. Once one user manages that, the game is up, because that clever person can either distribute ebooks that have had their DRM removed, or programs to remove DRM (or both). And since there's no legitimate market for DRM – no readers are actively shopping for books that only open under special approved circumstances – and since the pirated ebooks are more convenient and flexible than the ones that people pay for, the DRM-free pirate editions drive out the DRM-locked commercial editions.
+
+What's more, books are eminently re-digitisable. That is, it's very easy to retype a DRM-locked ebook, or scan a physical book, or take screenshots of a DRM-locked ebook, and convert the resulting image files to text. Google has scanned some 16 million books in the last few years.
+
+It's a solved problem."
+(http://www.guardian.co.uk/technology/2012/may/03/death-of-drm-good-news)
+
+
+==DRM cannot create new economic value==
+
+"It's the non-scarce products, the recipes and the ideas, that helps expand the value of limited resources, the ingredients. You expand value by creating new non-scarce goods that make scarce goods more valuable -- and you can keep on doing so, indefinitely. Successful new business models are about creating those non-scarce goods and helping them increase value. Any new business model must be based around increasing the overall pie. It's about recognizing that creating value isn't about shifting around pieces of a limited economic pie -- but making the overall pie bigger.
+
+DRM is fundamentally opposed to this concept. It is not increasing value for the consumer in any way, but about limiting it. It takes the non-scarce goods, the very thing that helps increase value, and constrains them. Those non-scarce goods are what increase the pie and open up new opportunities for those who know where to capture the monetary rewards of that value (within other limited resources). DRM, on the other hand, holds back that value and prevents it from being realized. It shrinks the pie -- and no successful business models come out of providing less value and shrinking the overall pie. Fundamentally, DRM cannot create a successful new business model. It can only contain one."
+(http://www.techdirt.com/articles/20070301/005837.shtml)
+
+
+==What to think of open DRM==
+
+Henrik Ingo:
+
+"think the following short rule of thumb is a good start: For various
+"ethics related" reasons one may be opposed to all DRM on principle.
+On the other hand, if someone is going to use DRM, it is clearly
+better that they'd use an open standard - then at least there is a
+chance that the DRM is not a reason to make the content locked into a
+proprietary one-vendor/one-platform solution. (Richard Stallman would
+disagree with this opinion, saying that DRM is always a form of
+oppression and producing a good system of oppression is actually worse
+than a bad system.)
+
+
+In practice even open standards DRM will always have to rely on
+something being kept secret from the end user / consumer and therefore
+the opennes is of questionable value to the end user, who's role is
+restricted to being just a consumer.
+
+Typically an open source content player is not a possibility, or at
+least some library file providing the particular decryption functions
+would have to be closed source. This because even if the DRM system
+would be based on an open standard, at least some cryptographic keys
+have to be hidden from the user. Other alternatives are to hide the
+decryption component in some hardware, like a smartcard or the
+infamous TPM chip on a motherboard. Even so, something is restricted
+from the end user, this is just another place to hide it. In addition
+to hiding the decryption function, a proper DRM also wants to protect
+the path from decryption to output device (so that you couldn't copy
+the content anywhere within that path). This is why DVDs will play
+with lower resolution on Windows Vista unless you have a new monitor
+that will give the proper responses in this game.
+
+From this discussion it is possible to argue that by traditional
+cryptographical standards "good" DRM is actually an impossible problem
+to solve. While good cryptography always relies on the protocol being
+public and only a key being secret, the problem DRM tries to solve
+necessarily leads to solutions that by cryptographical standards would
+be considered ugly hacks. Hardware based solutions are slightly better
+in this regard, since extracting the secret from a hardware chip
+really would be practically impossible. Nevertheless from a cryptographical point of view DRM is like eating
+the cake (user must be given the key to be able to view content) and
+trying to keep it too (user cannot know he has the key or where it is,
+lest he uses it for inappropriate purposes).
+
+So in practice an open DRM system will always be like "doing the wrong
+thing the right way".
+(p2presearch mailing list)
+
+
+==DRM as an [[Architecture of Control]]:==
+
+Dan Lockton:
+
+Digital rights management (DRM) can encompass a variety of architectures of control—in the words of Andreas Bovens, “in essence, every use that is not specifically permitted by the content [or indeed hardware] provider is in fact prohibited” . 
+
+
+
+
+This situation, whilst it has legal precedents in the idea of explicitly enumerated lists of rights (as opposed to a more evolutionary common law approach), has never before been applicable to products. The implications of this level of control for unanticipated ‘freedom to tinker’ innovation cannot yet be fully appreciated, but, as will be examined later, could be significant.
+
+
+
+One factor driving DRM’s adoption is that digital electronics permits (indeed, relies upon) exact copies of information being made at low or zero marginal costs. Thus if the information vendors (who may or may not be the rights-holders) wish to maintain their revenues or restrict the availability of information, technology needs to be embedded in the architecture of the information, or copying device, or both, which controls or restricts that ability to copy. DRM allows the balance of control to be shifted from the user (e.g. “Who’ll know if I photocopy a book in the library rather than buying a copy?”) to the content or hardware provider (e.g. “We’ll build a photocopier that will refuse to copy the book in the first place”). Similarly, then, to the ‘disciplinary architecture’ outlined in the built environment context, DRM, both as copy-prevention and for other purposes, can be used to prevent legal infractions.
+
+
+
+However, it can equally be used to prevent behaviours which are by no means illegal, but which the DRM controller desires to prevent for its own strategic reasons—in some cases, infringing established rights on the part of the consumer. For example, in most legislatures, it is accepted that a backup copy may be made of software, audio or video purchased by the consumer; yet DRM can prevent this ‘fair use’ copying with impunity . Equally, there is the right of a customer to re-sell an item he or she has purchased; this, too can be restricted using DRM, to the extent that, say, software could not be installed on a subsequent purchaser’s machine, even if it had been uninstalled from the original—to what extent this affects the statutory property rights of the purchaser will be an area of increased debate as DRM becomes more prevalent.
+
+
+
+There is increasing potential for DRM to provide the architectures of control to enforce the (often very restrictive) end-user licence agreements (EULAs) for software; whilst it is likely  that many users do not fully abide by the EULAs to which they currently ‘agree,’ architectures of control embedded in both software and hardware could greatly reduce the possibilities for deviance (see also the EULA forcing function).
+
+
+
+Another implication of some DRM architectures is the control of user access: certain users could be prevented from viewing information or using functions (trivial strategic hardware analogues might be keeping certain items on high shelves to prevent children reaching them, or ‘child-proof’ lids on medicine bottles).
+
+
+
+The discrimination could well be purely for security reasons (just as the first encryption of a message was, in itself, an architecture of control), but when a combination of economic and political motivations comes into play, the dystopian science-fiction vision presented back in 1997 in Richard Stallman’s “The Right to Read” does not appear especially exaggerated:
+
+
+
+
+
+“In his software class, Dan had learned that each [electronic] book had a copyright monitor that reported when and where it was read, and by whom, to Central Licensing. (They used this information to catch reading pirates, but also to sell personal interest profiles to retailers.) The next time his computer was networked, Central Licensing would find out.” 
+((http://architectures.danlockton.co.uk/architectures-of-control-in-the-digital-environment/))
+
+=Key Books to Read=
+
+#[[What Every Citizen Should Know About DRM]]. Mike Godwin.
+
+
+=More Information=
+
+
+
+==Introduction==
+
+#Rita Lewis has a good intro article, at http://firefox.org/news/articles/1045/1/What-is-DRM-and-why-should-I-care/Page1.html
+#Very good overview article, with some pessimistic assessments and updated until the launch of VISTA, at http://polishlinux.org/gnu/drm-vista-and-your-rights/
+
+
+==External Resources==
+
+#DRM Watch [http://www.drmwatch.com/] monitors developments in the field.
+#Read Cory Doctorow on why [http://www.dashes.com/anil/stuff/doctorow-drm-ms.html '''DRM's are bad''']
+#The [[Electronic Frontier Foundation]] maintains a [http://www.eff.org/IP/DRM/guide/ list] of [[DRM Free Music]]: [[emusic]], [[Audio Lunchbox]], [[Bleep]], [[Live Downloads]], [[Magnatune]], [[Garageband]], [[Archive.org/Audio]], [[Calabash Music]], [[MP3Tunes]]
+
+
+==Internal entries==
+
+#[[DRM Interoperability]] and [[Trusted Computing]]
+#[[Open DRM]]
+#[[Rights Management Information]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Media]]
+
+[[Category:Standards]]
+
+[[Category:Audiovisual]]
+
+[[Category:Music]]
+
+[[Category:Culture]]

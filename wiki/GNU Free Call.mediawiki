@@ -1,0 +1,113 @@
+'''= GNU Free Call is a new project to develop and deploy secure self-organized communication services worldwide for private use and for public administration. We use the open standard SIP protocol and GNU SIP Witch to create secured [[Peer-to-Peer Mesh Calling Network]]s'''
+
+
+=Description=
+
+"Our goal is to make GNU Free Call ubiquitous in a manner and level of
+usability similar to Skype, that is, usable on all platforms, and
+directly by the general public for all manner of secure communication
+between known and anonymous parties, but without requiring a central
+service provider to register with, without using insecure source
+secret binary protocols that may have back-doors, and without having network
+control points of any kind that can be exploited or abused by external
+parties. By doing so as a self organizing meshed calling network, we
+further eliminate potential service control points such as through
+explicit routing peers even if networks are isolated in civil
+emergencies.
+ 
+We do recognize this project has significant long term social and
+political implications. It also offers potentially essential utility
+in public service by enabling the continuation of emergency services
+without requiring existing communication infrastructure. There are
+many ordinary public service uses, such as the delivery of eHealth
+services, as well as medical, and legal communication, where it is essential to
+treat all with equal human dignity by maintaining privacy regardless
+of race, religion, or political affiliation. Equally important is the
+continuation of emergency medical services even when existing
+infrastructure is no longer available or has been deliberately disabled.
+ 
+Initially we will extend sipwitch to become aware of peer nodes by
+supporting host caches, and then support publishing of routes to
+connected peers. This work builds upon the already existing routing
+foundation in sipwitch itself. The use of host caches is a mechanism
+used in older p2p networks, it is generally well understood, it would
+meet the initial goals of establishing a self organized mesh network,
+and it is rather easy to initially implement to fully demonstrate the
+potential of sipwitch as a mesh calling system. More advanced
+methodologies can then be added later on.
+ 
+Related to this goal is having sipwitch operate as a SIP mediation
+service for desktops users and IP enabled cell phones such as Android.
+This introduces the needs for users to be able to “pilot” their local
+sipwitch instance through a desktop and cell phone gui, whether to see
+what calls are being placed through it, or to see the verification
+status of secure key exchange. There are today IPC interfaces in
+sipwitch to allow for desktop integration, but a specific GUI to use
+these interfaces and present server and call states in a manner for
+people to understand still needs to also be constructed, and hence
+this too is part of the plan of work for this project.
+ 
+In addition we will be extending GNU SIP Witch to offer secure VoIP
+proxy. Much like what was done initially by Phil Zimmerman to develop
+ZRTP using zfone, this mode of operation will enable development of
+key elements of a secure infrastructure without having to also initially
+create new SIP user agent applications. By offering secure proxy
+through a SIP Witch instance running at the endpoint, any existing SIP
+standard compliant softphone or device will be able to establish a secure
+connection to another standard compliant SIP device or SIP peer that
+is using GNU SIP Witch at the destination.
+ 
+This project’s definition of secure media is similar to Zimmermann’s
+work on ZRTP, in that we assure there is no forwarding knowledge by
+using uniquely generated keys for each communication session.
+Furthermore, we will use GNU Privacy Guard (GPG) to fully automate
+session validation. This will be done by extending the SIP protocol to
+exchange public keys for establishing secure media sessions that will
+be created by each instance of SIP Witch operating at the end points on
+behalf of local SIP user agents, and then verifying there is no
+man-in-the-middle by exchanging GPG signed hashes of the session keys
+that were visible at each end."
+(http://planet.gnu.org/gnutelephony/?p=14)
+
+
+=Discussion=
+
+Aaron Huslage:
+
+"The basic problem with projects like this lie in the fact that they base the
+entire codebase off of hacking something together from code that wasn't
+meant to do what they are asking of it.
+ 
+Sipwitch has never caught on in general because it is horrible to configure,
+awful to use and not reliable once you get it working. Add another feature
+of ill-defined p2p networking on top of that and you have a recipe for
+failure or at least a lot of wasted effort for something that will only ever
+be used by geeks.
+ 
+Let's not forget that Skype, warts and all, works very well and is
+reasonably private/difficult to snoop. It also has 10 years of development
+and a gigantic committed user base (which any p2p network needs).
+ 
+The need to provide a "free" Skype is a philosophical one, not a technical
+one. This is the GNU Foundation after all. They do great work and get stuck
+in philosophy land without thinking of the technical need sometimes. I don't
+have a problem with an open Skype, but I do have a problem with hacked
+together technology that isn't appropriate or even functional without great
+effort. It's easier to just write something new."
+(Next Net mailing list, March 2011)
+
+
+
+
+=More Information=
+
+# Info via Haakon Eriksen – Project Coordinator - haakon.eriksen@far.no ; David Sugar – Project Architect - dyfet@gnu.org
+# [[P2P Telephony]]
+# [[GNU SIP Witch]]
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]

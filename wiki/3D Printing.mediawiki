@@ -1,0 +1,349 @@
+''' Feed a device with blueprints for a solid object of your choosing, then let the machine build it for you from plastic or other simple materials''' [http://www.sciam.com/article.cfm?id=five-ways-to-print-3d-objects]
+
+Video illustration at http://www.youtube.com/watch?v=6FTxd9wwwyg
+
+=Definition=
+
+
+'''1.'''
+
+"3D Printing” is an umbrella term that covers four distinct manufacturing technologies. All are “Additive Fabrication” processes that create objects by adding material in thin layers until a product is completed. Each technology addresses the challenge differently with accompanying benefits and drawbacks."
+(http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/)
+
+'''2.'''
+
+"Three-dimensional printers, often called rapid prototypers, assemble objects out of an array of specks of material, just as traditional printers create images out of dots of ink or toner. They build models in a stack of very thin layers, each created by a liquid or powdered plastic that can be hardened in small spots by precisely applied heat, light or chemicals."
+(http://www.nytimes.com/2007/05/07/technology/07copy.html?)
+
+
+'''3.'''
+
+"3D Printing is a technique that deposits material layer by layer using a head similar to that of a inkjet printer. The head tends to move along the X and Y axes and the object being printed moves up and down on the Z axis."
+(http://www.shapeways.com/blog/archives/39-3D-Printing.-A-definition-and-links.html)
+
+
+==Discussing the Definition==
+
+"3D Printing is currently rather a hard term to define. Officially it is just one of the rapid manufacturing techniques. Currently however the term 3D Printing itself is used as a synonym for [[Rapid Manufacturing]], [[Digital Manufacturing]], [[Direct Digital Manufacturing]], [[Rapid Prototyping]], [[Desktop Manufacturing]], [[Freeform Fabrication]], [[Electron Beam Freeform Fabrication]] and [[Fabbing]].
+
+Each one of these terms has a distinct meaning but they are all vying for your attention to become the official term to describe any process whereby the information in a digital file describing an object virtually(such as an STL or CAD file) is used to rapidly make a real object. Usually by one single machine and usually in limited production runs.
+
+The official definition maintains that 3D Printing is is just one of the many ways that you do this. In that light: 3D Printing is a technique that deposits material layer by layer using a head similar to that of a inkjet printer. The head tends to move along the X and Y axes and the object being printed moves up and down on the Z axis. In the picture above you can see our Objet printer at work. The head is printing two copies of Macouno's Shapeways model Petunia(Of Project Petunia fame). The two Petunias are on a base plate that moves down along the Z axis to give the model depth.
+
+At Shapeways we have noticed that we, our designers and partners tend to use 3D Printing as a general term to describe any rapid manufacturing technique."
+(http://www.shapeways.com/blog/archives/39-3D-Printing.-A-definition-and-links.html)
+
+
+=Usage=
+
+"What might this 3D printer be useful for? Working just in plastic would limit it to producing items not requiring great strength or heat resistance, whilst the fabrication volume would preclude production of large objects (other than in parts). However, as mentioned above, there is a great deal of active research going on to extend the range of materials that these low-cost systems can work with. There are many potential applications.
+
+* Spare Parts. Many appliances require unique and often expensive spare parts. Often these are small, made of plastic and relatively simple design, and would be amenable to domestic fabrication. Examples familiar to the authors include door parts for washing machines,14 lids for food processors15 and camera lens accessories.16 Significantly, provision of third-party spares has led to many IP disputes.17
+    
+* Craft and Hobby Items. Craft hobbies often require plastic moulds; as with appliance spares, these are often expensive but could be produced with a 3D printer.18 A 3D printer could equally produce items directly, such as model figures for war-gaming19 or specialist add-on parts for model-making.20
+    
+* Educational Uses. School science teaching frequently requires small specialist components for demonstrating or conducting experiments.21
+    
+* Unique Requirements. A 3D printer, allied with user-friendly design software, would allow the ready creation of bespoke items. The [[RepRap]] website cites the fabrication of a unique bracket to allow an MP3 player to be attached to the coin-holder in a car dashboard.22 Individually-tailored body-fitting items such as frames for glasses could be produced, an extension of the use of 3D printing to make tailored medical implants.23
+    
+* Fashion Accessories. Existing 3D printing systems have been used to make jewellery.24 Personal 3D printers could add a new dimension (literally) to many forms of fashion art, and allow customisation of personal accessories."
+(http://www.law.ed.ac.uk/ahrc/script-ed/vol7-1/bradshaw.asp)
+
+
+=Typology=
+
+'''1.'''
+
+"The three leading 3-D printer companies all used different technologies. Stratasys makes models out of liquid plastic using a very expensive heated print head that resembles a glue gun. 3D Systems uses lasers to harden liquid polymers. And the Z Corporation,  a unit of the private equity group EQT, builds models by squirting a sort of glue over layers of sandlike plaster."
+(http://www.nytimes.com/2007/05/07/technology/07copy.html?)
+
+
+'''2.'''
+
+From the Wikipedia:
+
+"One variation of 3D printing consists of an inkjet printing system. Layers of a fine powder (plaster, corn starch, or resins) are selectively bonded by "printing" an adhesive from the inkjet printhead in the shape of each cross-section as determined by a CAD file. This technology is the only one that allows for the printing of full color prototypes. It is also recognized as the fastest method.
+
+Alternately, these machines feed liquids, such as photopolymer, through an inkjet-type printhead to form each layer of the model. These Photopolymer Phase machines use an ultraviolet (UV) flood lamp mounted in the print head to cure each layer as it is deposited.
+
+Fused deposition modeling (FDM), a technology also used in traditional rapid prototyping, uses a nozzle to deposit molten polymer onto a support structure, layer by layer.
+
+Another approach is selective fusing of print media in a granular bed. In this variation, the unfused media serves to support overhangs and thin walls in the part being produced, reducing the need for auxiliary temporary supports for the workpiece.
+
+Finally, ultrasmall features may be made by the 3D microfabrication technique of 2-photon photopolymerization. In this approach, the desired 3D object is traced out in a block of gel by a focused laser. The gel is cured to a solid only in the places where the laser was focused, due to the nonlinear nature of photoexcitation, and then the remaining gel is washed away. Feature sizes of under 100 nm are easily produced, as well as complex structures such as moving and interlocked parts.
+
+Each technology has its advantages and drawbacks, and consequently some companies offer a choice between powder and polymer as the material from which the object emerges. Generally, the main considerations are speed, cost of the printed prototype, cost of the 3D printer, choice of materials, color capabilities, etc."
+(http://en.wikipedia.org/wiki/3D_printing)
+
+
+'''3.''' 
+
+From the Replicator blog [http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/]:
+
+
+==3D Printing Proper==
+
+"usually refers to object made using ink jet technology in three dimensions. As it’s name implies it is a close cousin to traditional 2D printing. These printers work by layering powder a powder substrate and binding it with pigmented glue"
+
+The major manufacturer of 3D printing equipment is [http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/zcorp.com ZCorp].
+
+Video: http://www.youtube.com/watch?v=GuUAvG1Ampo&eurl=http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/&feature=player_embedded
+
+
+==[[Fused Deposition Modeling]]==
+
+"creates models by heating and extruding a filament of plastic material. Fused Deposition Modeling (FDM) creates models by heating and extruding a filament of plastic material. [http://www.stratasys.com/ Stratasys] commercialized this technology and owns the trademark.
+
+Video at http://www.youtube.com/watch?v=3I7fGOSaf2A&eurl=http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/&feature=player_embedded
+
+
+==[[Stereolithography]]==
+
+"produces models by tracing a beam of UV light over a photosensitive pool of liquid. Over time the part is lowered into the bath and the final product is produced. The major benefit of this 3D printing technology is the high level of detail and surface finish it enables."
+
+The Viper line of stereolithography apparatuses (SLA’s) manufactured by [http://www.3dsystems.com/ 3D Systems] produce the highest quality 3D prints available.
+
+Video at http://www.youtube.com/watch?v=HTWFWh1x-yo&eurl=http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/&feature=player_embedded
+
+
+==[[Selective Laser Sintering]]==
+
+"the awesome union of 3D printing and Lasers. The process is similar to stereolithography replacing the UV light with a laser and a vat of liquid with a powdered base. The major benefit of SLS is the ability to produce parts in a variety of materials ranging from plastics to ceraminc to metals."
+
+The [http://www.3dsystems.com/products/sls/sinterstation_pro/index.asp Sinterstation] by 3D Systems is an example of this technology in practice.
+
+http://www.youtube.com/watch?v=lC0uVO_uT0s&eurl=http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/&feature=player_embedded
+
+
+==Other Techniques==
+
+"In addition, two other 3D printing technologies are maturing, but neither is in wide use yet.
+
+Laminated Object Manufacturing (LOM) machines cut and glue thousands of sheets of material together to form solids. MCOR Technology has released a new 3D printer that promises to drastically reduce the cost of 3D printing by using standard A4 paper as the build material.
+
+Electron Beam Melting (EBM) is similar to SLS technology except the process is far more exacting and capable of producing implant grade parts to be used in orthopedic surgery. The final product is higher quality and better embodies the traditional material characteristics making it a true replacement for standard manufacturing techniques. Arcam is the leading the charge in this exciting field."
+(http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/)
+
+
+
+=Applications=
+
+'''1.'''
+
+"Colleges and high schools are buying them for design classes. Dental labs are using them to shape crowns and bridges. Doctors print models from CT scans to help plan complex surgery. Architects are printing three-dimensional models of their designs. And the Army Corps of Engineers used the technology to build a topographical map of New Orleans to help plan reconstruction.
+
+Entrepreneurs like Fabjectory are beginning to find interest in 3-D printing among aficionados of online games, like Second Life and World of Warcraft, in which players design their own characters. Electronic Arts hopes to offer a similar service to create three-dimensional models of characters in Spore, a game to be introduced later this year."
+(http://www.nytimes.com/2007/05/07/technology/07copy.html?)
+
+
+2. 3D Printing as a Shopping Service:
+
+"This is a newly emerging mode, where the price of equipment and media are low enough to support a burgeoning industry of service bureaus.
+
+    
+These services accept or provide 3D models that can remotely print objects that are then physically transported to the recipient.
+
+    
+The service is used when the client is unable to afford their own equipment, and will be popular with anybody who needs occasional 3D printing."
+(http://ecommerce.typepad.com/exciting_ecommerce/2008/02/3d-printing-als.html)
+
+
+=Status Report=
+
+
+==Interview==
+
+Matt Mason interviewed by Rafael Cabral:
+
+'''Do you think that everyone will have a desktop 3D printer? If so when? How distant to “downloading sneakers” are we?'''
+
+It’s certainly technically possible to have one already. Companies like MakerBot are already shipping them to people worldwide. Whether or not they will become mainstream is primarily a cultural question - there are a lot of cool technologies we could be using that just never really caught on in a huge way, like the Segway for example. But as 3-D printers become more versatile and useful, it makes sense that more people would want to use them. I still think we are at least a decade or so away from a downloadable sneaker that should worry the likes of Nike.
+
+
+'''What are the major challenges for the popularization of this technology? Do you think that the industry and brands are interested in the development of domestic 3D printers? Or worried?'''
+
+Right now 3-D printers don’t really have a killer app. Music was the killer app for the internet - filesharing was the thing that really made the internet seem so cool and powerful and disruptive. Right now the closest thing 3-D printers have is being able to print out your World of Warcraft avatar, which is not as cool as free music. Free downloadable sneakers would do it for sure, but I think it will be something simpler first. Bottle openers maybe, a lot of people with 3-D printer are making those already, and a bottle opener is definitely a social object.
+
+There are some large 3-D printer manufacturers out there who want nothing more than to see this all go mainstream and become the new Apples and Microsofts of the world. When you talk to them, they are really excited about the possibilities and what might happen. I don’t think a lot of people feel threatened by 3-D printers yet, because the threat isn’t there yet. None of the record labels felt threatened by the concept of the internet in the 1980s. Most of them weren’t worried in the 1990s either.
+
+
+'''The major implications of the popularization of 3D printers are economic and legal. What do you think that will happen if we create technologies capable of allowing citizens to replace much of the historical industrial-era supply chain? Too dystopic or the old economy can try to make it illegal, like they did with file-sharing?'''
+
+I think there will be some serious pushback from some powerful communities over 3-D printing, if it catches on. It could upset shipping, all kinds of manufacturing and supply-chain businesses, the entire manufacturing process potentially. That would mean more new economic thinking and business models, the kind of thinking we still haven’t figured out for the digital world. It basically means all of the problems of the internet spilling into the real world. But also all of the possibilities. It won’t be the end of capitalism - It is just as likely to lead to some amazing new businesses and economic ideas as it is to destroy some old systems. It’s an opportunity, not a problem."
+(http://thepiratesdilemma.com/punk-capitalism/some-thoughts-on-3-d-printing)
+
+
+==2010==
+
+From the [http://makezine.com/21 special issue of Make Magazine] dedicated to [[Desktop Manufacturing]] and [[Personal Fabrication]], statements collected by Gareth Branwyn:
+
+"'''* Aaron Nielsen, Oomlout, oomlout.com, a distributed design house that makes laser-cut, open source robot and microcontroller kits'''
+
+What we feel best represents the potential of this burgeoning movement is not a machine, or software, nor is it even immediately identifiable as desktop manufacturing. However, it shows how evolution in all these areas is making previously impossible projects possible. We’re talking about the [[Maker Beam]] project (makerbeam.com), an effort to produce an open source building system (in the spirit of Lego and Meccano).
+
+In the past, an idea like this would’ve needed to be made attractive to banks or VCs. But in this case, it captured the imagination of enough people on a distributed funding site called Kickstarter (kickstarter.com), getting seed funding from 131 backers to the tune of $17,922. The cost of software to do 3D designs would’ve been another stumbling block, but now, freely available open source alternatives exist. The prototypes would have been difficult and expensive to obtain, but now are as easy as pressing Print. Finally, the expense of a marketing campaign would bookend the project, however there are already 131 town criers, and hopefully many more, who will be swayed by the idea and help get the word out. And all that makes us very excited.
+
+
+* Shawn Wallace, '''[[Fab Academy]], fabacademy.org, a distributed school teaching digital fabrication worldwide'''
+
+Spend a few hours reading through the complete archives of the RepRap blog (blog.reprap.org) from 2005 to present. It’s worth it in the same way that it’s worth reading Andy Hertzfeld’s folklore.org, about the early days of the Mac. It’s an oral history of a watershed moment in technology. The way we usually think of it, a technology passes through a couple of crucial moments when it becomes first industrialized, then commoditized. The Rep Rap project is leapfrogging to the final watershed status of folk technology: accessible to everyone.
+
+
+
+* Chris Riley, '''[[DIYLILCNC]], diylilcnc.org, project to build a cheap 3-axis CNC for the everymaker'''
+
+I’m excited by how open source is putting CNC in the hands of artists, hobbyists, and indie designers. There’s a growing trend, among amateur-built CNC/3D printing devices, of using bigger/more precise/commercial CNC machines to build components for these more modest 3D siblings. For example, there are quite a few instruction sets floating around that involve building your own 3D printer with laser-cut parts, or making parts for a small mill on a larger commercial CNC. There are also some really robust open source machine control software packages that take care of potentially difficult machine control problems; after all, you can have the fanciest 3D printer in the world that’s little more than a large paperweight without software to drive it.
+
+This combination - open source control software, alongside CNC devices, built with the aid of other CNC devices, from open source CAD files - really illustrates just how powerful the open source ethos can be and how far it’s taking us."
+(http://makezine.com/21/stateoftheart/)
+
+==2008==
+
+Cathy Lewis, August 2008, on the commercial situation:
+
+"The current vendors like Stratasys, ZCorp, Objet and 3d Systems are not household names as you see in the 2d printing space.  
+
+    
+In fact, few outside the industry have ever heard of them and after almost 20 years they continue to be relatively small companies with revenues ranging from $50M to $150M dollars annually. And most of them, with one exception, are very profitable and growing rapidly."
+(http://ecommerce.typepad.com/exciting_ecommerce/2008/07/3d-printing-des.html)
+
+=Projects and Companies=
+
+#[[Fab@Home]] Project is the original open source, cheap, desktop 3D Printer project.  
+#[[RepRap]] 
+
+From the [[Fab Wiki]] [http://fabwiki.com:8080/index.php?title=Category:Companies list] of 3D Printing companies:
+
+# Stratasys is the largest producer machines - all using the FDM process.
+# 3D Systems produces SLA, SLS, and PJET style machines.
+# Z Corporation produces powder-binder style 3D printers - only printer with full color.
+# Objet produces resin 3D printers known for resolution and unique material options.
+# EOS produces SLS/SLM machines - mainly operating in the European market.
+# ProMetal produce powder-binder style 3D printers using stainless/bronze materials.
+# EnvisionTec produce a resin
+# SolidScape produce wax-based 3D printer for lost-wax casting positives.
+# MakerBot produces an open source FDM machine kit called the CupCakeCNC.
+# A1 Technologies produces an FDM machine called the RapMan.
+
+
+Others:
+
+#Desktop Factory, at http://www.desktopfactory.com/
+#Shapeways, at http://www.shapeways.com/
+#Solid Concepts https://www.solidconcepts.com/
+
+
+=History=
+
+Source: S Bradshaw, A Bowyer and P Haufe, "The [[Intellectual Property Implications of Low-Cost 3D Printing]]", (2010) 7:1 SCRIPTed 5' [http://www.law.ed.ac.uk/ahrc/script-ed/vol7-1/bradshaw.asp]
+
+==A Brief History of Manufacturing==
+
+"People have three ways to make solid objects:
+
+1. Cutting shapes out of a block of material;
+   
+2. Adding material piecemeal to build up shapes; and
+   
+3. Forming material that is liquid or plastic into the required shapes that then set.
+
+
+All forming processes are secondary in the sense that the dies and moulds for them must initially be cut or built by one of the other two primary processes. Pre-industrial examples of these three are carving wood, bricklaying, and moulding a jelly.
+
+Since the industrial revolution, an enormous number of variations on these three techniques have been developed and pre-industrial techniques have been much refined. Cutting and forming have, in particular, received a great deal of attention, resulting in sophisticated lathes and milling machines for cutting, and injection-moulding and die-casting machines for forming.
+
+Just after the Second World War, John Parsons invented the idea of numerical control.1 In this, a manufacturing machine has all its parameters and variables continually controlled by a computer, allowing a previously hand-controlled process to be completely automated. A typical numerically-controlled machine tool is a lathe or a mill that can produce a complicated-shaped part from a simple block entirely without human intervention. This idea has been called the Second Industrial Revolution, and - directly or indirectly – it is the basis of virtually every engineering product that is made and sold today.
+
+Since the creation of the microcomputer in the late 1970s the cost of numerically-controlled machine tools has fallen dramatically and it is now possible for organizations of modest means (such as schools) and also private individuals in the developed world to own lightweight ones. However, the vast majority of all these machines - heavy and light - are still cutting machines, as opposed to additive or moulding machines.
+
+Numerically-controlled cutting machines suffer from an inherent problem: given a computer model of a shape to be made, it is extremely difficult to compute the paths that the cutting tools have to follow in order to make that shape automatically. The more complicated the shape, the more difficult this problem becomes. Further, it is straightforward to design shapes that are perfectly valid three-dimensional objects but that cannot be cut out at all. Almost all these problems stem from the fact that the tool doing the cutting and the device attaching it to the machine must not strike any part of the object being cut except at the point where the actual cutting is happening.
+
+
+==3D Printing==
+
+Until the late 1970s the alternative primary manufacturing idea - adding material - had received comparatively little attention (except in the electronics industry for chip manufacture, where it was, and still is, ubiquitous, if microscopic). But in 1974 a joke was written and in 1977 a patent was granted that caused that situation to change.
+
+The joke was by David Jones, writing his column under the pen-name “Daedalus” in the New Scientist.2 He made what he imagined was a tongue-in-cheek proposal that one could shine a laser through a vat of liquid plastic monomer and cause it to solidify along the path of the beam. The photons of light might thereby be made to initiate the covalent cross-linking of the liquid monomer to form a solid polymer. He further proposed that, if the wavelengths were adjusted appropriately, the cross-linking could be made to happen only where two beams intersected, resulting in an intense spot of energy at one point, and that - by computer-controlled mirror deflection - that intense point could be made to trace out the volume of a required solid object.
+
+The patent was granted in 1977 to Wyn Kelly Swainson for essentially the same idea, though he had originally filed the patent well before the appearance of Jones’s piece. In Swainson’s system the laser caused covalent cross-linking at the surface of the liquid monomer and the object being manufactured rested on a tray that was gradually lowered into the vat.
+
+This was the start of the 3D printing industry, which engineers sometimes call the rapid prototyping industry. (The latter term has become less current over the last few years – the field is evolving rapidly.) It was called “rapid” because one-offs could be made much more easily and quickly using it than by conventional numerically-controlled machining and it was called “prototyping” because it was too slow and expensive to be used for production (it could not compete with injection moulding for making many copies of a single item, for example).
+
+The primary reason that 3D printing technology was (and is) so easy to use was that it completely eliminated the tool-path calculation problems of numerically-controlled cutting machines. Because parts are built up layer by layer, there is always a flat-topped surface with unrestricted access for the laser (or other solidifying or depositing device) to gain access to build upon. This makes it very simple to write a computer programme to control the machine from a computer model of the shape required. There are other advantages (and disadvantages) to 3D printing, but this is the most significant one.
+
+Although it is typically slightly less accurate than cutting, 3D printing is capable of manufacturing more complicated and intricate shapes than any other primary manufacturing technology. Most 3D printing technologies work using plastics but technologies such as selective sintering of metal granules have allowed the printing of metal shapes4 and there are systems that can work with ceramics."
+
+
+==Home 3D Printing==
+
+At the time of writing, the lowest-cost conventionally-made and marketed 3D printing machine (the SD-300 made by Solido Ltd in Israel) was being retailed at about €12,000. Machines range in price from that up to around €300,000 and a typical mid-range machine might cost €40,000. In quick succession after Swainson’s patent, all the obviously possible ways of making objects by adding layers under automatic computer control were patented. Those early patents are now expiring but patents for newer 3D printing techniques continue to be issued.6
+
+One of the technologies developed was fused-filament fabrication.7 This is essentially a computer-controlled glue gun. Molten plastic is extruded from a fine nozzle and laid down on a flat plate by scribbling with the nozzle to form the bottom layer of the object to be made. The plate then drops a small distance, and the next layer is added. Because the plastic is molten when it emerges from the nozzle the second layer welds to the first, and in this way complete three-dimensional solids can be built. This is a comparatively simple technology that requires no hard-to-make parts (such as a laser).
+
+In 2004 Adrian Bowyer realised that 3D printing was such a versatile technology that it ought to be possible to design a fused-filament fabrication 3D printing machine that could manufacture a significant fraction of its own parts.8 Conventional industry has little use for this idea: why sell a machine to your customers that means that they never need to come back to you to buy another, never need to buy spares, or even that allows them to go into production themselves in direct competition with you? But owning such a machine would have real advantages for people in general: anyone who had one could use it to make things, and could also make another such machine and give that to a friend. This is an interesting example of a failure of the market: such a self-replicating machine is an object that people would value, but that it is in no one’s interest to sell. For these reasons it was decided to make the machine and to give all its designs away free under the GNU General Public Licence on the web. This was the start of the [[RepRap]] project. RepRap is short for Replicating Rapid-prototyper.
+
+RepRap has been a significant success, and is now in its second version."
+(http://www.law.ed.ac.uk/ahrc/script-ed/vol7-1/bradshaw.asp)
+
+
+=Discussion=
+
+==3D Printing and IP Rights==
+
+Joren DeWachter:
+
+"A key characteristic of the Intellectual Property system, as it currently exists, is that it is very closely linked to the manufacturing processes of the Industrial Revolution.
+
+A patent (the right to exclude others to manufacture or distribute a product or use a production process) only makes sense if you make the same product over and over again, in the same or similar way.
+
+In a world where manufacturing becomes personalized, patents effectively become completely useless – because patents need standardized manufacturing in order to have any meaning (let alone value).
+
+The same is true for other IP rights. What could possibly be the point of registering a design, if it takes any person on their PC with some basic training an hour or so to modify it enough to steer clear of possible infringement, and then they can manufacture that design in their own home? The return on investment in filing a design becomes pretty horrendous.
+
+Copyright, as I have stated many times, is a complete misfit for the digital age. It is based on assumptions that were true in the 19th century, such as high cost of copying, control of distribution chain etc.
+
+Those are simply not true anymore. But copyright is also particularly badly designed (pun intended) for personalized manufacturing based on digital files.
+
+Copyright, in theory, applies to the design itself (to the extent it is not merged to the function), and to the digital file carrying the information necessary to print the product. But copyright does not apply to the function of the print, or the function of what is being printed.
+
+And again, how can you possibly enforce copyright in a standardized product, when the value of 3D printing is in the personalization – i.e. that bit which would fall outside copyright protection in the first place?
+
+I think it is a key aspect that is not well understood by IP professionals. 3D printing will personalize manufacturing.
+
+And personalized things fall outside IP, because IP is based on principles of standardized manufacturing/copying.
+
+After all, when was the last time you heard about the estate of Jimi Hendrix sue someone because they have as a ringtone the intro to “Hey Joe”? In theory, every ringtone is a breach of copyright.
+
+But copyright can’t handle personalized things – so, for ring tones, it has become irrelevant.
+Is that the way forward for all IP?"
+(http://jorendewachter.com/2013/02/3d-printing-and-intellectual-property-why-are-they-a-misfit/)
+
+==Vasilis Kostakis on Peer Production and 3D Printing==
+
+See:
+
+# [[Peer Production and Desktop Manufacturing: The Case of the Helix_T Wind Turbine Project]]
+# [[Commons-Based Peer Production and Digital Fabrication: The Case of a RepRap-Based, Lego-Built 3D Printing-Milling Machine]]
+# [[Open Source 3D Printing as a Means of Learning: An Educational Experiment in Two High Schools in Greece]]
+
+=More Information=
+
+#Section on [http://fabwiki.com:8080/index.php?title=Category:3D_Equipment 3D Printing Equipment], maintained by [[Fab Wiki]]
+#See also: [[Desktop Manufacturing]]; [[Rapid Manufacturing]]; [[Personal Fabricators]]
+#Online tutorial through slideshow: [http://www.sciam.com/article.cfm?id=five-ways-to-print-3d-objects Five Ways to Print Your Own 3-D Objects]
+#Three videos on 3d printing collected by The Scientific Indian, at http://scienceblogs.com/thescian/2008/08/3d_printing.php
+#[http://replicatorinc.com/blog/2009/02/4-types-of-3d-printing/ Four types of 3d-printing]: with videos for each
+#Yahoo Group: [[DIY 3D Printing and Fabrication]]
+#[[3DSUG]] - User group whose mission is to encourage and coordinate technical information exchange between owners and operators of 3D Systems equipment.
+#Article: S Bradshaw, A Bowyer and P Haufe, "The [[Intellectual Property Implications of Low-Cost 3D Printing]]", (2010) 7:1 SCRIPTed 5
+#[[Makerbot]]'s [[Replicator]], sold at CES 2012
+
+[[Category:Business]]
+
+[[Category:Design]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Resources]]
+
+[[Category:Manufacturing]]

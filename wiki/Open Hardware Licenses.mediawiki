@@ -1,0 +1,577 @@
+Overview from http://www.ladyada.net/library/openhardware/license.html
+
+There is an updated categorisation of licenses, according to their conformity to the [[Open Source Hardware Definition]] via the [[Open Hardware Roadmap]] pagr on [http://www.ohroadmap.org/licenses Licenses]
+
+
+=Description=
+
+From the Wikipedia:
+
+"Rather than creating a new license, some open-source hardware projects simply use existing, free and open-source software licenses.[3] These licenses may not accord well with patent law.[4]
+
+Additionally, several new licenses have been proposed. These licenses are designed to address issues specific to hardware designs.[5] In these licenses, many of the fundamental principles expressed in open-source software (OSS) licenses have been "ported" to their counterpart hardware projects. Organizations tend to rally around a shared license. For example, Opencores prefers the LGPL or a Modified BSD License,[6] FreeCores insists on the GPL,[7] Open Hardware Foundation promotes "copyleft" or other permissive licenses",[8] the Open Graphics Project uses a variety of licenses, including the MIT license, GPL, and a proprietary license,[9] and the Balloon Project wrote their own license.[10] New hardware licenses are often explained as the "hardware equivalent" of a well-known OSS license, such as the GPL, LGPL, or BSD license.
+
+Despite superficial similarities to software licenses, most hardware licenses are fundamentally different: by nature, they typically rely more heavily on patent law than on copyright law. Whereas a copyright license may control the distribution of the source code or design documents, a patent license may control the use and manufacturing of the physical device built from the design documents. 
+
+
+This distinction is explicitly mentioned in the preamble of the TAPR Open Hardware License:
+
+"... those who benefit from an OHL design may not bring lawsuits claiming that design infringes their patents or other intellectual property." — TAPR Open Hardware License
+(https://en.wikipedia.org/wiki/Open-source_hardware#Licenses)
+
+=Examples=
+
+#[http://www.chumby.com/developers/agreement Chumby Developers Agreement] for the [[Chumby]]
+#[http://www.tapr.org/ohl.html TAPR Open Hardware License], a legal framework for Open Hardware projects
+#[[CERN Open Hardware Licence]]
+
+
+
+=Characteristics=
+
+Matt from Liquidware:
+
+"with Open Source and Intellectual Property, we're talking about information, and the rights associated with it as it sits, encapsulated in a set of source files that occupy disk space. Creators of these source files (like you) have a set of decisions to make. Some of these decisions you make knowingly, after thinking about them. Some of these decisions you make instinctively, immediately without much thought. The point is, you’re making decisions whether you think about them or not. Let’s run through the types of decisions you’re making, one by one. Each of these decisions is a decision about Intellectual Property rights.
+
+I'll try to frame each from the perspective of Intellectual Property as well as from the viewpoint of "Open Source":
+
+Entity – Can anyone use the files and information you’ve created, or are there restrictions on the types of entity? For instance, is the information for individual use only, or can institutions and companies use it too? Can any government use the information, or are there restrictions imposed by trade and political policy that restrict some governments or groups of people?
+
+Branding / Attribution – If someone else takes the work, must they provide recognition and attribution back to the original author, or are they free to take it, brand it in a new way, and distribute it without recognition or attribution?
+
+Naming – Can someone rename the project once they build it themselves, or must they keep it named the same thing the original author named it?
+
+Field of Use – Can the project or information you provide be used in any field or domain of use, or is it restricted? Can someone build missiles and weapons that kill people with your idea, or are they restricted to public service and commercial domains? Can people use your idea in any industrial use, or only in specifically defined, narrow ones that don’t compete with you?
+
+Share-Back – Can someone make changes to your idea and keep their changes to themselves, or are they obliged to share them back with you, perhaps for inclusion in future versions?
+
+Replication – Do you restrict people from copying or reproducing the information, or can they make as many copies as they want?
+
+Reselling / Transferability – Can the information be resold to others, or is it permanently assigned to a single recipient, and non-transferrable?
+
+Economic Rights – Assuming someone else has a version or copy of the information, can they sell their copy, or resell multiple copies for a profit? Can they charge any price at all, or are they restricted to transferring the information in a non-monetary transaction?
+
+Ownership or Leasing – When someone else has a copy of the information, do they own it legally, or are they only temporarily leasing partial rights from someone else, the original author, or the distributor?
+
+Upgrade Rights – Assuming there are versions of the information, and those versions change over time, does owning a previous version of the information entitle you to all future upgrades, or must future upgrades be re-evaluated, re-purchased, or re-negotiated under new contracts.
+
+Derivative Licensing – If copies or derivative works are permitted, and if they are allowed to be distributed to others, does the original creative author require that the derivative works carry the same license, or are future versions permitted to be covered under different licenses?
+
+Jurisdiction – Does the contract covering information rights remain in effect anywhere on the planet, or universe, or does it only apply in certain geographical jurisdictions? If the contract is contested, and the case goes to court, where will the court case be held, on a boat in the mid-Pacific (you’ll get away with anything), or in Delaware (pro-company), or in Texas (pro-individual inventor), or in New York (the person with the bigger budget wins), or in Washington, DC (pro-US government, pro-lobbyist), or in one of the Norwegian countries (anti-information restrictions, pro-information freedom), or in sub-Saharan Africa (the more guns and money you have, the better your chances of winning. And living).
+
+Target – Your defining a set of information rights. You could be addressing anyone who could possibly ever come into possession of the information, or you may only be defining rights and freedoms for a certain group of people. You might not care what a non-profit organization does with your idea, but you may be very careful about restricting rights for commercial entities.
+
+Timing – Do the rights last forever, or are they restricted in time. For instance, do the rights last for a fixed number of years, as long as the inventor or creator is alive, as long as Mickey Mouse if protected, or for as long as the government who granted those rights is around?
+
+Fees – Does it cost anything to acquire, retain, or perhaps modify the rights granted to you? Or are the rights free to acquire, free to retain, and free to modify?
+
+Platform and Stack – Do the rights cover the entire platform, and the entire system and ecosystem, or are other licenses permitted to cover different rights throughout the system? For instance, if a piece of software is Open Source, does it require that it be run on an Open Source operating system, or can you run it on a proprietary one? Does it have to be compiled with an Open Source compiler or can the tool-chain be closed source and proprietary? At the extreme, perhaps the license requires that everything, from the programming language, to the instruction set architecture, to the silicon masks that built the processor, be completely consistent and covered by the same self-consistent rights.
+
+Enablement – How much is required to be disclosed by the author? Is it sufficient to merely provide the painting, or must the artist describe how the painting was drawn? This is sometimes called the “Mona Lisa” test. To paint the Mona Lisa, you get paint, assemble brushes, set up a canvas, and then … paint the Mona Lisa. In patent law, the concept of enablement requires that anyone attempting to get a patent, must describe accurately and sufficiently in the patent text itself, how a “person reasonably skilled in the art” to recreate the invention on their own.
+
+Editability – Does the author of the information permit the information to be edited, or must it remain in its original form for the duration of its life? If it’s allowed to be edited, can anyone edit the information, or only certain people? Gun laws and gun restrictions require that only certain people, accredited gunsmiths, be allowed to maintain and modify, and fix guns.
+
+Workaround and Trespassing – Are there punishments in place for someone who tries to work around mechanical or security restrictions, like digital trespassing? What burden of proof is required to prove that someone has violated the terms of the contract? Do you have to catch them in the act, or is it enough to associate them with the information indirectly?
+
+Identification and Authentication – Does each copy of the art require a unique identification number, of can the information be distributed widely without identifiers? Alternatively, must the information be “activated” with codes or passwords before it is legible?
+
+Customization and Standardization – Can the information be tailored to specific uses or applications, can it be tweaked, are there different versions of the information, or are they all the same?
+
+Requisite Skillset – Can anyone take advantage of the information with basic education? Can children utilize the information? Must you require years of education and millions of dollars of specialized equipment in order to use the information?
+
+Visibility and Transparency – Is the information understandable or digestable simply by looking at it, or must you peel back a cover or lid to peek inside? Do you need a key, a special set of tools or programs, in order to reverse engineer it before you can understand it, or is the information simple to convey, and described in common formats or vernacular?
+
+Taxation and Registration – During transfer of the information and files, are there taxes or government policy-related registrations required? Owning a map of the world’s nuclear facilities, or blueprints for how to build a nuclear bomb, tend to be restricted and regulated by government authorities.
+
+
+Each of these dimensions, or attributes, is a piece or part of the terms and conditions imposed on a piece of information by its creator, author, or inventor. These terms are collected from real contracts, from intellectual property law concepts and constructs, and from the field of practical contract drafting. These are the terms and conditions debated in court, addressed by the district and Supreme Courts in rulings on intellectual property rights. This is clearly not a complete list. There are many other concepts in intellectual property theory and Open Source that are clearly not addressed in the list above. That’s ok, this isn’t meant to be an exhaustive list. Rather, it’s meant to be a 90% list. These are the issues that constitute the majority of intellectual property debates and disputes that relate to Open Source and information rights.
+
+This list of attributes is meant to convey one point: Open Source contract terms and conditions are not straightforward."
+(http://antipastohw.blogspot.com/2010/01/grand-unifying-theory-of-open-source.html)
+
+
+=Discussion=
+
+
+==Unresolved legal issues hamper the development of sound open hardware licenses==
+
+Jonathan Kuniholm:
+
+"Every single effort to tackle the problem of open hardware licensing
+has failed to acknowledge that it is unclear what we are licensing
+(TAPR, CERN, OHANDA, OSHW, you name it), and if any license will
+withstand a legal challenge. Open source software has a legal basis in
+the copyright of source code AND the executable--perhaps most
+importantly in the copy of the executable made in RAM at startup.
+Without a legal basis for ownership rights, there is nothing to
+license, and it is pointless to discuss the fine points of a
+particular license. This is like talking about the architecture of a
+building without a foundation, land on which to build, or funding.
+Choose your metaphor.
+ 
+Open (source) hardware is completely different than software,
+precisely because there is no clear analogue to software source code
+and the copyright basis for its protection (I prefer to leave out
+"source" exactly because of the issue that I am raising, although I
+appreciate others' fondness for it based on the ease and most useful
+form to modify).
+ 
+The decision made by everyone who has addressed these issues so far
+has been "damn the torpodes," and they have skipped straight to the
+discussions of license, because the basis question may indeed be
+intractable. I don't think that it is, and the unfortunate effect of
+the "damn the torpodes" approach could be the creation of a poorly
+designed building that collapses, and poisons the environment for a
+better considered strategy.
+ 
+Based on all of the discussions that I've been involved in, I believe
+that there are only two possibilities for a robust legal basis for a
+license. (1) the maintenance of a registered trademark and the
+creation of a community with open (source) hardware principles to
+which any user of the community, copyrighted source material, and the
+trademark itself must adhere, and (2) the creation of an SKDB-type
+common file format for sharing physical designs that duplicates the
+legal basis for open source software licenses.
+ 
+The second possibility I think has been little discussed, and appeals
+to me a lot. Besides potentially addressing the need for open source
+CAD (or at least truly open CAD file formats), this second possibility
+could create the automatic legal protection for hardware that we have
+all simply been pretending in this community that we already have. The
+fact that the source file could be reverse engineered or firewalled is
+exactly the same risk that exists in software, and the creation of a
+file format (like software source code) that makes the use of GPLed
+software a path of least resistance could apply here as well. The fact
+that patent protection would be necessary to protect the underlying
+ideas absent the reuse of source is a problem and matter of debate in
+software as well.
+ 
+The first possibility is a less solid one, but much more within reach.
+It is the one that OHANDA uses, and was in part inspired by the Sun
+license on OpenSPARC (http://en.wikipedia.org/wiki/OpenSPARC). It is
+interesting to me that the OSHW community ignored this possibility by
+at least initially releasing their logo CC, which would deny them this
+legal lever for control--indeed perhaps the only one they have.
+ 
+What I believe that we are in need of here is for some smart law
+review students to tackle this issue for a note in a legal journal,
+informed and framed by as much of our experience as possible, to
+create a roadmap for the best case legal basis that we can come up
+with. Because of the difference in skill and mindset between the
+patent and copyright legal worlds, I think that hardware has been
+ignored by the open source legal types. I've reached out to the Center
+for the Public Domain here at Duke, but have been unsuccessful in
+interesting anyone in discussing this issue.
+ 
+Once it is clear that there is actually a legal basis for any of this,
+i.e. something to license, then we can move on to discussions of what
+the provisions of any license might be. Anything else is a waste of
+time, and stands to cause harm by muddying the legal waters by
+creating a failed precedent."
+(Open Manufacturing list, September 2011)
+
+
+==Caveat: Licenses do not replace Patents==
+
+Bruce Perens:
+
+"In promoting Open Hardware, it is important not to unintentionally
+deceive designers regarding the extent to which their licenses
+actually can control their designs. Under U.S. law, and law in many
+other places, copyright does not apply to electronic designs. Patents
+do. The result is that an Open Hardware license can in general be used
+to restrict the plans but probably not the manufactured devices or
+even restatements of the same design that are not textual copies of
+the original. The applicable section of copyright law is 17.102(b),
+which says:
+ 
+In no case does copyright protection for an original work of
+authorship extend to any idea, procedure, process, system, method of
+operation, concept, principle, or discovery, regardless of the form in
+which it is described, explained, illustrated, or embodied in such
+work."
+(http://www.freedomdefined.org/OSHW_draft)
+
+
+'''John Griessen''' adds:
+ 
+"TAPR OHL includes '''an agreement that users of the design waive their patent rights to sue''' the design's originators and users. It has no effect on any other patent
+rights exercised by anyone not using the licensed design. Another way to say this
+is TAPR OHL includes an agreement not to sue, so the users of a TAPR OHL design
+cannot use patents to effectively take it over."
+(open-manufacturing list, October 2010)
+
+==Introduction by Christian Siefkes==
+
+For links, see the web version: [http://www.keimform.de/2009/12/09/the-tricky-business-of-copylefting-hardware/]
+
+It’s probably safe to say that the copyleft principle has been essential
+for the success of free software. Copyleft means that all versions of a
+software or document will remain free, preventing companies from creating
+“value-added” versions of free programs and selling them as proprietary,
+non-free software. The GNU General Public License (GPL)—the first and most
+well-known incorporation of the copyleft principle—is used for about 50–70%
+of all free programs, making it more popular than all other free software
+licenses together.
+
+At first sight, the situation in the newly emerging field of free and open
+hardware might seem similar—here, copyleft licenses such as the GPL and the
+Creative Commons Attribution-ShareAlike License (BY-SA) are very popular
+too (see below for a more detailed analysis). But actually, the situation
+is very different for hardware design, since copyleft relies on copyright,
+and hardware is (in most cases) not protected by copyright law.
+
+
+'''The Problem: Copyleft Depends on Copyright'''
+
+
+In hardware design, the copyleft clauses of the GPL and the CC BY-SA
+license thus don’t work in the way you might expect them to work. Anybody
+who modifies and spreads the design description is bound by them, but
+people and companies using the design to build and distribute actual
+hardware are not. Vendors can modify the hardware and sell or distribute
+the modified hardware without having to publish their modified design,
+since licenses only govern the design descriptions (the instructions on how
+to build the hardware), not the hardware itself. Here’s how the FSF puts it
+in their GPL FAQ:
+
+   
+* Can I use the GPL to license hardware?
+
+   Any material that can be copyrighted can be licensed under the GPL.
+   GPLv3 can also be used to license materials covered by other
+   copyright-like laws, such as semiconductor masks. So, as an example,
+   you can release a drawing of a hardware design under the GPL. However,
+   if someone used that information to create physical hardware, they
+   would have no license obligations when distributing or selling that
+   device: it falls outside the scope of copyright and thus the GPL
+   itself.
+
+The problem is that copyright governs only the distribution of information,
+but not its usage. If somebody has access to information, they can use them
+and act upon them in any way they like without violating copyright law.
+
+If a bookseller publishes a book describing how to build a product X, the
+bookseller cannot prevent me from using this information to build and sell
+X. The book is protected by copyright laws, but the factual information
+contained in it is not, and my use of that factual information falls
+outside of copyright laws. The GPL relaxes the restrictions of copyright,
+giving me more freedom to use copyrighted information than I would usually
+have, but of course it cannot deny me the freedoms which I always have,
+even with full copyright in force.
+
+
+'''A Solution: Patents?'''
+
+I know of only one license that is specifically targeted at open hardware
+and tries to work around this issue by relying not only on copyright, but
+also on a mutual patent immunity clause: the TAPR Open Hardware License,
+published in May 2007 (Version 1.0). The idea is that the licensor grants
+everybody who complies with the terms of the license the right to use any
+relevant patents they control. So if you don’t comply (e.g. by not
+publishing the “source” for physical products you build based on the
+licensed information), you might get sued by the licensor for patent
+violation, but if you comply you’re safe.
+
+TAPR has published two versions of the license: the Open Hardware License
+(OHL), which emulates standard copyleft (like the GPL or CC BY-SA), and the
+TAPR Noncommercial Hardware License (NCL), which additionally prohibits
+commercial usage (like the CC BY-NC-SA).
+
+Relying on patent law instead of copyright law for hardware makes sense,
+since patent law is made for hardware, while copyright law is made for
+information. But it’s also a problem, since getting a patent is a difficult
+and costly process, while getting copyright is free and automatic.
+
+The TAPR licenses will only be really effective if the licensor possesses
+relevant patents, or at least if people can’t be entirely sure that (s)he
+doesn’t have any such patents. That’s a pretty bad limitation, since
+patents are difficult and expensive to get. Most peer projects will be
+unable or unwilling to apply for a patent, so the TAPR licenses will hardly
+be suitable for them.
+
+Another unrelated problem of the TAPR licenses is that they require you to
+distribute the original designs you’ve received from others in addition to
+your own modified version—you must distribute both “before” and “after”
+versions of any files you’ve modified (§ 4.2 (b)). This might be extremely
+impractical for large version histories (think of hundreds or thousands of
+versions), and it makes the creation of printed versions of modified
+hardware documentation practically impossible. It’s also unclear what’s the
+point of this requirement.
+
+
+'''Pragmatic Solutions: Just Use Standard Copyleft—Or No Copyleft Altogether'''
+
+Most open hardware projects seem to care little about the specific issues
+of hardware licensing. Most projects aiming for copyleft just apply a
+standard license such as the GNU GPL or the Creative Commons BY-SA license,
+apparently either not knowing or not caring that is won’t apply to building
+hardware (see list of projects below).
+
+Another solution is to forgo copyleft altogether and just use a permissive
+license such as the (modified) BSD license. This allows everybody to use
+the provided information in any way they like, without having to keep
+modifications or improvements open.
+
+There even is a hardware-specific non-copyleft license, the Balloon
+Licence. The Balloon Licence is a simple MIT-style license. Since it does
+not try to apply any restrictions on the manufacturing of hardware (no
+copyleft or non-commercial clause), it doesn’t have the problems of other
+open hardware licenses. However, since this license is very similar to the
+commonly used MIT and (modified) BSD licenses and doesn’t address any new
+issues, there seems to be little reason to choose this special license
+instead of one of the standard ones.
+
+What To Do?
+-----------
+
+As can be seen from the list below, there is a clear tendency of projects
+to use standard copyleft (the GPL or the CC BY-SA), protecting the design
+information itself but not any physical hardware built on their basis. Does
+this mean that projects are willing to live with a limited copyleft, or are
+they just unaware of the problem? I’m not so sure…
+
+In any case, no convincing solutions seem to exist. The TAPR license, the
+only license that tries the address the problem of extending copyleft to
+the hardware itself, never became very popular—almost nobody outside the
+TAPR project seems to be using it. And indeed, its reliance on patent law
+makes the license very impractical to use for all but the biggest projects.
+
+On the other hand, just using permissive licenses (like the Apache projects
+and the BSD family do) doesn’t seem to be an attractive option for the
+majority of open hardware projects—most prefer to get at least the partial
+copyleft protection that standard licenses such as the GPL and CC BY-SA can
+give them.
+
+But, as described above, their copyleft protection is very incomplete in
+case of hardware—hardware builders aren’t required to give back their
+improvements. In the case of the RONJA project, this difference between
+hardware builders not giving back but the project maintainers expecting
+them to do so, has already caused tensions that contributed to the downfall
+of the project. Whether similar problems will appear in other projects and
+weaken the open hardware community, remains to be seen..."
+(http://www.keimform.de/2009/12/09/the-tricky-business-of-copylefting-hardware/)
+
+
+==There is no good open hardware license to date==
+
+Matt from Liquidware:
+
+"Attributes are not clear cut, and they are not all created equal. Some are not enforceable, because it would be impossible to determine, practically speaking, whether someone is violating that term. Other attributes are simply not enforceable because they may be inconsistent with government permissible activity. Violating the terms may be punishable by imprisonment, or fines, or a slap on the wrist depending on your jurisdiction and the severity of the penalty. Strictly speaking, in the US, it is only “illegal” to violate trademark, copyright, and patent law.
+
+Once a framework like this is outlined, a logical next question is, “what constitutes the most open source” set of rights? No matter what anyone says, there is no simple, straightforward answer to this question. It depends on the audience, the target, and the nature of the work. This is a topic of significance on many web forums, where the debate has been waged for years. As you no doubt can tell, this is an emotionally charged issue.
+
+There are “open source” licenses of various flavors, but they tend to address the narrow domain of the file itself, and get fuzzy when it comes to what can be done with that file, how it can be put to use, what it can be used for, or not. Some licenses are better than others, some explicitly address the attributes and dimensions above, while other licenses brush over the surface, skip, ignore, or only briefly touch on the dimensions. This can create ambiguity, and ambiguous contracts breed abuse and hurt feelings.
+
+It is the author’s opinion that none of the current “open source” licenses properly covers “open source hardware” to a sufficient quality standard to be used in a widespread way. Instead, most of the open source hardware licenses in wide use today are merely repurposed open source software licenses! This is a serious problem."
+(http://antipastohw.blogspot.com/2010/01/grand-unifying-theory-of-open-source.html)
+
+
+==The problem with existing licenses==
+
+Alicia Asín Pérez:
+
+"Can people use a [[Creative Commons]] license to release their hardware? Some projects do that, but it’s probably not the best way. Creative Commons or [[GPL]] licenses only apply to works that can be copyrighted (for example theater plays, pictures, films, musical works, etc.). Creative Common licenses do not apply to the idea presented in the file. The only way to protect an idea is to patent it. After getting a patent you can license it, but patents are time-consuming and expensive, and most individuals can’t afford them. So, by using a CC license for releasing an schematic we are really releasing the drawing of the schematic, not the circuit that can be done with it.
+
+There is still another question: copyright rights apply directly: this means that if you compose a song, your authorship is recognized automatically; however, the only way of getting rights over a utilitarian design or an invention is by a patent. So… you all might have released something that theoretically is not yours! Now you may wonder, what would happen if someone else patented my design? Well, in Europe, if you have published it, you have prevented it from being patented—you can’t even patent it yourself!
+
+The TAPR organization has contributed to the [[Open Hardware]] developers community with an Open Hardware License. As they say in their website, they grant permission for anyone to use the OHL as the license for their hardware project, provided only that it is used in unaltered form. This license is based in GPL but unlike the GPL, the OHL is not primarily a copyright license. While copyright protects documentation from unauthorized copying, modification, and distribution, it has little to do with your right to make, distribute, or use a product based on that documentation. For better or worse, patents play a significant role in those activities. Although it does not prohibit anyone from patenting inventions embodied in an Open Hardware design, and of course cannot prevent a third party from enforcing their patent rights, those who benefit from an OHL design may not bring lawsuits claiming that design infringes their patents or other intellectual property”. This license takes into account aspects like manufacturing and distribution of products made with the documentation released, which are not considered in software licenses. The problem is that this license only affects the documentation related to the hardware, not to the products themselves (which is what happens with software and the GPL). However, the OHL is definitely a good start to build a more complete license."
+(http://www.freesoftwaremagazine.com/articles/making_open_hardware_possible)
+
+
+
+==Why "non-commercial" is a "non-good" idea for your project==
+
+From http://www.ladyada.net/library/openhardware/license.html:
+
+"It seems like this misunderstanding about restrictions on projects has severely bogged down open hardware. A surprising large number of projects and people are not aware that by labeling their project "Creative Commons NonCommercial" they are taking it out of the Open Source pool and also likely keeping their project from being useful to people.
+
+When talking to people, many express concern that if they remove the NC part of their license, their project will be "abused" somehow. 
+
+
+Let's approach these concerns and identify what is fact and what is just fear.
+
+
+'''"I'm afraid that it will get copied by a large conglomerate and sold cheaply to people!"'''
+
+This is the most common fear people have which keeps them from releasing a project under a true OS license.
+One thing to ask yourself is "Who is this company?" Are they real or just a figment? Try to write down some names.
+
+What products do they have that are close to yours that would make them a contender to 'steal' your work?
+
+Do you think that a large company that has many liability concerns would be comfortable using an Open Source project in their line of products?
+
+More to the point: Do you think that the company would be willing to risk intellectual-property issues that would open it up to lawsuits if they misused the content, or do you think it would make more sense for the company to spend the $5-$10K dollars to just design something similar that would be wholy owned by them?
+
+Companies are often valued by their assets. An open source project isn't really an asset compared to a internally-developed one for which they own all intellectual property such as copyrights and patents.
+
+Chances are if you really think hard about the 'big scary guy' who is trying to rip you off, the fact is, there's probably nobody out there with that interest. It's too risky for most, and anyways the hardest part of product development is rarely the 'schematic' but rather the manufacturing, distribution, etc.
+
+'''"I'm afraid my project will be used by some big company without proper credit or attribution!"'''
+
+While this doesn't have much to do with "NonCommercial" it has come up. Some people figure that by making the license restrictive they avoid having people use their work without attribution. Except that in reality, the logic doesn't work. Anyone who would not attribute your work properly probably wouldn't care about the non-commercial part anyways.
+
+If you're concerned about attribution. here are some  things you can do. Most of the time attribution is just not clear!
+
+    
+* Place your name/email/web/license on the PCB in copper layer as well as the name of the project. If you don't have a lot of space, use a name that is unique and 'googlable'
+    
+* Do the same on the schematic
+    
+* And with the code
+    
+* Write a quick paragraph about what kind of attribution you would like. For example I often say  "You must keep the attribution on the PCB and schematic and in the firmware files, as is"
+
+Some companies with Open Hardware projects have 'requests' for attribution. For example ObDev requests "Publish your entire project on a website and drop us a note with the URL. Use the Feedback Form for your submission." It's not legally binding but most people follow the request.
+
+
+'''I would like to sell my project as a product and I'm scared of someone becoming a competitor!'''
+
+This is a slightly-more reasonable fear, and it's quite scary. But here are some things that you can remember:
+You can require attribution that makes it clear that you are the originator.
+
+You can use trademarks to create a brand. Trademarks are not covered by Open Source licenses so they remain your property. Trademarks are super-cheap compared to patents, and you can file for them yourself for about $275.
+
+Your product is more than just a circuit board. Its your service and value. Anybody who wants to make a direct copy of your project and sell it 'to make big bucks' without making a contribution to the project, is probably pretty lazy to start, and won't be able to do the very hard work of selling a product: providing support, performing upgrades, and all the other nonsense that business-owners must do.
+
+Here is a real-life example: the Arduino project is Open Source. There is a product that the team sells, an assembled circuit board as well as accompanying open source software. The team trademarked the word (although they haven't registered it yet), so that only the original team can use the word Arduino in the name. That isn't to say there aren't clones, there are quite a few. But they have to make it clear that they are not originals because of attribution and trademark. People do buy the clones but the numbers are very small compared to those who would rather get the Official Arduino, which is already assembled, is well supported and is guaranteed to be compatible.
+
+'''If you keep your project "non-commercial" it is less likely to succeed and evolve!'''
+
+If Firefox or Linux (or apache or mysql or any other open source software you use) was released under a non-commercial license, how popular do you think it would be today? Think about it: nobody working at a company could use it. No e-commerce site could use this software, or any website for a company.
+
+Redhat, Novell, IBM, Dell, etc all use Linux in their products and services, and thus use it to make (or rather, save) money. Is that a bad thing? Do you think that Dell selling laptops with Linux preinstalled has hurt Linux or helped get it out to more people?
+
+Do you think Linus, GNU/FSF and the rest of the people who helped design Linux and subparts dont get attributed?
+
+'''If you say "non-commercial" that means nobody working in a company can use your design either. That means its stuck in academia forever.''' It also strongly restricts who can use or contribute to it. There might be a company that could make a big improvement to your design as part of using it in one of their projects, but they'll never work on your project because they can't!"
+(http://www.ladyada.net/library/openhardware/license.html_
+
+=Directory=
+
+There is an updated categorisation of licenses, according to their conformity to the [[Open Source Hardware Definition]] via the [[Open Hardware Roadmap]] pagr on [http://www.ohroadmap.org/licenses Licenses]
+
+
+==List from Tere Vaden:==
+
+# [[TAPR Open Hardware License]]
+# Simputer GPL, 'SPGL'; the GPL modified for hardware [http://opencollector.org/hardlicense/sgplv1.html]
+# Balloon Licence, by the Balloon Project [http://balloonboard.org/licence.html] (essentially GPL, with a limited basic design to guarantee standardization)
+# Hardware Design Public Licence [http://www.opencollector.org/hardlicense/hdpl.html] (again, aiming at GPL-style effects)
+
+Other, not hardware-specific licenses used
+
+# GPL, used, e.g., by OpenSparc by Sun [http://arstechnica.com/old/content/2007/02/8911.ars]
+# The MIT Licence, used, e.g., by the LART project [http://en.wikipedia.org/wiki/LART]
+
+
+==OSHW Definition Conforming Licenses==
+
+Via [http://www.ohroadmap.org/licenses]:
+
+* [[TAPR]], http://www.tapr.org/ohl.html
+
+TAPR is the OSHW licenses that served as a guideline during the creation of the Open Hardware Definition. TAPR is based off the OSS GNU GPL License, while addressing specifically the fact that open hardware is covered by a different legal system (patents vs copyright). As such, it forbids any other license from preventing the same rights to copy and modify documentation and the make and use the product made using that documentation. There are concerns about edge cases, however, as there is insufficient discussion of the distribution terms.
+
+
+* [[Hardware Design Public License]], http://www.opencollector.org/hardlicense/hdpl.html
+
+The HDPL, like the TAPR License, is also one of the licenses that preceded and inspired the Open Source Hardware Definition. It is also inspired by the OSS GNU GPL. It addresses many of the same issues, with a good number of comments included to make clear the terms of the agreement. HDPL attempts to create a more comprehensive license than TAPR, encompassing legal edge-cases and a variety of hardware types, with clear definitions of terms.
+
+
+
+
+
+==Compilation by Christian Siefkes:==
+
+The following projects use standard copyleft licenses:
+
+    
+* GPL:
+          
+o Bug Labs, modular open source computer hardware (cf. Bug Labs: License)
+
+o Elphel, high performance cameras based on free software and hardware designs (cf. About Elphel)
+
+o RepRap, an open source fabber (cf. RepRap GPL Licence)
+
+o Sun’s OpenSPARC project, publishes free hardware designs for the UltraSPARC T1 and T2 processors
+
+o Free Telephony Project
+    
+
+* CC Attribution-ShareAlike:
+          
+o Arduino (cf. Arduino Hardware) and Freeduino (cf. Freeduino PCB Design Files), two variants of a free microcontroller board. They are aware that the CC clauses don’t apply to physical production: “You don’t need to give attribution on the physical products that you might make with these files, as copyright in general, and CC2.5 in particular, do not apply to physical objects.”
+
+o Beagle Board, a free low-cost computer board based on a Texas Instruments processor
+o MultiMachine, a low-cost multi-purpose machine that can be built with common hand tools
+o Openmoko, open source mobile phones (uses BY-SA for CAD Files and schematics)
+    
+
+* GNU Free Documentation License:
+          
+o Ronja, optical data transmission (cf. Ronja Copying)
+
+
+Projects using a standard share-alike license that prohibits commercial usage (CC Attribution-Noncommercial-ShareAlike):
+
+* Ronen Kadushin, free furniture designs
+
+
+Projects supporting various Creative Commons license:
+
+
+* Open Architecture Network, a repository of architectural designs and plans; users can choose any CC license, including public domain (cf. OAN Licensing)
+        
+* Thingiverse, a repository of digital designs for physical objects; users choose either standard copyright or a CC license, GPL and public domain are also supported (cf. Thingiverse Terms of Services)
+        
+* Ponoko, a repository and marketplace for digital fabrication; available choices are full copyright and Creative Commons licenses (list of CC-licensed designs)
+
+
+
+Projects using the TAPR Open Hardware License, a share-alike license designed specifically for hardware which relies on patent rather than copyright law:
+
+* TAPR, the community of radio amateurs which developed that license
+
+
+Projects dual-licensing between TAPR License and standard copyleft:
+
+
+* Open Graphics Project, open source graphics cards; three license alternatives for its hardware descriptions (schematics and artwork): GPL, TAPR License, or a commercial proprietary license, cf. OGP FAQ and Announcement from 7 April 2009. Of course, dual/triple-licensing with TAPR as one of several options makes the special protections of the TAPR License void (users can just choose the GPL instead), so this multi-licensing model seems somewhat pointless.
+
+
+Projects using a non-share-alike license specifically developed for hardware (the Balloon Licence):
+
+
+* Balloon Project, another circuit board (only parts of the design are free, some design files are kept proprietary)
+
+Projects using a standard non-copyleft license (the BSD license):
+
+* Fab@Home, another project for building an open source fabber (cf. Fab@Home: General disclaimer)
+
+
+Mixed:
+
+
+* OpenCores, develops computer components for CPUs, memory controllers, peripherals, motherboards etc.; uses a mix of GPL or (preferably) LGPL and modified BSD license, depending on the preferences of the contributors (OpenCores FAQ)
+
+(http://www.keimform.de/2009/12/09/the-tricky-business-of-copylefting-hardware/)
+
+=More Information=
+
+#[[Open Design]]
+#[[Open Hardware]]
+#[[Open Source Hardware]]
+#[[Open Licenses]]
+
+
+[[Category:Design]]
+
+[[Category:Open]]
+
+[[Category:Manufacturing]]
+
+[[Category:Licensing]]
+
+[[Category:Peerproperty]]

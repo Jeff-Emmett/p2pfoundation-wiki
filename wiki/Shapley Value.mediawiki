@@ -1,0 +1,20 @@
+
+
+=Description=
+
+Kyle Birchard:
+
+"In the sense used here, a [[Cooperative Game]] is comprised of coalitions of individuals working toward a common goal. While those early papers often considered business decision makers, in the present day, we might also model these actors as households, firms, sensors, data owners, personal AI agents, DAOs, and other entities that haven’t yet been invented.
+
+The key feature of coalitional forms is that working together creates a larger surplus than the sum of any of the individual actors. In one sense, this is almost too obvious to mention, but one of the important contributions of game theory is a formal representation of “cooperation” that gives us ways to measure this surplus in quantitative terms and to embed rules in code that can be deployed, for example, in Ecological Contracts executed over the [[Ecological State Protocols]] envisioned by [[Regen Network]].
+
+Other properties we are interested in with cooperative game theory are functions that are superadditive (the whole is greater than the sum of its parts) and supermodular (joining a coalition yields increasing returns as the coalition size gets larger, i.e., increasing returns).
+
+This is a good time to introduce the [[Shapley Value]], a measure of the contributions made by the individuals that comprise a coalition. Introduced by Lloyd Shapley in a seminal 1953 paper, this value presents a dynamic allocation mechanism that reflects the value contributed by the entities participating in a coalition at any given time.
+
+Until recently, the Shapley Value was largely of theoretical interest because it is so computationally expensive: the number of computations grows as a factorial of the number of agents in the coalition. So, for example, if you have 20 members of a coalition, you would need to compute 20! combinations for each of the 20 members (or 2,432,902,008,176,640,000 computations each). Improvements in processor power and new approximation methods have made it possible to compute values for larger groups, and the Shapley Value has recently been used to study coalition formation in automated negotiation systems, the economics of peer-to-peer networks, and even the contributions of individual players to an English soccer club. Given some of its interesting properties, the Shapley Value and its variants could see important application to data valuation in cryptoeconomic settings."
+(https://medium.com/regen-network/cooperative-games-and-the-ecological-data-economy-df993338cdff)
+
+[[Category:Gaming]]
+
+[[Category:P2P Accounting]]

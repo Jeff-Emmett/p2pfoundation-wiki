@@ -1,0 +1,524 @@
+'''= open engineering resources'''
+
+
+=Example=
+
+"Learning from the GNU open-source model for computer software and adapting that open source model for engineering design.
+
+Open handed, shared freely, published rather than patented, empowering rather than controlling.
+
+With the hope that by opening the gates of knowledge, fewer communities will resort to building untested technologies that all too often become the white elephants that litter the landscape in the Global South."
+
+
+"The [[Agua Clara]] team is committed to creating open source design tools that will make it possible for engineers in the Global South to build municipal scale drinking water treatment plants. This engineering design service is available on our website. We are committed to providing this design service free of charge. It is our hope that Implementation Partners will be able to use our Design service to leverage increased funding for improving drinking water infrastructure in the Global South."
+(https://confluence.cornell.edu/display/AGUACLARA/Open+Source+Engineering)
+
+
+=Source=
+
+[http://www.opennovation.org/ Opennovation.org] "is an open source engineering portal, your one-stop shop for news, links (below), other resources, and profiles of open source engineering software. It also hosts package repositories for running some software on Ubuntu 8.04 "Hardy Heron" and Debian 5.0 "Lenny"."
+
+
+=More Information=
+
+See also the site [http://www.deferredprocrastination.co.uk/], maker of the [[Open Source Velomobile]] called [[Atomic Duck]]
+
+=Directory=
+
+----
+
+===Engineering-focused Linux distributions===
+
+* '''[http://caelinux.com/ CAELinux]''' live DVD based on PCLinuxOS, see [profiles/CAELinux.html profile] for details
+* '''[http://wiki.debian.org/DebianScience DebianScience]''' "pure blend" of [http://www.debian.org/ Debian GNU/Linux] focuses on packaging useful scientific software for Debian
+* '''[http://scibuntu.sourceforge.net/ Scibuntu]''' is a set of scripts for adding scientific software to an Ubuntu workstation
+* '''[http://www.meraka.org.za/scubuntu.htm Scubuntu]''' is a project of the [http://www.meraka.org.za/ Meraka Institute] of South Africa, its goal is to provide support for scientific computation on the Ubuntu platform "in a naturally embedded manner"
+
+----
+
+{|
+| colspan="5" |
+
+
+===Partial Differential Equation (PDE) Solvers===
+
+'''General Finite Element Analysis (FEA)'''
+|- bgcolor="#D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+|
+'''[http://www.code-aster.org/ Code-Aster]''' ([profiles/aster.html profile])
+| Structural and thermomechanical software (en français)
+| Electricité de France
+| GPL
+|
+[http://bugs.debian.org/458812 Debian ITP]
+|- bgcolor="#F0E8C0"
+|
+'''[http://www.csc.fi/elmer/ Elmer]''' ([profiles/Elmer.html profile])
+| FEA Software for Multiphysics Problems
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://www.calculix.de/ CalculiX]'''
+| Three-Dimensional Structural Finite Element Program
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://www.freefem.org/ FreeFEM]'''
+|
+Finite element software family, including [http://titi.ann.jussieu.fr/ FFW] (FreeFEM on the Web)
+| GPL
+|
+[http://packages.debian.org/freefem Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://impact.sourceforge.net/ Impact]'''
+| Explicit dynamic finite element program
+| Several
+| GPL
+|- bgcolor="#F0E8C0"
+|
+'''[http://www.dealii.org/ deal.II]''' ([profiles/deal.II.html profile])
+| C++ library for solving PDEs using adaptive FEA
+|
+[http://trolltech.com/products/qt/licenses/licensing/qpl QPL]
+|
+[http://bugs.debian.org/494729 Debian ITP]
+|- bgcolor="#FFFFE8"
+| '''[http://www.hpfem.jku.at/ngsolve/ NGSolve]'''
+| General purpose heat, magnetic and elasticity 3-D solver
+| LGPL
+|- bgcolor="#F0E8C0"
+| '''[http://www.xmds.org/ XmdS]'''
+| Extensible multi-dimensional simulator
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://www.geuz.org/getdp/ GetDP]'''
+| Generalized environment for treatment of discrete problems
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://tochnog.sourceforge.net/ TOCHNOG]'''
+| Free finite element program
+| Dennis Roddeman
+| GPL
+|
+[http://packages.debian.org/tochnog Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://www.fenics.org/ FEniCS]'''
+| Automated ODE/PDE solver
+| FEniCS group
+| GPL+LGPL
+|
+[http://bugs.debian.org/503265 Debian ITP]
+|- bgcolor="#F0E8C0"
+| '''[http://www.fenics.org/wiki/DOLFIN DOLFIN]'''
+| C++/Python interface to FEniCS
+| FEniCS group
+| GPL
+|
+[http://bugs.debian.org/503082 Debian ITP]
+|-
+| colspan="5" | <br />'''Computational Fluid Dynamics (CFD)'''
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+| '''[http://www.opencfd.co.uk/openfoam/ OpenFOAM]'''
+| General CFD toolbox with pre-processor
+|
+[http://www.opencfd.co.uk/ OpenCFD]
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://openflower.sourceforge.net/ OpenFlower]'''
+| CFD solver focused on turbulent unsteady incompressible Navier-Stokes equations
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://gfs.sourceforge.net/ Gerris]'''
+| Variable density incompressible Navier-Stokes, Stokes or Euler solver with adaptive mesh refinement
+| New Zealand National Institute of Water and Atmospheric Research
+| GPL
+|
+[http://packages.debian.org/gerris Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://rd.edf.com/code_saturne Code_Saturne]'''
+| General purpose CFD software
+| Electricité de France
+| GPL
+|- bgcolor="#FFFFE8"
+|
+'''[http://libmesh.sourceforge.net/ libMesh]''' ([profiles/libMesh.html profile])
+|
+C++ FEA library with adaptive mesh refinement based on [http://www-unix.mcs.anl.gov/petsc/petsc-as/ PETSc]
+|
+University of Texas at Austin [http://www.cfdlab.ae.utexas.edu/ CFDLab]
+| LGPL
+|
+[http://packages.debian.org/libmesh Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://duns.sourceforge.net/ DUNS]'''
+| Diagonalized Upwind Navier Stokes Code
+| Pennsylvania State University
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://slfcfd.sourceforge.net/ SLFCFD]'''
+| San Le's Free Computational Fluid Dynamics
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://www.cimec.org.ar/twiki/bin/view/Cimec/PETScFEM PETSc-FEM]'''
+|
+General multi-physics FEM package based on [http://www-unix.mcs.anl.gov/petsc/petsc-as/ PETSc]
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://typhon.sourceforge.net/ TYPHON]'''
+| Development platform for many computational methods for gas dynamics
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://openfvm.sourceforge.net/ OpenFVM]'''
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://adfc.sourceforge.net/index_en.html ADFC]'''
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://www.dolfyn.net/dolfyn/index_en.html Dolfyn]'''
+| Apache 2
+|-
+| colspan="5" | <br />'''Electromagnetism and Optics'''
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#F0E8C0"
+| '''[http://alioth.debian.org/projects/tessa/ Tessa]'''
+| Three-dimensional simulation software for optical systems, based on the FDTD method
+|
+[http://leom.ec-lyon.fr/ LEOM laboratory], École centrale de Lyon
+| GPL
+|
+[http://packages.debian.org/tessa Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://ab-initio.mit.edu/wiki/index.php/Meep Meep]'''
+| Finite-difference time-domain (FDTD) simulation software for electromagnetic systems
+|
+Joannopoulos [http://ab-initio.mit.edu/ Ab Initio Physics group]
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://ab-initio.mit.edu/wiki/index.php/MIT_Photonic_Bands MIT Photonic Bands]'''
+| Computes the band structures (dispersion relations) and electromagnetic modes of periodic dielectric structures
+|
+[http://math.mit.edu/~stevenj Steven G. Johnson] and the Joannopoulos [http://ab-initio.mit.edu/ Ab Initio Physics group]
+| GPL
+|
+[http://packages.debian.org/mpb Debian]
+|-
+| colspan="5" | <br />'''Software for Phase Field simulations'''
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+| '''[http://www.matforge.org/fipy/ FiPy]'''
+| Python-based finite volume partial differential equation solver library
+| NIST CTCMS
+| Public domain
+|- bgcolor="#F0E8C0"
+| '''[http://www.matforge.org/powell/wiki/RheoPlast RheoPlast]'''
+|
+Parallel finite difference PDE solver written in C and based on [http://www-unix.mcs.anl.gov/petsc/petsc-as/ PETSc]
+|
+[http://www.opennovation.com/apowell/ Adam Powell] ''et al.''
+| GPL
+|-
+| colspan="5" | <br />'''Boundary Element Method (BEM)'''
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#F0E8C0"
+| '''[http://www.matforge.org/powell/wiki/Julian Julian]'''
+| Boundary element code for Laplace equation and linear elastic mechanics
+|
+[http://www.opennovation.com/apowell/ Adam Powell] and Yi-Cheung Lok
+| GPL
+|-
+| colspan="5" | <br />'''Pre- and post-processing frameworks and tools'''
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+|
+'''[http://www.salome-platform.org/ Salomé]''' ([profiles/Salome.html profile])
+| Graphical framework for FEA pre- and post-processing with some CAD capabilities, links well with Code-Aster
+| Several
+| LGPL
+|
+[http://bugs.debian.org/457075 Debian ITP]
+|- bgcolor="#F0E8C0"
+|
+'''[http://www.geuz.org/gmsh/ Gmsh]''' ([profiles/Gmsh.html profile])
+| Graphical FEA CAD tool, mesher, post-processor
+|
+[mailto:geuzaine@acm.caltech.edu Christophe Geuzaine] and [mailto:remacle@gce.ucl.ac.be Jean-Francois Remacle]
+| GPL
+|
+[http://packages.debian.org/gmsh Debian]
+|- bgcolor="#FFFFE8"
+|
+'''[http://www.opencascade.org/ OpenCASCADE]''' ([profiles/OpenCASCADE.html profile])
+| High-level CAD library
+|
+[http://www.opencascade.com/ Open CASCADE S.A.S.]
+|
+[http://www.opencascade.org/occ/license/ OCTPL] ([http://lists.debian.org/debian-legal/2007/12/msg00066.html Discussion])
+|
+[http://packages.debian.org/opencascade Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://www.hpfem.jku.at/netgen/ NETGEN]'''
+| Automatic 2-D or 3-D mesh generator
+|
+[http://www.hpfem.jku.at/joachim/index.html Joachim Shöberl]
+| LGPL
+|
+[http://packages.debian.org/netgen Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://meshlab.sourceforge.net/ MeshLab]'''
+| System for processing and editing unstructured 3D triangular meshes
+|
+[http://vcg.isti.cnr.it/%7Ecignoni Paolo Cignoni] ''et al.''
+| GPL
+|
+[http://bugs.debian.org/426581 Debian ITP]
+|- bgcolor="#F0E8C0"
+| '''[http://www.paraview.org/New/index.html Paraview]'''
+| Parallel visualization application
+|
+[http://www.kitware.com/ Kitware] ''et al.''
+|
+[http://www.paraview.org/New/copyright.html several]
+|
+[http://bugs.debian.org/462631 Debian ITP]
+|- bgcolor="#FFFFE8"
+| '''[http://fsl.fmrib.ox.ac.uk/fsl/fslview/ FSLView]'''
+| Visualization tool for volume data geared toward medical MRI
+|
+[http://www.fmrib.ox.ac.uk/analysis Analysis Group, FMRIB, Oxford, UK]
+| GPL
+|
+[http://packages.debian.org/fslview Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://matforge.org/powell/wiki/Illuminator Illuminator]'''
+| Parallel visualization library for structured grid data sets
+|
+[http://www.opennovation.com/apowell/ Adam Powell] ''et al.''
+| LGPL
+|
+[http://packages.debian.org/illuminator Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://mayavi.sourceforge.net/ MayaVi]''' and '''[http://code.enthought.com/projects/mayavi/ Mayavi2]'''
+| Data visualization tools based on VTK
+|
+[http://enthought.com/ Enthought]
+| BSD
+|
+[http://packages.debian.org/mayavi2 Debian]
+|- bgcolor="#F0E8C0"
+| '''[https://wci.llnl.gov/codes/visit/ VisIt]'''
+| Parallel visualization tool
+|
+[https://wci.llnl.gov/ WCI] (Lawrence Livermore National Laboratories)
+| BSD
+|
+[http://packages.debian.org/illuminator Debian]
+|-
+| colspan="5" |
+----
+
+===Computer-Aided Design (CAD)===
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+| '''[http://brlcad.org/ BRL-CAD]'''
+| Mature Constructive Solid Geometry (CSG) CAD system used by all three major branches of the US military
+| U.S. Army Basic Research Laboratories
+| GPL
+|
+[http://bugs.debian.org/289632 Debian RFP]
+|- bgcolor="#F0E8C0"
+| '''[http://varkon.sourceforge.net/ VARKON]'''
+| High-level CAD system
+| Örebro university Department of Technology CAD group
+| LGPL
+|
+[http://packages.debian.org/varkon Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://www.ribbonsoft.com/qcad.html QCad]'''
+| 2-D general CAD system using the Qt widget toolkit
+| GPL
+|
+[http://packages.debian.org/qcad Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://sweethome3d.sourceforge.net/ Sweet Home 3D]'''
+| Interior design CAD software
+|
+[http://www.eteks.com eTeks]
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://extensions.services.openoffice.org/project/cadooo CADOO.o]'''
+| CAD-like extensions for OpenOffice.org Draw
+|- bgcolor="#F0E8C0"
+| '''[http://juergen-riegel.net/FreeCAD/Docu/ FreeCAD]'''
+| Alpha-stage general purpose 3-D parametric CAD modeler which is aiming for the feature set of Catia V4 and V5
+|
+[http://juergen-riegel.net/ Jürgen Riegel] and Werner Mayer
+| GPL+LGPL
+|
+[http://packman.links2linux.de/package/FreeCAD SUSE]
+|- bgcolor="#FFFFE8"
+| '''[http://www.pythoncad.org/ PythonCAD]'''
+| 2-D general CAD system written in Python
+| GPL
+|
+[http://packages.debian.org/pythoncad Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://www.soffernet.com/jaime/fandango/ Fandango]'''
+| 3-D python scripting CAD engine
+| GPL
+|- bgcolor="#FFFFE8"
+| '''[http://sagcad.sourceforge.jp/ SagCAD]'''
+| Sagiya Metal Mold Factory, Inc.
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://www.sailcut.com/Sailcut_CAD Sailcut CAD]'''
+| For designing and visualizing sails
+| GPL
+|
+[http://packages.debian.org/sailcut Debian]
+|- bgcolor="#FFFFE8"
+| '''[http://www.lis.inpg.fr/realise_au_lis/kicad/ kicad]'''
+| Electronic printed circuit board (PCB) design and layout suite
+|
+Jean-Pierre Charras, [http://www.lis.inpg.fr/ Laboratoire des Images et des Signaux]
+| GPL
+|
+[http://packages.debian.org/kicad Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://www.geda.seul.org/ gEDA]'''
+| Electronic design automation (EDA) tools
+|
+[http://www.geda.seul.org/developer.html#people Several]
+| GPL
+|
+[http://packages.debian.org/geda Debian]
+|-
+| colspan="5" | <br />'''Multi-body dynamics'''
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+| '''[http://www.aero.polimi.it/~mbdyn/index.html MBDyn]'''
+| Command-line multi-body dynamics software
+|
+[http://www.polimi.it/ Politecnico di Milano] [http://www.aero.polimi.it/ Dipartimento di Ingegneria Aerospaziale]
+| GPL
+|- bgcolor="#F0E8C0"
+| '''[http://orsa.sourceforge.net/ ORSA]'''
+| Orbit Reconstruction, Simulation and Analysis
+| Pasquale Tricarico
+| GPL
+|
+[http://packages.debian.org/orsa Debian]
+|-
+| colspan="5" |
+----
+
+===Data Analysis===
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#F0E8C0"
+|
+'''[http://gpiv.sourceforge.net/ Gpiv]''' ([profiles/Gpiv.html profile])
+|
+[http://en.wikipedia.org/wiki/Particle_image_velocimetry Particle Image Velocimetry (PIV)]
+| Gerber van der Graaf
+| GPL
+|
+[http://packages.debian.org/gpiv Debian]
+|-
+| colspan="5" |
+----
+
+===Integrated Computational Materials Engineering (ICME)===
+|- bgcolor="D5D5D5"
+| '''Name'''
+| '''Description'''
+| '''Author'''
+| '''License'''
+| '''Packaging'''
+|- bgcolor="#FFFFE8"
+| '''[http://www.abinit.org/ abinit]'''
+| Density Functional Theory (DFT) for molecules and crystals, including geometry optimization
+|
+[http://www.pcpm.ucl.ac.be/~gonze/ Xavier Gonze], [http://www.uclouvain.be/ UCL] [http://www.pcpm.ucl.ac.be/ PCPM] (Belgium)
+| GPL
+|
+[http://packages.debian.org/abinit Debian]
+|- bgcolor="#F0E8C0"
+| '''[http://lammps.sandia.gov/ LAMMPS]'''
+| Parallel molecular dynamics code
+|
+[http://www.cs.sandia.gov/~sjplimp Steve Plimpton], Paul Crozier and Aidan Thompson at [http://www.sandia.gov/ Sandia National Laboratories]
+| GPL
+|}
+
+----
+
+=Other sites with similar goals=
+
+* '''[http://osengineering.org/ OSEngineering]'''
+* '''[http://wiki.developspace.net/Open_Source_Engineering_Tools Open Source Engineering Tools]''' on [http://wiki.developspace.net/ DevelopSpace]
+* '''[http://www.imechanica.org/ iMechanica] [http://www.imechanica.org/node/470 discussion] and [http://www.imechanica.org/node/938 list]''' of finite element software
+* '''[http://opensource.cheme.info/ opensource.cheme.info]''' Open Source Chemical Engineering Software Forum
+* '''[http://www.freebyte.com/cad/ FreeByte Mechanical Engineering software list]''' includes CAD, CAD/CAM, finite element, dynamics, etc.
+* '''[http://www.icivilengineer.com/Open_Source/ Open Source]''' on [http://www.icivilengineer.com/ iCivilEngineer]
+* '''[http://sal.jyu.fi/index.shtml Scientific Applications on Linux (SAL)]''' lists a large number of tools in various categories
+* The '''[http://www.openchannelfoundation.org/ Open Channel Foundation]''' is a clearing house for software originating from academic and research institutions
+* '''[http://www.freecad.com/ FreeCAD.com]''' is a directory of free CAD, CAM, CAE programs
+* '''[http://wiki.developspace.net/Open_Source_Engineering_Tools DevelopSpace Open Source Engineering Tools]''' list
+* '''[http://swc.scipy.org/ Software Carpentry]''' site with free educational tools for scientists and engineers on effective use of computation
+* '''[http://ask.slashdot.org/article.pl?sid=05/11/15/0214207 Slashdot discussion on open source engineering tools (2005)]''' This discussion dwelt on why open source doesn't have a more prominent presence in the engineering software world, and included links to some of the tools listed below
+
+----
+
+
+=More Information=
+
+See the site http://www.deferredprocrastination.co.uk/, maker of the [[Open Source Velomobile]] called [[Atomic Duck]]
+
+
+[[Category:Manufacturing]]
+
+[[Category:Design]]

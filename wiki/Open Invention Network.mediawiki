@@ -1,0 +1,75 @@
+'''Open Invention Network'''
+
+URL = http://www.openinventionnetwork.com
+
+
+=Description=
+
+
+New York (November 10, 2005) - '''Open Invention Network''' (OIN), '''a company that has and will acquire patents and offer them royalty-free to promote Linux and spur innovation globally''', was launched today '''with financial support from IBM, Novell, Philips, Red Hat, and Sony.''' The company, believed to be the first of its kind, is creating '''a new model where patents are openly shared in a collaborative environment and used to facilitate the advancement of applications for, and components of, the Linux operating system'''.
+
+"Open collaboration is critical for driving innovation, which fuels global economic growth. Impediments to collaboration on the Linux operating system seriously jeopardize innovation. A new model of intellectual property management for Linux must be established to maintain advances in software innovation - regardless of the size or type of business or organization," said Jerry Rosenthal, chief executive officer at Open Invention Network. The company will foster an open, collaborative environment that stimulates advances in Linux - helping ensure the continuation of global innovation that has benefited software vendors, customers, emerging markets and investors, among others.
+
+Patents owned by Open Invention Network will be available on a royalty-free basis to any company, institution or individual that agrees not to assert its patents against the Linux operating system or certain Linux-related applications. 
+
+
+=Discussion=
+
+"To help F/LOSS companies and projects overcome the challenges of patent lawsuits in a way that is compatible with the culture of free software, Open Invention Network (OIN) was launched in 2005. OIN is an intellectual property company that was formed to further software innovation and promote Linux by using patents to create a collaborative ecosystem. OIN established a defensive patent pool to help F/LOSS projects, particularly those associated with Linux. OIN does not seek revenue by asserting its patents, but rather its intent is to allow community members to use its patents in a defensive way against those who attack Linux. Patents owned by OIN are available royalty-free to any company, institution, or individual that agrees not to assert its patents against Linux and related technologies. This enables companies to make significant corporate and capital expenditure investments in Linux – helping to fuel economic growth. OIN is backed by investments from IBM, NEC, Novell, Philips, Red Hat, and Sony. These six companies decided it would be mutually beneficial if they agreed not to sue each other over Linux and related technologies.
+
+An example of OIN’s role comes from late February 2009, when Microsoft filed a patent infringement suit against TomTom on eight patents, including three related to File Allocation Table (FAT) technology. Microsoft simultaneously sought an US International Trade Commission injunction against TomTom shipping product into the United States. TomTom reached out to OIN, as well as Linux Foundation and Software Freedom Law Center, for assistance with the suit. On March 23, 2009, OIN publicly distributed a press release indicating that TomTom had joined the OIN community of licensees. Microsoft settled the suit against TomTom shortly thereafter. TomTom was not required to disclose the terms of its settlement with Microsoft because the terms were deemed to be “nonmaterial” based on disclosure requirements in the Netherlands. Many believe that this particular suit was brought just to scare Linux kernel users. Bruce Perens observed: “What Microsoft really wants from TomTom isn't money, it's support in building fear about Linux in other companies, especially the makers of mobile and wireless devices just like TomTom's own product.” There is a struggle going on for what kind of software we will use in the future. Given that lawsuits are expensive, the courts represent a stacked deck for the wealthier litigant.
+
+In another example, Red Hat and Novell were sued in 2007 by IP Innovations, an NPE that owns 536 patents. OIN supported the search for prior art to help invalidate the three patents using Linux Defenders, an online clearing house for prior art. Post-issue prior art, a term referring to evidence garnered after a patent has been issued, was crowdsourced from the community. Three junk patents based on X windowing systems from 1987 were knocked out. IP Innovations will not be able to sue anyone else over those specific patents, but there are still many more to be struck down. It is notable that IP Innovations is a subsidiary of Acacia Technologies; there has been some speculation about the relationship between Acacia and Microsoft, which could mean deep pockets in addition to many technology patents.
+
+Given the interconnections between F/LOSS projects, OIN would like more projects to become licensees so the F/LOSS community can focus on the external threats as a united front. For F/LOSS companies and projects, this means that OIN's defensive patent pool may be licensed for free. It is in the interest of our founding companies to see suits against the F/LOSS community defended adequately. Future cases over the same patents may refer back to decisions made in previous suits. Precedents built by suits against companies unprepared to fight back hurt the whole community.
+
+OIN is staffed by a small group of F/LOSS community members, attorneys, coders, and outreach personnel who support OIN while also participating in other segments of the community. As with many other examples of the F/LOSS community working together on shared goals, it is impossible to gauge how much mutual success each organization is responsible for. OIN's success cannot be quantified as a separate element from the overall community's continued success. Given the current environment, where patent aggression is on the rise, OIN is proud to play its role in mitigating the risk of patent aggression to the Linux system."
+(http://timreview.ca/article/511)
+
+
+==Critique==
+
+Very strong critique by [[Florian Mueller]] at 
+
+#http://fosspatents.blogspot.com/2010/06/oins-linux-system-only-constant-is.html
+#http://fosspatents.blogspot.com/2010/05/open-invention-network-oin-demystified.html
+
+"To someone who understands what reasonable license agreements looks like, this shows that the people who conceptualized the OIN had nothing good in mind. They designed a mechanism that is unfair to a despicable extent. They built in a backdoor so they would be able to use the OIN for future purposes that could even harm developers, distributors and users of Linux and other open source software.
+
+The ones who have the prerogative to redefine the "Linux System" are the six companies who effectively own the OIN (IBM, Philips, Sony, NEC, Red Hat, Novell). I don't know whether they have to reach a unanimous agreement among the six to make changes to that definition. Maybe a majority is sufficient. Maybe IBM contributed most of the money and can change it singlehandedly. Who knows. They don't tell.
+
+The current version of the list of program files that constitute the "Linux System" is available on this webpage. For each file, they also specify a program version. For an example, by the time I'm writing this, the version of PostgreSQL that's part of the list is version 8.1.0 (by the time you read this, this may already have changed). If you infringe any OIN patent with any other version of PostgreSQL than the one on the list, you're at risk.
+
+They don't even have an obligation to notify you. It's your responsibility to reload that list all the time and see if anything has changed, or else you're at risk.
+
+This means that PostgreSQL's developers, when adding new features, don't even know if they will face patent problems with the OIN when finished. Again, PostgreSQL is just an example. There are many other projects that face the same problem."
+(http://fosspatents.blogspot.com/2010/06/oins-linux-system-only-constant-is.html)
+
+ 
+Florian Mueller's credibility in attacking OIN has been called into question due to his paid relationship with Microsoft. [http://www.fosspatents.com/2011/10/study-on-worldwide-use-of-frand.html]
+
+=Status Update=
+
+* August 2009: http://www.h-online.com/open/Open-Invention-Network-starts-buying-patents--/news/113918
+
+
+=More Information=
+
+* Article: Open Invention Network: A [[Defensive Patent Pool for Open Source Projects and Businesses]]. Deborah Nicholson. Tim Review, January 2012.
+
+URL = http://timreview.ca/article/511
+
+
+
+
+[[Category:Movements]]
+
+[[Category:Open]]
+
+[[Category:Companies]]
+
+[[Category:IP]]
+
+[[Category:Licensing]]
+
+[[Category:Collaborative Economy]]

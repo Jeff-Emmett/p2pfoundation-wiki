@@ -1,0 +1,53 @@
+
+
+=Discussion=
+
+==[[From Open Source to Open Sourcing Digital Medical Devices]]==
+
+Glyn Moody:
+
+"It is not just an issue for life-saving medical devices that can kill as well as save: it is about our increasing reliance on embedded software in everyday life, in developed countries at least. The key question is: how can we trust those devices if we can't see the code?
+
+Clearly, we can't. If the code is not available, then it necessarily limits the number of people who have looked at it. And as Linus' Law reminds us, given enough eyeballs, all bugs are shallow. That doesn't mean opening up the code guarantees that all bugs will be found, but it certainly increases the probability. The corollary is that keeping it closed decreases the chance of someone finding such bugs.
+
+But there's a problem here. As we move from the realm of "pure" software – that is, programs running on generalised computers producing essentially digital output (even if that is converted into analogue formats like sounds, images or printouts) – to that of "applied" software, there is a new element: the device itself.
+
+For example, in the case of the pacemakers, having the software that drives the computational side of things is only part of the story: just as important is knowing what the software does in the real world, and that depends critically on the design of the hardware. Knowing that a particular sub-routine controls a particular aspect of the pacemaker tells us little unless we also know how the sub-routine's output is implemented in the device.
+
+What that means is that not only do we need the source code for the programs that run the devices, we also need details about the hardware – its design, its mechanical properties etc. That takes us into the area of open hardware, and here things start to get tricky.
+
+It's all very well getting the source code for a device and combing it for errors; but what exactly can you do with the hardware specifications? Build your own? Hardly. So there is a dilemma here: we need to be able to explore every aspect of device in order to be (more) confident that it will work as planned; but simply gaining access to the source code and (unimplementable) hardware plans does not bring us much closer to that goal.
+
+The problem with hardware specifications is that they are only really useful to those with the facilities to implement them – that is, hardware manufacturers. In fact, those best placed to explore the hardware are the original designers and engineers with their prototyping machines. So what is needed is some way for others to get involved in that design process right at the start, not after everything has been decided. Of course, there are technical areas that few have the competence to comment upon – but some do: there are bound to be designers and engineers outside the company who are able to make useful comments. And even non-technical people can comment on other aspects – for example the appearance of devices, or assumptions about how they will be used.
+
+Companies already gather that kind of information through market research, but there's a key difference here. Instead of the company paying a specialist market research organisation to go out and ask people what they think about a possible new product, this would entail opening up the entire design process to let anyone comment. Where the former depends on finding enough people who may or may not have interesting things to say, the latter is self-selecting: those who have opinions are given a way of expressing them.
+
+This is not a new idea. It was formally dubbed "open innovation" by Henry Chesbrough a decade ago, notably in his book of the same name. It's based on the simple but powerful idea that there are always more people outside a company than inside it who know about any given subject – it's never possible to hire all of the world's experts. And so it makes sense to open up the development process to tap into that pool of expertise that would otherwise be missed.
+
+But as readers of this column will have immediately recognised, what Chesbrough dubbed "open innovation" is simply the open source development methodology, largely devised by Linus in the early years of Linux, transposed to the world of manufacturing. Sadly, Chesbrough mentions Linux just once in his book, and without making the connection.
+
+So the answer to our increasing dependence on digital devices, and the need to know that they are working as they should, is not simply to open source the code that runs them, but to open up the entire development process, right from the start. The benefits would be huge for both sides.
+
+The public would be able to ensure that the right devices were made in the first place – what they need and want, not what market research guesses they might need and want. It would allow them to contribute to the development of devices that they would buy, and thus have greater confidence in their use because the entire process was open to scrutiny. It would also make it more likely that they did buy them once they were manufactured, since they would naturally feel a closer connection with something whose design they contributed to. They would cease to be passive consumers of design, and become active participants in it.
+
+The manufacturers, meanwhile, would receive invaluable, rolling feedback that would not only have cost a disproportionate amount to gather using traditional means, but which is also probably more accurate. That's because it is offered voluntarily by precisely those people who are interested and care most about the products in question, not random collections of people dug up by market research. It's precisely why open source software is so good: it's largely created by people who like writing that particular kind of code, not just those who are paid to do so. That would stop companies making egregious mistakes, and might well open up avenues they would never have discovered otherwise.
+
+Once again, this shows that open source's importance is not just as a way of writing great code, or of bringing freedom to computer users. It has a far larger message about the power of collaboration and of opening up processes to everyone."
+(http://www.h-online.com/open/features/From-open-source-to-sourcing-openly-1434057.html)
+
+=More Information=
+
+* Article: Killed by Code: [[Software Transparency in Implantable Medical Devices]]. Karen Sandler.
+
+URL = http://www.softwarefreedom.org/news/2010/jul/21/software-defects-cardiac-medical-devices-are-life-/
+
+"We focus specifically on the security and privacy risks of implantable medical devices, specifically pacemakers and implantable cardioverter defibrillators, but they are a microcosm of the wider software liability issues which must be addressed as we become more dependent on embedded systems and devices. The broader objective of our research is to debunk the “security through obscurity” misconception by showing that vulnerabilities are spotted and fixed faster in FOSS programs compared to proprietary alternatives. The argument for public access to source code of IMDs [Implantable Medical Devices] can, and should be, extended to all the software people interact with everyday. The well-documented recent incidents of software malfunctions in voting booths, cars, commercial airlines, and financial markets are just the beginning of a problem that can only be addressed by requiring the use of open, auditable source code in safety-critical computerized devices."
+
+
+[[Category:Open]]
+
+[[Category:Free Software]]
+
+[[Category:Health]]
+
+[[Category:Science]]

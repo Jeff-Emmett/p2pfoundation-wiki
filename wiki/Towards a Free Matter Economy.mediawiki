@@ -1,0 +1,89 @@
+'''Article. Towards a Free Matter Economy. By Terry Hancock. Free Software Magazine, Issue 7, October 2005.'''
+
+URL = http://www.freesoftwaremagazine.com/node/1192/pdf
+
+
+=Introduction=
+
+"Material products are getting “smarter” in that more and more of the value of a material product is contained in the information it carries, rather than in its material substance. R. Buckminster Fuller called this process “ephemeralization”[1], and it is one means by which the economics of matter—predicated on the conservations of mass and number—are becoming sidelined by the properties of information. Furthermore, both the capital and marginal cost of making products has trended consistently and rapidly down as manufacturing tools become both cheaper and more versatile, so that the capital cost of an object is increasingly not in the capital equipment required to manufacture it, but in the effort required to design it.
+
+The business model of masquerading an information product as a matter product—by legally controlling the “uncomfortable” property of free replication—has been remarkably successful for a very long time. This suggests that we should consider whether the converse is possible: can matter-based products be masqueraded to act more like information products—eliminating (or hiding) the uncomfortable property of costly replication ? In other words, can we create a bazaar for free-licensed hardware design information and a matter product manufacturing economy which supports it? And can we do it without poisoning the free-design process itself? If so, we might be able to port the high utility, rate of innovation, and low costs found in the free software community to community-based hardware projects—an extremely attractive possibility."
+
+
+=Overview=
+
+==What is required to make free hardware development possible?==
+
+'''Hardware design will require the construction of prototypes, experimental apparatus, testing services, and manufacturing expenses'''
+
+"hardware is going to present special challenges, since hardware design will require the construction of prototypes, experimental apparatus, testing services, and manufacturing expenses. So, the most serious obstacle to overcome is payment for costs without interference with the interest-motivation of developers:
+
+* '''A means must be found to offset the materials and manufacturing costs''' associated with free-licensed hardware prototypes, experimental apparatus, and finally, manufacturing cost.
+
+
+Other requirements for success include the maintenance of a healthy effective bazaar size. This can be a problem for the much smaller hardware developer communities, largely due to a lack of exposure to the tools for manufacturing and design, and there are four strategies that can be used to solve this part of the problem:
+
+* '''Make the bazaar more efficient at attracting, retaining, and collecting contributions from developers.''' This makes a larger bazaar size, despite a smaller community. Essentially, it must be easier to contribute.
+    
+* '''Make development reduce loss by more efficient and complete archiving''', and above all, usefully cataloging archived data so that it can be efficiently retrieved when needed.
+    
+* '''Make more and better collaborative design tools available to the users as free software''' so that more would-be developers have access to them, and are made aware of the benefits of free-licensing.
+    
+* A'''ctively train users on the tools and methods needed to become an effective developer''' — encourage growth in the community by turning more users and other interested parties into developers. This can only be pursued by active contributions.
+
+
+==Hardware is never totally free==
+
+'''Just as free programs need free libraries, free machines need free electronics and ultimately free components.'''
+
+"Almost no piece of hardware is totally “free”, because it invariably uses proprietary products at some depth. With software, a hard legal line can be drawn, but hardware introduces a fuzzy area that needs to be understood and controlled. As Figure 2 attempts to show, we have many different layers to consider: Program, Firmware, PAL devices, PCB design, Core-level, Chip-level, and even discrete component level. It’s less of a problem for mechanical designs, but electromechanical components are frequently single-source, and it may therefore be difficult to replace them in the future. All of which argues for the importance of commoditized subsystems to support top-level free designs."
+
+
+==Necessary Localisation or In Situ Resource Utilization==
+
+"In a free matter economy, free-design data is produced in the same way as free software is today, and the manufacturing process is managed by the end user. That either means building it yourself, or contracting a manufacturing service provider to do it for you. But either way, the manufacturing process is decentralized and localized near the end-user.
+
+This is driven by the market forces described in this series, but there is another reason for it: in the future, transportation costs will be a much bigger factor."
+(http://www.freesoftwaremagazine.com/articles/free_matter_economy?page=0%2C1)
+
+
+=Discussion: Funding Issues=
+
+'''Both grants and prizes introduce serious hazards for poisoning the self-selection and cooperative advantages of the bazaar development model.''' 
+
+==The Problems with Grants==
+
+"Grants provide money in advance, when it is most needed, both to provide for the material needs of the project and to pay researchers for their time, making them the most obvious way to fund any public good. We’ve funded university and institutional research this way for ages. Many precursors of free software products got started like this, including the code that became the Unix family of operating systems. Clearly this system can and does work.
+
+However, grant money, once given, is extremely hard to get back. So when a person applies for a grant they must endure a gauntlet of tests, intended to prove to the granting agency that that person is willing and able to fulfill the promise they make in their proposal. If a grant is received, will the project be completed? How much money will it cost? Real research is full of unexpected set-backs and cost-overruns. Real researchers are full of optimism and unrealistic deadlines. The skills for research, development, logistics, and management are rarely found all in one person—good scientists rarely make good accountants, let alone good receptionists.
+
+This encourages the granting agency to be very selective and take few risks with whom they fund. Researchers must have a proven professional background, track-record of honesty, and a reputation to protect. This is why funding by grants requires the use of large government, foundation, and university bureaucracies, and only the professionals who have climbed the career ladder to positions in these organizations have a serious chance of benefitting from them. The “solitary inventor” is indeed dealt out of this game, just as Eisenhower predicted."
+(http://www.freesoftwaremagazine.com/articles/free_matter_economy?page=0%2C1)
+
+
+
+==The Problems with Prizes==
+
+"Prizes have been proposed as a much better solution than grants, and it’s not hard to see why: With a prize, the donor does not have to try to predict in advance who can achieve the proposed goal, nor how it will be achieved. Likewise, applicants don’t have to prove anything to the donor about their past performance—they just have to step up to the task at hand and do it. That means there’s no “artificial” barrier to entry. The success of the Ansari X-Prize, recently won by Burt Rutan and Scaled Composites with Space Ship One is a good example of how well prizes can work.
+
+With a prize, the donor does not have to try to predict in advance who can achieve the proposed goal
+
+Except for one problem, of course: money. Winning prizes is usually only an option for people already rich enough to fund their own research. Prizes do not provide money when it is most needed—during the development process, so they do little for people with ideas but no money. True, you can look for investors, but you still have to convince them in advance that you can do the job. It’s no coincidence that so many entrepreneurs started out in marketing!
+
+It’s also instructive to note some less-appealing details of the X-prize competition: once Space Ship One emerged as the clear leader, some competitors began to slack off, because there was no second place to strive for. Prizes fundamentally encourage competition and discourage cooperation, and they have all the benefits and dangers of competition as a result. In a field where effective cooperation seems to be essential to produce real quality, they can be seriously detrimental, as can be seen by the problems encountered by both Source Exchange and Co-Source—the two “reverse auction” funding sites Raymond mentions in “The Magic Cauldron”, which are now long dead.
+
+Both were essentially “prize” systems. As such, these sites implicitly assumed that programs would be written by single entities (whether individual people or individual companies), since they made no provision for how prizes would be split among competing or cooperating interests. Therefore, they did not directly address the bazaar mode of development at all, and effectively discouraged it as a result.
+
+If you have an idea that might be useful to a free-software project, and you expect to gain some benefit from it (such as using the resulting program), it makes sense to contribute your work. But what if you have a hope of getting paid for that contribution? It’s only natural to bargain for the best price for your work—so if there’s a cash prize to be won, you will withhold information until you can negotiate good terms for it. Now, all of a sudden, you, the well-meaning free-development contributor, are an “information hoarder”. Essentially, you’ve succumbed to the rules of proprietary development—even if the license of the released code will be free.
+
+Both grants and prizes, therefore, introduce serious hazards for poisoning the self-selection and cooperative advantages of the bazaar development model. So, what else is there?"
+(http://www.freesoftwaremagazine.com/articles/free_matter_economy?page=0%2C1)
+
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]
+
+
+
+[[Category:Articles]]

@@ -1,0 +1,153 @@
+'''* Book: The Success of Open Source. By Steven Weber. Harvard University Press, 2005'''
+
+
+See also [[Voluntary Hierarchy]]
+
+
+=Publisher's note=
+
+"Much of the innovative programming that powers the Internet, creates operating systems, and produces software is the result of "open source" code, that is, code that is freely distributed--as opposed to being kept secret--by those who write it. Leaving source code open has generated some of the most sophisticated developments in computer technology, including, most notably, Linux and Apache, which pose a significant challenge to Microsoft in the marketplace. As Steven Weber discusses, open source's success in a highly competitive industry has subverted many assumptions about how businesses are run, and how intellectual products are created and protected.
+
+Traditionally, intellectual property law has allowed companies to control knowledge and has guarded the rights of the innovator, at the expense of industry-wide cooperation. In turn, engineers of new software code are richly rewarded; but, as Weber shows, in spite of the conventional wisdom that innovation is driven by the promise of individual and corporate wealth, ensuring the free distribution of code among computer programmers can empower a more effective process for building intellectual products. In the case of Open Source, independent programmers--sometimes hundreds or thousands of them--make unpaid contributions to software that develops organically, through trial and error.
+
+Weber argues that the success of open source is not a freakish exception to economic principles. The open source community is guided by standards, rules, decisionmaking procedures, and sanctioning mechanisms. Weber explains the political and economic dynamics of this mysterious but important market development"
+(http://www.hup.harvard.edu/catalog/WEBSUC.html)
+
+
+=Citations=
+
+
+'''In the Preface''':
+
+By experimenting with fundamental notions of what constitutes property, this community has reframed and recast dome of the most basic problems of governance. At the same time,m it is remaking the politics and economics of the software world. If you believe(as I do) that software constitutes at once some of the core tools and core rules for the future of how human beings work together to create wealth, beauty, new ideas, and solution to problems, then understanding how open source can change this processes is very important.
+
+
+'''In Chapter 1 "Propery and the Problem of Software"''':
+
+
+I explain the creation of a particular kind of software - open
+source software - as an experiment in social organization around a
+distinctive notion of property. The conventional notion of property
+is, of course, the right to exclude you from using something that
+belongs to me. Property in open source is configured fundamentally
+around the right to distribute, not the right to exclude. If that
+sentence feels awkward on first reading, that is a testimony to just
+how deeply embedded in our intuitions and institutions the
+exclusion view of property really is.
+
+What would a broader version of this political economy really look
+like? This book uses the open source story as a vehicle for
+proposing a set of preliminary answers to that very large question.
+
+Ultimately the success of open source is a political story. The open
+source software process is not a chaotic free-for-all in which
+everyone has equal power and influence. And is is certainly not an
+idyllic community of like-minded friends i which consensus reigns
+and agreement is easy. In fact, conflict is not unusual in this
+community; it's endemic and inherent to the open source process. The
+management of conflict is politics and indeed there is a political
+organization at work here, with the standard accouterments of power,
+interests, rules, behavioral norms, decision-making procedures, and
+sanctioning mechanisms. But it is not a political organization that
+looks familiar to the logic of an industrial-era political economy.
+
+=Review=
+
+Very good commentaries  by  [http://www.sauria.com/blog/2006/Jun/04 Ted Leung] ; and [http://www.dougsimpson.com/blog/archives/000363.html Doug Simpson]
+
+
+=Reading Notes from Michel Bauwens=
+
+From a 2005-2006 notebook:
+
+"The following reading notes may be from a preliminary essay by the same author, on the same theme, as yet unidentified, but related to the topic of the book.
+
+
+==How to explain the success of open source ?==
+
+For Steve Webber, 'obtaining reputation' is only part of the explanation, since there is no record of strategic forking, by ambitious individuals who want to create a new project where they can be the 'boss'.
+
+Webber stresses the problems of public goods, which tend to be 'underprovided' for (also due to the free rider problem). How does OS solve this ?
+
+The answer is that it is a non-rival good with increasing positive externalization, making it likely that a critical mass overcomes free riding. Free riders are in fact potential debuggers and therefore a plus in such a system.
+
+In OS projects, authority derives from responsibility, the more you do, the more say. Seniority is influential, as the founder and early associates play a important role. The ability to write quality code is also an important marker. However, negative authority, such as shunning, retains a role as well.
+
+
+==How does OS manage complexity ?==
+
+The modular design keeps program small and unifunctional.
+
+The work on Linux and Apache is actually very structured and in the process of formalisation
+
+    - Torvals and his lieutenants control Linux quality, and Apache has committees
+    - through the creation of the Open Source Initiative in February 1998 and of the Apache Software Foundation as nonprofits with a board of directors.
+
+==What is the role of the internet ?==
+
+It makes geographical and functional dispersion possible at virtually no cost. It makes free riding easy does paradoxically adding market share (passive) as well as the numbers of debuggers/testers (active).
+
+It replaces the division of labor based on a value chain, depending on its weakest links, by a parallel distributed innovation process.
+
+There is now a potentially infinite supply of qualified collaborators, and there are no vested interests that can maintain sub-optimal paths.
+
+It attracts standard setting and removes IP barries that impede that process.
+
+
+==Is OS extensible to other sectors ?==
+
+"The key concept of:
+
+    - 1) user-driven innovation in  a parallel-distributed setting, with
+    - 2) distinct forms and mechanisms of cooperative behaviour, and
+    - 3) the logic of anti-rival goods,
+
+- are generic enough to suggest that the open source process could flourish" (in other sectors)."
+
+
+The criteria for such an extension are:
+
+    - widely available knowledge (not proprietary)
+    - the existence of a substantial core (initial mass)
+    - a product that is perceived as important
+    - complex and 'modulable'
+    - strong positive network effects
+
+[[Category:Bauwens Reading Notes Project]]
+
+=Discussion=
+
+==Voluntary Hierarchy==
+
+
+URL = http://felix.openflows.org
+
+Felix Stalder on Open Source Projects as Voluntary Hierarchies. From a review of the book by Weber, Steven (2004) The Success of Open Source. Cambridge, MA, Harvard UP
+
+"More interesting and original is the chapter on the macro-organization of FOSS projects. Here, Weber shows that these projects are not chaotic at all, but tend to have explicit formal structures (release schedules, project leaders, official repositories, etc) and that notions of self-organization do not really clarify much. To bring together the two basic observations that all contributions are voluntary, and that projects are hierarchically structured, Weber develops the notion of a voluntary hierarchy (though, he never quite calls it that). In such a governance system, individuals voluntarily accept their position in a hierarchy, because they realize that doing so is beneficial to them. Their own contributions get recognized and the overall project develops into a direction that they like. In such as system, contrary to what we usually think of hierarchies, power flows from the bottom to the top 'because the lead depends on the followers more than the other way around Asymmetrical interdependencies favor the potential followers, who will make a free and voluntary choice where to invest their work' (p.160).
+
+The freedom of choice if and where to contribute is not just based on the fact that all contributions are voluntary, but also, perhaps even more importantly, on the ability to fork the project, to reorganize the project under a different leadership. This happens if contributors believe that the current leader no longer supports their own individual goals. If a significant number of contributors share this sense of disaffection, the project splits, or routs around the unpopular leader. Given the free access to the source code, all the resources to form a new project are there.
+
+The only thing that is needed is the credible claim of another leader to be more responsive to the community. The hurdle for forking is, as Weber argues, simultaneously very low and very high. It is so low that it forces the leader to stay attentive and responsive to the community. The Utopian vision that 'authority follows and derives from responsibility' (p.163) comes to be realized to a reasonable degree. The fact that forks happen quite rarely shows that the hurdle, in practice, is nevertheless high enough to allow for a high degree of project continuity. As projects mature and grow in complexity, governance structures are becoming more explicit (foundations, board of directors, etc) without replacing the essentially voluntary nature of the hierarchy.
+
+For Weber, the reason why the political economy of FOSS works is because the main task of such production processes is no longer to organize the division of labor (as it was with industrialism) but distributed innovation. The latter cannot be divided into a linear sequence of steps, but is better modularized and flexibly networked. For such a task, the open source way of flexible, voluntary self-assignment is (more) efficient and attracts rational individuals who want to optimize the returns they receive on their time invested. The difficulty with this analysis is that the efficiency criterion runs the danger of becoming tautological since it is not clear in relation to what efficiency is supposed to be assessed. Successful projects are efficient, because efficiency leads to success. While Weber acknowledges that the FOSS mode of development can be 'expensive and messy' and lead to 'wasted resources' (p.158) he sees the efficiency of FOSS embodied in 'a powerful sense that it is not merely inefficient, but downright stupid, almost criminal, for people to have solve the same problem twice' (p.138). Yet, in fact, FOSS is so full of duplications that it is impossible to count the number of Linux distributions or text processing programs or music players. Here, clearly, something different than economic efficiency and resource maximization is driving development as well. Perhaps the beauty of FOSS is that it is not only about efficiency, but also about freedom and idiosyncrasies, which makes it hard to tell in advance what is a brilliant innovation or a tremendous waste of time. Weber's book serves both as a solid introduction to the social and political issue raised by FOSS, and as an advanced analysis of some of its aspects, particularly the novel governance mechanism and the productive concept of the voluntary hierarchy."
+
+
+=More Information=
+
+#There is an extensive summary of the book by Stefan Merten at Oekonux, which is well worth reading and has extensive quotes, see at http://en.wiki.oekonux.org/Oekonux/Research/SuccessOfOpenSource
+#Webcast: [[Steven Weber on the Success of Open Source]]
+#[[Open Source]]
+#[[Open Source Software]]
+
+[[Category:Books]]
+
+[[Category:Business]]
+
+[[Category:Governance]]
+
+[[Category:Free Software]]
+
+[[Category:Peergovernance]]
+
+[[Category:Peerproduction]]

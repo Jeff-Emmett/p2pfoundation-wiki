@@ -1,0 +1,76 @@
+Refers to individual 'physical' radio's that can receive internet-based radiostations through a WiFi connection, but also to the specialized spectrum available to them.
+
+=Individual WiFi Radio=
+
+==AE WiFi Internet Radio==
+
+
+"The AE Wi-Fi Internet radio is a stand-alone receiver, preprogrammed with more than 2,500 online stations. Designed to operate more like a radio than a computer, it’s made by Acoustic Energy in Britain and is scheduled to hit the U.S. marketplace in mid-May.
+
+It won’t be alone. Roku’s long-delayed SoundBridge radio — also a stand-alone unit that can pick up Internet radio via Wi-Fi — is also scheduled to start shipping next month. It comes programmed with only about 80 stations (more can be added) and lacks the user-friendliness of the AE machine. But the sound quality is better. Both models bring Internet radio closer to the practicality of traditional radio. They might require the presence of Wi-Fi signals and electric outlets (because neither runs on batteries), but they fit nicely onto nightstands, bookshelves and kitchen counters. Neither is cheap. The AE has a list price of about $300. The SoundBridge is about $400. The tech-retro appearance of the AE, with push buttons under a small info screen, looks like something out of the old sci-fi “Thunderbirds" show. I get a kick out of the look, but the simplicity of those controls is at the heart of the AE’s charm. Using an all-purpose “select" button and the tuning knob, I can easily navigate station lists organized by location and genre. There are 710 stations to choose from in the U.S., 380 in Britain, 33 in China, 21 in Mexico, nine in India, two in Trinidad and so on. By genre, there are 109 stations classified as alternative, plus four bluegrass, 11 Bollywood, 120 classical, 102 gospel, 81 jazz, 36 hip-hop and many more."
+(requoted from the LA Times, at http://socialsynergy.typepad.com/social_synergy/2006/04/the_coming_wifi.html)
+
+
+==Comment==
+
+From Sam Rose, at http://socialsynergy.typepad.com/social_synergy/2006/04/the_coming_wifi.html
+
+"These radios still fall short of the full potential of a Wi-Fi radio, though. The reason why is that they limit what can be accessed to a pre-defined set of "stations". So, the "station" selection possibly squeezes out tons of music, citizen radio and journalism, and more. Anyone can make a podcast or internet-accessed audio now for very little cost. These stand alone Wi-Fi radio devices should allow us to find and listen to it all (or, at least most of it)."
+(http://socialsynergy.typepad.com/social_synergy/2006/04/the_coming_wifi.html)
+
+
+==More Information==
+
+Acoustic Energy's Wifi Radio, at http://www.acoustic-energy.co.uk/Product_range/WiFi_radio/WiFi.asp
+
+Soundbridge at, http://www.rokulabs.com/products/soundbridge/SoundbridgeRadio/index.php
+
+
+=Spectrum=
+
+
+==Technical Issues==
+
+From Peter in Arch-Econ mailing list, January 2008:
+
+""As Wi-Fi radios evolve, they tune more widely into adjacent spectrum,
+like from 5 GHz to the 4.9 GHz Public Safety spectrum and the 5.9 GHz
+Intelligent Transportation System spectrum. What has been missing is
+the software/firmware for licensed operators to control the radios.
+
+These radios running under the FCC lightly licensed scheme will use an
+over the air control system; listening for a local infrastructure
+signal that enables them to negotiate link and function.  They don't
+operate until they receive an enabling signal to begin operation.
+
+This url for a late 2006 cisco FCC meeting explains a good bit:
+
+http://fjallfoss.fcc.gov/prod/ecfs/retrieve.cgi?native_or_pdf=pdf&id_document=6518438394
+
+802.11y is mostly a software protocol that can easily be loaded into
+802.11 chipsets numbering in the hundreds of millions per year (11a/
+11n). For 3650 MHz operation, additional Energy Detect features are
+specified, to enhance operation in the presence of other radios.
+
+The same 'enablement' protocol can be applied to other lightly
+licensed bands, with additional sensing and location-awareness
+requirements from the regulators (like the TV-band white space
+investigations).
+
+IEEE 802.19 Coexistence Assurance has been studying operation in the
+3650 MHz band, and their current modeling documents are found at
+
+http://ieee802.org/19/pub/2008/  07/0011r13 Parameters for Simulation,
+and 07/0020r3 Coexistence Metrics for the 3650 MHz Band. (note that
+simulations will follow after there is agreement on the parameters and
+metrics)"
+(summarized by Gordon Cook)
+
+
+[[Category:Resources]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:Media]]

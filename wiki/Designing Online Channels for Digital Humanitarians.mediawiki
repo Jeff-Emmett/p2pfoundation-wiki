@@ -1,0 +1,313 @@
+
+'''* Thesis: [[Participatory Aid Marketplace]]. Designing Online Channels for Digital Humanitarians. Matt Stempeck, 2013'''
+
+URL = http://www.mattstempeck.com/wp-content/uploads/2013/06/Matt-Stempeck-Participatory-Aid-Marketplace.pdf
+
+Submitted to the Program in Media Arts and Sciences, School of Architecture and Planning,
+in partial fulfillment of the requirements for the degree of
+Master of Science in Media Arts and Sciences at the
+Massachusetts Institute of Technology, June 2013
+
+
+=Abstract=
+
+"Recent years have seen an increase in natural and man-made crises. Information and 
+communication technologies are enabling citizens to contribute creative solutions and 
+participate in crisis response in myriad new ways, but coordination of participatory aid 
+projects remains an unsolved challenge. I present a wide-ranging case library of 
+creative participatory aid responses and a framework to support investigation of this 
+space. I then co-design a Marketplace platform with leading Volunteer & Technical 
+Communities to aggregate participatory aid projects, connect skilled volunteers with 
+relevant ways to help, and prevent fragmentation of efforts. The result is a prototype to 
+support the growth of participatory aid, and a case library to improve understanding of 
+the space. As the networked public takes a more active role in its recovery from crisis, 
+this work will help guide the way forward with specific designs and general guidelines."
+
+Thesis supervisor: Ethan Zuckerman
+
+
+=Contents=
+
+"This introduction will discuss my motivations and overview of my contributions. 
+
+Chapter 2 explains the spectrum of ways we, as a society, respond to crises. It 
+dissects formal and mutual aid and introduces a new phrase, participatory aid, to 
+describe the dramatic democratization of crisis response. 
+
+Chapter 3 offers a framework 
+for understanding participatory aid projects and a deep case library of examples. 
+
+In  Chapter 4, I review related work, introduce my technical intervention, the Participatory 
+Aid Marketplace, and discuss how it seeks to support various actors in the 
+participatory aid sector. 
+
+Chapter 5 discusses next steps for the Marketplace and 
+additional research questions to investigate in participatory aid. 
+
+Finally, Chapter 6 
+concludes the work and summarizes the key findings and limitations of this thesis."
+
+=Excerpts=
+
+From the introduction:
+
+"This thesis examines the many ways the public can contribute to help others in 
+times of crises, be they man-made or natural disasters. I introduce the growing trend of 
+participatory aid: mutual, peer-to-peer aid assisted by information and communication 
+technologies like the World Wide Web and the smartphone. My inspirations are the 
+many creative ways people have used the internet and related technologies to aid 
+others in need. Remote online volunteers have used the internet to develop 
+crowdsourced maps for decisionmakers and translate victims’ requests for aid, to give 
+two successful examples. 
+
+The spectrum of what individuals and groups can achieve online is wider and 
+richer than our conventional imagination allows. Technology's advance over time 
+continues to expand the realm of the possible. Knowing -- and signaling -- what can be 
+done, where to get involved, and, crucially, how such an effort maps to others’ needs 
+are unsolved problems. A central clearinghouse of opportunities and active efforts 
+could reduce barriers to communication and collaboration."
+(http://www.mattstempeck.com/wp-content/uploads/2013/06/Matt-Stempeck-Participatory-Aid-Marketplace.pdf)
+
+==On [[Ad Hoc Mutual Aid]]==
+
+Matt Stempeck:
+
+"In recent decades, there has been significant sociological research into “helping
+networks” to investigate the power of informal social networks in our lives. Donald 
+Warren’s 1980 book, Helping Networks, studies how these informal aid systems sit in 
+society: “They are not groups. They often do not know each other. They are the 
+combinations of people we turn to.”
+
+There is also a wide collection of literature studying “pro-social behavior”, and 
+the forces that drive individual and collective altruism.18 René Bekkers and Pamala 
+Weipking completed a thorough and useful literature review of empirical studies of 
+philanthropy and identified eight mechanisms that drive charitable giving. One of the 
+most referenced works discussing pro-social behavior in society is Dynes’ 1970 book, 
+Organized Behavior in Disaster.
+
+The literature on “helping networks” and studies of offline social networks have
+analyzed how people solicit and receive aid from a wide range of others in their lives, in 
+times of acute crisis as well as daily life. There are “[s]ystems of help, not simply those 
+with which bureaucracy and professionalism are associated, but also a vast set of 
+almost invisible threads of human contact used in times of crisis and need for everyday 
+problems.”20 In the context of mental health, neighbors rely on one another naturally for 
+social services and resources rather than seek professional intervention.21 Shirley 
+Patterson’s exploration of “Natural Helping” found that social contacts provide mutual 
+aid support to their neighbors out of altruism rather than expectations of future 
+rewards.
+
+Mutual aid is also a significant force in the context of acute crises. When there is 
+a crisis, people want to help, and will often go to great lengths to provide meaningful 
+aid themselves. Sarah Vieweg finds collective intelligence in the aftermath of the 
+campus shooting at Virginia Tech in 2007.23 In Facing the Unexpected: Disaster 
+Preparedness and Response in the United States, Tierney, et al., analyze 25 years’ 
+worth of disaster data and strongly support the finding that “disasters engender pro-
+social, altruistic, and adaptive responses rather than negative reactions like panic.”
+
+Vieweg, et al. write, “Disaster situations, throughout history, have demonstrated that 
+people rise to difficult challenges to help others, often through remarkable innovations 
+and adaptations of their own abilities and resources to meet needs.”
+
+Professional emergency response managers like Pascal Schuback understand 
+that the affected population itself begins responding to a new disaster long before 
+“first-responders” from formal aid groups can arrive.26 The informal aid offered by 
+citizens in these first hours can be critical to saving lives. One exemplary recent 
+example is the unplanned evacuation of lower Manhattan on September 11, 2001. 
+Kendra, et al. document how ships of all kinds, from tugboats to ferries to private 
+pleasure boats materialized at the site of the most devastating terrorist attack in US 
+history to help evacuate between 300,000 and 500,000 civilians stranded at the 
+southern tip of the island with little direction from the Coast Guard.27 Writing about this 
+type of ad hoc mutual aid in emergencies, Stallings and Quarantelli argue that formal 
+aid actors should facilitate these “emergent citizen groups”, not just in crises that 
+trigger a clear survival consensus, but also in divisive crises like riots.28
+Mutual aid may be a natural inclination, but it is also at least partially driven by 
+the limits of formal aid actors:
+
+“Self-help or mutual-aid groups have developed, in part, as a reaction to various limitations of 
+professional organizations. Such limitations included an “unwillingness of professionals to deal 
+with certain problems, a limited reach with regard to various populations, an overly intellectual 
+orientation, and monopolistic credentialism.”
+
+One directly relevant example of mutual aid rising to meet a population’s needs 
+when the formal aid system fails is Gregory Asmolov’s work launching the Russian 
+Fires Map30 (which has evolved to become Rynda.org). When wildfires consumed large 
+areas of Russia in 2010, the ineptitude of the government response and paucity of 
+state-influenced media coverage inspired citizen-driven aid efforts, coordinated 
+through an Ushahidi map.
+
+The mapping platform was repurposed to connect citizens 
+in need and citizens seeking to help. Citizens used participatory media to hold the 
+government accountable, but also to organize and collaborate on ways to respond to 
+the fires to take the action that the formal state actors had failed to take. Asmolov has 
+since launched Rynda.org, an 'atlas of help', to match peer donors and beneficiaries 
+under the romantic symbol of the rynda, the bell Russian sailors would strike when they 
+were in need of help. (For an extensive treatment of affected communities’ own abilities 
+to respond to crisis, see Humanitarianism in the Network Age report by UNOCHA)."
+(http://www.mattstempeck.com/wp-content/uploads/2013/06/Matt-Stempeck-Participatory-Aid-Marketplace.pdf)
+
+
+==On [[Civic Groups-Based Mutual Aid]]==
+
+Matt Stempeck:
+
+"In addition to the ad hoc aid found throughout human history, mutual aid 
+includes semi-formal groups like religious congregations, citizen clubs, and other
+community groups. These civic groups often serve critical organizing roles in alerting 
+and structuring mutual aid within a community. 
+
+Like many dichotomies, the distinction between formal and mutual aid has 
+always been somewhat artificial. Formal and mutual aid are in no way mutually 
+exclusive, except that we may sometimes focus on the former at the expense of 
+developing the latter. Formal aid sector workers do the best they can to save as many 
+lives as possible, but they do not pretend to have every answer, or the resources to 
+sufficiently help every person in every crisis. Mutual aid is recognized within the formal 
+aid space as a powerful force.
+
+A community’s ability to manage crisis itself has been described as resilience.
+The concept has been popularized in recent years to describe “the capacity of the 
+affected community to self-organize, learn from and vigorously recover from adverse 
+situations stronger than it was before.” In Building Resilience: Social Capital in Post-Disaster Recovery,
+Daniel Aldrich argues that the strength of (traditional) social 
+networks themselves can predict a community’s resilience and ability to recover in 
+times of crisis. He pulls together data from four different large-scale natural disasters to 
+prove that “social resources, at least as much as material ones, prove to be the 
+foundation for resilience and recovery.”36 A community with a more densely connected 
+social network and deeper social capital may prove more adept at providing mutual aid 
+to one another, because it can more quickly share critical information, aid resources,
+and better stem population losses due to migration away from the affected area. To 
+illustrate his argument, Aldrich compares the stark difference in post-Katrina recovery 
+between different neighborhoods in New Orleans. The Vietnamese community 
+centered around the Mary Queen of Viet Nam Church is deeply interconnected and rich 
+in social capital, and was able to recruit back 90% of homes and businesses within a 
+year of the hurricane, in addition to establishing a charter school, urban farm, and 
+medical clinics.37 The community was also able to organize itself to rally for official 
+resources, like the restoration of electricity from the local utility. Other neighborhoods 
+are still visibly suffering from the unemployment, poverty, and structural damages 
+delivered by the storm years later. Aldrich argues that the great disparities in recovery 
+between neighborhoods or cities are not the result of variation in official government 
+recovery funding but rather the degree to which the responding community has 
+information, collective action, and social connections."
+(http://www.mattstempeck.com/wp-content/uploads/2013/06/Matt-Stempeck-Participatory-Aid-Marketplace.pdf)
+
+
+==On [[Peer to Peer Aid]]==
+
+Matt Stempeck:
+
+"In the crisis management world, Kropotkin’s term ‘mutual aid’ describes the acts 
+of the affected populations in leading their own response and recovery. Participatory 
+aid is the evolution of mutual aid, which can stand independently of formal aid 
+systems, and which invites participation of people from all over the globe to have 
+greater impact, thanks to ICT. We might even reimagine the role of the formal aid 
+systems to support and inform participatory aid.
+
+The mutual aid school of thought has gained new currency in recent years with 
+the success of technology-mediated peer-production movements38 like open source 
+software, Wikipedia, and other digital projects where non-market forces drive 
+individuals’ contributions to the common good. Collaborative projects have exposed 
+the productive roles peer reputation and cooperation can play in driving meaningful 
+participation.
+
+Proponents of the peer-production trend, such as Stephen Johnson, argue that 
+the continued debate over the appropriate role for the market and the state in society 
+must also now include the third pole of networks of individuals. Mutual aid has evolved 
+and grown stronger alongside our advances in information and communication 
+technology. Johnson’s book, Future Perfect, describes ‘peer progressives’ who 
+organize in a decentralized manner and can actually surpass the efficacy of traditional 
+hierarchical (and market-driven) approaches.39 The descriptor ‘peer’ works, Johnson 
+argues, on the civic level (“a jury of our peers”) as well as the technical level (peer-to
+peer networks).40 These broad shifts in the agency of networked individuals are 
+changing the crisis response industry just as they have disrupted the music, travel, and 
+countless other industries before it. 
+
+Industry after industry has been disrupted by the rise of connective technical 
+platforms like the internet, which has enabled end consumers (or citizens) to source 
+their books, news, music, travel, and, increasingly, their response to crisis, directly. In 
+the 20th century, record labels gained control of many of the stages involved in the 
+production and distribution of music. Peer to peer filesharing dramatically disrupted the 
+labels’ 20th century distribution model, but also other stages, such as artist discovery, 
+promotion, production, and the revenue models behind each process. In the travel 
+industry, the middlemen known as travel agents have been replaced by more efficient
+web platforms that aggregate and filter numerous options for end consumers. Airbnb 
+has further disrupted the travel industry by making private residences available to 
+travelers, introducing serious competition to the hotel industry. 
+
+In each case, technology has brought producers and consumers closer 
+together, or in some cases, blurred the lines beyond recognition. This creates a 
+diminished role for mediator middlemen like retail stores, distributors, travel agents, 
+and large crisis response NGOs. Cultural and business factors play an important role in 
+timing, but one of the key independent variables in ICT disruption of consumer-facing 
+industries is the introduction of intermediary platforms that supplant the human- or 
+bureaucracy-organized options presented to consumers. These platforms usually 
+accomplish this feat by simultaneously expanding the range of available options and 
+improving customized filtering of these options to prevent overload and reduce friction 
+(such as time or cost required for the consumer to take action).
+
+Information and Communication Technologies like the World Wide Web and 
+smartphones have not only connected us, but also digitized many of our professions. 
+
+Information workers, from lawyers to designers to cartographers, now use digital tools 
+extensively in their labor. This development has opened up the opportunity to donate 
+one’s time, and with it one’s professional skills and abilities, to assist in recovery 
+efforts. Our networked, digitized workplace allows professionals to make significant 
+pro bono contributions from anywhere in the world. Properly allocated, the time of an 
+individual with valuable skills could quickly surpass the value of the small donation they 
+may (or may not) represent as a traditional donor. The range of potential ways to help 
+has also greatly expanded. Online, the simple act of bringing attention to a crisis has
+emerged as an important, if lightweight, contribution. Well-structured crowdsourcing 
+allows even unskilled volunteers to contribute en masse.
+
+Thus far, the participatory aid movement is small relative to the percentage of 
+citizens that might give a donation during a telethon. One reason this is the case is that 
+awareness of available ways to help is low (identified by Bekkers and Wiepking as a 
+key factor in successful philanthropy). Another barrier to public involvement in 
+participatory aid is the lack of a popular, central, and trans-crisis intermediary platform 
+to connect those who seek to help with projects and organizations that can channel 
+this energy. 
+
+We might expect fewer citizens to get involved in participatory aid projects 
+relative to the number that take the simple act of making a donation. But we should 
+also expect more people, in absolute terms, to contribute to participatory aid efforts, 
+and in a wider range of ways than we’ve previously seen. This work seeks to 
+encourage meaningful participation by producing a volunteer-friendly intermediary 
+platform to increase awareness of channels accepting volunteer contributions and to 
+reduce the friction of finding and joining such efforts. 
+
+The Humanitarian Horizons report predicts “the emergence of a “new 
+humanitarianism” that will be part of neither the humanitarian nor development 
+systems.”
+
+Just as participatory media opens the power of communication to the 
+audience, participatory aid invites the involvement of the people formerly known as
+beneficiaries, and their peers, to respond to and even drive recovery efforts 
+themselves. 
+
+Information technology has driven participatory models of interaction forward 
+and disrupted the companies, institutions, and societal expectations built, over 
+decades, around the broadcast model. Macro trends independent of any specific 
+players in the aid industry have shifted the roles and relative abilities of donors, 
+recipients, and mediating organizations in ways we do not yet fully understand. In 
+many ways, this shift echoes similar technology-driven disruption in other fields. 
+Participatory aid does not outright replace formal aid, but if supported, could greatly 
+augment it. This connection between 
+disparate sectors requires facilitation."
+(http://www.mattstempeck.com/wp-content/uploads/2013/06/Matt-Stempeck-Participatory-Aid-Marketplace.pdf)
+
+
+=More Information=
+
+* [[Participatory Aid]]
+
+
+
+[[Category:Participation]]
+
+[[Category:Resources]]
+
+[[Category:P2P Solidarity]]
+
+[[Category:Security]]
+
+[[Category:Collaborative Economy]]
+
+[[Category:Research]]

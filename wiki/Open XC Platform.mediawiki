@@ -1,0 +1,44 @@
+
+'''= allow developers to access metrics from Ford cars’ internal network'''
+
+URL = http://openxcplatform.com/
+
+=Description=
+
+1.
+
+"OpenXC is an API to your car - by installing a small hardware module to read and translate metrics from a car's internal network, the data becomes accessible from most Android applications using the OpenXC library. You can start making vehicle-aware applications that have better interfaces based on context, can minimize distraction while driving, are integrated with other connected services, and can offer you more insight into your car's operation.
+
+Ford Motor Company and Bug Labs joined up to create a standard way of creating aftermarket software and hardware for vehicles. Every new car is full of computers and electronics, and there is growing interest in connecting the output from those systems to third-party applications and the web. Many companies are already offering tools to hook into the driver's interface, but for the most part they have limited availability for hobbyists and developers. What if the system was designed from the ground up to be open source and to give insight into the vehicle itself? With proper hardware isolation to ensure you can't "brick" your $20,000 investment in a car, OpenXC imagines when your car is as easy to program as your smartphone.
+
+Today's version of OpenXC runs on a combination of the Arduino and Android platforms. It uses tools you already know and opens up thousands of possibilities."
+(http://openxcplatform.com/)
+
+
+'''2. Matt Burns:'''
+
+'Our cars today feature a lot of sensors, but it’s not easy for developers and hardware hackers to access to all of this data, which is typically proprietary and manufacturer specific. Last year, Ford, in collaboration with Bug Labs, announced the beta of its OpenXC program to allow developers to access metrics from its cars’ internal network. Today it is opening up the program and launching an SDK so anybody who is interested in this project can start building hardware and software for the OpenXC platform. Until now, the platform was only available as a limited testing release.
+
+As Ford’s K. Venkatesh Prasad, the group and senior technical leader for Vehicle Design and Infotronics with Ford Research and Innovation told me earlier this week, this project is currently aimed squarely at the maker and hacker crowd. While we’ve seen both Ford and General Motors launch their new in-car app initiatives at CES this week, these two programs are really meant for developers who want to commercialize their apps and don’t currently feature a hardware component.
+
+...
+
+The OpenXC platform, which itself is based upon a combination of the Arduino and Android platforms, is all about getting data out of the car and building custom apps and hardware modules. Developers, for example, can see if the windshield wipers or the headlights are on, tap into the car’s GPS system and get speedometer readouts. This, as Prasad explained in his interview with Matt Burns, could allow a developer to mash up date from the car’s wiper blades with location data and create “some really valuable traffic information if it’s aggregated right.”
+
+Prasad likes to call this process “prototyping 2.0.” Ford is providing the software and specs for the hardware, but it won’t – at least for the time being – sell its own version of the CAN translator that turns the data stream from the car’s internal network into readable information. Instead, he told me, the company hopes that an ecosystem of makers and maybe even startup companies will start selling these devices and then, over time, the modules they develop for them. The company, Prasad argued, prefers to invite innovation from developers and give them the tools to build new products instead of building them itself."
+(http://techcrunch.com/2013/01/08/ford-launches-its-openxc-sdk-and-hardware-specs-to-let-developers-access-its-cars-sensors-and-metrics/)
+
+
+=Status=
+
+'Currently, this program is obviously led by Ford, but Prasad noted that this is an open-source project and that the company is open to working with other manufacturers and OEMs."
+(http://techcrunch.com/2013/01/08/ford-launches-its-openxc-sdk-and-hardware-specs-to-let-developers-access-its-cars-sensors-and-metrics/)
+
+
+[[Category:Manufacturing]]
+
+[[Category:Open Data]]
+
+[[Category:Transportation]]
+
+[[Category:P2P Accounting]]

@@ -1,0 +1,33 @@
+
+= A Permanent Web - A peer-to-peer hypermedia protocol
+
+URL = http://ipfs.io
+
+=Description=
+
+"IPFS is a distributed file system that seeks to connect all computing devices with the same system of files. In some ways, this is similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects. IPFS could become a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy.
+
+IPFS is still in the alpha stages of development, so we're calling this an experiment for now. It hasn't replaced our existing site storage (yet). Like with any complex new technology, there's a lot of improvements to make. But IPFS isn't vaporware, it works right now. You can try it out on your own computer, and already can use it to help us serve and persist Neocities sites."
+(https://ipfs.io/ipfs/QmNhFJjGcMPqpuYfxL62VVB9528NXqDNMFXiqN5bgFYiZ1/its-time-for-the-permanent-web.html)
+
+"IPFS began as an effort by Juan Benet to build a system that is very fast at moving around versioned scientific data. Versioning gives you the ability to track how states of software change over time (think Git). IPFS has since become thought of as the The Distributed, Permanent Web ; “IPFS is a distributed file system that seeks to connect all computing devices with the same system of files. In some ways, this is similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects. IPFS could become a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy.”[1]
+At its core, IPFS is a versioned file system that can take files and manage them and also store them somewhere and then tracks versions over time. IPFS also accounts for how those files move across the network so it is also a distributed file system.
+IPFS has rules as to how data and content move around on the network that are similar in nature to bittorrent. This file system layer offers very interesting properties such as:
+- websites that are completely distributed
+- websites that have no origin server
+- websites that can run entirely on client side browsers
+- websites that do not have any servers to talk to
+===Content Addressing===
+Instead of referring to objects (pics, articles, videos) by which server they are stored on, IPFS refers to everything by the hash on the file. The idea is that if in your browser you want to access a particular page then IPFS will ask the entire network “does anyone have this file that corresponds to this hash?” and a node on IPFS that does can return the file allowing you to access it.
+
+IPFS uses content addressing at the HTTP layer. This is the practice of saying instead of creating an identifier that addresses things by location, we’re going to address it by some representation of the content itself. This means that the content is going to determine the address. The mechanism is to take a file, hash it cryptographically so you end up with a very small and secure representation of the file which ensures that someone can not just come up with another file that has the same hash and use that as the address. The address of a file in IPFS usually starts with a hash that identifies some root object and then a path walking down. Instead of a server, you are talking to a specific object and then you are looking at a path within that object."
+(https://medium.com/@ConsenSys/an-introduction-to-ipfs-9bba4860abd0#.8i2i89j77)
+=More Information=
+
+More at The [[Blockchain Applications Directory]]
+
+[[Category:Cryptoledger Applications]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

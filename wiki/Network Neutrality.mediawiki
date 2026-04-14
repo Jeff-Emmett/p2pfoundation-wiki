@@ -1,0 +1,259 @@
+''' = network service providers should not be allowed to deny people access to certain Web sites or prioritize certain content.'''
+
+
+
+
+=Definition=
+
+Network neutrality is the principle that obliges data carriers, the telecommunication companies that transport internet traffic, to not discriminate as to the content that they transport, they are ‘neutral’ towards it. (Washington Post)
+
+"Net Neutrality means no discrimination. Net Neutrality prevents Internet providers from speeding up or slowing down Web content based on its source, ownership, or destination."
+(http://www.savetheinternet.com/=faq)
+
+
+=Characteristics=
+
+Four points that neutral networks should adhere to:
+
+   
+1. Non-discriminatory routing of packets
+   
+2. User control and choice over service levels
+   
+3. Ability to create and use new services and protocols without prior approval of network operators
+   
+4. Nondiscriminatory peering of backbone networks.  
+(http://dig.csail.mit.edu/2006/06/neutralnet.html)
+
+
+Martin Geddes distinguishes a hierarchy or taxonomy of “neutrality”, each area with its own specific concerns and issues, and potentially with interventionist or market remedies [http://www.telepocalypse.net/archives/001100.html]:
+
+    
+'''* “Read neutrality”.''' You can read the packet headers, but deep packet inspection is banned. The problem with this is that the user may desire some kinds of prioritisation (e.g. RTP/SIP) as the devices in the home are either incapable of co-operating or the user in incapable of configuring them. It’s going to be hard to separate “desirable” from “undesirable” routing and blocking when you opt in to the terms of service agreement. The postal system has had a form of this for a long time, but only for first-class type post; send something at the “printed material” rate and they’re allowed to check for cheating.
+
+    
+'''* “Write neutrality”.''' You can look, but don’t touch. However, you can drop a packet based on what you see. You just can’t modify packets or create new (fake) ones that the user didn’t initiate. This seems a whole lot less contentious, since what Comcast are doing looks uncannily like a misrepresentation to the customer. However, nothing is ever so simple. I was recently downloading some stock photos whilst dialled up over my 3G phone. Some transparent proxy somewhere super-compresses all JPEG images, and they look crap. This wasn’t what I wanted on my laptop, but may indeed be a behaviour I wanted on my mobile phone (and indeed is quite normal — who wants to download a 100Kb image just for the browser to re-size it to 20 pixels wide).
+
+    
+'''* “Route neutrality”.''' You have to treat all packets as equals. Nothing in the headers or payload can be used to determine priority. Unfortunately, this seems to be a fantasy land where no peering is ever done based on commercial considerations, no capacity is ever under- or over- provisioned, and no payments are possible from either content hosts or users at either end to re-allocate whatever scarcity might exist in their own favour. This is likely to prove impossible to define in any watertight manner, and could indeed fatally undermine the Internet’s interconnect system and drive a lot of traffic to IMS-ville.
+
+    
+'''* “Receive neutrality”.''' You can’t stop the devices sold to the user from sending or receiving specific types of data. This would be a complement to “network” neutrality — “edge” neutrality. Sadly, it throws out a lot of infant limbs with the murky waste water. Would you really want the iPhone to be illegal? The French have this kind of law, and there’s a good reason why the iPhone launch there is delayed. It’s rather analogous to the US/Canadian prescription pharmacy tussle. The Canadians love to free-ride on American price discrimination profits, but don’t want to shoulder any of the fixed costs themselves. Similarly, we’d all like an open device, but only at the price point of a closed one (subsidised by various service revenues it ties you into).'
+(http://www.telepocalypse.net/archives/001100.html)
+
+
+=Typology=
+
+"So far, much of the argument over "net neutrality" has been over whether service providers should be allowed to favor one application, destination or Internet service over another. This is Net neutrality at the application layer. But the real issue is the neutrality of the IP layer where routers treat alike bits from every type of application. This neutrality is what makes the Internet flexible -- while it also assures uniform treatment of information flow. If this neutrality is not maintained, the Internet will be changed fundamentally. It will no longer be the flexible, open platform that allows anyone with a good idea to compete on a level ground. 
+
+[[IP-Layer Neutrality]] is not a property of the Internet. It is the Internet. The Internet is a set of agreements (protocols) that enable networks to work together. The heart of the Internet protocol is the agreement that all data packets will be passed through without regard to which application created them or what's inside of them. This reliable, uniform treatment of packets is precisely what has made the Internet a marketplace of innovation so critical to our economy. 
+
+Providers certainly should be allowed to develop services within their own networks, treating data any way they want. But that's not the Internet. If they want to participate in the Internet, they need to follow the protocols that have been developed over the course of more than thirty years through consensus standards processes. Nor should they be permitted to single-handedly subvert the authority of the processes that have developed and maintained the Internet. 
+
+We call on Congress to end the confusion and protect not only the Internet but the tens of millions of American citizens who need to know that when they buy Internet access, they're getting access to the real Internet. Network providers who offer services that depend on violating IP-layer neutrality should be prohibited from labeling those services as "Internet," as their doing so will only undermine the weight of consensus authority presently accorded to the existing standards. The term "Internet" represents specific standards that provide IP-layer neutral connectivity that supports the openness of access and innovation that have been the defining characteristics of the Internet since its origins."
+(http://www.dpsproject.com/twotypes.html)
+
+
+
+=Context=
+
+"Network neutrality is the principle that obliges data carriers, the telecommunication companies that transport internet traffic, to not discriminate as to the content that they transport, they are ‘neutral’ towards it. However, they are campaigning to change it, under the rationale of differentiated service according to the ability to pay. This is very very dangerous for the survival of the internet as we know it, and is very well explained by a Washington Post article, which we quote:
+
+"Do you prefer to search for information online with Google or Yahoo? What about bargain shopping — do you go to Amazon or eBay? Many of us make these kinds of decisions several times a day, based on who knows what — maybe you don’t like bidding, or maybe Google’s clean white search page suits you better than Yahoo’s colorful clutter.
+
+But the nation’s largest telephone companies have a new business plan, and if it comes to pass you may one day discover that Yahoo suddenly responds much faster to your inquiries, overriding your affinity for Google. Or that Amazon’s Web site seems sluggish compared with eBay’s.
+
+The changes may sound subtle, but make no mistake: The telecommunications companies’ proposals have the potential, within just a few years, to alter the flow of commerce and information — and your personal experience — on the Internet. For the first time, the companies that own the equipment that delivers the Internet to your office, cubicle, den and dorm room could, for a price, give one company priority on their networks over another.
+
+This represents a break with the commercial meritocracy that has ruled the Internet until now. We’ve come to expect that the people who own the phone and cable lines remain “neutral," doing nothing to influence the content on your computer screen. And may the best Web site win."
+(http://www.washingtonpost.com/wp-dyn/content/article/2006/01/21/AR2006012100094.html)
+
+
+Tim Berners-Lee:
+
+"Control of information is hugely powerful. In the US, the threat is that companies control what I can access for commercial reasons. (In China, control is by the government for political reasons.) There is a very strong short-term incentive for a company to grab control of TV distribution over the Internet even though it is against the long-term interests of the industry. 
+Yes, regulation to keep the Internet open is regulation. And mostly, the Internet thrives on lack of regulation. But some basic values have to be preserved. For example, the market system depends on the rule that you can't photocopy money. Democracy depends on freedom of speech. Freedom of connection, with any application, to any party, is the fundamental social basis of the Internet, and, now, the society based on it." 
+(Tim Berners-Lee at http://www.smartmobs.com/archive/2006/07/04/tim_bernerslee.html )
+
+
+=Discussion=
+
+
+==Three Reasons why Network Neutrality is essential for Innovation==
+
+John Borthwick:
+
+"Here are three reasons why this matters now:
+
+'''1. The Internet and how we build things on the network is undergoing meaningful change as we transition to broadband and wireless access.'''
+
+Network providers are making significant capital commitments that will shape access to networks in coming years. Despite this, the US is behind in both broadband and wireless connectivity. Only 65% of American households have broadband access, compared to 90% of households in South Korea. It is important to note that not all access is created equal. A study from earlier this year puts the US in 18th place with an average of 3.8 Mbps downstream compared to an average of 14.6Mbps in South Korea. The US is now 22nd in terms of downstream broadband speed, behind Latvia and the Czech Republic. The story is the same on a price per megabit basis: in the US, we pay $40 per month for an average of 3.9Mbps, which can be compared to a $45 per month fee that includes 20-30Mbps connections in France(plus VoIP service and HDTV + DVR to boot).
+
+As I said at the outset, access to fast, affordable broadband for users and developers is, I believe, the single most important driver of innovation in our market. We got this wrong ten years ago—we don’t have a competitive market for broadband today, access is inconsistent, prices are high and speeds are often anemic—and we can’t afford to be wrong again.   The structural separation approach that the Europeans took a decade ago yielded cheap, fast access in their market. I believe this access has been the most significant factor in the advancement of European Internet innovation. Despite this, the European approach is now reaching its limits. The transition to wireless Internet access provides an opportunity; and as the network becomes more diverse, the need for common technical standards becomes essential. An uneven experience across various platforms will fragment innovation and promote gatekeepers’ ability to tax applications.  Match this situation with the embedded conflicts of interest in the delivery of video over DOCIS, or wireless vs. over-the-top IPTV, and you get a sense of the network complexities at hand. As Chairman Genachowski pointed out, we need “rules of the road” and now is the time to act.
+
+
+
+'''2. Most of the innovation that has taken place online over the past 15 years was born out of a handful of architectural decisions. Two of these decisions are now being challenged.'''
+
+Non-discriminatory pricing of bits and the clear definition of layers (i.e. the logical separation of conduit and content) that make up the Internet stack are two of the key architectural foundations of the network. The fact that bits containing applications, images, text or videos are handled in the same manner is central to how the Internet works. Network providers can shape or manage traffic on an aggregate, best-effort basis but identifying a single application or any content in an application or page will change the way the network is used. Specifically, it will hamper innovation by end-users such as individuals, developers and new or existing companies. Similarly, the layers are building blocks that are vital to how we develop and build Internet companies. This goes back to seminal pieces of Internet literature like the rise of the stupid network. I agree that, in the short term, tightly coupled systems can provide more efficient means to drive end-to-end innovation when you know precisely what you want to build. But I fundamentally believe that the essence of innovation is that you don’t usually know exactly what you want to build.
+
+Innovators aim to solve problems—they start in one place and then they iterate. All too often real innovation is simply stumbled upon. Ideas and companies evolve (or pivot, as we now call it) as they better understand the problem they are seeking to solve. The Internet has demonstrated time and time again that loosely coupled systems and edge-based innovation is what drives the kind of massive change we have seen over the past two decades. This freedom to create “on the edge”, and to evolve ideas, is what gets me up in the morning and keeps me up late at night.
+
+Like all good architecture, structural principles are remarkably resilient to change and scale. There have been continual challenges to these principles over the past few decades but this has all been part of the persistent tension that exists in a network between centralization and decentralization. Today, given our current transition to wireless and broadband access, the challenges faced are more fundamental as network providers attempt to change these building blocks as preconditions to future investment. The conflation of access (and control of access) with control of the stack of the open Internet is wrong.
+
+
+
+'''3. Edge-based innovation has been the driver of change and creativity online, yet the edge has no single representative.'''
+
+The edge-based innovation I talk of is predicated on access to a handful of things and the persistent tension between centralization and decentralization is a hallmark of a healthy web, evident in debates all the way back to Napster, CompuServe and AOL and, more recently, Facebook and Wikileaks. We have many native Internet companies relative to ten years ago. Though these native Internet companies come from the edge, no single company represents the edge.  Moreover, as companies scale, they become increasingly misaligned with the edge. Google, Amazon, Facebook, eBay, and Yahoo, for example, all came from edge-based innovation but no longer represent the edge. Despite intentions to the contrary, there is a natural evolutionary path through which a large company becomes less likely to let edge-based innovations flourish and more likely to preserve the status quo.  There is currently an over-representation of the center in Washington DC and the edge needs a louder voice."
+(http://techcrunch.com/2010/12/19/neutrality/)
+
+==Structural Separation as the Solution==
+
+See David Isenberg's proposal on [[Structural Separation]]
+
+
+
+==Net Neutrality as a Communication Right==
+
+Jonathan Zittrain reframes NN through a comparisonw with diplomatic rights accorded to states:
+
+"Just as states expect to conduct their official business on foreign soil without interference, so citizens should be able to lead digitally mediated—and increasingly distributed—lives without fear that their links to their online selves can be arbitrarily abridged or surveilled by their Internet Service Providers or any other party. Just as the sanctity of the embassy and la valise diplomatique is vital to the practice of international diplomacy, the ability of our personal bits to travel about the net unhindered is central to the lives we increasingly live online.
+
+This frame differs from the usual criteria for debating the merits of net neutrality. It does not focus on what makes for more efficient provision of broadband services to end users. It is unaffected by what sorts of bundling of services by a local ISP might intrigue the ISP’s subscribers. It does not examine the costs and benefits of faraway content providers being asked to bargain for access to that local ISP’s customers. Instead, it recognizes that Internet users establish outposts far and wide, and that a new status quo of distributed selfhood is quickly taking hold. This status quo is enabled by neutral access among all points of presence on the Internet, and underscores the expectations that are settling as one point forges ongoing connections with others. These users have come to expect, and greatly benefit from the fact, that “far” is irrelevant—everything is in fact only a click away—and “wide” can become narrow on demand: data and activities from multiple sources can be seamlessly integrated into one’s personal page or portal.
+
+...
+
+Translated to the digital realm, the diplomatic example captures the notion that citizens have the right to communicate both with one another and, in a cloud environment, with their own remote selves, full stop. No party, public or private, should have the unchecked ability to abridge an individual’s lines of communication over our generic global Internet. If the government ran the Internet the way it maintains the highways, we would see this in the United States as a First Amendment right, but because private parties offer Internet access, we do not view it that way, at least not doctrinally.[6]
+
+Freedom of communication is no less important, however, simply because people get their access from private parties. Public accommodation doctrine developed in an age where physical travel was how people and ideas spread—and thus innkeepers were required to offer an available room to anyone ready to pay for it. Common carriage created a regime where private trains took all customers—and owed them the utmost duty of care to get them to their destinations unmolested.[8] These doctrines mattered precisely in those circumstances where the market, left to its own devices, could not achieve the same result—at least not for everyone.
+
+The rights of diplomacy arose out of states’ mutual self-interest: Each sovereign appreciated the value of having protection for its own outposts and the links to and from them, and reciprocity provided the classic framework by which to curtail one’s own activities with respect to others’ embassies in exchange for the corresponding benefits on foreign ground. On the Internet, such reciprocity could fuel parallel rights of passage for data on peer-to-peer ad hoc mesh networks—that is, networks created by users linking their devices together wirelessly without the explicit involvement of a commercial network provider. For “regular” Internet networks, maintained by commercial providers, there is no such reciprocity on which to build net neutrality. ISPs might claim that they unambiguously give something up when they are limited in how they can shape services for their own customers, even as they might appreciate a level playing field when attempting to peer with other ISPs—something they do not enjoy today. But that is not exactly true. Much Internet service is a shared resource, even within the “last mile” to the home. My cable modem’s connection bandwidth is shared with that of others. So too with wireless connectivity. A subscriber creating traffic for the purpose of slowing down others’ connectivity is engaging in a form of denial-of-service attack, and is fair game for sanctions by an ISP. Why should not a reciprocal rule apply to ISPs who purposefully slow down connectivity in a discriminatory fashion?
+
+We enjoy access to massive archives of our digital trail in the form of emails, chats, comments, and other bits of personal ephemera, all stored conveniently out in the cloud, ready to be called up or shared in a moment, from wherever we happen to be, on whatever device we choose. The services stowing that data owe a commitment of privacy defined by a specific policy—one that we can review before we commit. Yet if any of the cloud services we use restrict our ability to extract our data, it can become stuck—and we can become locked into those services. The solution there is for such services to offer data portability policies to complement their privacy policies before we begin to patronize them, to help preserve our freedom to choose services over the long term.[9] By dismissing the principle of net neutrality, however, we endanger that ability not just by one cloud service provider but across the board: ISPs can perform deep packet inspection to glean whatever they can about us as we correspond with different sites across the Internet, and our data can become stranded in places as the shifting sands of our ISPs’ access policies constrict access to places they disfavor. Just as international diplomacy depends on the principles of the inviolable embassy, la valise diplomatique, and mutual reciprocity to operate in the ultimate best interests of all involved, so does net neutrality depend on maintaining an online environment that preserves those aspects that made it such a valuable and central part of modern life in the first place.
+
+A framing of Internet use that focuses on the persistent, undifferentiated right to get from here to there need not entail an absolutist position on net neutrality. Diplomatic pouches can be inspected or refused passage under exigent circumstances; innkeepers do not have to rent out rooms they do not have. The U.S. embassy in Beijing is in reality more Chinese territory than American. So, too, can viruses be rightfully detected and blocked by ISPs, and packet congestion dealt with, under the aegis of reasonable network management. But to reject net neutrality and privilege specialized ISP content-service bundles over the abilities of consumers to reach—prospectively and retroactively—the activities and data of their choice is to embrace a narrow and increasingly unrealistic view of the Internet, one that sees it as just another product with features to be optimized across clumps of customers. The Internet is that, but it is more: It is the paramount way we communicate with one another, and the means by which we establish our own digital selves. To allow anyone to deny us access to any one of those repositories would deny the ways in which the Internet has become so foundational to our very identities."
+(http://yalelawandpolicy.org/29/net-neutrality-as-diplomacy)
+
+
+
+
+==The challenge of [[Deep Packet Inspection]]==
+
+From Ars Technica [http://arstechnica.com/articles/culture/Deep-packet-inspection-meets-net-neutrality.ars/3]:
+
+"these particular constructions of "openness" run headlong into the business plans of the traffic-shapers. Companies like Ellacoya and Procera argue that this sort of "never discrimate" policy isn't much more than unworkable idealism. Such a network will in fact fill up with data; companies that don't filter or shape packet flows have then made a default decision to allow things like VoIP, videoconferencing, and online gaming to get "laggy" and e-mail to get delayed as BitTorrent and YouTube packets clog the tubes. Downloading an 800MB video, even if the movie in question is legal, is hardly the sort of application that is mission critical, and few customers are going to abandon ship because their YouTube videos take an extra two seconds to buffer. But customers do care if their VoIP service consistently goes glitchy or has tremendous lag, if World of Warcraft becomes unplayable, or critical e-mails and IMs are delayed in transit.
+
+The argument of the vendors is generally that "the market will decide" and that what's important is for companies simply to be upfront about the kinds of restrictions they have in place. We agree that transparency in these matters is a good idea, but the basic problem in the US is that if you don't like the policies your ISP has in place, it can be difficult to switch. We've been pointing out for years that Americans are generally locked into one or two providers, so most people are hardly spoiled for choice.
+
+Where you come down on these questions may vary depending on where DPI gear is deployed; many people have less problems with its use by last-mile ISPs who interact directly with consumers. Throttling P2P traffic to keep the network open for other uses might be fine, but the concern is magnified when such gear is rolled out by the backbone operators, like AT&T and Verizon. With last-mile ISPs, at least (most) customers have some options for switching if they don't like the terms.
+
+But there are so few backbone operators, and they wield so much power, that the truly scary stuff from a net neutrality perspective is if backbone providers start looking at Google and say, "If you want decent transport over my pipes, then you have to pay my toll." When that type of demand comes from an upstream provider, from a network economics standpoint that's a whole different ball game than Comcast trying to soak Google by threatening to slow down access to Google.com.
+
+That's because there's no way for the end users to vote "no" on the policy; all of the users of the multiple last-mile ISPs who are downstream from that backbone will see their access to Google start to suck, but there's not much they can do about it because it's not really their ISP's fault. In other words, the backbone providers have a more insular, more monopolistic, non-consumer-facing position in the Internet hierarchy, so if they decide to ditch neutrality and start squeezing websites and online service providers, then there's not much that can be done."
+(http://arstechnica.com/articles/culture/Deep-packet-inspection-meets-net-neutrality.ars/3)
+
+=Resources=
+
+==Network Neutrality FAQ==
+
+By Susan Crawford, ICANN representative at,
+http://scrawford.blogware.com/blog/_archives/2006/5/31/1998151.html
+
+
+'''"1.  What does net neutrality actually mean? Is it a meaningful protection for the web, or, as some say, a romanticized ideal that's getting in the way of progress?'''
+
+
+Think of the pipes and wires that you use to go online as a sidewalk.  The question is whether the sidewalk should get a cut of the value of the conversations that you have as you walk along.  The traditional telephone model has been that the telephone company doesn't get paid more if you have a particularly meaningful call -- they're just providing a neutral pipe.
+
+This argument is about whether companies selling highspeed transport mechanisms for the internet should be allowed to price discriminate -- charge different "content providers" (like YouTube) for the privilege of reaching you and me.  Because Americans have so few choices of broadband access providers, allowing these providers to leverage their market power over transport in order to have exclusive control over "programming" online is a matter of great concern. 
+
+The risk is that the network providers will keep everyone who hasn't paid protection money to them at 2001 speeds.
+
+
+'''2.  The cable and telephone companies argue that they need additional revenue to build 'the internet of the future' and so the Googles and Amazons of the world (who will benefit from that new internet) need to pay their fair share. Is that a legitimate argument?'''
+
+
+What they mean by 'the internet of the future' is a cable system -- not the internet.  They'll be using their market power over broadband access to force us all to accept their cable-ized version of 'the internet' and to force nascent Googles to pay protection money.  Those nascent Googles may never come into being -- so net neutrality is a right-to-life movement for new technology.
+
+These incumbents don't have competition.  We have no real information about their costs or how their networks work.  We're having this argument about "need for additional revenue" in the dark.  They've been promising to build broadband networks for a long time, and we're falling behind as a country.
+
+We know from Japan that competition for broadband access (lower prices, higher speeds) comes when you force the incumbent to "unbundle" (let competitors use its facilities on nondiscriminatory terms).  That's the real 'internet of the future.'
+
+
+'''3.  Net-neutrality's supporters are concerned that if you give the cable and telephone companies latitude to control who travels through their pipes (and at what speed), it puts those gatekeepers in a position to favor their own products and services over their competitors'. The fear is that innovation will suffer. Is that a concern you share?'''
+
+
+Emphatically yes.  The whole point of price discrimination (the goal of the cablecos and telcos) is that you get to choose who pays more to travel your network.  Network providers will have every incentive to favor their own services and make exclusive deals, and in the absence of a simple rule of separation between transport and services ("you're only a pipe") we'll be trapped in litigation for years over what discrimination is appropriate and what isn't. 
+
+Innovation happened online because the transport (the pipes) were largely "dumb."  This allowed new things to be developed without anyone having to ask permission of the telcos.  The deepest pockets are not the deepest sources of innovation -- to the contrary.  The telcos think of the internet as a "broken network."  They only know about networks over which they have perfect control.  When was the last time a new telephone service was introduced?  Call-waiting? 
+
+
+'''4.  Why do you think this issue has taken off with such a fervor in recent months?'''
+
+
+The telcos almost got away with this -- communications law is arcane and full of acronyms.  But it's easy for people to understand that the greater social good is to keep the internet open.  The benefit to private companies of being able to maintain their business plans is not worth the burden on the rest of us.  True, we don't know exactly what these larger social benefits of an open internet will be.  But the history of the internet has just begun, and it is already a remarkable story. 
+
+Americans aren't "consumers" of the internet (the way we are of cable programming).  We are "users," and almost 50 million of us have posted material online.
+
+People want broadband internet access to be treated like a utility.  Government may have a role in ensuring that this happens -- it's like keeping the highway system working.
+
+
+'''5.  Could you sketch out what groundrules you'd like to see govern the internet of the future?'''
+
+
+This debate isn't about internet governance.  This is about who gets to make decisions about prioritizing particular packets as they get close to broadband subscribers.
+
+I'd like to see blazing competition for broadband access and have us catch up to Japan.  We'll continue to only have a few transport providers in this country, because it's expensive to build a broadband network.  This means that those basic providers (the cablecos and telcos) will have to open up their facilities to others -- the ISPs who connect to them.  
+
+I'd like to see many different choices of ISPs, all of whom can make whatever decisions they want about prioritizing particular packets.   
+
+We may need to pay back the cablecos and telcos for their reasonable costs of building these broadband networks.  But we should not let them control our future.  The best and richest future for all of us is the unpredictable future"
+(http://scrawford.blogware.com/blog/_archives/2006/5/31/1998151.html)
+
+
+==Annenberg Principles==
+
+The Annenberg Center Principles for Network Neutrality
+
+URL = http://www.annenberg.edu/news/news.php?id=13
+    
+The goal of the Annenberg Center Principles for Network Neutrality is to provide a simple, clear set of guidelines addressing the public Internet markets for broadband access.
+
+    
+1. Operators and Customers Both Should Win: It is important to encourage network infrastructure investment by enabling operators to benefit from their investments. It also is important to ensure that customers have the option of unrestricted access to services and content on the global public Internet.
+
+    
+2. Light Touch Regulation: Any regulation should be defined and administered on a nationally uniform basis with a light touch. Regulations should be aimed primarily at markets in which it has been demonstrated that operators possess significant market power. The emphasis should be on prompt enforcement of general principles of competition policy, not detailed regulation of conduct in telecommunications markets.
+
+    
+3. Basic Access Broadband: Broadband network operators should provide "Basic Access Broadband," a meaningful, neutral Internet connectivity service.* Beyond providing this level of service, operators would be free to determine all service parameters, including performance, pricing, and the prioritization of 3rd party traffic.
+
+    
+4. Transparency: Customers should receive clear, understandable terms and conditions of service explaining how any network operator, internet service provider or internet content provider will use their personal information and prioritize or otherwise control content that reaches them.
+
+    
+5. Encouraging Competitive Entry: Government policy should encourage competitive entry and technological innovation in broadband access markets in order to help achieve effective network competition and make available high speed Internet access to the largest number of customers.
+
+    
+* Network operators providing basic access should not insert themselves in the traffic stream by blocking or degrading traffic. Traffic should be carried regardless of content or destination, and operators should not give preferential treatment to their own or affiliated content in the basic access service. The specific parameters (speed and latency) of this service will be reviewed on a quadrennial basis. Current thinking is that speeds of 1.25+ Mb/s downstream and less upstream would be acceptable at this time, moving to increasingly symmetric bandwidth at higher speeds in the future."
+(http://www.smartmobs.com/archive/2006/03/24/annenberg_cente.html)
+
+
+=More Information=
+
+#David Isenberg: [[Making Net Neutrality Sustainable]], a must read.
+#See this [[Network Neutrality Video]] .
+#Faq from the [[Save The Internet]] Coalition, at http://www.savetheinternet.com/=faq
+#2010 Berkman Radio conversations with Jonathan Zittrain and Lawrence Lessig, http://blogs.law.harvard.edu/mediaberkman/2010/10/15/radio-berkman-165-jonathan-larry-take-on%E2%80%A6-net-neutrality/
+#Wu, Tim and Christoper Yoo, 2006 “Keeping the Internet Neutral?” Legal Affairs, http://www.legalaffairs.org/webexclusive/dc_printerfriendly.msp?id=86
+
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Standards]]
+
+[[Category:Policy]]

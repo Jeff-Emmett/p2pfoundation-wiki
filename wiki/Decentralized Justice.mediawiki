@@ -1,0 +1,130 @@
+'''= "Decentralized justice is a new approach to online dispute resolution that combines blockchain, crowdsourcing and game theory in order to produce resolution systems which are radically more efficient than existing methods".''' [https://www.frontiersin.org/articles/10.3389/fbloc.2021.564551/full]
+
+
+=Description=
+
+Federico Ast:
+
+"Existing decentralized justice systems (e.g., Kleros and Aragon) require users to deposit a cryptographic token to express their interest and availability in resolving disputes in the platform. A pre-defined number of jurors are randomly chosen among all those who deposited the tokens. Once they are drawn, jurors independently analyze the evidence and vote for the party they believe is right. Jurors are rewarded with cryptocurrency tokens if they vote like the majority and penalized with the loss of their deposit if they are incoherent with the majority.
+
+In this way, by looking at their individual self-interest, jurors are incentivized to vote on the consensual truth about the dispute. The truth about the dispute is the focal point on which jurors tend to coordinate in order to collect the reward.
+
+As in any cryptoeconomic protocol, decentralized justice systems have a number of game theoretical defenses against attacks by malicious agents who would try to abuse the system for their own interest. This results in a mechanism design structured in such a way that agents, while seeking their economic interest, produce a fair outcome without any ethical assumption on juror behavior.
+
+Users seeking to attack the system (e.g., accepting bribes or casting a vote without proper consideration of the evidence) are likely to vote incoherently with the consensus majority, resulting on average in an economic loss. On the contrary, users behaving honestly (e.g., not taking bribes, taking proper care in assessing the evidence, etc.) are likely to vote coherently with the majority resulting on average in an economic gain.
+
+In order to assess whether a dispute resolution system qualifies as decentralized justice, one may ask the following question: Does the mechanism design generate the economic incentives for the system to produce fair decisions without having to rely on moral considerations about the agent's behavior?"
+
+(https://stanford-jblp.pubpub.org/pub/birth-of-decentralized-justice/release/1?)
+
+
+=Characteristics=
+
+Federico Ast:
+
+"Decentralized justice systems built as decentralized autonomous organizations on blockchains such as Ethereum’s comply with the Weingast and Hadfield (2013) criteria for institutions able to produce rule of law:
+
+The decision-making logic is publicly available. As open source projects, decentralized justice systems have their code deployed on a public blockchain which anyone can examine and replicate.
+
+The institution resolves ambiguity. Decentralized justice systems typically have different courts addressing different types of cases (e.g., e-commerce, insurance, finance). Each court has a clear set of rules defining how evidence should be evaluated and how decisions should be made.
+
+The decision-making logic is stable. Both the general procedural rules of decentralized justice systems, as defined in their mechanism design, and the specific rules of each court tend to be stable and not change often.
+
+The institution gives predictable results to novel inputs. Court guidelines and jurisprudence accumulated in past rulings help predict how the system is likely to rule in a given case.
+
+The institution is impersonal. As users interact with the decentralized justice system under a pseudonym (e.g., an Ethereum public address) the real identity of parties and jurors stays hidden. This contributes to decision-making on impersonal grounds.
+
+The institution can produce new rules by soliciting information from users. Decentralized justice systems have a governance mechanism which enables users to make decisions about the evolution of the protocol, including the creation of new courts, the developing of rules for courts, setting adjudication fees as well as a number of decisions regarding software development.
+
+These features guarantee that decentralized justice systems comply with two key features that we would expect from any justice system.
+
+First, the system is secure in the sense that no agent can unilaterally and arbitrarily influence the decision-making process. The entire procedure (handling evidence, jury selection, jury incentivization and execution of ruling) works in a fully automated and immutable way thanks to blockchain code. This guarantees that the decision-making process will work exactly as written in the code and will not be affected by any agent with “special decision rights.”
+
+Second, the system is managed by the community (typically defined by users holding the protocol cryptographic tokens). Any necessary changes in the procedure will have to be made through some type of voting procedure. Transparent to all participants in the network is the information regarding how rule changes are executed.
+
+The combination of these features gives a decentralized justice organization the key features we expect from rule of law: equality of citizens, predictability and community governance. In order to assess whether a dispute resolution system qualifies as decentralized justice, one may ask the following questions:
+
+Is the dispute resolution procedure encoded as a decentralized autonomous organization on a blockchain?
+
+Does it comply with the features that Hadfield and Weingast require for the rule of law?
+
+Does the system have a governance mechanism that members must use in order to make changes in how the system works?
+
+Does any agent possess some “special rights” to introduce changes in the procedure?"
+
+(https://stanford-jblp.pubpub.org/pub/birth-of-decentralized-justice/release/1?)
+
+
+==Fairness==
+
+Federico Ast:
+
+"Daniel Dimov has worked extensively on the development of a model for assessing procedural fairness in the context of '''crowdsourced online resolution systems''' (“CODR”). Procedural fairness refers to a number of criteria for determining whether a given procedure contributes to a fair outcome. Dimov examines two types of procedural fairness: objective procedural fairness (defined as the extent to which the procedure complies with the fairness standards defined by the Directive on Alternative Dispute Resolution of the European Union, 2003) and subjective procedural fairness (an individual subjective perception of the fairness of a procedure), and then merges them into a single framework which may be used to assess the overall fairness of a dispute resolution procedure.
+
+
+Dimov’s framework argues that there are 14 points to assess the fairness of a crowdsourced online dispute resolution system:
+
+- Expertise: The neutral third party should have the necessary knowledge and skills in the field of dispute resolution.
+
+- Independence: Jurors must be free from coercion when adjudicating disputes.
+
+- Impartiality: The neutral third party must not have any internal prejudices toward certain parties or certain of the elements of the subject matter of the dispute.
+
+- Transparency: The dispute resolution process should be understandable and, if necessary, possible to replicate.
+
+- Fair Hearing: Parties should be provided with a notice informing them about the commencement of the dispute resolution process and an opportunity to present their cases and rebut the cases of their opponents.
+
+- Counterpoise: Pre-existing imbalances in the financial status of parties and the computer skills of the disputants should be neutralized.
+
+- Reasonable Length of Procedure: The outcome of the dispute resolution procedure should be available within a period of 90 calendar days from the date on which the provider of the dispute resolution service received the complete complaint file.
+
+- Providing Reasons: Jurors must give parties a statement of the grounds on which the decision is based.
+
+- Process Control: The increase of control over the development and selection of information that will constitute the basis for making a decision strengthens the perceptions of procedural fairness.
+
+- Decision Control: Parties have the possibility of appealing a decision rendered by a third party.
+
+- Consistency: The procedure must be applied consistently across persons and across time.
+
+- Accuracy: Information used in the resolution process is agreed beforehand by the parties.
+
+- Correctability: The opportunity to correct a decision strengthens the perceptions of fairness of the procedure used for making the decision.
+
+- Ethicality: The extent to which a procedure conforms to personal standards of ethics and morality increases the extent of the perceived fairness of the procedure.
+
+An evaluation of these points enables a judgment on the fairness of a dispute resolution process. A decentralized justice system needs to comply with most of the criteria."
+
+(https://stanford-jblp.pubpub.org/pub/birth-of-decentralized-justice/release/1?)
+
+
+=Discussion=
+
+Federico Ast:
+
+"The key question for a court system can be framed as follows: How to design a mechanism able to produce true decisions efficiently and in such a way that it is compatible with the ethical beliefs of a community?
+
+Throughout history, different communities have given different answers to this question, depending on the technology available to them and their system of beliefs. In ancient Athens, trials were conducted by large bodies of randomly selected voluntary citizens. The merchant courts of the Middle Ages were based on peer judges via the Lex Mercatoria. Contemporary legal systems put legal decisions in the hands of professional attorneys and judges.
+
+Since the 1990s, the Internet has drastically changed the world’s economic systems and humankind’s ability to organize social cooperation. Global connectivity enables crowds to collaborate online in unprecedented ways. Over time, crowd intelligence succeeded in producing a collaborative encyclopedia such as Wikipedia, a sophisticated operating system such as Linux and a decentralized monetary system such as Bitcoin.
+
+The wisdom of crowds can also be leveraged for a radical transformation of ODR systems. The field of decentralized justice seeks to leverage blockchain and mechanism design in order to build dispute resolution procedures able to efficiently and fairly address the new types of disputes of the digital age. It is decentralized because the process is fully driven by peers and built on blockchain technology and cannot be controlled by any single agent. It is justice because the design complies with a number of conditions to be considered fair by the people using it."
+
+(https://stanford-jblp.pubpub.org/pub/birth-of-decentralized-justice/release/1?
+)
+
+
+=More information=
+
+* see: [[Blockchain Online Dispute Resolution Projects]] ; [https://www.frontiersin.org/articles/10.3389/fbloc.2021.564551/full]
+* [[Decentralized Justice Platforms]]
+* [[Online Dispute Resolution]]
+
+'''* Article: [[When Online Dispute Resolution Meets Blockchain]]: The Birth of Decentralized Justice. by Federico Ast. Stanford Journal of Blockchain, Law and Policy, June 2021'''
+
+URL = https://stanford-jblp.pubpub.org/pub/birth-of-decentralized-justice/release/1?
+
+"This paper reviews the main theoretical principles underlying the nascent field of decentralized justice and the early empirical experience in real life use cases. Part of the Blockchain & Procedural Law seminars (Max Planck Institute Luxembourg for Procedural Law).
+
+The Online Dispute Resolution ("ODR”) industry was born in the 1990s. As the Internet became a part of people’s everyday lives, many also sought to leverage the web’s potential for the creation of virtual courts that would greatly increase the efficiency of dispute resolution procedures. This vision, however, failed to fully materialize. To some extent, early ODR solutions only brought an incremental innovation that streamlined existing alternative dispute resolution procedures, but did not create any disruptive innovation with the potential of generating a more than 10x advantage over existing methods. In recent years, a number of technological innovations in computer networks such as blockchain and the growing use of cryptocurrencies enabled new types of mechanism designs for online dispute resolution. This emerging approach, which may be called decentralized justice because of the decentralized nature of blockchain and of juror networks, enables the possibility of a radical increase in the efficiency of dispute resolution. This Essay reviews the main theoretical principles underlying the nascent field of decentralized justice and the early empirical experience in real life use cases."
+
+[[Category:P2P_Law]]

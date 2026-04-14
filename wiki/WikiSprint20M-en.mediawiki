@@ -1,0 +1,117 @@
+<noinclude>
+<b>English form for the P2P WikiSprint</b>.
+
+Enter the name of the item to document and press the button.
+
+{{#forminput:form=WikiSprint20M-en}}
+
+</noinclude><includeonly>
+<div id="wikiPreview" style="width: 600px; display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+__NOTOC__
+{{{for template|WikiSprint-20M}}}
+{| class="formtable"
+! Title/Name:
+| {{{field|Name}}}
+| {{{field|Language|input type=text|hidden|default=English}}}
+|-
+! Main URL:
+| {{{field|Main URL|rows=90|input type=url}}}
+|-
+! Short description:
+| {{{field|Short description}}}
+|-
+! Details:
+| {{{field|Details|input type=textarea|autogrow}}}
+|-
+! Discussions/Quotes:
+| {{{field|Discussions/Quotes|input type=textarea|autogrow}}}
+|-
+! References/Links:
+| {{{field|References/Links|input type=textarea|autogrow}}}
+|-
+! Contact person:
+| {{{field|Contact person}}}
+|-
+! Contact's person e-mail:
+| {{{field|Contact's person e-mail|input type=url}}}
+|-
+! Number of participants:
+| {{{field|Number of participants|input type=number}}}
+|-
+! Start date:
+| {{{field|Start date|input type=date}}}
+|-
+! Related projects:
+| {{{field|Related projects|input type=textarea|autogrow|placeholder=One per line}}}
+|}
+
+== Location information ==
+
+{|
+! City:
+| {{{field|City}}}
+|-
+! Country:
+| {{{field|Country}}}
+|-
+! Geo-Location:
+| {{{field|Location|mandatory|default=0,0|input type=map|zoom=1}}}
+|-
+|}
+
+== Categorization ==
+
+{|
+! Topics:
+| {{{field|Topics|input type=categories|top category=P2P Domains|height=200|hideroot=on|depth=3}}}
+|-
+! Entity type:
+| {{{field|Types|input type=categories|top category=P2P Entity Type|height=200|hideroot=on|depth=3}}}
+|-
+! Format:
+| {{{field|Formats|input type=categories|top category=P2P Multimedia Directory|height=200|hideroot=on|depth=3}}}
+|-
+! Keywords/Tags:
+| {{{field|Categories/Tags|placeholder=comma separated values}}}
+|}
+
+{{{for template|MC}}}
+== Categorization with MoveCommons ==
+<img style="float:right; margin: 0 0 10px 10px;" src="http://movecommons.org/mc/0.1/images/logo-pp.png">
+Below you will find some question that allows to tag your entry using the [http://movecommons.org/ MoveCommons] parameters
+If you got any doubt or need further details about this tagging system, we recommend you to visit [http://movecommons.org/preview/ this link]
+
+=== The initiative does not seek economic benefit or not? ===
+{|
+| {{{field|mc1|values=Non Profit,For-Profit|input type=radiobutton|mandatory|default=Non Profit}}}
+|}
+
+=== It's open enabling anyone to reuse it or its protected and for exclusive use? ===
+{|
+| {{{field|mc2|values=Exclusive,Reproducible|input type=radiobutton|mandatory|default=Reproducible}}}
+|}
+
+=== Reinforces the Commons or not? ===
+{|
+| {{{field|mc3|values=Reinforcing the Commons,Reinforcing other aims|mandatory|default=Reinforcing the Commons|input type=radiobutton|show on select=Reinforcing the Commons=>type}}}
+|}
+<div id="type">
+{|
+! Which area is the main focus of the initiative?:
+| | {{{field|mc3e|values=Nature, Body/Health,Town/Community/Society,Digital|input type=radiobutton|mandatory|default=Nature}}}
+|}
+</div>
+
+=== Is driven by representatives or by horizontal collective decisions?===
+{|
+| {{{field|mc4|values=Representative,Grassroots|input type=radiobutton|mandatory|default=Grassroots}}}
+|}
+{{{end template}}}
+
+
+{{{end template}}}
+
+{{{standard input|summary}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

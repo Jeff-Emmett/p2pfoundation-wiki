@@ -1,0 +1,40 @@
+'''= a message-based anonymizing network. It builds a virtual network between the communication endpoints.'''
+
+URL = http://www.i2p.net/ [http://en.wikipedia.org/wiki/I2P]
+
+
+=Description=
+
+1. From the Wikipedia:
+
+"I2P (Invisible Internet Project) is a computer network layer that allows applications to send messages to each other pseudonymously and securely. Uses include anonymous web surfing, chatting, blogging and file transfers. The software that implements this layer is called an I2P router and a computer running I2P is called an I2P node. The software is free and open source and is published under multiple licenses. The name I2P is derived from Invisible Internet Project, which, in pseudo-mathematical notation, is represented as I²P."
+(http://en.wikipedia.org/wiki/I2P)
+
+
+'''2.'''
+
+"I2P is an anonymizing network, offering a simple layer that identity-sensitive applications can use to securely communicate. All data is wrapped with several layers of encryption, and the network is both distributed and dynamic, with no trusted parties.
+
+Many applications are available that interface with I2P, including mail, peer-peer, IRC chat, and others.
+
+The I2P project was formed in 2003 to support the efforts of those trying to build a more free society by offering them an uncensorable, anonymous, and secure communication system. I2P is a development effort producing a low latency, fully distributed, autonomous, scalable, anonymous, resilient, and secure network. The goal is to operate successfully in hostile environments. even when an organization with substantial financial or political resources attacks it. All aspects of the network are open source and available without cost, as this should both assure the people using it that the software does what it claims, as well as enable others to contribute and improve upon it to defeat aggressive attempts to stifle free speech.
+
+Anonymity is not a boolean – we are not trying to make something “perfectly anonymous”, but instead are working at making attacks more and more expensive to mount. I2P is a low latency mix network, and there are limits to the anonymity offered by such a system, but the applications on top of I2P, such as Syndie, I2P mail, and I2PSnark extend it to offer both additional functionality and protection.
+
+I2P is still a work in progress. It should not be relied upon for “guaranteed” anonymity at this time, due to the relatively small size of the network and the lack of extensive academic review. It is not immune to to attacks from those with unlimited resources, and may never be, due to the inherent limitations of low-latency mix networks.
+
+I2P works by routing traffic through other peers, as shown in the following picture. All traffic is encrypted end-to-end. For more information about how I2P works, see the Introduction."
+(http://technosociology.org/?p=305)
+
+
+=More Information=
+
+#[[Anonymity]]
+#[[Tor]]
+
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:NextNet]]

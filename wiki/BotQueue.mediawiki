@@ -1,0 +1,28 @@
+
+'''= an online platform for distributing print jobs to multiple 3D printers for production'''
+
+
+URL = http://www.botqueue.com/
+
+
+=Description=
+
+Zach Hoechen:
+
+"I believe that low cost 3D printing has the potential to revolutionize not just prototyping, but small-scale manufacturing of parts: from 10 to 1000 units.  With a small fleet of 3D printers it is possible to run them around the clock and produce enough parts to run a small business.  While this has been possible before today, there has never been software designed with this task in mind.
+
+Thus, BotQueue was born.
+
+BotQueue is an online platform for distributing print jobs to multiple 3D printers for production.  As the name suggests, it allows you to create a print queue which contains jobs.  Your connected bots will grab jobs and produce them.  As each job is competed, the operator is prompted to remove and verify the output.  Upon successful completion, the bot will grab the next job and start producing it.  This continues until the queue is empty.  If a bot fails, it is taken offline for repairs.
+
+Another huge benefit of BotQueue is online access to your bots.  The main interface to control your machines is through the BotQueue website.  This means you can access your bots from anywhere in the world.  You could queue up a print while on the road, and come home to a finished object on your 3D printer.  Future support is planned for webcams, so you will even be able to check up on the printing progress remotely.
+
+The best part of all this?  It’s 100% completely open source.  Both the web server and client software are licensed under GPLv3.  An instance of the BotQueue server is being hosted on botqueue.com, but you are free to run your own local server for private production, a public server for hosted printing, or whatever you want.  The code is located at github.com/hoektronics/botqueue.
+
+BotQueue is designed for running machines as close to 100% capacity as possible.  However, it would work just fine for everyday single-machine, sporadic use.  It would also work well for putting development machines through life testing as it tracks failures, printing time, and general usage statistics.
+
+This is the v1.0 release of BotQueue, so it may be a little bit rough around the edges.  Currently it only supports RepRap machines running gcode-parsing firmwares such as GRBL, Sprinter, Marlin, etc.  Future support is planned for MakerBot machines.  The client has a driver-based architecture and is written in Python, so it is straightforward to add support for new machines or firmwares."
+(http://www.hoektronics.com/2012/09/13/introducing-botqueue-open-distributed-manufacturing/)
+
+
+[[Category:Manufacturing]]

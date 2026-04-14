@@ -1,0 +1,48 @@
+
+
+=Proposals=
+
+Johannes Ernst:
+
+"Around 2005/2006, there were about four major lines of thought on user-centric identity with a few variations. We can quibble about the exact numbers and times, but in broad strokes — which is what this post is all about — that seems about right.
+
+   
+* The Kim Cameron / Microsoft / CardSpace / Identity meta-system line of thought. In this view, major brands (like banks, associations…) would issue “electronic cards” with various pieces of identity information on them. A piece of software on the user’s device, called an “identity selector”, would allow the user to select which card to present to a web site in order to convey just the necessary amount of identity information to complete a transaction. By default, sites would have no ability to conspire tracking the user across sites. The vision was always very tightly coupled to the WS-* stack of protocols. 
+
+* A more ambitious version was presented by Paul Trevithick / Parity / Azigo. In this version, cards would be the metaphor for any kind of person-to-person and person-to-machine data exchange, just as in Snow Crash. Unlike in Kim’s version, the data “on” the card could be dynamic and open-ended. Brands were far less important: anybody could issue and receive cards just as easily as passing notes.
+    
+* The Dick Hardt / Sxip line of thought. Here, users would have one or more trusted sites on the web that would push identity data as part of the user’s login process to any site the user visited, with the user having the final say on which data to convey. Originally it was conceived as a hierarchical, DNS-like system, the vision later became decentralized. Additions enabled updated identity information to flow upstream or downstream after the initial exchange. A browser plugin would make the user experience simpler.
+    
+* The Drummond Reed / Cordance / XRI / XDI / i-names line of thought. This line of thought started several years earlier than any of the others. It envisioned a DNS-like system (XRIs and i-names) to supplant DNS. In the pure form, users would have an identifier (an i-name with the characteristic equals sign in front) that would be unique on the web and could be used for identification. With the identifier, a rich set of services would be associated that could be dynamically discovered. The set of services would include identity-related services such as single-sign-on, but also broader data exchange services, using a new set of protocols called XDI.
+    
+* My own, the Johannes Ernst / NetMesh / Light-Weight Identity (LID) line of thought. Here, users would claim a place on the web as their own (like their blog or personal website), and point everybody to that place on the web when they needed to find out any information about the user. Identity, and other information, could be pulled from that place on the web by others, but only if approved by the owner who’d be in complete control of that site.
+          
+* The Brad Fitzpatrick / David Recordon / Six Apart / OpenID V1 version that followed the “point to user’s home site” architecture but dropped all parts other than authentication, focusing on the special case of blog commenting. This was the first vision of user-centric identity that got actual traction in the marketplace."
+(http://netmesh.info/jernst/big_picture/the-death-of-user-centric-identity-for-now)
+
+=Status=
+
+Johannes Ernst:
+
+" here we are in 2011, and it is time to acknowledge that none of these original visions have worked out. Cardspace has been canceled. The rest of the proposals was, sort of, merged into what became OpenID. When we did this merger, we were all hoping that OpenID would end up being the sum of all (good) parts. Unfortunately, it became the opposite: an oddity not true to any of the visions, and far, very far, from being an aggregate of the best. Worse, its evolution has disintegrated into multiple incompatible architectures all of which have plenty of trees, but no forest. None of the original visionaries are actively involved in it any more, and it shows.
+
+Here’s an example: current OpenID implementation practice is to use non-correlatable identifiers as the URLs that I envisioned for LID, in order to get CardSpace-like privacy features. But then, the first piece of information that is typically pushed to sites, Sxip-style, is the user’s e-mail address — a perfectly correlatable identifier if there ever was one. The identity push features in OpenID 2, from their roots in Sxip, are unused beyond a few like name and e-mail address; instead, any meaningful data exchange is performed using OAuth, an (incompatible) branch-off which is much closer in architecture to XDI and LID than to either Sxip or Cardspace, without any of the sophisticated query and privacy features envisioned in either, and without any aspirations whatsoever to be user-centric.
+
+And because we totally, disastrously, failed in keeping the cats herded that like nothing better than to come up with a 5%-better version of some aspect of some obscure protocol oblivious to recognize that this splits the market and makes either version un-implementable, you can now chose between some power set of incompatible ways of implementing all of it, none of which ever has an even remote chance of really working on a mass scale.
+
+The result: the top Quora answer on OpenID has 457 positive votes on “OpenID was doomed the day it launched”. Answer #6, with 25 votes, is the first positive response, and rather defensive at that. While the OpenID Foundation prods on, I have to say — and mind you, I was one of its co-founders — I have not the slightest clue what it is trying to do at this point in 2011. The most recent board meeting minutes sound very much like a typical management meeting would have been at Nokia if they hadn’t had the wits to bring in a new “The Platform is Burning” CEO.
+
+The clear winner: Facebook. To their credit, they first hired the right people out of the identity world. Then, they thought hard how to turn user-centric identity into a product that mere mortals can understand — and that increases the Facebook stock price. That it has, literally by billions. Users’ lives have become better on the net as a result, but make no mistake: the primary beneficiary has been Facebook and its shareholders. There is nothing user-centric in Facebook’s implementation of identity. At least nothing that any of the above visionaries would recognize as part of their vision. Facebook-centric is the best way of calling it.
+
+(To be clear, I have no problem with what Facebook did on this subject. In a competitive market, they should be held in check by competitive forces. Sadly, its competitors’ forces seem to have been exhausted by being asleep at the wheel to an extent I have a hard time grasping.)
+
+So, for now user-centric identity is dead in the sense that it has been losing market share and mind share at a furious rate, with no white knight in sight. It was fun while the ride lasted. It will come back up for sure, with new visions by (likely) new visionaries. Decentralization, user-centricity, like democracy, does not ever die, it just disappears from sight for a while."
+(http://netmesh.info/jernst/big_picture/the-death-of-user-centric-identity-for-now)
+
+
+
+=More Information=
+
+# [http://www.onlinecommunityreport.com/2007/10/user-centric-identity-an-interview-with-kaliya-hamlin-live/ Interview with Kaliya Hamlin], 2007
+# Overview page at [[Identity]]
+# [[User-Centric Digital Identity Movement]]

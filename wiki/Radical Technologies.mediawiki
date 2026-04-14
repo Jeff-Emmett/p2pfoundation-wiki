@@ -1,0 +1,64 @@
+
+'''* Book: Radical Technologies. By Adam Greenfield.'''
+
+URL = http://www.indiebound.org/book/9781784780432
+
+=Description=
+
+"A field manual to the technologies that are transforming our lives:
+
+Everywhere we turn, a startling new device promises to transfigure our lives. But at what cost? In this urgent and revelatory excavation of our Information Age, leading technology thinker Adam Greenfield forces us to reconsider our relationship with the networked objects, services and spaces that define us. It is time to re-evaluate the Silicon Valley consensus determining the future.
+
+We already depend on the smartphone to navigate every aspect of our existence. We're told that innovations--from augmented-reality interfaces and virtual assistants to autonomous delivery drones and self-driving cars--will make life easier, more convenient and more productive. 3D printing promises unprecedented control over the form and distribution of matter, while the blockchain stands to revolutionize everything from the recording and exchange of value to the way we organize the mundane realities of the day to day. And, all the while, fiendishly complex algorithms are operating quietly in the background, reshaping the economy, transforming the fundamental terms of our politics and even redefining what it means to be human.
+
+Having successfully colonized everyday life, these radical technologies are now conditioning the choices available to us in the years to come. How do they work? What challenges do they present to us, as individuals and societies? Who benefits from their adoption? In answering these questions, Greenfield's timely guide clarifies the scale and nature of the crisis we now confront --and offers ways to reclaim our stake in the future."
+
+=Discussion=
+
+==Design is value driven==
+
+Adam Greenfield:
+
+"Too many of us don’t recognize that the decisions made in the design of these products and services constitute a coherent ideology, let alone wonder where that ideology comes from. Too many of us fail to see these products and services as places where distinct values are being enacted. And as a result, too many of us fail to understand these products and serves as contested, or at least eminently contestable, sites. (This includes a surprising number of people who pride themselves on their degree of wokeness in virtually every other facet of their lives.) It becomes far easier to perceive these aspects of the world around us, though, if we take a little time to understand how software functions.
+
+Software is a forked thing, a way of doing work in the world that has a necessary dualism inscribed in it. Its ability to perform that work relies, on the one hand, on a set of rules or instructions that establish the basic parameters of what is to be done, called code, and on the other hand the things these instructions operate on: data, a representation of some aspect the world translated into ones and zeros, the universal binary language of digital information-processing engines. In the universe as rendered in software, there is no order without code, no traction or meaning without data.
+
+We can get a sense for how this works in the everyday by considering what happens, say, at the checkout counter whenever someone equipped with a supermarket loyalty card does their grocery shopping.
+
+The software that runs the checkout terminal consists, in effect, of a long series of conditional instructions – each one a standing order inscribed in a few lines of code, that will trigger specified patterns of response whenever certain conditions arise.
+
+But which conditions, and which responses? At the checkout counter, both conditions and responses correspond with clear, direct commercial imperatives. Buy cat food often enough over the course of a year, and the profile associated with your loyalty card will evolve to reflect the strong likelihood that you have a companion cat in the household. The loyalty software will leverage this state of affairs in its attempts to cross-sell or upsell, directing you to the grocery chain’s favored partners by offering you a discount coupon for cat litter on your next trip, and in doing so pushing you through the steps of a business logic. The code establishes that there is such a category as Cat In Household (and more distantly and abstractly, that there are such social facts as households in the first place). But it’s the data – the running tally of observed facts about your purchases which you increment on every trip to the market – that operationalizes that definition.
+
+There’s a trade-off involved in all this, of course. You surrender to the supermarket chain (as well as its vendors, partners and customers) data about the time, whereabouts and frequency of your purchases, and in return you receive discounts, upgrades or other offers. Here, once you’ve accepted the fundamental terms of this bargain, there’s not a whole lot of scope for the expression of values. Your endorse the belief systems implicit in the loyalty scheme by participating in it, and your opportunity to reject those belief systems begins and ends with the right of refusal."
+(https://www.versobooks.com/blogs/3333-the-ideology-behind-technology)
+
+
+==The problem with the [[Smart City]]==
+
+Adam Greenfield:
+
+"In the case of the smart city, though, as with virtually all facets of metropolitan experience, the ambit of behavior and response is hugely more complicated. And this is where the largely preconscious values and conceptions of urban life held by such a system’s designers come into play.
+
+Code is more obviously a site of intervention in the affairs of a city. When you establish rule sets, instructions that apply to the allocation of civic resources and have the force of command, you are obviously intervening in the distribution of possibilities, even lifechances. It is code that specifies a relationship between wait times at an intersection and the behavior of traffic signals elsewhere in the road network, code that sets the threshold at which a neighborhood or even a specific individual receives more attention from the police, code that defines a blob on a video feed as a potential nexus of dissent crystallizing in space and time. These specifications are clearly salient to the ways in which we differentially experience the city.
+
+But so, more subtly, is data. The way one chooses to collect it, the very taxonomies and ontologies that it is sorted into concretely articulate the conditions of possibility we confront in the networked city. If your software, for example, specifies that individuals have an attribute called Gender, and the range of acceptable attribute values your database will accept is limited to Female and Male, well, that is a decision. As of course so is the belief that this attribute is somehow salient to the way in which people will be treated in the first place.
+
+As vexingly complicated as the interactions between these terms and the things they represent seem, it’s not so very difficult to prise them apart. Data is the decision to acquire and measure bone-length dimensions from faces moving through the field of vision of a municipal CCTV camera. Code is the sorting of people into gendered buckets based on the results of those measurements. Policy is treating people differently depending on which bucket the system has placed them in. There is a politics and a system of values operating at every level.
+
+Perhaps such sorting is defensible in some contexts, and less so in others. But the point is that such decisions should always be made consciously, and in the fullest possible awareness of the values they reproduce. And in my experience, anyway, it so very rarely is. Only the most enlightened software development organizations weigh such matters, or give them even the slightest consideration. Which means that when decisions are made about how software-based systems are going to handle and mediate gender, class, ethnicity or caste, about what does or does not constitute a crime or what public space is for, all of those decisions will be made on the spot, by engineers who are generally both immersed in a particular way of seeing the world and unaware that their way of seeing the world may not at all be universal or unquestioned.
+
+Now, finally, we’re in a position to understand the questioner who – with an expression on his face that was something between surprise and open horror – took issue with my assertion that one of the aims of municipal technology ought to be “preventing capture of the commons for private advantage.” Isn’t that the whole point of capitalist enterprise, he wondered? Yes, I agreed, it was. Then why on Earth would you ever want to design software that might prevent that from happening? It had evidently never occurred to him that capitalism itself might be a value, or a system of values, shared neither by the designers of civic software nor by the people whose lifechances were shaped by its operation.
+
+This isn’t simply a classic Two Cultures problem, nor merely a matter of semantic distinctions (or “wordsmithing,” as every blithely ignorant boss you’ve ever had has characterized the notion that precision in language matters, and that different words actually have different meanings). History is replete with examples of software engineers who were both entirely conscious of the values enacted by the systems they devised, and intended for those systems to realize noncapitalist ends. In our time, though, after four solid decades of a regnant and seemingly unassailable neoliberalism in the core settings and institutions of global power, the overwhelming majority of those currently working on the smart city (as, indeed, on the algorithmic products and apps which now mediate so much of everyday experience) subscribe to that framework of values, more or less unconsciously. And they reproduce those values in every line of code they touch and every container they devise for the collection, storage and analysis of data.
+
+And it matters profoundly. If we are to have any hope whatsoever of establishing the conditions of justice in the cities of the twenty-first century, we will need to raise the values embedded in software to the surface and force them to speak themselves. We will need to demand that the engineers who will craft the code that determines all the million material ways in which the networked city interacts with the people who live in it, and give it shape and meaning, are able to consciously articulate the things they believe (even, at the very most basic level, whether or not they conceive of the distribution of civic goods as a zero-sum game). We will have to stop treating the various networked technologies around us as givens, let alone uncomplicated gifts, and learn to see them anew as bearers of ideology. And we’ll need to understand the design of software as the level at which that ideology operates.
+
+None of this will be straightforward or easy, especially for those of us whose eyes begin to glaze over the moment things become even the slightest bit technical. But I don’t think it’s any exaggeration to say that our capacity to live, act, associate and create meaning as we will in the years ahead will depend on our ability to so."
+(https://www.versobooks.com/blogs/3333-the-ideology-behind-technology)
+
+
+
+
+[[Category:Books]]
+
+[[Category:Technology]]

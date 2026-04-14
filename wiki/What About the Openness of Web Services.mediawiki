@@ -1,0 +1,48 @@
+'''= how can the freedom and openness of standalone free software be preserved when software moves to the web as  non-local applications?'''
+
+Review of the issue by OStatic blog [http://www.freesoftwaremagazine.com/articles/free_software_vs_software_service?page=0%2C0]:
+
+
+=Opportunities=
+
+"Before confronting the challenges of this environment, I’ll consider the opportunities as well. The prominence of Web applications actually makes it easier for users to switch from proprietary operating systems, such as Mac OS and Windows. You don’t have to worry about how to use Outlook, or how to migrate, if your email client is Gmail. You don’t have to learn a new address book if Facebook is your Rolodex. You don’t have to switch to a new photo management suite if your vacation snapshots are all on Flickr. In fact, retail giant Walmart recently began selling GNU/Linux PCs by Everex, whose gOS distribution adds icons for common Web applications like Gmail and Facebook right on the desktop. Koolu, the low-cost thin clients promoted by Jon “maddog” Hall, bundles Google Apps for its customers. These cross-platform applications provide familiar faces for new users making the switch.
+
+
+=Challenges= 
+
+There’s no reason that Web apps can’t be free software—and many prominent Web apps, such as WordPress and MediaWiki, are. But there’s a loophole which slows the growth of free software among Web apps: a loophole in the GPL, the most important free software license.
+
+The GPL has a well-known reciprocity clause, or copyleft: if a developer modifies a GPL-licensed program, pastes a bit of code from it into his own program, or links with it, that developer is now obliged to “share alike” by licensing his contributions under the GPL. This is the quid pro quo under which users are granted the freedoms of the GPL. But the condition of reciprocity only becomes active upon the act of distribution—and there’s the loophole.
+
+If I distribute a GPL-licensed program, with or without my modifications, I have to extend the GPL’s freedoms to users who receive the program from me. But if I run a GPL-licensed Web app on my server, offering public access to the application over the Internet—but never redistributing it—I am under no obligation to share the code with its users.
+
+If you think that the GPL’s “share alike” clause has helped spur the growth of free software (and I do) then this should be troubling to you. In a world where software is never distributed to users, but only run on server farms, authors of free software have no mechanism to ensure that downstream users will be free to use, study, modify, and adapt their software.
+
+
+=Solutions=
+
+A company named Affero thought of this problem a few years back, and received the FSF’s permission to modify the GPL, adding a clause to require reciprocity for users accessing the program over a network. The FSF considered adopting this clause into GPLv3, but dropped it during the revision process. However, they did adopt the Affero GPL as a new FSF license, updating it with the improvements in GPLv3 and making it possible to link AGPL-licensed programs with those licensed under the GPL. Unfortunately, adoption seems to be slow: a few Web apps have begun using the AGPL, such as Wikidot and the FSF’s own stet, but the most prominent free Web applications haven’t converted to the AGPL, at least not yet.
+
+
+=Why We Need [[Data Portability]] and owership=
+
+What you lack is your data. That’s right: your data, which you created—and from which the host has likely been profiting, by targeting advertising to you—is not available to you. You can ask the FBI what information they have about you, but you can’t ask Facebook what information they have about you. More precisely, you can ask, but they won’t give it to you. (Yes, I have asked. “Unfortunately, the feature you are requesting is not currently available,” Chad the customer support representative informed me.)
+
+Not everybody operates this way. WordPress, for example, makes it fairly simple to export your data. But too often, this is not the case.
+
+Let me clarify: why does this matter? Services like Facebook have a tremendous network effect. Similar to software with proprietary file formats, users are locked in because all their friends use the same platform. So you we don’t have data portability, the opportunity for meaningful competition is slim—which means one company controls our destiny. 
+
+
+=Conclusion=
+
+So if you’re being conscientious consumers when deciding where to spend your ad views and personal information, what should you demand?
+
+#'''Free license''': You should ask that our Web apps be freely licensed, as you would for programs on our own computers.
+#'''Source available''': Because you can’t rely on traditional copyleft clauses, you should demand that the source actually be available to users. Preferably, the authors should use the AGPL, to preserve the freedoms of downstream users.
+#'''Data portability''': Before you entrust anybody with our precious data, you should make sure that you can take it with you."
+(http://www.freesoftwaremagazine.com/articles/free_software_vs_software_service?page=0%2C0)
+
+Source: Copyright & copy; 2007; used under the Creative Commons Attribution 2.0 license.
+
+
+[[Category:Standards]]

@@ -1,0 +1,128 @@
+=Definition=
+
+
+From an overview in Read/Write Web at
+http://www.readwriteweb.com/archives/p2p_introduction_real_world_applications.php
+
+
+"Peer-to-Peer (P2P) networks have been receiving increasing demand from users and are now accepted as a standard way of distributing information, because its architecture enables scalability, efficiency and performance as key concepts. A peer-to-peer network is decentralized, self-organized, and dynamic in its pure sense, and offers an alternative to the traditional client-server model of computing. Client-server architecture enables individuals to connect to a server - but although servers are scalable, there is a limit to what they can do. P2P networks are almost unlimited in their scalability.
+
+In "pure" P2P systems, every node acts as a server and client - and they share resources without any centralized control. However most P2P applications have some degree of centralization. These are called "hybrid" P2P networks and they centralize at least the list of users. This is how instant messengers or file sharing programs work - the system keeps a list of users with their IP addresses.
+
+Different applications of P2P networks enable users to share the computation power (distributed systems), data (file-sharing), and bandwidth (using many nodes for transferring data). P2P uses an individual's computer power and resources, instead of powerful centralized servers. The shared resources guarantee high availability among peers."
+(http://www.readwriteweb.com/archives/p2p_introduction_real_world_applications.php)
+
+
+=Discussion=
+
+==Challenges and Benefits in p2p networks==
+
+Wolf Garbe:
+
+    
+* Security: As parts of the p2p infrastructure are accessible to everyone a different security philosophy is required, to protect against data and routing manipulation (e.g. Sybil attacks).
+    
+* Privacy: To protect privacy despite the fact that it is stored on unreliable nodes, data needs to be encrypted all the time, possibly using fully homomorphic encryption  http://www.physorg.com/news16516...
+    
+* Limited bandwidth: the bandwidth between nodes limited, opposite to high bandwidth connections within a data center. This requires specific algorithms.
+    
+* Low node uptime: the number of concurrently online peers is lower than the number of users. This requires data to be stored with additional redundancy.
+    
+* Heterogeneous nodes: different to a data center, in p2p networks the peers are usually heterogeneous in terms of memory, disk space, processor speed bandwidth, uptime, idle time. P2P architecture has to take this into account.
+    
+* p2p specific algorithms: many traditional algorithms perform poorly with unreliably, low capacity, low bandwidth connected nodes. Specifically tailored algorithms are required to provide competitive results
+    
+* Single points of failure: most p2p networks still rely on a centralized bootstrap and update server, which may be critical to filtering, blocking, and recovery in case of system-wide failure. Fully decentralized solutions exist.
+    
+* ISP throttling/blocking: Some ISP block or throttle p2p traffic by ports or deep packet inspection. This can be prevented by using encryption, standard ports and protocols.
+    
+* Churn: Dealing with the sudden arrival and departure of peers (every user can switch his/her PC of at any time) is one of the most challenging and most essential parts in a truly scalable p2p system.
+    
+* Redundancy overhead: Redundancy is required for a reliable storage of Information in unreliable peers. Maintaining redundancy can be bandwidth expensive.
+    
+* Distribution: P2P infrastructure is dependent on user adaption. A critical mass of peers is required to overcome the chicken/egg problem: users use a service only if it is already competitive, but it becomes only competitive if users are using it.
+    
+* Download hurdle: Downloading and installing a zero configuration p2p client not so much of a problem anymore in times where people are used to download apps from appstores.
+    
+* Latency: a network access in p2p networks requires usually multiple hops O(log n), often with a low bandwidth upstream involved. Utilizing geographic proximity and parallel access can improve this.
+    
+* NAT Traversal: Today almost all PC are connected to the internet via routers using NAT (Network Address Translation), which per default prevents incoming connections. NAT traversal is imperatively required for a peer to become active part of p2p infrastructure
+
+
+'''Benefits'''
+
+* Cost efficiency: No data centers with million servers, saves billion dollars
+    
+* Organically Scaling: Making the user part of the architecture scales organically with the growth of the internet
+    
+* No single point of failure: Decentralization as the core idea of the original internet architecture prevents a single point of failure and ensures reliability and scalability.
+    
+* Privacy: Consequent decentralization and ubiquitous encryption makes privacy irrevocable and immanent to p2p systems, as opposed to privacy by policy in centralized systems.
+    
+* Green Technology: Utilizing idle computer resources is environmentally friendly by saving electricity and carbon emissions caused by data centers with millions of servers.
+    
+* Enables web scale processing: Some massive Web scale operations are only feasible with a decentralized approach. E.g. Web scale Real-time Search: You cannot crawl the whole web within minutes over and over in a brute force approach, only to find that a small percentage of pages have changed."
+(http://www.quora.com/What-are-practical-limitations-of-P2P-networks)
+
+
+=Applications=
+
+
+==[[Gnutella]]==
+
+"used in many applications to allow connecting to the same network and searching files in a centralized manner. It's an open, decentralized search protocol for finding files through the peers. Gnutella is a pure P2P network, without any centralized servers.
+
+Using the same search protocol, such as Gnutella, forms a compatible network for different applications. Anybody who implements the Gnutella protocol is able to search and locate files on that network. Here's how it works. At start up, Gnutella will try to find at least one node to connect to. After the connection, the client requests a list of working addresses and proceeds to connect to other nodes until it reaches a quota. When the client searches for files, it sends the request to each node it is connected to, which then forwards the request to the other nodes it is connected, until a number of "hops" occurs from the sender."
+(http://www.readwriteweb.com/archives/p2p_introduction_real_world_applications.php)
+
+
+==Instant Messaging==
+
+"the use of P2P changed the whole idea of IM. The bandwidth was shared between users, enabling faster and more scalable communication."
+(http://www.readwriteweb.com/archives/p2p_introduction_real_world_applications.php)
+
+
+
+==P2P Filesharing Networks==
+
+'''These are the [[P2P Filesharing]] platforms and networks, that allow people to exchange files, and that are based on the principles of [[P2P Computing]]. They are to be distinguished from the [[P2P Clients]], i.e. the software used to access one or more of these platforms.'''
+
+
+===Examples===
+
+Amongst those platforms are:
+
+*[[Bittorrent]]
+*[[Freenet]]
+*[http://www.redswoosh.net/index2.php Red Swoosh], reviewed [http://www.techcrunch.com/2006/07/05/use-red-swoosh-to-serve-files-for-free/ here]
+*[[AllPeers]], a [http://www.allpeers.com/ Firefox plug in]
+*[http://www.enfra.net/ Enfra]
+*[[Dijjer]]
+*[http://www.skyrider.com/ Skyrider]
+
+==Other Applications==
+
+The article mentions
+
+- collaborative computing, with Groove as an example
+
+- IP Telephony, with Skype as an example
+
+- [[Grid Computing]]
+
+
+=More Information=
+
+Future applications are discussed in the second part of this series on P2P Networks by the Read/Write web blog, at http://www.readwriteweb.com/archives/p2p_potential_future_applications.php
+
+
+See our entries on [[P2P Filesharing]] and [[P2P Computing]] and the arguments about [[Peer to Peer - Advantages]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Media]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

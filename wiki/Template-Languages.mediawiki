@@ -1,0 +1,109 @@
+== Template ==
+<onlyinclude><div class="LanguageLinks">
+<table>
+<tr valign="top" style="background: #EEF3E2">
+<td style="width: 10px; white-space: nowrap; padding: 4px 1em 0 0.5em; border-right: 1px solid #aaaaaa;">'''Translations of this page:'''&nbsp;</td><td style="padding: 1px 1em 0; background: #F6F9ED;">
+'''[[{{{1|:{{NAMESPACE}}:{{BASEPAGENAME}}}}}|English]]'''{{Languages/Lang|es| {{{1|}}}}}{{Languages/Lang|ca|{{{1|}}}}}{{Languages/Lang|eu|{{{1|}}}}}{{Languages/Lang|pt|{{{1|}}}}}{{Languages/Lang|el|{{{1|}}}}}{{Languages/Lang|fr|{{{1|}}}}}
+{{Languages/Lang|it|{{{1|}}}}}</td></tr></table></div></onlyinclude>
+
+== Syntax ==
+ <nowiki>{{Languages|PageName}}</nowiki>
+
+* '''PageName''' (optional) - the name of the page to display language links for.  If omitted then the English version of the current page is used.  This parameter can normally be omitted, as it is only required if you want to link to a page other than the one you place the template on, which is very uncommon.  If this parameter is used on a sub-page make sure you supply the root name, not the full page name (e.g. on [[MediaWiki/fr]] you would need to use <code><nowiki>{{Languages|MediaWiki}}</nowiki></code> and not <code><nowiki>{{Languages|MediaWiki/fr}}</nowiki></code>).
+
+== Usage ==
+
+The template should only be placed on pages that exist in more than one language, and it should be placed in the same location on each translation of the page.
+
+The English version of a page is always the main version, with all other languages as sub-pages, named using the appropriate language code (see below). 
+
+For example, on the Main Page you would include the text <code><nowiki>{{Languages}}</nowiki></code>, both on [[Main Page]] itself, and on each of its language sub-pages.  The template automatically creates links to any language sub-pages that exist, e.g. <tt>Main Page/ja<tt>, <tt>Main Page/fr</tt>, and ignores non-existant languages.
+
+See [[Project:Language policy]] for further details about translating pages.
+
+== Supported languages ==
+This shows you the name of each language's sub-page (using ''Main Page'' as an example). Other languages may be added easily as necessary.  Please use the appropriate [[meta:List of Wikipedias|prefix, as used on Wikipedia]] when adding a new language.  Please do ''not'' add languages for which no pages exist yet, as this will increase the time needed to include the template without adding any benefit (languages are only displayed to the user when the relevant page exists).
+
+The link on the language names goes to the Wikipedia in that language. '''If no Wikipedia in your language exists, do not add pages in that language to MediaWiki.org!'''  This wiki is not the place for language advocacy - please go through the correct channels, and once your language has a Wikipedia then please return to add content here.
+
+{| border="1" cellpadding="5"
+! Page Name || Language 
+|-
+| Main Page || [[:en:|English]]
+|-
+| Main Page'''/af''' || [[:af:|Afrikaans]]
+|-
+| Main Page'''/ar''' || [[:ar:|Arabic]]
+|-
+| Main Page'''/br''' || [[:br:|Breton]]
+|-
+| Main Page'''/ca''' || [[:ca:|Catalan]]
+|-
+| Main Page'''/cs''' || [[:cs:|Czech]]
+|-
+| Main Page'''/de''' || [[:de:|German]]
+|-
+| Main Page'''/el''' || [[:el:|Greek]]
+|-
+| Main Page'''/es''' || [[:es:|Spanish]]
+|-
+| Main Page'''/fa''' || [[:fa:|Persian]]
+|-
+| Main Page'''/fi''' || [[:fi:|Finnish]]
+|-
+| Main Page'''/fr''' || [[:fr:|French]]
+|-
+| Main Page'''/gu''' || [[:gu:|Gujarati]]
+|-
+| Main Page'''/he''' || [[:he:|Hebrew]]
+|-
+| Main Page'''/hu''' || [[:hu:|Hungarian]]
+|-
+| Main Page'''/id''' || [[:id:|Indonesian]]
+|-
+| Main Page'''/it''' || [[:it:|Italian]]
+|-
+| Main Page'''/ja''' || [[:ja:|Japanese]]
+|-
+| Main Page'''/ko''' || [[:ko:|Korean]]
+|-
+| Main Page'''/mr''' || [[:mr:|Marathi]]
+|-
+| Main Page'''/ms''' || [[:ms:|Malay]]
+|-
+| Main Page'''/nl''' || [[:nl:|Nederlands]]
+|-
+| Main Page'''/no''' || [[:no:|Norwegian]]
+|-
+| Main Page'''/oc''' || [[:oc:|Occitan]]
+|-
+| Main Page'''/pl''' || [[:pl:|Polish]]
+|-
+| Main Page'''/pt''' || [[:pt:|Portugese]]
+|-
+| Main Page'''/ro''' || [[:ro:|Romanian]]
+|-
+| Main Page'''/ru''' || [[:ru:|Russian]]
+|-
+| Main Page'''/si''' || [[:si:|Sinhalese]]
+|-
+| Main Page'''/sq''' || [[:sq:|Albanian]]
+|-
+| Main Page'''/sr''' || [[:sr:|Serbian]]
+|-
+| Main Page'''/sv''' || [[:sv:|Swedish]]
+|-
+| Main Page'''/th''' || [[:th:|Thai]]
+|-
+| Main Page'''/tr''' || [[:tr:|Turkish]]
+|-
+| Main Page'''/vi''' || [[:vi:|Vietnamese]]
+|-
+| Main Page'''/yue''' || [[:zh-yue:|Cantonese]]
+|-
+| Main Page'''/zh''' || [[:zh:|Chinese]]
+|-
+| Main Page'''/zh-hans''' || Chinese (Simplified)
+|-
+| Main Page'''/zh-hant''' || Chinese (Traditional)
+|}

@@ -1,0 +1,39 @@
+'''= a project by [[Ward Cunningham]]: "Our new wiki innovates three ways. It shares through federation, composes by refactoring and wraps data with visualization".''' [http://wardcunningham.github.io/]
+
+== Description ==
+
+Ward Cunningham:
+
+"We imagine two components:
+* a server component managing page storage and collaboration between peer servers, and,
+* a client component presenting and modifying the server state in server specific ways.
+
+This project should be judged by the degree that it can:
+* Demonstrate that wiki would have been better had it been effectively federated from the beginning.
+* Explore federation policies necessary to sustain an open creative community."
+(https://github.com/WardCunningham/Smallest-Federated-Wiki)
+
+== Characteristics ==
+
+By Phil Jones:
+
+"SFW separates into minimal back-end server and a rich client running in the browser. That means I can host personal wikis on my local machine and public copies in the cloud, while the client can run on desktop and mobile devices.
+
+The client and one implementation of the server are written in CoffeeScript. A language I'm using and liking a lot.
+
+SFW supports different content-types which can have their own rendering and editing interfaces. And you can extend it with plugins that add new types. That's something I need in order to reproduce the things I did in SdiDesk and for some further projects which have never been released.
+
+The drag-and-drop refactoring looks like it will be very useful ...
+
+The emphasis on making "federation" easy solves dilemmas like : I'd like to keep some personal information privately in my local wiki but also use a public wiki as a publishing medium. In a sense it seems that SFW is bringing git-like distributed thinking to wiki.
+
+Federation helps resolve the tension between running my own wiki and contributing to a group production.
+It further resolves similar questions about throwing everything into one wiki or making special-purpose wikis around particular topics."<br />
+(https://github.com/interstar/ThoughtStorms)
+
+== More Information ==
+* [[Federated Wiki]]
+* [[Ward Cunningham]]
+
+[[Category:P2P Infrastructure]]
+[[Category:Technology]]

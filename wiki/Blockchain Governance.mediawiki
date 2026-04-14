@@ -1,0 +1,207 @@
+
+=The Book=
+
+'''* Blockchain Governance. by Primavera De Filippi, Morshed Mannan, and Wessel Reijers. MIT Press, 2024'''
+
+URL = https://mitpress.mit.edu/9780262549059/blockchain-governance/
+
+"How can digital cash truly be “trustless”? What does it mean that blockchain offers a new paradigm of the “rule of code”? How are decisions made when a blockchain system faces an emergency, and who gets to make those decisions? In Blockchain Governance, Primavera De Filippi, Wessel Reijers, and Morshed Mannan offer answers to these questions and more, in an accessible, critical overview of legal and political issues related to blockchain technology, now the foundation of a multi-billion-dollar industry. Moving beyond the hype, they show how blockchain offers fertile ground for experimentation with radically new ways to govern people and institutions. Blockchain-based systems, like Bitcoin, Ethereum, Tezos, and countless others, offer new ways of organizing digital cash, “smart” contracts to execute transactions, non-fungible tokens (NFTs) to collect art, and decentralized autonomous organizations (DAOs) to coordinate humans and machines. What these applications have in common is that they govern the behavior of people and artificial agents through distributed systems. Drawing from their extensive experience in researching blockchain technologies and communities, the authors discuss the origins of Bitcoin in cypher-anarchism and extropianism, spectacular events like the million-dollar theft of the DAO Attack, and the hostile takeover of the Steem platform. While engaging with political and legal thinkers such as Hobbes, Kelsen, and the Ostroms, these narratives explore how blockchain governance problematizes fundamental concepts such as rule of law, sovereignty, legality, legitimacy, and polycentric governance."
+
+
+=The Concept=
+
+==Definition==
+
+Lanre Ige:
+
+“How public communities and key stakeholders arrive at collective action specifically with respect to protocol change.“
+(https://medium.com/mosaic-network-blog/is-plutocratic-on-chain-governance-really-a-bad-thing-68132700205c)
+
+
+==Characteristics==
+
+===Layers of the Blockchain Tech Stack===
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+The technological stack or “tech stack” refers to the combination of technologies used to construct and operate a specific project. In blockchain technology, this stack consists of various layers, each playing a unique role. These layers include blockchain networks, DApps, and DAOs, with blockchain networks further subdivided into layer 0, layer 1, and layer 2. 
+
+'''Layer 0 Blockchains''': These provide the fundamental infrastructure for blockchain technology, serving as the bedrock upon which other layers are built.
+Layer 1 Blockchains: This layer consists of the blockchain protocol (which outlines the rules and procedures for data exchange, verification, and recording on the network) and the actual ledger that logs all transactions.
+
+'''Layer 2 Blockchains''': Aimed at enhancing the efficiency and speed of transactions, layer 2 blockchains act as scaling solutions for layer 1 blockchains, addressing issues like network congestion and high transaction fees.
+
+'''DApps''': These applications operate on a blockchain network rather than a centralized server or single computer. DApps represent a paradigm shift in application design and operation, utilizing blockchain's inherent security, transparency, and resilience benefits.
+
+'''DAOs''': DAOs are collaborative groups functioning via the Internet with a specific objective. They use smart contracts on blockchain networks and blockchain-based assets such as tokens and cryptocurrencies to manage governance processes.
+
+Each layer of the tech stack can form distinct yet interconnected blockchain systems. The governance of the blockchain systems at the bottom affects the governance of the systems that are built on top. Naturally, members of blockchain systems at the top of the stack have incentives to participate in some governance decisions of blockchain systems at the bottom."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+===Governance Areas===
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"The governance of blockchain systems is shaped not only by their placement within the technological stack but also by the specific nature and type of decisions that need to be made. 
+
+
+Across most blockchain systems, there are common decision-making areas that include:
+
+'''Software Updates''': These decisions involve updates or modifications to the software components that the blockchain relies on.
+
+'''Monetary Policy''': This area covers the issuance, distribution, and management of a cryptocurrency or token utilized by the blockchain system.
+
+'''Treasury Allocation:''' Governance in this area concerns how to save, spend, or invest funds pooled together within the blockchain system.
+
+'''Rewards to Contributors''': This involves establishing policies and practices to acknowledge and reward the contributions made by community members.
+
+'''Standards and Interoperability''': These decisions focus on processes that enable the integration of the blockchain system with other platforms and projects within the broader blockchain ecosystem.
+
+'''Security Measures and Breaches''': This area usually involves exceptional governance processes or mechanisms, distinct from the standard governance areas, to address security-related issues.
+
+'''Secondary Rules''': These are meta-rules that govern how to create, amend, and repeal other governance rules within the system.
+
+
+Additionally, for systems built around blockchain networks, a critical governance area is:
+
+'''Block Production:''' This involves decisions on how new blocks of transactions are added to the ledger, guided by a predefined consensus algorithm.
+Each of these governance areas plays a crucial role in the effective functioning of blockchain systems, influencing everything from daily operations to long-term strategic direction. Understanding these areas is essential for comprehending the complex governance landscape of blockchain technology."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+===Stakeholders===
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"In the governance of blockchain systems, various stakeholder groups play pivotal roles, engaging directly or indirectly in one or more governance areas. 
+
+
+These groups encompass a diverse range of participants, including:
+
+'''Founders and Founding Teams:''' Individuals or groups who initiate and develop the blockchain project.
+
+'''Software Developers:''' Professionals responsible for building and maintaining blockchain technology and its applications.
+
+'''Organizations from the Broader Ecosystem:''' Entities that are either integrated with or competed with the referenced blockchain system. These might be other blockchain projects or businesses leveraging blockchain technology.
+
+'''Investors:''' Individuals or entities that provide capital for the development and expansion of the blockchain system.
+
+'''Token Holders''': People who own cryptocurrencies or tokens associated with the blockchain, often having voting rights or other forms of influence in the system.
+
+'''Users:''' End-users who interact with the blockchain system, either through transactions, applications, or other forms of engagement.
+
+'''Policy Makers, Lawmakers, and Regulators:''' Governmental and regulatory bodies that influence the legal and operational framework within which blockchain systems operate.
+
+
+It is important to note that overlap often exists within these stakeholder groups. For instance, core software developers may also be investors in the blockchain project. Each group behaves according to their own financial and non-financial incentives, which can sometimes lead to challenges in coordination and alignment of interests. Recognizing and understanding the diverse motivations and potential conflicts among these stakeholders is crucial for effective governance in blockchain systems."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+===Governance Mechanisms===
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"Blockchain systems employ a variety of governance mechanisms to regulate themselves. These mechanisms can be split into on-chain and off-chain.
+On-chain Governance Mechanisms: Also referred to as “governance by the infrastructure,” these mechanisms are embedded directly within the blockchain's code, making them transparent and relatively resistant to change. 
+
+
+Key examples include:
+
+'''Ex-ante rules and processes''': Consensus algorithms used for block production in blockchain networks.
+
+'''Ex-post rules and processes''': On-chain signaling and voting systems designed for amending existing governance rules.
+
+'''Off-chain Governance Mechanisms''': Also known as “governance of the infrastructure,” these mechanisms involve decision-making processes that are not directly recorded on the blockchain. 
+
+
+This approach offers more flexibility but often lacks the transparency of on-chain mechanisms. 
+
+
+They include:
+
+'''Community-driven mechanisms''': In-person meetings, online forums, and off-chain voting, where the blockchain community collaborates and makes decisions in a more traditional, less technologically tethered manner.
+
+'''External party-driven mechanisms:''' Laws, regulations from governmental agencies, and technology standards set by non-blockchain tech firms. These mechanisms influence blockchain governance from outside the blockchain community.
+
+
+As noted by De Filippi and McMullen (2018), the choice between on-chain and off-chain governance mechanisms depends on the specific needs and context of the blockchain system, balancing transparency, flexibility, and responsiveness to internal and external influences."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+==Typology==
+
+===Off-chain Governance VS On-chain Governance===
+
+Lanre Ige :
+
+"Conversations around blockchain governance tend to distinguish between two kinds: Off-Chain Governance and On-Chain Governance.
+
+Off-chain Governance: A governance process whereby decision-making takes place on a social level (off-chain) and then, afterwards, is acted on by developers who encode it into the blockchain protocol. Examples include Bitcoin and Ethereum.
+
+On-chain Governance: A governance process whereby rules, voting, and choices are hardcoded (on-chain) into the blockchain protocol. Examples include Tezos and EOS. Voting in a democratic system relies on a “one person, one vote” system. On-chain governance, on the other hand, is often considered plutocratic because of the way voting is carried out. The on-chain voting systems rely on the number of native tokens (corresponding to the protocol being governed) that a given address holds.
+
+A generic on-chain voting system would employ a “one token, one vote” policy or some derivation thereof (quadratic voting, etc.). These ‘one token, one vote’ systems often suffice given that there are no current decentralized identity systems which allows for ‘one person, one vote’ on-chain voting. On-chain voting systems, however, often have much more complexity than simply being ‘one token, one vote’. Holding tokens does not always directly entitle individuals to a vote: users often must take some kind of action such as: the staking of the tokens; the ‘buying of ticket’, as in the case of Decred: or holding a certain threshold of token, as is the case with DASH and masternode governance."
+(https://medium.com/mosaic-network-blog/is-plutocratic-on-chain-governance-really-a-bad-thing-68132700205c)
+
+
+===Protocol-level versus application-level governance===
+
+Lanre Ige:
+
+"One must also distinguish between two kinds of blockchain-based governance: protocol- and application-level governance.
+
+I) Protocol-level governance – this is governance over changes to a given blockchain protocol such as Ethereum or Bitcoin. This type of governance has historically been off-chain, but there have been more recent efforts at on-chain protocol-level governance.
+
+II) Application-level governance – this relates to the inner workings of blockchain-based applications. For example, users being able to vote for the content they see on a decentralized video sharing application, or the voting mechanisms of a Token-Curated Registry.
+
+It is useful to draw the distinction since both of the negative accusations of on-chain voting as ‘plutocratic’ (as well as the assumption that plutocratic governance is bad) most often hold on the protocol-level, but not necessarily for the application-level."
+(https://medium.com/mosaic-network-blog/is-plutocratic-on-chain-governance-really-a-bad-thing-68132700205c)
+
+
+
+==Cases==
+
+'''* Article: Rennie, Ellie and Zargham, Michael and Tan, Joshua and Miller, Luke and Abbott, Jonathan and Nabben, Kelsie and De Filippi, Primavera, Towards a participatory digital ethnography of blockchain governance (February 27, 2022). Qualitative Inquiry,''' 
+
+Available at SSRN: https://ssrn.com/abstract=4078259
+
+"[[Blockchain Governance]] occurs through a combination of social and technical activities, involving smart contracts, deliberation within a group, and voting. These processes are significant as they demonstrate how governance of distributed infrastructures is evolving. While typologies of blockchain governance can be constructed by gathering on-chain interactions and formal rules, other aspects are more difficult to observe, including governance interactions occurring inside discussion forums. In this paper we discuss a participatory digital ethnography technique, whereby participants and researchers use a bespoke bot to identify governance interactions occurring within project forums (on Discord). The technique is designed to be used in conjunction with analysis of software for the purpose of mapping and understanding the ‘governance surface’ of different protocols. We describe our tools and methods for understanding automated futures through a case study of the SourceCred community, an organization using, developing and maintaining open source software called [[SourceCred]]. The SourceCred codebase is also used by other decentralised communities for various organisational functions, including reputation and compensation."
+
+
+=Key Publications=
+
+
+* '''Report: Interim Report on Blockchain Governance Practices. Project Liberty Institute // [[BlockchainGov]], 2024'''
+
+URL = https://www.projectliberty.io/news/decentralized-future-requires-robust-governance-models
+
+"As decentralized technologies such as blockchain rapidly evolve, establishing effective governance models is crucial to guide stakeholders towards a sustainable and equitable digital future. To enhance understanding and promote responsible practices in this landscape, Project Liberty Institute and BlockchainGov have embarked on a multi stakeholder governance initiative on good governance for a responsible decentralized technological ecosystem. The first intermediary report compares for the first time governance mechanisms and dynamics across 11 major blockchain networks.
+
+Using an interdisciplinary and comparative approach, the report explores prominent blockchain systems including Avalanche, Bitcoin, Cardano, Cosmos, Ethereum, Filecoin, Optimism, Polygon, Polkadot, Tezos, and Zcash. It examines these networks through a multidimensional governance taxonomy, collecting data through desk research and in-depth interviews with key stakeholders.
+
+The Multi Stakeholder Council set up by Project Liberty and BlockchainGov for this Initiative has been instrumental in guiding the development of this report.
+
+The analysis has uncovered six key findings related to the legal entities created to support blockchain networks, power distribution across governance areas and stakeholder groups, decentralization objectives and challenges, the interplay of on-chain code and off-chain practices in governance formalization, predominant decision-making mechanisms, and processes for handling security breaches.
+
+The intermediary report highlights that while blockchain networks are technically decentralized across nodes, their governance involves multiple layers. Hence determining influence requires scrutinizing the types of decisions being made, the stakeholders involved, and the specific mechanisms utilized. This understanding enables designing inclusive governance aligned with community values. The report also analyzes how governance comprises both on-chain protocol rules and off-chain social practices.
+
+The key findings of this report will guide the formulation of good governance recommendations providing pragmatic guidance to stakeholders and the overall ecosystem of blockchain and decentralized technologies.
+
+This pioneering comparison marks a milestone to advance the good governance of blockchain and decentralized technologies.
+
+Project Liberty Institute and BlockchainGov, together with the members of the Initiative’s Governance Multi Stakeholder Council, will now, based on the findings of this comparative study, work on distilling recommendations for the forthcoming Manual on Best Practices for Blockchain and Decentralized Technologies, scheduled for release in April 2024."
+
+(https://www.projectliberty.io/news/decentralized-future-requires-robust-governance-models)
+
+=More information=
+
+* discussion by Lanre Ige: [https://medium.com/mosaic-network-blog/is-plutocratic-on-chain-governance-really-a-bad-thing-68132700205c Is plutocratic on-chain governance really a bad thing]?
+
+[[Category:Crypto_Governance]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Governance]]

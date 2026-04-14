@@ -1,0 +1,80 @@
+
+'''= designs, makes, and sells electronics for the growing open source hardware community.'''
+
+URL = http://www.sparkfun.com/
+
+
+=Description=
+
+Chris Anderson:
+
+"The SparkFun operation is in a newish two-story building in an office park outside Boulder, Colorado. The first floor is larger than three basketball courts, with racks of circuit boards waiting to be sold, packed, and shipped on one side and some machines attended by a few technicians on the other. The first two machines are pick-and-place robots, which are available used for less than $5,000. They position tiny electronic components in exactly the right spot on a PCB. Once each batch of boards is done, technicians place them on a conveyor belt that goes into another machine, which is basically just a heater. Called a reflow oven, it cements the parts into place, essentially accomplishing what a worker could do with a soldering iron but with unmatched precision and speed.
+
+The PCBs arrive from SparkFun’s partner firm in China, which makes millions of them using automated etching, drilling, and cutting machines. At volume, they cost a few cents each.
+
+That’s it. With these elements you can make the basics of everything from a cell phone to a robot (structural elements, such as the case, can be made in low volume with a CNC machine or injection-molded if you need to do it cheaper at higher volume). You can sell these components as kits or find some college students on craigslist to spend a weekend assembling them for you. (I conscript my kids to assemble our blimps. They rotate roles, coveting the quality assurance task where they check the others’ work.)"
+(http://www.wired.com/magazine/2010/01/ff_newrevolution/all/1)
+
+
+=Discussion=
+
+==Sharing Designs as Default Practice==
+
+BY TIM MALY:
+
+"Lara Boudreaux, SparkFun’s Marketing Department Project Manager. “We find that people will copy your design no matter what you do,” she says. “You might as well just play the game and go ahead and innovate. It’s fun, it keeps us on our toes.”
+
+Instead of relying on patents for protection, the team prefers to outrace other entrants in the field. “The open source model just forces us to innovate,” says Boudreaux. “When we release something, we’ve got to be thinking about the next rev. We’re doing engineering and innovating and it’s what we wanna be doing and what we do well.”
+
+SparkFun’s rapid turnover model is one that echoes the fashion industry. Like the electronics world, fashion is rife with copycats and rip-off artists. And while the wolf of obsolescence is always at electronics’ door, the wolf of being out of style is always at the door for clothes. Like SparkFun, fashion designers don’t spend much time worrying about the copyists, they just keep releasing new looks.
+
+“I’d never thought of that parallel myself, but in a way it makes sense,” says Boudreaux. “That being said, I think the innovation vs. style is an important distinction. I think it’s about more than staying ‘in style,’ it’s about staying relevant and filling the needs of the community. If SparkFun creates a breakout board for a new sensor and then the sensor is updated, we need to update the breakout board.”
+
+Their weekly new product posts feel a lot like a fashion show, but for function.
+Though Boudreaux is reluctant to accept the parallel, the open hardware model means that SparkFun’s existence depends not on any particular product, but on an ongoing relationship with customers that’s not too dissimilar to the loyalty commanded by a fashion house. By working hard to keep their service exemplary and listening to their customers, the team at SparkFun has developed a community of loyal users and fans, ready to find out what’s next. Their weekly new product posts (which recently passed episode 100) feel a lot like a fashion show, but for function. Besides, the company must see at least some value in their iconic red boxes and red PCBs.
+
+Another way to understand SparkFun is through comparison is with the actions of the patent-hoarding giants. You can learn a lot about what a company cares about by looking at what they give away and what they protect.
+
+Apple jealously guards its hardware designs, OS, and supply chain, while giving away the Darwin core and things like webkit. Google would love to give you free storage, high quality maps, document editing suites, and a pair of OSs, but don’t bother asking them to open up PageRank, Adwords, or their jealously guarded server setup. Facebook has opened up its computing infrastructure, but good luck getting a peek at its social graph.
+
+SparkFun’s trick is that they are a hardware company that only kind of sells hardware. SparkFun’s actual value is in the community of fans and loyal customers that keep coming back, and the expertise under its roof in servicing their needs.
+
+SparkFun orders parts from 500 suppliers. Their catalog has about 2,500 items at any given time. “We introduce around 15 new products every week,” says Boudreaux, and they retire products at a similar rate, due to either low sales, or obsolescence — a common scourge in high-tech industries. Of the 2,500 items, about 400 are things designed internally. They introduce a new one of these just about every week, says Boudreaux. “We retire at a slightly slower rate, I’d say two to three products we design die every month, on average.”
+
+To handle the pace of change, SparkFun needs to keep its inventory lean. “It’s something that we’ve struggled with and we continue to struggle with,” says Boudreaux. “We try to do small runs and order in small quantities. Especially something that’s going to be obsolete quickly.”
+
+To help manage the demand, they use an in-house software system called Sparkle that, along with inventory and CMS management, tries to predict demand for different components and ensure they get ordered with sufficient lead time to account for how long it takes to get there.
+
+How they ensure a steady stream of new offerings? “I would say the innovation (revisions and new releases) here at SparkFun is organic and not planned,” says Boudreaux, “But we do a few things to make sure we are keeping up.” The team monitors all costumer feedback from emails to the comment section that is present on every page of the company’s site. They also ensure that team members have time to tinker in the office, write tutorials, and visit hackerspaces and maker events. “For us, designing (and revising) widgets is the job.”
+
+Though most ideas come from SparkFun’s dedicated engineering department, anyone in the company can suggest ideas and contribute designs. From there, the ideas run through an internal process of design, review, prototyping, testing and release.
+
+“We want to get new product innovations into the hands of early adopters as soon as possible,” says Boudreaux, “They eat these products up, even if the products are not ready for the mainstream & educator community due to minimal documentation or stability.” Boudreaux describes a symbiotic relationship with these early adopters, where feedback helps SparkFun revised and improve products for use by the rest of the community. “We have to be willing to kill ideas that don’t work, take a lot of tough criticism, and move fast. If we stay agile, we stay relevant.”
+
+The risk of this rate of change is that SparkFun can end up outpacing some of their customers. For example, educators need to be able to rely on access to a stable product, so they can run a piece of curriculum and order new and replacement parts that still exist over the course of a year or longer. For this reason, SparkFun has started making products that step out of the frantic pace of innovation, such as their SparkFun Inventor’s Kit part of its selling point is SparkFun’s promise to keep it around.
+
+“There’s balance in everything,” says Boudreaux, “Innovation does not necessarily need speed in order to create valuable change. Sometimes innovation works at a slower pace, but that does not mean it is any less valuable to those that benefit from it, and we are constantly balancing the needs of two very different customers.”
+
+Meanwhile, the rest of the SparkFun catalog churns on, unprotected and unencumbered by patents; racing to get the latest, coolest things in the hands of its customers.
+
+In a recent talk, Seidle likened the alleged protections that patents offer to IP Obesity. “If your idea is unique, easily copied, and can be sold for profit in a local market, it will be,” he argues. “Ok, but that’s what patents are for, right? I don’t think they help much. Patents can cost $30,000 to $50,000. And the USPTO is so backed up you’ll have to wait three to five years to even hear back on their decision. Ask yourself, how much does technology change in five years?”
+
+“Maybe you think I’m naive,” he continues, “Maybe you think an open source company can’t be scaled above 150 people. That’s fine, I’m sure patents will work for you. But for myself, my 135 co-workers, 75 million dollars of sales, 600,000 customers and our 431 unpatented products wish you good luck.”
+
+Want to take them on? You could do worse than poking through the company’s blog where they’ve been documenting production and business practices for years. Eventually, says Boudreaux, they even want to open source Sparkle. “It’s a wild ride,” she says, “but a fun one for sure.”
+(http://www.wired.com/design/2013/01/sparkfun-10-years)
+
+
+=More Information=
+
+* loving open hardware and hating 'IP Obesity' , http://www.sparkfun.com/news/963
+* Video: [[Open Source Hardware as a Competitive Advantage for Companies like Sparkfun Electronics]]
+
+
+
+
+[[Category:Companies]]
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]

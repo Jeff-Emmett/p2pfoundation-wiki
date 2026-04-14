@@ -1,0 +1,146 @@
+Curated selections from the discussions on P2P Infrastructure at the Google Group: [http://groups.google.com/group/building-a-distributed-decentralized-internet Building a Distributed Decentralized Internet]
+
+
+This documentation project is related to the [[ContactCon]] conference to be held on October 20, 2010 in NYC.
+
+
+
+==Q & A 001 from Building a Distributed and Decentralized Internet==
+
+Curated material compiled by Venessa Miemis:
+
+Q1. Is it that we want to be able to use the web we know today on a
+decentralized hardware and software infrastructure? Why?
+
+A1. Yes, we should be able to take existing open protocols and web
+technologies and run them on a distributed internet. It can work with
+what will very likely be a reasonable
+investment on targetted development in the traditional web application
+"stack". I'd like to see a distributed hardware/network medium where
+people can pool hardware resources and network connection node
+resources to run some variant of practically anything they can do on
+the internet now (starting with the simplest things, like message
+passing, etc).
+
+A1:Counterpoint.  The very best distributed stuff we do right now is
+in data centres, where bandwidth between nodes is massive, and we can
+handle the coherence stuff on high volatility data. Those guys really
+can plug anther node in and get N + 1 benefit. If it was possible, we
+would do it between datacentres, and then between individual
+computers, but it is just not feasible with our current technology.
+
+There is a subset of problems for which we can achieve fine grained
+distributed (lower volatility data gets easier, as does data for which
+very eventual consistency is ok), but that really is the question - is
+that subset sufficient? There's some discussion about techies and non-
+techies here, so I think we need to be clear that the ideal of the
+distributed internet from a philosophical perspective and the reality
+of the technology at this point in time are different things. We also
+need to be clear that a distributed internet won't behave the same as
+our current internet. e.g. latency, reliability and performance
+profiles will noticeably be different.
+
+Q2. What are existing US rules (and EU rules too) around radio
+spectrum? Particularly http://en.wikipedia.org/wiki/White_spaces_(radio)
+in US?
+
+A2. EU has no white spaces yet, as far as I'm aware. The US recently
+announced its rules so white spaces protocol finalization and use
+should begin in the next year or two.
+FCC rules:
+There are Part-15 bands (also called ISM) where any unlicensed user
+can transmit up to a ceiling of power (100mW for 2.4gHz, etc). These
+devices must receive all interference and minimize their transmission
+of interference. All of these rules are about interference avoidance
+and mitigation. They also protect licensed users above all
+others...like if you point a relatively small transmitter at a
+satellite's transponder and jam it you might go to jail.
+
+Modern radio technologies are able to use any part of the spectrum as
+efficiently as possible and "tune around" interference. Ultra Wideband
+radios can pull transmissions out from below the noise floor on many
+bands, so that most users can't even hear them because they don't know
+what to look for. This stuff is here now and has made licensing a tool
+for incumbent monopolies and not really a technical issue.
+
+Q3. What is possible now for packet forwarding, using radio relays in
+unlicensed spectrum? (Reading through
+http://hraunfoss.fcc.gov/edocs_public/attachmatch/FCC-10-174A1.pdf)
+
+A3. In general you can use repeaters in ISM or White Spaces bands
+provided you adhere to power and antenna height requirements. This is
+technically moot.
+
+
+==Q & A 002==
+
+Venessa Miemis:
+
+Q1. Could we use Shortwave, UHF, or VHF radio links for information
+backhaul?
+ 
+A1. Shortwave and VHF are only really good for low-bitrate
+applications like messaging (things like BPSK on the lower-end and
+1200BPS x.25 on the upper-end).
+Alternative Option: HF rigs (10m-band radios, etc) and messaging with
+a protocol called ALE.
+ 
+Q2. Could we use tunnelling within the current infrastructure, as
+implemented in the FreeNet software?
+ 
+A2. FreeNet creates more problems than solutions at this point.
+(documentation to support this opinion?)
+Alternative Option: CCN (www.ccnx.org) which is a new protocol being
+developed by Van Jacobsen at PARC to replace TCP/IP.
+ 
+Q3. Can we hack diaspora* or similar software to create a killer app
+for a distributed network?
+ 
+A3. Diaspora is already a distributed network, no?
+ 
+Q4. How important is the idea of federation? Does federation lead
+directly back to centralization of control structures?
+ 
+A4. Federation requires centralization at some level. Confederation
+maybe not.
+ 
+Q5. Is EM spectrum a human right? Is network access? How can we bring
+such access to as many people as possible?
+ 
+A5. Problem: there hasn't been a truly carrier-less access system
+commercialized yet. TCP/IP is biased towards carriers, and fails for
+certain topologies like mesh, grids, taurii.
+Potential Solution: CCN could be a solution, but once it hits the
+standards bodies it will be carrier-ized beyond recognition.
+Main Issue to be addressed: how to get around carrier and government
+monopolies on spectrum, infrastructure and core protocols
+ 
+Q6. Is it a better scenario to have everyone running a copy of
+something locally like diaspora or StatusNet and just doing requests
+from computer to computer? Or, is a better architecture one in which
+we all share parts of our CPU, storage, bandwidth by way of packet
+passsing like a giant grid?
+ 
+A6. My opinion is that we could do multiple architectures all from our
+machines and connections. There's no reason I can see that we cannot
+have both "personal web servers" and also offer our systems as a
+shared grid resource.
+ 
+Q7. If fixing the spectrum economy were taken as a long-term goal,
+could there be an interim version of a distributed internet to get us
+by in the meantime? One that may fall short of a fully realized
+distributed internet but wouldn't require a structural change like
+that up front? (Or perhaps, it could be a first step toward that
+ultimate vision?)
+ 
+A7. no answer here... but i can see a roadmap being created with
+multiple pathways forward, perhaps all of which can be pursued, and
+see which one(s) work best. i'm hearing options that assume a carrier
+infrastructure, and other options that suggest a carrier-less
+infrastructure.
+One potential solution for experimentation: Flybox
+
+
+
+[[Category:P2P Infrastructure]]
+[[Category:Autonomous Internet]]

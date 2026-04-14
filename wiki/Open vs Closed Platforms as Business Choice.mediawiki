@@ -1,0 +1,125 @@
+
+=Source=
+
+From a dialogue between Jonathan Zittrain, a professor of Internet law at Harvard Law School, and Mark VandenBrink, who leads Frog Design, conducted by Mr. Sherr and Mr. Totty.
+
+URL = http://online.wsj.com/article/SB10001424052970204554204577023994194742720.html
+
+
+=Text=
+
+"WSJ: '''For companies seeking to launch a new digital product, which is better: an open platform or a closed one?'''
+
+MR. ZITTRAIN: Open platforms tend to offer greater flexibility, and by making the use of a new digital product or service more flexible, a company can court far more usage and mind share.
+
+For example, Twitter could have insisted from the start that people wanting to use its service visit twitter.com or use only applications made by Twitter. That would have given Twitter better control over the look and feel of the Twitter experience.
+
+Instead, Twitter had open application programming interfaces, or APIs—a way of allowing other companies to write Twitter applications or interact with Twitter in automated ways. That led to new interfaces for Twitter that some users liked more, which drove usage and made Twitter more valuable.
+
+
+MR. VANDENBRINK: Jonathan makes the argument that the key to launching a new product or service is to make it more flexible, and as a result, more mind share ensues. I disagree: The key to launching a service is to maximize profit, not to be flexible.
+
+It's a simple equation: How do I get maximum return for minimal outlay? Let's look at the example of Apple and Google Inc.
+
+Apple takes the approach that having a totally closed ecosystem [where it builds all the hardware and client software] allows it to create a more perfect experience for their customer, and it's hard to argue with the success they have had. That near-perfect control of the customer experience translates well to developers targeting iOS, or Apple's mobile operating-system platform. They get the advantages of Apple's obsession with perfection: The platform is predictable in terms of upgrades, delivers high performance and works the same on any generation of device.
+
+Google's Android, while a fine platform, doesn't have that. Android runs a wide variety of phones from a variety of original equipment manufacturers, or OEMs. For each release of Android, Google works with an OEM as a lead partner, and helps tune Android to the particular hardware of that manufacturer. OEMs that aren't the lead partner must implement and tune Android on their own.
+
+This is one of the reasons why you see vastly different performance on new phones running the same version of Android. And since you have multiple OEMs working at different paces and with different priorities, Android upgrades are unpredictable and in some cases may never happen for a given phone.
+
+Flexibility, in this case, helps Google with platform adoption, but isn't good for customers. Longer term, that may not be good for Google.
+
+
+
+'''WSJ: Apple's success seems to be a direct challenge to arguments in favor of openness. What does that tell us about the value of open versus closed systems?'''
+
+MR. VANDENBRINK: Success is all about adoption by developers, and anything that slows adoption impacts your platform. The problem with open systems is that they tend to fragment with respect to features and interfaces—without one central "guiding hand," the platform has less predictability for developers.
+
+
+Mr. ZITTRAIN: With a few tweaks I could be content with Apple's App Store model. In essence, choosing a phone shouldn't entail choosing what software can and can't run on it. The freedom we take for granted on a PC—to run whatever we like—is gone with iOS.
+
+The curation that lets the vendor say what will run, instead of the user, might well provide some extra security, but it comes at a high cost. I'd like to see new ways to provide security that don't entail centralization of what code can run, especially since control of code blurs into control of content.
+
+Apple doesn't have a monopoly on smartphones, and that helps the situation. But it's also not so easy for a customer to switch from one
+platform to another, and the money invested in, say, iPhone apps and content can make it that much harder to switch. That kind of lock-in can create markets that aren't as competitive as we'd like them to be.
+
+
+
+'''WSJ: Companies also run into the question of open versus closed systems when buying technology such as software. What makes one a better choice over the other?'''
+
+MR. VANDENBRINK: Simply put, closed systems offer greater predictability in terms of releases, updates, etc.; more usability from the perspective of a higher degree of attention paid to making the system a unified whole that works together with a higher degree of polish; more stability in that since it comes from one company, it can be tested more thoroughly; and finally, more peace of mind in that you know who to call if the system doesn't perform as expected.
+
+
+MR. ZITTRAIN: Open technologies can make it significantly easier, and cheaper, to drop one vendor or source of technology and move to another one. There's less lock-in because that software might be supported by multiple companies—or by one's own in-house developers.
+
+
+MR. VANDENBRINK: I would argue that the danger of vendor lock-in is the same in both the open-source software and the closed systems.
+
+Business systems are complex, often made up of numerous subsystems. When you use an open system, each one of the subsystems may—and probably will—have a different license. It is very complex to understand how the licenses interact.
+
+Let's assume you pick an open-system vendor who has taken all the trouble to understand these interactions. Now, for whatever reason, your company decides to switch vendors or to take over the work itself. In the first case, you need to make sure that the new vendor understands the license interactions. If you take on maintenance of the system yourself, you are now in that assurance role.
+
+Businesses need to be able to focus on their core value proposition. This means simplifying operational issues so that people can do their best work. For this, a closed platform offers significant benefits, as for most organizations it provides a plug-and-play solution that "just works."
+
+
+MR. ZITTRAIN: Worries about plug-and-play are real, but they're present for both open and closed platforms. There can be maddeningly difficult-to-use closed platforms and easy-to-use open ones. But open platforms themselves attract packagers—companies that package open-source software with support services or make the software more user-friendly."
+(http://online.wsj.com/article/SB10001424052970204554204577023994194742720.html)
+
+
+
+=Discussion=
+
+
+==Closed Ecosystems can only win if all others loose==
+
+By Paul Miller:
+
+"I think the dominant trend in the industry right now is what I'd call the "Apple Way." Apple has always loved having its closed off little ecosystems that frustrated and delighted users, usually in equal measure. With the iPod, however, Apple had a closed off big ecosystem. The iPod was basically a monopoly in the portable listening space for nearly a decade — in the world of dedicated music players, it still is. Apple's approach to an ecosystem like the iPod / iTunes juggernaut is twofold: offer an incredible device that people want more than other devices, and then generate buy-in that makes it hard to leave. Both elements grow the ecosystem, and eventually make it difficult to pick another device, even for a new user.
+
+Apple's DRM'd music purchased in iTunes wouldn't play on other music players, and if somebody purchased DRM-free MP3s elsewhere, it wasn't as effortless to get it onto an iPod. Apple was so good at the iPod ecosystem that when it finally lifted the DRM from the iTunes Store (to be fair, something Apple had been advocating from the start), there wasn't a mass migration from the iPod — it was merely seen as a value-add.
+
+Apple isn't the only company to take this our-way-or-the-highway approach. RIM's BBM is another popular example. I'll get a BlackBerry because it has BBM, and I'll convince my friends to get a BlackBerry because it has BBM, and now none of us can buy a different phone, because there's no equivalent pervasive service, and we'd all have to jump at once to guard against peer group fragmentation. RIM's ultimate failure wasn't in its ecosystem strategy, it was in its device strategy. It just shows that no quasi-monopoly is foolproof: if you don't continue to innovate, someone will come along and eat your lunch.
+
+The problem with copying this sort of strategy is that the road is littered with failures, or user-hostile prisons. Microsoft tried to imitate Apple's closed music ecosystem with Zune, and failed miserably. Apple itself has tried to do a BBM-style move in FaceTime and iMessage, but instead of opening up FaceTime like it promised, Apple has kept it as a differentiator. They might make for a good ad, but since FaceTime and iMessage don't play nice with others, and because Apple is far from a majority in the smartphone space, they're ultimately limited in utility, and confusing for users.
+
+Sony is the classic case of proliferating standards. It's almost a byword now. Sony builds its own version of almost every service or standard (music, movies, app stores, discs, memory cards), and rarely shares the love. Instead of making the Xperia Play the premier handheld for playing all Android games, Sony tried to create its own ecosystem, the PlayStation Suite, that could only really catch on if it really caught on. As it stands, the only PlayStation-certified devices are built by Sony, and the number of games in the Suite is laughable.
+
+Carriers also seem to suffer from this disease of creating businesses that can only truly succeed if all others fail. They create a myriad of lock-ins, both monetary and mental, for users, and work hard to keep their networks incompatible with each other. Instead of sharing the load of network buildout, they duplicate efforts (to the tune of billions of dollars), and the user suffers because of it. Few people have to decide which car to drive because of which roads it's compatible with — car makers have found other ways to differentiate."
+(http://www.theverge.com/2012/1/4/2669066/ecosystem-the-winner-takes-it-all)
+
+
+==The alternative of Closed ecosystem that can proliferate across platforms or devices and benefits everyone who participates==
+
+By Paul Miller:
+
+"If a company is in the position to build an iPod-style monopoly, I can't blame them for trying (as much as I'll resist it and fight for an alternative), but most companies aren't in that position. So, instead of dooming their future by betting it all on a standard that can't hope to win, I think there are two solid options for most for-profits among us.
+
+1. Build an "open" standard that grows and benefits the entire industry.
+
+or
+
+2. Build a "closed" ecosystem that can proliferate across platforms or devices and benefits everyone who participates.
+
+My favorite is option number one, of course. That's where you get things like Wi-Fi, SMS, HTML5, and WebKit. Or the whole internet. The problem with Flash (a standard, but a closed one), ultimately, is that it wasn't a truly open standard that everybody could improve and build on. Its development and propagation was limited to the bandwidth of a single company, and therefore it turned into a target. Ironically, Apple, a company whose own QuickTime was once a potential competitor to Flash, was the one that pulled the trigger.
+
+But option number two has a number of strong success stories to its credit. Netflix, Skype and Kindle are closed and proprietary in many ways, but because they have allowed themselves to proliferate across all devices, there's very little resistance to them on the part of users. Of course, they've spawned many competitors and imitators, with Apple and Google competing on all three fronts. Perhaps all three could die a Flash-style death eventually, and owned-by-everybody standards for digital content distribution and video communication could triumph, but for now all three are synonymous with the respective services they provide. They're Kleenex.
+
+The step beyond an app that spans all platforms is an OS that spans all devices. Android and Windows are the huge success stories they are because they're good products, but also because any device manufacturer can benefit from the work Google and Microsoft have done.
+
+Oh, and if your app or OS isn't great, or mature enough to spread across an entire industry, you really shouldn't bother. Even operating systems full of good ideas alone, like Windows Phone or MeeGo, aren't sufficient. An OS with a small market share is too expensive to maintain and support with the necessary app ecosystem, device portfolio, and rapidly progressing set of features. As much as it pained me, the merging of Microsoft and Nokia's efforts, and the death of Meego, was a very natural result of realism on the part of both companies. Through this paradigm, webOS, an upstart on a closed platform, hardly stood a chance.
+
+When software or services or standards can't fulfill all (or any) of these requirements, they're usually a waste of my time — especially when entering a market with a clear and magnanimous winner. Samsung's ChatOn, Google's Google+ and Google Books, Amazon's Appstore, Apple's iBooks (and FaceTime, and iMessage, and Game Center, and Ping), Microsoft's Zune. Even Kobo and Nook as entire brands feel like a distraction at this point, though I understand that they're a necessary business model for both companies. I'm frustrated by the Kindle Fire as well, and I feel like the Fire and generic Android tablets need to team up and "synergize" or face continual irrelevance in the shadow of the iPad. Every time an Android device manufacturer spends another dozen million dollars on trying to dress up Android in a fancy new skin, or make another redundant Twitter app, I mourn for what could have been faster updates, better OS-integrated hardware, and maybe even improvements to the base OS itself."
+
+
+(http://www.theverge.com/2012/1/4/2669066/ecosystem-the-winner-takes-it-all)
+
+
+[[Category:Collaborative Economy]]
+
+[[Category:Business Models]]
+
+[[Category:Collaborative Economy]]
+
+[[Category:Articles]]
+
+[[Category:Open]]

@@ -1,0 +1,71 @@
+'''The recent financial meltdown demonstrated that credit rating agencies were blind to the dangers ahead. Toby Segaran of Metaweb Technologies and Jesper Andersen of the Open Data Group hope that crowdsourcing and transparency can help fix this mess. They launched an online project called FreeRisk, that encourages users to generate algorithms for analyzing credit risk and anyone can view the results.'''
+
+
+URL = http://freerisk.org/
+
+
+=Description=
+
+"Segaran and Andersen envision a new model that is accessible, open, diverse and transparent. According to them, there are several fundamental problems with the existing system: ratings organizations take payments from companies they evaluate and thus have incentive to “bid up” ratings to compete for business; their methods are not open for public scrutiny; and they lack diversity of opinion. In short, credit rating agencies operate as a virtual oligopoly with little obligation to explain their methodology."
+(http://shopyield.com/2009/04/crowdsourcing-ratings/)
+
+
+=Interview=
+
+"'''In a nutshell, what is FreeRisk?'''
+
+Toby Segaran: FreeRisk is going to be a huge open data store of financial data taken primarily from company filings. It’s all going to be available to download or query using standards. On top of that, there will be APIs for building risk models and submitting your results.
+
+
+'''Why do we need some sort of alterative risk model?'''
+
+Jesper Andersen: Foremost is the payment for service problem, with the debt issuer’s relationship with credit rating agencies. They’re paying for the rating. Because we have a very small set of companies that are really able to create these credit ratings, we get a situation where each of the companies essentially bid against one another for the right to issue this contract and collect the fee. What they’re really bidding is the quality of the rating: how high can they boost the rating for the debt issuer? Essentially, it’s legal but it looks a lot like a bribery effect, distorting what the credit rating should be. We have to do this in a way in which money doesn’t have to change hands in order for the information to be created.
+
+
+Secondly, there wasn’t a lot of creativity in approaches to evaluating risk. There was the Gaussian copula model that had become the dominant way of measuring and analyzing risk. That may or may not work. The chances of it being wrong are so high, and the dangers if it’s wrong are so incredibly high. A system that has a lot more diversity would allow us to mitigate some of that risk socially. It would also allow people to find credit rating that reflected their own biases and objectives.
+
+
+'''Moody’s Investors Services gave Lehman Brothers an A2 rating–the second highest–right up until it filed for bankruptcy. Similarly, AIG got a clean bill of health right up to the brink of disaster. What’s the lesson here?'''
+
+Segaran: Drilling down, you could really see that there were risks if you looked at the balance sheets and if you looked at what a lot of public figures were saying about those particular companies. The fact is the rating agencies weren’t even incorporating that information. They didn’t even give a warning that this might be a possibility.
+
+Andersen: In all these cases, you could see the equity markets, the actual stock price, changing drastically to incorporate all this new information. The stock market was able to react much faster and had more diverse viewpoints, underscoring that the ecosystem approach is a little more robust in incorporating new information.
+
+Segaran: In that case, the crowd–the traders and stock market–did a lot better than rating agencies.
+
+
+'''How do we fix this?'''
+
+Segaran: There are a lot of steps. One thing is to get a lot of financial data cleaned up and online so that people can start looking at it. As it exists now, it’s moderately easy to get but impossible to do anything with if you want to build your own algorithm, unless you already work at a bank that has a subscription to an expensive data processing service.
+
+Andersen: I’d consider it a victory if we just assemble the best clean data source on the Web. We really hope to create an ecosystem where there are non-financial rewards for working on problems like this and create a way where people can publish the results of their own credit rating algorithms, evaluate how well they did based on historical analysis, and foster a sort of reputational competition. If we can create that, we can show there are other forces we can leverage to get an understanding of the systematic risk and then let traditional market forces take over from there in terms of investing.
+
+
+'''Will people build their own models or will you have templates that people can plug into?'''
+
+Andersen: We have a couple of examples based on things we’ve found in the literature. But we’re really hoping that people will implement their own de novo strategies. We certainly don’t believe we are in any way the best equipped on the planet to assess risk. There are people who are in a much better position to do that that.
+
+
+'''How accurate have these alternative models been compared to the rating agencies?'''
+
+Andersen: The one we talked about the most was called the AltmanZ-Score. We haven’t quite assembled enough data yet to tell you historically how much better it is than the credit rating agencies, but we showed it was quicker to react to changes in the data. We showed Lehman and AIG and the model very quickly incorporated the changes in the balance sheets of those two companies and showed a very strong probability of default, faster than the credit agencies incorporated that data.
+
+Even while Moody’s gave Lehman a clean bill of health, the alternative model showed the company was basically DOA.
+
+Andersen: The Lehman score was the lowest score we’ve ever seen.
+
+Segaran: Lehman at the time had negative revenue, which I didn’teven know was possible
+
+
+'''With FreeRisk you’re saying that we need more information about our obligations and liabilities because credit is so important to society and because taxpayers may have to rescue institutions that fail?'''
+
+Segaran: That’s exactly right. Credit is obviously important to a modern economy and understanding credit risk is therefore really important to a modern economy. Putting it in the hands of the few to try to get a slight edge can lead to huge problems–social problems–if they’re wrong.
+
+
+Do you see FreeRisk producing a dominant model or just part of the mix of options for predicting risk?
+
+Segaran: Obviously, we hope that open data in general becomes the more dominant model. It’s partly an experiment. In the long run, if it’s successful,we hope people start paying attention and using what we’ve learned. Hopefull ythis will bring out new models and the idea that transparency is the way to go."
+(http://shopyield.com/2009/04/crowdsourcing-ratings/)
+
+
+[[Category:Business]]

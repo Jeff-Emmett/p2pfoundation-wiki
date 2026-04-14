@@ -1,0 +1,85 @@
+'''= the total collection of linked 'semantic objects' that are of interest to the networked individual, irrespective of where they are located in a document or social network site'''
+
+
+=Citation=
+
+'''The Social Graph. The way I am connected, not the way my Web pages are connected.'''
+
+- Tim Berners-Lee [http://dig.csail.mit.edu/breadcrumbs/node/215]
+
+
+=Description=
+
+Tim Berners-Lee proposes a three-phased evolution of the internet/web:
+
+1. The internet (III = International Information Infrastructure) as the interconnecting of computers
+
+2. The web (WWW) as the interconnecting of documents
+
+3. The GGG as the interconnecting of the semantic objects (i.e. what the pages are about), irrespective of their document location
+
+Text: 
+
+'''1.'''
+
+"The Net we normally use as short for Internet, which is the International Information Infrastructure. Al Gore promoted the National Information Infrastructure (NII) presumably as a political pragma at the time, but clearly it became International. So let's call it III. Let's think about the Net now as an invention which made life simpler and more powerful. It made it simpler because of having to navigate phone lines from one computer to the next,you could write programs as though the net were just one big cloud, where messages went in at your computer and came out at the destination one. The realization was, "It isn't the cables, it is the computers which are interesting". The Net was designed to allow the computers to be seen without having
+to see the cables.
+
+Simpler, more powerful. Obvious, really.
+
+Programmers could write at a more abstract level. Also, there was re-use of the connections, in that, as the packets flowed, a cable which may have been laid for one purpose now got co-opted for all kinds of uses which the original users didn't dream of. And users of the Net, the III, found that they could connect to all kinds of computers which had been hooked up for various reasons, sometimes now forgotten. So the new abstraction gave us more power, and added value by enabling re-use.
+
+The word Web we normally use as short for World Wide Web. The WWW increases the power we have as users again. The realization was "It isn't the computers, but the documents which are interesting". Now you could browse around a sea of documents without having to worry about which computer they were stored on. Simpler, more powerful. Obvious, really.
+
+Also, it allowed unexpected re-use. People would put a document on the web for one reason, but it would end up being found by people using it in completely different ways. Two delights drove the Web: one of being told by a stranger your Web page has saved their day, and the other of discovering just the information you need and for which you couldn't imagine someone having actually had the motivation to provide it.
+
+So the Net and the Web may both be shaped as something mathematicians call a Graph, but they are at different levels. The Net links computers, the Web links documents.
+
+Now, people are making another mental move. There is realization now, "It's not the documents, it is the things they are about which are important". Obvious, really.
+
+In the short, what-can-I-code-up-this-afternoon-to-fix-this term, it is about other sites following the lead of my.opera.com, livejournal, advogato, and so on (list) also exporting a public RDF URI for their members, with what information the person would like to share.Right now, this blog re-uses the FOAF data linked to us to fight spam.
+
+In the long term vision, thinking in terms of the graph rather than the web is critical to us making best use of the mobile web, the zoo of wildy differing devices which will give us access to the system. Then, when I book a flight it is the flight that interests me. Not the flight page on the travel site, or the flight page on the airline site, but the URI (issued by the airlines) of the flight itself. That's what I will bookmark. And whichever device I use to look up the bookmark, phone or office wall, it will access a situation-appropriate view of an integration of everything I know about that flight from different sources. The task of booking and taking the flight will involve many interactions. And all throughout them, that task and the flight will be primary things in my awareness, the websites involved will be secondary things, and the network and the devices tertiary."
+(http://dig.csail.mit.edu/breadcrumbs/node/215)
+
+
+=Discussion=
+
+
+==Sharing requires loss of control==
+
+"The less inviting side of sharing is losing some control. Indeed, at each layer --- Net, Web, or Graph --- we have ceded some control for greater benefits.
+
+People running Internet systems had to let their computer be used for forwarding other people's packets, and connecting new applications they had no control over. People making web sites sometimes tried to legally prevent others from linking into the site, as they wanted complete control of the user experience, and they would not link out as they did not want people to escape. Until after a few months they realized how the web works. And the re-use kicked in. And the payoff started blowing people's minds.
+
+Letting your data connect to other people's data is a bit about letting go in that sense. It is still not about giving to people data which they don't have a right to. It is about letting it be connected to data from peer sites. It is about letting it be joined to data from other applications.
+
+It is about getting excited about connections, rather than nervous."
+(http://dig.csail.mit.edu/breadcrumbs/node/215)
+
+==Towards a [[Viewer-Oriented Web]]==
+
+
+Yihong-Ding:
+
+"We can view the Internet information organization from two opposite aspects: one is from the web publisher’s aspect and the other is from the web viewer’s aspect. Respectively I call them the publisher-oriented view and the viewer-oriented view.
+
+According to Sir Tim, the WWW abstraction is trying to address that “it isn’t the computers, but the documents which are interesting.” Publishers upload their organized information (in documents) onto the Web. Therefore, the traditional WWW abstraction of Internet information is based on publishers’ point of view. The information presented at the Web layer (specified by TBL) is publisher-oriented.
+
+This publisher-oriented web, however, does not facilitate web information manipulation. The reason is simple: when manipulating web information, web users are playing the role of web viewer instead of the role of web publisher. Due to the view conflict, it is difficult to perform search on the basis of the viewer’ view over information that is stored by the publisher’s view. To solve this problem, a fundamental request is to organize web information onto a new abstraction layer that is presented on the basis of the web viewer’s view. At this new abstraction layer, the Web becomes the viewer-oriented web. Sir Tim named this new layer to be Giant Global Graph.
+
+The fundamental units at WWW (the Web layer) are web pages (documents). The fundamental units at GGG (the Graph layer) are social graphs. When we compare a web page to a social graph, a web page contains a set of information organized by the publisher while a social graph contains a set of information organized by the viewer. This difference represents the most fundamental distinction between the WWW and the GGG. Since both a web page at WWW and a social graph at GGG play the same role in their respective abstraction layer, we may assign a general name for both of them. In fact, I have already proposed a name for such a role in my web evolution theory. The name is web space"
+(http://blogs.zdnet.com/web2explorer/?p=418)
+
+=More Information=
+
+[[Semantic Web]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Relational]]
+
+[[Category:Encyclopedia]]

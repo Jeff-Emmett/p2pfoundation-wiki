@@ -1,0 +1,48 @@
+
+
+=Text=
+
+Editorial from Nature magazine, By Kyle Niemeyer:
+
+"Modern scientific and engineering research relies heavily on computer programs, which analyze experimental data and run simulations. In fact, you would be hard-pressed to find a scientific paper (outside of pure theory) that didn’t involve code in some way. Unfortunately, most code written for research remains closed, even if the code itself is the subject of a published scientific paper. According to an editorial in Nature, this hinders reproducibility, a fundamental principle of the scientific method.
+
+Reproducibility refers to the ability to repeat some work and obtain similar results. It is especially important when the results are unexpected or appear to defy accepted theories (for example, the recent faster-than-light neutrinos). Scientific papers include detailed descriptions of experimental methods—sometimes down to the specific equipment used—so that others can independently verify results and build upon the work.
+
+Reproducibility becomes more difficult when results rely on software. The authors of the editorial argue that, unless research code is open sourced, reproducing results on different software/hardware configurations is impossible. The lack of access to the code also keeps independent researchers from checking minor portions of programs (such as sets of equations) against their own work.
+Reproduce THIS!
+
+Some journals take this issue seriously. Science includes code on its list of things that should be supplied by an author when submitting a paper. Biostatistics actually created an “Associate Editor for Reproducibility” dedicated to reproducing the results of a paper based on the data and code it receives.
+
+Nature, on the other hand, only asks for a written description of code with sufficient details to allow interested readers to create their own version. This is currently the common practice for most journals. Typically, when a computer program is written for a paper, the authors will supply an executable version upon request.
+
+However, the authors describe two reasons why these common practices (written descriptions of code and executables) are not sufficient to reproduce results: ambiguity in the descriptions and errors in the code.
+
+When it comes down to it, code is the only thing that can unambiguously describe code—that’s why we use programming languages instead of natural language. Even if the authors of a paper accurately describe a program, using precise mathematical equations when necessary, independent implementations (and results) would differ.
+
+Releasing executable versions of programs instead of code may not be sufficient due to underlying errors. This doesn’t just mean actual mistakes in the code, although some studies estimate one to ten errors for every thousand lines of code. Rounding and floating point errors, as well as ambiguities in programming languages like the order-of-evaluation problem, can all affect results.
+
+Without the ability to examine code, independent researchers won’t know if potential uncertainties or errors (or even the results) described in a paper can be traced to ambiguity in a description or numerical implementation.
+Why not open source?
+
+The authors acknowledge there are some barriers to the ubiquitous release of scientific code. Many researchers don’t recognize the importance of the issues described above, and others may see commercial potential in their code. Jeffrey Benner pointed out in 2002 that, even when researchers want to release their code openly, universities and national labs can block them in an effort to license and monetize software.
+
+The editorial also mentions a shortage of central scientific repositories or indexes for research code, and suggest funding agencies should investigate solutions similar to SourceForge. This might not be necessary, though, since many researchers (particularly in computer science) already post their code to SourceForge and Google Code.
+
+Another justification for keeping code closed is selfish: to slow down the competition by keeping the results of hard work to yourself. Daniel Lemire, a computer scientist and professor, responded to this argument elsewhere by pointing out that open sourcing his code not only makes his work repeatable, but spreads the ideas faster and makes the code better in the long run, since other users can help debug it.
+
+In the end, simple embarrassment over ugly code may also be a factor, according to Matt Might, another computer science professor. (As someone who writes code for my research, I can vouch for this. [Editor’s note: as can his editor.]) He also believes academics should release code openly, and created the Community Research and Academic Programming License (yes, that’s CRAPL) to help “absolve authors of shame, embarrassment, and ridicule for ugly code.”
+What needs to change?
+
+The authors of the paper suggest a few steps that could help correct the problem. First, more journals should adopt standards for source code accessibility (such as full source code, partial source code, executable, or no code) and ensure researchers provide a sufficient description of software used.
+
+They also suggest that funding bodies could look into tools to integrate code with other elements of the paper. For example, the data and code used to generate a figure could be bundled with the figure itself.
+
+The most important step, and probably the easiest and cheapest to accomplish, is for science and engineering departments to emphasize the concept of reproducibility in courses on statistics and programming."
+(http://arstechnica.com/science/news/2012/02/science-code-should-be-open-source-according-to-editorial.ars)
+
+
+[[Category:Science]]
+
+[[Category:Open]]
+
+[[Category:Free Software]]

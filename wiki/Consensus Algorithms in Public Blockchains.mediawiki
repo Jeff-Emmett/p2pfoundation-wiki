@@ -1,0 +1,28 @@
+=Description=
+
+Steve Wilson:
+
+"Public blockchain consensus algorithms – the most famous of which is Bitcoin’s “Proof of Work” – create order out of chaos. They literally produce an agreed ordering of potentially contentious entries made in real-time on a shared ledger, in a special case where we choose to have no administrator to rule on the sequence in which entries are received, creating an official account of all transactions.
+
+“Consensus” is one of those beguiling properties of blockchain – along with “trust” and “decentralised” – which are actually difficult to generalise beyond the narrow confines of cryptocurrency.  The consensus reached in the public blockchains is not what many people think it is.  Instead of a general type of agreement, blockchain consensus is tightly defined to serve a singular purpose.  In most of the broader business applications for which blockchains are being planned or deployed, we don’t need to reach “consensus” about the state of a ledger in the same way as Bitcoin does, because we have different authority structures.  It is important to appreciate the special purpose of blockchain consensus, so that the algorithm doesn’t add enormous overhead and real-time delays in cases where it is not warranted.
+
+The problem space of the Bitcoin blockchain is non-fiat digital money; that is, electronic cash transacted with no intermediaries or regulator, and no registration of account holders.  Since the 1990s at least, there had been stored value smartcard and digital money solutions using a central reserve or “mint” to oversee transactions and prevent double spend (Mondex and David Chaum’s Digicash being the prime examples). However, many cryptocurrency advocates reject central control, and thus remained unhappy with these architectures, until the arrival of Satoshi Nakamoto in 2008. 
+
+Nakamoto’s pioneering blockchain architecture cleverly crowd-sources the monitoring of each and every Bitcoin transaction, with the network periodically reaching agreement on blocks of accepted transactions, which it commits to the shared ledger. Account holders do not need to be registered but are allowed to generate their own keys as they join the network.  Nobody knows which user goes with which key pair; the blockchain ascribes transactions to key pairs, and the community simply assumes that users remain in control of their keys. If a private key is lost or destroyed, then the corresponding balance can never be spent again; if a private key is stolen or copied, its original owner has no recourse to a system operator.
+
+The consensus reached by the blockchain is about one thing only: the order in which transactions are deemed to have occurred. Agreement on ordering of the ledger is sufficient to prevent double spend of the cryptocurrency. In later generation synchronous ledgers without an intrinsic underlying currency, like Hyperledger Fabric, this function is explicitly named the Ordering Service.
+
+Consensus about the order of ledger entries cannot be readily generalised to any other property of the data.  Anyone contemplating broader blockchain applications should be wary of how the word “consensus” can be stretched too far. 
+
+Furthermore, the architects of non-fiat cryptocurrency are at liberty to simply reject central administration as they build their special new world.  Yet very few real-world business settings are like that.  If a program has a natural or inherent administrator (as with education, healthcare, elections or land titles) then it doesn’t need to crowdsource any question about the state of its data.  There isn't much that a distributed consensus algorithm can tell that the administrator can’t work out for itself, more quickly and for far less cost.
+
+Finally remember that blockchain consensus creates order out of the deliberate chaos of cryptocurrency where key holders are allowed to go unregistered.  In many of the extended blockchain use cases – such as Internet of Things or supply chain – there is no such disorder.  IoT devices tend to have serial-numbered chips to securely hold the private keys; supply chain operators are generally authorised employees, typically using dedicated terminal equipment in warehouses, field locations and delivery vehicles. These types of networks are orderly to begin with, and don’t need an elaborate consensus algorithm to work out what’s going on.
+
+When analysing potential blockchain use cases, always ask precisely what any consensus is about, and what’s the point of it."
+(https://www.constellationr.com/blog-news/what-blockchain-consensus-all-about)
+
+[[Category:Crypto_Governance]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:Governance]]
+[[Category:Protocols_and_Algorithms]]

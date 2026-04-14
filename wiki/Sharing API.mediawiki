@@ -1,0 +1,54 @@
+
+'''= a proposal for an open sharing application to interconnect local offerings'''
+
+URL = http://www.sharingapi.org/
+
+=Discussion=
+
+==Sharing API as solution to local sharing problem==
+
+
+Juho Makkonen :
+
+“Peer-to-peer borrowing and lending, sharing skills and rides and swapping heavy items like furniture—all activities that require close proximity between the offerer and the requester—are yet to experience their true breakthrough. I believe this is due to two reasons. First, these services have a difficult time with monetization, since the sums of money involved in sharing stuff and skills are a lot smaller than in cases of buying goods or sharing accommodation and transportation. Second, the critical mass required in their case is much greater, since people do not benefit at all from offers that are too far away.
+This is indeed a major problem with the sharing economy. We have a huge amount of different services in the areas of borrowing, sharing skills and swapping items, but the vast majority of them has not yet achieved a critical mass. They may have it in a small area—typically around where the founders are from, because it's cheap for them to market their service there—but in all the other places they might have only few users here and there. And that's why these services do not really work for anybody's benefit. Their growth is simply too slow to be self-sustainable.
+All these small services need a way to collaborate. Otherwise most of them will always remain small and eventually die unprofitable. This would be a shame, since a lot of marketing work has gone into building the small but passionate niche audience they have around the world, and that work should not go to waste. If we could somehow connect all these small user groups together, we'd suddenly be a lot closer to achieving mainstream success for local sharing.
+Readers of my previous post may know where I'm going with this. An excellent way to facilitate this kind of collaboration would be to build a common API specification for the shared stuff—goods, services, rides, spaces, you name it. Most services end up implementing an API at some point anyway, so they could as well use the same specification to do it.
+This would make it really easy to create all kinds of aggregation services. We could build a search engine that would search from a hundred different services that let people to borrow stuff from each other. A search engine like this would greatly increase the probability of actually finding something suitable close-by and motivate the searcher to join a service. This would lead to a greater pool of resources, more sharing, and continued growth. All services would benefit from the traffic directed from this global channel, while allowing space for niche providers to fill the gaps.
+So, lets begin by creating the specification. My previous post gathered a bunch of interested commentators, and together we are now starting to move this thing forward. We started by forming a Google Group for discussions. Matthew Slater just left an interesting note there, describing a site called open311.org. It describes an API intended for reporting civic issues to local governments.
+So we decided to build a site like this for the sharing API. It's already up at www.sharingapi.org. It's a start, and hopefully a lot will happen in the coming months.
+After the specification is finished, we just need as many services as possible to implement it. For instance, when we start building the API for Kassi, the service I'm involved with, we'll make sure it is done by the guidelines in the specification wiki. Among the people involved there are guys building services like CES, sharedearth.net and Yours2share—these too will be some of the first pioneers.
+After we get enough services on board, we could just as well build the search engine I described above. When the APIs are there, it would only take a few days of work.
+I invite everyone to join this project.”
+(http://shareable.net/blog/the-sharing-economy-has-a-problem-that-needs-to-be-fixed)
+
+
+==Towards a Common API==
+Juho Makkonen :
+
+“While it is great that there are so many people working to promote sharing, this also causes problems from the users' point of view. When there is more than ten sharing services working in the same city, it becomes tedious to find the stuff you're looking for or list what you have. As a result, it's difficult for a single service to achieve the network effect. A traditional capitalist approach would be to rely on the survival of the fittest. But could there be a more collaborative way? After all, our common goal is to boost sharing by mapping all the resources that people have to share and linking them together. Would it be possible to form a huge pool of resources that all sharing economy services could then use to their benefit?
+I'm going to look things from a practical (read: technological) point of view here and suggest two collaboration approaches that could solve these issues: a common API and a distributed data storage.
+Approach 1: Common API
+A common API would be a rather simple solution since it does not force current services into major changes in their infrastructure. Basically it would mean that each sharing service would build an API according to the same specification. The method would be somewhat similar to Google's Open Social initiative for social websites. We would have to define an ontology that maps all the resources that can be shared (stuff, skills, space) and their subtypes and properties related to them. For example, in the case of goods, the specification could require the API to provide some basic information of each item, such as  name, picture, location, category (books, tools, etc) and how they will be shared (lending, swapping, giving away, etc). This would mean that when I wanted to show all tools that people can lend near San Francisco area I could use the same query to retrieve results from all the different services.
+The benefit of this approach is that it would be easy to display results from different services when a user does a search in one service, because there would be no need to build a separate integration mechanism for each service. For example, if you were searching for a certain tool from NeighborGoods and did not find it, the search would then return results from Share Some Sugar and Freecycle. And since most modern online services plan on building an API at some point, using an existing specification could save time and resources.
+Using this kind of API connection would benefit all parties. Those who displayed results from other services in their search would be able to offer a better service to their users. It's a good customer service and marketing practice to point to your competitors if they can serve your customer better. Those offering their APIs for others to use would get exposure and traffic when other services pointed to them, and the people would get a wider selection of available resources and would be introduced to new sharing services.
+This approach is not perfect. When actually borrowing the item, the users would still need to sign up for those services. They would not be able to take their data from the original service with them. This data would include feedback received from other users and other information that is vital to facilitate sharing. A person with an excellent reputation as a frequent lender and a trustworthy borrower in NeighborGoods would become a suspicious newbie in Share Some Sugar.
+How could this issue be addressed? It's not easy, but it could be done, at least in theory, using a technique called distributed data storage.
+Approach 2: Distributed data storage
+Diaspora is a project familiar to many due to its huge Kickstarter success. Diaspora's main idea is to create a social networking site like Facebook but with a significant difference: people own all their data and can move it as they please, and only display it to people they choose. It uses peer to peer technology to distribute data between servers (or "pods") set up by the users of the service. This means that it has no central place where all the data is stored.
+Applied to collaborative consumption, this would mean that some core data--like users' profile information, things they are sharing and their reputation in different services--would be an identity that could be shared between different services. Each time a user came across a new service he could conduct a "collcons connect" (similar to Facebook Connect) which would transfer the data he selects to transfer to the new service. A publish/subscribe method could be used to ensure when some data is changed in one service, the change gets transferred to all the other services using that same data.
+This approach would make it easy for people to discover new services and start using them, and therefore start sharing with even more people. It would also create a huge catalogue of shared resources which new entrepreneurs could then use in innovative ways.
+Challenges
+The main challenges in this kind of collaboration between services are not technological. All the things mentioned above could be done. The actual reasons that are preventing collaboration between services are very similar to those that are preventing sharing between people in collaborative consumption services: convenience and trust.
+Startups have limited resources and want to be agile. The collaboration cannot take too much time away from their core business of developing a good service for their users or slow them down. Moreover, most startups have their own strong vision and want to test it first before considering collaborating with others. We all think that we should eventually collaborate, but no one is ready to take the step beyond talking.
+Then there are the trust considerations. If I'm going to pull data from somebody else's service, I need to be able to rely on the quality of the data. And if I let them take my data, I need to trust them to handle it responsibly. For the biggest players, it might seem that smaller services areusing their content and not giving enough back. The small services might think their users have no reason to return to them if their data is available on the bigger hubs. And naturally, owning data can be also viewed as a competitive advantage, which is why walled gardens are so prevalent on the web.
+There is no single one-size-fits-all solution for all collaborative consumption services. But there is certainly room for more cooperation than what currently exists.”
+(http://shareable.net/blog/an-api-for-sharing)
+
+[[Category:Sharing]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

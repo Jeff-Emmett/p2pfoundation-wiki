@@ -1,0 +1,105 @@
+
+
+=Discussionn=
+
+"The best introduction that shows the importance of scripting languages was written by John K. Ousterhout. '''He outlined four main advantages of mixed scripting language + compiled language programming''' in his famous paper [http://home.pacbell.net/ouster/scripting.html Scripting: Higher Level Programming for the 21st Century]." [http://www.softpanorama.org/People/Scripting_giants/introduction.shtml]
+
+Ousterhout quotes start with ...
+
+Commentary from Dr. Nikolai Bezroukov [http://www.softpanorama.org/People/Scripting_giants/introduction.shtml]
+
+
+
+==1.==
+
+"'''He pointed out that scripting languages represent a new type of languages: glue languages.''' 
+
+    
+...Scripting languages such as Perl and TCL represent a very different style of programming than system programming languages such as C or Java. Scripting languages are designed for "gluing" applications; they use typeless approaches to achieve a higher level of programming and more rapid application development than system programming languages. Increases in computer speed and changes in the application mix are making scripting languages more and more important for applications of the future.
+
+
+==2.==
+
+'''The second main idea is that scripting languages presuppose component programming and component framework can benefit from scripting languages.'''  If you think a little bit, you can even consider Unix shell as the  historically first component oriented language ;-). 
+
+    
+...Scripting languages and system programming languages are complementary, and most major computing platforms since the 1960's have provided both kinds of languages. The languages are typically used together in component frameworks, where components are created with system programming languages and glued together with scripting languages. However, several recent trends, such as faster machines, better scripting languages, the increasing importance of graphical user interfaces and component architectures, and the growth of the Internet, have greatly increased the applicability of scripting languages. These trends will continue over the next decade, with more and more new applications written entirely in scripting languages and system programming languages used primarily for creating components.
+
+    
+...Scripting languages such as Perl, Python, Rexx, Tcl, Visual Basic, and the Unix shells represent a very different style of programming than system programming languages. Scripting languages assume that there already exists a collection of useful components written in other languages. Scripting languages aren't intended for writing applications from scratch; they are intended primarily for plugging together components. For example, Tcl and Visual Basic can be used to arrange collections of user interface controls on the screen, and Unix shell scripts are used to assemble filter programs into pipelines. Scripting languages are often used to extend the features of components but they are rarely used for complex algorithms and data structures; features like these are usually provided by the components. Scripting languages are sometimes referred to as glue languages or system integration languages.
+
+
+==3.==
+
+'''The third important idea is that scripting languages are better used in tandem with compiled languages.''' The latter should be used for the component building where as scripting languages should be used a s a glue. 
+
+    
+... A scripting language is not a replacement for a system programming language or vice versa. Each is suited to a different set of tasks. For gluing and system integration, applications can be developed 5-10x faster with a scripting language; system programming languages will require large amounts of boilerplate and conversion code to connect the pieces, whereas this can be done directly with a scripting language. For complex algorithms and data structures, the strong typing of a system programming language makes programs easier to manage. Where execution speed is key, a system programming language can often run 10-20x faster than a scripting language because it makes fewer run-time checks.
+
+    
+Most of the major computing platforms over the last 30 years have provided both system programming and scripting languages. For example, one of the first scripting languages, albeit a crude one, was JCL (Job Control Language), which was used to sequence job steps in OS/360. The individual job steps were written in PL/1, Fortran, or assembler language, which were the system programming languages of the day. In the Unix machines of the 1980's, C was used for system programming and shell programs such as sh and csh for scripting. In the PC world of the 1990's, C and C++ are used for system programming and Visual Basic for scripting. In the Internet world that is taking shape now, Java is used for system programming and languages such as JavaScript, Perl, and Tcl are used for scripting.
+
+    
+...The third example of scripting-oriented applications is component frameworks such as ActiveX, OpenDoc, and JavaBeans. Although system programming languages work well for creating components, the task of assembling components into applications is better suited to scripting. Without a good scripting language to manipulate the components, much of the power of a component framework is lost. This may explain in part why component frameworks have been more successful on PCs (where Visual Basic provides a convenient scripting tool) than on other platforms such as Unix/CORBA where scripting is not included in the component framework.
+
+
+==4.==
+
+'''The fourth major idea behind scripting languages is a logical consequence of component orientation -- scripting languages should be typeless or at least weakly typed.''' The critical idea here is that strings as universal representation simplify reuse. 
+
+    
+...The second difference between assembly language and system programming languages is typing. I use the term "typing" to refer to the degree to which the meaning of information is specified in advance of its use. In a strongly typed language the programmer declares how each piece of information will be used and the language prevents the information from being used in any other way. In a weakly typed language there are no a priori restrictions on how information can be used: the meaning of information is determined solely by the way it is used, not by any initial promises
+
+    
+Typing has several advantages. First, it makes large programs more manageable by clarifying how things are used and differentiating between things that must be treated differently. Second, compilers can use type information to detect certain kinds of errors, such as an attempt to use a floating-point value as a pointer. Third, typing improves performance by allowing compilers to generate specialized code. For example, if a compiler knows that a variable always holds an integer value then it can generate integer instructions to manipulate the variable; if the compiler doesn't know the type of a variable then it must generate additional instructions to check the variable's type at runtime.
+
+    
+...In order to simplify the task of connecting components, scripting languages tend to be typeless: all things look and behave the same so that they are interchangeable. For example, in Tcl or Visual Basic a variable can hold a string one moment and an integer the next. Code and data are often interchangeable, so that a program can write another program and then execute it on the fly. Scripting languages are often string-oriented, since this provides a uniform representation for many different things.
+
+    
+The strongly typed nature of system programming languages discourages reuse. Typing encourages programmers to create a variety of incompatible interfaces ("interfaces are good; more interfaces are better"). Each interface requires objects of specific types and the compiler prevents any other types of objects from being used with the interface, even if that would be useful. In order to use a new object with an existing interface, conversion code must be written to translate between the type of the object and the type expected by the interface. This in turn requires recompiling part or all of the application, which isn't possible in the common case where the application is distributed in binary form.
+
+    
+...It might seem that the typeless nature of scripting languages could allow errors to go undetected, but in practice scripting languages are just as safe as system programming languages. For example, an error will occur if the font size specified for the button example above is a non-integer string such as xyz. The difference is that scripting languages do their error checking at the last possible moment, when a value is used. Strong typing allows errors to be detected at compile-time, so the cost of run-time checks is avoided. However, the price to be paid for this efficiency is restrictions on how information can be used: this results in more code and less flexible programs.
+
+
+==5.==
+
+
+'''The fifth important idea is that higher level and efficiency are probably inversely connected and you definitely need to sacrifice some efficiently to achieve higher level of abstraction'''. that actually does not mean that you system will be less efficient -- components should be used in time-critical parts of the system and they can utilize all advantages of compiled languages or even assembler language. That speaks against Java that tries to be "yet another universal language":  
+
+    
+...Scripting languages are less efficient than system programming languages, in part because they use interpreters instead of compilers but also because their basic components are chosen for power and ease of use rather than an efficient mapping onto the underlying hardware. For example, scripting languages often use variable-length strings in situations where a system programming language would use a binary value that fits in a single machine word, and scripting languages often use hash tables where system programming languages use indexed arrays.
+
+    
+Scripting languages are higher level than system programming languages, in the sense that a single statement does more work on average. A typical statement in a scripting language executes hundreds or thousands of machine instructions, whereas a typical statement in a system programming language executes about five machine instructions. Part of this difference is because scripting languages use interpreters, which are less efficient than the compiled code for system programming languages. But much of the difference is because the primitive operations in scripting languages have greater functionality. For example, in Perl it is about as easy to invoke a regular expression substitution as it is to invoke an integer addition. In Tcl, a variable can have traces associated with it so that setting the variable causes side effects; for example, a trace might be used to keep the variable's value updated continuously on the screen.
+
+    
+Scripting languages have existed for a long time, but in recent years several factors have combined to increase their importance. The most important factor is a shift in the application mix towards gluing applications. Three examples of this shift are graphical user interfaces, the Internet, and component frameworks.
+
+    
+Another reason for the increasing popularity of scripting languages is improvements in scripting technology. Modern scripting languages such as Tcl and Perl are a far cry from early scripting languages such as JCL. For example, JCL didn't even provide basic iteration and early Unix shells didn't support procedures. Scripting technology is still relatively immature even today. For example, Visual Basic isn't really a scripting language; it was originally implemented as a simple system programming language, then modified to make it more suitable for scripting. Future scripting languages will be even better than those available today.
+
+    
+One final reason for the increasing use of scripting languages is a change in the programmer community. Twenty years ago most programmers were sophisticated programmers working on large projects. Programmers of that era expected to spend several months to master a language and its programming environment, and system programming languages were designed for such programmers. However, since the arrival of the personal computer, more and more casual programmers have joined the programmer community. For these people, programming is not their main job function; it is a tool they use occasionally to help with their main job. Examples of casual programming are simple database queries or macros for a spreadsheet. Casual programmers are not willing to spend months learning a system programming language, but they can often learn enough about a scripting language in a few hours to write useful programs. Scripting languages are easier to learn because they have simpler syntax than system programming languages and because they omit complex features like objects and threads. For example, compare Visual Basic with Visual C++; few casual programmers would attempt to use Visual C++, but many have been able to build useful applications with Visual Basic.
+
+    
+Scripting languages have been mostly overlooked by experts in programming languages and software engineering. Instead, they have focused their attention on object-oriented system programming languages such as C++ and Java. Object-oriented programming is widely believed to represent the next major step in the evolution of programming languages. Object-oriented features such as strong typing and inheritance are often claimed to reduce development time, increase software reuse, and solve many other problems including those addressed by scripting languages.
+
+    
+...How much benefit has object-oriented programming actually provided? Unfortunately I haven't seen enough quantitative data to answer this question definitively. In my opinion objects provide only a modest benefit: perhaps a 20-30% improvement in productivity but certainly not a factor of two, let alone a factor of 10. C++ now seems to be reviled as much as it is loved, and some language experts are beginning to speak out against object-oriented programming [2]. The rest of this section explains why objects don't improve productivity in the dramatic way that scripting does, and it argues that the benefits of object-oriented programming can be achieved in scripting languages.
+
+    
+...The reason why object-oriented programming doesn't provide a large improvement in productivity is that it doesn't raise the level of programming or encourage reuse. In an object-oriented language such as C++ programmers still work with small basic units that must be described and manipulated in great detail. In principle, powerful library packages could be developed, and if these libraries were used extensively they could raise the level of programming. However, not many such libraries have come into existence. The strong typing of most object-oriented languages encourages narrowly defined packages that are hard to reuse. Each package requires objects of a specific type; if two packages are to work together, conversion code must be written to translate between the types required by the packages.
+
+    
+Scripting languages, on the other hand, have actually generated significant software reuse. They use a model where interesting components are built in a system programming language and then glued together into applications using the scripting language. This division of labor provides a natural framework for reusability. Components are designed to be reusable, and there are well-defined interfaces between components and scripts that make it easy to use components. For example, in Tcl the components are custom commands implemented in C; they look just like the builtin commands so they are easy to invoke in Tcl scripts. In Visual Basic the components are ActiveX extensions, which can be used by dragging them from a palette onto a form.
+
+    
+Scripting languages represent a different set of tradeoffs than system programming languages. They give up execution speed and strength of typing relative to system programming languages but provide significantly higher programmer productivity and software reuse. This tradeoff makes more and more sense as computers become faster and cheaper in comparison to programmers. System programming languages are well suited to building components where the complexity is in the data structures and algorithms, while scripting languages are well suited for gluing applications where the complexity is in the connections. Gluing tasks are becoming more and more prevalent, so scripting will become an even more important programming paradigm in the next century than it is today."
+(http://www.softpanorama.org/People/Scripting_giants/introduction.shtml)
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]

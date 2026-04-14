@@ -1,0 +1,184 @@
+[[Open Source]] licenses and principles contain the obligation to make the source code of the software available for subsequent users. It is similar to [[Free Software]] but differs in its emphasis on the economic benefits of open source methodologies.
+
+#[[Copyleft]] and other [[Open Licenses]]
+#See also the related entry on the [[Free Content Definition]], a framework to judge open and free licenses.
+#List of all [[Open Source Initiative]]-approved [http://www.opensource.org/licenses/ Open Source Licenses]
+
+
+=Definition=
+
+“An open source license is a copyright license for computer software that makes the source code available under
+terms that allow for modification and redistribution without having to pay the original author. Such licenses may
+have additional restrictions such as a requirement to preserve the name of the authors and the copyright statement
+within the code. One popular (and sometimes considered normative) set of open source software licenses are those
+approved by the Open Source Initiative (OSI) based on their Open Source Definition (OSD).” 
+(http://en.wikipedia.org/wiki/Open-source_license)
+
+=Typology=
+
+For conceptual convenience, there are four broad categories or families of open source licenses:
+
+* strong copyleft licenses
+* weak copyleft licenses
+* no copyleft licenses
+* other open source licenses
+
+==Strong copyleft licenses:==
+
+The GPL (General Public License)
+
+[[Copyleft]] (a play on the word copyright) is the key factor that differentiates the various open software licenses. Copyleft is a license requirement that governs the distribution of modifications to the original open source software. If a license contains a strong copyleft provision, anyone who modifies the source code and distributes it to the public must license the modifications back to the public under the same terms as the original software. This means that you must give up private ownership of any changes you make to copyleft software, unless you elect not to make the modified software available publicly.
+
+The [[GNU General Public License]], one of the first open source licenses and still by far the most widely used, was the first to implement copyleft. Linux, the most famous open source application, uses the GPL. Richard Stallman and Eben Moglen created the GPL and formed the Free Software Foundation to help promote and manage its use. The Foundation's web site contains much useful information on the GPL as well as a downloadable copy of the license itself.
+
+
+==Weak copyleft licenses==
+
+Some programmers who create or contribute to open source software don't want to give up all their ownership rights in their modifications. To meet their needs, several licenses contain watered-down or weak copyleft provisions.
+
+The Mozilla Public License:
+
+'''The Mozilla Public License (MPL) is the most popular open source license that contains a weak copyleft provision.''' It came about to distribute the Mozilla web browser (the open source version of the Netscape browser). It requires the inclusion or publishing of the source code for all publicly distributed modifications. The length of time necessary to publish the code is limited to a period of one year or six months, depending on the situation. The MPL's copyleft provision entails only changes to files subject to the MPL or new files that contain MPL-licensed code. New files that don't contain MPL-licensed code do not fall under the MPL.
+
+
+==No copyleft licenses==
+
+The Open Source Definition does not require copylefting; many open source licenses contain no copyleft provisions at all. A whole family of licenses contain no copyleft and few other restrictions on users. The best-known of these no-copyleft licenses is the Berkeley Software Distribution (BSD) License. One of the earliest nonproprietary licenses, it permits users to do virtually anything they want with BSD-licensed code: they may distribute the software--either for free or commercially--without providing the source code; they also may modify it and distribute the changes without providing the source code. Anyone can turn software distributed under no-copyleft licenses into proprietary software (and then relicense it for a fee) as long as they credit the developers of the original open source software. Two other well-known licenses, the Apache Software License and the MIT License, are very similar to the BSD License.
+
+
+==Other open source licenses==
+
+
+Various other licenses combine elements from the other license families and contain additional provisions as well. Examples include the Artistic License and the Academic Free License.
+
+=Background=
+
+'''The Consensus of the Open Sources Initiative'''
+
+Open Source projects are fundamentally similar to Free Software in that they both forbid any restriction on the free distribution of the software and on the availability of the source code. The following principles are accepted to define an Open Source project:
+
+-	no restriction on the free distribution is allowed (but payment is allowed)\
+-	the source must be freely available to all at no cost
+-	changes must be accepted and distributed
+-	the author can request a protected version number
+-	no discrimination in usage is allowed, for every activity, including commercial usage
+-	the rights attached to any program are for all the users all of the time
+-	the license cannot be program specific (to avoid commercial restrictions)
+-	the license cannot be applied to other code (such as proprietary additions)
+-	the license must be technologically neutral (not restricted to certain devices or operating systems)
+
+See also at http://www.opensource.org/ ; Background on the Open Source definition, by Bruce Perens, at http://www.perens.com/Articles/OSD.html 
+
+
+=Discussion=
+
+
+==The spectre of License proliferation==
+
+By Tom Chance:
+
+“There are, at the time of writing, over fifty licenses approved by the Open Source Institute. There are many hundreds more “free" licenses used around the web, some by organisations looking for some extra control, others by individuals who want to tweak an existing license to their needs. If explaining the GPL to somebody takes time, imagine explaining fifty different licenses and their implications. Applied to Creative Commons, imagine how much more complex the issues I have so far discussed would become if artists could choose between over fifty licenses! The major achievement of the Creative Commons organisation has been to create a simple set of choices that produce only six licenses; these have been translated to match the legal systems of different countries, but each license retains the meaning of the original. In other words, all people need to understand are the concepts of attribution, commercial use, derivative use and the share alike clause. Each concept has a corresponding symbol that, if used universally, can become instantly recognisable.
+But proliferation is already happening. Creative Commons have a special sampling license, an extremely problematic idea given the ambiguity of a sample (when does it become a full remix?) and further unnecessary complication. The BBC have also adopted a license for their Creative Archive that is extremely similar to the Creative Commons licenses, but is nonetheless incompatible. Nobody will be able to remix BBC material and share it on Remix Reading. To make things worse, the BBC has devised its own symbols, making recognition of license conditions that little bit harder. This is unsurprising, because everyone’s opinions on art are quite different, so the conceptual difficulty of trying to create a handful of licenses to cover all preferences is formidable."
+(http://tom.acrewoods.net/writing/remixculture )
+
+
+==Are Open Source Licenses Obsolete?==
+
+Tim O'Reilly: [http://www.infoworld.com/article/03/07/03/HNoreilly_1.html Software Licenses no longer work]: "'''once you're no longer distributing an application, none of the licenses mean squat'''."
+
+Also:
+
+#[http://radar.oreilly.com/archives/2006/08/open_source_licenses_are_obsol.html Open Source Licenses are Obsolete]
+#[http://radar.oreilly.com/archives/2007/02/is_open_source_1.html Is "open source" now completely meaningless?]
+#[http://www.openparenthesis.org/2007/03/03/fauxpen-source Fauxpen-source?]
+#[http://www.onlamp.com/pub/a/onlamp/2004/11/18/licenses.html Open Source Licenses Are Not All the Same]
+
+
+
+=Specialized Domains=
+
+
+==Open Source Licenses in Biotechnology==
+
+Can Open Source Licensing Work With Biotechnology? 
+
+By Janet Hope:
+
+"When I spoke to Bruce Perens, who helped define the basis for open
+source development in his aptly titled document, The Open Source
+Definition, he took the view that the open source biotechnology
+movement does not aim to create a particular legal framework. Instead,
+it is a form of social engineering. There is no question that one
+could produce a legally binding open source license in biotechnology
+if one wanted to—the real question is whether anyone will use it.
+
+The different proprietary regimes that prevail in the software and
+biotechnology contexts are important to consider in answering this
+question. Both software code and biotechnology innovations are
+protected under a mixture of licensing systems , but the primary one
+in software is copyright, whereas in biotechnology it is patents. The
+cost of patent protection can be substantial, whereas copyright
+protection arises automatically and without cost to the owner. Also,
+patent fees are usually at least partly recovered from licensees under
+the remuneration clauses in a proprietary license.
+
+Second, standardized licenses appear to be important for keeping
+transaction costs low in open source software, but this approach may
+be less applicable outside a digital context. Biotechnology
+innovations are far more diverse in terms of composition than
+software, which is essentially non-physical and instantly
+reproducible. Defining rights in living biological materials, given
+their capacity for self-replication and mutation, is difficult.
+Determining what constitutes an improvement to a licensed biological
+technology is also challenging. This aspect would be especially
+critical in open source applications. As stated earlier, open source
+licenses generally require that improvements to the technology be made
+available to the other users. Naturally, this is far more difficult
+when the medium is biological matter, as opposed to digital
+information.
+
+To explore how open source might translate into the biotechnology
+context, it is necessary to characterize it in terms of generalized
+principles, as distinct from software-specific features. Although it
+is becoming a popular subject of study for people in many disciplines,
+no unifying principle has yet emerged as the dominant approach. I have
+chosen to view open source development through the lens of a
+relatively new theory from the field of innovation management, known
+as [[User Innovation Theory]]."
+(http://groups.google.com/group/diybio/browse_thread/thread/93a354079b5bfdbb/e0a42d0823a87604?pli=1)
+
+See also: http://rsss.anu.edu.au/~janeth/OSBiotech.html and [[Open Source Biotechnology]]
+
+=More Information=
+
+#[http://www.shlomifish.org/philosophy/computers/open-source/foss-licences-wars/ FOSS License Wars]: This article gives an overview of the various options in picking up a licence for one's Free and Open Source Software (FOSS) project, and tries to give some guidelines choosing one.
+#The [[Creative Commons]] Licenses
+#The [[Free Content Definition]] Framework
+#The alternative [[IANG License]]
+#The Oekonux point of view on open licenses, by Stefan Merten, at
+http://en.wiki.oekonux.org/StefanMerten/LicensesAsSeenFromAnOekonuxPerspective
+
+Legal overview:
+
+* American Bar Association. An Overview of "Open Source" Software Licenses. Undated. http://www.abanet.org/intelprop/opensource.html
+
+=Key Books to Read=
+
+'''Open Source Software Law. by Rod Dixon'''
+
+Provides a broad introduction to the area of software licensing in the information age. Helps professionals and students to understand the basic philosophy and key issues of open source license. Explains the legal framework that has been developed to support the increasingly popular Internet-based open source and free software community.
+
+
+Kennedy, Dennis M. '''A Primer on Open Source Licensing Legal Issues''': Copyright, Copyleft and Copyfuture. Available at http://www.denniskennedy.com/index.htm.
+
+[[Category:Encyclopedia]]
+
+[[Category:Resources]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Open]]
+
+[[Category:Licensing]]

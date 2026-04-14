@@ -1,0 +1,286 @@
+=Proposal=
+
+Source: '''Whitepaper: Open Climate. Leveraging blockchain for a global, transparent and integrated climate accounting system'''. By Martin E. Wainstein.
+
+([https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LqvHPFhbHQiZy9q1yA0%2F-LspI8pHHJj72pPqqOlM%2F-LspIEV5N2P98gqsHxTK%2FWhitepaper_OpenClimate.pdf?])
+
+
+==Six project pillars: guidelines for success in the application of blockchain for global climate accounting==
+
+By Martin Wainstein:
+
+"We propose the Open Climate platform and system based on 6
+key pillars. These pillars constitute critical insights derived
+from a landscape research and analysis of what constitutes
+success in the blockchain and climate intersection, briefly
+presented in section 1. These insights have been translated to
+the main design guidelines and features of the system. From
+these 6 pillars, we have defined the 5 climate dimensions that
+the project’s scope encompasses, and the 4 integrated layers
+that the software development effort comprises. This section
+describes the pillars, dimensions and layers of the project.
+
+Figure 2 provides a graphical abstract of this outline
+
+These pillars can be understood as the underlying
+assumptions of the project based on our accumulated
+research, as well as their accompanied resulting guidelines
+that have been considered in the project’s scope and
+architecture. The pillars are therefore presented here as a set
+of pairs; the insights about what the system should have the
+capacity to do, and the resulting features that our current
+prototype development includes. 
+
+
+These pillars are:
+
+===1. Consensus on the physical state of the planet=== 
+
+> '''[[Earth Ledger]]'''
+
+The main insight of this pillar has already been laid out above
+in section 1.1. There needs to be a clear distinction between
+the physical planet and the political world. The need for
+consensus of the Earth’s ecosystem state and key ‘vital signs’
+are three-fold. First, a robust and scientific consensus needs to
+dispel any post-truth or climate skepticism from the general
+public, it needs to clearly record ‘the facts.’ Second, this data
+sets the baseline for all science-based climate targets from
+state and non-state actors. It also facilitates the evaluation of
+the aggregate effect of climate actor’s collective efforts. Finally,
+an established immutable value on a distributed ledger can be
+used for smart contracts to automate certain processes that
+need to be based on physical metrics. For example, a smart
+contract can deterministically tie carbon pricing to the
+remaining planetary carbon budget relative to a 1.5oC target
+using on-chain records.
+
+This pillar is translated in the concept of an Earth ledger.
+Section [3.1] describes the architecture and process flow to
+operate a decentralized carbon budget accounting
+mechanism, involving global CO2 internet-connected sensors,
+multi-source oracles, integrated assessment models, and
+Earth system governance to manage uncertainty ranges. While
+we focus here on the carbon modules of the Earth ledger, this
+is but one of many modules to consider. A natural extension of
+it could include the tracking of all planetary boundaries
+(Rockstrom et al., 2009)."
+([https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LqvHPFhbHQiZy9q1yA0%2F-LspI8pHHJj72pPqqOlM%2F-LspIEV5N2P98gqsHxTK%2FWhitepaper_OpenClimate.pdf?])
+
+
+===2. Seamless inclusion of state and non-state actions=== 
+
+> '''Nested accounting'''
+
+Also outlined in section 1 is the importance of the capacity of
+a global climate accounting system to combine both
+commitments, actions and politics pertaining to nation-states,
+as well as those from all NSAs. This feature needs to be
+achieved without any risk of double counting, which happens
+to be one of the main values of distributed ledger technologies.
+This integration should be designed to take advantage of
+positive feedback loops involved in a win-win dynamic
+between state and NSA. Namely, accounting the actions of
+NSAs lessens the climate burden of the national governments,
+thus fostering federal incentives to support NSAs actions and
+the capacity building to utilize the same accounting
+methodologies. With incentives and motivation, NSAs can
+mobilize the lion share of capital required in finance the
+climate transition. Conversely, if an elected government from
+a nation-state loses track of scientific facts and shows
+minimum signs of planetary stewardship, a mechanism that
+incorporates NSA accounting can enable a country to maintain
+a paris-consistent track irrespective of the federal position. A
+clear example of this dynamic is seen with the Trump
+administration of the United States of America in regard to the
+potential pullout of the Paris Agreement, which lead to the
+immediate NSA backlash in the form of the #WeAreStillIn
+coalition.
+
+This pillar is translated in a proposed protocol to automate
+nested accounting of climate actions. This means that, for
+example, the mitigation certificates generated and retired by a
+forest conservation project developed by a private actor
+would automatically be included in the fulfillment of climate
+commitments of the subnational actor (eg. the province or
+region in which the project or company is located), and
+subsequently the nationally determined contribution of the
+involved country. If the mitigation certificates are sold from
+the private developer to a company incorporated in a different
+jurisdiction —and are retired by the buying actor— then,
+subject to countries approval, the accounting of those actions
+would fall under the nested scopes involved in the buyer’s
+jurisdiction. A nested accounting mechanism essentially
+operates the guidelines laid forth in article 6 of the Paris
+Agreement. Section 3.2.2 describes the architecture and
+process flow of this proposed features.
+
+
+===3. Linking of all climate related information with financial value mobilization=== 
+
+> '''5 integrated climate domains'''
+
+One of our analysis’ main insight is that one of the most
+important values of blockchain and related technologies to
+climate accounting is the capacity to integrate multiple
+climate-related records with financial capital. Leveraging the
+financial technology aspects of blockchains and smart 
+contracts can automate rules for deploying financial capital
+under positive feedback loop dynamics. In other words,
+different climate accounting aspects —which includes Earth
+data records, commitments of actors, the tracking of their
+progress, the minting of certificates attesting to their tracked
+action, and the transactions associated to the trading of these
+certificates— have dynamic influences between them, and the
+collective supply chain of this climate value information must
+inform and directly drive climate finance. This allows the
+application of smart contracts and digital finance to directly
+link capital with climate value in a low-cost a frictionless way.
+
+This can either take the form of tax burdens or pricing
+associated to negative climate value, and capital financing and
+rewards for positive climate value creation.
+
+This pillar is translated in a significantly broad scope of the
+project, involving the proposed direct linking of 5 different
+climate domains. These domains are: the Climate System (the
+physical dimension), Climate Agreements and their Actors
+(the political dimension and required registries), Climate
+Assets (the certifications of actions), Climate Markets (the
+networks and rules for transacting those assets) and Climate
+Finance (the mobilization of capital to finance climate value).
+
+Figure 3 shows a metadiagram of this multi-domain
+integration of climate aspects that can be associated to ledger
+records. This concept supports the proposition of using a
+‘ledger of ledgers’ and smart contracts to orchestrate a
+positive system dynamic of finance and information flow. In
+fact, the metadiagram in figure 3 conveys the scope of the open
+climate project and the incorporation of pillars 1 to 3.
+
+
+===4. Intuitive and accessible user interface covering all aspects of the system=== 
+
+> '''Open climate portal'''
+
+Blockchain, distributed ledgers and smart contracts are
+intricate concepts for the general public. Key climate data and
+actor’s action progress and accountability are scattered in
+different platforms, making it hard for both key stakeholders
+and general public to keep track of. As such, this pillar’s main
+insight is the value of a one-stop-shop portal that can connect
+all meaningful climate accounting records and functions under
+the same user interface.
+
+A single portal does not necessarily go against the
+decentralized nature of the project. Front-end software
+technology through the use of APIs, block explorers and secure
+credentials, can act as portals to an underlying network with
+multiple platforms and blockchain ecosystems, and allow
+logged in users to operate climate functions (eg. accounting,
+reporting, trading) hosted in different platforms but accessed
+through the same interface. Having the capacity to do this
+reduces reporting fatigue from actors that require compliant
+processes, simplifies user experience through intuitive
+processes and provide a main function for climate
+transparency and visibility. As an example, technological
+improvements in user experience have made the preparation
+and filing of annual tax returns an accessible process for
+layman citizens in the United States (eg. with the use of the
+Turbo Tax software).
+
+This pillar is translated in the creation of an open source frontend platform with special focus on intuitive user experiences
+in the whole array of climate accounting functionality. 
+
+Figures 5 and 6 shows examples of the growing number of screens
+with multiple functionalities in the project’s front-end efforts.
+
+
+===5. Capacity to interoperate between legacy and emerging technology climate platforms=== 
+
+> '''Platform of platforms'''
+
+As mentioned in section 1, blockchain applications in the
+climate space should not try to replace existing climate
+accounting frameworks but rather build on top of them to
+drive higher levels of efficiency. Furthermore, the distributed
+ledger technology space is characterized by a high levels of
+entrepreneurial spirit and initiatives. If these are to directly
+compete against each other with a zero-sum mindset, then the
+capacity for having a unified climate accounting system is
+reduced. In other words, the world would not benefit from
+multiple carbon ledger systems that cannot interoperate with
+one another. The planet’s atmosphere is still a single limited
+space where all free greenhouse gases reside. Therefore, an
+open climate system needs the capacity to involve both
+existing legacy climate registries, platforms and databases,
+with blockchain based environments that subsequently
+should interoperate and reconcile records between each
+other.
+
+This pillar is translated into the effort of generating a platform
+of platforms (or PoP). Figure 4 shows the role that this PoP has
+as a middle layer between legacy and blockchain system,
+integrating them through protocols and APIs, and
+representing the collective in the user’s interface.
+
+
+===6. Open source and radical collaboration=== 
+
+> '''Consortium initiative towards a decentralized autonomous system'''
+
+Last but certainly not list, the sixth pillar guiding this project
+posits that the most important innovation the project should
+focus on is not just what needs to be built, but how. This points
+to the social innovation of driving software and solution
+architecture development through a mindset of radical
+collaboration, which puts forward a paradigm of unity among
+all planetary stakeholders, rather than a mindset of
+competition, which strengthens a paradigm and illusion of
+separation. This is perhaps the most challenging aspect of the
+project since modern innovation and technological progress
+has been driven by the latter mindset and zero-sum dynamics.
+The challenge of climate change and its irreversible erosion of
+planetary resilience is perhaps the ultimate opportunity to
+mobilize our mental structures. As such, a global climate
+accounting system needs to have a strong foundation on open
+data and open source software. A shared platform and its
+constituent parts need to represent an ecosystem of digital
+public goods for the global commons. This does not negate, yet
+indeed challenges, the use of commercial business models.
+Open source protocol layers can be compatible with
+proprietary software built on top of it, but innovative business
+models need to be introduced to allow developers and 
+organizations to have the financial sustainability to operate
+and maintain such a system.
+This pillar translates not only into the open source publication
+of the Open Climate platform’s software, but on the
+development of a growing network of constituent platforms
+that can use a consortium model and open innovation
+framework to govern the initial development process. Part III
+fully focuses on this aspect and pillar. Furthermore, once an
+Open Climate PoP and system achieves the technological
+readiness to operate at a global level, the project has the
+intention to be released as a decentralized and autonomous
+organization.
+
+Perhaps one of the most powerful inventions underpinning
+the bitcoin network, which catalyzed the blockchain
+movement, is the fact that what was created was fully
+emancipated from the hand of the creator (i.e. Satoshi
+Nakamoto). This motivates the development of truly
+decentralized systems that require innovative governance
+schemes. An Open Climate platform and system, should be
+driven by a mechanism of Earth system governance that can
+tap into collective intelligence, rather than one centrally
+managed by a powerful few."
+([https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LqvHPFhbHQiZy9q1yA0%2F-LspI8pHHJj72pPqqOlM%2F-LspIEV5N2P98gqsHxTK%2FWhitepaper_OpenClimate.pdf?])
+
+=More information=
+
+* [[OpenX Platform for Contractual Automation for P2P Project Finance of Climate Actions]]
+
+[[Category:Thermodynamic Efficiencies]]
+[[Category:Cryptoledger Applications]]
+[[Category:Ecology]]
+[[Category:Global Governance]]

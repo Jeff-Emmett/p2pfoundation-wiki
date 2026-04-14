@@ -1,0 +1,148 @@
+
+
+'''= Cmacc - Legally enabled Crypto-Transacting: turning smart contracts into legally enforceable contracts'''
+
+URL = http://commonaccord.org [http://beta.commonaccord.org/wiki/Main_Page wiki]
+
+"CommonAccord is an open, collective and international effort for the standardization of law. We propose a collaboration to organize members of a global network of websites of legal content."
+
+=Description=
+
+'''1. Primavera de Filippi:'''
+
+"CommonAccord plans to "open source" and automate the drafting of legal documents by creating a global template system of codified legal texts (i.e. something akin to the Incoterms rules for commercial transactions).  The goal is to make the documents so modular that much of the text disappears, leaving parties with only specific deal points and clear relationships.  These relationships can be 'rendered' at any time into full legal documents, for verification and enforcement. Technically, this is a data-model for text, an extremely simple and expandable data-model that consists of a series of nested lists that render into texts. The texts can be improved, extended and forked by the community. As such, CommonAccord is expected to play the same role in facilitating and accelerating collaboration on legal texts as git has played for code."
+
+
+'''2. Website description:'''
+
+"CommonAccord is a public website of legal materials intended to become a legal code for transactions in business, with government and in litigation. Fulfilling the goals of the Uniform Commercial Code and Napoleonic Code by open source methods – iteratively, rapidly and precisely.
+
+Internationally, it is anticipated that each jurisdiction will foster it’s own website. These sites will interoperate with one another and with materials created by participants, trade groups and other publishers.
+
+CommonAccord is based on collaboratively programmed documents. Parties privately define deal points and negotiated terms that rely on public or private forms and boilerplate.  Participants can work simultaneously on different parts of a document without conflict or confusion.  Versions are a chain of time stamped edits, each referencing the prior one.
+
+Because the lists are labeled and linked to one another, everything can be immediately found. Paperwork can be automated reports, alarms and workflows established, best practices evolved, drafting aided, results predicted. The system learns with each use."
+
+
+'''3. David Bollier:'''
+
+"This is a fledgling project that is attempting to apply open source principles to the inefficiencies and costs of conventional lawyering. The goal is to decentralize the writing of legal documents and empower users by developing a massive global inventory of standard legal forms, libraries of legal clauses and specific use-cases in civil law.  The many modular elements can then be mixed-and-matched by users to apply to their specific needs.  Specific legal modules would be rated, annotated and commented up by recognized legal experts, in an open-source fashion, helping to provide a measure of credibility and trust in the legal draftsmanship of legal documents.  
+
+While the system would not necessarily eliminate the need for a real lawyer in a given situation, it could automate, simplify and reduce the legal costs for many standard commercial and civil transactions. Common Accord is also involved in devising machine-readable legal consent forms for contributors to peer production projects, such as open source software projects, data sharing by municipalities, patients who share their genetic information with hospitals and pharmaceutical companies, and musicians eager to collaborate on collective pieces of music. Such collaborations are often plagued by legal terms that favor the data-using institutions and by incompatibilities among national legal systems and digital technical standards."
+
+=Examples=
+
+* Marc Dangeard, how we use CommonAccord at Be-Bound:
+https://www.linkedin.com/pulse/law-code-marc-dangeard
+
+
+Examples of use cases (switch between “Document” and “Source” to see the model in action)
+
+* Frameworks of trust: NDAs; Master Agreements
+
+* Licenses; Contribution Agreements
+
+* Crowd-funding (Eris Assurance contract)
+
+See, e.g., CommonAccord version of a model contract [http://my.commonaccord.org/index.php?action=doc&file=/License/CR/Harmony/Form/Combined.md]; patient consent forms; [http://ga4gh.commonaccord.org/index.php?action=list&file=Demo]; and [[Municipal Data Sharing]]. [http://datashare.commonaccord.org]
+
+=Status=
+
+Via James Hazard:
+
+"The [http://swarm.commonaccord.org Swarm Common Accord]] was started by Joel Dietz and James Hazard.
+
+Commonaccord is a commons for legal documents, a kind of Civil Code 3.0, on GitHub, and compatible with P2P transacting systems such as blockchain.  Primavera de Filippi did the software code and Marc Dangeard is using it in his company.
+
+I put the License in at http://swarm.commonaccord.org/index.php?action=list&file=./Swarm/, along with some documents we did before. 
+
+The Participatory Orgs LLC agreement, which Joel sent my direction earlier, is now also in this repo, at http://swarm.commonaccord.org/index.php?action=list&file=./LLC/Form/."
+
+
+=Discussion 1=
+
+Primavea de Filippi:
+
+"CommonAccord’s list-based template system provides a flexible, robust format for codifying and rendering legal texts from code.  
+
+This can be achieved in at least two ways:
+
+
+===Manual Matching===
+
+CommonAccord’s framework can be used to produce a legal document (whose torrent/hash can be incorporated into the blockchain as a proof of existence) to tie every smart contract to a real world one. Through inheritance, CommonAccord’s data model can express any smart contract as simple nested lists that can be rendered into legal documents, according to the selected jurisdiction and circumstances.  This is a manual process that requires matching the prototype of the smart contract with the specific CommonAccord template that goes along with it.
+
+
+
+===Automated Matching===
+
+CommonAccord’s framework can be used as an API that returns matching snippets of code (both legal and technical code) whenever someone submits a request for a particular template, together with the necessary parameters requested by the template. This requires creating a database of independent ‘contract modules’ linking standardized code-snippets to their corresponding contractual provisions, which can be combined together into a collection of ‘contract-type templates’ (i.e. documents instructing how these modules can or should be incorporated into either a smart contract or a legal document).
+
+Traditional contracts often share common "boilerplate" elements, and smart contracts are no different. CommonAccord’s inheritance system enables code reuse; this provides more convenience, as well as increased legal certainty. Many contracts will have relatively simple and easy to understand logic built on top of well-known and widely used modules. Modules could encompass basic functionality, or more advanced features such as a standard auction, escrow, or bond implementation. 
+
+The goal is to implement a modular template system which, after having been fed with specific parameters, can be rendered into both technical ‘dry’ code (i.e. self-contained code snippets) and legal ‘wet’ code (i.e. specific contractual provisions translating the code snippets into legalese) whose overall structure can be established directly through the CommonAccord template system. 
+
+Ideally, this would allow for the dynamic creation of sophisticated and highly customized smart-contracts, which are automatically rendered into a legal document enforceable between the parties. 
+
+Of course, both versions of the contract - the smart-contract, written into code, and the legal contract, written in human language - should cross-reference each other. The legal contract should include a reference to the smart-contract code (i.e. its blockchain address), whereas the smart-contract should incorporate a reference to the hash of the digitally-signed legal document, which should remain available on a decentralized storage system (which can be either public or private, according to the confidentiality rules). Those two versions may differ in certain regards. While there should be a 1:1 correspondence between the code and the specific template texts, the relationships established between these templates are uniquely defined in the code. As a result, the code version might be extremely unambiguous, but the generated legal text less so.
+
+The question therefore arises as to which version should be relied upon in court in order to settle a dispute between the parties. Considering the current courts’ inability to understand computer code,  it will most likely be the legal document. Yet, although it might be ignored at first, incorporating a reference to the smart-contract into the real-world legal contract might - in the long run - expand the opportunities for smart-contract enforcement, insofar as it might lead courts to consider the smart-contract code as evidence of how the legal contract should be effectively construed."
+(https://docs.google.com/document/d/1jm9t61JnqLqsV50cD9Mzwyu8cXWRmVFaI2XK-UaFggk/edit)
+
+
+=Discussion 2=
+
+==A proposal from CommonAccord==
+
+Reinforcing Legal Institutions and the Rule of Law through Peer-to-Peer Transacting
+ 
+Project Summary, Draft 2015-06-15 - 1.0 .2
+ 
+ 
+Many legal systems are weak, slow, expensive, captured or corrupt.  The costs - economic, democratic, environmental and human - are enormous.
+ 
+Many of these failings can be addressed by a combination of (1) peer-to-peer, mobilephone-enabled transacting, (2) source-code-based handling of legal text (CommonAccord) and (3) participation of industry via procurement and of NGOs via development support.
+ 
+1) There are a number of online transacting platforms that support e-signature and e-payment.  These include new models such as the "blockchain" based P2P systems, and established ones such as telecoms-based payments.
+
+Any system that permits inclusion of a text of roughly 50 characters (a hash) can be used to securely sign documents, as well as make payments. 
+
+
+2) By handling text like source-code, it is possible to:
+
+* Securely connect the online signatures and payments to full-text versions of documents.
+
+* Provide stock solutions.
+
+
+
+3) Create a dynamic of continuous improvement of text.
+
+This is a good fit with well-established legal institutions and principles
+
+Party autonomy in contract is widely recognized.  The autonomy is always bounded, but as a practical matter the parties have great latitude to adopt legal frameworks.  This is P2P legislation.
+
+Their autonomy extends into dispute resolution - arbitration is widely recognized and part of treaty obligations in many countries.  P2P judiciaries.
+
+The missing element, the executive function, can be provided by supply chains, NGOs and national and local governments.
+
+Companies and consumers care about where and how their goods are sourced.  Companies need to ensure compliance along the entire supply chain to ensure maintenance of their reputations and legal compliance.
+This requires documentation that reaches across the chain.  There are currently efforts to automate the documentation of the entire supply chain.  This can be extended to enable a form of P2P local governance.
+
+NGOs can also both help and be helped.  They can help via relationships with local authorities that have an interest in reducing delays, legal insecurity and corruption.  The national authorities can establish legal forms and reporting mechanisms, run dispute resolution and manage the system.  The NGOs can coordinate with the national authorities. "Landline" legal systems can leapfrogged like landline telephone services were.  GPS-based land registry systems for informal town provide a paradigm.
+
+NGOs can be helped because they, too, suffer from delays and uncertainty.  This can be particularly acute in a crisis, when they can face acute administrative bottlenecks.
+
+Contact: contact@commonaccord.org; @commonaccord; james.g.hazard@gmail.com
+
+=More Information=
+
+* source document from Primavera de Filippi: [[	Legal Framework For Crypto-Ledger Transactions]] [https://docs.google.com/document/d/1jm9t61JnqLqsV50cD9Mzwyu8cXWRmVFaI2XK-UaFggk/edit]
+
+* For more details on the CommonAccord data model, see:
+http://commonaccord.org and http://beta.commonaccord.org/wiki/Main_Page.
+
+
+[[Category:P2P Law]]
+
+[[Category:Law and the Commons Project]]

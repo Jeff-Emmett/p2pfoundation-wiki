@@ -1,0 +1,174 @@
+
+
+=Context=
+
+Trent:
+
+"Software commons are an increasingly important part of our daily lives. The people and frameworks involved are able to provision novel goods outside of the state/market dichotomy.
+
+Not all software commons will experience the same enclosure dynamics. Those that do can still exist and thrive in spite of it - perhaps it only becomes problematic when the scale of extraction becomes too large relative to the rest of the commons. It remains to be seen whether this conflict is an unavoidable early phase of commons bootstrapping or perhaps this will be a site of ongoing ever-increasing conflicts between the two modes.
+
+It’s also possible for capital and the people wielding it to exercise restraint i.e. “dont kill the golden goose.” The underlying motivation (e.g. build a moat now to profit in the future) will eventually surface.
+
+Linux is an ongoing demonstration of the possibilities and challenges involved in software commons stewardship. At the start of our own work, the Ethereum community should better develop a critical understanding of capital’s interest.
+
+Today, the protocol community is largely aligned on the vision for near-term Ethereum. Layer 2 teams are a crucial component to making this work, and should be celebrated. In the future, will the different parts of the community agree on the right path forward?
+
+Do native forms of capital embedded in resource production give a better ability to modify negative externalities? Or does it supercharge incentives for external capital to enter and co-opt the resource production system over time? How can we develop better heuristics for thinking about this challenge and developing safeguards?
+
+There are decision-making norms which try to privilege the health of the network commons against apathy and “death by a thousand capital cuts”. As the number of profit-seeking stakeholders inevitably increases, will this always be the case?"
+
+(https://trent.mirror.xyz/GDDRqetgglGR5IYK1uTXxLalwIH6pBF9nulmY9zarUw)
+
+
+=Characteristics=
+
+Trent:
+
+"The Ethereum commons produces a body of software artifacts which can come to consensus on the output of EVM computations run in globally distributed environments. This is a collective snapshot of what the Ethereum protocol is today and what it might look like in the near future. It reflects the values of its contributor set, is available for anyone to explore, and open source.
+
+
+This includes the client software which can read and write to EVM state. Each Ethereum client implements the spec with opinionated decisions on the language, features, database, research areas, and more:
+
+* Execution layer - Erigon, Besu, Geth, Nethermind, Reth, EthJs
+
+* Consensus layer - Lighthouse, Lodestar, Nimbus, Prysm, Teku
+
+
+While many of the full-time contributors to each project are paid by a commercial entity which acts as the “host,” the set of contributors is typically broader than just the entity itself. The diversity of client approaches is the product of and reinforces the norm of political polycentrism. In an ideal case, there is a healthy distribution of many client types. This produces a more technically robust, fault-tolerant network. For example, a client in a new language opens a path to Ethereum contributions for any developer in that community, while also providing protection against issues that might appear in other languages.
+
+
+'''Constraints - ACD, EIPs, Specs'''
+
+In addition to OSS norms found in the Linux Commons around respecting licenses and collaborative efforts, the Ethereum community holds shared values:
+
+* censorship resistance: including both accessibility for users, and decentralization for the network
+
+* autonomy/self-determination
+
+* permissionlessness
+
+* privacy advocacy
+
+
+Venues like the All Core Devs call, Eth R&D Discord, ethresear.ch and Ethereum Magician’s forum host discussions for a globally distributed contributor set. Participants are able to build consensus around which particular changes are of highest priority.
+
+The EIP process structures the way changes to the protocol are specified
+
+Ethereum Execution Layer Specification (aka EELS), Consensus Specs, Yellow Paper, Ben Edgington’s Upgrading Ethereum: specifications and related items are an important set of artifacts which steer how the protocol develops and describes itself. They range from the purely representational to functional testing components and are used at various points in the network upgrade process. This library of references is a key enabler for Ethereum’s robust offering of 10+ unique clients which can all interoperate within this distributed system
+
+Social Dynamics: '' there is '''no single leader'''. Even though Vitalik’s opinions do hold significant weight, he has largely stepped back from regular involvement in core protocol stewardship. He doesn’t have any override power if social consensus disagrees with his perspective''.
+
+
+'''Embedded capital engines'''
+
+Perhaps most significantly: the Ethereum commons has capital circuits directly embedded within itself at the level of production. Monetization/productization /commodification isn’t added later by an independent company (as in Linux): the software is birthed with perpetual incentives.
+
+Proof of Work consensus depended on financial incentives, and Proof of Stake introduced an even more direct relationship between capital and consensus. This area of the protocol also sees growing engagement from extra-protocol actors (e.g. commercial staking services, liquid staking providers, restaking systems, etc), each with their own incentives.
+
+The native asset ether (ETH) is used to pay for state changes, and to reward validators for participating in consensus which advancing the chain. While Ethereum’s lack of onchain governance prevents capital having a direct voice (in the form of ETH) in stakeholder decision making, the asset holders may try to steer the protocol down suboptimal paths.
+
+Blockspace (and any associated MEV) can be considered a separate infrastructure/resource supply chain
+
+In the perspective of this article, the embeddedness of capital feels contradictory, and potentially counterproductive to commons stewardship. There’s a universe of possibilities, with two defining frames:
+
+Capital and the protocols/parameters it manifests as are ultimately subject to the influence of the software commons contributors. This allows for a healthy counterbalance to any influence capital is able to exert through the actors engaged in these systems.
+
+The close proximity causes unforeseen challenges to ongoing protocol stewardship. Capital creates more instability, unpredictability, and faster (and more complete) enclosure in the underlying commons.
+
+...
+
+The broader Ethereum commons includes producers and consumers of EVM blockspace:
+
+Projects which modify the commons software to produce additional differentiated instances of EVM state/history/blockspace eg. other L1s, L2s
+
+Users transacting
+
+Applications developed by teams create demand
+
+A broad array of entities are implicated in this production process because of how they share resources and constraints:
+
+* They must share code, software, information: all actors are building off of the EVM
+
+* They might share the labor of individuals. Their efforts may shape the core protocol to benefit all other blockspace producing/consuming actors (eg. EIP 4844) or in the degenerate case, a single L2 trying to influence protocol decisions in their favor. The overlaps are illustrative and do not generalize to every occurrence of the type.
+
+* They might share norms on how to produce/steward the software.
+
+* They might share the same blockspace/state/history: network-bound state. This enhances the anti-rival characteristics of the resource.
+
+#Independent EVM chains e.g. L1 Y. there is no blockspace relationship
+#EVM chains which have (or are working towards) trustless guarantees for passing state between them (canonical bridges) - L2 A, L2 B. They consume state on the Ethereum L1
+#Applications creating demand for blockspace
+#Individuals consuming blockspace
+
+To engage with the Ethereum software product, all of these actors are required to step outside of their immediate domain. Practically, this means they can’t ever have exclusive control over the underlying software production or the resulting blockspace."
+
+(https://trent.mirror.xyz/GDDRqetgglGR5IYK1uTXxLalwIH6pBF9nulmY9zarUw)
+
+
+==Potential pathways for Ethereum's enclosure==
+
+Trent:
+
+"I’d like to preface this section with some caveats.
+
+It’s possible for companies to share the values of the Ethereum commons. Companies are not default evil, and neither are companies with differentiated revenue streams. It’s just that the fundamental goals of capital and the commons are incompatible.
+
+Though money/assets/resources will always be part of the commons management process - its effects are most strongly felt when it’s seeking a return.
+
+A large multinational corporation has projects adjacent to but outside of the commons. They acquihire the team building a Layer 2, which gives them access to the political/social relationships which comprise the Ethereum software commons.
+
+Superficially, the goals of capital and the commons may seem coincident as “grow the impact of the blockspace product/system.” In the short term, and as expressed by individual actors, this may actually be true! However, on longer timelines these goals are ultimately conflicting in terms of who the benefits accrue to, and in what form.
+
+
+'''The commons asks: How can the benefits/assurances of the system be scaled to the largest public?'''
+
+# Lowering barriers to verify state validity (running a node)
+# Lowering barriers to produce blockspace (validating, censorship resistance)
+# Lowering barriers to consume blockspace (permissionless user access, censorship resistance)
+
+
+'''Capital asks: where can private benefit be extracted?'''
+
+# Inserting into/extracting profit from state verification (explorers)
+# Inserting into/extracting profit from blockspace production (MEV, hosted validation)
+# Inserting into/extracting profit from blockspace consumption (user experiences, products)
+
+There are constraints on what capital can do in pursuit of these goals, including to what degree and by what methods. (how easy it is to fit to the capital entities chosen form):
+
+Isolated entities cannot fully enclose blockspace production systems without compromising crucial characteristics, ie. availability, credible neutrality, censorship resistance.
+
+The EVM ecosystem shares the same public/private key infra, making user lock-in to a particular product less feasible - this increases user agency.
+
+Relative to Linux, the EVM ecosystem is a public system that lends itself to decomposition of the blockspace production stack, aka “protocol surface area”. This makes it harder for any single capital entity/small groups to dominate (absent cartelization) over longer timelines. Ultimately, “big C” Capital benefits even when projects fail to build profitable product and cycle out of the ecosystem.
+
+In the same way the expanded commons takes on some of the constraints, any systems integrating/layering on top have to be designed in a particular way. Both technically and legally with regard to OSS licenses.
+
+Relationships between blockspace (e.g. L1 and L2) cannot be broken without fundamentally changing the nature of the blockspace.
+
+Given these limits, capital may turn to commons governance (i.e. any future protocol changes, aka the “process”) to give voice to its interests. 
+
+
+This may materialize as:
+
+* Commercial entities competing between each other (e.g. Layer 2s, investment firms) to influence the shape of the core protocol features to their benefit/ their portfolio companies’, or to prevent others from benefitting.
+
+* Larger companies hosting client teams in order to access/leverage their local knowledge/position in the commons production. This can be either by permanently acquiring a team, or short-term consulting.
+
+* Legacy organizations looking to stay ahead of obsolescence (e.g. web2 dipping its toes into web3) or to create regulatory moats.
+
+
+There are downsides to this:
+
+* Capital biases towards speed, not long term sustainability. Timelines shorten to match the short-term benefit of actors, rather than the long-term benefit of the broader commons and the public welfare it is capable of producing.
+
+* Commons stewardship which leans too heavily on the presence of capital (extrinsic motivations) risks crowding out other intrinsic motivations (e.g. vibes, respect from peers, challenging oneself).
+
+(https://trent.mirror.xyz/GDDRqetgglGR5IYK1uTXxLalwIH6pBF9nulmY9zarUw)
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Commons Infrastructure]]
+
+[[Category:Crypto Governance]]

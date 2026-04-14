@@ -1,0 +1,105 @@
+'''= The OS (OpenStructures) project explores the possibility of a modular construction model where everyone designs for everyone on the basis of one shared geometrical grid.''' It initiates a kind of collaborative Meccano to which everybody can contribute parts, components and structures.
+
+URL = https://openstructures.family/ [http://openstructures.net/]
+
+
+=Context=
+
+'''1. Introductory Citation by Thomas Lommée, the creator of OpenStructures:'''
+
+"While eBay provides a circulation of objects, and cradle-to-cradle provides a circulation of materials, modular construction systems provide a circulation of parts and components. Our ambition is to create puzzles instead of static objects. The system should generate objects of which it is not entirely clear anymore who designed them. An object evolves as it is taken in hands by more designers." (http://www.lowtechmagazine.com/2012/12/how-to-make-everything-ourselves-open-modular-hardware.html)
+
+'''2. KELSEY CAMPBELL-DOLLAGHAN:'''
+
+"The move towards DIY digital fabrication--from MakerBot to Fab@Home--is an undoubtedly great development for consumers. But one thing it’s missing is a standard system for modeling and exchanging components. If 10 people upload a design for a replacement bolt for a chair, odds are you’ll get 10 slightly different designs. While the world has the International Organization for Standardization (ISO) devoted to regulating specifications, tolerances, and standards of consumer goods, the digital fabrication community is fractured when it comes to a universal standard.
+
+Enter OpenStructures, a Belgian project that aims to establish a standard grid for developing and sharing models."
+(http://www.fastcodesign.com/1671068/an-open-source-kit-of-parts-for-making-any-gadget-from-scratch#1)
+
+
+=Description=
+
+"The OpenStructures (OS) project initiates a construction system where everyone designs for everyone.
+
+It is an ongoing experiment that wants to find out what happens if people design objects according to a shared modular grid, a common open standard that stimulates the exchange of parts, components, experiences and ideas and aspires to build things together."
+(http://openstructures.net/pages/2)
+
+=Details=
+
+Kris De Decker:
+
+"The first basic rule of OpenStructures is shared with Grid Beam and similar systems: all parts are connected to each other in such a way that they can be easily disassembled, using bolts and screws rather than nails or glue. However, the OpenStructures design "language" is different: it is based on the OS Grid, which is built around a square of 4x4 cm and is scalable. The squares can be further subdivided or put together to form larger squares, without losing inter-compatibility. The illustration below shows nine complete squares of each 4x4 cm put together.
+
+The borders of the squares mark the cutting lines (which define the dimensions of square parts),  the diagonals determine the assembly points, and the circles define the common diameters. As is the case with LEGO, any modular part has to comply with at least one of these conditions in order to be compatible with other parts. Either the dimensions have to correspond with the horizontal and vertical lines, or the assembly points should be spaced according to the grid, or the diameters should be similar. 
+
+...
+
+
+While this set of rules is more sophisticated than that of the Grid Beam system, complicated it is not. Nevertheless, it allows for the design of a much larger variety of objects, not just square or rectangular frames. Over the course of five years, OpenStructures has yielded objects ranging from household devices to cargo bicycles, suitcases and furniture."
+(http://www.lowtechmagazine.com/2012/12/how-to-make-everything-ourselves-open-modular-hardware.html)
+
+
+
+
+=Discussion=
+
+'''1. Glyn Moody''' on why this project is important:
+
+"If the stuff to hand isn't modular, you can't really share, because your stuff isn't compatible with other people's stuff. If it isn't modular, you can't share out tasks and scale. If you can't share out tasks, you can't have people working independently, at their own pace and in their own way, which means the project isn't really open. If it isn't modular, you can't swap in some new elements while leaving everything else untouched, which means no "release early, release often", no experimentation, no rapid evolution. Modularity is indispensable.
+
+I think that's why open source hardware has singularly failed to take off. It's difficult to make bunches of atoms modular in the way that bunches of bits are (at least until we have general 3D printers, in which case we're done...)
+
+But could there be a way of introducing that modularity at a higher level so as to enjoy the benefits outlined above? I do believe there is, and with hindsight, it was pretty obvious (er, so why didn't I think of it?). It's called OpenStructures:
+
+    
+- The ''OS (OpenStructures) project explores the possibility of a modular construction model where everyone designs for everyone on the basis of one shared geometrical grid. It initiates a kind of collaborative Meccano to which everybody can contribute parts, components and structures''.
+
+
+As you can see, the clever people behind this project have the magic word "modular" in there. Specifically, they have devised a very simple grid system that ensures that things fit together, even when they're made by different people at different times and for different purposes. Significantly, the grid is based on binary multiples and subdivisions:
+
+    
+- ''If you choose to apply the OS grid for the dimensions of a part, at least one of the measurements of this part (length, wideness and thickness or height) should correspond to either 0,125cm / 0,25cm / 0,5cm / 1cm / 2cm and multiples of 2cm in order to be compatible with other parts''.
+
+
+
+What's really impressive about this project is not just this insight into the modularity of elements, but the completeness of the vision that results. For example, there is an explicit hierarchy of elements, starting from OS Parts, which combine to form OS Components, from which are made OS Structures, and finally OS Superstructures.
+
+It's an amazing vision, and I think it could have a major impact on the world of open source hardware, at least of this particular construction-set type."
+(http://opendotdotdot.blogspot.com/2010/03/open-sources-not-so-secret-sauce.html)
+
+
+'''2. Eric Hunting:'''
+
+"In recent years a large number of Open Source hardware projects have emerged, exploring the potential of community based technical development that was once largely the province of software. Among these, some of the more interesting are those that pursue platforms or modular systems for some spectrum of uses rather than a single design or device. These seem to suggest a growing awareness of the once generally overlooked but critical paradigm that distinguished the computer and software industries from those of the past and which has been largely responsible for their exponential pace of advance; the reliance on shared technology platforms supported by global communities of alternately cooperative (in the context of interface and interoperability) and competitive (in the context of cost/performance/design) developers and manufacturers. Observing the powerful disruptive impact this has had in these industries, many are coming around to the notion of re-creating this kind of Post-Industrial revolution in other areas -with some of the greatest impact likely in its application to tools and building systems where there is a potential to realize the same kind exponential cost/performance advance in the general sphere of manufacturing and the chronically progress-resistant application of housing.
+
+The Open Structures Project is one of the more ambitious of these platform-oriented open hardware projects and it takes some of its cues from the work of designer Ken Isaacs; perhaps the first developer in modern history of a deliberately open building system known as Matrix -later to evolve into Box Beam and todays Gridbeam. There are similarities to Matrix in the basic type of framing systems OS employs with many structures, though they have gone much farther toward establishing form factor and interoperability standards across a variety of applications, materials, and types of framing. Whereas Matrix defined a modular dimensional system confined largely to the wooden beams used in construction, OS attempts to define a volumetric grid affording a volumetric interoperability for any number of structures and elements regardless of function. This is similar in nature to the Japanese 'ken' system of organization deriving from tatami mat dimensions and associated rules of proportion that was once the basis of traditional Japanese architecture. They then established databases or catalogs of components and kits/structures, all open designs, that can be combined freely into a larger habitat. These databases function as both a dissemination channel for designs as well as a market for those produced by designers as a small business.  In effect, the Open Structures system is a 'habitat platform' built on the foundation of its dimensional grid that extends from individual pieces of furniture, tools, and machines to entire complexes of buildings and potentially incorporates all the functional elements of a self-sustained human habitat. Quite an ambitious objective and, since this is still a relatively new endeavor, only a fraction of the necessary elements have so far been developed and remain largely experimental. Still, the current work is impressive and the founding group has managed to stage a number of public exhibits.
+
+Having followed OS from its earlier stages, I've noticed that this promising project has seen a somewhat slow pace of advance despite its relevance to the open technology movement. This project seems to have been overlooked by the larger Maker community in the US and Europe, perhaps because of its lower-tech nature, and, in this author's opinion, deserves much more attention even if it is not yet making home fabbers and robots. There are few others looking into things at the level of a whole habitat platform and that ambitious idea deserves more exploration."
+(via email, August 2010)
+
+
+=Tools=
+
+==The [[OpenStructures Open Modular Hardware Database]]==
+
+Kris De Decker:
+
+"First, you can request an overview of all objects that were designed based on the OS grid. The webpage for each object then shows you the parts and components from which it is made. Second, you can request an overview of all parts that were designed based on the OS grid. The webpage for each of these shows you which components and objects they could serve. Third, you can request an overview of all components. The webpage for each component shows you their parts and the objects they can be used for.
+
+The webpage for each part, component and object also gives additional information: the dimensions, the materials, the designer's name, the licence and the order information. To add to this, all parts and components receive a serial number. This means that after a modular object is taken apart, the serial number of each part and component can be entered into the database to see what else can be made with it. Missing parts can be obtained via the database: either by ordering them online, by finding the address of a shop where they sell them, or by downloading the digital design and making them." (http://www.lowtechmagazine.com/2012/12/how-to-make-everything-ourselves-open-modular-hardware.html)
+
+=More Information=
+
+#[[P2P Architecture]]
+# http://www.domusweb.it/en/design/open-source-design-05-the-esperanto-of-objects/
+
+
+
+
+[[Category:Urbanism]]
+
+[[Category:Open]]
+
+[[Category:Manufacturing]]
+
+[[Category:Design]]

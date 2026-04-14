@@ -1,0 +1,196 @@
+'''Wireless Mesh Networks''',
+
+
+=Definition=
+
+"A wireless mesh network (WMN) is a communications network made up of radio nodes organized in a mesh topology. Wireless mesh networks often consist of mesh clients, mesh routers and gateways.The mesh clients are often laptops, cell phones and other wireless devices while the mesh routers forward traffic to and from the gateways which may but need not connect to the Internet. The coverage area of the radio nodes working as a single network is sometimes called a mesh cloud. Access to this mesh cloud is dependent on the radio nodes working in harmony with each other to create a radio network. A mesh network is reliable and offers redundancy. When one node can no longer operate, the rest of the nodes can still communicate with each other, directly or through one or more intermediate nodes. The animation below illustrates how wireless mesh networks can self form and self heal. Wireless mesh networks can be implemented with various wireless technology including 802.11, 802.16, cellular technologies or combinations of more than one type.
+
+'''A wireless mesh network can be seen as a special type of [[Wireless Ad-Hoc Network]]. A wireless mesh network often has a more planned configuration, and may be deployed to provide dynamic and cost effective connectivity over a certain geographic area. An ad-hoc network, on the other hand, is formed ad hoc when wireless devices come within communication range of each other.''' The mesh routers may be mobile, and be moved according to specific demands arising in the network. Often the mesh routers are not limited in terms of resources compared to other nodes in the network and thus can be exploited to perform more resource intensive functions. In this way, the wireless mesh network differs from an ad-hoc network, since these nodes are often constrained by resources."
+(http://en.wikipedia.org/wiki/Wireless_mesh)
+
+
+
+=Description=
+
+
+'''1. Explained by the Wikipedia''' at http://en.wikipedia.org/wiki/Wireless_mesh_network
+
+
+'''Wireless mesh networking is mesh networking implemented over a Wireless LAN.'''
+
+"This type of Internet infrastructure is decentralized, relatively inexpensive, and very reliable and resilient, as each node need only transmit as far as the next node. Nodes act as repeaters to transmit data from nearby nodes to peers that are too far away to reach, resulting in a network that can span large distances, especially over rough or difficult terrain. Mesh networks are also extremely reliable, as each node is connected to several other nodes. If one node drops out of the network, due to hardware failure or any other reason, its neighbours simply find another route. Extra capacity can be installed by simply adding more nodes. Mesh networks may involve either fixed or mobile devices. The solutions are as diverse as communications in difficult environments such as emergency situations, tunnels and oil rigs to battlefield surveillance and high speed mobile video applications on board public transport or real time racing car telemetry. The best mobile networks are those that provide a seamless handover between the mobile device and the fixed infrastructure points."
+(http://en.wikipedia.org/wiki/Wireless_mesh_network)
+
+
+'''2.'''
+
+
+"In basic terms, the mesh provides an alternative to established methods of linking computers together and connecting them to the internet. In practice, it can be used to build large networks far more quickly and cheaply than has previously been possible. As a result, wireless networks are viable in unexpected places. New Orleans, still without a phone service after Hurricane Katrina, recently began building a free, citywide network using mesh technology, while the whole of Macedonia is now one big wireless hotspot. Networks are also providing web connections to people in the parts of the UK untouched by phone-based broadband, as well as in developing countries that have never had effective telephone networks".
+(from Times Online, quoted by http://www.smartmobs.com/archive/2006/01/28/wireless_mesh_n.html)
+
+
+'''3. Jason Tashea:'''
+
+"A mesh network creates reliable and redundant wireless internet access. Instead of relying on a wired access point to the internet like a traditional network, a mesh network uses wireless radio nodes that speak to each other, thus creating decentralized wireless access points. Because a mesh network does not have to communicate through a central organization (like an ISP), if one node goes down the network will self heal — allowing service to continue without interruption.
+
+You are probably wondering, how is this different than your WiFi at home? For one, mesh networks are actually wireless. If you think of your at-home wireless router, it is wired directly to the internet. Within a mesh network, only one node needs to be hardwired. All the other nodes, of which there could be hundreds, do not require direct access to the internet, just access to the mesh network itself. This allows a mesh network to operate without laying new cable, or as a local network during a service outage."
+(http://technical.ly/2015/04/06/12-communities-experimenting-mesh-networks/)
+
+=Example=
+
+From http://www.worldchanging.com/archives/003133.html :
+
+'''* CUWiN'''
+
+"CUWiN -- the Champaign-Urbana community WIreless Network -- brings together a bunch of worldchanging ideas into one useful package: Free/Open Source software to create ad-hoc municipal wireless networks using recycled old PCs. The software -- which can be downloaded from cuwireless.net -- just needs to be burned onto a CD, which can then be used to boot a PC (even something as old as a 486) with a wireless card. Once the system boots, the software configures itself, looking for other nodes to connect to; the CUWiN system uses "ad hoc networking" principles to link machines together to reach the computer that's actually connected to the Internet."
+(http://www.worldchanging.com/archives/003133.html)
+
+
+From Magnus Lawrie:
+
+'''* DjurslandS.net'''
+
+DjurslandS.net in Denmark is among the largest CWNs in the world).
+
+250 volunteer built radio stations share fast internet connections with over 5000 remote rural households in an area of 3360 sq/km (Neilsen, 2007, p.3).
+
+The Djursland peninsula, extending East from Jutland, is encircled by a fibre-optic backbone. At the end of the 1990s, despite the proximity of this communications ’trunk road’, most Djursland homes fell into the ’last mile’ of connectivity, where broadband was technically inoperable. For incumbent telecom providers, extending coverage was financially unjustifiable - market failure had occurred. By now Djursland had been in economic decline for some years. The closure in 1998 of Djursland’s only regional newspaper was the motivation to set up an internet information portal. Boevl, the computer enthusiasts’ group who took up this challenge had engaged in socially-active projects since 1992. With grant aid they had established a free access computer workshop, undertaken computer recycling and instigated fifteen similar projects in Lithuania and Kazakhstan. By practical steps of widening access to information and services, Boevl developed their vision of the ICT-Society in Djursland and from January 2001, worked with a decision making board towards the ideal of ”lightning fast internet access for a fixed price all over Djursland” (Neilsen, 2007, p.7). A phased development programme followed, with the pilot project expected to receive EU support. However, an obscure funding process resulted in the ruling that (even in the absence of competition) government intervention in the market was not allowed. As the options for external support dwindled, by increments Djursland’s network - built on DIY pragmatism more than Free Software idealism - became self-sustaining.
+
+Through economies of scale and hobbyist-led technical innovations costs reduced, whilst individuals worked to greatly expand the network. Members of DjurslandS.net provided themselves fast internet access, at one-third of the subscriber fees in more ’economically viable’ urban areas.
+
+
+'''* Freifunk:'''
+
+Freifunk was established in Berlin in 2002 to create independent, community-based, non-commercial, open and uncensored data networks (Freifunk, 2004). Freifunk has done this using wireless technology, operating on unlicensed segments of the radio spectrum. Technical efforts have centred on adapting OpenWRT – Free Software run on consumer wireless routers.
+
+The resulting ’firmware’, developed by a small team of volunteers, manages bandwidth allocation in order to maintain an equal flow of data throughout a wireless network; Regardless of network size, traffic, or the relative locations of two communicating points, data will be exchanged with equal priority.
+
+A flexible ’mesh’ networking arrangement (many nodes connecting to many neighbour nodes) invests control of the network in the end devices, not an additional layer. By sharing technology and experiences, several Freifunk networks were established in Berlin. These were connected through wireless links known as the Berlin Backbone (BBB). Although the linked networks continued to operate independently, the BBB could be seen as an administrative layer which takes control away from end devices, whilst enhanced possibilities for local audio and video applications such as free radio, internet telephony and webTV advance the case for uncensored data and net neutrality. Freifunk’s social aim has been to strengthen existing organization and to develop e-democracy and grass roots structures appropriate to the digital era. Balances between social and technical participation in Freifunk networks is achieved by the absence of privileged nodes; horizontalism remains built in the network, whilst the hobbyist aspect of the organization keeps the network free to use and free of commercial interests. A diversity of participants and agendas is maintained through router firmware designed to put control with users." (http://ditch.org.uk/download/commons_wireless_autonomy.pdf)
+
+
+==Twelve [[Community Wireless Networks]] in the U.S.A.==
+
+Jason Tashea:
+
+Here are 12 community mesh networks around the U.S. we checked up on:
+
+Redhook Wifi, Brooklyn
+
+In 2013, when we last checked in, Redhook Wifi had just been tested by Hurricane Sandy. Tony Schloss, the director of community initiatives, gave us an update: “It is clear that having a locally controlled and maintained network is critical in those emergency situations.” However, in non-emergency moments, Schloss questions the overarching value of the mesh network because so many users pay for internet access. No matter how residents connect to the internet, Schloss thinks education is critical. Building off of the Digital Stewards program (see Detroit below), Schloss says their work is ultimately about “creating real opportunities for the young adult participants in career options, social capital, and attitude shifts in their confidence regarding tech.”
+
+
+BBamboowifi, Philadelphia
+
+Bamboowifi is a wireless internet service provider that operates through a mesh network. Back in January, we reported on Bamboowifi and its then-upcoming Kickstarter campaign. After just a few months, cofounder David Platt already has lessons to share. “General interest has been overwhelmingly positive. Anyone we’ve spoken to about the concept seems very interested in our different approach to providing internet service,” said Platt. Even with this interest, the Kickstarter campaign and recruiting local businesses as hotspots has been slow. Platt believes that they need to build a pilot zone to make the concept concrete for potential partners. All the same, Platt continues to build their project and is looking to potential grant funders and investors to make Bamboowifi a reality.
+
+SMesh, Baltimore
+
+Fifteen years ago, SMesh sought to create something new: a seamless mesh network. When the project started at Johns Hopkins University, seamless transfer supporting VOIP, for instance, was not an omnipresent option like it is today. After significant experiments at Hopkins, and the development of less expensive technology, the SMesh program now lays dormant. Yair Amir, a Hopkins professor of computer science and member for the SMesh team, points out their code is still open and useable for anyone interested in their work. Amir is not bothered by the project’s passing, “We do research, some of it sticks and some of it doesn’t.” SMesh, he says, was a worthwhile experiment for its time, now his focus is on the next generation of internet services.
+
+Meta Mesh, Pittsburgh
+
+Meta Mesh and PittMesh got started in Pittsburgh’s South Side neighborhood. Their aim was to provide a local network that upheld privacy and freedom for its users. Their motivation for increased privacy became acute after it was revealed that the National Security Agency was collecting individual data through backdoors in traditional cloud services and ISPs. The Meta Mesh project requires that all traffic is encrypted. According to a video produced by Meta Mesh, they hope that interest from local innovators and “nerds” will help grow and improve the two-year-old network.
+
+Digital Stewards, Detroit
+
+The Digital Stewards project in Detroit is more than a mesh network — it’s a social movement. Born out of the Detroit Digital Justice Coalition, the mesh network is just one way they create equal access to media and technology. This work is particularly important in Detroit where a 2012 study reported that 40 percent of residents were without internet access. Beyond maintaining six networks around Detroit, they also developed a curriculum to improve digital literacy. This curriculum is being adopted around the world, including by Redhook Wifi (as mentioned in this article). For Diana Nucera, program director of the Detroit Community Technology Project, it is all about access, no matter where you get it. Nucera points potential mesh network advocates to Commotion’s setup wizard. “You don’t need a B.A. in Information Technology to try out [a community mesh network],” she said.
+
+NYCWireless, New York City
+
+For Dana Spiegel and the folks at NYCWireless, creating a mesh network was about hacking new technology (in 2000) and bringing untapped value to community spaces. “We saw an opportunity to hack together a way to use internet access … to bring communities together into our shared spaces,” said Spiegel. Beyond public spaces, NYCWireless is also putting networks into older buildings. The nodes allow for approximation making implementation much easier than laying new wires. Looking forward, Spiegel is emboldened by Mayor Bill de Blasio’s interest in public internet. NYCWireless promises to be a strong voice advocating for an open and democratic internet.
+
+Personal Telco, Portland, Oregon
+
+After the 2000s dot-com bubble, Portland had a number of unemployed IT people looking for faster internet than what their at-home dialup allowed. Personal Telco wanted to leverage new wireless technology to fix this problem. In the beginning, the problem setting up this network was not the nascent technology, but the trees. The verdant Northwest’s tall evergreens would block the signal, making the network patchy. This challenge turned Personal Telco’s focus to urban (read: less treeful) parts of Portland. “Most of our networks today are stand alone hotspots that someone sponsors,” said Russel Senior at Personal Telco. Senior hopes that Personal Telco and the philosophy behind it will persuade public policy makers that Portland needs a publicly owned internet utility. So far, Russell says, this effort is a work in progress.
+
+MileMesh, Hoboken, N.J.
+
+Hoboken learned how weak the internet is the hard way. After Hurricane Sandy, the New Jersey community was frustrated by broken and unresponsive communications infrastructure. As a community organization MileMesh’s goal is simple: cover Hoboken with reliable connectivity. According to their Twitter account, they are just getting started: the first MileMesh node was launched less than a year ago. With a $3,000 grant from NYCWireless, the expectation is to expand throughout Hoboken’s 1.3 square miles. Anthony Townsend, founder of NYCWireless, told TechPresident that expanding mesh networks was not about a starting a company or a project, “We’re trying to start a movement.”
+
+Wasabinet, St. Louis
+
+Wasabinet started as an experiment. Cofounder Ben West explains: “We saw the inherent bottoms-up and all-inclusive spirit of a mesh network like Wasabinet as a natural companion to the bootstrapped cultural and economic revival already taking place [in the Cherokee Street community].” With initial support from the Incarnate Word Foundation, other St. Louis neighborhoods are reaching out to West and his partner, Minerva Lopez, to expand the mesh network footprint. For the time being, however, West is exploring solar-powered nodes to make Wasabinet reliable in a power outage.
+
+TFA Wireless, Houston
+
+Technology for All in Texas aims to close the digital divide for the underserved and vulnerable. Part of this mission, in partnership with Rice University, is TFA Wireless. Started in 2004 and based in Houston’s underserved East End, TFA Wireless has continued to expand. According to their website, by 2011 TFA Wireless had provided the first residential deployment of “Super WiFi,” a long-range, barrier-piercing wireless network. The partnership with Rice has allowed for study of high-impact, low-cost networks and the development of new health-sensing applications in an attempt to catch public health issues early.
+
+Meshnet Project, Seattle
+
+Just a couple of years ago Seattle did not have a mesh network. For Dan Ryan and his colleagues, this was an opportunity. Now, there are a few dozen nodes in Central Seattle and the Ballard neighborhood. On the security side, Meshnet is unique. They use cjdns, a networking protocol that requires that each computer verify itself cryptographically instead of using a single, public IP address. This level of encryption will continue as the project grows and adds cjdns for Android users. Ryan is excited about the project and thinks its value has not been tested yet. “It could potentially play a significant role in future natural disasters [if] traditional networks are nonfunctional,” he said.
+
+La Cañada Wireless Association (LCWA), Santa Fe
+
+The La Cañada De Los Alamos Land Grant area outside of Santa Fe, New Mexico is rural. According to the 2010 census, 434 people lived there. Locally owned and operated by its members, this project provides low-cost internet in an area with lacking infrastructure. Instead of creating a mesh network that covers an entire geographic area, LCWA focuses its nodes to jump directly from an access point to a member’s home. According to their website, this allows an unobscured access point to reach a home up to ten miles away. While it is unclear if the LCWA is still fully functional, the model is none-the-less important to note, because it illustrates the application of mesh networks outside of urban areas."
+(http://technical.ly/2015/04/06/12-communities-experimenting-mesh-networks/)
+
+=Typology=
+
+Magnus Lawrie:
+
+"Two types of wireless mesh network exist. These we have seen in two distinctive CWNs: infrastructure (with a separate administrative layer) and ad-hoc (where control is ’in’ the network). These principles extend more or less easily to describe user participation in the network. An organizational hierarchy is more discernable in Djursland, whereas such distinctions are not so clearly deliniated in the Freifunk community. The case studies show cultures where organizational questions (technical and social) are always informed by a view where ”architecture is politics” (Kapor, 2006). Contrasting legal and technical systems for Free Content distribution present alternative models for dealing in scarce natural resources and cheap-to-copy data. Keeping Boyle’s objections in mind, we might consider the fate of software and public good in the Global Commons to be intertwined. Certainly, in this context, much thinking is being redefined. To this extent such hitherto arcane fields as economics and law are being opened to scrutiny, and even celebrity. In 1989 political rhetoric concentrated on the grand themes of Left versus Right. Today opposing sides are drawn less by political lines, more by pragmatic aims. The diversity of CWN membership, as well as recent Intelectual Property case law, suggests it is now far more a matter of incumbents versus newcomers. Participants in CWNs may be recognized as empiricists, not ideologues (Lessig, 2001, p.69), driven by rough consenus and running code (Clark, 1992). The ’viral’ and self-organizing characteristics of CWNs however suggest both a culture and economics of autonomy, which values the Free Software Definition." 
+(http://ditch.org.uk/download/commons_wireless_autonomy.pdf)
+
+
+=Discussion=
+
+==Why Open Mesh Networks are beneficial==
+
+Mark Cooper:
+
+"The technologies at the heart of the digital revolution are also at the heart of the deployment of open wireless networks in the spectrum commons.  The potential spectrum carrying capacity has been the direct beneficiary of the convergence of progress in digital technology and the institutional development of networks.   When users add radios that help by cooperating in receiving and forwarding signals, i.e. act as repeaters, carrying capacity of the network increases.   Smart nodes get their expanding brainpower from decentralized computational capacity to communicate seamlessly, utilizing embedded coordination protocols. 
+
+Smart technologies in mesh networks cooperating to deliver messages also show the beginning of anti-rivalry characteristics.   The ability of each node to receive and transmit messages, even when they are neither the origin nor the destination, expands the capacity of the network.  This intelligence is the key to mesh networks’ immense capacity. 
+
+The [[Spectrum Commons]] in which these networks exist exhibits the characteristic of inclusiveness, since the more nodes on the net-work, the greater the value to users.   The denser the nodes in the commons, the greater is the commons’ communications capacity.   The combination of digital technology and network organization has turned the old logic on its head; adding users on a mesh network improves performance.   [[Mesh Networks]] allow devices to share their resources dynamically, allowing more communications to take place with less power.  
+
+However, even with new technology, there is still the challenge of how to ensure cooperation among users.  Since cooperation is the key to the capacity gain, if users chose not to cooperate, the mesh network will not work.   Therefore, more devices are transitioning to “embed coordination” to ensure cooperation.   For example, radios become smart by embedding intelligence – algorithms – that take on the functions necessary to transmit a signal after listening to the spectrum and finding available frequencies to use and determining the power necessary."
+(http://cyberlaw.stanford.edu/system/files/From+Wifi+to+Wikis+and+Open+Source.pdf)
+
+
+==Why Wireless Meshworks don't work at scale==
+
+Sha.ddih:
+
+" After a couple years I developed a pretty good understanding that wireless mesh networks aren’t actually a good way to build a real network. These are a few of those reasons.
+
+    
+* '''Reason 1: Management is hard and expensive.''' The biggest cost for the networks I ran was actually maintaining them once they were built. It’s not just replacing hardware either: you haven’t lived until you’ve hunted down transient connectivity problems resulting from RF weirdness in urban areas. It’s hard, and even if you’re relying on volunteers to do the work to keep costs down, you’re going to spend all your time just maintaining basic connectivity. Then there are network-level issues, like traffic shaping/throttling: the wireless channel is hella bandwidth constrained, so you must do extensive shaping to ensure everyone gets fair access to your limited resources.
+
+      
+There is a reason the only large scale mesh networks (i.e., Freifunk, Athens Community Wireless, etc) are run by a relatively tight-knit group of smart, motivated people — it’s a significant undertaking even without doing things in a decentralized fashion. My colleague used to run the largest mesh network in the world (not joking!), and eventually his group switched to a carefully-planned, point-to-point wireless network due to mesh’s management overhead, from both an RF and network perspective. When you’re building large systems you want as little unpredictability as possible, and unfortunately unplanned mesh networks just don’t deliver there.
+    
+
+* '''Reason 2: Omni-directional antennas suck.''' The whole idea behind a mesh network is that each node in it can see multiple other nodes, so if one goes down, or if there is interference, the mesh routing protocol can find a new path through the network. In order to achieve this, you use omnidirectional antennas. Antennas are passive devices: they just focus RF energy. Omnidirectional antennas are very inefficient, since they throw your energy (i.e., signal) all about, when in reality you just want your signal to reach the handful of nodes nearby. This means your signal travels a shorter distance, and thus you need a higher density of nodes. In my experience, for a small apartment building this is at least one per floor to achieve a semblance of reliability. Even if all 15,000 people on the Darknet subreddit could install and maintain 10 devices, they wouldn’t cover all of Wichita, KS, not to mention the miles of farmland between it and the next town. And, to make matters worse, omnidirectional antennas also receive interference from every direction, making the mesh network less reliable.
+    
+
+* '''Reason 3: Your RF tricks won’t help you here.''' You can get higher gain or directional antennas, but again this won’t help. Remember, antennas are passive, only focusing energy. Thus, a higher gain omnidirectional antenna has a radiation pattern more like a disc than a sphere, and the higher gain you go the thinner the disc gets: if your nodes are at different heights, they wouldn’t be able to “see” each other! Directional antennas allow you to focus your RF beam directly where you want it to go, but now your node can’t communicate with as many other nodes, eliminating a key property of the mesh network.
+
+      
+Amplifiers do nothing here, by the way. They only boost transmit power; the real limitation is receive sensitivity. Also, amplifiers are power-hungry and expensive (and there are legal limits to their power levels). Antennas are nice because by focusing both transmitted and received RF energy, they help with both (and they use no power and are relatively cheap to build).
+    
+
+* '''Reason 4: Single-radio equipment doesn’t work; multi-radio equipment is very expensive. This is the biggest technical reason mesh networks don’t work for Internet access.''' If you’re using low-cost equipment, it will only have one radio transceiver. This means your node is half-duplex, meaning it can’t both send and receive at the same time. In addition, only one node in a given area can be transmitting at a time: if two nodes send at the same time, their signals “collide” and the receiver won’t be able to decode the message. This is even true if the senders are sending to different receivers: remember, omnidirectional antennas transmit in all directions, and pick up interference from all directions! And to make matters worse, every node is both a sender and a receiver, since every sent packet needs an acknowledgement. There are some tricks to mitigate these problems, but these problems are fundamental (see “hidden node problem”), especially when you have the density of nodes necessary to create a mesh network. Each of these challenges means that each node can only transmit for a small amount of time, and this reduces your effective bandwidth. In practice, a mesh network using single-radio equipment is unusable if a packet must travel more than three hops to its destination.
+
+      
+One solution would be to use multi-radio nodes. You would need two: one to transmit, one to receive. This solves the half-duplex problem, but you still have the interference issue, and if you use multiple channels to get around that problem you quickly will run out of RF spectrum, not to mention having the new problem of how to intelligently allocate spectrum to each node. This spectrum allocation task is an NP-hard scheduling problem, as is allocating non-interfering time-slots for single-radio equipment. There are also challenging practical considerations like how you efficiently implement a valid schedule once you compute it. And, because you still would need roughly the same node density as before, a network of multi-radio devices quickly becomes very expensive.
+    
+
+* '''Reason 5: Unplanned mesh networks break routing.''' Once you have a mesh network, you have to figure out how to get packets across it. There are many protocols for mesh routing, like AODV, OLSR, and BATMAN. Fundamentally they require individual nodes to communicate with each other, which not only takes up further network resources, but also means that achieving a consistent routing state (i.e., one in which packets won’t get routed into black holes or loops) is extremely difficult for all the reasons distributed systems are hard to build. The unplanned nature of a grassroots mesh network exacerbates this problem, since poor RF-level connectivity means the connectivity state between nodes changes frequently, leading to more routing overhead in the network. It’s a bad cycle.
+
+I’m not saying mesh networks don’t work ever; the people in the wireless mesh community I’ve met are all great people doing fantastic work. What I am saying is that unplanned wireless mesh networks never work at scale."
+(http://sha.ddih.org/2011/11/26/why-wireless-mesh-networks-wont-save-us-from-censorship/)
+
+=More Information=
+
+Essay: [[Wireless Networks as Techno-social Models]]. By Armin Medosch.
+
+See also the entry on [[Hive Networks]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Standards]]

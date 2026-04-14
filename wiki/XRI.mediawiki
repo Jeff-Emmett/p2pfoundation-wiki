@@ -1,0 +1,27 @@
+
+=Description=
+
+
+
+Dr. Starcat:
+
+"iNames are an implementation of a set of technical specifications called XRI/XDI that has been under the stewardship of Drummond Reed since at least 1994. The specifications haven’t always been called XRI/XDI (originally Communication Objects, then XNS), and the company associated with them hasn’t always been Cordance (originally Intermind, then One Name). Drummond and the core concepts are about the only things that have survived throughout.
+
+[[XRI]] is a way to refer to things on the internet (e.g. people, businesses, addresses, etc) that creates a permanent machine-readable identifier (a number) along with a human-readable identifier that can change over time. This is cool for identity because whereas I may want you ALWAYS to have access to my address, the actual CONTENT of that address is likely to change over time. With XRI, my address is a data element assigned a PERMANENT numerical identifier, but the human readable identifier can be changed (and even transferred) to someone else.
+
+Okay. Midly cool. [[XDI]] is VERY cool though. What XDI enables is a way to create a PERMENANT, PERMISSIONED, GRANULAR pipe between two data elements. So taking the address example again, let’s say both you and I have an iName, which is just a specific kind of XRI for people and means we each have a permanent number and a modifiable human-readable name. Using XDI, I can establish a PERMANENT (unless I revoke it) link between the two of us that allows you to have access (PERMISSIONED) only to my work contact information (GRANULAR).
+
+Better yet, since both XRI and XDI are extensible (that is, you can associate as much stuff as you want to them), my XRI can have ANY number of data elements associated with it (contact information, preferences, friends, music, etc.) and the link between us can have ANY number of rules (contact info: allowed, auto-update: allowed, friends: denied).
+
+This stuff is a little complicated, but if you’ve started thinking about how to OWN and CONTROL your identity data on an INTERNET-WIDE scale, without drowning in complexity, and without having any ONE company in control, you will quickly understand that the existing internet protocols aren’t up for the task. If you were then to spend the next ten years working through all the technical and political issues surrounding what’s missing, you’d probably have something that looks a lot like [[XRI/XDI]]."
+(http://drstarcat.com/archives/13)
+
+
+
+=More Information=
+
+#The five-part series on iNames is continued here at http://drstarcat.com/archives/16
+#[[Identity]]
+
+
+[[Category:Standards]]

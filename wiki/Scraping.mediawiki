@@ -1,0 +1,39 @@
+= '''scraping, a mechanized method for gathering and displaying feeds from multiple sites''' [http://loadedpun.com/2006/12/17/who-owns-a-feed.html]
+
+
+=Description=
+
+Wired: 
+
+Scraping "refers to the act of automatically harvesting information from another site and using the results for sometimes nefarious activities. (Some scrapers, for instance, collect email addresses from public web sites and sell them to spammers)... Scrapers write software robots using script languages like Perl, PHP, or Java. They direct the bots to go out (either from a Web server or a computer of their own) to the target site and, if necessary, log in. Then the bots copy and bring back the requested payload, be it images, lists of contact information, or a price catalog."
+(http://www.snee.com/bobdc.blog/2008/01/scraping_and_linked_data.html)
+
+
+=History=
+
+The movement towards the voluntary scraping of [[Linked Data]] and [[Open Data]], by  Bob DuCharme:
+
+"I see three historical phases for this kind of data retrieval, and Wired still doesn't know about the third. '''The first''', which people have been doing since late in the last century, '''involves retrieving files and then running scripts to find and pull out useful information as described above'''. (My own base tool set for scraping is wget, TagSoup, and XSLT)
+
+
+'''The second phase, implemented by sites that are willing to share some data but want to control that sharing, are APIs like those provided by Amazon and Google''', which the article covers. Since I first drafted this posting, the difference between scraping and API use became a big story in the data geek world after Facebook disabled Robert Scoble's account because he was beta testing Plaxo. This online address service scrapes Facebook instead of using its API because Facebook's API doesn't provide address book information, and Scoble has enough Facebook friends that trying to scrape all that data violated Facebook's terms of service, or something. (If you think that this is a really big deal, Dan Brickley brings some much-needed perspective to it.)
+
+
+'''The third phase of web-based data retrieval is the pulling down of data that was intentionally put into web pages for retrieval by automated processes.''' Unlike the data retrieved in the first phase of web data retrieval, this data goes into the web pages in a format that conforms to simple rules so that it's immediately usable, with no requirement for pattern matching and rearranging. Unlike the APIs of the second phase, the new data is retrieved with a simple HTTP request (perhaps wget or curl) with no need to provide a login developer token or to make calls to specific processes that will then hand you the data if you make the calls correctly.
+
+There are multiple efforts working in this area. The [[Linked Data]], [[Semantic Web]], and [[Microformats]] movements all overlap to some extent, but I don't know of any single term that encompasses them all, unless an especially passionate advocate of one insists that the others are subsets of their work. The key difference between this work and the scraping described in the Wired article is that this third phrase is about people putting up data that they want others to retrieve and use. I don't want you pulling my data and running it next to Google AdSense ads unless it helps me in some way. If the data consists of schedules for events that I charge money for, such as plane flights or movie showings, then I'm happy to let you drive more business to me. If I'm craigslist or Facebook, I just see you building a business model around my data with no benefit to me, and I don't like it."
+((http://www.snee.com/bobdc.blog/2008/01/scraping_and_linked_data.html)
+
+
+
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Media]]
+
+[[Category:IP]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]

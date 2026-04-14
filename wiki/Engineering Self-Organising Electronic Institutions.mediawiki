@@ -1,0 +1,46 @@
+
+'''* Article: Axiomatization of Socio-Economic Principles for Self-Organizing Institutions: Concepts, Experiments and Challenges. Jeremy Pitt, Julia Schaumeier and Alexander Artikis.  ACM Transactions on Autonomous and Adaptive Systems, December 2012.''' 
+
+URL = http://portalparts.acm.org/2390000/2382570/fm/frontmatter.pdf?ip=174.109.161.92&CFID=337835287&CFTOKEN=75064162
+
+
+=Abstract= 
+
+"We address the problem of engineering self-organising electronic institutions for resource allocation in open, embedded and resource-constrained systems.  In such systems, there is decentralised control, competition for resources and an expectation of both intentional and unintentional errors.  The ‘optimal’ distribution of resources is then less important than the sustainability of the distribution mechanism, in terms of endurance and fairness, based on collective decision-making and tolerance of unintentional errors.  In these circumstances, we propose to model resource allocation as a common-pool resource management problem, and develop a formal characterization of Elinor Ostrom’s socio-economic principles for enduring institutions. "
+
+
+=Discussion=
+
+David Bollier:
+
+"Our knowledge about what makes digital commons work is terribly under-theorized.  Yes, there are famous works by Lawrence Lessig and Yochai Benkler, and there are lots of projects and websites that are based on commoning such as like Wikipedia, free software, Arduino, open access journals, among countless others.  But can we identify core principles for organizing digital commons?  Can we use that knowledge to engineer the evolution of new commons?  Identifying such principles just might let us move beyond “openness” as the ultimate goal of online life, to a more sustainable goal, the self-governed commons.
+
+It has been a pleasure to discover that some computer scientists are actively exploring how Elinor Ostrom’s principles for successful commons might be applied to the design of software.  
+
+...
+
+There are lots of technical formalisms in the paper that I don’t understand, and to my mind the paper does not actually identify the “secrets” to engineering digital commons.  But that’s okay.  What is more important to me, for now, is that there are computer scientists deliberately trying to figure out how to engineer “planned emergence,” as Pitt et al. put it.  The scientists envision “a new type of intrinsically adaptive institution” that can adapt to rapid changes in the social, technological and physical environment (unlike contemporary government).  They also seek to combine “top-down control and coordination [with] bottom-up emergence and adaptation” in order to create hybrid institutions. 
+
+Pitt also has a very interesting article in Computer magazine (annoyingly behind a paywall also), about which he elaborates in a (free) YouTube audio interview.  I found the title intriguing:  "Transforming Big Data into Collective Awareness."  Pitt discusses with an editor of Computer "how integrating social and sensor information can transform big data, if it's treated as a knowledge commons, into a higher form of collective awareness that can motivate users to self-organize and create innovative solutions to various socioeconomic problems."
+
+As much as we need new theoretical insights, one of the best ways to advance these lines of inquiry is to get out into the field and start developing a suitable taxonomy of digital commons.
+
+...
+
+One of the most significant changes in software design is the growing recognition that it must take account of the open, emergent properties of the platform.  It’s not just code; it’s a socio-technical system.  As Pitt et al. put it:  “Traditionally, the role of a software engineer has been to apply some methodology to implement a ‘closed’ system which satisfies a set of functional and non-functional requirements.  Our problem is to engineer ‘open’ systems where the primary non-functional requirement, that the system should endure, is an emergent property, and is a side-effect of the interaction of components rather than being the goal of any of those components.” 
+
+Designing a system so that it can adapt and evolve, and deal effectively with both errors and malevolent behaviors, is very difficult.  But one might say that this is the essence of designing a commons.  The code can’t solve all contingencies, but it must design as if human beings actually have some creative agency….because they do!  Why turn users into automatons when they can become collaborative geniuses?
+
+What I find exciting is the self-conscious attempt to devise “morphogenetic engineering” methods that use biological systems as a template for designing digital systems.  This is not entirely new, of course, but the rise of electronic networks has made it both more attractive and feasible to pursue this line of software design.  Just as ants or insects exhibit remarkable degrees of “undirected coordination and stigmergic collaboration,” as Pitt and his colleagues put it, so individual agents on open networks show remarkable capacities for such coordination and collaboration.  (“Stigmergic,” as Wikipedia describes it, is the principle by which “the trace left in the environment by an action stimulates the performance of a next action, by the same or a different agent.  In that way, subsequent actions tend to reinforce and build on each other, leading to the spontaneous emergence of coherent, apparently systematic activity.”) 
+
+For more on biologically inspired digital ecologies, I recommend the work of Mihaela Ulieru, an expert in “digital intelligent systems” who alerted me to Pitt’s work as well as to her own work on “holonics” at the Impact Institute.  (Thank you, Mihaela!)  Holonics, as Wikipedia explains, is the study of self-reliant units of organization that are autonomous “wholes” nested interdependently within larger systems.  One might say that the commons is implicitly about the study of holons because any commons is necessarily be nested within larger systems upon which it is dependent, and may itself contain holons as sub-systems. 
+
+Once you venture into the world of complex adaptive systems, you enter a world where the 20th Century ontologies no longer work.  The focus is more on flows rather than stocks, and on processes and relationships rather than discrete things.  This shift in orientation is needed because once you acknowledge that everything is interconnected and dynamic, it no longer makes sense to view an organism in isolation.  The boundaries between an organism and its ecosystem become rather indeterminate.  We start to realize that everything is embedded in everything else.  Biologists are discovering, for example, that we human beings are not really discrete “individuals” so much as “super-organisms” comprised of vast numbers of sub-organisms and -systems such as “biomes” – vast collections of bacteria with whom we share a vital symbiotic relationship.  Our very identities as a species and as individuals are not so obvious, but rather blur into the ecological context. 
+
+In light of this ontological shift, I find it fascinating that our perspectives may need to change from the third person to the first person, and from the (supposedly) “objective” to the subjective.  For example, at the first German SommerSchool on the Commons last year, participants were concerned that Elinor Ostrom’s eight design principles are not very accessible to the general public; nor do they reflect the direct experiences and first-person voices of commoners.  So they “re-wrote” them as a kind of re-interpretation or remix. "
+(http://bollier.org/blog/applying-ostroms-guidelines-design-software-platforms)
+
+
+[[Category:Peergovernance]]
+
+[[Category:Articles]]

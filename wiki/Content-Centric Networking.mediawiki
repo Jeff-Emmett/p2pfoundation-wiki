@@ -1,0 +1,63 @@
+'''= replaces IP addresses with names for content'''
+
+URL = http://www.ccnx.org/
+
+=Description=
+
+
+Aaron Huslage:
+
+"The Internet was designed for one machine to share information with exactly one other machine. There are other protocols that can be used to connect one machine to many machines (like IP Multicast), but they go unused on the wide Internet and are generally limited to local networks.
+
+This is the part of the Internet that doesn’t scale. We’ve made great strides to accommodate the growth of the net with modern routing algorithms and load balancing techniques, but the fundamental thing is still the same. We need a new way for the content itself to be addressed directly, regardless of what machine it lies on or even where in the world it is. The network should be content agnostic, but remain simultaneously content aware. This is where the shift needs to occur on the future Internet. IP is dead.
+
+Enter Content-Centric Networking, or CCN. This project is run by Van Jacobson at the illustrious PARC in Palo Alto, CA. PARC is famous for many things, but most notably for popularizing the user interface that you’re using to read this page with. Van Jacobson was a major contributor to the initial project that came up with IP in the first place. In other words, CCN is being spearheaded by on of the very authors of the spec that its trying to replace. Nice hack.
+
+CCN replaces IP addresses with names for content. These names mean something to the network, in fact they are the only thing that lets stuff speak on the network. This sounds like a simple idea, but it is insanely powerful. By simply replacing the address 74.125.127.100 with the name “google.com” we enable any device, or any person for that matter, to no longer care that the content that I’m asking for is on a machine in a data center in (in this case) northern Virginia. In fact, that content could be many places in the world simultaneously and I don’t really have to care anymore. The network simply provides the content through whatever channels are available at the time I asked for it.
+
+This new paradigm is radical and changes everything. Abstractions like DNS and load balancing are no longer necessary in a world of a CCN-based Internet. Content can come from anywhere at any time. This enables devices (and the people that use them) to carry content with them and provide it to anything else around them that wants that content.
+
+The idea of replacing IP addresses, which no user in the world cares about, with names for content, which every user in the world cares about, is not new. CCN is the current best approach that I’ve found to the problem of fixing the Internet. It will take years for this new protocol to catch on, and Van Jacobson has thought about that a lot. In fact, CCN is set up so that it can be used on the Internet as it exists today! The protocol is being worked on in full public view and they are asking for contributions to their open-source reference implementation."
+(http://hact.net/2009/10/the-internet-of-content/)
+
+
+=Discussion=
+
+==CCN as a PARC project==
+
+Via PARC:
+
+"The internet was designed as a communications network, not a media distribution network. These limitations impact every part of the ecosystem – from carriers to publishers, across wired and wireless communications – and operators need economical ways to solve these problems beyond marginal improvements on existing solutions and tools.
+
+Content-Centric Networking (CCN) is a new network architecture designed to match the way the network already works, and to address the problems people are trying to solve. CCN is the next milestone in PARC’s notable legacy in networking -- from inventing Ethernet, to making significant contributions to the IPv6 protocol.
+What is CCN?
+
+CCN directly routes and delivers named pieces of content at the packet level of the network, enabling automatic and application-neutral caching in memory wherever it’s located in the network. The result? Efficient and effective delivery of content wherever and whenever it is needed.  Since the architecture enables these caching effects as an automatic side effect of packet delivery, memory can be used without building expensive application-level caching services.
+
+CCN’s security model focuses on explicitly securing the content itself – as opposed to endpoints. Regardless of where packets travel across the network, content is protected from damage, alteration, or snooping from unauthorized parties.
+
+CCN is designed to run alongside or independent of TCP/IP, and will not disrupt exisiting networks.  The architecture enables a suite of solutions and capabilities through effectively addressing these issues of naming, memory, and security.
+Global traction for CCN
+
+
+PARC continues to make significant advancements in CCN:
+
+* One of the significant research projects funded by the National Science Foundation’s Future Internet Architectures program, the Named Data Networking (NDN) initiative (2010) involves PARC and 9 research institutes. Additionally, a number of global OEMs are actively exploring and developing the ideas behind CCN. The NDN “network architect” is PARC Research Fellow and former Cisco Chief Scientist Van Jacobson, best known for his contribution averting the internet’s collapse by redesigning TCP/IP’s flow congestion algorithms.
+
+    
+* PARC released the open source code CCNx (2009) to enable network research experimentation and to establish a foundation of open core protocols for content networking.
+
+    
+* PARC released the CCNx Android code (2010) and began multiple commercial engagements with Fortune Global 500 companies in devices and network infrastructure, such as with Samsung Advanced Institute of Technology (SAIT) for new business solutions in mobile and other contexts."
+(http://www.parc.com/work/focus-area/content-centric-networking/)
+
+
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:NextNet]]

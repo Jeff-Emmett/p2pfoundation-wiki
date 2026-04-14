@@ -1,0 +1,134 @@
+
+
+=Description=
+
+Excerpted from: '''Defending​ ​Internet​ ​Freedom​ ​through​ ​Decentralization: Back​ ​to​ ​the​ ​Future? By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman. The​ ​Center​ ​for​ ​Civic​ ​Media​ ​& The​ ​Digital​ ​Currency​ ​Initiative. MIT Media Lab, 2017'''
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"In the mid-2000’s open Internet activist Eben Moglen identified control over our
+networked data infrastructure as the next battleground for consumer protections online.
+As a legal scholar, Moglen argued that the rise of cloud storage services posed a direct
+threat to our Fourth Amendment rights to freedom and privacy, because it removed
+sensitive personal information from the sacredness of the home, where we have strong
+privacy protections in place, to private infrastructure that is ultimately owned and
+operated by for-profit companies.
+
+According to Moglen, “Everybody understands that that which you keep close is
+more yours to regulate and control than that which you voluntarily give away to a
+stranger to keep for you… So the server that protects your freedom should be in your
+house.” The rise of “the cloud” marked an important shift in the relationship between 58
+users and the data they generate online, whereby service providers became the primary
+owners of both the physical infrastructure and the software that is needed to support
+online applications. This has serious implications for how content is published and
+disseminated online. In spite of these growing concerns, Moglen and other like-minded
+individuals struggled to gain traction with large online service providers to provide
+stronger privacy guarantees, such as encryption by default, to their customers.
+In light of these struggles, Moglen launched a project called Freedom Box in
+2010, with the aim of shifting away from large, corporate owned server farms to a more
+community-oriented model for managing communications online. In contrast to projects
+with similar goals, such as Own Cloud and Media Goblin, the Freedom Box team
+resisted the urge to return back to the personal server model that was prominent in the
+early days of the web, opting instead for a more grassroots community model of service
+provision. According to James Vasile, former Director of the Freedom Box Foundation,
+a small group of users would ideally be able to access a more secure means of
+engaging in online activities for which they wanted better privacy guarantees, via a
+friendly local tech enthusiast who set up and maintained a Freedom Box for the
+neighborhood.
+
+The Freedom Box itself would provide “out of the box” privacy guarantees, such
+as encrypted communication services. Rather than require users to download and run
+additional software on their own, the Freedom Box team sought to build in better default
+settings into hardware that consumers were already in the habit of buying. As such, they
+focused on building Freedom Box firmware into an affordable router. Routers were an
+ideal piece of technology for the Freedom Box team to focus on building around,
+because they are an extremely common piece of hardware that most households need
+to purchase in order to connect to the Internet. In addition to performing the normal
+functions of a router, the Freedom Box includes additional features, such as the ability
+to communicate between peers and filtering for advertising and malware. The hope was
+that by selling routers with custom firmware, the Freedom Box team would adjust the
+default settings for going online automatically, without requiring effort or specialized
+knowledge on the part of users.
+
+Moreover, the Freedom Box project has been part of a broader push by privacy
+and consumer rights advocates towards supporting open, federated social networks like
+Diaspora. Federation is the idea of a group of organizations or individuals working
+together to support a common standard of operation. The goal of Diaspora, founded in
+2010, was to provide a federated social network: a distributed social networking service
+that addressed consumer privacy concerns by enabling users to host their own content
+on a friendly community device, like Freedom Box. Diaspora would also serve as a
+social aggregator of content from more mainstream sites like Facebook, until eventually
+the decentralized alternative had enough traffic to stand on its own. Ultimately, one of
+the goals of the Freedom Box project was to mitigate the power of large social media
+sites like Facebook by building in support for open source projects like Diaspora by
+default. This would include making the Freedom Box router a node in the Diaspora
+network, as well as enabling easy account sign up when users are setting up their
+Freedom Box for the first time.
+
+In 2013, the first Freedom Box was released on the market, combining a
+standard Dreamplug router with a secure digital card (SD card) with custom firmware
+that enabled additional ad blocking, malware detection and support for things like
+OpenPGP. This enabled users to leverage the web of trust for authentication of
+TSL/SSL communications through the use of familiar tools, such as one’s web browser
+or a secure shell. We were unable to find specific data on the number of users who
+have purchased a Freedom Box set, or downloaded the free software, but we heard
+anecdotally from core contributors to the project that their software had experienced
+fairly limited uptake. The relatively low level of adoption Freedom Box has experienced 62
+is probably best attributed to nascent consumer demand for these types of products.
+The Freedom Box team was quite deliberate in designing their intervention around a
+familiar product (the router), in a way that minimized the amount of effort and technical
+know-how the average consumer needed to have.
+
+Nevertheless, the Freedom Box has struggled to compete with the default
+freemium model of large platforms like Facebook and Amazon, whose platform services
+are already coupled with free data storage and identity management functionalities. This
+challenge is not unique to the Freedom Box project. Projects like OwnCloud and
+remoteStorage, as well as companies like Cozy Cloud, offer privacy-preserving cloud
+products and services that could support federated social media platforms, but these
+models for self-hosting require additional cost and effort to run, either in the form of
+subscription fees or set-up costs. The limited adoption of these personal cloud solutions
+likely points to the lack of market demand for these kinds of services.
+
+Even if Freedom Box were able to achieve mass adoption, the most important
+question for us to ask is whether or not such an intervention directly addresses any of
+the risks regarding control over the publication and dissemination (through discovery
+and filtering) of speech online. The Freedom Box project aimed to give greater
+autonomy and control over user publishing, by shifting from corporate owned hardware
+to a community ownership model for storing content. They also explicitly sought to
+enable users to discover and filter one another’s content by supporting projects like
+Diaspora, which enabled a set of users to exchange information and interact within a
+federated framework.
+
+In theory, Freedom Box could have lowered the barrier for users in switching
+over from incumbent services like Facebook to more distributed alternatives, for
+example by enabling the easy setup of a Diaspora account. It could have also increased
+user agency and the potential for interoperability, by providing the basis for a personal
+data store that users could use to port their data across different platforms. If, in
+addition, applications had adopted this data storage model, then when users wanted to
+switch social media platforms due to concerns over censorship or exclusion, it would be
+much easier to do so."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+
+=More information=
+
+* [[Internet​ ​Freedom​ ​through​ ​Decentralization of Media Infrastructures]]
+
+Other decentralized services:
+
+* [[Diaspora​]], a federated social network
+* [[Mastodon​]], a federated Twitter-like service
+* [[Blockstack]]​, a distributed system for online identity services
+* IPFS​ ​([[Interplanetary​ ​File​ ​System]]),​ a distributed storage service with a proposed mechanism to
+incentivize resource sharing
+* [[Solid]]​ ​(Social​ ​Linked​ ​Data),​ a linked-data protocol that could act as a back-end for data sharing
+between social media networks
+* [[Appcoins]],​ a digital currency framework that enables users to financially participate in
+ownership of platforms and protocols
+* [[Steemit]],​ an online community that uses an appcoin to incentivize development and community
+participation in a social network
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

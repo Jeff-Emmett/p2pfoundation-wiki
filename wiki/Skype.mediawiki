@@ -1,0 +1,189 @@
+'''Skype =  propriety [[Internet Telephony]] solution that is based on P2P principles'''
+
+URL = http://www.skype.com
+
+
+=Description=
+
+"Skype is a P2P internet telephony network that allows users to talk to other Skype users free. Unlike open VoIP protocols like SIP, IAX, or H.323 the Skype protocol requires no servers and has been found to work across different types of network connections including firewalls and NAT. In addition, Skype also allows users to call traditional telephone numbers or receive calls from traditional phones, and receive voicemail messages."
+(http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html)
+
+
+=P2P Action Appeal=
+
+
+
+A call from Glyn Moody in Linux Journal:
+
+“So here’s a thought for eBay: why not open-source Skype and its protocols?
+
+There are many advantages. First, it would largely avoid nasty surprises of the kind that China provided (Skype said that the snooping occurred “without our knowledge or consent”.) It wouldn’t be possible to prevent the code from being modified, but at least it would be obvious when it had occurred, and users could either avoid the program – or avoid saying anything that might get them into trouble when using it. At the moment, only eBay can police the code; by opening it up, it would allow anyone to check what was going on, making it easier to spot problems early on, and relieving eBay of that particular burden.
+
+Releasing Skype as free software would also make eBay highly-popular with the Free Software Foundation, to say nothing of millions in the free software world. Just recently, the FSF released its list of “High Priority Free Software Projects”, number 3 of which was a replacement for Skype:
+
+Skype is a proprietary Voice-over-IP program that uses a proprietary protocol. Skype is seducing free software users into using proprietary software, often two users at a time. We do not want to encourage the creation of a Skype compatible client, but instead, we want to encourage you to create, contribute to, or promote the use of free software alternatives to Skype, such as Ekiga, and to encourage to adoption and use of free VoIP, video, and chat protocols such as SIP and XMPP/Jingle.
+
+A free version of Skype itself would be a much better solution: there are already hundreds of millions of Skype users out there, and the prospects for converting many of them to a free alternative like Ekiga are not good. And introducing a rival standard would split developer effort. Far better for everyone to unite behind a completely free and open version of Skype.
+
+Doing so would lead to yet another major benefit for eBay: it would suddenly find itself aided by hundreds of willing coders who could improve the program far faster than eBay itself. And at a time when it is cutting back on staff, it needs all the help it can get.
+
+The great thing about opening up Skype is that it wouldn’t affect its business model, which is already based on giving away the code, albeit in a closed form. Money could still be made from the outbound calls from Skype to ordinary phone lines. But freeing Skype completely would encourage wider use of both it and its protocols as an entire ecosystem grew up around them, leading to more users, and more opportunities to sell them subscriptions or pay-as-you-go plans. The only thing that eBay would lose are some of its problems….”
+(http://www.linuxjournal.com/content/why-ebay-should-open-source-skype)
+
+
+=Details=
+
+
+==Skype's encryption==
+
+"When you call another Skype user your call is encrypted with strong encryption algorithms ensuring you privacy. In some cases your Skype communication may be routed via other users in the peer-to-peer network. Skype encryption protects you from potential eavesdropping from malicious users... Skype encryption ensures that no other party can eavesdrop on your call or read your instant messages. Skype uses AES (Advanced Encryption Standard) – also known as Rijndel – which is also used by U.S. Government organizations to protect sensitive, information. Skype uses 256-bit encryption, which has a total of 1.1 x 1077 possible keys, in order to actively encrypt the data in each Skype call or instant message. Skype uses 1536 to 2048 bit RSA to negotiate symmetric AES keys. User public keys are certified by Skype server at login."
+(http://globalguerrillas.typepad.com/globalguerrillas/2004/03/skype_secure_p2.html)
+
+See: [http://www.dailymail.co.uk/news/worldnews/article-1055611/Taliban-using-Skype-phones-dodge-MI6.html Taliban Using Skype to avoid detection]
+
+=Discussion:=
+
+==Skype's use of proprietary P2P technology==
+
+From http://digitalmediaupdate.blogspot.com/2007/08/skypes-proprietary-p2p-v-standards.html :
+
+""Skype uses a different type of Peer-To-Peer network than most companies -- a proprietary form based on SuperNodes. A [[SuperNode P2P System]] is one in which you rely on your customers rather than your own servers to handle the majority of your traffic. SuperNodes are just normal computers which get promoted by the Skype software to serve as the traffic cops for their entire network. In theory this is a good idea, but it does have unique vulnerabilities that have been exposed during the past week. Skype, as a company, has no physical or programmatic control over the most vital piece of its product when the network destabilizes for any reason.
+
+Another issue with SuperNode models concerns system recovery after a crash. A SuperNode-based network can only recover as fast as new SuperNodes can be identified."
+(http://digitalmediaupdate.blogspot.com/2007/08/skypes-proprietary-p2p-v-standards.html)
+
+
+* '''Sten Tamkivi on why Skype choose a proprietary protocol:'''
+
+
+"We've been quite successful with a proprietary one, so any switch like that would need a very good reason. It's one of those where you don't fix what's not broken. I think what is more immediate for us is the question of how to interop with others, and something we launched this year into beta was Skype for SIP. The other related project is Skype for Asterisk; where it's about how do you connect to other end points who are not Skype nodes; which of the standards of protocols are the ones you pick to communicate with those. As you can see, we're doing SIP and Asterisk in parallel because that gives us new learnings of what works, what doesn't, where do open standards fall short.
+
+If you think back into late 2003 where those decisions around Skype's architecture was made, then I don't think we would be where we are if we had gone with open standards at that point. Some of those reasons have been mentioned today, as well. If you ask the users why they picked up Skype in the early days, they usually say Skype solved the problem of setting up the client. Me personally, the first time I tried to use a VoIP client in 1995, or 1996, and being a fairly technical person, I couldn't get through the proxies and ports and all this other mess I had to set up. Once I got the client running there was nobody to talk to. Those two problems, Skype solved, and a lot of that solved is our proprietary invention of how to solve it. That's explaining where the roots are. Today, we are looking more to how we open up to these open standards rather than replace what we have with something else."
+(http://blog.ecomm.ec/2009/11/europe-2009-transcript-sten-tamkivi.html)
+
+
+[[Category:Webcasts]]
+
+==Skype is a closed calling network==
+
+Letter by Michael Robertson, the founder of SipPhone/GizmoProject to Skype:
+
+"I recently saw your letter to FCC Chairman Kevin J. Martin demanding that wireless companies open their networks. While I concur this would be beneficial for consumers, Skype's actions do not mirror their words to the commission which diminishes credibility for Skype to demand openness.
+
+I am CEO of Gizmo5, a standards based VOIP and IM network. We invite other networks to connect to our users and currently route calls to and from more than 500 networks big and small on the Internet. We cannot route calls to Skype users in spite of the fact that consumers would like to do this because Skype has a closed network.
+
+The wireless companies you chastise in your letter to commissioner Martin allow me to send and receive calls to the networks they operate but Skype does not. Skype operates the largest closed calling network on the planet. We have requested peering information from Skype in the past on multiple occasions and our requests have been ignored. Skype continues to deny Gizmo5 and others in the internet calling world the information and access to allow calls to flow to and from your network.
+
+It appears that when it is convenient for Skype's business objectives Skype waves the flag of openness, at the same time conveniently ignoring competitors requests for openness. It is disingenuous for Skype to demand mobile operators open their networks so that Skype can infiltrate their systems with their proprietary, closed calling scheme which locks out all others.
+
+If Skype truly believes there should be open competition then they should start by enabling other networks such as Gizmo5 to call Skype users in an official and supported capacity. Until you remove the padlock from your own front door you would seem to have no right to demand that others adopt an open door strategy.
+
+I'm open to discuss and implement an open peering relationship which will demonstrates Skype true commitment to open networks and make your actions match your words. Contact me anytime at michael@michaelrobertson.com"
+(http://andyabramson.blogs.com/voipwatch/2008/09/gizmo-projects.html)
+
+
+==Commentary on the August 2007 Skype outage==
+
+... and what it means for [[P2P Computing]].
+
+By Gwendal Simon:
+
+"Skype is undoubtedly one of the most famous peer-to-peer systems over
+Internet. Skype sofwtare is so efficient that many users consider
+Skype as a casual phone company, although the system is actually based
+on mechanisms that were initially designed for file sharing systems.
+This small start-up leverages on known advantages of such
+architectures: scalability, self-healing ability, no (or few) required
+infrastructure...
+
+Users were quite disappointed when the system experienced a major
+crash during two days in mid-August. Reported in the official Skype
+blog (http://heartbeat.skype.com/2007/08/what_happened_on_august_16.html),
+this bug emphasized the deficiency of Skype's self-healing property.
+Many experts have debated about this crash, however very few facts
+have been made public by the company which uses a close proprietary
+network protocol.
+
+A nice reaction to this crash comes from Alen Peacock. He claims
+(http://flud.org/blog/2007/08/20/p2ps-skype-induced-blackeye-or-why-diversity-is-good/)
+that the close proprietary model of Skype is the main cause of this
+crash. He convincingly argues that if Skype were open, many different
+programs would form an unique Skype system and this system would be
+far more reliable because one bug in one program could not affect the
+whole system. In other words, the self-healing property of a
+peer-to-peer system does not depend only on the decentralized
+architecture, but should also rely on a full distribution of the
+system.
+
+We make here the parallel with a previous study on the Gnutella system
+where the diversity of actors was also shown as a positive
+characteristic (http://enstb.org/~gsimon/Resources/Slide-Gnutella-FING/slide-Gwendal-FING.pdf).
+In a classic market view, Gwendal Simon showed that the competition
+between several actors united in the same system is good for the
+system itself as it benefits from innovations from several actors.
+These competitors try to differentiate but they also try to make the
+system more attractive. This dilemma results, for Gnutella at least,
+in a positive evolution. As an example, the seminal mail in the
+Gnutella Developers Forum said : « The network effect implies that the
+more the network grows, the more powerful and valuable it will be. We
+have more to gain in cooperation than in competition. Lets try to keep
+this in mind as we have technical discussions. »
+
+In both cases (self-healing and innovation), the diversity of actors
+appears to be positive. The competition between actors reaches a
+natural collaborative state as actors know that their main value comes
+from the network. The recent Skype outages emphasize another positive
+aspect of the diversity generated by open common system."
+
+
+==[[GNU Call]] as an open alternativer==
+
+Alastair Otter:
+
+"In an effort to create a free software alternative to Skype the GNU Project has announced plans for GNU Call. The project hopes to provide secure over-the-internet calls to all users and rival the popular Skype VoIP service.
+
+The GNU Project is one of the primary advocates and developers behind the free and open source software and provides a broad range of free software which is included in popular Linux releases.
+
+The GNU Call project says that its primary difference with Skype will be that it will use a peer-to-peer SIP protocol so that the service will not rely on one single service provider. In doing so the organisation hopes to create self-organised mesh calling networks that will be beyond the control of any one organisation. This, the organisation says, will increase security and reliability as there will be no single vulnerable point.
+
+The project will build on the already existing GNU SIP Witch, a server for SIP calls which provides a method of managing and routing calls.
+
+The GNU Project's plans to create a distributed peer-to-peer version of Skype's service is similar to the Diaspora project's plans for an open source Facebook alternative. Bot projects are looking to provide a free (as in freedom) alternative to what are already well established services, which is a significant undertaking.
+
+GNU Call is still in early development but what is known is that it will have the option for multiple user interfaces, so it can be integrated into most desktops, it will not include video directly into the application but will likely hand that off to standalone video players on the various desktops and will be usable on both desktops as well as smartphones.
+
+The ambitions of the GNU Call team are noble, as many commenters on their site suggest, but breaking into the Skype market, even with the best product, is going to take hard work."
+(http://mybroadband.co.za/news/software/19177-GNU-Call-open-source-Skype.html)
+
+=Interview=
+
+'''Skype, using P2P filesharing principles for telephony''':
+
+Zennström and Friis, the creators of KaZaa, one of the early and popular P2P filesharing systems, came up with the idea of using P2P to enable free phone calls on the internet, and Skype was born, poised for an extraordinary rapid update. Beyond phone calls, users have been creatively tinkering with it to enable audio and video broadcasts (i.e. Skypecasting). 
+
+Excerpts from an interview in Business Week:
+
+"'''Q: Where else could this go, beyond files and people?''' 
+
+A: It could be other resources -- you know, storage, video streams. But this really works on two levels. First there's the peer network, and I've been stressing that because it's the enabler for everything. But then there are the applications. We could not have foreseen -- wow! -- all the things that could be developed on top of P2P. For instance, when we first used peer-to-peer technology, we didn't foresee that we could do voice. It became obvious to us after some time, but when we started we didn't know what the applications would be. But when we applied the technology to various industries, we realized we could create a sustainable competitive advantage. That's because, in the normal system you have a marginal cost for every unit you add. If your network is client/server-based, you have to add a new network card for each new Web server, central switch, and so on. But in a peer-to-peer network, you're reusing the system resources in the network, so the marginal cost of producing a phone call or a file transfer or something else is zero. "
+(http://www.businessweek.com/magazine/content/04_44/b3906091_mz063.htm; 
+http://www.businessweek.com/magazine/content/04_44/b3906087_mz063.htm)
+
+
+=More Information=
+
+An article explaining the rapid diffusion of Skype, at http://www.nytimes.com/2004/09/05/business/yourmoney/05tech.html?th 
+
+Open Source telephony developments for the enterprise market are summarized here at http://www.eweek.com/article2/0,1759,,00.asp
+
+PC to Phone services such as SkypeOut are reviewed by the New York Times, at http://www.nytimes.com/2005/09/01/technology/circuits/01basics.html?; Among the competing services it mentions are : www.gizmoproject.com, www.voicestick.com.
+
+Google Talk vs. Skype VoIP, a comparison by Red Herring: http://www.redherring.com/Article.aspx?a=13339&hed=Is+Google+Talk+a+Skype+Killer%3f
+
+[[Category:Encyclopedia]]
+
+[[Category:Standards]]
+
+[[Category:Software]]
+
+[[Category:Business]]

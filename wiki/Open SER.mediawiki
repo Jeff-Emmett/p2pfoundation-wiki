@@ -1,0 +1,36 @@
+
+'''= project to develop an open [[SIP]] Express Router'''
+
+URL = http://www.openser.org/
+
+
+=Description=
+
+"''Robust Open Source (GPL) SIP (RFC3261) server implementation''. Among features: VoIP SIP registrar/proxy/router/application server, TLS secure communication, AAA, ENUM, LCR, load balancing, NAT traversal, OSP, CPL, SNMP, IM&Presence, DNS failover."
+(http://sourceforge.net/projects/openser/)
+
+
+=Technical Motivation=
+
+"Why am I even bothering with OpenSER when there's Asterisk? Asterisk is
+great, but it's not really a SIP proxy and it doesn't scale as well as
+OpenSER. A single OpenSER box can handle more registrations and call
+setups, than a large cluster of Asterisk boxes can at this time. This is
+why Free World Dialup uses SER as it's SIP proxy and not Asterisk."
+(http://www.oldskoolphreak.com/tfiles/voip/beginners_openser.txt)
+
+
+=More Information=
+
+#http://siprouter.onsip.org/doc/gettingstarted/
+
+
+
+=More Information=
+
+#[[P2P Telephony]]
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]

@@ -1,0 +1,62 @@
+'''= case description of an [[Open Development]] process for [[Open Source Software]] by Andrew Morton in 2004, also interesting for insight into [[Peer Governance]]'''
+
+
+=Description=
+
+Andrew Morton:
+
+"How do new features find their way into "legacy infrastructure" open source projects such as the Linux kernel? In other words, what is the requirements analysis and planning process?
+
+- First up, with a legacy project, the feature set tends to be well understood.
+
+We're implementing 30-year-old technology, so we're working to all that prior understanding of how these things should traditionally operate. This removes a lot of uncertainty from the design process.
+
+And to a large extent we're strongly guided by well-established standards: POSIX, IEEE, IETF, PCI, various hardware specs, etc. There's little room for controversy here.
+
+- Generally, new features are small (less than one person-year) and can be handled by one or two individuals. This is especially true of the kernel which, although a huge project is really an agglomeration of thousands of small projects. Linus has always been fanatical about maintaining the quality and sanity of interfaces between subsystems, and this stands us in good stead when adding new components.
+
+This agglomeration of many small subsystems fits well into the disconnected, distributed development team model which we use.
+
+If the project was a large greenfield thing, such as, say, an integrated security system for the whole of San Jose airport then open source development methodologies would, I suspect, simply come undone: the amount of up-front planning and the team and schedule coordination to deliver such a greenfield product is much higher than with "legacy infrastructure" products.
+
+The resourcing of projects in the open source "legacy infrastructure" world is interesting. We find that the assignment of engineering resources to feature work is very much self-levelling. In that if someone out there has sufficient need for a new feature, then they will put the financial and engineering resources into its development. And if nobody ends up contributing a particular feature, well, it turns out that nobody really wanted the feature anyway, so we don't want it in the kernel. The system is quite self-correcting in that regard.
+
+Of course, the same happens in conventional commercial software development: if management keeps on putting engineers onto features which nobody actually wants then they won't be in management for very long. One hopes. But in the open source world we really do spend zero time being concerned with programmer resource allocation issues -- the top-level kernel developers never sit around a table deciding which features deserve our finite engineering resources for the next financial year. Either features come at us or they do not. We just don't get involved at that level.
+
+And this works. Again, because of the nature of the product: a bundle of well-specified and relatively decoupled features. If one day we decided that we needed to undertake a massive rewrite of major subsystems which required 15 person years of effort then yes, we'd have a big management problem. But that doesn't happen with "legacy infrastructure" projects.
+
+Development processes and workflow
+
+- All work is performed via email. Preferably on public mailing lists so a record of discussions is available on the various web archives. I dislike private design discussions because it cuts people out of the loop, reduces the opportunity for others to correct mistakes and you just end up repeating yourself when the end product of the discussion comes out.
+
+- Internet messaging via the IRC system is used a little bit, but nothing serious happens there -- for a start it's unarchived so for the previously mentioned reasons I and others tend to chop IRC design discussions off and ask that they be taken to email.
+
+- We never ever use phone conferences.
+
+- The emphasis upon email is, incidentally, a great leveller for people who are not comfortable with English -- they can take as much time as they need understanding and composing communications with the rest of the team.
+
+- Contributors send their code submissions as source code patches to the relevant mailing lists for review and testing by other developers. The review process is very important. Especially to top-level maintainers such as myself. I don't understand the whole kernel and I don't have the time or expertise to go through every patch. But I very much like to see that someone I trust has given a patch a good look-over.
+
+- When a patch has passed the review process it will be merged into one of the many kernel development trees out there. The USB tree, the SCSI tree, the ia64 tree, the audio driver tree, etc. Each one of these trees has a single top-level maintainer.
+
+I run a uber-tree called the "mm kernels" which integrates the latest version of Linus's tree with all the other top-level trees (32 at the last count). On top of that I add all the patches which I've collected from various other people or have written myself -- this ranges from 200 to 700 extra patches. I bundle the whole lot together and push it out for testing maybe twice a week.
+
+When we're confident that a particular set of patches has had sufficient test and review we will push that down into Linus's tree, which is the core public kernel, at kernel.org.
+
+- Vendors such as Red Hat and Suse will occasionally take a kernel.org kernel and will add various fixes and features. They will go through a several month QA cycle and will then release the final output as their production kernel.
+
+- The preferred form of bug reports from testers is an email to the relevant mailing list. We go through a diagnosis and resolution process on the public list, hopefully resulting in a fix. This whole process follows a many-to-many model: everyone gets to see the problem resolution in progress and people can and do chip in with additional suggestions and insights.
+
+This process turns out to be quite effective.
+
+- We do have a formal web-based kernel bug reporting system, using bugzilla. But the bugzilla process is one-to-one rather than many-to-many and ends up being much less effective because of this. I screen all bugzilla entries and usually I'll bounce them directly to up email if I think the problem needs attention.
+
+The mailing lists are high volume and it does take some time to follow them. But if a company wishes their engineering staff to become as effective as possible with the open source products, reading and contributing to the development lists is an important function and engineer time should be set aside for this."
+(http://www.groklaw.net/article.php?story=20041122035814276)
+
+
+[[Category:Business]]
+
+[[Category:Governance]]
+
+[[Category:Cases]]

@@ -1,0 +1,29 @@
+
+
+=Description=
+
+David Rowe:
+
+"A PBX connects a number of private extensions through a trunk line or lines to the public phone system, routing outbound and incoming calls and providing features such as voicemail and teleconferencing.
+
+IP-PBXs work with VoIP telephones and trunks to provide these voice services on an IP-based data network. IP-PBXs can also mix IP and traditional telephony--for example, routing an incoming analog call from the PSTN to a VoIP telephone, or trunking a call /P>from an analog phone over the Internet.
+
+By combining the Analog Devices Blackfin, open hardware, Asterisk, Oslec and uClinux, an extremely low-cost yet powerful IP-PBX reference design has been developed and put into production. The IP04 is being produced commercially and is also being adopted by a number of equipment suppliers as the engine for their IP-PBX products.
+
+Asterisk is a very powerful and popular open-source software application that implements an IP-PBX function on several hardware platforms. Many Asterisk IP-PBXs are based on an X86 PC plus PCI card for the analog ports. The Open Telephony Project is taking advantage of Asterisk software to build a high-quality IP-PBX.
+
+The IP04 is just such an open-hardware IP-PBX design. It uses a four-port IP-PBX that runs Asterisk and uClinux on a Blackfin processor. When power is applied, the Blackfin boot ROM starts reading from the 256-kbit SPI flash chip. The program it loads is called u-boot, a powerful boot loader that has been ported to the Blackfin. U-boot has a command line interface that lets you load other programs from flash or via Ethernet. In normal operation, it automatically loads and executes the uClinux kernel."
+(http://www.eetimes.com/news/design/showArticle.jhtml?articleID=202800249)
+
+
+=More Information=
+
+#[[P2P Telephony]]
+
+
+
+[[Category:Open]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]

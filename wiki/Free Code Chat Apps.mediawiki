@@ -1,0 +1,119 @@
+Most people are familiar with proprietary chat apps like Skype, FaceTime, FB Messenger, WhatsApp, Hangouts, WeChat, and so on. Chat apps differ from email in that they are designed mainly for use by two or more people having a back-and-forth conversation made up of short messages (usually 1 or 2 sentences at a time), and often online at the same time. Most modern chat apps also support voice and video calling, and voice mail. This page has information about chat apps whose code is available as a commons, under a [[Free Software|free software]] license, allowing it to be audited by the community, or modified ("forked") to make new versions or new apps.
+--[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 16:34, 20 May 2019 (UTC)
+
+
+== Features: what they can do ==
+
+{| class="wikitable sortable"
+|-
+! Name !! Platforms supported !! Text/ Audio/ Video? !! Group chat !! End-to-End Encrypted !! Other features !! # of Languages Supported
+|-
+| [https://www.briarproject.org Briar] || Android || text only || yes || yes || forums, blogs || ?
+|-
+| [https://chatsecure.org/ ChatSecure] || iOS || text, voicemail || yes || optional || file transfer || ?
+|-
+| [https://conversations.im/ Conversations] || mobile || text, voicemail, audio (?), video (?) (audio/video chat is said to work between Conversations and some other jabber apps, including Movim) || yes || optional || file transfer, message editing || 
+|-
+| [https://delta.chat/ Delta Chat] || desktop and mobile || text, voicemail || yes || sometimes (works Delta <> Delta and with other email clients that support Autocrypt) || file transfer, image sharing || ?
+|-
+| [https://jami.net Jami] || desktop and mobile || text, voicemail, audio, video || voice/ video only || yes || file transfer || ?
+|-
+| [https://keybase.io/ Keybase] || desktop and mobile || text, (audio/video?) || yes || yes || signed file storage || ?
+|-
+| [https://www.linphone.org/ Linphone] || desktop and mobile || text, audio, video || yes || [https://www.linphone.org/news/end-end-encryption-1-1-and-group-instant-messaging in progress]? || file transfer || [https://www.transifex.com/belledonne-communications/public/ 32+ supported via Transifex]
+|-
+| [https://f-droid.org/en/packages/d.d.meshenger/ Meshenger] || Android || audio || ? || ? || ? || ?
+|-
+| [https://www.mumble.info/ Mumble] || desktop and mobile || text, audio || yes || no || ? || ?
+|-
+| [https://qtox.github.io/ qTox] || desktop || text, audio, (video?) || text: yes, audio, (video?) || yes || ? || ?
+|-
+| [https://riot.im/ Riot ] || web, mobile, desktop || text, audio, video || yes (audio and video via Jitsi Meet plug-in) || yes ([https://matrix.org/blog/2020/05/06/cross-signing-and-end-to-end-encryption-by-default-is-here as of May, 2020]) || file transfer, message editing || ?
+|-
+| [https://getsession.org/ Session] || mobile and desktop || text, voicemail || yes || yes || file transfer || ?
+|-
+| [http://signal.org/ Signal] || mobile, desktop || text, voicemail, audio, video || yes || yes || image sharing || ?
+|-
+| [http://silence.im/ Silence] || Android || text, multimedia messages || ? || yes || ? || ?
+|-
+| [https://github.com/zoff99/ToxAndroidRefImpl TRIfa] || Android || text, audio, video || ? || yes || image sharing, file transfer, video embeds || ?
+|-
+| [https://www.wire.com/ Wire] || web, mobile, desktop || text, audio, video || yes ||  yes || message editing, image sharing, file transfer || ?
+|-
+| [https://zom.im/ Zom] || mobile || text || yes || yes || file transfer || ?
+|}
+
+== Structure: how they work ==
+
+{| class="wikitable sortable"
+|-
+! Name !! License !! Free Software Directory !! Topology !! Protocol(s) Used !! Network Transport(s)
+|-
+| [https://www.briarproject.org Briar] || [https://code.briarproject.org/briar/briar/blob/master/LICENSE.txt GNU GPLv3+] || [https://directory.fsf.org/wiki/Briar#tab=Details Listed] || distributed || Tor || internet, wifi, bluetooth
+|-
+| [https://chatsecure.org/ ChatSecure] || [https://github.com/ChatSecure/ChatSecure-iOS/blob/master/LICENSE GNU GPLv3+] || [https://directory.fsf.org/wiki/Collection:IOS Mentioned] || federated || XMPP || internet
+|-
+| [https://conversations.im/ Conversations] || [https://github.com/siacs/Conversations/blob/master/LICENSE GNU GPLv3] || https://directory.fsf.org/wiki/Conversations.im || federated || XMPP, MUC, OMEMO, PGP || internet
+|-
+| [https://delta.chat/ Delta Chat] || [https://github.com/deltachat/  MPL (core), GPL (most apps), unclear (iThing app)] || ? || federated || IMAP (email), Autocrypt || internet
+|-
+| [https://jami.net Jami] || [https://git.jami.net/savoirfairelinux/ring-project/blob/master/COPYING GNU GPLv3+] || [https://directory.fsf.org/wiki/Jami Listed] || distributed || SIP || internet
+|-
+| [https://keybase.io/ Keybase] || [https://github.com/keybase/client/blob/master/LICENSE Modified BSD] || || ? || centralized || internet
+|-
+| [https://www.linphone.org/ Linphone] || core library: [https://gitlab.linphone.org/BC/public/linphone/blob/master/LICENSE.txt GNU GPLv3], desktop, Windows 10, iOS clients: [https://gitlab.linphone.org/BC/public/linphone-desktop/blob/master/LICENSE.txt GPLv2], Android client: [https://gitlab.linphone.org/BC/public/linphone-android/blob/master/LICENSE.txt GNU GPLv3], flexisip server: [https://gitlab.linphone.org/BC/public/flexisip/blob/master/COPYING GNU AGPL] || [https://directory.fsf.org/wiki/Linphone#tab=Details Listed] || centralized || SIP, LIME || internet
+|-
+| [https://github.com/meshenger-app/meshenger-android Meshenger] || [https://github.com/meshenger-app/meshenger-android/blob/master/LICENSE GNU GPLv3] || ? || distributed || IOTA || local network, community network (internet?)
+|-
+| [https://www.mumble.info/ Mumble] || [https://github.com/mumble-voip/mumble/blob/master/LICENSE Modified BSD] || [https://directory.fsf.org/wiki/Mumble#tab=Details Listed] || centralized || [https://wiki.mumble.info/wiki/Protocol Own protocol], UDP || internet
+|-
+| [https://qtox.github.io/ qTox] || [https://github.com/qTox/qTox/blob/master/LICENSE GNU GPLv3] || [https://directory.fsf.org/wiki/Collection:GNU/Linux Mentioned] || distributed || Tox || internet
+|-
+| [https://riot.im/ Riot ] || [https://github.com/vector-im/riot-web/blob/master/LICENSE Apache 2.0] || [https://directory.fsf.org/wiki/Review:Riot.im-REV-ID-1 Under review] || federated || Matrix || internet
+|-
+| [https://getsession.org/ Session] || clients: [https://github.com/loki-project/session-desktop/blob/clearnet/LICENSE GNU GPLv3] || ? || hybrid (mostly distributed, but public groups are federated) || Loki blockchain || internet
+|-
+| [http://signal.org/ Signal] || clients: [https://github.com/signalapp/Signal-Desktop/blob/development/LICENSE GNU GPLv3], server: [https://github.com/signalapp/ContactDiscoveryService/blob/master/LICENSE GNU AGPLv3] || [https://directory.fsf.org/wiki/Signal#tab=Details Listed] || centralized || Signal || internet
+|-
+| [http://silence.im/ Silence] || [https://github.com/SilenceIM/Silence/blob/master/LICENSE GPLv3] || ? || federated || SMS, MMS || GSM
+|-
+| [https://github.com/zoff99/ToxAndroidRefImpl TRIfa] || [https://github.com/zoff99/ToxAndroidRefImpl/blob/zoff99/dev003/LICENSE GNU GPLv2] || ? || distributed || Tox, Tor (with Orbot) || internet
+|-
+| [https://www.wire.com/ Wire] || [https://github.com/wireapp/wire-webapp/blob/dev/LICENSE GNU GPLv3 (clients)] / [https://github.com/wireapp/wire-server/blob/develop/LICENSE AGPLv3 (server)] || [https://directory.fsf.org/wiki/Wire#tab=Details Listed] || centralized ([https://github.com/wireapp/wire-server/issues/631 federation is planned]) || [https://github.com/wireapp/proteus Proteus] (own protocol) for text, DTLS and SRTP for voice || internet
+|-
+| [https://zom.im/ Zom] || [https://github.com/zom/zom-android-matrix/blob/master/LICENSE Android: Apache 2.0], iOS ? || || federated || Matrix || internet
+|}
+
+=== Notes on Network Topology ===
+
+Network topology terms are used in the table above as follows:
+* '''Centralized''': all connections between user apps must be made through a server (or cluster of servers) controlled by one operator. 
+* '''Federated''': all connections between user apps must be made through servers, but users can still communicate even if they are connected to separate servers, controlled by different operators.
+* '''Distributed''': all connections are made directly between user apps, with no servers required.
+
+A "distributed" network is commonly referred to as a "P2P" (peer-to-peer) network, or sometimes a "mesh" network. "Federated", as used here, is often referred to as "decentralized", following a convention established by the famous network topology diagram from [https://hi-project.org/the-technology/ Paul Paran's 1964 paper 'Centralized, Decentralized and Distributed networks']. However, in political writing, the term "decentralized" has commonly been used to refer to both networks of organizations, and networks of peers, while the term "federation" only applies to networks of organizations. --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 13:50, 28 October 2019 (UTC)
+
+== Further notes on apps ==
+{| class="wikitable"
+|-
+| Briar ||  adding contacts requires in-person scanning of QR codes or sending special URLs
+|-
+| Keybase || [https://keybase.io/blog/keybase-joins-zoom acquired by Zoom in 2020]
+|-
+| Session || a fork of Signal using a blockchain in place of a central server. Doesn't require a phone number to create an account, unlike Signal. Private "closed groups" can be up to 10 users, larger groups are public "open groups".
+|-
+| Silence || a fork of TextSecure - the app that later became the Android client for Signal - keeping only the support for SMS text messages and MMS multimedia messages.
+|-
+| Zom || began as updated version of the [https://chatsecure.org/blog/chatsecure-conversations-zom/ old ChatSecure for Android code], using XMPP, but later moved to the Matrix protocol. The blog piece at that link describes a plan to begin a new ChatSecure for Android, as a fork of Conversations, making it also an XMPP client, but [https://chatsecure.org/faq/ this effort was abandoned]
+|}
+
+== See also ==
+* [[Free code chat software]] - an overview of audio and video chat software 
+* [https://directory.fsf.org/wiki/Category/Live-communications Free Software Directory - Chat Category]
+* [https://www.privacytools.io/software/real-time-communication/ PrivacyTools.io chat app guide]
+* F-Droid: Aims to offer a complete collection of Android apps that can be built from free code with no proprietary dependencies. Other chat clients they list: https://search.f-droid.org/?q=chat
+* [https://en.wikipedia.org/wiki/Comparison_of_instant_messaging_clients Wikipedia - comparison table of chat apps]
+
+[[Category:P2P Infrastructure]]
+[[Category:Free Software]]
+[[Category:Technology]]

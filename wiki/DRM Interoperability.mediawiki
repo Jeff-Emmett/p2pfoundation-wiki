@@ -1,0 +1,99 @@
+'''DRM Interoperability'''
+
+[[Digital Rights Management]] refers to software and hardware-embedded techniques that restrict the usage of digital files, usually in order to protect copyright, or to monetize specific usage. It is opposed by those who protect user rights. DRM interoperability refers to the obligation that digital files must be playable across different DRM systems. It was in the news when it appeared that the new French copyright legislation, DAVSDI, would impose it.
+
+
+=Definitions=
+
+
+"DRM system: A system of Information Technology components and services which strives to distribute and control content and its rights. This operates in an environment driven by law, policies and business models." 
+(http://camorra.org/swann/2007/07/11/daniels-drm-dilemma/)
+
+"Interoperability: The ability of a User to technically execute Functions through Interfaces and Protocols, based on open specifications, with predictable results."
+(http://camorra.org/swann/2007/07/11/daniels-drm-dilemma/)
+
+
+
+=Background=
+
+
+
+==Types of Interoperability==
+
+Bill Rosenblatt at [http://www.drmwatch.com/standards/article.php/3609066 DRM Watch] explains 2 + 1 approaches:
+
+"'''there have been essentially two approaches to DRM interoperability thus far.  One is to leave existing systems in place and attempt to build technology to interoperate among them.  The other has been to create a flexible DRM standard and get device makers and content service providers to implement that standard.''' 
+
+'''Examples of the former approach include Coral and Secure Video Processor (SVP)'''.  Coral enables service providers to build services that offer DRM interoperability, while SVP does some of the same things for set-top-box-like devices instead of services.  Both essentially follow market dynamics: they are technology that facilitates interoperability where there is a market demand for it.  For SVP, the demand is mostly a future hypothetical one based on emerging home networking paradigms.  For Coral, demand for interoperability could come from almost anywhere and potentially be supported. Both depend on some level of cooperation from vendors of existing technologies with which interoperability will take place.
+
+'''There are two prominent examples of the latter approach to interoperability, the approach of "build it and they will come" DRMs for future devices: OMA DRM from the wireless telecoms industry, and more recently, Marlin from the "media player"''' consumer electronics industry.  While Marlin is a brand new spec, OMA DRM support (for version 1, at least) is now built into hundreds of handset-type devices around the world and implemented in dozens of services.
+
+'''WIth IDP-2, DMP envisions a third approach''', almost a Hegelian synthesis of the previous two.  IDP-2 starts with a set of notions of how content information is packaged in an XML-based file format that includes an identifier, metadata, rights information, and so on -- mostly based on MPEG-21 standards such as Digital Item Description Language (DIDL), Intellectual Property Management Protocol (IPMP), and Rights Expression Language (REL).  Then it includes a small set of core DRM functions that are assumed to be present in every device that can exercise rights to content such as play and store. 
+
+The flexibility of IDP-2 comes via the ways in which devices' DRM functionality can be expanded.  IDP-2 compatible devices can provide storage for "DRM Tools," which expand their functionality beyond the core.  If a content license (which can be part of a content item or separate from it) comes to a device with rights that are beyond the device's capability to process, then the device can contact a registration agency to obtain the required DRM tools, provided they work with the device in question.  DRM tools can also be bundled with content items -- this being an idea from Kocher's aforementioned white paper."
+(http://www.drmwatch.com/standards/article.php/3609066)  
+
+
+==Interoperability in French Law==
+
+
+"Interoperability : freedom for consumers and innovators"
+
+Explanation by Christian Paul, in the context of the proposed French law on copyright/filesharing (DAVDSI), which created a controversy over an amendment obliging Apple's iPod to open up to competitors.
+
+URL = [http://www.culturenumerique.net/index.php/2006/03/23/43-interoperabilite-communique-de-presse-explicatif-a-l-attention-de-nos-amis-americains]
+
+The recent adoption of provisions for DRM interoperability in the French "droit d'auteur" (~copyright) law raised eyebrows in the US and caused an alarmed reaction from Apple Inc.
+
+I would like to explain why we proposed that. First: we want to protect consumers' freedom of choice and privacy. We oppose the idea that the seller of a song or any other kind of work can impose on the consumer the way to read it, forever, and especially in consumer's home. It is essential to assure that the consumer can choose whatever device she likes, just as she can use her favorite hi-fi today and does not have to buy a new one for each vendor.
+
+Second: we want to keep the market free and open. Instead of legally enforcing artificial monopolies, we prefer to create an environment where every innovator has a chance. To do so, innovators need some information on how to interoperate with existing devices. To assure that small innovators can enter the market, we do not want this information to be expensive. As we are discussing an essential freedom here--the one to create and innovate--we estimated that the only acceptable price is: without charge.
+
+Third: we want to protect free (as in freedom) software developers. Many of them are individuals coding for fun, not for profit. Getting information required for interoperability without charge is key to them. They must also be able to publish the source code of software interoperating with any DRM. We have put this last guarantee in law.
+
+Let's put it more simply: Can we allow a couple of vendors to establish monopolies tightly controlling their clients and excluding competition? I think that no American can wish for that. Neither Apple, nor Microsoft, nor anyone else is threatened by this law if they intend to play fairly with competitors and consumers. If Apple wants to remain a big player, it will have to innovate and continue providing exciting new products. This is a good news for consumers, who will get better, cheaper competition. And it is also a great news in the long term for Apple."
+([http://www.culturenumerique.net/index.php/2006/03/23/43-interoperabilite-communique-de-presse-explicatif-a-l-attention-de-nos-amis-americains])
+
+
+== Position of the ACM on Interoperability==
+
+URL =  http://www.freedom-to-tinker.com/?p=985
+
+From a new policy statement on DRM, issued by USACM, the U.S. public policy committee of ACM, the leading professional society for computer scientists.
+
+"BACKGROUND:New technologies have remade the consumer entertainment landscape, allowing creative content – such as movies, television, and radio programming – to be delivered in digital form. Because exact copies of digital content can be widely and quickly distributed, some content distributors are employing technical protection systems to manage consumer uses of copyrighted content, often characterized as “digital rights management (DRM) technology". DRM systems are intended to enable distributors to manage consumer uses of content. In theory, this may prevent the making and distribution of infringing copies of digital works. However, use of these technologies has created controversy, especially as regards issues of “fair use" and public interest. In some cases, DRM technologies have been found to undermine consumers’ rights, infringe customer privacy, and damage the security of consumers’ computers. One notable example was the software distributed with compact discs in 2005 by Sony BMG. Sony subsequently withdrew the product, which had created security and privacy vulnerabilities for consumers’ computers, because of resulting public criticism and legal action.
+
+The marketplace should determine the success or failure of DRM technologies but, increasingly, content distributors are turning to legislatures or the courts to erect new legal mandates to replace long-standing copyright regimes. DRM systems should be mechanisms for reinforcing existing legal constraints on behavior, not as mechanisms for creating new legal constraints. Striking a balance among consumers’ rights, public interest, and protection of valid copyright interests is no simple task for technologists or policymakers. For this reason, USACM has developed the following recommendations on this important issue.
+
+
+RECOMMENDATIONS:
+
+Competition: Public policy should enable a variety of DRM approaches and systems to emerge, should allow and facilitate competition among them, and should encourage interoperability among them. No proprietary DRM technology should be mandated for use in any medium.
+
+Copyright Balance: Because lawful use (including fair use) of copyrighted works is in the public’s best interest, a person wishing to make lawful use of copyrighted material should not be prevented from doing so. As such, DRM systems should be mechanisms for reinforcing existing legal constraints on behavior (arising from copyright law or by reasonable contract), not as mechanisms for creating new legal constraints. Appropriate technical and/or legal safeguards should be in place to preserve lawful uses in cases where DRM systems cannot distinguish lawful uses from infringing uses.
+
+Consumer Protection: DRM should not be used to interfere with the rights of consumers. Neither should DRM technologies interfere with any technology or use of consumer systems that are unrelated to the copyrighted items being managed. Policymakers should actively monitor actual use of DRM and amend policies as necessary to protect these rights and interests.
+
+Privacy and Consent: Public policy should ensure that DRM systems may collect, store, and redistribute private information about users only to the extent required for their proper operation, that they follow fair information practices, and that they are subject to informed consent by users.
+
+Research and Public Discourse: DRM systems and policies should not interfere with legitimate research, with discourse about research results, or with other matters of public concern. Laws and regulations concerning DRM should contain explicit provisions to protect this principle.
+
+Targeted Policies: Public policies meant to reinforce copyright should be limited to applications where copyright interests are actually at stake. Laws and regulations concerning DRM should have limited scope, applying only where there is a realistic risk of copyright infringement."
+(http://www.freedom-to-tinker.com/?p=985)
+
+ 
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Media]]
+
+[[Category:Standards]]
+
+[[Category:Music]]
+
+[[Category:Audiovisual]]
+
+[[Category:Policy]]

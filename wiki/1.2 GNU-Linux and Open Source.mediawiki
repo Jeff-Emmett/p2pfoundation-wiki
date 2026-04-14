@@ -1,0 +1,102 @@
+
+===Linux and GNU/Linux===
+Back in the 80s, Richard Stallman and the GNU Project were still busy developing an operating system which should be entirely free software. Two important components were an editor called GNU Emacs and tools to compile source code to executable binaries, the GCC (GNU Compiler Collection). The availability of free developing tools was very important to gain more participants. 
+By 1990 the GNU Project had either developed or found everything which made up an operating system, except one component: the kernel. 
+
+{{Technology Box|Kernel|
+[[Image:Kernel.png|200px|right]]
+A Kernel is the central component of an operating system, but usually not the largest. It is responsible for the communication between hardware and upper-level software and thus makes the hardware, like CPU and memory, available to all other software running on the computer.
+}}
+
+
+[[Image:Linus Torvalds.jpg|thumb|200px|left|Linus Torvalds]]
+[[Image:Tux.png|thumb|150px|right|The penguin Tux, the official mascot of the Linux kernel.]]
+
+In 1991, Linus Torvalds (born 1969 in Finland), started work on the Linux kernel and released it in 1992 under the GPL. Users started to pair it with other free software they found. They combined the almost complete GNU system with the Linux kernel and got, without knowing it, the first completely free operating system. Most of them called it simply ''Linux'' as they didn't know about the goal of the GNU project and were starting from the Linux kernel. The media and most people still call the whole system only ''Linux'', although Richard Stallman urges everybody to call it ''GNU/Linux'', as he sees it as a GNU system, based on Linux. While ''Linux'' is the shorter, and also the more common name for the whole operating system, it is important not to forget that without the GNU project's struggle for a free operating system, for the sake of freedom, we wouldn't have one today. Users of the system should know its history and value the freedom it gives them. There are still lots of traps for free software, and freedom will be valued most when it's already lost. As Linus Torvalds and the name ''Linux'' don't emphasize very much on this issue, I personally prefer to call the whole system ''GNU/Linux'', but it's up to every single person to make his choice. Of course, everybody agrees that the sole kernel is just called ''Linux'' (for more information, have a look at [[Wikipedia:GNU/Linux naming controversy]]).
+
+The very open and collaborative software development style used by Linus Torvalds with the Linux kernel, relying on early and frequent releases of still unfinished software, was soon broadly adopted in the free and open source community as its advantages resulting in faster evolving projects became clear.<ref>Raymond, Eric S.; [http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html Release Early, Release Often], ''The Cathedral and the Bazaar'', 1997</ref> In fact, this is the first example of a large scale peer production. More on that later on in [[2.4 Property and Commons#Peer Production|Chapter 2.4]].
+
+===Open Source===
+As the GNU/Linux operating system and the very effective development method of free software was gaining more momentum, also businesses were beginning to show interest. In 1998, Netscape released most of the source code of its internet browser ''Netscape Communicator''. The browser was until then proprietary but still popular, although it was loosing ground to Microsoft's ''Internet Explorer'' that ships with its ''Windows'' operating system, both being proprietary, too. The liberation of the ''Netscape Communicator'' kicked off the Mozilla project that lead eventually to the popular Firefox browser. At a strategy meeting of several people interested in free software it was decided to use this chance to convince more businesses of the superiority of an open development process. In their opinion, the ideological and sometimes confrontational attitude which had been associated with free software needed a change. Emphasizing on the pragmatic advantages, they created a new marketing term for free software which wasn't bothered by the ambiguity of the English word ''free''. They came up with '''open source''', as the source code needs to be open to the public. Richard Stallman and other opponents of the term note that it can easily be misunderstood or even misused and still prefer the term ''free software''. If, for example, you can look at the source code of a program, but aren't allowed to change or redistribute it, the software has an open source, but is neither free software nor open source software. 
+
+[[Image:OSI_logo.png|thumb|144px|left|Open Source Initiative (OSI) Logo]]
+
+Still in 1998, Bruce Perens and Eric S. Raymond founded the Open Source Initiative (OSI), a non-profit organization to further promote the idea, especially to the corporate world. The OSI has also published its own [http://opensource.org/osi3.0/node/4 Open Source Definition]. Most of what is qualified as open source software is also free software as defined by the Free Software Foundation. Thus the terms can usually be used interchangeably. So, although the free software movement and the open source movement have different philosophies (one emphasizing freedom, the other a superior development methodology leading to technologically better software), they agree on the practical recommendations and work together on many projects.
+
+To avoid having to choose one term over the other, people suggested different names like "'''Software Libre'''" (libre as in liberty), "Free and Open Source Software" ('''FOSS''') or "Free/Libre/Open-Source Software" ('''FLOSS'''). However, there are also similar terms describing non-free software which can be confusing: ''Freeware'' is proprietary software, given away at no cost. ''Shareware'' is proprietary software which is distributed free of charge for trial purposes, however it is limited until the user pays its full price.
+
+In the 90s, new companies like Red Hat were founded whose sole business is to develop free and open source software and provide support for it, mainly targeting enterprises. In the 2000s, technology giants like IBM and Novell were beginning to massively invest in GNU/Linux, also providing legal defense.
+
+===GNU/Linux distributions===
+[[Image:command_line.png|thumb|200px|right|A screenshot of a computer running a Command Line Interface, every hacker's best friend.]]
+[[Image:GUI.png|thumb|200px|right|Most computer users today use a graphical user interface (GUI). Here a screenshot of KDE.]]
+
+While the Open Source Initiative was persuading the corporate world and ''open source'' achieved much press coverage, the free and open source ecosystem and GNU/Linux were further evolving. 
+In 1996, Matthias Ettrich launched the KDE desktop environment, providing GNU/Linux with a graphical user interface. Because KDE was based on the proprietary Qt toolkit, the Free Software Foundation paid Miguel de Icaza to create GNOME and therewith a completely free alternative which didn't depend on underlying proprietary software. Fortunately, the Qt toolkit was released as free software in 1998, and now, KDE as well as GNOME are widely used. Both are based on the X11 windowing system.
+After Netscape had released the source of its internet browser, Sun Microsystems freed its StarOffice suite in 2000, and the resulting OpenOffice.org project remains the most feature-filled free alternative to the proprietary Microsoft Office suite. Replacing ''Word'', ''Excel'' & Co, it does not only run under GNU/Linux but also under Windows and other operating systems. By now, there are thousands of smaller and larger free and open source software projects and for nearly every proprietary program there exists a free alternative. ([[Wikipedia:List of open source software packages]])
+
+As everybody is free to change and redistribute all free and open source software, it is easy to fork projects, if for example disagreements between developers arise. Sometimes this is favourable, as the projects evolve in different directions and provide solutions to different problems, or different solutions to the same problem, leading to more choice. But sometimes it is also a waste of development resources as it's often laborious to reintegrate changes from one forked version into another. Also, it's not always easy for users new to the Linux world to choose the software which fits their needs best.
+
+Soon after the Linux kernel was paired with parts of the GNU system, people started to bundle also other pieces of software together to form a complete operating system, including diverse userlevel applications. This made it a lot easier to install and start off with GNU/Linux. Such a bundle is usually called a Linux distribution, or just a '''distro'''. Today there exist over three hundred distros in active development. Some, like "Ubuntu Linux", are considered more user-friendly, others, like "Gentoo", are more the geek-thing. There's a list of [http://distrowatch.com/dwres.php?resource=major The Top Ten Distributions] over at DistroWatch.com. There are also ''LiveDistros'', which are GNU/Linux distributions on a CD-ROM, ready to run without having to install and alter the computer's harddrive. Live CDs are considered a good way to try out an operating system without the slightest risk. A popular LiveDistro is [http://knopper.net/knoppix/ Knoppix]. It is derived from the community-driven Debian GNU/Linux which in turn is known for its adherence to the free software philosophy. 
+
+===Present day===
+[[Image:RMS 2005.jpg|thumb|200px|left|Richard Stallman in the year 2005.]]
+Today, the Linux kernel is used in anything, from small embedded devices such as cell phones, to huge supercomputers, often paired with many components of the GNU system and other free and open source software. Because of its reliability and security, GNU/Linux is a very popular choice on the server market, adoption increasing.<ref>[http://www.dwheeler.com/oss_fs_why.html Why Open Source Software / Free Software (OSS/FS)? Look at the Numbers!]</ref> Especially for web-servers, the LAMP solution stack is broadly used. It consists of '''L'''inux (referring to the operating system), the '''A'''pache web server, the '''M'''ySQL database management system, and the '''P'''HP programming language, all being free software. On desktop computers and laptops adoption has been weaker, but still increasing.
+
+Linus Torvalds continues to direct the development of the Linux kernel. Richard Stallman heads the Free Software Foundation that now concentrates on legal and structural issues which concern the free software movement and community.
+
+
+
+==Open Source==
+
+===External Links===
+
+[http://www.opensource.org/ Open Source Initiative]
+
+
+===Internal Links===
+
+*[[Open Source Telephony]]
+*[[Open Source Initiative]]
+*[[Open Source Streaming Alliance]]
+*[[Open Source Licenses]]
+*[[Open Source Commercialization]]
+*[[Open Source Approaches - Generalities]]
+*[[Open Source Industrial Design]] 
+*[[Open Source Biotechnology]]
+*[[Open Source Architecture]]
+*[[Open Source Virtual Worlds]]
+*[[Open Source Metaverse]] 
+*[[Free Open Source Research Community]]
+
+== Free and Open Source Software today==
+===GNU/Linux===
+
+
+====External Links====
+
+* [https://www.gnu.org/distros/free-system-distribution-guidelines.html GNU Free System Distribution Guidelines] (GNU FSDG)
+* [http://www.distrowatch.org Distrowatch.org]
+* [http://www.ubuntu.org Ubuntu Linux]
+
+====Internal Links====
+
+* [[GNU/Linux Distros That Follow GNU FSDG]]
+*[[Linux]]
+*[[Linux - Desktop]]
+*[[Linux Distributions]] 
+*[[Linux - Governance]]
+*[[Linux Foundation]] 
+*[[GNU/Linux]]
+*[[Get GNU Linux]]
+*[[GNU Linux Matters]]
+
+===Applications===
+[http://www.mozilla.com/firefox Firefox]
+
+==References==
+<references/>
+
+==More Information==
+* [[Overview Texts]]
+[[Category:Intro]]

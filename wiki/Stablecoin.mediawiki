@@ -1,0 +1,633 @@
+
+=Context=
+
+RWA Report 2024:
+
+"The existence of stablecoins as a tokenized version of fiat currencies
+allowed for a stable unit of exchange in a volatile environment. Since
+2014, firms such as Tether and Circle have issued tokenized stable
+assets that are backed by real-world collateral such as bank
+deposits, short-term notes, and even physical gold."
+
+(https://assets.coingecko.com/reports/Research/RWA-Report-2024-Rise-of-Real-World-Assets-in-Crypto.pdf?)
+
+
+=Contextual Quote=
+
+"The irony is striking: after a decade of chasing volatility, crypto has quietly become a stablecoin industry. Nearly every major protocol, exchange, and bank integration now revolves around dollar-pegged assets. What began as a bridge between fiat and DeFi has turned into the core of onchain finance, the layer where liquidity, regulation, and real yield finally converge.
+In fact, since stablecoins provide stability in volatile markets and support the growth of DeFi, they have emerged as critical assets in the digital asset ecosystem."
+
+- ExaGroup [https://x.com/exagroupxyz/status/1980984254998684156]
+
+=Description=
+
+'''1. Philipp Sandner et al.:'''
+
+"Stablecoins are based on blockchain protocols that have the principle of price stability inherently encoded and, thus, fulfill the function of a reserve currency. The introduction of stablecoins set the foundation of the functioning decentralized financial system, as they enable participants to engage with each other without the underlying risk of price volatility
+
+(https://www.forbes.com/sites/philippsandner/2021/02/22/decentralized-finance-will-change-your-understanding-of-financial-systems/?)
+
+
+'''2. Harry M. Claverty:'''
+
+"The token market is volatile, which is a problem for utility tokens because their prices need to be stable to have utility, otherwise, we’d use them purely to speculate. If a token performed similarly to a mature currency, it would be useful enough to exchange within this ecosystem. Enter: The Stablecoin.
+
+A ‘Stablecoin’ is a ‘cryptoasset that maintains a stable value against a target price (e.g. USD)’. These assets could offer the best of privacy, stability, scalability, and decentralisation (more here). Moreover, a stakeholder can exchange in their own currency, significantly reducing the barrier to entry."
+
+(https://medium.com/@harrymclaverty/reverse-icos-part-3-db72547afd87)
+
+
+=Status=
+
+==2025==
+
+"By September 2025, the global stablecoin market cap reached an all-time high of $300 billion with 25.2 million senders every month, reflecting unprecedented adoption. Transaction volumes have surpassed $27 trillion annually, with nearly $100 billion in payments settled between 2023 and mid-2025."
+
+Conclusions by the ExaGroup:
+
+"As we have seen, stablecoins have quietly become the foundation of onchain finance tapping into the U.S. dollar for stability. And what started as an experiment to “hold value” in a market of chaos is now powering trillions in payments, trades, and savings.
+
+Today, most yields come from the same place they do in traditional finance — Treasuries and fixed-income instruments. Issuers like Circle, Paxos, and BlackRock have turned stablecoin reserves into efficient yield machines, offering 4–5% returns that mirror the risk-free rate. On the DeFi side, projects like MakerDAO, Ethena, and Frax have taken those same principles and reimagined them through smart contracts, delta-neutral strategies, and staking rewards that can reach well into the double digits.
+
+But the real story here isn’t just about who’s paying what yield — it’s about trust, transparency, and the gradual merging of two worlds. Regulation has finally caught up. The GENIUS Act, MiCA, and similar frameworks have given stablecoins formal recognition as payment instruments, creating space for banks, fintechs, and DeFi protocols to coexist under a clearer rulebook.
+
+So, as the $300 billion stablecoin market keeps growing, the big question isn’t whether stablecoins will stay — they’re already here to stay. The question is what kind of stability we want to build next: one owned by banks and fintechs, or one that stays open, composable, and truly decentralized.
+
+Either way, one thing’s clear — the “stable” in stablecoin now carries more meaning than ever."
+
+- Exagroup [https://x.com/exagroupxyz/status/1980984254998684156]
+
+==RWA Report 2024==
+
+"Currently, RWA stable assets are predominantly
+comprised of USD-pegged tokens. The top 3 USD
+stablecoins – USDT ($96.1B), USDC ($26.8B), and
+DAI ($4.9B) – make up 95% of market share.
+USDT dominance has continued climbing to
+71.4%, while USDC saw a hit in market share
+after its brief depegging during the US banking
+crisis in March 2023.
+
+‘Others’ comprises other fiat currencies (i.e.
+EURT, CNHT, MXNT, EURC, EURS, and TRYB).
+Collectively, these stable assets make up just
+0.2% of the market.
+
+Total market cap of fiat-backed stablecoins had
+seen a meteoric rise from $5.2B at the start of
+2020 to a whopping $150.0B at its peak in
+March 2022, before declining gradually
+throughout the bear market.
+
+Inflows have started seeing an uptick since
+November 2023. Since the start of 2024, the
+market cap of fiat-backed stablecoins have grown
+by 5% from $128.2B to $133.6B as of February 1.
+
+
+...
+
+
+In 2023, tokenized US treasuries saw a surge in
+popularity, increasing its market cap by 7.82x
+from $104M in 2023 January to $917M by the
+end of the year. However, that momentum has
+somewhat stalled in early 2024, increasing by
+just 1.5% to $931M in 2024 January.
+
+While these tokens are largely based on ETH,
+with 52.9% market share, firms such as Franklin
+Templeton and Wisdomtree Prime have chosen
+to issue them on Stellar, which currently holds
+35.8% of the total market cap. Other networks
+include Polygon, Solana, Base and Mantle."
+
+(https://assets.coingecko.com/reports/Research/RWA-Report-2024-Rise-of-Real-World-Assets-in-Crypto.pdf?)
+
+
+=History=
+
+==Stablecoins Evolution==
+
+ExaGroup:
+
+First thing first. Stablecoins went from experimental assets to the backbone of DeFi. Let’s explore how we got here.
+
+
+===2014–2018: Early Days – Fiat-backed and Pioneering Models===
+
+BitUSD (July 2014) was the first decentralized stablecoin that allowed users to lock $BTS (BitShares token) as collateral. It was pegged to USD via smart contracts and market incentives.
+
+Volatile BTS prices caused frequent undercollateralization and liquidations, limiting adoption and that’s when Tether USDT (November 2014) came into the picture offering a fiat-backed alternative, redeemable 1:1 for USD held in custody that would avoid overcollateralization or algorithmic complexity.
+
+USDT focused on exchange liquidity, payments, and settlements. It rapidly expanded, particularly in Asia, achieving $19.3 million in volume and $1.45 million market cap in just a few months and in a market where ETH was ~$1 and BTC ~$240.
+
+Circle (September 2018) arrived much later with USDC, a fully dollar-backed stablecoin regulated with public attestations that gained traction mostly amongst compliant fintech integrations very quickly becoming a key collateral asset in DeFi protocols.
+
+
+===2017–2019: Collateralized DeFi Models Emerge===
+
+Single-Collateral Dai (SAI, December 2017) by MakerDAO enabled users to lock ETH in Collateralized Debt Positions (CDPs) to mint SAI, with a soft USD peg maintained via stability fees and incentives. ETH-only collateral exposed it to volatility and liquidation risk. Multi-Collateral DAI (November 18, 2019) expanded collateral types (ETH, stablecoins, RWAs) and introduced $MKR governance for stability fees, collateral onboarding, and risk controls, enabling broader DeFi adoption and improved stability over SAI.
+
+
+===2019–2022: Rise of Algorithmic Stablecoins===
+
+Algorithmic stablecoins, such as Terra UST, gained popularity for decentralization and capital efficiency, growing to $18 billion market cap by early 2022. However, UST collapsed in May 2022, losing $40 billion and depegging to $0.10 due to flawed supply-demand mechanics that highlighted risks of under-collateralized, purely algorithmic designs - spurring interest in hybrid or overcollateralized models.
+
+
+===2022–2023: Innovation Amid the Bear Market===
+
+The 2022–2023 bear market drove robust designs addressing past failures. MakerDAO’s DAI refined 150–175% overcollateralization for transparency. Ethena USDe introduced delta-neutral hedging to stabilize pegs. Curve crvUSD launched LLAMMA for soft liquidations, mitigating sharp depegs. Frax FRAX blended fractional-algorithmic collateral with assets and supply modulation. These innovations recovered the market cap to ~$150 billion by late 2023, reinforcing transparency and DeFi interoperability.
+
+
+===2024–2025: Regulatory Recognition and GENIUS Act===
+
+The GENIUS Act, introduced in 2024 and signed July 18, 2025, recognized stablecoins as formal payment instruments, akin to debit card networks, ACH transfers, and wire systems. It mandated 1:1 reserves in high-quality assets (Treasuries/cash), AML/KYC compliance, and banned uncollateralized algorithmic models. Triggered by UST’s collapse and a $200 billion market cap by mid-2024, the GENIUS Act encouraged institutional adoption while constraining permissionless innovation.
+
+
+===2025: Current Market and Infrastructure===
+
+By September 2025, stablecoins reached a $300 billion market cap, with 25.2 million monthly senders, $27 trillion in annual transaction volume, and ~$100 billion settled since 2023.
+
+USDT maintains >60% dominance but relies on general-purpose chains using volatile gas tokens, not optimized for institutional scale. New networks include Arc (Ondo-backed, $500 million TVL), Tempo (Stellar-based, cross-border focus), and Paxos Global Dollar Network (PayPal, Mercado Libre integration). Fintechs (Robinhood, Kraken) and banks (JPMorgan, BNY Mellon) engage in stablecoin issuance and network partnerships, but infrastructure gaps limit scalability and compliance readiness."
+
+(https://x.com/exagroupxyz/status/1980984254998684156)
+
+
+=Regulation=
+
+==The US "Genius Act" has set off a wave of stablecoin regulation==
+
+Wenser:
+
+"Filling the last piece of the crypto regulation map
+
+For all stablecoin projects, the "Genius Act", a stablecoin regulatory bill that the U.S. Senate recently voted to "pass", is undoubtedly the sword of Damocles hanging over their heads. After Bitcoin spot ETF and Ethereum spot ETF have become part of the traditional institutional capital allocation positions, this bill will undoubtedly fill in the last piece of the Trump administration's crypto regulation map.
+
+Specifically, in my personal opinion, the main purpose of the Genius Act is to:
+
+1. Ensure the hegemony of the US dollar. As a loyal supporter of "America First", the core purpose of Trump and his government members and even the Democratic Party members is still to ensure the political and economic hegemony of the United States, and the main medium to achieve this is the US dollar. Stablecoins that are pegged to the US dollar at a 1:1 ratio are undoubtedly one of the best tools.
+
+2. Ensure that the operation of the stablecoin system is under the jurisdiction of the United States. Now that the crypto-friendly environment has become a foregone conclusion, the United States is becoming a hot spot for crypto again, which will help the United States take the initiative in the stablecoin operation system and regulatory policy formulation. At that time, just like the foreign trade regulations in the past, the United States will achieve comprehensive suppression of the global crypto economy and even cross-border trade through the stablecoin system.
+
+3. Ensure partial security of the crypto-financial system. This is one of the important reasons why the Genius Act has been positively affirmed by many industry professionals and representatives of the traditional financial industry. The mandatory 1:1 full asset reserve and the prohibition of misappropriation and re-pledge, the release of a reserve report at least once a month and the introduction of high-frequency information disclosure for external audits, the banking-level regulatory license after the circulation market value exceeds 10 billion US dollars, and the introduction of custodians will add one safety lock after another to the stablecoin track. Of course, as to whether the door behind the lock is solid, this is another question.
+
+4. It greatly opens up the imagination space of the RWA track, and the on-chain and off-chain worlds are more closely integrated. It can be said that stablecoins are the earliest RWA products, and the real-world assets they are bound to are US dollars. With the gradual implementation of the "Genius Act", the introduction and implementation of RWA-related bills are not far away. Compared with the current cryptocurrency market of over 3 trillion US dollars, it will be an asset market of tens of trillions of dollars.
+
+In this regard, the Genius Act will provide policy dividends for the US government and the US economy to develop the digital economy, tap the potential of digital assets, and encourage the development of crypto projects, giving birth to a number of crypto projects with great development prospects and the teams behind them. The geniuses who will bear the future of crypto may be hidden among them."
+
+(https://www.panewslab.com/en/articles/xnlccxqq)
+
+
+==Stablecoins: Between Monetary Sovereignty and Market Efficiency==
+
+Felipe Oria:
+
+"Stablecoins like USDC, USDT, and DAI now move more digital dollars per day than Venmo or PayPal. But unlike banks or payment institutions, their issuers aren’t central banks — they’re tech companies or DAOs. This is creating friction between private innovation and public monetary policy.
+
+The EU’s MiCA regulation explicitly targets large stablecoins, warning that “significant” issuers may pose threats to financial stability and monetary policy.
+
+In the U.S., stablecoin bills are being drafted to clarify oversight by the Federal Reserve and the SEC.
+
+In parallel, countries like China and India are accelerating their own CBDCs to counteract dollar-denominated stablecoins in domestic economies.
+
+Stablecoins are efficient and borderless — but they bypass traditional currency controls, raising critical questions: 
+
+* Can traditional government structures really oversee these borderless networks?
+
+* And even: what happens to government's enforcement capabilities when the conversion to the actual fiat becomes less important than the networks liquidity and size in themselves?"
+
+(https://www.linkedin.com/pulse/crypto-infrastructure-financial-regulation-who-controls-felipe-ori%C3%A1-7mg0f/)
+
+
+==Yanis Varoufakis on a New Monetary Commons (1)==
+
+* Defusing the Stablecoin Time Bomb. A New Monetary Commons Would Grant Us Freedom From Bankers and Financiers. 
+
+Yanis Varoufakis:
+
+"A dangerous monetary transformation is underway, prompted by the steady rise of stablecoins—privately issued currencies that are supposed to be backed by US dollar reserves. But a public stablecoin system, using the same blockchain technology, would avoid the risk of a financial crisis and make possible a trust fund for all.
+
+Margaret Thatcher famously quipped that the problem with socialists is that, eventually, they run out of other people’s money. But what happens when bankers run out of other people’s money, as seems likely to happen soon? Either we end up with another calamitous financial meltdown or we innovate to serve the public interest in a manner Thatcher would have dismissed as socialist.
+
+Before I propose one such innovative response to the looming financial quagmire, one must understand the monetary transformation currently underway, owing to the steady rise of stablecoins. Unlike Bitcoin and other cryptocurrencies which are tethered to nothing and fluctuate like a yo-yo, stablecoins are issued by private corporations that promise that their tokens will faithfully track the value of the US dollar.
+
+There are good reasons why common people, not just criminals, want to use stablecoins: they offer a way to send money, especially abroad, that is cheaper, faster, immune to US sanctions, and more reliable than rickety inter-bank messaging systems such as SWIFT.
+
+There are even more reasons why financiers are keen to offer us their brand of stablecoin: by shifting the trading of shares, bonds, derivatives, and other securities onto their own blockchain, they can make trading much faster and more reliable. Moreover, if their stablecoin becomes dominant, they will own not only the market but also the currency in which trades are made, creating scope for gargantuan financial gains.
+
+But '''stablecoins are setting the stage for the next financial meltdown'''. For starters, their issuers have an incentive to issue more tokens than the dollars they keep in reserve to back them. And, because stablecoin issuers keep a significant portion of their dollar reserves in banks, a bank run will cause a stablecoin run (a rush of requests to convert them into real dollars) which then triggers a cascade of bank runs.
+
+Moreover, a doom loop ties together stablecoins, shares, and bonds: once financial trading has shifted to blockchains “lubricated” by a stablecoin, a run on that stablecoin will threaten the stock market and the $29 trillion Treasuries market. And then there is the global fragility introduced by dollar-backed stablecoins issued outside the United States by companies that US authorities are unlikely to rescue if the need arises."
+
+(https://savageminds.substack.com/p/defusing-the-stablecoin-time-bomb)
+
+
+
+==[[Proposal for a New Public Crypto Network That Functions Like a Monetary Commons]]==
+
+
+* A proposal for a new public crypto network that functions like a truly novel monetary commons, by Yanis Varoufakis:
+
+"what is the alternative? Suppose that US residents could download a Federal Reserve digital wallet from any app store. Imagine that they could then ask employers to deposit their pay into that wallet and even transfer money from their commercial bank accounts to take advantage of the Fed’s overnight interest rates as well as free transactions.
+
+
+Using the same blockchain technology of stablecoin issuers, the Fed could guarantee that every payment or transfer is utterly private, while enabling everyone to see how much money sloshes around the system in aggregate, thereby preventing the authorities from creating new money without everyone knowing.
+
+
+This would be the mother of all stablecoins, without any of the drawbacks. Speed, efficiency, and privacy would be combined with a higher interest rate on deposits (compared to commercial banks) and the copper-plated security that your digital tokens are 100% Fed-backed US dollars with none of the moral hazards or doom loops afflicting private stablecoins. Moreover, this public system comes with an additional advantage: it makes possible a trust fund for everyone.
+
+
+Recall that, under the current system of fractional reserve banking, commercial banks create a lot more dollars from every dollar of deposits they receive (the so-called money market multiplier). Conversely, if the US Treasury is correct that $6.6 trillion of deposits are about to migrate from US banks to stablecoins, the overall supply of dollars is about to shrink dramatically. That will cause the Fed to raise interest rates substantially in order to allow banks to do likewise to stem the migration and the fall in the money supply—a disastrous outcome for the real economy.
+
+
+By contrast, following a mass migration of bank deposits to Fed wallets, the Fed does not need to increase interest rates. All it needs to do is calculate by how much the money supply is falling and credit each resident’s wallet with whatever sum is necessary to keep the money supply steady. In essence, without the state having to raise new taxes or borrow a single cent, the Fed would be offering a substantial trust fund to everyone within this new public crypto network that functions like a truly novel monetary commons."
+
+(https://savageminds.substack.com/p/defusing-the-stablecoin-time-bomb)
+
+=Typology=
+
+Philipp Sandner et al.:
+
+"There are three options how a cryptocurrency can reach price stability. 
+
+First, stablecoins can reach high degrees of price stability by pegging a currency to other assets. For example, for each issued unit of USD Coin a real US Dollar is held in reserve. 
+
+From a decentralized finance perspective, another interesting approach is the issuance of stablecoins by using other cryptocurrencies as collateral. A central protocol for the Defi ecosystem is Maker DAO, which issues the cryptocurrency DAI that is backed by other cryptocurrencies and ensures with its algorithm that the value of 1 DAI is hovering around the value of 1 US Dollar. 
+
+Thirdly, there are more experimental approaches that aim to reach price stability without the use of collaterals. For instance, the protocol Ampleforth automatically adjusts the supply of token in accordance with demand."
+
+
+(https://www.forbes.com/sites/philippsandner/2021/02/22/decentralized-finance-will-change-your-understanding-of-financial-systems/?)
+
+
+==Fiat-backed, crypto-backed, algorithmic and hybrid==
+
+ExaGroup:
+
+"Stablecoins are broadly categorized into fiat-backed, crypto-backed, algorithmic and hybrid. They are distinguished by their backing mechanisms and yield distribution models, which can be further categorized into yield-bearing and non-yield-bearing forms, as well as centralized and decentralized.
+
+Each form has unique characteristics in terms of peg stability, collateral composition, liquidity depth, ability to distribute yields and risk profiles.
+
+===Non-yield-bearing, centralized stablecoins===
+
+These are managed by single entities and backed by fiat reserves. They prioritize transactional efficiency and peg stability over income generation. They maintain reserves in high-quality liquid instruments such as cash, short-term U.S. Treasuries, or government money market funds and they ensure rapid settlements without distributing any form of interest to holders.
+
+Tether’s USDT is the largest stablecoin by market cap exceeding $180 billion. It relies on a mix of Treasuries, cash equivalents, and other short-term assets, supported by excess reserves that guarantee redemptions at par. It’s built to ensure deep liquidity across exchanges and low transfer costs.
+
+USD1 is a newer entrant that incorporates government money market funds into its reserves but adheres to the same non-yielding model. It maintains robust pegs with minimal deviations yet face risks tied to issuer solvency and potential regulatory restrictions.
+First Digital’s FDUSD is also backed by Treasuries and cash but focuses more on centralized exchange integrations without offering native yields. FDUSD one of the primary stablecoin issuer offering zero trading fees on Binance.
+
+
+===Yield-bearing, centralized stablecoins===
+
+These stablecoins introduce conditional returns through issuer-platform partnerships, though yields are absent in self-custody or on non-participating platforms.
+
+Circle’s USDC is backed by cash at reserve banks and investments in government money market funds holding short-dated Treasuries and reverse repurchase agreements, offering yields of approximately 4–5% exclusively on platforms like Coinbase, where reserve income is shared.
+
+Paxos’s PYUSD is issued under New York Department of Financial Services oversight with reserves in Treasuries and cash and provides discretionary yields within PayPal and Venmo ecosystems. It also extends to broader networks like the Global Dollar Network to foster interoperability among selected partners including Kraken, Robinhood, and Mastercard. This network powers USDG which is a MiCA-compliant USD stablecoin issued in Singapore and the EU that enables banks to join shared infrastructure for economic upside without full issuance burdens.
+
+MetaMask’s mUSD (MetaMask USD) is the first native stablecoin from the self-custodial wallet MetaMask. It is issued by Stripe’s Bridge with a 1:1 backing in dollar-equivalent reserves backed by short-term U.S. Treasuries and cash equivalents. It integrates directly into the MetaMask wallet to offer seamless on-ramping, swaps, and cross-chain bridging on Ethereum and Linea.
+
+Since its launch in mid-September 2025, mUSD's circulating supply has surged over 500% to approximately $100 million as of October 19, 2025—fueled largely by speculation around a potential MASK token airdrop tied to MetaMask's upcoming rewards program. While it maintains a non-yield-bearing base for broad accessibility, mUSD does allow for yield capture via the MetaMask’s Stablecoin Earn feature, that allows deposits into Aave lending pools for 4–5% APYs on compatible assets like USDC or USDT."
+
+
+===Non-yield-bearing, decentralized stablecoins===
+
+This form of stablecoin architecture employs onchain mechanisms such as over-collateralization or synthetic hedging to sustain their dollar pegs without distributing interest.
+
+MakerDAO’s DAI, for instance, requires borrowers to deposit assets like ETH or staked ETH at collateralization ratios of 150–175%, with stability fees accruing to a protocol surplus rather than holders. Its peg is maintained through automated liquidations and auctions.
+Sky’s USDS, is an evolution of Maker’s framework, and demands higher collateralization to around 270% channeling fees into system buffers. On the other side USDf maintains a minimum 116% cushion with assets that are less volatile such as stablecoins and BTC as a redemption safeguard.
+
+Another example is Ethena’s USDe which adopts a delta-neutral strategy, pairing spot collateral (e.g., ETH) with offsetting short perpetual futures positions, supplemented by a modest liquidity buffer, yielding zero until staked.
+
+These designs account for approximately $20 billion in market cap within the broader $283.2 billion landscape and prioritize transparency and DeFi interoperability but remain susceptible to smart contract vulnerabilities, collateral volatility, liquidation risks, and counterparty exposure — particularly since many of their hedging positions depend on centralized venues that could fail or restrict access during stress events (as seen on October 10). Moreover, when the market turns bearish, short perpetual positions used to maintain delta neutrality can incur persistent negative funding rates, adding to the overall cost of maintaining the hedge.
+
+
+===Yield-bearing, decentralized stablecoins===
+
+These stablecoins are debt-based and actively distribute income to holders, often through staking wrappers that enable auto-compounding without issuing new tokens.
+
+Staked versions like sDAI, sUSDe, sUSDS, and sUSDf transform their base assets into productive instruments drawing yields from perpetual funding rates, liquid staking rewards, stability fees, treasury coupons from over-collateralized vaults or even leveraging interest from institutional lending.
+
+To ensure peg stability, each stablecoin adopts its own independent stability mechanisms."
+
+
+===Yield-bearing, fiat-collateralized, centralized stablecoin (USDY)===
+
+This is the case of BlackRock’s BUIDL, Franklin Templeton’s BENJI, and Ondo’s USDY.
+
+They function as tokenized shares of regulated reserves invested in short-dated Treasuries and repos and they deliver 4–5% yields directly to whitelisted holders.
+
+Access is restricted to accredited investors and emphasizes institutional-grade custody. Two innovative stablecoin models are:
+USD0 by Usual, a RWA-backed Liquid Deposit Token backed 1:1 by short-term US Treasuries such as USYC, with peg maintenance via mint engine, CBR (Counter Bank Run), and transparency oracles for verifiable reserves.
+
+USDO by OpenEden is the first regulated Bermuda DABA stablecoin with rebasing yields. It is backed 1:1 by tokenized US Treasuries and generates yields via Treasury rebasing.
+
+
+===Hybrid Stablecoins===
+
+Two great examples of hybrid stablecoins are Frax Finance’s FRAX and Cap Money’s cUSD:
+
+FRAX employs a fractional-algorithmic design that blends partial collateralization with assets like USDC and RWAs and supply modulation for efficiency. It distributes yields via its wrapper SFRXUSD that yields around 4–5% through Treasury exposures and forward mechanisms like FXB.
+
+On the other side, Cap Money’s cUSD innovates by outsourcing yield generation to competing protocols such as EigenLayer-backed credit markets that can offer variable, competitive returns that minimize issuer-specific risks.
+
+Overall, purely algorithmic stablecoins that rely solely on supply-demand dynamics have declined due to historical failures like Terra’s UST while commodity-backed options like PAXG, pegged to gold, maintain stability but see limited adoption."
+
+(https://x.com/exagroupxyz/status/1980984254998684156)
+
+
+==USDT vs USDC==
+
+===The rise of USDT===
+
+Wenser:
+
+Surrounding the city from the countryside, and seizing the market with use cases
+Looking at the history of Tether’s development, we can roughly classify it as a “three-step strategy”:
+
+
+'''1. From Crypto Blood to Crypto Oil'''
+
+In October 2014, Tether was founded. At that time, its core product was the stablecoin USDT issued based on the Bitcoin Omni protocol.
+
+In February 2015, USDT was launched on Bitfinex, the largest Bitcoin trading platform at the time. Tether CEO Paolo Ardoino is also the CTO of Bitfinex. The two companies have always been regarded as "brother companies" by the outside world due to the high overlap of team members.
+
+In 2018, Tether issued USDT based on the ERC 20 standard on Ethereum. USDT under this standard is compatible with the original protocol, further improving its convenience of use. Since then, Tether and USDT have taken advantage of the development of the Ethereum ecosystem and have gradually penetrated into the body of the crypto ecosystem like crypto blood.
+
+In 2019, TRON and Tether successfully married. Since then, TRON has been soaring on the road to becoming the leading stablecoin network ecosystem. The former has become a heavyweight cooperative network that accounts for more than one-third of the USDT issuance. TRON founder Justin Sun also made TRON one of the cryptocurrency infrastructures through the early coin distribution strategy.
+
+It can be said that after the early redemption fee profit model was successfully verified, Tether has established its own competitive barriers and business model through USDT, and has gradually become a transaction equivalent to oil raw materials in the crypto ecological network.
+
+
+'''* 2. From Encryption to More Than Encryption'''
+
+As time enters 2020, with the outbreak of DeFi Summer, the market value of stablecoins has been rising. Tether and USDT are the ones who have seized the first-mover advantage. Tether's ambition is naturally no longer limited to the crypto world, but is gradually expanding to a larger range.
+
+As we mentioned in the article "The market value of "the first stable currency" USDT hits a new high, revealing the 100 billion business empire behind Tether": USDT's usage scenarios include general equivalents of cryptocurrencies, alternative currencies in inflationary areas, and major payment tools for cross-border trade, etc. In addition, after Tether has obtained massive profits, it has further extended its hands and feet into the entire world economic system through various investments, acquisitions, US debt reserves, gold reserves, and BTC reserves, strengthening its connection with the outside world of cryptocurrencies. This is also one of the important reasons why USDT has been criticized as a "money laundering accomplice". After all, money never sleeps, and the same is true for USDT.
+
+
+'''3. From means of payment to store of value'''
+
+In 2021, after reaching a settlement with the New York Attorney General's Office (NYAG) and paying a $41 million fine to the U.S. Commodity Futures Trading Commission, Tether has phased out the biggest obstacle on its road to development. Since then, the value of USDT has gradually upgraded from a means of payment to a store of value. After experiencing previous incidents such as the de-anchoring storm and the reserve asset Fud, USDT issued by Tether has become one of the few objects of hoarding in the high-risk and high-volatility crypto market-the other object is BTC. In particular, the continuous purchase of U.S. bonds, the market position and brand recognition tied to the U.S. dollar at a 1:1 ratio have finally been successfully recognized by the crypto community, and the billions or even tens of billions of dollars in profits each year have provided it with the confidence to win the "twin dollar" brand.
+
+From a crypto project that once grew wildly to the dominant stablecoin today, Tether and USDT have staged a wonderful drama of "surrounding the city from the countryside and seizing the market with use cases."
+
+(https://www.panewslab.com/en/articles/xnlccxqq)
+
+
+===USDC’s Second Path: Centralized Development, Crypto IPO===
+
+Wenser:
+
+"Unlike the USDT issued by Tether, Circle, which was founded by Coinbase, and its stablecoin USDC have taken a completely different path: everything is built for compliance.
+
+Apart from the regular U.S. Treasury reserves, Circle's profit model is undoubtedly more fragile than Tether's. After all, partners such as Coinbase and Binance can eat up more than half of its profits. This is also one of the important reasons why it has been pushing for crypto IPOs after Trump took office. Only by seizing the existing advantages of compliance and expanding its base from the cryptocurrency field to the traditional financial market in a timely manner can it obtain stronger bargaining power and obtain stronger funds, resources and even policy support in subsequent market competition.
+
+In addition to the two market giants USDT and USDC, from the early market TrueUSD (TUSD), Circle Coin (USDC), Gemini Dollar (GUSD), Paxos (PAX), to other stablecoin projects that still occupy a certain market today, such as DAI (MakerDAO), USDS (Sky), USDDe (Ethena), PYUSD (PayPal), RLUSD (Ripple), USD1 (WLFI), etc., the competition for this lucrative "cake" is undoubtedly becoming increasingly fierce. Who can truly remain invincible or become the ultimate winner still needs to be tested by regulatory policies and verified by time."
+
+(https://www.panewslab.com/en/articles/xnlccxqq)
+
+=Discussion=
+
+
+==Why Trump supports Stablecoins and crypto==
+
+Peter Ryan:
+
+"A statement from Treasury Secretary Scott Bessent at last week’s summit was the latest indication that there is a deeper strategy: maintaining dollar hegemony in an increasingly multipolar world. Bessent declared: “We are going to keep the US [dollar] the dominant reserve currency in the world, and we will use stablecoins to do that.” Stablecoins are cryptocurrencies that maintain a one-to-one peg with a fiat currency based on a stablecoin provider, usually a centralized private firm, maintaining real reserves of the currency. They provide the non-volatile value of a fiat currency, but with the regulatory flexibility of cryptocurrencies. Stablecoins are mostly used for trading cryptocurrencies within market exchanges. About 75 percent of trades are done with stablecoins. In short, there is no crypto sector without stablecoins. And it just so happens that 99 percent of stablecoins are pegged to the US dollar. That means that increasing cryptocurrency demand increases stablecoin demand, which increases US dollar demand. This is because the expanding market of cryptocurrencies is dollar-denominated, so dollars are needed to buy stablecoins to buy cryptocurrencies. Stablecoin demand, in turn, also increases demand for US Treasuries, because stablecoin providers convert customer dollars into Treasuries to hold as reserves, instead of non-interest bearing cash. Stablecoin providers own $120 billion worth of US debt through Treasury purchases. This makes them the 18th largest holder of US debt in the world, larger than countries like Germany. The approach taken by World Liberty Financial (WLF), a dollar-pegged stablecoin project launched by Trump last year, is consistent with the strategy of using stablecoins to support dollar and Treasury demand. WLF’s X account stated in September: “By spreading US-pegged stablecoins around the world, we ensure that the US dollar’s dominance continues.” Boosting dollar and Treasury demand matters to the current administration because of the rising risk of de-dollarization."
+
+(https://www.compactmag.com/article/the-real-reason-trump-backs-crypto/)
+
+
+==Why stablecoins won't work==
+
+Yanis Varoufakis:
+
+"The idea behind the Gold Standard was that national currencies gained credibility because their state/central bank gave up the right to print money at will. By fixing the exchange rate of a national currency to the price of gold (e.g. $35 for one ounce of gold), and freely allowing two-way convertibility, it was common knowledge that, if the authorities printed money in total value exceeding the value of the gold in the central bank’s vaults, at some point people holding paper money would demand gold that the central bank did not have.
+
+A currency board (e.g. the system underpinning Bulgaria’s national currency today) is similar in that the central bank fixes the national currency’s exchange rate to equal the average price of a basket of hard currencies. Again, as long as there are no capital controls and the national currency is fully convertible to the hard currencies in the currency board, if the central bank prints more money than is equivalent (under the fixed exchange rate) to its foreign currency reserves, it risks a run on its reserves. As with the Gold Standard, currency boards have proven fragile – at the sign of economic crisis, war, or other types of stress, they are abandoned.
+
+A stablecoin is a currency board with the difference that it applies to a stateless digital currency (like Tether), not a national currency. This means that there is no state to legislate that the system administrators honour the fixed exchange rate; that they not create stablecoins in excess of the value of their reserves, cash them in, and do a runner. In other words, in addition to the inherent instability of currency boards, stablecoins are ripe for fraud.
+
+In conclusion, the fact that stablecoins or Bitcoin itself acquire the aura of saviours in countries hit by inflation, like Turkey, is nothing more than a measure of the desperation of the people: they will clutch at straws. Stablecoins offer Turks no respite from inflation that buying euros or dollars cannot offer. So, why buy Tether instead of dollars or euros? Why rely on the shadowy characters running a private currency board? Only because the latter deploy good marketing to exploit desperate people."
+
+(https://metacpc.org/en/crypto-blockchain/)
+
+
+== Private Stablecoins as a Challenge to Democratic Sovereignty ==
+
+Saule T. Omarova:
+
+"In developed economies with democratic
+governments, digitization of money
+has been primarily a private market
+phenomenon, whereby multiple privately issued digital currencies co-exist,
+sometimes uneasily, with sovereign money.
+The recent growth of stablecoins poses an
+especially serious challenge to the long-term stability and monetary sovereignty of
+democratic governments. Stablecoins are
+digital currencies claiming to keep “stable”
+value pegged to the value of the USD or
+some other state currency. Typically, the
+issuer of a stablecoin – including USDC,
+Tether, and Binance USD –maintains the
+peg to traditional money by setting up a
+“reserve” to hold USD or other safe assets
+backing it. A stablecoin thus “borrows”
+its stability from the sovereign money and
+functions as its tokenized derivative, or a
+privately-controlled digital representation.
+
+In this sense, stablecoins are both a direct
+competitor to, and a direct outgrowth of,
+sovereign currency. They facilitate trading,
+lending, and investing in a wide variety of
+crypto-assets, particularly in the so-called 
+decentralized finance ([[DeFi]]) universe,
+and serve as “onramps” connecting
+crypto-markets to the traditional financial
+system. This critical infrastructural
+function gives stablecoin issuers – private
+crypto-exchanges, banks, and technology
+companies – potentially enormous market
+power. As the issuers of the widely accepted
+“means of exchange” and “store of value”
+within the crypto ecosystem, these private
+market actors can replicate the functions of
+traditional central banks, but without the
+accompanying legal obligation to act in the
+public interest. In effect, stablecoins enable
+what may be called synthetic privatization
+of the fundamental public function and
+a critical public resource – sovereign
+money and credit – with no democratic
+accountability or express political
+commitment to provide public goods.
+
+The political risks this business model
+creates are especially visible in the case
+of Big Tech stablecoins. In June 2019,
+Facebook (now Meta) launched its Libra
+project (later renamed Diem): a global
+stablecoin to be issued by a Swiss-based
+consortium of large corporations led
+by Facebook. From the start, Libra was
+promoted as a service for the billions of
+people around the globe locked out of the
+traditional financial system. The original
+plan was to have the Libra Association
+issue a global cryptocurrency, backed
+by a basket of sovereign currencies (the
+“Libra Reserve”), and manage a cross-border payments network built on top of
+Facebook’s vast social-media platform.
+Facebook was to run the digital wallet built
+into the Libra ecosystem, and provide other
+potentially lucrative services tied to it. The
+unprecedented scale and structural design
+of this project, which would effectively put
+Facebook at the center of global money and
+payments flows, generated strong political
+and regulatory backlash. Despite the newly
+renamed Meta’s efforts to scale down and
+rebrand it, the project was ultimately wound
+down.
+
+The Libra/Diem saga is nevertheless highly
+instructive. It revealed how private digital
+currencies and payments systems created
+and controlled by globally dominant
+techno-financial conglomerates can
+directly threaten the stability, autonomy,
+and resiliency of the world’s leading
+democracies. If successful, the Libra/
+Diem stablecoin would have made Meta
+a “shadow” Federal Reserve, a source
+of globally ubiquitous digital currency,
+potentially more powerful than the actual
+Fed.26 It would have given Meta and its
+corporate partners direct access to the
+financial and transactional data generated
+by the users. Meta would have been able
+to monitor in real time daily activities
+of billions of users, manipulate their
+preferences and shape their behavior, and
+otherwise commercialize their personal
+data in deeply invasive ways. It would have
+been able to condition individuals’ access
+to, or price of, Libra/Diem either on their
+willingness to purchase other goods or
+services offered by Meta or on some form
+of “social scoring” maintained by it. From
+there, it is not hard to imagine Meta using
+its newly-minted power over digital finance
+for political reasons, in effect replacing old
+interest-group politics with the new tactics
+of digital authoritarianism.
+
+This is not such a far-fetched scenario,
+particularly given the highly personality driven culture of the tech and crypto
+industries. Successful technology firms –
+including publicly-traded Apple, Microsoft,
+Amazon, and Meta – tend to be closely
+associated with their charismatic founders.
+Many tech firms also have corporate
+governance structures that explicitly
+concentrate control in the hands of the
+few insiders. These private authoritarian
+tendencies under the guise of techno-meritocracy are even more extreme in
+crypto-finance, where they provide the
+fertile ground for the rise of potentially
+autocratic “visionaries” with grand political
+ambitions. 
+
+The tech-driven ability to control digital
+money and finance networks, therefore,
+offers not only an unprecedented economic
+advantage but also a new set of previously
+non-existent political levers.
+
+From this perspective, the ongoing
+expansion of Big Tech platform companies
+into digital money and payments –
+including the recent announcement of
+Twitter’s intentions to offer payments
+services – raises potentially far more
+troubling and complex issues than is
+commonly acknowledged. The same is true
+of financial institutions, such as JPMorgan
+that currently issues its own JPM Coin
+and runs a permissioned blockchain
+platform for trading of tokenized financial
+instruments. It is critical to see these
+private conglomerates’ push into digital
+money not simply as a technologically
+innovative business strategy, but as a
+politically salient project of redefining the
+core public-private balance in finance.
+
+To date, the prevailing response to this
+challenge has been a call for regulation.
+What the appropriate regulatory regime
+should seek to accomplish, and by what
+means, however, remains unclear. In the
+U.S., the vast majority of policy proposals
+seek to make private stablecoins actually
+“stable” and “safe” as the means of
+payments, either by limiting their issuance
+to federally-insured banks or by mandating
+the composition of reserves backing them.
+
+While consumer protection and avoiding
+failure are important policy goals, this
+approach ignores or downplays the perilous
+structural implications of legitimizing – and
+publicly subsidizing – private stablecoins.
+Instead of defending the state’s monetary
+sovereignty, this seemingly pragmatic
+approach risks further erosion and ultimate
+loss of democratic control of public money
+and finance.
+
+But there is a bigger problem with treating
+regulation as the only possible response.
+As shown in my prior work, our existing
+technocratic paradigm of financial
+regulation is inherently ill-suited to deal
+with the unique challenges of digital
+finance. That raises the question about
+other, more direct and effective, options we
+may need to consider."
+
+(https://cdn.sanity.io/files/9xbysn2u/production/4d7f42a888168a1d66292f26cdc50b5e3ff8d698.pdf)
+
+
+Source: Article/Chapter: Digital Finance and the Specter of Digital Authoritarianism. Saule T. Omarova. In: Decoding Digital Authoritarianism. Global Affairs Canada, 2023.
+
+
+== Stablecoins are an instrument of central control ==
+
+Fabio Vighi explains:
+
+"Trump’s move to ban central bank digital currencies, while simultaneously accelerating the federal recognition and regulation of stablecoins, reveals a calculated pivot rather than a principled stand against digital currencies. The executive order did not end the digitization of money—it merely redirected it into the hands of private entities operating under government oversight. In doing so, it replaced one form of centralized control with another, repackaged in the language of “market freedom.”
+
+
+This strategy is now being accelerated by various legislative initiatives backed by the crypto industry and its congressional allies. This week, Trump-aligned lawmakers rallied behind the Guiding and Establishing National Innovation for US Stablecoins (GENIUS) Act, a bill designed to establish regulatory clarity for stablecoin issuers and formalize a public-private partnership model for digital money. Passed yesterday the House, it will allow private entities such as banks, fintechs, crypto firms to issue stablecoins, though only with Federal Reserve approval and supervision. Crucially, most stablecoins are denominated in US dollars, typically at a 1:1 ratio, such that their value mirrors the dollar’s exactly. This peg ties them to the monetary policies of the US government, including interest rates, inflation, and debt levels. These digital reserves are thus deeply integrated into the Federal Reserve’s monetary system, just as their issuers are financially dependent on Fed-managed instruments. Even though they aren’t issued by the Fed, stablecoins depend entirely on confidence in the dollar."
+
+(https://compactmag.com/article/why-crypto-wont-free-you/?)
+
+=More information=
+
+* [[Equity Tokens]]
+
+* [[Stable Economic Value Representation for All Agents and All Transactions]]
+
+* [[Stable Decentralized Programmable Money]]
+
+* Report:  Real-World Assets 2024: "Real-world assets allow traditional financial instruments to be represented on-chain as tokens,
+democratizing access to a wider userbase." [https://assets.coingecko.com/reports/Research/RWA-Report-2024-Rise-of-Real-World-Assets-in-Crypto.pdf? pdf]
+
+[[Category:Crypto_Economy]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Money]]

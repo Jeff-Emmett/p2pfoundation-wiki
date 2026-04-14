@@ -1,0 +1,177 @@
+'''The Power Law refers to the unequal distribution of influence within networks.'''
+
+
+=Definition=
+
+"In systems where many people are free to choose between many options, a small subset of the whole will get a disproportionate amount of traffic (or attention, or income), even if no members of the system actively work towards such an outcome. The very act of choosing, spread widely enough and freely enough, creates a power law distribution."
+[http://shirky.com/writings/powerlaw_weblog.html] 
+
+
+=Typology=
+
+"The best-known power law is probably 
+
+* the [[Pareto Principle]], which is otherwise known as the "80/20 law." It's been overused throughout the years; Pareto's actual law only said that 80% of the wealth would be held by 20% of the population.
+
+However, it offers a fine example of how power laws work. They generally describe a discrepancy between intensity and population: inevitably, some people do a lot more of the work in any social situation. 
+
+* Other examples include [[Zipf's Law]], which suggests that the frequency of a word's usage is inversely proportionate to its ranking among words (making the second ranked word appear half as much, the third a quarter as much, etc), 
+
+* and the [[Long Tail]], which talks about selling a very large number of items in a very small individual quantity.
+
+* For online communities, which have been the focus of most of my studies on the topic of community sizes, I've found that the [[Participation Inequality]] power rule is very apt. This term comes from Will Hill of AT&T Laboratories, who said, "A major reason why user-contributed content rarely turns into a true community is that all aspects of Internet use are characterized by severe participation inequality." It's often equated with the 1% law, though I like to be more precise and say that 90% of an online community tends to be lurkers, 9% tends to be intermittent participants, and 1% tends to be active participants."
+(http://www.lifewithalacrity.com/2009/03/power-laws.html)
+
+=Consequences of the Power Law=
+
+'''Consequences of the power law in scale-free networks''':
+
+"A scale-free network is one that obeys a power law distribution in the number of connections between nodes on the network. Some few nodes exhibit extremely high connectivity (essentially scale-free) while the vast majority are relatively poorly connected. The reason that scale-free networks emerge, as opposed to evenly distributed random networks, is due to these factors.
+
+'''1) Rapid growth confers preference to early entrants. The longer a node has been in place the greater the number of links to it. First mover advantage is very important. 
+
+2) In an environment of too much information people link to nodes that are easier to find. This preferential linking reinforces itself by making the easier to find nodes even more easy to find.
+
+3) The greater the capacity of the hub (bandwidth, work ethic, etc.) the faster its growth"'''
+(http://globalguerrillas.typepad.com/globalguerrillas/complex_networks/index.html)
+
+
+=Discussion=
+
+==Clay Shirky: inequality is not always unfair==
+
+Classic discusion of how the power law operates in blogs, and why it is inevitable, by one of the most influential commentators, by Clay Shirky.
+
+URL = http://shirky.com/writings/powerlaw_weblog.html 
+
+"A persistent theme among people writing about the social aspects of weblogging is to note (and usually  lament) the rise of an A-list, a small set of webloggers who account for a majority of the traffic in the weblog world. This complaint follows a common pattern we've seen with MUDs, BBSes, and online communities like Echo and the WELL. A new social system starts, and seems delightfully free of the elitism and cliquishness of the existing systems. Then, as the new system grows, problems of scale set in. Not everyone can participate in every conversation. Not everyone gets to be heard. Some core group seems more connected than the rest of us, and so on.
+
+Prior to recent theoretical work on social networks, the usual explanations invoked individual behaviors: some members of the community had sold out, the spirit of the early days was being diluted by the newcomers, et cetera. We now know that these explanations are wrong, or at least beside the point. What matters is this: Diversity plus freedom of choice creates inequality, and the greater the diversity, the more extreme the inequality."
+
+Is the Power Law as it affect blogging unfair?
+
+
+"Given the ubiquity of power law distributions, asking whether there is inequality in the weblog world (or indeed almost any social system) is the wrong question, since the answer will always be yes. The question to ask is "Is the inequality fair?" Four things suggest that the current inequality is mostly fair.
+
+The first, of course, is the freedom in the weblog world in general. It costs nothing to launch a weblog, and there is no vetting process, so the threshold for having a weblog is only infinitesimally larger than the threshold for getting online in the first place.
+
+The second is that blogging is a daily activity. As beloved as Josh Marshall (TalkingPointsMemo.com) or Mark Pilgrim (DiveIntoMark.org) are, they would disappear if they stopped writing, or even cut back significantly. Blogs are not a good place to rest on your laurels.
+
+Third, the stars exist not because of some cliquish preference for one another, but because of the preference of hundreds of others pointing to them. Their popularity is a result of the kind of distributed approval it would be hard to fake.
+
+Finally, there is no real A-list, because there is no discontinuity. Though explanations of power laws (including the ones here) often focus on numbers like "12% of blogs account for 50% of the links", these are arbitrary markers. The largest step function in a power law is between the #1 and #2 positions, by definition. There is no A-list that is qualitatively different from their nearest neighbors, so any line separating more and less trafficked blogs is arbitrary...."
+(cited at http://radio.weblogs.com/0114726/2003/02/10.html#a281)
+
+
+==Stephen Downes: a critique of the 'naturalism' of the concept==
+
+A critique by Stephen Downes at http://www.downes.ca/cgi-bin/page.cgi?post=33034
+
+"'''Power Laws and Inequalities'''
+
+Much of the work in networks has been on what are called 'scale-free' networks. A scale-free network is (as people like Barabasi have shown) distinct from a random network in that some entities in the network have a much higher degree of connectedness than others. True, in a random network, there will be a certain variance in distribution, but in a scale free network this variance is extreme. Consider, for example, a network like the internet, where some sites, such as Google, have millions of visitors, while other sites have only one or even none.
+
+A scale-free network of this sort forms through a dynamic process where the presence of one entity leads others to connect to it. For example, consider the act of creating links on a web page. In order to create a useful link, it is necessary to connect to a site that already exists. This means that, all other things being equal, a site that was created first will obtain the most links, because it will have been a candidate for linkage for all subsequent websites, while a site that was created last will have the fewest links, because it has never been a candidate for links.
+
+This effect can be magnified when preferential attraction is considered. For when creating a link on a web page, a designer wants not merely to link to a random page, but to a good page. But how does one judge what counts as a good page? One way is to look at what other people are linking to. The probability that the first page created will be found is greater than that for any other page, which means that the first page will obtain even more links that it would receive through random chance. With this and similar drivers, some websites obtain millions more links than others.
+
+What's interesting is that though a similar process leads to the formation of scale-free networks in other areas, not in all cases is such an extreme inequality reached. What happens is that in some cases a structural upper limit is reached. Consider, as Barabasi does, the cases of airports and the power grid. Both are developed according to similar principles (airlines want to land flights, for example, where other airlines land flights). And, not unexpectedly, a power-law distribution occurs. But there is an upper limit to the number of aircraft that can land in a single airport, and consequently, a limit to the size of the inequality that can occur.
+
+Various writers (for example Shirkey) write and speak as though the power law were an artifact of nature, something that develops of its own accord. And because it is natural, and because such systems produce knowledge (we will return to this point), it is argued that it would be a mistake to interfere with the network structure. This argument is remarkably similar to the argument posed by the beneficiaries of a similar inequality in financial markets. The rich get richer, benefiting from an inequal allocation of resources, but efforts to change this constitute 'intereference' in a 'natural phenomenon', the invisible hand of the marketplace, intelligently allocating resources and determining priorities.
+
+This may be true, if we think of networks as natural systems. But the absence of limits to the growth in the connectivity of some nodes should alert us that there is something else going on as well. And it is this: the networks we describe, and in some cases build (or through legislation, protect), are interpretations of the multifarious connections that exist in an environment or in a society. They depend, essentially, on a point of view. And, arguably, the inequalities of links on the web or money in society represent the prevalance of one point of view, or some points of view, over others. But to understand how this could be so, we need to look at networks, not as physical systems, but as semantical constructs, where the organization of links is determined as much by similarity and salience than by raw, epistemologically neutral, forces of nature."
+(http://www.downes.ca/cgi-bin/page.cgi?post=33034)
+
+
+=Research: The Power Law does not always operate=
+
+
+==Ross Mayfield's research==
+
+
+The following table by Ross Mayfield summarises recent research, '''showing that small groups can maintain egalitarian networks''':
+
+
+Network	                //Size	        //Description	                //Distribution
+
+
+Political Network	//~1000s	//Blogs as mass media	        //Power-law (scale-free)
+
+Social Network	        //~150	        //Blogging Classic	        //Bell-curve (random)
+
+Creative Network	//~12	        //Blogs as dinner conversation	//Dense (equal)
+
+
+
+After reviewing data of work relationships, information flows and knowledge exchanges from hundreds of consulting assignments inside Fortune 2000 organizations Valdis Krebs did not see much evidence of power laws in this data. His data is of confirmed ties [both persons agreed/recognized their mutual interactions/flows/relationships] from a worldwide pool of clients dating back to 1988. Of course he found some people were better connected than others, but the extreme hubs found in power law networks just were not evident.  Adapting a famous line from the movie "Blazing Saddles" Valdis concluded: "Power Law? There ain't no stinkin' power law in this data!"
+(http://radio.weblogs.com/0114726/2003/02/12.html#a284)
+
+
+==Philippe Aigrain's research==
+
+An empirical study by Philippe Aigrain in [http://www.firstmonday.org/issues/issue11_6/aigrain/index.html First Monday] shows that free music and free text communities do considerable better than [[Zipf's Law]] in guaranteeing access to the middle layers material in their collection.
+
+==The Power Law as the Motor of History==
+
+
+[[George Modelski]] on the temporality of change as a consequence of the Power Law:
+
+Someone who has studied the temporality of human civilisational change is George Modelski with his theories on 'evolutionary' politics', with some of his conclusions, that 'the rate of change is tapering off' being counter-intuitive. He foresees a period where technological change would co-exist with a stabilized social structure. His conclusions are based on combining various observable trends in one integrated interpretation:
+
+Phase Changes and Saturation: '''Power Law Behavior and World Systems Evolution''', Tessaleno Dvezas and George Modelski, Technological Forecasting and Social Change, V70 N9, Nov 2003
+
+“'''An excellent article modeling world social organization as a multilevel, self-similar, nested power-law process, following self-organized criticality'''. They suggest social change involves a range of processes that range in "size" (time duration) from 250 (or rarely, longer) down to 1 (very common) human generation, with few of the long duration developmental processes (e.g., world democracy, globalization), and a very large number of single generation processes (e.g., typical cultural and legal emergences). Assuming a human generational/cultural learning time of 30 years, they describe "K-waves" of 60 years encompassing developments such as the rise of leading sectors in global economy (e.g., the emergence of automobiles, or electricity), and "long waves" of 120 years, such as the rise of world powers to a position of global leadership. All of this has been observed by other cycle scholars and seems quite reasonable. One of the more helpful insights from their model is that the time duration of developmental innovations is inversely related to their importance to the developmental process (e.g., irreversible processes that take a long time to occur are both much rarer and more necessary to advance the system as a whole). Another very interesting insight is their observation that world system change, while still upsloped, has been slowing for 1,000 years, with the inflection point at roughly 1000AD.  Using a logistic growth curve ("S curve") their model of world system emergence proposes that human social development  (the Y axis) is in a decelerating phase and is about "80% complete", and therefore that the major features of human social organization are now in place. In other words, they propose that social change is rapidly saturing, and will be significantly less dramatic and novel every year forward. A plausible scenario here: We all end up living in increasingly standardized individual empowering, fine grained, and fair social democracies, with conflict a highly regulated affair, and the only unregulated innovation occurring at the chaotic edge of human understanding and social need. The authors delineate four phases of social change for the model, beginning with the Ancient Period (3000BC to 1,000BC), then Classical Period (1,000BC to 1,000AD) then the Modern Period (1,000-3,000AD) of "world system consolidation", and a presumed Postmodern Period (3,000-5,000AD) with little social change (though we can presume much change in the technological sphere). Each 2,000 year period corresponds well to the four phases in logistic growth: initiation, acceleration, deceleration, and saturation."
+(http://accelerating.org/tech_tidbits/2005/18jan05.html#socialsaturation)
+
+
+
+=Designing against the power law=
+
+
+==Stephen Downes on Alternatives to the Power Law==
+
+
+Stephen Dowes:
+
+'''1. Balancing out the power law through connective diversity'''
+
+"In order therefore to successfully counterbalance the tendency toward a cascade phenomenon in the realm of public knowledge, the excesses made possible by an unrefrained scale-free network need to be counterbalanced through either one of two mechanisms: either a reduction in the number of connections afforded by the very few, or an increase in the denisity of the local network for individual entities. Either of these approaches may be characterized under the same heading: the fostering of diversity.
+
+For, indeed, the mechansism for attaining the reliability of connective knowledge is fundamentally the same as that of attaining reliability in other areas; the promotion of diversity, through the empowering of individual entities, and the reduction in the influence of well-connected entities, is essentially a way of creating extra sets of eyes within the network."
+(http://www.downes.ca/cgi-bin/page.cgi?post=33034)
+
+
+'''2. [[Knowing Networks]] as an alternative to scale-free networks'''
+
+"First, diversity. Did the process involve the widest possible spectrum of points of view? Did people who interpret the matter one way, and from one set of background assumptions, interact with with people who approach the matter from a different perspective?
+
+Second, and related, autonomy. Were the individual knowers contributing to the interaction of their own accord, according to their own knowledge, values and decisions, or were they acting at the behest of some external agency seeking to magnify a certain point of view through quantity rather than reason and reflection?
+
+Third, interactivity. Is the knowledge being producted the product of an interaction between the members, or is it a (mere) aggregation of the members' perspectives? A different type of knowledge is produced one way as opposed to the other. Just as the human mind does not determine what is seen in front of it by merely counting pixels, nor either does a process intended to create public knowledge.
+
+Fourth, and again related, openness. Is there a mechanism that allows a given perspective to be entered into the system, to be heard and interacted with by others?
+
+'''It is based on these criteria that we arrive at an account of a knowing network. The scale-free networks contemplated above constitute instances in which these criteria are violated: by concentrating the flow of knowledge through central and highly connected nodes, they reduce diversity and reduce interactivity. Even where such networks are open and allow autonomy (and they are often not), the members of such networks are constrained: only certain perspectives are presented to them for consideration, and only certain perspectives will be passed to the remainder of the network (namely, in both cases, the perspectives of those occupying the highly connected nodes).'''
+
+Even where such networks are open and allow autonomy (and they are often not), the members of such networks are constrained: only certain perspectives are presented to them for consideration, and only certain perspectives will be passed to the remainder of the network (namely, in both cases, the perspectives of those occupying the highly connected nodes)."
+(http://www.downes.ca/cgi-bin/page.cgi?post=33034)
+
+
+
+=More Information=
+
+
+#Michel Bauwens discusses the power law in chapter five  [http://p2pfoundation.net/5._%22Network_Theory%22_or:_The_Discovery_of_P2P_principles_in_the_Cosmic_Sphere] of the online manuscript on peer to peer.
+#Bokardo [http://www.bokardo.com/archives/social-design-101-aggregate-displays-change-user-behavior/ on how aggregate displays influence user behaviour]
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Relational]]
+
+[[Category:P2P Hierarchy Theory]]
+
+[[Category:P2P Theory]]
+
+[[Category:P2P Class Theory]]

@@ -1,0 +1,56 @@
+=Description=
+
+Anil Dash:
+
+(more extensive article with links is at http://dashes.com/anil/2009/07/the-pushbutton-web-realtime-becomes-real.html)
+
+"platforms like Twitter, Facebook and FriendFeed have focused on building the infrastructure for efficient large-scale delivery of updates using their own proprietary networks. A lot of attention has been paid to Twitter's 140-character limit, or Facebook's News Feed, but the compelling technology that enables the user experience on these platforms is the immediacy with which updates are delivered. Earlier systems like instant messaging or chat allowed realtime messaging on a one-to-one or small group basis, but it's been harder to deliver those realtime messages to anyone in the world who wanted to receive them unless you had a lot of money, expertise and infrastructure.
+
+Another barrier is that, while there are many different programs and clients that let you connect to Twitter or Facebook with your own applications, there haven't been any free and open options for delivering realtime messages to a large audience if you couldn't, or didn't want to, rely on those companies.
+
+But recently, a few key pieces have fallen into place that make it inexpensive and relatively easy to add realtime messaging as an incremental upgrade to existing websites and web applications. This set of related technologies, which I'm calling the Pushbutton platform, will yield a broad new set of capabilities for users, publishers and developers on the web. Best of all, Pushbutton technologies are free, open and decentralized, meaning that the arrival of realtime on the web will not be owned or controlled by any single company.
+
+
+The concept and potential of Pushbutton is a lot like Ajax — it's not a single technology or invention, it's a whole family of technologies, some of which have been in development or deployment for nearly a decade, that together enable this new realtime web. 
+
+
+Pushbutton's foundation is built on these systems:
+
+* Atom and RSS: The most common feed formats, for syndication on the web
+    
+* [http://code.google.com/p/pubsubhubbub/ PubSubHubBub] and [[RSS Cloud]]: Powerful new "hubs" for distributing messages
+    
+* Web Hooks: Simple web services for receiving messages, rather than sending them
+
+Pushbutton systems rely on the web's fundamental HTTP protocol for communication between these component parts. The architecture of Pushbutton message delivery is also simple to understand. Before Pushbutton, in today's systems, when you create a message (a blog post, tweet or other update) that's published in your RSS or Atom feed, every application or site that wants updates from you has to repeatedly request your feed to know when it's updated. You can optionally notify ("ping") some applications to tell them it's time to come collect your new updates, but this is time-consuming and resource-intensive on both sides, especially if you want to notify a lot of people.
+
+In the best case, the system we have now is analogous to a person coming by your house and saying "Hey, there's a new edition of your favorite newspaper today. You should go get it." And then you have to go to the newspaper's printing plant to pick it up. In a Pushbutton web, that person is delivering each story to your house the moment it's complete.
+
+That's because Pushbutton-enabled applications will improve upon the current state of affairs by proactively delivering not just the notification that there's a new message, but the content of the message itself. And instead of requiring all those applications to come to your site to read the update, it uses a hub server in the cloud to pass along the message directly to all the receivers that are interested in it."
+(http://dashes.com/anil/2009/07/the-pushbutton-web-realtime-becomes-real.html)
+
+
+=Who's Behind Pushbutton?=
+
+"Pushbutton technologies have been created and advocated by some of the most credible and experienced developers of social web technologies. Here's a brief overview of the impressive pedigree of these components:
+
+* PubSubHubBub was co-created by Brad Fitzpatrick and Brett Slatkin of Google. Brad was founder of LiveJournal, and created or co-created fundamental social web technologies like Memcached, OpenID and more.
+    
+* XML-RPC update pings, RSS and the RSS Cloud ideas were pioneered by Dave Winer, who has been actively developing open implementations of each of these technologies.
+    
+* Web Hooks have been evangelized by Jeff Lindsay, and have been deployed by a variety of different companies and platforms which all independently developed the technique.
+
+In addition, Google has supported Brad and Brett's development of PubSubHubBub, and enabled it on the Google FeedBurner service. A number of smaller companies are deploying large parts of this infrastructure as well. In short, some of the best reputations in developing open web systems have made Pushbutton possible, from the biggest tech companies to the most steadfastly independent developers on the web."
+(http://dashes.com/anil/2009/07/the-pushbutton-web-realtime-becomes-real.html)
+
+
+=Example=
+
+* "Google recently built [http://lifehacker.com/5331165/the-pushbutton-web-now-in-google-reader PubSubHubbub into Google Reader], so now when you click "Share" on a blog post that you like, Reader instantly notifies the other sites you're connected to. You can share a post from Reader, and it'll show up on your Friendfeed—and maybe on Facebook and Twitter—immediately." [http://www.slate.com/id/2225283/pagenum/2]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

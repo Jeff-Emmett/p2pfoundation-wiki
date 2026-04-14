@@ -1,0 +1,204 @@
+In 2019, free code projects are increasingly using community-hosted replacements for proprietary 'code forge' (software project management) platforms like GitHub, which is now owned by Microsoft. Some are run by  projects teams for their own use and for use by allied projects, while others are intended to replicate the 'open to all' community hub model of GitHub and GitLab.com. This list began to be compiled on [[List of Community-Hosted GitLab Instances]]. It will continue to be periodically updated here, but will probably become less and less complete over time, as the interest in self-hosting and community-hosting increases. --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 19:45, 11 October 2019 (UTC)
+
+== Federating independent code forges ==
+
+One major downside of projects working on their own code forges is that it makes it hard to collaborate between projects, as contributors have to set up an account on every forge that hosts a project they want to contribute to, or even file an issue on. There are a number of projects working on ways to enable these community-hosted code forges to form a federated network, allowing them to compete with the network effect of large, centralized services like GitHub and BitBucket:
+
+* '''ForgeFed:''' https://forgefed.org/ (working docs at [https://codeberg.org/ForgeFed/ForgeFed their CodeBerg repo]) - extending the ActivityPub standard for code-sharing purposes. The reference implementation is an [https://vervis.peers.community/ experimental code forge called Vervis]:
+
+* '''Sourcehut:''' https://sourcehut.org/ - using [https://drewdevault.com/2018/07/23/Git-is-already-distributed.html using email protocols for code-sharing across web forges]. The demo site is: https://sr.ht/
+
+* '''Libervia:''' https://www.libervia.org/ - using the [https://www.goffi.org/b/F4xScokjZejCYAB4NamBbc/decentralized-code-forge,-based-xmpp XMPP standard to federate access to code repositories and issue tickets].
+
+There are also a couple of distributed code forge experiments:
+
+* git-ssb (maybe defunct?): https://scuttlebot.io/apis/community/git-ssb.html - using the Scuttlebutt project's SSB protocol
+
+* GitWorkshop: https://gitworkshop.dev/ - same idea as git-ssb but using the Nostr protocol
+
+* Radicle: https://radicle.xyz/ - using the IPFS protocols: https://web.archive.org/web/20220809021407/https://radicle.community/t/radicle-but-using-ssb-instead-of-ipfs/53
+
+== List of Community-Hosted Code Forge Instances ==
+
+This list of instances is sorted according to the code forge software used, in alphabetical order. 
+
+=== Forgejo ===
+
+* Codeberg: https://codeberg.org/explore/ - run by a German not-for-profit organisation for gratis, public use.
+
+=== FusionForge ===
+
+* FusionForge: https://fusionforge.org/projects/ - used for the development of FusionForge itself
+
+* OurProject: http://ourproject.org/ - set up by the Comunes Association so non-software "libre projects" could have access to a similar project management toolset to what SourceForge provided for free code software
+
+=== Gitea ===
+
+* Asonix: https://git.asonix.dog/explore/ - used for the development of components for fediverse apps including Plume and Aardwolf
+
+* Carcosa: https://git.carcosa.net/explore/ - a private instanced used by the developer of Brutaldon and Aardwolf
+
+* code.as: https://code.as/explore/ - run by A Bunch Tell and used by their development team for projects like WriteFreely (see also Write.as)
+
+* Cloudstrike: https://gitea.cloudstrike.nz/explore - mostly for internal use by IT contractors based in Aotearoa
+
+* Disroot: https://git.disroot.org/explore/ - run by a not-for-profit based in Amsterdam that hosts free code software for a community of users.
+
+* FemGit: https://fem.mint.lgbt/explore/ - run by a collective of queer teens hosting a range of network services using free code packages
+
+* FSFE: https://git.fsfe.org/ - available to supporters of the Free Software Foundation Europe
+
+* Gergely Polonkai: https://gitea.polonkai.eu/explore/ - used mainly for Gergely's personal projects
+
+* Hackers.town: https://git.hackers.town/ - used for a range of projects worked on by developers associated with the hackers.town [[fediverse]] instance
+
+* Organic Design: https://code.organicdesign.nz/explore/repos - used for a range of projects worked on by the Organic Design collective 
+
+* (defunct) postActiv: https://git.postactiv.com/explore/projects - used for development of the postActiv micro-blogging server (and web client)
+
+* PsychicDebugging: https://psychicdebugging.com/explore/ - game related stuff and mirrors of projects including Freedombone
+
+* Puckipedia: https://git.puckipedia.com/ - used for the Kroeg federated social web project
+
+* Shapegoal: https://shapegoal.org/ - used for development of fediQuest
+
+=== GitLab ===
+
+ActivityPub.software: https://activitypub.software/explore/ - used for the development of Sharkey and a few other AP software projects.
+
+* Briar: https://code.briarproject.org/explore/ - used for development of the Briar P2P chat/social network app for mobile devices.
+
+* Callpipe: https://git.callpipe.com/explore - used public development of Signald, and possibly a range of private projects.
+
+* Debian: https://salsa.debian.org/public - available for any free code software or any software that can be included in the Debian distribution or its repos.
+
+* e Foundation: https://gitlab.e.foundation/explore/ - used for development of the /e/ project (formerly Eelo), which includes the /e/ OS mobile OS (forked from Android via LineageOS), and a suite of privacy-friendly apps and hosted services (mostly forked from bits of Android, and existing free code Android apps and server packages) designed to create a complete replacement for the mobile devices, apps, and services run by Apple, Google, etc.
+
+* FairKom: https://git.fairkom.net/explore
+
+* ForgeFriends: https://lab.forgefriends.org/explore - used for a range of forge federation related projects, including the [https://forum.forgefriends.org/t/definition-and-scope-of-the-forgefriends-project/546 ForgeFriends] project itself
+
+* FOSSCommunity.in: https://git.fosscommunity.in/explore/ - used for various projects supported by free software hackers in India
+
+* FramaGit: https://framagit.org/public/projects/ - used for projects people involved in FramaSoft contribute to
+
+* FreeDesktop.org: https://gitlab.freedesktop.org/explore/groups/ - used for projects people involved in the freedesktop.org community contribute to
+
+* Gajim: https://dev.gajim.org/explore/projects/ - used development of the Gajim XMPP client and related projects
+
+* Git.coop: https://git.coop/explore/projects/ - for members of the UK based multi-stakeholder cooperative WebArchitects 
+
+* Gitgud.io: https://gitgud.io/explore - open access instance run by a user-supported company called Sapphire
+
+* GNOME Project: https://gitlab.gnome.org/explore/projects/ - used for the development of the GNOME desktop environment and its many subsidiary projects
+
+* GNU Project: https://git.gnu.io/explore/projects/ - used for development of various GNU social media projects, including the MediaGoblin media-hosting package, and the GNU Social micro-blogging server (and web client).
+
+* Happy-dev: https://git.happy-dev.fr/explore - for development of various projects [https://happy-dev.fr/ developed by Happy Dev]
+
+* Haskell: https://gitlab.haskell.org/explore/ - used for the development of various tools involved in the Haskell programming language
+
+* Ind.ie: https://source.ind.ie/explore/projects/ - used internally by Ind.ie developers for their own projects
+
+* Instant Infrastructure for Cooperation: https://gitlab.ii.coop/explore/projects/
+
+* Jami (a GNU project, formerly Ring): https://git.jami.net/explore/projects/ - used for development of the various components of the GNU Ring P2P voice/ video chat app developed by the savoirfairelinux team
+
+* Libreho.st: https://lab.libreho.st/explore/ - used for a suite of hosting packages developed and used by members of the librehosters network
+
+* Linphone: https://gitlab.linphone.org/explore - used for development of the Linphone voice chat apps and related projects
+
+* linux-kernel.at: https://git.linux-kernel.at/explore/ - a mostly private instance used for the development of ivatar, a decentralized replacement for Gravatar 
+
+* Mastodon: https://source.joinmastodon.org/explore/projects/ - for developers of Mastodon micro-blogging sever (and web client), and associated projects.
+
+* Maunium: https://mau.dev/explore - used for development of chat related projects (components for Matrix, Telegram etc)
+
+* NZ Open Source Society: https://git.nzoss.org.nz/explore/projects/ - available for developers associated with NZOSS to host their dev, or a mirror of their own repo elsewhere
+
+* Open Educational Resources Universitas: https://git.oeru.org/explore/ - used by some developers and projects associated with the OERU and OER Foundation.
+
+* 0xacab: https://0xacab.org/explore/projects/ - used by some developers and projects associated with RiseUp labs
+
+* Pattle: http://pattle.dev/explore - used for the development of the Pattle app ([[Matrix]] client)
+
+* Pleroma: https://git.pleroma.social/explore/projects/ - used for development of the Pleroma micro-blogging server (and web client)
+
+* Purism: https://source.puri.sm/public - used for development of a range of software projects used in their products and services
+
+* Silence: https://git.silence.dev/explore - used for the development of Silence, a fork of Signal used for encrypting SMS/MMS on Android devices, and its website.
+
+* Trisquel: https://devel.trisquel.info/groups/trisquel/ - used for development of the Trisquel GNU-linux distribution
+
+* VideoLAN: https://code.videolan.org/explore/projects/ - used for development of the VLC media player and other VideoLAN projects
+
+=== Gitolite ===
+
+* GNUNet: https://git.gnunet.org/ - used for the development of the GNUNet P2P network stack and apps designed to run over it.
+
+=== Gogs ===
+
+* Freedombone: https://code.freedombone.net/ - used for projects related to Freedombone, a GNU/Linux distribution designed to enable user to self-host services on low-powered hardware.
+
+* NotaBug: https://notabug.org/explore/ - a community use forge run by Peers.community, a group of free software and free culture advocates
+
+=== Kallithea ===
+
+* Kallithea: https://kallithea-scm.org/repos - used for the development of Kallithea itself
+
+* SalmonLabs: http://source.salmonlabs.net/ - used for the developed of the GoblinRefuge fork of MediaGoblin and other SL projects
+
+=== Pagure ===
+
+As of December 2024, it appears that Fedora is abandoning Pagure and shifting its projects to Forgejo;
+
+https://fedoramagazine.org/fedora-moves-towards-forgejo-a-unified-decision/
+
+* Fedora: https://pagure.io/ - used by projects associated with the Fedora GNU/Linux distribution
+
+=== Phabricator ===
+
+It appears that as of June 2021, the Phacility company that developer Phabricator ended support for both their hosted service, and the software; 
+
+https://admin.phacility.com/phame/post/view/11/phacility_is_winding_down_operations/
+
+There is at least one community-led fork, called Phorge;
+
+https://we.phorge.it/
+
+* Apertus: https://lab.apertus.org/ - used for the Apertus open hardware camera project
+
+* Blender Foundation: https://developer.blender.org - used for the development of the Blender 3d modeling suite
+
+* femProCommons: https://projectes.commonscloud.coop/ - used for the development of the CommonsCloud project.
+
+* Haskell: https://phabricator.haskell.org/ - used for the development of core projects related to the Haskell language
+
+* KDE: https://phabricator.kde.org/ - used for KDE desktop environments and related projects
+
+* Purism: https://tracker.pureos.net/ - used for bug tracking for the PureOS distribution of GNU/Linux, developed by Purism for use on their custom laptops and mobile devices.
+
+* WikiMedia Foundation: https://phabricator.wikimedia.org/ - used for coordinating WikiMedia projects, including both software projects and non-code projects.
+
+* Wildfire Games: https://code.wildfiregames.com/ - used for developing 0AD and other libre games (see: [[Gaming_Literacy]])
+
+* Others, including private instances used for proprietary software and platforms: https://secure.phabricator.com/w/usage/companies/
+
+=== Tuleap ===
+
+* Tuleap.net: https://tuleap.net/ - used for the development of Tuelap itself, a code forge with a particular focus on integrating tools helpful for agile development practices.
+
+=== Unknown ===
+
+* https://keep.imfreedom.org/ - used for the development of a number of XMPP apps and related software
+
+* libav.org: https://git.libav.org/ - used for the development of the LibAV components
+
+=== It's Dead Jim! ===
+
+* Federated Networks Association: https://git.feneas.org/explore/projects/ - used for a range of federated social networking projects, initially those that support the federation protocols used by Diaspora. Shut down after the Association was wound down.
+
+* [https://web.archive.org/web/20201228015638/https://sorcia.org/ Sorcia] flagship instance: git.mysticmode.org - used for the development of MysticMode projects including [https://lobste.rs/s/4kzkkm/sorcia_federated_git_hosting_engine a code forge called Sorcia that aimed to be federated], here's an archived copy of the [https://web.archive.org/web/20201104222304/https://github.com/losyme/sorcia/ source code mirror], which appears to have been deleted from the host.
+
+[[Category:P2P_Infrastructure]]
+[[Category:Software]]

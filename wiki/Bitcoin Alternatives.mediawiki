@@ -1,0 +1,113 @@
+=Examples=
+
+Originally porter from our main page on [[Bitcoin]]
+
+==The second wave: Bitcoin forks==
+
+Carl Miller:
+
+"A programmer can piggyback on the bitcoin code, customise it, and within a day give you your own currency. There are around 70 cryptocurrencies currently being traded in reasonable quantities. At the moment, most have tinkered around with bitcoin to offer some kind of additional edge. Litecoins offer faster transactions. Worldcoins, designed with a small total cap, promise to appreciate over time. Anoncoin claims to be more anonymous (obviously) and Stablecoin to have "military-grade" encryption.
+
+Yet a second kind of cryptocurrency is appearing for another reason. Devcoins are used by open-source developers. Peercoin are used by those who desire, in their eyes, a more equitable way of sharing out the currency in the first place (bitcoin is notoriously unequal, a few big miners and early adopters hold the majority of bitcoin wealth). Coinye Wests will be for gigs and music. Sexcoins are self-explanatory. These new cryptocurrencies are being used as a way of affiliating with a group, community, interest or set of principles. Using dogecoins, which sport no particular advantage over bitcoins at all, is most directly a cultural rather than a financial decision.
+
+We are moving into an era where the currency we use be a conscious, active, even activist decision, a value statement based on who we are and what we need. Imagine: eco-cafes will trade in currencies where a tiny percentage of each transaction goes to a good cause. You will pay your child pocket money in a currency they can only use on certain, child-proofed things. We might pay our officials allowances in a completely non-anonymous currency so we can track everything they spend. Niche groups and communities, from survivalists in Utah and comic book fans in New York to terrorist cells, will, with just a little bit of technological know-how, be able to create and finesse a currency that works specifically for them.
+
+I confidently predict that the number of cryptocurrencies that are regularly traded and used will radically grow. Their exchange with each other is also likely to grow more intensive and seamless. We might end up habitually using dozens of currencies without noticing, as super-fast transactions allow us to move our money into the currency we need at that time. You might quickly exchange the sexcoins you have left over from last night into bitcoins to pay your freelance designer, devcoins to make a contribution to her open-source project, and a childcoin so your kid can browse amazon whilst they wait.
+
+Cryptocurrencies are now part of our cultural and technological development. Their attributes and capabilities will constantly change. At a barest minimum, the security conscious will lump on more and more ways of keeping them secure against theft. The privacy conscious likewise will do so against detection."
+(http://www.wired.co.uk/news/archive/2014-01/13/dogecoin-and-the-era-of-personal-currency)
+
+==Is Freicoin in competition with Bitcoin?==
+
+"Yes and no, but mostly no.
+
+We are in favor of a free monetary market. We believe that there should be a free monetary market and monetary diversity. In this respect, yes, Freicoin and Bitcoin will compete with each other for users as currencies. But that doesn’t mean that you can’t use both for different reasons or that one of them has to necessarily disappear. In any case, that’s for you and the the marketplace of ideas to decide, not us, the bitcoin community or any coercive agency. Silvio Gesell wrote that money was a natural monopoly and thus the state should operate it, but we disagree with him on that point. Thousands of complementary currencies in circulation today are a living proof that this is not the case.
+
+The Austrian school of economics underlies Bitcoin’s design. Most Austrian economists don’t support a monetary monopoly, even if such a money system were based on gold, which Bitcoin is designed to resemble. E.C. Riegel was a strong opponent of a state monopoly on money. Bernard Lietaer argues that both competition and diversity are important for the efficiency and resilience of a market economy. There are many other inspirations to defend a free monetary market inclusive of both Bitcoin and Freicoin.
+
+Bitcoin and Freicoin support each other as collaborative free software. Free software is software that respects your freedom as a user and with a collaborative development model. Freicoin is a fork of Bitcoin because we don’t want to compete with it technically. The technical improvements we develop will be submitted “upstream” to the Bitcoin developers, and we will of course draw upon features and bug fixes applied to Bitcoin. Our software development relationship with the bitcoin community is based on collaboration, not competition.
+
+We don’t compete with bitcoin for miners either. Merged mining allows network operators to secure both currencies simultaneously. The merged mining technology first developed for Namecoin allows miners to use their proof of work in several block chain networks simultaneously. We’re currently evaluating the tradeoff between security and the convenience of having merged mining included early-on, since some new chains have been attacked by bitcoin pools (even without the users of that pool knowing it) and merged mining makes new currencies vulnerable to such attacks. Even if Freicoin isn’t merged-mine capable at launch, it will be in the near future. The result is more security for both Freicoin and Bitcoin." (http://freico.in/about/)
+
+
+==Can Ripple be integrated with [[Bitcoin]]==
+
+Interview of Ryan Fugger, conducted by Samuel Benson:
+
+"Ben: Can Ripple and Bitcoin integrate?
+
+Ryan: Sure, they can integrate in lots of ways.
+
+There’s a discussion on the Bitcoin forums about Ripple being a good way to implement instant Bitcoin transactions.
+
+https://bitcointalk.org/index.php?topic=3557.0
+
+Ben: What plans do you have for Ripple over the next few years?
+
+Ryan: I don’t know…  I’d like to have a working distributed server implementation.  Beyond that, I hope the idea catches on further and more people starting building systems like this.
+
+Ben: Any thoughts on Decentralized currencies and networks growing in India?
+
+Ryan: Ripple would be a great way to build a Hawala network:
+
+https://en.wikipedia.org/wiki/Hawala
+
+You can look at Ripple as Hawala with automated routing.
+
+There is no API to Ripplepay yet and Ripple still has a few problems to solve. It has the strong potential to be a monetary system to work alongside Bitcoin. Similarities can be found in the PayPal exchange website Bitcoinary.com."
+(http://bensonsamuel.wordpress.com/bitcoin-3/a-decentralized-monetary-system-for-a-decentralized-currency/)
+
+==What is the difference between Coinbase and every other Bitcoin wallet service?==
+
+From an interview of Brian Armstrong, conducted by Samuel Benson:
+
+There are several good online wallets for Bitcoin, and open source Bitcoin clients for the desktop.
+
+Why should someone use Coinbase instead?
+
+Here are a few ways Coinbase tries to be different:
+
+They try to make Bitcoin easy to use for non-technical users.  This means they avoid asking the user to deal with private keys, encryption, or any topics they might be unfamiliar to them.
+They try to make buying and selling Bitcoin with your local currency as simple as possible.
+They handle security and backups for you so don’t have to worry about losing your device, or forgetting to back it up.
+(Note that all of these may not be built yet, but this is their goal for the product.)  They understand there are a variety of users in the Bitcoin ecosystem from beginner to advanced, and they certainly do not claim to be the best solution for everyone.
+
+What is the difference between Coinbase and PayPal?
+
+Coinbase uses a different currency underneath (Bitcoin) which is a distributed, open-source protocol for transmitting money.  Bitcoin is still relatively new, but they believe it is a good platform to build on top of due to the following properties:
+
+Low (or zero) transaction fees
+Payments arrive instantly (at about the speed of an email) and are confirmed within the hour
+Works internationally
+They try to make Coinbase easy to use and help avoid transaction fees when making payments."
+(http://bensonsamuel.wordpress.com/bitcoin-3/bitcoin-gets-funded-by-ycombinator-interview-with-the-ceo-of-coinbase/)
+
+From the Coinbase FAQ:
+
+"Coinbase is a simple and secure online bitcoin wallet for sending, receiving, and storing bitcoin. Coinbase also allows you to buy and sell bitcoin using a bank account, or use our tools to accept bitcoin as a merchant.
+
+Coinbase is different from other bitcoin services and wallets in several ways:
+ 
+
+    We focus on making bitcoin easy to use for non-technical users.  This means we avoid asking users to deal with private keys, encryption, or any topics they might be unfamiliar with.
+    We make buying and selling bitcoin using a bank account easy.
+    We handle security and backups so you don't have to worry about losing your device or forgetting to back it up.
+    We are a "one stop shop" - we offer a wallet, an exchange, and merchant tools with one simple interface.
+    Coinbase is a platform on which many bitcoin applications are being built using our API."
+
+(http://support.coinbase.com/customer/portal/articles/585625-what-is-coinbase-and-how-much-does-it-cost-to-use-)
+
+==Ethereum: Cryptocurrency 2.0==
+
+Ethereum: A Next-Generation Generalized Smart Contract and Decentralized Application Platform:
+
+"In the last few months, there has been a great amount of interest into the area of using Bitcoin-like blockchains, the mechanism that allows for the entire world to agree on the state of a public ownership database, for more than just money. Commonly cited applications include "colored coins", the idea of using on-blockchain digital assets to represent custom currencies and financial instruments, "smart property", physical objects such as cars which track a colored coin on a blockchain to determine their present legitimate owner, as well as more advanced applications such as decentralized exchange, financial derivatives, peer-to-peer gambling and on-blockchain identity and reputation systems. Perhaps the most ambitious of all is the concept of "autonomous agents" or "decentralized autonomous corporations" - autonomous entities that operate on the blockchain without any central control whatsoever, eschewing all dependence on legal contracts and organizational bylaws in favor of having resources and funds autonomously managed by a self-enforcing smart contract on a cryptographic blockchain.
+
+However, most of these applications are difficult to implement today, simply because the scripting systems of Bitcoin, and even proto-cryptocurrency-2.0 alternatives such as the Bitcoin-based colored coins protocol and so-called "metacoins", are far too limited to allow the kind of arbitrarily complex computation that DACs require. What this project intends to do is take the innovations that such protocols bring, and generalize them - create a fully-fledged, Turing-complete (but heavily fee-regulated) cryptographic ledger that allows participants to encode arbitrarily complex contracts, autonomous agents and relationships that will be mediated entirely by the blockchain. Rather than being limited to a specific set of transaction types, users will be able to use Ethereum as a sort of "Minecraft of crypto-finance" - that is to say, one will be able to implement any feature that one desires simply by coding it in the protocol's internal scripting language. Custom currencies, financial derivatives, identity systems and decentralized organizations will all be easy to do, and it will also be possible to construct transaction types that even the Ethereum developers did not imagine. Altogether, we believe that this design is a solid step toward the realization of "cryptocurrency 2.0"; we hope that Ethereum will be to cryptocurrency what Web 2.0 was to the World Wide Web circa 1995."
+(http://vbuterin.com/ethereum.html)
+
+[[Category:Crypto_Governance]]
+[[Category:Crypto_Economy]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:Money]]

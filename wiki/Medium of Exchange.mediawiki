@@ -1,0 +1,70 @@
+'''= a core [[Function of Money]], along with [[Standard of Value]] and [[Store of Value]]. It can also be applied to other domains, see the discussion on the internet.
+
+
+=Description=
+
+'''1.''' Bernard Lietaer:
+
+"For currencies that are not playing the role of standard of value (i.e. the
+majority of the complementary currency systems), the function of medium of
+exchange is the most important one. The ease and costs of their use as medium
+of exchange depends predominantly of the support medium used in the
+currency."
+(http://www.global-community.org/gc/newsfiles/25/Community%20Currency%20Guide.pdf)
+
+
+'''2.''' Tom Vest:
+
+"..a class of general purpose technologies that facilitate liquidity, or the easy exchange of goods, services, and information (sometimes called real factors) in the presence of various transactional frictions -- including physical distance and inter-temporal gaps between producers and consumers, the presence of uncertainty and mistrust, and the infrequency of coincidences of wants between diverse, independent economic agents."
+(http://www.eyeconomics.com/eyecononomics.com/MoEDdefined.html)
+
+
+=Discussion=
+
+Tom Vest:
+
+
+==Internet IP Addresses as Medium of Exchange==
+
+"To date, the function of “medium of exchange” (MoE) has been almost exclusively identified with the specific set of technologies known as money. However, the two terms are not synonymous. Money is generally understood to embody several other functions in addition to that of MoE -- e.g., means of payment, store of value, unit of account, et al -- each of which is distinct, and may conceivably exist in isolation from the others. 
+
+
+While each of these functions is generally regarded as independent by monetary theorists, it may be more accurate to say that money’s capacity to serve as a MoE for the scarce physical goods and services that characterize the conventional economy is contingent on the bundling together of these services within a single instrument. For example, when individual goods are rival -- that is, they are wholly transferred or consumed (and hence unavailable to the selling party to conduct further transactions) in the process of exchange -- then it makes sense for the MoE to undergo a similarly absolute (functional if not physical) transference in the opposite direction. In this sense, money is well suited to serve as a MoE in the conventional economy because it circulates, or changes hands, typically in the opposite direction of the goods and services being exchanged. The common term for this function is means of payment.
+
+
+Money’s operation as a MoE is contingent on its widespread acceptance as a means of payment in exactly this sense. In turn, money’s broad utility as a means of payment depends on its capacity to function as both a store of value and as a unit of account. The first of these features implies that money earned in one place today can be held with confidence that it will continue to be valuable -- i.e., to the useful for executing purchases -- in the same way (if not necessarily to the same degree) at other places and times in the future. The second of these features implies that the instrument is decomposable into discrete units that are widely used as a benchmark for calculating the relative value of real factors, or goods and services, which can be bought and sold using the MoE. Together, these collateral features enable consumers to hold money acquired here and now with confidence that it could be used to execute transactions at different places and times in the future. They also provide current producers with some basis for setting prices for the goods that they produce today but hope to sell at other places and times in the future.
+
+
+While each of the secondary functions associated with money has a role to play in the Internet, none is required in the same way for the Internet’s MoE to work. Unlike the conventional economy’s value-bearing features, the packet-borne goods and services that are characteristic of the Internet are not consumed in the process of exchange. A website viewed by one Internet user does not cause that website to become unavailable or less valuable in any way to subsequent users, nor does the act of receiving a file transfer cause the file in question to become unavailable to its original creator, or to anyone else that might access it thereafter. This is because, for transactions that are executed by means of packet switching, the act of exchange is at root identical to the act of duplication. In economic terms, this implies that Internet exchanges are fundamentally nonrival.
+
+
+Since Internet-based transactions do not absolutely consume the value-bearing resources that are being exchanged, a circulating MoE is unnecessary to provide liquidity for such exchanges. Arguably, such circulation would be absolutely inefficient for this narrow purpose, since such MoE movements would likely result in a reduction in overall liquidity, as some real factors would become periodically or perhaps permanently detached from the market and hence unavailable for exchange. One should note that this this does not imply that a separate, possibly circulating means of payment can have no role to play in the Internet, but rather that a mechanism of this kind is not -- and likely should not be -- bundled with the Internet’s MoE. 
+
+
+Typically, individual public IP addresses are uniquely and persistently associated with the specific points of attachment (or interfaces) between an individual device that plays host to one or more of the Internet’s real factors, and the universe of similarly addressed devices and real factors. In effect, they are the static tokens that mediate the dynamic, ad hoc, demand-driven interaction of nonrival factors across the vast distributed exchange mechanism that we call the Internet. Viewed in this light, this particular combination of nonrival real factors and non-circulating MoE provide the foundation for the Internet’s distinctive attachment-oriented economic model, in which association with the virtual economy and levels of participation in that economy are mutually independent.
+
+
+While the above description might prompt some to conclude that the liquidity services provided by IP addresses and money exhibit few commonalities that might merit comparison or the use of a common functional terminology for explanatory purposes, such a conclusion would be premature. Subsequent research will illuminate how both MoEs are vulnerable to the same kinds of systemic risks -- “same” in the sense of arising from the same root causes, giving rise to the same differential and progressive effects, and responding to the same basic mitigation strategies. It is also a telling historical fact, given the complete absence of intellectual cross-fertilization between the disparate MoE expert communities, that the same basic systemic risk management mechanisms emerged organically in both MoE-defined domains (note: a preliminary exploration of this historical symmetry is now online here).
+
+
+
+Although the Internet’s attachment-oriented economic model might be well suited to any system of pervasive, nondirectional exchange of nonrival factors, and arguably fits well with the kind of radical factor-level experimentation that is characteristic of the Internet, it is clear that the attachment model presents some intrinsic challenges of its own. The most basic of these is the incongruence of this model with the finite nature of some of the Internet’s basic building blocks, as well as with the broader, scarcity-based habits and constraints of the encompassing “conventional” economy. These incongruences have given rise to two distinct kinds of concerns, both of which have become increasingly salient in the recent past.
+
+
+The first kind of challenge arises as a result of the inherent mismatch between an effectively infinite quantity of exchangeable goods and services, and the ultimately finite carrying capacity of the diverse infrastructure elements required to execute those exchange transactions. Long recognized but never clearly diagnosed, critics often describe this particular challenge as an manifestation of the Internet’s “lack of a business model,” prompting them to periodically call for the development of mechanisms to “route money,” or embed a means of payment into the very structure of TCP/IP-based exchanges. Conversely, it has often been identified by advocates as one of the key features that makes the Internet so amenable to “peer production,” and other voluntaristic, non-contractual, and/or gift-like exchange conventions. For better or worse, the inherently binary nature of this attachment-based system has also led at times to MoE-centered commercial strategies for regulating demand for Internet-based services by end users, and also to anticompetitive strategies for discouraging market entry by aspiring new Internet service providers.   
+
+
+If the first kind of challenge stems from levels of participation in Internet-based exchange that meet or exceed the carrying capacity of required physical infrastructure inputs, the second kind of challenge results when levels of participation fall below the level that would justify the commitment of such inputs, or of associated IP number resources required to make such gross inputs interoperable. Although this problem is not intrinsic to the Internet protocol itself, it is increasingly relevant today because of the relatively small quantity of unique IP addresses that are supported by the current version of the Internet protocol -- and because that pool of globally interoperable IP addresses is now almost fully distributed to current or former Internet service providers.
+
+
+The proximate concern arising from this looming development is that some IP addresses that were distributed in the past are no longer used, or perhaps were never used. Technology changes over time have reduced or eliminated some older requirements for unique IP addresses, at the same time that administrative improvements have permitted the distribution of IP addresses to be ever more closely aligned with the concurrent requirements of address resource seekers. Unfortunately, the terms under which IP number resources have been distributed generally provide no effective mechanism for recovering number resources that are no longer used by their original recipients. As a result, some IP addresses that may have been needed in the past are now idle, but cannot be easily recovered to support additional Internet growth. As the numbers of aspiring Internet participants and the supply of new exchangeable factors continue to grow unabated, the persistence of these stranded and idled IP addresses has become increasingly contentious.
+
+
+However, even if this proximate concern did not exist -- e.g., because all IP addresses were 100% utilized, or all remaining idled IP addresses were 100% unrecoverable -- the fundamental problem would still remain: the foundational MoE that is supported by current Internet technology is too limited in quantity to continue providing basic liquidity services for an ever-expanding global base of demand drivers -- including user-generated interactions as well as commercial content and services -- that are actively exchanged over the Internet."
+(http://www.eyeconomics.com/eyecononomics.com/MoEDdefined.html)
+
+
+
+[[Category:Money]]
+
+[[Category:Economics]]

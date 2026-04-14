@@ -1,0 +1,68 @@
+'''= White paper by Provenance'''  Written by Project Provenance Ltd, namely: Dr. Jutta Steiner and Jessi Baker working with Dr. Gavin Wood at Ethereum, with editing by Dr Sarah Meiklejohn.  
+
+URL https://www.provenance.org/whitepaper
+
+
+=Contextual Citations=
+
+“Without understanding the impacts of goods and services, we buy into systems that deplete natural resources, worsen environmental and social problems and endanger humans and ecosystems. Supply chains are conventionally held secret, limiting the stakeholders who can prevent environmental, social and health and safety problems.”
+
+- Leonardo Bonanni, Founder of Sourcemap
+
+
+=Discussion=
+
+"This white paper is by social enterprise Project Provenance Ltd. and describes a prototype that uses blockchain technology to enable secure traceability of certifications and other salient information in supply chains. Provenance enables every physical product to come with a digital ‘passport’ that proves authenticity (Is this product what it claims to be?) and origin (Where does this product come from?), creating an auditable record of the journey behind all physical products. The potential benefits for businesses, as well as for society and the environment, are hard to overstate: preventing the selling of fake goods, as well as the problem of ‘double spending’ of certifications present in current systems. The Decentralized Application (Dapp) proposed in this paper is still in development and we welcome businesses and standards organizations to join our consortium and collaborate on this new approach to understanding our material world.
+
+
+==Demand for transparency is increasing==
+
+We know surprisingly little about most of the products we use every day. Even before reaching the end consumer, goods travel through an often vast network of retailers, distributors, transporters, storage facilities, and suppliers that participate in design, production, delivery, and sales, yet in almost every case these journeys remain an unseen dimension of our possessions.
+
+The creation, exchange, and use of material things, however, has many potential negative consequences: environmental damage, exploitative extraction, unsafe work conditions, forgery, and the huge amounts of valuable material wasted at the end of product life. Our relationship with the material world is broken.
+
+There is a growing rallying call by customers and governments demanding more transparency from brands, manufacturers, and producers throughout the supply chain. In the UK, 30% of consumers are concerned about issues regarding the origin of products but struggle to act on this through their purchasing decisions. The market for products of proven origin is growing. In the future, regulations like the European directive on non-financial reporting or the UK Modern Slavery Act will require companies to transparently disclose reliable information about their business footprint.
+
+'''Pioneering companies have long realized the competitive advantage of open, transparent supply chains and sustainable manufacturing.''' As an example, fish suppliers John West started including codes on their tuna cans to enable a consumer to trace the product back to the fisherman; this initiative alone added £17m to the brand’s sales. Sustainability standards and certification (e.g., Fairtrade, Forest Stewardship Council (FSC), Soil Association) have been an important tool to enable choice differentiation and conscientious consumption, yet in the end the outcome of certification is often just an image file or printed label on the packaging whose actual meaning is difficult to know and hard to verify. Guaranteeing the integrity of certificates is a costly process that, despite laborious audits, still struggles to assure the validity of the claims being made. Worldwide expansion of certification schemes in regions with levels of high corruptions further endangers credibility.
+
+
+==Centralized systems can’t power transparency==
+
+Despite various efforts, full “chains of custody” that tell the stories of products remain largely rudimentary and difficult to verify. Fragmentation of these efforts make them open to fraud. To connect the dots, nominally neutral, not-for-profit or governmental entities are commissioned with the task of creating a centralized data storage to enable a flow of trusted information.
+
+''In the face of these efforts, we must ask ourselves: can one organization be trusted to broker all data about every product’s supply chain? The truth is that no single organization can, and that relying on one party (or even a small collection of cooperating parties) creates an inherent bias and weakness in the system. If the party were the brand itself, or the most powerful actor in the supply chain, then it would be responsible ultimately for only its own bottom line; this could lead to selective disclosure or, worse, extortion. If the supply chain data were gathered by a third party, it would have to be both totally unbiased and properly incentivized to deliver the technical capability of running the system. Third parties like NGOs or industry associations, however, rarely manage even one of these two, and even if they could, they would become a single point of weakness; this would make them and their operations a vulnerable target for bribery, social engineering, or targeted hacking.''
+ 
+Distributing the transaction platform among various third parties would add further difficulties, as the shared costs for its set up and operation would be difficult to apportion and agree on, as benefits to each party are not usually made transparent.
+
+'''Despite these difficulties, the idea of using a centralized system with a governing third party was, until recently, the only conceivable way to achieve data and transaction transparency along supply chains. Today, however, a new technology called the blockchain presents a whole new approach. The blockchain is a recent development in the field of computer science, which uses a global peer-to-peer network to provide an open platform that can deliver neutrality, reliability and security. The basic mechanism was originally proposed as part of a solution for administering the shared accounting ledger underlying Bitcoin [“Bitcoin: A Peer-to-Peer Electronic Cash System”, Satoshi Nakamoto, 2008]. Beyond this initial financial application, blockchains can be generalized and used to implement an arbitrary set of rules that no one, neither the users nor the operators of the system, can break. They rely on a completely different system architecture — one that we will detail below — that makes them a unique platform for applications involving multiple parties with little trust in each other; for example, fragmented supply chains. We stress that our approach does not require any particular behavior on behalf of the participants; instead, the underlying technology guarantees the integrity of the system even in the face of dishonesty or idleness. In this way, we provide a technological solution to an organizational problem.'''
+
+
+==Blockchain technology changes everything==
+
+
+To grasp the potential that applications built on top of blockchains can deliver, it is essential to understand the three key differences between blockchains and most existing computer designs. We present these below as non-localization, security, and auditability.
+
+
+==Non-localization: A truly global computer running by consensus==
+
+Personal computers (e.g., desktop PCs, laptops, and mobile phones) are limited by the physical world. Even though it may seem that modern applications run on several devices, to keep consistency an application’s core program is in fact executed on a single, centralized server, with the client device serving merely as a powerful display.
+
+In contrast, there is no single machine that governs the business logic or the data on which a blockchain operates. Instead, the data on a blockchain is determined by consensus, which is a defined convention for how to execute and administer the business logic (e.g., to update the stock of a certain good). The magic of the blockchain and its surrounding incentive structure is such that users can then unambiguously discover the state of the system (e.g., the current level of stock or the origin of a particular certificate), not from a single particular authority but rather by independently applying common rules and publishing data openly."
+(https://www.provenance.org/whitepaper)
+
+
+=More Information=
+
+* To contact us please email hello@provenance.org or tweet @ProvenanceHQ.
+
+* [[Dapp]] = , Decentralized application) A program implemented on the blockchain that executes the rules of a particular business application. Usually the term Dapp encompasses both the program’s backend as well as (various) user facing web frontends
+
+* [[Provenance]]
+
+[[Category:Crypto_Governance]]
+[[Category:Crypto_Economy]]
+
+[[Category:Cosmo-Local_Production]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Mutual_Coordination]]
+[[Category:Articles]]

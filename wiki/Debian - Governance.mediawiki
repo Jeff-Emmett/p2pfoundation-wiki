@@ -1,0 +1,126 @@
+=Description=
+
+From Jeremy Malcom:
+
+"One final example of hierarchical ordering in open source software development is found in comparing two similar Linux-based operating system distributions, Debian GNU/Linux and Ubuntu. The Debian project was the first to be established, in 1993. Although not incorporated, an associated incorporated body Software in the Public Interest, Inc (SPI) was formed in 1997 to provide the Debian project (along with various other open source projects) with administrative and legal support. It does not take an active role in the development of the Debian distribution.
+
+The Debian project is led by a Project Leader who is elected by the project’s members, known as its Developers (or Maintainers), for a one year term. The Project Leader presides over a Project Secretary, a Technical Committee of up to eight members, and various other technical positions, all of whom are appointed from amongst the Developers by the Project Leader (save that the Project Leader appoints a new Project Secretary jointly with the incumbent in that role). The process for becoming a Developer is a meritocratic one, the requirements of which are set out in a detailed policy document.[92] As at 2007 there are over 1100 Developers, although many of these are inactive.
+
+The autonomy of the Project Leader is expressly limited by clause 5.3 of the [[Debian Constitution]] which provides, “The Project Leader should attempt to make decisions which are consistent with the consensus of the opinions of the Developers” and “should avoid overemphasizing their own point of view when making decisions in their capacity as Leader.” The same applies to the Technical Committee, which is only to make decisions as a last resort, where “efforts to resolve it via consensus have been tried and failed” (clause 6.3.6). Clause 4.1 provides that any decision of the Project Leader may be overruled by a general resolution of the Developers, as may any decision of the Technical Committee by a two thirds majority resolution." 
+
+Source: Book: [[Multi-Stakeholder Governance and the Internet Governance Forum]]. Jeremy Malcolm. Terminus, 2008, draft of chapter 4.
+
+
+=Discussion=
+
+==Governance in Debian==
+
+From Mathieu O'Neil's [[Cyberchiefs]]:
+
+Excerpt from Chapter 7: The Imperfect Committee
+
+'''A BAZAAR OF CATHEDRALS'''
+
+‘The Cathedral and the Bazaar’ is the title of a famous essay by Eric Raymond. Raymond contrasted the secretive low-frequency-release model of Richard Stallman’s Free Software Foundation’s GNU software to the ‘release early, release often’ model pioneered by Linus Torvalds with Linux. Nicolas Auray has argued that Debian represents an attempt to make the bazaar viable, with norms aiming to reduce tensions, but also moral, with institutions aiming to reduce unequal relations.1 This represents an evolution for FOSS projects from purely charismatic models such as Linux which are based on a ‘lazy consensus’: if no one makes an objection after three days, then a proposal is accepted.2
+
+Debian must reconcile the central notion of each developer’s autonomy, and the respect for difference, with the constraints deriving from the production of a complex system with quality standards of the highest order. This is the main purpose of the modular structure: to give developers full administrative control over their packages or teams, in a mini-cathedral model. This level of personal control is in fact a primary attraction for many FOSS developers, who are then free to work alone if they wish. There is also less chance of being criticised for one’s work if one keeps control over it and only releases finished versions, thereby stopping others from interfering. At the same time, Debian packages all follow strict production guidelines (‘policy’) and can easily become integrated. 
+
+The absence of monetary rewards in Debian guarantees that reputation benefits earned by technical excellence (hacker charisma) are the standard for all value. One sign of authority in Debian might therefore be the number of packages any one developer is responsible for: the higher the number, the greater the hacker-charismatic authority? Yet a higher level of administrative authority is required to deal with infrastructure that stretches over different packages. Martin Krafft observes that these core tasks are undertaken ‘by a smallish number of developers that take Debian very seriously’.3 Studies of other free-software projects have shown that small groups are responsible for the majority of work. Lerner and Tirole argue that a tiny minority make the largest contributions, their integration into the ‘core group’ of developers representing the ultimate recognition by their peers.4 A study of the development of Apache showed that out of 400 developers, the top 15 contributed between 83 and 91 per cent of changes, whilst ‘bug’ (or problem) reports were much more evenly distributed.5 
+
+Krafft notes that since the membership of the security team is seen as prestigious, ‘some people write lengthy emails explaining why they should be picked’.6 Naturally these requests are never honoured: only those who have contributed are deemed worthy of inclusion. Highly specialised knowledge of the project’s infrastructure or of the workings of a core team, accumulated over years, risks becoming fossilised. This is the central question for Debian, and indeed for any volunteer project requiring high levels of expertise: how do the tribal elders transmit their wisdom? As will be shown in the next section, this question is largely unresolved.
+
+Supporting new users is a crucial activity if the project is not to wither away. Hacker-charismatic authority can be detected by examining interactions in lists, the project’s primary communication and education tool. FOSS lists are not simply forums for discussion, but are also means for peers to evaluate the quality of code or advice. A question must be useful for everyone, otherwise it risks the indignity of the questioner being directed to documentation such as the FAQ.7 Studies of patterns of questions and responses on the debian-french user list reveals a tension between a system of massively distributed collective authority in which everyone and anyone authorises themselves to respond to a request on the one hand, and the constitution of an elite based on reciprocal approbation on the other. The selection of who one responds to, as well as how one responds, is crucial: authoritative responses on threads are primarily addressed to previous respondents, rather than to the original questioner. The threaded nature of discussions on lists enables the selection of high-status partners. A mutually responding core emerges, which preserves expert authority in the midst of a dynamic and open system.8 On developer lists, studies show that the necessary knowledge of all the elements of the distribution, allowing people to foretell problems and remember solutions, is not equally distributed. List archives can be viewed as the minutes of a permanent assembly, which is directly accessible to all at every minute, but only the most experienced members can remember or find their way around the mounds of archived information. The authority of such tribal elders represents the means of moderating the obsessional reference to technical excellence.9
+
+Unlike on Daily Kos, where the two variants of online charisma mutually reinforce one another, hacker and index charisma on Debian are fundamentally antinomic. This is because index authority always contains an arbitrary element: the identity of earliest entrants is due to chance, not talent. Since Debian is based on meritocratic skill, it should in theory have no place for the other form of online charisma. How did the index-authority virus enter the project? As previously mentioned, a key goal for leaders of online tribal projects is to distribute administrative power whilst maintaining quality. Since the autonomous structure makes it very hard to discipline people, the maximum effort must be borne upstream, before recruitment occurs. In practical terms, this boils down to: who can be trusted to access the levers of control? Contrary to weblogs (where administrative power is never fully opened to everyone) and to wikis (where all modifications are instantly reversible, and do not affect the whole project), contributors to Debian really do have the potential to harm the software. 
+
+As a result, a central difference between Debian and the other cooperative projects examined in this book is that contributions cannot be anonymous. Online communities are routinely described as having fluid boundaries and shifting members and identities. In contrast, members of FOSS projects who are developing software that is hosted on protected servers connected to the Internet must maintain a distinct and trusted identity, which will enable them to gain access to these protected resources.10 Since developers are capable of modifying the code, the project has to be protected from Trojans (hidden bugs or viruses) as well as from well-intentioned but unskilled developers. 
+
+There are various means by which a digital identity can be authoritatively linked to the entity it claims to represent. The answer for Debian lay in the use of keys (large numbers) that allow data to be encoded and decoded. If the key is secret, and the same key is used to encode and decode a message, sender and recipient cannot exchange a secret key to begin with. A possibility is public key infrastructure, where a centralised certifying authority registers users and delivers certification to them. But autonomous projects require a distributed solution. The aim of securing identities led to the establishment of a private-key cryptography system, whereby a public key encodes data, and a completely different key decodes the data. The authenticity of the communication’s content is guaranteed, but this process does not verify the link between the key and the sender’s identity. Real-world identities must be connected to a given public key. This is achieved when identity certificates (including public keys and owner information) are signed by other users who are themselves known and trusted by the tribe. The physical act of vouching for the link between a public key and the person or entity listed in the certificate takes place at offline ‘key-signing parties’. Developers bring a copy of their public key and valid photo identification; they meet and certify another’s public key. A key which has been signed can then be placed on a central key server maintained by a keyring coordinator. In social network analysis terms, O’Mahony and Ferraro write that the resulting web of trust rests on the assumption that ‘the more people who have signed each other’s key (the greater is the density of the network), the more reliable is the information authenticated’.11
+
+This process contains the hallmarks of a familiar scenario in which entrants who have accumulated many endorsements are advantaged and it is hard for new entrants to break in. O’Mahony and Ferraro have analysed the dating of key-signings and suggest that between 1997 and 2001 the Debian keyring network increasingly conformed to a power-law mode and became centralised. Formalised membership processes, such as a vetting team (the New Maintainer Committee or NMC) and the requirement of sponsorship by an existing developer, encouraged preferential attachment to gatekeepers, as measured by key-signings. O’Mahony and Ferraro’s conclusion, that becoming a central player through physical participation in key-signings ‘enhanced the probability of attaining a gatekeeper position far more than the number of packages maintained’,12 seems unassailable. However their assertion that preferential attachment influences the ‘structure of the network as well as the design of governance mechanisms’ assimilates recruitment procedures to overall project governance. There is scant evidence that this is the case, beyond the fact that the head of the NMC was elected Debian project leader in 2003. It is arguable, for example, that membership of Debian’s Technical Committee (TC), or of key infrastructure teams, is of greater significance to the project, because these positions are not renewed every year.
+
+The influence of index-charisma is counterbalanced by Debian’s embrace of sovereign authority. An egalitarian or collectivist organisation based on the sovereign will of all participants is the natural format of ‘successful anarchist communities’.13 This takes a number of institutional forms. The autonomous authority of individual developers over their packages is overridden by the greater good, as expressed in two institutional mechanisms: the General Resolution Protocol and the Technical Committee. Though Debian users can take part in mailing-list discussions, only developers can vote in a general resolution or sit on the TC. Debian Developers (DDs) elect the Debian project leader every year. The DPL in turn appoints or reappoints the chairman of the Technical Committee and the secretary; these three roles must be distinct. The DPL also appoints delegates, such as the FTP master, who controls uploads of packages; release managers, who are in charge of supervising the release process; security team managers, who coordinate security issues with other projects; and Debian account managers or DAMs, a very sensitive position as they maintain Debian accounts and oversee the recruitment of new members, and can also expel or suspend developers. Often delegates are reappointed in their roles for many years.
+
+The TC is a kind of supreme court which is supposed to arbitrate matters of technical policy, decide where developers’ jurisdictions overlap, and, when necessary, overrule developers. The secretary administers, and reports on, the voting process. Secretaries can stand in for the leader (as can the TC chairman) and they adjudicate disputes about interpretations of the constitution. The ultimate authority is the democratic will of all the developers, who can recall leaders, reverse decisions by leaders or delegates, or amend the constitution through a general resolution. In practice however, this is seldom used: in the ten years following the adoption of the Constitution in 1998, there have only been twelve general resolutions. 
+
+As for DPLs, their authority is qualified. The constitution states that, just like a traditional tribal chief, ‘the Project Leader should attempt to make decisions which are consistent with the consensus of the opinions of the Developers’.14 Leaders make decisions for which no one else has responsibility, but should ‘avoid overemphasising their own point of view when making decisions in their capacity as leader’.15 How can project leaders enforce their decisions? Their compliance arsenal is limited, as demonstrated when the DPL, in an effort to compel a recalcitrant developer to report on what he was up to, published an open letter to the developer in an attempt to shame him into action.16 Because of the delays in processing new applicants, the status of Debian maintainer, situated between developers and users, was created in 2007. This authority level would be for users who had been maintaining a package for some time; they would be allowed to upload without going through maintainers. However, they would not have voting rights, nor would they have access to the debian-private mailing list or the Debian infrastructure.17 
+
+As has frequently been noted, external enemies serve to coalesce boundaries of exclusion and inclusion. The originating enemies of all free-software project, which motivate and sustain their existence, are entities which restrict hacker autonomy. Lehmann writes that such enemies include ‘anything and anyone which is perceived as prohibiting access, including copyrights, patents, and secret source codes, but also mechanisms that encourage dependence’.18 Richard Stallman once declared that persecuting the unauthorised redistribution of knowledge by robot guards, harsh punishments, legal responsibility of ISPs and propaganda is ‘reminiscent of Soviet totalitarianism, when the unauthorised copying and redistribution of samizdat was prohibited’.19 This kind of outburst is rare. Hackers in general, and Debian developers in particular, do not as a rule disparage proprietary software; its inferiority is taken for granted, not dwelt upon. This is because, as in the blogosphere, conflicts with the ‘same’ far outweigh in intensity those against the ‘other’.
+
+A prime candidate for the role is a rival software distribution named Ubuntu. Financed by Mark Shuttleworth, a dot-boom entrepreneur, and his firm Canonical, Ubuntu’s strongpoint is the clockwork regularity of its releases: every six months, Ubuntu developers ‘freeze’ Debian, make a selection amongst the myriad Debian packages, and release them as an integrated system. Ubuntu’s ease of installation and its successful generation of a community network of support and development, complete with mailing lists, have proved popular. Debian’s original founder, Ian Murdock, who left the project, commented that Debian had ‘brought this fork on itself with its glacial pace’.20 The Ubuntu website states (emphasis added) that ‘the Ubuntu project attempts to work with Debian to address the issues that keep many users from using Debian.’21 A developer justified leaving Debian for Ubuntu because he was tired of the frequent flame wars and because ‘having one person who can make arbitrary decisions and whose word is effectively law probably helps in many cases’.22
+
+Conversely, some Debian users affirmed their distinction as true free-software aficionados: ‘most people who use Ubuntu (Not to insult them) are teenagers who want to use Linux in the same way “hip” people use Macs’.23 Sometimes the hostility moved offline, for example at the annual Debian development conference debconf6 where someone ‘was attacked for wearing an Ubuntu T-shirt … while someone else was applauded for wearing a “Fuck Ubuntu” t-shirt’.24 In contrast to Debian, Ubuntu’s updates had a clockwork regularity; and it was disturbing for volunteers to see others being paid for what they themselves were doing for nothing.25 The rise of Ubuntu also risked turning Debian into a supermarket of components with little work being done on the crucial elements that work across packages.26 But the biggest problem was the perception that as Ubuntu grew, it was effectively leeching off Debian, but not paying Debian back in the coin of the realm: improvements to the software. The Ubuntu website declares that bugs listed on the Debian Bug Tracking System (BTS) and fixed in Ubuntu are automatically communicated back to the BTS. Yet in 2008 a former Debian project leader declared that developers were unhappy about the relationship with Canonical, who they believed was not actively contributing back to Debian: ‘They’re not giving back as much as they claim to do.’27 In breaking the development code, Ubuntu was not behaving honourably.
+
+What is the role of honour in Debian? Nicolas Auray argues that the ethic of the Debian project is a form of ‘moral heroism’ or ‘civic totalitarianism’ required by the participants’ constant mobilisation via the mailing lists. This generated a specific Debian ‘netiquette’. Members of the tribe have to demonstrate perfect self-control, temper their emotions and follow norms of humility.28 That inventors require norms of humility to moderate an intense focus on originality and priority had been posited by Robert Merton in his sociology of the scientific field.29 In Debian, humility serves to temper not priority, but authority over packages. Yet it is debatable whether humility really influences behaviour in an environment predicated on technical excellence, and which clearly constitutes a continuation of the confrontations of Usenet, as evidenced by countless references to ‘flame wars’ and ‘killfiles’ (and their distinctive *plonk* noise). In this context the threat of dishonour allows the lack of observance of the humility norm. Honour is less a bug in system than a fallback mechanism, an (archaic) justification for autonomous conflictuality. When a French user dared to criticise the lack of responsiveness of developers to user needs, a developer replied: ‘What am I, your servant? We are volunteers who have better things to do than listen to the inept ramblings of a minority of users who know better than us what they want to do.’ And the next day another developer added, speaking to the same user: ‘Contrarily to you, we don’t just watch, we play’.30 The developer’s honour is rooted in being active and autonomous."
+
+
+===References===
+
+1 Nicolas Auray, ‘Le Sens du juste dans un noyau d’experts: Debian et le puritanisme civique’, in Bernard Conein, Francoise Massit-Folléa and Serge Proulx (eds), Internet, une utopie limitée: Nouvelles régulations, nouvelles solidarités, Laval, Quebec: Presses de l’Université Laval, 2005.
+
+2 Nicolas Auray, ‘The decision-making process within a huge project: discussions and deliberations in Debian’, Libre/Open Source Software: Which Business Model? Calibre Workshop, Paris, 4 March 2005.
+
+3 Krafft, The Debian System, p. 53.
+
+4 Josh Lerner and Jean Tirole, ‘Some simple economics of open source’, Journal of Industrial Economics, Vol. 50, No. 2 (2002), pp. 194–327. 
+
+5 Audris Mockus, Roy Fielding and James Herbsleb, ‘A case study of open source software development: the Apache server’, in Proceedings of the Twenty-second International Conference on Software Engineering, Limerick, Ireland, ACM Press, 2000, pp. 263–72.
+
+6 Krafft, The Debian System, p. 54.
+
+7 Bernard Conein, ‘Communauté épistémique et réseaux cognitifs: coopération et cognition distribuée’, Revue d’Economie Politique, No. 113 (2004), pp. 141–59. 
+
+8 Bernard Conein, ‘Relations de conseil et expertise collective: comment les experts choisissent-ils leurs destinataires dans les listes de discussion?’, Recherches Sociologiques Vol. 35, No. 3 (2004), pp. 61–74.
+
+9 Auray, ‘Le Sens du juste’.
+
+10 Siobhán O’Mahony and Fabrizio Ferraro, ‘The emergence of governance in an open source community’, Academy of Management Journal, Vol. 50, No. 5 (2007), pp. 1079–106. 
+
+11 Siobhán O’Mahony and Fabrizio Ferraro, ‘Managing the boundary of an “open” project’, Workshop on the Network Construction of Markets, Santa Fe Institute, 2003.
+
+12 Ibid.
+
+13 Auray, ‘Le Modèle souverainiste’.
+
+14 ‘5.3. Project Leader: Procedure’, Debian Constitution [online].
+
+15 Ibid.
+
+16 SH, ‘Re: Making Debian work: a question of trust indeed’, debian-project, 21 November 2007 [online]. 
+
+17 ‘General Resolution: endorse the concept of Debian Maintainers’, Debian [online]. 
+
+18 Lehmann, ‘FLOSS developers as a social formation’.
+
+19 Richard Stallman, ‘Copyright and globalisation in the age of computer networks’, in Rishab Aiyer Ghosh (ed.), CODE: Collaborative Ownership and the Digital Economy, Cambridge, MA: MIT Press, 2005, pp. 317–35. 
+
+20 Ian Murdock, ‘Ubuntu vs. Debian, reprise’, Ian Murdocks’ Weblog, 20 April 2005 [online].
+
+21‘Community: Debian and Ubuntu’, Ubuntu [online].
+
+22 Matthew Garrett, ‘I resigned from Debian today’, LiveJournal, 28 August 2006 [online].
+
+23 MP, ‘Re: “I do consider Ubuntu to be Debian”, Ian Murdock’, debian-user, 19 March 2007 [online]. 
+
+24 Scott James Remnant, ‘Having left Debian’, Netsplit, 2 September 2006 [online]. 
+
+25 Martin Krafft, ‘Ubuntu and Debian’, Madduck, 2006 [online]. 
+
+26 Joey Hess, ‘The supermarket thing’, 21 October 2007 [online]. 
+
+27 Sam Varghese, ‘A conversation with Martin Michlmayr’, IT Wire, 31 January 2008 [online]. 
+
+28 Auray, ‘Le Sens du juste’.
+
+29 Robert K. Merton, The Sociology of Science: Theoretical and Empirical Investigations, Chicago: University of Chicago Press, 1973.
+
+30 Various authors, ‘Re: Critique constructive de Debian’, debian-devel-french, 29 September 2007 [online].
+
+
+=More Information=
+
+#Open Source Leadership in Debian, http://www.oss-watch.ac.uk/resources/debianleader.xml
+
+[[Category:Governance]]
+
+[[Category:Cases]]

@@ -1,0 +1,45 @@
+'''= distributed [[Reputation]] system.'''
+
+Technical concept which is sometimes used in a broader sense.
+
+
+=Definition=
+
+From the Wikipedia:
+
+"In cryptography, a web of trust is a concept used in PGP, GnuPG, and other OpenPGP-compatible systems to establish the authenticity of the binding between a public key and a user. Its decentralized grass roots trust model is an alternative to the centralized trust model of a public key infrastructure (PKI), which relies exclusively on a certificate authority (or a hierarchy of such). As with computer networks, there are many independent webs of trust, and any user (through their identity certificate) can be a part of, and a link between, multiple webs.
+
+The web of trust concept was first put forth by PGP creator Phil Zimmermann in 1992 in the manual for PGP version 2.0."
+(http://en.wikipedia.org/wiki/Web_of_trust)
+
+
+
+
+=Description=
+
+"One of the first applications to handle reputations in an automated fashion on a genuinely large scale was the "web of trust" system introduced in Phil Zimmermann's Pretty Good Privacy (PGP). This was also the first program to bring public key cryptography to the masses (see the Crypto chapter for more details on public key crypto).
+
+With public key cryptography comes the key certification problem, a type of reputation issue. Reputations are necessary because there is no way to tell from the key alone which public key belongs to which person.
+
+For example, suppose Alice would like people to be able to send encrypted messages to her. She creates a key and posts it with the name "Alice." Unbeknownst to her, Carol has also made up a key with the name "Alice" and posted it in the same place. When Bob wants to send a message to Alice, which key does he choose? This happens in real life; as an extreme example, the name "Bill Gates" is currently associated with dozens of different PGP keys available from popular PGP key servers.
+
+So the key certification problem in PGP (and other public key services) consists of verifying that a particular public key really does belong to the entity to whom it "should" belong. PGP uses a system called a web of trust to combat this problem. Alice's key may have one or more certifications that say "Such and such person believes that this key belongs to Alice." These certifications exist because Alice knows these people personally; they have established to their satisfaction that Alice really does own this key. Thus Alice's key builds up a reputation as being the right key to use when talking to Alice. Carol's fake "Alice" key has no such certifications, because it was made up on the spot.
+
+When Bob looks at the key, his copy of PGP can assign it a trust level based on how many of the certifications are made by people he knows. The higher the trust level, the more confidence Bob can have in using the key. But because there's a limit to how many people Alice and Bob can know, in reality Bob's software will look for broader connections, such as a "certification chain" that is less than, say, 4 hops long, or how many independent paths through the web go through at most 4 people.
+
+There are still a number of tricky issues that make the PGP web of trust concept hard to use securely: for example, what exactly did Bob mean when he certified Charlie's key, and does Charlie mean the same thing when he certifies David's key? But the key point to remember here is that the web of trust depends on reputation to extend trust to new parties."
+(http://freehaven.net/~arma/jean.html)
+
+
+=More Information=
+
+#[[Trust]]
+#[[Identity]]
+#[[Reputation]]
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Relational]]

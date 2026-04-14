@@ -1,0 +1,81 @@
+=Source=
+
+By Michał Woźniak, 24.09.2012
+
+Original title: Breaking the garden walls
+
+URL = http://rys.io/en/88
+
+
+=Text=
+
+Michał Woźniak:
+
+"For some time now I have been pondering the best way to break people free from walled-gardens (like Facebook, Google+, Twitter, etc).
+
+For all those services there are viable, free-as-in-freedom alternatives (Diaspora/Friendica, StatusNet, and many more). All those proprietary services are being heavily criticised (among others, for privacy violations, tricking or pushing their users, heavy-handed policies, censorship, nymwars).
+
+And yet, people still overwhelmingly use them, instead of the libre, decentralised, federated alternatives. 
+And yet, people still write software for them and base their business on them — and even when those closed services change their API policies and draw ire of developers, the developers themselves write petitions instead of simply diversifying.
+
+There is a reason for that, and the reason is called Network Effect. In short — the more people use a given communication too, the more new people will use it.
+
+Seems that there is no way out... However, I believe there is. But we have to subvert the network effect to do our bidding!
+
+
+==Step 0. Agreed protocols==
+
+We do have a problem with fragmentation. Fragmentation is not choice — it is a situation where you don't know which of the incompatible service types to choose — in fact, it's almost a kind of a walled-garden in and of itself.
+
+Choice is what we have with e-mail: you can choose from a plethora of clients, servers, webmail providers, etc; however, regardless of whichever you choose, you are still able to seamlessly communicate with any other e-mail user, using any other combination.
+
+Currently we have quite a few open, free, decentralised social media protocols that have similar functionality but not much interoperability. Before we can move on, we need to change that — and the only way to change that is to agree on one of those protocols and move from there.
+
+I believe we should start a discussion on that and make the decision as soon as possible; and I call upon GNU Project, FSF, FSFE, and all other notable organisations promoting free/libre/open source software to partake in this discussion and throw their weight behind the protocols that would emerge as the agreed-upon solution.
+
+
+==Step 1. Awesome service==
+
+We need to build a service (and methods of creating new instances of it quickly and easily!) that integrates as many different service types as possible uder a single user@example.org identity. I'm thinking at the very least:
+
+#e-mail with webmail access;
+#Jabber/XMPP;
+#Diaspora/Friendica;
+#StatusNet;
+#OpenID identity service;
+#calendar, files, contacts web interface and synchronisation service (e.g. ownCloud);
+#all of the above accessible via TOR hidden services.
+
+Maybe a distro/remix, ready with everything one needs to just install it, enter some basic data and run? We need as many instances of that as possible, as fast as possible.
+
+Of course, there already are valuable projects going in this direction, and we should support them. For example, FreedomBox, as pointed out by forteller; or SocialSwarm, as pointed out by march.
+
+The problem with FreedomBox and SocialSwarm I see is that they are trying to make two hard transitions at once: from centralised to de-centralised, and from third-party-hosted to self-hosted. I believe this is a tad too an ambitious plan and it should be split into two separate steps. However, if we did Step 0 and Step 1 right, they both would have at least a part of their work done for them.
+
+
+==Step 2. Prison break==
+
+When we have where to send potential interested users, it's time to start the campaing proper. For this we need a website, endorsed by as many privacy-advocating and FLOSS-evangelizing organisations and people as possible.
+
+It would designate a single day each month, or each quarter, to be (e.g.) "Prison Break Day Q4 2012". Users of walled-gardens could log-in on the website with their walled-garden accounts and pledge to (either, or both):
+
+#create an account on an analogous libre, decentralised service (i.e. StatusNet for Twitter users; #Friendica for Facebook users);
+#close their walled-garden accounts;
+
+...before or at the next "Prison Break Day".
+
+Info that they did pledge that would get automagically published on their walled-garden feeds for all their friends to see. As the "Prison Break Day" draws closer, at least one reminder would be sent to them — and to their feeds. Users then would be able to log-in with their libre OpenID to "claim" a given pledge and prove they made good on it. This would also get published on their walled-garden feeds.
+
+To sweeten the deal, the libre services should be able to connect with walled-garden accounts and publish to them.
+
+This would have the effect that people would see how many of their friends in walled-gardens are actually willing to make the switch. For some the amount of those would be enough to make good on their pledges and create the accounts; for some it would even give the incentive to close their walled-garden accounts.
+
+Anyway, we would have the network effect working for us.
+
+Yes, there is a Diaspora thread and Identica one for your commenting pleasure!"
+(http://rys.io/en/88)
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Articles]]

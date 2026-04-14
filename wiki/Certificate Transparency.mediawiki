@@ -1,0 +1,27 @@
+
+
+=Description=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"In order to provide more transparency (in the [[Authentication of Naming and Identity on the Internet]]), Google has developed a projected called
+Certificate Transparency (CT). CT is an open framework to audit and monitor digital
+certificates in real time. CT was created to help address the problem of certificate 89
+revocation–the process of taking back certificates that are no longer valid. The problem
+it solves is that if any certificate authority along a chain has been compromised, all
+certificates issued along the chain from then on must be deemed suspicious. In order
+for a user’s browser to find out about a compromise, ideally they would receive a
+notification that the certificate authority, and all certificates derived from it, should be
+nullified. But in practice, it is difficult to update browsers quickly, before they are
+attacked. CT is the first step in addressing this–anyone can run a CT server which logs
+and audits certificate issuance in real time. An owner of a domain can monitor the logs
+to verify that bad certificates aren’t being issued for their domain. CT is an attempt to
+make a more transparent audit for changes to the certificate authority system, and
+probably has interesting applications in other domains where monitoring would be
+helpful."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Standards]]

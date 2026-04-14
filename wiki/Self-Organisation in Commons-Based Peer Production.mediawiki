@@ -1,0 +1,714 @@
+
+'''* PhD Thesis: Self-organisation in Commons-Based Peer Production (Drupal: “the drop is always moving”).
+By David Rozas. University of Surrey, Department of Sociology, Centre for Research in Social Simulation, 2017'''
+
+URL = https://davidrozas.cc/phd [https://davidrozas.cc/sites/default/files/publications/files/phd_thesis_drupal_cbpp.pdf]
+
+Submitted for the Degree of Doctor of Philosophy. This work was partially supported by the Framework
+programme FP7 ICT-2013-10 of the European Commission through project P2Pvalue (grant no.: 610961). 
+
+
+=Abstract=
+
+David Rozas:
+
+"[[Commons-Based Peer Production]] (CBPP) is a new model of socio-economic
+production in which groups of individuals cooperate with each other without
+a traditional hierarchical organisation to produce common and public goods,
+such as Wikipedia or GNU/Linux. There is a need to understand how these
+communities govern and organise themselves as they grow in size and complexity.
+
+'''Following an ethnographic approach, this thesis explores the emergence of and changes in the organisational structures and processes of [[Drupal]]: a large and global CBBP community''' which, over the past fifteen years, has coordinated the work of hundreds of thousands of participants to develop a
+technology which currently powers more than 2% of websites worldwide.
+
+''Firstly, this thesis questions and studies the notion of contribution in CBPP
+communities'', arguing that contribution should be understood as a set of meanings
+which are under constant negotiation between the participants according
+to their own internal logics of value. Following a constructivist approach, it
+shows the relevance played by less visible contribution activities such as the
+organisation of events.
+
+''Secondly, this thesis explores the emergence and inner workings of the sociotechnical systems which surround contributions'' related to the development of
+projects and the organisation of events. Two intertwined organisational dynamics
+were identified: formalisation in the organisational processes and decentralisation
+in decision-making.
+
+Finally, this thesis brings together the empirical data from this exploration of
+socio-technical systems with previous literature on self-organisation and organisation
+studies, ''to offer an account of how the organisational changes resulted in the emergence of a polycentric model of governance'', in which different forms of organisation varying in their degree of organicity co-exist and influence each other."
+
+=Contents=
+
+==1 Free/Libre Open Source Software and Commons-Based Peer Production==
+
+* 1.1 Free/Libre Open Source Software . . . . . . . . . . . . . . . . . . 28
+* 1.2 Research on Free/Libre Open Source Software . . . . . . . . . . 40
+* 1.3 Commons-Based Peer Production . . . . . . . . . . . . . . . . . . 50
+* 1.4 Research on Commons-Based Peer Production . . . . . . . . . . 56
+* 1.5 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+
+==2 Drupal: case study and research questions==
+
+* 2.1 What is Drupal? . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+* 2.2 Key moments in the history of Drupal and its community . . . . 67
+* 2.3 The growth of the community . . . . . . . . . . . . . . . . . . . . 85
+* 2.4 Life in a “do-ocracy”: a model of governance? . . . . . . . . . . 95
+* 2.5 Research questions . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+* 2.6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+
+
+==3 The exploration of self-organisation via contribution activities: conceptualising Drupal through an Activity Theory lens==
+
+* 3.1 A historical overview of Activity Theory . . . . . . . . . . . . . . 103
+* 3.2 Why draw on Activity Theory for the study of peer production? 112
+* 3.3 Conceptualising Drupal through an Activity Theory lens . . . . 115
+* 3.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+
+
+==4 Methods 125==
+
+* 4.1 Methodological approach: an ethnographic perspective . . . . . 125
+* 4.2 Data collection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+* 4.3 Ethical considerations . . . . . . . . . . . . . . . . . . . . . . . . 153
+* 4.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+
+
+==5 Identifying contribution activities in a “code-centric” community==
+
+* 5.1 Contribution beyond source code in FLOSS . . . . . . . . . . . . 159
+* 5.2 “Object-oriented” and “community-oriented” contribution activities
+* 5.3 Representation of contribution activities in user profiles . . . . . 168
+* 5.4 “Come for the software, stay for the community”: the role of
+affective labour in the Drupal community . . . . . . . . . . . . . 176
+* 5.5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 178
+* 5.6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180
+
+
+==6 Socio-technical systems of non-core Drupal projects==
+
+* 6.1 The emergence of the socio-technical system of contributed projects
+* 6.2 The Project Application Process . . . . . . . . . . . . . . . . . . . 188
+* 6.3 Case study: following a contributed project . . . . . . . . . . . . . 193
+* 6.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 204
+
+
+==7 The socio-technical system of core projects==
+
+* 7.1 The emergence of the socio-technical system of core projects: “in the beginning was Dries” . . . . . 
+* 7.2 Core initiatives, leaders and gates: formalisation and decentralisation in core 
+* 7.3 Case study: the story of an unofficial core initiative . . . . . . . . 216
+* 7.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+
+==8 Socio-technical systems of local events and DrupalCamps==
+
+* 8.1 Socio-technical system of local Drupal events . . . . . . . . . . . 238
+* 8.2 Socio-technical system of DrupalCamps . . . . . . . . . . . . . . . 242
+* 8.3 Case study: emergence of local institutions and selection of presentations in DrupalCamps 
+* 8.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+
+==9 The socio-technical system of DrupalCons==
+
+* 9.1 Emergence of DrupalCons . . . . . . . . . . . . . . . . . . . . . . 262
+* 9.2 Growth of DrupalCons: “DrupalCons used to be like DrupalCamps” 265
+* 9.3 Case study: formalisation and decentralisation in the organisation of “modern DrupalCons” . . . . . 
+* 9.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+
+==10 Loosen control without losing control==
+
+* 10.1 Drupal as a CBPP community . . . . . . . . . . . . . . . . . . . . 299
+* 10.2 Degrees of organicity in peer production . . . . . . . . . . . . . . 303
+* 10.3 The emergence of polycentric governance in peer production . . 313
+* 10.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+
+
+==11 Conclusion==
+
+* 11.1 Key insights . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 319
+* 11.2 Impact and implications of this thesis for practitioners . . . . . . 324
+* 11.3 Future work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+
+
+==Summary==
+
+David Rozas (excerpted from preface):
+
+"This thesis presents a study of self-organisation in a collaborative community
+focussed on the development of a Free/Libre Open Source Software, named
+Drupal, whose model responds to the latter: a Commons-Based Peer Production
+community. Drupal is a content management framework, a software to
+develop web applications, which currently powers more than 2% of websites
+worldwide. Since the source code, the computer instructions, was released under
+a license which allow its use, copy, study and modification by anyone in
+2001, the Drupal project has attracted the attention of hundreds of thousands
+of participants. More than 1.3 million people are registered on Drupal.org, the
+main platform of collaboration, and communitarian events are held every week
+all around the World. Thus, as the main slogan of the Drupal project reflects —
+“come for the software, stay for the community”, this collaborative project cannot
+be understood without exploring its community, which is the main focus of
+this thesis.
+
+In sum, over the course of the next eleven chapters, this thesis presents
+the story of how hundreds of thousands of participants in a large and global
+Commons-Based Peer Production community have organised themselves, in
+what started as a small and amateur project in 2001. This is with the aim of furthering
+our understanding of how, coping with diverse challenges, CommonsBased
+Peer Production communities govern and scale up their self-organisational
+processes.
+
+'''* Chapter 1''' provides an overview of the phenomenon of Free/Libre Open
+Source Software and connects it with that of Commons-Based Peer Production,
+allowing the theoretical pillars from previous studies on both phenomena to be
+drawn on. 
+
+
+'''* Chapter 2''' provides an overview of the main case study, the Drupal
+community. Throughout the second chapter the Drupal community is framed
+as an extreme case study of Commons-Based Peer Production on the basis of
+its growth, therefore offering an opportunity to improve our understanding
+of how self-organisational processes emerge, evolve and scale up over time in
+Commons-Based Peer Production communities of this type.
+
+
+'''* Chapter 3''' provides an overview of Activity Theory and its employment as
+an analytical tool: a lens which supports the analysis of the changes experienced
+in complex organisational activities, such as those from Free/Libre Open
+Source Software communities as part of the wider phenomenon of CommonsBased
+Peer Production. 
+
+
+'''* Subsequently, chapter 4''', explores the fundamental
+methodological aspects considered for this study, which draws on an ethnographic
+approach. The decision for this approach is reasoned on the basis of
+the nature of the research questions tackled in the study. Firstly, on requiring
+an inductive approach, which entails the assumption that topics emerge from
+the process of data analysis rather than vice versa. Secondly, on the necessity
+of drawing on a methodological approach which acknowledges the need to understand
+these topics from within the community.
+
+'''* Chapter 5''' begins the presentation of the findings of this study. Concretely,
+it presents the findings regarding the study of contribution in the Drupal community,
+a notion which is fundamental for the choice of the main unit of analysis,
+contribution activity, in Activity Theory. The results from this study enabled
+the identification and consideration, throughout the subsequent chapters,
+not only of activities which are “officially” understood as contributions, such as
+those listed in the main collaboration platform, but also of those which have remained
+less visible in Free/Libre Open Source software and Commons-Based
+Peer Production communities and the literature on them.
+Having carried out this exploration of the notion of contribution in the Drupal
+community, the conceptual underpinnings necessary to carry out the study of
+self-organisation in the Drupal community, by focussing on contribution activities,
+are laid out. 
+
+* More precisely, '''chapters 6 and 7''' address the study of the development
+of projects, activities whose main actions and operations are mostly
+performed through an online medium; 
+
+'''* while chapters 8 and 9, the organisation of events''', whose main actions and operations are mostly performed through an offline medium. Throughout these chapters the main argument that binds
+this thesis together is presented: the growth experienced by the Drupal community
+led to a formalisation of self-organisational processes in response to a
+general dynamic of decentralisation of decision-making in order for these processes
+to scale up. 
+
+
+This research identified these two general organisational dynamics,
+formalisation and decentralisation of decision-making, affecting large
+and global Commons-Based Peer Production communities as they grow over
+time. Thus, throughout these chapters, the means by which these general dynamics
+of formalisation and decentralisation shaped the overall systems which
+emerged around these different contribution activities are explored. The exploration
+of the organisational processes of this case study does not only show the
+existence of these dynamics, but it provides an in-depth account of how these
+dynamics relate to each other, as well as how they shaped the overall resulting
+system of peer production, despite the main medium of the peer production
+activities studied being online/offline, or the significant differences with regard
+to their main focus of action — writing source code or organising events.
+For each pair of chapters this exploration starts with the most informal systems
+and progresses towards the most formal respectively: custom, contributed and
+core projects, in chapters 6 and 7; and local events, DrupalCamps and DrupalCons,
+in chapters 8 and 9.
+
+After carrying out this in-depth exploration of self-organisation, the overall
+identified changes experienced in the self-organisational processes of the
+Drupal community are brought together according to general theories of selforganising
+communities, organisational theory and empirical studies on CommonsBased
+Peer Production communities, in order to connect the exploration with
+macro organisational aspects in chapter 10. 
+
+* '''This (10th) chapter''' argues that this study
+provides evidence of the emergence of polycentric governance, in which the
+participants of this community establish a constant process of negotiation to
+distribute authority and power over several centres of governance with effective
+coordination between them. In addition, this chapter argues that the exploration
+carried out throughout the previous chapters provides an in-depth
+account of the emergence of an organisational system for peer production in
+which different forms of organisation, varying in their degree of organicity, simultaneously
+co-exist and interact with each other. Finally, chapter 11 summarises
+the main contributions of this thesis and provides a set of implications for
+practitioners of Commons-Based Peer Production communities."
+
+=Excerpts=
+
+==FLOSS Statistics==
+
+David Rozas:
+
+"The period that comprises the arrival of the new millennium to nowadays saw
+a continuation in the growth of FLOSS. For example, a study of the economic
+impact of FLOSS on the European Information and Communication Technologies
+sector carried out in the early 2000s indicated that the code base of quality
+FLOSS applications was doubling every 18-24 months, and represented 20.5%
+of the total software investment in Europe and 20% in the United States (Ghosh,
+2006).
+
+...
+
+The presence of FLOSS as a model of development in the private sector is prevalent nowadays. 
+
+The following excerpt by the CEO of Black Duck (2016), a company which has run an
+annual survey to study the use and development of FLOSS in the private sector
+since 2006, provides an illustration of the changes experienced over the past ten
+years:
+
+- “When the first survey launched 10 years ago, hardly anyone
+would have predicted that open source use would be ubiquitous
+worldwide just a decade later, but for many good reasons that’s
+what happened. Its value in reducing development costs, in freeing
+internal developers to work on higher-order tasks, and in accelerating
+time to market is undeniable. Simply put, open source is the
+way applications are developed today.”
+
+
+Similarly, a growth in the adoption of FLOSS in the public sector can also be
+observed during this period. For example, the Brazilian government launched
+an initiative to promote the adoption of FLOSS in 2006 (Schoonmaker, 2007), the
+Ecuadorian government passed a similar law in 2008 (Correa, 2008), the British
+government specified a set of recommendations to foster the use of FLOSS instead
+of proprietary software in 2014 (Gov.uk, 2014), and the US government
+established a policy in August 2016 to promote its use and to determine the release
+of at least 20% of the custom code commissioned by federal agencies (Scott
+& Rung, 2016), to name but a few cases. The main case study of this research
+is also one more example of the adoption of FLOSS technologies in the public
+sector, including in hundreds of cases in more than 150 countries (Drupal.org,
+2009c), such as the platform used for the website of the White House. Overall,
+in the public sector today FLOSS represents a minimal requirement in the
+agendas of governments seeking to encourage open innovation (Lee, Hwang &
+Choi, 2012)."
+
+==Contributions==
+
+David Rozas:
+
+" “Object-oriented” and “community-oriented” contribution activities:
+
+When studying what types of activities are perceived as contributions in the
+Drupal community, two main types of contribution activities emerged. 
+
+The first was “object-oriented” contributions, encompassing all the activities whose
+focus of action are objects, typically digital commons such as source code, documentation
+and translations. 
+
+The second category is “community-oriented”
+contributions: those in which the focus of action is directed towards the community.
+Examples are the organisation and participation in face-to-face events,
+activities related to supporting other users, and mentoring. 
+
+
+...
+
+
+These perceptions of what can be considered contribution contrast with those
+represented in the main collaboration platform. Not surprisingly for a FLOSS
+community with a strong “code-centric” character (Zilouchian-Moghaddam et
+al., 2011; Sims, 2013), there is a mismatch between the perceptions of the importance
+of “community-oriented” activities and those “officially” reflected in
+the main collaboration platform. This mismatch is illustrated, for example, in
+the main pages that explain how individuals could contribute to Drupal.
+
+On the one hand, all the categories identified as “object-oriented” (G1) are
+represented in the “Get Involved” page138 relating to contribution in the main
+collaboration platform. Some of them are differentiated and highlighted. For
+example, in the case of contribution activities related to source code (SG1.1),
+there is an explicit distinction between ‘theming’ and ‘backend’ development.
+
+On the other hand, “community-oriented” activities (G2) are only partially
+reflected in user support, donations and marketing. For example, a sub-page
+named “Contribute to Drupal.org139”, provides information about contributions
+related to the main collaboration platform itself. This area refers to some
+of the “online community management” (SG2.4) contributions. However, no
+explicit mention is made of the “organisation and participation in face-to-face
+events” (SG2.5). The first reference can be found only after navigating through
+a secondary link in the “General Resources” section to the Drupal Groups.
+
+This allows the user to start browsing by geographical criteria after several
+steps, where the first references to the organisation of events can be found.
+The main aim in this section has been to show the need to widen our understanding
+of contribution activities beyond the traditional view of source code
+or other “object-oriented” activities, and the existence of differences with regard
+to the internal perceived value. Additionally, evidence was provided with
+regards to the lack of visibility of “community-oriented” activities in the main
+collaboration platform. To further understanding of this lack of visibility, the
+next section explores the representation of the identified contribution activities
+at an individual level, by studying user profiles.
+
+
+...
+
+
+By drawing on the concept of “affective labour”, this study
+connects the findings with the larger literature on the commons. Participation
+in the Drupal community “transforms the local subjectivities” of Drupalistas, in
+a way reminiscent of Singh (2013), in her research on community-based forests
+in India. By looking at an extreme “code-centric” case study, this research
+provides additional empirical evidence of the importance of affective labour
+in CBPP communities, which was argued by Bollier (2014) to be its “lifeblood”.
+
+The lack of representation of “community-oriented” activities cannot be understood
+as due solely to socio-cultural reasons. The “code-centric” character
+of the community offers only a partial explanation. Technical limitations also
+have a major impact. For example, while certain activities are easily quantifiable (e.g. the number of commits of source code, or the number of editions of
+wiki pages), others are more difficult to quantify or represent in concise, useful
+ways. In some cases, although indicators are available, the information is beyond
+the scope of, and therefore not reflected in, the main collaboration platform.
+
+For example, external platforms such as Meetup.com, commonly employed for
+the organisation of local events, provide an account of the number of events attended
+and organised by a certain user. Nevertheless, this information is stored
+in proprietary third-party platforms and therefore absent from Drupal.org.
+
+However, the main limitation lies in the difficulty to provide indicators to
+measure and aggregate the value of some types of contribution, or even distribute
+it beyond the CBPP community itself; an issue that is under exploration
+by researchers (e.g. De Filippi & Hassan, 2015) as well as CBPP communities
+(e.g. Open Value Network, 2014) themselves. The Drupal community is also
+attempting to find suitable indicators. For example, there is an ongoing initiative145
+to improve how activities are represented in user profiles at Drupal.org,
+to “[...] go beyond code creation activity and into more community-oriented
+contribution stuff, since that’s also a huge part of what makes Drupal healthy.”,
+and some of the elements, such as the peer-to-peer mentorship references illustrated
+in figure 5.7, indicate the will to follow that direction.
+
+Overall, this issue should be understood within the wider context of CBPP,
+and the need to enhance and expand the conceptualisation and measurement
+of value in these communities, as well as the incorporation of indicators of such
+contribution into the socio-technical systems employed to support their organisation.
+This is an aspect that becomes especially relevant in large and global
+communities as they scale up since, due to their growth and their global character,
+the generation of perceptions between unknown members becomes more
+frequent in these communities, and the role of the platforms employed to support
+their self-organisation becomes more relevant.
+
+Conclusion:
+
+By studying an extreme “code-centric” case study, the findings presented in this
+chapter expose the need to broaden our understanding of contribution activities
+in FLOSS communities beyond the most easily quantifiable and “object-
+oriented”. The ethnographic approach taken showed how certain activities,
+whose focus is directed towards the community, are indeed understood as contributions.
+
+These activities foster collaboration, as well as affecting the creation
+or modification of emotional experiences, varying according to the degree of
+experience of the participants.
+
+Most of these contributions are poorly represented in the main collaboration
+platform as compared to “object-oriented” ones. This unequal representation
+was found at an “official” level, such as in the main sections of the platform
+dedicated to contribution, as well as at an individual level, such as in the study
+of user profiles. This disjunction between the relevance and lack of visibility of
+this type of contribution casts doubt on the “object-centric” myth illustrated in
+the motto “Talk is silver, code is gold”, which has been traditionally present in
+FLOSS communities.
+
+These findings extend previous studies on FLOSS to connect it to the wider
+area of CBPP, drawing on the concept of affective labour. Through participation
+in “commoning” processes, the subjectivities of participants are transformed."
+
+
+==[[Polycentric Governance]]==
+
+David Rozas:
+
+"Rather than a “[[Do-ocracy]]”, this study concludes that the development of
+these multiple governing authorities as a result of the identified dynamics of
+formalisation and decentralisation in the Drupal community represents the emergence
+of polycentric governance. The notion of polycentrism from which this
+study develops is that of Ostrom et al. (1961) employed in the study of communities
+regulating commons such as natural resources (e.g. Gelcich, 2014),
+which refers to the co-existence of several centres of governance which blend
+the distribution of authority and power with effective coordination between
+these centres. Although originally coined for the study of the organisation of
+government in metropolitan areas, and subsequently employed for the study of
+self-governance of natural resources, the concept of polycentric governance has
+been more recently employed to further understanding of self-governance in
+communities managing the peer production of digital commons, such as Wikipedia
+(Hartswood, Grimpe, Jirotka & Anderson, 2014).
+
+In the case of “mostly-online” activities, for example, the polycentric character
+of the governance model of the Drupal community is illustrated by the
+emergence of autonomous spaces for decision-making on how to regulate the
+maintenance of contributed projects examined in chapter 6, or by the definition
+of the working groups in core presented in section 7.2. Similarly, for the case of
+“mostly-offline” activities, it is shown by the emergence of numerous autonomous
+local groups and institutions holding events of different scopes explored in
+chapters 8 and 9.
+
+In the end, the story told through the exploration of organisational changes
+in previous chapters is that of continuous negotiation, emergence and development
+of organisational structures to constantly seek to distribute authority in
+order to scale up decision-making, in which the participants in peer production
+systems “have authority to make at least some of the rules related to the use
+of that particular resource” (Ostrom, 1999, p. 528). This constant negotiation
+was illustrated, for example, by the emergence, definition and enforcement of
+the rules regarding the quality assurance processes of the activities previously
+examined. For instance, in the case of “mostly-online” activities, this was illustrated
+by the Project Application Process (PAP) of contributed projects presented
+in section 6.2, or by the Core Gates and Initiatives discussed in section 7.2. Analogously,
+for the case of “mostly-offline” activities, it was depicted by the processes
+related to the definition of quality assurance for the selection of presentations
+at DrupalCamps explored in the case study in section 8.3, as well as those
+related to the selection criteria for presentations and selectors of DrupalCons
+examined through the case study in section 9.3. Overall, these processes illustrate how the autonomy and legitimacy to define rules in these different spaces
+emerged and how authority was distributed and legitimised over time.
+
+While the ontological use of the concept of polycentricity (Thiel, 2016, pp. 13-
+15) enables light to be shed on the understanding of the governance of complex,
+adaptive socio-technical systems, such as those which emerged in the Drupal
+community, polycentric governance as an explanatory theory has tended, however,
+to emphasise structuralist and static perspectives (Thiel, 2016, pp. 8-9). In
+other words, when polycentric governance has been used as an analytical lens,
+these explanations have favoured approaches which assume stability, rather
+than dynamism and change, resulting in a lack of studies on “how it [polycentricity]
+emerged, sustains or outlives itself” (Thiel, 2016, p. 7).
+
+In this way, the explored changes in the organisational processes and the
+identified dynamics of decentralisation and formalisation, in chapters 6 to 9,
+as well as the interactions between socio-technical systems of contribution, as
+those discussed in section 10.2, contribute to the literature by providing a dynamic
+approach of how such a polycentric model of governance has emerged
+in a large and global Commons-Based Peer Production community, while also
+shedding light on how participation is regulated in FLOSS communities beyond
+the model of bazaar governance (Demil & Lecocq, 2006)."
+
+
+
+==From the Conclusion==
+
+David Rozas, chapter 11:
+
+"This thesis has presented a study of self-organisation in peer production, a
+story of how hundreds of thousands of Drupalistas have organised themselves
+during the past fifteen years, from which three main contributions resulted.
+
+Firstly, questioning and studying the notion of contribution in CBPP communities.
+Secondly, identifying the general dynamics of formalisation in the organisational
+processes and decentralisation in decision-making, providing an indepth
+account of how they are intertwined. Thirdly, offering an in-depth account
+of how the organisational changes explored, as shaped by the aforementioned
+dynamics, resulted in the emergence of a polycentric model of governance,
+in which different forms of organisation, varying in their degree of organicity,
+co-exist and influence each other. These insights, which fall within the
+field of Science and Technology Studies, contribute to the literature on CommonsBased
+Peer Production and Free/Libre Open Source Software, whilst also providing
+implications which are of interest for the practitioners in these communities.
+This chapter concludes this thesis, firstly by summarising the key insights
+and contributions of this study to the aforementioned fields in section 11.1, subsequently
+presenting a set of implications for practitioners in section 11.2, and
+finally discussing possible avenues for future research in section 11.3.
+
+
+'''Key insights:'''
+
+This study of self-organisation in Commons-Based Peer Production was based
+on a single and in-depth case study which, as discussed in section 2.3, should be
+understood as an extreme case because of the significant growth experienced by
+the Drupal community. Studies focussed on a single, in-depth and extreme case
+are valuable to shed light on organisational aspects which are pivotal for the
+main body of work on Commons-Based Peer Production and Free/Libre Open
+Source Software. These approaches help to tackle issues derived from other
+research designs, such as over-generalisation, over-simplification and neglect of
+complexity. As discussed in chapter 1, previous research on self-organisation
+of CBPP and FLOSS communities was criticised (Viegas et al., 2007; Mateos- ´
+Garc´ıa & Steinmueller, 2008) for lacking social and institutional aspects, which
+resulted in offering oversimplified accounts. Thus, it is through the study of
+extreme cases, such as this, by which it is possible to unveil these aspects of peer
+production, which are less prominent in smaller and organisationally simpler
+communities.
+
+
+===Beyond “object-centric” notions of contribution in peer production===
+
+This study shows the need to broaden our understanding of the notion of contribution
+in the study of peer production beyond the most traditional “objectcentric”
+conceptions, which in the concrete case of Free/Libre Open Source
+Software studies has been more prominently present in the form of “codecentrism”.
+The notion of contribution should be understood as a set of meanings
+which are under constant negotiation between the participants in peer production
+communities according to their internal logics of value.
+
+This constructivist approach towards the notion of contribution has implications
+for studies aiming to further our understanding of Commons-Based Peer
+Production. For example, to show the relevance of intangible assets in these
+communities, such as those which emerged from this case study in the form
+of affective labour (Hardt, 1999). “Object-centrism” within the notion of contribution
+is still commonly present in the studies of CBPP communities. For
+example, studies on contribution in Wikipedia are commonly focussed on the
+edition of articles (e.g. Kittur, Chi, Pendleton, Suh & Mytkowicz, 2007; Crowston,
+Jullien & Ortega, 2013; Matei & Bruno, 2015); or studies on contribution
+in OpenStreetMap on the edition of maps (e.g. Haklay, Basiouka, Antoniou &
+Ather, 2010; Neis & Zipf, 2012). While Coleman (2013) showed a relationship
+— highlighting some of these affective, moral, economic, and political dimensions
+— between face-to-face events and the public in FLOSS communities, this
+study is novel in showing how these “community-oriented” activities are understood
+as relevant contributions. This study connects a constructivist approach towards the notion of contribution to the wider literature on Commons-Based
+Peer Production through the concept of affective labour. Furthermore,
+this study provides evidence of the role which these less visible contributions
+play to transform the emotional experiences of the participants in becoming
+“commoners”, as well as to scale up the overall sense of community.
+This notion of contribution also has implications for the provision of indicators
+that measure, aggregate and incorporate these forms of value in the
+technical artefacts employed to support the organisation of peer production.
+
+Hence, this finding is also relevant for more technical fields, such as Computer
+Science, as well as research initiatives (e.g. European Comission, 2015) aiming
+to develop platforms to support and foster the development of peer production.
+For example, by assuming a constructivist approach, a high degree of
+flexibility is expected for the design of mechanisms that indicate the notion of
+value in the collaboration platforms employed by these communities. In other
+words, rather than creating tools which impose “one-fits-all” indicators, such
+as “likes”, a broader understanding of contribution in peer production implies
+for these platforms the need to offer mechanisms that enable communities to
+define these indicators dynamically, allowing them to reflect the results of their
+processes of constant negotiation.
+
+
+===Formalisation and decentralisation in peer production===
+
+The research identified two general organisational dynamics affecting this case
+of a large and global Commons-Based Peer Production community as it grew
+over time: the formalisation of organisational processes and the decentralisation
+of decision-making. The exploration of the organisational processes of this
+case study provided a detailed account of how these dynamics are intertwined
+and how they shaped the overall resulting system of peer production. This is
+despite the main medium of the peer production activities studied being online/offline
+or the significant differences with regard to their main focus of action
+— writing source code or organising events.
+
+At first glance, this could be perceived as contrasting with some of the
+hacker values which were initially introduced in this study (see section 1.1.2).
+
+For example, Levy (2010, pp. 34-35) explains how one of the main hacker values
+consists of a mistrust of authority by promoting decentralisation. Hackers
+avoid formal and bureaucratised systems, since these systems invoke arbitrary
+rules to consolidate power and react interpreting their creative impulses as a
+threat. However, previous chapters show how the evolution towards an increased
+formalisation of self-organisational processes around decision-making
+is explained as a means to achieve this decentralisation. These apparently contrasting
+ideas, which were conceptualised as a systemic contradiction from an
+Activity Theory perspective (see section 3.1.3), were employed in this study as a
+“window of opportunity” (see section 2.4) to follow and collect data to explore
+the emergence of the processes and structures which the Drupal community
+has created over time. Formalisation and decentralisation, it was shown, resulted
+in the emergence of several socio-technical systems of contribution, some
+of which were explored in this thesis.
+
+
+This finding is congruent with recent quantitative studies in FLOSS (e.g.
+Schweik & English, 2013) and CBPP communities (e.g. Wang & Cheliotis, 2016).
+For example, drawing on Social Network Analysis techniques, Wang and Cheliotis
+(2016, p. 4) concluded that:
+
+- “[...] despite recent claims about the value of loosely coordinated
+entrepreneurial online action, the introduction of some structure
+to peer production can be beneficial. Specifically, providing
+participants with the tools to self-organize (e.g., by defining roles
+in subprojects) can lead to less centralized engagement; on the other
+hand, providing no such tools could result in participant engagement
+that coalesces around community leaders who exert a disproportional
+influence on the output of the community.”
+
+
+While quantitative approaches, such as Wang and Cheliotis (2016), show
+the generalisability of this argument, the qualitative approach followed in this
+study provides an in-depth account of how formalisation and decentralisation
+occur in peer production. In other words, this study shows how the explored
+self-organisational processes increased in their degree of formality over time
+and their relationship with the dynamic of decentralisation of decision-making.
+
+This was a limitation acknowledged by Wang and Cheliotis (2016, p. 18) in
+their study because of the quantitative approach followed. It is important to
+consider, however, that this study was framed, as shown in the main research
+question, as that of a large and global CBPP community. CBPP communities
+may not commonly experience such an intense increase in participation, hence,
+it would be suggested that they commonly possess an organisational configuration
+which resembles that of this case study during its initial stages: characterised
+by having a high degree of organicity in self-organisational processes.
+
+Nevertheless, this does not reduce the relevance of this finding, since CBPP
+communities growing in participation may experience similar organisational
+changes and be shaped by analogous dynamics, as similar empirical studies
+(Viegas et al., 2007; Forte et al., 2009) suggest. Thus, this study contributes to the ´
+literature by providing an in-depth account of how these dynamics are intertwined,
+explaining the emergence of these different socio-technical systems of
+contribution, as well as how these sophisticated organisational processes work
+in practice. This contribution, hence, furthers our understanding of the inner
+workings of large and global CBPP communities in congruence with the results
+from the aforementioned recent quantitative studies (Schweik & English, 2013;
+Wang & Cheliotis, 2016), which suggest the robustness of this finding.
+
+
+===Emergence of polycentric governance and organisational forms with different degrees of organicity===
+
+By bringing together empirical data from the exploration of the self-organisational
+processes of the case study with literature from organisational theory, this study
+shows the simultaneous co-existence of different forms of organisation found
+in a large and global case of a Commons-Based Peer Production community.
+
+These different forms vary in their degree of organicity, which, in the case of
+Drupal, materialised through the emergence of different socio-technical systems
+of contribution. These socio-technical systems, it was shown, entail a
+set of interacting parts. They include people, institutions, software, hardware,
+procedures or rules among others. In other words, these socio-technical systems
+of contribution constitute complex wholes that revolve around networks
+of human activity systems towards a shared focus of action, in what is perceived
+as a contribution according to the internal logics of value of the community.
+
+Furthermore, this study provides evidence of how polycentric governance
+emerged. Participants distributed authority and power over several
+centres of governance with coordination amongst them as part of a process of
+continuous negotiation, leading to the emergence of an organisational system
+for peer production in which different forms of organisation, varying in their
+degree of organicity, co-exist.
+
+Following a dynamic approach which highlighted and explored changes in
+self-organisation, the account of the emergence of polycentric governance and
+organisational forms with different degrees of organicity presented in this study,
+thus, contributes to continue the unveiling of the hidden order (Viegas et al., ´
+2007) of Commons-Based Peer Production communities. This account furthers
+our knowledge of organisation in peer production in a field which, as a result
+of approaching a novel phenomenon, is in an incipient state of research and
+in which the literature focussed on its self-organisational aspects is still scarce.
+This scarcity finds its exception in Forte et al.’s (2009) study, whose exploration
+of self-organisation in Wikipedia can indeed be interpreted as depicting a
+simultaneous co-existence of organic socio-technical systems of contribution, in
+the form of Wikiprojects, with mechanistic systems with respect to the different
+articles produced by the participants of the well-known collaboratively built
+encyclopedia. Comparative studies with a wider range of case studies, especially
+including lesser known projects than Wikipedia and also beyond FLOSS,
+could confirm the generalisability of this co-existence of different forms of organisation
+in CBPP communities, as well as whether they also influence each
+other in similar ways as those found for this case study. Nevertheless, this
+does not undermine the relevance of this contribution, since it is through the
+study of extreme cases, such as Drupal, that certain organisational aspects of
+peer production, which are less visible in smaller and organisationally simpler
+communities, can be unveiled."
+(https://davidrozas.cc/sites/default/files/publications/files/phd_thesis_drupal_cbpp.pdf)
+
+
+
+[[Category:Peergovernance]]
+
+[[Category:Peerproduction]]
+
+[[Category:Research]]
+
+[[Category:Commons]]

@@ -1,0 +1,105 @@
+=Discussion=
+
+Arthur Brock:
+
+"I assert that it is not just Bitcoin's Proof-of-Work wasted computation on crypto-cracking that is the problem. Don't get me wrong, Bitcoin multiples the problem a thousand-fold, but the fundamental problem remains. Bitcoin burns more electricity than the whole country of Ireland to achieve about 5 transactions per second. That is a pitiful and unforgivable waste. 
+
+But the problem does not end with changing Proof-of-Work to Proof-of-[fill-in-the-blank]. 
+
+First of all, '''main contenders [Work] and [Stake] both amplify Pareto Effects ensuring the rich get richer, and the powerful get more powerful'''. That doesn't really solve any of the problems of our monetary system. In fact, it is hard for me to imagine a decentralized digital currency design that could more accurately recreate all the problems of national currencies than Bitcoin. But that is a conversation for another time. 
+
+Proof-of-[Value] and [Cooperation] are well-meaning approaches trying to solve some of these problem, but they fail to get the core issue: Consensus. These are all methods which everyone pretends are about creating consensus. Because of course, we must all agree about the data for it to be valid, right?
+
+Actually, no. That's it's not right. And really, what they're doing should not be called consensus at all. 
+
+Unless you think the word "consensus" applies to this story: 
+
+- Take 7,000 people (the approximate number of current bitcoin "miners"). Have each person fill out a ballot writing in whoever they think should be the next President of the U.S. Then have them each take a clear box with 20 dice in it. The first one to be able to shake their box and get all 20 dice to land as ONES, gets to have their ballot be the only one that counts as long as everyone else agrees the candidate's name was spelled correctly and meets the legal criteria (over 35 years old and natural born citizen). Would any normal human call that an election by "consensus?"
+ 
+That's basically how bitcoin "mining" works. Most of the energy is going into "rolling the dice" to crack a specific kind of cryptographic hash, which gives them the authority to have their list of transactions be THE list of transaction for that 10 minute time window. 
+
+I hope what I'm about to tell you, should end up feeling completely obvious to you. However, you should know, that it is the opposite of how everybody building distributed computing systems is behaving. If you show it to an "expert" in that space it will NOT be obvious to them. It will sound ridiculous to them, because they spend all their energy operating under two major fallacies which make their approach to distributed computing fundamentally untenable and unscalable. Also keep in mind those are the people who call that previous nonsense "consensus."
+
+
+==The two fallacies==
+
+The two fallacies:
+
+* Data exists.
+
+* Time exists.
+
+
+===DATA HAS INDEPENDENT EXISTENCE===
+
+All of computing is build around the idea that you've written some kind of "truth" into data, which has to be preserved, protected, & managed. For example, "We've collected many years of climate data, we must protect it from the Trump regime erasing it all!"  It sounds very plausible. And as a researcher you'd likely agree with their fears. Heck, I agree with their concerns, and want to preserve the data, because it's the best data we've got, but let's look more closely.
+
+What is the temperature of the room you're in right now?  (You're in Thailand? Maybe 37 C?) 
+
+But wait, is that actually TRUE?
+
+Sure, you look over at the thermometer, and it says 37C.
+
+But is there only one consistent temperature in that room? Is the sun shining in any windows? There may be some hot spots there. Is there a breeze blowing in any windows or air conditioning vents? There may be some cooler spots there. How precisely is that thermometer calibrated? It could be 36.8 C, not 37. 
+
+The point is this -- there is no true temperature. At best there is a certain reading from a specific sensor in a sequence of readings from that sensor. If you have a digital thermometer or mini-weather station, you could record a regular reading from it and store it as data. But if you separate that data value (36.8 C) from its provenance... If you treat it as a kind of truth, instead of as a story told by a particular device, then what do you do when you discover the calibration is off and it has been over-reporting the temperature by 4%? 
+
+What about all that data that was collected and shared into the global climate data system? Is the data true? Well a the cluster of databases each synchronizing the climate data with each other all agree that the value stored in that field at that time is 36.8, therefore it must be true.
+
+Because all the data we collect is true, right? Nobody lies about their weight, or their age. No salespeople have ever exaggerated their figures. No manager ever covered their ass with selective reporting. No teacher has ever fudged some grades. Surely, the data is just data. It exists. And our job with computers is to ensure its existence.
+
+This is wrong. Data does not have some kind of independent existence. It is always asserted by some agent (a device, sensor, person, or process). To divorce data from it's provenance and behave like it is an existential / ontological entity, is a fundamental misclassification.  
+
+It is not a rock sitting on the road. In fact, many people now understand even that rock does not have some fundamental "is"-ness. There are a multitude of possible states -- quantum probabilities that only resolve through an interaction.
+
+Well... This is even more important for data in decentralized systems. To optimize these systems for unaccountable anonymity, and structure them for random "consensus" is to destroy the integrity and provenance of data. 
+
+All the sensors in the room do not have to agree on the temperature. You don't have to randomly pick just one of them as the winner. It can be very useful to know what each one is saying differently.
+
+The reason Bitcoin, Ethereum, FairCoin, and every altCoin has to do this is because they fundamentally built their ontology on the fallacy that data exists. They create cryptographic tokens which have an existence independent of any agent. That's why they're called "coins." They have approached money, not as an agreement between agents about value, and transacting it with each other, but rather as if it is a THING that exists in the world. And now they perpetually have to get EVERY computer to agree about which ones exist. 
+
+That is the consensus they are managing - the list of which tokens exist. And they do it by investing a massive amount of computation into a made-up problem to randomize the selection of whose block of transactions will be committed for this time cycle. And as long as most other nodes agree that person solved the random problem and that the transactions are valid (properly signed in a valid sequence), then that one node's list of changes becomes THE OFFICIAL list.
+
+So 7,000 bitcoin nodes have to shuttle every transaction around, and then every proposed block, and every valid block and tack them together into a single global ledger now about 130GB large and growing fast. 
+
+26,000 Ethereum nodes have to that kind of nonsense for EVERY STEP OF COMPUTATION in every smart contract.
+
+Do you think there's a reason why each cell in your body just manages its own state rather than synchronizing to some global cell ledger?
+
+Holochain is not token-centric, it is AGENT-centric. Instead of putting an immutable chain into the shared space that everyone must agree on, each agent has its own immutable chain of the actions (changes to data) that it has made. When someone spends a currency, you do double-entry accounting just like in the real world. My account goes down 20 credits, and yours goes up 20. We each countersign an identical transaction to our chains which points to our previous transaction. That means I can't change anything about the transaction without breaking your signature. I can't add or remove any transactions before it without breaking the hash. Same goes for you.
+
+When you record a new temperature, do a monetary transaction, or write a new tweet, you sign it to your own chain that only you can write to. Then if it's a "public" entry, it is posted to a shared DHT (distributed hash table). The (randomly selected by tiny hash algorithm) nodes on the DHT responsible for storing and serving out that piece of data, must validate it before making it public. They can audit my chain to make sure I have the credits I'm spending, or confirm the signature of my tweet to make sure it come from me.
+
+DHTs are easily sharded into neighborhoods where, depending on the redundancy setting of the application, N peers gossip it with each other. That means you could feasibly run something on the scale of Twitter, if each person carried their own twitter load times N. This is a minor increase in computing load which scales as more people are added because each person brings their own computing power. You don't need a global ledger, or consensus. The two people transacting can audit each other's chains, confirmed by the random DHT peers.
+
+This is TINY FRACTION of the computing power as blockchain, with none it wasted on consensus, only validation of provenance and compliance with shared agreements.
+
+
+===UNIVERSAL TIME or SEQUENCE EXISTS===
+
+Imagine you (in Thailand) and I (in San Francisco) are on a Skype call and we decide to clap our hands at exactly the same time. 
+
+We say "1, 2, 3 clap!"
+
+How can we know if we clapped at the same time, or who clapped first? If it sounded to me like the same time, then for you it should have sounded about 1/2 second later. How would it be possible to determine the precise sequence? From what vantage point do you measure it? Exactly half way between from a satellite with simultaneous visual confirmation of both of us? I mean... that would be just about the only way to tell, right? WiFi connections, network latency, processor speeds, etc. could all be different between us, so we can't really count on any of those, but we could theoretically count on the speed of light being the same between us if you could have simultaneous visibility of us both from an equidistant point.
+
+Because if we actually managed to clap at "the same time," it would probably not seem precisely like the same time to anything else. Someone in the room with me, would see me clap before you. Someone in the room with me would see you clap before me. The General Theory of Relativity makes it pretty clear that the sequence will be different from different vantage points. There is no one true, universal sequence of events, only the sequence of events as experienced relative to a particular vantage point.
+
+Yet... the "consensus" process described above exists precisely to manufacture the official timeline by which everything happened. If we both tried to spend a bitcoin token at "the same time," different nodes would each receive our transactions in different orders, and would have to reject whichever one they received second. Then the lottery of hash-cracking begins and eventually selects a node's vantage point as the official universal time line. 
+
+In Holochain, each agent/node/user has a very clear and unambiguous sequence of actions/changes/transactions signed to their individual chain. And since we're not managing a list of tokens, rather the state of each agent, there is no need for a universal time sequence. Each node is clear on it's own sequence, and if we are doing a transaction together, we each sign an identical transaction in appropriate relative sequence to each of our chains. 
+
+There is no consensus required to know in which order we did our transactions. In fact, it is pretty crazy to make a transaction between two independent agents (you and me) require consensus from everyone else, rather than simply dependent on the state of each of our chains. 
+
+----
+
+This massive computationally intense "consensus" process is really about the converting data asserted by an agent in relativistic time, into a fiction of data having independent existence in universal time.
+
+Proof-of-Work is just a really expensive and wasteful way of creating this official fiction. Even if you switch to a different consensus strategy (Proof-of-X), it is still very expensive to force relativistic data into an artificially universal rendering on a single ledger which everybody must copy in full."
+(by email, August 2017)
+
+[[Category:Crypto Governance]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:P2P_Theory]]
+[[Category:Articles]]

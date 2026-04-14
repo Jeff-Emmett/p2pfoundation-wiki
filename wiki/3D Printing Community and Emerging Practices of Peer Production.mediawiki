@@ -1,0 +1,148 @@
+
+'''* Article: 3D printing community and emerging practices of peer production. By Jarkko Moilanen and Tere Vadén. First Monday, Volume 18, Number 8 - 5 August 2013'''
+
+URL = http://journals.uic.edu/ojs/index.php/fm/article/view/4271/3738
+
+
+
+=Abstract=
+
+"Based on the results of a 2012 survey on people doing 3D printing, we present results on the demographics and self–identification of the community, as well as describing participants’ printing activity. Combining results from the survey with insights from research literature, we analyse emerging patterns and practices of 3D printing as a subdivision of a more general trend of physical peer production, and, even, of a revolution in manufacturing, as predicted by several theorists."
+
+
+=Excerpts=
+
+==Bottlenecks in creating a commons and indications for the future==
+
+By Jarkko Moilanen and Tere Vadén:
+
+On the basis of a wide review of literature on the sustainability of commons (both in terms of natural resources and in terms of software), Schweik [8] has presented a tri–partite division of variables influencing a developer’s commitment to a project and, consequently, the sustainability of the project and the viability of the commons it creates and is based on. The three groups are the 1) technological (including factors like task granularity and modularity, software requirements, versioning system and bug tracking); 2) community (including factors like participant involvement, leadership, social capital, financing, marketing, group homogeneity); and, 3) institutional (operational, collective choice and constitutional level rules) attributes of the project.
+
+The survey participants were asked to name a “most wanted feature” for the future of 3D printing and also to identify bottlenecks. On the basis of the answers, it seems that there are problems on the technological and community levels mentioned by Schweik, while the institutional level was not mentioned. This is no big surprise, since 3D printing is a field evolving fast, and both the technology and the modes of operation are in flux.
+
+Moreover, the physical nature of 3D printing brings in aspects absent from open source in terms of software. As presented by Malinen, et al. (2011), when peer production is intended to result in a physical artefact, there is more friction in the development cycle compared to open source software production: more time and resources are needed, copies are not perfect, bugs are potentially “deep” and debugging cannot be speeded up at will, and so on. Given identical files and equipment, a skilled and experienced user of 3D printing technology will tend to get better results, i.e., higher quality prints, than a beginner. Typically, the digital designs but not the physical end products are pooled to a commons. The friction and the absence of a commons for the physical end products are the two factors most clearly separating 3D printing from the models of commons–based peer production in terms of software.
+
+
+'''Most wanted feature'''
+
+Participants were asked “What is the most wanted feature you are waiting for to develop further or to emerge?” and given predefined list of options: Multicolored printing; Metal material printing; Glass material printing; Speed; Object quality; Ease of use; Ethernet connected printers; Better printer integration to CAD (or other similar) modeling software; Cheaper printer price; Cheaper material prices; and, Other.
+
+Of the given options the most prevalent were:
+
+* Object quality (166)
+
+* Speed (119)
+
+* Cheaper material prices (115)
+
+* Metal material printing (108)
+
+* Cheaper printer price (106)
+
+Comments (n=34) given in option “other” contained several other features such as: multi–material printing; value added services (painting/assembly); ceramic & resin printing; extruder that takes plastic pellets; a broad network supporting the needs of makers and fabbers; feedback loop for self–calibration for improved quality; mixed material printing; and, bioprinter developments and better shipping (most likely related to printing services).
+
+As mentioned above, unlike in commons–based peer production of software, copies in physical 3D printing are not perfect. The consequences are clearly seen in the answers regarding the “most wanted” feature: all of the items in the top five relate to the physical aspect of the process. This physical friction (to be included in group 1) of technological attributes in Schweik’s classification) also works against the creation of a knowledge commons. However, it can partially be alleviated through information sharing on discussion forums, IRC channels and so on.
+
+
+'''* Bottlenecks'''
+
+Survey participants were asked what they see as the bottlenecks in development and in general in 3D printing: “What, in your opinion, is the greatest bottleneck for the development in 3D technology right now? — printers — materials — designs — social co–operation — Internet infrastructure — other infrastructure”. Answers were given as free text. Answers were classified to groups by hand. The number of answers was 221, from which a wide range of topics was found. The seven topics discussed below were most common.
+
+
+'''* Materials and quality'''
+
+Current low–cost printers use different kinds of plastics as material. For some of the participants that is clearly not enough. Above all, the ability to use different metals for printing is most wanted. One of the participants crystallized this item in one sentence: “Only plastic is a drag, we need metal printers”. Also the quality of plastic prints was criticized “3D printers presently make stuff that looks like the cheapest crap and it is thus not very interesting”. Open source attempts to add metal to the list of materials is according to one respondent already there: “MetalicaRap team! (a electron–beam powder metal printer, in the spirit of the reprap)”.
+
+
+'''* Great for hackers, not so much for consumers'''
+
+Usability and ease of use, reliability, lack of “Plug and Play” printers and ease of construction — these terms and concepts kept on coming up in the answers. Printers should be more easy to assemble, more user–friendly and reliable. The learning curve is felt to be too steep or as one survey participant puts it: “The level of knowledge and understanding needed about print quality vs print speed, temperature control of extruder and print bed, is quite an obstacle to new comers and does represent a bottleneck to take–up of 3D printing by people without an appetite or aptitude for such aspects.” The steep learning curve is partly to blame for the lack of instant gratification. The comments do not relate just to printers, but rather to the whole printing process, which apparently needs to be (or at least needs to be felt) more simple. The solution might be usability related hardware and software improvements.
+
+
+'''* Software'''
+
+As noted above, respondents experience hardware hard to use and learn. The same seems to apply to software as well. According to one respondent: “easy to use and open source 3d design software/tools and high/steep learning curve are a definite barrier to entry that requires a lot of research and/or mentoring/hand holding to overcome. Learning curve for 3d modeling for people unskilled in that area, yet still want to design and fabricate items via 3d printing.” Some of the respondents saw a big difference in usability between commercial and open source modeling software: “Open source CAD software that is as powerful and easy to use as the commercial varieties”. The biggest problems with (open source) CAD software is according to one survey participant: “Non–intuitive nature of 3D modeling/CAD tools due to chronically poor user interface design, lack of application–specific design metaphors, and lack of procedural modeling features.”
+
+The lack of access to appropriate models was also seen as bottleneck. The Web is teeming with 3D models, but not all are printable, at least not with all (commonly) used low–cost printers. The software toolchain was also seen as too complicated. Some of the respondents gave examples of toolchain needed to do 3D printing: “I use a combination of SolidWorks, Sketchup, Meshlab, Blender, NetFabb, ReplicatorG, and Skeinforge. That is too many pieces of software” and “the workflow going from computer model to physical print is very convoluted, involving lots of different pieces of software.”
+
+
+'''* Public awareness'''
+
+The industry is still seen as a niche, even though it is less and less so every day. A lot of articles have been written about 3D printing and the promise it holds. But has the message been correct? According to one participant the viewpoint could be different: “I think awareness of 3D printing among the general public ... particularly awareness of the cost and availability at the low end, rather than the general ‘look at the future’ articles”.
+
+
+'''* Lack of social co–operation'''
+
+Lack of social co–operation was seen as bottleneck. Some of the respondents saw embodiment of poor social co–operation in lack of or insufficient documentation, lack of organization (in the RepRap community), lack of quality control and lack of test plans. One respondent even said that “there’s an arrogance factor in the community that needs overcoming.” Fragmentation or diversity of solutions and tools was also mentioned by one respondent.
+
+When it comes to fragmentation, it must be remembered that open source normally fosters competition between solutions and that competition (including the possibility and actuality of forking) is considered a sign of a healthy community. Some attempts to increase social co–operation are being made [9].
+
+
+'''* Patents'''
+
+Protection of innovation as patents was raised as an obstacle by a few participants. The protection of intellectual rights has negative effect on open source driven development. One respondent formulated this problem as “major patents hold by few 3D printing companies (Open Source 3D Printing companies cannot grow due to patent risks, note for instance Canonical or Red Hat in SW business)”. However, it was not specified what the patents are or which area of development is held back because of patents.
+
+
+'''* Costs'''
+
+Cost of printers and materials are too high for consumers. “We need lower prices to democratize 3D printing (and compete with mass manufacture) ... We need a 3d printer you can buy at Target for $200, with easy to use re–fills”. Low–cost 3D printers should have “better range of material to print with and printers also should be able to print with multiple materials”. One of the respondents noted that there are “still not enough companies and not enough competition on the market.” That might be one reason for situations where it is: “impossible to buy resources/spare parts in local shops”.
+
+In sum, the first three mentioned bottlenecks — materials and quality, usability, software (also the issue of costs, lower on the list) — are, again, related to the physical nature of 3D printing, and, consequently belong in Schweik’s group 1. The next two — lack of public awareness and social co–operation — clearly belong in group 2, i.e., community attributes. Interestingly, issues of the third group, institutional attributes, were not high on the list of concerns. This may indicate that 3D printing as a form of peer production is still in the early days where the institutional level practices and models are being formed and are not yet in the focus of attention.
+
+
+'''* The influence of the physical aspects of 3D printing on commons–based peer production'''
+
+It seems that in terms of creating and upholding a commons, the friction introduced by the physical nature of 3D printing does not fundamentally change the mode of operation compared to open source software. The physicality of the production makes things slower and more expensive, but the commitment to open sharing of the designs, improvements on printers and knowledge functions in largely similar fashion. However, the fact that the end results, the printed artefacts themselves, are not pooled into a commons, is a possible game changer. At least for the moment, in order to get good quality prints in a timely fashion, many participants use 3D printing services. In the case of software, people also resort to third–party providers of open source code, such as the Linux operating system, but there the reason is not the quality of the product, but rather additional services. Therefore the prevalence of the use of 3D printing services can be seen as an indication of the way in which the physical nature of 3D printing effects the creation of a commons. It is possible that the gap in quality between the service providers and widely available desktop 3D printers will diminish in the future, so that the role of the printing services will change, but it is also possible that the gap will remain, as both progress. This will be one of the interesting developments to follow, in the future.
+
+ 
+
+==Discussion and conclusion==
+
+By Jarkko Moilanen and Tere Vadén:
+
+"In the survey, the average member of the 3D printing/manufacturing community member is an over 30–years–old male, living in Europe (50.3 percent) or North America (37.7 percent) and has a college degree (56 percent) or at least some college studies.
+
+“Intrinsic” enjoyment (“for fun”) and direct practical benefit (“scratch an itch”) are the two biggest drivers of open source hackers. According to the survey, there is no one predominant “itch to scratch”, rather what we have is a wide variety of purposes and uses. As a whole, the community has a strong open source component (and the basic demographics correspond closely with the demographics of open source communities in previous studies), and many of the participants identify with both the maker movement and peer production. A typical member of the ecosystem identifies himself more strongly with the maker movement than with peer production. Nearly half of the respondents are not (or have not been) members of any DIY community such as hackerspace, makerspace, or diybio.
+
+Most notably, the use of 3D printers is rapidly growing since 2005. The growth and the corresponding “unsettled” or “early days” nature of the community is clearly visible in the bottlenecks and desired future developments identified by the participants. The fast evolving landscape provides a fertile ground for both social and technological improvements.
+
+
+'''* Immature “pre–ecosystem”'''
+
+The buzzword “ecosystem” has been overused during the past few years. However, it is one possible concept to use in order to catch the multitude of 3D printing participants — hardware providers, software developers, volunteer community, service providers and end users — with one word.
+
+The 3D manufacturing ecosystem is still immature in nature, as can be seen from the results in several ways. Firstly, some of the participants see lack of organisation (especially in RepRap) as a bottleneck. As argued, e.g., by Schweik (2013), lack of organisation is not just lack of bureaucracy. It causes several other unwanted results such as lack of proper documentation, lack of quality control and lack of test plans. In other words, implementing additional social co–operation models could solve some of the issues and thereby increase the maturity of the ecosystem. Secondly, 3D manufacturing processes are still too complicated (require too many pieces of at least somewhat separate software). Thirdly, usability and reliability are poor. This is visible in open source CAD/CAM software, which are lagging behind in features and usability compared to commercial software and in the printers themselves, which should be more easily assembled, used and more reliable.
+
+
+'''* Simple ecosystem model'''
+
+Based on the survey and observation of the community, a preliminary ecosystem model can be sketched, as seen in Figure 12. The ecosystem parts are: end users, early adopters, developer community, hardware vendors and service providers.
+
+This figure should be understood as a continuous circle. The developer community innovates and creates new features. Hardware vendors adapt some of the innovations to products and ship printers to early adopters. The early adopters’ role is to test and verify/validate new improvements and features. Depending on the case, after the early adopters have tested new features, either service providers or/and end users take new models into use. They (and the other groups in the circle) in turn provide feedback to the developer community. The feedback is given for example on discussion forums as questions and comments. The iteration continues in cycles.
+
+As stated above, the model is very crude. Reality is more complicated: for example feedback goes back and forth and discussions among different ecosystem parts occurs between all parties not just end users and developers. Moreover, individual participants and institutions (companies, projects, communities) regularly belong to several parts at the same time.
+
+
+'''* Developers and early adapters'''
+
+The most common 3D printer is RepRap. Around 55 percent of the community is involved in open source projects and nearly 20 percent wants to be involved in an open source project. Even though the amount of female participants was low (n=24), it seems that men are more prone to open source development than women. The percentage of females in the group “end users” was a slightly larger than the percentage for males. Again, these results cannot provide any hard evidence of the gender distribution, and need to be developed in following studies.
+
+ 
+'''* Service providers'''
+
+Shapeways seems to have taken a major share of the markets — 48 percent of those who have used printing services have used Shapeways. Ponoko and iMaterialise share a similar market size (ca. 15 percent). It must be noted that a large amount of respondents (42 percent) have not yet used any printing services.
+
+
+'''* Manufacturing in motion?'''
+
+It is clear that the ecosystem is just forming, so that the promises of a third industrial revolution are not being realised yet. The clearly identified bottlenecks with regard to usability, object quality, price and co–ordination of collaboration likewise speak of a number of elementary hurdles on the way of the revolution. On the other hand, the wide variety of uses for 3D printing and the rapid growth of the community point to a strong potential. The theorists mentioned in the introduction have also been right in emphasising the role of the open source development model, as adapted to physical production, in facilitating the development of 3D printing/manufacturing. Interestingly, the physical characteristics of 3D printing — end results not in a commons, the level of skill and experience evident in end product — may, in time, produce modes of commons–based peer production different from open source software development."
+(http://journals.uic.edu/ojs/index.php/fm/article/view/4271/3738)
+
+ 
+
+
+[[Category:Peerproduction]]
+
+[[Category:Articles]]
+
+[[Category:Manufacturing]]

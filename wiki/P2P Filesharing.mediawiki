@@ -1,0 +1,305 @@
+'''a type of transient Internet network that allows a group of computer users with the same networking program to connect with each other and directly access files from one another’s hard drives.''' [http://searchnetworking.techtarget.com/sDefinition/0,,sid7_gci212769,00.html]
+
+
+The following entry has some information about the 'three generations of technology' used in peer to peer filesharing. The second section discusses social and political aspects of filesharing.
+
+
+=Filesharing technology=
+
+
+==Definition==
+
+
+'''Definition 1'''
+
+“The peer-to-peer (P2P) approach, which has become popular in the context of file-sharing systems such as Gnutella or KaZaA, allows handling huge amounts of data in a distributed and self-organizing way. In such a system, all peers are equal and all of the functionality is shared among all peers so that there is no single point of failure and the load is evenly balanced across a large number of peers."
+(http://www.mpi-sb.mpg.de/departments/d5/software/minerva/index.html)
+
+
+'''Definition 2'''
+
+"Peer-to-peer (P2P) computing has been envisaged to solve computing scenarios requiring spatial distribution of computation, spatial distribution of content, real-time collaboration, ad-hoc networking, scalability or fault-tolerance at reduced costs. P2P systems provide higher storage and access capacity via distribution of resources across peers, improved reliability due to the availability of multiple peer machines and distributed security achieved by distributing partial secrets across peers. Unlike the client-server computing paradigm, where all the computation cycles and data are to be had from a single source, in P2P the participating peers contribute CPU cycles and storage space." 
+(http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html )
+
+==Advantages vs. Disadvantages==
+
+Advantages of P2P Filesharing
+
+“To use FTP or HTTP download, someone has to upload a file to a central server (or at least, one of the servers), from which you can download it. It means that someone has to pay for using (or buy) a server, and someone has to take constant care of it. What is more, someone may find the contents of the server illegal and sue the operator. Even if he looses the trial, the server will have to be offline for some time, anyway. Additionally, if the server becomes too popular, it may turn out that its bandwith is too low, and some users have to wait in long queues or their downloads are extremely slow.
+
+Modern P2P networks eliminate all those problems. Computers do not connect via a server; they connect directly. This means that you do not need to upload anything anywhere. You just need to tick a folder 'shared'. None has to pay for using or buying a server. None has to take care of it. None can sue the operator of the server because there is no server. There is no bandwith problem because, again, there is no server."
+(http://p2p.info.pl/eng/mod-subjects-viewpage-pageid-46.phtml )
+
+
+==Disadvantages==
+
+
+===P2P Filesharing compared to Torrents===
+
+Which is most efficient?
+
+Answer from http://www.foronceandforall.com/2006/12/19/p2p-vs-torrents/:
+
+"The whole torrents thing is simply much more efficient than P2P. How so? Well if you need a file suppose. On a P2P network it will take around 5 minutes to search, 5 more minutes to navigate through the fake files to find the right one, and 5 more minutes to go back to find the real one since the one you clicked was fake. However, if you’re looking for a torrent, a quick search on a torrent search engine, download a small 5kb file, and you’re done.
+
+Then the P2P client will struggle to find sources because hardly anyone bothers to share files. Torrents are a different story. Since you’re forced to share, there’s always someone to download from.
+
+Efficiency is key. If you have one piece of a file, you let everyone get that piece from you, while you can get the other piece from someone else. Although even P2P networks do this, torrents are much better at it since they take advantage of a tracker, which lets everyone keep track of whose got what, and where they can get what they want from."
+(http://www.foronceandforall.com/2006/12/19/p2p-vs-torrents/)
+
+More info at http://en.wikipedia.org/wiki/BitTorrent
+
+==Typology==
+
+
+===Networks vs. Clients===
+
+It's important to distinguish between [[P2P Networks]] and [[P2P Clients]]
+
+
+'''P2P Networks vs. P2P Clients'''
+
+
+"P2P clients like Grokster, KaZaA, Linewire, Morpheus and eDonkey do not make a P2P network; they only allow the user to connect to an existing network by using common protocols. There are a large number of P2P networks out there: Gnutella, Gnutella 2, Ares, FastTrack, eDonkey2000, BitTorrent and even Freenet. Clients are applications used to connect to those networks."
+(http://technollama.blogspot.com/2006/07/kazaa-deal-worth-gloating-about.html)
+
+
+===Centralized vs. Decentralized===
+
+'''Typology of programs:'''
+
+" Open-source peer-to-peer software development takes many forms, ranging from obscure hobbyist projects with only a few users to software programs that have been downloaded tens of millions of times. Many of the most influential peer-to-peer ideas, such as the hydra-headed decentralization of Gnutella or the speedy "swarming" downloads of BitTorrent, have come from this community. At one end of the spectrum are projects like Shareaza, which are wholly decentralized, without a controlling entity at all that bears legal or financial responsibility. On the other are companies like LimeWire and MetaMachine, both of which have open-source development products, but have revenue-generating businesses based on selling software and associated products. Somewhere in the middle are younger companies such as Aelitis, the French company recently formed by developers of the Azureus BitTorrent client, the most popular piece of software tracked by Sourceforge, a well-trafficked open-source software development hub. According to that site, Azureus has been downloaded more than 78 million times, and more than 2.4 million times in the last week alone."
+(http://www.p2p-zone.com/underground/showthread.php?t=21779 )
+
+Legal commercial filesharing systems are:  Peer Impact, Weed and Mercora
+
+
+'''Filesharing without central servers''':
+
+"From the second generation on, you had distributed servers. You could run your own server and tie them into others. Searches took longer, were less accurate and there was no guarantee you would be searching a single other machine, much less the entire network. It was however, unstoppable. For every node you took the time and money to blast out of existence, there were several thousand others springing up. Clearly, the old tactics would not work. To make matters worse, these new networks were aware of the tactics being used against them, and actively tried to nullify them.  As the network programmers were adding features, they were also adding security, both for them, and for their users. Things started out simple, like support for file types other than MP3, and quickly became more sophisticated. Military grade encryption? No problem. Licence restrictions that beat the pigopolists with the very sticks they created? Sure, pick any of five. Random user names, obfuscated IP addresses, changing ports and just about everything else you could think of has been done by now. 
+
+The real stake in the heart of the RIAA and friends came with the complete removal of servers, in a true peer to peer sense. Instead of having many little servers, you had every node doing dual purpose client and server jobs. Searches were completely decentralised, and the RIAA was finished, period. The recent string of stinging court losses for the Greediest Monopoly on Earth in the US courts assured any chance the RIAA had was gone. Its worst nightmare was confirmed, as everyone else just knew, the services were completely legal. The Grokster decision affirmed the right of the companies to provide the services they always have, and to do so with impunity. People using it may be guilty of crimes, but the services themselves are not illegal. In the old days, there was one provider, and one repository, one throat to strangle. It was manageable technically if it came down to a technical solution. Instead of allowing that technical solution to blossom, they went the legal route, and lost. In the intervening years, the tech went around them, and they sat still, and possibly regressed. 
+
+The problem with forced evolution is that it tends to work. The RIAA made the networks evolve technically, from a relatively incocous MP3 network to the file sharing network from hell. There is nothing you can't get anymore, and there is no one to stop it. If they came up with a tool, unlikely as that may be, there is no place to implement it."
+(http://www.theinquirer.net/?article=18206 )
+
+
+'''The third generation of peer-to-peer networking technology'''
+
+"Each successive generation has decentralized more functions, making the networks harder to shut down and helping to expand the power of searches. The first first generation of file-swapping services, led by Napster, were built around big centralized indexes that would keep track of what was available everywhere on the network. These would serve as matchmakers, linking a person searching for a file with the computer where it was stored. That was efficient, allowing access to a huge range of material--but it also proved to be illegal. Courts said that Napster was responsible for a network where a vast amount of copyright infringement was happening and ultimately shut the company down. The second generation of decentralized services, led by Gnutella and the FastTrack technology underlying Kazaa, soon emerged to take its place. Neither of these had central servers. They relied instead on passing search requests from computer to computer until a file was found, and then passed that information back to the original searcher. That technology proved initially unwieldy, as millions of search requests passed through every computer on the network, creating traffic jams at low-bandwidth bottleneck points. That improved over time as programmers figured out ways to hand off these search requests more efficiently, but usually resulted in searches that included only part of a network--say 100,000 people instead of 2 million. A U.S Appeals Court recently ruled that this kind of decentralized network was legal, unlike Napster, in part because the software distributors did not have direct control over what was happening on the networks. "The (record labels and movie studios) urge a re-examination of the law in the light of what they believe to be proper public policy," the court wrote in that decision. "Doubtless, taking that step would satisfy the copyright owners' immediate economic aims. However, it would also alter general copyright law in profound ways with unknown ultimate consequences outside the present context." The third generation of networks, represented by eDonkey and now Morpheus, as well as a host of smaller independent developers, makes the tools even more decentralized than before. Distributed hash tables are essentially a way of taking a snapshot of where every file on the network is at a given moment and scattering bits of that information around the entire network. To find a given file, a search request goes first to any computer on the network. That computer will point to a different computer that has a little more information on how to find the file. The third computer might have information on the file itself--or it might take a few more hops to find the computer with the right information. The process is analogous to asking a succession of increasingly informed tour guides for directions, rather than accosting random people on the street. The information about the network in each place is constantly being updated as new files or computers are added."
+(http://news.com.com/Super-powered+peer+to+peer/2100-1032_3-5397784.html?)
+
+
+===Other===
+
+See [[Private Filesharing Networks===
+
+=Business Aspects of Filesharing=
+
+
+==Chris Anderson on the [[Long Tail]] of music filesharing==
+
+By Chris Anderson of the Long Tail blog.
+
+
+"The hits at the top of the charts lose sales, but the niche artists further down the popularity curve actually benefit from file-trading. Form the paper - "Artists who are unknown, and thus most helped by file sharing, are those artists who sell relatively few albums, whereas artists who are harmed by file sharing and thus gain from its removal, the popular ones, are the artists whose sales are relatively high." But then "File sharing is reducing the probability that any act is able to sell millions of records, and if the success of the mega-star artists is what drives the investment in new acts, it might reduce the incentive to invest in new talent. This is, at its heart, an empirical question which is left to future work."
+(http://slashdot.org/article.pl?sid=05/11/26/146221 ; http://www.thelongtail.com/the_long_tail/2005/11/the_effect_of_p.html)
+
+The original paper by David Blackburn is at http://www.economics.harvard.edu/%7Edblackbu/papers/blackburn_fs.pdf ; a summary of evidence from other studies, at http://www.thefactz.org/economics/p2p_summary.html 
+
+
+
+==Filesharing as externalization of distribution costs==
+
+Jonas Anderson is his [[Benjamin Updated]] essay:
+
+
+"One positive outcome of the uncontrolled copying is thus that for every file copied, the artist’s or content producer’s fifteen minutes of fame is momentarily extended and might gain them in the long run. The sharing of the online file-sharers could here be seen to actually contribute to the value of the content spread, although perhaps more as an unintended by-effect than by deliberation. As with many other contemporary areas of consumer-producer relations, this is in effect a radical process of “outsourcing" labour to users. The end-users make part of the effort of distribution, saving labour on the producer/distributor side, lo¬wer¬ing prices, altering competition balances, etc. When file-sharers thus help musicians be heard more easily, they effectively, however tacitly, act as PR agents in some respects (and may get sued in the process, adding insult to injury!). If we still are to persist with applying the con¬cept of aura to the phenomenon, we could interpret this as a form of diversion of the poten¬tial aura; a positive recognition that the listener makes active part of, if not the co-authorship, then at least the co-distribution of the musical object. Not so special anymore, “it’s just a file my mate sent me".
+Another “positive" aspect (at least from the viewpoint of the entertainment industry) would be that we are seeing how a downloaded file does not necessarily replace a purchase, since many consumers actually value the actual nature of the content differently. A film can today exist as an online file of varying bit-rate and encoding (technical quality) – instantly duplicable, for free; or as a full-price DVD (with lots of extra material); as a TV broadcast either (seemingly) free or pay-per-view; or, for that sake, as a slimmed down DVD version, handed out (seemingly) for free with Sunday newspapers! File-sharing is here merely part of a radical fragmentation of distribution vehicles, and – in parallel with that – a radical fragmentation of value."
+(One positive outcome of the uncontrolled copying is thus that for every file copied, the artist’s or content producer’s fifteen minutes of fame is momentarily extended and might gain them in the long run. The sharing of the online file-sharers could here be seen to actually contribute to the value of the content spread, although perhaps more as an unintended by-effect than by deliberation. As with many other contemporary areas of consumer-producer relations, this is in effect a radical process of “outsourcing" labour to users. The end-users make part of the effort of distribution, saving labour on the producer/distributor side, lo¬wer¬ing prices, altering competition balances, etc. When file-sharers thus help musicians be heard more easily, they effectively, however tacitly, act as PR agents in some respects (and may get sued in the process, adding insult to injury!). If we still are to persist with applying the con¬cept of aura to the phenomenon, we could interpret this as a form of diversion of the poten¬tial aura; a positive recognition that the listener makes active part of, if not the co-authorship, then at least the co-distribution of the musical object. Not so special anymore, “it’s just a file my mate sent me".
+Another “positive" aspect (at least from the viewpoint of the entertainment industry) would be that we are seeing how a downloaded file does not necessarily replace a purchase, since many consumers actually value the actual nature of the content differently. A film can today exist as an online file of varying bit-rate and encoding (technical quality) – instantly duplicable, for free; or as a full-price DVD (with lots of extra material); as a TV broadcast either (seemingly) free or pay-per-view; or, for that sake, as a slimmed down DVD version, handed out (seemingly) for free with Sunday newspapers! File-sharing is here merely part of a radical fragmentation of distribution vehicles, and – in parallel with that – a radical fragmentation of value."
+(http://homepages.gold.ac.uk/j-andersson/Benjamin_updated.doc)
+
+
+==Filesharing as Consumption Insurance==
+
+Umair Haque:
+
+For many people, digital music's more about risk than it is about music itself. Not legal risk - but transactional risk, the kind of risk you take when you buy a used car. Now, this statement has deep economic meaning. I'd like to explain why.
+
+Fundamentally, I'm going to argue that consumers download music, as much to derive extra value from getting something for free, as they do because they want insurance against buying something they didn't want in the first place. File-sharing is as much about risk-sharing as it is about the 'theft' of value. Technological changes have made this possible - but the way the business model of the music industry is at odds with the implicit contract it signs with listeners is what makes it probable.
+
+Here are the basic economics of the music industry: The major record labels assume market risk in exchange for value. They take on the risk of assuming search, development, and distribution costs, in exchange for uncertain profits.
+
+We can also look at this through the lens of contract theory. Contract theory says that principals contract agents to do things they're unable - for whatever reason - to do. In every such transaction, we can say that there are extra costs incurred. Economists call these costs agency costs.
+
+So we can say that labels are agents hired by music listeners - principals - to perform a function they don't have the time to do - find interesting and entertaining musical artists. The problem is that this simple transaction creates massive information asymmetries. There's no monitoring mechanism, so listeners can't see what the labels are doing; conversely, labels can't really tell what listeners' preferences are. Even worse, the principals can't influence the agent unless they can coordinate amongst themselves to do so.
+
+Now, in most real-world markets, information is an issue. Neither side in a transaction is perfectly well-informed about costs and benefits. But in most markets, prices are considered the central economic mechanism of information transmission, because they convey information about future benefits and future risks. This point is intuitive if we think about it: prices reflect the scarcity of a good. Think of the price of blue-chip stock, for example.
+
+But, partly because of massive buyer power (the influence the biggest retailers exert over the record labels), prices in the music business have long since failed to carry any pertinent information. Prices have become, if not fixed, as many suspect, certainly standardized. And this robs consumers of a vital means to gauge how much future value they derive and risk they take when purchasing different music goods. It also robs labels of the ability to really understand consumer preferences.
+
+So this forces listeners to rely even more on the record industry's - the agent's - choices. In this case, the principals are kind of blindly reliant on the agent - they have no mechanism to monitor the agent.
+
+So what if, under such a contract, the interests of the record labels - the agent - diverge from the interests of the listeners - the principal? What if, for business reasons, the labels are more interested in economies of scale, scope, and brand than providing music listeners with music they value?
+
+In an extreme case, the labels might begin to impose agency costs beyond the search costs the listeners are exchanging value for - making transactions with record labels provide negative value for listeners. Conversely, we can say that listeners might find it more efficient to take on their own search costs. And this is what's happened today. Many people are more happy to spend time searching for new music on the net than they are simply buying the goods the industry selects and promotes.
+
+It's traditionally argued that the web reduces search costs. But this argument helps explain a very curious phenomenon: why music today is one of the few markets in which people, are, curiously, willing to pay very high search costs.
+
+So the net actually begins to make it possible for people to pay higher search costs at all. They do so because they replace the agency costs imposed by the music industry - which provide them little value - with their own search costs, which do result in a transaction that provides them value. Before the web, people had little option but to pay the agency costs the music industry demanded.
+
+Economists have a name for problems like this: moral hazard. Moral hazard happens when the actions of an agent can be hidden from a principal, creating agency costs - because the agent is able to shirk, take additional risks, and generally not deliver on his end of the bargain. In this case, the moral hazard is that the record industry, because listeners can't monitor or influence it, can effectively shirk, and choose artists not based on listeners' preferences, but based on business efficiencies. This is effectively what the record industry has been doing - adding massive agency costs that replace the search value it is supposed to provide. It's compounded by the fact that music is an experience good, whose value is not directly knowable to buyers - another fact the music industry has been exploiting.
+
+The way to change the incentives implicit in such a moral hazard-creating contract is straightforward in economic terms - insurance. Insurance provides an incentive for the recording industry to choose only acts listeners value. At the same time, insurance means that consumers don't have to pay agency costs - the costs of the music industry selecting acts no one wants to hear.
+
+But doing so would create a double moral hazard. The second moral hazard is trickier: offering insurance to listeners provides listeners an opportunity to hide their actions from the recording industry. Listeners might take advantage of the insurance, and renege on buying music altogether. If the industry offered consumers the ability to simply return any music they didn't like, consumers might return all the music - even the music they did like, after having copied or consumed it.
+
+But this is exactly what the internet has done - offered music listeners a second moral hazard, in opposition to the first. The net offers a kind of gigantic way to renege on buying music goods produced under moral hazard, and completely eliminate the risk listeners take in buying such risky experience goods.
+
+The point is this: the net offers listeners insurance against the music industry itself. File-sharing isn't simply theft. Rather, file-sharing is risk-sharing - against an industry with the freedom to undertake hidden action in the extreme, and not live up to the contract it has written. Remember, the contract said that labels would assume the risk in exchange for dollars from listeners - so when moral hazard lets labels try and push risk to listeners, is it any surprise that listeners try and minimize it by parceling it out? In fact, we could go even further - saying that file-sharing is a way for principals to punish agents operating under extreme moral hazard, with the hope of bringing the agents incentives into line."
+(http://www.bubblegeneration.com/?a=a&resource=musicrisk1)
+
+=Social and Political Aspects of Filesharing=
+
+
+==The P2P View on Filesharing==
+
+As expressed by the [[Grey Commons]] and anti-copyright activists of [[PiratByran]].
+
+
+By Rasmus Fleischer at http://copyriot.blogspot.com/2006/06/piratbyrans-speech-at-reboot.html
+
+
+===On the necessity to oppose the ideological framework imposed by copyright holders===
+
+
+"Most file-sharers use bittorrent, where every downloader is also an uploader, and thus were probably in a formal sense criminals also before this law, that doesn't really seem to have changed anything. It is of big importance not to accept this terminology where “downloading" appears as some kind of activity completely separate from the uploading. We instead insist on talking about file-sharing as an horizontal activity. Just like the activity of breathing includes both taking in air in the body and letting it out, filesharing has the same symmetry between up and down. Taking them apart, if even only through language, can only fill the purpose of replacing open exchange with centralized control. Talking about "downloading" obscures the fact that horizontal P2P-communication is essentialy different from vertical mass-distribution. It is not the same "content" taking different paths to the "consumer". It is about different archives and different architectures.
+
+There is a constant buzz, driven by mass media, about so called "legal download services" for digital movies and music, presented as an alternative to P2P networks.
+But the aim of "legal download services" is not primarily selling movies or music. It is rather about selling language, selling ideology, appropriating the very notion of "legal download". In that ideology, "legal" is understood as "for payment", and "download" as an up-down-transfer from a central server offering a limited range of so-called "content", to a consumer.
+
+So, we are totally mistaken if we think that we are criticising the content industry by saying that "offering legal downloads is good, but DRM sucks and prices are too high..." etc – because with that terminology we have already swallowed the ontology of undifference.
+
+Horizontal exchange or vertical distribution? Open and unstable archiving, or centralized and limited? Those are the fundamental questions. Much more fundamental than the questions asked in the discourses about accessibility, consumer rights, social justice or compensation.
+
+Metadata, not copyrighted material, is the war on piracy's target
+Pirated copies will be produced, no matter the fate of file-sharing networks. We're all too often today equalising unauthorised digital copying with file-sharing networks, but it's a fact that a lot of the illicit warez arrives at the hard disk from a physical storage medium, like an usb-device, a borrowed cd or a burned dvd.
+To the extent that some people may avoid P2P networks, research shows that they just reconnect to other sources of data – be it physical copying from family and friends or files exchanges with mail and chat clients. It's all a piracy performed in a grey zone outside surveillance.
+
+So the question is not piracy or not, nor if darknets are desirable or not, but what infrastructures piracy will take use of.
+Burning cd's or gmailing files or giving them away with services like Yousendit.com, means quite much that piracy is stuck in the same infrastructure that it had during the era of the cassette tape and the photocopier, only multiplied by digital effectivity. There is still a dependence of finding someone (a friend, a library) with access to the source. File-sharing networks, however, connects every private archive that in one particular moment is connected, into the largest and most accessible archive ever.
+
+The war against file-sharing is essentially a war against the distribution of uncopyrighted metadata, not against the distribution of copyrighted material. It is about hindering the ever-present piracy from globalizing and open indexing, pushing it back to the family and the schoolyard and the workplace. Scaling-down, not in quantity but in network scale, from peer-to-peer to person-to-person.
+The result is not less piracy, but less plurality in piracy. More dependence on personal contacts means that more iPods will be filled with mainstream music that is exposed through mass media, while less people will curiously sneak around shared folders just to try out stuff."
+(http://copyriot.blogspot.com/2006/06/piratbyrans-speech-at-reboot.html)
+
+
+===Opposing [[Mental Rights Management]]===
+
+
+'''Mental rights management''': The grey zone also becomes visible if we consider how arbitrary the very definition of "copying" is. How it is based upon outdated technical cathegories.
+We emphasize and affirm the tendency that it is getting harder to distinguish between local transfers of data and “file sharing" between different systems, for example in wireless environments. Digital technology is built on copying bits, and internet is built on file-sharing.
+Copying is always already there. The only thing copyright can do is to impose a moral differentiation between so-called normal workings and immoral.
+For the copyright industry, it is of extreme importance to keep people uninformed of the real workings of networked computers. They want to make an artificial distinction between "downloading" and "streaming", as equivalents to record distribution and radio broadcasting.
+But – and we should keep insisting that – the only difference between "streaming" and "downloading" lies in the software configuration on the receiving end. However, copyright law will never be able to acknowledge that. It has to rely on fictions, on a kind of cognitive mapping, where notions valid for traditional one-way mass media are forcefully applied to the internet. We call it Mental Rights Management (and it is the very precondition for DRM).
+It is essential for the copyright industry to keep the majority of computer users trapped in the belief that the "window" of their web browser is exactly a window, through which they can look at information located elsewhere, under someone else’s control. Then our job is to clarify that everything you see on your screen or hear through your speakers, is already under your control.
+Zeros and ones have no taste, smell or color – be they parts of pirated material or not. Therefore it is impossible to construct a computer that cannot reproduce and manipulate these zeros and ones – as such a machine would no longer be a computer, but something as grotesque as a digital simulation of the machines of the last century."
+(http://copyriot.blogspot.com/2006/06/piratbyrans-speech-at-reboot.html)
+
+
+
+=Status: 2009 Review=
+
+Full report on the decade of top 10 filesharing resources at http://www.slyck.com/news.php?story=1888
+
+
+==BitTorrent==
+
+"BitTorrent may be very resourceful and popular, but it has more of a ‘hit and run’ nature than the more communal networks like Napster. But it’s tremendously efficient and resistant to attack – whether by legal means or cyber warfare. This has helped BitTorrent remain a permanent fixture on the internet landscape. For better or worse, BitTorrent will likely be around for a long time to come – or at least until the next great thing comes along."
+(http://www.slyck.com/news.php?story=1888)
+
+
+==eDonkey2000==
+
+"The community grew resistant to MetaMachine’s planned changes (such as Overnet) and wasn’t pleased with the lack of progress on the original eDonkey client. As a result, the community developed the independent and open source eMule client and Kademlia DHT network, which quickly usurped the old eDonkey2000 community. Today, eMule and Kad remain very popular with several million users, and despite the quantum shift in ED2K technology, users still refer to themselves as part of the ED2K community."
+(http://www.slyck.com/news.php?story=1888)
+
+
+==Ares Galazy==
+
+"Few have heard from Alberto Treves in several years. But what was once his network and client now belongs to the community. If it wasn’t for Alberto’s actions, Ares Galaxy would’ve vanished years ago. A dedicated community continues to help make this network a good resource."
+(http://www.slyck.com/news.php?story=1888)
+
+
+==SoulSeek==
+
+"SoulSeek has managed to survive since the early days of file-sharing, thanks in part to the relative absence of top 40 music. But SoulSeek has run into some legal problems in France, where it was sued last year by the music industry. How much life remains in SoulSeek is unknown, but their homepage reflects an upbeat attitude by Nir. If SoulSeek does go down, it won’t be due to a lack of interest or a sudden loss in population. Indeed, SoulSeek is one of the last great P2P networks from that’s been around since the beginning."
+(http://www.slyck.com/news.php?story=1888)
+
+=More Information=
+
+Summary: [[Peer to Peer - Advantages]]
+
+'''P2P Weblog''' monitors filesharing developments, including its political and economic aspects, at http://www.p2p-weblog.com/ 
+
+P2P based research companies who monitor the filesharing world for market research, at http://www.bigchampagne.com/
+
+
+==On filesharing networks and clients==
+
+How [[Bittorrent]] works, at http://userpages.umbc.edu/~hamilton/btclientconfig.html#HowBTWorks: very easy explanation on how it works 'technically'
+
+Also: 
+
+#A [http://junauza.blogspot.com/2008/01/freeopen-source-p2p-file-sharing.html list of free and open source filesharing systems]
+#A [http://p2p.info.pl/eng/mod-subjects-viewpage-pageid-46.phtml list of P2P Filesharing Networks]:  [[Bittorrent]], [[Ares]], [[eDonkey2000]], [[Fast Track]], [[Gnutella]]
+#Another comparative overview at http://www.scribd.com/doc/982041/A-complete-list-of-P2P-file-sharing-programs
+
+
+The multinetworking P2P clients (can access more than one network) are: 
+
+[[giFT]] - currently supporting Ares, Gnutella, FastTrack and OpenFT
+
+[[MLDonkey]] - supporting a great many of networks
+
+[[Morpheus]] - good; contains adware
+
+[[Shareaza]] 
+
+
+See the entry on the principles of [[P2P Computing]]
+
+==On filesharing and online music distribution==
+
+
+'''Some online music resources:'''
+
+An article explaining how to find legal online music, at : http://www.nytimes.com/2004/09/10/a...sic/10INTE.html ; Grouper is a software tool that lets you share music amongst friends only, to ensure the fair use principle, at http://www.grouper.com/ ; user-enriched evaluations of filesharing programs at http://www.slyck.com/programs.php
+
+The OECD in a recent report said it was difficult to establish a link between P2P filesharing and the music industry's shrinking revenues, at http://www.wired.com/news/digiwood/0,1412,67820,00.html?; the report is at http://www.oecd.org/document/46/0,2340,en_2649_201185_34994926_1_1_1_1,00.html 
+
+An overview of how the music industry is reacting to the challenges to its music distribution models, at http://www.businessweek.com/technology/content/jun2005/tc20050628_9810_tc024.htm
+
+=Key Books to Read=
+
+William Fisher, author of “Promises to Keep" has undertaken comprehensive calculations of what it would take to compensate the loss of revenue through filesharing. It would take $6 per month per user. See http://www.tfisher.org/PTK.htm for access to the book; and see http://www.theregister.co.uk/2004/02/01/free_legal_downloads/ for a summary by The Register.
+
+'''Book: Promises to Keep. Technology, Law, and the Future of Entertainment. William W. Fisher III. Stanford University Press, 2004'''
+
+
+=More Information=
+
+#[http://www.p2pon.com/file-sharing-programs/ Directory of File Sharing Progams], 10 most popular in 2009 [http://www.p2pon.com/top-10-most-popular-p2p-file-sharing-programs-in-2009-at-your-request/]
+#[http://www.p2pon.com/guides/ P2P-Filesharing Guides]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:IP]]
+
+[[Category:Media]]
+
+[[Category:Technology]]

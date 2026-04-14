@@ -1,0 +1,110 @@
+
+'''* Article: Governance of Open Source Software Foundations: Who Holds the Power? By Ludovico Prattico. TIM Review, December 2012'''
+
+URL = http://timreview.ca/article/636
+
+
+=Abstract=
+
+"The research reported in this article attempts to discover who holds the power in open source software foundations through the analysis of governance documents. Artificial neural network analysis is used to analyse the content of the bylaws of six open source foundations (Apache, Eclipse, GNOME, Plone, Python, and SPI) for the purpose of identifying power structures. 
+
+Results of the research suggest that: 
+
+i) the actions of an open source software foundation are centered around one of three groups: Members, Chairman/President/Executive Director, and Board of Directors; 
+
+ii) in only one of the six foundations is the Board of Directors responsible for both the community and the product; and 
+
+iii) artificial neural network analysis of the content of bylaws provides unbiased insights of the power structure of open source software foundations. These results may prove useful to those who contribute to open source foundations and use their products and services."
+
+
+=Excerpts=
+
+==Introduction==
+
+By Ludovico Prattico:
+
+Open source software foundations (OSSFs) create, enhance, and support open source technology such as tools, frameworks, operating systems, productivity software, and content management systems. These foundations act as keystones to anchor ecosystems of companies that generate revenue by developing and commercializing products based on the outputs produced by the foundations. Examples of OSSFs include the Apache Software Foundation, which supports the Apache HTTP Server among many other projects, and the Eclipse Foundation, which supports the Eclipse software development environment.
+
+For foundations members, the benefits of OSSFs include: spreading development costs across participating members, increasing revenue generation through increased sales of complementary products, increasing the addressable market by competing more effectively across “technology stacks”, and acting as a common good through which member firms increase their goodwill and general welfare (Riehle, 2010).
+
+In order to guide their operations and achieve their objectives, OSSFs develop governance policies, or bylaws, in at least four areas:
+
+* Board of Directors composition
+* Foundation bylaws
+* Membership agreement
+* Intellectual property rights
+
+Although researchers have studied OSSF governance from a variety of perspectives, few have examined OSSF governance based on studies of governance documents. The objective of this research is to answer the question: Where does the power lie in the governance of open source software foundations? The question is answered by examining the bylaws of not-for-profit, member-supported, OSSFs that are the keystone organizations upon which open source software products are anchored on.
+
+This article is structured as follows. 
+
+First, prior research into OSSF governance is examined to provide context and background for the research described here. 
+
+Next, the research method is described, including the definition of "power" that was applied to the context of OSSFs. 
+
+Then, the results of the artificial neural network analysis of the content of the six foundations' bylaws are presented. 
+
+Finally, conclusions are provided."
+
+
+==Prior Research in OSSF Governance==
+
+"An overview of governance mechanisms uncovered in the studies of open source software development was provided by de Laat (2007). The mechanisms include spontaneous governance, internal governance, and “governance towards outside parties”. Spontaneous governance is characterized by communities of volunteers who enjoy the intellectual stimulus, have a desire to learn and improve their skillset, or need the code created for their current professional employment or personal use. These communities cross institutional boundaries, are self-directing, and have no formal control. Typically, the de facto leaders are the 20% that produce 80% of the code.
+
+The second governance method, internal governance, is related to projects that use explicit and formal tools to co-ordinate and control open source software projects. '''Internal governance is characterized by six groups of tools: modularization, division of roles, delegation of decision-making, training and indoctrination, formalization, and autocracy/democracy''' (de Laat, 2007).
+
+The third governance method is “governance towards outside parties”. This form of external governance is a result of outside parties, such as firms, governments, and non-governmental organizations taking an interest in the benefits of open source software. In order to deal with the challenges associated with creating software in the commons and the threats from patent infringement, this form of governance creates a “legal shell” around the project (de Laat, 2007).
+
+'''O’Mahony (2007) discusses what it means to be community managed.''' 
+
+From research on four large and mature open source software communities, she identified five principles for the community-managed governance model: 
+
+i) independence of any one sponsor; 
+
+ii) pluralism in diversity of contributors, management of conflict, and determination of leadership; 
+
+iii) representation where contributing members can be represented in all community decisions; 
+
+iv) decentralized decision making (e.g., how contributors gain access to decision-making structures); and 
+
+v) autonomous participation in that all contributors are welcomed and members contribute on their own terms.
+
+
+Xie (2008) uses the term governance structures to refer to “who participates in the decision making” and concludes that there are three types: 
+
+i) Merit, 
+
+ii) Merit Dominated, and 
+
+iii) Sponsor Dominated. 
+
+In foundations with Merit governance structures, all members are merit members with full voting rights. In foundations with Merit Dominated governance structures, merit members are the majority, which makes it difficult for sponsor members to affect the outcomes. In foundations with Sponsor Dominated governance structures, sponsored members are typically company employees and would have a greater say in decisions.
+
+'''This research described in this article builds on the work carried out by Xie (2008) by studying the power structures within OSSFs through analyses of their governance documents. More specifically, the research looked at where the power is centred according to the governance documents''' (bylaws)."
+
+
+==Conclusion==
+
+"Three conclusions can be drawn from this study:
+
+Computer-aided text analysis of OSSF bylaws demonstrated that the actions of an open source software foundation are centered on one of three groups: Members, Chairman/President/Executive Director, and Board of Directors. However, this research did not study why power lies within different groups of a given foundation.
+
+The majority of the literature on OSSF governance focuses on the mechanisms and processes used to manage OSSFs. This work touches on one aspect of how OSSFs are managed through the application of the bylaws, but more work is needed to see how the bylaws impact the management of the OSSFs.
+
+Artificial neural network analysis of OSSF bylaws provides unbiased insights on the power structure of OSSFs. Each bylaw uses its own language, thus causing the researcher to interpret results based on the bylaw's unique language. This can be improved upon by creating a standardized dictionary of term that map terms used in a given bylaw with a standardized term. For example, all the terms for the highest office (President, Chairman, Executive Director, etc.) would be mapped into the term EXECDIREC.
+
+Finally, this research showed that the power in OSSFs lies within different groups, but provided no insight on why this is the case. Further studies into the underlying reasons for the power distributions observed in this study would contribute to a better understanding of how OSSFs operate and how they can be organized to provide greater benefit to their members."
+
+
+=More Information=
+
+* [[Open Source Software Foundations]]. Z. Xie [http://timreview.ca/article/194]
+
+* The [[GNOME Foundation Is All About People]]. S. Peters. [http://timreview.ca/article/261]
+
+
+[[Category:Peergovernance]]
+
+[[Category:Governance]]
+
+[[Category:Articles]]

@@ -1,0 +1,137 @@
+
+
+=Description=
+
+J. Orlin Grabbe:
+
+"Digital cash is a digitally signed payment message that serves as a medium of exchange. Let’s examine this definition piece by piece.
+
+We all know what a message is. A letter is a message. Email is a message. A severed horse’s head in your bed is a message. Smoke signals can be a message.
+
+A payment message is one used to buy or pay for something. A check is a payment message. A letter to someone with a power of attorney could be a payment message. A SWIFT message from Union Bank of Switzerland saying transfer $1 million to Bank of New York is a payment message.
+
+A signed payment message is a payment message that is signed. (Surprise!) A check is signed with a handwritten signature. A Federal Reserve note is signed by the Secretary of the Treasury and the Treasurer of the U.S. Traveler’s checks are often signed twice by the person purchasing the checks.
+
+A digitally signed payment message is one that is signed with a digital signature. The concept of digital signature comes from cryptology. If you write a message and stick it into a computer, it gets transformed into numbers. Into 0s and 1s. A digital signature is a further numerical calculation based on these 0s and 1s. The signed message may replace the original message. Or the signature may exist separately from the original message.
+
+Ordinary credit card payments are not digital cash. They may serve as a medium of exchange, but they don’t bear a digital signature. Digital signatures, and hence digital cash, raise new issues with respect to law and economics. They also create a new opportunity for personal privacy."
+(http://orlingrabbe.com/digiprin.htm)
+
+
+=Aspects of Digital Cash=
+
+J. Orlin Grabbe:
+
+"Concepts in Digital Cash
+
+It is not hard to understand digital cash. But you must build up your understanding piece by piece. Athena sprang full-grown from the head of Zeus, but cerebral grasp of digital cash won’t go in that way. When I was still in high school, I spent one summer at Ohio State University in Columbus. One of my roommates, from Akron, had a favorite saying: “The way to a man’s heart is under his stomach.” It’s important to first examine some of the underlying concepts that make up digital cash. Yes, it may seem mechanical at first. But the explosion in the brain will come later.
+
+If you prefer, think of the following as a vocabulary lesson. We start off with some terms from cryptology. Some people don’t want to hear about cryptology. They want to treat cryptology as a black box. Well, that isn’t going to work. Why don’t we treat the Constitution as a black box? “Let’s not get into those little distinctions between the 1st and 10th Amendments.” Yes, you can treat cryptology as a black box if you want to. But you won’t get to enjoy the explosion in the brain that comes later. Because your technique is wrong.
+
+In covering the following concepts, I make references to some existing digital cash systems (such as Mondex, NetCash, or Stefan Brands’ digital cash sytem). Take note of the names, but otherwise there is no need to worry about them. They will reappear in a future article.
+
+
+==Public key cryptography==
+
+Cryptology provides methods of hiding or signing information. Information that is hidden or signed can be thought of as having been “locked”. Associated with this “lock” is an appropriate “key”. Or keys. There may be more than one. Public key cryptography (asymmetric key cryptography) uses two “keys”--two sets of digital strings of 0s and 1s--to process, or scramble, data in certain ways. Unencrypted data--such as the readable text of an email message--is called plaintext, while encrypted data is called ciphertext. The keys in the pair have inverse functions. One key is used to turn plaintext into ciphertext. The other key turns the ciphertext back into plaintext.
+
+One of the two keys is called a public key, which is a binary or hexadecimal (base 16) number known to everyone. Messages to an individual or other party can be encrypted (scrambled) with this key, and sent to the key owner (Alice, say). The other key is call a private key, which is a binary or hexadecimal number known only to the key owner. Messages encrypted with Alices’s public key can only be decrypted using Alice’s private key.
+
+Conversely, messages encrypted with Alice’s private key can be decrypted by anyone, by using Alice’s known public key. Private keys are often used for digital signatures. Because only the key owner knows her own private key, messages encrypted with the private key must have come from the key owner. But anyone can read, and thus verify the source of, such a message by decrypting it with the key owner’s known public key.
+
+Note that the encryption mapping is many-to-one using a public key, while it is one-to-many using a private key. Many people can encrypt messages with Alice’s public key, but only Alice can read them (using her private key). On the other hand, only Alice can encrypt messages with her private key, but many people can read them (using Alice’s public key).
+
+Public key cryptography has one draw-back compared to symmetric key cryptography (below): namely, encryption and decryption are slow relative to the speed of the latter. RSA is one well-know public key system that is widely used in banking. Briefly, the RSA system encrypts messages by raising them to a power e, dividing the result by a large number n (which is the product of two primes), and keeping the remainder. The numbers (e,n) are known to everyone, and constitute the public key. A message encrypted by e may be decrypted by raising the encrypted message to another power d, dividing by n, and keeping the remainder. This restores the original message. The number d is the private key, and is kept secret.
+
+
+==Symmetric key cryptography==
+
+By contrast to public key cryptography, symmetric key cryptography uses only a single secret key, which is used both to encrypt and to decrypt. This key must necessarily be known to both parties--to the party that encrypts the message into ciphertext, and also to the party that decrypts the ciphertext back into plaintext. Two crypto-systems that use symmetric key cryptology are DES (Data Encryption Standard) and IDEA (International Data Encryption Algorithm). DES is a cryptographic standard in the financial services industry (along with a strong variant called triple-DES).
+
+DES takes a 64-bit block of plaintext and transforms it into a 64-bit block of ciphertext. The data is processed in 16 rounds, or steps, using 16 subkeys that are created from an original 56-bit DES key. If each 64-bit block in the message is encrypted independently of other blocks, the mode is called electronic code book (ECB). Two other modes, called cipher-block chaining (CBC) and cipher-feedback (CFB) make the encryption of the current block dependent on past blocks.
+
+Symmetric keys, much like public/private key pairs, turn the problem of keeping a lot of different messages or files secret into the simpler problem of maintaining the secrecy of a single cryptographic key. All the encrypted files are secure as long as a single key is secure. Cryptography creates efficiency.
+
+A symmetric key system makes key management an especially important issue. Key management is the process of generating a secret key, securely distributing or transferring the secret key to the other person without it being observed, and securely storing the key. Key management is sometimes handled by a trusted third party or network resource, a key distribution center (KDC). Ordinarily, if N users wanted to communicate with each other securely, this would require a minimum of N(N-1)/2 keys. For 20 users there would be 190 keys. But instead, each user of the KDC shares a single symmetric key with the KDC.
+
+If a customer of the KDC, Alice, wants to communicate with Bob, she first calls the KDC who generates a key for her. The KDC returns to her a pair of certificates--one encrypted so that only Alice can read it, and the other encrypted so only Bob can read it. Each certificate has a copy of the key to be used between Bob and Alice, but one is encrypted with the key shared by Alice and the KDC, while the other is encrypted with the key shared between Bob and the KDC. Then when Alice calls Bob, she presents him with a copy of the certificate that only he can decrypt. Bob decrypts the certificate with the key he shares with the KDC, and obtains the session key to communicate with Alice.
+
+The use of a KDC has thus turned the problem of finding N(N-1)/2 secure ways to share an initial symmetric key, which the problem of only finding N secure ways to share a key with the KDC. One symmetric key serving system of this type is Kerberos. Kerberos is used by the NetBill and NetCash systems of digital cash.
+
+The problem with a KDC is that if the KDC is itself compromised by an attacker, then the attacker gains access to all keys and all encrypted messages in the system. It is, however, possible to avoid central key storage, and to negotiate a symmetric key between two parties--even in the presence of an eavesdropper--without there being a risk the eavesdropper gets possession of the key. The prime example here is something called Diffe-Hellman key negotiation, a name to be aware of. But we will not discuss it now.
+
+Because symmetric key cryptography is much faster than public key cryptography, most systems combine the two methods as follows. First, the message is encrypted with a symmetric key. The message may be long, but the symmetric encryption process is fast. Then the symmetric key is itself encrypted with the recipient’s public key. This encrypted key is added to the encrypted message and both are sent together. This combination of an encrypted message, along with the message-encryption key encrypted by the recipient’s public key is called a digital envelope. The receiver of the digital envelope uses her private key to decrypt the encrypted symmetric key. Then she uses the symmetric key to decrypt the message.
+
+
+==Temporal relationship between withdrawl, payment, and deposit==
+
+There are many different ways to classify electronic payment systems. One way is based on the temporal relationship between a cash withdrawal and receipt of the the good or service. In pre-paid systems, such as prepaid phone cards, ordinary money is withdrawn now, but the service is actually purchased and received later. The card thus represents stored value, and is often referred to as a “stored value” card. A generalized instrument of this type is an “electronic purse”, whose value may be spent on a variety of goods and services. The value stored in an electronic purse functions very much like the value stored in a traveler’s check. Most digital cash systems are prepaid. In particular, proposed digital cash systems that protect privacy have a time gap between withdrawal and payment, so value must be stored in the interim.
+
+In pay-now systems, payment is made at the same time the product is received, as when one uses an ATM or other debit card to purchase gas at a local service station. (This is an electronic funds transfer (EFT) point-of-sale (POS) transaction.) Pay-now systems are often “on-line”, meaning they take place by making a connection to a central computer. Pay-now systems can be easily modified for digital cash systems, even systems protecting privacy. That is, the customer payment for and receipt of goods, and merchant deposit, can take place simultaneously.
+
+Finally, there are pay-later systems, an example of which occurs when one pays for dinner with a credit card. The seller (restaurant) will receive payment prior to the buyer's account being debited, because the card-issuer extends credit to the buyer in the interim. No noteworthy pay-later digital cash systems are in operation. However, credit may be easily introduced into a digital cash system by letting the user pay for digital cash with a credit card. Or by allowing the value stored as digital cash be some large number for which there has not been pre-payment. But the latter mechanism would appear to eliminate the possibility of anonymity in transactions, because the transaction amounts would need to be collected and later presented for deduction from the spender’s account.
+
+
+==Authentication, authorization, and non-repudiation==
+
+Authentication is any process by which the buyer establishes his identity in order to effect payment. In ordinary commerce, authentication is usually based on something you have (e.g. driver's license, ATM card), something you know (e.g. password, mother's maiden name), or something you are (e.g. fingerprints, retinal scan), or some combination of these. Authentication differs from authorization, which is the process by which payment is released to the seller. The two are associated in that typically a customer's identity must be authenticated before his payment authorization will be accepted as valid. In public key cryptography, the buyer can authenticate his identity by signing an authorization payment or statement with his private key, while the seller or the seller's agent (such as a bank) may verify the identity using the buyer's public key.
+
+Non-repudiation means that the sender of a payment or authorization message cannot deny he sent the message. Non-repudiation works by binding some unique information about the source to the message. For example, a customer may digitally sign a payment order with the customer's own private key. The customer cannot subsequently deny having done so, because only the customer could have signed with the customer's private key.
+
+
+==On-line versus off-line systems==
+
+On-line systems are ones that involve an authentication and authorization server (a specialized dial-up digital cash or VISA computer, for example). Information provided by a user is compared against information in a central database. A transaction between buyer and seller (customer and merchant) does not take place unless the third party server first verifies the buyer’s identity (in non-anonymous digital cash systems) or the validity of the buyer’s digital cash (in both anonymous and non-anonymous systems), and authorizes payment to the seller of the good. Digital cash systems that are purely software-based are usually on-line, because of security problems associated with computer software. If the system is anonymous, so that the identity of the spender is not known, the on-line computer verifies that the digital cash offered in payment was not spent previously; that is, that the cash has not been counterfeited.
+
+Off-line systems, by contrast, involve no third party in the payment from buyer to seller. Off-line systems require less immediately accessible communication than on-line ones. But off-line digital cash systems require additional tamper-resistant hardware (in the form of a PCMCIA or smart card, for example), and a more sophisticated cryptological protocol. The tamper-resistant module in the card is used for authorization, although not necessarily for authentication. (It can be both, by requiring the user to type in an identifying password before authorization is made.) Because the authorization server (tamper-resistant module) in an off-line system is mobile, it is analogous to a small portable bank.
+
+Value can be stored in various ways in off-line systems, using devices that are variously called stored-value cards, electronic purses, or electronic wallets. Money is stored in these devices as a number, just as one’s checking account or similar balance in a local bank is a number in the bank’s computer. In the simplest form (“balance-based system”), such a device records a number and a currency designation, such as “$1000”, in a numeric register. Then upon spending, say, $25, the stored value is reduced by this amount, leaving a stored value of “$975”. A second way of storing value is to store “coins,” each of which is identified by a set of numbers which constitute the signature on the coin. These coins are just digital information, preserved in computer or smart card memory, each of which represents a given value. The total value stored is therefore the sum of the coin values. But one can only spend a coin by transferring its signature to another person. (The use of “blind signature” protocols allows transactional anonymity to be maintained even when a signature is transferred.) A payment of $25 might involve the transfer of five “$5” coins, each bearing an individual signature. A third way of storing value is to store a “balance” number, along with a series of uniquely identified transactions, called “electronic checks”. Unlike the coin-based system, the size of each check is not predetermined. Under this system, the “$1000” value would be stored and compared against an electronic check withdrawal of, say, $31, where this electronic check has been assigned a unique signature reflecting the parties to the transaction and the currency amount.
+
+
+==The double-spending problem and framing==
+
+In anonymous digital cash systems, the distinction between on-line and off-line systems is especially important, because of the issue of counterfeiting or (the more common term) double-spending.
+
+Double-spending refers to fraudulently spending the same money twice. Because digital cash is computer data, it is easily copied (counterfeited). If digital cash can be copied and spent twice, then it can be copied and spent n-times (multi-spending). Digital cash is digital data that has been cryptologically processed in certain ways. But it is still data, and all the 1s and 0s in the cash string can be copied to another string.
+
+On-line systems typically keep a record of digital cash (digital coins) that has (have) been spent, and hence do not authorize transactions involving previously spent money. This runs into the problem that the data base grows over time, which creates issues of storage and access time. (The NetCash system operated by NetCheque, however, only records coins that have not been spent yet.)
+
+By contrast, off-line anonymous digital cash systems frequently rely on exposure as a preventative measure: the otherwise anonymous identity of the spender is publicly revealed by double-spending. One way of doing this is that, before accepting an off-line payment, the merchant will issue an unpredictable challenge to which the customer's equipment must respond with some information about the digital cash signature. By itself, this information discloses nothing about the customer. But if the customer spends the note a second time, the information yielded by the next challenge gives away his identity (or his secret key) when the cash is ultimately deposited. (Recall from geometry that two points determine a straight line. Double-spending creates two “points”, and the slope of the resultant line might be, for example, the customer’s secret key. A single point, by contrast, will not yield any information about the secret key. This principle is used in Schnorr authentication.)
+
+Some off-line systems go further and attempt to prevent double-spending at its source, using tamper-resistant hardware (called an "observer"). Such a solution is not simply hardware-based, however. It requires a carefully thought-out cryptological protocol. A significant aspect of Stefan Brands' digital cash system is that the on-line system is a self-contained subset of the off-line system, and the data and computation requirements of the system are sparse.
+
+The typical "wallet with observer" is a smart card containing cryptographic routines in its integrated circuit (IC). Smart cards were originally created for use with French telephones Since 1986 the company SGS-Thompson has sold more than a billion smartcard ICs. The basis of smart card data storage is "non-volatile" memory, meaning that the chip can retain data even after power to it is shut off. The smart card also contains logic devices and controllers which connect the memory chip with the outside world (with electronic card readers, for example). The best cards use EEPROM (Electrically Erasable Programmable Read Only Memory), a type of non-volatile memory which can be repeatedly reprogrammed, thus allowing account data or monetary values to be repeatedly updated. The first electronic wallet with observer was built in connection with the CAFE digital cash project.
+
+A framing attempt is an attempt by a bank to fraudulently claim that a customer has double-spent the same piece of cash when the customer hasn’t. A good digital cash system should protect customers from bank framing, just as it should protect the bank from double spending by customers.
+
+
+==Unlinkability and untraceability==
+
+This book is concerned with cryptology applied to the creation of potentially anonymous digital cash systems. Anonymity generally means an inability to determine an individual's spending patterns or sources of income. Anonymity involves several aspects, including “unlinkability” and “untraceability”.
+
+Unlinkability refers to the inability of a bank (even colluding with merchants) to determine that two payments were made by the same user. To understand this, consider the contrary case: a monthly American Express or credit card bill. Such a statement contains a set of transactions which are all linked by a common element--the AMEX or credit card account number. Because these payments are linked, they present a limited picture (a subset) of the card-holder’s behavior, movements, and habit patterns. His private behavior is potentially public information. Unlinkability is therefore an aspect of privacy or anonymity. Because linkability in anonymous digital cash involves cryptological protocols, it is actually a probability concept: how probable is it that two payments can be accurately identified as having been made by the same user? Unlinkability means such probability is negligible.
+
+Untraceability refers to the inability of a bank to match withdrawals of digital cash with subsequent payments. To have untraceability, the information a person reveals about himself by making payments must be statistically independent of the information a person reveals about himself by making withdrawals. Of course if the bank, even when colluding with merchants, can't link or trace a person's transactions--even in probability terms--then neither can FinCEN or the NSA. Anonymity or privacy thus ultimately hinges on concealing such information from the prying eyes of the bank.
+
+As we shall see later, untraceability relies on “blind signatures”, which allow banks to sign digital cash without being able later (at the time of payment) to associate that cash with the person who who withdrew it. This blinding is important for privacy, and individuals need the ability to verify that the blinding is performed properly and that no hidden or shared information is leaked during payment. This requirement, along with the need to prevent double-spending, lead David Chaum to propose the “observer paradigm”--the separation of the functionality of a device for making payments (smart card, etc.) into two parts. One part is the observer, which is tamper-resistant and designed to prevent double-spending. The other part is a user-controlled processor which performs all the blinding operations. The observer is required to communicate with the outside world through the user-controlled processor, so that its messages can be examined for appropriateness.
+
+
+==Divisibility, tranferability, and scalability==
+
+The divisibility of digital cash refers simply to the ability to make change. This poses some problems for cryptology. Suppose a bank digitally signs a dollar bill with its private key. Anyone using the bank's public key can verify that the bill is authentic. But suppose I want to pay someone 50 cents, or 1/2 of this dollar bill. How do I do this? Remember that my dollar bill is a block of data, a set of 1s and 0s which bears a signature--an encrypted version of another set of 1s and 0s. So how do I divide it into two equivalent pieces to make payment? The answer is not immediately obvious, even to good mathematicians. An efficient solution to the divisibility problem appears possible only in an on-line form: no off-line, perfectly unlinkable, and efficient cash-divisibility scheme is possible.
+
+The term tranferability refers to the ability to transfer digital cash between two parties without having to contact the bank. By definition, a transferable system is off-line. Transferable systems allow a chain of digital cash transfers to take place between the initial withdrawal and the final deposit. In essence, the digital coins are bearer tokens. Transferable coins grow in size, because they must accumulate bits to prevent double-spending. Hence the number of transactions that may take place between bank contacts is limited. Mondex, for example, is a transferable system, but is not anonymous.
+
+The scalability of a digital cash system refers to its ability to be expanded or contracted as needed to service more customers over time. For example, consider a single central server which, to prevent double-spending, keeps track of all coins spent in the system. Such a central server would limit the scale of the system, because the database of spent coins would grow over time, increasing the cost per transaction of detecting double spending. NetCheque and Net Cash were specifically designed to be scalable.
+
+
+==Acceptability and reliability==
+
+The acceptability of digital cash refers to the ability of users to deal with multiple parties or banks (something which is also needed for scalability). A digital cash system that required all users to be customers of the same bank would severely limit its acceptance as a medium of exchange. Acceptability also implies common communication protocols for transferring digital cash, such as the Internet's TCP/IP, as well as compatibility in crypto systems. One aspect of acceptability is interoperability, which refers to the ability to convert funds represented by one payment mechanism into funds represented by another.
+
+The reliability of a digital cash system relates to the probability cash is lost or that it does not reach a desired destination. If you send cash through the mail, the letter can be lost, or the cash stolen by a postal employee. Digital cash is similarly sent through a communications network, which might be Internet email or another computer network such as Fedwire. Digital cash which is encrypted with the public key of the person intended to receive it is hard to steal: no one else will be able to read the message and determine whether it is $1,000 in digital cash or a sexy note from a girlfriend. But the message might still fail to arrive at its intended destination, just as an ordinary email message can bounce or disappear into the great Internet void. It is hard to argue that a cash system is reliable if the transport system it uses is unreliable, or if one cannot determined whether digital cash has arrived safely at its destination. "
+(http://orlingrabbe.com/digiprin.htm)
+
+[[Category:Money]]
+
+[[Category:Economics]]

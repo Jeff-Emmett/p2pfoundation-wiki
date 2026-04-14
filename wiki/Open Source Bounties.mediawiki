@@ -1,0 +1,43 @@
+
+'''= bidding money conditional on the completion of defined [[Open Source Projects]]'''
+
+
+=Description=
+
+Nat:
+
+"I am still in favor of the creation of a general bounty system for open source projects. The idea is to allow anyone to act on their "I'd pay $50 if someone fixed this" impulses. SourceXchange and others tried to do this years ago, but I think they were too early, and to date no one has done this well.
+
+I think a general bounty system should start with a simple, clean interface wherein:
+
+   
+1. Anyone can create a new bounty, and describe it with HTML, text, images, etc.
+
+   
+2. People can search for bounties that already exist, and "pile" onto them by pledging additional money.
+
+   
+3. There is an easy mechanism for people to associate a bounty with a bug in any of the popular bugzillas. So, there'd be a way to create a freeform bounty, and a way to create a bug bounty bound to a bug in bugzilla.mozilla.org/bugzilla.gnome.org/bugzilla.kde.org, etc.
+
+      
+I had been thinking that we might want to create a link from the bug to the bounty, but I think this actually would seem like spam to the people who are using bugzilla.
+
+      
+Instead, we could have the bounty website periodically poll the bugs for which there are bounties and alert anyone who has pledged on that bounty if the bug status has changed.
+
+   
+4. There is a mechanism for people to claim bounties, and for the original bounty creator to verify that the claim is valid."
+(http://nat.org/2005/january/#bountysystem)
+
+
+=Examples=
+
+OpenID bounties, http://openid.net/foundation/bounty/
+Gnome bounties, http://swik.net/GNOME/GNOME+Bounties
+MoinMoin bounties, http://moinmo.in/MoinBounties
+OS2 bounties, http://www.os2world.com/bounties
+
+
+[[Category:Business]]
+
+[[Category:Money]]

@@ -1,0 +1,33 @@
+{{#lst:{{{1}}}|{{{2}}}}}
+<noinclude>
+This template is for use in re-using sections from around the wiki.  We are trying to make it easier to collaborate on the wiki by taking a modular approach to complex topics.
+
+You can find out more about creating custom sections for re-use in the [[P2P Foundation Wiki LST]] help page.  Once you have created a section you can use this template to "paste" or "call" that section from the original article. 
+
+This helps by reducing redundancy because the "called" section remains in the original location where more than one editor might be interesting in keeping it current.
+
+Using the template looks like this:
+
+<pre><nowiki>
+{{simplelst|1|2}}
+</nowiki></pre>
+
+1 is the name of the page where the section you want to call is located
+2 is the name of the section within that page that you wish to call
+
+Here's what it looks like completed:
+
+<pre><nowiki>
+{{simplelst|Transparency|Intro}}
+</nowiki></pre>
+
+This will tell the wiki to look at the [[Transparency]] page and fetch the "Intro" section.
+
+You will need to define the "Intro" section before hand.  Instructions for doing so are on the the [[P2P Foundation Wiki LST]] page.
+
+When you use this template, as described above in the example for the Transparency page Intro, this is what happens:
+
+{{simplelst|Transparency|Intro}}
+
+[[Category:Templates]]
+</noinclude>

@@ -1,0 +1,79 @@
+=Discussion=
+
+
+==For Transparency==
+
+Cory Doctorow:
+
+"The idea of a ranking algorithm is that it produces "good results" -- returns the best, most relevant results based on the user's search terms. We have a notion that the traditional search engine algorithm is "neutral" -- that it lacks an editorial bias and simply works to fulfill some mathematical destiny, embodying some Platonic ideal of "relevance." Compare this to an "inorganic" paid search result of the sort that Altavista used to sell.
+
+But ranking algorithms are editorial: they embody the biases, hopes, beliefs and hypotheses of the programmers who write and design them. What's more, a tiny handful of search engines effectively control the prominence and viability of the majority of the information in the world.
+
+And those search engines use secret ranking systems to systematically and secretly block enormous swaths of information on the grounds that it is spam, malware, or using deceptive "optimization" techniques. The list of block-ees is never published, nor are the criteria for blocking. This is done in the name of security, on the grounds that spammers and malware hackers are slowed down by the secrecy.
+
+But "security through obscurity" is widely discredited in information security circles. Obscurity stops dumb attackers from getting through, but it lets the smart attackers clobber you because the smart defenders can't see how your system works and point out its flaws.
+
+Seen in this light, it's positively bizarre: a few companies' secret editorial criteria are used to control what information we see, and those companies defend their secrecy in the name of security-through-obscurity?"
+(http://www.boingboing.net/2008/01/01/wikiinspired-transpa.html)
+
+
+==Counter-Arguments==
+
+From the same article's comments.
+
+'''Joe''':
+
+"There's a problem with making the page ranking algorithm transparent. The problem is that there are vast numbers of people who want to make money by getting you to visit particular sites, even though those sites are definitely not what you intend to visit. If they can do it, they will fool the search engines into ranking their clients' sites highly for queries that have nothing to do, really, with anything you care about.
+
+So we're talking about a game theory problem, in essence. The search engine confronts a hostile party.
+
+Keeping at least some aspects of the algorithm hidden is one defense, but it gives too much power to people like Google. Other defenses include changing the algorithm rapidly to keep defeating attacks on it. But if the Wikipedia model is used, then some of the volunteer developers may in fact be "traitors", all set to cash in when the algorithm is updated.
+
+This doesn't mean it can't be done. It just means it's going to be damned hard to get right."
+(http://www.boingboing.net/2008/01/01/wikiinspired-transpa.html)
+
+
+'''J.R. Tom''':
+
+"Cryptography algorithms are designed to turn meaningful data into something that's indistinguishable from noise unless you have the necessary data (e.g., a private key) to interpret it.
+
+Search engines are designed to take a set of meaningful criteria (including the text of your query) and return a set of results; most of them also associate an ordering with this set. This set, and its ordering, should be ones that the vast majority of the users will find relevant and reasonable. (Personalized search is another can of worms that I won't open here.)
+
+That is, the output of a search engine is designed to be as _transparently obvious_ as possible.
+
+To the extent that the criteria on which a page's relevance and ranking depend on properties that are easily manipulable by third parties, you're kind of screwed.
+
+Now, Google, Yahoo, Microsoft, and the rest are almost certainly doing their best to arrange matters so that the inputs to their algorithms are not something that can be manipulated (in a bad way) easily if at all, or at least in such a way that manipulation is obvious and possible to circumvent. (I am familiar with some of the research in this area.) But the means that criminals have to screw with these algorithms are the same ones that genuine users and contributors of data (i.e., creators of links) have to improve things in the first place, so you have to be very careful about locking things down.
+
+To put it another way: if your system has inherent flaws that are a function of the problem you're trying to solve, then sometimes security through obscurity may be the best you can do.
+
+As a practical matter, I'd guess that in practice the relevance and ranking methods are undergoing constant and rapid metamorphosis to both promote good results and combat (perceived) manipulation...so I could easily imagine that keeping up with the changes (to examine them for problems) would be tricky at best.
+
+Now, it's possible that search engines could publish some parts of their algorithms for external review. But...
+
+...getting back to that can of worms that we mentioned earlier: the "correctness" of relevance and ranking algorithms is subjective by definition. You need a broad spectrum of users (and usage data) in order to be able to measure how well the algorithms are doing. It's not clear that third-party basement hackers would be able to help much...but third-party criminals might be given a major bonanza.
+
+Finally, the relevance/ranking algorithms are a large part of the IP upon which companies like Google and Yahoo (and to a lesser extent MS) are based. Granted, knowing Google's algorithms wouldn't give you access to their server farms (or their collected data)...but releasing them would basically hand Google's competitors a gun with which to shoot them."
+(http://www.boingboing.net/2008/01/01/wikiinspired-transpa.html)
+
+
+==Critique of Google==
+
+Anil Dash:
+
+"Connecting PageRank to economic systems such as AdWords and AdSense corrupted the meaning and value of links by turning them into an economic exchange. Through the turn of the millennium, hyperlinking on the web was a social, aesthetic, and expressive editorial action. When Google introduced its advertising systems at the same time as it began to dominate the economy around search on the web, it transformed a basic form of online communication, without the permission of the web's users, and without explaining that choice or offering an option to those users.
+
+Worse, the transformation was retroactive and the eventual mechanisms for opting out were incomplete in that the economic value could not be decoupled from the informational value. Inevitably, spammers arose to take advantage of the ability to create high-economic-value links at very low cost, causing vast damage to the ability to use links as a purely informational exchange. In addition, this forced Google to become more and more opaque about the refinements and adjustments it makes to its indexing algorithms, making a key part of their business less and less transparent over time. The eventual result has been the virtual decimation of communications systems like TrackBack, and absurdities like blogs linking to their own tag search results for key words in lieu of useful links, in an attempt to appease a search algorithm that they will never be allowed to fully understand.
+
+An awareness of how a transformation in the fundamental value of links from informational to economic could have led Google to develop a system that separated editorial and aesthetic choices from economic ones, preventing the eventual link-spam arms race."
+(http://www.dashes.com/anil/2007/12/google-and-theory-of-mind.html)
+
+
+=More Information=
+
+#Book: [[Protocol]]. Alexander Galloway.
+#[[Protocallary Power]]
+
+[[Category:Technology]]
+
+[[Category:Governance]]

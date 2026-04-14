@@ -1,0 +1,105 @@
+=Source=
+
+This is sourced from the [[Capital Allocation Pattern Language]] document.
+
+URL = [https://docs.google.com/document/d/1w-ivyDmBIDoe8Ey-gPDlT2Ua0_6cEqh2O2JPLcy9RZ0/edit?]
+
+A work in progress by Benjamin Life and associates.
+
+=Description=
+
+
+==Core Structure of Capital Allocation==
+
+"This pattern language organizes capital allocation into three primary components, each with distinct subcategories and relationships.
+
+===1. Allocators (Who Allocates Capital?)===
+
+Allocators determine how resources are distributed within a system. They can be categorized based on their decision-making process:
+
+
+'''A. Decision-Making Models'''
+
+#Crowdsourced Decision-Making: Allocations determined by collective intelligence (e.g., Quadratic Funding, Participatory Budgeting, Conviction Voting).
+#Algorithmic & Automated Allocation: Programmatic mechanisms govern resource flows (e.g., AutoPGF, Bonding Curves, Roundabout Production).
+#Market-Driven Allocation: Uses pricing mechanisms, speculation, or risk assessments (e.g., Harberger Taxes, Investment DAOs, Social Impact Bonds).
+
+
+'''B. Systemic Allocators'''
+
+#Community-Driven Allocators: Localized funding pools managed by members (e.g., ROSCAs, Community Currencies).
+#Institutional Allocators: Foundations, governments, and DAOs that deploy structured funding mechanisms.
+#Hybrid Allocators: Mixes human governance with algorithmic enforcement (e.g., Investment DAOs, Quadratic Funding Operators).
+
+
+===2. Allocations (How is Capital Distributed?)===
+
+Allocations define the way capital moves through a system, classified by timing, liquidity, and flow mechanisms.
+
+'''A. Temporal Models'''
+
+#Preemptive Funding: Capital is deployed before work is done (e.g., Participatory Budgeting, Investment DAOs).
+#Ongoing Funding: Continuous capital flow based on real-time feedback (e.g., Bounties, Streaming Payments, ROSCAs).
+#Retroactive Funding: Resources are allocated after impact is demonstrated (e.g., RetroPGF, Hypercerts, Social Impact Bonds).
+
+
+'''B. Liquidity & Capital Flow Models'''
+
+#One-Time Disbursement: Lump-sum grants or bounties.
+#Continuous & Streaming Payments: Auto-adjusting fund flows (e.g., AutoPGF, Revnets).
+#Circular & Reinvestment Models: Funds recirculate within an ecosystem (e.g., Community Currencies, Bonding Curves).
+
+
+===3. Signals (How Are Allocation Decisions Made?)===
+
+Signals provide data points that inform allocators and guide allocation mechanisms.
+
+'''A. Verification Models'''
+
+#Reputation-Based: Trust networks assess eligibility (e.g., Revnets, UBI, Conviction Voting).
+#Data-Driven & Attestation-Based: Impact metrics and oracle data validate claims (e.g., Hypercerts, Social Impact Bonds).
+#Hybrid Verification: Combines qualitative and quantitative assessments (e.g., DAO-based grant approvals, Investment DAOs).
+
+
+'''B. Output Signals'''
+
+#Performance Metrics: Assess effectiveness of past allocations.
+#Condition-Based Signals: Dynamic allocation triggers based on real-world events (e.g., climate oracles for ReFi funding).
+#Network Signals: Peer validation and social capital assessments (e.g., quadratic voting weight adjustments).
+
+=Examples=
+
+==II. Application to Capital Allocation Mechanisms==
+
+This pattern language can be used to break down the structure of several key capital allocation mechanisms:
+
+'''1. Quadratic Funding'''
+
+#Allocator Type: Crowdsourced Allocators (community-driven decision-making).
+#Allocation Model: Preemptive Funding with pooled matching funds.
+#Signals Used: Reputation-Based Signals (weighted community votes to determine fund distribution).
+
+
+'''2. Tunable Quadratic Funding'''
+
+#Allocator Type: Hybrid Allocators (mix of community voting and algorithmic adjustments).
+#Allocation Model: Preemptive or Ongoing Funding with adjustable match weighting.
+#Signals Used: Reputation-Based and Condition-Based Signals (adjusting funding weights dynamically based on predefined criteria).
+
+
+'''3. AutoPGF (Automated Public Goods Funding)'''
+
+#Allocator Type: Algorithmic Allocators (smart contract-driven disbursements).
+#Allocation Model: Ongoing Funding with continuous distribution based on predefined formulas.
+#Signals Used: Data-Driven Signals (onchain metrics and external data oracles trigger fund releases).
+
+
+'''4. RetroPGF (Retroactive Public Goods Funding)'''
+
+#Allocator Type: Hybrid Allocators (community reviewers + algorithmic fund allocation).
+#Allocation Model: Retroactive Funding based on verified past contributions.
+#Signals Used: Data-Driven & Attestation-Based Signals (Hypercerts, reputation scores, impact metrics)."
+
+([https://docs.google.com/document/d/1w-ivyDmBIDoe8Ey-gPDlT2Ua0_6cEqh2O2JPLcy9RZ0/edit?])
+
+[[Category:Crypto_Economy]]

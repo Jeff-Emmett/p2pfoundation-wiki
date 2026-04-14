@@ -1,0 +1,148 @@
+
+'''= "Gardens are digital economies that anyone can help shape".'''
+
+URL = https://gardens-rinkeby.1hive.org/
+
+
+=Description=
+
+Sacha Saint-Leger:
+
+"Gardens is an initiative by 1Hive to create a template for public communities to coordinate shared resources in a bottom-up fashion (essentially taking the best lessons learnt from the 1Hive community and allowing any DAO to implement them in a plug-and-play fashion).
+
+
+A Garden has three main pillars:
+
+* A novel voting system ([[Conviction Voting]])
+
+* A decentralised social contract ([[Community Covenant]])
+
+* A dispute resolution protocol (Celeste)
+
+
+Taken together, they fulfil the promise of effective community-driven on-chain governance."
+
+(https://gardens.substack.com/p/introducing-gardens)
+
+
+=Characteristics=
+
+==[[Conviction Voting]]==
+
+Sacha:
+
+"Conviction voting is the heart of a Garden. It allows folks to signal their preferences continuously rather than forcing them to “make a decision.” From the perspective of a community member, the UX is simplified to just showing up and supporting things you care about.
+
+To quote a passage from '''Jeff Emmett'''’s wonderful introductory post:
+
+- "Conviction Voting offers a novel decision making process that funds proposals based on the aggregated preference of community members, expressed continuously.
+In other words, voters are always asserting their preference for which proposals they would like to see approved, rather than casting votes in a single time-boxed session.
+A member can change their preference at any time, but the longer they keep their preference for the same proposal, the “stronger” their conviction gets.
+This added conviction gives long standing community members with consistent preferences more influence than short term participants merely trying to influence a vote.
+Conviction Voting sidesteps sybil attacks, provides collusion resistance, and mitigates many of the attack vectors of time-boxed voting mechanisms.
+Under conviction voting, the majority doesn’t need to achieve consensus on everything. As such, we get real proportional representation. Community members can propose and support things they care about without fear that a whale will vote them down. In fact, there is no down voting. People with large stakes and strong opinions can’t suppress the community."
+
+
+Proposals simply need enough support to pass – the fewer funds they ask for, the less support required. This means there’s a real sense in which everyone has a voice. The only thing token holders have to think about is whether or not they support something. That’s it.
+
+Under this framework, many divergent initiatives can be proposed and run in parallel. This allows the DAO to explore, experiment, and innovate quickly and seamlessly. If an experiment works, a larger proposal can then be submitted.
+
+One underrated benefit of this is that it allows the DAO to grow as '''a headless brand''', iterating through cycles of divergence and convergence, and continuously reflecting the preferences and interests of token holders (a true living organisation!).
+
+In sum, by giving small token holders the agency to contribute, conviction voting helps lay the foundation for a fiercely loyal community, solving the problems associated with governance attacks, low participation, and the overall inability to effectively prioritise and decide when there are many potential options all competing for consideration at once."
+
+(https://gardens.substack.com/p/introducing-gardens)
+
+
+==[[Community Covenant]]==
+
+Sacha:
+
+"The second pillar of a Garden is the community covenant.2 You can think of it as a constitution or decentralised social contract of sorts.
+
+On a practical level, a covenant is a document, stored on IPFS, which explains what a DAO is about in plain english. It establishes values, rules and customs. And is used to protect the DAO from malicious actors without sacrificing the agency of its members.
+
+The key idea here is that a covenant allows an organisation’s actions to be governed by a subjective set of rules; rules which are either impossible to encode into smart contracts, or which would otherwise result in a complicated and slow-moving organisation.
+
+Take 1Hive’s Covenant, for example:
+
+1Hive is a community of activists seeking to build a future that is more free, fair, open, and humane.
+
+1Hive is also an economic protocol, similar to Bitcoin or Ethereum, where a digital currency, Honey, is issued and distributed programmatically. Unlike Bitcoin or Ethereum, the 1Hive protocol does not narrowly define the set of activities that are valuable but instead relies on community members to guide the distribution process by creating and staking on Honey distribution proposals.
+
+The goal of the 1Hive protocol is to foster a healthy community economy by allocating a steady stream of Honey towards development, maintenance, and improvement of the common goods that bring the most value to the 1Hive community…
+
+Anyone interacting with the 1Hive protocol has to abide by this covenant. In particular, any proposal which violates the spirit of the covenant can be challenged and taken to Celeste (a decentralised court).
+
+In a sentence, a covenant allows a DAO to adhere to an agreement specifying its values, as well as outline subjective rules for what types of proposals are allowed. This unlocks the ability for much more nuanced and complex governance."
+
+(https://gardens.substack.com/p/introducing-gardens)
+
+
+==The [[Celeste Dispute Resolution Protocol]]==
+
+Sacha:
+
+"The third pillar of Gardens, Celeste, serves as the interface for a DAO’s shared values, beliefs and hopes. It provides a way to resolve subjective disputes, and to peacefully enforce the covenant.
+
+More technically, Celeste is a BrightID integrated fork of Aragon Court – the integration with BrightID allows for placing limits on how much stake an individual can add to the system.
+
+While we’ll save the details for a dedicated follow-up post, I think it’s worth mentioning here that Celeste is invoked only if and when an action is challenged (i.e. only in exceptional circumstances).
+
+Once Celeste is invoked, a decentralised (and randomly selected) group of BrightID verified humans – called keepers – is drafted to rule on the dispute (they are tasked with deciding whether or not the disputed action is compatible with that community’s covenant).3
+
+If the keepers decide the proposal is compatible, on-chain execution continues. If they decide it is not, the proposal is blocked.4
+
+By allowing even small token holders to challenge proposals that aren’t in line with the values of the community, Celeste provides a trustless way to uphold a DAO’s core values."
+
+(https://gardens.substack.com/p/introducing-gardens)
+
+
+=Discussion=
+
+==Who should use Gardens==
+
+Sacha Saint-Leger:
+
+"Traditional online communities / open-source projects that have yet to tokenise can use Gardens to tokenise and reward contributions with tokens. An example of a community that has chosen to tokenise using Gardens is Giveth.
+
+Projects with an existing token can use Gardens to grow/cultivate a more participatory community and improve engagement with their community. They can do this by either directing a portion of their treasury or on-chain cash flows into a community-directed pool, or by simply allowing token holders to act as patrons, curating and prioritizing important features and milestones. An example of this type of Garden is Agave.
+
+In sum, the Gardens model applies equally well to communities thinking of launching their own DAO + token, as it does to existing DAOs looking to improve the interface between their core contributors and wider community."
+
+(https://gardens.substack.com/p/introducing-gardens)
+
+
+==[[Multisig Governance]]==
+
+Sacha Saint-Leger:
+
+"Governance by plutocracy is simply not a sustainable way of running a DAO.
+
+In particular, without additional checks in place, there’s the ever-present risk that a whale, or a special interest group, will at some point cause the DAO to take actions that are not in its best interest (or in line with the values of its community).
+
+So far, most DAOs have skirted around this problem by relying on a multisig to officially sign off on proposals (as a sort of insurance layer against a malicious proposal being passed).
+
+In other words, while the community can vote on proposals, these votes are not binding; a small set of trusted community members have to sign off on them. If the multisig doesn’t sign, the system cannot move.
+
+However, while a multisig does act as a check on the power of whales, it doesn’t solve the concentration of power problem: it merely shifts it away from large tokenholders towards a small group of trusted community members.
+
+There is nothing, apart from perhaps reputation, actually stopping the multisig from either executing an action that the community does not agree on, or vetoing an action that the community has advanced.
+
+And even if we assume that this group is honest and will continue to remain so, as the value they secure with their keys increases they become more and more vulnerable as individuals to attacks from others (the law included).
+
+In sum, multisig governance increases the risk born by both multisig holders and token holders, and leads to a somewhat fragile, and rather centralised DAO."
+
+(https://gardens.substack.com/p/introducing-gardens)
+
+[[Category:Peergovernance]]
+[[Category:Democracy]]
+[[Category:Cryptoledger Applications]]
+[[Category:Protocols and Algorithms]]
+[[Category:Crypto Governance]]
+
+[[Category:Peergovernance]]
+[[Category:Democracy]]
+[[Category:Cryptoledger Applications]]
+[[Category:Protocols and Algorithms]]
+[[Category:Crypto Governance]]

@@ -1,0 +1,37 @@
+'''= a local Internet or community Intranet that can survive global outages and serve for local emergencies'''
+
+=Description=
+
+John Robb:
+
+"Most of the local loops (from telco fiber to cable company coaxial) currently in place and/or being installed in the US are dumb (I suspect it is the same globally). They simply route data from local customers to regionally clustered corporate server farms and then outwards/back. This means that any disconnection (physical or logical fault) between local customers and these remote systems will result in a complete cessation of service. To correct this deficiency, communities need to start to think more like a corporation: security of data services are considered central to a company's survival. So, as part of future negotiations with cable/telcos, communities should request that companies allow them to piggyback on their "dumb" networks to create a smart local loops."
+(http://globalguerrillas.typepad.com/globalguerrillas/2008/07/resilient-commu.html)
+
+
+=Characteristics=
+
+John Robb:
+
+
+This would entail:
+
+* A high availability local network for emergencies. A local emergency network that connects all homes and business in the area by accessing the local aggregation nodes of cable/telco operators (which is actually a relatively trivial/inexpensive network exercise). It should become the default network if access to the greater Internet fails. Optimally, the network should sit astride both cable and telco services to provide a seamless community "footprint."
+    
+* High availability servers (computers that host Web sites) in the local loop. Servers that are on the community network and located within the communities environs. Back-up power should be provided to ensure that these servers maintain high up time.
+    
+* (futures) Community coordination software to sit on these servers. Easy to use and edit social software: blogs, wikis, etc. If the market is large enough, there will be software packages (hopefully open source) that replicate the functionality of a fully functional emergency response system (i.e. locally cached Google maps, etc.). In terms of operating this software, most communities could ask schools/boy scouts/etc. to maintain the software, even during an emergency (young people are much more likely to have the skill sets to do this w/o specific training)."
+(http://globalguerrillas.typepad.com/globalguerrillas/2008/07/resilient-commu.html)
+
+
+=Examples=
+
+Case study in San Diego fires: http://globalguerrillas.typepad.com/globalguerrillas/2008/02/journal-web-bas.html
+
+
+[[Category:Geography]]
+
+[[Category:Technology]]
+
+[[Category:Security]]
+
+[[Category:Localization]]

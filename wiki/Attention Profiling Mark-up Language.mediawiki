@@ -1,0 +1,104 @@
+'''= APML is an XML-based format for capturing a person's interests and dislikes.'''
+
+URL = http://www.apml.org/ ; http://apml.pbwiki.com/
+
+
+=Definition=
+
+"APML allows you to share your own attention data. That's data about what you have given your attention to; whether by browsing websites, reading RSS feeds or listening to music. You could then take your attention data profile and pass it to another website which would then be able to automatically customise itself to your preferences or interests."
+(http://www.bbc.co.uk/blogs/radiolabs/2008/01/apml_isnt_just_for_humans.shtml)
+
+
+=Description=
+
+"APML will allow users to export and use their own personal Attention Profile in much the same way that OPML allows them to export their reading lists from Feed Readers.
+
+The idea is to boil down all forms of Attention Data – including Browser History, OPML, Attention.XML, Email etc – to a portable file format containing a description of ranked user interests.
+
+Imagine being able to export your Attention Profile from Amazon and plugging it into Digg to get an instantly customized view of the top Digg stories most relevant to your interests."
+(http://www.particls.com/blog/2006/02/apml-opml-for-attention.html)
+
+
+=Discussion=
+
+
+==Five Benefits of Using APML==
+
+Elias Bizannes:
+
+"filtering, accountability, privacy, shared data, and you being boss.
+
+
+'''1) Filtering'''
+
+If a company supports APML, they are using a smart standard that other companies use to profile you. By ranking concepts and authors for example, they can use your APML file in the future to filter things that might interest you. As I have such a high ranking for Marjolein, when Bloglines implements APML, they will be able to use this information to start prioritising content in my RSS reader. Meaning, of the 1000 items in my bloglines reader, all the blog postings from her will have more emphasis for me to read whilst all the ones about Valleywag will sit at the bottom (with last nights trash).
+
+
+'''2) Accountability'''
+
+If a company is collecting implicit data about me and trying to profile me, I would like to see that infomation thank you very much. It’s a bit like me wearing a pink shirt at a party. You meet me at a party, and think “Pink - the dude must be gay”. Now I am actually as straight as a doornail, and wearing that pink shirt is me trying to be trendy. However what you have done is that by observation, you have profiled me. Now imagine if that was a web application, where this happens all the time. By letting them access your data - your APML file - you can change that. I’ve actually done this with Particls before, which supports APML. It had ranked a concept as high based on things I had read, which was wrong. So what I did, was changed the score to -1.0 for one of them, because that way, Particls would never show me content on things it thought I would like.
+
+
+'''3) Privacy'''
+
+I joined the APML workgroup for this reason: it was to me a smart away to deal with the growing privacy issue on the web. It fits my requirements about being privacy compliant:
+
+    
+* who can see information about you
+
+    
+* when can people see information about you:
+
+    
+* what information they can see about you
+
+The way APML does that is by allowing me to create ‘profiles’ within my APML file; allowing me to export my APML file from a company; and by allowing me to access my APML file so I can see what profile I have.
+
+
+'''4) Shared data'''
+
+An APML file can, with your permission, share information between your web-services. My concepts ranking books on Amazon.com, can sit alongside my RSS feed rankings. What’s powerful about that, is the unintended consequences of sharing that data. For example, if Amazon ranked what my favourite genres were about books - this could be useful information to help me filter my RSS feeds about blog topics. The data generated in Amazon’s ecosystem, can benefit me and enjoy a product in another ecosystem, in a mutually beneficial way.
+
+
+'''5) You’re the boss!'''
+
+By being able to generate APML for the things you give attention to, you are recognising the value your attention has - something companies already place a lot of value on. Your browsing habits can reveal useful information about your personality, and the ability to control your profile is a very powerful concept. It’s like controlling the image people have of you: you don’t want the wrong things being said about you."
+(http://liako.biz/2007/10/explaining-apml-what-it-is-why-you-want-it/)
+
+
+=Examples=
+
+From Robin Good:
+
+"you can make use of APML using the following sites and services:
+
+    
+* Particls is a great way of receiving alerts about the news that interests you most in a news ticker, sidebar and pop-up format on your Windows desktop (Mac version coming soon). Particls creates a hierarchy from the news sources you subscribe to, highlighting the more important news and slightly downplaying the news likely to be of less interest to you.
+
+      
+Particls creates an APML file using the data it gathers from your news selection, along with that collected from your IM conversations, emails, browsing habits and documents. This APML file is then used to create a hierarchy of alerts for the latest news likely to be of interest to you
+
+    
+* Engagd is a service tailor-made to creating your APML file through your personal selection of RSS feeds. It also allows you to filter your RSS feeds according to your evolving profile. You can see a great write up of how this works in practice in Emily Chang's write-up of her own use of Engagd to create a personal data stream.
+
+    
+* Cluztr is a social network based on sharing your clickstream (the things you click on as you browse the web) with friends. Cluztr creates an APML file based on your browsing habits, and uses it to automatically generate tags for other users to explore content through
+
+    
+* Dandelife is a service for creating a socially powered biography, gathering your notes on the people you've met, the places you've been, the events you've been to and more, and creating an APML file from the results
+
+    
+* Additionally the popular Newsgator and Bloglines RSS services have adopted or promised future adoption of APML to aid your feed reading."
+(http://www.masternewmedia.org/online_marketing/attention-profiling-apml/apml-beginners-guide-attention-profile-20071113.htm)
+
+=More Information=
+
+#Wikipedia article at http://en.wikipedia.org/wiki/Attention_Profiling_Mark-up_Language [http://en.wikipedia.org/wiki/APML]
+#See also our entries on [[Attention]], [[Attention Data]], [[Lifelogging]] and [[Personal Data Streams]]
+#The APML FAQ at http://apml.pbwiki.com/FAQ
+#[http://www.bbc.co.uk/blogs/radiolabs/2008/01/apml_isnt_just_for_humans.shtml Using APML for radio]
+#Robin Good's introduction to [http://www.masternewmedia.org/online_marketing/attention-profiling-apml/apml-beginners-guide-attention-profile-20071113.htm Attention Profiling]
+
+[[Category:Encyclopedia]]
+
+[[Category:Standards]]

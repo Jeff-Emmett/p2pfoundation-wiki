@@ -1,0 +1,29 @@
+'''= better approach to mobile ad-hoc networking'''
+
+URL = https://www.open-mesh.net/batman
+
+
+=Description=
+
+"B.A.T.M.A.N. (better approach to mobile ad-hoc networking) is a new routing protocol for multi-hop ad-hoc mesh networks."
+
+How it works:
+
+"The approach of the B.A.T.M.A.N algorithm is to divide the knowledge about the best end-to-end paths between nodes in the mesh to all participating nodes. Each node perceives and maintains only the information about the best next hop towards all other nodes. Thereby the need for a global knowledge about local topology changes becomes unnecessary. Additionally, an event-based but timeless (timeless in the sense that B.A.T.M.A.N never schedules nor timeouts topology information for optimising it’s routing decisions) flooding mechanism prevents the accruement of contradicting topology information (the usual reason for the existence of routing loops) and limits the amount of topology messages flooding the mesh (thus avoiding overly overhead of control-traffic). The algorithm is designed to deal with networks that are based on unreliable links.
+
+The protocol algorithm of B.A.T.M.A.N can be described (simplified) as follows. Each node transmits broadcast messages (we call them originator messages or OGMs) to inform the neighboring nodes about it’s existence. These neighbors are re-broadcasting the OGMs according to specific rules to inform their neighbors about the existence of the original initiator of this message and so on and so forth. Thus the network is flooded with originator messages. OGMs are small, the typical raw packet size is 52 byte including IP and UDP overhead. OGMs contain at least the address of the originator, the address of the node transmitting the packet, a TTL and a sequence number."
+(http://boomeroo.org/?p=5032)
+
+=More Information=
+
+#Used by [[ROBIN]] project
+#[[Open Mesh Routing Protocols]]
+#[[Open Source Mesh Networking]]
+#[[Wireless Commons]]
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

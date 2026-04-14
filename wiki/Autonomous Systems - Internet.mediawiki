@@ -1,0 +1,40 @@
+=Description=
+
+Rudolph van der Berg:
+
+"At the moment, the Internet consists of over 25,000 Autonomous Systems (AS). An Autonomous System can independently decide who to exchange traffic with on the 'Net, and it isn't dependent upon a third party for access. 
+
+Networks of Internet service providers, hosting providers, telecommunications monopolists, multinationals, schools, hospitals and even individuals can be Autonomous Systems; all you need is a single "AS number" and a block of provider independent IP-numbers. These can be had from a regional Internet registry (like RIPE, ARIN, APNIC, LACNIC and AFRINIC). Though one network may be larger or smaller, technically and economically they have equal possibilities. 
+
+(Most organizations and individuals do not interconnect autonomously to other networks, but connect via an ISP. One could say that an end-user is "buying transit" from his ISP.) 
+
+
+=Discussion=
+
+
+==Transit and Peering==
+
+Rudolph van der Berg:
+
+"In order to get traffic from one end-user to another end-user, these networks need to have an interconnection mechanism. These interconnections can be either direct between two networks or indirect via one or more other networks that agree to transport the traffic.
+
+Most network connections are indirect, since it is nearly impossible to interconnect directly with all networks on the globe. In order to make it from one end of the world to another, the traffic will often be transferred through several indirect interconnections to reach the end-user. 
+
+The economic arrangements that allow networks to interconnect directly and indirectly are called "peering" and "transit": 
+
+Peering: when two or more autonomous networks interconnect directly with each other to exchange traffic. This is often done without charging for the interconnection or the traffic. 
+Transit: when one autonomous network agrees to carry the traffic that flows between another autonomous network and all other networks. Since no network connects directly to all other networks, a network that provides transit will deliver some of the traffic indirectly via one or more other transit networks. A transit provider's routers will announce to other networks that they can carry traffic to the network that has bought transit. The transit provider receives a "transit fee" for the service. 
+
+The transit fee is based on a reservation made up-front for the number of Mbps. Traffic from (upstream) and to (downstream) the network is included in the transit fee; when you buy 10Mbps/month from a transit provider you get 10 up and 10 down. The traffic can either be limited to the amount reserved, or the price can be calculated afterward (often leaving the top five percent out of the calculation to correct for aberrations). Going over a reservation may lead to a penalty. "
+(http://arstechnica.com/guides/other/peering-and-transit.ars)
+
+
+=More Information=
+
+#[[Peering]]
+#[[Internet Governance]]
+
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

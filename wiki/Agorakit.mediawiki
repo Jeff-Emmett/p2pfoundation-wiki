@@ -1,0 +1,99 @@
+<big>[https://www.agorakit.org Agorakit] is web-based, open source organization tool for citizens collectives and similar projects. By creating collaborative groups, people can discuss topics, organize events, store files and keep everyone updated as needed.</big>
+
+Agorakit is a forum, calendar, file manager, mapping tool and email notifier.
+
+It is being used by several citizen initiative like "[https://participer.toutautrechose.be Tout autre chose]" and "[http://deelnemen.hartbovenhard.be Hart boven Hard]" in Belgium and elsewhere.
+
+It is open source (GPL) and in active development. We are currently searching and evaluating various decision making ideas to integrate in the tool.
+
+We are always seeking for help, feedback, and publicity to attract more help.
+
+Development happens on [https://github.com/philippejadin/agorakit Github]
+
+The presentation website is here : https://www.agorakit.org
+
+A demo can be tested on https://demo.agorakit.org
+
+== Features ==
+=== Create groups ===
+
+    
+* Create an unlimited amount of groups
+* The group can be open (anyone can join) or private (invite only)
+* The group can have one or more admins
+* Each group has a discussion area, a calendar, a file repository, a member list & map.
+* Only members can use the discussion area, calendar and files
+* Content is public in public groups, and private in private groups (simple security model everyone understands)
+
+=== Discussions ===
+
+* Create discussion topics
+* Reply to topics with comments
+* Mention others in comments using @name (they get notified)
+* Mention files using f: (autocomplete opens)
+* Mention other discussions using d: (autocomplete opens)
+
+=== Calendar ===
+
+* Create events
+* List upcoming events as a list or as a dynamic calendar
+* Show geolocalized events on a map
+* Global and per group calendar
+* iCal feed for each calendar
+* RSS
+* Embed elsewhere using iframes
+
+=== Files ===
+
+* Upload & tag several files at once
+* Quick search among files by author, filename and tags
+* Preview images / download
+* re-tag files
+* Mention files in comments
+
+=== Members ===
+
+* Access a list of members (global / per group)
+* Contact others without leaking your/their email (privacy)
+* Check what others are up to (activity feed)
+* Fill your profile with portrait, bio, address (if you want)
+
+=== Notifications / emails ===
+
+* For each group, choose how often you want to be notified (every hour for the hardcore, everyday to keep your mailbox cool, every week or every month)
+* Auto login to your account from "Reply" links inside the notification emails you receive (great time saving)
+* Get instant notifications when someone mentions you (for urgent matters)
+
+=== Admin ===
+
+* Get stats on everything
+* Mass invite members using their email
+* Mass add existing members to groups
+* Settings control panel (in progress)
+
+=== Architecture ===
+
+* Standard Laravel structured application. If you know Laravel, you can work with Agorakit easily
+* Simple structure, no single page app complexities
+* Bootstrap based UI
+* Simple DB schema
+* Simple file storage scheme (per group, per file id)
+
+=== Privacy ===
+
+* Host it where you want
+* Your data is yours
+* No leakage of emails
+* Geolocalization of users (on a voluntary basis) is randomized by ~100 meters
+* Open source you can study and trust
+
+
+[[Category:Democracy]]
+
+[[Category:Facilitation]]
+
+[[Category:Belgium]]
+
+[[Category:Peergovernance]]
+
+[[Category:Open]]

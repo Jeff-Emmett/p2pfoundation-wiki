@@ -1,0 +1,192 @@
+
+'''* Report: Defending​ ​Internet​ ​Freedom​ ​through​ ​Decentralization: Back​ ​to​ ​the​ ​Future? By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman. The​ ​Center​ ​for​ ​Civic​ ​Media​ ​& The​ ​Digital​ ​Currency​ ​Initiative. MIT Media Lab, 2017'''
+
+URL = http://dci.mit.edu/assets/papers/decentralized_web.pdf
+
+
+=Executive Summary=
+
+"The Web is a key space for civic debate and the current battleground for protecting freedom of
+expression. However, since its development, the Web has steadily evolved into an ecosystem of
+large, corporate-controlled mega-platforms which intermediate speech online. In many ways this
+has been a positive development; these platforms improved usability and enabled billions of
+people to publish and discover content without having to become experts on the Web’s intricate
+protocols.
+
+But in other ways this development is alarming. Just a few large platforms drive most traffic to
+online news sources in the U.S., and thus have enormous influence over what sources of
+information the public consumes on a daily basis. The existence of these consolidated points of
+control is troubling for many reasons. A small number of stakeholders end up having outsized
+influence over the content the public can create and consume. This leads to problems ranging
+from censorship at the behest of national governments to more subtle, perhaps even
+unintentional, bias in the curation of content users see based on opaque, unaudited curation
+algorithms. The platforms that host our networked public sphere and inform us about the world
+are unelected, unaccountable, and often impossible to audit or oversee.
+
+At the same time, there is growing excitement around the area of decentralized systems, which
+have grown in prominence over the past decade thanks to the popularity of the cryptocurrency
+Bitcoin. Bitcoin is a payment system that has no central points of control, and uses a novel
+peer-to-peer network protocol to agree on a distributed ledger of transactions, the blockchain.
+Bitcoin paints a picture of a world where untrusted networks of computers can coordinate to
+provide important infrastructure, like verifiable identity and distributed storage. Advocates of
+these decentralized systems propose related technology as the way forward to “re-decentralize”
+the Web, by shifting publishing and discovery out of the hands of a few corporations, and back
+into the hands of users. These types of code-based, structural interventions are appealing
+because in theory, they are less corruptible and resistant to corporate or political regulation.
+Surprisingly, low-level, decentralized systems don’t necessarily translate into decreased market
+consolidation around user-facing mega-platforms.
+
+In this report, we explore two important ways structurally decentralized systems could help
+address the risks of mega-platform consolidation: First, these systems can help users directly
+publish and discover content directly, without intermediaries, and thus without censorship. All of
+the systems we evaluate advertise censorship-resistance as a major benefit. Second, these
+systems could indirectly enable greater competition and user choice, by lowering the barrier to
+entry for new platforms. As it stands, it is difficult for users to switch between platforms (they
+must recreate all their data when moving to a new service) and most mega-platforms do not
+interoperate, so switching means leaving behind your social network. Some systems we
+evaluate directly address the issues of data portability and interoperability in an effort to support
+greater competition.
+
+
+We offer case studies of the following decentralized publishing projects:
+
+* [[Freedom​ ​Box]], a system for personal publishing
+* [[Diaspora]] a federated social network
+* [[Mastodon]] a federated Twitter-like service, 
+* [[Blockstack]]​, a distributed system for online identity services
+* IPFS​ ​([[Interplanetary​ ​File​ ​System]]),​ a distributed storage service with a proposed mechanism to
+incentivize resource sharing
+* [[Solid]]​ ​(Social​ ​Linked​ ​Data),​ a linked-data protocol that could act as a back-end for data sharing
+between social media networks
+* [[Appcoins]],​ a digital currency framework that enables users to financially participate in
+ownership of platforms and protocols
+* [[Steemit]],​ an online community that uses an appcoin to incentivize development and community
+participation in a social network
+
+
+Considering these projects as a whole, we found a robust and fertile community of
+experimenters developing promising software. Many of the projects in this report are working on
+deeply exciting new ideas. Easy to use, peer-to-peer distributed storage systems change the
+landscape for content censorship and archiving. Appcoins may transform how new projects are
+launched online, making it possible to fund open-source development teams focused on
+developing shared protocols instead of independent companies. There is also a renewed
+interest in creating interoperable standards and protocols that can cross platforms.
+
+However, we have reason to doubt that these decentralized systems alone will address the
+problems of exclusion and bias caused by today’s mega-platforms. For example, distributed,
+censorship-resistant storage does not help address problems related to bias in curation
+algorithms – content that doesn’t appear at the top of your feed might as well be invisible, even
+if it’s technically accessible. And though censorship-resistance and decentralization are noble
+goals that will undoubtedly appeal to tech-savvy and politically inclined users, most users are
+not ideologically motivated and have no interest in shouldering the additional cost and
+responsibility of running these complex systems directly. They will want to engage with the Web
+through friendlier, third-party publishing platforms, and these platforms will suffer from the same
+forces that drive consolidation today.
+
+It’s important to remember that today’s mega-platforms are built on top of the Web’s already
+distributed and open protocols. The real issue to address is this natural tendency towards
+market consolidation. Underlying these concerns is the predominant business model for
+platforms on the Web – user-targeted advertising. Advertising based business models
+encourage the consolidation and the hoarding of user views and data, driving platforms to
+become ever larger.
+
+
+The challenges decentralized systems as a whole face are as follows:
+
+* User​ ​and​ ​developer​ ​adoption.​ Technical feasibility alone does not guarantee the sort of
+widespread adoption necessary to build a useful social network. Some of the more mature tools
+developed in this space have faced serious difficulties in attracting a permanent user base, and
+the problems those platforms suffer from may hinder the growth of new systems as well. Social
+networks, in particular, are difficult to bootstrap due to network effects. We generally join social
+networks because our friends are already there. Systems like Steemit and Diaspora are
+currently incompatible with existing social networks, planning to supersede existing communities
+like Reddit and Facebook, rather than integrate with them. Taking a competitive, rather than
+complementary, position in the market creates a difficult barrier to entry for new projects.
+
+* Similarly, interoperable protocols require adoption at the developer level. Solid, which hopes to
+bridge between existing and novel social networks, faces a serious adoption challenge: Why
+should developers choose to switch to Solid’s new data model, and what's the incentive for
+Facebook to make their data interoperable without legal requirements forcing them to do so?
+
+* Security.​ ​ Another major issue is security. “Decentralized” networks generally means anyone
+can join, which implies these systems have to take strong precautions to enforce security,
+usually by pushing the responsibility of security to users in the form of managing public key
+cryptography. It is extremely difficult to develop software that is both cryptographically secure
+and easy to use. Most of these systems, like IPFS and Blockstack, do not yet have a good
+story for how users will manage their private cryptographic keys and gain a good mental model
+of complex security protocols. As companies like Signal, an encrypted messaging service, have
+recently demonstrated, this is not impossible to achieve, but it requires an intense focus on
+usability that we did not see in many of the tools we review in this report.
+
+* Monetization​ ​and​ ​incentives.​ ​Given that user data is so important for monetizing these
+platforms, there is little incentive for the mega-platforms to adopt interoperable protocols – they
+would rather own all the data. Similarly, content that is viewed and clicked on the most
+generates the most advertising revenue, so mega-platforms have an incentive to prioritize viral,
+attention-grabbing or feel-good content. Steemit offers a fascinating alternative model to
+prioritizing and monetizing content. However, it replaces opacity with a semi-transparent free
+market model that concentrates power in a few hands and, if not carefully crafted, might even
+incentivize more clickbait. Designing robust reward mechanisms for community-governed
+content is still an open problem, but if solved, this could be integral to placing curation control in
+the hands of a community.
+
+* Resisting​ ​market​ ​consolidation?​ Platforms benefit from economies of scale in multiple ways –
+it’s cheaper to acquire resources like storage and servers in bulk and as platforms become
+larger they become more useful as a social network and usually, more profitable. Even in
+decentralized systems like Bitcoin, there has been a natural market consolidation in the form of
+large mining pools. This type of consolidation into a few super-participants might be inevitable
+due to economies of scale. We are increasingly persuaded that this isn't necessarily a bad thing,
+and that a more realistic goal might be the development of a robust, competitive marketplace
+that offers a range of ground rules for online speech, rather than a return to a purely
+peer-to-peer architecture for communication online.
+
+
+Recommendations:​ We advise investors–whether motivated by civic or fiscal concerns–both to
+watch this space closely and to advocate for the pre-conditions that we believe will enable a
+healthier marketplace for online publishing. A precondition for the success of these distributed
+platforms is a shift towards user-controlled data, the ownership of a user’s social graph and her
+intellectual property created online. It will be difficult for new platforms to develop without
+widespread support for efforts towards data portability and rights over data ownership.
+
+Data portability also enables new models for aggregation.
+
+Small, thoughtfully curated news sources will be made more powerful by having access to the
+user data currently locked inside mega-platforms, but right now, federated clients that
+interoperate between different platforms are borderline illegal – fixing this may require adjusting
+overly broad regulations, like the Digital Millennium Copyright Act. We believe that these
+user-controlled data rights are essential to develop a more robust market and allow new efforts
+to emerge from existing communities. Though individual users might not directly care about or
+understand these rights, their adoption will free developers to create applications that leverage
+users’ existing data, so that they can provide compelling, interesting new experiences, even with
+a small user base.
+
+In envisioning a marketplace for open speech platforms that support more generative and
+censorship-resistant discussions, we recommend focusing on supporting existing efforts that
+provide alternatives to Facebook’s opaque curation and ranking. These alternatives might look
+more like Reddit's sub-communities, with different rule sets to enable different types of
+conversation, overseen and administered by members of the community with a system for due
+process when contentious issues arise.
+
+Funding developers directly to create a diverse ecosystem of publishing platforms and curation
+websites is another place to make a difference. In particular, foundations are in an excellent
+place to fund the development of user-friendly software to implement common security practices
+that are common across many applications. An example of this is Let’s Encrypt, which makes
+using secure HTTP (HTTPS) easier for small website administrators. Most small platforms do
+not have the resources to directly hire experts in usability and security.
+
+Another fascinating space to watch and explore is that of Appcoins. Recently there has been a
+dramatic upsurge in the adoption of appcoins as a mechanism for funding new projects and
+platforms. Appcoins potentially provide a way to circumvent the existing open-source or
+VC-funded software development models to create systems where users collectively own their
+data. Creating an alternative business model to advertising could end up pushing the markets to
+create entirely new, different types of applications than the ones we’ve seen so far, which
+mainly rely on user data and views. New funding models means smaller projects could more
+easily bootstrap small, personalized communities. However, this space also has a lot of
+potential for scams, and it might be unreasonable to expect users to manage a financial stake in
+many different networks."
+
+
+[[Category:Media]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Articles]]

@@ -1,0 +1,181 @@
+URL = http://www.openhardwaresummit.org/license/
+
+
+=Context=
+
+Bryan Bishop:
+
+"This is a draft definition of open source hardware. Note that this
+isn't a license, or a legal mechanism for open source hardware, but a
+definition for whether or not a license might qualify as an open
+source hardware license."
+ 
+
+ 
+=Draft Summary =
+
+This (draft) definition is the product of discussion between attendees of the Opening Hardware workshop at Eyebeam (New York City), March 17, 2010.
+
+"Open-source hardware is that for which its designer: 
+
+*provides design files (in the preferred format for making modifications to them) 
+*allows the modification and redistribution of the design files 
+*allows the manufacture, sale, distribution, and use of devices from the design files or modifications of the design files 
+*without discrimination against persons, groups, or fields of endeavor. Additionally, the designer must release under an open-source license any software it has developed that is essential to the proper functioning of the device. 
+
+
+The designer may require others to: 
+
+*provide attribution when distributing design files based on the original designer's 
+*provide attribution when manufacturing devices based on the original designer's design files or derivatives thereof 
+*release as open-source hardware devices based on the original designer's design files or derivatives thereof 
+
+
+Manufacturers of a derivative device must not: 
+
+*imply that the device is manufactured, tested, warrantied, guaranteed, or otherwise sanctioned by the original designer 
+*make use of any trademarks owned by the original designer without explicit permission 
+
+We also recognize that open-source is only one way of sharing information about hardware and encourage and support all forms of openness and collaboration, whether or not they fit this definition."
+(http://freedomdefined.org/OSHW)
+
+
+
+=Open Source Hardware (OSHW) Definition version 1.0=
+
+==Open Source Hardware (OSHW) Statement of Principles 1.0==
+
+Open source hardware is hardware whose design is made publicly available so that anyone can study, modify, distribute, make, and sell the design or hardware based on that design. The hardware's source, the design from which it is made, is available in the preferred format for making modifications to it. Ideally, open source hardware uses readily-available components and materials, standard processes, open infrastructure, unrestricted content, and open-source design tools to maximize the ability of individuals to make and use hardware. Open source hardware gives people the freedom to control their technology while sharing knowledge and encouraging commerce through the open exchange of designs.
+
+
+==Open Source Hardware (OSHW) Definition 1.0==
+
+OSHW Draft Definition 1.0 is based on the Open Source Definition for Open Source Software and draft OSHW definition 0.5. The definition is derived from the Open Source Definition, which was created by Bruce Perens and the Debian developers as the Debian Free Software Guidelines. Videos and Documentation of the Opening Hardware workshop which kicked off the below definition are available here. Please join the conversation about the definition here
+
+
+'''Introduction'''
+
+Open Source Hardware (OSHW) is a term for tangible artifacts -- machines, devices, or other physical things -- whose design has been released to the public in such a way that anyone can make, modify, distribute, and use those things. This definition is intended to help provide guidelines for the development and evaluation of licenses for Open Source Hardware.
+
+Hardware is different from software in that physical resources must always be committed for the creation of physical goods. Accordingly, persons or companies producing items ("products") under an OSHW license have an obligation to make it clear that such products are not manufactured, sold, warrantied, or otherwise sanctioned by the original designer and also not to make use of any trademarks owned by the original designer.
+
+The distribution terms of Open Source Hardware must comply with the following criteria:
+
+
+'''1. Documentation'''
+
+The hardware must be released with documentation including design files, and must allow modification and distribution of the design files. Where documentation is not furnished with the physical product, there must be a well-publicized means of obtaining this documentation for no more than a reasonable reproduction cost, preferably downloading via the Internet without charge. The documentation must include design files in the preferred format for making changes, for example the native file format of a CAD program. Deliberately obfuscated design files are not allowed. Intermediate forms analogous to compiled computer code -- such as printer-ready copper artwork from a CAD program -- are not allowed as substitutes. The license may require that the design files are provided in fully-documented, open format(s).
+
+
+'''2. Scope'''
+
+The documentation for the hardware must clearly specify what portion of the design, if not all, is being released under the license.
+
+
+'''3. Necessary Software'''
+
+If the licensed design requires software, embedded or otherwise, to operate properly and fulfill its essential functions, then the license may require that one of the following conditions are met:
+
+a) The interfaces are sufficiently documented such that it could reasonably be considered straightforward to write open source software that allows the device to operate properly and fulfill its essential functions. For example, this may include the use of detailed signal timing diagrams or pseudocode to clearly illustrate the interface in operation.
+
+b) The necessary software is released under an OSI-approved open source license.
+
+
+'''4. Derived Works'''
+
+The license shall allow modifications and derived works, and shall allow them to be distributed under the same terms as the license of the original work. The license shall allow for the manufacture, sale, distribution, and use of products created from the design files, the design files themselves, and derivatives thereof.
+
+
+'''5. Free redistribution'''
+
+The license shall not restrict any party from selling or giving away the project documentation. The license shall not require a royalty or other fee for such sale. The license shall not require any royalty or fee related to the sale of derived works.
+
+
+'''6. Attribution'''
+
+The license may require derived documents, and copyright notices associated with devices, to provide attribution to the licensors when distributing design files, manufactured products, and/or derivatives thereof. The license may require that this information be accessible to the end-user using the device normally, but shall not specify a specific format of display. The license may require derived works to carry a different name or version number from the original design.
+
+
+'''7. No Discrimination Against Persons or Groups'''
+
+The license must not discriminate against any person or group of persons.
+
+
+'''8. No Discrimination Against Fields of Endeavor'''
+
+The license must not restrict anyone from making use of the work (including manufactured hardware) in a specific field of endeavor. For example, it must not restrict the hardware from being used in a business, or from being used in nuclear research.
+
+
+'''9. Distribution of License'''
+
+The rights granted by the license must apply to all to whom the work is redistributed without the need for execution of an additional license by those parties.
+
+
+'''10. License Must Not Be Specific to a Product'''
+
+The rights granted by the license must not depend on the licensed work being part of a particular product. If a portion is extracted from a work and used or distributed within the terms of the license, all parties to whom that work is redistributed should have the same rights as those that are granted for the original work.
+
+
+'''11. License Must Not Restrict Other Hardware or Software'''
+
+The license must not place restrictions on other items that are aggregated with the licensed work but not derivative of it. For example, the license must not insist that all other hardware sold with the licensed item be open source, nor that only open source software be used external to the device.
+
+
+'''12. License Must Be Technology-Neutral'''
+
+No provision of the license may be predicated on any individual technology, specific part or component, material, or style of interface or use thereof.
+
+
+
+==Afterword==
+
+The signatories of this Open Source Hardware definition recognize that the open source movement represents only one way of sharing information. We encourage and support all forms of openness and collaboration, whether or not they fit this definition.
+[edit] Licenses and Hardware
+
+In promoting Open Hardware, it is important to make it clear to designers the extent to which their licenses actually can control their designs. Under U.S. law, and law in many other places, copyright does not apply to electronic designs. Patents do. The result is that an Open Hardware license can in general be used to restrict the plans but not the manufactured devices or even restatements of the same design that are not textual copies of the original. The applicable section of copyright law is 17.102(b), which says:
+
+- In no case does copyright protection for an original work of authorship extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery, regardless of the form in which it is described, explained, illustrated, or embodied in such work."
+(http://freedomdefined.org/OSHW)
+
+=Discussion=
+
+Bunnie (the creator of [[Chumby]]):
+
+"The way the current definition is written, in order to comply with the OSHW definition, the system integrator bears the burden of choosing only components for which they can also share all required software to fulfill essential functions under an OSI-approved open source license. So, for example, there are no wifi solutions that I know of which comply to this definition — even the ubiquitous rt73 chipset, which offers open-source drivers, requires a firmware blob which is closed-source. Other interesting chips that do not comply to this definition include probably most cellular phone chipsets, bluetooth chipsets, graphics chips, camera chips, and surprisingly, most SoC CPUs. Every ARM SoC that I’ve encountered contains a small bit of internal ROM (32k or so — hey, that was a whole operating system back in the 80’s!) that’s written by the chip maker and that piece of code is closed-source (this includes the i.MX233 and the PXA168 used inside chumby products), and many ARM SoC’s have NDA-only datasheets for the register set (such as every Marvell CPU), which takes it yet another step toward closed-ness. Even the ubiquitous Intel desktop CPUs utilize microcode updates, which I believe are closed-source (there are F/OSS-friendly tools for deploying the microcode, but the actual microcode itself is distributed as a binary, afaik). Furthermore, systems that incorporate some proprietary code (like chumby, which uses a closed-source Flash licensed from Adobe), cannot release all code required to fulfill essential functions, such as playing apps. 
+
+Thus, as the OSHW definition is writ, it excludes the possibility of making any open source gadget with compelling, popular consumer features (such as wifi, cellular connectivity, chip cameras, high-performance and low power ARM CPUs) because most of the components required to achieve these features cannot comply to the OSHW definition version 0.3. 
+
+I don’t think that excluding all these devices from the OSHW definition was intentional; the intention of the software-release clause is well-meaning, but I think the definition needs some tweaking. I’d suggest that the burden of responsibility should be limited to the person or organization releasing the OSHW. Thus, one should only be responsible for sharing the source and documentation for the components developed with your own resources. For example, if you are a board or system-level OSHW provider, then the best you can do is release the schematics and layout for your design, and any code you wrote to tie the pieces together in your system; you are not required to also release code and datasheets on behalf of your chip vendors to customers in order to claim OSHW-compliance. While this is not an ideal solution in terms of open-ness, I think it finds a balance between providing featureful, useful, and modern designs to consumers while giving them a toe-hold to grab onto if they desired to modify, extend or repair their purchased hardware. 
+
+The other potential issue I have with the definition is the clause where documentation must be released “in the preferred form for which a hardware developer would modify the design”. This term was more or less borrowed directly from the GPL, and by and large that clause makes sense in the software world because ASCII text is nearly universally accepted as the form for source, and there are a multitude of interoperable text editors out there, with the single biggest problem being CR/LF translations and maybe unicode integration. 
+
+Unfortunately, in the hardware world, there is no consensus over a machine-readable intermediate schematic or circuit board layout format that also binds in all the interesting metadata you may need to quickly modify the design. In fact, the situation is much worse because a few of the biggest names in consumer electronics hardware actually have in-house proprietary schematic capture and board layout programs that don’t interoperate with anything, so they can play the game of releasing their files in their preferred form for modification and claiming OSHW compliance, which is essentially useless to the community at large since the tools are unavailable to read them. 
+
+As a result, I’m a proponent of requiring, in all cases, a minimum of a human-readable schematic provided in a common format (PDF, PNG, etc.) as the primary form for interchange, and optionally a machine readable format to the discretion of the particular designer. To me, the machine-readable format is less important than a quick human-readable format; I would prefer a PDF over an Eagle file any day (Eagle is a popular interchange format among the Arduino community), especially since I don’t use Eagle or even have a copy of it installed on my machine." 
+(http://www.bunniestudios.com/blog/?p=1224)
+
+=History=
+
+"In early 2010, Ayah Bdeir, then a Creative Commons fellow, was trying to turn her project littleBits (a system of open source hardware modules) into a company. She consulted with her Creative Commons advisor, John Wiibanks, with whom she had several discussions about how to launch, run, and protect open source hardware enterprises. Together they decided to hold a workshop to share the questions and possible solutions they had been debating with other open-hardware developers. The Opening Hardware workshop took place at Eyebeam in NYC on March 2010 (Eyebeam 2010) and coincided with a major Arduino meeting which had brought several stakeholders to the city. Amongst those present were Alicia Gibb (R&D director at Bug Labs), Bunnie Wang (founder of Chumby), Chris Anderson (editor-in-chief of Wired Magazine, author of The Long Tail, and founder of DIY Drones), David A. Mellis, Gianluca Martino, Massimo Banzi, Tom Igoe (four of the five members of the Arduino Team), Nathan Seidle (founder of SparkFun), Zach Smith (co-founder of MakerBot), Limor Fried (founder of Adafruit), Phillip Torrone (creative director of Adafruit), Becky Stern (then editor at Make magazine), Benjamin Mako Hill (MIT), Jonathan Kuniholm (Open Prosthetics Project/Shared Design Alliance), Ken Gilmer (Bug Labs), and Ken Gracey (Parallax).
+
+During the workshop, Thinh Nguyen (legal counsel at Creative Commons) and Wiibanks talked extensively about legal protections and recourse for open source hardware, and advised attendees to determine the practice’s norms instead of opting for a probably long and painful legal recourse. Based on this, Bdeir, Mellis and Windell Oskay (EMSL) orchestrated a series of posterior communications amongst the workshop’s participants which culminated in the Open Source Hardware Definition 0.1 (Freedom Defined).
+
+Also in early 2010, Peter Semmelhack, founder of [[Bug Labs]] (a company that produces an open source modular system for building devices), approached Alicia Gibb and asked her if it would make sense to hold a meeting about open source hardware:
+
+- ''Peter asked if I thought a bunch of people would want to come together and hear all the issues and complications of manufacturing open source hardware and doing business as an open hardware company. He was thinking 20 people and I told him we could get 300, it would be an entire conference. And so I started planning the Summit – but it was only on the sides of manufacturing and business, when Ayah and I later joined forces, she brought the legal side to the Summit. On Jan. 18, 2010, in an email to Gibb, Peter came up with the name “Open Hardware Summit.” Then Peter and I sat down with Dale Dougherty and the decision was made to have it happen alongside of Maker Faire. (Gibb, Pers. Comm.)''
+
+These two parallel efforts converged in June 2010 when Bdeir and Gibb joined forces to organize the first Open Hardware Summit (OHS). The summit took place in NYC on September 23rd of the same year. Approximately 320 people attended, since the venue couldn’t hold more, and the summit became an annual event. The second edition of the Open Hardware Summit, chaired by Gibb and Bdeir, had 350 attendees and 22 speakers plus breakout sessions and demos. As the open source hardware practice and community continued to grow, so did the event. Its 2012 edition, chaired by Catarina Mota and Dustyn Roberts, saw close to 500 attendees and 42 speakers. Topics covered at the conference ranged from electronics, 3D printers and airplanes to biomedical devices, neuroscience, and fashion.
+
+In the meantime, a group of stakeholders had continued to iterate the Open Source Hardware Definition, with significant contributions from David Mellis and Windell Oskay, and made version 0.3 public on July 13, 2010 (Freedom Defined). Through feedback and contributions from the public, over a period of several months, the definition continued to be discussed and refined. The Open Source Hardware Definition 1.0 is the current the stable version.
+
+In December 2010, Nathan Seidle sent an email to the summit’s mailing list proposing the adoption of an open source hardware logo created by SparkFun’s designer. Seidle wanted to somehow indicate on SparkFun’s products that they were open source and a logo/stamp was needed. Bdeir suggested that the logo created for the Open Hardware summit be used instead, and Jonathan Kuniholm proposed that the OHANDA logo be adopted. A long discussion ensued not just on the topic of the logo, but also on the status of the definition and the need for higher cohesion amongst open source hardware stakeholders. Eventually, the OSHW Definition 1.0 was released on February 10th, 2011 (Bdeir 2011a) and endorsed by the majority of those involved. It was also decided to hold a design competition for the logo. The competition received 129 submissions, from which 10 were selected, by a group of stakeholders invited by Bdeir, and put up for public vote. On April 7, 2011 the group announced that the design “Golden Orb” by Macklin Chaffee had received the most votes (Bdeir 2011b) and consequently been selected as the symbol of agreement with and abidance by the OSHW Definition. The first open source hardware developer to apply this community mark on a product was Parallax and it has since been used on an increasing number of projects and products."
+(http://www.oshwa.org/research/brief-history-of-open-source-hardware-organizations-and-definitions/)
+
+
+
+
+[[Category:Manufacturing]]
+
+[[Category:Standards]]
+
+[[Category:Licensing]]

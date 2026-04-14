@@ -1,0 +1,31 @@
+'''Forban - a simple link-local opportunistic p2p free software'''
+
+URL: http://www.foo.be/forban/
+
+Code is hosted at GitHub: https://github.com/adulau/Forban
+
+==Introduction==
+Forban is a kind of p2p application for link-local and local area network. Forban works independently from Internet and use only the local area capabilities to announce, discover, search or share files. Forban relies on HTTP and he is opportunistic (meaning replicating any files seen in his proximity or interest). The name took his origins from the old French word (a forban is a kind of pirate). “Forban” can be also a play word in English at a time where government or corporate want to ban access to the Internet.
+
+The current implementation is written in Python. The Forban protocols are minimalistic to ease the accessibility to build independent Forban in any decent language or even in shell scripts (using tcpdump and wget for example).
+
+Forban operates in different modes, the opportunistic mode is the default and working as a gossip protocol to disseminate data with any Forban in his proximity. The main concept is to provide persistence for the disseminated data even on periodic or unreliable communication. This is a kind of epidemic protocol to share any files easily.
+
+==Screenshot==
+
+[[File:Screen shot 2010-06-07 at 22.40.33.png|800px]]
+
+==Ideas==
+
+* As the protocol for Forban is stabilized, we would like to create autonomous hardware device that can rely on the Forban protocol to share files automatically. If you have any idea of low-power, 802.11 wireless, supporting HTTP and having a decent storage space, let me know.
+
+==See Also==
+
+* Presentation about Forban (given in April 2010) - http://www.foo.be/forban/pres/2010-BreizhEntropyCongress/forban-general.pdf
+* Presentation about Forban at FOSDEM 2011 - http://www.foo.be/forban/pres/2011-FOSDEM-Forban-Intro.pdf
+* [http://blog.p2pfoundation.net/forban-simple-local-linkopportunistic-p2p-free-software/2010/03/15 Blog post] about Forban
+* [[Netsukuku]]
+
+[[Category:Software]]
+
+[[Category:P2P Infrastructure]]

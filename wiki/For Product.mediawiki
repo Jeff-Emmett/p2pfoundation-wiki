@@ -1,0 +1,37 @@
+== Purpose ==
+The For_Product model changes how we fund, build and govern [[User Owned]] supply-chains.
+
+The [[Material Sources]] of production are held "For Product" instead of "For Profit".
+
+This is a proposed implementation of [[Propertyleft]].
+
+== Strategy ==
+=== Fund ===
+# For each parcel of Land currently "for sale" on the open market, mint 1 Coin for each square_meter.
+# For each parcel, sell those Coins to buy that Land.  Like Bitcoin, these Coins bestow no rights of governance, have no redeemable value, imply no financial return and do not represent Land ownership.
+# For each parcel, if all Coins are sold, buy that Land and hold it for now.
+
+=== Build ===
+# Ask potential Users for the future production they want.
+# Mint 1 Ticket for each requested production.
+# Ask for the Work and Land required to fulfill those Tickets.
+# Mint 1 Contract for each (specialized) kind of Work required to fulfill 1 (or more) kind(s) of Ticket(s).
+# Mint 1 Deed for each (specialized) kind of Land required to fulfill 1 (or more) kind(s) of Ticket(s).
+# Offer a *bundle* of '''many''' different Tickets for each {'''1'''} Contract signature.                ... Meanwhile ...
+# Vest Deeds to Users who complete Contracts.
+# Vest Deeds to Users who pay Profit (when they buy surplus production).
+
+=== Govern ===
+# The specific Deeds you receive are, by default, the same *kind* as those which "back" the Tickets you hold.  For example, If you hold Bread Tickets, you recieve Deeds in a Farm, a Mill, and a Bakery.
+# As an owner, you hold Deeds to *avoid* paying Profit and Rent to other owners.
+# As an owner, you may sell surplus production, but some % of profit collected (any amount above 0) must be invested *for the User who paid that profit*, and that User must be informed they now hold a tiny amount of (UNALLOCATED) Deeds proving they also have Land ownership. This ensures all Users gain "their own instance of" the Material Sources required for (that same kind of) future production.
+# As a co-owner (when holding Deeds in groups, or groups of groups, recursively), you must compensate other owners based on arbitrary conditions negotiated between you and those other owners.
+# The kind of Deeds you receive are based on the Tickets you hold, not the Contracts you fulfill.
+# Each Ticket requires many kinds of Deeds and Contracts for fulfillment.
+# Each Ticket is initially-invalid and finally-expiring, with a "Window of Validity" defined by real-world limitations of production and storage.
+# The maximum Deeds held by each User should be limited by the minimum Deeds required by all other Users.
+----
+
+https://docs.google.com/document/d/1cRYLXIQnNWfXNU88UvxdlKgdLfOyoXSvl4xyp6xytMU/
+
+[[Category:User_Owned]]

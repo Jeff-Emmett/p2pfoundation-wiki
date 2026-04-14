@@ -1,0 +1,253 @@
+This is a verbatim copy of the document 'Survey: Canonical tool functions' created by participants in the [https://www.hylo.com/c/collaborative-technology-alliance Collaborative Technology Alliance]:
+https://cta.hackpad.com/Survey-Canonical-tool-functions-sE0UyxlDMrn
+
+"Survey: Canonical tool functions
+
+
+Possible categorization schema for canonical tools/features/functions--
+
+    trying to articulate this a little further to see if it's helpful and not entirely arbitrary...welcome thoughts and additions and if it's not so useful or generalizable i'll clip it out/relocate
+
+    Actually - metamap may be the best place to work on this a bit to start:
+
+    http://metamaps.cc/maps/1822
+
+    ^ thanks, nice work (I was reading this & thinking it needed one :) I have now forked it to a map intended to be just for Canonical Economic Tool Functions => so https://metamaps.cc/maps/2088 is to be pared down as seen fit, if folks find it useful.
+
+    Hi Benjamin, hey these are important structural considerations and they relate significantly to this related hackpad:  [[Reduce duplicate effort on lower level fundamentals]]
+
+    Do closed source applications count for the purposes of this document?  Use as a conceptual reference point, or not at all?
+
+    Jacob Gadikian  we've had much discussion of potential CTA 'ecosystem standards' for the openness of code and user data.  Some of the related issues are nuanced, but some are not.  Typical "closed source" proprietary apps are certainly relevant as reference points here, and also perhaps as stopgap 'solutions', but not IMO for the general vision of desired standards for apps and platforms.   (Sorry these docs get so attenuated / diluted by the inline comments; not my favorite feature of hackpad!)
+
+    Data
+
+    Data format
+
+    Data model
+
+    Data storage
+
+    Access / querying
+
+    Transfer protocol
+
+    Synchronization
+
+    Platform
+
+    Application
+
+    Interface
+
+    Web
+
+    app - smartphone, tablet
+
+    VR
+
+    AR
+
+    smartwatch
+
+    Experience
+
+    Community
+
+    Norms
+
+    Values
+
+    Network
+
+    Topology
+
+    Economy
+
+
+
+Key functions of an ecosystem of collaborative software tools:
+Here are a number of proposed areas critical to this collaborative ecosystem.
+
+    Project/Team Overview Dashboard: Gives an overview of a project including:
+
+    What is the purpose of this project/team?
+
+    Tools used - what are the tools used for task tracking, calendaring, discussion, etc. etc.
+
+    Members - who's here, what are their roles different 
+
+    Governance (Decision making&etc.) used
+
+    Calendar (milestones, meetings, etc.)
+
+    Norms, Rules/Agreements - how is work done around here
+
+    How do I get involved (onboarded)?
+
+    How is value distributed?
+
+    See also discussion in https://www.hylo.com/p/13616
+
+
+    Notifications Dashboard: aggregated notifications of activity that is sourced from activity from tools in the ecosystem
+
+    Chat and Direct Messaging: one-to-one and one-to-many messaging, with tunable privacy as appropriate to communication goals
+
+    Representation of Group Membership and Group Auth: a tool that stores who is a member of which group, who can see the data that the group contains, and can invoke single-purpose tools through “group authentication”
+
+    this sounds like a good use for a physical token of some sort.  
+
+    Representation of which groups are using which tools: this enables the community to understand which tools are part of the set of tools in use in a given environment
+
+    Intent-casting + Collaborative discovery: discovery of aligned intentions + matching of available requests and offers. Can include bounties/price tags in a variety of currencies.
+
+    Collaborative ideation & brainstorming: allows decentralized groups to ideate and brainstorm together (metamaps, etherpad, hackpad)
+
+    Collaborative decision making: allows decentralized groups to come to decisions together (example projects: Loomio)
+
+    Collaborative budgeting: allows decentralized groups to allocate common-pool resources (example projects: CoBudget)
+
+    Network visualization: allows users to interact with different types of visual representations of shared data and membership (example projects: Nodesphere, Metamaps, Noomap, Holodex)
+
+    Reputation: allows users to assess the past actions of network participants based on user tunable, context aware preferences (example projects: Backfeed)
+
+    Identity: allows users to be aware of the identity of other users over time tied to reputation (example projects: Backfeed, Identity.com, Jim Fournier + Victor Grey's Project)
+
+    Mutual Credit: allows users to create and track mutual credit exchanges (example projects: CredEx.co)
+
+    Task management: allows users to assign and track completion of tasks
+
+    Taiga.io - Scrum-oriented tool for software development, useful in meatspace as well.  
+
+    Payments
+
+    Dues collection: allows users to pool resources
+
+    Crowdfunding: allows users to gather small contributions from large numbers of people
+
+    Payroll Value distribution: distributing money to people who do work
+
+    Common Resource Pool Management: allows users to pool resources that can be invested collectively
+
+    I can't stress just how revolutionary I think cryptoequity will be.  Corporations aren't evil:  some people who have control of them are, however.  Distributing control is a way of moving them towards a model of good.  
+
+    Cryptoequity: allows users to share equity in each other’s projects and work with outside financing
+
+    Smart Contracts: allows users to create contracts with each other that are machine-executable
+
+    Personal data management and export tools: allow users to manage access to and export their private data
+
+    Collaborative production and distribution of goods and services: for example, food networks, Sensorica, Solidarity Economy networks. In addition to some of the other tools already listed:
+
+    Conversations for Action (coming to agreement, taking action on agreements, and evaluating the results) (often preceded by Intent-casting)
+
+    Economic Resources and Resource Types: AKA Products and Services and their definitions, categories, taxonomies, etc.
+
+    Organizational models: people and groups, agents and their relationships, holons, etc. (I see already mentioned above as Group Membership)
+
+    Value equations: agreements on how to distribute income according to contributions, and tools to distribute income following the equation.
+
+    Recipes: computable instructions for making or doing things, AKA Bills of Material and Routings, or in a different way, 3D printing programs
+
+    Planning: network resource planning, material requirements planning, capacity planning, supply chain planning, cash flow planning
+
+    Marketplaces Point of sale mechanism: a way to tender items / services for sale across a network at (potentially) multiple purchase points / marketplaces
+
+    Marketplaces - (returned from the deleted) not necessarily the same as point of sale mechanisms. In Mutual Aid Networks, they start with intents: offers and wants, which may not mean buying and selling.
+
+    Open Books Accounting: preferably full ecosystem accounting, but that's really hard
+
+    Media ratings:  agree/disagree metrics, and emoji, which can be applied to whole media items or selections thereof.   
+
+    Sociometrics: realtime visual aggregations (preferable lossless) of media ratings, efficiently directing viewers' attention.
+
+    Collaborative documentation: decentralized generation of community-specific media item metadata and ratings, with user-selected sorting and filter options.  (note: this can coexist with the development of Open Linked Data.) 
+
+    another category I think is highly disruptive/transformative.  My company got VC funding because of a doc very similar to this one!
+
+    also might keep in mind generation of media item metadata and ratings that could transcend the specific community - metadata for the broader web.
+
+    I'm glad you're thinking along these lines.   Xander, I think maybe that metadata should always have community context, even if someone tries to define a 'global community' which is radically inclusive, but which does stand for certain principles.  obviously this is a huge topic unto itself and we can talk about it elsewhere :) 
+
+    +1 GC, my thoughts similar: direct democracy & cultural competency function best locally - important for trust/relationship-building. Importance of global context = the ability for people who either choose to leave or are banished from a given community to be able to find those w/ shared values else-where
+
+    Collaborative authorship and editing:  allows decentralized groups to inclusively generate multi-author media.  
+
+    Some existing, limited tools of this sort:  Etherpad, Google Drive Apps, Github documents (both code and noncode)
+
+    Note:  desired functions relate closely IMO to the function of "Collaborative ideation & brainstorming".  Functionality may benefit from:
+
+    recursively branching/threaded discussion and annotation/commentary
+
+    examples:  Disqus, Reddit
+
+    Selection-based annotation/commentary
+
+    example:  Google Docs
+
+    media rating tools, including agree/disagree
+
+    distributed version control (of all media types)
+
+    visual mapping/sense-making of media versions, their metadata (including community ratings), and their annotation/commentary structures
+
+    Document types for collaborative co-creation:
+
+    Rich-text document
+
+    Spreadsheet
+
+    Presentation
+
+    3D sketch
+
+    Map (e.g. annotate an existing map and share is an important use-case)
+
+    media-pin-board (ala mura.ly, etc.)
+
+    Index/annotations - need an easy way to create document indexes
+
+    Decentralized governance and administration model(s) for intentional communities and media commons. 
+
+    Web app hosting platform (such as Sandstorm IO)
+
+    Linked Data Browser
+
+    Mapplication: map geographically and semantically, groups of place and online / memetic space
+
+    Culture Map: a system for mapping / matching individual and collective values, principles, aims, practices etc in order to facilitate better matchmaking (over and above simple intent)
+
+    Version Control: a versatile way to manage, track and sync distributed, redundant, inherited, or forked info across communities, applications, and storage sites
+
+    Granular Permissions: comprehensive yet intuitive read/write control or parameterization
+
+    Distributed file storage/sharing system: probably tied to a reputation system supporting file integrity.  Using robust consensus establishing mechanisms, and/or tied to blockchain or https://github.com/ssbc/docs types of tech for distributed databases
+
+    building a global DFS right now.  I'll let you know how it goes.  LizardFS.  
+
+    Collaborative Learning: a system for capturing and sharing learnings
+
+    Skills mapping: ability to map-out what skills team members have, what skills a project needs and to do gap analysis
+
+    Skills mapping is great.   I personally recommend a dual metric which can matchmake skill level and interest level --i.e. maybe my skill is minor but it's an area I'd love to learn more about.  (should IMO be done universally per person, but can be coordinated with mapping of each project's needs.)
+
+    Yes, I agree, there are many things around skills mapping which can be done to help organisations but also to help people develop their skillsets. Would love to do a discussion around this.  Would love to take part in your discussion. +1
+
+    Organisation structure mapping: ability to map an organisations structure (e.g. sociocratic/holacratic roles& circles, or whatever structure a team chooses to take on)
+
+    Ability to say "thank you" / give "non-monetary rewards" in a way which is not tied to monetary value exchange - I think a next-generation organisation needs to have a dual reward structure - one which in the end somehow translates to money and one which is in the "abundance economy" i.e. not limited - the thank yous/etc. There are so many things which people do which are important and valuable but hard or impossible translate into monetary value. However the "thank you" system could naturally feed into the reputation system
+
+     I'm wondering is this last line meant to read "Ability to say thank you"? If so, this is fab!  (+1) But could we be a bit more flexible to include other types of feedback – not just thanks. For instance, "This helped me" / "This didn't work for me" etc
+
+    Yes, exactly, sorry I had only written it half-way, expanded now. 
+
+    +1: is there any research on how this helps? makes logical sense though
+
+    An  integral UI/browser environment that allows data synergy across  applications; separation of data from interface and organisational  layers
+
+    Passion mapping - to allow for integral connectivity based on inner motivations
+
+    Scheduling/calendaring/events: Schedule meetings with a group of people, publish individual availability, create event calendar, etc.
+
+    Whomever first creates the timeline with the power of gantt and the flexability of conversation will have quite the gift for society indeed."

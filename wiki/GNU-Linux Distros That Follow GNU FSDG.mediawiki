@@ -1,0 +1,47 @@
+The GNU Project maintains the [https://www.gnu.org/distros/free-system-distribution-guidelines.html Free System Distribution Guidelines] (GNU FSDG), laying out the criteria for GNU/Linux distros that fully respect the freedoms of their users. They curate a list of "[https://www.gnu.org/distros/free-distros.html distributions that are entirely free as in freedom]", which they have reviewed and found to meet these criteria. This tables lists these distros and provides more details about them.  --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 11:24, 31 October 2019 (UTC)
+
+== GNU/Linux distros endorsed by the GNU Project ==
+
+{| class="wikitable sortable"
+|-
+! Name  !! Default Desktop !! Alternative Desktops !! Based on !! Architectures !! Uses systemd
+|-
+| [https://www.distrowatch.com/dragora Dragora] || XFCE || N/A || N/A || ? || No ([https://www.phoronix.com/scan.php?page=news_item&px=Dragora-3.0-Alpha-2 using SysVinit])
+|-
+| [https://www.distrowatch.com/dynebolic Dyne:bolic] || [https://www.distrowatch.com/table.php?distribution=dynebolic Awesome]? [https://archiveos.org/dynebolic/ XFCE/ WindowMaker then GNOME in 3.0]? || N/A || N/A || 32-bit (64-bit from 3.0?) || [https://devuan.org/os/partners/devuan-distros no] 
+|-
+| [https://www.distrowatch.com/gnewsense Gnewsense] || GNOME || N/A || Debian (originally Ubuntu) || 32/64-bit up to 4.0 || no
+|-
+| [https://www.distrowatch.com/guixsd Guix] (formerly GuixSD) || ? || ? || N/A || 32/64-bit || no
+|-
+| [https://www.distrowatch.com/hyberbola Hyperbola] || N/A || N/A || Arch || 32/64-bit || no?
+|-
+| [https://www.distrowatch.com/parabola Parabola] || N/A || N/A || Arch || 32/64-bit || yes?
+|-
+| [https://www.distrowatch.com/pureos PureOS] || GNOME || N/A || Debian || 64-bit || [https://tracker.pureos.net/w/troubleshooting/slow_system_startup/ Yes]
+|-
+| [https://www.distrowatch.com/trisquel Trisquel] || Mate || LXDE || Ubuntu || 32/64-bit || yes
+|-
+| [https://distrowatch.com/table.php?distribution=ututo Utoto] || ? || ? || Ubuntu || ? || ?
+ |}
+
+=== Notes on table ===
+
+* '''Name:''' linked to their entry on Distrowatch, a project which has a detailed info page about each distro, including links to their homepage and downloads, and monitors whether development on distros is active, dormant, or discontinued.
+* '''Default desktop:''' the graphical desktop system that a user will be presented with after installing from the standard installer for the distro. Some distros don't have one, either because they are assembled from parts like those based on Arch, are because they are intended for server use, not desktop use.
+* '''Alternative desktops:''' other desktops systems for which there are automated installers available with every release, meaning that desktop system has been tested and is know to work with that version. Some distros only test and release with one default desktop. In either case, other desktop systems can be installed later, as with apps, but they may not work smoothly without some tweaking. 
+* '''Based on:''' N/A means a distro assembled from scratch, instead of using releases of one of the longer-lived distros as a starting point for each of their own releases. Most distros are not built from scratch. 
+* '''Architectures:''' for decades all computers used 32-bit chips. Then 64-bit chips were introduced. 64-bit is now commonly used and supported by most software, while some software projects are phasing out support for 32-bit, or in the case of newer projects, never supported it.
+* '''systemd:''' a Linux component that a subset of advanced GNU/Linux users passionately oppose, to the point of forking distros to release systemd-free variants like Devuan (Debian without systemd).
+
+== Not listed but may be under review to be added ==
+
+* [https://www.distrowatch.com/heads Heads]: developed by Dyne and Rastasoft, the developers of Dyne:Bolic, as a fully free variant of Tails, [without systemd](https://devuan.org/os/partners/devuan-distros).
+* [https://www.distrowatch.com/uruk Uruk]: variant of Trisquel, differing mainly in the design of the default desktop, including the range of default apps.
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Free Software]]
+
+[[Category:Technology]]

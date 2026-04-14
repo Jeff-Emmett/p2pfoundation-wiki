@@ -1,0 +1,67 @@
+<noinclude>
+This is the "WikiSprint" form.
+To create a page with this form, enter the page name below;
+if a page with that name already exists, you will be sent to a form to edit that page.
+
+
+{{#forminput:form=WikiSprint}}
+
+</noinclude><includeonly>
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|WikiSprint}}}
+{| class="formtable"
+! Title/Name:
+| {{{field|Title/Name}}}
+|-
+! One sentence description:
+| {{{field|One sentence description}}}
+|-
+! Main URL:
+| {{{field|Main URL}}}
+|-
+! Short description:
+| {{{field|Short description}}}
+|-
+! Details:
+| {{{field|Details}}}
+|-
+! Discussions/Quotes:
+| {{{field|Discussions/Quotes}}}
+|-
+! References/Links:
+| {{{field|References/Links}}}
+|-
+! Location:
+| {{{field|Location}}}
+|-
+! Contact person:
+| {{{field|Contact person}}}
+|-
+! Contact's person e-mail:
+| {{{field|Contact's person e-mail}}}
+|-
+! Number of participants:
+| {{{field|Number of participants}}}
+|-
+! Start date:
+| {{{field|Start date}}}
+|-
+! Related projects:
+| {{{field|Related projects}}}
+|-
+! Categories/Tags:
+| {{{field|Categories/Tags}}}
+|}
+{{{end template}}}
+
+'''Free text:'''
+
+{{{standard input|free text|rows=10}}}
+
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

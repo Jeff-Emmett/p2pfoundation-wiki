@@ -1,0 +1,54 @@
+'''= wiretapping into the content of messages itself, to determine their level of priority, etc...'''
+
+It is generally seen as a threat to the principles of [[Network Neutrality]]
+
+
+=Description=
+
+From Ars Technica [http://arstechnica.com/articles/culture/Deep-packet-inspection-meets-net-neutrality.ars/1]:
+
+"Imagine a device that sits inline in a major ISP's network and can throttle P2P traffic at differing levels depending on the time of day. Imagine a device that allows one user access only to e-mail and the Web while allowing a higher-paying user to use VoIP and BitTorrent. Imagine a device that protects against distributed denial of service (DDoS) attacks, scans for viruses passing across the network, and siphons off requested traffic for law enforcement analysis. Imagine all of this being done in real time, for 900,000 simultaneous users, and you get a sense of the power of deep packet inspection (DPI) network appliances.
+
+Although the technology isn't yet common knowledge among consumers, DPI already gives network neutrality backers nightmares and enables American ISPs to comply with CALEA (government-ordered Internet wiretaps) reporting requirements. It also just might save the Internet (depending on who you believe). 
+
+The "deep" in deep packet inspection refers to the fact that these boxes don't simply look at the header information as packets pass through them. Rather, they move beyond the IP and TCP header information to look at the payload of the packet. The goal is to identify the applications being used on the network, but some of these devices can go much further; those from a company like Narus, for instance, can look inside all traffic from a specific IP address, pick out the HTTP traffic, then drill even further down to capture only traffic headed to and from Gmail, and can even reassemble e-mails as they are typed out by the user.
+
+But this sort of thing goes beyond the general uses of DPI, which is much more commonly used for monitoring and traffic shaping. Before an ISP can shape traffic, it must know what's passing through its system. Without DPI, that simple-sounding job can be all but impossible. "Shallow" packet inspection might provide information on the origination and destination IP addresses of a particular packet, and it can see what port the packet is directed towards, but this is of limited use.
+
+Shallow inspection doesn't help much with modern applications, especially with those designed to get through home and corporate firewalls with a minimum of trouble. Such programs, including many P2P applications and less-controversial apps like Skype, can use many different ports; some can even tunnel their traffic through entirely different protocols.
+
+So looking at the port doesn't give ISPs enough information anymore, and looking just at the IP address can't identify P2P traffic, for instance.
+
+This only works if the packet inspection is "deep." In terms of the OSI layer model, this means looking at information from layers 4 through 7, drilling down as necessary until the nature of the packet can be determined. For many packets, this requires a full layer 7 analysis, opening up the payload and attempting to determine which application generated it (DPI gear is generally built as a layer 2 device that is transparent to the rest of the network)."
+(http://arstechnica.com/articles/culture/Deep-packet-inspection-meets-net-neutrality.ars/1)
+
+
+=Discussion=
+
+The same Ars Technica article warns of the dangers of this approach for [[Network Neutrality]]
+
+From Ars Technica [http://arstechnica.com/articles/culture/Deep-packet-inspection-meets-net-neutrality.ars/3]:
+
+"these particular constructions of "openness" run headlong into the business plans of the traffic-shapers. Companies like Ellacoya and Procera argue that this sort of "never discrimate" policy isn't much more than unworkable idealism. Such a network will in fact fill up with data; companies that don't filter or shape packet flows have then made a default decision to allow things like VoIP, videoconferencing, and online gaming to get "laggy" and e-mail to get delayed as BitTorrent and YouTube packets clog the tubes. Downloading an 800MB video, even if the movie in question is legal, is hardly the sort of application that is mission critical, and few customers are going to abandon ship because their YouTube videos take an extra two seconds to buffer. But customers do care if their VoIP service consistently goes glitchy or has tremendous lag, if World of Warcraft becomes unplayable, or critical e-mails and IMs are delayed in transit.
+
+The argument of the vendors is generally that "the market will decide" and that what's important is for companies simply to be upfront about the kinds of restrictions they have in place. We agree that transparency in these matters is a good idea, but the basic problem in the US is that if you don't like the policies your ISP has in place, it can be difficult to switch. We've been pointing out for years that Americans are generally locked into one or two providers, so most people are hardly spoiled for choice.
+
+Where you come down on these questions may vary depending on where DPI gear is deployed; many people have less problems with its use by last-mile ISPs who interact directly with consumers. Throttling P2P traffic to keep the network open for other uses might be fine, but the concern is magnified when such gear is rolled out by the backbone operators, like AT&T and Verizon. With last-mile ISPs, at least (most) customers have some options for switching if they don't like the terms.
+
+But there are so few backbone operators, and they wield so much power, that the truly scary stuff from a net neutrality perspective is if backbone providers start looking at Google and say, "If you want decent transport over my pipes, then you have to pay my toll." When that type of demand comes from an upstream provider, from a network economics standpoint that's a whole different ball game than Comcast trying to soak Google by threatening to slow down access to Google.com.
+
+That's because there's no way for the end users to vote "no" on the policy; all of the users of the multiple last-mile ISPs who are downstream from that backbone will see their access to Google start to suck, but there's not much they can do about it because it's not really their ISP's fault. In other words, the backbone providers have a more insular, more monopolistic, non-consumer-facing position in the Internet hierarchy, so if they decide to ditch neutrality and start squeezing websites and online service providers, then there's not much that can be done."
+(http://arstechnica.com/articles/culture/Deep-packet-inspection-meets-net-neutrality.ars/3)
+
+
+=More Information=
+
+#[http://www.cdt.org/speech/20060615fcc-neutrality.pdf CDT commentary] on [[Network Neutrality]].
+#Canadian Privacy Commissioner Collection of Essays on DPI and Privacy at http://dpi.priv.gc.ca/index.php/essays/
+#Detailed report at http://advocacy.globalvoicesonline.org/wp-content/uploads/2009/06/deeppacketinspectionandinternet-censorship2.pdf
+
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]

@@ -1,0 +1,32 @@
+
+=Description=
+
+Steve Coast:
+
+"OpenGeocoder starts with a blank database. Any geocodes that fail are saved so that anybody can fix them. Dumps of the data are available.
+
+"There is much to add. Behind the scenes any data changes are wikified but not all of that functionality is exposed. It lacks the ability to point out which strings are not geocodable (things like "a") and much more. But it's a decent start at what a modern, crowd-sourced, geocoder might look like."
+(http://www.readwriteweb.com/archives/can_opengeocoder_fill_the_platform_gap_left_by_goo.php)
+
+
+=Discussion=
+
+'How do machines understand what place you're talking about when you say the name of a city, a street or a neighborhood? With geocoding technology, that's how. Every location-based service available uses a geocoder to translate the name of a place into a location on a map. But there isn't a really good, big, stable, public domain geocoder available on the market.
+
+Steve Coast, the man who lead the creation of Open Street Map, has launched a new project to create what he believes is just what the world of location-based services needs in order to grow to meet its potential. It's called OpenGeocoder and it's not like other systems that translate and normalize data.
+
+Google Maps says you can only use its geocoder to display data on maps but sometimes developers want to use geo data for other purposes, like content filtering. Yahoo has great geocoding technology but no one trusts it will be around for long. Open Street Map (OSM) is under a particular Creative Commons license and "exists for the ideological minority," says Coast himself in a Tweet this week. And so Coast, who now works at Microsoft, has decided to solve the problem himself.
+
+This has been tried before, see for example GeoCommons, but the OpenGeocoder approach is different. It is, as one geo hacker put it, "either madness or genius."
+
+The way OpenGeocoder works is that users can search for any place they like, by any name they like. If the site knows where that place is, it will be shown on a big Bing map. If it doesn't, then the user is encouraged to draw that place on the map themselves and save it to the global database being built by OpenGeocoder."
+(http://www.readwriteweb.com/archives/can_opengeocoder_fill_the_platform_gap_left_by_goo.php)
+
+
+=More Information=
+
+# open source geocoder discussion, http://petewarden.typepad.com/searchbrowser/2011/10/what-can-you-use-for-geocoding-instead-of-google-maps.html
+
+[[Category:Geography]]
+
+[[Category:Standards]]

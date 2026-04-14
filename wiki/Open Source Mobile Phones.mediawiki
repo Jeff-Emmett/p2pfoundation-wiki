@@ -1,0 +1,50 @@
+
+=Status Report 2008=
+
+From Ostatic:
+
+“If all you want to do is develop or run open source software on your handset, then all the major players have you covered. You can buy a copy of Visual Studio to develop applications for Windows Mobile, or download a free beta of the iPhone SDK from Apple, and share your software to your heart's content. Well, almost: Apple is going to maintain some control over what iPhone users can buy from their devices, and it's not yet clear how this will play out with open source software.
+
+
+
+But '''what if you want not just the application layer, but the underlying phone itself, to be open source? In this case, you have two main choices. The first, and the one that has gotten the most press lately, is Google Android.''' No Android phones exist yet, but Google has started releasing the software - a GPL'd kernel - and they've announced plans to use the Apache License for the final software. '''Using ASL rather than GPL means that handset manufacturers will be able to add their own enhancements to the Android code without any requirement for sharing back with the community.'''
+
+
+
+Android only gets you so far with open source; although the software itself will be open (or at least it will start as open, though there could be closed parts in any particular device), most people will need to pick up a closed device from some member of the Open Handset Alliance to run it. '''If you want openness all the way down, you need to turn to OpenMoko.'''
+
+
+
+'''With OpenMoko everything is open source: the software (GPL and LGPL licensed), the hardware plans, even the CAD drawings for the case.''' The tradeoff is that it'll cost you about $400 for their second-generation device (due out this month). Most regular cell phone users are unlikely to be willing to put that much premium on freedom.
+
+
+
+One final possibility is interesting to those who like the OpenMoko hardware but think Android has a better chance of delivering sophisticated applications quickly (due to Google's clout and cash bonuses for development): run Android software on an OpenMoko phone. Though not currently possible (due to conflicts between Android's required instruction set and the CPU used by the available OpenMoko phones), this could happen in the future as both projects evolve.”
+(http://ostatic.com/158950-blog/how-open-do-you-want-your-phoness)
+
+
+=Examples=
+
+
+==OpenMoko==
+
+See [[OpenMoko]] and its [[Open Mobile Telephony]] platform
+
+
+==Android==
+
+See [[Android]]
+
+
+==Motorola's MIDP==
+
+Motorola's [http://www.internetnews.com/dev-news/article.php/3606331 Mobile Information Device Profiles]
+
+"By making the frameworks and test cases available via an open source project, Motorola said it wants to encourage development of Java-based mobile phone software, which is difficult to do because the platform is so fragmented, particularly in the area of testing frameworks.
+
+"Right now, every handset manufacturer has their own test harness. There is no way to run a consistent test and we have thousands of tests on dozens of harnesses," said Mark VandenBrink, senior director and chief architect for Motorola Mobile Devices. "We're offering test cases to it so there's one unified test harness to make sure that [applications] interoperate." 
+(http://www.internetnews.com/dev-news/article.php/3606331)
+
+[[Category:Technology]]
+
+[[Category:Standards]]

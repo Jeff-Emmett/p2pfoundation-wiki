@@ -1,0 +1,67 @@
+
+'''= A peer-to-peer signalling protocol'''
+
+URL - http://openpeer.org/
+
+=Description=
+
+"Open Peer is peer-to-peer signalling protocol taking advantages of the IETF advances of firewall penetration techniques for moving media and adds a layer to performs the media signalling in a peer-to-peer fashion but does expect that a minimal requirement of rendezvous servers existing. Beyond the initial rendezvous to get past firewalls, the servers should drop out of the protocol flow and are no longer required."
+
+
+=Characteristics=
+
+Open Peer was designed with these main goals in mind:
+
+    
+Openness – a protocol is freely available for anyone to implement.
+    
+Greater network resilience – peers can continue to function and inter-operate even if servers are down.
+    
+Increased privacy and security – peers communicate directly in a secure fashion designed to protect against network ease dropping, forged communication or spying by 3rd parties or being a convenient data mining target for hackers as the information does not flow through centralized servers.
+    
+Federation – the protocol makes it easy for users on one service to communicate with users on another independent service offering.
+    
+Identity protection – the ability of users to easily provide proof of their identity using existing social platforms while protecting these identities from spoofed by others.
+    
+Decreased cost – without the need to continuously relay signalling or media through centralized servers, the costs to host, administer, relay, replicate, process and store data on servers while providing 5 9s uptime is decreased.
+    
+WebRTC enabling protocol – designed to be the engine that allows WebRTC to function, supporting federation of independent websites and services, provide security and online identity protection and validation, and peer-to-peer signalling bypassing the need for heavy cloud based infrastructure.
+    
+Scalability – whether starting at 50 users or moving beyond 5,00,000 users, the protocol is designed to allow for easy scalability by removing the complexity of communications out of the servers."
+
+
+=Discussion=
+
+==Introduction to Open Peer==
+
+The holy grail of communication on the Internet has been to allow peer-to-peer communication without the requirement of any centralized servers or services. A peer-to-peer approach offers some key advantages over a centralized server approach:
+
+    
+Greater network resilience – peers can continue to function independent of servers and can operate even if servers are down
+    
+Increased privacy and security – peers communicate directly thus the data is not centralized in one location where it can be spied upon by corporations, governments, 3rd parties or hackers.
+    
+Decreased cost – without the need of servers, the cost to host, administer, store and relay data is reduced substantially
+    
+Scalability – a peer to peer network doesn’t require servers to scale as the peers can operate amongst themselves.
+
+Unfortunately, the goal of peer-to-peer and the reality of peer-to-peer do not match. Centralization of data into the Internet cloud is prolific and firewalls frequently impede direct peer-to-peer communication making peer-to-peer connection extremely difficult to setup and challenging to architect.
+
+What further reduces the proliferation of peer-to-peer is a lack of standardization, openness and ubiquity of the technology. The standards bodies have been working for years on firewall traversal techniques and standardization of the approaches and a new joint effort called WebRTC between the W3C and IETF on how browsers can directly communication between browsers to move media. This joint effort does not specify how signalling happens between peers so it’s not a complete solutions on its own.
+
+Performing peer-to-peer approach to signalling has been notoriously difficult for a variety of reasons:
+
+Without a publicly addressable intermediate ‘server’ machine to initiate communication, two peers behind firewalls are never able to communicate with each other. Thus, a peer network almost always requires some sort of rendezvous and relay servers to initiate contact between peers behind firewalls (and firewalls tend to be used more frequently than not for end users).
+
+Automatically promoting the few publically addressable home machines into rendezvous and relay servers is not the best option. Average users tend to not want to have their home/work machines to be automatically promoted to rendezvous and relay servers since it consumes their bandwidth and costs them to relay traffic for others who “leech” off their bandwidth. This cost factor causes end users to intentionally shutdown protocols that promote end user machines into servers. Over time, the number of average users willing to have their machines operate as servers for the benefit of those leeching decreases relative to the number of those whom leech off those servers until the entire system collapses with a too great server/leech ratio. As an example, Skype’s network collapsed for this very reason and they were forced to setup their own super nodes to handle the load.
+
+Some peer-to-peer networks require ports to be opened on a firewall to operate. Where possible, peers will register themselves with UPnP to open the ports when the firewall automatically. Unfortunately, many firewalls lack the ability to automatically open ports or actively disallow this feature for fear that this opens the network to security holes. If opening ports automatically is not possible then users are required to open ports manually. Thus only the technically savvy can perform this task and such peer networks tend to be limited to those who are technically savvy. This is not a universal solution since it assumes too much technical ability and responsibility of the end user.
+
+Many peer networks rely on mutual peers not behaving in an evil manner. These networks can easily be disrupted by peers that do not act in an altruistic fashion. When all peers behave properly there is no problem with such a network; however, the moment an ‘evil’ node or cluster of ‘evil’ nodes is injected into the peer network, parts or all of the network can suffer fatal issues and security can be compromised."
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

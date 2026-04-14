@@ -1,0 +1,2 @@
+# Track XML dumps with Git LFS (large files, ~16MB each)
+xmldump/*.xml filter=lfs diff=lfs merge=lfs -text

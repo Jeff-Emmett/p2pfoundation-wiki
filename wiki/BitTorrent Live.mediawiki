@@ -1,0 +1,32 @@
+
+'''=  A New Way to Live Broadcast: "a BitTorrent-based P2P protocol optimized for streaming live content near-instantaneously".'''
+
+URL = http://live.bittorrent.com/
+
+=Description=
+
+"BitTorrent Live is a powerful new web-based live streaming technology. Designed to eliminate barriers to broadcast, Live is an entirely new protocol, designed to deliver high quality video to large audiences - with significant reduction in infrastructure cost and network delays.
+
+BitTorrent Live is currently in open beta."
+
+
+=Discussion=
+
+" Bram Cohen hopes his BitTorrent Live protocol will prove to be a major disruptor for the streaming media business. Today, Cohen shared that BitTorrent Live -- despite its possible patent encumbrance -- will be entirely free for both users and broadcasters who utilize the P2P service. 
+
+A potential game-changer, BT Live is '''a BitTorrent-based P2P protocol optimized for streaming live content near-instantaneously'''. Currently, BitTorrent Live streams broadcasts with relatively low latency (a "few seconds" according to Cohen) which fares better than other P2P streaming technologies which can generate delays best measured in minutes.
+
+Cohen says some "very unorthodox techniques" were used to bring latencies down -- possibly techniques which are covered by his recent patent application.  Cohen is also the author and inventor of the original BitTorrent protocol.
+
+"To get slightly more technical, the way BitTorrent Live works is by '''making subsets of peers responsible for subsets of data'''. High robustness and low latency is achieved by using a screamer protocol between those peers," Cohen explained to TorrentFreak.
+
+"For the last hop it uses a non-screamer protocol to regain congestion control and efficiency. There is redundancy and some waste in the screaming, but that’s kept under control by only using it to get data to a small fraction of the peers."
+
+Although bi-lateral usage is slated to be entirely free, third-party client implementations will be limited (i.e. the technology will probably need to be licensed). Cohen claims BTL is a "tricky" protocol and misbehaving clients could have a serious, negative impact on the ecosystem. It seems he wants to make certain clients are regulated and play by the rules, but this may also provide a way for Cohen to monetize his invention, as well.
+
+BitTorrent Live has endured beta testing since last year and has actually been a work in process for several years. In 2010, Cohen expressed the inherent difficulties of crafting a satisifactory BitTorrent-based streaming solution."
+(http://www.techspot.com/news/52081-bittorrent-live-video-streaming-protocol-to-be-free-for-users-publishers.html)
+
+[[Category:Technology]]
+
+[[Category:Media]]

@@ -1,0 +1,30 @@
+
+
+=Description=
+
+Phil Windley:
+
+"Programmers reverence protocols. We think of protocols as something given to us from on high by the Cerfs, Postels, and Berners-Lees of the world. But the truth is that programmers build protocols all the time. Sometimes these are ad hoc and other times they are built with the help of a metaprotocol.
+
+A metaprotocol is a protocol for building or describing other protocols. You’re undoubtedly familiar with some metaprotocols even if you haven’t thought of them that way before. SOAP, RMI, CORBA, and JSON are all examples of metaprotocols. We often use words like framework, IDL, specification, or even just format when we’re talking about metaprotocols. The page from Caucho Technology on metaprotocol taxonomy does a pretty good job of classifying various metaprotocols.
+
+RMI, for example is a metaprotocol that defines the syntax of interactions between classes. RMI specifications are given by the Java class definition using reflection. Whenever someone uses RMI to specify the interactions between Java classes, they’re defining a machine-readable protocol.
+
+The Evented API specification also defines a metaprotocol. Events are transported over HTTP and the specification defines a format (i.e. syntax) for how events can be encoded."
+(http://www.windley.com/archives/2012/03/protocols_and_metaprotocols_what_is_a_personal_event_network.shtml)
+
+
+=More Information=
+
+* [[Protocols]]
+* [[Protocollary Power]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:Protocols and Algorithms]]

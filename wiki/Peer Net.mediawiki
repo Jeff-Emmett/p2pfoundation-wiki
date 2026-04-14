@@ -1,0 +1,59 @@
+'''= proposal for a PeerNet Infrastructure by J. Eriksson et al'''
+
+URL = http://iptps03.cs.berkeley.edu/final-papers/peernet.pdf
+
+
+=Description=
+
+"An unwritten principle of the Internet Protocol is that the IP address of a node also serves as its
+identifier. Many scalability problems result from this principle, especially when we consider mobile
+networks. To overcome this problem the PeerNet was designed.
+
+The PeerNet concept is a P2P infrastructure at the network level, proposed by Eriksson J, Faloutsos M,
+and Krishnamurthy S. at UC, Riverside. The intention is to overcome the limitations imposed by the IP
+Protocol.
+
+PeerNet is a network layer with integrated support for routing between peers. PeerNet makes an
+explicit distinction between node identity and address. PeerNet is not an overlay on top of IP, it is an
+alternative to the IP layer. PeerNet is a radically new architecture that brings peer-to-peer concepts to
+the network layer through the separation between the address and the identity.
+
+In PeerNet, the address reflects the node’s current location in the network. This simplifies routing
+significantly but creates two new challenges: the need for consistent address allocation and an efficient
+node lookup service.
+
+The PeerNet network layer consists of three major parts:
+
+* First, address allocation maintains one address per node, in compliance with the area invariant.
+
+* Second, routing disseminates enough information about the global state of the network and
+uses this information to efficiently deliver packets to their destination.
+
+* Third, node lookup is a distributed network service mapping a node identifier to its current
+network address.
+
+PeerNet assigns addresses to nodes dynamically, so that the PeerNet area invariant is preserved. For
+increased efficiency and stability, address allocation must result in a well balanced address tree and
+nodes within an area should be well connected.
+
+PeerNet does not need the support of a wireline infrastructure, but the aim is to be able to leverage
+any available infrastructure. It is envisioned to tunnel through the Internet to interconnect
+disconnected PeerNet networks initially and when available. Future considerations are development of
+protocols and tools to facilitate the communication between PeerNet and Internet nodes as well as
+enable TCP/IP emulation for IP-only software."
+(http://iptps03.cs.berkeley.edu/final-papers/peernet.pdf)
+
+==Peer Net Apps==
+Potential apps include a [[P2P Wiki]], and even [[P2P AGI]] or artificial general intelligence.  
+
+=Source=
+
+Paper: PeerNet: Pushing Peer-to-Peer Down the Stack. By Jakob Eriksson, Michalis Faloutsos, Srikanth Krishnamurthy. University of California, Riverside
+
+URL = http://iptps03.cs.berkeley.edu/final-papers/peernet.pdf
+
+[[Category:Technology]]
+[[Category:P2P Infrastructure]]
+[[Category:NextNet]]
+[[Category:Application Layer]]
+[[Category:Autonomous_Internet]]

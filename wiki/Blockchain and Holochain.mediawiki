@@ -1,0 +1,35 @@
+By Arthur​​ Brock, ​​David​​ Atkinson,​​ Emaline ​​Friedman, Eric ​​Harris-Braun, ​​Erin ​​McGuire,​​ Jean​​ M ​​Russell, Nicholas​​ Perrin,​​ Nicolas Luck,​​ Will​​ Harris-Braun. Holo Green Paper (2017). Retrieved from: https://files.holo.host/2017/12/Holo-Green-Paper.pdf
+
+{| class="wikitable"
+|+ Comparing​​ Blockchain ​​and ​​Holochain
+! 
+! Blockchain
+! ​​Holochain
+|-
+! Hash-chain approach
+| Data-centric, ​​a ​​single​​ global ​​data​​set​​-​​one shared ​​reality ​​across ​​all ​​nodes.|| Agent-centric,​​ allows ​​nodes​​ to​​ act independently, ​​or ​​in​ ​tight ​​coordination ​​only with ​​counterparties,​​ and​ ​then ​​share independently​ ​evolving ​​data​ ​realities ​​that come ​​to ​​agreement ​​over ​​time.
+|-
+! Energy Use
+| Bitcoin​​ consumes ​​more ​​than ​​0.1%​​ of​​ the world’s​​ electricity ​​​​to​​ power​​less ​​than 0.0001%​​ of ​​the ​​world’s ​​money.
+| Since ​​no​ ​mining ​​is ​​required, ​​no ​​specialized processors ​​are ​​needed, ​​making​ ​it ​​feasible to ​​run ​​full ​​nodes ​​on ​​low-power ​​computers or ​​cell​​phones.
+|-
+! Transaction Volume
+| Neo currently ​​processes ​​+1000 transactions ​​per ​​second.​​ Bitcoin​​ and Ethereum ​​considerably​​ less ​​at ​​a ​​handful per ​​second.
+| Expected ​​to ​​surpass ​​financial ​​exchange backbones ​​like​ ​the ​​Visa ​​network, ​​with ​​a ​​max of​ ​56,000 ​​transactions ​​per ​​second.
+|-
+! Scalability
+| Even ​​ignoring ​​proof-of-work, ​​there​ ​are serious ​​scalability ​​limits​​ on ​​synchronizing ​​a global​ ​ledger ​​across​ ​many ​​nodes.
+| With ​​a ​​sharded ​​DHT, ​​the ​​transaction ​​load per ​​node ​​gets ​​lighter ​​as ​​the ​​network​ ​grows.
+|-
+! Platform
+| Can ​​now ​​only ​​run ​​effectively ​​with ​​special mining​​ rigs ​​or ​​wasteful ​​staking ​​algorithms.
+| Can ​​run ​​on ​​a ​​Raspberry ​​Pi ​​or ​​a ​​mobile phone.
+|-
+! Computational efficiency ​​of architecture (not ​1 ​​machine)
+| O(n*m) ​​for​​ validating​​ transactions ​​on blockchain​​ as ​​a​​ whole​​ distributed architecture.
+| O(n/m*log​​m) ​​for ​​validating ​​transactions.
+|-
+! Consensus Effects
+| Core​​ consensus ​​algorithms​​ centralize power​​ (make ​​the ​​rich ​​richer). Proof-of-Work ​​results​​ in​​ infinitely ​​growing computational ​​over head ​​for ​​finite ​​data​​set.
+| No​​ mining​​ or ​​staking. ​​No ​​consensus. ​​Not vulnerable ​​to ​​majority ​​attacks.​ ​You ​​only have​ ​to ​​trust ​​the ​​code​ ​on ​​your ​​own​ ​node and ​​can ​​validate ​​counterparty’s​ ​history directly.
+|}

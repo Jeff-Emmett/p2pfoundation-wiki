@@ -1,0 +1,46 @@
+=Description=
+
+"The Linux kernel is the lowest level of software running on a Linux system. It is charged with managing the hardware, running user programs, and maintaining the overall security and integrity of the whole system. It is this kernel, which after its initial release by Linus Torvalds in 1991, jump-started the development of Linux as a whole. The kernel is a relatively small part of the software on a full Linux system (many other large components come from the GNU project, the GNOME and KDE desktop projects, the X.org project, and many other sources), but it is the core which determines how well the system will work and is the piece which is truly unique to Linux.
+
+With the 2.6.x series, the Linux kernel has moved to a relatively strict, time-based release model. At the 2005 Kernel Developer Summit in Ottawa, Canada, it was decided that kernel releases would happen every 2-3 months, with each release being a "major" release in that it includes new features and internal API changes.
+
+The quick release cycle was chosen as a way to get new features out to users in a stable form with minimal delay. As a result, new code – features, device drivers, etc. – is available in a stable kernel within a few months of its completion, minimizing or eliminating the need for distributors to backport developmental code into stable releases. So the kernels released by distributors contain many fewer distribution-specific modifications, yielding higher stability and fewer differences between distributions.
+
+Each 2.6.x release is a stable release, in that it is made available when the list of outstanding bugs is made as small as possible.
+
+The Linux kernel is one of the largest and most successful open source projects that has ever come about. The huge rate of change and number of individual contributors shows that it has a vibrant and active community, constantly causing the evolution of the kernel in response to a number of different environments it is used in. There are enough companies participating to fund the bulk of the development effort, even if many companies which could benefit from contributing to Linux have, thus far, chosen not to. With the current expansion of Linux in the server, desktop and embedded markets, it's reasonable to expect this number of contributing companies – and individual developers – will continue to increase."
+(https://www.linux-foundation.org/publications/linuxkerneldevelopment.php)
+
+
+=Discussion=
+
+==The role of companies==
+
+"The list of companies participating in Linux kernel development includes many of the most successful technology firms in existence. None of these companies are supporting Linux development as an act of charity; in each case, these companies find that improving the kernel helps them to be more competitive in their markets. Some examples:
+
+    
+* Companies like IBM, Intel, SGI, MIPS, Freescale, HP, etc. are all working to ensure that Linux runs well on their hardware. That, in turn, makes their offerings more attractive to Linux users, resulting in increased sales.
+    
+* Distributors like Red Hat, Novell, and MontaVista have a clear interest in making Linux as capable as it can be. Though these firms compete strongly with each other for customers, they all work together to make the Linux kernel better.
+    
+* Companies like Sony, Nokia, and Samsung ship Linux as a component of products like video cameras, television sets, and mobile telephones. Working with the development process helps these companies ensure that Linux will continue to be a solid base for their products in the future.
+    
+* Companies which are not in the information technology business can still find working with Linux beneficial. The 2.6.25 kernel will include an implementation of the PF_CAN network protocol which was contributed by Volkswagen. PF_CAN allows for reliable communications between components in an interference-prone environment – such as that found in an automobile. Linux gave Volkswagen a platform upon which it could build its networking code; the company then found it worthwhile to contribute the code back so that it could be maintained with the rest of the kernel. [http://lwn.net/Articles/253425/]
+
+There are a number of good reasons for companies to support the Linux kernel. As a result, Linux has a broad base of support which is not dependent on any single company. Even if the largest contributor were to cease participation tomorrow, the Linux kernel would remain on a solid footing with a large and active development community."
+(https://www.linux-foundation.org/publications/linuxkerneldevelopment.php)
+
+
+=Status=
+
+Some stats:
+
+"The kernel which forms the core of the Linux system is the result of one of the largest cooperative software projects ever attempted. Regular 2-3 month releases deliver stable updates to Linux users, each with significant new features, added device support, and improved performance. The rate of change in the kernel is high and increasing, with almost 10,000 patches going into recent kernel releases. These releases each contain the work of nearly 1000 developers representing well over 100 corporations.
+
+Since 2005, over 3700 individual developers from over 200 different companies have contributed to the kernel. The Linux kernel, thus, has become a common resource developed on a massive scale by companies which are fierce competitors in other areas."
+(https://www.linux-foundation.org/publications/linuxkerneldevelopment.php)
+
+More stats at http://lwn.net/SubscriberLink/275954/ec04dd97dc01376d/
+
+
+[[Category:Technology]]

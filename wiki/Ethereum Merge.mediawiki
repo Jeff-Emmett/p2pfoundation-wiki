@@ -1,0 +1,39 @@
+
+=Case study=
+
+(in the context of the 'endogenous legitimacy of polycentric governance systems in the blockchain ecosystems)
+
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"The history of Ethereum 2.0 is almost as old as Ethereum itself. As Buterin mentioned during a viewing party in the leadup to The Merge being executed (Fortis 2022), the plan of transitioning from a computationally- and resource-intensive PoW to a PoS system had been “the dream” from as early as January 2014. In a blog post on 15 January 2014, Buterin had identified two major advantages of PoS over PoW: it would remove the need to perform “useless calculations to secure the network” and, relatedly, would obviate the need for miners to operate specialized hardware, which could potentially concentrate mining power in the hands of wealthy parties that can afford to accumulate mining equipment (Buterin 2014). In short, according to Buterin, PoS could reduce the environmental footprint of Ethereum and diminish the risk that the network would be subject to plutocratic governance. PoS would replace network security gained through the burning of energy by security gained through people wishing to avoid significant economic losses (Buterin 2016).
+
+However, the challenge laid in designing a PoS protocol for Ethereum. This was as much a challenge of designing incentives as it was a technical challenge. For instance, there was a risk that a validator in a PoS system selfishly validates transactions on both an original and forked blockchain, thereby compromising the primary way in which a “legitimate blockchain” is determined (Buterin 2014). This risk existed because nothing was actually at stake in early experiments with PoS systems. As a result, Buterin and, later, Vlad Zamfir conceived of ‘slashing’ mechanisms in which validators in PoS systems would be penalized for bad behavior. This would involve validating nodes paying a “security deposit” to be able to have the right to block produce and earn returns, while losing said deposit if the rules of the system were infringed (Zamfir 2016a). To take another related example, there was a risk that nodes could simply be bribed to hand over their private keys to an attacker, allowing the attacker to eventually “take control of the blockchain” and “create ‘fake histories’ at will” (Zamfir, 2016b). Zamfir suggested that this challenge could be tackled by only accepting messages about the state of the network from nodes that maintained deposits at the time the message was sent. In the following years, Buterin, Zamfir, and others continued to discuss how to reinforce the security of PoS protocols, such as preventing bad actors’ efforts to revert the finality of Ethereum transactions, and incentivize good behavior by network participants (Buterin 2018; Buterin & Griffith 2017). These and other technical challenges continued to be discussed and researched over the years, with updates provided on social media, blogs, and other online resources. 
+
+As the Ethereum network's popularity surged, voices from outside the immediate blockchain community, including environmental NGOs, policymakers, academic, and financial institutions, started voicing concerns about the energy consumption of cryptocurrencies, especially Bitcoin and Ethereum (Neumueller 2022, 2023). The central worry was that, amid escalating climate change, the PoW consensus mechanism Ethereum previously utilized consumed as much energy as countries the size of Finland, contributing minimally to the economy. In contrast, some defended PoW mining's environmental impact, arguing it encourages the shift to renewable energy, aids in balancing electricity grids, and minimizes energy wastage (Rennie 2023). Nonetheless, the intense public scrutiny on PoW mining's energy use significantly influenced the blockchain community's perception, leading to a notable increase in discussions about the benefits of PoS, particularly its potential for reducing carbon and environmental footprints, in subsequent analyses of the PoS consensus mechanism.
+
+To test whether their PoS consensus protocol worked and was secure, in December 2020 the ‘Beacon chain’ was launched in parallel to the Ethereum main chain, which continued to operate using PoW consensus. This allowed the testing of whether this new protocol could maintain consensus about its own state without vulnerabilities and downtime, while the PoW consensus system of the Ethereum main chain continued to process and secure transactions. The Merge was finally executed on 15 September 2022. The consensus clients of the Beacon chain replaced the main chain as the consensus layer, while the original clients formed the execution layer with both layers being able to communicate with one another (Ethereum 2023). PoW mining was discontinued, but all the Ethereum transaction history was preserved. 
+
+The Merge can be seen as an attempt to address this public concern in a manner that does not diminish endogenous legitimacy and comports with the polycentric nature of blockchain networks. 
+
+
+This was achieved due to multiple procedural considerations being taken into account: 
+
+Firstly, the plan to eventually transition to PoS had been announced at an early stage, so network participants knew that this was part of the roadmap from the time they joined the network
+.  
+Secondly, the PoS protocol was carefully tested over a period of time. 
+
+Thirdly, the transition didn’t lead to network downtime, thereby not disturbing network participants. 
+
+Fourthly, the implementation of The Merge required the thousands of nodes to actively and voluntarily agree to upgrade their clients, for instance, by running both a consensus client and an execution client. In other words, nodes could not be directly coerced into accepting these upgrades by developers or other third parties. As always, it was possible for a fork to take place, and immediately prior to The Merge, a prominent Chinese Ethereum miner did try to organize a fork that would retain proof-of-work consensus (Lutz 2022). It was also possible for network participants to leave Ethereum, with the ETC Cooperative, the organization supporting the development of Ethereum Classic, reporting a surge of interest in the proof-of-work based Ethereum Classic in the leadup to The Merge (Munster 2022).
+ 
+Finally, expectations were managed. The energy usage of Ethereum was indeed dramatically reduced (Neumeuller 2023)—the Ethereum Foundation estimates by 99.95%—but no commitments were made that, for example, transactions would become faster as a result of The Merge.
+
+
+'''The fact that The Merge did not lead to a mass exodus of participants from the network, nor lead to the complete collapse of the value of Ether, indicates that this process was broadly considered to be endogenously legitimate.''' The existence of the factors described above confirms that it is possible for polycentric governance in blockchain systems to be endogenously legitimate provided there are opportunities to effectively participate in governance and exit from the system. Importantly, the example of the Ethereum Merge offered lessons for polycentric co-regulation. It demonstrated how external actors can shape social norms, for example, about contributing to environmental harm, in a manner that leads to a change in the technical architecture of the blockchain system so that public policy concerns are addressed, but without imposing inefficacious or punitive regulations or compromising the endogenous legitimacy of the system (De Filippi et. al 2024)."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+[[Category:Crypto Governance]]
+
+[[Category:Peergovernance]]

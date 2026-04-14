@@ -1,0 +1,82 @@
+=Description=
+
+By Yann Aouidef, Federico Ast and Bruno Deffains:
+
+"Decentralized justice platforms are a form of “digital courts” supported by blockchain technology whose purpose is the settlement of disputes by crowdsourcing jurors under economic incentives to provide fair (Ast and Dimov, 2018) rulings. The procedure in these platforms is encoded as smart contracts on a blockchain which seeks to guarantee legal certainty6. Decentralized justice platforms aim to provide a way to resolve matters of interpretation inherent to smart contracts thus lowering transaction costs and enabling the thriving of many decentralized applications built on blockchain."
+
+(https://www.frontiersin.org/articles/10.3389/fbloc.2021.564551/full)
+
+
+=Characteristics=
+
+By Yann Aouidef, Federico Ast and Bruno Deffains:
+
+"Case Complexity: Different mechanism choices affect the different types of disputes that platforms can handle. All platforms can resolve binary cases where the decision is to be made only between two options. Some platforms claim to be able to resolve non-binary cases.
+
+Jury Selection: Different platforms have made different choices on the selection process of jurors, in particular, the possibility of vetting jurors based on specific criteria such as skills. Kleros and Aragon do not offer a mechanism to select jurors based on specific criteria (all users can be drawn as jurors if they stake tokens) while Jur allows for jurors to be vetted.
+
+Reputation Effects: Different platforms have different approaches on the accumulation of reputation as jurors. Kleros and Aragon rely solely on cryptoeconomic incentives created by a token while Jur takes juror reputation into consideration.
+
+Appeal Mechanism: Different platforms made different choices in the possibility for users to appeal rulings. Some platforms allow appealing rulings (Kleros and Aragon) while others do not (Jur).
+
+Governance Model: In Kleros and Jur, the platform token is used for governance (e.g., decide software upgrades). In Aragon, a different token is used.
+
+Subscription Fees: In Aragon, parties are required to pay a regular subscription fee to have the right to use the court. In Kleros and Jur, fees are only paid when a dispute arises.
+
+Trustlessness: Kleros and Aragon are built on fully decentralized blockchains with trustless transactions in the sense that any user can join as a node. Jur is built on VeChain, which uses a Proof of Authority consensus algorithm with trusted nodes."
+
+(https://www.frontiersin.org/articles/10.3389/fbloc.2021.564551/full)
+
+
+=Status=
+
+By Yann Aouidef, Federico Ast and Bruno Deffains:
+
+"The decentralized justice industry is at an early stage. In May 2020, the combined number of users of decentralized justice platforms is lower than 1,000. Adoption is expected to increase as the applications from the blockchain ecosystem gain adoption and decentralized justice platforms offer a more efficient and trustless way of securing transactions compared to alternatives such as government courts, international arbitration and traditional online dispute resolution methods.
+
+Since they are based on innovative game theoretical mechanism designs and frictionless payments rails, decentralized justice systems can offer an adjudication system which is radically cheaper and faster than alternatives while at the same time guaranteeing a fully transparent procedure.
+
+An important question is: how are decentralized justice platforms going to grow from their current early stage into highly efficient providers of “justice as a service”?
+
+In order to answer this question, we can conceptualize decentralized justice systems as marketplaces which coordinate the supply and demand of resolution services. Parties (e.g., two users who use a decentralized justice platform to resolve an e-commerce dispute) are the demand side of the marketplace. They consume an adjudication service which is provided by jurors through the platform cryptoeconomic mechanism. Jurors are the supply side of the marketplace. They sell their time and skills in order to process the relevant information and produce decisions.
+
+Traditional legal and arbitration systems have high costs because the institutional arrangements in which they operate tend to give legal experts a monopoly on the provision of legal services: lawyers have a monopoly on legal consultation and magistrates have a monopoly on judgments having imperium and exequatur. This results in a limited supply of adjudication services and, therefore, a high equilibrium price.
+
+Thanks to their cryptoeconomic mechanisms, decentralized justice platforms can leverage the knowledge and work of individuals with a specific expertise which is not necessarily recognized by the system of legal skills development. As illustrated in Figure 3, as a higher number of agents participate as service providers, the supply of resolution services increases which drives the cost per case at a level that is not possible to attain by traditional methods. The quality of the adjudication services is ensured, not by reliance on a professional body and codes of conduct, but by purely economic mechanisms."
+
+(https://www.frontiersin.org/articles/10.3389/fbloc.2021.564551/full)
+
+
+=Directory=
+
+==Kleros==
+
+"Kleros was founded by Federico Ast and Clément Lesaege in May 2017 (Kleros Website, 2020). Development efforts for the Kleros protocol are coordinated by Coopérative Kleros, a Société Coopérative d’Intérêt Collectif (SCIC) incorporated in France. Launched on the Ethereum blockchain in July 2018, Kleros was the first decentralized justice platform to become operational and the most used at the time of this writing8. As of November 2020, nearly 500 disputes have been resolved and around 400 users participate as jurors in the platform9. This has generated around $123,000 in arbitration fees paid to jurors10.
+
+Coopérative Kleros follows a hybrid strategy which targets both use cases native from the blockchain industry and also mainstream use cases where traditional actors from the ODR industry are already active. As for applications in the blockchain industry, the company targets dispute resolution for escrow transactions, token curated registries (the use of decentralized jurors and economic incentives for compliance verification) and dispute resolution for oracles. As for mainstream applications, Coopérative Kleros fosters the development of so-called “layer two companies” building solutions on top of the Kleros protocol Kleros blog (2020).
+
+More information:
+
+* For reflection on the question if Decentralize justice, for instance Kleros, can fit with current jurisdictional frameworks: Dmitry, N (2019). Due Process In Kleros Consumer Dispute resolution. https://drive.google.com/file/d/1eyQDC3QYNE8gAjt0meZ6ImhL3n47zr_3/view [Accessed November 18, 2020].
+
+* To learn more about how the Kleros platform works, read Kleros White Paper: https://kleros.io/whitepaper_en.pdf. Also read Kleros Yellow Paper with the social choice theory research currently conducted by Coopérative Kleros: https://kleros.io/whitepaper_long_en.pdf
+
+* http://klerosboard.com
+
+
+==Aragon==
+
+Aragon was founded in February 2017 by Luis Cuende and Jorge Izquierdo in Spain and is currently incorporated in the Aragon Association which is a non-profit entity based in Zug, Switzerland Aragon Wiki (2020). The vision of the Aragon project is to provide software tools for users to create decentralized autonomous organizations (DAOs) (Aragon Website, 2020). Aragon launched their decentralized court in November 2019 with a mechanism design heavily inspired by Kleros work (Aragon, 2020). According to Aragon sources, the court has 239 jurors Aragon Network (2020) but do not inform about the number of resolved disputes.
+
+In the case of Aragon, the court service seems focused on providing arbitration services for DAOs within the Aragon ecosystem. The main use case envisaged in the white paper Aragon Whitepaper (2020) is the resolution of disputes on voting proposals in DAOs that may contradict the “constitution” of the organization. Through a vote on the Aragon court, the proposal could be declared “unconstitutional” and overturned.
+
+
+==Jur==
+
+Jur was founded in October 2017 by Alessandro Palombo and Giotto De Filippi in Switzerland through a “Société civile/Société commerciale” under Swiss law11. At the time of this writing, Jur still has not released a working product. The project’s white paper claims that the system will cover a wide variety of cases through three different courts: the Court Layer (a system similar to a traditional ODR system with traditional arbitrators for higher value disputes, which they claim can produce legally binding rulings), the Open Layer (a system more akin to Kleros with a decision making logic based on collective intelligence) and the Community Layer (a kind of private court with specifics rules defined by creators). Jur strategy seems focused on enterprise use cases. While they started building on Ethereum, in July 2018 they switched to the blockchain Vechain in an attempt to focus on the enterprise segment".
+
+(https://www.frontiersin.org/articles/10.3389/fbloc.2021.564551/full)
+
+[[Category:P2P Law]]
+[[Category:Crypto Governance]]
+[[Category:Cryptoledger Applications]]

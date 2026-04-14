@@ -1,0 +1,24 @@
+'''= phase of the web which can be contrasted with the [[Document Web]]'''
+
+
+=Description=
+
+Joe Geldart:
+
+" This view of the Web, as a collection of discrete and immutable documents is what I term the [[Document Web]].
+
+The logical next step is to dissolve the boundaries between documents and provide meaning to the structure of the contents. This is the key idea behind the Giant Global Graph. This has been the focus of two mildly-competing efforts. One, XML, tries to make document representation mechanical and so maximise the reuse of tools. The other, RDF, tries to provide a formal data-model for the Web. I say mildly competing because there is a difference is direction between the two projects, and some overlap in goals. XML starts with the premise that the ‘Document is King’ and represents all data in the form of a tree of structured parts. RDF, starts from the idea of the Web, that ‘Connection is King’ and works backwards to specific item representations from there. In light of these very different starting points, we should wonder not why RDF-XML was so bad, but rather that it happened at all. Looking at the Semantic Web project, we can see a large portion of the idea is to liberate data from stifling documents only manipulated as a whole and allow the Web idea to operate right down to the level of a binary assertion. This densely inter-linked network of assertions is what I term the Data Web and represents a true second phase for the Web project.
+
+The purpose of the Web is to allow us, its users, to share information and understanding (granted, given the perceived quality of the majority of the content, this may seem like a lofty and idealistic purpose but more on that later.) The Document Web allows us to post pages detailing the most tedious minutiae of a topic and link them in with other pages so that people can find them and share in our ennui. The Data Web allows us to tear down the artificial silos that divide our knowledge and benefit from emergence; the whole is more than the simple sum of its parts. It seems debatable whether it is possible to go further than that, however it is worth noting that the Data Web is very well-suited to blind aggregation, but questionable in its approach to human-oriented knowledge.
+
+Both the Document Web and the Data Web rely upon a very simple idea; that of providing names to things. In the Document Web, these names are locators; they tell you where to find documents so that you can download them. Appropriately, these names are called Universal Resource Locators (URLs). The Data Web goes a step further and provides the ability to name things you can't download such as the book you just read, the idea you just had and the action you're about to do. These names are called [[Universal Resource Identifiers]] (URIs) and subsume URLs. What could be simpler? You label the world from top to bottom with these atoms (for fairness, I should state that the idea of URIs as atomic is not without controversy but it is the position I hold and this is my rambling blog) to allow you to make unambiguous statements which may be merged with the statements of others. As a concept, URIs are perfectly named. They provide a universal model of identity to the Web."
+(http://www.dur.ac.uk/j.r.c.geldart/essays/there_again/towards_the_active_web.html)
+
+
+=More Information=
+
+#Joe Geldart on why we are moving to the [[Active Web]]
+
+[[Category:Standards]]
+
+[[Category:Technology]]

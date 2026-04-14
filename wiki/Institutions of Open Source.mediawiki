@@ -1,0 +1,73 @@
+
+'''Typology'''
+
+By [[Lars Zimmermann]]:
+
+"What institutions allow or support open source development? And what is their current state? Here is an (probably incomplete) list. Feel free to add things in the comments or via email to me. The list is followed by a short discussion of each institution.
+
+* READ ME FIRST Files
+* Licenses
+* Version Control/Documentation Systems (like and especially Git)
+* Foundation(s)
+* Standards (or generally common and accessible construction methods)
+
+==READ ME FIRST files==
+
+This is something coming from Open Source Software and we adapted this for the organisation of the Open Source Circular Economy Days. The READ ME FRIST file in a software project is usually a text-document with instructions on how to install the software and it often contains also information about the  project behind the software its structure and how to join it. The practice of READ ME files is pretty common. Many people expect and look for this file when checking a new software project. It is an existing and working institution in the world of software.
+
+Is there room for improvement? A major research project could compare a lot of READ ME FIRST documents from software projects, probably something interesting can be found out here.
+
+But there is one thing that definitely could be done with this institution: Let’s bring this technique to other areas! This is something I am thinking about anyway. For every new open project I will do I will create form now on a READ ME document and add a link to it in the menu bar of the website. The menu bar of every open project could have an obligatory “READ ME” button next to the usual other buttons like “Contact”.
+
+Many projects claim to be open but it is often hard to find out where and how? The information is always placed and structured differently. Adapting the READ ME technique in all open projects also outside of software would help to build a general understanding and allow quicker progress.
+
+==LICENSES==
+
+Contracts are a general object of study of [[New Institutional Economics]] – especially standard contracts and clauses. And licenses are standard contracts. They work as institutions. And it is really obvious how the availability and use of very good free and open source software licenses is essential for this movement. The number of available licenses for software today is high.
+
+The fact that the whole question of licensing is extremely different, difficult and somehow unsolved for open source hardware is definitely one of the big obstacles for the growth of open source hardware. You will find a lot of insecurities around licensing in open source hardware and insecurities indicate best a lack of working institutions. This article is not the place for detailed descriptions of that problem. But I want to make some comments and hope that they also can be understood by those unfamiliar with the problems so far.
+
+People use sometimes licenses from open source software or free culture for their hardware. But software is mostly a subject of copyright law while functionalities of hardware are a subject of patent law. Software licenses are based in copyright law can not apply for things that are subject of patent law. Therefore the software licenses don’t work for functionalities in hardware. And the fact that copyright law and patent law are and work entirely different makes it difficult or impossible to develop licenses for hardware similar to those we have for software.
+
+You can’t have copyleft for hardware [1]. Copyleft is a clause that is often a part of free and open source software licenses and some people think that it was and is the driving force for the growth and success of it. Copyleft means that everybody can use your work as a base for or ingredient of a new work but only if this new work is also published as open source or free software. Copyleft licenses are often called “viral” licenses because they “infect” more and more software projects with openness. It is impossible or at least not foreseeable how a copyleft for hardware similar to the one in software could be realized in the future.
+
+What does the lack of copyleft mean for hardware designers? They can’t limit or predict in any way what others do with their work. It is possible that someone takes the work and invents a modification of it, patents this innovation and closes this road for development, also for the initial designer. Because the initial design is open the designer has nothing to bargain and open up this road for him or her again. Going open with hardware means to enter a world of insecurity.
+
+Some address this problem by adding free culture or open source software licenses to their hardware nevertheless. Although theoretically the license does not work there is the chance that it might work in court for particular aspects and in special situations. There is some insecure legal ground where only in court can be found an answer. So there is a small risk for every violator of the license to loose in court – you enter insecure ground. And this risk or insecurity can somehow work as a protecting shield, because minimizing risks is what companies tend to do. But it is insecurity that protects which is the opposite of what we expect from a working and strong institution! This is nothing to build a lasting movement on.
+
+So is the situation frustrating and hopeless for open source hardware, the movement in a dead end and can’t grow? It looks a little bit like that. I don’t really see a good workaround.
+
+But wait, there is still a lot of ground to explore! Once you have understood this situation you have can react accordingly. Open Source could for example still work in a field where patents are very unlikely – because the hardware itself is not the invention but the setting in which it is openly shared. Or maybe institutions like “Shame Pages” could help sometimes. Also lobbying and fighting for a clearer patent law and better patent practices is very important! What else?
+
+==FOUNDATIONS==
+
+Foundations are important for Open Source. We have in Open Source or generally free and open culture a lot of important foundations and similar organisations, the Wikimedia Foundation, the Free Software Foundation, the Creative Commons Organisation and the Linux Foundation are examples. Big or important software projects sometimes create their own foundations (an example is the Document Foundation behind Libre Office).
+
+The legal form of a foundations is basically also a contract (about collaboration between a diverse set of partners). It would be interesting to study different foundations around Open Source and find out what are common things in their statutes and common problems for example to understand how to improve this institution. Is there a good standard recipe for a foundation?
+
+But advertising the foundation model more and expand it to other areas (to open hardware for example) is definitely a way to push this institution. At the end of September 2015 will be a meeting where we will discuss a future foundation for the Open Source Circular Economy Days (OSCEdays). Maybe, if we succeed, we can add with this foundation to the world of foundations around Open Source. The meeting and discussion for this foundation is open and ideas and suggestions most welcome.
+
+==VERSION CONTROL SYSTEMS / DOCUMENTATION SYSTEMS==
+
+How to share design files or source code and collaborate on it effectively in an open setting? A shared standard of documentation and tool for collaboration would of course be an institution of great importance. With Git (and the rise of GitHub) I think we have this for software. If you create an Open Source software project today you will ask yourself the question if you want to go to Git Hub or not. You still can decide not to do it. But you will probably think about Git Hub at one point.
+
+For Hardware we don’t have anything like this, yet. There are many reasons for that. Hardware is very diverse (an airplane, a glas bottle and a sausage are different) and instructive hardware documentation can be way more complex than software documentation. A shared ground for open hardware documentation is missing. This brings up a lot of insecurities, unknowns and difficulties.
+
+We need and hopefully will make progress here! A number of people is working on it although I don’t see a breakthrough coming quite soon. With the IPO tables I tried to suggest a possible shared ground/starting point useful and suitable for all hardware projects and that would on top come with the side-benefit to make organisation and collective invention of circular production easier. The project is stuck a bit because of a lack of resources although some great people started to discuss it. But the idea of IPO is simple and open to be experimented by everyone and I would love to see people doing it.
+
+==STANDARDS==
+
+The importance of standards for Open Source is pretty obvious as they are somehow shared norms and make understanding and collaboration easier. The [[Open Source Hardware Definition]] reflects this when it says: “Ideally, open source hardware uses readily-available components and materials, standard processes, open infrastructure, unrestricted content, and open-source design tools to maximize the ability of individuals to make and use hardware.“
+
+Successful Open Source Hardware projects like Arduino can become basically a standard, and at least in the case of Arduino probably because (!) they are open. The Open Structures project and its idea to base collaboration on the open standard of a shared 4cm x 4cm grid has to potential to make open source design and collaboration outside of electronics really big and mass market compatible, if the project would be pushed further by its founders or someone would take the existing open parts and the method and give us a great open hardware start up.
+
+In one sentence: Standardization is good for Open Source and therefore probably most things that are good for standardization are also good for Open Source. It would be of course good, if the standards are open source itself."
+(http://bloglz.de/institutions-for-open-source-and-the-current-state-of-open-source/)
+
+[[Category:Governance]]
+
+[[Category:Peergovernance]]
+
+[[Category:Commons Economics]]
+
+[[Category:Civil Society]]

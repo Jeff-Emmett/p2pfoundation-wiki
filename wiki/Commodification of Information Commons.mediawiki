@@ -1,0 +1,429 @@
+'''* Article: The Commodification of Information Commons. By Primavera De Filippi and Miguel Said Vieira.'''
+
+URL = http://biogov.uclouvain.be/iasc/doc/full%20papers/De%20Filippi%20-%20Said%20Vieira.pdf
+
+=Abstract=
+
+"Internet and digital technologies allowed for the emergence of new modes of production 
+involving cooperation and collaboration amongst peers (peer-production) and oriented towards 
+the maximization of the common good—as opposed to the maximization of profits. To ensure 
+that content will always remain available to the public, the output of production is often released 
+under a specific regime that prevents anyone from subsequently turning it into a commodity (the 
+regime of information commons).
+
+Although they cannot be commodified, information commons can nonetheless be exploited by 
+the market economy. Indeed, since they have been made available for use by anyone, large 
+Internet service providers can indirectly benefit from the commons by capturing the value 
+derived from it. While this is not a problem as such, problems arise when the exploitation of the 
+commons by one agent is likely to preclude others from doing the same—often as a result of
+commodification. This is especially true in the context of cloud computing, where the content 
+holder has become as powerful, if not more powerful than the copyright owner. Nowadays, 
+regardless of their legal status, information commons are increasingly controlled by large 
+corporations who can precisely define the manner in which they can be used or accessed.
+Digital communities need to be aware of these risks. In order to reduce the likelihood of 
+commodification, but still benefit from the advantages offered by cloud computing, digital 
+communities should rely on decentralized platforms based on peer-to-peer architectures—
+thereby escaping from the centralized control of large service providers while nonetheless 
+preserving the autonomy of the commons they produce."
+
+
+=Excerpt=
+
+==COMMODIFICATION OF THE COMMONS==
+
+By [[Primavera De Filippi]] and Miguel Said Vieira:
+
+===a. Definition===
+
+Commodification is the process through which something becomes a commodity. Commodity, in 
+turn, is a concept that can be defined in many (often complex) ways. For the purpose of this 
+paper, we have adopted an operational definition of commodity, similar to that of Karl Polanyi
+(1957 [1944], 72): a private good, produced through a process which is mostly driven by market 
+needs or considerations (as opposed to a process driven by direct needs or considerations of a 
+community).
+
+Before further exploring this definition, let us consider an argument in  favour of 
+commodification which is frequently raised in mainstream economics: the market demand for 
+commodities is the most efficient way to gauge the needs of communities. We argue that the 
+problem with this approach is that markets can only offer, at most, an indirect  signalling of 
+community’s  needs; one which is prone to serious distortions. This distortions can be clearly 
+exemplified by the “neglected diseases” issue, which refers to diseases that receive very little 
+attention from the pharmaceutical industry (in terms of research investments, and sometimes 
+even production and distribution of existing medicines), even though they affect more than a 
+billion people around the world (DNDi 2012).
+
+This same industry, in turn, makes huge 
+investments in research for drugs that cater to the needs of a wealthy minority, often wasting 
+valuable resources in developing similar medicines for already treatable conditions (as in the 
+case of erectile dysfunction drugs), only in order to have a share in the most lucrative markets
+(Latrive 2005, 27). This illustrates how markets might frequently be better in  signalling the 
+profitability of an endeavour than the needs of communities.
+
+Coming back to the definition of commodity, its application to information commons (namely, 
+when information commons are the subjects of a commodification process) involves a 
+peculiarity. To turn a commons into a commodity, it must firstly be turned from a common good 
+(i.e. a good that is owned by a community) into a private good through the process of enclosure. 
+
+This is due to two main reasons. First, in order to legitimately offer a commodity in a market, 
+one must be able to exert exclusive rights (such as those connected to private property) over it.
+
+Second, if a commodity can be shared amongst several individuals, it will be less scarce (and 
+thus less valuable as a commodity) than if it was exclusively controlled by one person.
+To better understand the concept of commodification as applied to information commons, it 
+might be useful to distinguish it from similar but distinct phenomena that can occur within or
+around the commons. 
+One of these is the process of  commercialization,  i.e. the act of offering something for sale. 
+While commodification presupposes commercialization, the reverse is not always true. For 
+instance, although FLOSS can sometimes be sold commercially, such a sale does not involves 
+the commodification of the software (which remains shareable and free—in the strong sense of 
+this word—despite the sale), nor does it imply that the production thereof was necessarily driven 
+by market needs. In this example, commercialization occurs inside the commons, to the extent 
+that it is directly affecting its resource pool; however, commercialization can also occur around
+the commons, by indirectly leveraging the contents of the resource pool. This is the case of many 
+“indirect sale-value” (Raymond 2001, 134–140; Eric Raymond is a leading figure in the open 
+source software movement) and “freemium” (Anderson 2009) business models, in which profit 
+comes not from the sale of the commons resource pool, but rather from the sale of products or 
+services related to it. In the context of FLOSS, this type of commercialization is generally 
+achieved through the sale of proprietary versions with additional features, specialized hardware 
+that is compatible with the software, support or customization services. In the context of literary 
+works, this is achieved through the sale of abridged audio versions, deluxe editions; and so on. 
+
+Finally, commercialization around the commons can also be achieved by means of advertising. 
+
+Providing information commons for free in order to attract a substantial users base and 
+subsequently selling users’ data for the purpose of  behavioural advertising is nowadays a 
+frequent business model which, although definitely involving some degree of commodification, 
+does not necessarily imply commodification of the commons’ resource pool itself. 
+
+Many of these cases are based upon the provision of previously unavailable services or products; 
+ones that can satisfy communities’ needs, without posing threats to the commons they’re 
+structured around. Additionally, the benefits derived from advertising and previous examples 
+could potentially be used to provide resources for the development of more information 
+commons.
+
+A second phenomenon that must be distinguished from the commodification of information 
+commons is the one of cooptation: i.e. transforming the structure of an information commons in 
+such a way as to no longer reflect the aims and needs of its community. Cooptation can be a 
+consequence of commercialization happening  around the commons (as in the cases outlined 
+above), but it is a more subtle and nuanced phenomenon. Let us consider two possible examples 
+of cooptation.
+
+One is the case of FLOSS becoming the object of interest of a few companies whose businesses 
+are based on providing services or selling hardware somehow related to that FLOSS. Those 
+companies are likely to contribute to the development of that software, mainly to ensure it is 
+being developed in ways which are compatible with the businesses they run around it. In this 
+case, cooptation would take place whenever the influence these companies exert over the 
+development of the software is so large (e.g. because of the amount of community members that 
+the company can employ for paid work, or because of their interference in the governance 
+structure of the commons) that it eventually supersedes the influence of other actors, thus 
+effectively making the needs of those companies a priority over the community’s needs.
+
+Since the commons’ resource pool remains free, it is in theory always possible for the community to 
+fork in order to follow a different direction; yet, apart from the fact that forking is generally 
+rare (it is undertaken only as a last resort, as communities acknowledge that otherwise it wastes 
+too much effort [Weber 2005, 64]), the fact that the company employs many members of the 
+community introduces an additional imbalance  favouring the primacy of the company’s 
+interests.
+
+The second example is that of many blogs licensed under free/open content licenses. 
+Most of those blogs resort to advertisements (either in the form of banners and text ads, or 
+through sponsored posts and paid product placement) in order to earn money. In this case, 
+cooptation would occur if the content and general editorial direction of those blogs were 
+transformed in such a way as to make them more attractive to advertisers (for instance, by 
+focusing on content that is seen as more advertising-friendly, that promotes more click-throughs, 
+or that is geared to increasing search engine hits).
+
+As mentioned above, cooptation is ultimately a nuanced process: in both examples, there is a 
+continuum of gray areas (rather than a binary measure) of cooptation. It is—unlike 
+commercialization inside or around the commons, which could potentially help in funding the 
+maintenance of the commons—a process strictly detrimental to commons, although it does not 
+necessarily involve commodification per se.
+
+
+===b. Traditional means of commodification===
+
+Commons are generally driven by the needs of their communities; and with information 
+commons, communities can be remarkably large and porous to new members.
+
+Information  commons create value for society by allowing anyone to use them, but also to build upon them, 
+to subsequently produce new works that will become themselves part of the commons (either 
+immediately, whenever the derivate works have been released under a free/open license, or at a 
+later time, after the copyright has expired).
+
+All works derived from the information commons will either become immediately available to the public under an identical (in the case of copyleft 
+licenses) or similar regime, or they will be subject to the copyright regime and thus only benefit 
+society at a later time, after the exclusive rights have expired.
+While any work released under a free/open licence will contribute to increasing the pool of 
+information commons, licenses precluding the making of derived works or imposing restrictions 
+over commercial uses of the commons could reduce potential benefits that can emerge from 
+those works (in particular, the possibility that certain derived works are produced and added to 
+the commons). Those are, however, the most widely used types of licences: according to an 
+estimate by Creative Commons in 2010, almost half the works using their licenses used those 
+with clauses precluding commercial usage—including the making of derived works.
+26
+This can be detrimental to the extent that using the commons—either commercially or not—is 
+likely to result in previously unavailable products or services that could ultimately benefit 
+society. The use of these licences is therefore discouraged by many online communities 
+concerned with the preservation and the promotion of information commons,
+on the grounds 
+that information commons cannot be, in themselves, directly harmed by commercial usages, 
+since they will, at least in principle, also remain accessible to others in a non-commercial way.
+What is true in principle is, however, not necessarily true in practice. Indeed, many mechanisms 
+can be employed to turn information commons into a commodity.
+
+One of such mechanisms—albeit somewhat controversial—is to acquire the copyright in a work 
+and subsequently revoke the licence. This issue was raised in the CyberPatrol
+case, where the 
+copyright in software released under the GPL licence was transferred to a third party which 
+purported to revoke the licence. Although the judge ultimately did not rule on the issue, the 
+general opinion is that even though the copyright owner may decide that a work be no longer 
+released under a particular license, this decision cannot impinge upon the rights of any previous 
+licensee who has legitimately obtained a license: any formerly issued license will continue to be 
+valid provided that no breach has occurred.
+
+When the law does not allow for the commons to be turned into a commodity, contracts and 
+technology can be used instead, as a mechanism to dictate the extent to which a particular piece 
+of content can be used. This can be done, for instance, by incorporating protected material into 
+an information commons (e.g. adding a preface to a book that has entered the public domain) and 
+subsequently relying on contractual provisions and/or technological measures to introduce an 
+additional layer of protection to the work as a whole. While this practice has been precluded by 
+several free / open licences,
+it can nonetheless be employed to acquire control over information 
+that is not subject to copyright protection, such as facts, ideas, or any work whose copyright has 
+expired. 
+
+Moreover, some people claim that the mere act of digitization gives rise to a new right over the 
+resulting digital copy. Although this claim has thus far not been acknowledged by the 
+jurisprudence, several corporations, such as Google, implement something similar by 
+incorporating contractual provisions into the digitized copies of public domain works in order to 
+prevent users from exploiting them commercially.
+
+Contracts and technology can thus 
+potentially supersede the law, turning public domain information into a commodity whose 
+exploitation can be regulated as if it qualified for copyright protection (for more details on the 
+use of contracts for the commodification of information, see e.g. Radin 2004
+
+
+===c. Commodification through Cloud Computing===
+
+Cloud computing provides the underlying infrastructure for the establishment of a whole new 
+layer of commodification, which applies not only to public domain information but also to 
+copyrighted content released under free/open licences.
+
+Given that information stored into the cloud is made available to the public through a specific, 
+provider-controlled user interface (be it a graphical user interface, or an application 
+programming interface), cloud providers can unilaterally determine the extent to which and the 
+manner in which information commons can be accessed, used or reused. If—as clearly expressed 
+by Lawrence Lessig (2006)—code is the law of the internet, in the context of cloud computing 
+the user interface can become de facto law. As the main content holders, cloud providers have 
+become as powerful, and sometimes more powerful than copyright owners. Indeed, the 
+provisions of copyright law have become irrelevant in a context where everything the user can or
+cannot do is determined by the technical specifications of the cloud computing platform. By 
+exporting content into the cloud, the copyright owner no longer enjoys direct access to such 
+content and is thus left with little practical means of control over it. The cloud provider, on the 
+other hand, has the power to specify the terms and conditions regulating the access to and the 
+usage of any piece of content stored on its servers, potentially ignoring the provisions of the 
+licence under which it has been released (De Filippi and McCarthy 2012).
+
+By limiting the extent to which users control their content, cloud computing itself, as a service 
+sold to communities, is commodified; its characteristics have less to do with communities’ needs 
+than with the provider’s profit motivation. But commodification can also happen here in a 
+second and less obvious direction: when commons are turned into commodities, and are used to 
+“pay” for cloud computing services. 
+
+One of techniques used to reach that goal is the practice of crowdsourcing.
+
+Nowadays, the production of content or information frequently is done not by online operators, but rather by a 
+large community of users participating in online platforms. Encouraging digital communities to 
+produce and share information is a means for online service providers to maximize their profits 
+by exploiting the output of peer production as a means to reduce their own costs of production. 
+Online operators can subsequently reap off the benefit thereof by offering a service whose value 
+is for the most part derived from the commercial exploitation of this content.
+
+In the last few years, a large number of such platforms have been deployed to facilitate social 
+interactions through the dissemination of user-generated-content. This is the case of Facebook, 
+whose business model relies—in addition to selling user’s data to advertisers—mainly on the 
+content produced by its user-base; but also Flickr, Twitter or any other company that does not 
+actually produce any content itself, but merely exploits the content generated by others for its 
+own profit.
+
+Most of those platforms are nowadays controlled by large corporations that are able to precisely 
+define the manner in which content can be produced or communicated through them. Although 
+they cannot claim any right over such content, they can nonetheless dictate the way users can 
+access or interact with it. Oftentimes, terms of use also require users to automatically transfer the 
+copyright in any content produced onto the platform, or a minima to grant the service operator a 
+universal, perpetual and unconditional license for exploiting such content.
+
+In spite of its legal 
+status, content can thus be freely exploited by cloud operators.
+
+Conversely, to the extent that 
+they cannot fully control the content they have produced (as it is now hosted in the infrastructure 
+owned by the provider), users cannot freely dispose of it—regardless of whether or not it has 
+been released into the commons. 
+
+Finally, this leads to another fundamental concern raised by cloud computing with regards to the 
+freedom to use and reuse information commons. To the extent that content is only available 
+through the interface provided by the cloud provider, users can no longer access the source file 
+of such content. In the case of FLOSS, access to the source code is a prerequisite for users to 
+exercise their freedom to understand, edit and modify the code.  Similarly, in the context of 
+information commons, access to the source file is often necessary—or to the least instrumental—
+to the creation of derivative works. By not providing the means for users to download the source 
+files of content stored into the cloud, cloud providers can negatively affect some of the freedoms 
+granted to users under the licence."
+(http://biogov.uclouvain.be/iasc/doc/full%20papers/De%20Filippi%20-%20Said%20Vieira.pdf)
+
+==GOVERNANCE AND ARCHITECTURE DESIGN==
+
+By [[Primavera De Filippi]] and Miguel Said Vieira:
+
+===a. Decentralized peer-production===
+
+As mentioned in previous sections, most (successful) models of commons production are geared 
+towards the satisfaction of a community’s needs. As a result, the output of production cannot be 
+regarded as a commodity (in Polanyi’s terms). Even if certain communities do actually sell some 
+of their common resources, generally speaking, this form of commercialization is not directly 
+aimed towards the accumulation of surplus, but rather towards guaranteeing the sustained 
+existence of the common resources, or, eventually, towards financing the production of 
+additional resources to fulfil new and more community’s needs.
+
+This goes hand in hand with the fact that many commons display a significant level of selforganization and democratic community participation. This  was one of the findings of Elinor 
+Ostrom’s research, defining self-organization and democratic participation as two of the 
+fundamental “design principles” of the most successful, enduring commons.
+
+Highly centralized, hierarchical models of production are often unwelcoming to input from the 
+members of the community, so that the needs of many users could simply be ignored and go 
+unattended. In those models, the risk of the community breaking down is therefore considerable, 
+unless there is a strong leader or a significant level of cohesion. 
+
+While Ostrom’s research focused material commons, those traits can easily be observed in the 
+context of intellectual commons. Wikipedia and the Debian project
+are good examples of this.
+
+Even though they do implement some limited form of hierarchy, their structure and organization 
+is ultimately based on democratic principles that dictate most of the wide ranging decisionmaking processes.
+
+ 
+These projects are also permeable to new members and their contributions: 
+
+anyone can edit Wikipedia (in most articles, even without being a registered member) or 
+contribute to Debian, and can do so voluntarily, self-selecting their preferred tasks—as is typical 
+of peer production initiatives. In the case of the Debian project, even if some of the most 
+substantive ways to contribute (package maintenance, for instance) require specialized technical 
+knowledge, many others do not (translations, legal issues, communications, advocacy etc.); and 
+since 2010, non-technical contributors can also attain the official status of Debian Developers, 
+and thus vote in the most important decisions concerning the project (Debian Project 2010).
+
+
+===b. Centralized cloud environment===
+
+Commodities, according to Polanyi’s definition, are mainly produced to satisfy market needs and 
+considerations. Oftentimes, commodities are directly pushed into the market, and profit is taken 
+as an indirect measure of people’s needs. Rather than being determined by those communities’ 
+needs, production is gauged according to the overall profits: if one commodity sells well, more 
+of it will be produced, until market demand is satisfied—that is, not because they reflect 
+effective societal needs, but merely because some can buy it at a profitable price for the 
+producer. Matters are further complicated through advanced and ubiquitous advertising and 
+branding practices, which have the effect of blurring people’s effective needs.
+
+In the context of cloud computing, where most online operators are profit oriented, information 
+commons are not produced by the community for the community; they are produced—by the 
+community—to ultimately satisfy the interests of cloud operators. While this usually involves 
+furthering the interests of the community—a precondition to maintain a satisfied, productive 
+user-base—answering to the community is only a means to reach another end, which is mostly 
+oriented towards the maximization of profits.
+
+To do so, the majority of cloud computing platforms rely on centralized architectures combined 
+with a hierarchical system of governance. Given that all hardware and software is controlled by 
+the cloud operators, users can only interact with the platform according to the rules established 
+by the service provider. Risks of cooptation increase, as service providers are likely to encourage 
+the production of information commons according to the amount of profits that they might derive 
+from it, rather than according to the actual interests of the community itself.
+ 
+Besides, unless data portability or interoperability has been provided by the cloud operator, users 
+willing to leave one platform might only do so at the costs of losing all data stored in the cloud. 
+Insofar as users are locked into the platform (i.e. the costs of switching to another platform are 
+higher than the benefits they might derive from it), the correlation between users’ needs and 
+cloud operators’ interests is weakened, as profits are not necessarily linked to the satisfaction of 
+actual users’ needs (De Filippi and Belli 2012).
+
+
+===c. Decentralized alternatives for peer-production===
+
+Previous sections have illustrated the existence of a clear and serious mismatch between 
+information commons produced according to a community-centred and democratic approach, 
+and those produced in the context of cloud providers’ market-driven, centralized and 
+asymmetrical approach. This mismatch is one of the main culprits for the various possibilities of 
+commodification that we have described so far. However, this does not necessarily mean that all 
+forms of cloud computing are equally inadequate to the production or the dissemination of 
+intellectual commons; it is in fact theoretically possible to design a series of decentralized cloud 
+computing platforms based on a peer-to-peer architecture.
+
+Such platforms might allow 
+communities to escape from the centralized control of large service providers, thereby increasing 
+their autonomy as regards their own data, and reducing the risks of commodification.
+
+Implementing decentralized infrastructures for cloud computing is not necessarily a trivial task 
+(on the contrary), nor necessarily the most efficient option: centralized, large-scale providers 
+often benefit from economies of scale in terms of costs, performance and maintenance. However, 
+the intensive use of file-sharing peer-to-peer technologies
+as an alternative to centralized fileserving suggests that the peer-to-peer approach to cloud computing is not only feasible, but also 
+promising. Apart from a clearly more adequate fit with the commons’ model of governance, 
+another reason for this is that personal computers connected to the Internet are often below their 
+maximum usage capacity (in terms of processor cycles, memory usage and bandwidth). Peer-topeer approaches to cloud computing allow communities to tap and pool these “spare resources” 
+(which would otherwise go unused) instead of purchasing them from cloud providers. Exclusive 
+reliance on user’s personal computers might introduce a series of concerns in terms of 
+infrastructure reliability and resources’ availability (personal computers are more likely to fail, or 
+to be turned off, than cloud providers’ servers located on dedicated data centres); but most of 
+these drawbacks can be lessened by means of planned redundancy, for instance.
+
+There are already many initiatives experimenting with a communitarian approach to cloudrelated services. One interesting example tackling the issue of online storage is Tahoe-LAFS, a 
+distributed, secure, fault-tolerant FLOSS file system, which can be used for the storage of 
+personal files (https://tahoe-lafs.org). Data is stored across a variety of nodes in a redundant way 
+(where the level of redundancy is configurable), so that even if some nodes are not online (or 
+even if they have been completely lost due to hardware failure), files can still accessed.
+
+All data  stored on Tahoe-LAFS is encrypted, so that—unlike what happens by default in most 
+commercial cloud computing platforms—no one but the file owner can access its contents (not 
+even those who actually control the nodes where that file sits). In practice, this means that a 
+small group of individuals with only moderate technical knowledge and standard  personal 
+computers can provide each other, for free, online backup services that can be more secure (in 
+terms of privacy, at least) than those offered by commercial providers. Another example with a 
+wide range of applications is FreedomBox: a community project to develop, design and promote 
+personal servers running free software for distributed social networking, email and audio/video 
+communications. The project was initiated by Eben Moglen on February 2010 and is now being 
+carried out by the FreedomBox Foundation. Intended to assemble a “collection of social 
+communication tools, distributed services, and intelligent routing in a package anyone can use”
+(FreedomBox Foundation), the basic idea is to allow anyone to easily set-up their own personal 
+servers, using FLOSS software to replace many provider-based web services. The list of 
+applications a FreedomBox should be able to run include feed aggregators, photo sharing, 
+webmail, blog (and microblog) publishing, link shortening / sharing, text chat, calendar and 
+time-management systems, telephony systems, activity stream (as in current social networks), 
+and online backup (“Leaving the (proprietary) cloud” 2012). While much of the software already 
+exists, it is being packaged and adapted in a way that it can run from cheap, low-power devices
+(from older personal computers to modern “plug-sized” computers),
+and take advantage from 
+cryptography and peer-to-peer technologies (such as mesh networking) to guarantee privacy, 
+avoid censorship and overcome localized connectivity problems.
+Those are just a few of the various initiatives that have been taken so far,
+yet, it is important to 
+note that those efforts, albeit extremely valuable, are not sufficient (as such) to counteract the 
+trend towards the commodification of information commons.  Issues related to Internet 
+governance and access to technology, which can undermine these efforts, must also be worked 
+on. For these alternatives to actually have an impact upon society, they  also  must be widely 
+available and easy to use, and —most importantly—the dangers of commodification must be 
+clearly communicated to the public. Awareness of the risks resulting from the growing 
+centralization of cloud computing platforms is the first step towards the provision of 
+decentralized alternatives which are likely to be adopted by a sufficiently large number of users. 
+
+
+Only then will it be possible to offer a community-oriented service capable of being an 
+alternative to the services provided by commercial cloud operators."
+(http://biogov.uclouvain.be/iasc/doc/full%20papers/De%20Filippi%20-%20Said%20Vieira.pdf)
+
+
+[[Category:Commons]]
+
+[[Category:P2P Theory]]
+
+[[Category:IP]]

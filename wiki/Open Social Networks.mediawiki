@@ -1,0 +1,93 @@
+=Description=
+
+An open system would be one where you can both import and export your data with relative ease. 
+
+"there are three layers of interconnection in an open social network: Authentication, Import/Export of data, and common actions on top of those 2 layers. The basic premise is that users can create and maintain content across a range of websites and services. With an open social network that has open identity, import/export and a "vocabulary" of common actions (like 'create a relationship') - then data and services truly integrate and interconnect. "
+(http://www.readwriteweb.com/archives/peopleaggregato.php)
+
+
+=Citation=
+
+"Damn the Facebooks and the MySpaces. The last time we checked, there was this thing called the internet that had 6 billion users. It’s time to take our personal data out of Mr. McGregor’s little gardens and put it back where it belongs — free and open on the open web.
+
+Social networks like Facebook and MySpace are taking the web by storm because they make it easy to manage your personal data and keep in touch with people you know. But to get value out, you have to put something in — photos, contacts, appointments, lists of your interests and your blog musings.
+
+Therein lies the rub. When entering data into Facebook, you’re sending it on a one-way trip. Want to show somebody a video or a picture you posted to your profile? Unless they also have an account, they can’t see it. Your pictures, videos and everything else is stranded in a walled garden, cut off from the rest of the web."
+(http://marketingconversation.com/2007/08/08/will-closed-networks-hurt-themselves-or-lead-to-web-30/)
+
+
+=Discussion=
+
+Dare Obasanjo:
+
+"Below are my opinions on the various definitions of "open" in the context of social networking sites
+
+   
+1. '''Content Hosted on the Site Not Viewable By the General Public and not Indexed by Search Engines:  As a user of Facebook, I consider this a feature not a bug.''' I've mentioned in previous blog postings that I don't think it is a great idea that all the stuff being published by teenagers and college students on the Web today will be held against them for the rest of their lives. Especially since using search engines to do quick background searches on potential hires and dates is now commonplace. Personally, I've had several negative experiences posting personal content to the public Web including
+         
+a. fresh of out of college, I posted a blog post about almost hooking up with some girl at a nightclub and a heated email discussion I had with someone at work. It was extremely awkward to have both topics come up in conversations with fellow coworkers over the next few days because they'd read my blog.
+
+b. a few months ago I posted some pictures from a recent trip to Nigeria and this ignited a firestorm of over a hundred angry comments filled with abuse and threats to myself and my family because some Nigerians were upset that the president of Nigeria has servants domestic staff. I eventually made the pictures non-public on Flickr after conferring with my family members in Nigeria.
+         
+c. around the same time I posted some pictures of my fiancée and I on my Windows Live Space and each picture now has a derogatory comment attached to it.
+
+      
+At this point I've given up on posting personal pictures or diary like postings on the public Web. Facebook is now where I share pictures.
+
+      
+When we first launched Windows Live Spaces, there was a lot of concern across the division when people realized that a significant portion of our user base was teenage girls who used the site to post personal details about themselves including pictures of themselves and friends. At the end we decided, like Facebook, that the default accessibility for content created by our teenage users (i.e. if they declare their age in their profile) would be for it to only be visible to people in their social network (i.e. Windows Live Messenger buddies and people in their Windows Live Spaces friends list). I think it is actually pretty slick that on Facebook, you can also create access control lists with entries like "anyone who's proved they work at Microsoft". 
+   
+
+2. '''Inability to Export My Content from the Social Network''': This is something that geeks complain about especially since they tend to join new social networking sites on a new basis but for the most part there isn't a lot of end user demand for this kind of functionality based on my experience working closely with the folks behind Windows Live Spaces and keeping an eye on feedback about other social networking sites. There are two main reasons for this, the first is that there is little value of having the content that is unique to the social network site outside of the service. For example, my friends list on Facebook is only useful in the context of that site. The only use for it outside the service would be for a way to bootstrap a new friends list by spamming all my friends on Facebook to tell them to join the new site.  Secondly, danah boyd has pointed out in her research that many young users of social networking sites consider their profiles to be ephemeral, to them not being able to just port your profile from MySpace to Facebook isn't a big deal because you're starting over anyway. For working professionals, things are a little different since they may have created content that has value outside the service (e.g. work-related blog postings related to their field of endeavor) so allowing data export in that context actually does serve a legitimate user need. 
+   
+
+3. Full APIs for Extracting and Creating Content on the Social Network: With the growth in popularity and valuations of social networking sites, some companies have come to the conclusion that the there is an opportunity for making money by becoming meta-social network sites which aggregate a user's profiles and content from multiple social networking sites. There are literally dozens of Social Network Profile aggregators today and it is hard to imagine social networking sites viewing them as anything other than leeches trying to steal their page views by treating them as dumb storage systems. This is another reason why most social network services primarily focus on building widget platforms or APIs that enable you to create content or applications hosted within the site but don't give many ways to programmatically get content out.  
+
+      
+Counter examples to this kind of thinking are Flickr and YouTube which both provide lots of ways to get content in and out of their service yet became two of the fastest growing and most admired websites in their respective categories. It is clear that a well-thought out API strategy that drives people to your site while not restricting your users combined with a great user experience on your website is a winning combination. Unfortunately, it's easier said than done.
+   
+
+4. '''Being able to Interact with People from Different Social Networks from Your Preferred Social Network''': I'm on Facebook and my fiancée is on MySpace. Wouldn't it be great if we could friend each other and send private messages without both being on the same service?
+
+      
+It is likely that there is a lot of unvoiced demand for this functionality but it likely won't happen anytime soon for business reasons not technical ones. I suspect that the concept of "social network interop" will eventually mirror the current situation in the instant messaging world today.
+          
+* We'll have two or three dominant social networking services with varying popularity in different global markets with a few local markets being dominated by local products.
+          
+* There'll be little incentive for a dominant player to want to interoperate with smaller players. If interop happens it will be between players that are roughly the same size or have around the same market strength.
+          
+* A small percentage of power users will use services that aggregate their profiles across social networks to get the benefits of social network interoperability. The dominant social networking sites will likely ignore these services unless they start getting too popular.
+          
+* Corporate customers may be able to cut special deals so that their usage of public social networking services does interoperate with  whatever technology they use internally."
+(http://www.25hoursaday.com/weblog/2007/08/06/SomeThoughtsOnOpenSocialNetworks.aspx)
+
+
+And therefore, the priorities ought to be:
+
+Scott Gilberson:
+
+"* Content access controls. The ability to make some content visible to everyone and at the same time reserve other parts of content only for those visitors I’ve designated as “friends.” To some degree you could do this with OpenID, but OpenID still hasn’t reached critical mass.
+        
+* Cross-interaction for existing Social Networks. Got friends defined on MySpace, Facebook, Flickr and a ton of other sites? Any good solution to this problem will not require you to redefine your relationship, it will incorporate your existing data while providing a way to define new friends without resorting to any specific social networking site."
+(http://blog.wired.com/monkeybites/2007/08/a-slap-in-the-f.html)
+
+=Example=
+
+See this [http://www.readwriteweb.com/archives/peopleaggregato.php announcement] on [[People Aggregator]]
+
+
+=More Information=
+
+See our entry on [[Social Network Sites]]
+
+
+
+[[Category:Standards]]
+
+[[Category:Relational]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:Open]]

@@ -1,0 +1,291 @@
+'''= "a term that has come to describe the mechanics and specifics of token distribution, according to a given sale and ownership structure".''' [https://medium.com/@wmougayar/tokenomics-a-business-guide-to-token-usage-utility-and-value-b19242053416]
+
+=Contextual Quote=
+
+"The stateful nature of cryptoeconomic systems has the
+potential to cede control of data back to the users of these platforms, if privacy by design is considered in the modeling of the cryptoeconomic systems and their applications."
+
+- Shermin Voshmgir and Michael Zargham [https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf] 
+
+
+=Definition=
+
+"Cryptoeconomics is a design-paradigm that is used, among other things, for the protocol layer of almost all currently existing blockchains. It is intended to generate security guarantees for the reliable execution of these protocols by combining economic incentives/penalties (-economics) with applied computer science (crypto-). Apart from this specific use case in distributed, “decentralized” networks, cryptoeconomic design principles are being promoted by some to be an adequate way of “designing” social interactions and institutions in areas not related to questions of network security."
+
+(https://www.youtube.com/watch?v=p9TMBdgWE6Y)
+
+
+=Description=
+
+'''0. Jaya Klara Brekke et al. :'''
+
+"Cryptoeconomics describes an interdisciplinary, emergent and experimental field that draws on ideas and concepts from economics, game theory and related disciplines in the design of peer-to-peer cryptographic systems. Cryptoeconomic systems try to guarantee certain kinds of information security properties using incentives and/or penalties to regulate the distribution of efforts, goods and services in new digital economies. Cryptoeconomics is an embryonic field at present and can be taken to include several areas of focus: information security engineering, mechanism design, token engineering and market design. This portmanteau of cryptography and economics raises questions regarding the epistemic novelty of cryptoeconomics, as distinct from its constituent components."
+
+(https://policyreview.info/glossary/cryptoeconomics)
+
+
+
+'''1. Shermin Voshmgir and Michael Zargham:'''
+
+"[[Cryptoeconomics]] is an emerging field of economic coordination games in cryptographically secured peer-to-peer networks. The term cryptoeconomics was casually coined in the Ethereum developer community, and is generally attributed to Vitalik Buterin. The earliest recorded citation is from a talk by Vlad Zamfir [Zamfir 2015], which was later loosely formalized in blog posts and talks by Buterin [Buterin 2017a], [Buterin 2017b]. The term has gained traction in the broader developer community [Tomaino 2017a] and in the academic community [Catalini and Gans 2016], but it still remains under-defined, possibly because it is often used in so many different contexts. Using the same term in different contexts leads to communication breakdowns and challenges when trying to come up with a rigorous definition of that term."
+
+(https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+
+'''2.'''
+
+
+"Cryptoeconomic systems are complex socioeconomic networks defined by 
+
+(i) individual autonomous actors, 
+
+(ii) economic policies embedded in software (the protocol or smart contract code), and 
+
+(iii) emergent properties arising from the interactions of those actors with the whole network, according to the rules defined by that software. 
+
+
+A comprehensive definition of cryptoeconomics therefore includes three levels of analysis: 
+
+(i) micro-foundational, relating to agent level behaviors 
+
+(ii) meso-institutional, relating to policy setting and governance and 
+
+(iii) macroobserverable, relating to the measurement and analysis the system level metrics."
+
+=Typology=
+
+Shermin Voshmgir and Michael Zargham:
+
+"Cryptoeconomics relates '''three interactions layers or levels of analysis that define characteristics at the micro-foundational, meso-institutional, and macroobserverable domains of scope.'''
+
+* a Macro-observables are system global properties that inform decision-making
+at the meso-institutional level and provide stakeholder feedback, performance indicators and measures that can impact micro-foundational properties.
+
+* b Meso-institutional characteristics encompass decision-making and goal determination, based upon and requiring micro-foundations. Mechanism design as
+used in Economics informs institutions, organisations and teams.
+
+* c Micro-foundational characteristics are assumption specifications with a natural expression within mechanism design as used within Computer Science.
+
+Informal Governance is a form of decentralized governance whereby changes
+to the protocol are made locally by individual participants operating nodes in the
+peer-to-peer network and changes only take effect if the majority of participants
+adopt the change."
+
+((https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+
+==Research Orientations==
+
+'''1.''' Primavera De Filippi, Kelsie Nabben, et al. :
+
+"Economists who have sought to study blockchains have developed a number of distinct approaches. These include: 
+
+(1) cryptoeconomics (game theory and mechanism design applied to incentive problems in protocol design, also known as tokenomics); 
+
+(2) microeconomics, including finance, industrial organization, and public goods, typically using some formulation of Chicago price theory, Berkeley competition theory, and Harvard/MIT welfare economics (e.g. Abadi and Brunnermeier 2018, Cong and He 2019, Buterin et al 2019, Catilini and Gans 2020), and 
+
+(3) institutional cryptoeconomics, which draws on new institutional economics, public choice theory and Austrian economics (e.g. Davidson et al 2018, Berg et al 2019). 
+
+There is also a distinct school of crypto monetary economics (e.g. George Selgin, Larry White, William Luther, et al). There is overlap between these mostly complementary approaches, and it is useful to understand these as examining broadly different parts of the crypto-economy at different levels of focus and with somewhat different tools. Nevertheless, the common core is analysis of the crypto-economy through the lens of rational behavior subject to incentives, which are designed mechanisms in which blockchain technologies (including smart contracts) are new technologies that lower specific costs. The purpose of analysis is to trace these changes in costs, through changes in markets, through to new equilibrium outcomes."
+
+(https://docs.google.com/document/d/1LvqvarU951r9dHMif4dhXanmkq_eQ_k5xTZC5-t7lkM/edit)
+
+
+===2. Institutional Economics based research===
+
+De Filippi et al. :
+
+"The economic approach to DAOs is a new field that sits within the standard economic approach to the theory of the firm as developed by leading economists such as Ronald Coase, Oliver Williamson, Armen Alchian and Harold Demsetz, Jensen and Meckling, and Oliver Hart. In 1939, Ronald Coase asked ‘why do firms exist?” and then answered that they were an organizational technology that economized on the transaction costs of using the market. This ‘transaction cost’ perspective is the foundation of New Institutional Economics. William and Hart developed this approach further by examining issues of trust and opportunism, and the economic logic of contracting. Jensen and Meckling developed a theory of the firm as a ‘nexus of contracts’ and Alchian and Demsetz developed a model of a firm as a ‘private market’. These approaches sought to understand the existence of firms, as well as their comparative advantages as technologies for coordinating people and capital, through the lens of efficient contracting over situations that involved missing information and uncertainty (i.e. asymmetric information, hazards of opportunism and problems of trust).
+
+A small but growing literature seeks to develop economic analyses of DAOs. Lumineau et al. (2021) and Santana and Albareda (2022) offer useful recent surveys. This literature largely overlaps with the theory of the firm and therefore includes topics such as: agency, contracting, entrepreneurship, investment under uncertainty, team production, asset specificity, boundaries of the firm, and corporate governance. However, the economics of DAOs also sits within a broader literature on voluntary or private organizations, integrating the economic theory of clubs and the economic theory of commons (Rosaz et al 2021). Clubs and commons theory is also focused on governance and collective decision-making, as well as the creation and use of common pool resources or local public goods.
+
+'''Institutional economics'''
+
+Summary: Part of the rationale for DAOs is that they are a technology, much like firms, for minimizing transaction costs and ‘costs of trust’. Institutional economics can help explain present DAO structures and suggest new designs for DAOs based on a rigorous analysis of the DAO’s cost functions.
+
+Why do DAOs exist? This is the same question that Ronald Coase asked in 1939 that established the concept of transaction cost and the field of New Institutional Economics as a comparative analysis of institutions. Coase’s answer was that firms exist to minimize the ‘transaction cost’ of using a market. These transaction costs are the costs of searching for counterparties, writing contracts, monitoring actions, haggling and bargaining and so on. They include search and information costs, agency and monitoring costs, contracting and decision costs; to a considerable extent they are ‘costs of trust’ that would not exist in a world of perfect costless information with total transparency in a world of counterparties who only ever told the truth and always did what they promised. Such a world would lack uncertainty and opportunism. Firms are a technology for organizing people and resources into coordinated actions. Firms exist when it is cheaper to use that technology than an alternative institutional technology, namely the market. Firms exist because they economize on the costs of using the market. The particular boundaries of firms (e.g. vertically integrated, multidivisional, cooperative, etc) are competitive consequences of those cost-specific cost advantages over a range of margins. The same logic applies to the economic analysis of DAOs.
+
+A DAO is an organization made in part using a new technology: smart contracts. These give DAOs different competitive advantages in relation to transparency, monitoring and auditing, as well assurance and expectation. As such, DAOs have different cost functions with respect to a range of key operational and competitive functions within economic coordination, e.g. some have argued that DAOs exist to economize on the costs of trust compared to firms and markets (Berg et al 2019). Note that not all costs are significantly lower. On some dimensions such as regulatory uncertainty and integration with legal and other external systems, DAOs are often more costly than traditional industrial corporations. In other words, DAOs are institutional competitors to other forms of economic organization (also including clubs, coops, trusts, governments, as well as firms and markets). 
+
+
+The problem, then, is to develop a general economic theory of DAOs that 
+
+(1) explains their existence in terms of specific costs and the way in which those costs are internalized, 
+
+(2) grounds those costs in the logic and design of (smart) contracts and other resources within the DAO, and 
+
+(3) links those resources to a theory of DAO strategy (see “Dynamics and strategy”, below). 
+
+
+Within this general framing, we can then organize a range of open questions:
+
+Structure of a DAO. Analogous to the theory of the organizational structure of a firm (pioneered by Alfred Chandler, and the U-form and M-form corporation) [CITE], what is the governing economic logic determining the structure of DAOs and subDAOs?
+
+Information economics of DAO coordination. The economic efficiency of firms and markets (and governments) is in part based on their comparative efficiency in different types of information processing, e.g. in price signals in markets or entrepreneurial coordination (in the work of F.A. Hayek, Mark Casson, Israel Kirzner, George Stigler). An open question is to empirically and theoretically analyze the economic mechanisms and economic efficiency of information flow and processing in a DAO, including through new data sets not present in a typical firm.
+
+Entrepreneurship versus management. Firms are both effective organizational mechanisms for starting and building new projects and engaging in entrepreneurship (e.g. entrepreneurial capitalism, viz. Schumpueter, Kirzner), as well as efficient mechanisms for operating large going concerns e.g. managerial capitalism, viz. Porter, Bloom and van Reenan). Do DAOs share this joint comparative efficiency, or are they better for starting new projects due to low costs of organizing (entrepreneurship) or for operating existing projects due to low costs of participation in cooperative joint ownership (management)? This is both an empirical and theoretical research question.
+
+Management and incentives in DAOs. What incentive structures (tokenized or otherwise) are evident across DAOs that can be designed and used for effective DAO management? 
+
+How can tendencies towards speculation be identified and minimized mechanistically? What are the impacts of financialized governance on efficacy, ability to fundraise, and internal execution processes? How should token distributions be structured? 
+
+How should incentives be created to get work done from contributors? What is an effective compensation structure for aligning delegate incentives?
+
+How to define and create effective bounties? (Note this issue relates broadly to incentivising community production of local public goods)
+
+DAO constitutions. Public choice theory and constitutional economics makes specific predictions about the economic efficiency of different types of constitutions (Black 1948, Buchanan and Tullock 1962, Buchanan 1990). Early data on DAO constitutions suggest a very different form for DAO constitutions, which are designed to complement existing smart contracts (Tan, Langenkamp, et al., 2022). What are the economic principles of DAO constitutions? Does the efficiency principle of supermajority or unanimity hold in internalizing externalities?
+
+Mapping rules for DAOs. Where corporate firms use hierarchical decision-making, DAOs tend to be flatter and egalitarian, like a commons (Ostrom 1990). A large-scale empirical and theoretical research question is to map the governance rules of all DAOs, e.g. through some form of institutional grammar (Crawford & Ostrom, 1995; Frantz & Siddiki, 2021) or building earlier work on capturing data sets of DAO smart contracts (L. Korpas & Tan, 2023).
+
+Cultural and institutional economics of DAOs. A significant literature in development economics focuses on the role of culture in shaping institutional evolution and economic outcomes (e.g. Grube and Storr 2015, Storr 2013, Chamlee-Wright 2002, 2008). This literature can be usefully re-applied to the study of DAO communities and ecologies.
+
+Externalities and social welfare. What are ‘market failure’ equivalents for DAOs, and what types of goods can be provided by different actors within a given DAO’s ecosystem? How can public goods funding mechanisms piloted in DAOs extend existing economic theory, particularly in maximizing positive-sum returns to semi-private, anti-rival goods? How do DAOs bound their club goods? What digital property rights should be enforceable? What public “bads” can be reduced by DAOs?
+
+Infrastructure and public goods. Due to the relatively low cost of distributed ownership and participation, DAOs have characteristics of clubs, and are therefore effective institutional mechanisms for the private provision of local public goods or quasi-public infrastructure. Such goods can be provisioned by sub-committees within a DAO or by a trust or foundation under DAO oversight (Potts et al 2021). A major open question in this arena concerns the design and analysis of incentive mechanisms to provide different types of local public goods, e.g. taxes, bounties, grants, prizes, retroactive funding, and so on (Buterin et al 2019).
+
+
+'''* Case studies within institutional economics'''
+
+Summary: Economists do not currently have a good way of measuring and quantifying the transaction and governance costs of DAOs. To make progress on this problem, we can build on top of particular case studies that compare DAOs with comparable firm or market forms of coordination. 
+
+The overarching research project in the institutional economics of DAOs is to map, quantify, and analyze the transaction costs and governance costs within DAOs versus comparable firm or market forms of coordination. 
+
+In particular, quantifying these costs forms the basis for comparative static institutional analysis. From an empirical perspective, such an examination must begin with case studies of particular application domains before building to sectoral data sets. For example:
+
+Exchanges. What are the costs within centralized exchanges such as Coinbase versus those in decentralized (and DAO-governed) exchanges such as Uniswap? How do costs compare between even different decentralized exchanges?
+
+Unions. What are the collective action costs within traditional labor unions versus in those in (theorized) DAO-based unions (Allen et al 2019, also cite Sara Horowitz DAO Harvard talk?)?
+
+Courts. What are the governance costs within traditional governance institutions such as courts as compared with those in blockchain-based dispute resolution systems such as Kleros, Celeste, and Aragon Court?
+
+Open source. Open-source software is a good example of a public good that is easier to build than to maintain (Eghbal, 2020), and DAOs have previously been theorized as an evolution of open-source communities (L. M. Korpas et al., 2023). In a DAO, what is the balance between costs associated with developing such goods and costs associated with maintenance and operations; how do these costs compare with costs in typical open source communities?
+
+Note: while institutional comparative statics is an empirical research exercise, it is also a market test (Alchian 1950), as we expect that DAOs with lower relative costs will survive and grow, whereas DAOs with higher costs will be outcompeted by alternative forms of organization. Of course, that claim only holds in the long run and under the selection pressure of fair and robust market competition, so there are many reasons that short or medium run results may depart from economic optimal conditions and predictions."
+
+(https://docs.google.com/document/d/1LvqvarU951r9dHMif4dhXanmkq_eQ_k5xTZC5-t7lkM/edit#heading=h.x8xhsrviz4wi)
+
+=Examples=
+
+"A cryptoeconomic system such as the Bitcoin network can be described as a special class of complex socioeconomic system that is dynamic, adaptive, and multi-scale. Cryptoeconomic networks are dynamic due to the flow
+of information and assets through the network. Cryptoeconomic networks are adaptive because their behaviour
+adjusts in response to their environment, either directly in the case of the Bitcoin difficulty controller or more
+broadly through decisions on the part of node operators. Cryptoeconomic networks are multi-scale because they
+are specified by local protocols but are defined by their macro-scale properties, as is the case with the local ”no
+double spend” rule guaranteeing a globally conserved token supply [Zargham, Zhang and Preciado 2018]. Their
+design requires a strong interdisciplinary approach to develop resilient protocols that account for the spatial and
+temporal dynamics of those networks [Liaskos, Wang and Alimohammadi 2019]."
+
+(https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf)
+
+
+=Discussion=
+
+==A UNIFYING PERSPECTIVE ON CRYPTOECONOMICS==
+
+Shermin Voshmgir and Michael Zargham:
+
+"Cryptoeconomic systems are complex socioeconomic networks defined by 
+
+(i) individual autonomous actors, 
+
+(ii) economic policies embedded in software (the protocol or smart contract code), and 
+
+(iii) emergent properties arising from the interactions of those actors with the whole network, according to the rules defined by that software. 
+
+
+A comprehensive definition of cryptoeconomics therefore includes three levels of analysis: 
+
+(i) micro-foundational, relating to agent level behaviors 
+
+(ii) meso-institutional, relating to policy setting and governance and 
+
+(iii) macroobserverable, relating to the measurement and analysis the system level metrics. 
+
+
+Critically, the dynamics at each
+level of analysis are interdependent in a manner which cannot be simply reduced into a single layer–governance
+is precisely managing the relationship between the micro and macro scales.
+Micro-foundational characteristics of cryptoeconomic systems are commonly expressed in terms of algorithmic game theory in the computer science literature [Nisan et al. 2007] and mechanism design in the economics
+literature [Hurwicz and Reiter 2006]. Mechanism design is sometimes referred to as reverse game theory as it pertains to the construction of games to produce specific behaviors from agents. Nakamoto Consensus, for example,
+is a cryptoeconomic mechanism based on proof-of-work that is designed to provide convergence to a dynamic
+equilibrium–a synchronous shared global state, which furthermore remains resistant to a range of attacks constituting of self-interested misinformation despite being a permissionless network. An attack would be any violation
+of the state transition rules encoded in the protocol, such as a “double spend’. Nakamoto consensus uses a combination of cryptographic tools with economic incentives that make economic cost of wrongdoing disproportionate
+to the benefit of doing so [Nakamoto 2008], [Antonopoulos 2014]. Proof-of-stake mechanisms provide similar
+game theoretic arguments for network security. Interestingly, proof-of-authority networks [De Angelis et al. 2018]
+offer a more traditional approach where the validator role is permissioned and stems from social and institutional
+reputational processes which exist outside the computational environment. Most current definitions of cryptoeconomics focus on this level of analysis and modeling [Buterin 2017a], [Buterin 2017b] [Tomaino 2017a]. However,
+the level of security very much depends on how people react to economic incentives, which in turn has been a field
+of study in economics [Voshmgir 2020]; the security of the network is an emergent macro level property.
+Macro-observables are system-wide metrics or properties which may inform decision-making of stakeholders
+within the system. Macro-observables often include performance indicators that impact governance decisions
+at the meso-institutional level as well as measures that can impact perception and thus behavior at the microfoundational level. In addition to security, market capitalization, price [Shorish 2019], [Cong, Li and Wang 2019]
+and price stability are the most commonly studied macro-observables. Other important macro-observables include
+wealth distributions, governance participation, monthly active users, and any other measure or estimate which
+serves as a proxy for system level goal that matters to a cryptoeconomic network’s human stakeholders. Critically,
+macro-observables are not directly controllable; efforts to impact these metrics are determined at the meso scale
+and the consequences of those interventions are borne out at the micro scale.
+
+Meso-institutional characteristics encompass decision-making and goal determination, based upon macroobservables and requiring micro-foundations. This level builds on political science, law, governance and economics to design the steering processes of communities, by some referred to as institutional cryptoeconomics
+[Berg, Davidson and Potts 2019]. Ethical design and informed governance of cryptoeconomic systems resides in
+the meso-institutional level and requires an understanding of both the micro-foundations and macro-observables,
+as well as the relations between them. This manuscript, as a whole, addresses the meso-instutional perspective as
+a keystone in the coherent synthesis of macro and micro perspectives on cryptoeconomics through the observation
+that automation in socioeconomic systems is tantamount to algorithmic policy making."
+
+
+==The [[Limitations of Cryptoeconomic Governance Mechanisms]]==
+
+Nathan Schneider:
+
+"The purpose of this section is to identify the limitations on governance that reliance on cryptoeconomics currently does or might incur. I review several apparent limitations. These reflect widely recognized attributes of cryptoeconomic systems, and they are sites of active development that may be addressed as practice evolves. But for now, I argue, these limitations suggest that older concerns about the corrosive effects of economics on democratic governance are also relevant to cryptoeconomic domains. At the root of these limitations is the blindness of cryptoeconomics to the
+identity and integrity of human users—a persistent, but not necessarily permanent condition. In most pre-digital political and economic governance systems, identifying participants is not an existential problem. Difficulties arise in edge-cases. Fraud, which can be minimized with laws that threaten to punish it. Authorities may not have simple processes in place for when citizens’ names or gender identification changes. Refugees crossing borders may have trouble identifying themselves. But many people find that they can take government-based identity infrastructure for granted. Dominant Internet platforms have also come to incorporate users’ politically defined identities into their systems, either directly (such as by requiring government-issued identification) or indirectly (such as through bank accounts or phone numbers).Cryptoeconomics typically seeks to avoid reliance on centralized institutions such as governments. For developers of distributed-ledger systems, representing the personhood of participants is a chronic problem, precisely because of how cryptography obscures its users and how economic incentives reward deception. A common anxiety is the danger of “Sybil” attacks, in which a single user can benefit by masquerading as many users (Conte de Leonet al., 2017). Such attacks can be easy and damaging. Some applications may require users to verify their identities by multiple means, such as by posting a code on social media accounts, producing a video of themselves, and submitting biometric data. In cryptoeconomic contexts, personhood cannot be taken for granted, and establishing it incurs costs. Enduring a complex process of identity verification, for instance, may prevent less-motivated users from completing the on-boarding process, thus reducing adoption.For many blockchain enthusiasts, the lack of reliance on personal identity is a feature not a bug, offering advantages in terms of privacy and permissionless participation. Cryptoeconomics could also produce identification protocols that improve on existing options, such as through “self-sovereign identity”mechanisms based on reputation and mutual attestation of others across a network (Tobin & Reed, 2017). This approach could give users unprecedented control over how they represent themselves and could be less vulnerable to the coercion or collapse of governments. But cryptoeconomics has yet to deliver a widely adopted means of identifying unique human users. Therefore the control of economic units, rather than units based on personhood, remains the basic logic of governance. This presents challenges for governance if personhood should still possess intrinsic importance.
+
+
+===Persistent plutocracy===
+
+The prevailing consensus mechanisms, known as “proof of work” and “proof of stake,” grant governance rights roughly in proportion to a given node’s buy-inon the network—through computing power or token holdings, respectively.Applications and organizations built on such networks tend to follow a similar logic, granting power to whomever holds their tokens. Those with more tokens than others hold more decision-making power than others. Vitalik Buterin (2018) therefore comes by his anxieties about plutocracy honestly;rule according to wealth has so far been the norm in cryptoeconomic designs.Governance by economics is nothing new. Joint-stock companies conventionally operate on plutocratic governance—more shares equals more votes.This arrangement is economically efficient for aligning shareholder interests(Davidson and Potts, this issue), even while it may sideline such externalities as fair wages and environmental impacts. Yet companies operate within the constraints of state policy, which ultimately govern obligations among state-recognized persons, whether corporate or natural. The earliest companies formed to fulfill the charters of mercantilist monarchs; today, companies must at least adhere to the rules of governments that purport to represent the will of society as a whole, not just the company’s participants. Governments im-pose rules about transparency, conduct, accounting, equity trading, and more.So while plutocracy is prevalent in the joint-stock universe, governments can counteract it through progressive taxation, collective bargaining rights,environmental regulations, antitrust enforcement, and more. If distributed ledgers are based on cryptoeconomics “all the way down,” without an underlying political order, such options are not available. But if “a DAO is closer to a country than to a corporation,” participants will expect countermeasures against rule by wealth. For cryptoeconomic systems, as in many economic markets, the primary means of accountability and redress against plutocracy is user exit — leaving one network and moving to a more agreeable one. But exit may not be as easy as it appears, whether it be from a social-media network (Matias,2018) or a protocol (Galloway, 2006). The persistent dominance of early-to-market blockchains like Bitcoin and Ethereum suggests that cryptoeconomics similarly favors incumbency. Mechanisms like quadratic voting can reduce plutocracy by lessening the influence of large vote-buyers in comparison to smaller ones (Buterin et al., 2018; Wright, 2019–2020). But this comes atthe cost of greater vulnerability to Sybil attacks in the absence of robust means of establishing personhood.
+
+For now, plutocracy may be endemic in cryptoeconomic systems. Ferreira et al. (2019) predict a high likelihood of corporate capture in proof-of-work blockchains such as Bitcoin.  Many hope that the influence of venture-capital firms in token markets might be warded off with efficient vote-selling(Automata Finance, 2021) or other incentive designs that make plutocracy less attractive (Buterin, 2018; Eyal, 2019). 1Hive counteracts large holders by rewarding non-monetary participation with tokens and making decisions with mechanisms that weigh commitment, not just wealth. But as long as governance is reducible to economics, it will be difficult to prevent the feedback loops between wealth and power from spiraling into plutocratic outcomes.
+
+
+===Suppressing participant interests===
+
+Like economics itself, cryptoeconomics is surely normative as well as descrip-tive. Ferraro et al. (2005) find across numerous studies that “self-interested behavior is learned behavior, and people learn it by studying economics and business.”  Although this picture of human flourishing finds limited validation in empirical psychology and anthropology,homo economicus has spread across organizational life through managers with economics-informed business education. It shapes the institutions people create, as well as peoplethemselves.The anthropology underlying cryptoeconomic institutional design—“explicit economic incentives for good behavior and economic penalties for ba[d]behavior” (Buterin, 2018)—assumes that users have a common desire to maximize their economic rewards; incentives based on those rewards comprise the structure of organizations and nudge the behavior of participants. Remarkably, cryptoeconomic design has produced multi-billion-dollar financial networks that are resistant to fraud, without government coercion to enforce their claims. Yet perhaps the anthropology embedded in these systems—thathomo crpytoeconomicusof incentive nudges—helps explain why distributed-ledger adoption has been primarily among finance-related applications, a field already premised on self-interested value-maximizing. Outside of finance,people might expect systems that can see different sides of their natures.The subjectivity of a cryptoeconomic juror on Kleros seeking to earn afee is surely different from that of jurors deliberating in a legal courtroom,repeatedly reminded of their civic duty. “Community” takes on a different meaning if it is a fandom of authors freely sharing fan-fiction, in comparison to Honey-holders in 1Hive who stand to profit from the market value of their
+shared token. Relying on cryptoeconomic incentives limits governance to a narrow subset of the techniques that other kinds of institutions have used. Cryptoeconomics sees only a certain slice of the people involved.  Concepts such as self-sacrifice, duty, and honor are bedrock features of most political and busines sorganizations, but difficult to simulate or approximate with cryptoeconomic incentive design. Labor unions can produce economic benefit for members,but achieving and maintaining those benefits has required cultivating an “expanded community of fate” that is anything but self-interested (Levi, 2020).As Albert O. Hirschman (1970) famously showed, the most economically valuable forms of organizational loyalty often grow out of non-economic forms of relationship. When people complain that others seem to vote against their own economic interests, it should be a reminder that economic interests do not encapsulate the totality of human needs and wants (Haidt, 2012).Governance regimes should reflect that multiplicity.In a survey of diverse governance domains, Gritsenko & Wood (2020) found that, while introducing algorithmic processes can increase efficiency, doing so also results in “decreasing the space for governing actors’ discretion.”Algorithms can also increase the space of their initial designers’ power,compared to the power of future users (Galloway, 2006). Incentive-based systems meanwhile have trouble seeing aspects of the world around them not already captured in the algorithms.
+
+
+===Discounting externalities===
+
+On May 13, 2021, the billionaire entrepreneur Elon Musk issued a statement that his company Tesla would stop accepting Bitcoin for car purchases due to concerns about the cryptocurrency’s fossil-fuel usage, almost instantly causing a 10 percent dive in Bitcoin’s value (Livni, 2021). In the guise of an erratic celebrity, this was a rare case in which Bitcoin faced at least asemblance of accountability for its country-sized energy consumption and environmental impact. The system is governed by its users—especially the“miners” who carry out its energy-intensive computation—and those users generally stand to benefit from ignoring their collective carbon footprint.A busier network roughly correlates to higher energy consumption anda higher trading price. Competing cryptocurrencies have promised lower environmental impact, but the incentives associated with Bitcoin’s dominant market position have prevented mass exodus.
+
+The environmental costs are classic externalities—invisible to the feedback loops that the system understands and that communicate to its users as incentives. Other externalities relevant to distributed ledgers include money laundering, dealings in dangerous drugs and weaponry, tax evasion, and the growth of ransomware attacks on public infrastructure that cryptocurrencies have facilitated. Non-cryptoeconomic systems have some similar properties; shareholders of oil companies also have incentives to pollute, and paper money can support dangerous black markets. But such abuses, at least in principle, are subject to oversight and enforcement by governments tasked with protecting the common good. Political processes enable participants to negotiate compromises among a variety of economic and non-economic interests. If the firm on its own does not see a given externality, the regulatory layer can compel it to do so, such as through disclosure requirements or selective taxation. The externality thus becomes visible to the firm’s incentive structures. For distributed ledgers, similar oversight remains either crude or nonexistent. Cryptoeconomics can accommodate designs that integrate new variables into their incentive structures; Bitcoin could conceivably incorporate a software update with incentives for reducing energy consumption. “Oracle” mechanisms like that of reality.eth, which resulted in Kleros case 532, enable cryptoeconomic systems to take input from arbitrary phenomena that would otherwise be outside the view of their algorithms. “Non-fungible tokens”(NFTs) have made representations of non-quantifiable works of art legible and quantifiable on distributed ledgers. If things must be quantified to be seen, however, what meaning might be lost in the process of quantification? The challenge of funding “public goods” is another example of an externality—and one that threatens the sustainability of crypteconomic systems (Buterinet al., 2018). As has been the case for commons-based software in general (Arpet al., 2018), market mechanisms struggle to support critical infrastructure that does not produce direct financial returns. Non-market institutions such as governments and (at vastly smaller scales) charities have been necessary for the provision of public goods before cryptoeconomics; increasingly, distributed ledgers are reinventing them through fee-funded treasuries and donor grant pools. In this and other respects, cryptoeconomic designers are beginning to venture into the realm of the political."
+
+(https://osf.io/wzf85/?view_only=a10581ae9a804aa197ac39ebbba05766)
+
+=More information=
+
+* [[Crypto Economy]] ; [[Cryptoeconomy]]
+* Report: [[Foundations of Cryptoeconomic Systems]]
+
+
+
+==Article==
+
+'''* Article: Brekke, J. K. & Alsindi, W. Z. (2021). Cryptoeconomics. Internet Policy Review, 10(2).''' [https://doi.org/10.14763/2021.2.1553 doi]
+
+URL = https://policyreview.info/glossary/cryptoeconomics
+
+"Cryptoeconomics describes an interdisciplinary, emergent and experimental field that draws on ideas and concepts from economics, game theory and related disciplines in the design of peer-to-peer cryptographic systems. Cryptoeconomic systems try to guarantee certain kinds of information security properties using incentives and/or penalties to regulate the distribution of efforts, goods and services in new digital economies. Cryptoeconomics is an embryonic field at present and can be taken to include several areas of focus: information security engineering, mechanism design, token engineering and market design. This portmanteau of cryptography and economics raises questions regarding the epistemic novelty of cryptoeconomics, as distinct from its constituent components."
+
+(https://policyreview.info/glossary/cryptoeconomics)
+
+==Video==
+
+* [[Jaya Klara Brekke, Benjamin Seibel et al. on Cryptoeconomics]]
+
+[[Category:Crypto_Economy]]
+[[Category:Crypto_Governance]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Encyclopedia]]
+[[Category:Peergovernance]]
+[[Category:Economics]]

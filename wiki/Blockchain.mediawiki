@@ -1,0 +1,1419 @@
+'''=  "a distributed cryptographic ledger shared amongst all nodes participating in the network, over which every successfully performed transaction is recorded".''' [http://www.wired.com/2014/03/decentralized-applications-built-bitcoin-great-except-whos-responsible-outcomes/]
+
+'''See, from [http://wiki.p2pfoundation.net/Rachel_O%E2%80%99Dwyer Rachel O'Dwyer]: [[How the Blockchain Might Support a Commons]]'''
+
+For a word of caution, read [https://hackernoon.com/ten-years-in-nobody-has-come-up-with-a-use-case-for-blockchain-ee98c180100 this]
+
+
+=Contextual Citation=
+
+"Why trust Bitcoin, or more specifically, why trust the technology that makes Bitcoin possible? In short, because it assumes everybody’s a crook, yet it still gets them to follow the rules."
+
+- Morgen E. Peck [http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin]
+
+
+'''An important warning on the blockchain as a centralized infrastructure:'''
+
+"The need to replicate the whole chain of blocks on our computer is an insurmountable barrier to entry if you’re searching for an alternative to IBM, Amazon or Google. The Twister chain is still small, but think about how, to date, the initial synchronization for Bitcoin requires storage space of more than 65GB for the complete download of the blockchain. For any of us, having to reserve 65GB on our personal computers has a large cost. But for IBM, or Google, or any of the Chinese Bitcoin miners, it’s nothing. And let’s not even talk about the astronomical differences between the processing capabilities of the great monsters of scale compared to ours. Because blockchain is consensual, after a certain point of centralization, the rules of the system depend on very few users. For example, the bitcoin “update” would be unviable if the two more Chinese mining organizations had refused to implement it. A network of nodes designed this way has a power structure with clear centralizers—the owners of infrastructure—that in the end presents a threat to the distributed future of the Internet. In summary, when we use Blockchain technologies, the barrier to entry has a relatively small knowledge component—compiling and installing software—but an insurmountable infrastructure barrier beyond certain scales."
+
+- Manuel Ortega [https://english.lasindias.com/blockchain-is-a-threat-to-the-distributed-future-of-the-internet]
+
+=Definition=
+
+'''0. From the Report on [[Blockchain Technology and Polycentric Governance]]:'''
+
+"“Blockchain technology" represents a decentralized digital ledger of transactions. It securely records transactions across numerous computers, ensuring integrity and resistance to tampering, all without reliance on any central authority for its operation. "Blockchain systems" refer to the community of individuals and organizations involved in the development, management, and use of these blockchain networks and the applications built upon them."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit)]
+
+
+'''1. Via Aeze Soo:'''
+
+"A block chain is a distributed data store that maintains a continuously growing list of data records that are hardened against tampering and revision, even by operators of the data store's nodes. The most widely known application of a block chain is the public ledger of transactions for cryptocurrencies, such as bitcoin. This record is enforced cryptographically and hosted on machines running the software."
+
+
+'''2. Via the Wikipedia:'''
+
+"A block chain, or blockchain, is a distributed database that maintains a continuously-growing list of data records hardened against tampering and revision. It consists of data structure blocks—which hold exclusively data in initial blockchain implementations, and both data and programs in some (for example, Ethereum)  of the more recent implementations—with each block holding batches of individual transactions and the results of any blockchain executables. Each block contains a timestamp and information linking it to a previous block.
+
+The block chain is seen as the main technical innovation of bitcoin, where it serves as the public ledger of all bitcoin transactions. Bitcoin is peer-to-peer, every user is allowed to connect to the network, send new transactions to it, verify transactions, and create new blocks, which is why it is called permissionless. This original design has been the inspiration for other cryptocurrencies and distributed databases."
+
+(https://en.m.wikipedia.org/wiki/Block_chain_(database))
+
+
+'''3. Syed Omer Husain, Alex Franklin, et al. :'''
+
+"Put simply, blockchain is a shared cryptographic register. It records transactions between two parties in a permanent and verifiable manner without the need for any intermediary or central authority. Though blockchains themselves can be seen as a development that drew from and combined many existing technologies (Campbell-Verduyn 2017), in this article, we situate them as the meeting point of two historical trajectories: the ledger and the Internet."
+
+(https://link.springer.com/article/10.1007/s11625-020-00786-x)
+
+
+'''4. Arna VB:'''
+
+"What is Blockchain?
+
+As the name suggests, blockchain, (consists) of:
+
+* “Blocks” containing information which are “chained“ together through special mechanism of “cryptography“ forming a decentralised database in which data can’t be changed (immutable) once updated.
+
+
+This information in blocks can vary in different blockchains:
+
+* In case of Bitcoin: Record of Transactions
+
+* In Case Of Ethereum: Code (Smart Contracts)."
+
+(https://mirror.xyz/0xDed7d178d8abf77B95AAbEf66f2D733c3Cdd75f6/wQbtCooxVCgkG1bt9FT7-KRzR3uiosNUsRKwuduPjY4)
+
+=Description=
+
+
+'''0. David Andolfatto:''' 
+
+"All record-keeping systems (which include monetary systems) must contend with trust issues and methods of organizing historical information. Conventional systems rely on the reputation of central authorities and record-keepers to achieve consensus. Blockchain, which powers Bitcoin, differs from conventional systems by achieving consensus through a community of anonymous (and therefore "trustless") agents who compete amongst themselves to authenticate transactions. The promise of the blockchain protocol is that it is invulnerable to human foibles."
+(https://research.stlouisfed.org/publications/review/2018/02/13/blockchain-what-it-is-what-it-does-and-why-you-probably-dont-need-one/)
+
+
+'''1. by Jacob Aron:'''
+
+"The true innovation of Bitcoin's mysterious designer, Satoshi Nakamoto, is its underlying technology, the "block chain". That fundamental concept is being used to transform Bitcoin – and could even replace it altogether.
+
+So what is the block chain? It is a ledger of transactions that keeps Bitcoin secure and allows all users to agree on exactly who owns how many bitcoins. Each new block requires a record of recent transactions along with a string of letters and numbers, known as a hash, which is based on the previous block and produced using a cryptographic algorithm.
+
+Miners, people who run the peer-to-peer Bitcoin software, randomly generate hashes, competing to produce one with a value below a certain target difficulty and thus complete a new block and receive a reward, currently 25 bitcoins. This difficulty means faking a transaction is impossible unless you have more computing power than everyone else on the Bitcoin network combined. Confused? Don't worry, ordinary Bitcoin users needn't know the details of how the block chain works, just as people with a credit card don't bother learning banking network jargon. But those who do understand the power of the block chain are realising how Nakamoto's technology for mass agreement can be adapted. "You can replace that agreement with all sorts of different things and now you have a really powerful building block for any kind of distributed system," says Jeremy Clark of Concordia University in Montreal, Canada."
+(http://www.newscientist.com/article/mg22129553.700-bitcoin-how-its-core-technology-will-change-the-world.html)
+
+
+
+'''2. [[Primavera De Filippi]]''' 
+
+"For many, bitcoin — the distributed, worldwide, decentralized crypto-currency — is all about money … or, as recent events have shown, about who invented it. Yet the actual innovation brought about by bitcoin is not the currency itself but the platform, which is commonly referred to as the “blockchain” — a distributed cryptographic ledger shared amongst all nodes participating in the network, over which every successfully performed transaction is recorded.
+
+And the blockchain is not limited to monetary applications. Borrowing from the same ideas (though not using the actual peer-to-peer network bitcoin runs on), a variety of new applications have adapted the bitcoin protocol to fulfill different purposes: Namecoin for distributed domain name management; Bitmessage and Twister for asynchronous communication; and, more recently, Ethereum (released only a month ago). Like many other peer-to-peer (P2P) applications, these platforms all rely on decentralized architectures to build and maintain network applications that are operated by the community for the community. (I’ve written before here in WIRED Opinion about one example, mesh networks, which can provide an internet-native model for building community and governance).
+
+Thus, while they enable a whole new set of possibilities, blockchain-based applications also present legal, technical, and social challenges similar to those raised by other P2P applications that came before them, such as BitTorrent, Tor, or Freenet."
+
+
+==The Blockchain as a universal ledger==
+
+'''1. Dominic Frisby:'''
+
+"Today there is a new system of digital record-keeping. Its impact could be equally large. It is called the blockchain.
+
+Imagine an enormous digital record. Anyone with internet access can look at the information within: it is open for all to see. Nobody is in charge of this record. It is not maintained by a person, a company or a government department, but by 8,000-9,000 computers at different locations around the world in a distributed network. Participation is quite voluntary. The computers’ owners choose to add their machines to the network because, in exchange for their computer’s services, they sometimes receive payment. You can add your computer to the network, if you so wish.
+
+All the information in the record is permanent – it cannot be changed – and each of the computers keeps a copy of the record to ensure this. If you wanted to hack the system, you would have to hack every computer on the network – and this has so far proved impossible, despite many trying, including the US National Security Agency’s finest. The collective power of all these computers is greater than the world’s top 500 supercomputers combined.
+
+New information is added to the record every few minutes, but it can be added only when all the computers signal their approval, which they do as soon as they have satisfactory proof that the information to be added is correct. Everybody knows how the system works, but nobody can change how it works. It is fully automated. Human decision-making or behaviour doesn’t enter into it.
+
+If a company or a government department were in charge of the record, it would be vulnerable – if the company went bust or the government department shut down, for example. But with a distributed record there is no single point of vulnerability. It is decentralised. At times, some computers might go awry, but that doesn’t matter. The copies on all the other computers and their unanimous approval for new information to be added will mean the record itself is safe.
+
+This is possibly the most significant and detailed record in all history, an open-source structure of permanent memory, which grows organically. It is known as the blockchain. It is the breakthrough tech behind the digital cash system, Bitcoin, but its impact will soon be far wider than just alternative money."
+(https://aeon.co/essays/how-blockchain-will-revolutionise-far-more-than-money)
+
+
+'''2. From the Report on [[Blockchain Technology and Polycentric Governance]]:'''
+
+"In essence, a blockchain operates as a distributed digital ledger, spread out across numerous computers, designed to prevent any single party from gaining total control over the network. While the technology comes in various forms, “public and permissionless” blockchains stand out for using cryptographic methods to guarantee that the data on the ledger is transparent, open to all, and secure against unauthorized changes. These networks are built to be censorship-resistant, meaning no single authority can control or restrict access to the network or its transactions. Furthermore, blockchains have a global reach, with nodes of the network spread across the globe, making them not bound by national borders.
+
+The origin of blockchain technology is attributed to an individual or group under the pseudonym of Satoshi Nakamoto, who in 2008 introduced the groundbreaking concept via the whitepaper “Bitcoin: A Peer-to-Peer Electronic Cash System” (Nakamoto 2008). Nakamoto's implementation of the first blockchain was designed to function as the public ledger for all transactions occurring on the Bitcoin network. This innovation marked the beginning of a new era in digital transactions. Since this initial invention, blockchain technology has undergone extensive evolution, extending its utility well beyond the confines of digital currencies. A significant milestone in this evolution was the introduction of the Ethereum network in 2014, which enhanced blockchain's functionality by introducing smart contracts. These are self-executing contracts with the terms of the agreement directly written into code, which activate automatically when predetermined conditions are met. The advent of smart contracts led to the development of decentralized applications (DApps) and decentralized autonomous organizations (DAOs), broadening blockchain's applicability. Currently, the versatility of blockchain is showcased through its myriad applications across diverse fields such as gaming, art, supply chain management, and identity verification, demonstrating its far-reaching impact.
+
+Blockchain systems represent a sophisticated amalgamation of technology and social dynamics. They comprise the foundational blockchain technology and the network of individuals and organizations that develop, manage, and utilize it."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+=How it works=
+
+Morgan Peck:
+
+"the blockchain is nothing more than a long string of transactions, each of which refers to an earlier record in the chain. But Bitcoin users do not directly make the updates to the blockchain. In order to transfer coins to someone else, you have to create a request and broadcast it over the Bitcoin peer-to-peer network. After that, it’s in the hands of the miners. They scoop up the requests and do a few checks to make sure that the signature is correct and that there are enough bitcoins to make the transaction; then they bundle the new records into a block and add it to the end of the blockchain.
+
+All miners work independently on their own version of the blockchain. When they finish a new block, they broadcast it to the rest of their peers, who check it, accept it, add it to the end of the chain, and pick up their work from this new starting point.
+
+The arrangement will work only if the miners agree on what the most recent version of the blockchain should look like. In other words, they all have to agree on a consensus version of it. But given the fact that they’re all strangers, they really have no reason to trust one another’s work. What’s to stop a miner from fiddling with earlier entries on the blockchain and undoing payments?
+
+The strategy that Satoshi Nakamoto (Bitcoin’s pseudonymous architect) devised for establishing consensus in his system is widely considered to be a breakthrough in distributed computing.
+
+“There have been consensus algorithms running since the eighties, where you come to consensus, providing a log of events on multiple machines, with all the machines participating in that network,” says Paul Snow, the founder of Factom, a service that condenses data and transfers it onto the Bitcoin blockchain. However, he says, these systems were successful only when the participants shared a common allegiance.
+
+Bitcoin replaces that allegiance with mathematical confidence. Given the cryptographic proof required to commit a transaction, we can already be confident that only people who own bitcoins can spend them. But a bitcoin miner can also be confident that the other miners are not changing entries on the blockchain, because in Bitcoin there is no going backward.
+
+That’s because the process of adding a new block to the blockchain is very difficult. Anyone who participates is required to devote large quantities of computing power—and therefore, electricity—toward running the new data through a set of calculations called hash functions. Only once this work is completed can the block be appended to the chain in a way that satisfies other miners on the network.
+
+“You’re building a giant wall,” explains Peter Kirby, the president of Factom. “And every time you want to agree to something, you put a thousand bricks on top of it. And you agree to something else and put another thousand bricks on top of it. And that makes it very, very, very difficult for someone to change a brick way down at the bottom of the wall.”
+
+...
+
+A Nakamoto blockchain, then, becomes more secure as more people participate in the network. But why would they? In the case of Bitcoin, it’s because they are paid to do it. Every time a block gets solved, a virgin transaction is created with a handful of newly minted bitcoins signed over to the first miner who completed the work.
+
+In old security models, you tried to lock out all of the greedy, dishonest people. Bitcoin, on the other hand, welcomes everyone, fully expecting them to act in their own self-interest, and then it uses their greed to secure the network.
+
+“This is, I think, the main contribution,” says Ittay Eyal, a computer scientist at Cornell who studies Bitcoin along with other decentralized networks. “Bitcoin causes an attacker to be better off by playing along than by attacking it. The incentive system leads a lot of people to contribute resources toward the welfare of the system.”"
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin)
+
+
+
+
+=Characteristics=
+
+
+==Seven tendencies of blockchain technology and the structural qualities that produce them==
+
+Sarah and Ben Manski:
+
+* '''Veriﬁability'''<br>Transactions are assured through encrypted network consensus mechanisms in such a form that all transactions from the very ﬁrst to the most recent are recorded in a ledger open to its maintainers, reducing information asymmetries2.
+
+* '''Globality'''<br>Digital transactions and cultural information ﬂows transcend geographic space and national borders3.
+
+* '''Liquidity'''<br>Value liquidity is enhanced as the location of a store of value that does not depend or is not under the direct control of a sovereign, central bank or private corporation4.
+
+* '''Permanence'''<br>The ledger of transaction is immutable by design5.
+ 
+* '''Ethereality'''<br>Transactions are conducted in a digital medium6.
+
+* '''Decentralization'''<br>The ledger is widely distributed among many stakeholders and maintainers.
+
+* '''Future Focus'''<br>Found in newer developments of blockchain such as Ethereum, a stored autonomous self-reinforcing agency (SASRA) is formed in the temporal displacement of action through the use of smart contracts enabling the preﬁgurative recording of future transactions."
+
+(https://www.academia.edu/36871389/No_Gods_No_Masters_No_Coders_The_Future_of_Sovereignty_in_a_Blockchain_World)
+
+==Game-based consensus mechanism==
+
+David Andolfatto:
+
+"Fine, so you don't trust "the Man." What now? One alternative is to game the write privilege. The idea is to replace the trusted historian with a set of delegates drawn from the community (a set potentially consisting of the entire community). Next, have these delegates play a validation/consensus game designed in such a way that the equilibrium (say, Nash or some other solution concept) strategy profile chosen by each delegate at every date t = 1,2,3,... entails (i) no tampering with recorded history H(t-1) and (ii) only true blocks E(t) are validated and appended to the ledger H(t-1).
+
+What we have done here is replace one type of faith with another. Instead of having faith in mechanisms that rely on personal reputations, we must now trust that the mechanism governing noncooperative play in the validation/consensus game will deliver a unique equilibrium outcome with the desired properties. I think this is in part what people mean when I hear them say "trust the math." 
+
+Well, trusting the math is one thing. Trusting in the outcome of a noncooperative game is quite another matter. The relevant field in economics is called mechanism design. I'm not going to get into details here, but suffice it to say that it's not so straightforward designing mechanisms with surefire beneficial properties. Ironically, mechanisms such as Bitcoin will have to build up trust the old-fashioned way—through positive user experience, much the same way most of us trust our vehicles to function, even if we have little idea how an internal combustion engine works.
+
+Of course, the same holds true for games based on reputational mechanisms. The difference is, I think, that noncooperative consensus games are intrinsically more costly to operate than their reputational counterparts. The proof-of-work game played by Bitcoin miners, for example, is made intentionally costly (to prevent DDoS attacks) even though validating the relevant transaction information is virtually costless if left in the hands of a trusted validator. And if a lack of transparency is the problem for trusted systems, this conceptually separate issue can be dealt with by extending the read privilege communally.  
+
+Having said this, I think that, depending on the circumstances and the application, the cost associated with a game-based consensus mechanism may be worth incurring."
+
+(https://research.stlouisfed.org/publications/review/2018/02/13/blockchain-what-it-is-what-it-does-and-why-you-probably-dont-need-one/)
+
+
+==The thirteen philosophical pillars of the blockchain==
+
+Graph at https://miro.medium.com/v2/resize:fit:828/format:webp/1*HxQUzWm8dAZDsPKtVv9oCw.png
+
+Source: https://medium.com/paradigm-research/chain-of-thought-exploring-blockchain-through-the-lens-of-philosophy-5c81198312bd#43dc
+
+
+===1. Decentralization===
+
+Sasha Shilina:
+
+Blockchain technology and cryptocurrencies are often associated with the principle of decentralization. This concept is rooted in political philosophy, particularly anarchist and libertarian ideas, that emphasize the need for decentralized power structures. Blockchain enthusiasts aim to create systems that distribute power, authority, and control across a network of participants rather than relying on centralized entities.
+
+
+===2. Trust and transparency===
+
+Blockchain technology offers a transparent and immutable ledger that records transactions and information. It aims to establish trust and remove the need for intermediaries or central authorities. This emphasis on transparency resonates with philosophical notions of truth, accountability, and open dialogue. It challenges traditional systems of trust and authority and encourages a more participatory and democratic approach.
+
+
+===3. Self-sovereignty===
+
+Blockchain technology emphasizes the concept of self-sovereignty, which means that individuals have control over their own data and identity. This is based on the idea of individual autonomy and the need for individuals to have agency over their own lives.
+
+
+===4. Privacy and security===
+
+Cryptocurrencies and blockchain systems incorporate cryptographic techniques to secure transactions and protect user privacy. They offer the possibility of pseudonymity and control over personal data, and some of them offer privacy. This aspect aligns with philosophical discussions around privacy rights, personal autonomy, and the limitations of surveillance capitalism. It encourages individuals to take ownership of their data and engage in self-determined interactions.
+
+
+===5. Programmability and automation===
+
+Automation is an important aspect of the philosophy behind blockchain. One of the key benefits of blockchain is that it allows for the automation of trust through the use of smart contracts, eliminating the need for intermediaries. Furthermore, blockchain technology also enables the automation of many other processes, such as record-keeping, identity verification, and supply chain management. This not only reduces the potential for human error and fraud but also increases efficiency and lowers costs. The idea of automation in the context of blockchain is rooted in the broader philosophy of automation, which seeks to replace manual labor and decision-making processes with machines and algorithms. Proponents of automation argue that it can increase productivity, reduce costs, and free humans from menial tasks to focus on more creative and innovative endeavors.
+
+
+===6. Immutability===
+
+Immutability refers to the idea that once data is recorded on a blockchain, it cannot be changed or deleted. This is because the ledger is distributed across the network, making it virtually impossible for any single user to alter the data without the consensus of the entire network. The rights given to the network’s participants are immutable and cannot be changed. In philosophy, the idea of unchanging, eternal truths has been explored by thinkers such as Plato, who posited the existence of a perfect, unchanging realm of Forms.
+
+
+===7. Trustlessness and peer-to-peer collaboration===
+
+Blockchain technology enables peer-to-peer interactions and disintermediation, allowing direct interactions and collaborations without intermediaries. This aspect resonates with philosophical ideas of horizontal relationships, cooperation, and the empowerment of individuals and communities. It challenges centralized power structures and promotes a more participatory and egalitarian approach to interactions and decision-making. The collaboration concept also resonates with the concept of consensus which can be traced back to the works of Ancient Greek philosophers and Enlightenment thinkers.
+
+
+===8. Equality and financial inclusion===
+
+Cryptocurrencies and blockchain-based financial systems have the potential to promote financial inclusion by providing access to financial services for individuals who are unbanked or underbanked. This aligns with philosophical concerns about justice, equality, and addressing socio-economic disparities. By offering financial agency and empowerment, blockchain and crypto can be seen as philosophies that strive for more inclusive and equitable systems.
+
+
+===9. Economic liberty===
+
+Economic liberty is a fundamental philosophical pillar of blockchain technology. It is rooted in the belief that individuals should have the freedom to conduct their economic activities without interference from governments or other centralized authorities. Blockchain enables economic liberty by providing a decentralized infrastructure that allows individuals to engage in peer-to-peer transactions without the need for intermediaries.
+
+
+===10. Accessibility===
+
+Accessibility is one of the key philosophical pillars of blockchain technology. It is the idea that the benefits of technology should be open to everyone, regardless of their socioeconomic status, education level, or technical expertise. Accessibility means that blockchain should be open and transparent, with no barriers to entry for individuals or organizations looking to participate. Also, at its core, accessibility in blockchain means that the technology should be designed in a way that makes it easy for anyone to use and participate in.
+
+
+===11. Sustainable development===
+
+Sustainable development is another philosophical pillar of blockchain. The decentralized and transparent nature of blockchain can contribute to the achievement of the United Nations Sustainable Development Goals (SDGs) aimed at ending poverty, protecting the planet, and ensuring peace and prosperity for all, creating a more equitable and sustainable world for future generations.
+
+
+===12. Progress and innovation===
+
+The pillar of progress and innovation refers to the continuous development and evolution of blockchain. This includes ongoing research and development, as well as the implementation of new features and functionalities that improve its capabilities and expand its potential use cases. It also involves fostering an environment that encourages innovation and experimentation, which is essential for the growth and adoption of innovative technologies.
+
+
+===13. Determinism===
+
+Determinism, one of the key philosophical pillars of blockchain, equals the finality concept. At its core, determinism is the idea that all events, including human actions, are ultimately determined by previous causes. This notion aligns with the idea of immutability in blockchain, where once a transaction is recorded on the ledger, it cannot be altered or deleted. In other words, the outcome of a transaction on the blockchain is predetermined and cannot be changed by any individual or entity. Determinism was developed by the Greek Pre-socratic philosophers, and later by Aristotle. Some of the main philosophers who have dealt with this issue are Thomas Hobbes, Baruch Spinoza, Gottfried Leibniz, David Hume, Arthur Schopenhauer, William James, Friedrich Nietzsche, Albert Einstein, Niels Bohr, and, more recently, John Searle, and Daniel Dennett."
+
+(https://medium.com/paradigm-research/chain-of-thought-exploring-blockchain-through-the-lens-of-philosophy-5c81198312bd#43dc)
+
+=Typology=
+
+""Swartz (2016) identifies two types of blockchain projects: radical and incorporative. Simply put, radical projects are oriented towards revolutionary social, economic, and political changes through imagining a new techno-political order. These systems enable users to circumvent the dominant institutional setting—central governments, banks, and corporations—by creating new ones. Contrastingly, incorporative projects innovate within the existing techno-political system not (necessarily) aiming for a reconstruction of the underlying political and social premises, but instead providing, for instance, more transparency and autonomy (Swartz 2016, pp. 86–87). As she clarifies, “the distinction…is not clearly defined and, in practice, there is a continuum between the two ideological modes” (Swartz 2016, p. 87). Often, we see how many radical start-ups which begin with “utopian visions might ‘pivot’ (to use industry parlance) towards business models different from or even in opposition to their original goals” (Swartz 2016, p. 88)."
+(https://link.springer.com/article/10.1007/s11625-020-00786-x)
+
+See also:  '''Typology of blockchain imaginaries''', https://link.springer.com/article/10.1007/s11625-020-00786-x/tables/1
+
+==Private vs Public i.e. Permissioned vs Permissionless==
+
+RWA Report 2024:
+
+===Private Blockchains===
+
+▪ "The adoption of blockchain technology in general, regardless of
+private or public, could unlock significant efficiency gains for
+TradFi institutions with legacy infrastructure.
+
+▪ Private blockchains enable privacy on two levels:
+
+o Only permissioned participants can access the
+blockchain and transact / view its data
+
+o The data is only stored by permissioned node operators
+
+
+▪ It also simplifies the trust assumption, meaning consensus
+mechanisms can be simplified further, e.g. Proof-of-Authority,
+and could even go as far as enable certain participants to edit
+past data.
+
+▪ Simplifying consensus could also enhance the performance of
+the chain, providing higher throughput with little or no fees.
+▪ Assuming these networks will operate with fewer nodes
+however, this will lead to heightened concentration of risk on
+the individual participants, node operators, and the maintainer
+of the blockchain client software.
+
+▪ It is possible that a few participants or node operators going
+rogue or being exploited, or a bug in the client software, could
+cripple the network and cause irreparable damage to the chain
+and its data.
+
+
+===Public Blockchains===
+
+▪ In general, a key component of a public blockchain’s security is
+“strength in numbers”, where a large number of node
+operators secure the network. Broader dispersion of these
+operators across geographies and hardware, as well as use of
+different clients, make it difficult to launch 51% attacks against
+a public network.
+
+▪ Another benefit of public blockchains is “building in the
+open”, where smart contract code is fully transparent. This
+could help get more eyes on smart contract codebases to
+ensure that they are free of vulnerabilities, and “battletested” in a real-world environment.
+
+▪ However building on public blockchains also means sharing
+blockspace with the rest of the users, and the complications
+that come with that, such as occasional network congestion
+and resulting slower transaction times and higher gas fees.
+
+▪ Transactions on a public blockchain are also publicly
+viewable by all (except specialized blockchains that enable
+privacy by default); A copy of the data for these chains are also
+stored by all node operators. These may not be preferable for
+certain use cases.
+
+▪ Public blockchains are also not without its own technical
+hiccups, from occasional chain re-orgs to serious downtimes."
+
+(https://assets.coingecko.com/reports/Research/RWA-Report-2024-Rise-of-Real-World-Assets-in-Crypto.pdf?)
+
+
+
+==The four segments==
+
+Graphic at https://d3ansictanv2wj.cloudfront.net/blockchain_app-1c3df0ef526f707f181e2038a5f8fbab.jpg
+
+
+William Mougayar:
+
+
+===The Currency Segment===
+
+"The currency-related segment targets money transfers, payments, tips, or funding applications. The end-user typically goes to an exchange or uses their own wallet to conduct such transactions, benefiting from transaction cost reductions, speeds in settlements, and freedom from central intermediaries. Today’s exchanges are centralized, but it’s likely we’ll see another generation of decentralized trusted exchanges. And although the current bitcoin wallets today are “dumb” wallets, they could become smarter, via an ability to launch smart contracts.
+
+
+
+===The Pegged Services Segment===
+
+Pegged services to the blockchain represent an interesting segment because these apps utilize the blockchain’s atomic unit, which is a “value store” capability, but they also build on top of that with their unique off-chain services. For example, decentralized identity or decentralized ownership is a horizontal blockchain service, but it can be applied to any other vertical segments, such as for videos, music, or photography, just to name a few.
+
+
+===The Smart Contract segment===
+
+Smart contracts are small programs or scripts that run on a blockchain and govern legal or contractual terms on their own. They represent a simple form of decentralization. They will become available in a variety of application areas, such as for wagers, family trusts, escrow, time stamping, proofs of work delivery, etc. In essence, they are about moving certain assets or value from one owner to another, based on some condition or event, between people or things. Smart contracts represent an “intermediate state” between parties, and we will trust these smart programs to verify and take action based on the logic behind these state changes.
+
+
+===The DAO segment===
+
+Legal issues aside, a Distributed Autonomous Organization is “kind of” incorporated on the blockchain because its governance is very dependent on the end-users who are part-owners, part-users, and part-nodes on that decentralized network. Key aspects of a DAO are that each user is also a “worker,” and by virtue of their “work,” they contribute to the value appreciation of the DAO via their collective participation or activity levels. Arguably, bitcoin itself is the “uber DAO.”
+
+(https://www.oreilly.com/ideas/understanding-the-blockchain)
+
+
+==Layers of the Blockchain Tech Stack==
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+The technological stack or “tech stack” refers to the combination of technologies used to construct and operate a specific project. In blockchain technology, this stack consists of various layers, each playing a unique role. These layers include blockchain networks, DApps, and DAOs, with blockchain networks further subdivided into layer 0, layer 1, and layer 2. 
+
+'''Layer 0 Blockchains''': These provide the fundamental infrastructure for blockchain technology, serving as the bedrock upon which other layers are built.
+Layer 1 Blockchains: This layer consists of the blockchain protocol (which outlines the rules and procedures for data exchange, verification, and recording on the network) and the actual ledger that logs all transactions.
+
+'''Layer 2 Blockchains''': Aimed at enhancing the efficiency and speed of transactions, layer 2 blockchains act as scaling solutions for layer 1 blockchains, addressing issues like network congestion and high transaction fees.
+
+'''DApps''': These applications operate on a blockchain network rather than a centralized server or single computer. DApps represent a paradigm shift in application design and operation, utilizing blockchain's inherent security, transparency, and resilience benefits.
+
+'''DAOs''': DAOs are collaborative groups functioning via the Internet with a specific objective. They use smart contracts on blockchain networks and blockchain-based assets such as tokens and cryptocurrencies to manage governance processes.
+
+Each layer of the tech stack can form distinct yet interconnected blockchain systems. The governance of the blockchain systems at the bottom affects the governance of the systems that are built on top. Naturally, members of blockchain systems at the top of the stack have incentives to participate in some governance decisions of blockchain systems at the bottom."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+==Governance Areas==
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"The governance of blockchain systems is shaped not only by their placement within the technological stack but also by the specific nature and type of decisions that need to be made. 
+
+
+Across most blockchain systems, there are common decision-making areas that include:
+
+'''Software Updates''': These decisions involve updates or modifications to the software components that the blockchain relies on.
+
+'''Monetary Policy''': This area covers the issuance, distribution, and management of a cryptocurrency or token utilized by the blockchain system.
+
+'''Treasury Allocation:''' Governance in this area concerns how to save, spend, or invest funds pooled together within the blockchain system.
+
+'''Rewards to Contributors''': This involves establishing policies and practices to acknowledge and reward the contributions made by community members.
+
+'''Standards and Interoperability''': These decisions focus on processes that enable the integration of the blockchain system with other platforms and projects within the broader blockchain ecosystem.
+
+'''Security Measures and Breaches''': This area usually involves exceptional governance processes or mechanisms, distinct from the standard governance areas, to address security-related issues.
+
+'''Secondary Rules''': These are meta-rules that govern how to create, amend, and repeal other governance rules within the system.
+
+
+Additionally, for systems built around blockchain networks, a critical governance area is:
+
+'''Block Production:''' This involves decisions on how new blocks of transactions are added to the ledger, guided by a predefined consensus algorithm.
+Each of these governance areas plays a crucial role in the effective functioning of blockchain systems, influencing everything from daily operations to long-term strategic direction. Understanding these areas is essential for comprehending the complex governance landscape of blockchain technology."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+==Stakeholders==
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"In the governance of blockchain systems, various stakeholder groups play pivotal roles, engaging directly or indirectly in one or more governance areas. 
+
+
+These groups encompass a diverse range of participants, including:
+
+'''Founders and Founding Teams:''' Individuals or groups who initiate and develop the blockchain project.
+
+'''Software Developers:''' Professionals responsible for building and maintaining blockchain technology and its applications.
+
+'''Organizations from the Broader Ecosystem:''' Entities that are either integrated with or competed with the referenced blockchain system. These might be other blockchain projects or businesses leveraging blockchain technology.
+
+'''Investors:''' Individuals or entities that provide capital for the development and expansion of the blockchain system.
+
+'''Token Holders''': People who own cryptocurrencies or tokens associated with the blockchain, often having voting rights or other forms of influence in the system.
+
+'''Users:''' End-users who interact with the blockchain system, either through transactions, applications, or other forms of engagement.
+
+'''Policy Makers, Lawmakers, and Regulators:''' Governmental and regulatory bodies that influence the legal and operational framework within which blockchain systems operate.
+
+
+It is important to note that overlap often exists within these stakeholder groups. For instance, core software developers may also be investors in the blockchain project. Each group behaves according to their own financial and non-financial incentives, which can sometimes lead to challenges in coordination and alignment of interests. Recognizing and understanding the diverse motivations and potential conflicts among these stakeholders is crucial for effective governance in blockchain systems."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+
+==Governance Mechanisms==
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"Blockchain systems employ a variety of governance mechanisms to regulate themselves. These mechanisms can be split into on-chain and off-chain.
+On-chain Governance Mechanisms: Also referred to as “governance by the infrastructure,” these mechanisms are embedded directly within the blockchain's code, making them transparent and relatively resistant to change. 
+
+
+Key examples include:
+
+'''Ex-ante rules and processes''': Consensus algorithms used for block production in blockchain networks.
+
+'''Ex-post rules and processes''': On-chain signaling and voting systems designed for amending existing governance rules.
+
+'''Off-chain Governance Mechanisms''': Also known as “governance of the infrastructure,” these mechanisms involve decision-making processes that are not directly recorded on the blockchain. 
+
+
+This approach offers more flexibility but often lacks the transparency of on-chain mechanisms. 
+
+
+They include:
+
+'''Community-driven mechanisms''': In-person meetings, online forums, and off-chain voting, where the blockchain community collaborates and makes decisions in a more traditional, less technologically tethered manner.
+
+'''External party-driven mechanisms:''' Laws, regulations from governmental agencies, and technology standards set by non-blockchain tech firms. These mechanisms influence blockchain governance from outside the blockchain community.
+
+
+As noted by De Filippi and McMullen (2018), the choice between on-chain and off-chain governance mechanisms depends on the specific needs and context of the blockchain system, balancing transparency, flexibility, and responsiveness to internal and external influences."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+=Status=
+
+Igor Calzada, 2023:
+
+(in the context of an article on [[E-Diasporas]])
+
+"After conducting the literature review and presenting empirical findings of cases and functionalities (Table 1), the positive contributions of blockchain can be summarized as follows:
+
+1. Financial inclusion: Blockchain-based solutions such as cryptocurrencies and digital wallets, can promote greater financial inclusion by enabling low-cost, cross-border payments and remittances (Chouliaraki and Georgiou, 2022, Flore, 2018, Naik and Jenkins, 2020, Zhang and Morris, 2023).
+
+2. Transparent and secure transactions: Blockchain’s distributed ledger technology provides a transparent and secure method for conducting transactions, fostering trust within e-diaspora communities (Werbach, 2019).
+
+3. Decentralization: The decentralized nature of blockchain empowers e-diaspora communities to build peer-to-peer networks and circumvent traditional intermediaries, creating opportunities for collaboration and innovation (Inwood and Zappavigna, 2021, Zook, 2023).
+
+4. Identity verification: Blockchain-based solutions can assist e-diaspora communities in establishing and verifying digital identities, protecting data privacy through the use of wallets (Calzada, 2023a). This is particularly valuable for individuals residing in regions with weak or unstable identity systems (Kondova & Erbguth, 2020).
+
+
+However, there are also negative contributions to consider:
+
+1. Energy consumption: The energy-intensive nature of blockchain can have adverse environmental effects, particularly in areas with limited access to renewable energy sources (Calzada, 2023c, Bridle, 2018).
+
+2. Regulatory challenges: The decentralized nature of blockchain poses difficulties for regulation, giving rise to legal and regulatory challenges for e-diaspora communities (European Commission, 2020, Finck, 2018, UNESCO, 2023).
+
+3. Lack of scalability: Current limitations in blockchain technology regarding scalability and speed may restrict its utility in certain contexts, especially when large-scale transactions or high-speed data processing are necessary (Hughes et al., 2019, Viano et al., 2023).
+
+4. Security risks: While blockchain is generally considered secure, it is not impervious to security risks such as hacking and cyber-attacks, which can have negative repercussions for e-diaspora communities."
+
+(https://www.sciencedirect.com/science/article/pii/S0016328723001623)
+
+
+=Technology=
+
+==The [[Blockchain Application Stack]]==
+
+Joel Monegro:
+
+"This is what I think the architecture of Internet applications is going to look like in 10 years. This is just a simple illustration and it leaves a lot of important insights and issues out. I’ll try my best to explain the thinking behind it below. To keep things short, we’ll run through every part of the stack from the bottom up, and do a deep dive on each in future posts.
+
+The basic idea is that everything inside the gray rectangles is decentralized and open source. For now I’m calling these the shared data and protocol layers. Nobody controls these parts of the system, and they’re accessible by any person or company. If we use bitcoin as an example, the blockchain is the shared data layer and the bitcoin protocol is a decentralized protocol that’s part of the shared protocol Layer.
+
+You’ll notice that each layer gets thinner the higher up you go. You’ll also notice that the shared data and protocol layers cover about 80% of the entire stack. Internet applications today are built on top of open, decentralized technologies like TCP/IP and HTTP, but if you were to graph the current Internet application stack like above, those open, decentralized protocols would probably only make up about 15% with everything on top being private and centralized.
+
+
+'''1. Miners and the blockchain'''
+
+If you know a little about how bitcoin works, you know what miners are. In a nutshell, miners are the nodes in a network of computers who, together, verify all bitcoin transactions. In exchange, the algorithm rewards them with bitcoin. Because bitcoin has real-world value, the operators of these machines are incentivized to keep them running. If you’d like to learn more about mining, this is a great explanation of how they work.
+
+The blockchain is the public ledger that holds a permanent record of all bitcoin transactions, and is maintained by the miners. It’s not controlled by a single entity and it’s accessible by everyone. You can read more about the blockchain here.
+
+
+'''2. Overlay networks'''
+
+This is where things start to get interesting. Developers are starting to build networks that work in parallel to the bitcoin blockchain to perform tasks that the bitcoin network can’t, but that make use of the bitcoin blockchain to, for instance, timestamp or validate their work.
+
+One example is Counterparty. Another might be sidechains. Whatever form these overlay networks take, the one thing they have in common is their connection to the bitcoin blockchain, and how they benefit from its network effects to achieve liquidity without having to bootstrap their own alternative cryptocurrency and/or blockchain like alternative solutions such as Ethereum require.
+
+
+'''3. Decentralized protocols'''
+
+Thanks to the blockchain, for the first time we can develop open source, decentralized protocols with built-in data (thanks to overlay networks and the blockchain), validation, and transactions that are not controlled by a single entity. This is where the traditional architecture of software businesses begins to break down. The best example of a decentralized protocol on top of a shared data layer is bitcoin, and we’re already well aware of how it’s affecting money and finance.
+
+Companies like eBay, Facebook and Uber are very valuable because they benefit tremendously from the network effects that come from keeping all user information centralized in private silos and taking a cut of all the transactions.
+
+Decentralized protocols on top of the blockchain have the potential to undo every single part of the stacks that make these services valuable to consumers and investors. They can do this by, for example, creating common, decentralized data sets to which any one can plug into, and enabling peer-to-peer transactions powered by bitcoin.
+
+In fact, a number of promising teams have already begun working on the protocols that will disrupt the business models of the companies above. One example is Lazooz, a protocol for real-time ride sharing and another is OpenBazaar, a protocol for free, decentralized peer-to-peer marketplaces.
+
+
+'''4. Open source and commercial APIs'''
+
+Protocols are hard for the average developer to build on top of, so there’s an opportunity in making it easy to connect to them. Whether it’s a good business in the long term is up for debate, but I think it’s a very important part of the stack.
+
+Making it quick and easy for developers of any skill set to quickly build an application and experiment on top of these decentralized protocols is paramount to their success.
+
+These will be either commercial services or open source projects. Good examples of this trend are Chain's APIs and Coinbase’s Toshi for bitcoin. They both serve the same purpose, but Chain is a hosted, commercial service, and Toshi is open source.
+
+
+'''5. Applications'''
+
+This is the consumer-facing part of the stack. Applications built atop this architecture will, in most cases, work very similarly to the ones we have today – just like Coinbase works similarly to PayPal.
+
+The big difference to consumers, however, is that because they are built on decentralized protocols, they will be able to talk to each other, just like different email applications and bitcoin wallets can interoperate.
+
+One thing I like about this stack is that it’s growing from the bottom up. First we had miners, the blockchain, and bitcoin, and now we’re building everything else on top. As far as I know, the most significant revolutions in technology have been built this way."
+(http://www.coindesk.com/blockchain-application-stack/)
+
+
+==Why Blockchains don't scale==
+
+Preethi Kasireddy:
+
+"Blockchains, as it stands today, are limited in their ability to scale. 
+ 
+That’s not to say that this will be the case forever, but it’s definitely true today. In fact, I’d argue it’s one of the biggest technological barriers we face with blockchain technology today. It’s quickly become a very active area of research among researchers in the community and cryptocurrency in general.
+
+
+'''Why isn’t the blockchain scalable?''' Currently, all blockchain consensus protocols (eg. Bitcoin, Ethereum, Ripple, Tendermint) have a challenging limitation: every fully participating node in the network must process every transaction. Recall that blockchains have one inherent critical characteristic — “decentralization” — which means that every single node on the network processes every transaction and maintains a copy of the entire state.
+ 
+While a decentralization consensus mechanism offers some critical benefits, such as fault tolerance, a strong guarantee of security, political neutrality, and authenticity, it comes at the cost of scalability. The number of transactions the blockchain can process can never exceed that of a single node that is participating in the network. In fact, the blockchain actually gets weaker as more nodes are added to its network because of the inter-node latency that logarithmically increases with every additional node.
+ 
+In a traditional database system, the solution to scalability is to add more servers (i.e. compute power) to handle the added transactions. In the decentralized blockchain world where every node needs to process and validate every transaction, it would require us to add more compute to every node for the network to get faster. Having no control over every public node in the network leaves us in a pickle.
+ 
+As a result, all public blockchain consensus protocols that operate in such a decentralized manner make the tradeoff between low transaction throughput and high degree of centralization. In other words, as the size of the blockchain grows, the requirements for storage, bandwidth, and compute power required by fully participating in the network increases. At some point, it becomes unwieldy enough that it’s only feasible for a few nodes to process a block — leading to the risk of centralization.
+ 
+In order to scale, the blockchain protocol must figure out a mechanism to limit the number of participating nodes needed to validate each transaction, without losing the network’s trust that each transaction is valid. It might sound simple in words, but is technologically very difficult. 
+
+
+Why?
+
+* Since every node is not allowed to validate every transaction, we somehow need nodes to have a statistical and economic means to ensure that other blocks (which they are not personally validating) are secure.
+
+* There must be some way to guarantee data availability. In other words, even if a block looks valid from the perspective of a node not directly validating that block, making the data for that block unavailable leads to a situation where no other validator in the network can validate transactions or produce new blocks, and we end up stuck in the current state. (There are several reasons a node might go offline, including malicious attack and power loss.)
+
+* Transactions need to be processed by different nodes in parallel in order to achieve scalability. However, transitioning state on the blockchain also has several non-parallelizable (serial) parts, so we’re faced with some restrictions on how we can transition state on the blockchain while balancing both parallelizability and utility."
+(https://hackernoon.com/blockchains-dont-scale-not-today-at-least-but-there-s-hope-2cb43946551a)
+
+''(the above article discusses the technical solutions)''
+
+=Business Models=
+
+Joel Dietz:
+
+"There are currently a number of incentive structures surrounding blockchain technology and open source software:
+
+(1) Contribute open source code and make money via services (i.e. Peter Todd’s consulting)
+
+(2) Create a new close source software project based on the Bitcoin blockchain with a privately held speculative unit (i.e. legal equity in Coinbase)
+
+(3) Create an new technology set plugged into the Bitcoin blockchain with a privately held speculative unit (i.e. legal equity in Blockstream/Sidechains)
+
+(4) Create an entirely new unit with inherent utility on a new blockchain (BTC in Bitcoin, XRP in Ripple, ETH in Ethereum)
+
+(5) Create an entirely new unit with inherent utility on the Bitcoin blockchain (MSC in Mastercoin, XCP in Counterparty)"
+(https://medium.com/@Swarm/the-second-wave-of-blockchain-innovation-270e6daff3f5)
+
+==The fundamental value proposition of the blockchain concerns verification and transaction costs==
+
+''From an interview of '''Christian Catalini''', by Paul Michelman of Sloan magazine:''
+
+"We started by asking ourselves: What fundamental costs does blockchain reduce? If you can answer this question, it becomes much easier to identify where the opportunities are, whether you are an established company, a startup, or a regulator. Applications that do not take advantage of the structural changes in costs that the technology allows for are unlikely to succeed, as they will have a difficult time convincing consumers and businesses to adopt. Similarly, solutions that claim benefits the technology cannot currently deliver are likely to fail. ...  '''We concluded that at least two key costs will be affected: the cost of verifying the attributes of a transaction (for example, when did it take place, who was involved, etc.) and the cost of exchanging value within a network without relying on a costly intermediary.'''
+
+The ability to securely record and time-stamp information on a blockchain is extremely valuable when issues arise with a transaction. Whereas today we often have to invest resources to audit the transaction and assess the truth, in the future, these tasks could be automated thanks to a distributed ledger. This makes settlement and reconciliation across organizations simpler and more efficient, which explains why many early use cases for blockchain are in the financial sector. Here the compelling reason to adopt is the ability to lower operational costs while keeping the rest of the ecosystem the same. It also explains why banks and financial institutions like distributed ledgers but are worried about cryptocurrencies. Distributed ledgers, on their own, do not challenge existing revenue models and regulatory frameworks. In fact, they may even allow incumbents to achieve greater economies of scale. Cryptocurrencies, in contrast, present an existential threat to how value is generated and appropriated in the economy.
+
+This is where the second cost — the cost of networking — plays a key role: Before cryptocurrencies such as bitcoin existed, we needed intermediaries to transfer value across the globe. Creating and maintaining a secure network was both capital-intensive and labor-intensive. Bitcoin solves this problem by throwing cheap hardware at it: While often criticized for the energy-consuming computations needed to secure it, the bitcoin network has been extremely successful at automating value transfer. Where secure financial messaging platforms such as SWIFT and ACH have to invest in maintaining “trusted nodes” to validate transactions, Bitcoin uses a clever mix of cryptography and game theory to deliver the same results. Gone are the accounting, reconciliation, and security costs associated with ensuring that a rogue employee or financial institution did not tamper with the transaction. The integrity of the underlying data is not guaranteed by an intermediary but by the design of the system itself. This is the architectural innovation associated with cryptocurrencies, and it constitutes both an opportunity and a threat to existing business models."
+
+Examples of the first ...
+
+"Of course, the immutability offered by a distributed ledger is helpful only if the information it recorded is accurate in the first place. Hence, the cheaper it is to commit information early in the value chain and in an automated and tamperproof fashion, the better. Similarly, the more one can envision replacing labor-intensive and time-consuming tasks with a combination of software and a “shared source of truth,” the more the technology is likely to be useful. Early applications on this front range from the trading and settlement of currencies and financial assets to the tracking of ownership stakes in early-stage companies. For example, in 2015 Nasdaq experimented with executing a private securities transaction for San Francisco-based blockchain startup Chain Inc. on a distributed ledger, removing the manual steps typically involved in the process. Similarly, New York-based Digital Asset Holdings LLC is developing distributed ledger technology for the Australian Securities Exchange post-trade market, and startups such as Boston-based Circle Internet Financial Inc. and Plutus Financial Inc. (d/b/a Abra), based in Mountain View, California, are already using blockchain to lower the cost of transferring money across the globe."
+
+
+Examples of the second:
+
+"Changes in the cost of networking — although they will take longer to unfold — are more likely to be substantial. The ability to bootstrap a marketplace without the need for a central actor constitutes a radical departure from how most organizations appropriate value within their ecosystem today. Cryptocurrencies enable a hybrid type of organization that can take advantage of both the efficiency of a market and the more complex forms of contracting and governance that take place within companies or on online platforms. By sourcing capital, talent, and ideas through smart contracts, such organizations will be possibly able to move and allocate resources at a speed previously unimaginable. Many of the online platforms that rely today on their ability to process payments between buyers and sellers, and on controlling a reputation system (such as Uber Technologies Inc. and Airbnb Inc.) may face increased competition from open protocols that source resources and allocate returns in a more flexible way.
+
+Early experiments in this space include startups like San Francisco-based Numerai LLC, a hedge fund that makes investment decisions on the basis of crowdsourced predictions generated by a distributed network of data scientists. The data scientists rely on a cryptocurrency to both disclose their confidence in their models and appropriate the returns from their contributions. In addition, a smart contract ensures that participants do not have an incentive to “overfit” their data, as rewards are linked to the long-run ability of the hedge fund to make good investment decisions."
+(https://sloanreview.mit.edu/article/seeing-beyond-the-blockchain-hype/)
+
+==Comparing the Incentive Models==
+
+Joel Dietz:
+
+"For a long time, the primary model of open source software development has been in category one. The software itself is free. Hosting and other services around it are not. People can also build high value applications on top of the open source code, but these are usually closed source. This is the model that Ruby on Rails and other web frameworks have used fairly successfully as Joel Dietz has previously written.
+
+The second model is the typical business model. In this, the structure of legal equity binds both investors and developers to a future value that may not be realized for several years. This typically creates a group of a few people who are highly committed to a particular outcome, but may naturally come into odds. Historically there is also no way to incentivize any of the parties beyond employees and investors that may also have a vested interest in the platform (i.e. power users).
+
+The third model, by which I primarily refer to Sidechains, is still inchoate. In the Sidechains whitepaper it proposes demurrage as a method for incentivizing sidechain development. This seems to promote exactly the opposite set of incentives than what you would want. Effectively this means that assets on the main chain hold their value, while assets on a sidechain gradually decrease in value, while the difference is basically given away to miners. Also, the Sidechains project has no publicly stated business model, which is also a fairly significant concern. Any potential revenue on a service-based business will never be enough for the venture capitalists to get their necessary return, which basically forces them to either create a closed source product or otherwise leverage their position to “gate keep” and charge some sort of toll on network usage.
+
+The fourth model, though strongly disliked by many, is ironically closest to Bitcoin itself. It states fundamentally that there can be a speculative unit with attached technological innovation that is acquired, and by which the speculators will benefit as both utility and network grows. The somewhat unique feature of Ethereum and a few other related projects (e.g. DarkCoin) is that unlike earlier “altcoins,” these new projects do have significant additional utility that is not found on the Bitcoin Blockchain.
+
+Since all such projects extend the core Bitcoin technology with this additional utility, this effectively makes them competitors to the Bitcoin blockchain. Although early adopters and venture capitalist backers of Bitcoin had the hope that the network effects of Bitcoin would make it something like the TCP/IP protocal of internet money, it is entirely possible that some other competitor will surpass it. I suspect that whether or not this is the case will depend highly on whether or not anyone can make comparable utility and innovation compatible with Bitcoin.
+
+This leads to a fifth model that was perhaps under-appreciated until Ethereum came along. This is the possibility that a metacoin, so called because it works via inserting metadata into Bitcoin transactions, could provide much of the increased utility provided via a smart contracting layer without creating its own blockchain.
+
+Both four and five have very similar economic incentive structures. First of all, they are open to all participants and immediately liquid. Because of this it means that they naturally engage much more quickly a wider audience who are also incentivized to spread the word about that network. But, because of the immediate liquidity, there is no necessary long-term engagement. This affects both the development side and investing, and also means that there a fairly strong incentive to drive up the short time value for a project and exit at the peak. This likely results in a greater amount of capital, greater number of participants, with less depth. While potentially appropriate to the Facebook age, it is typically the case that startups require a few number of very intensely committed people due to the often intensely competitive nature of development, the occasional crisises that test resolve of key participants, and the general need for deferred compensation.
+
+An additional problem is that none of these projects have evolved business models independent of the appreciation of their new asset class. All effectively depend on driving up the price by increasing the underlying utility of the unit and size of their related network, something that, while feasible, remains a questionable choice for anything that expects to be around in 5–10 years. Also, it is quite possible that price appreciation in such an asset is limited relative to the benefits traditionally associated with equity (i.e. 1000x returns on a successful software exit from an early investment). Since venture capital is generally structured as taking high rewards for high risk, projects with capped rewards impossible for them to undertake from an investment perspective.
+
+Another very significant drawback is that even where economic incentives maybe aligned, there are basically no accountability structures due to the basically non-existant legal framework for entities receiving this sort of funding. In this case, Counterparty decided not to take funds whatsoever, whereas Ethereum structured their legal documentation to explicitly state that they were promising nothing in return whatsoever.
+
+As Vitalik recently noted, Ethereum also has a problem of having a dual purpose “product” offering and an “investment” offering, something Swarm founder Joel Dietz called misaligned incentives in an early piece on economics of Ethereum. It is problems like these that have probably caused two out of three Counterparty founders to begin working for a private corporation (Overstock), presumably with some additional equity-based incentivization in addition to the base counterparty unit. In this case, the Counterparty ecosystem now has participants both in categories (4) and (2), with potential conflicts of interest between the participants in area (2), but also the possibility for larger ecosystem growth presuming that those conflicts can adequately be mediated.
+
+So far we have only discussed the advantages and disadvantages of existing economic incentive structures. What about the future? What other possibilities can we expect to emerge?
+
+The first “composite” offering has been proposed by Reddit. This is to take an existing equity offering and distribute the benefits downwards to community users via cryptocurrency. This is an incredible opportunity, because it illustrates one of the key benefits of this ‘open’ incentivization model, it actually directly compensates the community members who contribute to network growth.
+
+The other model is Swarm itself, which, due to legal complexities, was deliberately vague about specific utility at the outset of its fundraising period, and instead described more generally the various categories of benefits that could be applied via these technologies (perk distribution, membership, privileged product access, financial rewards).
+
+This was sometimes described as sort of crypto social-contract with the intention of providing as much value as possible to its users as the legal infrastructure was developed in order to do so. Much of this increased value depended on ability to structure agreements via smart contracts, which was a technology that did not even exist in any usable form until one week ago."
+(https://medium.com/@Swarm/the-second-wave-of-blockchain-innovation-270e6daff3f5)
+
+=Governance=
+
+==On the difference between making rules and enforcing rules==
+
+By Izabella Kaminska:
+
+"As Lehdonvirta observes, the vision of blockchain is of a system which can enforce contracts, prevent double spending, and cap the money supply pool without ceding power to anyone:
+
+- ''No rent-seeking, no abuses of power, no politics — blockchain technologies can be used to create “math-based money” and “unstoppable” contracts that are enforced with the impartiality of a machine instead of the imperfect and capricious human bureaucracy of a state or a bank. This is why so many people are so excited about blockchain: its supposed ability change economic organization in a way that transforms dominant relationships of power.
+The problem which blockchain claims to have solved, in other words, is a rule-enforcement one, not a technological one''.
+
+And yet, here’s the rub. From Lehdonvirta:
+
+- ''Unfortunately this turns out to be a naive understanding of blockchain, and the reality is inevitably less exciting. Let me explain why. In economic organization, we must distinguish between enforcing rules and making rules. Laws are rules enforced by state bureaucracy and made by a legislature. The SWIFT Protocol is a set of rules enforced by SWIFTNet (a centralized computational system) and made, ultimately, by SWIFT’s Board of Directors. The Bitcoin Protocol is a set of rules enforced by the Bitcoin Network (a distributed network of computers) made by — whom exactly? Who makes the rules matters at least as much as who enforces them. Blockchain technology may provide for completely impartial rule-enforcement, but that is of little comfort if the rules themselves are changed. This rule-making is what we refer to as governance''.
+
+Unfortunately for blockchain fanatics, there is no formal process for how governance works in bitcoin. Lehdonvirta says this is because for a long time the underlying politics were overlooked.
+
+-  … ''many people don’t recognize them, preferring instead the idea that Bitcoin is purely “math-based money” and that all the developers are doing is purely apolitical plumbing work. But what has started to make this position untenable and Bitcoin’s politics visible is the so-called “block size debate” — a big disagreement between factions of the Bitcoin community over the future direction of the rules''.
+
+Whatever model of the blockchain is employed, the fundamental problem of governance remains, says Lehdonvirta. What’s more, if it was somehow resolved… you’d no longer need a blockchain.
+
+After all, as Lehdonvirta also observes, in performance terms, existing blockchain technologies are in many ways inferior to more conventional technologies."
+(https://ftalphaville.ft.com/2017/06/14/2190149/blockchains-governance-paradox/)
+
+
+=Potential Applications=
+
+by Dominic Frisby:
+
+"Coders are now developing ways to use blockchain tech for purposes beyond an alternative money system. From 2017, you will start to see some of the early applications creeping into your electronic lives.
+
+One application is in decentralised messaging. Just as you can send cash to somebody else with no intermediary using Bitcoin, so can you send messages – without Gmail, iMessage, WhatsApp, or whoever the provider is, having access to what’s being said. The same goes for social media. What you say will be between you and your friends or followers. Twitter or Facebook will have no access to it. The implications for privacy are enormous, raising a range of issues in the ongoing government surveillance discussion.
+
+We’ll see decentralised storage and cloud computing as well, considerably reducing the risk of storing data with a single provider. A company called Trustonic is working on a new blockchain-based mobile phone operating system to compete with Android and Mac OS.
+
+Just as the blockchain records where a bitcoin is at any given moment, and thus who owns it, so can blockchain be used to record the ownership of any asset and then to trade ownership of that asset. This has huge implications for the way stocks, bonds and futures, indeed all financial assets, are registered and traded. Registrars, stock markets, investment banks – disruption lies ahead for all of them. Their monopolies are all under threat from blockchain technology.
+
+Land and property ownership can also be recorded and traded on a blockchain. Honduras, where ownership disputes over beachfront property are commonplace, is already developing ways to record its land registries on a blockchain. In the UK, as much as 50 per cent of land is still unregistered, according to the investigative reporter Kevin Cahill’s book Who Owns Britain? (2001). The ownership of vehicles, tickets, diamonds, gold – just about anything – can be recorded and traded using blockchain technology – even the contents of your music and film libraries (though copyright law may inhibit that). Blockchain tokens will be as good as any deed of ownership – and will be significantly cheaper to provide.
+
+The Peruvian economist Hernando de Soto Polar has won many prizes for his work on ownership. His central thesis is that lack of clear property title is what has held back so many in the Third World for so long. Who owns what needs to be clear, recognised and protected – otherwise there will be no investment and development will be limited. But if ownership is clear, people can trade, exchange and prosper. The blockchain will, its keenest advocates hope, go some way to addressing that.
+
+Smart contracts could disrupt the legal profession and make it affordable to all, just as the internet has done with music and publishing
+
+Once ownership is clear, then contract rights and property rights follow. This brings us to the next wave of development in blockchain tech: automated contracts, or to use the jargon, ‘smart contracts’, a term coined by the US programmer Nick Szabo. We are moving beyond ownership into contracts that simultaneously represent ownership of a property and the conditions that come with that ownership. It is all very well knowing that a bond, say, is owned by a certain person, but that bond may come with certain conditions – it might generate interest, it might need to be repaid by a certain time, it might incur penalties, if certain criteria are not met. These conditions could be encoded in a blockchain and all the corresponding actions automated.
+
+Whether it is the initial agreement, the arbitration of a dispute or its execution, every stage of a contract has, historically, been evaluated and acted on by people. A smart contract automates the rules, checks the conditions and then acts on them, minimising human involvement – and thus cost. Even complicated business arrangements can be coded and packaged as a smart contract for a fraction of the cost of drafting, disputing or executing a traditional contract.
+
+One of the criticisms of the current legal system is that only the very rich or those on legal aid can afford it: everyone else is excluded. Smart contracts have the potential to disrupt the legal profession and make it affordable to all, just as the internet has done with both music and publishing.
+
+This all has enormous implications for the way we do business. It is possible that blockchain tech will do the work of bankers, lawyers, administrators and registrars to a much higher standard for a fraction of the price.
+
+As well as ownership, blockchain tech can prove authenticity. From notarisation – the authentication of documents – to certification, the applications are multifold. It is of particular use to manufacturers, particularly of designer goods and top-end electrical goods, where the value is the brand. We will know that this is a genuine Louis Vuitton bag, because it was recorded on the blockchain at the time of its manufacture.
+
+Blockchain tech will also have a role to play in the authentication of you. At the moment, we use a system of usernames and passwords to prove identity online. It is clunky and vulnerable to fraud. We won’t be using that for much longer. One company is even looking at a blockchain tech system to replace current car- and home-locking systems. Once inside your home, blockchain tech will find use in the internet of things, linking your home network to the cloud and the electrical devices around your home.
+
+From identity, it is a small step to reputation. Think of the importance of a TripAdvisor or eBay rating, or a positive Amazon review. Online reputation has become essential to a seller’s business model and has brought about a wholesale improvement in standards. Thanks to TripAdvisor, what was an ordinary hotel will now treat you like a king or queen in order to ensure you give it five stars. The service you get from an Uber driver is likely to be much better than that of an ordinary cabbie, because he or she wants a good rating.
+
+There will be no suspect recounts in Florida! The blockchain will also usher in the possibility of more direct democracy
+
+The feedback system has been fundamental to the success of the online black market, too. Bad sellers get bad ratings. Good sellers get good ones. Buyers go to the sellers with good ratings. The black market is no longer the rip-off shop without recourse it once was. The feedback system has made the role of trading standards authorities, consumer protection groups and other business regulators redundant. They look clunky, slow and out of date.
+
+Once your online reputation can be stored on the blockchain (ie not held by one company such as TripAdvisor, but decentralised) everyone will want a good one. The need to preserve and protect reputation will mean, simply, that people behave better. Sony is looking at ways to harness this whereby your education reputation is put on the blockchain – the grades you got at school, your university degree, your work experience, your qualifications, your resumé, the endorsements you receive from people you’ve done business with. LinkedIn is probably doing something similar. There is an obvious use for this in medical records too, but also in criminal records – not just for individuals, but for companies. If, say, a mining company has a bad reputation for polluting the environment, it might be less likely to win a commission for a project, or to get permission to build it.
+
+We are also seeing the development of new voting apps. The implications of this are enormous. Elections and referenda are expensive undertakings – the campaigning, the staff, the counting of the ballot papers. But you will soon be able to vote from your mobile phone in a way that is 10 times more secure than the current US or UK systems, at a fraction of the cost and fraud-free. What’s more, you will be able to audit your vote to make sure it is counted, while preserving your anonymity. Not even a corrupt government will be able to manipulate such a system, once it is in place. There will be no suspect recounts in Florida! The blockchain will also usher in the possibility of more direct democracy: once the cost and possibility of fraud are eliminated, there are fewer excuses for not going back to the electorate on key issues."
+(https://aeon.co/essays/how-blockchain-will-revolutionise-far-more-than-money)
+
+==Identity==
+
+Morgan Peck:
+
+"So what can you do with a Nakamoto blockchain? The most simple applications, the ones we are likely to see in the near future, will make use of them as basic storage systems that take advantage of the unique properties of the network.
+
+People who are interested in transparency and access are looking at the blockchain as a possible place to organize government records and to include the public in the legislative process, by giving people a forum for publishing, debating, and voting on new proposals.
+
+Because the blockchain gives each entry a rough time stamp, it can also be used as a decentralized notary. Imagine, for example, taking a picture of a dent in your rental car and loading it into a Bitcoin transaction. By looking at what block the transaction went into, you could later prove that the dent existed before you left the parking lot.
+
+Because Bitcoin transactions are secured by strong cryptography, the blockchain can also replace our standard user name–and–password strategy for identity verification. In such a system, a Bitcoin address could be tagged with a user name, while the private key would stand in as a password. Anyone could then ask you to prove your identity by using your private key to solve the same cryptographic puzzle that you would normally solve when making a Bitcoin transaction."
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin)
+
+
+==Censorship==
+
+Morgan Peck:
+
+"Nakamoto blockchains also solve the problem of censorship. Once inserted into the chain, metadata cannot be removed. Developers have used this crucial feature to build a new censorship-resistant version of Twitter (called Twister), and a decentralized domain-name registry (Namecoin).
+
+“Everything that we own, everything that we do, is governed by these big piles of records,” says Factom’s Kirby. “A bank is just a big stack of records. An insurance company is just a big stack of records. An economy is basically just a big stack of records. And if you can take this concept of…a giant global accounting ledger and say, ‘Now we can organize all the records in the world this way,’ well, it turns out that’s really exciting.”
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin)
+
+
+
+==[[Finance as a Commons]], using the Blockchain==
+
+Raymond Aitken:
+
+"What seems important is that it represents a distributed but powerful computing power, and incorruptible database, which can be used as a ledger-transactional system, as well as a notary system for publicly recording rights, including monetary/economic rights. In the event of a bail-in, the majority of the world's population and their enterprises, will have every incentive to transfer their accounts to such a system (which has a very different paradigm than Bitcoin).
+
+My questions are:
+
+(1) can the block-chain technology be architechtured into a decentralised operating system and commons block-chain platform, to provide banking as a public service, both at the local and international scale?
+
+(2) Can it be architectured as the framework of a new international monetary system, in accordance with the proposals of the French-Swiss economist, Michel Laloux (whose book I am translating into English), so that
+
+(3) money needed for regeneration of the economic commons (the 4 factors of production mentioned in my last email), as well as for solidarity (welfare) purposes - without dependency on the centralised State?"
+(email, August 2015)
+
+
+==Trust==
+
+Gideon Greenspan:
+
+"If multiple entities are writing to the database, there also needs to be some degree of mistrust between those entities. In other words, blockchains are a technology for databases with multiple non-trusting writers.
+
+You might think that mistrust only arises between separate organizations, such as the banks trading in a marketplace or the companies involved in a supply chain. But it can also exist within a single large organization, for example between departments or the operations in different countries.
+
+What do I specifically mean by mistrust? I mean that one user is not willing to let another modify database entries which it “owns”. Similarly, when it comes to reading the database’s contents, one user will not accept as gospel the “truth” as reported by another user, because each has different economic or political incentives.
+
+So the problem, as defined so far, is enabling a database with multiple non-trusting writers. And there’s already a well-known solution to this problem: the trusted intermediary. That is, someone who all the writers trust, even if they don’t fully trust each other. Indeed, the world is filled with databases of this nature, such as the ledger of accounts in a bank. Your bank controls the database and ensures that every transaction is valid and authorized by the customer whose funds it moves. No matter how politely you ask, your bank will never let you modify their database directly.
+
+Blockchains remove the need for trusted intermediaries by enabling databases with multiple non-trusting writers to be modified directly. No central gatekeeper is required to verify transactions and authenticate their source. Instead, the definition of a transaction is extended to include a proof of authorization and a proof of validity. Transactions can therefore be independently verified and processed by every node which maintains a copy of the database.
+
+But the question you need to ask is: Do you want or need this disintermediation? Given your use case, is there anything wrong with having a central party who maintains an authoritative database and acts as the transaction gatekeeper? Good reasons to prefer a blockchain-based database over a trusted intermediary might include lower costs, faster transactions, automatic reconciliation, new regulation or a simple inability to find a suitable intermediary.
+
+
+So blockchains make sense for databases that are shared by multiple writers who don’t entirely trust each other, and who modify that database directly. But that’s still not enough. Blockchains truly shine where there is some interaction between the transactions created by these writers.
+
+What do I mean by interaction? In the fullest sense, this means that transactions created by different writers often depend on one other. For example, let’s say Alice sends some funds to Bob and then Bob sends some on to Charlie. In this case, Bob’s transaction is dependent on Alice’s one, and there’s no way to verify Bob’s transaction without checking Alice’s first. Because of this dependency, the transactions naturally belong together in a single shared database.
+
+Taking this further, one nice feature of blockchains is that transactions can be created collaboratively by multiple writers, without either party exposing themselves to risk. This is what allows delivery versus payment settlement to be performed safely over a blockchain, without requiring a trusted intermediary.
+
+A weaker case can also be made for situations where transactions from different writers are cross-correlated with each other, even if they remain independent. One example might be a shared identity database in which multiple entities validate different aspects of consumers’ identities. Although each such certification stands alone, the blockchain provides a useful way to bring everything together in a unified way.
+
+If we have a database modified directly by multiple writers, and those writers don’t fully trust each other, then the database must contain embedded rules restricting the transactions performed.
+
+These rules are fundamentally different from the constraints that appear in traditional databases, because they relate to the legitimacy of transformations rather than the state of the database at a particular point in time. Every transaction is checked against these rules by every node in the network, and those that fail are rejected and not relayed on.
+
+Asset ledgers contain a simple example of this type of rule, to prevent transactions creating assets out of thin air. The rule states that the total quantity of each asset in the ledger must be the same before and after every transaction."
+(http://www.multichain.com/blog/2015/11/avoiding-pointless-blockchain-project/)
+
+=Examples=
+
+See also: [https://www.forbes.com/sites/bernardmarr/2018/05/14/30-real-examples-of-blockchain-technology-in-practice/ A list of 30 real applications]
+
+BY [[Primavera De Filippi]]:
+
+"The blockchain is not limited to monetary applications. Borrowing from the same ideas (though not using the actual peer-to-peer network bitcoin runs on), a variety of new applications have adapted the bitcoin protocol to fulfill different purposes: Namecoin for distributed domain name management; Bitmessage and Twister for asynchronous communication; and, more recently, Ethereum (released only a month ago). Like many other peer-to-peer (P2P) applications, these platforms all rely on decentralized architectures to build and maintain network applications that are operated by the community for the community."
+(http://www.wired.com/2014/03/decentralized-applications-built-bitcoin-great-except-whos-responsible-outcomes/)
+
+==Ethereum==
+
+"One of those tapping into its power is Vitalik Buterin, a 19-year-old developer from Toronto, Canada. Last week he launched Ethereum, a new platform that will not just allow for multiple cryptocurrencies, as they are known, but also promises to host a range of decentralised applications on a single block chain. Making systems decentralised is appealing because the authorities will find them hard to shut down.
+
+Initially, Ethereum users will be able to exchange bitcoins for a new currency – ether. Then, ether will be mined just like Bitcoin. But acquiring another form of digital money is not the point. Ethereum is meant to work like an operating system for cryptocurrencies. Developers can create apps, such as social networks or file storage, that sit on Ethereum's network as part of an app store.
+
+Ethereum allows for the creation of complex, yet decentralised, economic tools like financial derivatives, in which two parties can bet on the rise and fall of an asset, or crop insurance that pays out to a farmer according to a weather data feed. Creating decentralised versions of Dropbox or eBay should be possible too, claims Buterin.
+
+Other developers are attempting to achieve the same results by overlaying new code on the existing Bitcoin block chain. One example is the concept of "coloured" coins: with bitcoins labelled to represent other assets such as gold, cars or even houses, you transfer ownership when you trade the labelled coin.
+
+Buterin says Ethereum is much more flexible. "Bitcoin is great as a form of digital money, but its scripting language is too weak for any kind of serious advanced applications to be built on top."
+(http://www.newscientist.com/article/mg22129553.700-bitcoin-how-its-core-technology-will-change-the-world.html)
+
+
+==Decentralized Autonomous Corporations==
+
+"One of the more advanced concepts being touted for a next-generation Bitcoin is the idea of decentralised autonomous corporations (DAC) – companies with no directors. These would follow a pre-programmed business model and are managed entirely by the block chain. In this case the block chain acts as a way for the DAC to store financial accounts and record shareholder votes.
+
+In a way, Bitcoin is actually the first DAC, says Daniel Larimer, a developer in Blacksburg, Virginia. People who own bitcoins are shareholders in the company, which offers financial services, earns revenue through transaction fees and pays a salary to its employees, the miners. But no one is in charge.
+
+Larimer has started his own DAC, called BitSharesX, which he says can perform the actions of a bank, lending other currencies to customers, who can provide BitShares as collateral. Other potential business models for a DAC include election services and lotteries, all run automatically. "The key to a DAC is that it should not depend on any one person."
+(http://www.newscientist.com/article/mg22129553.700-bitcoin-how-its-core-technology-will-change-the-world.html)
+
+
+==Official Records==
+
+Morgan Peck:
+
+"Last year, Manuel Araoz, an Argentinean programmer who now works for BitPay, one of the original Bitcoin payment providers, created a service that enables users to condense any document and embed it into a transaction on the blockchain. A lot of people are now getting excited about the possibility of using this kind of application to store official records. The two examples that come up most often at conferences are property titles and documents proving “prior art” in intellectual property cases. In the case of titles, you’re basically layering a new form of property onto a Bitcoin transaction. Once a deed to a house is associated with a particular value on the Bitcoin blockchain, it can be transferred from party to party without the need for a paper trail.
+
+In the case of prior art, a document embedded in the blockchain would carry with it a rough time stamp (depending on the rate at which new blocks are being added to the chain), which inventors could later use in patent disputes to prove that they had the first claim to an idea. The same solution would extend to any situation where a human notary was necessary.
+
+According to Gavin Andresen, one of the developers who works on the core Bitcoin protocol, these applications could be especially useful for underdeveloped nations where governments lack a good way of tracking and transmitting official documents."
+
+“I think the places where it makes the most sense are the places where they don’t already have a functioning system, they don’t have some legacy way of accomplishing something that the blockchain can help them accomplish,” says Andresen. “The example of property records, deeds to houses. Here in the United States, in Europe, and in other developed world nations, we have this whole system that’s all about keeping track of who owns property and then taxing them. There are parts of the world where that just doesn’t exist yet.”
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin/four-cool-things-you-can-do-with-the-blockchain)
+
+
+==Voting==
+
+Morgan Peck:
+
+"There are several groups (Agora, BitCongress, Swarm) that are looking for ways to use the Bitcoin blockchain to enable online voting. Most of the schemes would involve sending a tiny fraction of a specially tagged bitcoin (or a similar token) to every voter. The voter could then sign it over to anyone on a list of candidates. The candidate with the most bitcoins at the end of the vote would win. One of the benefits of a system like this is that voters could divide their votes among candidates. The results are also completely transparent and visible to anyone who has downloaded a copy of the blockchain. On one hand, this is good because you can conduct a public audit of the vote. On the other hand, it opens the door for vote selling.
+
+The BitCongress application, which is still under development, goes further and seeks to carve out a space for all the steps in governance. The group wants to provide a forum for debate, a process for voting, and a place for representatives to publish legislative proposals, all on the Bitcoin blockchain."
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin/four-cool-things-you-can-do-with-the-blockchain)
+
+
+==Identity Verification==
+
+Morgan Peck:
+
+"Today, when we need to log on to websites or applications, we usually prove our identities by supplying passwords. As a result, we are accustomed to managing many different passwords on many different websites. We are also trusting these Web services to keep our passwords, and therefore our identities, safe.
+
+Onename uses the blockchain to link your name to a Bitcoin address, which you can then prove you control by signing a digital message with your private key (similar to what you do when you spend bitcoins). The developers describe the service as a universal passport for the Internet. They imagine that in the future, instead of signing in to applications with a Facebook account, we will refer to a Onename identity stored on the blockchain.
+
+For example, “If you want to release your medical records to an application, it is important that you are in unique control of your medical records. You’re not going to trust Facebook,” says Ryan Shea, the cofounder of Onename. “This can even be extended to things like authorizing access to your home, opening your garage door, really any action that is tied to identity. So you could see this being used anywhere on the Web where identity is required.”
+
+In this scenario, you never have to reveal your private key to anyone, and you retain complete control over (and responsibility for) the integrity of your online identity."
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin/four-cool-things-you-can-do-with-the-blockchain)
+
+
+==Distributed Domain-Name Server==
+
+Morgan Peck:
+
+"[[Namecoin]] is an altcoin that was established in 2011. The code is nearly identical to that of Bitcoin, but it uses its own Nakamoto blockchain. Rather than tracking financial transactions, it records domain names and their corresponding IP addresses to provide a more secure, censorship-resistant alternative to the way we usually access websites on the Internet.
+
+When you type a conventional URL (like Spectrum.ieee.org) into a browser, you rely on a centralized third party, called a domain-name server, to look up the URL in a directory and find the numerical IP address of the server you want to connect to. When the U.S. government wants to disable a website, one easy way is for it to demand that the domain-name server, or DNS, refuse to resolve the offending URL. In this case, even though the IP address you want is sitting there in a database on its server, the DNS sends you to a Digital Millennium Copyright Act website takedown notice instead of routing you to your destination. Because the databases are centralized, they are also good targets for hackers. If an attacker can manage to either change an IP address in the directory or send you a false one, he can divert your traffic toward a nefarious website.
+
+Namecoin was created to solve both of these problems. With a Namecoin client, you can look up any .bit URL and be sure that the corresponding IP address is the same as the one that originally registered it.
+
+“With Nakamoto blockchains, it’s very, very difficult to remove data from the blockchain once it’s already in there. And it’s not really feasible to insert fraudulent data that claims to be from an address that it really isn’t,” says Jeremy Rand, one of the Namecoin developers. “What this means is, if I register a name in the Namecoin blockchain, no one else can reverse that transaction and remove it from the blockchain, and no one else can hijack it.”
+(http://spectrum.ieee.org/computing/networks/the-future-of-the-web-looks-a-lot-like-bitcoin/four-cool-things-you-can-do-with-the-blockchain)
+
+=History=
+
+See for more detailed history: https://medium.com/all-things-venture-capital/intro-to-vc-the-history-of-blockchain-17ec65dfcf78 
+
+Joel Dietz:
+
+"The Second Wave of Blockchain Innovation
+
+The last months have included intense discussion on the feasibility and desirability of various economic forms of Blockchain innovation, including the ominous title of an article in Techcrunch, “A Bitcoin Battle is Brewing.” Although they contain many of the same principles that made Bitcoin successful, other digital assets have often been criticized and dismissed as “speculative.” However, recent usages of cryptoledger systems (c.f. “appcoins,” cryptoequity, smart contracts) often include substantial technological innovation and can be used to solve long standing problems both in investment and corporate governance.
+
+In the mid-90s Nick Szabo, the inventor of smart contracts, noted the many fascinating things that could be done with programmable money. Another one of his best ideas, “Bit gold,” was later implemented as Bitcoin, a distributed network with unique incentivization mechanism for growth. It included a rudimentary scripting language that allowed you to send a unit, a “coin,” to another participant in the network. This was enough for it to rise in value from mere pennies to a high of over $1,000.
+
+In 2013 J.R. Willet drafted “Second Bitcoin Whitepaper” and proposed that the Bitcoin blockchain be extended with more advanced smart contract capability, encoded via metadata. His proposed way to finance the development of this new functionality was to create a new type of token that gave access to these advanced features. This was called the “Master” coin.
+
+J.R. sold $600,000 worth of Mastercoins for Bitcoins in the first ever “crowdsale” in the summer of 2013. By the end of that calendar year, they had appreciated 74x in value. Investors rejoiced. But not all was well in the world of Mastercoin. Instead of full-time developers crunching away in hope of some future event, founders weren’t working full time and most people were employed via “bounties.” All of the best developers interested in the idea were quietly drifting away from the project. These notably included Vitalik Buterin and Adam Krellenstein, both of whom would attempt to solve the same problem in their own way.
+
+In early 2014, Adam Krellenstein, a self taught programmer, created a re-implementation of the Mastercoin idea from scratch. Like Mastercoin, it contained an implementation of certain smart contract ideas, primarily implementations of existing financial tools. This included asset issuance, asset trading, dividends, and betting. It was released as Counterparty and approximately $1.5mm worth of Bitcoin were transferred into this new system.
+
+Around the same time, Vitalik Buterin developed the first proof of concept of Ethereum, an abstraction of the same idea. Instead of programming the specific desired features of smart contracts, Vitalik proposed creating a toolkit that allows anyone to program their own smart contract. While theoretically possible to implement in a similar context on the Bitcoin blockchain, Vitalik believed that there were many other aspects of Blockchain architecture that could be improved, including file storage, clearing times, and proofing against special hardware. Vitalik initiated his own crowdsale to finance this blockchain, which gathered approximately $15mm worth of Bitcoins.
+
+As numerous other projects followed a similar model for funding in 2014, including Counterparty, Maidsafe, Storj, Supernet, Gems, and SWARM, there was a precipitous decline in the value of the progenitor. Mastercoins returned from a peak of almost 100 times return on investment to a price close to the original sale."
+(https://medium.com/@Swarm/the-second-wave-of-blockchain-innovation-270e6daff3f5)
+
+=Discussion 1=
+
+First, '''read this: [https://english.lasindias.com/blockchain-is-a-threat-to-the-distributed-future-of-the-internet The blockchain is a threat to the distributed future of the Internet]!'''
+
+For more, see also: [[Blockchain - Discussion]] 
+
+Zacqary Adam Green:
+
+"Bitcoin’s real contribution to the world is its source code. The blockchain, the network protocol, the cryptographic verification — anyone can take this and build a currency with any economic properties their community needs. I’m not convinced that bitcoin’s Austrian School properties can sustain a global (or even local) economy, but you know what? That’s okay. If I ever feel the bitcoin economy has become too unequal, unbalanced, or stagnant, it’s now trivial for me to start my own damn currency.
+
+A single bitcoin belongs is a measurement like a centimeter, but the bitcoin community is a social network. People use bitcoin because other people they trade with use bitcoin. If my town is running low on bitcoin but has a lot of resources to share internally, we can create our own local currency to free up bitcoin for importing and exporting. Or I could join an online network of artists who work on one another’s projects, and we’d create our own internal currency that plays by whatever rules we need it to.
+
+There is no perfect monetary system for every situation. Bitcoin is not going to be the one world currency, and it doesn’t need to be. A lot of people compare Bitcoin to the Internet, but it’s more like CompuServe. It’s the first of many digital, non-state currencies to come, that will all interoperate with each other in ways we can’t even dream of yet."
+
+(http://falkvinge.net/2013/11/06/bitcoins-real-revolution-isnt-hard-money-its-economic-panarchy/ )
+
+
+==Blockchains are not truly distributed because they rely on client-servers that aren't!!==
+
+By the co-founder of Signal:
+
+"There is nothing particularly “distributed” about the apps themselves: they’re just normal react websites. The “distributedness” refers to where the state and the logic/permissions for updating the state lives: on the blockchain instead of in a “centralized” database.
+
+One thing that has always felt strange to me about the cryptocurrency world is the lack of attention to the client/server interface. When people talk about blockchains, they talk about distributed trust, leaderless consensus, and all the mechanics of how that works, but often gloss over the reality that clients ultimately can’t participate in those mechanics. All the network diagrams are of servers, the trust model is between servers, everything is about servers. Blockchains are designed to be a network of peers, but not designed such that it’s really possible for your mobile device or your browser to be one of those peers.
+
+With the shift to mobile, we now live firmly in a world of clients and servers – with the former completely unable to act as the latter – and those questions seem more important to me than ever. Meanwhile, ethereum actually refers to servers as “clients,” so there’s not even a word for an actual untrusted client/server interface that will have to exist somewhere, and no acknowledgement that if successful there will ultimately be billions (!) more clients than servers.
+
+For example, whether it’s running on mobile or the web, a dApp like Autonomous Art or First Derivative needs to interact with the blockchain somehow – in order to modify or render state (the collectively produced work of art, the edit history for it, the NFT derivatives, etc). That’s not really possible to do from the client, though, since the blockchain can’t live on your mobile device (or in your desktop browser realistically). So the only alternative is to interact with the blockchain via a node that’s running remotely on a server somewhere.
+
+A server! But, as we know, people don’t want to run their own servers. As it happens, companies have emerged that sell API access to an ethereum node they run as a service, along with providing analytics, enhanced APIs they’ve built on top of the default ethereum APIs, and access to historical transactions. Which sounds… familiar. At this point, there are basically two companies. Almost all dApps use either Infura or Alchemy in order to interact with the blockchain. In fact, even when you connect a wallet like MetaMask to a dApp, and the dApp interacts with the blockchain via your wallet, MetaMask is just making calls to Infura!
+
+These client APIs are not using anything to verify blockchain state or the authenticity of responses."
+
+(https://moxie.org/2022/01/07/web3-first-impressions.html)
+
+
+==Global consensus mechanisms are still a form of carrier enclosure==
+
+Arthur Brock:
+
+"so we come to the blockchain and, more broadly, the whole decentralization movement. If you’re a participant in this ecosystem, you might be thinking that blockchain-based projects or dApps, at least the ‘best’ ones, are precisely the antidote to the problem of carrier enclosability.
+
+It’s true that blockchain applications have, in many cases at least, offered an exciting means of collaborating outside the reach of outsized government and corporate middlemen. The mechanisms for this accomplishment involve decentralized transacting, which is the ability to transact peer-to-peer, and decentralized issuance, meaning that currency is created not by a centralized authority but rather by protocols opted-into by the users. These mechanisms are laudable to a great degree.
+
+But decentralized transactions and decentralized issuance are not equivalent to truly decentralized governance at all levels, including the mechanisms by which transactions or interactions are considered legitimate enough to be added to the shared record. The most widely-used methods of making this determination — employed by every project/dApp we’re aware of outside of those being built on Holochain — all involve some form of global state, meaning that many nodes, or computers on a given network, must agree with one another before officially adopting any information. It’s an understandable approach since it might seem like the only way to coordinate at scale without being subject to centralized authority or being susceptible to malicious acting.
+The problem, though, is that global consensus mechanisms are still a form of carrier enclosure, and there are necessarily some nodes (or users) who have more say than others in determining the legitimacy of transactions and adopting updates to the rulesets.
+
+The two most common strategies for achieving consensus about global state, proof-of-work (POW) and proof-of-stake (POS), are very much enclosable and do converge toward enclosure. Those who have more money to buy more processing power (POW) or betting stakes (POS) win more money, which then enables them to buy more processing power or betting stakes. Both algorithms centralize power over time, allowing the rich to become richer and more influential.
+
+Another common strategy for managing global state is to reduce the number of nodes considered to be authorities about the state. EOS has 21 ‘block producers’, NEO has 7 ‘consensus nodes’, and TRON has 27 ‘super representatives’. Again, this approach fails our test of enabling you and me to transact directly because it channels us through an elite club of authorized nodes who accept (or refuse) our transaction.
+
+And real communication enclosures can happen and have happened in blockchain projects. The Ethereum hard fork in 2016, right-minded as it may have been, was a means of invalidating transactions that had occurred. EOS has also reversed transactions, as has Bitcoin Cash.
+
+But even these are relatively small examples compared to what can occur when you have a relatively small group of miners, stakers, developers, or you-name-its who have more power than others when it comes to saying what counts, what gets through, or what rule changes get adopted.
+
+So, even though the very intention of many blockchain projects is to address intermediation and the centralization of power, they are actually subject to the same kinds of power imbalances we see in other mediums. It’s a tilted playing field, and even a slightly tilted playing field eventually leads to massive imbalance, just as we’ve seen play out in economies around the world over the course of the last 500 years."
+
+(https://medium.com/holochain/unenclosable-carriers-and-the-future-of-communication-4ac6045ac894)
+
+
+==Blockchains as an alternative institution to governments and corporations==
+
+'''1. Chris Berg, Sinclair Davidson and Jason Potts:'''
+
+"The economic structure of modern capitalism has evolved in order service these ledgers.
+
+Oliver Williamson, the 2009 Nobel laureate in economics, argued that people produce and exchange in markets, firms, or governments depending on the relative transactions costs of each institution. Williamson’s transactions cost approach provides a key to understanding what institutions manage ledgers and why.
+
+Governments maintain ledgers of authority, privilege, responsibility and access. Governments are the trusted entity that keeps databases of citizenship and the right to travel, taxation obligations, social security entitlements, and property ownership. Where a ledger requires coercion in order to be enforced, the government is required.
+
+Firms also maintain ledgers: proprietary ledgers of employment and responsibility, of the ownership and deployment of physical and human capital, of suppliers and customers, of intellectual property and corporate privilege. A firm is often described as a ‘nexus of contracts’. But the value of the firm comes from the way that nexus is ordered and structured — the firm is in fact a ledger of contracts and capital.
+
+Firms and governments can use blockchains to make their work more efficient and reliable. Multinational firms and networks of firms need to reconcile transactions on a global basis and blockchains can allow them to do so near-instantaneously. Governments can use the immutability of the blockchain to guarantee that property titles and identity records are accurate and untampered. Well-designed permissioning rules on blockchain applications can give citizens and consumers more control over their data.
+
+But blockchains also compete against firms and governments. The blockchain is an institutional technology. It is a new way to maintain a ledger — that is, coordinate economic activity — distinct from firms and governments.
+
+Blockchains can be used by firms, but they can also replace firms. A ledger of contracts and capital can now be decentralised and distributed in a way they could not before. Ledgers of identity, permission, privilege and entitlement can be maintained and enforced without the need for government backing."
+
+(https://medium.com/cryptoeconomics-australia/the-blockchain-economy-a-beginners-guide-to-institutional-cryptoeconomics-64bf2f2beec4)
+
+
+'''2. [[Blockchain Constitutionalism]]'''
+
+Blockchains as systems of governance ([[Crypto Constitutionalism]]):
+
+
+''By Chris Berg, Sinclair Davidson and Jason Potts:''
+
+"Blockchains are constitutional orders — rule-systems in which individuals (or firms, or algorithms) can make economic and political exchanges.
+
+In this sense, blockchains look a lot like countries. They have currencies (tokens), property (digital assets), laws (protocols), corporations (DAOs), and security systems (proof-of-work, or proof of stake, or delegated byzantine fault tolerance, etc.).
+
+And like countries, blockchains have systems of governance.
+
+Satoshi built one system of governance into Bitcoin: how the network comes to a consensus when miners announce two equally valid blocks to the network. The protocol (the constitution) resolves this problem by incentivising nodes to prefer the chain with the most work.
+
+But this is a tiny fraction of the governance questions that just surround Bitcoin. How should the Bitcoin network be upgraded? Who decides? How should the various interests be accommodated — or compensated?
+
+In these blockchain governance debates — disputes about whether governance should be on-chain or off-chain, who writes the rules, who can be a node, the role of voting, and the relative position of protocol developers, miners, block producers, HODLers and third party applications — we’re seeing the history of thinking about political economy being rediscovered.
+
+Happily there exists an enormous body of thinking on governance, constitutions, the function and efficiency of voting and voting mechanisms, and how power is allocated in a political and economic system.
+
+Historically, experimenting with new constitutions has involved things like civil war, secession, conquest, empire, and expropriation. The English fought civil war after civil war to limit the power of the monarch to tax. Expanding the franchise involved protest and violence.
+
+In the real world, constitutional experimentation is costly and slow: limited by the rights and preferences of real populations and the real endowments of physical land and property.
+
+By contrast, blockchains offer a space for rapid, hyper-experimentation. New constitutional rules can be instantiated by a simple fork. New protocols can be released in months or weeks.
+
+Blockchains are an environment for institutional innovation — a place to apply hundreds of years of thinking about political governance."
+
+(https://medium.com/cryptoeconomics-australia/crypto-constitutionalism-c25d0c503ac)
+
+
+==How important is the blockchain, 'historically' speaking==
+
+Chris Berg, Sinclair Davidson and Jason Potts:
+
+"It is common to compare the invention of Bitcoin and the blockchain with the internet. The blockchain is Internet 2.0 — or Internet 4.0. The internet is a powerful tool that has revolutionised the way we interact and do business. But if anything the comparison undersells the blockchain. The internet has allowed us to communicate and exchange better — more quickly, more efficiently.
+
+But the blockchain allows us to exchange differently. A better metaphor for the blockchain is the invention of mechanical time.
+
+Before mechanical time, human activity was temporally regulated by nature: the crow of the rooster in the morning, the slow descent into darkness at night. As the economic historian Douglas W. Allen argues, the problem was variability: “there was simply too much variance in the measurement of time … to have a useful meaning in many daily activities”.
+
+“The effect of the reduction in the variance of time measurement was felt everywhere”, Allen writes. Mechanical time opened up entirely new categories of economic organisation that had until then been not just impossible, but unimaginable. Mechanical time allowed trade and exchange to be synchronised across great distances. It allowed for production and transport to be coordinated. It allowed for the day to be structured, for work to be compensated according to the amount of time worked — and for workers to know that they were being compensated fairly. Both employers and employees could look at a standard, independent instrument to verify that a contract had been performed."
+
+(https://medium.com/cryptoeconomics-australia/the-blockchain-economy-a-beginners-guide-to-institutional-cryptoeconomics-64bf2f2beec4)
+
+
+==The inevitable centralization effects on power and wealth of the Proof-of-Work or Proof-of-Stake mechanisms==
+
+Arthur Brock:
+
+"In modeling systems dynamics, Self-Reinforcing Feedback, also known as a Positive Feedback Loop, happens when the output of a process amplifies the input to that process in continuing cycles of that process.
+
+That may have made it sound complicated, but it’s fairly simple. In a large group of cattle, if something startles a few of them, and they react suddenly startling others, then this pattern repeats, then you get a stampede.
+
+In Proof-of-Work, if you have more money to buy more computing power, then you can perform more hashes so that you earn more money than others, which lets you invest in more computing power, and so on.
+
+In Proof-of-Stake, if you have more money to put at stake for your computed answers, you win more of the stakes, which lets you invest more stake, to win more stakes, and so on.
+
+Make no mistake about it, in both cases, the rich get richer. Those with the power amplify their power.
+
+Proof-of-Stake may solve the problem of wasting .3% of the planet’s electricity churning hashes, but it is exactly the same kind of positive feedback loop as Proof-of-Work.
+
+If someone tells you they’re building a “decentralized” system, and it runs a consensus algorithm configured to give the people with wealth or power more wealth and power, you may as well call bullshit and walk away.
+
+That is what nobody seems willing to see about blockchain.
+
+In less than 10 years, bitcoin issuance and holdings became more centralized than dollars. Blockchain is just a turbo-charged replay of the same destructive, reductive, and speculative patterns of national currencies. We get to the same imbalances faster."
+
+(https://medium.com/holochain/blockchain-blind-spots-1904d490218d)
+
+
+==The tremendous [[Environmental and Human Costs of Bitcoin and the Blockchain]]==
+
+Darin Stevenson:
+
+"What is bitcoin, really? You can think of it as a machine contagion—a network of devices amped to their performance tolerances—machines that do nothing but reprocess every transaction that ever occurred on their network (thus achieving ‘consensus’) while, at the same time, ‘mining’ new blocks of coins (currently worth about 25 btc) by solving a purposefully cumbersome mathematical formula which doesn’t actually accomplish anything other than enforcing computational difficulty. That is: making millions of machines grind away madly at nothing.
+
+This mining process is both the reprocessing of transactions, and a ‘weight’ factor that is incremented to insure that the average time for the entire network to ‘solve’ a block (that is, to produce an accurate guess close enough to a mathematically supplied target) is ‘about 10 minutes’.
+
+When you initiate a new machine into the network, you download the current transaction record (a 6-gigabyte file) of the entire history of bitcoin and reprocess it (this takes around 24 hours). You then either ‘mine’ alone (an almost useless endeavor which would take ~98 years to solve a block) or you join a pool of machines. By joining a pool, you get statistically better performance in terms of satoshi (currently: USD $0.0000046543 each) earned as you are ‘rewarded’ for work done by your machine’s participation in the pool.
+
+The more processing power (raw computational force over time) you can bring to bear on ‘the problem’ … the better a chance you have to earn incremental additions to your ‘wallet’ or account. Of course, most of the problem is invented… to be this kind of problem—one that requires more and more computational activity to qualify as complete. And we have now invented specialized machines and chips just to solve this problem.
+
+Machines involved in mining are pressed to the limits of their power consumption and performance profiles; they are ‘pinned’ at 100%+ of their computing power, ceaselessly, and thus generate heat (as well as consuming copious quantities of electrical power).
+
+Because they remain hot, they have to be electronically ventilated. This process of power-heating something we must in turn power-cool, for the phony ‘sake’ of mathematical processes intended to make more work each time they are implemented is deranged. We’re essentially turning computers into heaters that we have to cool to recompute previous computations with. On purpose. A single day of the environmental costs of this process are so catastrophic that if we ever did the accounting — if anyone did — we would immediately understand that this entire idea is a mode of ‘fracking the whole environment’ whose costs rise explosively with every moment we continue the process.
+
+Only a species that had gone entirely insane, and consciously intended to wipe out life on Earth would ever consider such a process. But any species that could actively celebrate and expand it — must be understood as both emphatically suicidal and openly omnicidal. In short: they intend to kill everything, anything, and themselves — and are hell-bent on the continuous and unlimited expansion of this agenda.
+
+The activity of the blockchain networks are not only burning down the future; they are also obliterating the history of humanity and life on Earth, faster and more aggressively every moment, by destroying the living results and opportunities established by this history, and insuring that the benefits that might otherwise blossom into astonishing ‘interest on investment’, are killed off by the necessity of breeding, operating, heating and cooling millions of machines that do makework for a resource that only exists as numbers in machines."
+
+(https://medium.com/ill-ixi-lli/-da9326e97d1f)
+
+
+==Why the various 'blockchain proof' innovations do not solve the fundamental problem==
+
+By Arthur Brock ([[Holochain]], [[Ceptr]]):
+
+"The problem (of wasted energy) does not end with changing Proof-of-Work to Proof-of-[fill-in-the-blank]. 
+
+First of all, main contenders [Work] and [Stake] both amplify Pareto Effects ensuring the rich get richer, and the powerful get more powerful. That doesn't really solve any of the problems of our monetary system. In fact, it is hard for me to imagine a decentralized digital currency design that could more accurately recreate all the problems of national currencies than Bitcoin. But that is a conversation for another time. 
+
+Proof-of-[Value] and [Cooperation] are well-meaning approaches trying to solve some of these problem, but they fail to get the core issue: Consensus. These are all methods which everyone pretends are about creating consensus. Because of course, we must all agree about the data for it to be valid, right?
+
+Actually, no. That's it's not right. And really, what they're doing should not be called consensus at all. 
+
+Unless you think the word "consensus" applies to this story: 
+
+- Take 7,000 people (the approximate number of current bitcoin "miners"). Have each person fill out a ballot writing in whoever they think should be the next President of the U.S. Then have them each take a clear box with 20 dice in it. The first one to be able to shake their box and get all 20 dice to land as ONES, gets to have their ballot be the only one that counts as long as everyone else agrees the candidate's name was spelled correctly and meets the legal criteria (over 35 years old and natural born citizen). Would any normal human call that an election by "consensus?"
+ 
+That's basically how bitcoin "mining" works. Most of the energy is going into "rolling the dice" to crack a specific kind of cryptographic hash, which gives them the authority to have their list of transactions be THE list of transaction for that 10 minute time window."
+
+(personal email, August 2017)
+
+
+==The blockchain as a potential opportunity for a true sharing economy==
+
+
+'''1. [[Primavera De Filippi]]:'''
+
+"Blockchain technology thus facilitates the emergence of new forms of organizations, which are not only dematerialized but also decentralized. These organizations — which have no director or CEO, or any sort of hierarchical structure — are administered, collectively, by all individuals interacting on a blockchain. As such, it is important not to confuse them with the traditional model of “crowd-sourcing,” where people contribute to a platform but do not benefit from the success of that platform. Blockchain technologies can support a much more cooperative form of crowd-sourcing — sometimes referred to as “platform cooperativism”— where users qualify both as contributors and shareholders of the platforms to which they contribute. And since there is no intermediary operator, the value produced within these platforms can be more equally redistributed among those who have contributed to the value creation.
+With this new opportunity for increased “cooperativism,” we’re moving toward a true sharing or collaborative economy — one that is not controlled by a few large intermediary operators, but that is governed by and for the people.
+
+There’s nothing new about that, you might say — haven’t we heard these promises before? Wasn’t the mainstream deployment of the internet supposed to level the playing field for individuals and small businesses competing against corporate giants? And yet, as time went by, most of the promises and dreams of the early internet days faded away, as big giants formed and took control over our digital landscape.
+
+Today we have a new opportunity to fulfill these promises. Blockchain technology makes it possible to replace the model of top-down hierarchical organizations with a system of distributed, bottom-up cooperation. This shift could change the way wealth is distributed in the first place, enabling people to cooperate toward the creation of a common good, while ensuring that everyone will be duly compensated for their efforts and contributions.
+
+And yet nothing should be taken for granted. Just as the internet has evolved from a highly decentralized infrastructure into an increasingly centralized system controlled by only a few large online operators, there is always the risk that big giants will eventually form in the blockchain space. We’ve lost our first window of opportunity with the internet. If we, as a society, really value the concept of a true sharing economy, where the individuals doing the work are fairly rewarded for their efforts, it behooves us all to engage and experiment with this emergent technology, to explore the new opportunities it provides and deploy large, successful, community-driven applications that enable us to resist the formation of blockchain giants."
+
+(https://hbr.org/2017/03/what-blockchain-means-for-the-sharing-economy)
+
+
+'''2. Alex Pazaitis, [[Primavera De Filippi]] & Vasilis Kostakis:''' 
+
+"Technology can facilitate distributed systems to scale and become viable; however it is the genuine dynamics of sharing and the underlying human sociality that should guide the design and deployment of technological solutions. To this direction, there is a high duty for an interdisciplinary and inclusive approach, involving ICT along with social sciences, as well as philosophy and ethics, so as to avoid getting locked in narrow theoretical and empirical perspectives. […] 
+
+We introduced a mechanism for decentralised consensus through the case of Backfeed, which relies on participatory evaluations and reputation-based influence. Finally, a token-based economic model was presented, which tentatively integrates this new system of value, providing the final layer of value actualisation. The tokens issued through collaborative processes represent a fair share of the created value and a reward for the contributors, and simultaneously they reflect the perceived value of the products and services they produce. Certain opportunities and limitations have been identified in relation to Backfeed and blockchain technology. On one hand, the Backfeed protocol can help productive communities, which engage in social sharing to create commons, to enact their own systems of value, through an inclusive, consensus-based approach. Simultaneously, it allows them to interface with one another and the market, and eventually scale and become sustainable. It thus can help us envision an ecosystem composed by a variety of value systems that fuel the circulation of commons in a sharing economy. In such an ecosystem value would become perceptible in a way that it shifts away from the logic of utility maximisation, towards the general benefit for the society.
+
+On the other hand, the application of Backfeed, and in fact any similar system of evaluation, poses certain challenges to the internal relations in productive communities, related to trust, reciprocity and intrinsic motives. Moreover, the technology is still at a very early stage and more empirical data are necessary to support its real life application. More generally, there are well-justified doubts on the extent that the blockchain alone can help communities solve issues concerning power and influence. At the same time, with the technology yet to reach a dominant design, it is too early to predict how it would operate on large scale. In any case, regardless of the development of blockchain technology or the eventual success of Backfeed as a project, its conceptual model allegedly presents an interesting scenario for the sharing economy and the role the latter can play in societies." 
+(Article: Blockchain and value systems in the sharing economy: The illustrative case of Backfeed. See: 
+
+http://wiki.p2pfoundation.net/Backfeed,_the_Blockchain,_and_Value_Systems_in_the_Sharing_Economy)
+
+
+==The key questions about the blockchain==
+
+Alanna Krause:
+
+1. Ethereum and similar blockchain enabled systems may distribute the verification of the ledger, but they are still centralised systems that easily become controlled by a few big players with more infrastructure resources. The contracts and transaction ledger may be decentralised, but the infrastructure isn't.
+
+2. Decentralisation in and of itself will not lead to P2P principles, or more social justice. In face, it has just as much power to great exacerbate social inequality. The most likely outcome of widespread adoption of block-chain enabled decentralised technologies is simply increased efficiency and wealth for big banks and governments. The discourse around the blockchain does not seem to acknowledge this. This WILL be co-opted (already is).
+
+3. I sense a deep lack of understanding of the social dynamics behind truly P2P ways of working and living in the blockchain community. People seem to want to "program" away what I consider the real challenges of confronting power dynamics, synthesising diversity, meeting different human needs, balancing collaboration and autonomy, building high-trust networks, collective ownership and commons management, etc. You cannot fix these things with technology - technology will just magnify the underlying dynamics. This is related to my observations of the lack of diversity in these communities.
+
+4. People get all excited about the blockchain, but most of the things they seem to want to do with it could be achieved just as easily with a normal database. It seems like the cases where you actually need an objectively verifiable distributed ledger in a zero-trust system are quite rare in practice. If people want to run self-organising corporations, why haven't they make a start with a normal database already? Surely they can implement a blockchain once it scales or they run into a real need. Seems to me people are just excited about some new and shiny tech concept, and not actually into solving the deeper challenges of self-organisation. I have seen a LOT of money changing hands and ideas thrown around, but no living case studies of blockchain enabled networks of people doing real productive work and creating livelihoods and societies."
+
+(via email, May 2016) 
+
+
+==The perils of [[Trustless Systems]]==
+
+'''Blockchains don’t offer us a trustless system, but rather a reassignment of trust!'''
+
+E J Spode:
+
+"Such are the perils of supposedly trust-free technology. It might make for good marketing copy, but the fact of the matter is that blockchain technology is larded through with trust. First, you need to trust the protocol of the cryptocurrency and/or DAO. This isn’t as simple as saying ‘I trust the maths’, for some actual human (or humans) wrote the code and hopefully debugged it, and we are at least trusting them to get it right, no? Well, in the case of The DAO, no, maybe they didn’t get it right.
+
+Second, you have to trust the ‘stakeholders’ (including miners) not to pull the rug out from under you with a hard fork. One of the objections to the hard fork was that it would create a precedent that the code would be changeable. But this objection exposes an unmentioned universal truth: the immutability of the blockchain is entirely a matter of trusting other humans not to fork it. Ethereum Classic Classic would be no more immutable than Etherum Classic, which was no more immutable than Ethereum. At best, the stakeholders – humans all – were showing that they were more trustworthy qua humans about not forking around with the blockchain. But at the same time, they obviously could change their minds about forking at any time. In other words, if Ethereum Classic is more trustworthy, it’s only because the humans behind it are.  
+
+Third, if you are buying into Ethereum or The DAO or any other DAO, you are being asked to trust the people who review the algorithm and tell you what it does and whether it’s secure. But those people – computer scientists, say – are hardly incorruptible. Just as you can bribe an accountant to say that the books are clean, so too can you bribe a computer scientist. Moreover, you’re putting your trust in whatever filters you applied to select that computer scientist. (University or professional qualifications? A network of friends? The testimonials of satisfied customers – which is to say, the same method by which people selected Bernie Madoff as their financial advisor.)
+
+
+Finally, even if you had it on divine authority that the code of a DAO was bug-free and immutable, there are necessary gateways of trust at the boundaries of the system. For example, suppose you wrote a smart contract to place bets on sporting events. You still have to trust the news feed that tells you who won the match to determine the winner of the bet. Or suppose you wrote a smart contract under which you were to be delivered a truck full of orange juice concentrate. The smart contract can’t control whether or not the product is polluted by lemons or some other substance. You have to trust the humans in the logistics chain, and the humans at the manufacturing end, to ensure your juice arrives unadulterated.
+
+Can’t these gateways to the system be trustless as well? Can’t smart contracts some day have code to call for robotic orange-pickers and robotic juice concentrate-makers who would summon their robotically driven trucks to deliver the orange juice concentrate straight to our door? Yes – in theory. But imagine the task of reviewing the code to ensure that every step in the process hadn’t been corrupted by a bug that uses security failures to highjack trucks, or that gives false approvals to adulterated orange juice. Perhaps we could write second-order programs to automate the testing of the first-order programs – but why do we trust those? Do we ultimately need automated automated-program-tester testers? Where does it end?
+
+By now, the answer should be obvious: it ends with other humans. Blockchains don’t offer us a trustless system, but rather a reassignment of trust. Instead of trusting our laws and institutions, we are being asked to trust stakeholders and miners, and programmers, and those who know enough coding to be able to verify the code. We aren’t actually trusting the blockchain technology; we are trusting the people that support the blockchain. The blockchain community is certainly new and different, and it talks a good game of algorithms and hashing power, which at least sounds better than tired slogans such as Prudential is rock solid and You are in good hands with Allstate. But miners aren’t necessarily any more reliable than the corporations they replace.
+
+The sorry case of The DAO raises another question: Why are people so eager to put their faith in blockchain technology and its human supporters, instead of in other social and economic organisations? The upheavals of 2016, from Brexit to Trump, suggest that there is widespread fatigue with traditional institutions. Governments can be bought. Banks are designed to service the wealthy, and to hell with the little guy. ‘The system is rigged’ is a common refrain.
+
+But instead of targeting the moral failures of the system and trying to reform it, the very concept of ‘trust’ has become suspect. Blockchain enthusiasts tend to cast trust as little more than a bug in our network of human interactions. To be sure, one of the weird features of trusting relationships is that, in order to trust someone, there has to be some chance that they will fail you. Trust involves risk – but that’s not necessarily a bad thing.
+
+Which brings us back to Buterin and the hard fork of The DAO. What made this event significant was not just what it demonstrated about the foibles of technology or the hubris of 20-something computer scientists. What it really exposed was the extent to which trust defines what it is to be human. Trust is about more than making sure I get my orange juice on time. Trust is what makes all relationships meaningful. Yes, we get burned by people we rely on, and this makes us disinclined to trust others. But when our faith is rewarded, it helps us forge closer relationships with others, be they our business partners or BFFs. Risk is a critical component to this bonding process. In a risk-free world, we wouldn’t find anything resembling intimacy, friendship, solidarity or alliance, because nothing would be at stake.
+
+Perhaps we ought to reconsider the desire to expunge trust, and instead focus on what should be done to strengthen it. One way to support trust is to hold institutions accountable when they betray it. When the US Department of Justice, for example, elected not to prosecute any of the bankers responsible for the 2008 financial collapse, the net effect was to undermine confidence in the system. They debased the principle of trust by showing that violating the public’s faith could be cost-free.
+
+Much of our system of trust is invisible to us – but it would be helpful if we could be more aware and appreciative all the same
+
+Second, trusting relationships should be celebrated, not scorned. When we believe in someone and they betray us, our friends might call us a sucker, an easy mark, a loser. But shouldn’t we celebrate these efforts to trust others – just as entrepreneurs talk up the value of failure on the road to innovation? Isn’t the correct response along the lines of: ‘I see why you trusted them, but isn’t it is terrible that they let you down?’
+
+Third, we should appreciate the trusting relations we engage in, and are rewarded by, every day. We’re constantly relying on others to help us with something or look after our financial affairs, and much of the time we simply take it for granted. In part, that’s because much of our system of trust is invisible to us – but it would be helpful if we could be more aware and appreciative all the same.
+
+Finally, we shouldn’t deceive ourselves with the idea that a technological fix can replace the human dimension of trust. Automation of trust is illusory. Rather than disparaging and cloaking human trust, we should face the brutal truth: we can’t escape the need to rely on other people, as fallible and imperfect as they might be. We need to nurture and nourish trust – not throw it away, like so much debased and worthless currency."
+(https://aeon.co/essays/trust-the-inside-story-of-the-rise-and-fall-of-ethereum)
+
+
+=Discussion 2=
+
+
+==Opportunities and Pitfalls for a progressive use of the blockhain==
+
+Source: In Trebor Scholz & Nathan Schneider (eds.). PlatformCoop The Book (2016) OR Books. '''This text is embargoed''' for diffusion until the publication of this book. Please do not distribute yet.
+
+Rachel O'Dwyer:
+
+"So let me show my hand. I'm interested in the blockchain (or blockchain-based technologies) as one tool that, in a very pragmatic way, could assist with cooperative activities, helping us to share resources, to arbitrate, adjudicate, disambiguate and make collective decisions. Some fledgling examples are LaZooz, an alternative ride-sharing app, Swarm, a fundraising app, and proposals for the use of distributed ledgers to manage land ownership or critical infrastructures like water and energy. Many of these activities are difficult outside of local communities or in the absence of some trusted intermediary. However, I also think that much of the current rhetoric around the blockchain hints at problems with the techno-utopian ideologies that surround digital activism, and points to the pitfalls these projects fall into time and again. It's worth addressing these here.
+
+
+===Pitfall #1: We can replace messy and time-consuming social processes  with elegant technical solutions===
+
+Fostering and scaling cooperation is really difficult. This is why we have institutions, norms, laws, and markets. We might not like them, but these mechanisms allow us to cooperate with others even when we donÕt know and trust them. They help us to make decisions and to divvy up tasks and to reach consensus. When we take these things away, when we break them down, it can be very difficult to cooperate. Indeed, this is one of the big problems with alternative forms of organization outside of the state and the marketÑthose that are not structured by typical modes of governance such as rules, norms or pricing. These kinds of structureless collaboration generally only work at very local kin-communal scales where everybody already knows and trusts everyone else. In Ireland, for example, there were several
+long-term bank strikes in the 1970s. The economy didn't grind to a halt. Instead, local publicans stepped in and extended credit to their customers; the debtors were well known to the publicans who were in a good position to make an assessment on their credit worthiness. Community trust replaced a trustless monetary system. This kind of local arrangement wouldn't work in a larger or more atomised community. It probably wouldn't work in today's Ireland because community ties are weaker.
+ 
+Bitcoin caused excitement when it proposed a technical solution to a problem that previously required a trusted intermediary money, or, more specifically, the problem of guaranteeing and controlling money supply and monitoring the repartition of funds on a global scale. It did this by developing a distributed database that is cryptographically verified by an entire network of peers and by linking the production of new money with the individual incentive to maintain this public repository. More recently this cryptographic database has also been used to manage laws, contracts, and property. While some of the more evolved applications involve  verifying precious stones and supporting interbank loans, the proposal is that this database could also be used to support alternative worker platforms, allowing systems where people can organize, share or sell their labor without the need of a central entity controlling activities and trimming a generous margin off the top.
+ 
+Here the blockchain replaces a trusted third party such as the state or a platform with cryptographic proof. This is why hardcore libertarians and anarcho-communists both favor it. But let's be clear here, it doesn't replace
+all of the functions of an institution,  just the function that allows us to trust in our interactions with others because we trust in certain judicial and bureaucratic processes. It doesn't stand in for all the slow and messy bureaucracy and debate and human processes that go into building cooperation, and it never will. The blockchain is what we call a 'trustless' architecture. It
+stands in for trust in the absence of more traditional mechanisms like social networks and co-location. It allows cooperation without trust, in other words, something that is quite different from fostering or building trust. As the founding Bitcoin document details, proof-of- work is not a new form of trust, but the abdication of trust altogether as social confidence and judgment in favor of an algorithmic regulation. With a blockchain, it maybe doesn't matter so much whether I believe in or trust my fellow peers just so long as I trust in the technical efficiency of the protocol. The claim being made is not that we can engineer greater levels of cooperation or trust in friends, institutions or governments, but that we might dispense with social institutions altogether in favor of an elegant technical solution. This assumption is naive, its true, but it also betrays a worrying politics, or rather a drive to replace politics (as debate and dispute and things that produce connection and difference) with economics. This is not just a problem with blockchain evangelism, it's a core problem with the ideology of digital activism generally. The  blockchain has more in common with the neoliberal governmentality that produces platform capitalists like Amazon and Uber and state-market coalitions than any radical alternative. Seen in this light, the call for blockchains forms part of a line of informational and administrative technologies such as punch cards, electronic ledgers and automated record keeping systems that work to administrate populations and to make politics disappear.
+
+
+===Pitfall #2: The technical can instantiate new social or political processes===
+
+Like a lot of peer-to-peer networks, blockchain applications conflate a technical architecture with a social or political mode of organization. We can see this kind of ideology at work when the CEO of Bitcoin Indonesia argues, "in its purest form, Blockchain is democracy". From this perspective, what makes Uber Uber and LaZooz. LaZooz comes down to technical differences at the level of topology and protocol. If only we can design the right technical system, in other words, the right kind of society is not too far behind. The last decade has shown us that there is no linear-causal relationship between decentralization in technical systems and egalitarian or equitable practices socially, politically or economically. This is not only because it is technologically determinist to assume so, or because networks involve layers of strata that exhibit contradictory affordances, but also because there's zero evidence that features such as decentralization or structureless continue to pose any kind of threat to capitalism. In fact, horizontality and decentralization -the very characteristics that peer production prizes so highly - have emerged as an ideal solution to many of the impasses of liberal economics. Today, Silicon Valley appropriates so many of the ideas of the left, anarchism, mobility, and cooperation, even limited forms of welfare. This can create the sense that technical fixes like the blockchain are part of some broader shift to a post-capitalist society, when this shift has not taken place. Indeed, the blockchain applications that are really gaining traction are those developed by large banks in collaboration with tech start-ups, applications to build private blockchains for greater asset management or automatic credit clearing between banks, or to allow cultural industries to combat piracy in a distributed network and manage the sale and ownership of digital goods more efficiently.
+ 
+ 
+While technical tools such as the blockchain might form part of a broader artillery for platform cooperativism, then, we also need to have a little perspective. We need to find ways to embrace not only technical solutions, but also people who have experience in community organizing and methods that foster trust, negotiate hierarchies and embrace difference. Because there is no magic app for platform cooperativism. And there never will be."
+
+(https://www.academia.edu/23524276/Blockchains_and_Their_Pitfalls)
+
+==The Blockchain's Major Design Flaw==
+
+'''Arthur Brock:'''
+
+"Stop the Nonsensus! (Nonsense Consensus): Systems will never scale if you require global consensus for local actions by independent agents. For example, I should not have to know where every dollar in the economy is when I want to buy something from you. That adds an overhead of ridiculous complexity for something which needs to follow the principle of pushing intelligence and agency to the edges rather than center. Likewise, an atom should be able to bond with another atom (see cartoon) without accounting for status every electron in the universe. However, Bitcoin and blockchains are built around authorized tokens embedded in every transaction/record, which embeds unnecessary complexity and limitations for scalability into every interaction. Tokens are not what makes a decentralized system work, cryptographic signatures and self-validating data structures are.
+ 
+Intrinsic Data Integrity: For a long time, data integrity has been conflated with the hosting, control, and access to the device on which the data is stored. So banks have big firewalls to keep you from hacking in and changing your account balance. But today we have self-validating data structures like hash-chains and Merkle-trees which leave evidence of tampering by breaking structural integrity, cryptographic hash, or counterparty signatures when the data is altered. This makes it possible to distribute the storage and management of data and ensure that the people holding it can't tamper with it. In other words, you could be an authority to show your own account balance, yet not be able to tamper with your account history. When implemented properly, this is the key to enabling massive scales of storage and throughput by enabling auditable data to be stored anywhere/everywhere instead of requiring agreement on single shared ledger.
+ 
+Distributed Process not Consensus: Let's learn a bit from tracking how scalable systems in nature and real world get things done. Speakers of a language each carry the means to generate sentences as needed, we don't store every sentence spoken in some global ledger. Cells each carry a copy of their instruction set (DNA), rather than a record of the state and type of every cell. What you need to distribute in a system of collective intelligence is the ability to distribute reliable processing according to shared agreements. Consensus then becomes something used for to ensure the integrity of the processing, rather than the medium upon which processing is executed. This approach, lets you confirm that your copy of the process is valid, so you can rely on it to work according to the agreed upon rules and proceed authoritatively without having to wait for the rest of the network to validate, verify and update itself with your state.
+ 
+Agents not Coins: Instead of starting with cryptographic coins or tokens as the fundamental thing that exists, start by having the agents/people/organizations (or their signatures and account IDs) be the primary things that exist. When each person has a copy of the process needed to participate, and their records are stored with intrinsic data integrity, that enable two people to perform a transaction without requiring approval or consensus of anyone else. My process audits your transaction chain to make sure you're in a valid state, yours audits my chain, and either rejects the transaction if it puts someone in an invalid state according to the coded agreements. I know, you have a lot of questions about to make sure this can happen reliably, but I'll drill into that later.
+ 
+Fractal not Global: You would think that the existence of the web would have taught us already that we can have shared access to pretty reliable, referenceable, information without us all having identical copies of it. Starting by creating a global ledger where each copy has to be in the same state is a totally different problem than having a fractal process for creating and organizing data which can be referenced by anyone wherever that data lives. It can still provide globally accessible agreement about data, but that agreement is constructed from fractally assembled reliable parts instead of requiring each part to reach global (or 51%) agreement to commit each element of data. One of the beautiful outcomes from this is such a massive reduction in the processing and storage requirements that it becomes feasible to run a full node on a mobile phone instead of requiring specialized mining hardware."
+(http://artbrock.com/blog/perspectives-blockchains-and-cryptocurrencies)
+
+
+
+==Three non-technological ways in which blockchains may still “fail”.==
+
+Tere Vaden:
+
+“Fail”, because failing is obviously relative. By now, there is no real doubt that blockchains deliver on their technological promise: tamper-proof distributed permissionless ledgers. But they may very well fail to deliver on their promise as a new shiny class of peer-to-peer technology disintermediating all those pesky central authorities into oblivion.
+
+===1. Poor usability for non-experts===
+
+Several generations of peer-to-peer technologies have promised a lot, delivered quite much, but still left a lingering taste of underachievement. While GNU/Linux — an operating system crucially dependent on a p2p development model — is clearly one of the resounding successes of open source, it still did not fulfill its promise in one crucial area (which in its early days was seen as one of the most important): desktop computers. Linux powers anything from toasters to supercomputers, but it hasn’t liberated the masses from Windows or Mac OS. In most of smartphones, Linux is in the shackles of Android.
+
+There are many reasons for why GNU/Linux hasn’t taken over, vendor lock-in being one of the major ones. But there is another issue that may be relevant to blockchains. When hackers write software for themselves — scratching their own itch — it is ready when it delivers what is needed. And this point of being ready for use is very different for a hacker and for a regular user. For too long, the installation and use of a Linux distribution was too hard for ordinary users. Even if Ubuntu and similar systems have largely solved that bottleneck now, the lesson stands: superior technology, if polished only to the point where it is good enough for hackers and early adopters, will not escape that ghetto. Let’s be honest: just the visual look of a Bitcoin address “13ktXxaJTPvBPfSyS7XALTP1i7nAeR2oZ9” is going to keep a big chunk of potential users away. At the moment, the user experience of even the most advanced blockchain apps is abysmal.
+
+
+===2. Domestication===
+
+The second danger is domestication, or, maybe better yet “commoditization”. As Robert Herian writes in Critical Legal Thinking:
+
+“Disruption, so-called and preached by many of the major global banks, to the extent that IBM are now claiming that more than half of those banks will be using the technology in the next three years, is anything but disruption because it leaves unchanged the conditions (norms and expectations) in which it occurs, namely those in which global financial capital has exclusive dominion over the social.”
+
+It is clear that the way the banks use blockchains in effectivising their databases and other back-office oprations, does very little for a peer-to-peer future. 
+
+
+Furthermore, as Herian continues to argue, there is the
+
+- "Beyond the public and transparent blockchain, and thus any hope of preserving a common space if not exactly or politically-speaking a “commons”, we see a potent indication of the victories of normative liberal and, to a greater extent, global financial capitalism over the blockchain narrative. An ideological victory which is in no small part manifesting itself through the proliferation of permissioned enclosed ledgers which are altering the dynamic of blockchain development […] "
+
+
+Most of the resources in terms of money are certainly going to permissioned and private blockchain development and that will, for sure, lend its flavor to what blockchains are all about in the public mind. Moreover, as Herian indicates, this trend is in a worrying way reminiscent of the way in which other technological developments have encroached digital commons. However, is it so bad that banks and other institutions want to use permissioned blockchains? We are still allowed to use permissionless blockchains and build on them, right?
+
+
+===3. Marginalisation===
+
+Domestiction becomes a real problem when combined with another non-technological threat: marginalisation. Again, let’s look at recent history. Torrent technology is a superior way for distributing digital content. However, since its first and most prominent uses were related to illegal file-sharing, legislation and public PR campaigns have pushed the technology to the fringe (can you believe that PirateBay is still the most popular torrent tracking site?). Torrents are, of course, used for legal purposes, too, in many forms of content distribution, but again the full promise of the technology has been curtailed by pushing it into a socio-cultural margin.
+
+All of the three threats ­– marginalisation, domestication and ghettoised user experience — loom large over blockchains. Moreover, the three collude in forming an evil circle, reinforcing each other. There is no silver bullet agaist any of them. A lot of education, both for regulators and the general public, is needed in order to counteract marginalisation. Against ghettoisation, the most urgent need are real-world uses cases that are not limited to currency speculation or to transactions with high counterparty risk. The more diverse the community involved, the greater the possibility of avoiding marginalisation and pushing for overall usability. The free software and open source movements, for instance, have a history of initiatives and procedures for increasing the diversity of the communities and lowering barriers of entry. They can be reused, while at the same time looking for new ways, such as ethical design, of broadening the horizons of p2p technology development."
+(https://medium.com/economic-spacing/three-non-technological-ways-in-which-blockchains-may-still-fail-a8d3a7c238be#.8s6m8sgr5)
+
+
+==Four Reasons not to trust 'trustlessness'==
+
+Aengus Collins:
+
+"Here are four reasons that might prompt us to take things a little bit more slowly.
+
+First, we should keep an eye on the widening gap between the claims being made about potential DLT applications and the actual roll-out of such applications. Look past all the talk about technological revolutions and there is not yet much concrete change on which to base our assessment of these technologies. Moreover, anecdotal evidence suggests that a growing number of organisations are looking down the wrong end of the telescope at DLTs: instead of bringing their problems to the table and assessing whether DLTs might help, they are bringing DLTs to the table and looking for problems to which the technology might be applied.
+
+      
+Second, are we sure that we either need or want a technological fix for a decline in trust? While it is undoubtedly true that there has been a worrying decline in public trust in key institutions in many countries, we should be careful about catastrophizing this development. Countless interactions and transactions take place each day that rely on the presence of sophisticated networks of trust, suggesting to some that maybe DLTs are a solution for “a problem no one has”. But even if that optimistic picture is false and we are, in fact, in the midst of a structural decline in interpersonal trust, it doesn’t follow automatically that DLTs are the answer. Maybe our first instinct should be to prioritise the rebuilding of societal trust rather than accepting its demise and jumping to the roll-out of technologies optimised for a low-trust world.
+
+Third, we should recognise that there are hard limits to the extent to which we can sidestep the need for trust, even in a world replete with DLTs. If nothing else, we need to trust the cryptography. We need to trust the network architecture. We need to trust the hardware on which the technology runs. And so on. For most of us, this means taking companies at their word when they tell us that we can trust the way they have incorporated DLTs into their operations. And for decision-makers within those companies, it means taking the word of the computer scientists when they say that their DLT implementations can be trusted.
+
+Fourth, what might the unintended consequences be if the idea took root of replacing socially grounded methods of generating trust with technologically distributed methods? Perhaps the last few years should give us pause here. When thinking about decentralising trust, a useful point of comparison is the internet’s radical decentralisation of news and information flows. This has undeniably had profound democratising effects, but the legacy is not quite that simple. We are becoming increasingly aware of more troubling consequences, such as echo-chamber phenomena that have contributed to levels of fragmentation and polarisation serious enough to have prompted concerns about the health of democracy itself. This is a question we dwelt on at length in last year’s Global Risks Report."
+(https://www.weforum.org/agenda/2017/07/four-reasons-to-question-the-hype-around-blockchain/)
+
+
+'''2. J. Macodiseas:'''
+
+"* trust-less blockchain can not scale to replace e-banking
+* There are no truly trust-less chains
+* There is no point in a non-trust-less chain
+
+Why trust-less blockchains don’t scale:
+
+* A blockchain, as data, is a database transaction log, where every transaction is signed by the sender and a verifier (miner).
+* Getting data about anyone’s account without trusting someone else’s word for it, you have to re-do this transaction log on your own, initially empty, database.
+* You can do it once, and then keep track of everyone in the world’s account state continually, ie run every single transaction in the world, or you can add it to the log and only “re-do” the log for one single account when you want to validate a transaction from there. Or you can re-download and re-run this log every time you want to validate something.
+
+This means, running fully trust-less, no matter how you do it, you spend some combination of storage, bandwidth and CPU power on every payment in the world. A bit of perspective: in 2017, 1.66 billion people shopped for goods online, but this only accounts for a maximum of 10% of global purchases. Just to buy goods, each of our blockchain clients would have to receive and process the data of 16 billion transactions a year.
+
+Yes, you could just read the numbers from an already complete database — someone else’s database, implying a trusted middleman, the very thing that the blockchain is supposed to get rid of.
+
+Yes, you could re-organize the data so that you don’t have to validate all the transactions, but only the ones relevant to you. But you can not know who you will interact with in the future. You will, sooner or later, have to access data that you have not validated. Therefore, you will have to trust somebody else’s results. Or … validate that data.
+
+To put it simply: running a blockchain fully trust-less also means running one replicated (not “distributed”, but replicated!) database on several billion unreliable, untrustworthy nodes that all have to replicate each other’s work.
+
+By the way: any design that offloads all the work to its miners… also doesn’t scale — there is precedent for this type of design and it failing, which at least one of the crypto CEOs should know full well. I will come back to that in a different article.
+
+There are no truly trust-less blockchains:
+
+Whenever it is a company offering a new token contract or a new blockchain software, they become the trusted middleman. As we have seen, with many of them, the trust is not well-placed. The same is true for any private chain run on some company’s computers, or private blockchain clients. How are you to know if they even have a blockchain?
+
+And it goes further. As “Satoshi Nakamoto” themselves point out in the Bitcoin whitepaper:
+
+* If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains.
+
+You trust the majority of the CPU power on Bitcoin, or another kind of majority on other chains. The sum of your miners are your trusted middleman, and this is not a good thing. This is what makes the the 51% attack possible — and it is not just a theory: there have been at least 9 successful attacks on major chains in 2018, resulting in millions of dollars lost to the attacker.
+
+There is no point in a non-trust-less blockchain:
+
+If you trust a company to run a private blockchain for you, you don’t even know if they aren’t simply using a database. As damn well they should: It is cheaper, faster, and more efficient, they can devote more hardware to keeping the data safe and valid.
+
+* there are no untrusted nodes in the network to deal with
+* if the company is any good, the nodes are guaranteed to run the same software (and if they are not, why do you think their blockchain software would be any good?)
+* if they can trust their own nodes, they have no need for energy-guzzling “coin miners” on their network.
+* the company has the financial incentive to keep your data safe. A blockchain doesn’t, if it is not mining currency.
+
+As soon as you begin to trust your nodes, you don’t need a blockchain, because any, truly any digital data storage technology is more efficient."
+(https://medium.com/@macodiseas/blockchain-society-trustless-blockchain-does-not-scale-a-technical-summary-7dec3215ddd0)
+
+
+==Post-Blockchain== 
+Blockchain technology, which arose itself as a Commons-Based Peer Production (CBPP) project, has evolved to attract even wider attention. From the CBPP perspective, blockchains have been envisioned to support and stabilize its value model, rationalizing openness and sharing in economic affairs. However, many different groups with diverging political values are looking to deploy the functionalities of distributed ledger technologies (DLTs) and heavily influence the relevant iterations and technological outcomes. Simultaneously, the blockchains are yet to establish a viable dominant design. Still, DLTs have challenged the core assumptions of the financial and monetary system, opening up a discussion where these matters become relevant for an increasing fraction of society. Now, an ontological shift is necessary to break the chains of open innovation through CBPP. Post-blockchain encapsulates such a vision of a blockchain-informed transition that is not necessarily blockchain-driven. 
+
+See full article here: https://www.mdpi.com/2078-2489/11/2/104/htm. 
+
+==More Discussion==
+
+
+See: [[Blockchain - Discussion]] for more articles on the following topics:
+
+1 From the Invisible Hand to the Visible Hand
+
+2 Disintermediating Banking and User Accounts
+
+3 Why the Bitcoin ledger is potentially so important
+
+4 The Revolution will not be based on a global receipt depository!
+
+5 The Political Vision behind the ledger
+
+6 The Bitcoin Protocol Is More ‘Cloud’ Than ‘P2P’
+
+7 What Are the Challenges?
+
+8 Towards an internet of (block)chains
+
+9 How the blockchain works for trust
+
+10 The dispute on the size of blocks
+
+=More Information=
+
+Extensive bibliography on bitcoin and [[Blockchain]] matters, maintained by Geert Lovink: [http://networkcultures.org/moneylab/2018/05/07/link-list-on-bitcoin-blockchain-demonitization-and-other-moneylab-issues-part-3/ part 3]
+
+* '''Read this first''': 
+
+#[http://www.multichain.com/blog/2015/11/avoiding-pointless-blockchain-project/ Avoiding the pointless blockchain project] ; [https://medium.com/@jimmysong/why-blockchain-is-hard-60416ea4c5c Why blockchains are not always appropriate, expensive, and difficult to maintain]
+#[https://english.lasindias.com/blockchain-is-a-threat-to-the-distributed-future-of-the-internet The blockchain is a threat to the distributed future of the Internet]
+
+Article: "Blockchain and value systems in the sharing economy: The illustrative case of Backfeed". → http://wiki.p2pfoundation.net/Backfeed,_the_Blockchain,_and_Value_Systems_in_the_Sharing_Economy
+
+All about crypto-currencies → http://www.coinwarz.com/cryptocurrency/coins
+
+Documentary : Ulterior States [ IamSatoshi Documentary ]→ https://www.youtube.com/watch?v=yQGQXy0RIIo
+
+DecentralizeFM : → https://decentralize.fm
+
+Book - Eyrolles - "Blockchain: Blueprint for a New Economy" → http://amazon.fr/Blockchain-Blueprint-Economy-Melanie-Swan-ebook/dp/B00SNS9JLW
+
+http://www.economist.com/news/special-report/21650295-or-it-next-big-thing
+
+The draw and blockchain ( in french )  → http://dem0crat1e.fr/posts/tirage-au-sort-bitcoin
+
+Related entries:
+
+#[[Internet of Chains]]
+#[[Open Source Sidechains]]: [[Sidechain Elements]]
+#[[Blockchain Applications Directory]]=
+#[[Blockchain Developer Assistance]]
+
+[[Category:Crypto_Economy]]
+[[Category:Crypto_Governance]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Money]]
+[[Category:P2P_Infrastructure]]
+[[Category:Technology]]

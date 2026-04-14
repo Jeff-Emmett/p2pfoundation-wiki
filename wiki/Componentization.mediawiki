@@ -1,0 +1,53 @@
+= in the context of [[Open Knowledge]]
+
+
+=Description=
+
+From http://www.okfn.org/wiki/Atomisation_and_Open_Data :
+
+"Componentization is the process of atomizing (breaking down) resources into separate reusable packages that can be easily recombined.
+
+Componentization is the most important feature of (open) knowledge development as well as the one which is, at present, least advanced. If you look at the way software has evolved it now highly componentized into packages/libraries. Doing this allows one to 'divide and conquer' the organizational and conceptual problems of highly complex systems. Even more importantly it allows for greatly increased levels of reuse.
+
+The power and significance of componentization really comes home to one when using a package manager (e.g. apt-get for debian) on a modern operating system. A request to install a single given package can result in the automatic discovery and installation of all packages on which that one depends. The result may be a list of tens -- or even hundreds -- of packages in a graphic demonstration of the way in which computer programs have been broken down into interdependent components."
+(http://www.okfn.org/wiki/Atomisation_and_Open_Data)
+
+
+=Discussion=
+
+By Jo Walsch and Rufus Pollock, Componentization as a strategy for [[Open Knowledge]]:
+
+'''Atomization'''
+
+Atomization denotes the breaking down of a resource such as a piece of software or collection of data into smaller parts (though the word atomic connotes irreducibility it is never clear what the exact irreducible, or optimal, size for a given part is). For example a given software application may be divided up into several components or libraries. Atomization can happen on many levels.
+
+At a very low level when writing software we break thinks down into functions and classes, into different files (modules) and even group together different files. Similarly when creating a dataset in a database we divide things into columns, tables, and groups of inter-related tables.
+
+But such divisions are only visible to the members of that specific project. Anyone else has to get the entire application or entire database to use one particular part of it. Furthermore anyone working on any given part of one of the application or database needs to be aware of, and interact with, anyone else working on it -- decentralization is impossible or extremely limited.
+
+Thus, atomization at such a low level is not what we are really concerned with, instead it is with atomization into **Packages**:
+
+'''Packaging'''
+
+By packaging we mean the process by which a resource is made reusable by the addition of an external interface. The package is therefore the logical unit of distribution and reuse and it is only with packaging that the full power of atomization's "divide and conquer" comes into play -- without it there is still tight coupling between different parts of a resource.
+
+Developing packages is a non-trivial exercise precisely because developing good *stable* interfaces (usually in the form of a code or knowledge API) is hard. One way to manage this need to provide stability but still remain flexible in terms of future development is to employ versioning. By versioning the package and providing 'releases' those who reuse the packaged resource can stay using a specific (and stable) release while development and changes are made in the 'trunk' and become available in later releases. This practice of versioning and releasing is already ubiquitous in software development -- so ubiquitous it is practically taken for granted -- but is almost unknown in the area of open knowledge.
+
+
+'''Conclusion'''
+
+In the early days of software there was also little arms-length reuse because there was little packaging. Hardware was so expensive, and so limited, that it made sense for all software to be bespoke and little effort to be put into building libraries or packages. Only gradually did the modern complex, though still crude, system develop.
+
+The same evolution can be expected for knowledge. At present knowledge development displays very little componentization but as the underlying pool of raw, 'unpackaged', information continues to increase there will be increasing emphasis on componentization and reuse it supports. (One can conceptualize this as a question of interface vs. the content. Currently 90% of effort goes into the content and 10% goes into the interface. With components this will change to 90% on the interface 10% on the content).
+
+The change to a componentized architecture will be complex but, once achieved, will revolutionize the production and development of open knowledge."
+(http://www.okfn.org/wiki/Atomisation_and_Open_Data)
+
+
+[[Category:IP]]
+
+[[Category:Media]]
+
+[[Category:Standards]]
+
+[[Category:Peerproduction]]

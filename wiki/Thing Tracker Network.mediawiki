@@ -1,0 +1,68 @@
+
+'''= a proposal for a way in which web sites and applications can share information about 3D models and projects, primarily, but not limited to, 3D printing'''
+
+URL = http://thingtracker.net/
+
+
+=Description=
+
+Gary Hodgson:
+
+"Makers like to share their creations, but choosing where to share their work, so that it is discovered by the right people, can be prove difficult.
+
+Anyone wishing to build a creation-sharing service has a Catch-22 situation: people won't use the service until it's deemed popular enough, yet it won't become popular without people using it.
+
+Groups and individuals may wish to host their own designs, yet make them discoverable to a wider audience.
+
+Instead of being another content sharing service, this site describes a proposal whereby existing, and future, services could share their data in order to create a web of things.
+
+By sharing key metadata, services could work together to form a truly decentralised network, where participants focus on their individual needs and yet be sure their content can be easily discovered, and tracked, by the wider community."
+(http://thingtracker.net/)
+
+=Interview=
+
+Founder Gary Hodgson, interviewed by Simone Cicero:
+
+" '''[Open Electronics] Could you please tell us something more about your previous experience related to the open hardware context?'''
+
+[Gary Hodgson] A few years ago I started hearing about the RepRap project and shortly thereafter decided to build a Prusa Mendel.  As I was putting it together I made a few silly mistakes due to my misreading the instructions on the wiki, and so I decided to put together the Prusa Mendel Visual Instructions at the same time a guide for the Wade’s Geared Extruder.  There’s a lot of good information in and around the community, and for this reason I later put together the RepRap Developer Bookshelf  which collates a few of the early RepRap blogs into ebook format.
+
+Another effort was the RepRap Development Tracker which can be thought of a as a prelude to the Thing Tracker Network.  In the development tracker I wanted a way for people to collect and find information about the various projects that are available.
+
+More recently I was approached to contribute to the RepRap Magazine, for which I write the “In the works” articles, and so far a couple of interviews with leading members of the community: the founder of RepRap, Adrian Bowyer, and with Chris Palmer, better known as Nophead.  I hope that these help bring some insight into the thoughts of the people who have shaped the community.
+
+
+A few other side-projects include Slic3r manual, Githubiverse, a way to use Github pages to present 3D model projects stored there, 3D-Printroom a proof of concept for an application to manage and display files used for 3D printing (STL, G-Code etc), Projectlayer, a modification of Kliment’s Pronterface for use with DLP resin printers.
+
+I suppose the general thread running through the various projects I work on is the sharing of information within the community.  Finding ways to make sure people find the information they need.  Which brings me to Thing Tracker Network..
+
+The Thing Tracker Network is a proposal for a way in which web sites and applications can share information about 3D models and projects, primarily, but not limited to, 3D printing.  The original blog post (http://garyhodgson.com/reprap/2013/01/thing-tracker-network/) has a few links to the various posts that started it all – but in summary, the main driving factor is the lack of diversity when it comes to places where people can share their creations.  A while ago Thingiverse caused a small furore in the community which prompted many to ask for alternative sites, and several attempts were made, the majority of which didn’t go anywhere.  The core problem is that small websites want to attract people, but most people are wary of using new and unproven services until they are shown to be worth using – a bit of a catch-22 situation!
+
+Instead of trying to build another website I tried to think of a different approach – one which could allow developers to focus on building their websites and applications, and yet still allow the content to be discovered by a wide range of people.  Once I started writing the idea of the tracker network down, I realised that it could evolve even further, into an ecosystem, where the members of the network could use the shared information to develop further services and applications, such as search engines, analytics, and boutique sites.  Of course such things would take time to develop, but it gives an idea of where the proposal could lead to.
+
+
+'''[Open Electronics] What’s the development stage of the TTN?'''
+
+[Gary Hodgson] A working draft of the specification exists, and has been developed from it’s original, rather narrow, origins as a tracker of basic information to a fuller specification which allows the describing of assemblies, BOM’s and other things, such as instructions (see for example some ideas here:https://github.com/garyhodgson/thing-tracker-network/wiki/Ideas-for-BOMs,-Sub-assemblies-and-Parts).  The proposal was pretty well received, and generated some great discussion.  As is often the case, it requires constant effort to keep the idea alive, and whilst it seems rather dormant it is still being worked on, however at a pretty slow pace.  This is purely because it’s still a hobby project which takes a lower precedence than such things as work and family.  Saying that, have a look at the ideas of Derrick Oswald on distributed Thing Trackers, which is something we are actively working on: (http://my.brainshark.com/Distributed-Thing-Tracker-767853647)
+
+
+Recently the proposal was implemented by the guys over at Bld3r (http://www.bld3r.com) which brings the total number of implementations to 2, including my own Development Tracker, mentioned earlier.  So it’s still very much early days, but I think once a few reference implementations become known, plus a few additional services appear, then the idea will hopefully catch on and take off from there.  The Bld3r guys made a great suggestion for a service which could utilise the data within the Thing Tracker Network – a recommendation engine which finds Things and projects which suit your tastes.  I think there are many ideas such as these just waiting to be taken advantage of by something such as the network.
+
+ 
+
+'''[Open Electronics]  What’s your vision of TTN roadmap and future development?'''
+
+[Gary Hodgson] A core tenant of the proposal is that it is open and flexible so that people can feel welcome to take the idea and mould it to fit their needs.  
+
+My hope is that the ecosystem I briefly describe on the main web page starts becoming a reality, and this attracts others to develop the idea into directions beyond what I can think of now.  It’s the potential of the idea that excites me as much as anything.  If the network can help people focus on developing the website or application they want to have, rather than having to chase users, then that would be a win for me, and complementing that goal is the hope that makers will be able to discover the things that they want to find easier too.
+
+[Open Electronics] Is there a team behind TTN? Are you planning to join the efforts with other players? Are you thinking of getting some hardware industry embracement? What organizations (if any) have you contacted to get more discussion and feedbacks on the idea behind the project.
+
+[Gary Hodgson] At the moment it’s really just me working together with the people who get in touch via the Google Plus community (http://bit.ly/ttn-g-plus-community) and via email (contact@thingtracker.net).  I’d be more than happy to work alongside others in further enhancing and promoting the ideas, as I mentioned before, the central goal is for it to be open and accessible to all.  This would include industry as well as the maker movement.
+
+I’m not one for promotion and sales, and so I haven’t expended terribly much energy in promoting the concept beyond a couple of blog posts and talking with people within the community."
+(http://www.open-electronics.org/networking-things-and-creators-in-open-source-hardware/)
+
+[[Category:Manufacturing]]
+
+[[Category:Standards]]

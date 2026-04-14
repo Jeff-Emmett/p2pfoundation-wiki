@@ -1,0 +1,41 @@
+
+
+=Discussion=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Cross-platform federation is important, because it enables individuals
+to speak to each other without subscribing to the same service or relying on the same
+codebase (and thus, the same developers). This is a critical aspect of enabling greater
+agency and choice for users, because it reduces the friction of switching from one
+platform to another. Instant messaging is an excellent example of this -- right now, if a
+user wants to switch to a new messaging application, then it’s unlikely that they’ll be
+able to communicate with their contacts who are using a different service. This wasn’t
+always the case. For example, XMPP is a protocol that lets different messaging
+services exchange messages. Google chat used to support XMPP, but recently opted
+out, possibly due to the fact that most users were not using the federated features to
+speak with their friends across different messaging services.
+
+Today, most open source federated projects only focus on federating with other
+nodes in their network, not across services, or only with the most popular social media
+platforms like Facebook or Twitter. This is due in large part to the fact that federated
+platforms bear the additional burden of coordinating across different clients, which
+makes it tough for them to remain agile and adaptable over time. For example, Signal, a
+popular encrypted messaging application, opted for a non-federated protocol, because it
+proved too challenging for them to respond to user demand for new features when
+using federated models. According to Signal’s lead developer, Moxie Marlinspike, “It's
+undeniable that once you federate your protocol, it becomes very difficult to make
+changes. And right now, at the application level, things that stand still don't fare very
+well in a world where the ecosystem is moving
+
+As a result of these challenges, open source platforms often cannot match the
+usability and quality of performance of privatized platforms like Facebook and Twitter."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+=Example=
+
+For a successful example, see [[Mastodon]]
+
+
+
+[[Category:P2P Infrastructure]]

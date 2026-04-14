@@ -1,0 +1,77 @@
+'''Freebase aims to be the Wikipedia for data. Want to know how many dentists are in one mile vicinity, if they are next to tube stop and are specialists in teeth whitening? Freebase say they can not only give you this information, but that the database behind it will be build Wikipedia style.''' [http://www.openbusiness.cc/2007/05/23/wikipedia-for-data-freebase/]
+
+
+=Interview=
+
+From Open Business:
+
+"1. '''Why did you start Freebase?'''
+
+Freebase’s goal is to be a database of the world’s knowledge.  As a single unified database, Freebase will prove to be far more powerful than the sum of its data sources, as it connects people to films, films to places, places to science, science to schools, schools to sports and so on…
+
+As a database, it lets people ask complex and extemporaneous questions like, “Find me child-friendly dentists within 10 miles of my home,” or “Give me photographs of John F. Kennedy in Europe prior to 1962,” or even “Find me all of the Venture Capitalists in Silicon Valley who share a board membership and went to college together.”
+
+Up until a few years ago it was almost impossible to build a database like this.  After several years of work, we’re now past the main technical hurdles to making such as system function at a worldwide scale.
+
+Even more than the technology, the bigger question for us was where all of this the data would come from.  The internet has many thousands of significant databases, but most are hidden within websites or have restrictive licenses so that the data is locked up.  Fortunately, there are several hundred significant open databases that are in machine readable form, and we have begun to import these.
+
+But most importantly, there are now many examples of sites where people are eager to build collective knowledge.  Wikipedia is the best example of this, but there are countless other sites built from user contributions, the biggest being IMDb (which has since become a closed model) and Musicbrainz, a music database which in many ways surpasses commercial alternatives.  It’s this phenomenon that makes us believe that a large database can actually be built.
+
+
+'''2. It says on the website that you aim to be a ‘Wikipedia for data’. Does that mean you are looking for user generated data?'''
+
+We’re getting data from many places.  Currently we have a team combining data about geography, government, school, business, restaurants, and products, as well as Wikipedia itself, which has data in a semi-structured form.  We are refining and reconciling these sources into a highly connected superset.
+
+We also learned two critical things from Wikipedia:
+
+A. Wikipedia has radically embraced a ‘post-hoc’ moderation model.  Most user contributed sites in the world have been ‘pre-moderated’.  That is, when a user contributes an addition or change through a form, it is put into a queue to be reviewed by an editor who will then determine if the data should be posted.  In Wikipedia (and wikis in general), users can make a contribution which will have an immediate and satisfying effect on the site.  Other users will review these changes and fix them if they are wrong.  It’s this openness (and the acceptance of temporary incorrectness) that has allowed Wikipedia to grow so much faster than sites built on more traditional processes.
+
+B. Wikipedia has exactly one article for one idea.  The importance of this becomes obvious when you type keywords into a search engine and you get several conflicting “definitive” articles on a single idea and then have to sift through them to assemble a collective answer in your head.  Because Wikipedia has a single article for “The Vietnam War” or “Apple, Inc.”, users are presented with the definitive overview with links to supporting information.  An explicit part of Wikipedia’s charter is to ensure that two articles get joined into one, and if one article becomes too big, it gets split into discrete articles.
+
+Freebase has adopted the radically open contribution model (our current closed Alpha notwithstanding), where users can add structured information with minimal effort, such as the closing time of a restaurant, a link to a digital camera’s online manual, or the name of a company’s founder.  Experts in a field are unimpeded by process.  Bad data becomes good data as many people find problems and fix them.
+
+Also, like Wikipedia, Freebase has the same one-to-one mapping of database records (what we call “Topics”) to things in the world.  For instance, we have a single “Austin, Texas” topic that points to all of the companies based there, the movies filmed there, the tree species growing there and the famous people born there.  If there are two “Austin Texas” topics, they will get joined into a single one.
+
+
+'''3. You are using a CC license - why?'''
+
+Creative Commons has done a lot to rationalize the complex world of data rights.  It is a kind of “brand name” that people understand and appreciate.  When users contribute information, they know exactly which rights they are granting.
+
+Freebase uses the very open “Creative Commons Attribution License” that allows anybody to use the data for any purpose, as long as they give attribution to the contributor.  This license is more radically open than the more common “Creative Commons Noncommercial License” which is used by licensors wishing to provide their data only to academic researchers or hobbyists.
+
+We believe that the more open the license is, the larger the set of users, the larger the set of contributors, and therefore the larger and higher quality the data set.  We allow and encourage commercial use because we want people to start building businesses that use and contribute back data to Freebase.
+
+
+'''4. OpenBusiness attempts to collect business models inspired by Open Source, [[Creative Commons]] etc, but how can you built a business on ‘[[Free Data]]’?'''
+
+Freebase is just the first application to be built on the Metaweb infrastructure.  Metaweb can hold data with any license, including copyrighted material.  Companies that wish to use the Metaweb infrastructure to hold that data for their own purposes would pay a fee, particularly at higher volumes.  Metaweb would act as a clearinghouse for licensable proprietary data in addition to the open data in Freebase.  We also have in mind other services that can be offered to business users of the Metaweb infrastructure.
+
+
+'''5. There are lots of businesses now being built in effect on aggregating data - this ranges from last.fm to Google (in a sense)? Would you say that we will see in future more services where users aggregate data and not vice versa?'''
+
+Some companies are getting their users to create data that are locked up within the service.  We believe that in the long run, users will contribute to the service that has the biggest audience.  Flickr, in particular, has benefited specifically because they don’t try to own user’s contributions.
+
+Freebase is aggregating user contributions for very practical reasons — so that a single pool of data is constantly improving with no wasted effort.
+
+The long-term vision of the Semantic Web is that the information should be widely distributed across many millions of networked computers.  As it becomes more technically possible, the data within Freebase will become widely distributed.
+
+
+'''6. Tim O’Reilly called for a definition of [[Open Services]] just like [[Open Source]] was defined legally and ethically two decades ago - would you agree, why and how would you proceed?'''
+
+Open software and open data have much more in common with each other than they do with open services.  In the case of the software and data, there are well-understood ways in which rights can be defined to last over time.  This is the case with the Freebase CC-Attribution data license.
+
+In the case of services, the future is not so well-defined.  Typically, the provider of these services is unlikely to make open-ended support commitments, if only because the cost of providing that service might not be sustainable.  Services take infrastructure and money to keep running, so a future commitment can carry financial and legal risks.  This is not the case with software and content licenses which can provide value without any sustaining effort.
+
+Typically, a company provides an open web service because it would like to reap the benefits of collective innovation.  Were a company like Linden Labs to get wide-scale adoption of their API, it would be very costly for them to shut down a successful application they would like to create themselves.  Much like a despot nationalizing an industry, it would dramatically undermine the trust of any future contributors.  In rare circumstances this may happen, but typically not, just in the way that governments can act in short term self interest, but rarely do because they gain so much from sustained collaboration with others."
+(http://www.openbusiness.cc/2007/05/23/wikipedia-for-data-freebase/)
+
+
+=More Information=
+
+#June 2008: How does freebase work?, at http://www.readwriteweb.com/archives/freebase_overview.php
+
+[[Category:Technology]]
+
+[[Category:Resources]]
+
+[[Category:Standards]]

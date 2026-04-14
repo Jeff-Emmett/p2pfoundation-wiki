@@ -1,0 +1,41 @@
+
+
+=Description=
+
+Kevin Marks:
+
+" In the future, we expect everything on the web will become more social, augmenting the many things you already do on the web. Whether you’re shopping, deciding what to read, or researching a topic, knowing what your friends, or family, or the people you respect think about that product, book, or source of information is a vital part of the web.
+
+I call this the “social cloud,” meaning that “social” will be integrated with the web so that you don’t think about it anymore. Charlene Li calls this same idea “social networks become like air.” The web itself is like this — following links seems like second nature to us because we know a URL can take us anywhere. Social isn’t there yet, but that’s the highest level goal of the OpenSocial project — to make interacting with people a natural part of how we use the web."
+(http://www.techcrunchit.com/2009/02/23/social-web-qa-with-googles-kevin-marks/)
+
+
+=Discussion=
+
+Kevin Marks:
+
+"There are '''three main components to social activity on the web — people, friends, and activities'''.
+
+'''Representing people has several aspects. First, there is the notion of identity. Email addresses are one way to identify people on the web, but as social networks have become increasingly popular, personal profiles (and the unique URLs that go with them) have emerged as a common way for people to find and connect with one another'''. OpenID is the standard that lets you prove to other websites that you own such a URL, thus letting you link your online identities.
+
+Then, to represent people more fully within OpenSocial, we started looking for things that social sites have in common. We talked to many social networking sites, looked at their data structures, and found that they were actually very similar. Under the hood, most of these sites had names, photographs, addresses, phone numbers, preferences. Based on these commonalities, we defined a model for representing people. This model is expressed in the Portable Contacts standard, which is also used in OpenSocial for people and friends.
+
+What makes these sites different from each other to their users are the communities of people who inhabit them. You’re happy to share information with people you know and trust, so long as you’re confident the website won’t share that information with anyone else. The most successful social sites, therefore, become trusted custodians of your social data.
+
+This brings us to '''the second component of social activity: friends. Once we can represent people, we need a model for who your friends are and which friends can see what information about you.''' Within a site, this is straightforward because the site is in control, but in order for the whole web to become more social, there must be a way to share this information between websites. That’s OAuth.
+
+Today, if a site wants to know who you’re friends with on a social site, it will often ask you for your user name and password. The site will then login to the social site with your user name, pretending to be you, look at the webpages there, and pull the data out. The problem is that by handing over your credentials, you’re also giving the site full access to everything in your social account, relying on faith that it will only do what you want it to do. But what if you accidentally give this information to a malicious site? What if the user interface is confusing and you accidentally let a site send out emails to your whole address book?
+
+By contrast, OAuth lets you grant permission for very specific tasks. You may let another site see all your profile data or just your name and image. You may let it see all the people you know or just a subset - your family or colleagues. Additionally, OAuth lets the social site know that a request is being made on behalf of a specific user, so if the social site reveals different information to different people, that can be taken into account, e.g. if you share your photos with some friends but not others. As the web becomes increasingly social, having an standard protocol to express this from website to website is very important.
+
+'''The last piece of this social web is activities — what you and your friends are doing around the web.''' Leisa Reichelt calls this “ambient intimacy,” the idea that you care little about the activities of strangers, but you’re very interested in the activities of people you know. What is more, with your close friends, you care what they had for lunch, how they’re feeling, and what they’re thinking. This flow of phatic information makes social sites like Twitter, Facebook, MySpace, Flickr, Seesmic, Picasa, et al., enormously attractive — they feed a basic human desire to know about others.
+
+The challenge with sharing activities is that it can’t be a chore. This is why OpenSocial allows any application to generate an activity and provides a way to send those activities from one place to another. The social networking site can then filter those activities in a way that makes sense for their users.
+
+When these events flow from one place to another, everyone is better off. If I can bring the information I have invested in a social networking site elsewhere, to say, a Bay Area biking website, when I post a comment like “I just rode this trail, here’s a photograph from the summit,” the site can feed that information back to the network, where my friends who are also interested in cycling can click over to the biking website. Additionally, other bikers on the website can see me, recognize that we share an interest, and establish a relationship within that context. Social networks get richer information, the cycling site spreads through friendship networks, and users get the benefit of being able to control what they share with whom."
+(http://www.techcrunchit.com/2009/02/23/social-web-qa-with-googles-kevin-marks/)
+
+
+[[Category:Standards]]
+
+[[Category:Relational]]

@@ -1,0 +1,43 @@
+
+=Discussion=
+
+==[[Crypto-Economic Aspects of the Sarafu Kenyan-Based Grassroots Economics Project]]==
+
+Excerpted from an interview with Blockchain for Good.
+
+Will Ruddick:
+
+"While Grassroots’ technology is built on a blockchain, it is important to note that the people using the CICs do not know that they are using this technology. Indeed, the user interface has been designed to be easy to learn. The wallet used by Grassroots Economics is a custodial wallet, meaning that the association holds the private key of its users. In concrete terms, a user with a feature phone creates a PIN code that will give him access to his wallet. Each time he wants to access it, he will have to enter this PIN code. It is from this wallet that the electronic vouchers will be accessible. There is the possibility to send the vouchers to a wallet other than the Grassroots one, such as Metamask. The reason why we do that is that actually, when you’re going for non-custodial wallets, which means you hold your private key, you have to store it securely and remember a seed phrase of 12 words. That would have meant that we needed to store the seed phrases for them, which was very complicated. So, we opted for a simpler system, using a PIN code.
+
+The issuance of the voucher, and the transactions between the different users are recorded on a blockchain. We do a lot of training with the population, especially to demonstrate that many things can be produced locally, and that they don’t need to wait for Kenyan shillings to be able to trade. This mapping activity is central to the work of Grassroots Economics. Simulation games with beans are organized so that communities can understand how the CICs work, and thus take ownership of them.
+
+...
+
+We have created an inter-community token, the Sarafu, which can be exchanged for all the CICs of all the communities. So, through liquidity pools, users can exchange their CICs into Sarafu, go to another community, and exchange their Sarafu into the CIC of that other community through another liquidity pool. Bancor allowed us to create our wallets on its backend, before migrating them to POA. This system, quite robust, did not allow us to have complete control over its technical infrastructure, especially since Bancor decided to issue a token, the BNT, which was to serve as a reference for all the others. This went against the idea we had of the project, namely the promotion of autonomous economic development. In other words, we did not want to make our CICs and Sarafus dependent on the BNT.
+
+As a result, we migrated to Uniswap, a much more convenient exchange, which allowed us to create our own cash reserves, rather than using Bancor’s.
+
+...
+
+We started looking at a number of alternatives, and we thought that Bloxberg, a blockchain created for academic purposes, would do the job. But they didn’t allow us to have a node either, because we were not a university.
+
+But their code was open-source, so we just copied their entire code base and then adapted it to suit our needs. Thus was born the Kitabu chain, a blockchain replicating the operation of the Bloxberg blockchain and which exploits an Open Ethereum node using the Aura consensus mechanism. This mechanism works by proof of authority that allows them to elect transaction validators. This mechanism allows us to process transactions much faster, which is handy in a context where connectivity is sometimes poor.
+
+Since Open Ethereum is no longer operational ! We’re going to migrate everything to Cosmos, but it will take a good six months of work to recode everything into the Cosmos programming language, which is different from Solidity, the language we’ve been using until now.
+
+...
+
+'''Impact investment by NGOs:'''
+
+We have imagined a mechanism to incentivize them to invest in the development of our communities: they buy CICs from local communities, thus stimulating production, with the possibility of becoming transaction validators, which allows them to have a return on investment. The CICs purchased allow communities to develop infrastructures accessible to the refugees in our communities. In this way, the NGOs become impact investors serving the community with the community’s resources. On the same principle, we develop agroforestry projects. Small investors within our communities buy CICs equivalent to seeds that will be reimbursed against the products of agroforestry."
+
+(https://medium.com/@Blockchain4Good/how-40-000-kenyans-are-using-community-inclusion-currencies-in-the-form-of-tokens-through-5d72c6537df6)
+
+
+[[Category:Crypto Economy]]
+
+[[Category:Kenya]]
+
+[[Category:Money]]
+
+[[Category:Cases]]

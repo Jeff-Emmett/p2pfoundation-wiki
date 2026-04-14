@@ -1,0 +1,73 @@
+
+'''= "Internet reputation systems let individuals rate other individuals over the internet and provide recommendations based on those ratings".''' [http://tomslee.net/2013/09/some-obvious-things-about-internet-reputation-systems.html]
+
+=Description=
+
+Tom Slee:
+
+"Reputation is a sign of trustworthiness manifested as testimony by other people. When my neighbour says “Don’t hire John the Plumber: he came to fix my sink but it’s still blocked”, she is providing information that lets me decide whether to trust John to fix my drains.
+
+When it works well, reputation is an effective discriminating signal that promotes trust and collaboration based on trust. In a community with strong word of mouth, it is easy for a good plumber to establish a reputation as reliable, punctual, and skilled simply by being reliable, punctual, and skilled; it is difficult for an incompetent or lazy plumber to do the same.
+
+Reputation is not a perfect discriminating signal. Much of what is communicated in testimonies may be private and informal (“he fixed my sink and came on time, but there was something about him… I just didn’t like having him in my house”) and this privacy and informality can have both good and bad effects. It can transmit justified but nebulous suspicions, but it makes it difficult for John to gain a good reputation—no matter how trustworthy he is—if he is a black man trying to find work in a white community with a history of racism, or difficult for Jane the Plumber’s skills to be taken seriously if the community has traditional norms about women’s roles. “Old boys’ clubs” and other insider groups provide members with an inbuilt advantage when it comes to establishing a reputation.
+
+Reputation is only one mechanism for solving the problem of trust. Others include reciprocity in long-term relationships, regulations (you can trust this restaurant because it has passed a food safety inspection), professional qualifications (you can trust this person to fix your leg because she is a doctor), voluntary industry certifications (you can trust this coffee to be fair trade because there is a fair trade label on the package), independent rating agencies, individual firm commitments (you can trust this retailer because they have invested heavily in their brand, and so must act accordingly), the common property regimes explored by Elinor Ostrom, and many others.
+
+Reputation, in the sense used here, is peer-to-peer, informal, decentralized, community-driven, and non-commercial, and it is those alternative qualities that sharing economy advocates claim can be scaled up by using internet reputation systems. Airbnb and BlaBlaCar both describe themselves as “a trusted community marketplace”; Lyft’s one-million rides show “the power of community”.
+
+The effectiveness of reputation depends on the motivations of those giving testimonies as well as on the actions of the trustee: the problem of secondary trust described above. Reputation is effective only if the testimonies are independent and free from the taint of collusion or retaliation. Testimony from John’s brother does not carry the same weight as that of someone who has no stake in John’s success or failure, and while John may not want my neighbour to tell me about his failure to fix their sink, there’s not a lot he can do about private conversations over a garden fence.
+
+'''Market-based incentives erode the effectiveness of reputation, and in this respect reputation is a cultural commons'''. In her TED talk, influential author Rachel Botsman says that in the new economy “reputation will be your most valuable asset”, but as reputation becomes an important asset, markets will grow around it and intermediaries will claim to help you boost your reputation, but these market-based incentives destroy the value of reputation as a mechanism for establishing trust. Mechanisms for buying and selling testimonies, for example, cause testimonies to lose their ability to discriminate between trustworthiness and opportunism because an opportunist with money could buy themselves a good reputation."
+(http://tomslee.net/2013/09/some-obvious-things-about-internet-reputation-systems.html)
+
+
+=Discussion=
+
+==Peer-to-peer internet reputation systems do not solve the problem of trust==
+
+Tom Slee:
+
+"BlaBlaCar, a French sharing economy company that connects “drivers with people travelling the same way” throughout Europe, has over a million registered drivers, transports over half a million passengers every month, and is expanding rapidly. Also, it makes testimonial-based ratings available on its web site. 
+
+Of 190129 distinct ratings, 2152 were one-star, there was not a single two-star rating, there was one three-star rating, five four-star ratings, and 187971 five-star ratings. A BlaBlaCar rating means something different from a Netflix movie rating.
+
+With over 98% of ratings being five stars, the reputation system does not meaningfully discriminate among drivers or riders. A reputation system that does not discriminate fails as a reputation system: it fails to solve the problem of trust.
+
+Collusion and fear of retaliation are the reasons why there are essentially no reviews less than five stars for rides that take place. If you give a less-than-five star review then, unlike in the case of offline community-based testimonials, it is visible to the reviewee, who can give you a harsh review in return and so affect your chance of getting future rides. Do you want to defend your opinion that the driver was a bit close to the car in front, or that the car was a bit dirty, or do you just want to give a five-star review and make a note to yourself not to ride with them again? Collusion is the other side of the retaliation coin: I know I turned up late and was eating smelly food in your car and you didn’t like it, but so long as you give me five stars I’ll give you a good positive rating and we’re both better off. Neither of these factors need to be explicit or even to be very important to produce large effects, because it makes no difference to me how I rate you. One seemingly tiny difference between word-of-mouth and the internet rating system makes all the difference, that testimonials are visible to everyone including the reviewee instead of everyone except the reviewee.
+
+The problem is not unique to BlaBlaCar. Reciprocity and collusion in the eBay reputation system has been studied here and the authors also provide an estimate of how many dissatisfied people are not rating their trustee:
+
+The fact that from 742,829 eBay users… who received at least one feedback, 67% have a percentage positive of 100%, and 80.5% have a percentage positive of greater than 99%, provides suggestive support for the bias. The observation is in line with Dellarocas and Wood (2008) who examine the information hidden in the cases where feedback is not given. They estimate, under some auxiliary assumptions, that buyers are at least mildly dissatisfied in about 21% of all eBay transactions, far higher than the levels suggested by the reported feedback. They argue that many buyers do not submit feedback at all because of the potential risk of retaliation.
+
+Finally, on Airbnb, reviewing of hosts by guests and guests by hosts also happens in public and is reciprocal. The Airbnb web site does not display individual numerical reviews, although it does display individual text reviews; instead it displays the average rating that a room has received in each of several categories (cleanliness, location, communication,…) together with an overall average, rounded off to the nearest 0.5 out of five. The web site is less easy to traverse programatically, but out of well over a hundred offerings in New York, Sydney, Berlin and Paris I have yet to see a single one that is not rated 4.5 or 5.6
+
+So even in the absence of explicit gaming, peer-to-peer internet reputation systems do not solve the problem of trust. The BlaBlaCar site fails the basic test of discriminating among almost any of the 190,000 drives that took place—it fails to deliver any useful information beyond giving the occasional sign that a driver or rider may not turn up."
+(http://tomslee.net/2013/09/some-obvious-things-about-internet-reputation-systems.html)
+
+
+==The commercial sharing economy is abandoning its reliance on peer trust systems==
+
+Tom Slee:
+
+"Venture capital demands for scale will produce changes in the nature of the sharing economy sites, changes that erode any community focus they have, and which turn them into far more traditional models. Such changes are already underway at the largest, most heavily funded sites.
+
+As Gannes reports, a single bad incident has forced Airbnb to hire a 50-person “trust and safety team” headed by a former US Army intelligence office and a former government investigator. The use of a human team clearly doesn’t scale, so Airbnb is now turning to centralized analysis to solve its problems, saying “We want to apply data to every decision. We want to be a very data-driven company.” On April 30 2013, asserting that “Trust is the key to our community”, Airbnb introduced a “Verified ID program” which demands that you provide government-verified identification and permit the company to analyze your social networking presence or provide it with a video profile.
+
+There is also a drive for more professionalism among hosts. Airbnb now lets hosts sell tours and activities, and here is Chip Conley, the new “Head of Global Hospitality” for Airbnb, hired from the hotel industry, in a September 2013 interview:
+
+We’ll be introducing nine minimum standards around what we expect an Airbnb experience to be, whether it’s related to cleanliness or the basic amenities you expect, which is not currently the case. The idea that we create some amenities that you should expect—clean towels, clean sheets—that’s important.
+In short, Airbnb is abandoning the idea that peer-to-peer reputation systems can solve the problem of trust, is moving away from the casual “air bed” mentality that gave it its name, and is resorting to traditional centralized systems of enforced minimum standards, documentary verification, and so on.
+
+There is, however, one remaining difference between Airbnb and a traditional hospitality business. To go back to the beginning of this essay, sharing economy companies claim that it is both necessary and sufficient to solve problems of trust and coordination to unlock a large new economy of resource sharing. The “sufficient” part of this is valid only if there are no spill-over effects from the operations of the sharing economy, so sharing economies will campaign for freedom from those constraints that prevent them maximizing their returns: health and safety standards, employment standards, licensing laws, and so on.
+
+To be successful, the venture-capital-funded “sharing economy” will be forced to lose all those aspects of informal sharing that makes “sharing” attractive, and to keep those aspects that erode neighbourhoods, erode employment rights, and remove basic standards. And if they succeed, they will have used the language of sharing to bring about an unregulated, free-market, neoliberal economy."
+(http://tomslee.net/2013/09/some-obvious-things-about-internet-reputation-systems.html)
+
+
+[[Category:Sharing]]
+
+[[Category:Relational]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Business]]

@@ -1,0 +1,184 @@
+
+'''=  DeSo: "Instead of one company controlling the “town square,” decentralized models distribute identity, content, and governance across open networks".''' [https://x.com/AnalogueUSB/status/1965839088289992777]
+
+
+=Description=
+
+Parallel Citizen:
+
+"Decentralized social media (DeSo) is the counter-movement. Instead of one company controlling the “town square,” decentralized models distribute identity, content, and governance across open networks. In practice, that means a user can port their followers between apps, communities can set their own moderation standards, and developers can build alternative clients on shared data.
+The idea is not new. Federated experiments date back to 2008. But a series of tipping points between 2020 and 2023: privacy scandals, Elon Musk’s acquisition of Twitter, regulatory shifts, and the maturation of protocols, propelled decentralized alternatives into the mainstream. Today, Mastodon, Bluesky, Farcaster, Lens, and Nostr coexist with Meta’s Threads and Coinbase’s Base. None has yet replaced the incumbents, but all are shaping a pluralistic future."
+
+
+
+=Discussion=
+
+Parallel Citizen:
+
+"Across fifteen years, decentralized social media has unfolded in waves of experiment and iteration. The early federation era (Identi.ca, Diaspora, Friendica) proved the concept of user-owned identity, even if the UX kept them niche. Mastodon and the wider Fediverse gave those ideas traction, surging after Twitter’s collapse into chaos, but exposed the fault lines of moderation and fragmentation. Blockchain projects like Steemit, Hive, Minds, and later DeSo tried to graft incentives onto social, sparking both innovation and revolt. Mirror and Paragraph stretched the model into publishing economies, while Scuttlebutt and Peepeth pushed peer-to-peer edges.
+
+The protocol turn of 2022–2025 reframed the field. Lens, Farcaster, CyberConnect, Nostr, and Bluesky all focused less on platforms than on rails - composable layers where identity and graphs could be portable, modular, and economically programmable. Coinbase’s Base accelerated that shift, turning creator economies into daily on-chain flows. What emerges from this lineage is not a single successor to Facebook or Twitter, but a pluralistic stack: some federated, some financialized, some minimalist, some corporate-adjacent.
+Federation’s UX failures led to blockchain experiments. Blockchain’s governance experiments introduced protocols. Protocols’ adoption hurdles are inspiring infra consolidation (Base). Each experiment laid groundwork, each revolt reshaped governance assumptions, and each breakthrough widened the design space. Decentralized social has unfolded as a scattered but persistent evolution toward a user-owned social graph.
+
+The future of DeSo isn’t a single killer app, but a resilience strategy: an escape hatch from the centralized feed. That parallel stack may remain niche, or it may one day be the default. Either way, the arc is bending toward user sovereignty."
+
+(https://x.com/AnalogueUSB/status/1965839088289992777)
+
+
+=History=
+
+Via Parallel Citizen:
+
+==The Proto-Federation Era (2008–2015)==
+
+===Identi.ca and StatusNet (2008)===
+
+"The story begins with Identi.ca, launched by Evan Prodromou in July 2008. Built on open-source software (StatusNet, originally “Laconica”), it implemented the OpenMicroBlogging protocol. This was the first real attempt at a decentralized Twitter clone. Users on different servers could follow each other’s updates, a radical idea at a time when Twitter itself was frequently crashing.
+Identi.ca never gained mass adoption. TechCrunch quipped in 2008 that “the problem with Identi.ca is that it’s not Twitter.” But it planted the seed: federation was possible, even if inconvenient for mainstream users.
+
+
+===Diaspora (2010)===
+
+If Identi.ca was an engineer’s experiment, Diaspora was a cultural statement. Launched via Kickstarter in 2010, it raised over $200,000 as the “Facebook alternative”. Its “pod” model let users self-host their social graph, promising privacy and autonomy. For the first time, mainstream media covered decentralized social networks seriously.
+
+Diaspora never reached critical mass. The learning curve was steep, its features lagged Facebook, and tragedy struck when one of its founders died by suicide in 2011. Yet Diaspora introduced concepts like user-owned servers and portable identity, which directly influenced the later Fediverse.
+
+
+===Friendica, GNU Social, and OStatus (2010s)===
+
+Projects like Friendica and GNU Social (2010–2012) kept the federation dream alive, building on OStatus, a protocol that combined feeds (Atom), pub-sub, and updates. These platforms formed a loose network, sustaining the “open social web” idea through the early 2010s.
+
+These efforts were more proof-of-concept than mainstream adoption. Still, by the mid-2010s, the technical groundwork was set for something larger.
+
+
+==The Fediverse & ActivityPub Era (2016–2019)==
+
+===Mastodon (2016)===
+
+The breakthrough came with Mastodon, launched by German developer Eugen Rochko in 2016. Mastodon offered a Twitter-like interface, polished UX, and native support for ActivityPub - a federated protocol later standardized by the W3C in 2018. Each Mastodon server (“instance”) could set its own rules, but all could interoperate.
+
+Mastodon became the anchor of what came to be known as the Fediverse: a constellation of interoperable apps (Pixelfed for Instagram-style sharing, PeerTube for YouTube-style video, WriteFreely for blogging). This applied the email model (Gmail ↔ Outlook interoperability) to social feeds.
+
+Mastodon remained niche until 2022. Then, Elon Musk bought Twitter.
+
+
+===The Twitter Exodus (2022)===
+
+Musk’s chaotic ownership of Twitter (rebranded as X in 2023) triggered an exodus. Mastodon’s user base surged by 700,000 in two weeks after the acquisition. By early 2023, it counted over 10 million registered accounts. Even with relatively low activity, the migration proved federation was viable.
+
+Meanwhile, Meta’s Threads, launched in July 2023, adopted ActivityPub compatibility. It gained 100 million signups in five days, the fastest consumer app launch in history at that point in time. However, the surge was short-lived, as it then lost ~80% of active users within months. Even Big Tech struggled with retention.
+
+
+===Governance and Moderation (2023)===
+
+The Fediverse also exposed the moderation dilemma. Instances could “defederate” (block other servers), leading to fragmentation. In 2023, many Mastodon admins pledged to block Meta’s Threads via the so-called “Fedipact,” fearing corporate co-option. This revealed the core tension: federation empowers communities, but consensus between federated servers was bifurcated.
+
+
+==The Blockchain Social Era (2016–2021)==
+
+
+===Steemit and Hive (2016–2020)===
+
+While Mastodon leaned on federation, blockchain experiments sought economic incentives. Steemit, launched in 2016, rewarded posts and curation with STEEM tokens. It attracted over one million users, popularizing “earn by posting”.
+But governance proved fragile. In 2020, a hostile takeover from Justin Sun led to a fork: Hive. This episode highlighted the risks of token-based governance. Whales would have outsized power and dominating influence, leading communities to revolt. It was a lesson in the limits of “decentralization” when token distribution is uneven, but also highlights the power of decentralized network coordination, in the face of a perceived threat actor.
+
+
+===Minds, Scuttlebutt, and Peepeth (2015-2018)===
+
+Other experiments tested edges:
+
+Minds (2015–2017) combined free speech branding with crypto rewards.
+
+Scuttlebutt and its mobile client Manyverse (2016–2019) offered an offline-first, peer-to-peer model.
+
+Peepeth (2018) built a minimalist microblog on Ethereum as an early proof of concept for blockchain social feeds.
+
+These remained subcultures, proving concepts without mass scale.
+
+
+===Mirror (2020) & Paragraph (2021)===
+
+Mirror first launched in 2020 as a web3 publishing platform for writers. It introduced crowdfunded essays, tokenized blogs, and decentralized storage. Paragraph launched a year later as a web3 newsletter + subscription tool. It extended Mirror’s ideas into ongoing publishing/subscription economies. Paragraph later acquired Mirror in 2024.
+
+While blogs wouldn’t traditionally qualify as social media platforms, X now allows for long-form posts and articles, and sites like Substack have incorporated Twitter-like social feeds baked into its blogging platform. The blogging era has largely merged with social media, so these platforms can’t be ignored as strong web3 alternatives that allow for publishing and supporting writers, on-chain.
+
+
+===BitClout/DeSo (2021)===
+
+The speculative peak came with BitClout, later rebranded as DeSo (Decentralized Social). Launched in 2021, it tied tradable tokens to user identities - essentially a market for clout. Critics slammed it as exploitative. Its notoriety, however, signaled the appetite for experimental models linking social and finance.
+
+The key identifier for DeSo is that they have their own blockchain and tokenomics, with promising high-throughput, fully on-chain social media. While this means DeSo is not as interoperable as Farcaster, it has the advantage of running on a unified blockchain layer in a tight ecosystem that is still permissionless, uncensored, and allows for unique funding and token-gated social models.
+
+
+===Republike (2022)===
+
+Republike began circulating its vision in 2022, outlined in a white paper that sketched a “beta republic” for digital citizens. But in 2025 the project starting to become more publicly accessible.
+
+Unlike BitClout/DeSo, which financialized social clout into tradable tokens, Republike framed itself as a governance-first experiment. Users joined not as mere posters but as “citizens,” subscribing with AUREUS tokens, participating in a DAO-style structure, and voting on rules, content, and community values. The idea was to replace attention-driven feeds with a constitutional, civic model of online life.
+
+Though still modest in scale, Republike’s significance lies in shifting decentralized social media from speculation toward governance. It anticipated the network-state discourse by weaving citizenship, sovereignty, and civic participation into the fabric of a social graph. In hindsight, Republike reads less like a DeSo clone and more like an early attempt to fuse social networking with political architecture - a reminder that decentralized social has always been about more than feeds and likes.
+
+
+==Protocol & Composability Era (2022–2025)==
+
+By the early 2020s, the conversation shifted from “platforms” to “protocols.” Instead of building a full competitor to Twitter or Facebook, projects focused on open layers that apps could plug into.
+
+
+===Lens Protocol (2022)===
+
+Launched on Polygon in 2022, Lens allowed users to mint their social graph as NFTs - portable, user-owned assets. Developers could build apps on top: Orb (Instagram-like), Lenster (now called Hey, a Twitter-like), and more. Lens reframed social identity as composable property. Below is a list of apps compatible with the Lens profile.
+
+
+===Farcaster (2022)===
+
+Farcaster, designed in 2020 and gaining momentum by 2022, became a hub for Web3 communities. Its client emphasized portable identity (via Ethereum keys) and composability. In 2024, Farcaster introduced Frames, which are interactive posts with in-feed transactions. This introduction caused daily active users to spike from ~5,000 to ~25,000 in a week. By 2025, Farcaster gained further exposure with The Base App acting as an interoperable UX layer for everything built to the Base Layer 2, which itself is built on Ethereum.
+
+
+===CyberConnect (2021)===
+
+Farcaster and Lens also compete with CyberConnect (2021), a social graph protocol popular in Asia. CyberConnect is influential regionally, even if less present in Western narratives. CyberConnect is building the social layer of Web3: a protocol that lets people own their digital identity, social graph, and content across apps and chains. Through its CyberProfile passport and CyberGraph contracts, users can carry their connections and reputation wherever they go, while developers plug into a ready-made network effect instead of starting from scratch. With their social identity aggregator, Link3, proving adoption at scale and smoothing away Web3 friction. CyberConnect positions itself as both infrastructure and ecosystem, bridging the usability of Web2 with the sovereignty of decentralized social.
+
+
+===Nostr (2021)===
+
+Nostr (“Notes and Other Stuff Transmitted by Relays”) took a minimalist path. Backed early by Jack Dorsey, it used public-private key pairs and simple relays. Its openness led to spam problems, but also made it resilient to censorship. By 2023, it had become a favored tool among Bitcoin communities and has a small but committed group of active users.
+
+
+===Bluesky and the AT Protocol (2023)===
+
+Spun out of Twitter by Jack Dorsey, Bluesky launched in 2023 on the AT Protocol. It separated data (personal data servers), indexing (relays), and presentation (app views). By mid-2025, Bluesky had over 38 million users and 4.1 million daily actives. Its growth rivaled Mastodon, though debates about moderation persist.
+
+
+===Base and the “Everything App” (2023–2025)===
+
+Coinbase launched Base, an Ethereum Layer-2, in 2023. By 2025, it positioned itself as an “everything app” (The Base App): hosting Farcaster, Zora (for creator coins), and a booming market of tokenized content. Daily token launches on Zora jumped from 6,600 to over 50,000 in July 2024. At the time of writing, The Base App actually replaces the original Coinbase app on smartphones (though its full fledged “everything app” version is largely still in closed beta). This marked a shift: decentralized, interoperable content itself is becoming available on user apps that aim to do it all.
+
+
+===Zora (2020–2025)===
+
+Zora began as an NFT marketplace protocol but quickly evolved into one of the most important cultural layers of Web3. By 2023 it positioned itself as the home for “media as an asset”, not just buying and selling digital art, but minting any form of content directly onto a blockchain. Writers, musicians, meme-makers, and communities could all issue tokens tied to their work, with royalties and provenance enforced at the protocol level.
+
+Its integration with Base in April 2025 accelerated adoption. Zora blurred the line between social and financial networks: a Farcaster post could double as a mintable collectible; a community could crowdfund through tokenized memes; a newsletter could embed monetization primitives by default. Zora’s significance lies in turning content itself into programmable infrastructure, positioning itself as a rival cultural layer to Instagram’s user experience."
+
+(https://x.com/AnalogueUSB/status/1965839088289992777)
+
+=Examples=
+
+* see [[Vole]].cc is a decentralized social media system in development based on bittorrent and Ember.js which completely cuts the server out of the equation
+
+
+=More Information=
+
+'''* Article: Decentralized Social Media: 15 Years in the Making. Parallel Citizen.'''
+
+URL = https://x.com/AnalogueUSB/status/1965839088289992777
+
+"This essay traces the 15-year arc of decentralized social media: its failed experiments, quiet successes, and the unresolved dilemmas still haunting the vision. The goal is not to predict a single “Facebook killer,” but to map how protocols, incentives, and culture have evolved - and what that means for builders, investors, and communities exploring new digital sovereignties."
+
+
+
+[[Category:Media]]
+
+[[Category:Crypto Technology]]
+
+[[Category:P2P_Infrastructure]]

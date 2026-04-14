@@ -1,0 +1,54 @@
+==What's a P2P Wiki== 
+
+A peer-to-peer wiki is a serverless decentralized wiki, hosted, edited, administrated and operated on its users' computers on the [[Peer Net]]. Imagine git (or another DCVS [https://en.wikipedia.org/wiki/Distributed_revision_control]) but with asynchronous and ''real-time'' text editing, a p2p conflict management system, and a user-friendly interface. P2P Wikis redefine how we publish, edit, host and administrate text document type pages (among other things). There's a long history of proposals for this type of technology. [https://en.wikipedia.org/wiki/User:HaeB/Timeline_of_distributed_Wikipedia_proposals]
+
+==Differences to existing text collaboration systems==
+* Real-time or asynchronous (Online and offline editing).
+* Granular revision history with playback.
+* Merging, forking, branching of text/documents; allows a panarchical political meta-structure, like in the (FLOSS) software world.
+* P2P conflict management.
+* True P2P Architecture
+* Hosting, administration, funding, computing power, and content created by and for user. 
+
+====The Blogosphere and Political Economy====
+Blogs (and personal websites) generally administer, edited and publish content autocratically--a blogger often controls the servers too. While bloggers do add p2p or quasi-democratic elements to a blog, like p2p comment administering, they largely don't adopt an overall cooperative-type political structure. 
+
+Wikis are generally administered more democratically. And (large ones) are funded and operated by quasi-democratic non-profit charity foundations. Despite this, because of the centralized nature of current wiki technologies, large Wikis in particular, have somewhat autocratic political structure. [http://ascii.textfiles.com/archives/2646] This is a consequence of the structure of the web and internet, other things, as it stands today. P2P Wikis change that. It's political meta-structure is analogous to a [[Panarchy]].
+
+==Why P2P Wikis?==
+[[P2P Wiki]]s, [[Federated Wiki]]s and [[Federated Blog]]s, conceptualize text documents (and data) differently than current software. Today we mentally separate instant messages, IRC, Chat, Blog posts, Comments and Wiki articles as different types of text "documents"--we have separate programs for each. In reality they're all just forms of text data. And whether real-time or asynchronously shared, they can be thought of as a part of a big discussion, happening everywhere. Various protocols and standards can integrate that cross-platform.
+
+You can have a private page on say "Abraham Lincoln" solely expressing your viewpoint; analogous to a hermetic autocracy. You can publicly share the page and only give write access to a small group of known like-minded peers; that's like tribal band-sized anarchy. Branching, merging, or forking of content allows many types of social organizations to form around that content.
+
+====Blogosphere Silos: Knowledge Commons Enclosure==== 
+The conceptualization and crediting ideas and insights to one's name, accrues status, social recognition/reputational benefits to oneself. As this process accumulates, one is eventually regarded as an expert, guru or authority. A mass following or personality cult can develop around the individual. Further more, sole bloggers often own the site's entire content, comments, posts, community groups and discussion. This helps enclose the knowledge commons at the physical level. And it rearranges political, economic and cultural organization for the interests of individuals, who often copyright the work. This is a process that largely goes unnoticed.
+
+Wiki's see knowledge differently. While a single individual can make large and unequal contributions relative to others, the work is ultimately credited and possessed (owned) by all--copylefted and collectively possessed.
+
+Decentralized revision controlled systems like the git have a deeper revision granularity than centralized systems. It stores the [https://en.wikipedia.org/wiki/Delta_encoding delta] or diff and can be conceptualized as a filesystem in a sense.  [https://en.wikipedia.org/wiki/Git_%28software%29#Characteristics] [http://kerneltrap.org/mailarchive/git/2007/9/21/270496/thread] This opens up a potential for micro-ownership of the Wiki content, eventually down to a single text character. Imagine being able to track the development of scientific discoveries via revision history of conversations had on a wiki.
+
+====Blogging and Self-Help: A Political Enclosure Nexus====
+The personal development, self-help, new age and lifestyle design fielda are broadly organized around individuals' books and websites/blogs. The content, ideas, information, insights, community discussions are siloed onto a website owned by one person. That situation is the grounds for competing autocracies in that world. It commonly revolves around popular figures with mass following of highly emulative and adulative followers. Popular figures derive power primarily from perceived expertise and knowledge. But both followers and the leader can't see the socio-political-cultural implications of the subtle personality cult type structure. In fact, they believe their social relations are completely democratic. In reality they are subtly authoritarian. [http://p2pfoundation.net/Spiritual_Projection_and_Authority] [http://p2pfoundation.net/Authoritarian_Blight_in_Spirituality] [http://p2pfoundation.net/Relational_Spirituality_and_other_Heresies_in_New_Age_Transpersonalism#New_Age_Narcissism]
+
+==Approaches to creating a P2P Wiki==
+One approach to doing this is using a [https://en.wikipedia.org/wiki/Distributed_revision_control distributed revision control system] as a backend of the wiki. [http://www.oddwiki.org/odd/SoftwareBazaar/distributed_wiki] [http://en.m.wikipedia.org/wiki/Fossil_(software)] [https://code.google.com/p/hgwiki/] With this approach, there is no central store of the wiki's content; instead, every user can keep a complete copy (highly compressed) of the wiki locally, and the software handles merging and propagating of changes when they are made. [http://meatballwiki.org/wiki/PeerToPeerWiki] [http://c2.com/cgi/wiki?DistributedWiki] This is the approach by [https://en.wikipedia.org/wiki/Ikiwiki ikiwiki]. It uses distributed revision control system [https://en.wikipedia.org/wiki/Git_%28software%29Git], and [https://en.wikipedia.org/wiki/Code_Co-op Code Co-op] (a distributed revision control system with a wiki feature).
+
+There is research on decentralized hosting of Wikipedia. [http://www.globule.org/publi/DWECWH_webist2007.html] [http://www.globule.org/?page_id=72] [https://strategy.wikimedia.org/wiki/Proposal:Distributed_Wikipedia] And there are other angles to attack the problem: modifying Apache (formerly Google Wave) [https://defectivecompass.wordpress.com/2009/08/04/peer-to-peer-google-wave-cloudless-style/], through serverless [http://p2pfoundation.net/Extensible_Messaging_and_Presence_Protocol XMPP], or web apps like [https://en.wikipedia.org/wiki/EtherPad EtherPad] [http://stickwiki.sourceforge.net/] [http://www.tiddlywiki.com/], and desktop text editing software like [https://en.wikipedia.org/wiki/SubEthaEdit SubEthaEdit]. None of these technologies integrate all the features of a p2p wiki as of yet. 
+
+===Related Projects/Software===
+*[https://en.wikipedia.org/wiki/Ikiwiki ikiwiki, a serverless wiki]
+*[http://fed.wiki.org/ Federated Wiki (Ward Cunningham)]
+*[https://github.com/github/gollum Gollum, a git wiki]
+*[https://github.com/sr/git-wiki Git-Wiki]
+*[http://bouillon.math.usu.ru/index.html%3Fp=128.html Project Bouillon, an Apache Wave like project]
+*[https://github.com/ZeroNetLabs/ZeroWiki ZeroWiki]
+*[https://www.beakerbrowser.com Beaker Browser]
+*[[Peer Net]]
+*[[Federated Wiki]]
+*[[Federated Blog]]
+*[[Federated Social Web]]
+
+[[Category:P2P Infrastructure]]
+[[Category:NextNet]]
+[[Category:Application Layer]]
+[[Category:Autonomous_Internet]]

@@ -1,0 +1,71 @@
+'''= Namecoin is Bitcoin’s little brother. It’s a decentralized peer to peer currency and name database system. It basically allows you to register .bit domain names''' [http://coinabul.tumblr.com/post/25890690158/khalahan-and-namecoin-interview]
+
+URL = https://namecoin.org/
+
+=Description=
+
+"Namecoin gets its name from its parent project, BitCoin. In fact, much of the code that is used within the Namecoin project is taken from the original BitCoin source and hacked to achieve the ends that its originators are trying to reach. That’s because ultimately Namecoin works as a currency, that just happens to have its own P2P DNS system built into it.
+
+In fact, purchasing a .bit domain is actually a namecoin transaction. The difference between this and traditional DNS is that once you own your domain, it can’t be taken away from you, because this would require that the entire P2P platform is compromised. That said, domains still expire as normal, and you will still need to renew ownership every year."
+(http://memeburn.com/2011/10/p2p-dns-taking-ownership-of-the-internet/)
+
+
+=Interview=
+
+Interview of Khalahan Henkh, the Lead Developer of the Namecoin project, by 'Jon' of the Coinabul blog:
+
+"Jon: '''What led you to Namecoin?'''
+
+Khalahan: I first discovered Bitcoin and immediately liked the project: a digital currency without central control and thought “wow, really impressive”. I read a lot about how it works to be sure it was a serious project and then I involved myself a bit in development. I like decentralized/p2p technologies and all that permits a community participation. This is the future of internet, and our governments will surely be shaken by that.
+
+Then, Vinced launched Namecoin, and I followed him, because DNS is still something where you don’t have a full control. And we can see today, more and more domains are seized… and things are getting worse day by day. Plus, Namecoin is more than a safe DNS system, it also allows any type of data to be stored in the blockchain. It can be used to build all sort of trusted things on it, like an alias system for Bitcoin, Namecoin, Anycoin or a more global identity storage, a messenging system, a encrypted system to exchange data between addresses, etc. There is no limit.
+
+
+'''Jon: What’s the current status of the Namecoin project?'''
+
+Khalahan: The software is usable to store any type of data. The DNS system is already usable and used. Server admins can build their own DNS or proxy and share it with other people. The alias system has been implemented in Namecoin as a proof of work and can be implemented by others. You can now send money to an alias instead of an address. It still needs some documentation to explain how it works and how to add it in other softwares. There is still a lot to do and any help is appreciated (C++, python, documentation, translation, donations, anything!)
+
+
+'''Jon: Do you think Namecoin will ever gain the amount of users Bitcoin has?'''
+
+Khalahan: Namecoin has some technological barriers that Bitcoin does not have (it needs some modifications on computers configuration), but, once this is automatic, the barriers will disappear. I guess a DNS system will not interest as much people as a currency, but an alias system can be widely used and who know which other usages will be added. So, reaching current Bitcoin popularity seems feasible."
+(http://coinabul.tumblr.com/post/25890690158/khalahan-and-namecoin-interview)
+
+
+=Discussion=
+
+Eli Dourado:
+
+" On Saturday, I registered elidourado.bit using Namecoin and pointed it to the IP address of the webserver that hosts my website. If you have access to a suitably-configured DNS server (or know how to use a Namecoin proxy), when you browse to http://elidourado.bit, it will redirect you to elidourado.com, the canonical name of the site. It would be trivial to configure the server to do things the other way, to make .bit canonical and redirect .com to .bit.
+
+For an Internet governance nerd like me, this is exciting. Many of the political battles over Internet governance have really been about the Internet Assigned Numbers Authority, which is the function of ICANN that is nominally overseen by the US Department of Commerce. Although much of the architecture of the Internet is decentralized, the domain name system isn’t, and at the top of the hierarchy sit ICANN, IANA, and the US government.
+
+Actual US oversight of IANA is mostly theoretical—the US didn’t interfere technically, for instance, when ICANN added .xxx to the list of top-level domains even though the US opposed the move—but it has nevertheless become a powerful symbol for other governments, all of whom have come to rely on a resource that is theoretically under the control of the US. Many governments are loudly insisting that the US devolve its power to the UN or another suitable intergovernmental body, while ICANN and some of its supporters appear to want complete independence. Meanwhile, much of the government interference through the ICANN’s Governmental Advisory Committee (yes, it’s pronounced gack) is idiotic. For instance, the French government currently objects to the proposed .vin (wine) top-level domain on the grounds that vin is a term that is regulated under French law. ICANN has also adopted corporatist rules for domain names, such as the Trademark +50 rule that allows trademark holders to reserve not only their trademark in every new top-level domain, but 50 variants and misspellings of their choice.
+
+Namecoin is a fascinating substitute for the domain name system because, like Bitcoin, it is completely decentralized and censorship-resistant. Proposed censorship measures like SOPA and PIPA simply could not apply to Namecoin because it is virtually impossible to reverse or interfere with name registrations, which are enforced with strong cryptography. New top-level-domains are added by the consensus of the miners, just as Bitcoin miners must agree on the rate of growth of Bitcoin’s money supply.
+
+Speaking of new top-level domains, the Namecoin community, such as it is, appears to be considering expanding beyond .bit to .tor. These latter domain names could be used for sites run as Tor hidden services, such as Silk Road 2.0. Instead of having to remember a URL like silkroad6ownowfk.onion (Silk Road 2.0′s current URL), the proprietors of the site could simply register silkroad.tor and point it at the onion URL. Creating memorable Tor service addresses would remove one of the main stumbling blocks to use of the censorship-resistant network. This would in turn strengthen the hand of political dissidents (not just black marketeers) all over the world.
+
+Just as Bitcoin has uses beyond currency, Namecoin has uses beyond DNS. Namecoin is at base a decentralized key-value store. We can use it to store information about ourselves in an easily accessible form. Using the non-domain namespaces of Namecoin, we could store information that it would otherwise be hard to securely or conveniently exchange. For example, public key encryption relies on one being able to verify that one’s correspondent’s public key is actually theirs. If we’ve never communicated before, signing something with my private key only proves that I’m me if you have some good reason to believe that the corresponding public key is mine.
+
+Under one vision of how Namecoin could be used, you could simply look up id/elidourado in the Namecoin database, and my public key would be listed. I could prominently display all over the web that my public key is accessible at id/elidourado. This would solve the problem of public key distribution.
+
+It would also enable the distribution of other cryptographic information. For example, Bitmessage is a decentralized, encrypted messaging system that, unlike encrypted email, hides even metadata from the NSA and others. One downside is that Bitmessage addresses are about as memorable as Bitcoin addresses. But by listing our Bitmessage addresses in our id records in Namecoin, we could get seamlessly solve the problem of Bitmessage address exchange. Instead of addressing a bitmessage to BM-orkCbppXWSqPpAxnz6jnfTZ2djb5pJKDb (a public echo server), you could simply address it to id/echo. Your Bitmessage client would perform a look-up using Namecoin and send the message to the appropriate address.
+
+Namecoin suffers from some problems. For one, it is sparsely used—its market capitalization of $42 million places it below “joke currency” Dogecoin. In addition, even if Namecoin starts to take off, domain names are inflexibly priced at 0.01 NMC, or around $0.05 at current exchange rates, a price so low that it encourages domain name squatting. If Namecoin appreciates in value by a factor of 100 or more, there is still no guarantee that the eventual price will be optimal in any sense. One advantage of ICANN’s new TLD program is that it will allow for better price discovery for domain names.
+
+Still, Namecoin is an impressive achievement. Zooko Wilcox-O’Hearn posited in 2001 that identifiers could not be simultaneously secure, decentralized, and human-meaningful, an idea that came to be represented in Zooko’s Triangle. With the advent of Namecoin, Zooko’s Triangle has been broken. It is the first system in history that achieves all three desirable properties of identifiers. Whether Namecoin or some successor system ultimately succeeds, the cryptographic-decentralization Zeitgeist makes it an exciting time to have and use names."
+(http://theumlaut.com/2014/02/05/namecoin-icann/)
+
+
+=More Information=
+
+* [[Dot-Bit Domains]]
+
+* [[FreeSpeechMe]]
+
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Money]]

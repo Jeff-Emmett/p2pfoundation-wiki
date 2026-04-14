@@ -1,0 +1,51 @@
+
+
+URL = http://en.wikipedia.org/wiki/PageRank
+
+=Definition=
+
+"What is PageRank?
+
+PageRank is a numeric value that represents how important a page is on the web. Google figures that when one page links to another page, it is effectively casting a vote for the other page. The more votes that are cast for a page, the more important the page must be. Also, the importance of the page that is casting the vote determines how important the vote itself is. Google calculates a page's importance from the votes cast for it. How important each vote is is taken into account when a page's PageRank is calculated.
+PageRank is Google's way of deciding a page's importance. It matters because it is one of the factors that determines a page's ranking in the search results. It isn't the only factor that Google uses to rank pages, but it is an important one."
+(http://www.webworkshop.net/pagerank.html)
+
+
+=Description=
+
+Detailed explanation of the algorythms can now be found here at the Wikipedia article, section 3: http://en.wikipedia.org/wiki/PageRank#Algorithm
+
+
+"After thinking about this a lot I have reached the conclusion that Google Page Rank is the ultimate way to measure online influence. It's far from perfect. However, several other metric candidates I addressed in February 2007 haven't panned out. There are three reasons why Google Page Rank rules.
+
+1) Page Rank is something you earn by producing high quality content that people link to - or what John Bell describes as socially connected
+
+2) It enables you to influence people on the Internet's biggest stage - Google - and just as people are searching for the topics you are knowledgeable about. This means it amplifies your influence because the press start at search engines when researching stories
+
+3) Finally, Page Rank is channel agnostic and takes the entire online ecosystem into account. It judges you based on links from all kinds of sources, not just people who live in the same fish tank. In other words, it goes beyond people who hang out on Twitter who love people who Tweet or bloggers who link to other bloggers, etc. It eschews the echo chamber
+
+PageRank takes time to earn. There are no shortcuts. Google is democratic and rewards professionals and amateurs equally if they do their job well. Create high quality content that earns links from other quality sources and, over time, your Google Page Rank grows as does your influence and responsibility."
+(http://www.micropersuasion.com/2008/10/page-rank-is-th.html)
+
+
+
+=Discussion=
+
+
+Only a French-language explanation so far:
+
+
+" Quand les deux fondateurs de Google, - Larry Page et Serguei Brin - se sont attaqués au problème de ranger les sites selon leur influence(3), ils n'ont pas considéré le "in-degree" comme pertinent : il est en effet facile de gonfler artificiellement l'importance d'un site, ne serait-ce qu'en créant massivement des échanges de liens(4). Ils ont alors conçu l'algorithme PageRank (rang de page) dans lequel chaque lien d'une page à une autre est compté comme un vote pour la page de destination et le score de chaque page dépend des scores des pages qui lient vers elle, et ainsi de suite. Au départ chaque page a un score de 100. Le score de chaque page est ensuite recalculé en y ajoutant celui de chaque page liant vers elle et en divisant par le nombre de liens sortants. Quand tous les scores ont été recalculés, l'algorithme recommence jusqu'à ce que les scores cessent d'évoluer (il s'agit d'un algorithme convergent). En d'autres termes, chaque site dans le réseau peut être vu comme une distribution de son influence sur tout les sites auxquels il renvoit. Une page gagne ainsi de l'influence en étant citée par d'autres pages considérées comme influentes (l'algorithme actuel, gardé aujourd'hui secret, est en fait un peu plus compliqué et contient notamment un système de pénalité à l'encontre des webmasters tentant de contourner l'algorithme, mais en gros voici l'idée)."
+(Automates Intelligents, No. 67)
+
+
+=More Information=
+
+#[[P2P Metrics]]
+#http://en.wikipedia.org/wiki/PageRank#Algorithm
+#Franceschet, M. (2010) ‘PageRank: Standing on the Shoulders of Giants’, Cornell University Library, February 15: http://arxiv.org/abs/1002.2858
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Governance]]

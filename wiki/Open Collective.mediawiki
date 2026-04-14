@@ -1,0 +1,100 @@
+'''= "a lightweight association that can collect and disperse money transparently without creating a legal entity".'''
+
+URL = https://opencollective.com/
+
+==Context Quotation==
+ 
+"Creating an association should be as easy as creating a Facebook Group. For most cases, we shouldn’t have to worry about creating and maintaining a legal entity. Yet those associations should be able to collect money and disperse it for their activities.
+Instead of creating these associations using a 20th century framework* that assumes that the money collected goes into a blackbox and therefore requires reporting to avoid abuse, what if we could create new associations on a more open and transparent model, where the collected money wouldn’t go into a blackbox, where we wouldn’t need to file annual reports with consolidated numbers, and where corruption would be impossible by design?"
+
+- Xavier Damman [https://l.facebook.com/l.php?u=https%3A%2F%2Fmedium.com%2F%40xdamman%2Fa-new-form-of-association-for-the-internet-generation-part-1-6d6c4f5dd27f%23.gbsw7t1sl&h=vAQEOjpBc]
+
+==Definition==
+
+Xavier Damman:
+
+"I define an Open Collective as a lightweight association that can collect and disperse money transparently without creating a legal entity. Because it operates in full transparency, it can safely be hosted by an existing legal entity (an organization or an individual) that will in practice collect the money on behalf of the collective and report its activities in accordance to local legislations."<br />
+(https://medium.com/@xdamman/a-new-form-of-association-for-the-internet-generation-part-2-fe6d8415f444#.4f8ybphze)
+
+==Description==
+
+'''1.'''
+
+"While the Internet has been very good so far at helping people do things together, it is still very difficult for groups to collect money and use it transparently. As a result, we see initiatives, projects, movements popping up here and there that disappear quickly from lack of funding. Imagine how many wonderful things don’t happen in the world because funding - which is oxygen for most organizations - is difficult to sustain. Without an easy way to raise and spend money, it’s hard to manage and grow many of these seeds of an idea that could change the world.
+
+Meetups, open source projects, parent associations, neighborhood associations, pet projects, clubs, unions, movements, non-profits, business incubators - in order to operate, all of them are forced to use a physical glass jar, ask a sponsor to directly pay their expenses or front the huge overhead of setting up and managing a corporation or a non-profit. It’s either inefficient and opaque or it’s overkill.
+
+OpenCollective enables groups to quickly set up a collective, raise funds and manage them transparently.
+
+We want all those seeds to have a chance to grow, to bring their ideas to life. We believe everyone should have the tools to create the organizations of tomorrow. And we are dedicating ourselves to making that happen!"
+(https://opencollective.com/about)
+
+
+2. Danny Crichton:
+
+" Open Collective wants to open source the monetization of open source itself.
+
+Open Collective is a platform that provides tools to “collectives” to receive money while also offering mechanisms to allow the members of those collectives to spend their money in a democratic and transparent way.
+
+Take, for instance, the open collective sponsoring Babel. Babel today receives an annual budget of $113,061 from contributors. Even more interesting though is that anyone can view how the collective spends its money. Babel currently has $28,976.82 in its account, and every expense is listed. For instance, core maintainer Henry Zhu, who we met earlier in this essay, expensed $427.18 on June 2nd for two weeks worth of Lyft rides in SF and Seattle.
+
+Xavier Damman, founder president of Open Collective, believes that this radical transparency could reshape how the economics of open source are considered by its participants. Damman likens Open Collective to the “View Source” feature of a web browser that allows users to read a website’s code. “Our goal as a platform is to be as transparent as possible,” he said.
+
+Damman was formerly the founder of Storify. Back then, he built an open source project designed to help journalists accept anonymous tips, which received a grant. The problem was that “I got a grant, and I didn’t know what to do with the money.” He thought of giving it to some other open source projects, but “technically, it was just impossible.” Without legal entities or paperwork, the money just wasn’t fungible.
+
+Open Collective is designed to solve those problems. Open Collective itself is both a Delaware C-corp and a 501(c)6 non-profit, and it technically receives all money destined for any of the collectives hosted on its platform as their fiscal sponsor. That allows the organization to send out invoices to companies, providing them with the documentation they need in order to write a check. “As long as they have an invoice, they are covered,” Damman explained.
+
+Once a project has money, it is up to the maintainers of that community to decide how to spend it. “It is up to each community to define their own rules,” Damman said. He notes that open source contributors can often spend the money on the kind of uninteresting work that doesn’t normally get done, which Damman analogized as “pay people to keep the place clean.” No one wants to clean a public park, but if no one does it, then no one will ever use the park. He also noted that in-person meetings are a popular usage of revenues.
+
+Open Collective was launched in late 2015, and since then has become home to 647 open source projects. So far, Webpack, the popular JavaScript build tool, has generated the most revenue, currently sitting at $317,188 a year. One major objective of the organization is to encourage more for-profit companies to commit dollars to open source. Open Collective places the logos of major donors on each collective page, giving them visible credit for their commitment to open source.
+
+Damman’s ultimate dream is to change the notion of ownership itself. We can move from “Competition to collaboration, but also ownership to commons,” he envisioned."
+(https://techcrunch.com/2018/06/23/open-source-sustainability/?)
+
+==Status==
+
+Xavier Damman:
+
+"We already built a first prototype of that software. It basically allows an organization (or an individual) to create virtual collectives, each with their own budget, their own interface to submit expenses and their own public page to collect money. Right now, it only works on top of PayPal for reimbursements and Stripe for credit card processing. Our goal is to eventually support other means of payment, including Bitcoin.
+
+We already have a few private beta testers (including Women Who Code, see part 1, and Yeoman, a popular open source project). We already have some Angel Investors (including Dries Buytaert, founder of Drupal, see part 1). But this is still very early days.
+
+We need more groups to join our private beta. We also need more organizations to host open collectives in their country and/or communities."
+(https://medium.com/@xdamman/a-new-form-of-association-for-the-internet-generation-part-2-fe6d8415f444#.4f8ybphze)
+
+==Discussion==
+
+Xavier Damman:
+
+"We could piggy back on existing bank accounts and create a virtual layer on top of them. 
+
+When you start a new website, you should first use a [[Mutualized Server]] like Dreamhost or Heroku. That way you can get up and running in no time and move on. It’s only once you get enough traction that you should consider upgrading to a dedicated server.
+
+The same should apply to the creation of an entity for your side project or association. You should be able to rent a virtual instance of an existing entity with its bank account. It’s only once your project reaches a certain size that you should consider upgrading to your own dedicated entity with all the stability, legal protection and overhead that come with it.
+
+
+For this to work, we need a network of host organizations; legal entities that will host virtual organizations under their umbrella. They will shield end users from the complexity of creating and managing a 20th century entity. Each of those hosts will empower people in their community to create or terminate associations without friction.
+
+If we can do this, we will foster an explosion of bottom up initiatives that will not be limited to activities that don’t require money. Those initiatives will finally be able to collect money, have a budget and have a larger impact.
+How can we build such network globally?
+
+We can get inspiration from the way we built data centers around the world to power what we refer to today as “the cloud”.
+
+We basically created software that anyone could deploy in their own country to create and manage local data centers. It didn’t matter that the local regulations in Belgium or the United States were different. That complexity was dealt with locally by each data center. What mattered was that once set up, all those servers could speak the same language and offer a unified interface to all, globally.
+
+That’s what we need to do. We need to build software to enable any organization to easily host a new ligthweight form of association for the Internet generation: open collectives."
+(https://medium.com/@xdamman/a-new-form-of-association-for-the-internet-generation-part-2-fe6d8415f444#.4f8ybphze)
+
+==More Information==
+
+* If this resonates with you please get in touch (xdamman@opencollective.com). Feel also free to share publicly your own personal stories or feedback with the #OpenCollective hashtag. 
+
+* Visit our website, follow us on Twitter @OpenCollect or join our Slack https://slack.opencollective.com
+
+* Contact us: info@opencollective.com
+
+[[Category:Open Company Formats]]
+[[Category:Post-Corporate]]
+[[Category:P2P Infrastructure]]
+[[Category:P2P Accounting]]
+[[Category:Peerfunding]]

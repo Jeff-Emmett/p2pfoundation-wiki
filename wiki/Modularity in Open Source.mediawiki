@@ -1,0 +1,501 @@
+See our general treatment on [[Modularity]] as a pre-condition for [[Peer Production]] to occur.
+
+=Source=
+
+"Article:  [[Of Hackers and Hairdressers]]:
+Modularity and the Organizational Economics
+of Open-source Collaboration. By Richard N. Langlois
+(The University of Connecticut, Richard.Langlois@UConn.edu) and Giampaolo Garzarelli (Università degli Studi di Roma, ggarzarelli@tiscali.it). Journal Industry & Innovation, Volume 15 Issue 2 2008
+
+URL = http://web.uconn.edu/ciom/Open1C.pdf (2005 draft version)
+
+I’m using the above 2005 draft version below for the excerpts.
+
+=Description=
+
+From Langlois and Garzarelli:
+
+"“The term modular system takes on many meanings in the literature; but one
+important candidate definition, which we adopt here, is that a modular system is
+a nearly [[Decomposable System]] that preserves the possibility of cooperation by
+adopting a common interface. The common interface enables, but also governs
+and disciplines, the communication among subsystems.
+
+Let us refer to a common interface as lean if it enables communication
+among the subsystems without creating a non-decomposable system,
+
+As we will see, an
+interface may become standardized; it may also be “open” as against “closed.”
+But it is the leanness of the interface, not its standardization or openness, that
+makes a system modular.
+
+Baldwin and Clark (2000) suggest thinking about
+modularity in terms of a partitioning of information into visible design rules and
+hidden design parameters. The visible design rules (or visible information) consist
+of three parts. (1) An architecture specifies what modules will be part of the
+system and what their functions will be. (2) Interfaces describe in detail how the
+modules will interact, including how they fit together and communicate. And (3)
+standards test a module’s conformity to design rules and measure the module’s
+performance relative to other modules."
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+
+West and O'Mahony:
+
+“Baldwin and Clark
+(2005) show how a modular architecture
+offering design options increases a developer’s
+incentives to join an open source community and
+remain involved. Architectures that are modular
+allow developers to focus their talents on
+specific modules without having to learn the
+whole system (Baldwin and Clark, 2005). By
+maintaining compatibility with design rules
+within modules developers can self-select the
+modules they know best, reducing participant
+learning curves and thus lowering the cost to
+participate (Baldwin and Clark, 2000).”
+(http://www.joelwest.org/Papers/WestOMahony2008-WP.pdf)
+
+==Open Source as a Modular System==
+
+All in all, then, modularity seems a powerful and elegant solution to the
+problem of coordinating the intellectual division of labor. No less a figure than
+Linus Torvalds has testified to the value of modularity in the arena of opensource
+software.
+
+“With the Linux kernel it became clear very quickly that we want to
+have a system [that] is as modular as possible. The [open-source]
+development model really requires this, because otherwise you
+can’t easily have people working in parallel. It’s too painful when
+you have people working on the same part of the kernel and they
+clash.
+Without modularity I would have to check every file that changed,
+which would be a lot, to make sure nothing was changed that
+would effect anything else. With modularity, when someone sends
+me patches to do a new filesystem and I don’t necessarily trust the
+patches per se, I can still trust the fact that if nobody’s using this
+filesystem, it’s not going to impact anything else. … The key is to
+keep people from stepping on each other’s toes. (Torvalds 1999, p.
+108.)"
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+
+===Commons-based peer production and modularity===
+
+Vasilis Kostakis and Marios Papachristou:
+
+"
+CBPP projects produce use value, i.e. an informational good (e.g. software, design, cultural content) free to use, modify and redistribute, part of the knowledge or cultural Commons. In addition, CBPP’s development processes are based on the self-selection
+of tasks by the participants, who cooperate voluntarily on an equal footing (as peers) in order to reach a common goal. It has been claimed (see only Benkler, 2006; Bauwens, 2005; Tapscott and Williams, 2006; Dafermos and Söderberg, 2009) that modularity is a key condition for CBPP to emerge: ‘Described in technical terms, modularity is a form of task
+decomposition. It is used to separate the work of different groups of developers, creating, in effect, related yet separate sub-projects’ (Dafermos and Söderberg, 2009: 61). Torvalds (1999), the instigator of the Linux project, maintains that the
+Linux kernel development model requires modularity, because in that way people can work in parallel. Empirical research (see only MacCormack et al., 2007; Dafermos, 2013) shows that modular design is characteristic not just of Linux but of the
+FOSS development model in general. ‘The Unix philosophy of providing lots of small specialized tools that can be combined in versatile ways’, Carson (2010: 208) writes, ‘is probably the oldest expression in software of this modular style’. We also
+observe the same approach in the development of one of the most prominent CBPP projects, that of the free encyclopedia Wikipedia. Articles (i.e., modules), which are consisted of sections (i.e., sub-modules), are built upon other articles and entries
+produced and, thus, can be used individually as well as in combination.
+
+Therefore, by breaking up the raw elements into smaller modules there is both an abundance of options in terms of remixing them as well as a low participation threshold, since the individuals can have access to the modules, rather than centralized forms of capital (Bauwens, 2005; Carson, 2010). So, in theory, we can assume that if physical objects could be
+designed to be modular – i.e., consisted of several interchangeable parts that could be swapped in or out without influencing the performance of the rest –, then individuals could engage in production processes of collaborative designing and manufacturing
+(Tapscott and Williams, 2006). If the interconnected personal computers are considered fundamental means of
+information production whose democratization gave rise to CBPP, then what could our expectations be if digital fabrication and desktop manufacturing technologies, such as 3D printing, follow a similar path?"
+(http://p2pfoundation.net/Case_of_a_RepRap-Based,_Lego-Built_3D_Printing-Milling_Machine)
+
+=Characteristics: Costs and Benefits=
+
+
+From Langlois and Garzarelli:
+
+==Benefits of Modularity==
+
+“Nonetheless, we argue, there can be costs to modularity as well as benefits, and
+there can be benefits to non-decomposability – or integrality, as we will call it – as
+well as costs. Indeed, the two are opposite sides of the coin. What modularity
+does well integrality does poorly, and what integrality does well modularity
+does poorly. The costs of the one are essentially the foregone benefits of the
+other.
+
+The '''first''' kind of benefit from modularity has already occupied us
+extensively: '''the ability of a modular system to obviate widespread
+communication among the modules (or their creators) and to limit unpredictable
+interactions'''. In effect, the process of modularization unburdens the system’s
+elements of the task of coordination by handing that function off to the visible
+design rules. Coordination is imbedded or institutionalized in the structure of
+the system, which means that it doesn’t have to be manufactured on the spot by
+the participants.
+
+A '''second''' source of benefits derives from what Garud and Kumaraswamy
+(1995) call '''economies of substitution'''. 
+
+'''We can think of these economies of substitution as a species of what economists call
+economies of scope. Economies of scope exist when it is cheaper to make a given product if
+you are already making similar products than if you were to start from scratch.''' This is
+possible to the extent that you can reuse existing fixed investments (including knowledge)
+
+To the extent that the interfaces governing
+the modular system are sufficiently standardized, it may be possible to upgrade
+a system by piecemeal substitution of improved modules without having to
+redesign the entire system. In large open-source software projects, for instance,
+the “approach of substituting individual components is the norm.”14 It may also
+be possible to optimize a system by choosing the best available modules or to
+customize a system to one’s tastes or needs by selecting only some modules and
+not others15 (Langlois and Robertson 1992).
+
+'''A third, and perhaps most important, benefit of modularity is that it
+militates in favor of specialization and the effective use of local knowledge.''' If we
+do not subdivide tasks, everyone must do everything, which means that
+everyone must know how to do everything. But, as Babbage understood, if we
+do subdivide tasks, we can assign workers according to comparative advantage.
+Why pay a mathematician for those parts of the work that an (unemployed)
+hairdresser could do? More significantly, however, a modular system can do
+more than use a given allocation of local knowledge effectively – it can
+potentially tap into a vast supply of local knowledge (Langlois and Robertson
+1992). This has not been lost on open-source developers, who often wax poetic
+on the ability of the open-source model to tap into a larger “collective
+intelligence.”16 Raymond (2001) even installs a version of this idea as “Linus’s
+law”: “Given enough eyeballs, all bugs are shallow.” That is to say: “Given a
+large enough beta-tester and co-developer base, almost every problem will be
+characterized quickly and the fix obvious to someone” (Raymond 2001). A
+modular system increases the potential number of collaborators; and the larger
+the number of collaborators working independently, the more the system
+benefits from rapid trial-and-error learning (Nelson and Winter 1977; Langlois
+and Robertson 1992; Baldwin and Clark 2000).
+
+'''Notice here that, unlike the first two kinds of benefits from modularity –
+institutionalized coordination and economies of substitution – the benefits of
+tapping into “collective intelligence” depend not only on the technological
+characteristics of the system itself but also on the way the intellectual division of
+labor is organized.'''
+
+For a modular system to take advantage of
+extended localized knowledge, the organization of the intellectual division of
+labor is no longer immaterial. In order to tap into “collective knowledge,” the
+system’s interface must be not only lean but also standardized and open.
+
+The economics of networks has taught us that, despite the occasional
+subtlety, standardization is the easy part. If interfaces are sufficiently lean and
+sufficiently open, there is a tendency for one of them to emerge as a dominant
+standard (Shapiro and Varian 1998).”
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+
+
+==The costs of modularity==
+
+“'''The first of these is the (fixed) cost of establishing the visible design
+rules''' (Baldwin and Clark 2000). A (nearly) decomposable system may solve
+coordination problems in an elegant way, but designing such a system may take
+a considerable amount of time and effort. 
+
+There may also be costs to
+communicating the design rules to participants and securing agreement on them.
+Another cost is that, at least in principle, it may not be possible to finetune
+a modular system as tightly as an integral one. For many kinds of software,
+this may no longer be an important issue in the face of Moore’s law. But for
+other kinds of systems, there may be important performance losses from
+building a system out of modules. Automobiles, for example, may be have an
+inherent “integrality” that prevents automakers from taking advantage of
+modularity to the same degree as, say, makers of personal computers (Helper
+and MacDuffie 2002). One can’t swap engines like one swaps hard drives, since
+a different engine can change the balance, stability, and handling of the entire
+vehicle. Clayton Christensen and his collaborators (Christensen, Verlinden, and
+Westerman 2002) have argued that integral designs, which can take advantage of
+systemic fine-tuning, have an advantage whenever users demand higher
+performance than existing technology can satisfy. As the fine-tuned system
+continues to improve in performance, however, it will eventually surpass typical
+user needs. At that point, these authors argue, production costs move to the fore,
+and the integral system (and the integrated organization that designed it) will
+give way to a network of producers taking advantage of the benefits of
+modularity discussed earlier.
+
+'''A third, closely related, cost of modularity (benefit of integrality) is the
+tendency of modular systems to become “locked in” to a particular system
+decomposition.''' At least to the extent that knowledge gained creating one
+modularization of the system cannot be reused in generating a new
+decomposition, it is a relatively costly matter to engage in systemic change of a
+modular system, since each change requires the payment anew of the fixed cost
+of setting up visible design rules. If in addition an interface has become a
+standard, the problems of lock-in are compounded in the way popularized by
+Paul David (1985), since in that case many people would have simultaneously to
+pay the fixed cost of change."
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+
+=Examples=
+
+From Michael Nielsen:
+
+"It looks to me like what’s really going on is that the open sourcers have adopted a posture of conscious modularity. They’re certainly not relying on any sort of natural modularity, but are instead working hard to achieve and preserve a modular structure. 
+
+
+Here are three striking examples:
+
+* The open source Apache webserver software was originally a fork of a public domain webserver developed by the US National Center for Supercomputing Applications (NCSA). The NCSA project was largely abandoned in 1994, and the group that became Apache took over. It quickly became apparent that the old code base was far too monolithic for a distributed effort, and the code base was completely redesigned and overhauled to make it modular.
+    
+* In September 1998 and June 2002 crises arose in Linux because of community unhappiness at the slow rate new code contributions were being accepted into the kernel. In some cases contributions from major contributors were being ignored completely. The problem in both 1998 and 2002 was that an overloaded Linus Torvalds was becoming a single point of failure. The situation was famously summed up in 1998 by Linux developer Larry McVoy, who said simply “Linus doesn’t scale”. This was a phrase repeated in a 2002 call-to-arms by Linux developer Rob Landley. The resolution in both cases was major re-organization of the project that allowed tasks formerly managed by Torvalds to be split up among the Linux community. In 2002, for instance, Linux switched to an entirely new way of managing code, using a package called BitKeeper, designed in part to make modular development easier.
+    
+* One of the Mozilla projects is an issue tracking system (bugzilla), designed to make modular development easy, and which Mozilla uses to organize development of the Firefox web browswer. Developing bugzilla is a considerable overhead for Mozilla, but it’s worth it to keep development modular."
+(http://michaelnielsen.org/blog/?p=591)
+
+
+
+=Discussion=
+
+All excerpts from (http://web.uconn.edu/ciom/Open1C.pdf)
+
+See the related discussion by Michael Nielsen on [[Modularity in Science]]
+
+
+From Langlois and Garzarelli:
+
+==Modularity and Openness==
+
+'''Modularity enables large-scale cooperation; but it requires
+agreed-upon visible design rules.'''
+
+“As the community of open-source software developers clearly understands,
+openness does not mean only unfettered access to knowledge of the visible design
+rules of the system, though that may be a necessary condition. Rather, openness
+is about the right to take advantage of those design rules. More broadly, the
+degree of openness of a modular system is bound up with the overall assignment
+of decision rights within the intellectual division of labor. This is an
+organizational issue and – what may be the same thing – a constitutional issue."
+
+==Modularity and Decision Rights==
+
+
+“The rights assignment problem
+(determining who should exercise a decision right), and the control or agency
+problem (how to ensure that self-interested decision agents exercise their rights
+in a way that contributes to the organizational objective).” All other things
+equal, efficiency demands that the appropriate knowledge find its way into the
+hands of those making decisions. There are basically two ways to ensure such a
+“collocation” of knowledge and decision-making: “One is by moving the
+knowledge to those with the decision rights; the other is by moving the decision
+rights to those with the knowledge” (Jensen and Meckling 1992, p. 253). These
+two choices – as well as possible variants and hybrids – are “constitutions” that
+set out the assignment of decision rights. Such assignments can take place within
+firms or within wider networks of independent collaborators.
+
+ 
+In what follows, we distinguish three models: corporate, hybrid, and spontaneous.
+In the case of the Prony Project, and of fordist production generally,
+decision rights remain centralized. This is because there is very little knowledge
+that needs to be transmitted; tasks have been made exceedingly simple, and the
+important knowledge – that involving design – is already at the center. The
+agency problem can be addressed either through investments in monitoring or
+by aligning incentives using a suitable piece rate. Even when the subdivided
+tasks are far more complicated – and require far more skill and creativity – it is
+still possible to organize the intellectual division of labor in more-or-less the
+same way, what we will call the corporate model. In this model, the ultimate
+decision rights remain centralized, even as many de facto decision rights are
+parceled out to employees at various levels of the hierarchy. Clearly, such an
+arrangement complicates the agency problem, since keeping everyone on the
+same page is no longer a simple matter of monitoring or incentive alignment in a
+narrow pecuniary sense.
+
+Many would argue that, even within the corporate context, effective
+management of high-human-capital projects requires recourse to more
+“participatory” or collaborative models (Minkler 1993). Does this mean that
+there is really no difference between the corporate model and the hybrid or
+voluntary ones? The answer is no, for two reasons. First, as we have seen, even
+a large organization is bounded in the capabilities on which it can draw, and this
+limitation may be important in many cases. Second, the location of the ultimate
+decision right matters. For any division of intellectual labor we choose, behavior
+and performance will be different if we assign decision rights to some central
+authority rather than to the individual collaborators.
+
+The opposite of a corporate model would a fully decentralized one in
+which the collaborators retain the ultimate decision rights. But just as the central
+holder of decision rights in a corporation must in practice cede de facto decision
+rights to others, so in a decentralized system the collaborators must give up some
+pieces of their rights in order to collaborate.”
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+More at: [[Governance Rights Typology]]
+
+==Modularity and the Economics of Organization==
+
+“More typically, one hears the following kind of story: markets are good at exchanging
+products for compensation, whereas firms are good at exchanging effort for
+compensation. The economics of organization can be understood from this
+perspective as a set of stories about why it is often costly to cooperate by trading
+products and often necessary to cooperate by trading effort.26 Ever since Coase
+(1937), it has been more-or-less taken for granted that the only way to trade effort
+is through an employment contract: I pay for your time and the right to direct
+your effort within agreed limits (Simon 1951). In other words, the only way to
+trade effort is by setting up a firm. Perhaps the most intriguing aspect of the
+open-source model is that it flies in the face of this assumption: under the right
+circumstances, it is possible to cooperate spontaneously on the effort margin, not
+just the product margin. 
+
+Rather than giving up their decision rights to others,
+open-source collaborators combine effort “voluntarily.” Voluntarily here means
+not that the collaborators do not receive pecuniary compensation (though that
+may often be true) but rather that the collaborators choose their own tasks.
+Assignment of individuals to tasks – and, to an extent we will explore, even the
+overall design of the division of labor itself – arises from these voluntary choices,
+in much the same way that assignment of sellers to products in a classic market
+arises from self-selection."
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+==Modularity and Innovation==
+
+'''Autonomous vs. systemic innovation:'''
+
+A modular system is good at modular or
+autonomous innovation, that is, innovation affecting the hidden design
+parameters of a given modularization but not affecting the visible design rules.
+But a modular system is bad at systemic innovation, that is, innovation that
+requires simultaneous change in the hidden design parameters and the visible
+design rules – simultaneous change in the parts and in the way the parts are
+hooked together.
+
+One might also add, however, that sometimes a modular system can improve in
+performance even faster than a fine-tuned system. To the extent that such a system benefits
+from “collective intelligence” and rapid-trial-and-error learning, the improvement in the
+parts can dominate any benefits from fine-tuning. Personal computers are again a case in
+point. PCs have come to outperform first mainframes, then minicomputers, then RISC
+workstations, all of which, in their day, made their money as fine-tuned non-modular
+systems (at least relative to PCs). Again, the extent to which modular innovation can
+outperform fine-tuning may depend on the degree of inherent integrality in the system.
+
+The benefits of an integral system in systemic change are related to the
+benefits of fine-tuning to which Christensen points. Fine-tuning is after all
+systemic change to improve performance. Thus integral systems may have
+advantages not only when users demand high performance in a technical sense
+but also when they need performance in the form of change and adaptability.
+This latter may also be a function of how quickly the user needs the system to
+perform; the front-end costs of a modular system may take the form of time costs
+– the output forgone while waiting for the modularization to crystallize or the
+visible design rules to get worked out. If a modularization is already in place, of
+course, the system can adapt and respond quickly by simply plugging in new
+modules to suit user needs. But if there is not yet a modularization, or if the
+user needs a level of performance greater than can be achieved even with the
+best possible assortment of available modules, then an integral system may do
+better.
+
+(The terms autonomous and systemic are from Teece (1986). There is a third possibility, what
+Henderson and Clark (1990) call architectural innovation. Here the modules remain intact,
+but innovation takes place in the way the modules are hooked together. (For a paradigmatic
+example of this kind of innovation, visit Legoland.) The possibility of architectural
+innovation underlies the benefits of economies of substitution discussed earlier.)
+
+In terms of our earlier distinction between the corporate model and the
+spontaneous or voluntary model, the need for performance and rapid
+adaptability would tend to militate in the direction of the corporate (Langlois
+1988). But this does not mean that unsatisfied needs for performance and rapid
+systemic adaptation therefore call for central planning on a Soviet scale. In
+Christiansen’s account, unmet performance needs do always call for an
+integrated corporate structure. But the network theorist Duncan Watts (2004)
+reminds us that a decentralized structure, with its ability to utilize “collective
+intelligence,” can sometimes be marshaled even in the service of an emergency
+response. His example is the way the Toyota Corporation responded in 1997
+when the sole plant supplying a crucial component burned to the ground,
+threatening to bring production of an entire model to a halt. Rather than
+attempting to create centrally a new plant to make the component, Toyota
+instead tapped the knowledge and capabilities of a large number of its divisions
+and outside supplier with the intent of generating rapid trial-and-error learning.”
+
+
+'''Choosing Hybrid Models as a Tradeoff for Innovation Benefits:'''
+
+“hybrid models are actually far more typical of opensource
+software development than are genuinely voluntary or spontaneous ones.
+Indeed, perhaps all models of open-source software development are hybrid
+models.
+
+To the extent that innovative hybrid
+arrangements are able to inject some of the benefits of central design and
+integrality into a modular structure, such innovations will tend to make modular
+arrangements more valuable and more widespread."
+(http://web.uconn.edu/ciom/Open1C.pdf)
+
+=More Information=
+
+
+==Bibliography==
+
+Books:
+
+Baldwin, Carliss Y., and Kim B. Clark 2000. Design Rules: the Power of Modularity.
+Volume I. Cambridge: MIT Press.
+
+Garud, Raghu, Arun Kumaraswamy, and Richard N. Langlois, eds. 2003.
+Managing in the Modular Age: Architectures, Networks and Organizations.
+Oxford: Blackwell Publishing.
+
+Raymond, Eric S. 2001. The Cathedral and the Bazaar. Musings on Linux and Opensource
+by an Accidental Revolutionary, revised edition. Sebastopol, CA:
+O’Reilly & Associates, Inc. Also online:
+‹http://www.catb.org/~esr/writings/cathedral-bazaar/›.
+
+Torvalds, Linus 1999. “The Linux Edge,” in DiBona, Chris, Sam Ockman, and
+Mark Stone (eds.), Open-sources: Voices from the Open-source Revolution.
+Sebastopol, CA: O’Reilly & Associates, Inc.: 101-11. Also online:
+‹http://www.oreilly.com/catalog/opensources/book/toc.html›.
+
+Essays:
+
+Benkler, Yochai 2002. “Coase’s Penguin, or, Linux and the Nature of the Firm,”
+Yale Law Journal 112(3): 369-446 (December). Available at:
+‹http://www.yale.edu/yalelj/112/BenklerWEB.pdf›.
+
+Bessen, James. 2001. “Open-source Software: Free Provision of Complex Public
+Goods.” Available at: ‹http://www.researchoninnovation.org/opensrc.pdf›.
+
+Coase, Ronald H. 1937. “The Nature of the Firm,” Economica (N.S.) 4(16): 386-405
+(November).
+
+Garzarelli, Giampaolo. 2004. “Open-source Software and the Economics of
+Organization,” in J. Birner and P. Garrouste (eds.), Markets, Information and
+Communication. London and New York: Routledge: 47-62.
+
+Kostakis, Vasilis. 2019. How to Reap the Benefits of the “Digital Revolution”? Modularity and the Commons. ''Halduskultuur: The Estonian Journal of Administrative Culture and Digital Governance'', 20 (1): 4-19. URL = http://halduskultuur.eu/journal/index.php/HKAC/article/view/228/177
+
+Kuan, Jennifer W. 2001. “Open-source Software as Consumer Integration into
+Production,” Working Paper (January). Available at:
+‹http://ssrn.com/abstract=259648›.
+
+Langlois, Richard N. 2002. “Modularity in Technology and Organization,”
+Journal of Economic Behavior and Organization 49(1): 19-37 (September).
+
+Lerner, Josh, and Jean Tirole 2002. “Some Simple Economics of Open-source,”
+Journal of Industrial Economics 50(2): 197-234 (June).
+
+Osterloh, Margit, and Rota, Sandra G. 2004. “Open-source Software
+Development - Just Another Case of Collective Invention?” Working
+Paper, University of Zurich (March). Available at:
+‹http://ssrn.com/abstract=561744›.
+
+Simon, Herbert A. 1998. “The Architecture of Complexity: Hierarchic Systems,”
+in Idem, The Sciences of the Artificial, 3rd edition, second printing.
+Cambridge, Mass.: MIT Press: 183-216. Originally published in 1962,
+Proceedings of the American Philosophical Society 106(6): 467-82 (December).
+
+Simon, Herbet A. 2002. “Near Decomposability and the Speed of Evolution,”
+Industrial and Corporate Change 11(3): 587-99 (June).
+
+von Hippel, Eric 1989. “Cooperation Between Rivals: Informal Know-how
+Trading,” in Bo Carlsson (ed.), Industrial Dynamics: Technological,
+Organizational, and Structural Changes in Industries and Firms. Dordrecht:
+Kluwer Academic Publishers: PAGES.
+
+von Hippel, Eric, and Georg von Krogh 2003. “Open-source Software and the
+‘Private-Collective’ Innovation Model: Issues for Organization Science,”
+Organization Science 14(2): 209-223 (March-April).
+
+Wheeler, David A. 2003. “Why Open-source Software/Free Software (OSS/FS)?
+Look at the Numbers!,” (September 8). Available at:
+‹http://www.dwheeler.com/oss_fs_why.html›.
+
+Wheeler, David A. n.d.1. “Open-source Software/Free Software (OSS/FS)
+References.” Available at: ‹http://www.dwheeler.com/oss_fs_refs.html›.
+
+
+[[Category:Governance]]
+
+[[Category:Technology]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Peerproduction]]

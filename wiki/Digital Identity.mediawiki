@@ -1,0 +1,138 @@
+See the overview entry on [[Identity]]
+
+
+=Examples=
+
+From Laura Stockwell:
+
+"Here are a few other examples of what's out there in the digital identity realm.
+
+[[Open ID]] has been gaining traction recently. OpenID is an open-source application that provides users with a “URI” in the same way that web sites have a URL. It allows for ‘authentification’ so that it is secure, and it also allows users to choose which elements of their identity to share. It is used by a number of sites, including Facebook, Digg, Wikipedia, Yahoo, and AOL. Reebok also implemented Open ID in its GoRunEasy.com community site.
+
+[[Claim ID]] is a sister to Open ID. It allows user to create a profile with all of the sites they have identities on. It also allows them to claim those pages as their own.
+
+[[iNames]] are similar to OpenID’s URI. iNames may be a better choice for regular, less technical people according to Hamlin. To date, more than 10,000 people use iNames. The system works by providing users with a number that is unique and persistent to that user. iNames and OpenIDs work together so you can type tour iName into an OpenID log-in.
+
+Windows CardSpace allows users to securely provide a digital identity to a site via a piece of client software that uses a set of “cards,” with identity data for the user to choose from.
+
+Amazon’s Real Name Attribution allows users to claim their real name using a credit card in the spirit of credibility and reputation building."
+(http://www.digitaldialogs.com/2007/10/one-avatar-many-worlds-and-other.html)
+
+
+=Discussion 1=
+
+==The potential of [[Blockchain]] technology to create global identity==
+
+Liad Orgad:
+
+"The UN Sustainable Development Goals recognise the importance of legal identity for all. Article 16.9 aims to “provide legal identity for all, including birth registration” by 2030. Through the ID4D program, the World Bank assists in the promotion of the UN goal by financially assisting states to provide recognised IDs.
+
+The Internet already offers the infrastructure for the realisation of digital IDs, yet new technologies, e.g. Blockchain, are likely to bring further improvements necessary to turn the idea into reality. The Internet is a system of interconnected computer networks, which allows for exchange and transfer of data. All present major Internet applications are structured in a client-server application, where the participants access it via an app or a web browser (client) and the company providing the application runs the computations and data on their own computers (server). This structure gives these companies (and governments) total control over the service they provide and all the data produced by its users. Blockchain technology offers the first Internet applications that works differently; it is designed as a peer-to-peer system that is not controlled by a central entity and in which data exchange is not stored in a single physical location. On the Blockchain, shared data are hosted by all the computers in the network simultaneously and are publicly accessible to all. ''Blockchain technology is a game changer; it can provide people with self-sovereign identity—they are the ones who create and register their identity and they are the only ones who control what to do with it and with whom to share what. In such a decentralised system, one’s identity is not owned by a central server'' (Facebook, LinkedIn, a state ministry), but by the person herself; she can decide which data to share and for what purpose. Hence, Blockchain technologies can help achieving the UN goal of granting an ID to everyone, not just to those who can obtain it from a state, in a decentralised way that is not necessarily controlled by the UN or by states.
+
+'''Several organisations are currently working on the creation of the technological infrastructure required for a trustworthy global digital ID.''' The achievement of this goal involves some challenges: who will register people for a global ID? What will be the relation between a global ID and a national ID—will the global ID rely on national registries or be independent? When will a global ID be created—at birth, or at later age when the person can exercise control? Which details will be included—only a birth certificate, or also physical characteristics and biometric data? Will there be a standard form? Will the possession of a global ID be a right, or also a duty? How to create digital IDs for people in places where the required technology does not exist or in authoritarian regimes that restrict their subjects’ access to information technology? How to create an ID that is immune to identity theft and fake identities? These are important questions, but the very idea of a global digital identity for everyone, giving all people a legal status as a “human being,” is no longer a far-fetched possibility.
+
+'''A global ID is not a status of citizenship—nor does it create, in and of itself, an international legal status, although it is a prerequisite for it.''' Yet, in my view, this is not supposed to be its main purpose. An international legal persona should not be seen as a replacement of national citizenships but rather as a status and identity complementary to national citizenships (it is thus not identical to cosmopolitan visions of global citizenship, see discussions in Shachar, 2009). It is a legal concept that will provide everyone with a global unique ID of a “human being.” This status will be the default lifelong identity and membership for every person, which cannot be waived or withdrawn, and on top of it individuals will have other forms of membership, such as national citizenship."
+
+(https://globalcit.eu/cloud-communities-the-dawn-of-global-citizenship/)
+
+
+=Discussion 2=
+
+Two critical blog entries that are doubtful that the user will be in control of the Digital [[Identity Commons]]. Both are from the Technopod blog at http://technopod.wordpress.com/.
+
+Brad Templeton warns that [[Open ID]] digital identity management schemes might be a danger to [[Privacy]], because they make identity collection more easy.
+
+==The Illusions of Identity Control==
+
+From http://technopod.wordpress.com/2006/04/02/identity20-illusion-of-control/ 
+
+
+"So what's Identity 2.0? Is it indeed a radically different approach to identity as its suffix suggests, or is it the same old stuff rebranded in the spirit of the current Zeitgeist?
+If you ask Dick Hardt he will tell you two things:
+
+
+1. Identity 2.0 is all about empowering the user. A user-centric model in which the user defines and controls his/her Identity.
+
+2. What is Identity? Identity is "The collective aspect of the set of characteristics by which a thing is definitively recognizable or known". In this context, Hardt talks much about Personas (assertions about MY Identity), as well as about Reputation - assertions that others are making about (aspects of) who I am. An example for that would be the eBAY reputation of a seller.
+I think the two points mentioned are problematic.
+
+
+First is the illusion of control. The User is not in a real control of what her Identity is. The different Identity Providers - Government, Universities, Work places and so forth - provide assertions about me that I cannot control nor alter. But at least, these are Objective and factual assertions. With Reputations, though, we're entering the realm of the subjective, with assertions that might be biased, inaccurate and sometimes false. Objective or Subjective - it does not really change the fact that People are not in control of their Public Identity!Differently put, Identity 2.0 is probably about controlling the How (distribution, interaction etc.), rather than controlling the What (Who am I).
+
+
+This leads me to the second problem, which relates to implicit assertions. This kind of assertions is not an explicit part of the Identity2.0 discussion. I am referring here to what can be induced from the data and the meta-data (clickstreams, gestures, attention or whatever) the user is generating inside the various service providers. My mails at Gmail, my docs at Writely, my photos at Flickr and so forth, say a lot of things about ME and are, therefore, essential components of MY Identity. If Identity 2.0 is all about giving ME the ability to control MY Identity, then Data and Meta-Data MUST be part of the design goals of Identity 2.0, for unlike Personas and Reputation - Data and Meta-Data are controllable. Unfortunately,though, I couldn't find any trace to these critical aspects of Identity in the 7 laws of Identity, nor in the 14 design goals of Identity 2.0."
+(http://technopod.wordpress.com/2006/04/02/identity20-illusion-of-control/ )
+
+
+==Critique of Identity 2.0==
+
+From 
+[http://technopod.wordpress.com/2006/06/06/p2p-business-platforms-and-the-story-of-digital-identity/] 
+
+
+"Johannes Ernst maintained that in the future we'll have an eBAY without an eBAY. Meaning: instead of having eBAY as a broker, people will engage in eBAY-like transactions without relying on a central entity. Ernst added, that this vision of completely decentralized business transactions, running on a global, peer-to-peer infrastructure, is currently under construction.
+This insight shed an interesting light on the Skype-eBAY deal (Skype as a p2p infrastructure company. And see also A Skype Rashomon: P2P, Voice and the Read/Write Web ).
+
+Naturally, Identity makes an essential part of any business infrastructure and a globaly distributed p2p business platform makes no exception. It is therefore logical to envision a decentralized Identity infrastructure as part of the future p2p business sphere, and indeed, that's one of the key success factors for Digital Identity, as presented by Dick Hardt.
+
+But the explicit and repetitive mentioning of the Digital Identity's decentralized architecture serves, imho, another goal. Usually, when decentralization is discussed, people think about the centralized opposite with its Big Brother connotation. Decentralization triggers, therefore, an immediate, tangible sensation of freedom and user-control. I'm afraid that Digital Identity rides on these feelings; some of its promoters describe its decentralized nature as if this will bring salvation (and control) to the users of the virtual-o-sphere. (I disagree with this sub-textual message, and see also Identity 2.0 Illusion of Control).
+
+This time, though, I heard a different tone – some kind of disillusionment from that alleged spirit of freedom. The panel agreed that federation and/or decentralization don't imply personal control. Actually, they sort of agreed that the only control a User maintains is whether or not to engage in a business transaction, and that's basically it. If the user elects to do the transaction, then she must provide the service provider with whatever Identity attributes the provider requires. There's no Identity Bazaar in which the user negotiates what attributes to reveal and what to conceal. Moreover, without a 3rd-party – a trusted Identity Provider that confirms the User's Identity claims - no transaction is possible, because in the world of Digital Identity the User is - by a paradoxical default - untrusted!
+
+So if Digital Identity is not about user's empowerment, what is it about?
+
+I'd say it's about the service providers making more money in the virtual-o-sphere. Both Hardt and Ernst mentioned, more than once, the importance of a trusted Digital Identity for the enablement of business transactions (for instance, proving that I'm over 18, that I live in the US, that I have that credit in my bank account etc.) and in the peer-to-peer reality, where business transactions will happen at the edges of the network, a peer-to-peer trust has to exist.
+
+I would therefore suggest that the whenever Identity is discussed in an authentication/authorization context, the user-centric theme should be viewed as nothing but a marketing strategy in the spirit of the current web2.0 Zeitgeist (Identity2.0…). There's no user-centricity in [[Identity 2.0]]."
+(http://technopod.wordpress.com/2006/06/06/p2p-business-platforms-and-the-story-of-digital-identity/)
+
+
+==The danger to [[Privacy]]==
+
+Brad Templeton on the paradox of digital identity management [http://ideas.4brad.com/paradox-identity-management]:
+
+"On the surface, privacy-conscious identity management puts control over who gets identity information in the hands of the user. You decide who to give identity info to, and when. Ideally, you can even revoke access, and push for minimal disclosure. Kim Cameron summarized a set of laws of identity outlining many of these principles.
+
+In spite of these laws one of the goals of most identity management systems has been ease of use. And who, on the surface, can argue with ease of use? Managing individual accounts at a thousand web sites is hard. Creating new accounts for every new web site is hard. We want something easier.
+
+However, '''here is the contradiction. If you make something easy to do, it will be done more often. It’s hard to see how this can’t be true. The easier it is to give somebody ID information, the more often it will be done.''' And the easier it is to give ID information, the more palatable it is to ask for, or demand it.
+
+Consider the magstripe found on most driver’s licences. This seems like personal identity management. That card is physically under your control, in your wallet. Nobody, except a police officer who suspects you of something, can demand you produce it. You control whether they can just look at it or can scan it.
+
+Yet the very existence of the stripe makes it easy to read all the data on the card. Sure, they could also look in the card and slowly type it all in, or photograph it, but as you know this is rare. If somebody is demanding this card for ID, it’s faster for them and for you to have them swipe it rather than type in the number and/or your other information. As a result it seems more “reasonable” for them to ask to swipe it, even if they don’t demand it. And thus far more data is collected. (So much that there are legal efforts to limit such scanning.)
+
+This applies even to “ideal” digital identity management systems which let you tweak what information they provide to a web site. In such a system, you can control whether your system offers up a pseudonym or your full name and address. You want that, because if you’re buying a book you want to easily tell them where to send it.
+
+However, at the same time this easy ability to offer your address makes it easy to ask. Today, a site that wants to ask for extra information it doesn’t really need has a disincentive — it has to push you to a form where you have to type it in manually. This makes it far more likely they will ask for this only if they really need it. It makes it really unlikely that they will demand it unless they truly need it. It still happens (I routinely see sites asking for phone numbers they don’t need) but it happens less often than if providing this information required merely a click.
+
+That’s because once you make it trivial to hand over your information, you quickly get to the state where only the privacy zealots put up a fight. And thanks to the fundamental theorem of privacy advocacy — most people don’t care about their privacy until after it’s invaded — this means most people will hand over far more information than needed, and in many cases the few who complain are few enough that companies can safely decide to refuse to deal with them if they won’t hand over the information that’s so easy to hand over.
+
+It’s against our intuition to think of ease of use as a bug, rather than a feature, but sometimes this can be the case.
+
+In addition, single sign-on systems tend to make correlation of user data easier, in spite of their many efforts to try to address this problem. If you use the same ID to sign on at many web sites, it’s hard to stop them from correlating that fact if they get together. Of course, most people use the same login on many sites today, but this is less reliable. (When a site demands an E-mail from me I give a different E-mail to each site, which among other things allows me to see if they pass the E-mail address to any 3rd party.) One of the common identity attributes that will be requested with OpenID is an E-mail address, and this becomes harder to vary if you’re getting the benefit of the single sign-on.
+
+Identity management also encourages the creation of “accounts” when they are not strictly needed at all. Should OpenID become a success, every site will want to use it. Sites that would not have troubled users to create an account to use them will now find it trivial to do so. Their current easy alternative — cookies — are stored on the user’s machine and much more under user control, and much harder to correlate with other sites.
+
+Fully implemented, I predict we’ll see “one click account creation” and “one click login” through the user of browser add-ons. This will result in sites that were perfectly usable without an account suddenly demanding them. Why not, after all? Sites with commercial interest are keenly interested in accounts in order to learn about their users and present information to advertisers or investors.
+
+It is also important to consider how the identity management technology we build will be used in places like China, Saudi Arabia or North Korea. Whatever global standards we adopt, especially with open source or free software, will be readily available for use in these countries.
+
+Unfortunately, these countries will not follow the same principles of user control and consent on identity collection that we do. However, we will save them the time and trouble of building their own ID and surveillance infrastructure. They can readily adapt ours.
+
+We may have to ask ourselves what ethical duty we have to the people of those countries. How would we design our systems if we lived in those places? What software would we give away to those governments? Is our own convenience and ease of use worth so much to us that we want to give these technologies to China where they will help restrict the activities of a billion people? This is not an easy question. The real villains are the oppressors, not the authors of the technology, but that doesn’t stop us from considering how what we build will be used.
+No solution?
+
+There may be no solution to this paradox. Identity disclosure is, in a sense, the opposite of privacy. Any system that assists in identity disclosure is unlikely to help protect privacy. There are technologies, such as secure pseudonyms and anonymity, and non-correlatable identifiers, which can help, but they are tricky."
+(http://ideas.4brad.com/paradox-identity-management)
+
+=More Information=
+
+Yhong-Ding: [http://yihongs-research.blogspot.com/2008/07/online-identity-what-is-it.html What is online identity?]
+
+[[Category:Encyclopedia]]
+[[Category:Governance]]
+[[Category:Relational]]
+[[Category:Media]]
+[[Category:Standards]]
+[[Category:Culture]]
+[[Category:Global Governance]]

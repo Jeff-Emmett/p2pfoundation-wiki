@@ -1,0 +1,79 @@
+= '''"The [[Semantic Web]] isn't just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With linked data, when you have some of it, you can find other, related, data."'''
+
+URL = http://linkeddata.org/
+
+=Description=
+
+'''1.'''
+
+"The goal of the W3C SWEO Linking Open Data community project is to extend the Web with a data commons by publishing various open datasets as RDF on the Web and by setting RDF links between data items from different data sources.
+
+RDF links enable you to navigate from a data item within one data source to related data items within other sources using a Semantic Web browser. RDF links can also be followed by the crawlers of Semantic Web search engines, which may provide sophisticated search and query capabilities over crawled data. As query results are structured data and not just links to HTML pages, they can be used within other applications."
+(http://esw.w3.org/topic/SweoIG/TaskForces/CommunityProjects/LinkingOpenData)
+
+
+'''2.'''
+
+"The goal of Linked Data is to enable people to share structured data on the Web as easily as they can share documents today.
+
+The term Linked Data was coined by Tim Berners-Lee in his Linked Data Web architecture note. The term refers to a style of publishing and interlinking structured data on the Web. The basic assumption behind Linked Data is that the value and usefulness of data increases the more it is interlinked with other data. In summary, Linked Data is simply about using the Web to create typed links between data from different sources.
+
+The basic tenets of Linked Data are to:
+
+1. use the RDF data model to publish structured data on the Web
+   
+2. use RDF links to interlink data from different data sources
+
+
+Applying both principles leads to the creation of a data commons on the Web, a space where people and organizations can post and consume data about anything. This data commons is often called the Web of Data or Semantic Web.
+
+The Web of Data can be accessed using Linked Data browsers, just as the traditional Web of documents is accessed using HTML browsers. However, instead of following links between HTML pages, Linked Data browsers enable users to navigate between different data sources by following RDF links. This allows the user to start off at one data source, and then move through a potentially endless Web of data sources connected by RDF links. For instance, while looking at data about a person from one source, a user might be interested in information about the person's home town. By following an RDF link, the user can navigate to information about that town contained in another dataset.
+
+Just as the traditional document Web can be crawled by following hypertext links, the Web of Data can be crawled by following RDF links. Working on the crawled data, search engines can provide sophisticated query capabilities, similar to those provided by conventional relational databases. Because the query results themselves are structured data, not just links to HTML pages, they can be immediately processed, thus enabling a new class of applications based on the Web of Data.
+
+The glue that holds together the traditional document Web is the hypertext links between HTML pages. The glue of the data web is RDF links. An RDF link simply states that one piece of data has some kind of relationship to another piece of data. These relationships can have different types. For instance, an RDF link that connects data about people can state that two people know each other; an RDF link that connects information about a person with information about publications in a bibliographic database might state that a person is the author of a specific paper."
+(http://sites.wiwiss.fu-berlin.de/suhl/bizer/pub/LinkedDataTutorial/)
+
+
+=Discussion=
+
+==The Four Rules for Linked Data==
+
+From http://www.w3.org/DesignIssues/LinkedData :
+
+"The first rule, to identify things with URIs,  is pretty much understood by most people doing semantic web technology.  If it doesn't use the universal URI set of symbols, we don't call it Semantic Web.
+
+The second rule, to use HTTP URIs,  is also widely understood.  The only deviation has been, since the web started,  a constant tendency for people to invent new URI schemes (and sub-schemes within the urn: scheme)  such as LSIDs and handles and XRIs and DOIs and so on, for various reasons.  Typically, these involve not wanting to commit to the established Domain Name System (DNS) for delegation of authority but to construct something under separate control.   Sometimes it has to do with not understanding that HTTP URIs are names (not addresses) and that HTTP name lookup is a complex, powerful and evolving set of standards. This issue discussed at length elsewhere, and time does not allow us to delve into it here. [ @@ref TAG finding, etc])
+
+The third rule, that one should serve information on the web against a URI, is, in 2006, well followed for most ontologies, but, for some reason, not for some major datasets.  One can,  in general,  look up the properties and classes one finds in data, and get information from the RDF, RDFS, and OWL ontologies including the relationships between the terms in the ontology. 
+
+Many research and evaluation projects in the few years of the Semantic Web technologies produced ontologies, and significant data stores, but the data, if available at all, is buried in a zip archive somewhere, rather than being accessible on the web as linked data.  The Biopax project, the CSAktive data on computer science research people and projects were two examples. [The CSAktive data is now (2007) available as linked data]
+
+There is also a large and increasing amount of URIs of non-ontology data which can be looked up.   Semantic wikis are one example. The "Friend of a friend" (FOAF) and Description of a Project (DOAP) ontologies are used to build social networks across the web.    Typical social network portals do not provide links to other sites, nor expose their data in a standard form.
+
+LiveJournal and Opera Community are two portal web sites which do in fact publish their data in RDF on the web.   (Plaxo has a trail scheme, and I'm not sure whether they support knows links). This means that I can write in my FOAF file that I know Håkon Lie by using his URI in the Opera Community data, and a person or machine browsing that data can then follow that link and find all his friends.   Well, all of his friends?  Not really:  only his friends who are in the Opera Community.  The system doesn't yet him store the URIs of people on different systems. So while the social network is open to incoming links, and while it is internally browseable, it doesn't make outgoing links.
+
+The fourth rule, to make links elsewhere,  is necessary to connect the data we have into a web, a serious, unbounded web in which one can find al kinds of things,  just as on the hypertext web we have managed to build.
+
+In hypertext web sites it is considered generally rather bad etiquette not to link to related external material.  The value of your own information is very much a function of what it links to, as well as the inherent value of the information within the web page."
+(http://www.w3.org/DesignIssues/LinkedData)
+
+
+=Examples=
+
+[[DBpedia]]
+
+
+=More Information=
+
+# Tim Berners-Lee: Linked Data (architecture note outlining the basic ideas of Linked Data), at http://www.w3.org/DesignIssues/LinkedData.html
+# Christian Bizer et al.: Interlinking Open Data on the Web (Two page document giving an overview about the Linking Open Data project), at http://sites.wiwiss.fu-berlin.de/suhl/bizer/pub/LinkingOpenData.pdf
+#Status (3/08) from http://www.mkbergman.com/?p=416: "Though counts rapidly become dated, today, in less than a year, the size of the Linked Data on the Web exceeds several billion RDF triples."
+
+
+
+[[Category:Standards]]
+
+[[Category:Movements]]
+
+[[Category:Encyclopedia]]

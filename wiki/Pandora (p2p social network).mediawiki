@@ -1,0 +1,82 @@
+'''Pandora''' is a free peer-to-peer social network application. Pandora provides functions of instant messenger, audio and video chat, trading platform, commercial system, payment system, distributed development system, file exchange and vote system. Pandora has its own binary protocol, uses a cryptography and a web of trust.
+
+(Also it's strongly recommended to read the [https://github.com/Novator/Pandora/wiki/P2P-social-network-Pandora BIG ARTICLE from SysMagazine] devoted to Pandora).
+
+= Network topology =
+
+Pandora is absolute peer-to-peer. There are no global or local centers. There are no trackers or similar services.
+
+[[File:Pandora_net.png|center|Topology of Pandora]]
+
+Node of Pandora includes all necessary functionality. Each node has its own identifier generated before first communication session. Nodes interact each other through internet or mesh-networks.
+
+= User interface =
+
+Pandora is user friendly, designed for ordinary people. Pandora is a single application like eMule or aMule, and works "out of the box". Graphical user interface (GUI) is based on Gtk2 toolkit.
+
+[[File:Pandora_dialog.png|center|600px|Dialog on Pandora]]
+
+Window contains four menu item: "World", "Business", "Region" and "Node".
+
+= Main objects =
+
+There are four level of objects in Pandora:
+
+'''Level 1. "World"'''
+
+* "Person"
+* "Community"
+* "File" (it can be also an article)
+* "City"
+* "Relation" links two object. Kind of relations: equal, similar, partof, follow, etc.
+
+'''Level 2. "Business"'''
+
+* "Product"
+* "Service"
+* "Advertisement"
+* "Order"
+* "Deal"
+* "Waybill"
+* "Debenture" is a basis of payment system in Pandora.
+* "Transfer" moves a debenture from one person to another.
+
+'''Level 3. "Region"'''
+
+* "Project"
+* "Resolution"
+* "Law"
+* "Contribution"
+* "Expenditure"
+* "Offense"
+* "Punishment"
+* "Resource"
+* "Delegation" conveys the right to evaluate some object to another person.
+
+'''Level 4. "Node"'''
+
+* "Parameter" is used to define the work of your node.
+* "Key" can be open (asymmetrical) or closed (symmetrical).
+* "Sign" is a evaluation (-1.0, -0.9...+1,0) of an object.
+* "Node" defines parameters and statistics of nodes which you work with.
+
+See full list of [https://github.com/Novator/Pandora/blob/master/model/01-base.xml Pandora objects with their description].
+
+= How to install =
+
+See user manual with pictures in github wiki to [https://github.com/Novator/Pandora/wiki/Install-and-first-run quick start].
+
+WARNING: There is only alfa-version of Pandora. Many functionality is still not realized.
+
+= For developers =
+
+Pandora is published under license GNU GPLv2. The code is written on Ruby, using bindings OpenSSL, SQLite, Gtk2 and GStreamer.
+
+Let's collaborate on [https://github.com/Novator/Pandora Github] or [https://www.facebook.com/p2pandora Facebook].
+
+[[Category:Encyclopedia]]
+[[Category:Resources]]
+[[Category:Media]]
+[[Category:Audiovisual]]
+[[Category:Money]]
+[[Category:P2P Infrastructure]]

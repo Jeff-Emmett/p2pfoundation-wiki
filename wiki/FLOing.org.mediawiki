@@ -1,0 +1,288 @@
+==Adding Feeds to FLOing.org==
+
+Log into Administrative Backend
+
+1. Identify a source that is participating in the FLO movement.  
+
+2. Collect the following information:
+*Name: What do they call their blog, place or project?
+*URL: Home page of their site.
+*RSS Feed URL: Find where they publish updates about their progress (usually a blog) and access their RSS feed by clicking on the RSS feed icon (on the right of the URL bar in Firefox.)
+*Logo: Small and as square as possible
+*Description: Create a descriptive phrase about the source and add it to the Category description.  Copying the one they've written for themselves (often under 'about') is best but if there is no good description or it's too long, summarize what they do.
+*Section: People, Places or Projects
+**people are individuals or groups connected through as issue, (ex. open source news and advocacy.)
+**places are physical locations from which a group of people post updates (ex. a coworking space)
+**projects are specific activities people are participating in to achieve goal (ex. development of a deployable open mesh network solution)
+*Section Specific Source Link 
+**for a person, link to primary social media channel: Twitter, Facebook, Tumblr, personal blog, youtube/vimeo, etc.  Call is 'Profile.'
+**for a place, link to physical address on google maps.  Call it 'Location'
+**for a project, link to contact info page on their website.  Call it 'Contact'
+
+3. Download the logo, rename it to the source's name and upload it into the Media Manager>stories.
+
+4. Create a Category by going to Articles>Category Manager>New.
+*Name it the source's name.
+*Add it to the appropriate section
+*Add it's logo as the image.
+*Add it's description.
+*Add it's URL as a hyperlink to "Source" and it's section specific URL as a link under it's title.  Seperate with a hypher.  (Ex. Source - Location)
+*Save
+
+5. Add a feed by going to Components>RSS2Content>RSS.
+*Choose the section where the Source's category is location.
+*Choose the category with the Source's name.
+*Click 'Choose'
+*Click 'New RSS' on the top right of the screen
+*Copy and paste the feed's URL
+*Save
+*Click "Manually load RSS" located in the horizontal header menu under the RSS2Content Title.
+
+6. Add a Menu Item by going to Menus and click the appropriate Menu Section
+*Click New
+*Click 'Articles' and then 'Category Blog Layout'
+*Title it the Source's Name
+*Select the Category in the Parameters on the right side and pick the Source's category.
+*Make sure the Description and Description Image both say 'show'.
+*Save
+
+7. Add the Most Popular Stories to the Source's page by first going to the Category manager page looking up the Source's Category ID on the right side.  Record that number.
+*Go to the "Module Manager" and clicking 'New'
+*Click "Most Read Content"
+*Title the module Source Title > Popular. (Ex. Window Farms > Popular)
+*Click 'yes' for Show Title and Enabled.
+*Position is 'Left'
+*Menu Assignment is 'Select Menu Items from the List" and click just the title of the Source
+*Add the category ID in the parameters section titled Category on the right side.  
+*Make sure the count is set to 5.
+*Click 'Save'
+
+8. Add the Sources Menu to the Source's page by going to the Modular Manager.
+*Click on the appropriate section's Source Menu module (ex. People > Sources)
+*Make sure the Source's page is selected in the menu selection area.  (Hold down the option key to select multiple options.)
+
+9.  Test you work by going to the site, clicking on the top navigation section where you filed the source, scroll to the bottom of the page and click on the source's name in the "Sources" module.  Have stories loaded?  Does the description and logo all look nice?  Does the source link work?
+
+10.  Pat yourself on the back, you did a great job!
+
+==Curating==
+
+Log in at floing.org/administrator with your username and password.
+
+Go to Article Manager and select the appropriate section and/or category
+
+Click on an article and eliminate formatting errors that may appear.
+
+If the article looks interesting Click on the Source Content hyperlink at the end of the article to view it's URL.  Place that URL into a browser and read the article.
+
+If the article is interesting, add descriptive tags to the article by clicking 'add tags' below the article's content and typing the tags seperated with comas.  The more significant the article, the more tags you should add, never exceeding 5 tags.
+
+If the article is relevant (not too local, too temporal), publish the article.
+
+If you'd like to see the article on the front page, click 'yes' on Front Page.
+
+==Headlines==
+
+To modify the headlines section on the front page/featured page, go to the module entitled 'headlines'
+
+The heading of the article shouldn't be longer than 90 characters.
+
+Add the URL of the article you want to link, so you've got to create the article first, then create the headline.
+
+The intro text should be no more than 300 characters.
+
+Adding an article image requires a few steps.
+*Download the image to your local machine and save it as something simple.  If it's got a .jpeg ending, change it to .jpg because Joomla doesn't recognize .jpeg.
+*Go to the Media Manager under the 'Site' header in the Joomla back end.
+*Click on the 'stories' menu on the left, and select the folder entitled 'headlines'
+*Upload File by clicking 'choose file' button and selecting the file.
+*Once the file is uploaded, go back to the headlines module and add the file name.  It should be the same as the name of the file you uploaded.
+*Click Apply to submit the changes.
+
+If you're working on constantly updating the header, leave the module open and click 'apply' every time you want to change something.
+
+==Topics==
+
+*To create a topics page go to the main menu and copy any existing topic page.
+**Change the tag in the parameters section to the topic of your choice.
+**Change the title of the menu to the title of topic
+**Delete the alias and leave it blank.
+*Go to K2 component and create a category with the title of your topic
+**Go to the module manager, search for 'topic'
+**Copy a topic module, change it's title to "Topic > 'your topic here'", select the appropriate category from the parameters menu and select the topic's menu page.
+**Go to the module manager, search for 'discussion'
+**Create a discussion module, change it's title to "Discussion > 'your topic here'", leave the RSS feed blank (for now) and select the topic's menu page.
+*Go to the Community section of the floing.org website and log in.  You can use Facebook Connect.
+**Click on Start a New Group - it's in the middle column of buttons below 'my status.'
+**Create a group name - description - select the appropriate category. [ex. Coworking - The Coworking Group discusses the coworking/intentional/shared/open office space movement.] Click 
+**'Create Group'.  The rest of the setting don't need to be changed.  
+**Add an appropriate picture.
+**Go to your group page and click on the RSS icon.  Select the discussion RSS feed and copy the feed.
+**Return to the backend (floing.org/administrator) and select the Discussion > Topic module you create.  Paste the RSS feed and save the module.
+**Go back to the discussion group and create the first post!
+
+==Curating==
+==Curating==
+
+Log in at floing.org/administrator with your username and password.
+
+Go to Article Manager and select the appropriate section and/or category
+
+Click on an article and eliminate formatting errors that may appear.
+
+If the article looks interesting Click on the Source Content hyperlink at the end of the article to view it's URL.  Place that URL into a browser and read the article.
+
+If the article is interesting, add descriptive tags to the article by clicking 'add tags' below the article's content and typing the tags seperated with comas.  The more significant the article, the more tags you should add, never exceeding 5 tags.
+
+If the article is relevant (not too local, too temporal), publish the article.
+
+If you'd like to see the article on the front page, click 'yes' on Front Page.
+
+==Headlines==
+
+To modify the headlines section on the front page/featured page, go to the module entitled 'headlines'
+
+The heading of the article shouldn't be longer than 90 characters.
+
+Add the URL of the article you want to link, so you've got to create the article first, then create the headline.
+
+The intro text should be no more than 300 characters.
+
+Adding an article image requires a few steps.
+*Download the image to your local machine and save it as something simple.  If it's got a .jpeg ending, change it to .jpg because Joomla doesn't recognize .jpeg.
+*Go to the Media Manager under the 'Site' header in the Joomla back end.
+*Click on the 'stories' menu on the left, and select the folder entitled 'headlines'
+*Upload File by clicking 'choose file' button and selecting the file.
+*Once the file is uploaded, go back to the headlines module and add the file name.  It should be the same as the name of the file you uploaded.
+*Click Apply to submit the changes.
+
+If you're working on constantly updating the header, leave the module open and click 'apply' every time you want to change something.
+
+==Topics==
+
+*To create a topics page go to the main menu and copy any existing topic page.
+**Change the tag in the parameters section to the topic of your choice.
+**Change the title of the menu to the title of topic
+**Delete the alias and leave it blank.
+*Go to K2 component and create a category with the title of your topic
+**Go to the module manager, search for 'topic'
+**Copy a topic module, change it's title to "Topic > 'your topic here'", select the appropriate category from the parameters menu and select the topic's menu page.
+**Go to the module manager, search for 'discussion'
+**Create a discussion module, change it's title to "Discussion > 'your topic here'", leave the RSS feed blank (for now) and select the topic's menu page.
+*Go to the Community section of the floing.org website and log in.  You can use Facebook Connect.
+**Click on Start a New Group - it's in the middle column of buttons below 'my status.'
+**Create a group name - description - select the appropriate category. [ex. Coworking - The Coworking Group discusses the coworking/intentional/shared/open office space movement.] Click 
+**'Create Group'.  The rest of the setting don't need to be changed.  
+**Add an appropriate picture.
+**Go to your group page and click on the RSS icon.  Select the discussion RSS feed and copy the feed.
+**Return to the backend (floing.org/administrator) and select the Discussion > Topic module you create.  Paste the RSS feed and save the module.
+**Go back to the discussion group and create the first post!
+
+==Adding==
+
+Go to the K2 component in the backend.
+Add a new item.
+Add it's title, up to 5 tags
+Add it's category
+Add content
+Make sure it's attributed to the correct author.
+Save
+
+==Bugs==
+
+Error after creating the first Multiprofile entitled "Participant".
+Section 1 has a red circular icon with a white hyphen:
+JFolder::create: Path not in open_basedir paths
+JFolder::create: Path not in open_basedir paths
+Section 2 has is a blue circular icon with a white 'i'.
+Unable to create watermarks folder. Please check the permissions for the images folder.
+Unable to create watermarks folder. Please check the permissions for the images folder.
+Since Multiprofile was created successfully, I moved on to create more profiles.
+Possible solution: http://forum.joomla.org/viewtopic.php?p=1306883
+
+==Potentials==
+
+[[Michael Zick Doherty]]: [http://sense.neufuture.com/ OpenRTMS] is a FLO Mobile Sensor Solution that enables people to connect a standard sensor to an Arduino device that sends data to an Android phone that can upload it to an online database.
+
+[http://www.nikolay-georgiev.net/blog/2011/01/open-source-ecology-overview/ Niholay Georgiec]: articulates Open Source Ecology in a very organized, clear way.
+
+Miquel Torres + Charles Collins on FreeCAD.
+
+[[Jeff Roush]]
+
+https://groups.google.com/forum/#!topic/openmanufacturing/dflXQm7uaaI
+
+http://maitreyal3c.com/Home.html
+
+http://cotidianosensitivo.info/blog/
+
+http://www.mecoconcept.com/
+
+http://gnusha.org/skdb/
+
+
+==FLOecology.org Architecture==
+
+People 
+*Community: JomSocial
+*Experts: K2 user pages
+
+Places 
+*Profiles: GreenMap
+*News Feeds: RSS2Content
+
+Projects 
+*K2 Categories 
+*BEEx Clusters (eventually)
+
+Participate 
+*Updates: Newletter
+*Join: Community
+*Support: BEEx
+*Volunteer: Opportunity Feed(?)
+
+==Jomsocial Profile Types==
+
+*Standard Profile
+**Name
+**Location
+**Profile URL -
+**About Me -
+**Dream Project -
+**Talk to Me About -
+**What makes you most upset? -
+**What makes you happiest? -
+*Subject Matter Experts are people interested in contributing their specialized skills to the community.
+**Professional Skill
+**Experience (URL Acceptable)
+**Level of Interest
+**Other links*
+*Space Owners are people interested in contributing their physical space to the community.
+**Address
+**Space Type
+**Useful Features
+**Level of Interest
+**Other links*
+*Fabricators are people interested in building FLŒcology tools.
+**Specific Skills
+**Address
+**Free Hours/Week
+**Pay for your own raw materials?
+*Artists/Craftspeople want to use FLŒcology tools to engage in arts and crafts projects.
+**Type of Art and/or Crafts (checklist)
+**What materials do you use?
+**What tools do you need?
+**Can you finance your own tools/materials?
+**Would you like to build your own tools?
+**Location
+**Retreat
+*Contributors want to give their time and unique skill set to advance the FLŒcology movement.
+**What types of projects would you like to participate in? (Checklist)
+**How can you help us?
+*True Fans want to give their money and social support to FLŒcology member's projects.
+**How much social support can you give?
+**How much financial support can you give?
+**What types of projects would you most like to support?
+*Non-English Speakers
+
+[[Category:Sarapis]]

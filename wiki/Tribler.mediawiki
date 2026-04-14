@@ -1,0 +1,78 @@
+'''Tribler = improved distribution mechanism for video files based on P2P-principles'''
+
+URL = http://www.tribler.org/
+
+
+=Description=
+
+From '''Tribler''':
+
+"The Bittorrent protocol designed by Bram Cohen works great and currently dominates the traffic on the Internet backbone, but it lacks many features that may be very useful. We are improving this protocol with over a dozen people with such features which go way beyond the original. We are extending the code from the ABC project. Features that we are adding include:
+
+* Amazon-like recommendations to get interesting files
+
+* Doubling the download speed by using the upload capacity of friends
+
+* Real-time P2P file sharing with P2P video streaming
+
+* Showing the locations of other downloaders of the same content with city-level accuracy on a world map"
+
+"Tribler is a “next-generation” video p2p platform that turns bandwidth into a global currency .... blending social network technology with peer-to-peer systems.
+
+“Our platform will provide fast downloads by ensuring sufficient uploads,” says Johan Pouwelse, an assistant professor at Delft University of Technology and the technical director of Tribler. “The next generation of peer-to-peer systems will provide an ideal marketplace not just for content, but for bandwidth in general.”
+
+“They are proposing an earn-and-spend market model, where the more a user uploads now and the higher the quality of the contributions, the more she would be able to download later and the faster the download speed. The enhanced Tribler goes beyond traditional P2P applications such as BitTorrent by implementing proper regulation in a decentralized environment.”
+
+
+
+=How it Works=
+
+'''1.'''
+
+"Peer-to-peer networks can become sluggish if too many users download content without sharing with others.
+
+Using bandwidth as a kind of currency helps to encourage better habits said Dr Johan Pouwelse, an assistant professor at Delft University of Technology, Amsterdam and co-creator of Tribler.
+
+Dr Pouwelse has been working with associate professor David Parkes from Harvard University to add an accounting system to Tribler to encourage users to upload as often as they download.
+
+"In our model your TV would use "TV watching minutes", our form of P2P currency, to download content," said Dr Pouwelse.
+
+"The TV would connect directly to the internet and provide video on demand in HDTV quality.
+
+"After you watch a program on TV, the system would automatically share this program during the night with other people, until your 'TV watching minutes' credit is healthy again," he said.
+
+"If we get this right, it would mean quite a change in the TV business," said Dr Pouwelse."
+(http://news.bbc.co.uk/2/hi/technology/6971904.stm)
+
+
+'''2.'''
+
+"The latest version of Tribler enhances the standard tit-for-tat BitTorrent algorithms with something they call the give-to-get algorithm (PDF article). This new algorithm allows their users to benefit from a good ratio without using a central server like private BitTorrent trackers do.
+
+Tribler users can still join every BitTorrent swarm and play the tit-for-tat game with old-school BitTorrent users. But, when they meet another Tribler peer they switch to give-to-get mode where the currency meter is running. This turns the Tribler network into a private Tracker network without the central server. This basically means, the more you share, the faster your downloads will go.
+
+Every Tribler client keeps an eye on MByte counts of fellow peers. They gossip around about who is a leecher and who is a top dog, without the details of which Hollywood movie it was. The only information displayed about this in the GUI is a list in your profile of the “Top 10 Tribler Uploaders”. For the next version of Tribler they plan to turn that list of top dog uploaders into a decentralized trust system and enable users to correct typos and add tags to the content. In short, BitTorrent would go “2.0″."
+(http://torrentfreak.com/harvard-develops-p2p-client-that-uses-bandwidth-as-currency-070830/)
+
+
+'''3.'''
+
+From the '''e-We blog''' at 
+http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html
+
+"In asymmetric Internet access scenarios, BitTorrent users are at a disadvantage due to the protocol’s strategy to limit the effective download bandwidth to upload link capacity. Tribler is a new cooperative downloading protocol that makes use of social groups to improve download performance. Peers from a social group that decide to participate in a cooperative download take one of two roles: collectors or helpers. A collector is the peer that is interested in obtaining a complete copy of a particular file, and a helper is a peer that is recruited by a collector to assist in downloading that file. Both collector and helpers start downloading the file using the classical BitTorrent and cooperative download extensions. Before downloading, a helper asks the collector what chunk it should download. After downloading a file chunk, the helper sends the chunk to the collector without requesting anything in return. In addition to receiving file chunks from its helpers, the collector also optimizes its download performance by dynamically selecting the best available data source from the set of helpers and other peers in the BitTorrent network. The Tribler system has been recently used to distribute Television programs on the internet. Such distribution is carried out at relatively no cost and it helps in establishing a more direct link between the program makers and viewers."
+(http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html)
+
+
+=More Information=
+
+Scientific paper on give to get algorithm, at
+http://tv.seas.harvard.edu/give-to-get_algorithm_for_P2P_Video_on_Demand.pdf
+
+[[Category:Resources]]
+
+[[Category:Media]]
+
+[[Category:Audiovisual]]
+
+[[Category:Music]]

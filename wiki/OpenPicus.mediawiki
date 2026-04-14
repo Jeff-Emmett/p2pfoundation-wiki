@@ -1,0 +1,38 @@
+'''= Openpicus builds FlyPort, an amazing, versatile, super efficient and open source system on module for the [[Internet of Things]].'''
+
+According to wikipedia:
+
+The company produces mostly two hardware products:
+
+* '''[[Flyport]]''' is a system on module based on Microchip Technology PIC processors with different kind of connectivity to Internet: Wi-Fi and Ethernet. Flyport modules are used to connect and control systems over Internet through an embedded customizable webserver or the standard TCP/IP services. Flyport modules with microcontroller and transceiver all in one. Microcontroller runs your application, no host processor needed. Pinout is customizable by software.
+
+* '''Nest expansion boards''' that are created for specific applications, compatible with each Flyport.
+* Also a Free IDE development tool is provided by the manufactorer to create, compile and download applications (firmware) to the modules and for importing external web pages.
+ 
+The complex communication stack that works in the background managed by [[FreeRTOS]] an open source os that  helps control the events. Flyport modules are based on the [[Microchip Technology]] PIC microcontrollers and a communication Transceiver (Wi-Fi or Ethernet). Different modules, such as Flyport Wi-Fi and Flyport Ethernet, are mechanically and pin to pin compatible with each other in order to save on expansion board and give more customizability.
+
+
+URL = http://www.openpicus.com/
+
+
+=Interview=
+
+Here is an excerpt of an interesting interview to [[Alicia Gibb]] president of [[OSHWA]]
+
+'''[openPicus - Simone Cicero]: "What do you think of openpicus technology? And what about our all opensource (IDE, hardware, Software, docs, etc...) approach? We already have open source schematics and software and - also in the process of compliying with OSHWA - we are opensourcing our IDE and reviewing the licensing policy overall to be more permissive.'''
+
+[[Alicia Gibb]] I’m very excited about the openpicus technology. As a former employee of Bug Labs, this product resonates with some of the visions of the Bug Labs products. However openpicus reaches a different audience, at a price point where the DIY’ers/hackers can get their hands on it. (ed:  Wow!)
+
+I think it’s hard to create open source hardware in the right spirit without having an all open source approach (IDE, hardware, software, docs, etc...). To build open source hardware, you need to be okay with the fact that someone may directly clone your design, make a derivative from your files, or use your design as inspiration. If all files needed to rebuild your product aren’t available, it’s not really in the true spirit of more or less giving away your baby."
+
+(http://openpicus.blogspot.it/2012/08/building-open-source-hardware.html)
+
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Open]]
+
+[[Category:Manufacturing]]
+
+[[Category:Companies]]

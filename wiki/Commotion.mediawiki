@@ -1,0 +1,193 @@
+'''= The Commotion Wireless Project proposes building a 'device-as-infrastrucure' distribution communications platform'''
+
+URL = http://tech.chambana.net/projects/commotion
+
+"Democratic activists around the globe will gain access to a secure and reliable platform to ensure their communications cannot be controlled or cut off by authoritarian regimes."
+[http://www.shareable.net/blog/10-projects-to-liberate-the-web]
+
+
+=Definition=
+
+Venessa Miemis:
+
+"Commotion aims to build a new type of tool for democratic organizing: an open source “device-as-infrastructure” distributed communications platform that integrates users’ existing cell phones, WiFi-enabled computers, and other WiFi-capable personal devices to create a metro-scale peer-to-peer (mesh) communications network."
+(http://www.shareable.net/blog/10-projects-to-liberate-the-web)
+
+
+=Description=
+
+Richie King:
+
+"The Open Technology Initiative—part of the public-policy think tank New America Foundation—recently received a US $2 million grant from the Department of State to help coordinate its MANET development effort, called Commotion Wireless. The organization’s goal is to get MANET technology ready for use in areas that have oppressive regimes. The project should be completed by the end of next year, according to Sascha Meinrath, the initiative’s director. While Commotion has only four full-time team members, it relies on some programming (some of which it pays for) from the open-source community. "For us, this is about a call to action," Meinrath says.
+
+Commotion’s ultimate vision is to build software packages for cellphones, laptops, and wireless routers that would be able to create both Wi-Fi and cellular networks on the fly. Once a network is established, even people who haven’t installed the software could connect. And if any node in a Wi-Fi network is connected to the Internet—a router with a directional antenna has a range that is tens of kilometers and could easily cross a border—then everyone in the network would have access.
+
+The software packages could come in a number of physical forms, according to Meinrath: CDs, thumb drives, SD cards. And when the network is up, MANET software could be transferred using Bluetooth or downloaded from the network itself. "So many vectors could be used to spread it that a regime stands no chance of stopping them all," Meinrath says.
+
+A MANET isn’t just a network of high-tech walkie-talkies; devices need to do more than communicate directly with one another. Any two connected users need to be able to share information, even if one of them is in Tahrir Square and the other is on the outskirts of Cairo and their devices are mutually out of range. That means every computer and cellphone node in a MANET has to double as a router, relaying information on behalf of other users so data can hop all the way across the network. To do that effectively, the network has to know the best path between any two devices, something that changes as people move around.
+
+There are plenty of protocols already in use that tell devices how and where to relay information. For instance, the Optimized Link State Routing (OLSR) protocol, which Commotion plans on employing, is currently being used in a grassroots MANET called FunkFeuer, based in Vienna. FunkFeuer is a network of 500 devices—most of them dedicated wireless routers on rooftops—and was created by tech-savvy citizens as a test network for OLSR. "We’ve made it massively scalable," says Aaron Kaplan, one of the founders of FunkFeuer. "We’ve been using it to have a community wireless network, and it’s been running very well."
+
+OLSR works by telling each device in the network to send out a "hello" signal to all the other devices in range. That way, a given device is introduced to all of its neighbors. Then each device sends out the list of these neighbors—a kind of neighborhood map (though one that doesn’t have exact geographic information). The protocol takes all the neighborhood maps from all the devices and combines them into an overall network map, refreshing about every 2 seconds.
+
+Before OLSR can be employed to bypass a throttled Internet, the technology needs to "move out of the geek-o-sphere and into the mainstream," Meinrath says. The key, he adds, is to make it really easy to install and use. The installation media that Meinrath envisions—thumb drives and the like—would be both clandestine and user friendly. A CD-ROM, for instance, could automatically install OLSR if it was put into a computer on booting up. And with a thumb drive or an SD card, installation would involve a mere click of the mouse.
+
+In addition to making it easy to set up a MANET, Commotion needs to make sure that the ad hoc networks are secure and anonymous so that citizens can use them without being afraid of persecution. To do this, Commotion will be adding a piece of software called Tor, which masks the sources and destinations of network traffic, and testing it in urban areas in the United States, such as Detroit, Washington, D.C., and Philadelphia. "Before we put people’s lives on the line, we want to test this out in a real-world setting," Meinrath says."
+(http://spectrum.ieee.org/telecom/internet/building-a-subversive-grassroots-network)
+
+
+=Discussion=
+
+
+The Commotion wireless project:
+ 
+As recent events in Tunisia, Egypt, and Libya have illustrated (and
+Myanmar demonstrated several years prior), democratic activists around
+the globe need a secure and reliable platform to ensure their
+communications cannot be controlled or cut off by authoritarian
+regimes. To date, technologies meant to circumvent blocked
+communications have focused predominantly on developing services that
+run over preexisting communication infrastructures. Although these
+applications are important, they still require the use of a wireline
+or wireless network that is prone to monitoring or can be completely
+shut down by central authorities. Moreover, many of these technologies
+do not interface well with each other, limiting the ability of
+activists and the general public to adopt sophisticated circumvention
+technologies.
+ 
+With support from New America Foundation’s Open Technology Initiative
+(OTI), Chambana.net, and Acorn Active Media the developers,
+technavists, and organizers here propose to build a new type of tool
+for democratic organizing: an open source “device-as-infrastructure”
+distributed communications platform that integrates users’ existing
+cell phones, WiFi-enabled computers, and other WiFi-capable personal
+devices to create a metro-scale peer-to-peer (mesh) communications
+network. Leveraging a distributed, mesh wireless infrastructure
+provides two key enhancements to existing circumvention technologies
+and supports human rights advocates and civil society organizations
+working around the globe. First, a distributed infrastructure
+eliminates the ability of governments to completely disrupt
+communications by shutting down the commercial or state-owned
+communications infrastructure. Second, device-as- infrastructure
+networks enhance communications security among activists by
+eliminating points for centralized monitoring, by enabling direct peer-
+to-peer communication, and by aggregating and securing individual
+communications streams.
+ 
+For over a decade, developers here have pioneered the development of
+“device-as-infrastructure” broadband networks. By utilizing cell
+phones and best-of-breed open source projects from around the globe,
+OTI’s implementation strategy integrates already existing hardware
+(and extensions to currently available open source initiatives) to
+dramatically increase the security and robustness of
+telecommunications. 
+
+
+Specifically, this project proposes the following
+five-point solution:
+
+* Create a robust and reliable participatory communications medium that
+is not reliant upon centralized infrastructure for local-to-local
+(peer-to-peer) and local-to-Internet communications;
+
+* Design ad hoc device-as-infrastructure technologies that can survive
+major outages (e.g. electricity, Internet connectivity) and are
+resilient during emergencies, natural disasters, or other hostile
+environments where conventional telecommunications networks are easily
+crippled;
+
+* Secure participants’ communication to protect data integrity and
+anonymity through strong end-to-end encryption and data aggregation;
+Implement communications technologies that integrate low-cost, pre-
+existing, off-the-shelf devices (e.g. cell phones, laptops, consumer
+WiFi routers) and maximize use of open source software; and,
+
+* Develop an open, modular, and highly extensible communications
+platform that is easily upgraded and adapted to the particular needs
+and goals of different local users."
+
+
+
+=Examples=
+
+* Brooklyn, http://oti.newamerica.net/blogposts/2013/case_study_red_hook_initiative_wifi_tidepools-78575
+
+"After superstorm Sandy cut power to most of Red Hook, Brooklyn, the neighborhood’s mesh network demonstrated how the technology could help recovery after natural disasters. A FEMA-provided satellite Internet link was connected to one part of the Commotion-based network still operating, and a mesh-enabled Wi-Fi router was installed on the roof of an auto body shop that also still had power. That made it possible for many residents and the local aid distribution point to use the slow but badly needed satellite link."
+(http://www.technologyreview.com/news/516571/build-your-own-internet-with-mobile-mesh-networking/)
+
+
+*  Detroit, http://cassco.co/
+
+=Status=
+
+'''1.'''
+
+"We need developers, organizers, technical writers, and folks to help
+with outreach. More Arabic speakers are also needed. Concerns are
+raising to support this project as we suspect other Middle-Eastern
+countries may soon respond to ongoing protests in the same way. If you
+would like to help, please sign up on the mailing lists listed below
+or sign into the IRC chat below.
+ 
+On the open source mesh side, folks have begun to organize around two
+focuses. First is to upgrade the olsr client ports (http://
+www.olsr.org/?q=download) starting with Windows, OS X, iPhone, and
+Android. This will allow folks on the ground to create a community
+intranet from existing user devices. Second is to move forward with an
+OpenWRT (http://www.openwrt.org/) based firmware called commotion.
+This will allow existing on the ground routers to be flashed with a
+open source meshing system as well as create live CDs to best make use
+of equipment already in possession of residents or available over the
+counter.
+ 
+Both initial focuses of the project are being managed openly at
+http://tech.chambana.net/projects/commotion and http://tech.chambana.net/projects/OLSRd.
+You can create an account there to contribute to the development of
+this code. 
+
+You can also pull the code anonymously via: $ git clone http://git.chambana.net/commotion.git
+ 
+Our first hope is first create an intranet as requested from our
+growing contacts on the ground to facilitate the creation of local
+based organizing and outreach intranet applications. Concurrently, we
+are working to provide strategic uplinks via satellite and dial-up to
+get folks reconnected to the global internet. Finally, we hope to
+integrate the good work folks at Tor are doing (https://
+trac.torproject.org/projects/tor/wiki/TheOnionRouter/Torouter) into a
+bundle and the firmware as well."
+
+
+'''2.'''
+
+"The Commotion project is also working on making its mesh software useful to people, such as political dissidents, for whom conventional connectivity isn’t safe, and the project has received federal grants to support that work. “The State Department and USAID are interested in protecting the free flow of information,” says Meinrath. “You could use a mesh to route around surveillance and censorship.”
+
+To that end, the Commotion team is adapting an encrypted chat program called Cryptocat so it can be used to communicate securely across a local mesh network. Another adaptation aims at making it possible to route communications only through trusted devices on a mesh network, in case an adversary has joined and is collecting traffic. However, Commotion’s security features are far from complete, and the project prominently displays a warning label on its site to indicate its current limitations."
+(http://www.technologyreview.com/news/516571/build-your-own-internet-with-mobile-mesh-networking/)
+
+=More Information=
+ 
+Below is a list of mailing lists for the intranet development:
+ 
+Developers List,
+http://lists.chambana.net/mailman/listinfo/commotion-dev
+ 
+General Discussion List,
+http://lists.chambana.net/mailman/listinfo/commotion-discuss
+ 
+Announcement Only List,
+http://lists.chambana.net/mailman/listinfo/commotion-announce
+ 
+Folks are also communicating via IRC in #oswc on irc.freenode.net (or
+http://webchat.freenode.net/ for a web client).
+ 
+All code for the Commotion project is under the GNU GPL Version 3,
+unless otherwise stated.
+ 
+Homepage: http://tech.chambana.net/projects/commotion,
+Subprojects: OLSRd
+
+
+[[Category:P2P Infrastructure]]
+
+
+[[Category:Technology]]

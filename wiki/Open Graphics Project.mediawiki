@@ -1,0 +1,70 @@
+'''The Open Graphics Project (OGP) is developing graphics cards with fully published specs and open source drivers'''
+
+URL = http://wiki.duskglow.com/tiki-index.php?page=Open-Graphics
+
+
+=Context=
+
+From http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_1_motivations:
+
+OGP: The “Open Graphics Project” is a community of developers working on replacing proprietary 3D graphics acceleration cards (a major obstacle to free software operating systems on the desktop) with community-designed open-hardware boards which will be free-licensed from the hardware definition language for the chip through the printed circuit board layouts—and of course to the drivers.
+
+OGA: The “[[Open Graphics Architecture]]” is the gate-logic design of the Graphics Processing Unit (GPU) being developed to run on the [[OGD1]] and later on the OGC1 cards.
+
+OGD1: The first “[[Open Graphics Development]]” card is designed to allow testing of the OGA in an FPGA device onto which new hardware designs can be loaded by special software. This is the card which is going into production now.
+
+OGC1: The first “Open Graphics Card” will be an ASIC-based, consumer-targeted graphics card that will be developed using the OGD1 as a testbed.
+
+TRV10: The ASIC chip that will be created for the OGC1 and also sold for embedded uses by Traversal Technology.
+
+Traversal Technology: A company founded by Timothy Miller, Andy Fong, and Howard Parkin, which will actually design, manufacture, and sell Open Graphics cards.
+
+OHF: The “[[Open Hardware Foundation]]” is a non-profit organization founded to aid OGP (and eventually other projects) in handling community funding for prototyping and manufacturing costs as well as other activities to promote Open Hardware
+(http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_1_motivations)
+
+
+'''Glossary''':
+
+"FPGA: A “Field Programmable Gate Array” is a reprogrammable logic gate chip whose internal gate connections can be altered by downloading a bitstream to the card with a special program written for that purpose.
+
+ASIC: An “Application Specific Integrated Circuit” is similar to an FPGA, but fixed at the factory, and much cheaper to produce in quantity.
+
+Verilog/HDL: A “Hardware Description Language” is a textual representation of logic gates and registers. It differs from a programming language mainly in that it describes a parallel structure in space rather than a sequence of actions in time. Verilog is one of the most popular HDLs and resembles C or C++ in its syntax.
+
+CPU: A “Central Processing Unit” is the part of a computer that actually does the computing: all math and memory operations are performed by a CPU.
+
+GPU: A “Graphics Processing Unit” is a kind of specialized CPU designed for graphics processing.
+
+PCI: The “Peripheral Component Interconnect” is the most popular expansion card bus used in most modern desktop computers.
+
+VLSI: “Very Large Scale Integration” refers to chips with many thousands of logic gates or transistors.
+
+SSI: “Small Scale Integration” refers to chips with only a few logic gates or transistors, such as the popular, standardized 7400-series chips that were introduced in the 1960s.
+
+PCB: A “Printed Circuit Board” is a plastic board with etched metal “traces” produced by a printing process. Many thin boards can be bonded together to form a multi-layer board."
+(http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_1_motivations)
+
+
+=History=
+
+
+OSHWA.org:
+
+"Four years later, openhardware.org would house an organization by the same name. But the first [[Open Hardware Foundation]] came out of the [[Open Graphics Project]] (an effort to design, implement, and manufacture a free and open 3D graphics chip set and reference graphics card). Realizing that the initial run of [[Open Graphics]] chips would cost approximately $2M to manufacture, Timothy Miller, founder of the Open Graphics Project, decided to create an offshoot company called Traversal Technology Inc. One of Miller’s concerns was how the company would interact with the project’s community and suggested the creation of a organization to safeguard the interests of Open Graphics Project community (McNamara 2007a)⁠. Thus, Patrick McNamara founded the Open Hardware Foundation (OHF) in 2007, in partnership with Traversal Technology, with the goal of facilitating the design, development, and production of free and open hardware. Another goal of the OHF was to help fund the production of open graphics products by providing Traversal a known number of sales. Traversal benefited by having less financial risk associated with producing the graphics chip and the open source community benefited by having hardware available at reduced or no cost for developers who could contribute further to the project (McNamara 2007a). But in 2009, McNamara announced that in order to better support the Open Graphics Project, the Foundation’s funds (the product of donations) were being applied towards the Linux Fund(2) (McNamara 2009)⁠."
+(http://www.oshwa.org/research/brief-history-of-open-source-hardware-organizations-and-definitions/)
+
+
+
+=More Information=
+
+See our entry on the related [[Open Hardware Foundation]]
+
+
+
+[[Category:Movements]]
+
+[[Category:Design]]
+
+[[Category:Technology]]
+
+[[Category:Open]]

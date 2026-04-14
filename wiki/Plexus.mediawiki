@@ -1,0 +1,25 @@
+
+'''= Technological project by Mark Pesce, which exhibits the following [[Four Design Principles for True P2P Networks]].'''
+
+URL = http://plexus.relationalspace.org/
+
+
+=Definition=
+
+"Plexus is a protocol for the social web, ‘plumbing’ that allows all  social web components to communicate: from each, according to their ability, to each, according to their need"
+
+=Description=
+
+Mark Pesce:
+
+"Plexus provides a ‘meta-API’, based on RFC2822 messaging, so that each service can feed into or be fed by an individual’s social graph.  This social graph, the heart of Plexus, is what we might call the ‘Web2.0 address book’.  It’s not simply a static set of names, addresses, telephone numbers and emails, but, rather, an active set of connections between services, which you can choose to listen to, or to share with.  This is the switchboard, where the real magic takes place, allowing you listen to or be listened to, allowing you to share, or be shared with.
+
+Plexus is agnostic; it can talk to any service, and any service can talk to it.  It is designed to ‘wire everything together’, so that we never have to worry about going hither and yon to manage our social graph, but neither need we be chained in one place.  Plexus gives us as much flexibility as we require.  That’s the vision.
+
+Just after New Year, I had an insight.  I had originally envisioned Plexus as a monolithic set of Python modules.  It became clear that message-passing between the components – using an RFC2822 protocol – would allow me to separate the components, creating a distributed Plexus, parts of which could run anywhere: on a separate process, on a separate subnet, or, really, anywhere.  Furthermore, these messages could easily be encrypted and signed using RSA encryption, creating a strong layer of security.  Finally, these messages could be transmitted by any means necessary: TCP/IP, UUCP, even smoke signals.  And of course, all of it is entirely open.  Because it’s a protocol, the pieces of Plexus can be coded in any language anyone wants to use: Python, Node.js, PHP, Perl, Haskell, Ruby, Java, even shell.  Plexus is an agreement to speak the same language about the things we want to share."
+(http://blog.futurestreetconsulting.com/2011/01/28/smoke-signals/)
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]

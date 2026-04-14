@@ -1,0 +1,13 @@
+
+'''= Federated, Available, and Reliable Storage for an Incompletely Trusted Environment'''
+
+URL = http://research.microsoft.com/sn/Farsite/
+
+=Description=
+
+"Farsite is a serverless, distributed file system that does not assume mutual trust among the client computers on which it runs. Logically, the system functions as a central file server, but physically, there is no central server machine. Instead, a group of desktop client computers collaboratively establish a virtual file server that can be accessed by any of the clients.
+
+The system provides a global name space for files, location-transparent access to both private files and shared public files, and improved reliability relative to storing files on a desktop workstation. It does this by distributing multiple encrypted replicas of each file among a set of client machines. Files are referenced through a hierarchical directory structure that is maintained by a distributed directory service."
+(http://research.microsoft.com/sn/Farsite/)
+
+[[Category:Technology]]

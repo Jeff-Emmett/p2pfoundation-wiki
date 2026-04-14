@@ -1,0 +1,107 @@
+Various ways to use P2P principles for TV, in particular internet TV developments.
+
+
+See our entry on [[IPTV]], which differentiates this concept from Internet Television. The former refers to the efforts by incumbents to use the internet for the tightly controlled distribution of their programs, using set top boxes and [[DRM]]
+
+
+=Definition=
+
+From the Wikipedia:
+
+"The term P2PTV refers to peer-to-peer  (P2P) software applications designed to redistribute video streams in real time on a P2P network; the distributed video streams are typically TV channels from all over the world but may also come from other sources. The draw to these applications is significant because they have the potential to make any TV channel globally available.
+
+In a P2PTV system, each user, while downloading a video stream, is simultaneously also uploading that stream to other users, thus contributing to the overall available bandwidth. The arriving streams are typically a few minutes time-delayed compared to the original sources. The video quality of the channels usually depends on how many users are watching; the video quality is better if there are more users. The architecture of many P2PTV networks can be thought of as real-time versions of BitTorrent: if a user wishes to view a certain channel, the P2PTV software contacts a "tracker server" for that channel in order to obtain addresses of peers who distribute that channel; it then contacts these peers to receive the feed. The tracker records the user's address, so that it can be given to other users who wish to view the same channel. In effect, this creates an overlay network on top of the regular internet for the distribution of real-time video content.
+
+The need for a tracker can also be eliminated by the use of distributed hash table technology.
+
+Some applications allow users to broadcast their own streams, whether self-produced, obtained from a video file, or through a TV tuner card or video capture card.
+
+Many of the commercial P2PTV applications were developed in China (TVUPlayer, PPLive, QQLive, PPStream). The majority of available applications broadcast mainly Asian TV stations, with the exception of TVUPlayer, which carries a number of North American stations including CBS, Spike TV, and Fox News. Some applications distribute TV channels without a legal license to do so; this utilization of P2P technology is particularly popular to view channels that are either not available locally, or only available by paid subscription, as is the case for some sports channels.[1] By January 2009, there were about 14,000 P2P channels on PPStream.
+
+Other commercial P2PTV applications outside China are Abroadcasting (USA), Zattoo (Switzerland/USA), Octoshape (Denmark), LiveStation (UK)."
+(http://en.wikipedia.org/wiki/P2PTV)
+
+=Background=
+
+
+==P2P as the necessary model for interactive TV==
+
+Fortune magazine uncovered yet another aspect of the coming peer to peer age in technology, by pointing out that the current ‘central server based’ methods for interactive TV are woefully inadequate to match supply and demand: 
+
+“Essentially, file-served television describes an Internet for video content. Anyone--from movie company to homeowner--could store video on his own hard disk and make it available for a price. Movie and television companies would have tons of hard disks with huge capacities, since they can afford to store everything they produce. Cable operators and satellite companies might have some hard disks to store the most popular content, since they can charge a premium for such stuff. And homeowners might have hard disks (possibly in the form of PVRs) that can be used as temporary storage for content that takes time to get or that they only want to rent--or permanent storage for what they've bought."
+(http://www.fortune.com/indexw.jhtml?channel=artcol.jhtml&doc_id=208364 )
+
+"The new '''TiVo''' technology, which will become a standard feature in its video recorders, will allow users to download movies and music from the Internet to the hard drive on their video recorder. Although the current TiVo service allows users to watch broadcast, cable or satellite programs at any time, the new technology will make it possible for them to mix content from the Internet with those programs."
+(personal communication)
+
+
+==The economics of netcasting==
+
+Mark Pesce: “A broadcaster spends the same amount of money whether 10 people or 10 million are watching a broadcast, because the broadcast tower reaches all who want to tune into it.  The economics for netcasting are quite different.  Anyone can set up a server to send out ten simultaneous program streams - but it requires a million times the infrastructure and bandwidth to serve the same program to 10 million people. Or it used to. The BBC doesn't have the bandwidth to netcast its programming to all 66 million of its viewers.  Fortunately it doesn't that kind of capability, because the BBC has cleverly designed the Flexible TV application to act as a node in a Peer-to-Peer network.  Anyone using Flexible TV has access to the programs which have been downloaded by any other Flexible TV client, and can get those programs directly from them.  All BBC need do is provide a single copy of a program into the network of P2P clients, and they handle the work themselves.   More than this, because of the P2P technology used by the BBC (more on this in a moment) a Flexible TV user can get a little bit of the program from any number of other peers; rather than going through the process of downloading an entire program from one other peer, the Flexible TV client can ask a hundred other clients for small sections of the program, and download these hundred sections simultaneously.  Not only does this decrease the amount of traffic that any clients has to handle, it also means that it produces a virtuous cycle: the more popular a program is, the more copies of it will exist in the network of peers, and therefore the more easily a peer can download it.
+In other words, the BBC has cracked the big problem which has prevented netcasting from taking off.  In this system of "peercasting" the network is actually more efficient than a broadcast network, because more than one program can be provided simultaneously, and failure in any one point in the network doesn't bring the network down.
+(http://www.hyperreal.org/~mpesce/fbm.html)
+
+
+=Technologies=
+
+
+==The Internet TV Tuner==
+
+'''Mark Pesce on the internet TV tuner''' and its disruptive effects on traditional broadcasting:
+
+“I do believe that it is appropriate to examine the politics of scarcity with respect to television broadcasting, and engineer a solution which effectively routes around the problem (to steal a phrase from John Gilmore), recapitulating the Britannica to Wikipedia process. As media consumers, we need to liberate ourselves from the anti-market forces of the free-to-air commercial networks, and, as creators and purveyors of audiovisual content, we need to free ourselves from the anti-market forces of commercial networks as programme distributors. In other words, we need to develop a comprehensive computational and emergent strategy to disintermediate the distributors of audiovisual media, directly connecting producers to consumers, and further, erasing the hard definition between producer and consumer, so that a producer’s product will only be identifiable by its inherent quality, in the eyes of the viewer, and not by the imprimatur of the distributor.., the pieces are in place for a radical reconfiguration of the technology of programme delivery to the TV viewer. Digital television, thought to be the endpoint of this revolution, was actually only its beginning, and while digital televisions are very useful as display monitors, their broadcast tuners with their sophisticated analog electronics will be completely obsolete once broadband supplants broadcast as the delivery medium. The digital TV is a great output device, but a lousy tuner, because the design of the device reinforces the psychology of spectrum scarcity. What we need, therefore, is a new device, which sits between the Internet, on one hand, and the digital television set, on the other, and acts as a new kind of tuner, thereby enabling a new, disintermediated distribution mechanism. The basic specification for this device is quite simple: it would be capable of locating, downloading and displaying audiovisual content, in any common format, on the viewer’s chosen display device. That display device doesn’t even need to be a digital television - it could be a PC. Or the soon-to-be-released PSP, the PlayStation Portable. Or a 3G cell phone. This intermediary device – the “Internet tuner," if you will – could be a hardware-based set-top box, or a piece of software running on a more general-purpose computing device – it doesn’t really matter…When the idea for the Internet tuner popped into my head… I presumed that I’d stumbled onto a completely novel idea. InI’ve discovered how wrong I was. Projects like the BBC Internet Media Player, MythTV on LINUX, Media Portal for Xbox and Windows, Video LAN Controller for Mac OS X, Windows and LINUX – the list goes on and on. Just four weeks ago TiVO announced that they’re going to release a software upgrade which will make their PVRs Internet-aware, so that they can locate and download Internet audiovisual content. These ideas are floating around the commercial software community, too, in products like Microsoft IPTV, and SnapStream’s Beyond TV. Many people are working toward the features of the Internet tuner, but none of them – to my knowledge – have brought these pieces together with an emphasis on the emergent qualities of the tuner as a tool for communication…the Internet tuner or something very much like it will do for audiovisual media what the Web did for print – make it immediately accessible from anywhere, at any time, for any reason. Because of the Web, libraries are transforming from repositories of knowledge into centers where people come to be pointed toward online repositories. The library is evolving into a physically constituted Google."
+(http://www.disinfo.com/site/displayarticle4565.html; see also http://www.hyperreal.org/~mpesce/fbm.html)
+
+
+'''Mark Pesce on building the alternative media network'''
+
+The Pesce proposal is specifically for a network which could also distribute similar programming, not all nodes doing different things.
+
+"So how do you turn these little stations into a network? Well, there are two answers to this question.  The first is fairly obvious: you put the transmitters close enough together that each station is a paired receiver/transmitter, and in so doing you create a mesh network of transmitters.   The receiver picks up the signal and passes it along to the transmitter, which rebroadcasts it on the same frequency.  This is somewhat analogous to how mobile networks work - you move from cell to cell and the signal follows you seamlessly - and is very well suited to densely populated urban districts, college campuses, public events, and so forth. The costs for each node in such a system are very low - probably less than fifty dollars for both the AM receiver and the transmitter….) Now it isn't possible to blanket an sparsely populated entire country….   In situations like this, Internet streaming comes to the rescue.  Any signal which can be delivered via AM radio can also be delivered via the internet at dial-up speeds.   The streaming signal output can put plugged into the AM transmitter, and, once again, you've got your network.  In this way you can cover both the densely populated areas and the spaces in between them with one network.Now both of these proposals are more than just idle ideas - they're the heart of a new network - RADIO RHIZOME - which launched in Los Angeles."
+(http://www.hyperreal.org/~mpesce/fbm.html)
+
+
+==Tools and services that enable Webcasting==
+
+Bottom-up video production and distribution by internet users
+
+The better known civil society initiatives are Common Bits (http://www.commonbits.org ) and the Broadcast Machine (http://www.particpatoryculture.org/bm ). They are associated with sites that enable sharing of such material through online communities, such as Common Tunes (http://www.commontunes.org ) for music and CommonFlix (http://www.commonflix.org ) for videos. Vimeo (http://www.vimeo.com/ ) allows users to share small clips.
+
+Many new sites are also acting as repositories such as Our Media (http://www.ourmedia.org ),  the Archive (http://www.archive.org ) or the Wikimedia Commons (http://commons.wikimedia.org/wiki/Main_Page)
+
+One World TV is at http://tv.oneworld.net .  Alternative TV stations are build around such open source content. For example UK Nova (http://www.uknova.com ) is webcasting BBC programs which have been put in the public domain.  Movies for the masses is a peer to peer financing scheme for producing movies and videos, at http://www.moviesforthemasses.ibiny.com/ . Search engines have been developed to identify this kind of content, see http://video.google.com/ and http://www.omn.org/
+
+In the corporate world, examples are Audiolink (http://www.audiolink.com/home.html ) and ODEO (http://www.odeo.com )  which assist users in their broadcasting efforts. Prodigem (http://www.prodigem.com ) allows any audiovisual creator to sell their content. Current TV (http://www.current.tv) is a similar attempt to commercialise citizen webcasting. 
+
+Companies are building software that allows users to manage time-shifted radio and television, as well as self-created content into their playing devices such as iPods. Griffin Technologies recently announced iFill, while El Gato's (http://www.elgato.com ) EveHome software enables viewers to watch internet-downloaded content on their TV.
+
+A videoproduction suite is discussed at = http://journal.planetwork.net/article.php?lab=pantic0704 
+
+Most of the above material was reviewed at http://blog.commonbits.org/2005/06/be_the_media_th.html? 
+
+
+==The Broadcast Machine==
+
+"It's a php tool for your website for publishing / posting video 'channels' (rich metadata rss feeds). It's the easiest way to post torrent files and it's also a really good way to make collections of videos from around the web (or to make channels out of stuff that you've posted elsewhere, eg archive.org or ourmedia.org). The goal of the software is to help people make channels of video that will be browsable, downloadable, and watchable in our video player."
+(http://www.boingboing.net/2005/05/24/publish_video_channe.html )
+
+Information about the Broadcast Machine is located at http://www.participatoryculture.org/bm/ 
+
+Interview with creator Steve  Holmes at http://stevegarfield.blogs.com/videoblog/2005/06/holmes_wilson_i.html
+
+This technology has now evolved to become the [[Miro]], a Democratic Internet TV platform
+
+=More Information=
+
+Some discussions on the f uture of television broadcasting: 1) a special report by Newsweek, at http://www.msnbc.msn.com/id/7935605/site/newsweek/ ; 2) a report by Deloitte, at http://www.deloitte.com/dtt/research/0,1015,cid=80658&pre=Y&lid=1&new=I,00.html ; http://www.deloitte.com/dtt/cda/doc/content/dtt_tmt_TelevisionnetworksGLOBAL_042005.pdf 
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Resources]]
+
+[[Category:Business]]
+
+[[Category:Audiovisual]]
+
+[[Category:Media]]

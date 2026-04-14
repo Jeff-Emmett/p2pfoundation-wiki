@@ -1,0 +1,44 @@
+
+'''= bitcoin-powered app to create and manage your own crowdfunding campaign on your computer.'''
+
+URL = http://blog.vinumeris.com/2014/05/17/lighthouse/ 
+
+=Description=
+
+Sandrine Ayral:
+
+"Bitcoin core developer Mike Hearn showcased the app at the Bitcoin 2014 conference in Amsterdam. And Lighthouse is a great example of how you can develop a complicated transaction framework on top of the bitcoin protocol.
+
+Hearn’s tagline about his own app speaks for itself: “[it] provides you with your own Kickstarter, on your own desktop. It explores one possible vision of how we can build decentralized applications.”
+
+If you are skeptical about bitcoin as a currency, there is a whole different aspect that makes it interesting as well — bitcoin is also an application platform. The bitcoin protocol makes it possible to transfer property rights (whether it is digital money, shares, or any kind of certificate) in an unforgeable, transparent and fast manner. And you don’t need a trusted third party. This completely redefines the role of thousand-year-old institutions and trades — banks, governments, lawyers and notaries.
+
+I was particularly eager to discover new startups building apps and services on top of the bitcoin protocol at the conference. With Lighthouse, you get all the features you need in a crowdfunding platform — and the app only leverages the bitcoin protocol.
+
+Lighthouse provides a wallet and a way to build crowdfunding campaigns without relying on a trusted third party. When it comes to crowdfunding, Kickstarter and Indiegogo are the most popular trusted third parties. Lighthouse effectively replaces these platforms.
+
+The bitcoin network detects when enough money has been pledged to reach the initial goal of the campaign, and releases the funds to the project owner when all the conditions have been met.
+
+As a backer, you just need to send coins to the app. You won’t be charged until the campaign goal has been achieved and you can also revoke your pledge before the campaign reaches its goal. Everything is automagically managed by the bitcoin network.
+
+Building Lighthouse is possible because the bitcoin protocol supports assurance contracts, more commonly referred to today as crowdfunding."
+(http://techcrunch.com/2014/05/23/lighthouse-is-a-crowdfunding-platform-built-on-top-of-bitcoin/)
+
+
+=How It Works=
+
+Mike Hearn:
+
+"Lighthouse combines two functions in one. Firstly, it gives a lightweight encryptable HD wallet. It uses simplified payment verification, so even though it synchronises directly with the block chain performance is as good as a web wallet – in fact, it uses the same code that powers the most popular Android smartphone wallet.
+
+Secondly, it provides a way to create projects, pledge money to projects using coins that were sent to the app, and revoke pledges you made if you want your money back before the contract reaches its goal amount. Because the contract takes place entirely on the block chain you don’t need much trust in the project owner to manage the partially raised funds. Pledges can’t be claimed individually; they only become recognised as valid by the Bitcoin network when enough are combined together to reach the goal. And pledges can be revoked by simply clicking a button that double spends the pledged coins back to your own address. This simplifies life for everyone: the project owner doesn’t have to worry about being hacked, they can go on vacation for a while and not have to worry about handling withdrawals from the pot, and anyone who pledges knows they can get their money back whenever they like before the goal is reached.
+
+Lighthouse has two modes: serverless and server assisted. In the serverless mode, which is what I showed in Amsterdam, you don’t need anything beyond the Bitcoin peer to peer network and a way to move files around. The app can be given to someone on a USB stick and it will work, with no signup or accounts needed. But the person doing the crowdfunding is responsible for getting a small contract file to people who might want to pledge, and pledgers have to get a pledge file back to the project owner. For example they could be attached to an email thread, or posted to a forum, or even placed inside an NFC tag. But the most convenient way is to use a shared folder. A completely P2P way of sharing folders is BitTorrent Sync, but you could also just use a shared folder on Google Drive or Dropbox.
+
+To disambiguate pledge files that might be dropped into a shared folder the app lets you choose a short nickname – in this example, the project is being created by cryptographer’s best friend Alice, and she’s getting a pledge from her best friend Bob.
+
+For more traditional larger scale projects where running a server isn’t a problem, there’s also a server assisted mode. In this mode the project can be loaded simply by clicking a link on a web page, and pledges are uploaded back to the server. Once enough pledges are gathered that server will automatically combine them and transmit them to the Bitcoin network. There’s no need to manually deal with files. Server assisted mode will often be the most appropriate choice for people raising money for larger endeavours, and serverless mode would make more sense for “micro crowdfunds” like a group of friends that want to split the costs of a big party, but only if enough people pledge to come."
+(http://blog.vinumeris.com/2014/05/17/lighthouse/)
+
+
+[[Category:Peerfunding]]

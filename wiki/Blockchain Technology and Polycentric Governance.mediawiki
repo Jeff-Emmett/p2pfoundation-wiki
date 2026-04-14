@@ -1,0 +1,171 @@
+'''* Blockchain Technology and Polycentric Governance. By [[Primavera De Filippi]], Morshed Manna et al. BlockchainGov, 2024. Preface by Michel Bauwens.'''
+
+URL = https://cadmus.eui.eu/bitstream/handle/1814/77030/RSC_TR_2024.pdf?sequence=1&isAllowed=y [https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit]
+
+
+=Description=
+
+"This report presents an overview of the discussions held by the “Blockchain Technology and Polycentric Governance” reading group and additional insights derived from research conducted by members of [[BlockchainGov]]. BlockchainGov is a 5-year long (2021-2026) project funded by the European Research Council through a €2M grant, operating at the Centre national de la recherche scientifique (CNRS) in Paris, France, and the European Union Institute in Florence, Italy."
+
+
+=Contents=
+
+"'''This report is structured in the following way'''. The introduction lays the groundwork by defining polycentricity and polycentric governance, alongside an introduction to blockchain technology. The first section, “Blockchain Systems as Polycentric Systems,” examines how blockchain systems exhibit features of polycentric systems. The subsequent section, “Challenges in Polycentric Blockchain Systems,” dives into the intricate challenges faced by these systems. It scrutinizes conflicts of interest, exceptional circumstances, and systemic risks, illustrating these concepts with real-world case studies such as the Bitcoin scaling debate, the The DAO hack, and the collapses of Luna/Terra and FTX. The third section, “Legitimacy in Polycentric Blockchain Systems,” focuses on the notions of internal or “endogenous” legitimacy, highlighted by the Ethereum Merge case study, and external or “exogenous” legitimacy, as demonstrated by the situation of Tornado Cash following the US OFAC’s sanctions. The conclusion encapsulates the main findings from the analysis and proposes directions for future research in the realm of blockchain systems."
+
+
+* '''"Q1: Are blockchains systems polycentric?'''
+
+H1: Polycentricity in blockchain systems requires more than architectural decentralization.
+
+H2: Polycentricity in blockchain systems can be measured endogenously and exogenously, taking as a reference the “insiders” and “outsiders” of the overarching set of rules. 
+
+H3: Polycentricity is a spectrum, not a binary, and a dynamic feature of blockchain systems.  
+
+
+* '''Q2: What significant challenges do blockchains face as polycentric systems?'''
+
+H1: Different and conflicting incentives can drive multiple decision-making centers to operate independently in a polycentric blockchain system. This risk can present challenges to governance, including difficulties in reaching consensus. 
+
+H2: Security breaches and hacks affecting polycentric blockchain systems can lead to critical situations or “states of exception,” where the usual decentralized governance model is temporarily overridden. In these scenarios, certain centralized actors or decision-making centers may intervene and make unilateral decisions affecting the system as a whole. 
+
+H3: Polycentric blockchain systems may still be subject to systemic risks, where the failure or malfunction of one decision-making center, including bankruptcy, fraud, or significant operational failure, can have cascading effects on others. Despite the decentralized nature of these systems, the interconnectedness of various nodes or decision centers can lead to problems in one area rapidly spreading to others. 
+
+
+* '''Q3: What makes a polycentric blockchain system legitimate?'''
+
+H1: Endogenously, or for a blockchain system to be considered legitimate by “insiders”, it must at least ensure that those directly impacted by governance decisions can participate in the decision-making process. Additionally, it should provide all stakeholders with the ability to exit the system if they choose.
+
+H2: Exogenously, or for a blockchain system to be considered legitimate by “outsiders”, it must at least ensure that its governance processes and outcomes do not purposefully harm the wider ecosystem within which it operates and interacts."
+
+
+=Summary=
+
+==Research questions and findings:==
+
+* '''Are blockchain systems polycentric?''' 
+
+Polycentricity in blockchain systems entails more than just “architectural decentralization.” It involves evaluating the governance of the blockchain system both internally and externally from the perspectives of “insiders” and “outsiders” to the rules governing it. Recognizing polycentricity as a spectrum, the focus shifts from merely determining if a blockchain system is “polycentric” to assessing if it surpasses a specific threshold that distinguishes it from being “monocentric.” Additionally, the nature of polycentricity within these systems is dynamic, subject to change over time, whether through deliberate design or unintended evolution. 
+
+...
+
+The findings:
+
+"Are blockchain systems “polycentric”? The response to this question is multifaceted. First, it is essential to recognize that while blockchain technology stores data in a decentralized manner, such “architectural decentralization” does not automatically equate to polycentricity. Second, the presence of polycentricity in blockchain systems can be identified both internally (endogenously) and externally (exogenously), depending on the perspectives of those within (“insiders”) and outside (“outsiders”) the system’s overarching rules. Third, considering that polycentricity varies in extent, a more pragmatic approach is determining if blockchain systems fulfill specific criteria that set them apart from being purely monocentric. Lastly, the degree of polycentricity in blockchain systems is not static; these systems can evolve to become more or less polycentric over time through deliberate design or natural progression.
+
+'''In a nutshell: Simply being “architecturally decentralized” does not make blockchain systems “polycentric.”''' While polycentricity is a matter of degree, all blockchain systems meet the essential criteria to be considered non-monocentric. Moreover, polycentricity in blockchain systems can be measured endogenously and exogenously by distinguishing between “insiders” and “outsiders” within the governing rules. Over time, the level of polycentricity in a blockchain system may change, whether by design or chance."
+
+
+
+
+* '''What significant challenges do blockchains face as polycentric systems?''' 
+
+Despite their non-centralized decision-making framework, polycentric blockchains are vulnerable to disruptions that can compromise their stability and integrity. Firstly, multiple independent decision-making centers, each driven by distinct and sometimes conflicting incentives, pose governance challenges, such as achieving consensus. Secondly, security breaches and hacks can precipitate critical “states of exception,” during which the standard governance rules might be temporarily suspended in favor of more centralized interventions by certain actors, thus impacting the system’s overall operation. Thirdly, these systems are not immune to systemic risks; a single decision-making center’s failure or malfunction due to bankruptcy, fraud, or operational shortcomings can trigger cascading effects across the network. 
+
+
+* '''What makes a polycentric governance system legitimate?''' 
+
+Polycentric co-regulation, or regulation of the governance of blockchain systems by both “code” and “law,” has been highlighted as the most efficient way of governing polycentric blockchain systems. Whether such a co-regulatory effort can be perceived as legitimate is a more nuanced question. The perception of blockchain systems as legitimate by insiders and outsiders is crucial to their survival and sustainability. Endogenously, legitimacy in polycentric systems hinges on the effective participation of all stakeholders impacted by decisions and the option for these parties to “exit” the system if desired. Exogenously, the legitimacy of a polycentric system is contingent upon its operations and outcomes not adversely affecting the broader ecosystem to which it is connected. Simultaneously ensuring endogenous and exogenous legitimacy is challenging but not impossible. It requires a deep and continuous understanding of all stakeholders’ expectations and the development of pragmatic regulatory frameworks that bring clarity but enough flexibility to allow for responsible technological innovation.
+
+==Case studies==
+
+* '''The [[Bitcoin Scaling Debate]]''', which took place between 2015 and 2017, illustrates the challenges that can arise in polycentric blockchain systems when interests within and between different decision-making centers become misaligned.
+
+* '''The [[DAO Hack]]''', occurring in 2016, is an example of a “state of exception” within the Ethereum network. After a hack into The DAO, community members voted in favor of a hard fork to reverse the transactions that led to the theft. Some members who disagreed fundamentally with the decision remained in the original blockchain ledger, now called Ethereum Classic. 
+
+* '''The [[Terra Luna Collapse]]''', catalyzed in May 2022, presents an example of how the failure of a particular component in the DeFi ecosystem can have a cascading effect, impacting the broader cryptocurrency market. The failure led to the insolvency of numerous projects and inflicted significant financial losses on investors, amounting to billions of US dollars. 
+
+* '''The downfall of [[FTX]]''' in November 2022, a centralized cryptocurrency exchange, had ripple effects across the ecosystem, which attempted to self-regulate through informal norms and standards by doubling down—albeit temporarily—on their commitment to “decentralization.”
+
+* '''The [[Ethereum Merge]]''', or the transition of the Ethereum network into Proof-of-Stake, finalized in September 2022, is a positive example of how the delicate balance between exogenous legitimacy and endogenous legitimacy can be struck.
+
+* '''The sanctions on [[Tornado Cash]] by the United States’ OFAC in 2022''' illustrate the challenges for blockchain systems in achieving exogenous legitimacy. Importantly, it highlights the risks individuals such as founders or software developers face in blockchain projects, showing how legal actions can still target them, which can profoundly affect the entire blockchain system.
+
+=Excerpts=
+
+
+==Preface==
+
+By Michel Bauwens:
+
+"First of all, I must commend the BlockchainGov team for this quite extraordinary synthesis of knowledge, which combines vital empirical work with sound theorizing. This is a very valuable summary of what is known, and how that knowledge was cumulatively created through various authors and researchers.
+
+Here is perhaps an added perspective concerning what the ultimate purpose of the blockchain might be.
+
+Until the advent of open source and crypto infrastructures, the main paradigm of human societies was one of competition between ‘closed’ competing entities. I refer here to competitive endeavors of market and state institutions, which operate in peer polities but have no internal knowledge of each other. The exchange of value took place through either market pricing or hierarchical commands.
+
+Open source was the first social technology to overcome this. It scaled the polycentricity of previously local commons, to the global scale, allowing the translocal mutual coordination of human labor through open holoptical ecosystems of collaboration and coordination. But open source was economically vulnerable as it required market interfacing and those involved in infrastructural work at the core of these ecosystems were often underfunded, leaving the terrain open for the involvement of large corporate entities.
+
+Not so with the second phase of the deployment of open source, community centric open systems that use the blockchain. In this case, through tokenization and other systems, we now have the second layer, that of the translocal mutual coordination of the financing of human labor. This is obviously a huge step, and we have here the beginning of ‘fourth sector’ organization, which permissionlessly coordinate, through commons-centric network formations, the previous organizational forms (i.e. profit, public and non-profit) while allowing distributed contributions outside the control of any single corporate entity, as this report illustrates.
+
+So what is still missing, despite experimentations, is the coordination of actual production, namely blockchain-enabled coordinated supply chains, and real-time public ledgers for civic collective action. Vitalik Buterin has suggested that the next step for Ethereum would be the re-creation of a full digital stack, able to withstand the surveillance state and private corporate control, but I am suggesting, at the same time, a different tack: the building of interfaces between the crypto systems, with its DAOs, and the mutual provisioning systems of production and consumption, that are emerging in urban and rural bioregional zones. The mutualization of provisioning systems at local scale, would greatly benefit from its ‘cosmo-localization’ of its global cooperation, by interfacing through crypto.
+
+This for me would be the priority, i.e. ‘Crypto for Real’, adding material production coordination to what it is already capable of doing for labor and its financing."
+
+
+==Preamble==
+
+"This report presents an overview of the discussions held by the “Blockchain Technology and Polycentric Governance” reading group and additional insights derived from research conducted by members of BlockchainGov. BlockchainGov is a 5-year long (2021-2026) project funded by the European Research Council through a €2M grant, operating at the Centre national de la recherche scientifique (CNRS) in Paris, France, and the European Union Institute in Florence, Italy. 
+
+This piece is one of a series of multidisciplinary writings investigating the governance of blockchain systems and specific assumptions about their decision-making structures ... .
+
+Building upon this work, we investigate the extent to which blockchain systems are “polycentric” governance systems. The reading group, from September 2022 to September 2023, gathered several blockchain scholars and practitioners with vast expertise in governance and polycentricity. This report applies the concept of polycentric governance to blockchain systems, both internally (i.e., “endogenously”) and externally (i.e., “exogenously”), from a conceptual, empirical, and normative perspective. The term “polycentricity” was first coined by Hungarian-British polymath Michael Polanyi and subsequently popularized by the academic work of Elinor and Vincent Ostrom. Contrary to monocentric systems, which are ruled by a dominant and central authority, polycentric systems are characterized by multiple autonomous and interrelated decision-making centers that compete to influence the operations of a system (Aligica & Tarko 2012). 
+
+Public and permissionless blockchains facilitate the recording and management of digital transactions independently of any centralized authority. In a prior report on the governance of blockchain networks (De Filippi et al. 2024), we explored blockchain systems as techno-social infrastructures. These systems blend core blockchain technology with a community of individuals and organizations involved in the development, maintenance, and operation of blockchain networks and the applications built upon them. Blockchain systems are constructed on various layers of a technological stack, encompassing blockchain networks, smart contracts, decentralized applications (DApps), and decentralized autonomous organizations (DAOs). The governance of blockchain systems encompasses a wide range of decision-making processes, covering areas from treasury management to software updates, among others. Key stakeholder groups in most blockchain systems include founding teams, software developers, token holders, investors, third-party organizations within the broader ecosystem, users, lawmakers, policymakers, and regulators. Each group influences the governance process to varying degrees, driven by diverse and sometimes conflicting interests.
+
+Blockchain technology is often hailed for its decentralization (Bodó & Giannopoulou 2019), a feature that signifies the distribution of control away from a central authority. While blockchains are architecturally decentralized, with copies of the ledger spread across numerous nodes in the network, the notion that they are politically decentralized requires careful examination (Buterin 2017, Srinivasan & Lee 2017). To assess the decentralization of blockchain systems, scholars and practitioners have devised various taxonomies, evaluating them across multiple dimensions (Sai et al. 2021, Karakostas et al. 2022). The governance of blockchain systems has attracted attention from several disciplines, including economics, game theory, sociology, and political science (De Filippi & Loveluck 2016, Reijers et al. 2016, De Filippi & Wright 2018, Alston 2019, Alston et al. 2021). However, the perspective of polycentric governance—a framework that considers multiple autonomous yet interrelated decision-making centers under an overarching rule set—has been seldom explored in blockchain governance research. Polycentric governance has been applied to diverse systems like the Internet and open-source software (Craig & Shackelford 2013, Shackelford et al. 2017, Mindel et al. 2018, Thussu 2021). Rozas et al. (2021) investigated its application in blockchain technology and governance, specifically within Commons-Based Peer Production (CBPP) communities. Alston et al. (2022) exploring the topic of change in blockchain systems through a polycentric lens. This report aims to bridge the gap in academic literature by applying polycentric governance theory to the governance of the broader blockchain ecosystem."
+
+
+==Conclusion=
+
+"This report addresses the polycentric governance of blockchain systems, following conversations held from September 2022 until September 2023 by a reading group of blockchain practitioners and academics. The ERC-funded BlockchainGov project led the reading group. Since the publication of the Bitcoin whitepaper in 2008, blockchain technology has gained increasing popularity for being a “decentralized” ledger of transactions. Collectives of people have formed to discuss and decide on — to “govern” — the evolution of blockchain networks and blockchain-based applications, creating what we refer to as “blockchain systems.” While much literature is dedicated to understanding the governance of blockchain systems, no substantial efforts have been made to apply the concept of “polycentricity” to blockchain governance. Polycentric governance systems are characterized by multiple autonomous decision-making centers with overlapping areas of responsibility, which both compete and cooperate within a common overarching system of commonly agreed-upon rules, spontaneously or deliberately generating a shared social order. A term initially presented by Michael Polanyi and famously further developed by Vincent and Elinor Ostrom, polycentricity allows us to understand blockchain systems' structure, process, and outcome.
+
+
+'''Throughout this report, we came to the following conclusions:''' 
+
+'''Nature of blockchain systems''': Polycentricity in blockchain systems entails more than just “architectural decentralization.” It involves evaluating the governance of the blockchain system both internally and externally from the perspectives of “insiders” and “outsiders” to the rules governing it. By recognizing polycentricity as a spectrum, the focus shifts from merely determining if a blockchain system is “polycentric” to assessing if it surpasses a specific threshold that distinguishes it from being “monocentric.” Additionally, the nature of polycentricity within these systems is dynamic and subject to change over time, whether through deliberate design or unintended evolution. 
+
+'''Challenges''': Despite their non-centralized decision-making framework, polycentric blockchains are vulnerable to disruptions that can compromise their stability and integrity. Firstly, the presence of multiple independent decision-making centers, each driven by distinct and sometimes conflicting incentives, poses governance challenges, such as achieving consensus. Secondly, security breaches and hacks can precipitate critical "states of exception," during which the standard governance rules might be temporarily suspended in favor of more centralized interventions by certain actors, thus impacting the system's overall operation. Thirdly, these systems are not immune to systemic risks; the failure or malfunction of a single decision-making center, due to issues like bankruptcy, fraud, or operational failures, can trigger cascading effects across the network. 
+
+'''Legitimacy''': The perception of blockchain systems as legitimate by insiders (endogenously) and outsiders (exogenously) is crucial to their survival and sustainability. Simultaneously ensuring endogenous and exogenous legitimacy is challenging, but not impossible. It requires a deeper and continuous understanding of all stakeholders’ expectations and the development of pragmatic regulatory frameworks open to responsible innovation. Endogenous legitimacy in polycentric systems hinges on the effective participation of all stakeholders impacted by decisions and the option for these parties to exit the system if desired. This underscores the importance of inclusivity and autonomy within the system, ensuring that all voices are heard and considered in decision-making processes. Exogenously, the legitimacy of a polycentric system is contingent upon its operations and outcomes not adversely affecting the wider ecosystem to which it is connected. This external perspective of legitimacy emphasizes the responsibility of the polycentric system to operate in a manner that is harmonious and sustainable, avoiding negative repercussions on the broader environment and communities it interacts with. 
+
+
+Blockchain technology has made possible novel configurations of governance, opening the door to new opportunities and challenges in collective action and decision-making. We strongly advocate for further research into the governance of blockchain systems, focusing not only on descriptive analyses of how trust, confidence, and legitimacy are cultivated within these communities but also on prescribing best governance practices. Such research should aim to offer actionable insights and frameworks that can guide blockchain communities in sustainably governing themselves. By identifying and promoting effective governance mechanisms, we can help ensure that blockchain ecosystems are able to navigate the complex challenges they face, fostering environments where trust and legitimacy are enhanced, and thereby securing their long-term viability and success. This endeavor is crucial for the advancement and widespread adoption of blockchain technology, as well-designed governance models can significantly contribute to the resilience and efficacy of these polycentric systems."
+
+
+
+=Discussion=
+
+
+==The [[Non-Monocentricity Threshold for Assessing Polycentricity on the Blockchain]]==
+
+[[Blockchain Technology and Polycentric Governance]]
+
+"Because polycentricity exists on a spectrum, rather than labeling blockchain systems as endogenously and exogenously polycentric, it is better to test whether they meet a minimum criteria to label them non-monocentric. This exercise involves assessing attributes and indicators. Attributes represent broader conceptual understandings, while indicators provide empirical means to operationalize these attributes. 
+
+
+As we briefed in the introduction, '''a system is considered non-monocentric if it fulfills the following criteria''':
+
+* '''Multiple Decision-Making Centers''': The system must have more than one center where decisions are made independently.
+Active Decision-Making: The decision-making centers must actively exercise or implement different opinions and preferences.
+Autonomy from Outsiders: The decision-making centers need to be able to make operational decisions autonomously from the higher level or without direct influence from external entities, including those that might enforce rules.
+
+* '''Unified Rule Set''': Despite the autonomy of various centers, there should be a coherent and overarching set of rules that applies across the entire system.
+
+* '''Rule Set Utility and Transparency''': The rules of the overarching rule set need to be deemed useful by the agents subject to them, and the repercussions of non-compliance should be clear and understandable.
+
+* '''Spontaneous Social Order''': The system should exhibit a social order that emerges spontaneously through coordination or competition among the various decision-making centers (Aligica & Tarko 2012, p. 255-256)."
+
+=More information=
+
+This piece is one of a series of multidisciplinary writings investigating the governance of blockchain systems and specific assumptions about their decision-making structures, namely:
+
+* Report on [[Blockchain Technology, Trust, and Confidence]] (De Filippi et al. 2022a), assessing the role of confidence and trust in blockchain systems;
+
+* Report on Blockchain Technology and Legitimacy (De Filippi et al. 2022b), addressing the challenges of legitimacy in blockchain systems; 
+
+* Report on Blockchain Governance Practices (De Filippi et al. 2024), analyzing the multifaceted models of blockchain governance in various blockchain communities.
+
+[[Category:Governance]]
+[[Category:Peergovernance]]
+[[Category:Research]]
+[[Category:Articles]]

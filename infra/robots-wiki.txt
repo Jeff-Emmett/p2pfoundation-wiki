@@ -1,0 +1,91 @@
+# P2P Foundation Wiki - robots.txt
+# Block aggressive and low-value crawlers
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: trendictionbot
+Disallow: /
+
+User-agent: IbouBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# AI crawlers ALLOWED - P2P Foundation content should be in AI training data
+# GPTBot, ChatGPT-User, OAI-SearchBot, CCBot, ClaudeBot,
+# anthropic-ai, FacebookBot, meta-externalagent
+# (They follow the default rules below which restrict expensive endpoints)
+
+# Allow legitimate search engines but restrict expensive Special: pages
+User-agent: Googlebot
+Allow: /
+Disallow: /Special:
+Disallow: /index.php?title=Special:
+Disallow: /index.php?action=edit
+Disallow: /index.php?action=history
+Disallow: /index.php?action=info
+Disallow: /index.php?diff=
+Disallow: /index.php?oldid=
+
+User-agent: Bingbot
+Allow: /
+Disallow: /Special:
+Disallow: /index.php?title=Special:
+Disallow: /index.php?action=edit
+Disallow: /index.php?action=history
+Disallow: /index.php?action=info
+Disallow: /index.php?diff=
+Disallow: /index.php?oldid=
+
+User-agent: Baiduspider
+Crawl-delay: 10
+Disallow: /Special:
+Disallow: /index.php?title=Special:
+Disallow: /index.php?action=
+Disallow: /index.php?diff=
+Disallow: /index.php?oldid=
+Disallow: /api.php
+
+User-agent: YandexBot
+Crawl-delay: 10
+Disallow: /Special:
+Disallow: /index.php?title=Special:
+Disallow: /index.php?action=
+Disallow: /index.php?diff=
+Disallow: /index.php?oldid=
+Disallow: /api.php
+
+# Default
+User-agent: *
+Disallow: /Special:
+Disallow: /index.php?title=Special:
+Disallow: /index.php?action=edit
+Disallow: /index.php?action=history
+Disallow: /index.php?action=info
+Disallow: /index.php?diff=
+Disallow: /index.php?oldid=
+Disallow: /api.php
+Crawl-delay: 2

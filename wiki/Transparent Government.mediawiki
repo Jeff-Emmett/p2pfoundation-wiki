@@ -1,0 +1,136 @@
+
+'''= the goal of the [[Open Government Data]] and [[Free Civic Data]] movements'''
+
+
+
+=Description=
+
+David Stephenson:
+
+"When ordinary people are able to gain access to government data even the limited number of examples of transparent government to date show that extraordinary things can result:
+    
+* ingenious new ways of combining various data bases to illustrate convergence, contrasts or possible causality
+    
+* mashups of data and maps
+    
+* public and media attention to previously-obscure issues.
+
+No matter what the specific form, these transparency projects create insights, provoke discussion — and sometimes outrage — on issues ranging from what military spending might pay for if diverted to human services to where illegal billboards are located.
+
+Because the transparent government movement is so new, there are no formulas for what constitutes a component — in fact, perhaps there never will be any, because variety and pushing the envelope is one of the key values. 
+
+
+However, the following examples will give you some broad parameters:
+
+* mashup of official data and a Google Map, so that data may be visualized in its geographic context.
+    
+* charts combining several data sources to demonstrate causality or relationships.
+    
+* use data released in common, easy-to-work-with form (XML)
+    
+* driven by the author’s personal interests, background, and/or — passions (after all, what government employee would ever think of a mashup showing where illegal billboards are located around a city — let alone create it??)
+    
+* Capitalize on recent technology and data sources the public already uses and is comfortable with in other aspects of their lives, such as Google mashups."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/514/473)
+
+
+=Examples=
+
+All examples from David Stephenson:
+
+"So who are the pioneers of transparent government? Where can you go for inspiration and to better understand the transparent government phenomenon? Let me describe a range of them that will give you an idea about the concept and how individuals and organizations have taken on this challenge without cooperation or involvement by government agencies."
+
+
+==Chicago Crime==
+
+Probably the first transparent government site mashing up data and a Google Map is the award-winning Chicago Crime. It was developed not by a police department employee, but by Adrian Holovaty, a Web developer with a background in journalism and databases.
+
+Chicago Crime was, and is, not affiliated with the Chicago Police Department.
+
+Holovaty takes data from the official Citizen ICAM site, which lets the public search for recently reported crimes. As we will see later, some municipalities do real-time raw data feeds to facilitate citizen mashups, but the Chicago Police to not — in fact, it takes a week after a crime before the data is posted, so once a day, Chicago Crime automatically does a screen scrape of new crime data from ICAM and it’s added to to the mashup."
+
+
+==Illegal Signs==
+
+"A little more quirky, but equally important because it illustrates how a single individual with a real passion for an issue, no matter how obscure it may be, can bring light to an issue through a clever mashup, is IllegalSigns.ca. As the site’s name implies, this one concentrates on removal of illegal billboards in Toronto.
+
+Equally important, this is an important example of sousveillance, in which government agencies are held accountable by public attention to their work — or lack thereof."
+
+
+==National Priorities Project==
+
+Washington DC: "It focuses on the impact of federal spending and other policies at the national, state, congressional district and local levels. It is an example of a transparent government project that relies more on provocative combinations of databases than on clever visualizations. For example, it allows users to determine tradeoffs between federal spending on military projects and a wide range of alternatives, including hiring teachers. The comparisons can be done on a statewide basis or by individual Congressional district."
+
+
+==Neighborhood Knowledge Los Angeles==
+
+"The last example of citizen-initiated transparent government I’ll cite is Neighborhood Knowledge Los Angeles, a collaboration between UCLA and community activists. Its motto is “neighborhood improvement and recovery is not just for the experts.” They say the staff is “ ..firmly committed to the accountability of making public information broadly accessible and understandable to local communities.”
+
+NKLA provides tools — such as access to the city’s code enforcement MIS — to access property and neighborhood data. It works with neighborhood residents, community organizations, and policymakers to mobilize support for community improvement in the Los Angeles area.
+
+Under a new federal grant, NKLA is transforming the Neighborhood Early Warning System (developed by the Center for Neighborhood Technology), which identifies early signs that a neighborhood may be declining, into a way to monitor neighborhood conditions.
+
+This is an important example of the value of transparent government because the system combines data on 7 “problem indicators” (from code violations to current and longer term property tax delinquencies) that might have otherwise remained isolated, as a means to highlight areas that need assistance before they become seriously blighted. It’s great example of visualization’s power: if you see a single block where there are overlays indicating 4 or 5 (or worse..) of the factors are present there, the numbers become almost irrelevant: you see there’s a serious problem (now if only the NKLA site wasn’t fraught with technical problems and a totally- unresponsive staff, they might actually be effective…) .
+
+Another NKLA goal is an important one for transparent government: they want release of the relevant data by city agencies not just historically, but on a real-time basis, so it can identify problems before they escalate.
+
+NKLA also illustrates another aspect of transparent government: when a Web-based service becomes available from companies, we start to ask why isn’t a similar service available from government? NKLA says, “The aim is for a system that will help residents track code complaints, inspections, and improvements in ways like online customers track their Fed Ex packages.”
+
+
+==Citywide Data Warehouse==
+
+Washington DC:
+
+"Leading the way for government: DC’s Citywide Data Warehouse
+However, the most exciting model — bar none — is right next door: the District of Columbia’s Citywide Data Warehouse (CDW), created as part of the city’s operational reform efforts.
+
+
+It provides real-time RSS, XML, and ATOM feeds. Among the benefits:
+
+* it has improved coordination among city agencies (as I’ll discuss later, this is critical, because transparent government should be tested behind the firewall first)
+    
+* the mashups are more informative because the data is available on a real-time basis rather than scraped from historical records
+    
+* the range of feed formats allows a wider variety of uses.
+
+The feeds are drawn from more than 150 data sets, ranging from the all-important crime reports to pothole complaints to the DPW (which Jon Udell quickly whipped into a cool sousveillance mashup).
+
+
+I’ve just been informed that DC has just added (although I haven’t been able to find them yet) the critical elements whose absence had kept the program from really being successful:
+
+* an easy-to-understand guide to using the feeds for analysis (similar to the ones found on commercial sites such as Swivel and Many Eyes)
+    
+* providing a central site where citizen mashups could be displayed and categorized."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/514/473)
+
+
+=Discussion=
+
+"They’re evidently still lacking a public outreach program to encourage the public to participate.
+
+There are a lot of concerns that can and should be addressed before a transparent government project is launched. Fortunately, there are sound solutions to most of them.
+
+
+* Concern: Amateurs will just confuse issues
+
+Response: As Jon Udell says, “Those who don’t cite data will be laughed at. Those who do cite data but interpret it incorrectly will be corrected. Those who do great work will develop reputations that are discoverable and measurable.”
+    
+
+* Concern: will violate privacy
+      
+Response: there is already a lot of personal information available on the web as well as data theft and inadvertent disclosure by government agencies. This issue must be addressed on a comprehensive basis, and shouldn’t be given as the justification for denying transparent government.
+    
+
+* Concern: releasing and combining bad data will compound problems
+      
+Response: No justification! Bad data must be cleaned up under any circumstances."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/514/473)
+
+
+[[Category:Policy]]
+
+[[Category:Governance]]
+
+[[Category:Politics]]
+
+[[Category:Movements]]

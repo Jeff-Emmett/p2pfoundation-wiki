@@ -1,0 +1,28 @@
+'''Resource Description Framework''' = a [[Semantic Web]] standard
+
+URL = http://en.wikipedia.org/wiki/Resource_Description_Framework
+
+=Description=
+
+"An official W3C recommendation, RDF is an XML-based standard for describing resources that exist on the Web, intranets, and extranets. RDF builds on existing XML and URI (Uniform Resource Identifier) technologies, using a URI to identify every resource, and using URIs to make statements about resources. RDF statements describe a resource (identified by a URI), the resource’s properties, and the values of those properties. RDF statements are often referred to as “triples” that consist of a subject, predicate, and object, which correspond to a resource (subject) a property (predicate), and a property value (object)." (http://www.altova.com/semantic_web.html) 
+
+
+==[[RDFa]]==
+
+"The modern Web is made up of an enormous number of documents that have been created using HTML. These documents contain significant amounts of structured data, which is largely unavailable to tools and applications. When publishers can express this data more completely, and when tools can read it, a new world of user functionality becomes available, letting users transfer structured data between applications and web sites, and allowing browsing applications to improve the user experience: an event on a web page can be directly imported into a user's desktop calendar; a license on a document can be detected so that users can be informed of their rights automatically; a photo's creator, camera setting information, resolution, location and topic can be published as easily as the original photo itself, enabling structured search and sharing.
+
+RDFa is a specification for attributes to be used with languages such as HTML and XHTML to express structured data. The rendered, hypertext data of XHTML is reused by the RDFa markup, so that publishers don't need to repeat significant data in the document content. This document is an introduction to the use of the RDFa attributes with XHTML. The underlying abstract representation is RDF [RDFPRIMER], which lets publishers build their own vocabulary, extend others, and evolve their vocabulary with maximal interoperability over time. The expressed structure is closely tied to the data, so that rendered data can be copied and pasted along with its relevant structure.
+
+The rules for interpreting the data are generic, so that there is no need for different rules for different formats; this allows authors and publishers of data to define their own formats without having to update software, register formats via a central authority, or worry that two formats may interfere with each other.
+
+RDFa shares some use cases with microformats. Whereas microformats specify both a syntax for embedding structured data into HTML documents and a vocabulary of specific terms for each microformat, RDFa specifies only a syntax and relies on independent specification of terms (often called vocabularies or taxonomies) by others. RDFa allows terms from multiple independently-developed vocabularies to be freely intermixed and is designed such that the language can be parsed without knowledge of the specific term vocabulary being used."
+(http://www.w3.org/TR/xhtml-rdfa-primer/)
+
+=More Information=
+
+
+==French==
+
+See [[RDF]]
+
+[[Category:Standards]]

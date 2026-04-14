@@ -1,0 +1,82 @@
+=Examples=
+
+#[http://www.dmpf.org/ Digital Media Project]
+#[http://chillout.dmpf.org/wordpress/index.php Chillout]]
+#[[Dream]]
+
+=Discussion=
+
+
+==Henrik Ingo:==
+
+" I think the following short rule of thumb is a good start: '''For various "ethics related" reasons one may be opposed to all DRM on principle. On the other hand, if someone is going to use DRM, it is clearly better that they'd use an open standard - then at least there is a chance that the DRM is not a reason to make the content locked into a proprietary one-vendor/one-platform solution'''. 
+
+(Richard Stallman would
+disagree with this opinion, saying that DRM is always a form of
+oppression and producing a good system of oppression is actually worse
+than a bad system.)
+
+
+In practice even open standards DRM will always have to rely on
+something being kept secret from the end user / consumer and therefore
+the opennes is of questionable value to the end user, who's role is
+restricted to being just a consumer.
+
+Typically an open source content player is not a possibility, or at
+least some library file providing the particular decryption functions
+would have to be closed source. This because even if the DRM system
+would be based on an open standard, at least some cryptographic keys
+have to be hidden from the user. Other alternatives are to hide the
+decryption component in some hardware, like a smartcard or the
+infamous TPM chip on a motherboard. Even so, something is restricted
+from the end user, this is just another place to hide it. In addition
+to hiding the decryption function, a proper DRM also wants to protect
+the path from decryption to output device (so that you couldn't copy
+the content anywhere within that path). This is why DVDs will play
+with lower resolution on Windows Vista unless you have a new monitor
+that will give the proper responses in this game.
+
+From this discussion it is possible to argue that by traditional
+cryptographical standards "good" DRM is actually an impossible problem
+to solve. While good cryptography always relies on the protocol being
+public and only a key being secret, the problem DRM tries to solve
+necessarily leads to solutions that by cryptographical standards would
+be considered ugly hacks. Hardware based solutions are slightly better
+in this regard, since extracting the secret from a hardware chip
+really would be practically impossible. Nevertheless from a
+cryptographical point of view DRM is like eating the cake (giving user
+content) and trying to keep it too (not giving user content).
+
+So in practice an open DRM system will always be like "doing the wrong
+thing the right way".
+(p2presearch mailing list)
+
+
+==Sam Rose:==
+
+Remark concerning the [[Open_Digital_Rights_Language]] project:
+
+"[http://lessig.org/blog/2006/03/opendrm.html Sun's OpenDRM] from a couple of years ago is actually is a cryptographic system, which claims to be an "OpenDRM".
+
+Most DRM is a mechanism for enclosure that is designed for business/monetization of content and technologies. DRM (including Sun's "OpenDRM") works towards "physically" removing access to code or hardware.
+
+In contrast, metadata like ODRL could be used to do something that I already do, for example, which is to "tithe" money to open source software projects, when I make money using them, to pay people for commercial use of artefacts and content they release under certain licenses that require you to do so, etc.
+
+As we discuss in the http://www.communitywiki.org/en/CyberneticEconomy "networked data" that is standardized can become part of a cybernetic system that has potential to make it easier, and more convenient to be "ethical".  Once the positive externalities become apparent, and once the positive effects feedback to enough people, and when it is easy ("cybernetic"), then it will become appealing to many people. Some have also discussed issues related to this at http://www.communitywiki.org/en/PayExpected
+
+From a media ecology perspective, ODRL can help (some) people realize the nature of resources they are using, the nature of the production and distribution. Successful "enforcement" can be voluntary, self-enforced."
+(p2presearch mailing list, 12/2007)
+
+=More Information=
+
+#[[Digital Rights Management]]
+#[[Dream]]
+#[[Open_Digital_Rights_Language]]
+#[[XRML]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Standards]]
+
+[[Category:Open]]

@@ -1,0 +1,49 @@
+
+'''= a routing protocol for mobile ad-hoc networks much used in community-driven free wireless networks'''
+
+
+URL = http://www.olsr.org/
+
+
+=Description=
+
+"The olsr.org OLSR daemon is an implementation of the
+
+Optimized Link State Routing protocol. OLSR is a routing protocol for mobile ad-hoc networks.
+The protocol is pro-active, table driven and utilizes a technique called
+multipoint relaying for message flooding. olsrd also implements
+a popular optional link quality extension. Currently the implementation compiles on GNU/Linux, Windows, OS X, FreeBSD, OpenBSD and NetBSD systems.
+
+Olsrd is ment to be a well structured and well coded implementation
+that should be easy to maintain, expand and port to other platforms.
+The implementation is RFC3626 compliant with respect to both core
+and auxiliary functioning. Olsrd supports use of loadable plugins.
+These can be used to to handle and generate custom packettypes to be
+carried by OLSRs MPR flooding scheme or for any other desired functioning.
+
+Olsrd is much used in community-driven free wireless networks all across the world."
+(http://www.olsr.org/?q=about)
+
+=Background=
+
+"[[Olsrd]] started out as part of the master thesis project for Andreas Tønnesen at UniK - University Graduate Center. The master thesis is now finished(it is available for download from the documentation section) but the olsrd project moves on.
+
+Olsrd has come a long way since the master was finished.
+This is much thanks to the efforts of Thomas Lopatic who joined as a developer fall 2004.
+Thomas has(in addittion to a lot of other things) made sure olsrd runs on multiple other platforms besides GNU/Linux. The C-base in Berlin has been using olsrd for their free network for quite some time now and people from this community has become contributers to the olsr.org imeplementations. The great link quality extension is a direct result of the c-base guys at work!
+
+In 2006 olsrd got deployed in larger networks (upto 600 nodes) and showed serious weaknesses in its scaling abilities. Some people thought that this is the natural end of link-state protocols.
+
+In Spring 2007 the olsrd-ng project kicked off. It quickly turned out that the issue just has been lack of efficient data structures and some implementation tricks to get serious CPU savings. Since then periodical rewrites are underway to save CPU cycles and make olsrd scale to thousands of nodes. The main goal of OLSR-NG is to make olsrd into a rock solid product and a great routing daemon with high scalability. As of this writing the high scalability aspect has been reached."
+(http://www.olsr.org/?q=background)
+
+
+=References=
+
+[http://www.ietf.org/rfc/rfc3626.txt RFC 3626]
+
+[[Category:Technology]]
+[[Category:Standards]]
+[[Category:P2P_Infrastructure]]
+[[Category:Application Layer]]
+[[Category:NextNet]]

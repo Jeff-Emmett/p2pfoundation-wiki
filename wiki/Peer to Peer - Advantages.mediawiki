@@ -1,0 +1,64 @@
+
+=Discussion=
+
+
+==Edward Felten on the Advantages and disadvantages of P2P systems vs. centralized systems==
+
+URL = http://www.freedom-to-tinker.com/?p=907
+
+"On the other hand, P2P designs have three main efficiency advantages. First, they use cheaper resources. Users pay about the same price per unit of computing and storage as a central provider would pay. But the users' machines a sunk cost -- they're already bought and paid for, and they're mostly sitting idle. The incremental cost of assigning work to one of these machines is nearly zero. But in a centrally controlled system, new machines must be bought, and reserved for use in providing the service. Second, P2P deals more efficiently with fluctuations in workload. The traffic in an online system varies a lot, and sometimes unpredictably. If you're building a centrally-controlled system, you have to make sure that extra resources are available to handle surges in traffic; and that costs money. P2P, on the other hand, has the useful property that whenever you have more users, you have more users' computers (and network connections) to put to work. The system's capacity grows automatically whenever more capacity is needed, so you don't have to pay extra for surge-handling capacity. Third, P2P allows users to subsidize the cost of running the system, by having their computers do some of the work. In theory, users could subsidize a centrally-controlled system by paying money to the system operator. But in practice, monetary transfers can bring significant transaction costs. It can be cheaper for users to provide the subsidy in the form of computing cycles than in the form of cash. (A full discussion of this transaction cost issue would require more space -- maybe I'll blog about it someday -- but it should be clear that P2P can reduce transaction costs at least sometimes.) Of course, this doesn't prove that P2P is always better, or that any particular P2P design in use today is motivated only by efficiency considerations. What it does show, I think, is that the relative efficiency of centrally-controlled and P2P designs is a complex and case-specific question, so that P2P designs should not be reflexively labeled as illegitimate."
+(http://www.freedom-to-tinker.com/?p=907)
+
+
+==Tom Evslin on the Advantages and Disadvantages of P2P==
+
+Access from http://skypejournal.com/blog/2007/08/a_p2p_primer.html :
+
+Scalability: P2P services are inherently scalable. If each user is sharing part of the load, more users mean not only more demand but also more capacity. By contrast, if a service runs on a central host, more users will eventually mean that more resources need to be added at the host. If new host resources aren’t added, the service breaks or slows to a crawl or suffers in some other way.
+
+Survivability: If you don’t have a central server, you’re not vulnerable to central failure – nor can terrorists target a service whose elements are widely dispersed. Related post: America’s Antiterrorism Network – Distributed Data Storage. The Internet itself can be considered a network of peers since it has no central site; it was designed to be survivable and its headless nature was an essential element in its survivability.
+
+Hardware Economics: ICQ, an early chat service, was one of the earliest free Internet services to net a small fortune for its founders. The founders could afford to make the service free even as it attracted hordes of users because of its P2P architecture. They didn’t have to have revenue to buy lots of hardware because the work of making connections and even storing the directory was done cooperatively on the computers of their users. Making a service free is a good way to get lots of users in a hurry. But, if it is free and not ad-supported, lots of users can mean a big unfunded hardware bill (even though hardware is much, much cheaper than it used to be, even in the ICQ days). P2P is a resolution to this quandary.
+
+Bandwidth Economics: Here’s where the controversy begins! Suppose that all Skype calls had to pass through central servers; those servers would have to have huge pipes to connect them to the Internet. eBay, Skype’s owner, would have to pay huge sums to ISPs for those huge pipes. That would make ISPs happy but Skype doesn’t work that way. Calls go “directly” over the Internet from one Skype user to another; even call setup is done by using the shared resources of online Skype users rather than a centralized resource (see here if you didn’t know you agreed to help connect other people’s calls when you agreed to the Skype TOS). So the bandwidth needed for both the calls and the call setup is provided by the users. If eBay had to provide all this bandwidth, Skype-to-Skype calls probably wouldn’t be free."
+(http://blog.tomevslin.com/2007/08/p2p-boon-boondo.html)
+
+
+'''Disadvantages for ISP's: Case study of the BBC Project''':
+
+"British ISPs. They complain that this new service will overload their networks and that BBC has no right to do this (although the British regulator has given them permission). The ISPs say they may have to throttle the number of people who can get the shows or “protect” themselves in some other unspecified ways. Usually (by Fractals of Change, at least) the UK is held up as a model of a competitive market for broadband services where issues of net neutrality don’t raise their ugly heads. What’s going on here?
+
+I suspect that the fact that iPlayer is a P2P service is at the root of the problem that ISPs have with it. If BBC downloaded shows to those who requested them directly from its own servers and if the service proves as popular as it might, BBC would have to buy huge (or huger) pipes of its own into the Internet and ISPs would get some revenue from that. However, in a P2P implementation, it is likely that only a few seed copies will be downloaded directly from BBC to the first people who ask for a particular show. Subsequent requestors will get their copies from the first requestors. BBC describes it this way in their terms of services (TOS):
+
+“When you install the BBC iPlayer Library you will also install peer-to-peer file sharing software from Verisign Inc. This software has a file share feature that enables other BBC iPlayer users to download BBC Content through your personal computer (using part of your upload bandwidth), via a secure link, to their personal computers. … When you use BBC iPlayer Library you shall not have the option to 'switch off' the peer-to-peer functionality as this is a core component of the BBC iPlayer Library.”
+
+BBC also warns: “… you are responsible for paying all expenses that you may incur in connection with your access to and use of BBC iPlayer including your internet service provider charges and any excess charges to that provider if you have a cap on downloads and/or uploads…”
+
+OK, fair warning if you’re in the habit of reading TOS carefully. But this warning does NOT appear in any of the marketing information for the service which I saw.
+
+So why should the ISPs be upset? If the users upload too much, they’ll be charged more and the ISPs’ll get paid more – not by BBC but by the users themselves. The problem is that not all ISPs have upload or download caps. Those that do usually don’t advertise them very prominently if at all. Moreover, most users may be well below their caps now – almost certainly are. So the users will use bandwidth which, from their point of view has been sitting idle, and either won’t pay the ISPs any more or will be outraged if they are presented with a bill or thrown off an “unlimited” service for overuse.
+
+It is highly unlikely that you use more than a small fraction of the bandwidth on your connection to your ISP most of the time – usually your connection is idle. But ISPs count on the fact that most connections are idle most of the time; there isn’t nearly enough backbone capacity to handle all the traffic which would result if all the local connections were busy all the time.
+
+“Oversubscription” isn’t fraud; it’s the correct way to design networks which are inexpensive enough for their users to use. The phone network wouldn’t work if all phones (or even more than a small fraction of phones) were offhook at the same time. The highway system wouldn’t work if every driveway were disgorging and engorging its maximum capacity 7x24. The backbone of most networks is designed assuming that most spurs will be idle most of the time.
+
+So if BBC succeeds in low cost distribution of its content without buying new capacity of its own and users substantially increase their use of download and upload capacity without paying extra themselves, the ISPs face either providing degraded service or a sudden need to upgrade their networks (or higher charges for uses of other providers’ networks)."
+(http://blog.tomevslin.com/2007/08/p2p-boon-boon-1.html)
+
+
+=More Information=
+
+* a faq on p2p tech systems, https://github.com/noffle/p2p-faq/
+
+* See also the third part of the series by Tom Evslin which summarizes counterarguments against the metering of P2P Traffic, at http://blog.tomevslin.com/2007/08/p2p-boon-boon-2.html
+
+* French report: http://www.francetelecom.com/fr/groupe/rd/une/thematique/dossier_mois/ddm200506/index.html
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Technology]]
+
+[[Category:P2P Theory]]

@@ -1,0 +1,88 @@
+
+
+=Discussion=
+
+==Why Do Open User Interfaces Suck?==
+
+Timothy B. Lee:
+
+"there’s been a lot of debate recently about the iPhone/Android competition and the implications for the perennial debate between open and closed technology platforms. In the past I’ve come down fairly decisively on the “open” side of the debate, criticizing Apple’s iPhone App Store and the decision to extend the iPhone’s closed architecture to the iPad.
+
+In the year since I wrote those posts, a couple of things have happened that have caused some evolution in my views: I used a Linux-based desktop as my primary work machine for the first time in almost a decade, and I switched from an iPhone to a Droid X. These experiences have reminded me of an important fact: the user interfaces on “open” devices tend to be terrible.
+
+The power of open systems comes from their flexibility and scalability. The TCP/IP protocol stack that powers the Internet allows a breathtaking variety of devices—XBoxen, web servers, iPhones, laptops and many others— to talk to each other seamlessly. When a new device comes along, it can be added to the Internet without modifying any of the existing infrastructure. And the TCP/IP protocols have “scaled” amazingly well: protocols designed to connect a handful of universities over 56 kbps links now connect billions of devices over multi-gigabit connections. TCP/IP is so scalable and flexible because its designers made as few assumptions as possible about what end-users would do with the network.
+
+These characteristics—scalability and flexibility—are simply irrelevant in a user interface. Human beings are pretty much all the same, and their “specs” don’t really change over time. We produce and consume data at rates that are agonizingly slow by computer standards. And we’re creatures of habit; once we get used to doing things a certain way (typing on a QWERTY keyboard, say) it becomes extremely costly to retrain us to do it a different way. And so if you create an interface that works really well for one human user, it’s likely to work well for the vast majority of human users.
+
+The hallmarks of a good user interface, then, are simplicity and consistency. Simplicity economizes on the user’s scarce and valuable attention; the fewer widgets on the screen, the more quickly the user can find the one she needs and move on to the next step. And consistency leverages the power of muscle memory: the QWERTY layout may have been arbitrary initially, but today it’s supported by massive human capital that dwarfs whatever efficiencies might be achieved by switching to another layout.
+
+To put it bluntly, the open source development process is terrible at this. The decentralized nature of open source development means that there’s always a bias toward feature bloat. If two developers can’t decide on the right way to do something, the compromise is often to implement it both ways and leave the final decision to the user. This works well for server software; an Apache configuration file is long and hard to understand, but that’s OK because web servers mostly interact with other computers rather than people, so flexibility and scalability are more important than user-friendliness. But it tends to work terribly for end-user software, because compromise tends to translate into clutter and inconsistency.
+
+In short, if you want to create a company that builds great user interfaces, you should organize it like Apple does: as a hierarchy with a single guy who makes all the important decisions. User interfaces are simple enough that a single guy can thoroughly understand them, so bottom-up organization isn’t really necessary. Indeed, a single talented designer with dictatorial power will almost always design a simpler and more consistent user interface than a bottom-up process driven by consensus.
+
+This strategy works best for products where the user interface is the most important feature. The iPod is a great example of this. From an engineering perspective, there was nothing particularly groundbreaking about the iPod, and indeed many geeks sneered at it when it came out. What the geeks missed was that a portable music player is an extremely personal device whose customers are interacting with it constantly. Getting the UI right is much more important than improving the technical specs of adding features."
+(http://timothyblee.com/2010/11/15/open-user-interfaces-suck/)
+
+
+==The Open Source Usability Problem is Structural (1)==
+
+John Gruber:
+
+"The undeniable truth is this: successful open source software projects tend to be at the developer-level, not the end-user level. I.e., successful open source projects have programming interfaces, not user interfaces. Apache, Perl, Python, GCC, PHP, the various SQL databases. The list of fantastic open source developer software is long.
+
+The list of fantastic open source GUI software is short. This is not a function of chance.
+
+The open source revolution has done nothing to change the fact that the best-designed, most-intuitive user interfaces are found in closed-source commercial software.
+
+I’m not saying all commercial software is well-designed, nor that all free software is poorly-designed — what I’m saying is that software that does provide a well-designed, intuitive interface tends to be closed and commercial. The bigger the software, the more likely this is to be true.
+
+The most obvious explanation is that the open source model does not work well for producing software with good usability. Everything in Raymond’s article hints at this truth. (Not to mention MPT’s aforementioned essay, which addresses this directly.)
+
+Good user interfaces result from long, hard work, by talented developers and designers.
+
+The distributed, collaborative nature of open source software works for developer-level software, but works against user-level software. Imagine a motion picture produced like a large open source project. Different scenes written and directed by different people, spread across the world. Editing decisions forged by group consensus on mailing lists. The result would be unfocused, incoherent, and unenjoyable.
+
+Movies are collaborative art, but require strong direction. So it is with end user software."
+(http://daringfireball.net/2004/04/spray_on_usability)
+
+
+
+==The Open Source Usability Problem is Structural (2)==
+
+'''Matthew Thomas, reasons why free software usability sucks:'''
+
+"1. Dedicated volunteer interface designers appear to be much rarer than their paid counterparts — and where they do exist, they tend to be less experienced (like yours truly).
+
+   
+2. First corollary: Every contributor to the project tries to take part in the interface design, regardless of how little they know about the subject. And once you have more than one designer, you get inconsistency, both in vision and in detail. The quality of an interface design is inversely proportional to the number of designers.
+
+   
+3. Second corollary: Even when dedicated interface designers are present, they are not heeded as much as they would be in professional projects, precisely because they’re dedicated designers and don’t have patches to implement their suggestions.
+
+   
+4. Many hackers assume that whatever Microsoft or Apple do is good design, when this is frequently not the case. In imitating the designs of these companies, volunteer projects repeat their mistakes, and ensure that they can never have a better design than the proprietary alternatives.
+
+   
+5. Volunteers hack on stuff which they are interested in, which usually means stuff which they are going to use themselves. Because they are hackers, they are power users, so the interface design ends up too complicated for most people to use.
+
+   
+6. The converse also applies. Many of the little details which improve the interface — like focusing the appropriate control when a window is opened, or fine-tuning error messages so that they are both helpful and grammatical — are not exciting or satisfying to work on, so they get fixed slowly (if at all).
+
+   
+7. As in a professional project, in a volunteer project there will be times when the contributors disagree on a design issue. Where contributors are paid to work on something, they have an incentive to carry on even if they disagree with the design. Where volunteers are involved, however, it’s much more likely that the project maintainer will agree to add a user preference for the issue in question, in return for the continued efforts of that contributor. The number, obscurity, and triviality of such preferences ends up confusing ordinary users immensely, while everyone is penalized by the resulting bloat and reduced thoroughness of testing.
+
+   
+8. For the same reason — lack of monetary payment — many contributors to a volunteer project want to be rewarded with their own fifteen pixels of fame in the interface. This often manifests itself in checkboxes or menu items for features which should be invisible.
+
+   
+9. The practice of releasing early, releasing often frequently causes severe damage to the interface. When a feature is incomplete, buggy, or slow, people get used to the incompleteness, or introduce preferences to cope with the bugginess or slowness. Then when the feature is finished, people complain about the completeness or try to retain the preferences. Similarly, when something has an inefficient design, people get used to the inefficiency, and complain when it becomes efficient. As a result, more user preferences get added, making the interface worse."
+(http://web.archive.org/web/20051125183807/http://mpt.phrasewise.com/discuss/msgReader$173)
+
+
+[[Category:Open]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Media]]

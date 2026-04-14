@@ -1,0 +1,103 @@
+
+
+=Description=
+
+By Kyle Soska and Nicolas Christin:
+
+"The sale of contraband and illicit products on the Internet
+can probably be traced back to the origins of the Internet
+itself, with a number of forums and bulletin board systems
+where buyers and sellers could interact.
+
+However, online markets have met with considerable
+developments in sophistication and scale, over the
+past six years or so, going from relatively confidential
+“classifieds”-type of listings such as on the Open Vendor
+Database, to large online anonymous marketplaces. Following
+the Silk Road blueprint, modern online anonymous
+markets run as Tor hidden services, which gives
+participants (marketplace operators and participants such
+as buyers and sellers) communication anonymity properties
+far superior to those available from alternative solutions
+(e.g., anonymous hosting); and use pseudonymous
+online currencies as payment systems (e.g., Bitcoin [33])
+to make it possible to exchange money electronically
+without the immediate traceability that conventional payment
+systems (wire transfers, or credit card payments)
+provide.
+
+The common point between all these marketplaces is
+that they actually are not themselves selling contraband.
+Instead, they are risk management platforms for participants
+in (mostly illegal) transactions. Risk is mitigated
+on several levels. First, by abolishing physical interactions
+between transacting parties, these marketplaces
+claim to reduce (or indeed, eliminate) the potential for
+physical violence during the transaction.
+
+Second, by providing superior anonymity guarantees
+compared to the alternatives, online anonymous marketplaces
+shield – to some degree2 – transaction participants
+from law enforcement intervention.
+
+Third, online anonymous marketplaces provide an escrow
+system to prevent financial risk. These systems are
+very similar in spirit to those developed by electronic
+2Physical items still need to be delivered, which is a potential intervention
+point for law enforcement as shown in documented arrests.
+
+Suppose Alice wants to purchase an item from
+Bob. Instead of directly paying Bob, she pays the marketplace
+operator, Oscar. Oscar then instructs Bob that
+he has received the payment, and that the item should be
+shipped. After Alice confirms receipt of the item, Oscar
+releases the money held in escrow to Bob. This allows
+the marketplace to adjudicate any dispute that could
+arise if Bob claims the item has been shipped, but Alice
+claims not to have received it. Some marketplaces
+claim to support Bitcoin’s recently standardized “multisig”
+feature which allows a transaction to be redeemed
+if, e.g., two out of three parties agree on its validity. For
+instance, Alice and Bob could agree the funds be transferred
+without Oscar’s explicit blessing, which prevents
+the escrow funds from being lost if the marketplace is
+seized or Oscar is incapacitated.
+
+Fourth, and most importantly for our measurements,
+online anonymous marketplaces provide a feedback system
+to enforce quality control of the goods being sold. In
+marketplaces where feedback is mandatory, feedback is
+a good proxy to derive sales volumes [13]. We will adopt
+a similar technique to estimate sales volumes.
+
+At the time of this writing the Darknet Stats service [1]
+lists 28 active marketplaces. As illustrated in Fig. 1
+for the Evolution and Agora marketplaces, marketplaces
+tend to have very similar interfaces, often loosely based
+on the original Silk Road user interface. Product categories
+(on the right in each screen capture) are typically
+self-selected by vendors. We discovered that categories
+are sometimes incorrectly chosen, which led us to
+build our own tools to properly categorize items. Feedback
+data (not shown in the figure) comes in various flavors.
+
+Some marketplaces provide individual feedback
+per product and per transaction. This makes computation
+of sales volumes relatively easy as long as one can
+determine with good precision the time at which each
+piece of feedback was issued. Others provide feedback
+per vendor; if we can then link vendor feedback to specific
+items, we can again obtain a good estimate for sales
+volumes, but if not, we may not be able to derive any
+meaningful numbers. Last, in some marketplaces, feedback
+is either not mandatory, or only given as aggregates
+(e.g., “top 5% vendor”), which does not allow for detailed
+volume analysis."
+(https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-soska-updated.pdf)
+
+
+[[Category:P2P Market Approaches]]
+
+[[Category:Cryptoledger Applications]]
+
+[[Category:Security]]

@@ -1,0 +1,16 @@
+La [[RDF]] est à la base du [[Web sémantique]]. Cependant, ce système est en lui même insuffisant. OWL est conçu pour l'étendre et préciser les "ontologies". Une "ontologie" décrit d'un domaine de connaissances spécifique, précisant les relations existant les différents termes. Par exemple, une ontologie concernant la zoologie spécifiera qu'il existe plusieurs sortes d'animaux, que les chats sont des mammifères, que les oiseaux pondent des œufs et possèdent des ailes mais ne savent pas forcément voler, etc. OWL peut organiser ce type de données, mais c'est également dans les cordes des Schémas [[RDF]]. 
+OWL étend la [[RDF]] en permettant des opérations plus complexes que la simple division en classes et sous-classes, il autorise par exemple les opérations logiques de type inclusion, union, différence...
+
+On peut spécifier que deux objets sont identiques, par exemple :
+<Animal rdf:ID="Porc"> <owl:sameAs rdf:resource="#Cochon" /> </Animal> 
+Rien n'empêche, par ailleurs de définir une intersection entre classes. On décrit ainsi un ornithorynque
+<owl:Class rdf:ID="Ornithorynque">
+  <owl:intersectionOf rdf:parseType="Collection">
+    <owl:Class rdf:about="#Mammifere" />
+    <owl:Class rdf:about="#Ovipare" />
+  </owl:intersectionOf> 
+  </owl:Class>
+OWL est un langage plutôt complexe, c'est pourquoi les chercheurs du W3C, soucieux d'en démocratiser l'accès, en ont-ils élaboré trois versions. Il existe ainsi un Owl "Lite", un Owl "DL" de difficulté intermédiaire, et un Owl "Full" offrant toutes les possibilités de description disponibles. 
+
+[[Category:French]]
+[[Category:Définitions]]

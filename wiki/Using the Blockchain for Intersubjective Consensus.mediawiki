@@ -1,0 +1,71 @@
+
+
+=Description=
+
+Matan Field:
+
+"The blockchain achieves a consensus about certain objective realities such as who transacted how much, to whom and when, and is thus an engine for objective consensus. Comparably, a general governance system of human agents can reach a consensus on intersubjective realities, such as the value of a contribution to a collaborative project, the size of an insurance payout, or the quality of an article. It is thus an engine for intersubjective consensus.¹
+
+Yet the blockchain plays a key role in intersubjective consensus engines as well. We need the blockchain to record agents’ inputs, as well as keep the unambiguous conversion rules from input to output (the governance protocol), and most importantly execute them trustlessly.
+
+Moreover, being a governance system by itself, the blockchain faces the universal challenge of collective decision-making, described below, and the corresponding principles to overcome it will be analogous to known principles used in blockchain research."
+(https://medium.com/daostack/decentralized-governance-first-principles-1fc6eaa492ed)
+
+
+=Discussion=
+
+==Scaleability==
+
+Matan Field:
+
+"Consensus engines suffer from a fundamental challenge known as the “scalability problem”:
+
+* In any decentralized governance system there is a principal tension between resilience and scalability.
+
+In this context, resilience means the tolerance and even resistance of a governance system to faulty behavior: whether fraudulent or simply due to poor consideration. By scalability we mean the ability of a governance system to process a large number of decisions in a given period, and even increase its rate as more agents participate in the network.
+
+It is easy to understand the origin of this tension. Decentralization of decision-making processes means having a large number of impactful decision makers, or voters. Resilience demands that decisions cannot be hijacked by a small minority; which naturally needs a large fraction of active voters paying attention to each decision in order to avoid that. And scalability, once again, means potentially many decisions to be made at every interval.
+
+However, if each decision needs to be considered by most voters, then the entire organization has the bandwidth of a single agent, and even worse than that, roughly the bandwidth of the slowest one. Which certainly cannot be scalable or produce many good decisions in a short time frame.² This problem simply reflects the natural limit on the bandwidth of collective attention, resulting in the inescapable tension between resilience and scalability.
+
+The above is a real physical tension. In consensus systems, increasing the threshold for consensus increases resilience but lowers scalability, and vice versa. More decentralization of the process enables more intelligence agents to contribute, potentially increasing capacity and resilience at the same time. However, effective decentralization depends critically on the degree of coherence in the system, and otherwise may reduce them both.
+
+To be specific:
+
+* Any resolution of this tension will allow minority decisions (improving on scale) that are guaranteed to be in strong correlation with the majority “truth” (protecting resilience).
+
+* This would be our definition of coherence and is a necessary condition for scalable governance."
+(https://medium.com/daostack/decentralized-governance-first-principles-1fc6eaa492ed)
+
+
+
+==Monetization of Attention==
+
+Matan Field:
+
+"Human attention, and in particular intelligence, is a scarce resource, and thus has to be represented by a scarce element. In other words, attention has to be monetized: acquiring collective attention on a network of intelligent agents has to be paid for by a valuable token.
+
+This is also the basic economic model behind the blockchain itself and specifically the notion of gas in Ethereum. However, in a decentralized governance system, acquiring attention works differently than paying miners to verify transactions in the blockchain: there is no single voter approving a proposal at a given time analogous to the notion of a successful miner of a block.
+
+Monetization of attention allows a decentralized, wider decision-making process, while protecting it from abuse and maintaining resilience in the network."
+(https://medium.com/daostack/decentralized-governance-first-principles-1fc6eaa492ed)
+
+
+
+==Holographic Consensus==
+
+Matan Field:
+
+"Group consensus means that an entire group of agents agrees on something, whatever their rules for agreement may be (e.g., the consent of 50% majority of token holders or 60% of reputation holders). By “holographic consensus” we mean that a deciding group allows any subset, a smaller party within itself, to make decisions on its behalf, under certain conditions. A good holographic consensus guarantees a high degree of coherence, and thus strong correlation of sub-group decisions with the will of the greater majority.
+
+The crux of holographic consensus is having an external staking system in which “auditors” can predict the outcome of incoming proposals. This would be the broader analogue of the off-chain computations paradigm used these days to solve blockchain scalability. In the next post I will introduce this novel holographic-consensus model in detail. We will see how the attention of the collective is drawn to the “interesting proposals” and how the system maintains coherence and remains protected from faulty behavior. In the third post of this series we present DAOstack, an operating system for collective intelligence, a general framework for blockchain governance and crypto-economic incentive systems.
+
+In March 2018, DAOstack launches Alchemy, its first application for decentralized budgeting. Alchemy implements the holographic-consensus protocol designed for scalable and resilient governance, permitting crowd-management of budget for large-scale, open-source projects."
+(https://medium.com/daostack/decentralized-governance-first-principles-1fc6eaa492ed)
+
+
+[[Category:Relational]]
+
+[[Category:Peergovernance]]
+
+[[Category:Cryptoledger Applications]]

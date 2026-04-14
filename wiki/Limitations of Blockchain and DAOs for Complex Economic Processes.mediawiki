@@ -1,0 +1,92 @@
+
+'''* Article: Beyond the Ledger: Why Blockchain and DAOs Fall Short for Complex Economic Organizations, and How OVNs Point the Way Forward
+Synthesized with AI from documents developed by Tiberius Brastaviceanu, with the help of Sacha Pignot. Sensorica, 2025.'''
+
+URL = https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html
+
+
+=Description=
+
+"We are witnessing a profound transformation in the architecture of global economic activity. The traditional capitalist system, rooted in firm hierarchies, proprietary assets, and market-based transactions, is giving way to a networked economy. This emergent configuration is typified by commons-based peer production (CBPP), open source collaboration, distributed knowledge networks, and peer-to-peer (p2p) collaboration. Examples abound: permissionless blockchains, distributed scientific research initiatives, decentralized media platforms, and open educational resources.
+
+In parallel, the digital infrastructures enabling these formations are evolving. Initially celebrated as a breakthrough in decentralized coordination, blockchain technologies and Decentralized Autonomous Organizations (DAOs) are revealing inherent limitations when tasked with modeling complex economic processes and sustaining full-fledged economic organizations. In contrast, newer agent-centric approaches—such as the Open Value Network (OVN) model built on Resource-Event-Agent (REA) accounting, the Valueflows vocabulary, hREA logic, and Holochain as a distributed substrate—are showing greater promise.
+
+This blog post draws from the experience of real-world p2p production networks such as Sensorica, and analyzes the foundational limitations of blockchain/DAO-based systems while advocating for a hybrid architecture of economic coordination."
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+
+=Discussion=
+
+
+==The Limitations of Blockchain and DAOs for Complex Economic Processes==
+
+Tiberius Brastaviceanu:
+
+ < ''smart contracts are excellent for certain trustless operations (e.g., escrows, auctions) but fail to capture the dynamics of real-world production, collaboration, and adaptive planning'' >
+
+
+===Smart Contracts: Deterministic, Rigid, and Passive===
+
+Smart contracts are finite state machines. While they enable conditional logic and self-enforcing agreements, they suffer from key constraints:
+
+
+===Lack of agency===
+
+Smart contracts cannot initiate actions; they passively await external transactions.
+
+
+===No adaptivity===
+
+They cannot learn or evolve in response to new contexts.
+
+
+===Low expressiveness===
+
+They model narrow rule-based interactions but cannot handle rich workflows, commitments, or evolving plans.
+
+
+===High operational cost===
+
+Every interaction incurs gas fees, limiting granularity and frequency of updates.
+
+
+==DAOs Are Only a Good Model for Governance Without Production==
+
+Tiberius Brastaviceanu:
+
+ < ''DAOs were designed to manage funds and collective decisions. While conceptually intriguing, most DAOs reduce governance to token-weighted voting and budget allocation'' >
+
+
+"DAOs lack:
+
+* A production grammar: DAOs manage treasuries, but not the economic processes that generate and transform valuables.
+Contextual roles and coordination: All agents are flattened to token holders; there is no representation of task-specific expertise or social embeddedness.
+
+* Traceability of contributions: There is no natively supported way to account for who contributed what, how, and with what impact.
+
+In essence, DAOs are governance shells with limited economic depth. They serve as digital cooperatives but do not embody operational infrastructures for economic activity.'
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+
+==The Blockchain Architecture's Global State Creates Consensus Bottleneck Inappropriate for the Coordination of Physical Production==
+
+Tiberius Brastaviceanu:
+
+Blockchain relies on a globally shared ledger, secured by consensus. This introduces:
+
+* Scalability issues: All agents must agree on the same state, which limits throughput.
+
+* Privacy limits: All state changes are visible to all participants.
+
+* Poor fit for diverse local contexts: Global rules enforced via consensus do not adapt well to context-sensitive collaboration.
+
+This model is inherently brittle for complex organizations with multi-scale, asynchronous, and context-specific workflows. Moreover, blockchain-based architectures are grounded in a low-level computational model (deterministic, transactional, state-machine driven) that is ill-suited for expressing complex, adaptive, multi-agent economic systems. In formal terms, blockchains are positioned near the low end of a spectrum of computational expressivity. At best, they enable finite state automation with strict constraints on complexity, timing, and semantic nuance."
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+
+[[Category:Peerproduction]]
+
+[[Category:Crypto Economy]]

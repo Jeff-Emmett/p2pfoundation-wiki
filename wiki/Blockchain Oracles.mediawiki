@@ -1,0 +1,91 @@
+'''= "entities that connect blockchains to external systems, thereby enabling smart contracts to execute based upon inputs and outputs from the real world".''' [https://chain.link/education/blockchain-oracles]
+
+
+=Context=
+
+'''1.'''
+
+"The blockchain oracle problem outlines a fundamental limitation of smart contracts—they cannot inherently interact with data and systems existing outside their native blockchain environment. Resources external to the blockchain are considered “offchain,” while data already stored on the blockchain is considered onchain. By being purposely isolated from external systems, blockchains obtain their most valuable properties like strong consensus on the validity of user transactions, prevention of double-spending attacks, and mitigation of network downtime. Securely interoperating with offchain systems from a blockchain requires an additional piece of infrastructure known as an “oracle” to bridge the two environments."
+
+
+'''2.'''
+
+"Blockchain oracle mechanisms using a centralized entity to deliver data to a smart contract introduce a single point of failure, defeating the entire purpose of a decentralized blockchain application. If the single oracle goes offline, then the smart contract will not have access to the data required for execution or will execute improperly based on stale data. Even worse, if the single oracle is corrupted, then the data being delivered onchain may be highly incorrect and lead to smart contracts executing very wrong outcomes." 
+
+(https://chain.link/education/blockchain-oracles)
+
+
+=Description=
+
+by Shermin Voshmgir:
+
+"Blockchains and smart contracts cannot access data from outside of their network. In order to know what to do, a smart contract often needs access to in- formation from the outside world that is relevant to the contractual agreement, in the form of electronic data, also referred to as oracles. These oracles are services that send and verify real world occurrences and submit this information to smart contracts, triggering state changes on the blockchain.
+
+Oracles feed the smart contract with external information that can trigger prede ned actions of the smart contract. This external data stems either from so ware (Big-data application) or hardware (Internet-of-Things). Such a condition could be any data, like weather temperature, successful payment, or price fluctuations. However, it is important to note that a smart contract does not wait for the data from an outside source to ow into the system. The contract has to be invoked, which means that one has to spend net- work resources for calling data from the outside world. This induces network trans- action costs. In the case of Ethereum, this would be “gas.”
+
+...
+
+The main challenge with oracles is that people need to trust these outside sources of information, whether they come from a website or a sensor. Since oracles are third-party services that are not part of the blockchain consensus mecha- nism, they are not subject to the underlying security mechanisms that this public infrastructure provides. One could replicate “man-in-the-middle attacks” standing between contracts and oracles. #
+
+The robustness assurance of this “second layer” is of utmost importance. Different trusted computing techniques can be used as a way of solving these issues. However, this topic will need more attention, as secure oracles are a bottleneck for smart contract security. If oracle security is not adequately provided, it will be a show stopper for widespread smart contract im- plementation."
+
+(https://blockchainhub.net/blockchain-oracles/)
+
+
+=Typology=
+
+ChainLink:
+
+"Types of Blockchain Oracles
+
+Given the extensive range of offchain resources, blockchain oracles come in many shapes and sizes. Not only do hybrid smart contracts need various types of external data and computation, but they require various mechanisms for delivery and different levels of security. Generally, each type of crypto oracle involves some combination of fetching, validating, computing upon, and delivering data to a destination.
+
+
+==Input Oracles==
+
+The most widely recognized type of oracle today is known as an “input oracle,” which fetches data from the real-world (offchain) and delivers it onto a blockchain network for smart contract consumption. These types of oracles are used to power Chainlink Price Feeds, providing DeFi smart contracts with onchain access to financial market data.
+
+
+==Output Oracles==
+
+The opposite of input oracles are “output oracles,” which allow smart contracts to send commands to offchain systems that trigger them to execute certain actions. This can include informing a banking network to make a payment, telling a storage provider to store the supplied data, or pinging an IoT system to unlock a car door once the onchain rental payment is made.
+
+
+==Cross-Chain Oracles==
+
+Another type of oracle are cross-chain oracles that can read and write information between different blockchains. Cross-chain oracles enable interoperability for moving both data and assets between blockchains, such as using data on one blockchain to trigger an action on another or bridging assets cross-chain so they can be used outside the native blockchain they were issued on.
+
+
+==Compute-Enabled Oracles==
+
+A new type of oracle becoming more widely used by smart contract applications are “compute-enabled oracles,” which use secure offchain computation to provide decentralized services that are impractical to do onchain due to technical, legal, or financial constraints. This can include using Chainlink Automation to trigger the running of smart contracts when predefined events take place, computing zero-knowledge proofs to generate data privacy, or running a verifiable randomness function to provide a tamper-proof and provably fair source of randomness to smart contracts."
+
+(https://chain.link/education/blockchain-oracles)
+
+
+=Examples=
+
+==ChainLink==
+
+"Oracles play a foundational role in the creation of the verifiable web, connecting blockchains that would otherwise be isolated to offchain data and compute, and enabling interoperability between blockchains. Initially, the Chainlink oracle network enabled the creation of the DeFi space and then grew to become the industry standard oracle solution for all of Web3. To date, Chainlink has enabled over $9T in transaction value. Now, Chainlink is collaborating with some of the world’s largest financial institutions, including Swift, the global messaging network for 11K+ banks, DTCC, the world’s largest securities settlement system processing $2+ quadrillion annually, and Australia and New Zealand Banking Group Limited (ANZ), a leading institution bank with $1T+ in AUM."
+
+(https://chain.link/education/blockchain-oracles)
+
+
+==Sustainability==
+
+"Hybrid smart contracts are advancing environmental sustainability by creating better incentives to partake in green practices through advanced verification techniques around the true impact of green initiatives. Oracles are a critical tool to supplying smart contracts with environmental data from sensor readings, satellite imagery, and advanced ML computation, which then allow smart contracts to dispense rewards to people practicing reforestation or engaging in conscious consumption. Oracles are also supporting many new forms of carbon credits to offset the impacts of climate change."
+
+(https://chain.link/education/blockchain-oracles)
+
+=Source=
+
+* Book: Token Economy, by Shermin Voshmgir, 2019
+
+*  A "[[Decentralized Oracle Network]], or DON for short, combines multiple independent oracle node operators and multiple reliable data sources to establish end-to-end decentralization. DONs enable the creation of hybrid smart contracts, where onchain code and offchain infrastructure are combined to support advanced decentralized applications (dApps) that react to real-world events and interoperate with traditional systems."
+
+(https://chain.link/education/blockchain-oracles)
+
+[[Category:Crypto_Technology]]
+
+[[Category:Cryptoledger_Applications]]

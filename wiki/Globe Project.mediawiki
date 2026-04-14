@@ -1,0 +1,16 @@
+
+
+URL = http://www.cs.vu.nl/globe/
+
+
+=Description=
+
+"In this research we are looking at a powerful unifying paradigm for the construction of large-scale wide area distributed systems: distributed shared objects. In our model, the universe consists of a vast number of shared objects, each of which has some associated methods. Authorized users of an object may invoke an object's methods. A method can return the contents of a Web page, but it can also accept an email or news message, look up a name in a worldwide distributed database, access a file or perform an arbitrary other action.
+
+Physically, objects are distributed, with active copies on multiple machines at the same time. Our objects use peer-to-peer communication: applications load (part of) the object implementation in their address space to participate in the distributed object. Users may contact any copy to have methods performed, but they know nothing about the internal structure and protocols used inside the object. This scheme allows different objects to use different algorithms for data partitioning, replication, consistency, and fault tolerance, in a way transparent to the users.
+
+Objects have location-independent names and are constructed from a control subobject, a communications subobject, a replication subobject, a security subobject, and a semantics subobject that does the actual work. The first four are taken from libraries or are compiler generated from the semantics object. This approach makes it simple to automatically build distributed, replicated, secure, worldwide objects. All the user has to do is write the semantics object and specify which distribution, replication, and security libraries to bind to. The system does the rest."
+(http://www.cs.vu.nl/globe/)
+
+
+[[Category:Technology]]

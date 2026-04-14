@@ -1,0 +1,35 @@
+
+'''* Article: Transport Layer Identification of P2P Super nodes. By DJ Oneil Hun Jeong Kang Jinoh Kim Donghyong Kwon'''
+
+URL =
+
+
+=Abstract=
+
+"Since P2P applications emerged, the amount of P2P traffic has continually
+grown. This poses potential costs as it entails extra workload on the network and
+host machines. First-generation P2P protocols used well-defined port numbers,
+allowing network administrators to control user access to these networks. Some
+of the earliest P2P networks, such as Napster, relied on central servers to connect
+peers and took on the processing and traffic costs of doing so. Many current
+P2P protocols allow users to define their listening port number and use random
+ports to connect to other peers. Consequently, the only reliable way to identify
+P2P traffic is by using user payload. However, there are legal and technical
+issues associated with this. Also, emerging P2P technologies are beginning to
+encrypt the payload, rendering payload validation impossible. These new P2P
+networks use super nodes to connect groups of peers. Super nodes are similar to
+the central servers of earlier networks, but are responsible for a small subset of
+peers. Any node on a P2P network can be promoted to a super node and will
+consequently be responsible for networking connected peers and forwarding on
+their searches. This can add a significant computational burden and increase in
+incoming and outgoing network traffic to the super node. This is often done
+without the user's knowledge and explicit permission. Our goal is to identify
+hosts running P2P applications and classify each P2P node as being a super node
+or regular peer node."
+
+
+[[Category:Technology]]
+
+[[Category:Articles]]
+
+[[Category:P2P Infrastructure]]

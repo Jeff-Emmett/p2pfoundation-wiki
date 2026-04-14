@@ -1,0 +1,118 @@
+'''= project by Google that promises to 'overtake email''''
+
+
+=Discussion=
+
+==Thomas Lord: Why Wave Matters==
+
+"I think the real advance - albeit an
+incremental one anticipated in the designs it
+builds upon - is in the protocols and data model.
+
+       
+And I don't think the protocols and data model
+are anywhere near done and I'm certain that there
+are flaws in the current design, but here is why
+they matter:
+
+       
+To a first approximation, every resource on
+the web as we know it today is identified by
+a host-based URL.  Of course most commonly
+the URL has the form:
+
+* http://example.com/relative/uri
+
+       
+Contrary to popular assumption, we do not name
+resources on the web - we name hosts and
+relative addresses within hosts.   If I type into
+the location box on my browser:
+
+* http://example.com/docs/GPLv3.txt
+
+
+My browser operates correctly not when it returns
+
+to me a verbatim copy of the GPLv3 in plain text
+format but, rather, when it contacts the host "example.com"
+and asks it to reply to a GET request for "/docs/GPLv3.txt".
+
+       
+In effect, a URL of that form does not name the
+document - it names a question posed to whomever
+currently owns "example.com".
+
+       
+In fact, there is no widely accepted, human-friendly,
+secure, distributed and decentralized namespace in
+which I can name some specific text - like a GPLv3 text
+file originally published by the FSF - and expect
+a browser to find it.
+
+       
+Wave opens that door a crack.  There's still
+some chains keeping the door closed but the deadbolts
+have been unlocked and the door cracked a couple of
+inches and with a few swift kicks the rest inevitably
+follows.  The web-as-you-know-it has numbered days,
+now.
+
+       
+Wave opens the door, more specifically, to a
+secure, human-friendly, browser-friendly (really,
+user-agent-friendly), distributed, decentralized,
+dynamically updated, secure, and location independent
+namespace for web resources.  A namespace in which
+routing is based on content or resource name and goes
+to any convenient verifiable host of that has that
+content or can provide that resource.
+
+       
+The way that Wave encourages this is by encouraging
+the development of clients that route to resources
+by host-independent IDs like wave ids, wavelet ids,
+and document ids -- while at the same time leaving
+fairly open ended what a document id is and leaving
+open to extension what an id is.
+
+       
+Wave initiates the game of building a much needed
+and much anticipated overlay network that can operate
+in a distributed and decentralized way, giving names to
+resources rather than questions to hosts."
+(Autonomous mailing list, June 2009)
+
+
+==Ryan Lanham==
+
+" it basically allows realtime voice/video or recording integrated with text or other media in a stream (conversation)--called a wave...as Matt says.  It is very power as a metaphor and will, as Matt suggests, be quite open to interface.  Google is closing in very rapidly on being able to offer a complete suite of virtual cloud computing that is device independent and open to linkage/service by any number of other systems.  If I were a Microsoft shareholder, I'd be quaking in my boots.  
+ 
+Google is plowing interesting ground between for-profit and for-service enterprises.  There is no doubt they mean to make money, but at the same time, their strategies are extremely P2P friendly and remarkably non-proprietary.  I think one rational expectation is that a P2P ethos is starting to pervade their business model. 
+ 
+By contrast, Microsoft's new "Bing" seems to offer some really neat advances but is being closely linked with other MS proprietary products.  Bing is very exciting for search, but I predict it will fail for the very reasons closed systems have always failed...people want APIs and options for interface on their own terms.  Going to a site designed to pull you into proprietary linkages is not the future...it's the past.
+ 
+Microsoft believes it can make money by driving corporate customers to suites of products.  But what corporate customers want is consistency with access to free content that more P2P corporations like Google are driving with YouTube, etc.  We've long since seen corporate P2P (for profit firms that advance the commons in their own way or make profits off of leveraging the commons), now we are starting to see P2P corporate (proprietary R&D being moved in segments to the commons so that the for profit aspects carry a tone of ethical balance and commitment).
+ 
+A cynic could say that corporations will always be untrustworthy and that the cheat will always wait until the most fateful moment.  An optimist would say that we are entering a new age of openness and sharing while still recognizing markets and innovation deserve financial recognition where desired.  The truth is probably somewhere in between."
+(p2p-research list, June 2009)
+
+
+==Nathan Cravens==
+
+"This buzz arrived just as I've pieced together a pretty clear general view on how we might go about creating an entirely post-scarcity environment. What timing! Wave is the sort of hyperaggregator that can adapt to what I have in mind--in part expressed below. 'Wave' is a useful term to describe "collaberative design" in one word--fab.
+
+Conversations are easier to track in Wave. It is backwards compatible with e-mail, so a conversation in a wave can remain sent as an e-mail. When it becomes a better tool in practice, and folk continue to speak well of it, we may be witnessing here the last of e-mail conversation.
+
+What I'm most interest in is Wave's ability to port in user generated programs, like software and hardware design ware, and view within the wave--from birth to the very moment--who made changes to a design and how the design changed over time. By viewing a design history, we might find something worked better previously than existing. Photo sharing or collaborative essay writing are simple examples, but I'm more interested in seeing how this tool is used in collaborative infrastructure or systems design itself.
+
+An infrastructure map might begin with the layout of NYCResistor's hackerspace graphically represented as a floorplan after a wave search for "NYCResistor." This layout is itself a series of waves, one wave for 'MakerBot' another for the 'Lazor X', ect. The waves 'MakerBot' and 'X Lazor' may be generated without knowing about NYCResistor at all, but because NYCResistor uses these tools, the established waves describing the MakerBot and X Lazor are more detailed and adopted with a special wave layer for Resistor's particular tools. The devices then, based on user preferences, communicate with the wave to report a tool's activity. Something like that would aid Resistor's collaberation with our friends at Skynet--I'm all for that.
+
+This program will help encourage collaboration by enabling the place for any variety of app useful to generating a collaberative design. It will encourage competition for reputation by enabling users to observe design progress. The aggregations of these apps into a single program means more potential for the cross pollination mentioned in the NYCResistor example.
+
+
+This is a very smart move if we look at Google's stock price decline over the past two years. What I see Wave affectively doing is managing Google's risk by open sourcing the ware, making it a general enough app to add user generated widgets, including Google's apps, so when the firm fails, the tool remains usable under increasing post-scarcity conditions."  
+(p2p-research list, June 2009)
+
+
+[[Category:Technology]]

@@ -1,0 +1,406 @@
+
+'''= Sarafu Network'''
+
+
+
+=Context=
+
+"Just to be clear – you don’t use the paper money any more.
+
+Yes, '''it’s all digital now''' – which is much better. You can’t steal it, no printing involved, less fraud etc. It’s a digital age – we needed to go digital."
+
+- Will Ruddick [https://www.lowimpact.org/posts/how-chamas-mutual-credit-changing-africa]
+
+
+=Description=
+
+Ester Barinaga:
+
+"The article is an effort to understand how the Kenyan community crypto-entrepreneur translates the logic of the commons into a new monetary system for networked local economies (Bollier and Conaty, 2015). It does so by looking closer into the current development of Sarafu, one of Kenya’s community currencies. In its latest iteration, Sarafu is moving the production of money from a centralized social entrepreneur onto multiple, temporary, and acephalous local savings and loans groups, also known as chamas. In so doing, the production and distribution of money is being embedded in existing community institutions. Blockchain technology allows building the new monetary system on social relations different from those on which capitalist money rests and thus, I argue, is pivotal to the development of this form of commons-based money. However, the standardization and automation of the new monetary rules through smart contracts erodes the very communal decision-making processes that made chamas interesting anchors of a money commons in the first place. This raises questions on the various levels of coordination needed for a money commons. Further, in the process of designing a commons-based multi-currency system and coding its rules into smart contracts, orthodox economic assumptions slipped in, the use of the new monetary system now risking to perform an economic rationality that was originally foreign to the chamas. The article concludes that to develop truly democratic monies, new technology is not enough. Nor it is enough to embed these monies in plural community institutions. Both are necessary but insufficient components of a money commons. The final component, the article suggests, involves re-framing money along the economic logic characteristic of the chamas."
+
+(https://www.frontiersin.org/articles/10.3389/fbloc.2020.575851/full)
+
+
+=Status=
+
+'''0. September 2024:'''
+
+"Since transitioning our technology onto the Celo blockchain in July 2023, Grassroots Economics has scaled its Commitment Pooling Protocol, transforming community-driven economic models across multiple regions. This protocol enables communities to issue Community Asset Vouchers (CAVs) and engage in Rotational Labor (Mweria), where individuals and groups pool commitments to facilitate trade, access credit, and foster business collaboration.
+
+As of September 2024: - Groups have established 33 commitment pools on Sarafu.Network, creating new channels for capital seeding, credit and local trade. - These pools support localized rotations of labor, resulting in tangible outcomes such as agroforestry improvements, water conservation, and community infrastructure. - 239 unique Community Asset Vouchers (also known as Community Inclusion Currencies) have been issued by individuals, groups, and businesses, benefiting 3,149 monthly active users globally"
+
+(https://sarafu.network)
+
+
+'''1. Dave Darby of the Stroud Commons interviewed Shaila Agha:'''
+
+"that includes 50,000 households across Kenya and did $3 million worth of trade last year – how’s that for a brief description?
+
+WR: Yeah, actually we’re up to 52,000, and last month we had 4200 new users registered." [https://www.lowimpact.org/posts/how-chamas-mutual-credit-changing-africa]
+
+
+
+'''2. Will Ruddick:'''
+
+"The ability for people to create tokens on public ledgers has been around for many years. 
+
+Likewise the ability for people to make printed IOUs has also been around for a while. See printed Ithaca hours.
+
+https://viz.sarafu.network is data from 60 such community issued mutual credit systems using Blockchain in Kenya."
+
+(email, January 2024)
+
+
+=Characteristics=
+
+==How Sarafu's Mutual Credit Principles Are Different==
+
+Will Ruddick:
+
+"Collateral in the form of pooled intangible and tangible assets, with reciprocal drawing rights being how mutual credit is expressed.
+
+The Mutual Credit of LETs and SEL don't clearly articulate this pool and suffer from that imo.
+
+Being able to identify, seed and exchange using a common pool is a whole different animal than typical barter or transactional exchange."
+
+(personal email, November 2024)
+
+
+==[[Crypto-Economic Aspects of the Sarafu Kenyan-Based Grassroots Economics Project]]==
+
+
+Excerpted from an interview with Blockchain for Good.
+
+Will Ruddick:
+
+"While Grassroots’ technology is built on a blockchain, it is important to note that the people using the CICs do not know that they are using this technology. Indeed, the user interface has been designed to be easy to learn. The wallet used by Grassroots Economics is a custodial wallet, meaning that the association holds the private key of its users. In concrete terms, a user with a feature phone creates a PIN code that will give him access to his wallet. Each time he wants to access it, he will have to enter this PIN code. It is from this wallet that the electronic vouchers will be accessible. There is the possibility to send the vouchers to a wallet other than the Grassroots one, such as Metamask. The reason why we do that is that actually, when you’re going for non-custodial wallets, which means you hold your private key, you have to store it securely and remember a seed phrase of 12 words. That would have meant that we needed to store the seed phrases for them, which was very complicated. So, we opted for a simpler system, using a PIN code.
+
+The issuance of the voucher, and the transactions between the different users are recorded on a blockchain. We do a lot of training with the population, especially to demonstrate that many things can be produced locally, and that they don’t need to wait for Kenyan shillings to be able to trade. This mapping activity is central to the work of Grassroots Economics. Simulation games with beans are organized so that communities can understand how the CICs work, and thus take ownership of them.
+
+...
+
+We have created an inter-community token, the Sarafu, which can be exchanged for all the CICs of all the communities. So, through liquidity pools, users can exchange their CICs into Sarafu, go to another community, and exchange their Sarafu into the CIC of that other community through another liquidity pool. Bancor allowed us to create our wallets on its backend, before migrating them to POA. This system, quite robust, did not allow us to have complete control over its technical infrastructure, especially since Bancor decided to issue a token, the BNT, which was to serve as a reference for all the others. This went against the idea we had of the project, namely the promotion of autonomous economic development. In other words, we did not want to make our CICs and Sarafus dependent on the BNT.
+
+As a result, we migrated to Uniswap, a much more convenient exchange, which allowed us to create our own cash reserves, rather than using Bancor’s.
+
+...
+
+We started looking at a number of alternatives, and we thought that Bloxberg, a blockchain created for academic purposes, would do the job. But they didn’t allow us to have a node either, because we were not a university.
+
+But their code was open-source, so we just copied their entire code base and then adapted it to suit our needs. Thus was born the Kitabu chain, a blockchain replicating the operation of the Bloxberg blockchain and which exploits an Open Ethereum node using the Aura consensus mechanism. This mechanism works by proof of authority that allows them to elect transaction validators. This mechanism allows us to process transactions much faster, which is handy in a context where connectivity is sometimes poor.
+
+Since Open Ethereum is no longer operational ! We’re going to migrate everything to Cosmos, but it will take a good six months of work to recode everything into the Cosmos programming language, which is different from Solidity, the language we’ve been using until now.
+
+...
+
+'''Impact investment by NGOs:'''
+
+We have imagined a mechanism to incentivize them to invest in the development of our communities: they buy CICs from local communities, thus stimulating production, with the possibility of becoming transaction validators, which allows them to have a return on investment. The CICs purchased allow communities to develop infrastructures accessible to the refugees in our communities. In this way, the NGOs become impact investors serving the community with the community’s resources. On the same principle, we develop agroforestry projects. Small investors within our communities buy CICs equivalent to seeds that will be reimbursed against the products of agroforestry."
+
+(https://medium.com/@Blockchain4Good/how-40-000-kenyans-are-using-community-inclusion-currencies-in-the-form-of-tokens-through-5d72c6537df6)
+
+=Interview=
+
+Dave Darby of the Stroud Commons interviewed Shaila Agha [https://www.lowimpact.org/posts/how-chamas-mutual-credit-changing-africa]:
+
+"* '''What kind of traders are they?'''
+
+Will Ruddick: Mostly food / agricultural produce. Food sellers and farmers.
+
+
+'''And what’s your role there?'''
+
+I’m the incoming director, dealing with business development and funding.
+
+
+'''And how well is it doing – what does the future hold?'''
+
+It’s growing fast. We’re developing new businesses, like pressing coconut oil. Also ‘syntropic farming’ (see poster below) – a system of farming that includes trees, vegetables and grasses, and a lot of mulching and a lot less water than traditional farming. The trees form a barrier – monkeys are a pest in Kenya. Then there are different rows with grasses and other plants. We provide training in mulching and water pans as well. Kenya is arid / semi-arid, so we need resilience against times of drought. So we train people in that. All these services are then paid for using Sarafu, and people accept the Sarafu because they know they’ll be able to buy produce with it.
+
+
+'''Yes – Grassroots Economics isn’t just about mutual credit is it? It’s about starting community businesses, and especially agriculture – community farms.'''
+
+Yes, it creates this circular economy. There’s poverty-induced hunger in Kenya during droughts. This doesn’t make sense, because we live in such a resource-rich country. There are so many unemployed youth too, but I feel like we’re addressing this, because people don’t have the money to buy what they need, so if we can provide this supplementary currency, then they’re able to get agricultural produce with it (which combats both unemployment and hunger).
+
+
+'''What do you think the Sarafu Network could achieve in future?'''
+
+In Kenya we’d love to scale nation-wide. One of the barriers is the expense of the Telcos – telecommunications. The network uses texting – and all texts are paid for by Grassroots Economics. That’s doable with 52k people, but what’s going to happen when it’s a million people? That will be too expensive. Also, government acceptability – wouldn’t it be great to pay for parking, or other government fees with it as well? At the moment, only people with money can access government services, whereas if they could use Sarafu, there’s a huge number of unbanked people who could participate in the economy."
+
+(https://www.lowimpact.org/posts/how-chamas-mutual-credit-changing-africa)
+
+
+=Technology=
+
+Technologies used by Grassroots, by Blockchain for Good [https://medium.com/@Blockchain4Good/how-40-000-kenyans-are-using-community-inclusion-currencies-in-the-form-of-tokens-through-5d72c6537df6]:
+
+
+==Bancor==
+
+"a crypto-currency exchange protocol, first centralized, then decentralized. Bancor admits a token, the BNT, which serves as a reference standard for all the tokens that will be exchanged on Bancor.
+
+
+==POA==
+
+Ethereum sidechain based on the proof of authority consensus mechanism. Using a small number of validators significantly speeds up the validation process, allowing POA to be used in places with poor connectivity.
+
+
+==[[Uniswap]]==
+
+"Uniswap is a protocol with two functions: a DEX* (Decentralized Exchange) and an AMM (Automated Market Maker).
+
+A DEX allows users to exchange their crypto-assets for other crypto-assets, for example exchange CICs for Sarafus. To do this, Uniswap relies on “liquidity providers” who deposit crypto-assets in reserves, being remunerated for this through transaction fees levied on traders, those who exchange crypto-assets (their amount is equivalent to 0.3% of the amount exchanged). Thus, with such an incentive mechanism to replenish the crypto-asset reserves, the exchanges (swaps) can be done quickly.
+
+Uniswap is organized around “pairs,” which are called liquidity pools. These liquidity pools consist of two crypto-assets, which are fed by users of the liquidity provider network. For the liquidity provider, the model is simple: one can deposit as much of each crypto-asset as she wants in a dedicated pool (CIC & Sarafu) as long as a parity is respected. This parity corresponds to the equation x*y = k, x: for the quantity of the first crypto-asset, y: for the quantity of the second, and k: the multiple (or product) of the two. Cash deposits will only be accepted if they respect this parity.
+
+On the other hand, this invariant is subject to change by crypto-currency exchanges. Indeed, when someone decides to exchange one crypto-currency for another, the stocks change: a new invariant is calculated, and the new deposits will be conditioned to the respect of this new invariant.
+
+This model of calculating the invariant and adjusting it according to the trades made is called AMM (Automated Market Maker). Once the invariant is calculated, it is used as the basis for calculating the exchange rate between the two crypto-currencies."
+
+(https://medium.com/@Blockchain4Good/how-40-000-kenyans-are-using-community-inclusion-currencies-in-the-form-of-tokens-through-5d72c6537df6)
+
+
+==xDAI Chain==
+
+the blockchain on which MakerDAO operates. It is a public blockchain without permission. This chain allows to forge non-collateralized tokens on chain. Only DAI is an exception to this rule. This feature has not handicapped Grassroot Economics, which performs off-chain collateralization of its CIC tokens (collateralized on physical quantities of commodities produced by communities).
+
+
+==Open Ethereum==
+
+Open Ethereum is an Ethereum client. An Ethereum client is a software used by multiple nodes (computers) to verify, store and sometimes create blocks. This software is compatible with the main network (or main net) of Ethereum, via an API. There are several advantages to using Open Ethereum. First, the fact that only a few nodes are running the network speeds up transaction execution considerably. In addition, the software is less heavy to store than Ethereum. Second, its code language is modular, which allows for complete customization of the node one is running, starting with the consensus mechanism used to validate transactions. It is possible to use consensus mechanisms by proof of work (ethash/engine) and by proof of authority (AuRa).
+
+The consensus mechanism that Grassroots uses is the AuRa mechanism, which allows the selection of validators through the definition of a “validor set”, consisting of the addresses of the people responsible for validating the blocks of transactions. Thus, Open Ethereum used with the AuRa consensus mechanism behaves like a permissioned private blockchain.
+
+
+==Bloxberg==
+
+Bloxberg is a permissioned public blockchain with open source code that runs on an Open Ethereum node. It is based on the AuRa proof-of-authority consensus mechanism and was originally designed by a university consortium. A replica of it was designed by Grassroots Economics under the name Kiratu Chain."
+
+(https://medium.com/@Blockchain4Good/how-40-000-kenyans-are-using-community-inclusion-currencies-in-the-form-of-tokens-through-5d72c6537df6)
+
+
+=Case Study=
+
+Ester Barinaga:
+
+"Sarafu is the generic term of the Kenyan community cryptocurrencies, regardless of whether they are used by dwellers in urban informal settlements in Nairobi or by villagers of rural Mombasa. While at the moment of writing, all communities use one single cryptocurrency—Sarafu –, work is ongoing to, in the near future, enable each community to create its own cryptocurrency. A second trait is key to the monetary system in-the-making: The possibility to trade across community cryptocurrencies. For this, Sarafu will turn into the system’s reserve currency, which—and this is a third defining trait –, will serve as the basis for the automatic calculation of exchange rates across community cryptocurrencies. These three traits—one, a multiplicity of community-created cryptocurrencies; two, capability to trade directly between distinct currencies; and three, automatic determination of currency prices—are central to the crypto-entrepreneur’s vision of the new monetary system becoming a “public infrastructure”8 that “anyone in the world can use,”9 an “infrastructure to enable a decentralized financial system without […] giving [away] undue power over such core aspects of our lives10.” The Sarafu system in-the-making is resolutely founded both on the dreams of futurism, decentralization and automation that characterize radical blockchain projects (Swartz, 2017) and on grassroots currency innovators’ ambition to democratize money (Bollier and Conaty, 2015).
+
+A defining design component of any monetary system is what the basis for deciding the money supply is, or, phrased differently, what grants trust in the value of the monetary units created. The funding needs of wars often decided how much the sovereign minted, trust on the money based on the ruler’s power to accrue taxes (Goodhart, 1998). The desire for profits weighs in the overall credit issuance of today’s bankers, trust being placed on the network of relations among banks, judicial institutions, and tax collecting agencies (Pettifor, 2017). In the Sarafu system in-the-making, a chama’s capacity to mutualize individual savings decides how many monetary units to issue. The collective savings in conventional money become the reserve of the community cryptocurrency, which is translated one-to-one to reserve in Sarafu. This reserve is then leveraged one to four. That is, a reserve ratio is coded into a smart contract so that for every Kenyan shilling the chama puts apart, four units of community currency are created. The Sarafu system thus moves trust from the sovereign and financial banking networks to the mutualized savings of the chama and the automation of the code.
+
+Once the supply of community currency has been created and airdropped into the chama’s communal phone, the chama plays a similar role in its new monetary commons as it does in relation to its undertakings with conventional money: It distributes the currency to its members through the granting of loans. Appropriation rules regulating loan sizes and repayment schedules similarly ensure the flow of monetary units reaches all members.
+
+The final component of the Sarafu monetary system is the hierarchy of reserves paired with the automated determination of exchange rates. The purpose is to facilitate exchange across community cryptocurrencies. A central ambition of the Sarafu crypto-entrepreneur and of the developers contributing to its code is to create “a global […] network of connected currencies11,” a monetary system that fulfills the needs of inter-community trade. The system designed builds on reserves each chama currency holds in Sarafu, which relate one-to-one to the chama’s savings in national currency. Chama currencies are connected to each other through reserves each keep in Sarafu. When a user of a currency buys from a user of another currency, the Sarafu reserves in her currency move to those of the selling community currency. In this way, the community currency of the buyer weakens relative to the community currency of the seller. This is reflected on the currency’s exchange rate and is automatically calculated by a “bonding curve.” In other words, bonding curves—algorithms coded in a smart contract—regulate the price of a currency based on how many Sarafu reserves a community of users has in their currency system. A difficult concept to explain to monetary novices, such as the communities he worked with, the Sarafu entrepreneur uses the connected water glasses metaphor to clarify the idea: “It’s like water glasses connected to each other. When the level of water in one goes up, the level in the other goes down. The same with the price of these currencies against each other. When many buy from a community, the level of reserves [relative to supply] of its currency goes up against the other12.” Variable exchange rates, it is hoped, will attract individual users to buy from those communities which currencies have seen its price go down, thus pushing the currency’s exchange rate back to a level that equates the prices of products across communities. As the community crypto-entrepreneur puts it, “the system is based in this idea that markets keep prices fixed at a certain level13.” Or, as formulated in the White Paper, “[f]ree competition among [community cryptocurrencies] can be seen as the fruition of Hayek’s (1990) proposal for competitively issued private currencies” (Ruddick, 2020, p.5).
+
+In short, the Sarafu in-the-making is founded on the possibility of decentralization and automation brought by the new technologies to develop a decentralized multi-currency space with automatic calculation of exchange rates. Further, it borrows the economic logic of chamas to anchor the issuance of the currencies on the chamas’ mutualized savings. Finally, it builds on an old idea of a market of competing private currencies, with freely moving exchange rates. How does this combination of novel automation, borrowed community logic and old free-market ideals shape the rules governing the money commons? And where does it place the center of decision-making?
+
+
+'''Money Governance in the Sarafu System'''
+
+
+Let us examine the extent to which Sarafu transfers the governance of money from States and markets onto communities. For that, let me linger in the relationship between the chama and the new money. Ostrom’s system-unit distinction is instructive here, a distinction that, as we saw, unfolded Martin’s second question into two questions: “who gets to decide the rules governing the flow of monetary units?” and “who gets to decide the rules governing the monetary system?” As for the first, the chama’s relation to the flow of monetary units remains unchanged regardless of it being conventional or community money. Indeed, community groups, following their own decision procedures regarding level of savings and granting of loans, maintain the contribution and appropriation rules they apply to the national Kenyan shillings also in regards to the community cryptocurrency. Chamas, that is, continue working along an economic logic of mutualization and circulation that keep the currency units circulating.
+
+It is however in the chama’s relation to Ostrom’s second element, the monetary system, that we see the productive potential of the blockchain as it is here that the chama acquires a new role, a role reminiscent of a central bank. Chamas’ pooled savings in Kenyan shillings constitute the reserves of their new community cryptocurrency. Once savings have been set aside, smart contracts on the blockchain automate the leverage of group savings—all communities are automatically granted a 1–4 reserve ratio on their savings—and enable the standardization of the reserve ratio rule to all cryptocurrencies created in the Sarafu system. Finally, another smart contract (a so-called “bonded curve”) automates the calculation of exchange rates across the various Sarafu cryptocurrencies. Standardization of reserve ratios and automatization of determination of exchange rates facilitates the crypto-entrepreneur’s work of scaling up the Sarafu monetary system.
+
+While automation and standardization are pivotal to a speedy deployment of “a global network of connected currencies,” they come at the cost of a regression in the understanding of money coded onto the blockchain and, with it, the erosion of the democratic ideal that chamas embody. The Sarafu monetary system in-the-making follows the fractional reserve banking model, in which money is implicitly understood as valuable in itself. Monetary metallism attributes value to the material stuff bills and coins are either made of (in the case of feudal silver coins) or are supposed to be a representation of (as with the notes backed by gold held in banker’s vaults during the gold standard periods). When value is seen in the material stuff behind money, the logical conclusion is the need to (fully or partially) back the money supply with collateral—be it gold, reserves in foreign currencies or, as in Sarafu, the savings—in shillings—of the chamas. The credit notion of money common among grassroots currency innovators (for some examples, see Croall, 1997; Cahn, 2004; Greco, 2009; Slater and Jenkin, 2016) and that characterized earlier, paper-based versions of the Kenyan community currencies (Barinaga et al., 2019) has inadvertently mutated and a metallist understanding of money has slipped in. With it, the locus of trust has moved from the rules and sanctions that constitute the chama onto the immobilized savings that make up the reserves. And with it, the site where decisions are made has moved from the chama to the code (and its coder) that automates the relationship between reserves, money supply, and exchange rates.
+
+Germane to the “who decides” question, automatic reserve ratios push the democratic ideal back. One, because seeing value in the collateral moves the issuance decision from the community that is to use the currency onto the savings which it is able to gather. Instead of delicate considerations that balance financial and social obligations within the community, the decision of how much money to issue is guided by the community’s capacity to save, not by its trading needs. For communities living under the poverty line, often leading a hand-to-mouth existence, anchoring issuance in savings amounts to immobilizing much needed mutualized savings, savings that previously rotated among members through the loan granting rules of the chamas. To overcome such limitation, the Sarafu crypto-entrepreneur collaborates with the Red Cross, which donation is funneled into the system’s reserves (Bornstein, 2019). While channeling donations through reserves against which chamas are allowed to redeem their Sarafu savings is an improvement of extant cash transfer programs14, it, however, effectively hands the issuance decision over to external actors. Two, democracy is pushed back because it is the engineers, the crypto-entrepreneur, the tech-savvy, that think the algorithm, decide reserve ratios, and code it into the smart contract.
+
+Automation does more than erode communal decision-making processes. Automated determination of exchange rates, the “automatic market maker” with its underlying Hayekian ideal of a market of currencies, potentially introduces speculative behavior into community relations. The crypto-entrepreneur codes on the assumption that buyers will procure products from those communities which currency exchange rate is lower in reference to one’s community currency. The engineer-cum-economist, that is, develops the algorithm on the assumption that individuals take their buying decisions based on prices alone, on a search for profit-maximization. The social obligations and personal relations that we saw so shaped the chama’s decision-making processes disappear in the coder’s concerns and homo economicus gets encoded in the algorithm, slipping in a political doctrine with dangerous ideological components (Cramer, 2002; Read, 2009; King, 2012; Crotty, 2013). Intent to promote the profit-seeking behavior of the rational economic man premised for the stabilization of exchange rates in the Sarafu system, communication of exchange rates is pushed onto traders through brief text-messages to their phone, a continuous reminder to the currency user that there is a better individual business to be made when buying from or selling to members of a different community. A behavior that was assumed and coded, is being encouraged, to observable effects. During a field visit in November 2019, Yazid, a rural villager, explained how he consulted exchange rates to decide when to redeem his Sarafu savings to Kenyan shillings. Yazid had taught Zalika and Lakeisha, two women in the same village, who in June did not know of exchange rates and had now started to make certain decisions based on them. The behavior of the theoretical homo economicus that was first introduced through the algorithm ends up provoking real individual economic behavior, a reminder of the performativity of economic models (MacKenzie, 2006; Callon, 2007; Muniesa, 2014).
+
+Swiftly, one of the most energizing novelties of the community cryptocurrencies being developed in Kenya is embedding the monetary system in the traditional community institution of the chama. Its promise lies in the role it plays in the mutualization (or commoning) of money, in its communal decision-making processes, and in its balance between social and financial obligations in all matters of economic life. To this borrowed monetary component, however, and through the automation enabled by novel blockchain technology, an old understanding of money as thing as well as a revered and individualized notion of economic rationality is imposed onto the community. Whilst the consequences on the social fabric of the community are yet to be seen, the fear is that encoding such economic and monetary theories end up realizing what was initially only a theory. The result: The undermining of community decision processes, the engendering of speculative behavior, and the favoring of economic value and financial gain over social obligation and personal relations."
+
+(https://www.frontiersin.org/articles/10.3389/fbloc.2020.575851/full)
+
+=Discussion=
+
+==Conclusion: Democratic or Despotic Money?==
+
+Ester Barinaga:
+
+"The monetary awakening induced by the financial collapse of 2008 resulted in increasingly loud calls for a money that serves the interests of the many and that is subject to the continuous revisions and active negotiations of slow, but inclusive, democratic processes (Mellor, 2016). Calls for monetary democracy got an empowering tool with the launch of bitcoin in 2009 (Swartz, 2017). Bitcoin’s underlying technology—the blockchain—and the technological developments that followed—such as smart contracts that automate the application of rules—gave these calls a cheap, yet potentially powerful instrument to realize their dreams. The possibility to design, and implement, a commons-based money was intoxicating and a number of grassroots and crypto-entrepreneurs started experimenting with various forms of money, playing with the rules determining the creation, distribution, and use of these new monies15. Sometimes driven by anarchist ideals, other times driven by a community ethos, these monetary experiments share the urge to re-claim money. How can the power to govern money be handed over to the people? The article looks at one such experiment, the Sarafu community cryptocurrencies being developed in Kenya, and considers its particular answer to that question: Chamas—a traditional institution governing communal economic and social life in many countries around the world—and its logic of mutualization and circulation can be the pillars of a decentralized monetary system for networked community economies.
+
+The article analyzes the implementation of that answer, with a special focus on examining the locus of governance and decision-making in the Sarafu monetary system. To do this, the article’s first analytical move—and its first contribution—is to conceive money itself as a commons and to build on Ostrom’s distinction between resource units and resource system in common-pool resources. The distinction allows us to unfold the question on the governance of the money commons into two questions: (1) who gets to decide the rules governing the flow of monetary units? and (2) who gets to decide the rules governing the monetary system?
+
+Operationalized through the dual analytical question, Ostrom’s distinction helped observe that in the Sarafu design of money chamas are certainly given a pivotal role in decisions concerning the flow of monetary units, yet they are sidestepped in regards the design of the monetary system. Anchoring the governance of the flow of money in the chamas is relatively direct and easy to implement; they simply have to run with Sarafu as they already do with the national money. In regards governance of the monetary system, however, the mutualizing logic of the chamas lost its ground to a systemic solution based on the logic of the market. The neoliberal ideals of the homo economicus, the self-regulating price mechanism, and the orthodox notion of money as representation of hard value slipped into the code. Monetary designs, that is, are not without ideological valences (Goodhart, 1998; Crotty, 2013; Desan, 2014). Now encroached into the code, those ideological composites are forced onto all communities implementing the Sarafu monetary model, with visible performative effects. The article’s second contribution is thus to the anthropology of money. Ethnographic observation suggested the introduction of homo economicus ideals through the monetary technology fostered new speculative profit-maximizing behaviors among community members16.
+
+The third and last contribution of this article is to highlight the contradiction between the democratic ideals common among many activist crypto-entrepreneurs (see Swartz, 2017) and the practical needs of coding a digital infrastructure. The need to code the governance rules of the monetary system previous to its implementation moves the center of decision-making from the chama onto the crypto-entrepreneur. Such erosion of community-based decision-making has to do with the entrepreneur’s global ambitions. Building a “public infrastructure” that “anyone in the world can use” necessarily requires finding a standardized solution that enables communities to trade among them. A common monetary language is needed, if you want, one that calculates the prices of currencies—the exchange rates—on the same parameters of value. In the engineering world of code, standardized rules translate into algorithms programmed ex-ante (Rozas et al., 2018), before communities are even given the opportunity to articulate their priorities and idiosyncrasies. And so, governing money with algorithmic formulas deprives the chama of the power to govern important aspects of the money they use. While the crypto promise of autopilot money governance—through algorithms and smart contracts—is alluring, it detracts money of the flexibility needed to adapt it to local social and economic changing circumstances. Governance through despotic algorithms may increase the efficiency of currency markets and may speed the scaling up of the new system. But this may be at the cost of eroding communal democracy and eliminating an entire mode of thinking about social coordination (on this, see also Morozov, 2019).
+
+The story told in this article is, as it were, a contemporary version of “putting old wine into new bottles.” It is not enough to adopt ingenious and innovative blockchain technology. It is neither enough to involve communal institutions into making certain decisions. Above all, we need to move away from an orthodox, damaging and long-challenged, yet dominant science of economics that understands money as neutral, sees money’s value in the hard thing it represents, conceives humans as selfish profit-maximizers, and worships the self-regulating price mechanism. If we are serious about building democratic monies, we urgently need a “new meme for money” (Wray, 2012). In the spirit of Eleanor Ostrom, this article is written from the belief that communities hold the key to such a re-framing of money. Chamas do indeed show us an economic logic that is far from the texts taught in traditional university courses in economics. They show that there are economic rationalities that balance financial, social and communal concerns. They show us that individuals are conditional cooperators (Ostrom, 2000) and that communal democracy can be a stable ground for decision-making processes. Reaching out to chamas is, certainly, the most provocative innovation of the Sarafu money. Yet, in discussing the governance of money, the locus of monetary decision-making, we need to go beyond simple translations of those community institutions and seriously consider what active role chamas could play in both determining the flow of monetary units and, most importantly, in deciding the particular constitution of the monetary system. Ostrom’s unit-system distinction may come handy here as it can help us identify different levels of monetary coordination. In so doing, Ostrom’s conceptual tools can help us better design institutions for the democratic governance of these new money commons."
+(https://www.frontiersin.org/articles/10.3389/fbloc.2020.575851/full)
+
+
+==Response from Will Ruddick==
+
+Will Ruddick [https://docs.google.com/document/d/1-DE6SMW3gGGNdo5k976qXvKdCbGqvjtgxAe9s4lbiuI/edit?f]:
+
+"Overall, the assertions of the author are one-sided, false and misleading and much of her argument derives from speculative discussions and marketing materials. In some cases the author is talking about research conducted in 2019 by Grassroots Economics on floating exchange rates between villages - which was discontinued (even acknowledged by the author starting January 2020) while asserting these are things that are planned or in process based on dated marketing materials. She also asserts that we were or are planning to use the savings from vulnerable populations as reserves and endanger them. This is absolutely false and has never been the case or will be. The author’s various concerns about our future programs in 2021 are speculative and damning. I would suggest that she brings up these concerns from a more academic perspective with specific dates on when different trials were in practice, that weight pros and cons - rather than the current accusatory speculative paper.
+
+The author also states that the originators of the Sarafu program are crypto-entreprenures when in fact we are a Kenyan non-profit foundation that has been doing these projects for years to help communities well before ever using blockchain and don’t even plan to use any specific blockchain technology in the future. Calling such a foundation ‘crypto’ or ‘entrepreneur’ is in fact derogatory and sets a negative precedent which is insinuating we are profit seeking or entrepreneurial. She also singles me out personally as a Sarafu or crypto-entrepreneur “informal conversations held with the crypto-entrepreneur “ - a term (which the author well knows) I would never use for myself as the founder of a non-profit - I’m neither dedicated to crypto or enterprise and have been doing this work without blockchain or any profit or entrepreneurial minded activities for over 10 years. The term Foundation, Non-profit Foundation, Founder of a non-profit foundation would all be accurate without a negative bias. 
+
+Google: “crypto-entrepreneur: a person who sets up a business or businesses, taking on financial risks in the hope of profit.”
+
+Note that in working with communities it is our utmost goal that their wishes are respected and they are empowered. We are so happy to have gotten through 2020 and are near completing redeveloped infrastructure that will allow for communities to build their own currencies in 2021. The Sarafu system in 2020 was a stop-gap way we could enable communities to keep supporting each other while waiting for technical development -without reverting to the expensive paper currencies we used in years past. Note that we are using existing and developing new open source tools that can be used in many ways - the hope is to give as many options to users as possible so they can create their own community currencies. The way the paper is written doesn’t speak at all to why Sarafu exists in the first place as a stop gap.
+
+Note that the number of people using Sarafu only jumped from a few hundred to 40,000+ this year. Really the Author does no work at all to describe the dates of various trial, number of users during these trials. Instead she generalizes it all into an extremely negative picture.
+
+
+Below are various erroneous or false assertions by the author and responses:
+	 	 	 	
+
+'''* “In the Sarafu system in-the-making, a chama’s capacity to mutualize individual savings decides how many monetary units to issue.”''' 
+
+There is no intention to use group savings for reserves or as a determinant for the supply of CIC they issue. Commitments to redemption of vouchers (in the form of CICs) collateralized by a network token (with no monetary value) is the current aim. Creating a fiat exchange value for a network token has been speculated as a possibility as has enabling users to choose between various network tokens (even a stable coins) - these are capabilities we have been researching since 2018 and have yet to develop or make available. The author seems to be confused as to what is reality vs speculation and readers might be confused as well.
+
+Rather than saying “In the making” which is false and negatively speculative - the author could speak toward her various worries such as basing a community currency on the savings of a chama (which is not our goal and never has happened). 
+
+
+'''* “With it, the locus of trust has moved from the rules and sanctions that constitute the chama onto the immobilized savings that make up the reserves. “'''
+
+Again: No such savings currently or have ever been immobilized, taken or used for reserves of Sarafu or any CIC. 
+
+Not only is this claim wrong but in moving to past-tense the assertion is damning. In fact in the future we hope that communities will determine their CIC supply by making commitments toward their future production. Inorder to connect CICs together there are many possible choices that we want to allow users to make - such as 1:1 liquidity pools, creating their own common network tokens and so on. Making interfaces to all the possibilities is impossible so user feedback on which directions is of utmost importance.
+
+
+'''* “The collective savings in conventional money become the reserve of the community cryptocurrency, which is translated one-to-one to reserve in Sarafu”'''
+
+Again: No such savings currently or have ever been taken or used for reserves of Sarafu or any CIC. 
+
+Because this is open source technology - communities can technically do whatever they want in adjusting parameters - but note that Sarafu has never had any fiat or on-chain backing and there are currently no plans in that direction. Using donor funds to purchase crypto as an on-chain reserve or liquidity pool for CICs has been speculated. These would all be options of users interacting with open source tech and infrastructure.
+
+
+'''* "Once savings have been set aside, smart contracts on the blockchain automate the leverage of group savings—all communities are automatically granted a 1–4 reserve ratio on their savings"'''
+
+Again: No savings of chamas or users are set aside or used by Sarafu or any CIC. There is no connection to Kenyan Shillings of users whatsoever. We have speculated in the past about connecting Sarafu or other CICs to National Currency or stable coins in reserves that are geared for donor assistance and subject to regulatory environments. Even the numbers 1-4 reserve ratio are not in use since end 2019 and not planned to be in use.
+
+This research paper seems to be a reaction to speculation and marketing materials - and in which case it should be structured differently. The author should feel free to bring out these topics without assuming what may be implemented - as that will continue to depend on the needs of the users.
+
+
+'''* “The Sarafu monetary system in-the-making follows the fractional reserve banking model”'''
+
+No, the model in 2019 briefly issued and freely distributes a network token (Sarafu with no connection to Kenyan Shillings or any fiat or stable coin) that can be used to connect chama created CICs together. There is no leverage or change in exchange rates between CICs planned in 2021. This may change depending on the regulatory environment. 
+
+Note that in 2019 we tried a non-fiat connected bonding curve model for 2 months in a few pilot communities. Also note that CIC technology is built on contracts where CIC issuers can determine the parameters that fit their situation.
+
+Even in the speculative terms: Regardless of the connector weight from CICs to their reserve this should not be confused with the fractional reserve systems of typical banks - as the author asserts! There is no ‘reserve’ in any sense limiting the creation of Sarafu or CICs planned, nor has this ever happened. 
+
+I believe the author from her 2019 visit confused variable exchange rates between CICs and voluntary donors buying Sarafu after conversion from CICs - with on-chain reserves of national currency. Note that variable exchange rates have not been in effect since December 2019 and the trial of donors removing Sarafu from communities after a donation was ended in July 2020. At the very least - put in the dates of various trials and note that there are still donations going out to vulnerable populations based on Sarafu usage - but no exchange for Sarafu.
+
+
+'''* “To overcome such limitation, the Sarafu crypto-entrepreneur collaborates with the Red Cross, which donation is funneled into the system’s reserves (Bornstein, 2019). While channeling donations through reserves against which chamas are allowed to redeem their Sarafu savings is an improvement of extant cash transfer programs14, it, however, effectively hands the issuance decision over to external actors.”'''
+
+The author is quoting speculative marketing materials which never were implemented. There are no funds from Red Cross or any source that have been used as a or funneled into an on-chain reserve. Note that donor funds are currently given to recipients without exchange for Sarafu, or for capacity building in communities and no Sarafu is being removed from communities in exchange for Kenyan Shillings. Trials of Sarafu being removed from communities after a donation have been tried and were discontinued as of July 2020. 
+
+The author confuses donors voluntarily exchanging Sarafu for their donations and on-chain reserve mechanisms. There is no reserve in funds of any sort for Sarafu and never has been.
+
+Note that there are several other technical ways that donor funds could be linked to a CIC - such as SDG Indexing or independent liquidity pools similar to UniSwap. Also note that even the blockchain technology used may change drastically in the next year such that any such speculation is hard to foresee. Moving to HoloChain for instance would create much easier ways to bridge between various ledgers. 
+
+Again calling Grassroots Economics Foundation or myself crypto-entrepreneurs is offensive, incorrect and in no way adds to the paper. Simply using non-profit foundation would be more accurate and not lump us in with explicitly crypo-entreprenures. 
+
+
+'''* “Two, democracy is pushed back because it is the engineers, the crypto-entrepreneur, the tech-savvy, that think the algorithm, decide reserve ratios, and code it into the smart contract.”'''
+
+When communities are able to create their own CIC the goal is that they have full control over all aspects that are not explicitly regulated. Note that the reserve ratio between a CIC and its reserve (a network token) is theorized to be 100% or use limited 1:1 liquidity pools - hence there are no changes to exchange rates. This has also yet to be implemented - note that the current Sarafu system is a single basic income style token to keep the previous exchange systems alive while we re-engineered the ability for communities to make their own currencies again. 
+
+The accusation that we have or are planning to ‘push back democracy’ and decide things on the behalf of communities is completely revolting. Rather than ‘pushing back democracy’ - how about “doing our best to develop non-profit infrastructure so that users can make their own decisions?” Note that the current system since the start of 2020 has been a stop gap while we rebuild software. There are a lot of interesting research topics about the usage of Sarafu as a form of UBI that could be covered - but seems to be completely lost in the author’s paper. THe paper assumes that various decisions were malicious by not stating the reasons behind them.
+
+
+'''* “During a field visit in November 2019, Yazid, a rural villager, explained how he consulted exchange rates to decide when to redeem his Sarafu savings to Kenyan shillings.”'''
+
+Isolated attempts of Sarafu to Kenyan Shilling exchange as well as variable exchange rates were tried in several communities and discontinued in favor of using aid funds for capacity building based on CIC circulation. The author is well aware that these trials ended in December 2019 and should at least mention that. Simply stating that we’ve tried to work with communities with many forms of community currency over ten years. 
+
+Note that variable exchange rates for certain types of community currency to fiat connections may be useful and desired by communities, while 1:1 exchange rates between communities in limited liquidity pools can potentially co-exist. There is no discussion at all of when share-like instruments might be useful.
+
+
+'''* “When a user of a currency buys from a user of another currency, the Sarafu reserves in her currency move to those of the selling community currency. In this way, the community currency of the buyer weakens relative to the community currency of the seller.”'''
+
+The author was referring to the 2019 trial that was discontinued, future iterations planned for 2021 will involve a 100% target reserve ratio - meaning the CICs will be 1:1 - hence there is no ‘weakening’. But the hope that communities can make such decisions on their own. Note that the on-chain reserve is a non-fiat connected or valued network token. 
+
+Also note that having variables exchange rate connections to other tokens is a way of creating share-like structures as media of exchange - whether or when such structures are appropriate is a great discussion topic. Creating speculative markets isn’t necessarily a bad thing where the speculation helps support a commons. Sadly this paper seems extremely one sided in such discussion.
+
+At the very least say when the trials of different methods started and stopped and the reasons why.
+
+
+'''* “The datasets presented in this article are not readily available because No personal contact information is to be shared outside the research team. All other data, concerning transactions (without identifying those involved in the transaction) is openly available. Requests to access the datasets should be directed to http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/.”'''
+
+
+Note that there datasets for transactions in the 2019 period and 2020 mentioned in this research are not available at the site given but rather http://grassecon.org/research 
+
+'''* “The result: The undermining of community decision processes, the engendering of speculative behavior, and the favoring of economic value and financial gain over social obligation and personal relations.”'''
+
+While claiming to have done extensive research - it is apparent that Barinaga’s result is based on a single field visit in 2019 at a site where we were researching for several months, fluctuating exchange rates between villages and cash rewards. The author doesn’t state what community decision process was undermined by such research. 
+
+Note again that we’ve been working for the entire year of 2020 to redesign the technology to allow for individual communitie to make their own currencies - as we’ve been doing with paper vouchers without blockchain since 2010.
+
+Also note that “financial gain over social obligation” is the type of dichotomy that we are trying to break down with community currencies; that ‘Financial’ gain can be tied into social obligation through the creation of currency commons. These are all wonderful topics of discussion that sadly get glossed over in this paper.
+
+'''* “or by villagers of rural Mombasa”'''
+
+Mombasa is not rural. Perhaps the author means Kwale or a dozen other rural counties where we work to support vulnerable populations?
+
+'''* “the Sarafu entrepreneur uses the connected water glasses metaphor to clarify the idea: “It’s like water glasses connected to each other. “'''
+
+Again the author seems to be referring to me in a derogatory way - I and Grassroots Economics Foundation are not entrepreneurs, crypto, sarafu or otherwise here. As a non-profit founder insinuating that I or the organization is entrepreneurial is a way of questioning our intentions to help others and is harmful. If the author wants to claim that any non-profit foundation that deals with technology or blockchain is a ‘crypto-entrepreneur’ - I would disagree - but she might do so directly in an academic argument rather than labeling.
+
+Given the author is quoting me from “Fieldnotes from June 2019, corroborated in an email exchange on August 23, 2019.” she might need to have some follow-up discussions to fully understand the various share-like structures vs pool-like structures. Note that connecting CICs together need not involve any bonding curve or fiat currencies - the liquidity-pool technology is extremely adjustable to both needs for continuous liquidity or static liquidity."
+([https://docs.google.com/document/d/1-DE6SMW3gGGNdo5k976qXvKdCbGqvjtgxAe9s4lbiuI/edit?f])
+
+
+=Details=
+
+
+==[[Money Commons]]==
+
+Ester Barinaga:
+
+"Timid voices have started to conceptualize money and its underlying new technology as a commons (Meyer and Hudon, 2017, 2019; Rozas et al., 2018; Barinaga, 2019). Seen in this light, the main insight from the financial crisis of 2008 was that money is a common resource but that its management was privatized. Comparably to how the privatization of common land from mid-sixteenth century England led Marx to develop his theory of accumulation and class exploitation, the realization of the privatized nature of today’s money governance is leading to much analytical development on the nature of money and on alternative modes of governing it (Wray, 2012; Fantacci, 2013). Money, this article argues, can be regarded as a commons to the extent that it is a “sufficiently large (resource system so) as to make it costly (but not impossible) to exclude potential beneficiaries from obtaining benefits from its use” (Ostrom, 1990, p. 30). Anybody entering a national currency area can access the money used in that area through labor, rent, trade, or exchange3. It would be difficult (if not impossible) to, say, exclude a continental European from using the Sterling pound when entering the United Kingdom. Money can also be regarded as a commons to the extent that someone’s use of a resource unit subtracts it from the pool of resource units other can access. The money I have in my bank account is for my use alone. This—Ostrom’s—definition of a commons moves the emphasis away from property rights and onto the nature of the resource. In this line, money fulfills the two variables Ostrom identified as defining a common-pool resource: (1) difficult to exclude potential beneficiaries from accessing the resource system and (2) substractability of use of the resource units.
+
+Continuing with this reasoning, another Ostrom distinction may help us shed some light on the relationship between the constitution of money (how money is created and governed, and by whom) on the one side and, on the other side, the shape of social relations and the economy at large. In her analysis of both natural and man-made common-pool resources, Ostrom distinguishes between resource system and resource units. While a resource system refers to “what generates a flow of resource units or benefits over time” (Hess and Ostrom, 2003, p. 121; italics added), resource units are “what individuals appropriate or use from resource systems” (Ostrom, 1990, p. 30; italics added). In natural commons, this distinction is easy to observe. Take a fishery. The resource system is the river, lake, or water basin whilst the resource units are the fishes living in that habitat. There is a direct relationship between the health of the resource system—the river, the water basin—and the flow of resource units—the number of fishes the system can sustain. Or, if you prefer, the rate of appropriation of resource units (how and how many fishes are fished) has an impact on the resource system (degree of biodiversity in the river).
+
+Translating Ostrom’s distinction to the money commons, the resource system would be the particular constitution of the monetary system and the resource units would be the coins in our pockets or the digits in our bank accounts. Note the instancing adjective “particular” in the previous sentence. Like other man-made common resources, money differs from fisheries or other natural commons in the fact that the resource system needs not only to be governed but it is also produced. Whereas rules and processes for appropriation of resource units need to be similarly decided in both natural and made commons, a man-made resource is a resource system that is constituted by a community and, as such, its architecture, its very internal design, is also a matter of governance. In other words, in a man-made commons such as money, the rules governing the flow and use of units as well as the rules constituting the resource system are the objects of decision. Monetary history clarifies how the form of the monetary system, its particular attributes, are, indeed, determined by those given the authority to design it (see, for instance, Kirshner, 2003; Martin, 2014; Desan, 2017). This insight, too, was one of the outcomes of the financial crisis of 2008. Money was denaturalized; the form of the monetary system laid open to a different “particular” design.
+
+Herein, I argue, lies the productive strength of Ostrom’s system-unit distinction. When we start looking at money as a commons that can be designed, a resource that is intentionally made and constituted to attend particular needs and priorities, then it is relevant to look at distinct levels of design. Or, to use the language of the regulatory regime recurrent in discussions of money and monetary policies, Ostrom’s distinction can be helpful to understand the level of intervention/coordination—where community governance rules are made to stop and other actors, external to the community of users, are made to take over. In man-made commons, Martin’s historical question “who gets to decide?” is thusly unfolded into two questions: “who gets to decide the rules governing the flow of monetary units?” and “who gets to decide the rules governing the monetary system?” These two questions are pivotal to understand the extent to which new monies in general, and the Kenyan community cryptocurrencies in particular, are anchored in the people that use them.
+
+In sum, Ostrom taught us that the rules for governing the commons can be designed by communities to attend their particular needs, priorities, and features. She and her team taught us that communities successfully design governance institutions for the management of their commons. Crypto-entrepreneurs and grassroots currency innovators tell us that the same can be true for the management of money. Certainly, the current wave of monetary innovation is experimenting with various ways of designing money and its governance institutions. Crypto-entrepreneurs have come with tech systems such as smart contracts and bonded curves to govern money; grassroots currency innovators do instead work with community-based organizational forms to govern local monies. These are two different strategies to governing money—reliance on the technology the first, on the community the second; coding standardizing rules in the blockchain ex-ante the first, adapting the rules as issues emerge ex-post the later (Rozas et al., 2018). When these two versions of governing money meet, like in the case of the Kenyan community crypto-currencies, how do their distinct approaches to governing money merge? What aspects of monetary design are left to the community of users and what to the external engineers coding the currency? In what sense is their new way of organizing money suggesting a route to a commons-based, democratic economy? And in what sense does their suggestion still retain some of the features of our current private-bank-made capitalist money? More to the point, what are the rules and who gets to decide?"
+(https://www.frontiersin.org/articles/10.3389/fbloc.2020.575851/full)
+
+
+==[[Chamas]]: Kenyan Savings and Loans Groups==
+
+Ester Barinaga:
+
+"Savings and Loans Groups ([[Chamas]]): A Communal Institution Governing the Flow of Money:
+
+It is 6.30 a.m. in the morning in rural Rohoni, a small farming and fishing village some 50 km north of Mombasa. A group of some 25 women all wearing a T-shirt in the same shiny blue with the words “Pamoja Mikono SILC group”4 printed on the back sits on the ground under the shade of a big tree. At the center, a blue tin box. The group’s treasurer collects one-by-one every members’ weekly savings and gathers them in the box. Sitting closely by, another woman, the group’s secretary, holds an accounting book in her lap and dutifully annotates the sums each woman hands to the treasurer. Members also return previous loans, with interests when due. Once all communal money has been collected, there is a round of loan requests. It can happen that the tin box contains enough capital to attend all petitions. Often enough there is not, and members have to negotiate how to prioritize the granting of loans. One’s child may have had an accident and the mother is suddenly facing high hospital costs; another woman wants to re-stock her tiny grocery shop, the only one in the area selling much needed soap and wheat flour; a third woman has lost her job and, with it, the meager income she had and wants to hire a boda boda (a motorbike taxi) to buy some cooking fuel in the neighboring town for her to sell locally for a mark-up. Facing more financial needs than there are funds for, the group of women discusses the urgency of the many individual needs and the group’s priorities. Some women agree to relinquish their loan requests for someone else’s more pressing emergency. Under the conditions of scarcity they live in, assuaging one woman’s urgency, however, may very well mean accentuating another woman’s penuries the following week. Each loan decision is therefore potentially divisive and yet, the group of women has been meeting weekly for long and renewed their commitment every year.
+
+Pamoja Mikono is one of hundreds of thousands of savings and loans groups in Kenya. You can see them in rural and urban areas; they are common among the most vulnerable groups and the more accommodated middle classes. The groups are defined by the territory—like the case in Rohoni described above and those connected to resident associations of urban informal settlements –, by family ties or occupational boundaries—like street vendor associations, waste-picker groups, or traders of a particular market. Or they can be set up purposely to coordinate a project—from funding the construction of an apartment building to bringing water pipes to the informal settlement. Scenes like the one in Rohoni take place in public parks and school yards, around the table of private living-rooms or in colorful plastic chairs by a public toilet.
+
+Variously called SILC (Savings and Internal Loans) groups, SACCOs (SAvings and Credit COoperative), table-banks or, more generically, chamas5, the basic structure of savings and loans groups is constant: members meet at a fixed regularity at a fixed time of the day to pool their savings together and loan the savings total to group members. Individual savings are carefully noted in a ledger or accounting book, and so are the loans taken, the amounts reimbursed and the interests paid. Groups form for a year with a starting individual contribution equal from all, which sum makes for the initial capital fund. The fund grows with the regular individual savings and the interests on loans. At the end of the year, savings and interests are distributed back to the individual that contributed them. Apart from the social ties and obligations binding the members, groups have well-developed sanctions for misbehavior—such as fines for not attending a meeting, coming without the group’s identifying T-shirt, or chatting too much while at a meeting. These sanctions are noted in the ledger on a separate account and used to cover the costs of the end-of-the-year celebration. While there are many variations on this structure—the size of the group and the economic level of its members, the time period the group runs and the regularity at which it meets, the size of initial contributions and of individual regular savings, the maximum loan size, repayment schedules, and interest rates, the nature of sanctioning fines, whether savings and loans are in cash or mobile money6, and whether the final group’s savings are to be redistributed to individuals or used as investment for a collective business –, the basic principle of the chamas remains the same: pooling individual savings and giving group members access to the mutualized capital fund.
+
+The chama economic logic is defined by the social practices of mutualization that constitute the very group. Pooling together individual savings and distributing them to work for the benefit of individual members, chamas play a central role in a process of commoning (Gibson-Graham et al., 2006) privately held national money. Instead of keeping one’s savings in one’s home or phone account where they are of no use to the community, chamas’ contribution practices pull money out of mattresses and phones and into the communal tin box (or phone card or bank account). Through the obligation of a regular individual contribution to the group, through rules on minimum size of that contribution, and through sanctions for failing to attend a meeting thus neglecting to contribute, chamas both commonalize money and keep it in the community. In Ostrom’s terms, the governance contribution rules that constitute the chamas are rules that mutualize money. These are rules that shape how many resource units there are for the group to use.
+
+Then there are appropriation rules, those regulating the individual use of the monetary units thus mutualized. These rules concern loan granting, repayment schedules and interest on loans. Typically, appropriation rules are related to the size of an individual’s accumulated contribution to the common pool. For instance, the maximum loan size a member is granted from the group’s mutualized savings hinges on how much the particular member has contributed to the chama thus far—a common limit being twice the total savings the individual loan-taker has put into the group’s fund. That is, if a member has saved 3,000 KSh, she can receive a loan of up to 6,000 KSh. Or take repayment rules, which vary with the size of the loan. Staying with Rohoni’s Pamoja Mikono chama, for loans of up to 3,000 KSh, repayment had to be done within 1 month; for loans between 4,000 and 10,000 KSh, repayment was due within 2 months; for loans between 11,000 and 20,000, repayment time was 3 months. Prescribing the allocation size of the mutualized money and stipulating the speed of repayment, appropriation rules make sure that “money is not idle for long but changes hands rapidly, satisfying both consumption and production needs” (Bouman, 1983). In other words, the detailed appropriation regulations of the chamas shape how monetary units flow and circulate within the community, making sure that money reaches all members.
+
+Contribution and appropriation rules set the tone of the chamas economic logic, one that builds a capital commons through practices of pooling and that guides the flow of resources to the benefit of community members through practices of loan allocation. The economic logic of the chamas is one of mutualization and circulation, of commoning and distribution within the boundaries of the chama. Of pulling money into the group and pushing it out to its members. This logic is well illustrated by the unconventional understanding of interest visible when groups distribute earnings at the end of the year. Instead of the dominant approach to interest as payment for the risk incurred by the lender (normal in bank loans), these groups see interest payments as contributions the borrower makes to the group’s pooled savings. At the end of the year, individuals are given back a lump sum made of her annual regular contributions and a percentage of the interests she paid to the group for the loans she took. At Pamoja Mikono chama, 50% of an individual’s interest payments were paid back to her. The other 50% was distributed evenly among those group members that had taken loans throughout the year. Because members failing to borrow from the common pool are perceived as not contributing to the pool in the form of interests paid, these members receive no dividends at the end of the accounting year even though their savings were also pooled into the fund for the granting of loans. It is a distinctive ethics of interest, one that centers not around the individual risk of the lender, but around the borrower’s contribution to the commons. Members’ relationships to the chama, that is, are framed as provision to a commons, their financial commons, from which all members benefit in the form of access to financial services that are un-reachable for them through the regular banking system. To Martin’s first question—What are the rules governing money?—chamas answer with mutualization and circulation rules.
+
+Chamas “answer to the second question—Who gets to decide?—and implicitly, I would add, to the question ‘on what basis are decisions taken?” is also distinctive. Each loan decision involves a delicate balance between individual economic needs, community relations and situational knowledge. When granting loans, prioritizing someone’s hospital costs may mean somebody else’s needs won’t be covered this time, or a community need for, say, fuel will have to wait for a while. Tightly intertwined with financial considerations are matters of communal life, of neighborly relations, of social and financial security. Each decision involves a mix of personal and impersonal concerns that need to be weighed against past group decisions and anticipated community needs. It is the group who decides the rules, indeed. These rules are however not based on profit-maximization. Rather, decisions are based on a mix of financial and social concerns, of impersonal and personal relations, of obligation and trust, and are continuously re-considered in relation to the changing circumstances of community life.
+
+The chama logic of mutualization and circulation, that is, is not an approach that merely centers on finance, one exclusively focused on impersonal relations of economic obligations and rights. Governing personal and group relations is just as crucial. Pamoja Mikono chama’s management of group relations when these founder illustrates the point. The temptation for the treasurer to take the tin-box with the collected savings and fines and flee is always present. And while such sort of misdeeds are rare (see Geertz, 1962; Burman and Lembete, 1995), they do occur from time to time. One interviewee recounted the occasion when the tin-box disappeared with 500,000 KSh of group savings in it—a large sum for poor female farmers in rural Kenya. The treasurer argued the box had disappeared while she was away from her home. Resolved to find the culprit, the group altogether went to a nearby sacred forest and prayed for the wrongdoer to get sick and die. “Nobody has died yet,” the interviewee explained. The chama also denounced the treasurer to the police and expelled her from the group. Personal and financial relations broke down. In such situations, when relations within the group collapse, conjuring the spirits offers a procedure to rebuild personal connections. No death overcoming, this practice opens up the possibility for the suspect to regain the trust of the other group members and eventually return to the chama. For as much as the individual finds financial and social security in the group, the group builds its financial and political strength in the sum of its members. Such is the economic logic of mutualization, one that is conditioned to the tight weaving together of impersonal financial relations with personal knowledge and intimate trust.
+
+It can be argued that mutualization rules, social practices and cultural beliefs not only govern financial obligations and enable the coexistence of impersonal and intimate relations within the group; they also contribute to build trust in chamas as financial institutional arrangements for the community (Malkamaki, 2015). In this doing, chamas become structures the community has instituted for transforming private assets (one’s savings) into community assets (the group’s fund); that is, into a financial commons for the group. The strength of this mutualization logic for building savings and anchoring a community’s economic life has long been recognized by scholars (see Geertz, 1962) and development agencies (Boonyabancha, 2001) who build their micro-lending programs, such as those promoted by Yunus and his Grameen Bank, on these community institutions (Biggart, 2001; Yunus, 2003). Important as their financial function for the community is, it is the particular, integrative, communal economic logic they spring from—a logic of mutualization and circulation, of developing a commons for the benefit of all members, and of weaving together financial and social obligations—that, in Kenya, captured the attention of the community crypto-entrepreneur. As he set to develop a monetary system for the many, one that “give[s] people the same power as banks7,” chamas became the institution on which to decentralize matters of governance and decision-making concerning the creation and circulation of the new money. The next section looks into the extent to which the monetary system in-the-making borrows from the chama logic to answer the twin questions of this article—“what rules” and “who decides.”"
+(https://www.frontiersin.org/articles/10.3389/fbloc.2020.575851/full)
+
+=More information=
+
+'''* Article: A Route to Commons-Based Democratic Monies? [[Embedding the Governance of Money in Traditional Communal Institutions]]. By Ester Barinaga. Front. Blockchain, 27 November 2020 | [https://doi.org/10.3389/fbloc.2020.575851]'''
+
+URL = https://www.frontiersin.org/articles/10.3389/fbloc.2020.575851/full
+
+
+"The financial crisis of 2008 resulted, among other, on a popular awareness that the monetary system was not working for the interest of the many. The blockchain technology that was launched soon after offered monetary activists and entrepreneurs a tool to re-imagine, re-claim and re-organize money along a vague ideal of a commons paradigm. A wave of monetary experimentation ensued that took a most concrete form in two entrepreneurial spaces: crypto-currencies with global ambitions and local currencies based on communal democracy. Seemingly distinct on the outset, both strands share a determination to develop a monetary system that serves the many. This has led participants on both sides to reach out toward each other. '''The article looks at one such attempt: the Sarafu community crypto-currencies in Kenya. These currencies are embedding the creation of money in traditional community savings groups'''. Using Eleanor Ostrom’s framework and building on interview and ethnographic material, the article identifies the economic logic of mutualization proper of the savings groups as one that transforms private assets (one’s savings) into a financial commons for the group. To build on this logic, the Sarafu model in-the-making is embedding the production and governance of the new community cryptocurrencies in these saving groups. In that doing, Sarafu has the potential to advance a new architecture of money. However, findings suggest that the standardization and automation of the new monetary rules through smart contracts impose neoliberal ideas that slipped into the code, risking the erosion of the very communal decision-making processes that made savings groups interesting anchors of a money commons in the first place."
+
+[[Category:Cases]]
+[[Category:Community]]
+[[Category:Crypto_Economy]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Kenya]]
+[[Category:Money]]

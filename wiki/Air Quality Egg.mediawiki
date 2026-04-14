@@ -1,0 +1,26 @@
+
+'''= A community-led air quality sensing network that gives people a way to participate in the conversation about air quality.'''
+
+URL = http://airqualityegg.com/
+
+
+=Description=
+
+"The Air Quality Egg is a sensor system designed to allow anyone to collect very high resolution readings of NO2 and CO concentrations outside of their home. These two gases are the most indicative elements related to urban air pollution that are sense-able by inexpensive, DIY sensors.
+
+The Air Quality Egg is developed by a community effort, born out of groups from the Internet of Things Meetups in NYC and Amsterdam. We are designers, technologists, developers, architects, students, and artists. "
+
+
+==How It Works==
+
+
+1) Outdoor sensors: A small electronic sensing system plug into the wall and sits outside your home taking regular readings. It has an RF transmitter, which sends the data wirelessly to an Egg-shaped base station inside.
+
+2) Egg base station: An Egg-shaped base station, which gives this project its name, receives the wirelessly transmitted data from the sensor box outside. It then relays that data to the Internet via a wired Ethernet connection. The Egg also acts as a User Interface, so it also has an LED light and a button. These are configurable by applications which will be developed in the future by the community.
+
+3) Data sent to Internet: The air quality data will be sent in real-time to Xively, an open data service, which both stores and provides free access to the data. The service includes embeddable graphs and the ability to generate triggers for tweets and SMS alerts (it looks something like this), as well as a robust API which allows for developers in the community to unlock the potential of this new dataset by building mashups, maps, and applications."
+
+
+[[Category:Science]]
+
+[[Category:Ecology]]

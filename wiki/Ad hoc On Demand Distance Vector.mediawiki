@@ -1,0 +1,23 @@
+= '''a routing protocol designed for ad hoc mobile networks'''
+
+URL = http://moment.cs.ucsb.edu/AODV/aodv.html
+
+=Description=
+
+"The Ad hoc On Demand Distance Vector (AODV) routing algorithm is a routing protocol designed for ad hoc mobile networks. AODV is capable of both unicast and multicast routing. It is an on demand algorithm, meaning that it builds routes between nodes only as desired by source nodes. It maintains these routes as long as they are needed by the sources. Additionally, AODV forms trees which connect multicast group members. The trees are composed of the group members and the nodes needed to connect the members. AODV uses sequence numbers to ensure the freshness of routes. It is loop-free, self-starting, and scales to large numbers of mobile nodes.
+
+AODV builds routes using a route request / route reply query cycle."
+(http://moment.cs.ucsb.edu/AODV/aodv.html)
+
+
+=More Information=
+
+Less technical explanation in the Wikipedia article at
+http://en.wikipedia.org/wiki/AODV
+
+See also: [[Optimized Link State Routing Protocol]]
+
+Full list of [http://en.wikipedia.org/wiki/Ad_hoc_routing_protocol_list Ad hoc routing protocols]
+
+
+[[Category:Standards]]

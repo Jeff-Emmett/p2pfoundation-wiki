@@ -1,0 +1,12 @@
+= Intro =
+
+BSD operating systems introduced Chroot Jails in 1979, allowing multiple applications to run at the same time on the same computer (each in its own jail). This approach is particularly useful for servers, where a server running BSD could have multiple server applications all running at once (eg webserver, mail server, IRC server). None of the applications have access to each other's jails, nor admin access to the underlying OS running on the computer, making it harder to use a security flaw in one server application to break into the server itself, or interfere with other applications running on the same machine. --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 14:28, 26 May 2017 (UTC) [[Danyl Strype]]
+
+Over the last 20 years, a number of projects have imported this approach into GNU+Linux servers, using the description "containerization"; a "container" is effectively the same kind of thing as a "jail".
+
+= List of GNU/Linux Containerization software by year of initial release =
+
+* 2003: [http://linux-vserver.org/Welcome_to_Linux-VServer.org Linux-VServer]
+* 2008: [https://www.proxmox.com/ Proxmox] (can support both containers, and full "virtual machines" where a complete computer is simulated, and a different OS can be installed on it)
+* 2012: [https://www.gnu.org/software/guix/news/running-system-services-in-containers.html GNU Guix]
+* 2013: [https://www.docker.com/ Docker]

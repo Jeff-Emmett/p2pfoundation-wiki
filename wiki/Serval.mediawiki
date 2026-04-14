@@ -1,0 +1,121 @@
+'''= the only working mesh solution that uses off the shelf phones and off the shelf unlicensed spectrum and existing phone numbers, and can work with absolutely no infrastructure.'''
+
+
+URL = http://www.servalproject.org/
+
+
+=Description=
+
+1. Mesh networking via cell phones, Mark Frazier:
+
+"Serval [is] an app that allows nearby phones to link up using their Wi-Fi connections, as long as they have been modified to disable the usual security restrictions. Voice calls, text messages, file transfers, and more can take place between devices with the Serval app installed. Devices don’t need to be in range of one another to communicate, as long as there are other devices running the app in between... the combination of relatively cheap smartphones and Wi-Fi routers with the progress made by open-source projects such as Serval means that creating and operating such networks is now becoming possible without specialist knowledge."
+
+
+'''2.'''
+
+"Communicate anywhere, any time … without infrastructure, without mobile towers, without satellites, without wifi hotspots, and without carriers. Use existing off-the-shelf mobile cell phone handsets. Use your existing mobile phone number wherever you go, and never pay roaming charges again.
+
+Communications should not just be for the fortunate — communication should be freely available to everyone, because we believe communication should be a human right.
+
+Serval enables mobile communications no matter what your circumstance: mobile communications in the face of disaster, in the face of poverty, in the face of isolation, in the face of civil unrest, or in the face of network black-spots. In short, Serval provides resilient mobile communications for all people, anywhere in the universe.
+
+Serval technology bridges the digital divide. We have proved that it is possible, using open source technology to create a mobile communications platform that benefits everyone, for all time, and changes the nature of telecommunications forever.
+
+Download the Serval Application for your Android phone soon for free – and experience open mobile telecommunications for the first time."
+(http://www.servalproject.org/)
+
+(The serval is a medium-sized variation of an African wild cat, which shares many common traits with the cheetah. It lives mainly in savanna type regions, though it is remakably adaptable to different surroundings) [http://www.servalproject.org/who-we-are]
+
+
+=Example=
+
+"The [http://www.servalproject.org/ Serval BatPhone] software can be used on compatible mobile phone handsets to create an alternative "network" where conventional mobile phone coverage has been destroyed or simply does not exist. Instead of relying on mobile phone towers, the Serval system relays calls for one mobile phone to another as either a "closed" network or to connect to a temporary tower."
+(http://nlnet.nl/press/20110414-serval.html)
+
+
+=Status=
+
+* Funding by NLNet Foundation, April 2011 [http://nlnet.nl/press/20110414-serval.html]
+
+
+=Interview=
+
+	
+Paul Gardner-Stephen interviewed Michel Bauwens, via email, January 2011:
+
+"- '''What exactly is Serval?'''
+
+
+Serval is a distributed communications system that can use off the shelf cell phones.  It was envisaged after the Haiti earthquake where I observed the lack of communications was extremely harmful for that community, and that there were probably lots of cell phones in the area, it is just that they were useless without towers.
+
+So I started to think about communications systems that don't need towers.  After some hunting I realised it was possible to adapt Village Telco's advances in practical mesh networking to cell phones, which I did.  We also created a system that lets you claim your existing telephone number so that even if you get a temporary phone in a disaster, you can keep your number so that your family can still make sure you are okay.  After all, what is the point of having phones if you and the people you want to call don't know the right numbers to call?
+
+We got this to prototype stage for local calling on the mesh in the middle of last year, and made the local news:
+http://www.youtube.com/watch?v=K819ggBvkU0
+
+We also see this system as allowing very poor communities to get affordable local telephone service and also potentially internet access, thus helping to bridge the digital divide.  
+
+This is why we are making the system free ($0 and GPL) so that one day it can be ubiquitous in all phones, and help as many people as possible.
+
+
+- '''Is it already being used?'''
+
+It is still in prototype stage, but we hope that it might start getting used within the next 12 months.  The first applications may be providing a local intercom/mobile network for NGOs in field deployments, and also for local search and rescue authorities who want a cheap way to be able to stay in contact with people working underground, e.g., in rubble.
+
+ 
+
+- '''What is already right, and what needs to be improved?'''
+
+Well, it already lets you call on the mesh using existing phone numbers in a very natural way, and you can also call out globally without any fiddly configuration if a DNA gateway is in range.  These are profound capabilities already.  It means that people can use our system to set up communications systems in all manner of strange places including mines, deep inside buildings, in the middle of no-where (maybe using a satellite link to the outside world).
+
+We still need to get in-bound calls (from the PSTN to mesh) sorted, as well as SMS.  Power optimisation and extending the range beyond what WiFi allows us are also things we need to do.
+
+From our perspective the main issues are energy consumption and range, both of which have a variety of potential solutions and enhancements.  Basically I view it like the internal combustion engine, it is not necessarily something entirely simple or elegant to get right, but by making the first model it starts to become apparent where the improvements can be made until you end up with something really compelling and useful.  And just like the early cars, we are as much hamstrung by policy and corporate interests (early car drivers had to have someone walk in front waving red flags!) that some times limits our use of spectrum and phone hardware in artificial ways.
+ 
+
+
+- '''What are your plans for the future, in order to achieve those improvements?'''
+
+
+There are some other unlicensed spectrum allocations that we can use on off-the-shelf phones, but this requires secret information about the baseband processors to accomplish it.
+
+More generally, we have quite an extensive technology roadmap that we are pursuing.
+We are applying for grants, looking for volunteer developers and also exploring commercial contracts to fund our development work. 
+
+
+
+- '''How do you see Serval in the context of the broader technical movement for a true p2p internet, global wireless meshworking, and the like?'''
+
+I think I see us as right in the thick of it.  We arguably have the only system that has the potential to be a contender for a global wireless mesh networking system, and seem to have found ourselves at the forefront of practical mesh systems for all people.
+ 
+
+-  '''How do you relate to the social aspects of new free culture, p2p and commons movements that are more non-technical in nature, i.e. the value revolution around sharing, openness, transparency ?'''
+
+I think that we cannot being to imagine the changes that will happen as ubiquitous mesh networking realises it's potential.
+ 
+
+- '''Do you have any particular philosophical or political points of view, not necessarily part of the project, but which inspired you and your team to work in this direction?'''
+
+I think my main motivation is an outworking of my Christian faith that makes me not want to see people suffer, people treated unjustly or in entrenched poverty.  As well as being emotionally and intellectually satisfying, it is also the most fun job I have ever had.  For example, right now I am organising to buy a small blimp for some testing work.  I am very privileged to have such great fun while helping to make the world a better place."
+
+
+
+
+=More Information=
+
+#Video: [[Explaining Serval]]
+#Podcast: [[Paul Gardner-Stephen on Mesh Networks in Authoritarian Regimes]]
+#report in Information Week, http://www.informationweek.com/news/telecom/voip/showArticle.jhtml?articleID=229200136
+
+See also:
+
+#[[P2P Telephony]]
+#[[Wireless Commons]]
+
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]

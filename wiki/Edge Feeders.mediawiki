@@ -1,0 +1,68 @@
+'''Edge Feeders'''
+
+'''The value in a network is created in a distributed fashion, at its edges, not at its center.
+
+Edge feeders, also called Edge Aggregators,  recognize that process and try to aggregate the value from where it is.'''
+
+
+=Definition=
+
+"An edge aggregator is a service that aggregates content from blogs and RSS feeds"
+
+(from Peter Cashmore at Mashable, http://mashable.com/2006/02/27/here-come-the-edge-aggregators/)
+
+
+
+=Commentary=
+
+
+Quote from Jeff Jarvis at Buzzmachine:
+
+"If I were a VC, I’d be investing in a company that tries to use tags and microformats and social interaction to link together the topics and opinions and information people care about on that distributed web. For that’s the company that won’t waste effort and expense trying to get people to change their behavior and reverse the natural flow of the web out to the edges — ‘come to us and give us your good stuff’ — but instead takes advantage of the essence of the web and leaves control out at those edges by saying: ‘We know you have good stuff and we’re going to help people find it.’ The consumer proposition is then clear: This is how you find the good stuff. This will be the real successor to and competitor against Google. Oh, Google could do it, too, but judging by Base, they’re not doing that. They’re taking control rather than giving it."
+(http://www.buzzmachine.com/index.php/2005/11/19/google-base-v-microformats/)
+
+A further comment clearly outlining the two options:
+
+David McClure: "the angle on microformats vs GoogleBase is right on target: those are 2 distinct alternatives to consider for the future. one is a centrally-hosted option (which has benefits, but significant downside if not searchable by anyone but Google), and the other is a distributed option, but “centrally-searchable".
+
+in other words, in a microformat world i post my data (job listing, classified ad, restaurant review, etc) on my site or blog, and using tags & microformats, that data is discoverable by anyone who knows to look for those tags & can recognize the data structure defined by the microformat. this is what i call “open access".
+
+in a GoogleBase (or Craigslist or eBay) world, i upload my data to a hosted DB, specify the structure as i post the listing there, and then the data is discoverable by anyone who uses the associated portal — and, if that data is searchable by other engines & crawlers, then it can be discovered by anyone using other meta-search or vertical search services. but if it is *not* open to search by others, then i’d say it’s more of a “walled garden".
+
+what is interesting about these 2 alternatives is that at first glance they look somewhat similar — they both allow anyone to post data that could be discovered & searched by a large audience. however, in the 2nd case, unless the data is searchable by other services, the size of that audience is limited by the hosting portal."
+(comment area at http://www.buzzmachine.com/index.php/2005/11/19/google-base-v-microformats/)
+
+
+=Reviews=
+
+'''Examples'''
+
+"What edge feeders do is provide mechanisms to faciliate the content creation on the edge.
+
+Flickr is an edge feeder and the best one I know of.  I could take my photos and simply post them to my blog.  But I don't do that.  I put them on Flickr and then from Flickr, I post them to my blog.  Flickr makes that dead simple.  But they also give me a badge to show aggregated photos. And they let me post other's photos to my blog.  They are the photo feeder of the blog world.
+
+Blip.tv, vimeo, and youtube are the video feeders.  I could post a video directly to my blog, but I don't.  I post it to vimeo, youtube, or blip.tv, and then from there I post it to my blog.  These services are rolling out lots of video specific blog integration techniques that will make it even easier to be a video content creator living on the edge.
+
+Delicious is a link feeder.  I could post a linkroll to my blog, but I don't.  I use delicious to host all of my links, and I use a tag (mine is linkroll) to feed my linkroll.  Delicious makes it easier to be a link content creator living on the edge."
+(http://avc.blogs.com/a_vc/2005/11/living_on_the_e.html)
+
+
+'''Peter Cashmore in Mashable'''
+
+URL = http://mashable.com/2006/02/27/here-come-the-edge-aggregators/
+
+"Edgeio - an aggregator for classified listings on blogs. Edgeio uses tagging for categorization - tag your post with “listing" to get it indexed and add other tags as a description. The primary business model is sponsored listings. Edgeio faces two challenges: getting people to post classified listings on their blogs (a new behaviour for most bloggers) and keeping out the spam. Overall, Edgeio is an innovative effort and a great idea - but is it too far ahead of the curve? (I reviewed Edgeio in full earlier this month.)
+
+iNods - A vertical search engine for product reviews. Only blogs entered via the submission form are indexed. I’m told that in the future they plan to support microformats and structured blogging - this would allow bloggers to create their posts in a structured way so that iNods could index them more effectively. iNods has not stated this explicitly, but since the structured blogging plugin includes a rating field, it seems reasonable that you may one day be able to search for the “top rated MP3 player" or the “lowest rated plasma tv", either on iNods or a competing service. It will be interesting to see whether this sort of ranking directly affects the way bloggers rate products, since the posts that award five stars would turn up more frequently in search results. To put it another way: nobody will search for the “most average laptop."
+
+Kritx - An edge aggregator for reviews that supports the hReview microformat. As such, Kritx already supports user ratings, but right now you can’t rank the reviews based on this value. Kritx is extremely simple and lightweight - it appears to be running on Ruby on Rails, which is proving popular with the new crop of startups. Although it is fairly basic at the moment, the potential is there for Kritx to become a very useful service indeed.
+
+Reevoo - A UK-based review site that also plans to aggregate reviews. The blog aggregation doesn’t appear to be live yet, and it remains to be seen whether Reevoo will become a rival to iNods and Kritx. I had a brief chat with the creator of Reevoo a few weeks ago, and ultimately I think review aggregation will be the most common (and successful) use of an edge aggregator.
+
+Toshiba - Although seemingly out of place among Web 2.0 startups, Toshiba is also attempting to aggregate reviews from the edge - it is building a system that will allow shoppers to scan a barcode using a cameraphone and receive relevant product reviews from the blogosphere. It’s not yet clear how these reviews will be selected."
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Media]]

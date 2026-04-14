@@ -1,0 +1,53 @@
+
+
+=Tool Overview=
+
+Sebastian Delmont:
+
+"We now had a great tile renderer, Mapnik (http://mapnik.org/), that was at the core of pretty much every mapping tool out there. Great "geo" and "gis" functionality for Postgres, in the form of PostGIS (http://postgis.refractions.net/). A few javascript libraries to present the results inside web browsers, such as Leaflet (http://leaflet.cloudmade.com/), Open Layers (http://openlayers.org/) and Modest Maps (http://modestmaps.com/), and other libraries to abstract your mapping backend behind a common API, such as Wax (http://mapbox.com/wax/) or Mapstraction (http://mapstraction.com/).
+
+But then I discovered the "second generation" of tools, built on top of what I just listed on the previous paragraph, and it blew my mind. Things like CartoDB or TileMill (http://mapbox.com/tilemill/) or Web Map Studio (http://cloudmade.com/products/web-maps-studio).
+
+TileMill, in particular, was just amazing, and Carto CSS (http://developmentseed.org/blog/2011/feb/09/introducing-carto-css-map-styling-language/) made map design look like something I could actually do!
+
+And of course, OpenStreetMap (http://www.openstreetmap.org/), the Wikipedia of mapping. An open source (well, technically, Creative Commons) data set, covering the entire globe, with lots of details (sometimes too much detail, like the voltage and gauge of a subway line!). It has a few errors here and there, but you can go and fix them yourself (as I've done http://www.openstreetmap.org/user/sdelmont/edits)."
+(https://plus.google.com/u/0/118383351194421484817/posts/foj5A1fURGt#118383351194421484817/posts/foj5A1fURGt)
+
+
+=Example=
+
+Use of Geo-Floss by StreetEasy:
+
+"I settled on Leaflet for the front end, mostly because it was small, fast, clean code with a good API that resembled Google Maps v2. It's a good thing that when we first implemented maps on StreetEasy, we did it through ruby that generated the JS code, so all I had to do was "implement an new backend". If I were to do it today, I might use Wax or Mapstraction instead, to ensure I could change map APIs if I had to.
+
+It was fairly easy to implement most basic features. Showing a map, adding markers, adding polygons, info popups (we had our own code for that, just had to hook it on the right events). I spent a couple of days getting our "polygon editor" to work (something I plan to contribute back to Leaflet as soon as I have time to clean up the code). And of course, the dreaded "does it run on IE?" time (I ran into some issues with onload events on script tags, but that was all).
+
+I installed Postgres and PostGIS, downloaded OSM extracts from http://download.geofabrik.de/osm/north-america/, because there is no point in downloading gigs and gigs of worldwide data when all I care about is the area around NYC. Imported it using osm2pgsql (http://wiki.openstreetmap.org/wiki/Osm2pgsql) and started playing with TileMill.
+
+I discovered the work of Mike at Stamen (for example http://mike.teczno.com/notes/osm-us-terrain-layer.html) and was inspired by it. Found a couple of TileMill projects (https://github.com/mapbox/open-streets-style and https://github.com/mapbox/osm-bright) to better understand how to organize them. Ran into High Road (http://mike.teczno.com/notes/high-road.html), a set of queries that makes OSM roads much more manageable and stylable.
+
+And I spent days and days tweaking maps. Just to get to a point where we were not unhappy with our maps. Something that was good enough to flip the switch.
+
+We added building outlines from NYC Open Data (http://nycopendata.socrata.com/), and our own neighborhood boundaries to decide where to put the labels (and trust me, we have the best boundaries for NYC).
+
+As soon as I had something that didn't cause my coworkers to vomit, I uploaded the tiles to S3 and started testing it on our site. A few days later, and a lot more map tweaks, we started using the new maps for some of our users. And as of Jan 10th, we flipped the switch for all pageviews on our site.
+
+We decided to host our tileset with MapBox (http://mapbox.com), from the great guys at Development Seed.. We could have unpack the mbtiles file produced by TileMill and just upload them to S3 (see http://karchner.com/2011/02/21/extract-images-from-an-mbtiles-file-or-getting-actual/), but we went ahead and paid for MapBox, in part because it means less servers to worry about, in part because we want to support the guys that brought us TileMill, and in part because of the promise of more cool features down the road. And most importantly, because they promised to help us make our maps look nicer, and they know about nice maps.
+
+Take a look at the results: http://streeteasy.com/nyc/sales/midtown-all-manhattan/status:open%7Cbeds:2?map_all=1 .
+
+at StreetEasy we built our own geocoder for NYC, using the City's database of streets and buildings. So it's not something we had to worry about as part of this transition.
+
+But in case you need to do some geocoding, there are plenty of tools (for example http://highearthorbit.com/geocommons-open-sourced-geocoder/) that use OSM data."
+(https://plus.google.com/u/0/118383351194421484817/posts/foj5A1fURGt#118383351194421484817/posts/foj5A1fURGt)
+
+=More Information=
+
+a follow up with some clarifications at https://plus.google.com/118383351194421484817/posts/8x6xSQYypwt
+
+
+[[Category:Open]]
+
+[[Category:Geography]]
+
+[[Category:Free Software]]

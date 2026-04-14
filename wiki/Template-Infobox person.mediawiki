@@ -1,0 +1,35 @@
+<div {{semattr-prefixes}} vocab="http://xmlns.com/foaf/0.1/" {{semattr-person}}>
+<table border="1" style="float:right; font-size:90%; text-align:left; border:1px solid #aaa; padding:1px; margin-bottom: 0.5em; margin-left: 1em; clear: right; color: black; background-color: #f9f9f9;" width="340px">
+{{#if: {{{1|}}}| <tr><th style="background:#ddf;border:none;">Date of Birth:</th><td style="border:none;"> {{{1|}}}</td></tr>}}
+{{#if: {{{2|}}}| <tr><th style="background:#ddf;border:none;">Nick name(s):</th><td style="border:none;" {{semattr-person-nickname}}> {{{2|}}}</td></tr>}}
+<tr><th style="background:#ddf;border:none;">Project(s):</th><td style="border:none;"> {{{3|}}}</td></tr>
+{{#if: {{{4|}}}| <tr><th style="background:#ddf;border:none;">Team(s):</th><td style="border:none;"> {{{4|}}}</td></tr>}}
+<tr><th style="background:#ddf;border:none;">Used license(s):</th><td style="border:none;"> {{{5|}}}</td></tr>
+{{#if: {{{6|}}}| <tr><th style="background:#ddf;border:none;">Position(s):</th><td style="border:none;"> {{{6|}}}</td></tr>}}<!-- XXX: role is probably wrong to use on a list -->
+</table>
+<noinclude>
+<div style="clear:both;"></div>
+
+'''''When adding information on people, please remember about privacy and other personality rights!'''''
+
+You use this infobox by typing:
+<pre>{{Infobox person
+|Date of Birth
+|Nick name
+|Projects worked on
+|Team
+|License releases under
+|Position on team
+}}</pre>
+This would produce:
+
+{{Infobox person
+|Date of Birth
+|Nick name
+|Projects worked on
+|Team
+|License releases under
+|Position on team
+}}
+[[Category:Templates|{{PAGENAME}}]][[Category:Infobox templates|{{PAGENAME}}]]
+</noinclude>

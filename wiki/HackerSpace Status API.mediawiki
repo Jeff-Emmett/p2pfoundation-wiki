@@ -1,0 +1,18 @@
+
+
+=Description=
+
+Koen Martens:
+ 
+
+"The HackerSpace Status API proposes a unified syntax to publish information about a hackerspace for consumption by javascript widgets, mobile apps and other scripts or programs. The API is flexible, and allows for custom extensions.
+
+The API is based on JSON, and defines the properties of the space status JSON object. In this specification, some fields are mandatory, whereas others are optional. A hackerspace implementing this API should at least provide the mandatory fields.
+
+Receivers of the object must be able to parse all mandatory fields, and may interpret the optional fields. The receiver may also choose to ignore optional fields.
+
+In addition to the fields defined below, a publisher is free to add any custom fields. It is recommended to start the field-names of custom fields with the string ‘ext_’, to make it clear the field is not part of the documented API. Consumers are not obligated to interpret any custom fields."
+(http://hackerspaces.nl/spaceapi/)
+
+
+[[Category:Manufacturing]]

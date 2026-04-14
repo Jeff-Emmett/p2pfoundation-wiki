@@ -1,0 +1,242 @@
+== Description==
+
+Agile development is an iterative process that focuses on producing
+the highest value in the shortest period of time. Progress is measured
+in the form of working software, is inspected often and adapts
+quickly. It is a method best used when there is a lack of certainty
+around what is valuable and how best to deliver it and / or there are
+drastic changes expected in available resources (manpower and budget).
+It focuses on revealing options for handling complex dependencies and
+interconnectivity between teams and products of different sizes.
+ 
+For the sake of clarity, here are some terms I will be using in the
+rest of this document:
+ 
+Customer – The specific team or group that requested the feature or
+product.
+ 
+Team Members – The developers, designers and other technically skilled
+people creating or implementing the product
+ 
+Story – A short representation of a product feature to be produced.
+ 
+Time Box – A block of time that does not change once set.
+ 
+Iteration – A time box in which forward progress on producing a
+product or products is accomplished, normally 1-4 weeks.
+
+=== Principles on which Agile was founded ===
+
+It’s About the People
+* Build projects around motivated individuals. Give them the environment and support they need and trust them to get the job done.
+* Strive for the highest possible levels of collaboration.
+* Self-organizing teams produce the best architectures, requirements and designs.
+ 
+Transparency
+* Aspects of the process that affect the outcome must be visible to those managing the outcome.
+* When someone inspecting a process believes that something is done, it must be equivalent to his or her definition of done (no sacrifices).
+ 
+Inspection
+* The process must be inspected frequently enough as to detect unacceptable variances in the process.
+* The frequency of inspection cannot impact the ability to meet delivery.
+* Success is directly related to the skill and diligence of the people inspecting the results.
+ 
+Adaption
+* The inspector must alter the process or material being processed if he or she finds that part of the process is outside acceptable limits or will result in an unacceptable product.
+* The adjustment must be made as quickly as possible to minimize further deviation. Continuous attention to technical excellence and good design enhances agility.
+ 
+Value
+* The highest priority is to satisfy the customer throughout development.
+* Frequent iterations ensure product quality early in the product lifecycle.
+* Customer receives value as early as the completion of the first iteration.
+ 
+Change is Good
+* Requirement changes, even late in development, are welcome and provide competitive advantage.
+* Customers and developers work together, sometimes daily throughout the project
+ 
+Simplicity
+* Maximize the amount of work NOT done.
+ 
+=== The Process ===
+
+Each team has a team lead / project manager, product owner, team
+members and backlog of stories. Team members should be chosen with
+cross-functionality in mind, meaning one team can perform the design,
+coding and infrastructural requirements of the stories selected. The
+product owner is a chosen by the customer(s) to be their
+representative on the team and does not perform any development. The
+team plans, sizes, manages and executes it’s own backlog.
+ 
+Each project is comprised of multiple releases, each of which can
+contain multiple iterations. Stories are started and completed inside
+of a single iteration. The stories that are tackled first are chosen
+based on value and priority.
+
+==== The Customer’s Process ====
+ 
+The customer is responsible for the vision of the project and
+products. This is usually done with the support / moderation of a
+project manager and is accomplished in two stages.
+ 
+The first stage, project setup is where the team is built and the
+customer’s vision is formulated. The individual goals or details are
+not as important as the overall message. Teams members should be
+trained, so that they can understand the process by which the project
+will be developed. By the end of this stage, preliminary release
+goals, feature lists and risks should be identified. This stage can be
+done after a project has been started and will go quicker then normal
+in this case.
+ 
+The second stage is the product development. This relies heavily on
+the whole team and should result in iterative development grouped into
+meaningful product releases. During this and all future points in
+time, the customer retains exclusive control over the release’s
+content and objectives.
+ 
+==== The Team’s Process ====
+ 
+The team starts with a high-level conversation about feature
+requirements, avoiding technical language. Feature requirements are
+then broken up into stories that can be stated in the following
+format:
+ 
+ As a <type of user>
+ I want to be able to <some goal>
+ So that <some result>
+
+(Flash cards work really well for this)
+ 
+The product owner then places a priority on the story (the team
+members usually have no say in this) and the team members give the
+story a rough size estimate (the product owner has no say in this). It
+is important that everyone on the team realizes that both priority and
+size are expected to change throughout the project. The story is then
+placed in the product backlog. None of these steps need to be perfect
+or complete for the story to be placed in the backlog, though each
+story should describe something that provides value to the users of
+the product.
+ 
+Good stories follow the I.N.V.E.S.T. principle:
+
+* Independent
+* Negotiable
+* Valuable
+* Estimable
+* Small
+* Testable
+ 
+NOTE: Stories are used because they shift focus from written to verbal
+communication. They avoid the need to put everything in writing up
+front and are written in a way that anyone can understand. Their
+brevity avoids implementation detail and technobabble before it is
+necessary. Stories can be thought of as the promise of a future
+conversation.
+ 
+Once the backlog has a decent number of stories in it, the first
+iteration can be planned. Each iteration starts with a planning
+meeting and ends with a retrospective meeting. Every story undertaken
+in each iteration should be started and completed during that
+iteration. A story is not considered complete until it has been
+elaborated upon, designed, developed, tested and accepted by the
+product owner.
+ 
+The planning meeting begins by selecting the stories with the highest
+priority to size ratio and prepping them for movement into the
+iteration backlog by adding a short statement of completion. The team
+members then identify tasks that will need to be completed within each
+story and estimate each task in hours. Once the iteration time box is
+full, no additional stories are added to the backlog.
+ 
+Each story now reads as follows:
+ 
+ As a _______________
+ I want to be able to ________________
+ So that _________________
+
+I will know this is done when <completion criteria>.
+ 
+To implement this:
+# Task 1 (<N> hours)
+# Task 2 (<N> hours)
+# …
+ 
+NOTE: It is important that iterations are not planned around specific
+functional activities (ex. A design iteration, followed by a
+development iteration, followed by a testing iteration, etc., etc.).
+ 
+While the iteration is under way, stories should be worked until
+completion and re-estimated daily with new tasks added as they are
+discovered. The number of stories in progress should be kept to the
+absolute minimum as to avoid incomplete stories at the end of the
+iteration.
+ 
+Details about the stories emerge during the iteration, not during the
+initial discussion periods. The product owner, and no one else, is
+responsible for determining the acceptance criteria, a set of high-
+level conditions the story must fulfill. The team members determine
+the technical details of the implementation throughout the process.
+ 
+During development, there is a short (15 minute or less) daily meeting
+involving all of the team members, called a standup meeting. These
+meetings serve as quick status updates for the team lead and address
+the following questions with each team member (adjusted for time of
+day):
+ 
+* What did I work on yesterday?
+* What am I going to work on today?
+* What are the obstacles / issues I have encountered?
+ 
+The standup meetings are not for issue resolution. If someone else on
+the team has a solution to a raised issue, they should connect with
+the team member experiencing the issue after the standup as to not
+hold everyone else on the team up. The product owner is usually not
+involved in these meetings and is not allowed to comment on the
+answers to the questions if he or she is. This is a status meeting
+only.
+ 
+During the course of the iteration, a burn down chart is managed by
+the team lead. This is a simple two-axis graph with hours on the
+vertical axis and days on the horizontal. Each day, the graph is
+updated by looking at the remaining hours of all incomplete tasks,
+giving an instant snapshot of how on target the iteration is. Based on
+the result of this chart, stories can be added or removed, but the
+time of the iteration cannot be changed.
+ 
+At the end of the iteration there is a retrospective meeting in which
+the team evaluates their performance and presents their work to the
+customer. Goals of the iteration are reviewed and feedback is invited.
+The main goals of the retrospective are to improve accuracy in the
+next iteration, update the product backlog and update the product
+release plan. Each team member should address the following three
+questions:
+ 
+* What did we do well?
+* What did we not do well?
+* What are we going to improve in the next iteration?
+ 
+Discussion among the team and the customer is actively encouraged
+during this meeting. At the end of the retrospective, a new iteration
+begins.
+
+===In Summary===
+ 
+Agile development focuses on producing a stable and functional product
+in an unstable and uncertain environment. By focusing on the planning
+instead of the specific plan, accuracy and precision can be improved
+over time and a project can easily adapt to changing requirements.
+Customers are free to manage the product while each team member
+focuses on their area of expertise.
+
+== More Information ==
+* [[Agile Manifesto]]
+* [[Agile Development]]
+* [[Agile Learning Centers]]
+* [[Agile Software Development]]
+* [[Eric Bear on Agile Learning Centers]]
+
+* [[Sociocracy 3.0]]
+
+* [https://www.apm.org.uk/resources/find-a-resource/agile-project-management/ Agile project management]
+* [https://www.agilealliance.org/agile101/ What is Agile?] from the Agile Alliance
+
+[[Category:Technology]]

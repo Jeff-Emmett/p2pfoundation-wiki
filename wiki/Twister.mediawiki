@@ -1,0 +1,48 @@
+'''=  a peer-to-peer alternative social network operating on a decentralized framework, designed in a way that prevents other users from knowing too much about your whereabouts and online habits.''' [http://www.shareable.net/blog/21-technologies-that-will-decentralize-the-world]
+
+URL = http://twister.net.co/
+
+"[[Twister]] is the fully decentralized P2P microblogging platform leveraging from the free software implementations of Bitcoin and BitTorrent protocols". 
+
+=Description=
+
+* Article: twister - a P2P microblogging platform, Miguel Freitas
+
+"This paper proposes a new microblogging architecture based on peer-to-peer networks overlays. The proposed platform is comprised of three mostly independent overlay networks. The first provides distributed user registration and authentication and is based on the Bitcoin protocol. The second one is a Distributed Hash Table (DHT) overlay network providing key/value storage for user resources and tracker location for the third network. The last network is a collection of possibly disjoint "swarms" of followers, based on the Bittorrent protocol, which can be used for efficient near-instant notification delivery to many users. By leveraging from existing and proven technologies, twister provides a new microblogging platform offering security, scalability and privacy features. A mechanism provides incentive for entities that contribute processing time to run the user registration network, rewarding such entities with the privilege of sending a single unsolicited ("promoted") message to the entire network. The number of unsolicited messages per day is defined in order to not upset users."
+
+(http://arxiv.org/abs/1312.7152)
+
+
+=Discussion=
+
+Robert Gehl:
+
+"Other critical reverse engineers are experimenting with fully distributed, peer-to-peer networks. One example is Twister, another Twitter alternative. Developed by the Brazilian software programmer Miguel Freitas, Twister was inspired by the “Brazilian Spring” of 2013, when activists protested high public transportation costs, government corruption, and police brutality. At that time, Freitas was getting his news from Twitter and feared that the Brazilian government would crack down on activists that were sharing news about the protest. He set out to solve that problem.
+
+According to a technical article by Freitas in the International Journal of Parallel, Emergent and Distributed Systems, Twister relies on:
+
+“three mostly independent overlay networks, two unstructured and one structured. The first unstructured overlay network is based on the Bitcoin protocol and provides distributed user registration and authentication. The second is a structured [distributed hash table] network, providing key/value storage for user resources and tracker location for the third network. The last, also unstructured, overlay network is a collection of possibly disjoint ‘swarms’ of followers, based on the BitTorrent protocol, which is used to provide efficient near-instant notification delivery to many users.”
+
+By using these three networks, Twister eliminates the need for any servers at all. Processing power, routing, and connection algorithms are handled only by the end-user devices in the network — there is no center. Topologically speaking, Twister looks more like a fishing net than a constellation of stars.
+
+Like Mastodon, Twister critically reverse engineers Twitter by implementing a decentralized approach while still providing recognizable microblogging to end users. Individuals can still follow other accounts, make short posts, and share images. The major difference is that no one, not even Freitas himself, can interfere with a Twister user. Remarkably, Freitas implemented this fully distributed microblogging system in a matter of months, which was a stunning achievement considering the technical challenges of decentralization. 
+
+Social Experiments
+Critical reverse engineering is not merely technical. Developing a new technology isn’t enough — we have to find ways to adapt that technology to meet social needs. So while federated or distributed technologies represent technical innovations, they also need to be accompanied by social innovations.
+
+A key area is moderation. Rochko didn’t just develop Mastodon to offer people the chance to create their own smaller versions of Twitter. He did so because he was concerned about hate speech and harassment on Twitter, and he built several affordances into Mastodon to give users and instance administrators more control over the content that they see. 
+
+“As a user, one has few different options — one can mute and block, which can hide individual trolls,” Rochko explained to the Indian news site Scroll. “The next… [option is to] hide all content from a particular instance… You can also contact your admin [to] take action on behalf of your instance, which is the harshest step, as the admin can cut off access to and from a particular instance.”
+
+
+As tech companies shape our perceptions, bias and discrimination are embedded into their products and services at multiple levels.
+
+Because instance administrators have complete control over their own servers, they can easily moderate conduct on their instances, posting “codes of conduct” for their users to abide by and federating with other servers that comport to similar values. A potent example of this happened when a group of alt-right trolls tried to bring their online community, Gab, into the Mastodon fediverse. Mastodon administrators simply blocked the Gab server from connecting to their servers, thus repudiating Gab’s hate speech. 
+
+Moreover, as some colleagues and I have shown in a recent article in New Media and Society, Mastodon administrators tend to be far more accessible to users. Unlike Facebook’s opaque “Supreme Court-like” oversight board, which the company created to rule on permissible and prohibited content, Mastodon administrators and users communicate openly about policies and codes of conduct, negotiating solutions rather than having them imposed by fiat.
+
+Whether moderators are involved, as in the case of Mastodon, or whether the end user is completely in control, as in a fully distributed system like Twister, decentralized projects give us an idea of the possibilities that can exist outside of the centralized social media model.
+
+(https://thereboot.com/creating-decentralized-social-media-alternatives-to-facebook-and-twitter/)
+
+[[Category:P2P Infrastructure]]

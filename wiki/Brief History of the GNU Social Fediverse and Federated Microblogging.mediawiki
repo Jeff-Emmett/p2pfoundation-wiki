@@ -1,0 +1,47 @@
+
+
+=Source=
+
+'''* Article: A Brief History of the GNU Social Fediverse and ‘The Federation’ by [[Danyl Strype]]'''
+
+URL = https://www.coactivate.org/projects/disintermedia/blog/2017/04/01/a-brief-history-of-the-gnu-social-fediverse-and-the-federation/
+
+
+=Excerpt=
+
+The people behind the technology's evolution, by Danyl Strype:
+
+"Back in the glass age, a guy called Evan wrote some free code in PHP to run vaguely Twitter-ish site called Identi.ca. The software was called Laconica, and then it was called StatusNet. It was able to federate with other vaguely Twitter-ish sites running the same software using the OpenMicroBlogging standard (a mash-up of existing protocols including OAuth, OAuth Discovery, YADIS, and XMPP), which was replaced by the OStatus standard (a bouquet of existing protocols including Atom, Activity Streams, PubSubHubbub, Salmon, and the delightfully named Webfinger), both of which Evan was also pretty involved in developing. A bunch of other sites/ softwares had a go at supporting OStatus (there’s a list on its Wikipedia page), hoping that one day they could all get along.
+
+A few years later, glass was being replaced by aluminium. Evan got bored with trying to fix a bunch of baked in architectural limitations in StatusNet (or maybe PHP itself, I’m guessing, I don’t know his reasons) and started working on a new piece of vaguely Google+-ish software called pump.io, written in Javascript. Evan announced that Identi.ca would be switching from StatusNet to pump.io, which it did in 2013. Pump.io federates using a new pump.io protocol (which still uses Activity Streams, but with JSON and a “REST inbox API“, whatever that means).
+
+This is good news for potential interoperability, since a bunch of other sites and softwares are already using Activity Streams (including any that support OStatus), and Activity Streams is being standardized under a license from the Open Web Foundation by the Social Web Working Group (SocialWG) of the World Wide Web Consortium (W3C). As it happens, Evan was also involved in starting the W3C SocialWG (which took over the standards work of the OpenSocial Foundation in 2014, but let’s not get ahead of ourselves…).
+
+Meanwhile,  Mikael Nordfeldth was hacking away on a fork of StatusNet called Free Social (or “Free & Social”), which debuted in late 2012 on on the FreeSocial.org website he was running for the Piratpartiet. According to OpenHub, Nordfeldth set out with a plan “to make the codebase smaller, leaner, neater and more modular”. Also in the aluminium age, as GNU Social founder Matt Lee tells it in his interview with the FSF LCL (Free Software Foundation Licensing and Compliance Lab):
+
+“GNU social was created as a companion to my earlier project, GNU FM, which we created to build the social music platform, Libre.fm. After only a few short months, Libre.fm had over 20,000 users and I realized I didn’t want to be another social media silo like MySpace or Facebook, so I came up with this vague idea called GNU social. A few prototypes were built, and eventually we started making GNU social as a series of plugins for Evan Prodromou’s StatusNet project, with some help from Ian Denhardt, Craig Andrews and Steven DuBois.”
+
+You could think of all this as Fediverse 0.1, the gestation that was happening as it slumbered in the world wide womb, waiting to be born.
+
+“Later”, continues Matt, “StatusNet, GNU social and Free Social… would merge into a single project called GNU social.”
+
+After this was announced in 2013, lots of people who had still been running StatusNet sites, and getting concerned about the lack of active development as Evan worked in pump.io, started migrating to the first release of GNU Social, and other folks started setting up new GNU Social servers. Some of them continued to or started to federate using OStatus. Users who had been missing StatusNet since Identi.ca switched to pump.io (including yours truly) started finding and joining GNU Social servers. The Fediverse 1.0 is born.
+
+This part of the history happened a few years ago, so I’m pretty sure I’ve got it right, but I welcome corrections in the comments. For the next part, I’m kind of winging it on the basis of what appears to have happened more recently, so apologies for any misunderstandings and again, please feel free to set me straight.
+
+The growing GNU Social Fediverse then sets out to try and make friends with some of the other kids in the federated social networking neighbourhood; particularly established players like Pump.io, Diaspora*, Friendica (formerly Mistpark), and Hubzilla (formerly Red Matrix), but also up and coming projects like Tent, the Matrix, and the skinny jeans wearing rebels of the IndieWeb). Some want to use their own brand spanking new protocol(s) (pump.io, Tent, and the Matrix, what is the Matrix? Still working that out). Some don’t really want to federate at all because it threatens to breaks their privacy model (Hubzilla), and others had already threatened in 2012 to take their ball and go home, to work on their reinvented decentralized authentication (the Zot protocol, which ended up being used as the federation protocol for Hubzilla). To be honest, I’m still left wondering why the hell they didn’t all just use XMPP but I’m not a developer so…
+
+Despite all that, GNU Social does manage to make some friends, and there is talk of a grand Federation (this link lists active Diaspora*, Friendica, and Hubzilla nodes). Some success appears to be made in allowing users to communicate between some of these projects, mostly using some variant on the OStatus cluster of protocols, which seem to be the lowest common denominator. The Diaspora* protocol uses similar bunch of protocols to OStatus, but it uses them differently, including adding support for private massages. Sean Tilley of the Diaspora* crew sums up the resulting blends:
+
+“Friendica, Diaspora, Hubzilla all talk to each other through Diaspora. Friendica can also speak OStatus. Hubzilla and Diaspora currently cannot.”
+
+...
+
+Back in the Fediverse, a few developers get bored with trying to hack around a bunch of baked in architectural limitations in GNU Social (or maybe PHP itself, I’m guessing, I don’t know their reasons), and develop a bunch of add-ons or replacements for the GNU Social server software (formerly StatusNet, remember?), in a few different languages. Qvitter, started by Hannes in 2013, is a Javascript layer used on the Quitter sites to give a more Twitter-ish user experience. In 2016, Maiyannah Bishop forks GNU Social to start the PostActiv project, which is not GNU Social but still part of the Fediverse, and Eugen Rochko starts working on Mastodon in Ruby on Rails, which is not even a GNU Social fork but is still part of the Fediverse and uses the same GNU AGPL software license. With a cluster of different server-side packages available for those who want to set up their own node in the OStatus-powered federated network that started with StatusNet/ GNU Social, this is the point where I feel I can say the Fediverse has turned 2.0.
+
+So to sum up, there’s been a lot of different things under a lot of different names."
+(https://www.coactivate.org/projects/disintermedia/blog/2017/04/01/a-brief-history-of-the-gnu-social-fediverse-and-the-federation/)
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

@@ -1,0 +1,25 @@
+
+=Discussion=
+
+Arnaud Bertrand:
+
+"Most people probably don't realize how bad news China's Deepseek is for OpenAI.
+
+They've come up with a model that matches and even exceeds OpenAI's latest model o1 on various benchmarks, and they're charging just 3% of the price. 
+
+It's essentially as if someone had released a mobile on par with the iPhone but was selling it for $30 instead of $1000. It's this dramatic.
+
+What's more, they're releasing it open-source so you even have the option - which OpenAI doesn't offer - of not using their API at all and running the model for "free" yourself.
+
+If you're an OpenAI customer today you're obviously going to start asking yourself some questions, like "wait, why exactly should I be paying 30X more?". This is pretty transformational stuff, it fundamentally challenges the economics of the market.
+
+It also potentially enables plenty of AI applications that were just completely unaffordable before. Say for instance that you want to build a service that helps people summarize books (random example). In AI parlance the average book is roughly 120,000 tokens (since a "token" is about 3/4 of a word and the average book is roughly 90,000 words). At OpenAI's prices, processing a single book would cost almost $2 since they change $15 per 1 million token. Deepseek's API however would cost only $0.07, which means your service can process about 30 books for $2 vs just 1 book with OpenAI: suddenly your book summarizing service is economically viable.
+
+Or say you want to build a service that analyzes codebases for security vulnerabilities. A typical enterprise codebase might be 1 million lines of code, or roughly 4 million tokens. That would cost $60 with OpenAI versus just $2.20 with DeepSeek. At OpenAI's prices, doing daily security scans would cost $21,900 per year per codebase; with DeepSeek it's $803.
+
+So basically it looks like the game has changed. All thanks to a Chinese company that just demonstrated how U.S. tech restrictions can backfire spectacularly - by forcing them to build more efficient solutions that they're now sharing with the world at 3% of OpenAI's prices. As the saying goes, sometimes pressure creates diamonds."
+
+(https://x.com/mbauwens/status/1881956761382629848)
+
+
+[[Category:Protocols and Algorithms]]

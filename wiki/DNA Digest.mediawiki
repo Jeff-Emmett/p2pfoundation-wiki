@@ -1,0 +1,46 @@
+
+
+'''= The objective of DNAdigest is to provide a simple, secure and effective mechanism for sharing genomics data for research without compromising the data privacy of the individual contributors.'''
+
+
+
+URL = http://www.dnadigest.org/
+
+
+=Description=
+
+"DNAdigest is a Not-for-Profit Organisation founded and located in Cambridge, UK, by a group of individuals from diverse backgrounds who all want to see genomics used to its full potential to aid medical research. The objective of DNAdigest is to provide a simple, secure and effective mechanism for sharing genomics data for research without compromising the data privacy of the individual contributors.
+
+From the beginning, this concept sounded very appealing to us. That’s why we contacted Fiona Nielsen, founder of this great initiative, to talk about the goals of the project, its approach on making use of such sensitive data and the current status of data sharing within the scientific community."
+(http://www.open-steps.org/interview-with-fiona-nielsen-dnadigest-org-cambridge-uk/)
+
+
+=Interview=
+
+With Fiona Nielsen, conducted by Open-Steps:
+
+"1) Fiona, '''could you first introduce yourself and DNAdigest?'''
+
+I am a bioinformatics scientist turned entrepreneur. I used to work in a biotech company where I was developing tools for interpretation of next-generation sequencing data and I took part in a number of projects where I was doing the data analysis of cancer sequencing samples. During my work, I realised how difficult it is to find and get access to genomics data for research.
+
+DNAdigest was founded as an entity to provide a novel mechanism for sharing of data, aligning the interests of patients and researchers through a data broker mechanism, enabling easy access to anonymised aggregated data.
+
+
+'''2) Why it is important to share genomics data? Quoting your website, the current state of sharing this information is embarrassingly limited. How does DNAdigest address this problem?'''
+
+The human genome is very complex. Made up of 3 billion base pairs and varying from individual from individual, it is equivalent to looking for a needle in a haystack when you as a researcher attempt to nail down the genetic variation that is causing a genetic disease. The only way to narrow your search is by filtering out genetic variation that has been seen before in healthy individuals and annotate the variation that is left by what disease(s) the variation occurs in. This type of comparative analysis requires looking at variants from as many samples as possible. Ideally you will need to compare to tens of thousands of samples to make your comparison approach statistical significance. Accessing thousands of samples today is not only difficult in terms of permissions, but also in terms of mere storage and network capacity it is not practical to download huge datasets for every team that wants to do a comparison. DNAdigest is developing a data broker which will allow the researcher to submit queries for specific variants and only the aggregated information about the selected variants is returned as a result. For example, examining a specific mutation in cancer, the query could be “what is the frequency of this mutation in cancer samples?” and the result would be returned as a frequency, e.g. 3%. The aim of DNAdigest is to reduce the time to discover, access and retrieve the data relevant to genomic comparison.
+
+
+'''3) It seems that your idea looks quite revolutionary and actually very needed. How was the reaction of the scientific community towards your initiative so far? Are the principles behind sharing and opening data something new for scientists?'''
+
+Similar approaches have been suggested and a handful of approaches have been prototyped within the academic community before. However, all of the projects for sharing data in an academic setting have ultimately faced the same problems: They do not have the resources to scale up their solution to work for the entire community, and even if they should have the ambition to scale up the solution, they would find that it is extremely difficult to find funding for infrastructure projects from traditional research funding. In general, there is a positive attitude towards data sharing in research. However, the immediate concerns of researchers revolves around writing papers and not so much towards building common infrastructure.
+
+Based on this knowledge of the community, I realised that a separate entity is needed to take initiative for developing a solution, drawing on the knowledge generated in academia, and building an organisation that can do independent fundraising and collaborate across institutions. We have registered DNAdigest as a charity so that we can function as an independent and trusted third party to provide the community with a feasible solution.
+
+
+'''4) What do researchers have to do in order to access genomics data on DNAdigest.org? Can individuals share their genomics information directly on the platform?'''
+
+We are still designing and developing the platform, so I can not yet give you the exact user guide. Our objective is not to store entire datasets, but to connect to existing data repositories and data management systems with a common API that allows queries into the metadata to select samples, and for the samples for which patient consent is available, to query into the genetic data to provide aggregated statistics collected across datasets.
+
+We have no plans at this point to make storage capacity for individual genomic data, currently for this purpose, an individual would have to find an associated repository, for example through their patient community, which will allow storage of their genomic data."
+(http://www.open-steps.org/interview-with-fiona-nielsen-dnadigest-org-cambridge-uk/)

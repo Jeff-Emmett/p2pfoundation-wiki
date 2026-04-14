@@ -1,0 +1,148 @@
+'''OpenID is a distributed identity management system, a.k.a. a decentralized single sign-on platform.'''
+
+URL  = http://openid.net/
+
+See the Wikipedia article at http://en.wikipedia.org/wiki/OpenID
+
+=Description=
+
+"OpenID is a decentralized system to verify one's online identity... It solves the single sign-on problem without relying on any centralized website to confirm digital identity. OpenID users identify themselves with a URI or XRI which they own, such as for a blog or a home page. Since OpenID is decentralized, any website can employ OpenID software as a way for users to sign in.
+
+On OpenID-enabled sites, Internet users do not need to register and manage a new account for every site before being granted access. Instead, they only need to be previously registered on a website with an OpenID "identity provider", sometimes called an i-broker. They can also link to this identity provider from another website they own and log in using that website's URI instead, allowing them to connect their identity to their website. A website which accepts sign-ins from OpenID is called a "relying party."
+(http://en.wikipedia.org/wiki/Open_id)
+
+==[[OpenID Connect]]==
+
+"OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.
+
+OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as encryption of identity data, discovery of OpenID Providers, and session management, when it makes sense for them."
+( https://openid.net/connect/faq/ )
+
+
+=Principles=
+
+Chris Messina:
+
+"From a human user perspective, OpenID solves a few problems:
+
+   
+1. It asserts that portable identity is important and useful (i.e. for carrying reputation between contexts).
+   
+2. It alleviates the burden of remembering countless usernames and passwords across many devices or contexts.
+   
+3. It supports the notion of developing multiple personas for each OpenID or for different OpenIDs."
+(http://developer.yahoo.net/blog/archives/2008/01/interview_chris.html)
+
+
+=Discussion=
+
+
+==Why you should care==
+
+Brian Oberkirch at http://www.brianoberkirch.com/2007/01/18/openid-portable-social-networks-and-the-darowski-problem/ :
+
+"Why should you care about OpenID? Well, first off, think about what a drag it is to create and manage the multiple identities for all the services you sign up for. One of the charms of having a central, verifiable identity would be to streamline your experience with different sites you interact with. Think about how PayPal made your purchasing life that much simpler. Now, let’s say you need to change your email, want to change your photo, mailing address, whatever; with OpenID, you could change that once and it would propagate throughout the services you’ve authorized with that identity.
+
+Now, even better, what happens when we can freely flow our own data across these multiple services, the way that Yahoo and Google can do when you are logged in to one of their services?"
+(http://www.brianoberkirch.com/2007/01/18/openid-portable-social-networks-and-the-darowski-problem/)
+
+
+==Concerns around Open ID==
+
+"Even though the system is completely decentralized, '''OpenID still raises privacy concerns'''. Some people don't want to have a central place that binds all their accounts. Another criticism is whether the system is fully de-centralized? As always, this space is vulnerable to one provider eventually dominating it. So any disequilibria may put the neutrality of the system under question."
+(http://www.readwriteweb.com/archives/openid_vs_bigco.php)
+
+
+Brad Templeton on the paradox of digital identity management [http://ideas.4brad.com/paradox-identity-management]:
+
+"On the surface, privacy-conscious identity management puts control over who gets identity information in the hands of the user. You decide who to give identity info to, and when. Ideally, you can even revoke access, and push for minimal disclosure. Kim Cameron summarized a set of laws of identity outlining many of these principles.
+
+In spite of these laws one of the goals of most identity management systems has been ease of use. And who, on the surface, can argue with ease of use? Managing individual accounts at a thousand web sites is hard. Creating new accounts for every new web site is hard. We want something easier.
+
+However, '''here is the contradiction. If you make something easy to do, it will be done more often. It’s hard to see how this can’t be true. The easier it is to give somebody ID information, the more often it will be done.''' And the easier it is to give ID information, the more palatable it is to ask for, or demand it.
+
+Consider the magstripe found on most driver’s licences. This seems like personal identity management. That card is physically under your control, in your wallet. Nobody, except a police officer who suspects you of something, can demand you produce it. You control whether they can just look at it or can scan it.
+
+Yet the very existence of the stripe makes it easy to read all the data on the card. Sure, they could also look in the card and slowly type it all in, or photograph it, but as you know this is rare. If somebody is demanding this card for ID, it’s faster for them and for you to have them swipe it rather than type in the number and/or your other information. As a result it seems more “reasonable” for them to ask to swipe it, even if they don’t demand it. And thus far more data is collected. (So much that there are legal efforts to limit such scanning.)
+
+This applies even to “ideal” digital identity management systems which let you tweak what information they provide to a web site. In such a system, you can control whether your system offers up a pseudonym or your full name and address. You want that, because if you’re buying a book you want to easily tell them where to send it.
+
+However, at the same time this easy ability to offer your address makes it easy to ask. Today, a site that wants to ask for extra information it doesn’t really need has a disincentive — it has to push you to a form where you have to type it in manually. This makes it far more likely they will ask for this only if they really need it. It makes it really unlikely that they will demand it unless they truly need it. It still happens (I routinely see sites asking for phone numbers they don’t need) but it happens less often than if providing this information required merely a click.
+
+That’s because once you make it trivial to hand over your information, you quickly get to the state where only the privacy zealots put up a fight. And thanks to the fundamental theorem of privacy advocacy — most people don’t care about their privacy until after it’s invaded — this means most people will hand over far more information than needed, and in many cases the few who complain are few enough that companies can safely decide to refuse to deal with them if they won’t hand over the information that’s so easy to hand over.
+
+It’s against our intuition to think of ease of use as a bug, rather than a feature, but sometimes this can be the case.
+
+In addition, single sign-on systems tend to make correlation of user data easier, in spite of their many efforts to try to address this problem. If you use the same ID to sign on at many web sites, it’s hard to stop them from correlating that fact if they get together. Of course, most people use the same login on many sites today, but this is less reliable. (When a site demands an E-mail from me I give a different E-mail to each site, which among other things allows me to see if they pass the E-mail address to any 3rd party.) One of the common identity attributes that will be requested with OpenID is an E-mail address, and this becomes harder to vary if you’re getting the benefit of the single sign-on.
+
+Identity management also encourages the creation of “accounts” when they are not strictly needed at all. Should OpenID become a success, every site will want to use it. Sites that would not have troubled users to create an account to use them will now find it trivial to do so. Their current easy alternative — cookies — are stored on the user’s machine and much more under user control, and much harder to correlate with other sites.
+
+Fully implemented, I predict we’ll see “one click account creation” and “one click login” through the user of browser add-ons. This will result in sites that were perfectly usable without an account suddenly demanding them. Why not, after all? Sites with commercial interest are keenly interested in accounts in order to learn about their users and present information to advertisers or investors.
+
+It is also important to consider how the identity management technology we build will be used in places like China, Saudi Arabia or North Korea. Whatever global standards we adopt, especially with open source or free software, will be readily available for use in these countries.
+
+Unfortunately, these countries will not follow the same principles of user control and consent on identity collection that we do. However, we will save them the time and trouble of building their own ID and surveillance infrastructure. They can readily adapt ours.
+
+We may have to ask ourselves what ethical duty we have to the people of those countries. How would we design our systems if we lived in those places? What software would we give away to those governments? Is our own convenience and ease of use worth so much to us that we want to give these technologies to China where they will help restrict the activities of a billion people? This is not an easy question. The real villains are the oppressors, not the authors of the technology, but that doesn’t stop us from considering how what we build will be used.
+No solution?
+
+There may be no solution to this paradox. Identity disclosure is, in a sense, the opposite of privacy. Any system that assists in identity disclosure is unlikely to help protect privacy. There are technologies, such as secure pseudonyms and anonymity, and non-correlatable identifiers, which can help, but they are tricky."
+(http://ideas.4brad.com/paradox-identity-management)
+
+
+=Status Report=
+
+
+==Open ID Providers vs. Consumers==
+
+From Nik Cubrilovic
+at http://www.nik.com.au/archives/2007/03/12/openid-too-many-providers-not-enough-consumers/
+
+
+"All these OpenID support announcements and I am not getting anywhere with my OpenID. You see, the reason why you won’t get very far if you follow the same path I just did is because while all these companies have announced OpenID support, along with many others, what they meant is that they are allowing their users to use their accounts at their services as OpenID accounts. These applications are all becoming OpenID providers as opposed to OpenID consumers. Funny thing is that most of these announcements pointed to the same list of applications that support OpenID as consumers - but not one of them decided to join that list themselves.
+
+It turns out that we are solving the multiple identity problem by issuing multiple OpenID’s to everybody - defeats the purpose doesn’t it (many of these services give you an OpenID if you want one or not). Fact is, this isn’t going to work if we don’t have consumers and providers - but it seems that while we have plenty of companies wanting to step up us providers (easy) and have their users use their OpenID’s with other applications, we don’t have enough companies stepping up as consumers of OpenID. We now have 100 million+ OpenID’s with nowhere to go (well, almost). I am not sure what the problem is, but I can only speculate that it is because each of these applications would like to maintain some form of control and/or ownership of the user, and have their users go out into the rest of the web world carrying an OpenID with their name and logo on it. If this is the reason, then it is a crazy reason, because you can still hand off identity management to a third-party provider while knowing who the user is - you just won’t be answering emails about forgotten passwords anymore."
+(http://www.nik.com.au/archives/2007/03/12/openid-too-many-providers-not-enough-consumers/)
+
+
+==What Needs to Be Done==
+
+The smart application developers will be gunning towards supporting OpenID as consumers - because there is now a pool of 100M+ users out there who have credentials to login to your app. That is the part of the problem that needs solving, not the provider end. So I watched these announcements and I watched all the cheering and I didn’t think it was that great - it seems that OpenID is flavor of the month and everybody is jumping on for the ride (I could post ‘Burger King Supports OpenID’ and it would make the frontpage of digg). 
+
+So here I present, for the benefit of us all, my criteria in terms of what constitutes OpenID support:
+
+   
+1. Your application becomes a full consumer of OpenID
+   
+2. You application allows users to link their existing accounts to their OpenID
+   
+3. Your application allows users to *replace* their existing accounts with their OpenID
+   
+4. Your application has no signup barrier other than requesting an OpenID and password
+   
+5. You are *optionally* a provider of OpenID, if your user explicitly enables it (not sure why you want to be in the identity management business)"
+(http://www.nik.com.au/archives/2007/03/12/openid-too-many-providers-not-enough-consumers/)
+
+
+==Estonia==
+
+[[Estonia]] is [https://open.id.ee/about/english providing OpenID for all its citizens].
+
+=More Information=
+
+See: [http://openidexplained.com/ Open ID Explained]
+
+Also:
+
+#Very good background and context to the project at http://www.readwriteweb.com/archives/openid_vs_bigco.php
+#[https://indieauth.com/ IndieAuth]
+#Evan Prodromou on the '''privacy concerns''' with OpenID, at http://evan.prodromou.name/OpenID_Privacy_Concern
+#[http://wiki.openid.net/OpenIDServers List] of OpenID providers [http://www.readwriteweb.com/archives/openid_status_check_a_guide_to_openid.php]
+#[http://mashable.com/2008/08/26/openid-resources/ 40 Open ID resources]
+
+
+* [[OpenID Screencast]]
+* [[Identity]]
+
+[[Category:Resources]]
+[[Category:Standards]]

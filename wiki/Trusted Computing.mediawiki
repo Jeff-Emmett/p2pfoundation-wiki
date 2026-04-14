@@ -1,0 +1,58 @@
+=Definition=
+
+
+From the Wikipedia article at
+http://en.wikipedia.org/wiki/Trusted_computing
+
+
+"Trusted Computing (commonly abbreviated TC) is a technology developed and promoted by the Trusted Computing Group (TCG). The term is taken from the field of trusted systems and has a specialized meaning. '''"Trusted computing" means that the computer will consistently behave in specific ways, and those behaviors will be enforced by hardware and software.''' Note that "trusted" does not imply any specific behavior - security and consistency are the most important attributes of trust. In this technical sense, "trusted" does not necessarily have the same definition as "trustworthy", because "trustworthiness" generally implies more than just security and consistency.
+
+Trusted Computing is controversial. Advocates of the technology (like the International Data Corporation,[1] the Enterprise Strategy Group[2] and Endpoint Technologies Associates[3]) claim that it will make computers safer, less prone to viruses and malware, and thus more reliable from an end-user perspective. Further, they state that Trusted Computing will allow computers and servers to offer improved computer security over that which is currently available. Opponents (like the Electronic Frontier Foundation and the Free Software Foundation) believe that trust in the underlying companies is not deserved and that the technology puts too much power and control into the hands of those who design systems and software. They also believe that it potentially forces consumers to lose anonymity in their online interactions, as well as mandating technologies that many have no pressing need for. Finally, TC is seen as a possible enabler for future versions of document and copy protection - which are of value to corporate and other users in many markets and which to critics, raises concerns about undue censorship."
+(http://en.wikipedia.org/wiki/Trusted_computing)
+
+
+=Discussion=
+
+==Trusted Computing as purposeful defective design for the user==
+
+
+"The term is intentionally misleading. It does not try to improve the security of the user, but rather wants to ensure that the user can be “trusted”. Obviously it’s not about the trust, it’s about the money. The companies that deliver content (specially multimedia, but it’s not restricted to media only) to the client want to be able to control the way it is used. For example, they want the content to be displayed on approved media only, banning all the “illegal” applications (illegal does not mean that it violates the law, but rather the agreement between the client and the company that sells the media)."
+(http://polishlinux.org/gnu/drm-vista-and-your-rights/)
+
+
+==Trusted Computing as an [[Architecture of Control]]==
+
+Dan Lockton:
+
+"Stallman also anticipated the rise of ‘trusted computing,’ in the sense of a computer which will report on its owner’s behaviour and—perhaps more importantly—is built with the ability for a third party, such as Microsoft, or a government agency (“absentees with clout” in Stallman’s phrase) to control it remotely. Of course, any attempt by the user to prevent this would be automatically reported, as would any attempts to tinker with or modify the hardware.
+
+There is insufficient space here to explore the full range of architectures of control which trusted computing permits, but the most notable example identified by Cambridge’s Ross Anderson is automatic document destruction across a whole network, which could remove incriminating material, or even be used to ‘unpublish’ particular authors or information (shades of Fahrenheit 451). Users who are identified as violators could be blacklisted from using the network of trusted computers, and anyone who is recorded to be contacting or have contacted blacklisted users would automatically be put under some suspicion.
+
+Within organisations (corporate and governmental), as Anderson points out, these architectures of control could be very useful security features—indeed, perhaps the salient features which spur widespread adoption of trusted computing. Confidential documents could be kept confidential with much less fear of leakage; documents could be prevented from being printed (as some levels of Adobe PDF security already permit; and those who have printed out restricted information (whether they be correspondence, CAD data, or minutes of meetings) would be recorded as such. Sensitive data could ‘expire,’ just as Flexplay’s DVDs self-destruct 48 hours after they are removed from the package (another product architecture of control).
+
+
+Flexplay’s self-expiring DVDs use an architecture of control - becoming unusable 48 hours after the packet is opened - to create a new business model for DVD ‘rental’
+
+The impact of data expiry on long-term archiving and Freedom of Information legislation, where internal government communications are concerned, is as yet unclear; equally, the treatment of works which are legally in the public domain, yet fall under the control of access restrictions (the Adobe Alice in Wonderland eBook débâcle [e.g. 19, 27] being a DRM example) is a potential area of conflict. It is possible that certain works will never practically fall into the public domain, even though their legal copyright period has expired, simply because of the architectures of control which restrict how they can be used or distributed.
+
+The wider implications of trusted computing architectures of control are numerous—including a significant impact on product design as so many consumer products now run software of one form or another. The network effects of, for example, only being able to open files that have been created ‘within’ the trusted network will work heavily against non-proprietary and open-source formats. Those outside of the ‘club’ may be under great pressure to join; a wider move towards a two-tier technological society (with those who wish to tinker, or have to, from economic or other necessity, being very much sidelined by the ‘consensus’ of ‘trusted’ products and users) is possible. 
+
+
+Analogue-to-digital converters (ADCs) such as these Texas Instruments ICL7135CNs, are classed as ‘endangered gizmos‘ by the Electronic Frontier Foundation, as, along with digital-to-analogue converters (DACs), they allow DRM circumvention."
+(http://architectures.danlockton.co.uk/architectures-of-control-in-the-digital-environment/)
+
+=More Information=
+
+The Wikipedia article links to many sources pro and con, at
+http://en.wikipedia.org/wiki/Trusted_computing
+
+Webcast on [[Opposing Trusted Computing]]
+
+
+[[Category:Standards]]
+
+[[Category:IP]]
+
+[[Category:Policy]]
+
+[[Category:Music]]

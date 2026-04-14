@@ -1,0 +1,85 @@
+
+=Discussion=
+
+From a LinuxWorld interview with Matt Ebb, maker of [[Elephants Dream]]
+
+==[[Elephants Dream]] as Open Movie==
+
+'''"How do you define the term "Open Movie"?'''
+
+Our definition for open movie was quite extensive for Elephants Dream-- there has been other artwork with the final product released under creative commons licenses before, but our big difference was that not only did we let people edit and copy the final product, but we also released all of our production files (our sets, characters, textures, animation data) under an open license, for people to study, re-animate, or do whatever they like with. With the software and content contained on the DVD and online, it's possible to completely re-make the movie. On top of this, we aimed to also use open development for our tools, using and developing open source graphics software.
+
+
+'''Was the creative process itself, also "open"?'''
+
+Yes, in addition to [Elephants Dream producer] Ton Roosendaal and our technical director in the studio, there were a lot of external programmers helping us out. At the beginning of the project, when we realised what sort of software features we'd need, we put a general call out asking for programmers to help us out, and the community was very helpful in providing software improvements.
+
+We also had some open collaboration from the public for the artistic aspects, though it was in a much more limited fashion. It's quite hard to work on a creative project in a distributed manner. One of the reasons the team got together in the Amsterdam studio for seven months, was so we could work together and share our ideas more easily. The other issue is that with a project such as ours with real milestones and tight deadlines to get things produced, it's hard to rely on external volunteers for anything too crucial, since there's no guarantee that people will actually do what they volunteer to do.
+
+However, we had some public involvement in things like creating props, and we had a great response when we asked for people to take photos for us of various objects and surfaces that we used for reference and for creating texture maps.
+
+In Elephants Dream you focused on the visual aspects of the movie, working mostly on concept design, sets, texture painting, lighting and compositioning, as well as a number of animation shots. You were also responsible for creating the title sequence, credits and other 2D design tasks. What was the most enjoyable aspect of your role and why?
+
+Although it was one of the more difficult things I've done in my life, it was also one of the most rewarding and enjoyable too. Just being around the other artists in the team, being involved in the flow of ideas and seeing the great work we could create together always brought a smile to my face.
+It has been written that the primary purpose of Elephants Dream was to showcase the capabilities of open source software and tools in the field of producing films. Do you think the project succeeded in doing this?
+
+Yes, a lot of people have that perception, but although that was certainly a desired effect of the project, it wasn't the primary purpose. The main purpose was a much more pragmatic one.
+
+Back before [3D content creation suite]Blender was open source, it started off as an in-house application used by a Dutch animation studio named NeoGeo (founded by Ton Roosendaal, one of the original programmers of Blender and also chairman of the Blender Foundation). One thing that Ton really missed from those days was the directed feedback and development that you get when working on a project with artists who have real problems to solve and real deadlines to meet.
+
+So rather than doing Elephants Dream to show you can make a quality short film with open source graphics software, the idea was more about trying to make a short film, and along the way identifying the roadblocks, and doing the required software development to make it possible to do a short film with open source. By doing a practical project, we could find out what needed to be fixed, what extra features were needed, and how we could improve workflow for doing practical production work.
+
+Of course, being a showcase for open source was a nice part of it, and the fact that we actually succeeded in finishing the movie (phew!) is a great validation for the process. It was due to a lot of hard work, but it's not just about slapping each other on the back.
+
+As to whether it succeeded, in the showcase sense, I think it surely has raised people's perception of Blender. A lot of people unfortunately equate free with worthless, but in the arts industry, having a good 'portfolio piece' makes a lot of difference to changing that perception. It's most definitely succeeded in the practical sense too. With the tool set we had available at the beginning of the project, we wouldn't have been able to do what we did, and the project has done wonders for making Blender a much more bulletproof production tool.
+
+
+'''Elephants Dream used one proprietary tool - Reaktor. Was this because there was no similar audio open source option available?'''
+
+As I mentioned, one of the main purposes was to develop the software. The project was run by the Blender Foundation, and our area of expertise is with graphics and animation software, so our focus was on developing the graphics toolset. We didn't handle the audio ourselves, and were generously sponsored by an outside studio and audio producer, Jan Morgenstern, who worked with us. Although he was sympathetic to our cause, we weren't interested in putting restrictions on the tools he used, since we had no expertise and control in improving audio software anyway, and apparently it wasn't going to be easy to get the level of quality that we demanded with open source tools.
+
+
+'''How much did Elephants Dream cost, and where did the funds come from?'''
+
+I'm not 100 percent sure, but I think it was around EUR200,000 (AU$331,750). Before we started, we announced the project publicly online, and allowed people to pre-order the DVD. About half the funds came from excited and interested people in the community, who pre-ordered the DVD before we'd finished. We had about 1,000 DVDs pre-ordered about one month into the project. Even though the film was to be released freely, there was still a great incentive for people to invest in the DVD, due to the software improvements the project would bring, and the educational value in receiving our production files on disk. They also got their names in the credits.
+
+The other half of the funds came from arts foundations such as the Dutch Film Fund, the Mondriaan Fund, Montevideo/Time Based Arts, and the EU. We also had sponsorship for studio space, for remote rendering power (from the BSU Xseed supercomputer), and some of our computer equipment. "
+
+
+==Advice to Open Movie makers==
+
+Matt Ebb:
+
+"'''Can you offer any quick tips or advice to people wanting to start their own open movie?'''
+
+Well, of course all of the usual advice, which applies to anyone wanting to make a movie of any kind (it's hard work!). But particularly if you are trying to start a collaborative project, you need to either pay people, or find some way to convince them to work for you for free. Being charismatic helps, but what it usually comes down to is that you'll have to get the project off the ground, and get stuck into the work first yourself (this could be actual production, or at least pre- production script, storyboards, or maybe even organisation such as securing funding and other resources).
+
+Once people see that you're serious and that the project is going to be a success, they'll be more willing to jump on board. 'Open' doesn't really mean 'get other people to volunteer to do it for you'.
+
+
+'''What are some potential mistakes people can make when creating an open movie and or challenges they may face?'''
+
+As I just mentioned, expecting that volunteers will come and do it for you (is a big mistake).
+
+It's a challenge doing projects like this at the moment since open movies are quite new and uncommon, so you may face a degree of scepticism, perhaps when looking for funding. Though if you frame it right, it can work in your favour as well (if you're applying for government arts grants, it's nice to argue that since taxpayers will be contributing financially, they should have full access to the results of it too).
+
+
+'''Do you think we will see more and more open movies in the future?'''
+
+I hope so. There are a lot of people making short films out there, that just fade into obscurity. I think it could be quite beneficial for some of these people to open up their content, sell it on DVDs and educate the public. Particularly in these days of YouTube and viral content, it could prove to be a very good way for people or companies to get stuff out there circulating in the public eye.
+
+One more thing is that part of the reason Elephants Dream was a success, is that when people pre-ordered the DVD, they were investors in the project. Unlike a Hollywood movie where the investors are hoping to make returns on the revenues gained by selling the product, open movie investors get value back in the value of the additional content and education, but also in the increased development of the software they use.
+
+The great thing about open source software is that anyone can do this - the project doesn't have to be run by the Blender Foundation. Anyone can assemble a team of artists and programmers and they can do just the same thing, pushing the software forward to meet the demands of the production which will reap rewards for all people that want to use those tools. There's a very low barrier to entry, and I hope more people take advantage of this.
+
+
+'''What is the minimal amount of money you think people would need to make a successful short open movie?'''
+
+It really depends on the scope of the project. People already make indie short films alone in their own time, so for these people it wouldn't cost themselves anything apart from usual living expenses, and they could perhaps even make some money out of it by selling DVDs. Of course if you want to get more and more professional, you have to start paying for things like voice actors, film transfers, equipment, etc.
+
+At the moment this sort of thing is new and exciting, so being open is probably in your favour if you're looking for grants. I think it'd also be great for people to explore other potential areas of funding that can work alongside open content - advertising, product placement, viral branding, sponsorship. There are quite a few business models that don't involve selling a closed final movie itself that would be great for people to explore."
+(http://www.linuxworld.com.au/pp.php?id=1111810628&pp=1&fp=4&fpid=4)
+
+
+[[Category:Media]]
+[[Category:Webcasts]]

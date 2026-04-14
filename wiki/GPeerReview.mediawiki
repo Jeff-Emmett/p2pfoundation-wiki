@@ -1,0 +1,58 @@
+'''= GPeerReview is a command-line tool that makes it simple to write a review of someone's work and digitally sign them together.''' 
+
+URL = http://code.google.com/p/gpeerreview/
+
+
+=Description=
+
+1.
+
+"PGP and GnuPG have been utilizing webs of trust to establish authenticity without a centralized certificate authority for a while. Now, a new tool seeks to extend the concept to include scientific publications. The idea is that researchers can review and sign each others' works with varying levels of endorsement, and display the signed reviews with their vitas. This creates a decentralized social network linking researchers, papers, and reviews that, in theory, represents the scientific community."
+(http://science.slashdot.org/article.pl?sid=09/02/04/2153208)
+
+
+'''2.'''
+
+GPeerReview attempts to makes it easy for authors to seek post-publication endorsements of their works. We provide the following tools:
+
+* A command-line tool to digitally sign endorsements (done and available).
+    
+* A web-based version of the signing tool (about 70% done).
+    
+* Client tools for analyzing endorsement graphs to establish credibility (in planning stages).
+    
+* Additional tools to facilitate the running of endorsement organizations (in the brain-storming stages).
+    
+* Tools for analyzing citation graphs (in the brain-storming stages)."
+(http://code.google.com/p/gpeerreview/)
+
+
+
+'''3. Detail'''
+
+Mike Gashler, the main GPeerReview developer, explains the publishing process:
+
+"1. The first thing you should do is pre-publish your work. Put your paper, your datasets, scripts, results, etc. on a public server. This does two things: 1- It ensures that science can move rapidly (without waiting for a response from a slow journal), and 2 - It protects you from dishonest reviewers who might steal your ideas. [..] If some journal doesn’t permit works that were pre-published, you should not support that journal with your ideas anyway. Such journals will try to lock up your ideas rather than promote them. This is not good for you. Pre-publishing is good for you.)
+   
+2. Try to publish in a top-tier journal. A few publications with really good journals will benefit your resume/career much more than a lot of publications with so-so journals. It is well worth the extra effort required to get the endorsement of a respected journal. (Notice that up to this point nothing is different. Now, here comes the new stuff…)
+   
+3. Also submit your paper to several big-name endorsement organizations (EO’s). An EO is similar to a journal, but it doesn’t care whether or not a paper has already been published, it only cares how good the paper is. An EO doesn’t publish your paper, it just reviews and (hopefully) endorses your pre-publication copy. The “editor” of the EO will solicit the help of qualified reviewers to review your paper (just like a journal). He/she will coordinate double-blind reviews to ensure fairness. If the EO decides to reject your paper, they send you a private email with suggestions for improvement. If they accept it, they will send you a digitally-signed endorsement. (See more about EOs below.) Your c.v. (resume) should list all the endorsements that you obtain for each of your works. The idea that only the publisher can endorse a work is becoming antiquated. It is perfectly reasonable for many organizations to endorse a paper."
+(cited at http://corpblawg.ynada.com/2009/03/20/gpeerreview-changing-the-reviewing-game)
+
+=Discussion=
+
+
+Cornelius Puschmann:
+
+"The concept of the endorsement organization is obviously the main innovation here:
+
+Why is it such a persuasive idea? Because it detaches evaluation from publication, two processes which have only been conflated in yesterday’s/today’s journal publishing system for historical and technological reasons. The infrastructure that publishers provide for disseminating your work is no longer needed - it’s a relic of the paper age. What’s still needed is peer review and peer endorsement in some form, but there is no practical reason why two separate processes should remain conflated into one once the technical requirements change. Authors can (and should) take care of making their ideas accessible and their institutions should support them with doing so. But evaluation is what that the community does - not the author herself (obviously), not her institution and not publishers."
+(http://corpblawg.ynada.com/2009/03/20/gpeerreview-changing-the-reviewing-game)
+
+=More Information=
+
+#[[Peer Review]]
+#[[Open Peer Review]]
+
+
+[[Category:Science]]

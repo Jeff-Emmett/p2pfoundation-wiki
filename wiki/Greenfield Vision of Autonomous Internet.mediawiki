@@ -1,0 +1,203 @@
+Please add your ideas about autonomous internet here. "Greenfield" means that you are "wiping the slate clean" and trying to imagine a whole new system from the ground up. This is meant mostly as an exercise in imagining and visioning new alternatives. The practical reality is that most efforts will build on existing concepts and technologies. However, the goal of this page is to offer a space to think beyond those existing technologies.
+
+
+== A Whole-earth system ==
+
+The internet is a global network. It does not need country borders and political divisions, and actually, it is hindered by them. It is simply '''infrastructure for the whole planet'''.
+
+Thus, the domain system as a top-level navigation entity should disappear. Apart from the fact that it is not mandatory to be used (I can buy most domains in country top-level domains I am not living in), it is simply obsolete in a globalized environment.
+
+Furthermore, the internet then could work as a single big system, instead of replicating functions and data silos across sites. Therefore, a '''service oriented architecture''' could be set up addressing '''the system as a whole'''; for example:
+
+* Directory services for finding information, people, organizations, groups, etc.
+* Accounting services for virtual/online currencies, etc.
+* Profiling services, authentication services, security services (certificates, etc.)
+* Rating services
+* Tagging services
+* many more
+
+The internet would run ''humanity'' as a single organization (like a 'multinational ' for all people), thus bringing the collaborative / cooperative meme of our times to full fruition.
+
+== Universal State Transfer ==
+
+===Uniform Context Transfer Protocol===
+
+One quick thumbnail: The Uniform Context Transfer Protocol is a "data transport layer" that sits above TCP/UDP/IP and below applications. It's designed so all applications are inherently interoperable, and since new applications simply become freely devised conventions that people share, understanding of the "applications layer" would change a good bit.  
+
+More technical elaboration:
+
+The uniform context transfer protocol (UCTP) is an end-to-end data transport  protocol that supports manipulable distributed hypermedia and data processing on the basis of the concept of universal state transfer. It employs a set of abstract terms that designate the elements of a uniform structure for representing and transferring state, called the uniform context framework (UCF).
+
+In place of documents and files, UCTP implements contexts, manipulable collections of resource elements which are referred to according to the UCF abstractions. All of the elements of a context are assigned key values which function as links to the servers at which the elements  originate. Because all elements are links, multiple contexts may freely reuse the same elements. 
+
+====Atomic Applications====
+
+The elements of the UCF reflect a universal information architecture which supports all the fundamental operations one needs for managing information, including modeling, updating and maintenance, navigation, manipulation, querying, categorizing, hierarchizing, distribution and dependency tracking. In this way, UCTP implements the notion of an atomic application. Fundamental information processing functions for any application can be implemented simply by declaring a UCTP context, or by declaring multiple contexts to be combined in a complex application.  Any UCTP front end interface that surfaces the full complement of UCTP  functionality can be used to browse and work with any information for any other application served by a UCTP server.
+
+====UCTP Scalability, Flexibility and Interoperability====
+
+UCTP is designed for scalability, providing a simple uniform interface through the use of a small set of verbs (GET, PUT, REMOVE and HOST) and the finite set of generic elements which make up the UCF. UCTP servers attain the status of universal application servers in the sense that all fundamental information management functions are provided by means of this interface and the rest of the functions and architecture incorporated within the protocol.
+
+The information architecture underlying UCTP affords a maximum degree of flexibility in data processing. Entity relationships for all applications are stored in a flat fact table form, allowing information to be accessed and worked with rapidly, flexibly and with implicit  interoperability among all applications. In addition, by using the UCF abstractions as generic primitives, UCTP makes possible a highly granular procedural approach to data processing that is unimpeded by the intricacies of entity-relationship models or the strictures of table- or record-level distribution and/or replication. Higher-level techniques for managing complexity, such as set-oriented and object- oriented data processing and programming, may be implemented on top of the UCTP layer. 
+
+====Uniform Context Framework (UCF)====
+
+Instead of working with information through the representation of diverse entities in separate physical tables, the UCTP physical data  model is a generalized and denormalized structure that directly represents relations as such. Relations implemented under UCTP are called contexts. UCTP uses the following generic abstractions to represent the elements of any context:
+
+* Space 
+* Location 
+* Standpoint 
+* Use Type 
+* Use 
+* Link Type 
+* Link 
+* Use Attribute 
+* Link Attribute 
+* Use Attribute Value 
+* Link Attribute Value 
+* Use Category 
+* Link Category 
+* Use Category Value 
+* Link Category Value 
+
+These elements make up the uniform context framework (UCF), a standard structure for representing and transferring state. UCTP assigns unique key values to each element, made up of a URL (designating the location of a UCTP server), a forward slash, and a key value unique to that  server. For example: UCTPhome.org/18273645. 
+
+====General and Particular Contexts in UCTP====
+
+A general context in UCTP is comprised of a use type related to a link type. A particular context instance is designated by a particular use  of the use type, which can have any number of links, particular instances of the link type, related to it. This combination of use types, link types, uses, and links describes a traditional one-to-many relationship, wherein the various uses of a use type serve as “records” of the parent entity type (on the “one” side), and the multiple links  of a link type serve as “records” of the child entity type (on  the “many” side). 
+
+====State in UCTP====
+
+In UCTP, state is an aspect of contexts representing their generality, and is designated in terms of the concepts of space, location, and  standpoint. Declaring a state for a UCTP context means that the context serves as a convention among all clients and servers that participate in that state. Space represents the notion of an abstract realm within which numerous UCTP servers participate and interoperate as they support shared contexts. Location represents an individual UCTP server.  Standpoint is an abstraction used to represent states of narrow scope hosted at particular locations, for the purpose of independent or  provisional development work. 
+
+Generality of a state is designated by either providing or not providing key values for space, location and/or standpoint. A state representing generality across an entire space is represented by providing a unique key value for the space, while leaving the location and standpoint keys empty.
+
+====UCTP and Standards====
+
+A state for representing universal conventions would be designated by leaving all three key values empty. However, since this designates no authoritative server for the state, contexts defined within such a state cannot be managed by UCTP, and would require ratification as  standards by external standards bodies, followed by general adoption in code and practice.  With UCTP, this process of fostering general adoption by means of standards bodies becomes significantly less necessary.  Instead of presupposing that state and physical data models are so arbitrarily complex and diverse as to necessitate such a process in  order to assure interoperability, UCTP provides for universal interoperability at the data transport level. 
+
+====Distributed Relational Modeling in UCTP====
+
+Traditional entity-relationship modeling entails record- and table- level replication in distributed environments because it binds sets of attributes to individual physical tables representing discrete entities. Under UCTP, distribution of attributes and their values is not  accomplished in the same manner. UCTP uses the UCF to distribute metadata describing the relational organization of information across servers, while it leaves particular attribute values at particular locations, where UCTP servers act as their authoritative hosts. User agents and interoperating UCTP servers may maintain the currency of their local caches of attribute values according to any algorithm appropriate to their own purposes. 
+
+====Scopes of Relevance for UCTP Attributes and Categories====
+
+Instead of binding sets of attributes to particular tables representing particular entities, UCTP uses the abstractions that make up the UCF to describe scopes of relevance for link and use attributes and categories. Attributes and categories can be declared to be relevant for all links of a particular link type, or for all links used by a particular use type, or for all instances of  a particular use or link regardless of general context (use type and/or  link type), or for any other of the finite number of scopes that can be  described by the possible permutations of the UCF elements. UCTP servers  provide and maintain appropriate attributes and values for various  contexts according to these scopes of relevance.
+
+====Locking Mechanisms Versus Occasion Requests====
+
+UCTP contexts do not presuppose or require locking mechanisms, since whenever user agents request an occasion to modify a context, UCTP  servers notify them whether the context has been modified in whole or in part since the time of the user agent's local copy. UCTP servers may  implement shared contexts as freely interruptible or as "reservable"  according to diverse governing principles. Separate protocols may  implement locking or other "reservation" schemes on top of the UCTP  layer, for contexts for which that is desired. 
+
+
+===Appendix: UCTP and RDF===
+
+The correlates for RDF's subjects, predicates, and objects under UCTP are uses, link types, and links.
+
+UCTP/Use - [Rdf Subject] 
+UCTP/Link Type - [Rdf Predicate] 
+UCTP/Link - [Rdf Object] 
+
+UCTP moves beyond RDF's knowledge-modeling assertions by splitting  subjects into use types and uses, and then using the combination of use  types with link types to define atomic applications, contexts which  automatically provide all fundamental information functions needed to  manage information for any application. Because CTP is designed in this  manner, it is perfectly suited for RDF applications. It simply goes  beyond the knowledge-modeling purposes of RDF and the semantic web, to  providing universal fundamental functions and implicit interoperability  among all applications.
+
+===Appendix: UCTP and REST===
+
+Roy Fielding has articulated a comprehensive set of engineering  principles which constitute an architectural style  called "representational state transfer" (REST) intended to govern  optimal Web architecture and Web application design. By describing how UCTP's implementation of universal state transfer compares with the  architectural principles of REST, we can address its design  implications in an orderly and reasonably complete manner. The chief differences stem from the fact that past architectural principles have presupposed the arbitrary complexity of state and data models, and therefore have taken certain design decisions geared toward managing complexity that are unnecessary within UCTP.
+
+== A Plural Architecture ==
+
+====Plural hardware routes====
+A minimum of 3 satellites are required for global communications.  More is better to prevent bottlenecks.
+Physical connections, wires, cables, are another layer in the system.
+
+====Plural addressing schemes====
+Nodes on the networks have multiple addresses.
+
+====Plural communication protocols====
+Nodes on the networks implement multiple communication protocols.
+
+====Plural software APIs====
+Software on the network will implement APIs for interoperability.
+Good APIs will provide mechanisms for automated discovery and communication.
+
+== Deep resistance to spam and denial of service. ==
+
+In the current internet, at the IP level, every packet is unsolicited; a router can't tell the difference between a packet that is part of an email from your boss and a smurf reply intended to flood a victim off the internet. Consequently, distributed denial service of attacks are impossible to stop, and disrupt existing relationships.
+
+Similarly, your mail server can't tell the difference between a Nigerian spam email and an email from your boss, so spam is a constant problem, and leads to the loss of legitimate email.
+
+We can divide communications into three categories:
+
+* Continuing communications that are part of an existing relationship;
+* Introductions, where an entity establishes a new relationship between two entities with which it already has relationships (for example, a SIP server setting up a call, or forwarding an email from one of your contacts to another);
+* Unsolicited communications, where two previously unrelated entities establish a new relationship; for example, leaving a comment on a stranger's blog.
+
+Unsolicited communications are a legitimate and important function of the internet. But any network that supports unsolicited communications will suffer from spam, and so there is no way to make unsolicited communications reliable in the presence of malicious actors who deliberately overload its capacity. However, it is possible for a network to prioritize continuing communications and introductions over unsolicited communications, reducing the damage done by spam. The POTS telephone network, for example, does not allow call setup messages to interfere with calls that have already been set up, and so AT&T's 1992 SS7 outage merely made it more difficult to set up new calls — it did not terminate calls in progress — and the same thing is true of telephone protests in which large numbers of callers "jam the switchboard" at a company.
+
+To the extent that this is done in an overlay network on top of the current TCP/IP infrastructure, it remains vulnerable to denial-of-service attacks at the lower layers. In many cases, attackers can use IP-level denial-of-service attacks to map the physical topology of the network they are attacking, by anonymously observing the failures they induce. This has been a problem for IRC networks for many years, for example — even when hub servers have locally-routable and secret IP addresses, attackers can determine their IP neighborhood well enough to bring them down with a flood of traffic.
+
+Current countermeasures to email spam and TCP- or IP-layer denial-of-service attacks largely work by empowering unaccountable intermediaries, who use error-prone heuristic algorithms to cut off "suspicious" communications. This also creates pressure against transparency, since many effective heuristics are only effective until the adversary knows them.
+
+To summarize, the current network architecture unnecessarily empowers a kind of brute-force attack, and as in other contexts, the defenses against brute-force attacks are centralization (banding together, whether in nations or in data centers) and lack of transparency.
+
+== Content-centric networking ==
+
+TCP/IP was designed in the 1970s and 1980s to set up one-to-one terminal connections by which mainframe users could access remote, centralized computing services. That's still the service it provides today, although HTTP and HTTPS is somewhat different from TELNET.
+
+But much of the current usage of HTTP (as well as BitTorrent, RTSP, and other popular protocols) is not actually to access remote computing services such as Wolfram Alpha, but rather to retrieve named pieces of information that have previously been stored in an online storage service, such as photographs, static HTML pages, email messages, and programs written in JavaScript. The actual computing is increasingly being done on the computer the user sits at, with AJAX, Comet, video codecs, and 3-D engines, while the cloud is used as much as possible simply for storage and transferring messages between users. Developments such as HTTP caches, the Google Libraries API, and CDNs in general exploit this fact to improve end-user performance and diminish bandwidth costs.
+
+Van Jacobson, one of the key architects of TCP/IP, is now exploring how to design a replacement for IP oriented toward retrieving named chunks of data rather than sending messages to named communication endpoints. He calls it "content-centric networking". Projects like Freenet and GitTorrent provide a similar service as an overlay network over TCP/IP. If some variation of this idea is developed sufficiently and becomes mainstream, it should have the following benefits:
+
+* Dramatically improved UI latency for things like AJAX applications.
+* Dramatically simplified system administration, since many of the services currently provided by many different pieces of software running on web servers would be provided by self-managing software in the cloud.
+* Improvements to privacy, since someone outside your ISP would only be able to determine that someone at your ISP wanted to download that Arabic comic about Martin Luther King and the bus boycott, not who or even how many; and similarly for your neighborhood or your house.
+* Dramatically improved bandwidth usage on long-distance links, since each named chunk of information would only need to be transmitted over the low-bandwidth link a single time, instead of once for each requester. (IRC network topology and Usenet servers used to provide this benefit for particular kinds of information.)
+* Reduced reliance on the reliability and trustworthiness of centralized servers, since you'd retrieve your friend's blog post directly by its name (hopefully a self-authenticating name) rather than through an intermediary who has the ability to edit it.
+* Increased functionality for local non-internet networks. In many countries, and with many internet service providers, it is legal to set up private computer networks (wireless or otherwise) without permission from anyone, but not to provide internet access without a license from your ISP, the national government, or both; and for this reason, many hobbyist networks do not provide internet access. If they could nevertheless provide access to named chunks of information, possibly retrieved by a proxy server over the internet, they could be far more useful.
+
+== Ubiquitous encryption ==
+
+When the current internet was designed, there were two major obstacles to encrypting all information transmitted over the network: US export controls on cryptographic software and the slowness of CPUs. Both of these problems have been essentially solved, but we still struggle under the burden of an internetwork design that makes encryption cumbersome, because it's incompatible with the installed base. A greenfield design could eliminate this problem.
+
+== MIXes ==
+
+A significant class of risks in the current infrastructure stem from the unwarranted revelation of identity information. This can be used to retaliate against deviant behavior (e.g. homosexuality, journalism, copyright infringement, organizing protests to call for democracy, gambling, masturbation, or marital infidelity); to commit fraud using that identity information; to discriminate against classes of people, such as those who live outside the USA; to impede the use of the network, for example by denial-of-service attacks. (Impeding the use of the network may be a form of retaliation, but it is sometimes carried out for other reasons as well; consider Gaddafi's recent denial of telecommunications services to all Libyans, which was intended to prevent them from organizing protests, not to retaliate against them for having activist compatriots.)
+
+MIX networks, such as the cypherpunks anonymous remailers and the TOR network, provide a way for people to communicate with each other without revealing identity information, and in particular without revealing their network locations. But MIX networks are currently subject to both technical and social limitations that stem from their non-ubiquity. Due to low and highly variable traffic, traffic analysis of current MIX networks could potentially reveal the identity information they are intended to conceal, and MIX node operators are sometimes subject to sanctions, such as being banned from editing Wikipedia or chatting on Freenode, or being raided by police in a few exceptional cases.
+
+If MIXes were the standard infrastructure of a large network, they would be much less vulnerable to these problems.
+
+== Source routing ==
+
+'''The way the current internet does packet routing is that''', at every hop, the router must look up the destination address of each packet in its routing table to determine how to forward the packet. The routing table can be quite large, and usually the destination address matches more than one entry in the table, with the consequence that the router must choose the most specific route, or balance traffic between multiple usable routes. Also, it needs to decrement the packet's TTL and possibly discard the packet, in order to limit the damage from routing loops. '''All of this computation is quite expensive''' at gigabit speeds, even with the custom hardware that is normally used.
+
+=== The current approach limits innovation, reduces reliability, requires centralization, and increases costs. ===
+
+It's also '''disharmonious with the overall Stupid Network''' architecture of the internet, which attempts to put as much computation as possible into endpoint nodes, rather than building an Advanced Intelligent Network in which you have to wait for your service provider to carry out upgrades in order to get access to new services like voicemail, caller ID, and automatic retry on connection failure. One consequence is that when there are routing failures in the internet — either deliberately provoked by Level3 peering disputes or by the Pakistani government, or simply due to equipment failure — '''end-user systems cannot work around them'''. Also, it makes the IP address space a global limited resource — although you can assign RFC1918 addresses to hosts on your local intranet, there's no way to make them reachable from the rest of the world.
+
+Another problem is that requiring each router to receive the entire IP header before forwarding the packet introduces per-router latency; it '''makes cut-through or wormhole routing infeasible'''. This, in turn, means that connections from one router to another must cover a substantial geographical distance on average. You can't do IP routing to transmit a message over a thousand hops (say, short-haul low-power radio connections) without incurring unacceptable latency.
+
+=== MPLS is a workaround that keeps the current approach from collapsing. ===
+
+'''Intra-AS MPLS''' is the approach that many tier-1 network service providers take to ameliorating some of these problems. MPLS allows each router in the core of the NSP to simply do a quick MPLS-flow-label lookup to find the next hop to forward the packet to, instead of a slow route prefix lookup. The MPLS flow label is assigned at the NSP's border router according to a routing table in that border router, and the packet passes through the rest of the NSP's network quickly by this mechanism. All the routers in between are invisible to traceroute.
+
+However, intra-AS MPLS only ameliorates these problems; it does not solve them completely. Inter-AS MPLS is, as far as I know, still an unsolved problem — for performance-management rather than correctness reasons.
+
+=== Source routing could solve these problems, but IPv4's source-routing feature can't. ===
+
+IPv4 has an older approach for solving these problems: the LSRR and SSRR ("Loose", or "Strict", "Source and Record Route") options. With these options, '''the sender of the packet computes a route to the destination and includes it in the packet header''' as a list of IP addresses. The "Loose" option carries an incomplete list, with the idea being that the points along the specified route aren't necessarily directly adjacent; the "Strict" option carries a complete list. In theory, this approach could work. In practice, it does not work, for several reasons:
+
+# These options are '''usually disabled''' in modern routers, because they provide a way to circumvent IP-filtering firewalls.
+# The IP '''header is too small''' to record a route through the modern internet — it was already too small fifteen or twenty years ago, when network operators started disabling these options.
+# They can only work if there's a way to '''distribute the necessary routing information''' to endpoints, which there isn't.
+# They would '''need to be applied recursively''' if they were to improve efficiency. When a packet arrived at a waypoint on its loose route, that waypoint would compute the pathway to the next waypoint and encapsulate the loose-routed packet in a strict-routed header. The format of the IP header does not permit this.
+# The LSRR/SSRR option is at the end of the IP header. To permit cut-through routing, the next-hop information '''must be at the very beginning of the packet'''.
+# Because most packets don't use these options, routers are not designed to process them on their hardware-accelerated "fast path", so '''they actually slow down routing instead of speeding it up''' — and the mere existence of the options doesn't relieve routers of the necessity to have enough processing oomph to handle packets routed in the normal way.
+
+=== A source-routed internet would have many advantages. ===
+
+An internet designed from the ground up around source routing would have to solve these problems with a different protocol design. Depending on how it's realized, Most of its '''routers could be much cheaper''', smaller, and faster. There would be '''no need for a global namespace''', so there would be no need for a global rollout of a new protocol to solve IPv4's 32-bit limitation on address space, because solutions to the addressing crisis could be rolled out incrementally by end-users, instead of requiring every service provider in the world to upgrade their equipment.  It would '''smoothly accommodate wireless mesh networks''' and IP mobility.  It would be '''more censorship-resistant''' and have '''fewer single points of failure''', and so it would be more reliable.
+
+It might turn out that the engineering problems are insuperable or that they fail to achieve some of these benefits, of course.
+
+[[Category:P2P_Infrastructure]]
+[[Category:Autonomous Internet]]

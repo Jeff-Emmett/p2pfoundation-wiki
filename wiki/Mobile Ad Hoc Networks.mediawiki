@@ -1,0 +1,38 @@
+
+
+
+=Description=
+
+"A mobile ad hoc network (MANET), sometimes called a mobile mesh network, is a self-configuring network of mobile devices connected by wireless links.
+
+Each device in a MANET is free to move independently in any direction, and will therefore change its links to other devices frequently. Each must forward traffic unrelated to its own use, and therefore be a router. The primary challenge in building a MANET is equipping each device to continuously maintain the information required to properly route traffic. Such networks may operate by themselves or may be connected to the larger Internet.
+
+MANETs are a kind of wireless ad hoc networks that usually has a routeable networking environment on top of a Link Layer ad hoc network."
+(http://en.wikipedia.org/wiki/Mobile_ad_hoc_networks)
+
+=Discussion=
+
+André Staltz:
+
+"You probably haven’t heard of mobile ad-hoc networks (MANETs), also known as meshes. One of the reasons for their lack of popularity is that meshes would threaten the business of telecom operators, so there is little incentive from the establishment to develop and deliver mobile ad-hoc networks to you. A MANET is like AirDrop, but automatically and seamlessly connects to devices around you and delivers data in multiple hops between those devices. Even if Bluetooth connections can only reach a few meters, after multiple jumps, you can connect to devices a few kilometers away. Information literally spreads through the air to a mesh of devices in a region. It is propelled even more by the fact that mobile devices are moving around, doing half of the work of transporting data.
+
+On the other hand, the primary reason why MANETs are underappreciated is that they do not yet provide data transfer speeds comparable to those in the wirenet. A MANET upholds principles like freedom from fixed intermediate organizations, but it is simply too slow for transfer-intensive use cases like streaming video or instant messaging. Their adoption would feel like a step backwards to the early days of the Web when speeds were measured in a few Kilobits per second, not the usual Megabits per second you are used to in developed countries.
+
+Mesh networks are nevertheless still promising, for two facts. First, the technology is evolving, with Apple MultipeerConnectivity and Bluetooth Mesh as a few cutting-edge examples. Novel protocols are being developed that envision IPv6 without ISPs, ideal for meshes. Second, because many developing countries do not yet have Internet access. This accounts for 4 billion people, out of the total 7.6 billion, with currently zero bits per second of transfer speeds. Even if it seems like the Internet encompasses the whole world, it still barely reaches 45% of the planet. Some may have Internet connectivity, but it’s intermittent or not consistently speedy. For people with intermittent or unexistent connectivity, ISP-free mesh networks with moderate but consistent speeds become quite attractive.
+
+...
+
+The exciting part is that we can actually beat the tech giants at this game by simply giving local and regional connectivity to people in developing countries. With mobile apps that are built mesh-first, the smartphones would make up self-organizing self-healing MANETs. Frankly, this is quite easy to do, if we are willing to gift mobile devices without expecting anything back, unlike tech giants. It won’t be an easy fight, though, Facebook is working hard to build a compromise that still gives them the middleman upper hand. Zuckerberg’s 10-year roadmap puts connectivity projects in the long-term spectrum (5–10 years). That’s basically our deadline, we need to get grassroots meshes in Africa before that.
+
+The mobile apps for meshes would have to be best suited for the particular limitations of (current) MANET technologies. Video streaming and instant messaging are not the first options, but lightweight websites in content-addressed style (like in the Beaker Browser with Dat) and text-first social news feeds are applications that can be realistically delivered in the short term. Such apps don’t even require constant connection to other devices in the mesh. For text-based social news feeds, it suffices to occasionally sync the latest news with other devices whenever they are in range.
+
+Even the mobile apps themselves can be deployed through MANETs, and I have already developed an “app store” mobile app that fits that use case, called Dat Installer. My main project at the moment is to build a mesh-friendly social network mobile app running on SSB. It is important to highlight that while these apps are built for meshes, they know how to ‘surf’ the Internet and utilize it as a fallback."
+(https://staltz.com/a-plan-to-rescue-the-web-from-the-internet.html)
+
+=More information=
+
+* [[Global Airnet]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

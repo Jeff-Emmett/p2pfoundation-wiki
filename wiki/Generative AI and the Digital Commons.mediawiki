@@ -1,0 +1,243 @@
+'''* Article / Working Paper: Generative AI and the Digital Commons. Saffron Huang and Divya Siddarth. AI Commons working group,'''
+
+URL = https://cip.org/research/generative-ai-digital-commons
+
+=Description=
+
+"The goal of this work is to build models of governance for generative foundation models, such as GPT-3 and Stable Diffusion, that enable broadly shared benefit. Our initial hypothesis is that data is a high-value lever of governance. Many of these models are trained on publicly available data and use public infrastructure, but 1) may degrade the “digital commons” that they depend on, and 2) do not have processes in place to return value captured to data producers and stakeholders. Separately, we see a need to collect high quality information to understand e.g. the economic impacts of these models. This makes such data potentially one of the most important bottlenecks and impacted factors in this problem space.
+
+Existing conceptions of data rights and protection (focusing largely on individually-owned data and associated privacy concerns) and copyright or licensing-based models offer some instructive priors, but are ill-suited for the issues that may arise from models trained on commons-based data. Forward-looking proposals include investments in standardized dataset/model disclosure and other kinds of transparency when it comes to generative models’ training and capabilities, consortia-based funding for monitoring/standards/auditing organizations, requirements or norms for GFM companies to contribute high quality data to the commons, and structures for shared ownership based on individual or community provision of fine-tuning data."
+
+(https://cip.org/research/generative-ai-digital-commons)
+
+
+=Excerpts=
+
+==[[Generative Foundation Models]]==
+
+Saffron Huang and Divya Siddarth:
+
+"We will use the phrase “generative foundation models” (GFMs) to refer to machine learning systems that are: 1) “generative” — they generate text, images, or other sequences of information based on some input prompt, and 2) “foundation models” — neural network models trained on a large dataset comprising diverse origins and content, and can be adapted to a wide range of tasks. (Machine learning, or ML, is sometimes also referred to as artificial intelligence, or AI).
+
+Examples of well-known GFMs are: OpenAI’s GPT family of language models (including ChatGPT) that take in text and generate text; DALLE-2, which takes in text/images and generates images; BERT, which takes in text and generates text, Stable Diffusion, which takes in text and generates images; Codex, which takes in code (a specific kind of text) and generates code.
+
+We speak of “generative” foundation models, rather than foundation models at large per Bommasani et al, because we are concerned primarily with the applicability of these models for generating content, such as generating text, code or images. This may include tasks such as summarization (generating a summary of a text) or text continuation (continuing the text by iteratively predicting the next word) or creating images and videos.
+
+Generative foundation models are a general technology, although they benefit from adaptation to the “downstream” tasks they are used for, e.g. by “fine-tuning” them by training on more specific datasets such that they can generate the appropriate material for the use context."
+
+(https://cip.org/research/generative-ai-digital-commons)
+
+
+
+
+
+=Discussion=
+
+== [[General Foundation Models and the Commons]] ==
+
+
+
+Saffron Huang and Divya Siddarth:
+
+"We believe the core of many of these concerns is the effect of GFMs on the digital commons. 
+
+GFMs both depend on and contribute to what is often known as the “commons”. Commons, more specifically common-pool resources, are resources that are both rival and non-excludable, and may thus fall prey to ‘tragedy of the commons’ style exploitation, in which individual actors can free-ride on, poison, or otherwise damage shared resources at great collective cost. Effective multi-stakeholder governance and management thus determines the sustainability of these common-pool resources.  
+
+
+We limit analysis primarily to the digital commons, as that is the realm in which GFMs are primarily created and deployed. The digital commons comprises two things:
+
+* '''The  online commons of information resources that we all benefit from, own and contribute to together.''' This traditionally includes things like wikis, Internet archive snapshots, Creative Commons (CC) licensed images and public software repositories, but online discussion spaces such as Reddit and news sources such as The Guardian are also part of this information commons. Much of this data or copies are technically hosted by someone (e.g. a private entity, the government, individuals) and authority/management over them vary in their level of collective control/ownership. But these generally have reasonably open and shared access, with few barriers to people contributing to or using these digital resources.
+
+* '''The collective infrastructure that underpins the commons.''' This infrastructure includes the physical (e.g. Internet cables), the institutional (e.g. organizations like the IETF, W3C, and IEEE), and the technological (e.g. open-source libraries). As we see increasingly more GFMs and other AI being deployed, we may see more ML models, datasets, libraries and platforms, ML-tailored computing hardware, as well as various AI building or governing institutions come under this umbrella. For example, if GFM products begin to replace traditional software products, machine learning libraries such as Pytorch may become a critical piece of digital infrastructure supporting an increasing amount of online functionality.
+
+* '''The existence and quality of the digital commons can be threatened by “undersupply, inadequate legal frameworks, pollution, lack of quality or findability” and needs to be maintained against such outcomes.''' For example, people, such as coders, artists, Wikipedians and bloggers, contribute and maintain high quality material in our information commons. Spam filters keep undesirable solicitations out of inboxes, the Creative Commons non-profit provides a multiplicity of licenses to make flexible copyright terms possible, internet archivists keep information available and open-source contributors create tools to support much of the world’s software.
+
+
+''The idea of digital commons can lend well to ML governance in particular:''
+
+Digital commons could also be an answer to the need for new governance structures for resources such as data or artificial intelligence… Data lends itself especially well to a commons framework: both inputs and impacts are fundamentally shared, distributing access to these resources provides a foundation for further bottom-up innovation and technological progress, siloing or privatizing these erodes the possibility of stewarding collective benefit… [forming] a shared layer necessary for economic growth and democratic participation. (Source)
+
+With respect to each of the risks detailed above, risks 1)-4) are most straightforwardly related to the commons-based approach, as they are directly concerned with the impact on common resources and the public sphere. Risks 5)-6), concerned with economic concentration and labour precarity/automation, raise questions around what obligations are tied to common resources. In short, to what extent does public data generate obligations whereby the people who created it should receive value from the resulting AI? If the data is included in the production of GFMs used for private interests and against the interest of those very people that created it, questions of compensation and reward become more salient.
+
+
+===The integrity of the digital commons matters.===
+
+The digital commons enables broadly shared access and benefits from digital technologies. The economic and ethical benefits of open-source have been studied repeatedly, open access policies amplify the diffusion of science and Wikipedia is one of the most visited websites in the world [2]. Because these are common resources and are not monetized, their value is difficult to measure, but accessibility seems clearly to lead to shared benefit, especially with non-rivalrous digital goods. Without shared collective infrastructure, it is possible that current and future innovations can be easily dominated by private entities. For example, in the 20th century, AT&T gained a leading monopoly over cable and radio due to its existing infrastructural monopoly over long-distance telephone lines [3]). A lack of collective digital infrastructure would potentially lead to monopoly dynamics rather than healthy competition that drives innovation.
+
+The digital commons is critical to modern knowledge-sharing. Knowledge in general is also seen as a shared, common-pool resource, referred to as “the knowledge commons” and analyzed as such. The digital commons, in this age, is a key part of the contemporary knowledge commons. Accurate, accessible, comprehensive and diverse sources of knowledge are widely acknowledged as necessary to culture, welfare, science and technology. Both the training data underlying GFMs and the outputs are part of this knowledge commons, and the GFM itself can be seen as a kind of interface to the knowledge in its training data.
+
+The digital commons underpins democracy. High quality knowledge and genuine debate between humans is important in itself, but also to democracy. Good information and public discourse are necessary for making good decisions on who to vote for or what policies to enact, and for holding representatives accountable. As pointed out:
+
+The foundational mechanism upon which all others depend is the maintenance of a healthy epistemic commons within a democracy—an epistemically healthy public sphere where widely trusted norms, processes, and institutions for making sense out of and reaching consensus on raw information lead to certain facts being accepted as true. (Source)
+
+Nowadays, as many of these interactions move online, we have seen how degradation of the digital knowledge commons can harm democracy, e.g. through misinformation, polarization, and other means.
+
+
+===Generative foundation models rely on, but may also erode, the digital commons.===
+
+GFMs are trained on the digital commons. Generative foundation models leverage large databases of scraped information (text, code, images) from the internet to train highly capable models. This depends on the availability of public, scrapable data and leverages the “collective intelligence” of humanity, including the painstakingly edited Wikipedia, millennia's worth of books, billions of Reddit comments, hundreds of terabytes’ worth of images, and more [4]. They also rely on non-profits like Common Crawl (which build and maintain open repositories of web crawl data), Creative Commons (for open licenses for the data used), open source libraries, and other digital infrastructure. They also take advantage of aggregated user preferences; e.g. the WebText dataset underlying the GPT family of models uses Reddit “karma scores” to select content for inclusion. All of this is common digital information and infrastructure that many people contribute to.
+
+The dependence of GFMs on digital commons has economic implications: much of  the value comes from the commons, but the profits of the models and their applications may be disproportionately captured by those creating GFMs and associated products, rather than going back into enriching the commons. Some of the trained models have been open-sourced, some are available through paid APIs (such as OpenAI’s GPT-3 and other models), but many are proprietary and commercialized. It is likely that users will capture economic surplus from using GFM products, and some of them will have contributed to the commons, but there is still a question of whether there are obligations to directly compensate either the commons or those who contributed to it.
+
+In addition, there are legal and moral implications. Laws to do with copyright and fair use have little precedent when it comes to generative AI, but there are already multiple lawsuits challenging the use of public data in a variety of such GFMs, including Github Copilot, Stability AI and Midjourney. Some companies, such as DeviantArt, are training models on user images, requiring them to opt-out (rather than opt-in) to the training set. Furthermore, artists who have released work have unwittingly been subjected to others training image models on their creations and creating outputs that they feel are invasive/don’t reflect the style or intent of their actual work.
+
+GFMs put material back into the digital commons much faster than humans can, and this material is of unknown quality. As GFM applications proliferate, copywriting tools start to fill the internet with AI-generated marketing text, website copy and blog posts. Image generation tools are used for blog posts, presentations, and website decoration. Everyday people use language GFMs to help them write blog posts and articles. The large-scale characteristics of this text for many use cases is as yet unknown, and there are potential effects of large-scale biasing or misinformation. 
+
+
+While some of the Internet is potentially already auto-generated to some extent, GFMs may be differentiated in their:
+
+''Speed''. 
+
+These generative models can generate text/code/images at much higher speed than humans can write/code/make art themselves. This machine-generated text could become a high % of the digital information commons, and potentially also homogenize it (information starts to have similar properties as they come from similar models). One analysis estimates that we will run out of high-quality language data for ML training by 2026.
+
+
+''Quality.''
+
+GFMs often say untrue or biased things, and the incorrectness is often subtle rather than easy to catch and correct. Generated language outputs are likely to over-predict rare rather than trivial events (reporting bias), and replicate discriminative biases of humans [5]; Stable Diffusion has been found to replicate stereotypes, and Galactica (Meta’s science language model) was quickly taken down after outputting falsehoods and prejudiced statements that nevertheless sounded plausible. Sometimes generations are more straightforwardly low-quality, being e.g. repetitive, unable to comprehend negations or unable to do common-sense inference [6]. Nevertheless, many models who almost certainly have such defects are being deployed as live products, and this is likely to overall bias the internet commons towards such events.
+
+Many people are trying to use text models as knowledge bases, querying them for answers much like Google or Wikipedia, which makes the above more problematic. The input data is not sanitized for truthfulness (that is near impossible at the scale at which data is collected), therefore there is in fact no guarantee that these models will say the correct answers. However, the attempts at using them in these applications will lead to mistakes of fact, many of which will not be caught. Meta’s Galactica language model was trained to generate scientific wiki essays and has notoriously emitted many subtle but confident-seeming scientific falsehoods. This might lead to a proliferation of misinformation, either accidentally or purposefully.
+
+
+''Accessibility and generalizability.''
+
+GFMs are hosted publicly on websites such as HuggingFace and Github, and require comparatively little technical knowledge to use, making them very accessible. They are also more accessible and generally applicable than previous methods of autogenerating content, such as articles that are optimized for ranking well on Google using automated techniques like Markov chains, or scraping RSS feeds, or automated synonymizing [7]. Compared to other algorithms applied for content generation, GFMs require less specialized development for particular use-cases, and thus auto-generation can proliferate in far more domains than previous techniques.
+
+Such issues may greatly degrade the quality of the information commons and require some level of restructuring of the internet e.g. intensifying and requiring new solutions to the problem of how we detect, filter and rank machine- vs human-generated content.
+
+It is difficult to determine the criteria for what generations are desirable, and to detect and counter undesirable generations. There are wide disagreements over the extent and criteria of what generations should be allowed or not. Furthermore, even if there was agreement, it is difficult to discover and mitigate all harms. Many generations are wrong or otherwise undesirable in subtle ways, as stated above, or ways that vary depending on context, making the creation of classifiers and content filters a hard task. Furthermore, the technical problems of permanently tagging/stamping data as machine-generated vs. human-generated is difficult, and there may be race dynamics between those developing methods to detect AI-generated content and those trying to outwit detectors. This contributes to the difficulty of ensuring safety.
+
+These generated outputs start to become part of the information commons. Conversational response and code auto-completion are common uses of GFMs among other products, and students are already using GPT-3 tools to write convincing school essays, and people can automate the creation of mis/dis-information e.g. via fake news generation, fake product reviews, and spamming/phishing. Given the many undesirable properties of generated outputs, this might “pollute” Internet-based datasets, including training for future generative models.
+
+The outputs of state-of-the-art GFMs tend to be much more indistinguishable to that of humans than previous algorithms. It will become increasingly difficult to tell what is AI-generated vs. human-generated content, and to filter one from the other. Countermeasures for distinguishing GFM outputs could be developed, as could new attacks that overcome those countermeasures, but it is likely that much GFM-created content will join the information commons as plausibly human-created content.
+
+Issues of training data quality are already cropping up with low-resource languages on Wikipedia, where content in Scots turns out to be patently wrong, or most Cebuano and Swedish articles turn out to be bot-generated. Researchers generally take Wikipedia to be a good source of high-quality human-written content, and hence train AI on this low-quality, bot-generated content, resulting in models with lower quality output. 
+
+If GFM outputs join the commons and become part of future datasets for newer GFMs, this may bias newer models towards older, established patterns and make future quality improvements more difficult, especially if input datasets are not carefully filtered or utilized [8].
+
+This may be like the effect of nuclear weapons and climate change on radiocarbon dating, where samples after a certain time cannot be used, with standard techniques, to accurately date the material. After a certain time, the information commons may not be high enough quality for standard ML training techniques to work.
+
+This may make it even harder for researchers, such as computational social scientists, to work reliably on Internet-based datasets. Available datasets already greatly limit such research, and the large-scale creation of machine-generated content will add new challenges.
+
+GFMs may erode self-determination and democracy. In many ways, GFMs could be used against self-determination, democracy, and even by state or semi-state actors in warfare operations e.g. by being used for personalized persuasion or disinformation. Genuine popular movements could also be discredited by being accused of being composed of GFM-generated material. Additionally, the content filters and other design choices are generally determined by a small team with little participation or diverse input which arguably creates an insufficiently democratic situation, especially as GFMs pertain to issues that impact political discussion (e.g. Meta’s Galactica AI filtered out legitimate scientific research to do with race or AIDs). Some of these problems may become less salient given the trend of open-sourcing models.
+
+GFMs may disincentivize contributions to the digital commons. People may stop writing and drawing in favor of using generative models, decreasing the production rate of new human-written material. (On the other hand, more people might engage with creating material with the aid of GFMs, with still significant human input, or with greater overall creative output.) Additionally, people may not want to release their non-GFM-enabled creations into the commons as much. Incentives to, for example, open-source one’s code or publish high-definition versions of one’s artwork may decline, because of fears of labor replacement or dislike of adding to training data e.g. not getting attribution or publicity, feelings of misalignment with the purpose of GFMs.
+
+It may also decrease incentives for artists to make their work legible to algorithms (e.g. artist Greg Rutkowski’s work has been popular for use in GFMs, because he adds alt-text to his images), which is bad for data science and ML, accessibility, and for having a free and open art commons. More may be hosted on private, non-scrapable services and less completely publicly, which gives more power to companies that wall off information (e.g. Facebook content cannot be scraped and used in training sets; people may publish there instead of on more open platforms like Artstation). This closes the digital commons off further. Overall, the digital commons may receive a large amount of lower quality AI-generated content, whereas the release of human-generated content is disincentivized."
+
+(https://cip.org/research/generative-ai-digital-commons)
+
+
+=Policy=
+
+==[[Policy Proposals for AI-Based Digital Commons]]==
+
+Saffron Huang and Divya Siddarth:
+
+===Proposal I: Consortia for monitoring, auditing, and standards-setting.===
+
+Solutions to commons-based problems that rely on the action of individual stakeholders are historically unlikely to work. However, consortia-based solutions, in which stakeholders come together and form collective institutions to provide or fund shared goods necessary to maintain the commons, have been robustly helpful in many domains.
+
+Examples of this include standards-setting bodies, peer review protocols and trade associations. Furthermore, given that GFMs are an early technology, establishing a GFM-governing consortium that develops strategies and agrees on new policies, will help establish best practices for responding to emerging risks or opportunities of future ML development (much like the W3C, which was established early in the Internet’s lifetime). This may look like the Coalition for Content Provenance and Authenticity (C2PA), which focuses on content provenance and authenticity certification standards for media.
+
+The consortium could connect the ecosystem in productive ways, e.g. connecting companies that train and release open-source GFMs with companies that deploy application-specific uses of GFMs. They could also be specific to different parts of the GFM ‘pipeline’ e.g. a consortium that focuses on issues specific to GFM application-deploying companies, rather than issues pertaining to  companies that train them.
+
+A working solution, however, must also avoid standards-capture by incumbents. Among other requirements, this means that those in charge of setting the standards or policies should not all be from GFM companies, and should be broadly representative of different interests.
+
+There are two sides to this proposal:
+
+1) Resourcing:
+
+Voluntary memberships and subscriptions. Much like private organizations contribute to standards-setting for the internet, GFM companies may contribute time and money to collective governance structures due to useful outcomes and good public perception. This is the model pursued by organizations such as the Linguistic Data Consortium and the Partnership on AI.
+
+Regulation and taxation. If the above does not hold, we might want to explore public money, grants or even data-dividend based models for funding such a body. A public funding model is pursued by organizations such as the National Consortium of Intelligent Medical Imaging in the UK. 
+
+2) Organizational duties:
+
+Monitoring. We cannot know what we don’t track, and understanding the risks and opportunities of GFMs will require monitoring and analysis, e.g. setting up data science pipelines to monitor whether they are causing the spreading of misinformation. Researchers have pointed out that we cannot understand systematic harms related to how social media affects society without better monitoring structures in place to collect high-quality data about its effects — the situation is arguably worse in generative AI, which is very new, and where research on information ecosystem impacts is nonexistent. We suggest efforts at identifying and potentially sponsoring such research. 
+
+Auditing: Consortium-based organizations are a natural choice for third-party AI audits, which have been called for by civil society groups, researchers, and even private entities. They are also a possible avenue for setting norms and standards around internal or voluntary audits.
+
+These audits can implement and modify existing proposed frameworks for audits such as SMACTR (for internal auditing), creating audit trails (including documenting specific design and data choices, as well as tests), and documenting organizational processes and accountability structures.
+
+Audits can look for problematic behaviours of discrimination, distortion, exploitation and (likely less applicable to generative rather than classification algorithms) misjudgement, as well as create robust and transparent suites of metrics and establish compelling baselines for behaviour (as noted by Bandy 2021).
+
+Given that a model can be trained/fine-tuned and deployed by different entities, audits can happen at the level of the model or the application (which may involve different organizations).
+
+Note: Auditing could be a separate proposal on its own outside of the consortia context, as it is possible for governments, for-profit and non-profit auditors, or some international organisation to audit. However, a key limitation of AI auditing in general is the lack of an industry ecosystem for doing so, so bundling this under the responsibilities of a more general consortium in order to create a needed home and mandate for auditing, may make sense.
+
+Standards for auditing and transparency: Proposals around algorithmic audits (both processes and metrics), data cards, and model cards for AI in general are gaining traction. However, release and use are not standardized, and datasets on which widely used models are trained are still poorly understood. Without this understanding, both impacts and contributions to the commons cannot be appropriately tabulated. Standards-setting bodies, either for AI at large or GFMs in particular,  can determine appropriate venues and forms of information release and enable industry-wide transparency and accountability.
+
+Developing shared tools. Tools to filter for high-quality data and/or to detect AI-created data will be needed to combat the problems of digital commons pollution. It is not clear if access to such tools will be equitable as they are likely to be developed by the best-resourced companies. For more equitable and widespread development of and access to these tools, consortia-based development of them may be helpful, similar to the approach of the C2PA.
+
+
+===Proposal II: Norms or rules for GFM companies to contribute high quality data to the commons.===
+
+GFM companies could create, as a norm or a rule, gold standard datasets usable by other entities. These datasets could be the datasets they train models on, or datasets related to how models are deployed or used by other parties. Numerous companies creating GFMs do not disclose their datasets or their dataset-cleaning methods, making it difficult to understand the properties of the resulting models or for others to replicate work. In general, information release related to GFMs and how they are deployed is greatly lacking.
+
+Companies could be encouraged to admit data on deployment to a privacy-preserving but accessible repository through a body like NIST, whenever they release a model for use. This would let researchers look at data for different deployments over time, and determine e.g. labour impacts of GFM deployment. They could also be encouraged to admit high quality datasets they use to improve the model, e.g. one with high quality labels of harmful GFM use cases, which will enable other companies to more easily adhere to standards of safe model deployment. Companies would need to follow specified scientific data collection procedures and be transparent about how they sample and process data. There would need to be external scrutiny to ensure the validity of collected data.
+
+Overall, this would decrease “moats” and increase competition, increase transparency and researcher access to understanding what data deployed models are trained on, ensure safer deployment, and also generate useful metadata for tracking labor impacts and economic effects of models.
+
+
+===Proposal III: Governance structures based on input data to model training.===
+
+High quality data is a key bottleneck for training AI, now and in the future, so data governance is a key lever for governing generative models. Data cleaning and processing is critical to training a performant GFM. Another method to ensure high quality data is to focus on actively generating human feedback data to improve models, such as reinforcement learning with human feedback (see here and here). We propose that this could be done in return for ownership stake or governance rights. 
+
+Multiple models are possible:
+
+Human feedback is provided by users to improve the model, in return for stake. (Sam Altman has expressed interest in giving “credits” to those who are giving feedback on utterances and thereby improving ChatGPT; other forms of feedback or stake could be explored here and in other contexts, e.g. direct feedback on content filters beyond feedback on specific utterances, some form of “shares” in the model beyond credits for using the model.)
+
+Individuals or groups with specific expertise could contribute fine-tuning data. Better data provenance, in this way, could enable easier tracking of truth and citations, and thereby combat model hallucinations. 
+
+Organizations with highly private data that is necessary for valuable applications (ex. financial fraud detection and medical diagnosis) could act as fiduciary data intermediaries for inputting that data into models via privacy-aware training approaches. Benefits could be distributed to organizations (to support fiduciary capacity) or back to communities. 
+
+The details of this require further research and comments are welcome.
+
+For GFM applications that require specific data from a clearly-defined constituency (e.g. training or fine-tuning an image generation model on specific artists’ work), non-profit organizations that act as data trusts can be set up to help data-owners interface with companies that train models.
+
+Groups that have specific use cases for GFMs may also come together to collectively create and govern GFMs together themselves, thus governing both data and model. For example, a specific group of artists may come together to jointly train and decide governance of an image model that they are able to monetize themselves.
+
+Early individual case studies of the above structures may provide excellent input to policymaking around feasible data and model governance structures for the broader public."
+
+(https://cip.org/research/generative-ai-digital-commons)
+
+
+=Directory=
+
+Via [https://cip.org/research/generative-ai-digital-commons]:
+
+"The structure of the nascent industry is likely to greatly change, but at the moment there are a few key actors creating more general-purpose GFMs, such as OpenAI, Midjourney, EleutherAI, BigScience, and Stability. More-specialized companies often build off the technology released by the actors above, applying the technology for specific tasks
+
+The structure of the nascent industry is likely to greatly change, but at the moment there are a few key actors creating more general-purpose GFMs, such as
+ 
+#OpenAI, 
+#Midjourney, 
+#EleutherAI, 
+$BigScience, and 
+#Stability. 
+
+More-specialized companies often build off the technology released by the actors above, applying the technology for specific tasks:
+
+Copywriting (Copy.ai, Jasper, NeuralText, Nichesss)
+
+Website generation (The.com, Debuild)
+
+Marketing and stock image generation (Shutterstock, Picsart, Jasper Art)
+
+General image editing and design (Photoshop plugin, Microsoft’s Designer)  
+
+General writing, editing, and content management (Microsoft Teams Premium, NotionAI, Coda + OpenAI, Chibi AI)
+
+Video editing (Runway, Kino)
+
+Code generation (Github Copilot, Tabnine) "
+
+Research assistants (Elicit)
+
+Building floor plans for home renovations (Tailorbird)
+
+Excel/data wrangling and cleaning (Charm)
+
+[[Category:Protocols and Algorithms]]
+[[Category:Technology]]
+[[Category:Data Commons]]

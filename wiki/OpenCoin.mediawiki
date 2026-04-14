@@ -1,0 +1,86 @@
+'''= anonymous virtual tokens'''
+
+URL = https://OpenCoin.org
+
+=Description=
+
+
+"The OpenCoin project is about creating anonymous virtual tokens, by providing a set of standards (formats and protocols) and a GPLed reference implementation of these standards. Tokens can be used for different kind of purposes, including online payments and voucher systems."
+
+
+Joerg Baach:
+
+"Opencoin is a system to create digital cash - that means one can have an
+issuer mint electronic coins, which are handled by the wallets of
+clients. The clients make transfers between them, without the issuer
+being able to record those transactions, and they might later on redeem
+the coins as well. Opencoin based coins behave very much like cash as
+opposed to bank transaction.
+
+Opencoin provides everthing to deal with the coins - creating them,
+wallet software etc.
+
+The system can however not create/built the social side of an
+(complementary) currency - trust, social agreements etc. This is outside
+of the system. E.g. a group would decide to create a LETS, and could
+then use opencoin to get the currency onto the mobile phone." ([http://docs.google.com/viewer?a=v&q=cache:VEXMgl5dz8AJ:opencoin.org/library/presentation.pdf+LDA+opencoin&hl=en&gl=us&pid=bl&srcid=ADGEESiB38MKFZbGnCUh1WXcLGsPFivoOr5maan2hPIiiabCYBa7vWvUOkHnxwh1rXI7ANpWaIheYsY7OcqsiO-9CyKMurPToMwuBxPNgQm7VIHWxu2zQkeFTb2X59BV3js5Hp5VNZaM&sig=AHIEtbQv5qPadDdrcsVK-9ssIvZg1yR6IQ&pli=1 presentation])
+
+=History=
+
+
+The initial project was funded by the [http://www.lda.gov.uk/ LDA], and brought together a team
+interested in law, cryptography, software, money theory, mobile phone
+development. This team produced the protocol, a first iteration of
+software, a legal report and a cryptographic report.
+
+Now, after a break of about a years time, the project is getting
+momentum again, with usuable software being developed, and a strong
+desire to get it used in the real world.
+
+
+=Status=
+
+July 2011:
+
+"We created a  first draft of the protocol, which was reviewed  by our crypto experts, and no obvious flaws were found. A legal report documents how an opencoin system could be used within the EU. We also created a sample implementation, mostly to test the protocol.
+
+Curently we are rewriting the implemenation, to allow better documention and testing of the system. This leads to slight changes in the exchange of messages. We are also working on protocol additions to prepare the way for a proper beta version."
+
+
+
+=Details=
+
+==Cryptography==
+
+
+Our electronic cash system is based on the invention by David Chaum, who
+delivered the basic cryptographic building block. Those blocks can then
+be used to setup a flow of communication, which gets standarized into a
+protocol.
+
+Opencoin has developed such a protocol, and the protocol got a first
+audit by cryptographic experts. Result: 'we did not fall off our chairs
+laughing' - no obvious flaws were found.
+
+
+==Implementation==
+
+Right now opencoin is in the 2nd iteration of the software, with a focus
+on a mobile phone client. There is a installable client for newer Nokia
+mobile phones. The client can handle multiple currencies, does all the
+cryptography, talks a 'real' protocol. It shows what can be done, but is
+not stable enough to be rolled out in a production environment.
+
+The server side is 'real' as well - crypto is in place, protocols spoken
+etc - but right now just works enough to show the 'good case' scenario.
+
+The ongoing development work will focus more and more on making client
+and server more stable, able to handle more attacks and errors.
+
+
+=More Information=
+
+#[[P2P Exchange Infrastructure Projects]]
+
+
+[[Category:Money]]

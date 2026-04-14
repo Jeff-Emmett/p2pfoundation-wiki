@@ -1,0 +1,74 @@
+=Discussion=
+
+==Bill Burcham on the need of a clipboard paradigm for Synergestic Web Applications==
+
+From http://lesscode.org/2005/10/21/baby-steps-to-synergistic-web-apps/: 
+
+This is a call for a clipboard-based web applications paradigm which also explains the consistency of other web standards.
+
+
+===XHML + CSS===
+
+"document structure should be separated from presentation or visual style. This two-tier division is embodied by the XHTML standard for document structure and the CSS standard for visual style specification. Adoption of this strict separation of concerns provides revolutionary opportunities for the economical production of highly accessible, aesthetically pleasing web sites. At the same time huge strides are being made by AJAX innovators like 37signals to provide web application user interfaces on a par with those of desktop applications.
+
+
+===XML vocabularies as shared domain===
+
+Concurrent with these breakthroughs in web user interface technology and practice, there is a an explosion of XML vocabularies, exemplified by OASIS, OPML, Microsoft Office XML, Open Office XML. A zillion XML vocabularies are blooming. These vocabulares are not presentational in nature like CSS, nor are they addressing document structure like XHTML. These vocabularies represent various other domains, commerce domains like order management, personal collaboration domains like calendar and contact management, media distribution and syndication domains, and myriad technical domains such as remote procedure call, database query, spreadsheet structural model. These vocabularies constitute a huge and growing, free, “domain model” for our world. Development, refinement and adoption of these shared, free domain models presents an unprecedented opportunity for both producers and users of information systems.
+
+
+===Non-interoperable web applications===
+
+Enter web applications. Not static content-oriented websites, but honest to goodness web applications. Think email, calendaring, authoring, supply chain management, customer relationship management. These web applications are manipulating at their core, domain models. Sure, these applications have to present an interface to the user, but the bulk of what the application does is manipulate and manage domain-specific information.
+
+While these web applications are manipulating domain-specific information they are doing precious little to expose that information in interoperable form. At best a web application may support download or upload of files. A contact management web application may for instance support bulk import or export — but where is the ability to conveniently “pick” an address from that application and use it as a “ship to” address at an online buying site?
+
+Each web application is an island. This monolithic approach to web applications favors those product vendors who can make big bets — vendors who can tackle and deliver huge applications. Mash Ups provide a glimmer of hope — but only for developers — not really for end users.
+
+It is not a new situation, that applications manipulate domain-specific information — information that users need to share with other applications. It has ever been so. So what’s the difference with web applications? The difference is that in the case of web applications, the world of document structure and presentation has not been bridged to the world of domain models. If Web 2.0 truly represents a new platform then perhaps we should consider whether there is anything to be learned from the older platforms in this regard. Where was presentation bridged to domain model for instance on the Macintosh, Windows and X-Windows platforms?"
+
+
+===The Clipboard paradigm===
+
+"On those predecessor platforms, the clipboard paradigm was one very important bridge. In the clipboard paradigm a platform-wide set of gestures is supported by all applications. Those gestures enable a user to designate content, to copy that content to a clipboard, and to later “paste” that content into a different location — either in the original application or in a separate application. The range of gestures was expanded on some platforms to include drag and drop with added semantics at the drop location to support the notion of linking in addition to the traditional copy-paste and cut-paste a.k.a. “move”.
+
+Fundamental to the notion of clipboard is the idea that there are potentially many representations for a given piece of content. This is where the bridging between presentation and domain model takes place. The clipboard can capture many representations at once — allowing the receiving application, in concert with the user to select precisely the level of presentation versus domain meaning desired. When pasting a circuit diagram (model) into an engineering report a presentational representation may be chosen, whereas when pasting the same content into a circuit simulation tool, a domain-specific (circuit modeling) representation may be chosen.
+
+Could the original notion of the clipboard be updated to fit the Web Application architecture? Clearly the benefits would be significant. A new model, allowing web applications to leverage one another under user control means that smaller bets and therefore more bets can be made (by product vendors). More bets means more vendors, more applications, and more functionality delivered sooner to the 2.0 Web. While less can certainly be a competitive advantage to a product vendor, that advantage is only amplified in an environment where users can combine the functions of multiple products. If cut and paste and even Compound Documents were useful in the old platforms then they’re potentially much more useful now given the explosion of open, standard XML vocabularies. 
+
+===What needs to be done for a web applications clipboard paradigm===
+
+"If a source application could somehow get a standard “web application clipboard” structure onto the desktop clipboard, and if that structure could be sent by the user to a destination web application then the opportunity would arise for users to create “on the fly” Mash Ups. Users would recapture their lost ability to bridge applications requiring various levels of meaning (remember the circuit diagram example?) Web Applications could be combined by mere mortals in ways unforeseen by the original designers.
+
+So what do we need to do to make it happen? Do we need to form a technical committee in a standards body? Do we need to go make a pitch to the software industry Old Guard? Sounds like it could take a long time and involve a lot of risk.
+
+No I don’t think we need to do anything so heavy weight. Who’s in charge here anyway? We don’t have to ask anyone’s permission, and we really don’t have to ask for anyone’s help. Here’s how I see it going down:
+
+   
+1. we agree on a standard, almost trivial, vocabulary for describing the clipboard itself. http://www.lesscode.org/clipboard/v0p1
+   
+2. ECMAscript for capturing the cut and copy gestures (in a source application), sends an XMLHttpRequest to the source web application, along with the current “selection” and a command verb — one of “identify”, “copy” or “cut”. Here “selection” is a URI ending in an XPointer identifying the XHTML designated by the user. http://www.lesscode.org/clip-source-request/v0p1
+   
+3. The web application returns a clipboard structure. The structure may contain multiple representation elements. The elements have a well-defined order so that the receiving application knows where the most “presentational” representations are and where the most “domain specific” ones are. Note that the source application may choose in the case of “copy” to place content in the representations either “by value” or “by reference”. The latter necessitates subsequent communication between the destination application and the source application. In the case of “cut”, the content is always returned by value. In the case of “identify” it’s always returned by reference. The “identify” verb is for future expansion to support drag and drop gestures. schema: 
+
+http://www.lesscode.org/clip-source-response/v0p1 and sample instance document: http://www.lesscode.org/clip-source-response/sample-1
+   
+4. ECMAscript for capturing paste gesture (in destination applications), sends an XMLHttpRequest to the destination application along with the current destination selection (a URI ending in an XPointer) and the current web application clipboard structure and a command verb — either “paste” or “link”. In the case of “paste” the destination application will either paste the content directly from the clipboard (if the content is provided by value) or will acquire the content from the source application (if the content was provided by reference). http://www.lesscode.org/clip-destination-request/v0p1
+   
+5. The destination web application returns a status code. http://www.lesscode.org/clip-destination-response/v0p1
+
+This basic scheme will support copy/paste and cut/paste gestures today and set the stage for drag with drop-copy, drop-move and drop-link later. By focusing first on “by value” cut/copy and paste we avoid thorny issues of distributed trust. The user is in control of the clipboard and there is no direct application to application communication required."
+(http://lesscode.org/2005/10/21/baby-steps-to-synergistic-web-apps/)
+
+
+=More Information=
+
+The full entry with 20+ comments at
+http://lesscode.org/2005/10/21/baby-steps-to-synergistic-web-apps/
+
+Ray Ozzie proposes a similar Live Clipboard approach at
+http://rayozzie.spaces.live.com/blog/cns!FB3017FBB9B2E142!285.entry
+
+[[Category:Standards]]
+
+[[Category:Technology]]

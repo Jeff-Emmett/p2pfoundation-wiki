@@ -1,0 +1,108 @@
+
+= a [[Free Software Business Model]]; Open Core for me means you provide a free software product, improve it, and don’t release the improvements under the free software licence [http://www.neary-consulting.com/index.php/2010/07/19/rotten-to-the-open-core/]
+
+=Description=
+
+Carlo Daffara:
+
+"Open Core (previously called “split Free Software/proprietary” or “proprietary value-add”): this model distinguishes between a basic Free Software and a proprietary version, based on the Free Software one but with the addition of proprietary plug-ins. Most companies following such a model adopt the Mozilla Public License, as it allows explicitly this form of intermixing, and allows for much greater participation from external contributions without the same requirements for copyright consolidation as in dual licensing. The model has the intrinsic downside that the Free Software product must be valuable to be attractive for the users, i.e. it should not be reduced to “crippleware”, yet at the same time should not cannibalise the proprietary product. This balance is difficult to achieve and maintain over time; also, if the software is of large interest, developers may try to complete the missing functionality in Free Software, thus reducing the attractiveness of the proprietary version and potentially giving rise to a full Free Software competitor that will not be limited in the same way."
+(http://carlodaffara.conecta.it/?p=216)
+
+
+=Discussion=
+
+Matthew Aslett of the 451 group (one of the leading researchers in Free Software business models) wrote:
+
+“The Open-Core approach is mostly (though not exclusively) used by vendors that dominate their own development communities. While this provides benefits in terms of controlling the direction of development and benefiting from the open source distribution model there are also risks involved with promoting and managing community development - or not. In fact, many of these companies employ the majority of the developers on the project, so they are actually missing out on many of the benefits of the open source development model (more eyeballs, lower costs etc).
+
+Additionally, by providing revenue-generating features on top of open source code, Open-Core vendors are attempting to both disrupt their segment and profit from that disruption. I previously argued that “it is probably easier in the long-term to generate profit from adjacent proprietary products than it is to generate profit from proprietary features deployed on top of the commoditized product.”
+While Open-Core is definitely the commercial open source strategy of the day and is effective in building the revenue growth required to fuel an exit strategy, I have my doubts as to whether it is sustainable in the long-term due to a combination of the issues noted above.”
+(http://carlodaffara.conecta.it/?p=216)
+
+
+==Critique of Open Core==
+
+by Simon Phipps :
+
+“The idea of open core is simple enough. Here’s a modified quote from a business leader in a company that depends on an open core business-model. He said:
+“We deliver a fully functional production with our community edition. You can download it under a GPL v3 license. But, additionally, we provide enterprise features only if you pay for them. It’s open core.”
+
+While that sounds reasonable, there are important unstated issues in that approach. Before you decide to commit yourself to such an approach — either as a software supplier or a software consumer — it’s important to understand those issues and ensure the decision you’re taking is made in the light of that understanding.
+
+
+'''A game on software freedom'''
+
+All systems have loopholes. As we found in the previous section, any system contains within itself by implication the game that will exploit it. Exploiting the loopholes is almost always an unintended consequence of the system. That’s as true of open source as it is of anything else. The open core model exploits open source and is a game on software freedom. The fact the game is played does not invalidate software freedom, but it suggests we may need to revisit definitions and make this particular game harder to play.
+
+Open core is a game on rather than a valid expression of software freedom, because it does not cultivate software freedom for the software user. In an open core business, there is a core package that is open source and which delivers basic functions. That package can be used freely under the terms of an open source licence, and there’s no issue involved at this point — as Andrew Lampitt, who coined the term “open core,” asserts:
+“… the customers enjoy, in a way, guarantee of liberty from the vendor; if things go sideways for the vendor, there is a sort of a ‘guaranteed escrow’ of the source code.”
+
+But to use the package effectively in production, a business probably won’t find the functions of the core package sufficient, even in the (usual) case of the core package being highly capable. They will find the core package largely ineffective without certain “extras,” and these are only available in the “enterprise version” of the package, which is not open source.
+
+To use those features, you are forced to be a customer only of the sponsoring company. There’s no alternative, no way to do it yourself if the value delivered doesn’t justify the expense involved or if you are time-rich and cash-poor. Worse, using the package locks you in to the supplier. If they prove a bad choice as a supplier, or if your business needs change, you have no real choice beyond “take it or leave it.” In many cases, ending your subscription with the supplier will mean losing your rights to use the enterprise version all together.
+
+
+'''Hiding the problem in plain sight'''
+
+It is typical of open core apologists to skip this point entirely, preferring to put opposition such as mine down to religious fundamentalism and trying to hide the problems in plain sight. They confuse “dual licensing” (which can respect customer liberties if the vendor chooses to make it so) with open core (which can’t) without observing dual licenses are not applied to the closed add-ons most “open core” vendors sell.
+
+They speak of “vibrant communities” but in most cases those are user communities, not communities of co-developers offering an alternative to the closed add-ons. They speak of “lively ecosystems” without noting that most open core vendors use their power over the code to try to ensure those ecosystems are built of partners, not alternatives. Open core is also not a guaranteed win, even for a great system like Compiere ERP. 
+
+According to Compiere founder Jorg Janke:
+
+“Compiere certainly did not fail due to its technology. It failed due to lack of sales and marketing expertise, execution and the wrong bet to ‘upgrade’ open source minded partners and customers to a traditional, commercial model. I think that the Commercial Open Source model is still valid, but Compiere overstepped the balance between proprietary and open product components.”
+
+This is not to say it’s never OK to wrap additional services around an open source project. In different ways, both the GPL-ish and BSD-ish wings of the open source movement depend on that ability.
+
+
+I asked a former president of the Apache Software Foundation how he viewed open core. 
+
+He replied:
+
+“Open core — as it is practiced within Apache — is that the functionality which makes the product compelling to its users is freely available and released through the auspices of the foundation. It is critical that the open offering be able to stand on its own and address the needs of the community or it will not be attractive enough to merit a diverse community which adheres to Apache’s standards. Since the open offering is released under a permissive license and developed in a transparent manner, the various collaborators within the Apache community — many of which have significant revenue streams or venture capital backing — are able to offer their own products which incorporate and complement the open option.”
+
+Yes, the whole premise of Apache was that its founders could share the various Apache projects as a “core” for other work, but in every case the Apache project is complete and sufficient for deployment at an enterprise level including “the functionality which makes the product compelling to its users.”
+
+As a well-known expert has said, some people have money and need time, and others have time and want money. Open source allows both to participate freely; open core does not.
+
+
+
+'''Open core harms software users'''
+
+To generalize the analysis, the problem with open core is that instead of delivering and cultivating software freedom, the open core business model induces dependency on closed software and lock-in to a vendor. Open core businesses hope that you will be willing to trade your freedom for tangible short-term benefits or even just for “shiny.”
+
+They stand to benefit massively from having you locked-in; they want to trade your freedom for their profit. So while open core businesses truthfully say they are sustaining open source core software, their actual business is nothing to do with open source. It’s a bait-and-switch, wrapping the same old lock-in in the flag of open source and hoping you won’t notice.
+
+This is not just a philosophical game. “Software freedom” may sound abstract, but it is the system of thinking behind the very practical and tangible benefits that have drawn vast numbers of businesses to use open source. As I have written previously, the four freedoms (to use, study, modify and distribute the software without restriction) have created a vast market by enabling cost savings and flexibility. So a business model that cultivates a casual disregard for and discarding of those liberties while pretending otherwise deserves to be challenged.
+
+If you are a software vendor, please respect your customers’ freedoms. Help them see that they are worth paying for. If you choose not to, remember that just because the business model you have chosen demands that you withhold software freedom from your customers, that doesn’t mean the only way to do business around open source involves doing the same. Don’t hide a desire for control that you can artificially exploit behind apparently good words about deserving to make a profit.
+
+If you’re an enterprise software consumer, it’s crucial you cultivate your degrees of freedom. They are the source of your ability to respond to changed market conditions; to negotiate with suppliers strongly because you always have choices that allow you to walk away from any deal; to hire staff from a free market beyond any vendors’ control; to expect constant new innovation because the market in which you purchase remains competitive. Ultimately, to save money by surrendering your freedoms will mean you never save money again.”
+(http://radar.oreilly.com/2012/07/open-source-enterprise-strategies.html)
+
+=Example=
+
+Neary:
+
+"First, companies can’t be Open Core. Products are Open Core. So whereas Monty considers that from 2006 on, MySQL was not an “Open Source company”, I would contend that MySQL Server has always been, and continues to be, Free Software, and an Open Source product. That is, not Open Core.
+
+'''Open Core for me means you provide a free software product, improve it, and don’t release the improvements under the free software licence'''. In my mind, Mac OS X is not “Open Core” just because it’s based on the NetBSD kernel, it is proprietary software.
+
+Perhaps it would be useful to give some examples of what is Open Core:
+
+Jahia is Open Core - significant features and stabilisation work are present in the Enterprise Edition are not available at all in the Community Edition 
+SugarCRM is obviously Open Core. Key features related to reporting, workflow, administration and more are only present in the commercial editions 
+JasperSoft BI Suite is Open Core. Lots of useful features are only available to people buying the product. 
+The key here is that support contracts and extra features are only available if you also pay licensing fees. To take the oft-cited example of InnoDB hot back-up tool for MySQL, you can purchase this and use it with the GPL licensed MySQL Server.
+
+This is why I say that Open Core products “don’t do exactly what it says on the tin” - the features you see advertised on the project’s website are not available." 
+(http://www.neary-consulting.com/index.php/2010/07/19/rotten-to-the-open-core/)
+
+
+=More Information=
+
+#[[Free Software Business Models]]
+#[[Dual Licensing]]
+
+
+[[Category:Business]]

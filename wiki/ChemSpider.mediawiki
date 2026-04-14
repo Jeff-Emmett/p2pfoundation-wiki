@@ -1,0 +1,55 @@
+
+
+=Description=
+
+Antony Williams:
+
+"Firstly, what is ChemSpider? At present it is primarily a large database of chemicals and related data linked out to the original sources of the data. What we’re been working towards is having ChemSpider be a “structure-centric” resource. If you want to find information associated with a chemical structure/compound and you know either its name(s) or its chemical structure then you can search the database and find associated information and data. The data are of various forms and include lists of chemical identifiers, experimental and predicted properties, analytical data, textual descriptions including synthesis procedures and Wikipedia articles, links to related information and data sources.
+
+How might this be of interest to you? You likely know the drugs associated with the treatment of amyotrophic lateral sclerosis. For example, Riluzole is an approved drug and you can find it on Wikipedia. Doing a search on that name on ChemSpider will provide access to hundreds of patents, to a long list of PubMed articles, to property data, a long list of alternative identifiers and a long list of links integrating to tens of other databases. The structure is here.
+
+In a similar way anyone interested in particular compounds or drugs and the information associated with the drug will be able to use ChemSpider as a search engine to access the information. The amount of data and number of data sources is increasing on an ongoing basis and you can consider ChemSpider as a unifying interface and aggregator of information and links.
+
+It is also a platform for deposition and curation. Some of this will be detailed further in our discussions but any scientist can deposit their chemical structures and compound collections onto ChemSpider to share with the public. Various forms of data can be added and scientists can participate in the validation of data and links associated with chemical compounds. As they expand or assist in cleaning the data, everyone wins. The quality of the data improves and there are fewer chances of errors proliferating across the databases as data reuse expands via semantic web integrations. While ChemSpider data are not yet pure, a major challenge with over 20 million unique compounds (!) we continue to work hard on this and lots of chemists are helping out.
+
+You asked “Why average people who are ill should care about ChemSpider and the wider world of Open Science?”. At present I would say that ChemSpider isn’t easily digestible by the public and that they’d encounter information overload in a similar way to that experienced searching the CAS Registry or PubMed. It is a system for people with experience in Chemistry but we do have intentions of delivering different “views” of the data for other groups to use – for example, students will benefit from our intention to deliver ChemSpider Education in the future. I believe that humanity as a whole should care about Openness in science as there is so much evidence from various scientific fields at this point that openness and access to data can be beneficial to analysis, generation of fresh hypotheses and international collaboration."
+(http://www.altsearchengines.com/2010/01/10/a-talk-with-antony-williams-of-chemspider/)
+
+
+
+=Characteristics=
+
+Antony Williams:
+
+"'''Structure Centric Community'''
+
+Chemical compounds encompass a broad distribution. There are those that have been fully characterized and defined and can be represented in terms of a chemical structure diagram and in our specific case in the form of a “connection table” of atoms and bonds. There are then those chemicals that are materials with specific compositions, for example minerals, or a distributed composition, for example polymers with a distribution of molecular weights and end groups. ChemSpider presently is limited to dealing with “structures” that can be represented with a connection table. The community aspect is twofold: ChemSpider as a resource is provided for the benefit of the community but we also intend for the community to participate in the enhancement of the data quality and content.
+
+
+'''Deposition and Curation Platform'''
+
+ChemSpider is a platform where the chemistry community can deposit their own chemical structure collections and enhance the existing database by adding new data or curating existing information. They can add or curate chemical names or identifiers, add images (pictures of crystals for example), add analytical data such as NMR, MS or IR spectra, deposit textual descriptions of synthetic procedures and so on. The curation capabilities allow the quality of the database to be enhanced edit by edit and the multi-level curator pecking order allows for iterative checking and validation.
+
+
+'''Publishing Platform'''
+
+ChemSpider was extended to provide the ChemSpider Journal of Chemistry, a platform where “publications” could be deposited and enhanced with “Semantic markup,” the process whereby terms within the online publication are linked out to other resources online. In our case we focused on connecting chemical names to chemicals within ChemSpider, chemical terms to Wikipedia (e.g. reaction names) and embedding live analytical data. This is presently being extended to provide a platform for hosting synthesis procedures.
+
+
+'''Interactive Platform for Chemists'''
+
+ChemSpider is interactive in a number of ways including 1) the ability to extend, enhance and improve the data; 2) interact with live analytical data by using viewing tools such as spectral viewing applets; 3) using tools for the prediction of properties for structures submitted by users – these tools can be used even for compounds that are not in the ChemSpider database; post comments for any record so that the curators can comment and respond.
+
+
+'''Chemistry Search Engine'''
+
+Chemists use the internet to search for chemistry related information. They can be searching for various types of information and data including: what is the chemical structure associated with a particular chemical identifier, physical properties of the compound, analytical data, how to synthesize a specific material, where to buy a specific material and so on. ChemSpider has the ability to answer these questions and many more, though not for all chemicals of course. ChemSpider is more of a chemical search engine than a chemistry search engine at present…you would search for a particular chemical in a number of ways and then find associated data. A “chemistry” search engine would be more encompassing and not be limited to information limited to chemicals only. This is one reason we are moving into synthesis procedures at present and will expand further from explicit chemicals into more general chemistry in the future.
+
+
+'''Database'''
+
+ChemSpider sits of a database of diverse data associated with millions of chemical structures. The database itself is Microsoft SQL Server and what we have done is built a data model onto SQL server and populated the database with chemistry-related content."
+(http://www.altsearchengines.com/2010/01/10/a-talk-with-antony-williams-of-chemspider/)
+
+
+[[Category:Science]]

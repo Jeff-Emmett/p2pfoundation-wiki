@@ -1,0 +1,80 @@
+== <span class="p-summary summary">IndieWebCamp</span> ==
+Own your data.
+
+Rather than posting content on third-party silos of content, we should all own the content we're creating. Publish on your own domain, and syndicate out to silos. 
+
+IndieWebCamp is an annual gathering of web creators building and sharing open web technologies to empower users to own their own identities &amp; content on the web, and advance the state of the indie web. 
+
+== Why Indie Web ==
+* You're '''afraid''' of [http://i.i.com.com/cnwk.1d/i/tim/2012/06/01/MobileMeReminder.png losing your photos and files][http://howto.cnet.com/8301-11310_39-57445683-285/apple-reminds-users-of-mobileme-closure/][http://www.nytimes.com/2012/06/07/technology/personaltech/goodbye-mobileme-hello-smugmug-dropbox-and-jimdo-state-of-the-art.html?pagewanted=all] (MobileMe closure).
+* You're '''frustrated''' by the [http://farm1.staticflickr.com/186/420426227_dda4d24789_o.png downtime][http://www.flickr.com/photos/tantek/420426227/] ([https://www.google.com/search?q=site%3Ablog.flickr.net+massage Flickr down]), [http://gigaom2.files.wordpress.com/2012/06/twitter-outage-chart-downrightnow.png outage]([http://gigaom.com/2012/06/21/twitter-outage-thursday-morning-frustrate-users/ 2012-06-21 Twitter outage]), [http://farm6.staticflickr.com/5210/5322875194_908d728816_b.jpg maintenance]([http://www.flickr.com/photos/tantek/5322875194/ Twitter maintenance]), [http://farm3.static.flickr.com/2571/3927590515_c3c6be51a9_o.png unscalability]([http://www.flickr.com/photos/factoryjoe/3927590515/ Twitter over capacity]), and [http://farm6.staticflickr.com/5046/5331910087_585181744c_o.png database failures]([http://www.flickr.com/photos/tantek/5331910087/ Tumblr database issues]) of web content hosting services.
+
+* Your '''account was frozen''' because Google decided that you [http://articles.businessinsider.com/2011-07-14/tech/29953907_1_google-services-google-account-google-rules violated the Google+ ToS] (or [https://plus.google.com/115878613002809583306/posts/WsWj4CEhaK3 violated] their GMail ToS) and now you can't login to all those services you signed up for... using your Google ID. [http://ehsanakhgari.org/blog/2012-04-14/how-i-lost-access-my-google-account-today], [http://www.washingtonpost.com/blogs/blogpost/post/hey-google-thanks-for-making-my-daughter-cry/2011/12/12/gIQAhYx9pO_blog.html], [http://www.reddit.com/r/technology/comments/n9l3a/hey_google_thanks_for_making_my_daughter_cry/], [https://plus.google.com/114311896476820866022/posts/QkKTxAbKGdq]: "There's no legal reason behind Google's decision to block my daughter's account. They've chosen to implement these age restrictions in this particular way. They've chosen to lock up my daughter's data without warning. They've chosen to threaten to delete the data."). Maybe you [http://www.huffingtonpost.com/jeff-jarvis/anti-washington-sentiment-_b_908117.html got bumped off Twitter for tweeting too much].
+* Or you've been '''disappeared''' from a hosting service, e.g. suffered from [http://www.zephoria.org/thoughts/archives/2011/04/27/tumblr-disappeared-me.html '''involuntary identity re-assignment'''] (perhaps due to trademark claims or other intimidation).
+
+* Your [http://waxy.org/2012/03/youtube_bypasses_the_dmca/ '''content was taken'''] and its ownership errantly transferred to a big content copyright holder / media company. (YouTube video upload, 2012)
+
+* Or you've '''lost content''' due to a [https://github.com/blog/744-today-s-outage production database being blown away], an [http://etherpad.com/transition.html acquisition shutdown], or [http://news.cnet.com/8301-13577_3-10110443-36.html post-acquisition migrations] to services which were subsequently [http://closing.vox.com/ shut down]. 
+** See [[site-deaths]] for chronology.
+
+Whatever the reason, you're done with sharecropping your content, your identity, your self.
+
+Our content is becoming more important, and sometimes even critical to our lives. It is not secure in the hands of random startups, organizations and web companies. We should be the holders of our own data.
+
+==Why Indie Web Camp?==
+* You're here because you know this and you want to design and build a web presence where you're in control.
+
+* Maybe you bought your own domain for vanity reasons but now want to put it to good use.
+
+We, the organizers of IndieWebCamp want that as well, and have started building it for ourselves.
+
+Join us and together we can grow the IndieWeb.
+
+= Getting Started on the IndieWeb =
+
+Perhaps you relate to all the reasons why you should be on the indie web but you're not sure how.
+
+Here are a few simple steps you can take to get you on your way to being on the indie web. Each of these steps is a just a bit more challenging and will make you a bit more indie.
+
+== Personal Domain ==
+Second, you need your own personal online identity:
+* get your own personal domain name (ask a friend or colleague for a domain name registrar that they use and like/trust/respect etc.)
+* get your own personal short URL domain name (again, ask for advice on specifics)
+
+== Redirect ==
+Third, create a redirect from your personal domain to whereever you're currently publishing most of your textual content.
+* These days Tumblr.com (preferred due to free domain mapping) or Wordpress.com are popular content hosting choices for easily getting started with publishing content publicly on the web. Get an account at one of those or a personal wiki site like pbworks.com if you don't already have one.
+* Setup a redirect from your domain name provider's control panel from your personal domain to your Tumblr, Wordpress or PBWorks account.
+* This will allow you to share URLs with your personal domain that redirect to those hosted services.  This is better than simply sharing URLs directly to those hosted services because in the future you can setup your site to serve those URLs directly rather than having them handled by a hosted service.
+* A redirect still has the disadvantage though that when people click on your URLs with your personal domain name, their browser will redirect them (and show them) the hosting service URL (e.g. user-example.tumblr.com rather than user-example.com), thus if they reshare this URL by copy/pasting they won't be using your personal domain.
+
+== Hosted Solution ==
+Fourth, change from a redirect to a hosted domain solution
+* Both Tumblr (and Wordpress.com) can be setup to serve your personal domain for you.
+** Tumblr (free) instructions: http://www.tumblr.com/docs/en/custom_domains
+** Wordpress.com (for pay) instructions: http://en.support.wordpress.com/domain-mapping/
+* The advantage of using a hosted domain solution over a redirect is that when people click on your personal domain URLs that you share, that's the URL they'll see in their browser, and reshare with their friends. This is perhaps the best stopgap indieweb solution short of actually hosting your own content on your own domain. It's not quite indieweb however, as you're still vulnerable to all the same content-hosting-service problems (downtime, ToS, content ownership, sharecropping, etc.)
+
+== Web Hosting ==
+Fifth, sign up for web hosting
+* Sign up with a web hosting provider (ask friends and colleagues who they use for their personal websites that they're happy with, also see Lifehacker's [http://lifehacker.com/5911651/five-best-web-hosting-companies list of 5 best web hosting companies])
+* Setup your domain name to be served by your web hosting provider
+* Upload a simple HTML index.html home page to get started with your [http://microformats.org/wiki/hcard-authoring hCard] and rel="me" links to all your other social network profiles.
+** Use the [http://microformats.org/code/hcard/creator hCard creator] form to quickly make an hCard and then add more URLs (with rel=me hyperlinks) for each of your other online profiles.
+* Set it up with web sign-in so you can log-in to this wiki.
+* Advantage: while you're not sharing your content on your own site (yet), you've staked your claim on the indie web, and taken a small but important step to declaring your independence from content silos.
+
+== Setup Content Publishing ==
+Sixth, setup content publishing on your domain.
+* Take a look at indie web Projects, pick one, and install it or set it up (e.g. your web hosting provider may have a "cPanel" control panel (or [http://en.wikipedia.org/wiki/Fantastico_%28web_hosting%29 Fantastico]) which can setup a WordPress install in a few clicks).
+
+== Setup Personal Shortlinks ==
+Seventh, setup your personal URL shortener.
+* For WordPress, install and use the [http://willnorris.com/2011/01/hum-personal-url-shortener-wordpress Hum personal shortener plugin].
+* For others, take a look at porting the existing open source [http://tantek.com/w/Whistle Whistle] algorithmic URL shortener to your system.
+
+== Post Once Syndicate Everywhere ==
+Eighth, setup syndication so copies of your Indie Web content are published (semi-automatically) to social silos whenever you wish them to be, along with a personal permashortlink or citation identifier back to the original on your own site.
+
+== Links ==
+*[http://indiewebcamp.com/Projects Projects]

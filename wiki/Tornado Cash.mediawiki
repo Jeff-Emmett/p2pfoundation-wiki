@@ -1,0 +1,43 @@
+
+=Discussion=
+
+[[Blockchain Technology and Polycentric Governance]]:
+
+"* '''The sanctions on [[Tornado Cash]] by the United States’ OFAC in 2022''' illustrate the challenges for blockchain systems in achieving exogenous legitimacy. Importantly, it highlights the risks individuals such as founders or software developers face in blockchain projects, showing how legal actions can still target them, which can profoundly affect the entire blockchain system.
+
+...
+
+Initially released in 2019, Tornado Cash is a collection of open source smart contracts on Ethereum that provides privacy for cryptocurrency transactions. It operates by breaking the on-chain link between a sender’s and a recipient’s addresses. To do so, Tornado Cash allows users to send cryptocurrency to a smart contract from one address and withdraw to another address after mixing the users deposits (Chainalysis 2023). In this way, the public link between the deposit and withdrawal addresses is obfuscated, without the user ever losing control over their cryptocurrency. 
+
+Tornado Cash became quite popular among users seeking privacy for their Ethereum and other cryptocurrency transactions, particularly those who valued anonymity for legitimate personal or business reasons, as well as those concerned about the public nature of blockchain transactions. At its peak, its transaction volume reached USD 2.8 billion (Malwa 2023). Popularity was not just limited to individuals seeking privacy; it also attracted attention from various entities and developers interested in the broader applications of privacy-preserving technologies within the blockchain ecosystem. For example, Tornado Cash's innovative use of cryptographic proofs (such as zero-knowledge proofs) to enable privacy without sacrificing the security and integrity of transactions was a significant contribution to the field of blockchain technology. 
+
+Popularity also came with controversies. As one might expect, this service can be used for both legal privacy-preserving purposes and illegal purposes. Soon enough, Tornado Cash was subject to regulatory scrutiny for allegations of it being used for money laundering and terrorist financing (Wade et al. 2022). In August 2022, the US Treasury’s Office of Foreign Assets Control (OFAC) sanctioned Tornado Cash. The initial and subsequent sanction notices (US DOT 2022a, 2022b) explicitly mention the use of Tornado Cash by a collective of North Korean hackers for laundering proceeds from their hacks of US-based crypto-firms and for assisting sanctioned North Korean governmental entities. This sanction was introduced despite Tornado Cash’s own efforts to add a third-party tool that would block crypto-wallets tied to individuals and entities that had been sanctioned by OFAC from accessing the front-end of the Tornado Cash dApp (Gkritsi 2023). The smart contracts, nonetheless, were still accessible by sanctioned entities and individuals through the InterPlanetary File System (IPFS). 
+
+Soon after the sanctions were announced, Tornado Cash developers ‘went dark’ or ceased public activity, and the platform’s interface went down, although the smart contracts were still accessible and the system continued to be used. Following the sanctions, Flashbots—one of the most popular Ethereum clients—enabled the filtering of transactions linked to Tornado Cash’s sanctioned addresses. Consequently, over half of Ethereum’s block producers started to block Tornado Cash transactions, regardless of their own exemption from OFAC sanctions (Carreras 2022). Most significantly, on 10 August 2022, one of the Tornado Cash software developers was arrested in the Netherlands and was indicted by the Dutch Public Prosecutor for allegedly writing code for software that facilitates money laundering (FIOS 2022). 
+
+The US OFAC sanctions targeted Ethereum smart contracts, sparking a significant debate within the blockchain ecosystem about privacy, free speech, and the extent of regulatory oversight. Some argued that sanctioning smart contracts exceeded the power granted to the Treasury Department, given that it could only impose sanctions on individuals, not software. They also alluded that the sanctions were an attack on the First Amendment of the US Constitution, particularly the right to freedom of speech, by highlighting legal precedents that recognized computer code as a type of language and software as a form of expression (Opsahl 2022, Reynolds 2023b). Others disagreed with the argument that the sanctions were indeed restraining free speech and saw the measures taken as necessary: “Researchers are not prohibited from copying, posting, ‘discussing, teaching about, or including open-source code in written publications, such as textbooks.’ (...) OFAC’s actions are aimed at preventing persons from using software applications that undercut one of the most basic functions of government: regulating activities that it deems endangers national security” (Farrell and Schneier 2022). 
+
+An important architectural feature of the project is that the Tornado Cash system was intentionally designed to be polycentric and its smart contracts were purposefully immutable and unstoppable. As the Tornado Cash team explained on 20 May 2020, the aim was to live “by the precepts that code is law” (Tornado Cash 2020a). In January 2022, Tornado Cash co-founder Roman Semenov told CoinDesk: “There is not much we can do in terms of helping investigations because the team doesn't have much control over the protocol” (Reynolds 2022a). This meant that, once deployed, the smart contracts cannot be altered or controlled by any single entity, including the development team or participants in Tornado Cash’s decentralized autonomous organization (DAO), which governs the Tornado Cash protocol. The Tornado Cash DAO was created to allow for certain aspects of the Tornado Cash protocol to evolve through decision-making by the DAO’s members, while nonetheless preserving the immutability of the smart contracts that pool and redistribute the cryptocurrencies (Tornado Cash 2020b). 
+
+
+The Tornado Cash case study illustrates many crucial aspects of the governance of blockchain polycentric systems: 
+
+Firstly, despite the operational autonomy of smart contracts, the enforcement of sanctions against Tornado Cash shows the impact of legal and regulatory pressures on blockchain polycentric networks.
+ 
+The detention of one of the Tornado Cash software developers exposed the limitations of deeming blockchain technology “alegal,” since individuals involved in blockchain projects can still be targeted by legal actions, even when smart contracts cannot be unilaterally “stopped.” 
+
+The reaction of other interconnected blockchain systems such as Flashbots and the Ethereum network block producers show a different aspect of systemic risks. The impact of regulatory enforcement can, indeed, also spread out across the blockchain ecosystem beyond the targeted entities. 
+
+Secondly, it shows how a blockchain polycentric system that may enjoy endogenous legitimacy can still face inherent challenges in achieving exogenous legitimacy. 
+
+For “insiders” that valued precepts such as “code is law” and privacy-preserving technologies, Tornado Cash was likely to meet their expectations and thus be perceived as endogenously legitimate. 
+
+However, some “outsiders” saw those same architectural features as catalysts of negative externalities, such as threatening US national security by facilitating money laundering and financing of terrorist activities.  
+
+Together, these aspects underscore the ongoing struggle to strike a balance between the need to abide by the principles and ideologies of blockchain systems in order to achieve endogenous legitimacy, and the need to comply with external regulatory pressures in order to enjoy exogenous legitimacy."
+
+([https://docs.google.com/document/d/1RmPoALlyKAKFJECDYYNa43NuzY9cOs9JfiEJiOXjxLE/edit])
+
+[[Category:Crypto Governance]]
+
+[[Category:Crypto Economy]]

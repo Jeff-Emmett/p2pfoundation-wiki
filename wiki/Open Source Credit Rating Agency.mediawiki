@@ -1,0 +1,97 @@
+=Description=
+
+Matthew Weinschenk:
+
+"Opening the Door to Transparent Ratings
+
+This week, PF2 Securities released the [http://www.publicsectorcredit.org/pscf.html Public Sector Credit Framework] (or PSCF) – powerful modeling software that outputs the probability of default for national, state, or local governments.
+
+Here’s how it works…
+
+First, the user sets a wide range of assumption for GDP growth, tax revenue, expenditures, population and inflation, to name a few.
+
+Second, they set what thresholds should be considered as a default.
+
+Finally, the software simulates thousands of outcomes using a mathematical model called a Monte-Carlo simulation to determine the probability of default. And, voila! You have the basis for a credit rating.
+
+Of course, every bank, investment firm and ratings agency has software like this. But the thing that makes PSCF different is that PF2 Securities released the software’s entire code to the public as open source.
+
+Using the open-source development model allows anyone to freely access, examine, improve and redistribute the software that PF2 has developed. This typically means that additional features and improvements in the code happen at a much faster rate than with closed source (or proprietary) software.
+
+But the point isn’t more efficient software development, nor is it for individual investors to start modeling default scenarios. It’s not even to give people an edge in the market. Instead, the real purpose of releasing the software as open source is to allow for transparent, honest comparisons between ratings.
+
+After all, the real crux of an accurate prediction is the method of analysis and economic assumptions made – precisely what S&P and Moody’s are keeping secret.
+
+What PSCF achieves – and what S&P and Moody’s prevent – is a common language, method and framework for discussing risk for investors and policy makers.
+
+So rather than accept the big firms’ rating as gospel, anyone can investigate scenarios based on their own ideas and predictions.
+
+PSCF is an important step toward transparency among the financial institutions that wield so much power (especially since the creator, Marc Joffe, is a former senior director at Moody’s)."
+
+Similar projects that describe how mortgage applications are approved or how federal allocations affect the budget would serve the public interest significantly."
+(http://www.wallstreetdaily.com/2012/05/08/are-we-witnessing-the-start-of-a-ratings-revolution-psc/)
+
+
+=Discussion=
+
+Cathy O'Neil:
+
+"'''Reasons to have an open source ratings model''':
+
+ 
+The current rating agencies have a reputation for bad modeling; in particular, their models, upon examination, often have extremely unrealistic underlying assumptions. This could be rooted out and modified if a community of modelers and traders did their honest best to realistically model default.
+   
+The current ratings agencies also have enormous power, as exemplified in the past few days of crazy volatile trading after S&P downgraded the debt of the U.S. (although the European debt problems are just as much to blame for that I believe). An alternative credit model, if it was well-known and trusted, would dilute their power.
+    
+Although the rating agency shared descriptions of their models with their clients, they weren’t in fact open-source, and indeed the level of exchange probably served only to allow the clients to game the models. One of the goals of an open-source ratings model would be to avoid easy gaming.
+    
+Just to show you how not open source S&P is currently, check out this article where they argue that they shouldn’t have to admit their mistakes. When you combine the power they wield, their reputation for sloppy reasoning, and their insistence on being protected from their mistakes, it is a pretty idiotic system.
+    
+The ratings agencies also have a virtual lock on their industry- it is in fact incredibly difficult to open a new ratings agency, as I know from my experience at Riskmetrics, where we looked into doing so. By starting an open source ratings model, we can (hopefully) avoid issues like permits or whatever the problem was by not charging money and just listing free opinions.
+
+ 
+'''Obstructions to starting an open source ratings model:'''
+
+It’s a lot of work, and we would need to set it up in some kind of wiki way so people could contribute to it. In fact it would have to me more Linux style, where some person or people maintain the model and the suggestions. Again, lots of work.
+    
+Data! A good model requires lots of good data. Altman’s Z-score default model, which friends of mine worked on with him at Riskmetrics and then MSCI, could be the basis of an open source model, since it is being published. But the data that trains the model isn’t altogether publicly available. I’m working on this, would love to hear readers’ comments.
+
+ 
+'''What is an open source model?'''
+
+The model itself is written in an open source language such as python or R and is publicly available for download.
+    
+The data is also publicly available, and together with the above, this means people can download the data and model and change the parameters of the model to test for robustness- they can also change or tweak the model themselves.
+    
+There is good documentation of the model describing how it was created.
+    
+There is an account kept of how often different models are tried on the in-sample data. This prevents a kind of data fitting that people generally don’t think about enough, namely trying so many different models on one data set that eventually some model will look really good."
+(http://mathbabe.org/2011/08/11/open-source-ratings-model/)
+
+
+
+=More Information=
+
+* [http://mathbabe.org/2012/05/22/an-open-source-credit-rating-agency-now-exists/ An open source credit rating agency now exists!]
+
+* In light of the intense criticism leveled against credit rating agencies for their perceived failure to analyze adequately sovereign creditworthiness, the Bertelsmann Foundation has developed a blueprint for an international non-profit credit rating agency (INCRA), whose rating criteria are designed to increase credibility and international acceptance. [http://www.bertelsmann-stiftung.de/cps/rde/xchg/SID-7E930054-4D501042/bst_engl/hs.xsl/nachrichten_112089.htm]
+
+* Financial Times Alphaville blog at http://ftalphaville.ft.com/blog/2012/05/02/983041/monte-carlo-simulated-sovereign-credit/.
+
+* The download page for the software and sample models is http://www.publicsectorcredit.org/pscf.html and the repository is at http://www.github.com/joffemd/pscf.html.
+
+* The rationale for developing this model is presented in four posts on PF2's ExpectedLoss blog. These are:
+
+#Are Sovereign Ratings Too Subjective? A Belated Response to Nate Silver http://expectedloss.blogspot.com/2012/04/substandard-and-porous-belated-response.html
+#Pro Bono Finance http://expectedloss.blogspot.com/2012/04/pro-bono-finance.html
+#Credit Rating Agency Models and Open Source http://expectedloss.blogspot.com/2012/04/credit-rating-agency-models-and-open.html
+#Multiple Rating Scales: When A Isn't At A http://expectedloss.blogspot.com/2012/04/multiple-rating-scales-when-isnt.html 
+
+
+[[Category:Money]]
+
+[[Category:Collaborative Economy]]
+
+[[Category:Economics]]
+
+[[Category:P2P Accounting]]

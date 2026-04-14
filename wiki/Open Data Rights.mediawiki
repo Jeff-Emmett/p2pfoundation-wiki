@@ -1,0 +1,44 @@
+See [[Open Data]]
+
+=Discussion=
+
+==What legal rights attach to data, either on its own, or as part of a database?==
+
+From Open Content Lawyer, at http://www.opencontentlawyer.com/2007/09/10/thoughts-on-drafting-an-open-data-licence/
+
+This has two parts — the data and the database. Let’s start with the data. Data, as a term for ‘the stuff in a database’ doesn’t have to be something that a person in a white labcoat and thick glasses collects in a beaker-filled laboratory. It can be anything that can be collected into a database: images, sound recordings, short stories, poems, and of course Beaker’s results.
+
+This set of information (the ‘data’) can be either homogenous or heterogeneous as to the legal rights that cover it. For a homogenous group of inforomation, one could apply a blanket set of terms that applies equally well if you just had one piece of the data (say, one image), or all of it. For a heterogeneous group of information, the ideal situation would be one where each independent piece of information also contained information about the rights associated with it. So one aspect of licensing data is the set of rights that govern the information independent of being collected into a database.
+
+Now when this set of information is collected into a database, what are the legal rights, and what do they cover? There are two:
+
+•	Copyright
+•	Database rights
+
+Copyright generally protects the selection and arrangement of the data into the database — much like how compilation CDs can have copyright over the arrangement of the songs, or the creator of an encyclopaedia can have copyright over the selection and arrangement that went into the volume. It can also cover individual parts of how the database is arranged, such as a field names or a data entry form. 
+
+In many jurisdictions, this copyright doesn’t extend to cover the data in the database — only the selection and arrangement of the data in that particular database. So if someone sucked out all the information and then came up with their own selection and arrangement (either with more information or by selecting only some of it), in many jurisdictions this would not be an infringement of the copyright in the database. Some jurisdictions however (famously Australia in the Telstra case) cover — by copyright — the effort that went into collecting the information into the database, and so there is some overlap with this kind of database copyright and the information independent of being in the database.
+
+In the European Union, there is also the sui generis database right, implemented in the Database Directive. This right, separate from copyright, covers the extraction and re-utilisation of the whole or a substantial part of the data. This means that it covers areas where copyright would not, especially under the standards set for copyright in the Directive itself (which are higher than in some jurisdictions). Mainly the sui generis database right prevents users of the database from taking the data outside of the database in ways that would not infringe database copyright (such as creating a whole new database). It also protects (or tries to protect) database makers that put a substantial investment into creating a database, even if the selection and arrangement of the database does not meet the threshold of having a copyright.
+
+From a European perspective, there are several points resulting from the above about licensing data:
+
+1.	it should cover any copyright over the database
+
+2.	it should cover any database rights; and
+
+3.	it can either try to cover the data independent of the database or it can leave this for another licence
+
+
+This is what we’re trying to do with the TCL 2.0 — cover the two main legal rights and make a decision about covering the third — covering the data. I think in order to be really useful, the answer to the third point is that it can’t try to cover the rights associated with the information independent of any database. Database rights can cover too many different kinds of information to try to make a licence that covers only factual (presumably not copyrighted) information. Plus a single-licence approach would be unworkable if you wanted to apply it on a database of, say, open content where all of the content was ‘open‘ but the licences were different. 
+
+Separating out the database rights from the rights over the data also allows for people not to overassert their rights by trying to claim copyright over data that can’t have copyright. In reviewing some current databases that use CC licences, many seem to think that the CC licence covers any data separate from the database, which I would disagree with, at least in the case of those dealing only with database copyright. In this way, two licences also allow for greater clarity over the rights associated with the work (by both licensors and users) apart from the database. In a following post I’ll discuss some of the implications of having two licences. In the end, I don’t think the difficulties of consulting two different licences will outweigh trying to have it all in one package.
+(http://www.opencontentlawyer.com/2007/09/10/thoughts-on-drafting-an-open-data-licence/)
+
+[[Category:IP]]
+
+[[Category:Design]]
+
+[[Category:Open]]
+
+[[Category:Open Data]]

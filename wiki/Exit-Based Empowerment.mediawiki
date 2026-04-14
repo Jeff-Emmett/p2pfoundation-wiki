@@ -1,0 +1,35 @@
+
+'''= an aspect of [[Peer Governance]] related to [[Forking]], tempering the power of the [[Benevolent Dictator]] aspect'''
+
+=Description=
+
+Source: Book: [[Multi-Stakeholder Governance and the Internet Governance Forum]]. Jeremy Malcolm. Terminus, 2008, from a draft version of chapter 4
+
+Jeremy Malcolm:
+
+"the examples given of open source projects in which a significant hierarchical structure exists or has existed—the Linux kernel, Mozilla, OpenOffice.org, Apache, and Ubuntu—all are the most widely-used open source projects in their class, and have large and active communities of developers.
+
+How can this be reconciled with the earlier hypothesis that it was the very lack of hierarchy that empowered developers and attracted them to volunteer their services to open source projects?
+
+Despite the fact that its significance to developers had earlier been downplayed, the answer is found in the open source licence. It is the open source license that enforces benevolence upon the dictator. It does this by ensuring that for any open source project, there is always relatively costless freedom of exit, in that any developers who feel they are being oppressed by a project leader can simply cease participating in the project, take its source code, and use it as the base for a new project of their own (known as a “fork” of the original project). This “exit-based empowerment” enjoyed by developers mitigates the power of the project leaders.
+
+As Torvalds has put it,
+
+- I am a dictator, but it’s the right kind of dictatorship. I can’t really do anything that screws people over. The benevolence is built in. I can’t be nasty. If my baser instincts took hold, they wouldn’t trust me, and they wouldn’t work with me anymore. I’m not so much a leader, I’m more of a shepherd. Now all the kernel developers will read that and say, “He’s comparing us to sheep.” It’s more like herding cats.
+
+The Linux kernel has, indeed, been forked numerous times. One prominent fork was that maintained by Red Hat Linux developer Alan Cox, who released a series of kernel source trees differentiated from Torvalds’ official kernel by the “-ac” tag, and which contained patches not yet accepted by Torvalds.[98] However since 2002, a technical solution to Torvalds’ backlog was found in the use of specialised revision control software (originally, ironically, a proprietary product called BitKeeper,and subsequently an open source equivalent called Git written by Torvalds himself). This has placated many of Torvalds’ critics, and resulted in the obsolescence of many former forks of the kernel.
+
+Both Mozilla’s Firefox browser and the OpenOffice.org office suite have also been forked. The Debian project, for example, has replaced Firefox in its distribution with a forked version called Iceweasel, to escape the onerous trade mark licence conditions imposed by the Mozilla Foundation for the use of the Firefox name and logo.As for OpenOffice.org, a prominent fork called NeoOffice has been customised to integrate more smoothly with the Mac OS X operating system. Debian itself has also spawned a number of derivative distributions, although these are seldom termed forks. A federation of Debian-based distributions (though not including Ubuntu) is the DCC Alliance.
+
+Admittedly, forking an open source project is not completely costless. Although the cost of the infrastructure required to host a new project is minimal (often even free), a new name and logo will be required (either because the originals are protected by trade marks as in the case of Firefox and OpenOffice.org, or simply because of the practical necessity to distinguish the two projects).
+
+Usually the most significant cost however is that it will be necessary for the new project leader to establish a community of users and developers to support the project in the long term. This is defined by economic sociologists as the cost of developing social capital. Thus, the more successful the parent project is (and the more cohesive its communities of developer and users), the higher its social capital will be, the higher the transaction costs of a fork, and the more effectively that fork will have to differentiate itself from its parent in order to overcome those costs.
+
+This is illustrated by the case of Samba-TNG which forked from the highly successful Samba project in 1999, seeking to differentiate itself by first offering the facility to replace a Microsoft Windows NT server as a Primary Domain Controller. However it struggled to build a development community comparable in size and expertise to that of its parent project, which in the meantime implemented its own version of Samba-TNG’s differentiating feature. In comparison, forks of less dominant and stable projects (such as the oft-criticised PHP-Nuke content management system) have been forked more often and more successfully.
+
+This characteristic of the transaction costs associated with migration from one open source project to another provides a cohesive force against the unnecessary fragmentation of open source projects, that will only be overcome if enough developers become sufficiently dissatisfied to form a viable competing project (which the project leaders have an incentive not to allow to happen, lest they lose their base of developers). In comparison, developers within Microsoft Corporation face much higher transaction costs in replicating their work and their communities elsewhere if they are dissatisfied, if indeed it is possible for them to do so at all.
+
+Thus it is from the unexpected source of the open source licence that a possible solution is found to the problem of how to ensure that an organisation acts benevolently rather than tyrannically, even though it may be structured in hierarchical rather than democratic form. The open source licence achieves this by providing an implicit check on the power of the organisation’s leadership, effectively conditioning its continued exercise of that power on the consent of its constituents.” 
+
+
+[[Category:Governance]]

@@ -1,0 +1,107 @@
+'''= a web search engine based on peer-to-peer technology.'''
+
+
+=Description=
+
+From an interview with Wolf Garbe of FAROO at
+http://altsearchengines.com/2007/10/02/great-debate-peer-to-peer-p2p-search-part-i/
+
+
+'''1) Architecture: How is your search engine different from today’s general search engines? Briefly, what does the architecture of your search engine looks like?'''
+
+FAROO: FAROO is a web search engine based on peer-to-peer technology.
+
+The users are connecting their computers, building a worldwide, distributed P2P web search engine. No centralized index and crawler are required anymore. Every web page visited is automatically included in the distributed index of the search engine.  Installing our software, you become immediately part of the distributed search engine.  FAROO’s distributed core architecture is fundamentally different from the centralized approach of today’s search engines.
+
+
+
+'''2) Distribution/P2P: In what aspect is the architecture distributed?  What are the benefits of this?'''
+
+FAROO:  FAROO is using a fully distributed architecture: distributed index, distributed crawler, distributed ranking, and distributed search.
+
+Search, as the most frequently used Internet application, will be distributed, and thus follows a principle, which the whole Internet is based upon successfully. The distributed architecture provides cost advantages, better scaling, less intrusive crawling, democratic ranking and improved privacy protection.
+
+* Each of the major search engines requires hundreds of thousands servers. We don’t need any hardware at all. This means huge saving of infrastructure costs, allowing us to share revenues with our users.
+  
+* The Internet is increasing steadily, and so also is the amount of required hardware in order to index all these new web pages and to serve the new users. In FAROO’s distributed architecture the users become part of the solution of this problem. Therefore FAROO scales with the growth of the Internet.
+  
+* FAROO indexes web pages without a dedicated crawler, therefore additional traffic for users and web servers is avoided.
+
+
+'''3) Crawler: How does your distributed crawler work?'''
+
+FAROO:   We changed the way a crawler works. There is no traditional crawler at all.  Every web page visited by one of our users is automatically included into our distributed index, and instantly searchable for all other users.
+
+
+'''4) Ranking: How does your ranking algorithm work?'''
+
+FAROO:  FAROO is using an attention based ranking. If users spend a long time on a page, visit it often, put it to bookmarks or print it out, this page goes up in ranking.  For the first time the ranking of the web pages is automatically done by the target audience itself. This leads to a more democratic, user centric ranking, while resistant against rank manipulation.  Additional ranking parameters ensure a proper ranking also during the start with relatively few users and for freshly indexed pages.
+
+
+'''5) Do you use the “wisdom of the crowds”? If so, how?'''
+
+FAROO:  When it comes to understanding, valuating, and rating of content, the human mind is still unsurpassed. Therefore FAROO uses “wisdom of the crowds” in two ways, for ranking and for crawling.  An algorithm may distinguish between original content, trivial content and spam. But when it comes to more subtle distinctions, we are better off trusting our own species!  And, it’s no surprise that even the well known PageRank uses indirect human judgment, as it is based on the popularity of a page among webmasters.
+
+FAROO’s user generated ranking goes a step further, as it is based on the popularity of a page amongst all users. And this is done automatically.  In this way many more people get involved then with current ranking methods, where either only webmasters are entitled to vote or a manual voting is required.
+
+FAROO also uses user powered crawling. Pages which are changing often like, for eaxample, news, are visited frequently by users. And with FAROO they are therefore also re-indexed more often. So the FAROO users implicitly control the distributed crawler in a way that frequently changing pages are kept fresh in the distributed index, while preventing unnecessary traffic on rather static pages.
+
+
+'''6) Participation: How do your users participate (By way of contribution and benefits)?'''
+
+FAROO: Our users provide infrastructure, and ranking, and we provide technology, so in fact we are building our search engine together.  Therefore we decided that our users should also participate in the revenues.  Not some minor percentage, we are sharing revenues of up to fifty percent with our users.  They may donate their share for charity organizations, joining their forces not only for search, but also for helping other people.
+
+Of course users also benefit from the collectively generated ranking and privacy protection. Currently we are about to define an API for FAROO’s distributed database.  That would allow everybody to use the distributed index, the collected information and ranking, both commercially and non-commercially, in mash-ups, with their own interfaces…
+
+Probably there will be some contribution/usage-ratio, to keep the p2p-principle working.
+
+ 
+'''7) Privacy: How do you protect the privacy of your users?'''
+
+FAROO'': FAROO does not collect any search log files. All search queries and the distributed index are encrypted.''  Neither the other peers nor any intermediate party may observe searches or visited pages.
+
+Due to the fully distributed architecture, FAROO is in fact working as a p2p anonymizer for searching, ranking and crawling.  No personal information is leaving the computer at any time. Even personalization is done client side.
+
+We are giving back search privacy and censor resistance to the user, something what is more and more fading away with current search engines. "
+(http://altsearchengines.com/2007/10/02/great-debate-peer-to-peer-p2p-search-part-i/)
+
+
+=Discussion=
+
+Sepp Hasslberger:
+
+"It seems difficult to imagine that anyone could challenge the well oiled machinery that is Google with their successful, ad-based business model. But Faroo (http://www.faroo.com/) has some pretty powerful ideas that might just give it an advantage.
+
+FAROO has 3 big potential advantages and 3 major hurdles. First, the 3 big advantages. 
+
+
+These were articulated on a site called ReviewSaurus, which is one of the few blogs paying any attention to FAROO:
+
+“1. The search engine index is based on a real users’ browsing habits : That means that web index will not serve those websites on which you don’t spend time thus reducing spam results.
+
+      
+2. The data is not stored anywhere but your own computer and you have the control of your own data. Searching is completely anonymous.
+
+      
+3. As per Faroo’s plans, you’ll be able to earn money from their advertising based revenue model. This is yet not implemented, however, it’s one of their declared plans.”
+
+While Lunn points out that for him the revenue sharing model is of great importance, I believe that anonymous search and the (eventually) better results of searches are major points of attraction.
+
+Better search results than Google? Yes, and only possible because Google has polluted their search results by the need to give their advertisers and certain others a break. Valid content that people look at and like, but that is in some way critical of major advertisers slips WAY down the search-result ladder at Google. The top of the line results in Google are either bought outright, or they are pulled to the top by a policy favoring official websites and Wikipedia, or they are there because of an advertiser friendly slant worked into the search algorithms.
+
+Faroo promises to change all that … a pretty powerful enticement that is going to become more effective as the slant in Google and other major centralized search engines becomes more easy to discern with time.
+
+Anonymous search in Faroo? Equally powerful as more and more people become aware of the privacy implications of leaving a trail in Google’s servers from which a profile about them may be constructed that tells … too much personal detail we never bargained to have “out there”. So if our searches were anonymous – I believe some would like that.
+
+
+'''Downside'''
+
+On the downside, Lunn lists [uncertain] scalability, the limited size of the p2p user base in early development and the fact that using Faroo requires a client download. Those are important drawbacks, but they do not seem unsurmountable.
+
+A serious issue connected to the need to download client software is that, at this time, there is no way to use Faroo on either a Mac or a Linux machine. The only client available so far runs on Windows. While that leaves me out in the cold (being a Mac user) I do encourage anyone of you who uses a Windows machine to try it out. Downloads and more information on the Faroo website http://www.faroo.com.
+
+Do think about whether it is worth your while to contribute to the growth of this engine. If nothing else, it is a good test bed for the search aspect of future p2p distributed networks. "
+(http://blog.p2pfoundation.net/faroo-a-distributed-p2p-search-engine/2010/07/03)
+
+
+[[Category:Technology]]

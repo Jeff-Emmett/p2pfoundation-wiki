@@ -1,0 +1,231 @@
+__NOTOC__
+'''= The Open Definition was called the "Open Knowledge Definition", based on the OSI Open Source Software Definition. It has no restrictions on field of endeavour, so non-commercial-use licenses are not open as in this definition.'''
+
+URL = http://www.opendefinition.org/
+
+==Description==
+
+Mike Linksvayer:
+
+"Open Definition (OD) is one of the first projects that the the Open Knowledge Foundation created. Its purpose has been to provide, promote — and protect — a meaningful Open in Open Data and Open Content.
+
+It does this primarily through curating the Open Knowledge Definition (OKD), working with license stewards to ensure new licenses intending to be open are clearly so, and keeping lists of licenses that conform to the OKD, and those that do not — providing any entity intending to create an open project, or mandate “open” in policy, with a clear reference as to which licenses will achieve their aims.
+
+If you’re a legal or policy expert, software freedom advocate, linked data hacker, translator, designer, communications maven — and want to go “meta” about openness, we could use your help! Join the od-discuss mailing list and pitch into the discussion, start a new one, or lurk until you’re ready.
+
+Final decisions about license conformance and definition updates are made by the Open Definition Advisory Council. This is not a big time commitment, but it is a big responsibility. If you’d like to join the AC someday, join od-discuss today."
+(http://opendefinition.org/2012/12/17/open-definition-forges-ahead-get-involved/)
+
+==Status==
+
+===1. Mike Linksvayer:===
+
+"With the growth in “open” and especially of open data initiatives in the last few years there has been an increasing amount for the project to do especially in terms of reviewing and evaluating licenses. For 2013 we see several important areas of work:
+
+OKD v1.2 — we’ve seen license conditions cropping up that are certainly contrary to the spirit of the definition and implicitly non-conformant. It ought be possible for anyone with some understanding of public licenses to do a quick read of the definition and understand its meaning for a particular license without having to know all of the history of open definitions and licenses.
+
+Review important new licenses and license versions for OKD compliance, e.g. Open Government License Canada, and version 4.0 of CC-BY and CC-BY-SA.
+
+Moving linguistic translations into a git repository for better review and updating.
+
+Improve explanations and graphics available on the OD site for anyone who wants to learn about open knowledge and services, and proudly announce to the world that their projects are open.
+
+Extend our work on license APIs that provide information about open licenses at licenses.opendefinition.org and integrate with the main OD site; also look to cooperate with other projects providing Linked Open Data about licenses.
+
+Provide regular updates about OD work to the broader OKFN network, open communities, and general public.
+
+Develop a version git-based repository of license texts so they can be tracked over time
+
+Growing out of discussions in 2006 and 2007, the OD project developed the Open Software Service Definition (OSSD), recognizing the complementarity of open content and data (knowledge) and open source web platforms and other network services that open knowledge is created, curated, and distributed on. The OSSD hasn’t been touched in a long time, but software services (some of them called “the cloud”) have become more important than ever, including in domains nearest to the OKFN community’s most active work, such as platforms used by and for open government. Shall we update the OSSD and revitalize evangelism for open services, or declare not a core competency, and look to other groups to take leadership?"
+(http://opendefinition.org/2012/12/17/open-definition-forges-ahead-get-involved/)
+
+===2. About the Open Definition===
+
+"The Open Definition was created in 2005 by the Open Knowledge Foundation with input from many people. The Definition was based directly on the Open Source Definition from the Open Source Initiative and we were able to reuse most of these well-established principles and practices that the free and open source community had developed for software, and apply them to data and content.
+
+Thanks to the efforts of many translators in the community, the Open Definition is available in 30+ languages."
+(http://blog.okfn.org/2013/10/03/defining-open-data/)
+
+The Open Definition is a project of [https://okfn.org/ Open Knowledge International]. 
+This is [http://www.opendefinition.org/od/2.1/en/ Version 2.1]
+
+==Text of Version 2.1==
+
+The Open Definition makes precise the meaning of “open” with respect to knowledge, promoting a robust commons in which anyone may participate, and interoperability is maximized.
+
+Summary: Knowledge is open if anyone is free to access, use, modify, and share it — subject, at most, to measures that preserve provenance and openness.
+
+This essential meaning matches that of “open” with respect to software as in the Open Source Definition and is synonymous with “free” or “libre” as in the Free Software Definition and Definition of Free Cultural Works.
+
+The term work will be used to denote the item or piece of knowledge being transferred.
+
+The term license refers to the legal conditions under which the work is provided.
+
+The term public domain denotes the absence of copyright and similar restrictions, whether by default or waiver of all such conditions.
+
+The key words “must”, “must not”, “should”, and “may” in this document are to be interpreted as described in RFC2119.
+
+==1. Open Works==
+
+An open work must satisfy the following requirements in its distribution:
+===1.1 Open License or Status===
+
+The work must be in the public domain or provided under an open license (as defined in Section 2). Any additional terms accompanying the work (such as a terms of use, or patents held by the licensor) must not contradict the work’s public domain status or terms of the license.
+===1.2 Access===
+
+The work must be provided as a whole and at no more than a reasonable one-time reproduction cost, and should be downloadable via the Internet without charge. Any additional information necessary for license compliance (such as names of contributors required for compliance with attribution requirements) must also accompany the work.
+===1.3 Machine Readability===
+
+The work must be provided in a form readily processable by a computer and where the individual elements of the work can be easily accessed and modified.
+===1.4 Open Format===
+
+The work must be provided in an open format. An open format is one which places no restrictions, monetary or otherwise, upon its use and can be fully processed with at least one free/libre/open-source software tool.
+==2. Open Licenses==
+
+A license should be compatible with other open licenses.
+
+A license is open if its terms satisfy the following conditions:
+===2.1 Required Permissions===
+
+The license must irrevocably permit (or allow) the following:
+====2.1.1 Use====
+
+The license must allow free use of the licensed work.
+====2.1.2 Redistribution====
+
+The license must allow redistribution of the licensed work, including sale, whether on its own or as part of a collection made from works from different sources.
+====2.1.3 Modification====
+
+The license must allow the creation of derivatives of the licensed work and allow the distribution of such derivatives under the same terms of the original licensed work.
+====2.1.4 Separation====
+
+The license must allow any part of the work to be freely used, distributed, or modified separately from any other part of the work or from any collection of works in which it was originally distributed. All parties who receive any distribution of any part of a work within the terms of the original license should have the same rights as those that are granted in conjunction with the original work.
+====2.1.5 Compilation====
+
+The license must allow the licensed work to be distributed along with other distinct works without placing restrictions on these other works.
+====2.1.6 Non-discrimination====
+
+The license must not discriminate against any person or group.
+====2.1.7 Propagation====
+
+The rights attached to the work must apply to all to whom it is redistributed without the need to agree to any additional legal terms.
+====2.1.8 Application to Any Purpose====
+
+The license must allow use, redistribution, modification, and compilation for any purpose. The license must not restrict anyone from making use of the work in a specific field of endeavor.
+====2.1.9 No Charge====
+
+The license must not impose any fee arrangement, royalty, or other compensation or monetary remuneration as part of its conditions.
+===2.2 Acceptable Conditions===
+
+The license must not limit, make uncertain, or otherwise diminish the permissions required in Section 2.1 except by the following allowable conditions:
+====2.2.1 Attribution====
+
+The license may require distributions of the work to include attribution of contributors, rights holders, sponsors, and creators as long as any such prescriptions are not onerous.
+====2.2.2 Integrity====
+
+The license may require that modified versions of a licensed work carry a different name or version number from the original work or otherwise indicate what changes have been made.
+====2.2.3 Share-alike====
+
+The license may require distributions of the work to remain under the same license or a similar license.
+====2.2.4 Notice====
+
+The license may require retention of copyright notices and identification of the license.
+====2.2.5 Source====
+
+The license may require that anyone distributing the work provide recipients with access to the preferred form for making modifications.
+====2.2.6 Technical Restriction Prohibition====
+
+The license may require that distributions of the work remain free of any technical measures that would restrict the exercise of otherwise allowed rights.
+====2.2.7 Non-aggression====
+
+The license may require modifiers to grant the public additional permissions (for example, patent licenses) as required for exercise of the rights allowed by the license. The license may also condition permissions on not aggressing against licensees with respect to exercising any allowed right (again, for example, patent litigation).
+
+----
+
+==Commentary==
+
+'''1.2''' Access
+
+This can be summarized as ‘social’ openness – not only are you allowed to get the work but you can get it. ‘As a whole’ prevents the limitation of access by indirect means, for example by only allowing access to a few items of a database at a time.
+
+'''2.1.4''' Separation
+
+The rights attached to the work must not depend on the work being part of a particular package. If the work is extracted from that package and used or distributed within the terms of the work’s license, all parties to whom the work is redistributed should have the same rights as those that are granted in conjunction with the original package.
+
+Comment: this is taken directly from item 8 of the OSD.
+
+'''2.1.5''' Compilation
+
+The license must not place restrictions on other works that are distributed along with the licensed work. For example, the license must not insist that all other works distributed on the same medium are open.
+
+Distributors of open knowledge have the right to make their own choices. Note that ‘share-alike’ licenses are conformant since those provisions only apply if the whole forms a single work.
+
+This is based on item 9 of the OSD.
+
+'''2.1.6''' Non Discrimination
+
+In order to get the maximum benefit from the process, the maximum diversity of persons and groups should be equally eligible to contribute to open knowledge. Therefore we forbid any open-knowledge license from locking anybody out of the process.
+
+This is taken from item 5 of the OSD.
+
+'''2.1.7''' Distribution of License
+
+This clause is intended to forbid closing up knowledge by indirect means such as requiring a non-disclosure agreement.
+
+This is based on item 7 of the OSD.
+
+'''2.1.8''' Application to Any Purpose
+
+The major intention of this clause is to prohibit license traps that prevent open source from being used commercially. We want commercial users to join our community, not feel excluded from it.
+
+This is based on item 6 of the OSD.
+
+'''2.2.3''' Share-alike
+
+Note that this clause allows the use of ‘viral’ or share-alike licenses that require redistribution of modifications under the same terms as the original.
+
+==Governance of the Open Definition==
+
+"Since 2007, the Open Definition has been governed by an Advisory Council. This is the group formally responsible for maintaining and developing the Definition and associated material. Its mission is to take forward Open Definition work for the general benefit of the open knowledge community, and it has specific responsibility for deciding on what licences comply with the Open Definition.
+
+The Council is a community-run body. New members of the Council can be appointed at any time by agreement of the existing members of the Advisory Council, and are selected for demonstrated knowledge and competence in the areas of work of the Council.
+
+The Advisory Council operates in the open and anyone can join the mailing list."
+(http://blog.okfn.org/2013/10/03/defining-open-data/)
+
+==Discussion==
+
+===What is Open?===
+
+"The full Open Definition provides a precise definition of what open data is. There are 2 important elements to openness:
+
+* Legal openness: you must be allowed to get the data legally, to build on it, and to share it. Legal openness is usually provided by applying an appropriate (open) license which allows for free access to and reuse of the data, or by placing data into the public domain.
+
+* Technical openness: there should be no technical barriers to using that data. For example, providing data as printouts on paper (or as tables in PDF documents) makes the information extremely difficult to work with. So the Open Definition has various requirements for “technical openness,” such as requiring that data be machine readable and available in bulk.
+
+
+There are a few key aspects of open which the Open Definition explains in detail. Open Data is useable by anyone, regardless of who they are, where they are, or what they want to do with the data; there must be no restriction on who can use it, and commercial use is fine too.
+
+Open data must be available in bulk (so it’s easy to work with) and it should be available free of charge, or at least at no more than a reasonable reproduction cost. The information should be digital, preferably available by downloading through the internet, and easily processed by a computer too (otherwise users can’t fully exploit the power of data – that it can be combined together to create new insights).
+
+Open Data must permit people to use it, re-use it, and redistribute it, including intermixing with other datasets and distributing the results.
+
+The Open Definition generally doesn’t allow conditions to be placed on how people can use Open Data, but it does permit a data provider to require that data users credit them in some appropriate way, make it clear if the data has been changed, or that any new datasets created using their data are also shared as open data.
+
+There are 3 important principles behind this definition of open, which are why Open Data is so powerful:
+
+* Availability and Access: that people can get the data
+* Re-use and Redistribution: that people can reuse and share the data
+* Universal Participation: that anyone can use the data,"
+(http://blog.okfn.org/2013/10/03/defining-open-data/)
+
+==More Information==
+
+* An older version, from 2007: the [[Open Knowledge Definition]]
+* The [[Open Data Commons]] is run by Jordan Hatcher, who started work on the Open Database License with support from Talis, later extensive negotiation with the OpenStreetmap community. ODbL is a ShareAlike license for data, that obviates the problems of inapplicability of copyright to facts.
+* [[Open Data Grid]]: a project in early incubation; based on the Tahoe distributed filesystem. It’s in need of development effort on Tahoe to really get going. Provide secure storage for open datasets around the edges of infrastructure that people are already running. 
+
+
+[[Category:Open]]
+
+[[Category:Standards]]

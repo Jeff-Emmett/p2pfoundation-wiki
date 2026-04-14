@@ -1,0 +1,278 @@
+'''= "a non-blockchain architecture for distributed social applications (dApps or hApps) and the ground level for further expanding an evolvable, fully distributed framework for coordinated sense-making and collective value-creation (i.e., means of articulating value) on all scales".''' ''"Holographic Storage for Distributed Applications".''
+
+URL: http://ceptr.org/projects/holochain [http://ceptr.org/whitepapers/holochain Whitepaper]
+
+
+
+
+=Context=
+
+Ryzhom:
+
+"Framing Holochain - a non-blockchain architecture for distributed social applications (dApps or hApps) and the ground level for further expanding an evolvable, fully distributed framework for coordinated sense-making and collective value-creation (i.e., means of articulating value) on all scales. Even though it had been conceived of and slowly developed for over more than a decade (by a group of people with already significant experience in designing systems currencies), Holochain only recently came to wider attention with an Initial Community Offering, Holo - a set of base application components and modules intended to introduce Holochain to the wider public and set the wheels in motion (the hApp prototying and development tools are designed to make development as straightforward, accessible and easy to understand as possible, somewhat similar to a simple web development framework).
+
+Instead of extending, modifying and reiterating upon the usual monolithic blockchain base, Holochain brings in a wholly different architecture for decentralized data coordination based on distributed hash tables (DHTs) as the public space (a familiar implementation of which is the BitTorrent file sharing mechanism). DHTs are tables of key-value pairs stored in overlapping shards among network peers. They provide a highly efficient and generalizable basis for managing application data and carrying out routing across large-scale peer-to-peer networks. Agents, by virtue of their agency, can easily bridge between the spaces of different Holochain applications (hApps), translating one context into another or importing validated datasets from one app into another. Holochain is, as such, an agent-centric model, whereas blockchains and most other forms of DLT are data-centric, rigidly deterministic and highly limited in their functional capacities (Bitcoin is said to have engineered artificial scarcity supported by an arms race lottery of enormous waste, so-called “proof-of-work”).
+
+This general arrangement sets the stage for a quickly expanding pool of diverse hApps and their rich networks of flowing information, available for agents/users to pull into all kinds of possible compositional abstractions, combining different flow indicators (as hApps or reusable functional components) in information system feedbacks. Additionally, it is extremely lightweight and highly scalable (DHTs are already pragmatically sharded between the relevant participants) - a set of properties that immediately resolve all the critical flaws of blockchain-based systems (scalability, sustainability and social consensus). (i.e., means of articulating value) on all scales. Even though it had been conceived of and slowly developed for over more than a decade (by a group of people with already significant experience in designing systems currencies), Holochain only recently came to wider attention with an Initial Community Offering, Holo - a set of base application components and modules intended to introduce Holochain to the wider public and set the wheels in motion (the hApp prototying and development tools are designed to make development as straightforward, accessible and easy to understand as possible, somewhat similar to a simple web development framework)."
+(https://rhyzome.github.io/Ceptr-and-Holochain/)
+
+=Definition=
+
+"Holochain provides a data structure that can be used to build decentralized apps. You have your own chain, which you can add data to, including financial transactions. The chains can merge, split, and interact in complex ways. The data is stored in a decentralized way (like Bittorrent). The data has a hash, which is a mathematical fingerprint that corresponds to the data. If someone tampers with the data, the mismatch between the data and the hash will be noticed, and the data rejected as invalid. Digital signatures guarantee the authorship of the data. It’s Bittorrent plus git plus digital signatures."
+(https://medium.com/h-o-l-o/heres-holochain-in-100-200-and-500-words-509818aa3c88)
+
+
+
+=Description=
+
+'''1. Aaron Fernando:'''
+
+"Although the proponents of Holochain proudly stand by the fact that it is not a blockchain, for the layperson Holochain has very many similar use-cases. One main difference is that it comes without the prerequisite of using the enormous amounts of energy required by "proof-of-work" blockchains like Bitcoin and Ethereum, yet it is still possible to run a blockchain exactly like Bitcoin on Holochain. Instead of having only one global agreement about what data is valid (as with a regular blockchain), individual users create their own intermeshed ledgers of valid data and personal histories.
+
+Additionally, whenever we access a website on the Internet, we are really accessing information hosted on servers operated by some third party — usually in a location we don't care about, owned by a separate private company. What Holochain makes possible is a blockchain-like method and reward structure for storing and accessing data and applications between users themselves, without having to rely on these third parties. This makes it possible to create and run applications of any sort between users, allowing the operation of a truly peer-to-peer internet."
+(https://www.shareable.net/blog/10-blockchain-projects-to-keep-an-eye-on)
+
+
+'''2.'''
+
+"Holochain is a more efficient alternative to blockchain. The Ethereum blockchain burns through huge amounts of computational power. It does that to achieve a universal consensus, to make sure everyone agrees on where all the coins are.
+
+Holochain has no native currency, it’s a “roll your own currency” crypto-accounting platform. Instead of watching coins, we keep an eye on accounts. Invalid transactions (increasing balance illicitly) simply get rejected by the network.
+
+This eliminates the need for consensus, and that allows us to make our computing much more efficient. We reckon it will be at least 10,000 times more efficient than Ethereum.
+
+There is huge interest in developing decentralized applications, but sooner or later they run into the inherent problems of blockchain. Besides being inefficient, Ethereum uses a unique programming language called Solidity. Solidity developers are in short supply, and I have seen many projects delayed by this shortage. Holochain supports Javascript and Lisp. There are many Javascript developers to every Solidity developer, so the development of distributed applications will move along quicker."
+(https://medium.com/h-o-l-o/heres-holochain-in-100-200-and-500-words-509818aa3c88)
+
+
+'''3. Holochain in exactly 500 words'''
+
+"Holochain combines hashing, digital signatures, and DHTs to form a tamper-proof distributed ledger.
+
+Hashing is a technique that collapses a bunch of data into a fingerprint that looks like this:
+
+ 6d28d7cf56c26dd99752b0cafc1b14865846e660
+
+
+If you change just one byte in the data, it no longer matches the hash. If you download a software program, and make sure what you downloaded has the proper hash, then you know that no one has inserted any malware or funny stuff.
+
+Dual-key cryptography is a basic cryptographic technique, used in all sorts of ways in computer science. There is a public key (like a username) that is shared with the world, and a private key (like a password) that is not.
+
+Dual-key cryptography is used to create digital signatures. Digital signatures work like this: I take a message, combine it with my private key, and stir it with some mathematics to create a signature. You can look at the signature, the message and my public key, and verify that the owner of the corresponding private key signed that message. If the message was altered, the signature wouldn’t check out. If someone tried to sign it without knowing my private key (which I store offline), it wouldn’t check out. I trust a software publisher, I know their public key, and so I download the software and check they’ve signed it. That confirms that the software really came from them, and hasn’t been altered since they signed it.
+
+If I stream video from YouTube, the video is stored on YouTube’s computers. I point my browser to a particular URL, and it downloads whatever file is sitting there. I am a recipient only. By contrast, a distributed hash table (DHT) is a thing that allows you to download data from your neighbours. With a DHT, I ask peers on the network, “Who has the file with the hash 23ae47x?”, download chunks of it from whoever has it near me, and then combine them to form a full file.
+
+DHT downloads are faster and more resilient than downloading from a server. They also put less strain on the network. Imagine a group of friends all watch a viral video on YouTube. Every time one of them watches it, the server — which may be on the other side of the world — has to send it again. If they were watching using a peer-to-peer system like a DHT, once one of them had it, he could send it to his neighbours.
+
+Because content on a DHT is identified by its hash, I always get exactly what I asked for; it’s impossible for an attacker to replace it with something fishy.
+
+These are the tools that build holochains. Digital signatures ensure no one can mess with my ledger without leaving a trail of signatures. Hashing ensures the data transferred is exactly what was requested. A DHT decentralizes the storage of this data, so that it’s hosted by the community rather than a company. This makes it a secure, distributed, tamper-proof ledger."
+(https://medium.com/h-o-l-o/heres-holochain-in-100-200-and-500-words-509818aa3c88)
+
+
+=Characteristics=
+
+
+'''Arthur Brock et al.:'''
+
+"Holochain delivers on the dreams of making decentralized computing easy and real. It provides the underlying cryptographic fabric to maintain data integrity across unlimited peers without requiring consensus.
+
+
+Integrity without consensus means:
+
+● immediate and efficient processing,
+
+● no proof-of-work,
+
+● no proof-of-stake,
+
+● no energy wasted on mining,
+
+● no bottlenecks nor global delays.
+
+
+In fact, Holochain is so efficient that you can run over 50 full nodes on a cell phone or a $35 Raspberry Pi computer. Holochain even enables scalable crypto-accounting to build new generations of asset-backed and value-stable cryptocurrencies.
+
+Programmers can leverage our RAD tools (Rapid Application Development) to quickly build fully P2P web applications designed to operate on the scale of Twitter or Facebook with no centralized data centers or infrastructure. Each user just brings their own device to share a small amount of computing and storage.
+
+
+Holochain meets the demands of people who want to:
+
+● own their own data,
+
+● control their identity,
+
+● have automatic backups,
+
+● customize their user experience,
+
+● choose how to connect their applications,
+
+● decide with whom to share their private information,
+
+● and transact without dependence on banks or governments."
+
+(https://files.holo.host/2017/12/Holo-Green-Paper.pdf)
+
+
+==Holochain is Local First==
+
+"Local Networks (Shouldn’t) Need Global Internet
+
+Local Area Networks (LAN), Mesh Networks, and other infrastructure like local servers and LANs that are networked together for say, a hospital or university, are all examples of internet protocols that are localized in some way.
+
+So we can network computers locally, but most applications don’t work on this scale. If you are at the office and the internet connection goes out, you should still be able to use the office Slack to chat with colleagues in the next room over who are also using the office wifi. But you cannot.
+
+
+HOLOCHAIN ALLOWS LOCAL-FIRST INTERACTION
+
+Because Holochain applications function peer-to-peer and thus don’t rely on a central server, the application’s network scales to whatever devices are actually able to connect at that time. This means that if you can form a local connection over whatever networking protocol you share, from Bluetooth to TCP/IP, then you can interact with the people in the next room.
+
+
++ LOCAL DATA-INTEGRITY
+
+Central servers grew in part from a need for security and data integrity. Central servers provide this security via firewalls and the rules of the software at both the server and application levels. For instance, we trust Slack’s servers (and the company itself), to ensure that only those supposed to be able to read from and post to a particular workspace have that access, avoiding spam or data collection by bad actors.
+
+Holochain uses framework level validation rules to secure the integrity of data and application level membrane rules to control access. All of this is done on a peer-to-peer basis, so you can act locally and securely.
+
+
+RESYNCING WITH THE GLOBAL INTERNET
+
+So you can interact locally, but what happens when you connect back to the internet as the whole?
+Holochain applications are always designed with the assumption that the total network state is unknown, working directly with the network nodes connected at any given time. This means that they can always scale up and down as different parts of the network come online.
+
+Holochain also includes provisions for local data caching so that you can save key pieces of global data in local stores in case of network interruption.
+
+
+HOLOCHAIN APPS: LOCAL-FIRST, GLOBAL COORDINATION
+
+Holochain applications are made to work at any scale. Working from a local-first basis, they work perfectly well at the level of an office or a town, but they also function for distributed teams and national governments. Because they are infrastructure agnostic, and don’t require central servers to hold user data, they can fluidly scale based on use and connectivity."
+
+(https://www.linkedin.com/pulse/holochain-powers-local-first-software-holochain/)
+
+=Discussion=
+
+"Holographic storage for distributed applications. A holochain is a validating distributed hash table (DHT) where every node enforces validation rules on data against the signed chains where the data originated.
+
+In other words, a holochain functions very much like a blockchain without bottlenecks when it comes to enforcing validation rules, but is designed to be fully distributed through sharding so each node only needs to hold a portion of the data instead of a full copy of a global ledger. This makes it feasible to run blockchain-like applications on devices as lightweight as mobile phones
+
+Historically, data integrity has been ensured by restricting access to data. If we wanted to prevent anybody from tampering with data, we locked it behind firewalls, or set strict permissions on databases and file systems. Because with centrally stored data, having the ability to write to data typically means you can change whatever you want.
+
+If we want to build peer-to-peer systems where we collectively hold data among many parties, we need better strategies for shared data integrity. Many are excited about building these kinds of applications on the blockchain, because they provide a strategy to maintain integrity of data that can be held by many peers without a single central authority.
+
+However, other limitations have become apparent, such as high computational overhead for achieving consensus, and the Pareto Effects of Proof of Work and Proof of Stake which steer the system toward being more centralized than many would want.
+
+Breakthroughs in shared data integrity enable new social, political, and organizational patterns with less tendencies toward corruption that emerge from power imbalances involved with selective parties controlling data, information, and protocols.
+
+
+We believe Holochains are one of these breakthroughs, because they take a different approach to ensuring the integrity of shared data. Instead of being built on top of cryptographic tokens they are organized around cryptographic validation of people (peers) validated against an immutable cryptographic record of those peers actions.
+
+This change allows us to manage data integrity without the massive overhead of computing consensus on a global ledger. Our monotonic, validating, graph DHT (distributed hash table) achieves eventual consistency while only allowing valid data to propagate and holding everyone accountable for their actions.
+
+The lower overhead of this approach makes it feasible to run full nodes on devices like cell phones or tablets which don’t have massive computing power.
+
+Holochain is designed as a data integrity engine for distributed applications. Unlike a distributed database, there are no methods for users to directly interact with the data because this would bypass application specific validation rules. All interactions happen only through the application code which enforce whatever business rules, application logic, or restrictions they need to, since different applications have different demands for strictness."
+(http://ceptr.org/projects/holochain)
+
+
+==Ferananda Ibarra on how the holochain philosophy differs from that of the blockchain==
+
+"When I talk about the blockchain, I think about the Wright brothers inventing the airplane and they did notinvent a faster plane. They just invented the plane. They didn’t consider the need for airports and all the infrastructure that came after. We can think about the blockchain as something that has showed us there’s a possibility for humanity and decentralization that we haven’t seen before. It’s an innovation, but it’s not the faster plane and it’s not the best plane. Bitcoin is in the same category. In the case of Holochain and Holo, a global consensus doesn’t make sense because nature does not work that way. As an example of this, we can see that cells carry their own instruction set - their DNA - inside. They don’t need a record of every state of every type of cell on what it is that they’re doing. Thatis not needed. It’s extra complexity, in the same way that speakers of a language can carry the means to generate sentences, but they do not have every sentence that has been spoken in some way or another somewhere. It’s not the way that nature works and that’s why, in my opinion, blockchain can’t work.
+
+The other point that Douglas made was tokens. Decentralization is not about token unification of everything. It’s about flows. It’s about people. It’s about what people can do together and how we organize our actions and coordinate ourselves better, which iskind of the central conversation for today.
+
+In Holochain, we think about agents. so we think about each person. If we take the example of the park: if it’s 20 people they can organize without a ledger, but if it’s a 150 people and there are agreements that every agent needs to know in order to be able to participate? They can track their contributions and they can track things about the specific time set for things and so it would make sense, but it wouldn’t be about a token. It would be about the flows of coordination and cooperation and what it is that they want to see. Currencies help us in the definition of Metacurrency as a way to make visible, enable, or shape a flow so in that regards, the technology should enable us the capacity for holisticism to be able to see the whole so that the parts can organize themselves themselves better and be much better players.
+
+That’s what we mean by collective intelligence and so in Holochain, Metacurrency, and Holo, we’re about human collective intelligence, augmented human collective intelligence and how these technologies can support us for the colony for our shared agreements. In the next round, I can talk about the commons engine, which is my next role in Holo after the ICO."
+(https://diglife.com/decentralized-co-operation-at-scale/)
+
+
+
+==Four Reasons to support the [[Holo]] / [[Holochain]] project==
+
+By Jean Russell:
+
+They are both "Inspired by natural systems and living ecology principles. Biomimicry applied to crypto-technology.
+
+* Holo rewards people for sharing hosting capacity with the most minimal transaction fees because it is designed to serve hosts and those hosted rather than a central office that controls the flow. It solves the challenge of managing minuscule bits of data and tracking the accounting of them without adding to the complexity.
+
+* Holochain is agent-centric not data-centric, meaning that it is putting the participant at the center of control and ownership. I own my data. I control permissions for others to access it. And by starting with the person at the center and then connecting them to a larger system, Holochain manages the dance between identity as something I control and something I am situated in (my reputation and activity engaging with others).
+
+* I can imagine the applications this structural design makes possible, and they excite me. I can imagine applications that honor my lived experience as it truly is. I can imagine markets that help companies address risks by funding nonprofits to address those concerns. I can imagine applications and even currencies that help us make visible the value flowing in our communities, giving dignity to all contributions and contributors."
+(https://medium.com/h-o-l-o/thrivabletechnology-3371a6a9ff8b)
+
+
+==The [[Holochain]] is the most promising project so far for building cooperative coins==
+
+Oliver Sylvester-Bradley:
+
+"Of all the current crypto currency options Holo stands out because it based on the Holochain (a more efficient way of encoding transitions)  and it’s currency is not only going to be based on “mutual credit” but its also going to backed by computer processing power. It’s well worth watching this great video from Philip Beadle to get an idea of how blockchain works and the differences between Bitcoin, Etherium and Holochain – especially from an app building point of view.
+
+Holo are just concluding a very successful crowdfunder which aims to provide the ‘bridging technology’ to bring holo into the mainstream. The ‘hosting boxes’ (holo ports) people have bought through the crowdfunder will allow non-technically minded people to simply plug a spare hard drive in to their router to provide storage capacity and processing power on the Holo network.
+
+The Holo network is nothing short of true peer-to-peer. Meaning that users can access each others computers directly, without the need to go via Google’s or Amazon’s servers. In fact, they can host and runs applications on the Holo network, in much the same way as BitTorrent works. This provides incredible opportunities for scaling (as more peers join the network, everyone benefits from ‘the network effect’) and, equally as importantly, the opportunity to re-define how the applications that run on the network are designed to work; it solves the entire “net neutrality” issue completely. Holo, and the people behind it, have designed the Holo network to work in a more “user centric” way than the way the web works today.
+
+The Holo ICO is a very HOT topic. Art Brock, one of the founders of the project, has written about building responsible crypto currencies and agrees that
+
+- “Cryptocurrencies do not have to be gambling tokens created from nothing. They can be responsibly connected to assets, promises, or real-world value. They don’t have to re-create all the speculative money problems that they were supposed to be solving”.
+
+Currencies can be optimised to be a useful means of exchange, or a useful store of value, but rarely work well when trying to be both at the same time. “Holo fuel” (also known as HOT, or Holo Tokens) are designed to provide a medium of exchange on the Holo network. Their ICO requires users to buy HOT with ETH (another crypto currency).
+
+Given that buying in to the Holo ICO with ETH will be at a specific price, we were keen to understand how the value of HOT has been calculated, how it hopes to avoid being linked in value to ETH and other crypto currency prices in the future, and how HOT will avoid suffering from speculation? 
+
+
+We put the question to Jean Russell, project lead for the Holo ICO, who answered as follows:
+
+- HOT is set as 10k x ETH for the launch. But that is just the initial set. Once the network starts, then 1 HOT = 1 Holo fuel. And Holo fuel is about the value of hosting in Holo.
+
+Surely there will arise an exchange that will convert ETH to Holo fuel, so they will be relational in some way. However, even if the Ethereum system collapses, Holo can continue and the value should not be negatively impacted. We believe that we will be much more than 10,000x faster/cheaper than Ethereum (mostly because that system in some ways was designed to be difficult and slow as part of the security). Our system is designed for scalability and resilience (DHT) so it should get better as it scales. Anti-fragile in fact.
+
+The initial price (and the practical network value the community gives it) will be a gap that speculators can guess at. Thereafter though, it should remain fairly stable as it is really about the asset and the value of that asset in the marketplace.
+
+I can’t give the deep philosophical explanation that Art can, but what I hear from him is that mutual credit along with asset-backing pretty much assures that it can’t be a gambling game of high stakes. Those who invest early when there is high risk of the platform getting off the ground will gain some benefit, yes. But then it should achieve a meta-stable state.
+
+We have high hopes for Holo. With Holochain offering a viable alternative to blockchain it should, naturally, benefit from “second mover advantage” by learning a lot of lessons from its predecessor. The way it has been designed from a holographic, and sociocratic perspective seems to fit the requirements of a co-operative economy which distributes ownership and governance to the lowest possible levels.
+
+If their ICO, which they are calling an “Initial Community Offering“, goes well it will be very interesting to see how this first major alternative to the blockchain based systems develops.
+
+If Holo is successful and a vibrant peer to peer community emerges, perhaps the Holo Network would be the place to launch a dedicated co-op coin? Much of the hard work, in terms of underlying infrastructure, will have been done so a launching a co-op coin on holo should not be as hard as starting from scratch. The main issues would be achieving agreement between a sufficient number of stakeholders about a co-op coins parameters, mainly it’s issuance and the management of supply and demand."
+(https://open.coop/2018/01/25/co-op-coin-ico-look-like/)
+
+
+=Status=
+
+An update on the [[Holochain Foundation]], November 2024:
+
+Eric Harris-Braun:
+
+"(Whither) the Holochain Foundation? Foremost, the Foundation will move from being a passive holder of the Holochain intellectual property, on behalf of the community, into being the active operational entity supporting and managing the Holochain development team.
+
+Part of our “coming of age” is realizing that we can’t do everything we might like. Focus matters. Our strategic plan for delivering on our mission of “fostering the evolution and thriving of the Holochain framework and related ecosystems”, begins with just one thing: The stability and reliability of Holochain, such that it can be deployed as industrial-strength, mission-critical infrastructure by commercial projects as well as our community stakeholders. What this means in practice is testing, testing, testing!
+
+(https://blog.holochain.org/the-holochain-foundation-is-coming-of-age/)
+
+=More Information=
+
+'''* Article: Holochain. Distributed Coordination by Scaled Consent, not Global Consensus. By Eric Harris-Braun, Arthur Brock, and Paul d’Aoust. (Dated: 2024-11-08 — v2.0)'''
+
+https://www.holochain.org/documents/holochain-white-paper-2.0.pdf
+
+"We present a generalized system for large-scale distributed coordination that does not rely on global
+consensus, explicating the problem instead through the lens of scaling consent. After establishing
+initial axioms, we illustrate their application for coordination in games, then provide a formal
+outline of the necessary integrity guarantees and functional components needed to deliver those
+guarantees. Finally, we provide a fairly detailed, high-level, technical specification for our operating
+implementation for scaling consent."
+
+
+* Pre-release Draft of whitepaper by Arthur Brock [http://artbrock.com] and Eric Harris-Braun [http://eric.harris-braun.com]:
+
+"We describe a holographic data storage architecture which combines the data integrity assurance of Hash-Chains with the efficiency of Distributed Hash Tables while eliminating consensus bottlenecks typical of Blockchain and typical approaches to distributed computing."
+
+* [[Holo]]
+
+[[Category:Crypto_Governance]]
+[[Category:Crypto_Technology]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:P2P_Infrastructure]]

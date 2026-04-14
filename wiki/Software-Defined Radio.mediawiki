@@ -1,0 +1,46 @@
+'''Software-defined Radio'''
+
+
+=Definition=
+
+" GNU Radio is a collection of software that when combined with minimal hardware, allows the construction of radios where the actual waveforms transmitted and received are defined by software. What this means is that it turns the digital modulation schemes used in today's high performance wireless devices into software problems.
+What is a Software Defined Radio?
+
+Joe Mitola says, "A software radio is a radio whose channel modulation waveforms are defined in software. That is, waveforms are generated as sampled digital signals, converted from digital to analog via a wideband DAC and then possibly upconverted from IF to RF. The receiver, similarly, employs a wideband Analog to Digital Converter (ADC) that captures all of the channels of the software radio node. The receiver then extracts, downconverts and demodulates the channel waveform using software on a general purpose processor."
+(http://www.gnu.org/software/gnuradio/)
+
+
+=Examples=
+
+Raffael Kemenczy writes: "Currently, the only usable and affordable software-controlled radio hardware is the USRP by Etus Research LLC (http://www.ettus.com/).
+
+
+'''1.''' [http://www.flex-radio.com/ Flexradio already ships such radios.
+
+"FlexRadio Systems is introducing the FLEX-5000 line of open source Software Defined Radios  (SDRs). The FLEX-5000 family follows the very popular SDR-1000™,and now integrates all I/Q audio and hardware control over a singleFireWire (IEEE-1394) connection to a user provided computer.Additionally, all A/D conversions are performed internally  in the FLEX-5000 so a sound card is not required. There are two additional versions of the FLEX-5000 (models C and D) that provide higher levels of integration."
+
+
+'''2.''' From the New Scientist, referred to in Smart Blogs, both URLs unavailable at time of entry.
+
+
+"A device capable of skipping between incompatible wireless standards by tweaking its underlying code has been given world's first go-ahead for outdoor trials in Ireland,"New Scientist reports."Ireland's communications regulator Comreg has issued the licence for publicly testing a "software-defined radio" device,which has been developed by researchers at the Centre for Telecommunications Value-Chain Research (CTVR) in Dublin.The device can impersonate a multitude of different wireless devices since it uses reconfigurable software to carry out the tasks normally performed by static hardware."I'm interested in a future where a single device can use every possible frequency,"says Linda Doyle,who heads up the CTVR project,which is one of several competing projects worldwide.The technology promises to let future gadgets jump between frequencies and standards that currently conflict.A cellphone could,for example,automatically detect and jump to a much faster Wi-Fi network when in a local hotspot.Devices could even decide for themselves which standard to use and might even be able to tease information from overlapping,or interfering,signals".
+
+
+[[Category:Media]]
+
+[[Category:Resources]]
+
+[[Category:Technology]]
+
+=More Information=
+
+See the GNU Radio project at http://www.gnu.org/software/gnuradio/
+
+See the podcast on [[Software Radio]]
+
+[[Eric Blossom on Software-defined Radio]]
+
+
+[[Category:Resources]]
+
+[[Category:Encyclopedia]]

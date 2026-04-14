@@ -1,0 +1,41 @@
+'''= an Open Community in the Home Automation and Domotics space'''
+
+cfr. the [[Open Remote]] project.
+
+URL = http://www.openremote.org/
+
+
+=Description=
+
+"The Home of the Internet-enabled Home. We are an Open Community in the Home Automation and Domotics space. We believe an Open Source approach can revolutionize the way people create, install, and maintain software in the industry."
+
+
+=Discussion=
+
+Marc Fleury:
+
+"So what does OR do? We are an Open Community in Domotics, product design is rather open. We provide a hardware reference implementation on Java Linux it will help us develop but also provides the physical bridge to IR/RS/Ethernet/wifi. On the software side use JBoss actually as the base for our server leveraging packaging and installation. It is an application of JBoss in a way. We use Java to map protocols.
+
+There is a personal motivation in proving that java technology can help solve many of the technical problems of the field. The HA field is very fragmented many many vendors, many standards, few dominant, a lot of proprietary standards. Using the modularity of JBoss we plan on supporting various such protocols out of the box. In the plans are X10, Insteon, KNX, IR/RS. Mapping protocols is something java is good at. This way we have writeByte() C drivers we can access through sockets and the C drivers remain simple while java does all the protocol implementation.
+
+For IR and RS we have a database called "Beehive" that collects IR and RS codes so you never have to see a HEX code again in your life as you program your remote. This is not new, every vendor has one, the point here is to maintain a professional quality one in an Open fashion.
+
+Finally we still have a healthy infatuation with the iPhone. Our current software panels are based on cocoa and HTML so your iPhone can control this all. You can even assemble simplified pages for your mother with just 4 buttons.
+
+So what do I do in this? well right now I am helping build the community. There is some talented people, energy is high and you can feel that everyone wants this to happen. It is a charged ambience. It is also a friendly ambience. After all we are dealing in home technology and nobody wants an abrasive presence in the home. This is not the middleware field. I want to be a catalyst. Like I was a catalyst in the past.
+
+As far as fields go though, this is an interesting market. Finding out where we fit and add value is consuming a lot of my time. I believe the answer may be in integration and tooling. We can offer common programming models, from the java world and the web 2.0 world, so you can program visual workflows (think JBPM) rather than write HEX codes sneaked out of the back of some reference book. Simplification of programming would be a good non-trivial contribution.
+
+I am looking at KNX, a european standard that has been certified for the Chinese market and is really media agnostic by specifying a telegram over RF/IP. As a spec we can use it to have the centralized message representation and immediate integration to an existing ecosystem. It is the closest thing to EE specs for JBoss.
+
+We are learning what it means to support various drivers. This is early in the cycle. It is geeky, it is fun. I am learning a bunch and it is good stuff. I am going to do this for a little while. I am even thinking, GASP! about writing some code again! God forbid!
+
+Most importantly I can do this from anywhere in the world. So I will be programming KNX in Madrid. It reminds me of the early JBoss days. I already feel I know some folks I have never met in person. The company of old and new friends is always a good thing. I want to see it take off."
+(http://www.thedelphicfuture.org/2008/07/my-new-project-openremote.html)
+
+
+[[Category:Design]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Open]]

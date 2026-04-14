@@ -1,0 +1,28 @@
+
+=Description=
+
+By David Herron:
+
+'Ford, like most other automakers, is heading towards a vision of the car as a platform for high tech wizardry and gizmos. Consumer electronics need not be limited to our living rooms or mobile computing devices, but can also be on-board the car. The OpenXC platform is a step in this direction, being an open source hardware and software stack allowing 3rd parties to connect gizmos to an OpenXC-compliant car.
+
+Ford is positioning OpenXC as a channel for collaboration between Ford and 3rd party application developers. If "your car is as easy to program as your smartphone," it stands to reason that future cars could generate as much innovation and excitement as todays smartphones are generating.
+
+The company announced last week they were making the OpenXC source code available, in beta form, to developers and universities around the world. Ford demonstrated a sample third-party mobile app created with the OpenXC toolkit at NASSCOM India Leadership Summit, held last week in Mumbai India. At NASSCOM the message was to not only open Ford's vehicles for 3rd party applications, but to enable development of market-specific applications for each country. The OpenXC source code is expected to be opened to the public via repositories on github, and documentation is available today on the openxcplatform website.
+
+Additionally to providing the OpenXC platform, Ford is opening a research laboratory in Silicon Valley in Q1 2012 meant to "ensure Ford keeps pace with consumer trends and aggressively prepares for the future by developing mobility solutions to harness the power of seamless connectivity, cloud computing and clean technology." The lab is targeted at collaboration with high tech companies here in Silicon Valley including Apple, Cisco, Facebook, Google, HP, Ideo, Intel, Microsoft Sony, and Stanford University. The research focus of the lab was described as personal mobility, or "Mindful of consumer trends and the growth of megacities, Ford is researching new business models that will help avoid the creation of global gridlock through a holistic approach to personal transportation"; open-source hardware and software developer kits, which is the OpenXC platform that Ford is developing in collaboration with BugLabs; and the car as a sensor, or "researching ways to utilize the multitude of sensors within the vehicle to improve the road for all drivers".
+
+The OpenXC platform is being developed in collaboration with Bug Labs, a New York based developer of small computer hardware building blocks meant to help organizations build the "Internet of Things." This concept looks toward a day if/when all objects will have embedded computerization, with ubiquitous connections to the Internet to share data and information enabling large scale applications to be built upon the data coming from all the connected gizmos. An example Ford provides is the weather information website, Weather Underground, which "is looking at ways to leverage vehicle windshield wiper activations to improve its weather proximity reporting." If sensors on hundreds of cars reported activation of windsheld wipers at nearly the same time in nearly the same location, it's a signal of a likely rainstorm popping up, right?
+
+The documentation on the OpenXC Platform website describes installing small hardware module, attaching it to the OBD-II port so the module can read CANBUS messages. The hardware module interfaces the OBD-II/CAN bus to the more common USB interface, and sends data from the car to the software running on the OpenXC software platform. The software part of the OpenXC platform runs on Arduino or Android platforms, and provides to software measurements of vehicle operation such as brake pedal status, engine speed, latitude and longitude, steering wheel angle, and vehicle speed. The documentation does not provide methods for the software application to send commands to the car, only to receive data from the car.
+
+The most obvious use for this is to improve accuracy of location aware applications, but Ford suggests extremely creative developers could do something crazy like "generate a digital painting based on your steering wheel movements over the course of a day, and upload it directly to the web". 
+(http://www.torquenews.com/1075/fords-open-source-openxc-platform-gateway-future-high-tech-car-gizmos)
+
+
+[[Category:Standards]]
+
+[[Category:Open]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Transportation]]

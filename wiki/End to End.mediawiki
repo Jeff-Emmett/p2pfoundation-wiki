@@ -1,0 +1,80 @@
+
+
+
+=Discussion=
+
+Is the internet still end to end today? No says Geoff Huston, middleware has changed it and applications have evolved so a mutual adaptation between end to end and middleware has occurred.
+
+See at http://www.potaroo.net/ispcol/2008-05/eoe2e.html
+
+Excerpts:
+
+The article starts by an extensive review of the end to end origins of the internet.
+
+Then he explains how it has changed:
+
+“So the question is: Have we gone past end-to-end? Are we heading back to a world of bewilderingly complex and expensive networks?
+
+The model of a clear and simple network where end hosts can simply send packets across a transparent network is largely an historical notion. These days we sit behind a dazzling array of so-called “middleware”, including Network Address Translators, Firewalls, Web caches, DNS interceptors, TCP performance shapers, and load balancers, to name but a few.
+
+For many networks middleware, in the form of firewalls and NATs, are a critical component of their network security framework and middleware has become an integral part of the network design. For others middleware offers a way to deliver scalable services without creating critical points of vulnerability or persistent black holes of congestion overload. For others its the only possible way make scarce public IP addresses stretch over a far larger pool of end hosts.
+
+For others middleware is seen as something akin to network heresy. Not only does middleware often break the semantics of the internet protocol, it is also in direct contravention to the end-to-end architecture of the Internet. Middleware breaks the operation of certain applications.
+
+Emotions have run high in the middleware debate, and middleware has been portrayed as being everything from absolutely essential to the operation of the Internet as we know it through to being immoral and possibly illegal. Strong stuff indeed for an engineering community.
+
+Middleware cuts across the end-to-end model by inserting directly into the network functionality which alters packets on the fly, or, as with a transparent cache, intercepts traffic, interprets the upper level service request associated with the traffic and generates responses by acting as a proxy for the intended recipient. With middleware present in an internet network, sending a packet to an addressed destination and receiving a response with a source address of that destination is no guarantee that you have actually communicated with the address remote device. You may instead be communicating with a middleware box, or have had the middleware box alter your traffic in various ways.
+
+The result we have today in the internet is that its not just the end applications which define an Internet service. Middleware also is becoming part of the service. To change the behaviour of a service which has middleware deployed requires the network’s middleware be changed as well. A new service may not be deployed until the network’s middleware is altered to permit its deployment. Any application requiring actual end-to-end communications may have to have additional functionality to detect if there is network middleware deployed along the path, and then explicitly negotiate with this encountered middleware to ensure that its actual communication will not be intercepted and proxied.”
+
+
+And concludes:
+
+“But its probably too late now to consider middleware and end-to-end as alternative destinies. So it appears that the Internet has somehow evolved into a middleware system rather than a coherent and simple end-to-end system. Middleware appears to be here to stay, and now its up to applications to work around middleware. And applications have certainly responded to the challenge in various ways.”
+
+
+Geoff then describes how various applications are adapting to such middleware, but in fact, often by defending end to end functionalities, so the end result is not a total abandonment of end to end, but some kind of mutual adaptation.
+
+
+Here’s a final excerpt where he explains this:
+
+“So where are we with end-to-end? Is this proliferation of edgeware simply throttling end-to-end to the point that end-to-end has indeed ended, or is end-to-end still alive in some form or fashion?
+
+I suspect that the path that took us to the proliferation of this edgeware is going to be hard to deconstruct anytime soon.
+But maybe this actually reinforces the end-to-end argument rather than weakens it. Not only do end-to-end applications need to take into account that the network will treat packets with a certain cavalier attitude, but also need to take into account that parts of the packet may be selectively rewritten, that entire classes of packets may be deliberately discarded or quietly redirected by this edgeware. What we have as a result is actually a greater level of capability being loaded into end-to-end applications. We’ve extended the end-to-end model from a simple two-party connection to a multi-party rendezvous process, and added additional capabilities into the application to detect other forms edgeware behaviour above and beyond network level behaviours of simple packet discard, reordering and re-timing. And, oddly enough, the more we see edgeware attempt to impose further constraints or conditions on the communication, the more we see applications reacting by equipping themselves with additional capabilities to detect and react to such edgeware behaviours.
+
+So it looks like end-to-end is still a thriving and vibrant activity, but it too has changed over time. Its no longer a model of “dumb” applications making a simple connection over TCP and treating TCP as a reliable wire. The end-to-end argument is no longer simply encapsulated in an architecture that promotes TCP as the universal adaptor that allows “dumb” applications to operate across “dumb” networks. Over the years, as we’ve loaded more and more functions onto the connection edge between the local network and the public internet, we’ve had to raise the concept of end-to-end to another level and equip the application itself with greater levels of capability to adapt and thrive in an edgeware-rich network.
+
+Yes, its still end-to-end, but its no longer a model that uses just TCP as the universal adaptor between applications and networks. These days the applications themselves are evolving as well to cope with more complex network behaviours that have resulted from the proliferation of edgeware in today’s Internet.”
+(http://www.potaroo.net/ispcol/2008-05/eoe2e.html)
+
+
+
+
+=More Information=
+
+3 key essays:
+    
+* End-to-End Arguments in System Design
+J.H. Saltzer, D. P. Reed and D. D. Clark, ACM Transactions in Computer Systems, November 1984
+
+http://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf
+    
+
+* Rethinking the design of the Internet: The end to end arguments vs the brave new world
+M.S. Blumethal, D. D. Clark, ACM Transactions on Internet Technology, August 2001.
+      
+http://portal.acm.org/citation.cfm?doid=383034.383037
+    
+
+* Tussle in Cyberspace: Defining Tomorrow's internet
+ D. D. Clark, K. R. Sollins, J. Wroclawski, R. Braden, SIGCOMM '02, August 2002.
+      
+http://www.sigcomm.org/sigcomm2002/papers/tussle.pdf
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Encyclopedia]]

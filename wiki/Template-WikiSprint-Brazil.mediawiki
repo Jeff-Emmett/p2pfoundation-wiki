@@ -1,0 +1,56 @@
+<noinclude>
+This is the "WikiSprint-Brazil" template.
+It should be called in the following format:
+<pre>
+{{WikiSprint-Brazil
+|Title/Name=
+|One sentence description=
+|Main URL=
+|Short description=
+|Details=
+|Discussions/Quotes=
+|References/Links=
+|Location=
+|Contact person=
+|Contact's person e-mail=
+|Number of participants=
+|Start date=
+|Related projects=
+|Categories/Tags=
+}}
+</pre>
+Edit the page to see the template text.
+</noinclude><includeonly>
+* '''Full name:''' [[WS_Name::{{{Title/Name|}}}]]
+* '''URL:''' [[WS_URL::{{{Main URL|}}}]]
+* {{{Short description|}}}. It started on {{{Start date|}}}.
+
+; Participants
+* '''Contact person:''' {{{Contact person|}}} ([[WS_ContactMail::{{{Contact's person e-mail|}}}]])
+* '''Number of participants:''' {{{Number of participants|}}} <small>(until {{REVISIONDAY}}/{{REVISIONMONTH}}/{{REVISIONYEAR}})</small>
+[[WS_Participants::{{{Number of participants|}}}| ]]
+
+== Location ==
+{{#display_map:{{{Location|}}}|width=400|height=300|zoom=2}}
+[[Has coordinates::{{{Location|}}}| ]]
+
+== Description ==
+{{{Details|}}}
+
+== Quotations ==
+{{{Discussions/Quotes|}}}
+
+== Links and references ==
+{{{References/Links|}}}
+
+; Related projects
+{{{Related projects|}}}
+
+
+
+
+</includeonly>
+
+[[Category:Brazil P2P WikiSprint]]
+[[Category:Brazil]]
+[[Category:WikiSprints outputs]]

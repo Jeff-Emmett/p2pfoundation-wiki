@@ -1,0 +1,79 @@
+'''= "dApps enable a new way of transferring and holding property through mart contracts, decentralized currencies, and asset ownership that are recorded on an immutable public ledger: the blockchain".''' 
+
+
+=Description=
+
+'''1.'''
+
+"At minimum, decentralized applications (dApps) enable a new way of transferring and holding property. Smart contracts, decentralized currencies, and asset ownership are recorded on an immutable public ledger: the blockchain.
+
+Blockchain technology and dApps have the ability to decentralize power from existing authorities in business, law, and technology to a broad set of stakeholders. This shift will disrupt current business, economic and social paradigms. Transaction costs and barriers to entry in various industries will be reduced in these industries. The result will likely be an increase in economic exchange and prosperity."
+(https://consensys.net/vision/)
+
+
+'''2. Vitalik Buterin:'''
+
+"A decentralized application is similar to a smart contract, but different in two key ways. First of all, a decentralized application has an unbounded number of participants on all sides of the market. Second, a decentralized application need not be necessarily financial. Because of this second requirement, decentralized applications are actually some of the easiest things to write (or at least, were the easiest before generalized digital consensus platforms came along). For example, BitTorrent qualifies as a decentralized application, as do Popcorn Time, BitMessage, Tor and Maidsafe (note that Maidsafe is also itself a platform for other decentralized applications).
+
+Generally, decentralized applications fall into two classes, likely with a substantial gray area between the two. The first class is a fully anonymous decentralized application. Here, it does not matter who the nodes are; every participant is essentially anonymous and the system is made up of a series of instant atomic interactions. BitTorrent and BitMessage are examples of this. The second class is a reputation-based decentralized application, where the system (or at least nodes in the system) keep track of nodes, and nodes maintain status inside of the application with a mechanism that is purely maintained for the purpose of ensuring trust. Status should not be transferable or have de-facto monetary value. Maidsafe is an example of this. Of course, purity is impossible – even a BitTorrent-like system needs to have peers maintain reputation-like statistics of other peers for anti-DDoS purposes; however, the role that these statistics play is purely in the background and very limited in scope.
+
+An interesting gray area between decentralized applications and “something else” is applications like Bitcoin and Namecoin; these differ from traditional applications because they create ecosystems and there is a concept of virtual property that has value inside the context of this ecosystem, in Bitcoin’s case bitcoins and in Namecoin’s case namecoins and domain names. As we’ll see below, my classification of decentralized autonomous organizations touches on such concepts, and it is not quite clear exactly where they sit."
+(https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide/)
+
+=Discussion=
+
+==Decentralized Applications are Censorship Resistant==
+
+Adam Ludwin:
+
+"It’s not at all clear yet that decentralized applications are actually useful to most people relative to traditional software.
+
+Simply put, you cannot argue that for everyone Bitcoin is better than PayPal or Chase. Or that for everyone Filecoin is better than Dropbox or iCloud. Or that for everyone Ethereum is better than Amazon EC2 or Azure.
+
+
+In fact, on almost every dimension, decentralized services are worse than their centralized counterparts:
+
+* They are slower
+* They are more expensive
+* They are less scalable
+* They have worse user experiences
+* They have volatile and uncertain governance
+
+
+And no, this isn’t just because they are new. This won’t fundamentally change with bigger blocks, lightning networks, sharding, forks, self-amending ledgers, or any other technical solutions.
+
+That’s because there are structural trade-offs that result directly from the primary design goal of these services, beneath which all other goals must be subordinated in order for them to be relevant: decentralization.
+
+Remember that “elaborate and expensive competition” I described? Well, it comes at the cost of throughput. Remember how users need to “cryptographically sign” their transaction announcements? Well, those private keys need to be held onto much more securely than a typical password (passwords can be recovered). Remember how “no single entity operates” these networks? The flip side is that there is no good way to make decisions or govern them.
+
+Sure, you can make decentralized applications more efficient and user friendly by, for example, centralizing users’ cryptographic signing keys (i.e., control of their coins) with a trusted entity. But then we’re mostly back to square one and would be better off using a service that is centralized.
+
+Thus, bitcoin, for example, isn’t best described as “Decentralized PayPal.” It’s more honest to say it’s an extremely inefficient electronic payments network, but in exchange we get decentralization.
+
+Bottom line: centralized applications beat the pants off decentralized applications on virtually every dimension.
+
+EXCEPT FOR ONE DIMENSION.
+
+And not only are decentralized applications better at this one thing, they are the only way we can achieve it.
+
+What am I referring to?
+
+'''Censorship resistance.'''
+
+This is where we come to the elusive signal in the noise.
+
+Censorship resistance means that access to decentralized applications is open and unfettered. Transactions on these services are unstoppable.
+
+More concretely, nothing can stop me from sending Bitcoin to anyone I please. Nothing can stop me from executing code on Ethereum. Nothing can stop me from storing files on Filecoin. As long as I have an internet connection and pay the network’s transaction fee, denominated in its crypto asset, I am free to do what I want."
+(https://blog.chain.com/a-letter-to-jamie-dimon-de89d417cb80)
+
+
+=Example=
+
+* [[ConsenSys]]: A blockchain venture production studio building decentralized applications & foundational tools based on Ethereum.
+
+[[Category:Crypto_Governance]]
+[[Category:Crypto_Economy]]
+
+[[Category:Cryptoledger_Applications]]
+[[Category:P2P_Infrastructure]]

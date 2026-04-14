@@ -1,0 +1,73 @@
+
+
+=Discussion=
+
+
+
+==Arduino's [[Open Source Hardware]] business method==
+
+'''1.'''
+
+"But today Banzi is all business. He's showing off his operation to a group of potential customers from Arizona. Banzi scoops up one of the boards and points to the tiny map of Italy emblazoned on it. "See? Italian manufacturing quality!" he says, laughing. "That's why everyone likes us!" Indeed, 50,000 Arduino units have been sold worldwide since mass production began two years ago. Those are small numbers by Intel standards but large for a startup outfit in a highly specialized market. What's really remarkable, though, is Arduino's business model: The team has created a company based on giving everything away. On its Web site, it posts all its trade secrets for anyone to take—all the schematics, design files, and software for the Arduino board. Download them and you can manufacture an Arduino yourself; there are no patents. You can send the plans off to a Chinese factory, mass-produce the circuit boards, and sell them yourself — pocketing the profit without paying Banzi a penny in royalties. He won't sue you. Actually, he's sort of hoping you'll do it.
+
+That's because the Arduino board is a piece of open source hardware, free for anyone to use, modify, or sell. Banzi and his team have spent precious billable hours making the thing, and they sell it themselves for a small profit — while allowing anyone else to do the same. They're not alone in this experiment. In a loosely coordinated movement, dozens of hardware inventors around the world have begun to freely publish their specs. There are open source synthesizers, MP3 players, guitar amplifiers, and even high-end voice-over-IP phone routers. You can buy an open source mobile phone to talk on, and a chip company called VIA has just released an open source laptop: Anyone can take its design, fabricate it, and start selling the notebooks."
+
+
+'''2.'''
+
+"So the Arduino inventors decided to start a business, but with a twist: The designs would stay open source. Because copyright law—which governs open source software—doesn't apply to hardware, they decided to use a Creative Commons license called Attribution-Share Alike. It governs the "reference designs" for the Arduino board, the files you'd send to a fabrication plant to have the boards made.
+
+Under the Creative Commons license, anyone is allowed to produce copies of the board, to redesign it, or even to sell boards that copy the design. You don't need to pay a license fee to the Arduino team or even ask permission. However, if you republish the reference design, you have to credit the original Arduino group. And if you tweak or change the board, your new design must use the same or a similar Creative Commons license to ensure that new versions of the Arduino board will be equally free and open.
+
+The only piece of intellectual property the team reserved was the name Arduino, which it trademarked. If anyone wants to sell boards using that name, they have to pay a small fee to Arduino. This, Cuartielles and Banzi say, is to make sure their brand name isn't hurt by low-quality copies.
+
+Members of the team had slightly different motives for opening the design of their device. Cuartielles—who sports a mass of wiry, curly hair and a Che Guevara beard—describes himself as a left-leaning academic who's less interested in making money than in inspiring creativity and having his invention used widely. If other people make copies of it, all the better; it will gain more renown. ("When I spoke in Taiwan recently, I told them, 'Please copy this!'" Cuartielles says with a grin.) Banzi, by contrast, is more of a canny businessman; he has mostly retired from teaching and runs a high tech design firm. But he suspected that if Arduino were open, it would inspire more interest and more free publicity than a piece of proprietary, closed hardware. What's more, excited geeks would hack it and—like Linux fans—contact the Arduino team to offer improvements. They would capitalize on this free work, and every generation of the board would get better.
+
+Sure enough, that's what happened. Within months, geeks suggested wiring changes and improvements to the programming language. One distributor offered to sell the boards. By 2006, Arduino had sold 5,000 units; the next year, it sold 30,000. Hobbyists used them to create robots, to fine-tune their car engines for ultrahigh mileage, and to build unmanned model airplanes. Several quirky companies emerged. A firm called Botanicalls developed an Arduino-powered device that monitors house plants and phones you when they need to be watered.
+
+In one sense, Arduino's timing was perfect. There's a resurgence of DIY among geeks interested in hacking and improving hardware, fueled by ever-cheaper electronics they can buy online, build-it-yourself publications like Make magazine, and Web sites like Instructables. In recent years, hackers have been aggressively cracking consumer devices to improve them—adding battery life to iPhones, installing bigger hard drives on TiVos, and ripping apart Furby toys and reprogramming them to function as motion-sensing alarm bots. Inexpensive chip-reading tools make it possible to reverse-engineer almost anything.
+
+This is the unacknowledged fact underpinning the open hardware movement: Hardware is already open. Even when inventors try to keep the guts of their gadgets secret, they can't. So why not actively open those designs and try to profit from the inevitable?
+
+"Apple never open-sourced the iPod, right? But if you go down to Canal Street in Manhattan, there are copies all over the place."
+(http://www.wired.com/techbiz/startups/magazine/16-11/ff_openmanufacturing?)
+
+
+==The Arduino Enterpreneurial Coalition==
+
+Dam Mellis:
+
+"There are a lot of people creating value around Arduino: e.g. this experimentation kit from oomlout, tons of videos from Make Magazine, various books, etc. When I see all this activity, two questions come to mind, one selfish and one altruistic. The selfish question is: how can I capture more of this value? The altruistic question is: how can I make these things more accessible and useful to the Arduino community?"
+(http://dam.mellis.org/2009/06/value_and_the_arduino_ecosystem/)
+
+
+
+
+==Two Open Source Hardware Business models==
+
+1.
+
+"Right now, open design pioneers tend to follow one of two economic models. The first is not to worry about selling much hardware but instead to sell your expertise as the inventor. If anyone can manufacture a device, then the most efficient manufacturer will do so at the best price. Fine, let them. It'll ensure your contraption is widely distributed. Because you're the inventor, though, the community of users will inevitably congregate around you, much as Torvalds was the hub for Linux. You will always be the first to hear about cool improvements or innovative uses for your device. That knowledge becomes your most valuable asset, which you can sell to anyone.
+
+This is precisely how the Arduino team works. It makes little off the sale of each board—only a few dollars of the $35 price, which gets rolled into the next production cycle. But the serious income comes from clients who want to build devices based on the board and who hire the founders as consultants.
+
+"Basically, what we have is the brand," says Tom Igoe, an associate professor at the Interactive Telecommunications Program at New York University, who joined Arduino in 2005. "And brand matters."
+
+What's more, the growing Arduino community performs free labor for the consultants. Clients of Banzi's design firm often want him to create Arduino-powered products. For example, one client wanted to control LED arrays. Poking around online, Banzi found that someone in France had already published Arduino code that did the job. Banzi took the code and was done."
+
+
+2. 
+
+"Then there's the second model for making money off open source hardware: Sell your device but try to keep ahead of the competition. This isn't as hard as it seems. Last year, Arduino noticed that copycat versions of its board made in China and Taiwan were being sold online. Yet sales through the main Arduino store were still increasing dramatically. Why?
+
+Partly because many Asian knockoffs were poor quality, rife with soldering errors and flimsy pin connections. The competition created a larger market but also ensured that the original makers stayed a generation ahead of the cheap imitations. Merely having the specs for a product doesn't mean a copycat will make a quality item. That takes skill, and the Arduino team understood its device better than just about anyone else. "So the copycats can actually turn out to be good for our business," Igoe says."
+(http://www.wired.com/techbiz/startups/magazine/16-11/ff_openmanufacturing?)
+
+
+[[Category:Cases]]
+
+[[Category:Companies]]
+
+[[Category:Business Models]]
+
+[[Category:Manufacturing]]

@@ -1,0 +1,299 @@
+Extensive directory of Open Source VOIP applications, both clients and servers at 
+http://www.voip-info.org/wiki-Open%20Source%20VOIP%20Software
+
+
+=Directory=
+
+Copied from http://www.voip-info.org/wiki-Open%20Source%20VOIP%20Software
+
+No live links, for hyperlinks go to that original compilation.
+
+==SIP Proxies==
+
+    * Net-SIP A Perl SIP framework that includes a stateless proxy
+    * sipd SIP Proxy
+    * SIP Express Router (SER): the SIP router/proxy/jack-in-all-trades from IPtel.org
+    * partysip
+    * SaRP SIP and RTP Proxy in Perl
+    * Siproxd SIP and RTP Proxy
+    * sipX The SIP PBX for Linux: Complete, native SIP PBX solution from SIPfoundry
+    * Vocal SIP softswitch with H.323 and MGCP translators for non-SIP endpoints
+    * Yxa: Written in the Erlang programming language
+    * JAIN-SIP Proxy
+    * Mini-SIP-Proxy A very tiny perl POE based SIP proxy
+    * OpenSER: GPL SIP Server with TLS support
+    * MjServer: cross-platform SIP proxy/registrar/redirect, written in java, based on MjSip stack
+    * OpenSBC: MPL licensed SIP proxy/registrar/B2BUA with NAT traversal and ENUM
+    * MySIPSwitch: SIP Proxy server which allows using multiple SIP accounts with a single SIP login
+    * SIPVicious tool suite: tools for auditing sip devices 
+
+
+
+
+==SIP Clients (UA's)==
+
+
+'''Linux clients:'''
+
+    * Cockatoo
+    * Ekiga: SIP, H.323 audio and video softphone for various unices
+    * Kphone
+    * Linphone audio and video SIP softphone for Linux and Windows XP
+    * minisip cross-platform SIP softphone, Linux, Windows XP and soon Windows Mobile 2003 SE
+    * MjUA: simple cross-platform SIP softphone, written in java, based on MjSip stack
+    * PhoneGaim
+    * PJSUA: Command line SIP UA with SIMPLE, IM, call transfer, RTCP/RTCP, etc.
+    * SFLphone, open-source multiplatform multi-protocol VoIP client
+    * OpenWengo: a fully SIP compliant multiplatform softphone with many features
+    * OpenZoep: GPL telephone and IM messaging client engine
+    * Shtoom: SIP softphone in Python, runs on Windows, Mac, Linux
+    * sipXphone from SIPfoundry, previously known as the Pingtel phone
+    * sipXezPhone ("sipX easy phone") from SIPfoundry based on sipXtapi
+    * Twinkle
+    * YATE: YateClient is multiprotocol and multiplatform phone with H.323, SIP and IAX support.
+    * YeaPhone: A SIP softphone for the Yealink USB-P1K handset based on the libLinphone backend
+    * FreeSWITCH
+    * http://www.opensipstack.org MPL licensed SIP stack with ENUM, Presence (XMPP/SIMPLE) and NAT traversal. Reference implementation of Session Border Controller (OpenSBC) available. 
+
+
+'''MacOS X clients:'''
+
+    * FreeSWITCH: Console client for SIP, IAX2, Woomera and Jingle/Google Talk
+    * PJSUA: Command line SIP UA with SIMPLE, IM, call transfer, RTCP/RTCP, etc.
+    * SFLphone, open-source multiplatform multi-protocol VoIP client
+    * Shtoom: SIP softphone in Python, runs on Windows, Mac, Linux 
+
+
+'''Windows clients:'''
+
+    * 1videoConference alpha: a web2.0 VoIP video conferencing software for Asterisk.
+    * FreeSWITCH: Console client for SIP, IAX2, Woomera and Jingle/Google Talk
+    * minisip cross-platform SIP softphone, Linux, Windows XP and soon Windows Mobile 2003 SE
+    * Linphone audio and video SIP softphone for Linux and Windows XP
+    * MjUA: simple cross-platform SIP softphone, written in java, based on MjSip stack
+    * Eyeball Messenger: Standards based soft client that is SIP and XMPP compliant
+    * OpenWengo: a fully SIP compliant multiplatform softphone with many features
+    * OpenZoep: GPL telephone and IM messaging client engine
+    * PhoneGaim
+    * PJSUA: Command line SIP UA with SIMPLE, IM, call transfer, RTCP/RTCP, etc.
+    * SIP COMMUNICATOR Java based softphone
+    * Shtoom: SIP softphone in Python, runs on Windows, Mac, Linux
+    * sipXphone from SIPfoundry, previously known as the Pingtel phone
+    * http://www.opensipstack.org MPL licensed SIP stack with ENUM, Presence (XMPP/SIMPLE) and NAT traversal. Reference implementation of Session Border Controller (OpenSBC) available.
+    * sipXezPhone ("sipX easy phone") from SIPfoundry based on sipXtapi
+    * wxCommunicator Windows softphone based on sipXtapi and wxWidgets 2.8.x, multi-account, conferencing, NAT support
+    * YATE: YateClient is multiprotocol and multiplatform phone with H.323, SIP and IAX support. 
+
+
+
+==SIP tools==
+
+    * Callflow: Generates SIP Call Flow diagrams
+    * SIP-CallerID: SIP Caller ID retrieval and lookup
+    * SIPbomber: SIP proxy testing tool
+    * Sipp: SIP performance tester
+    * SIP Proxy: SIP security testing tool.
+    * pjsip-perf: SIP transaction and call performance measurement tool
+    * Sipsak: SIP testing tool
+    * SMAP: Locating and fingerprinting remote SIP devices
+    * Vovida.org load balancer: SIP Load Balancer
+    * PROTOS Test-Suite: SIP Testing tools
+    * SFTF: SIP Forum Test Framework - a SIP UA test suite primarily targeted at UA software developers hosted by SIPfoundry
+    * SIP Soft client: Software development kit for SIP Softphone
+    * SIPVicious tool suite: tools for auditing SIP devices 
+
+
+==SIP Protocol Stacks and Libraries==
+
+    * YASS - Statefull SIP stack used in Yate written in C++ usable for client, server or proxy in a multithread or single thread model. It's working on both Windows and Linux, it's very small but full featured.
+    * MjSip - complete and powerful java-based SIP library for both J2SE and J2ME platforms.
+    * oSIP Library SIP Library
+    * eXosip - eXtended osip library
+    * Vovida SIP Vovida SIP stack
+    * reSIProcate SIP stack and sample Application from SIPfoundry
+    * NIST SIP Various SIP appications and tools in Java
+    * PJSIP: Small footprint, high performance, and ultra-portable SIP stack written in C, and has language binding for Python.
+    * Twisted Python protocol stacks and applications includes SIP support
+    * OSP client protocol stack and SIPfoundry
+    * libdissipate SIP stack
+    * sipXtackLib an RFC 3261, 3263 complient SIP stack from SIPfoundry
+    * minisip includes a SIP stack
+    * http://sofia-sip.sourceforge.net Sofia-Sip is SIP stack implementation with STUN and presense support
+    * http://www.opensipstack.org MPL licensed SIP stack with ENUM, Presence (XMPP/SIMPLE) and NAT traversal. Reference implementation of Session Border Controller (OpenSBC) available.
+    * Verona - GPL licenesed VOIP engine based on oSIP,eXosip,oRTP,ffmepg, works on Linux,Windows Mac-OS/X
+    * PhClickDial - Verona based Active/X plugin for IE allowing ClickToDial functionallity 
+
+
+==H.323 Clients==
+
+
+'''Linux clients:'''
+
+    * Ekiga
+    * GnomeMeeting
+    * YATE: YateClient is multiprotocol and multiplatform phone with H.323, SIP and IAX support.
+    * FreeSWITCH 
+
+
+'''MacOS X clients:'''
+
+    * ohphoneX
+    * FreeSWITCH 
+
+
+'''Windows clients:'''
+
+    * OpenPhone
+    * FreeSWITCH 
+
+
+==H.323 Gatekeeper==
+
+    * GNU Gatekeeper - for Linux, Windows, Mac etc. 
+
+
+==IAX clients==
+
+    * IAXComm for Linux, MacOS X and Windows
+    * Kiax - for Linux (QT3) and Windows (QT4), based on iaxclient, GPL
+    * QtIax from http://www.holgerschurig.de/qtiax.html
+    * SFLphone, open-source multiplatform multi-protocol VoIP client (IAX support is planned)
+    * MozIAX
+    * YakaPhoneSimple, Free, Open Source, Skinnable IAX/IAX2 Softphone from YakaSoftware
+    * YATE: YateClient is multiprotocol and multiplatform phone with H.323, SIP and IAX support.
+    * FreeSWITCH 
+
+
+==RTP Proxies==
+
+    * Maxim Sobolev's RTPproxy: Works with SIP express router to traverse NAT, also functions as RTP gateway between IPv4 and IPv6
+    * AG Projects: SER MediaProxy works with SIP express router, has load-balancing using DNS SRV records and accounting capabilities 
+
+==RTP Protocol Stacks==
+
+    * JRTPLIB CUCL Common Multimedia Library includes cross platform RTP stack
+    * oRTP Written in C, running on linux, win32 and arm-linux.
+    * ccRTP C++ library based on GNU Common C++
+    * LIVE.COM Streaming Media includes C++ RTP stack
+    * Vovida RTP Stack
+    * RTPlib C library
+    * libRTP part of gnome-o-phone
+    * sipXmediaLib RTP + audio bridges, audio splitters, echo suppression, tone from generation (e.g. DTMF), streaming support, RTCP, G711 codecs, etc. from SIPfoundry
+    * Secure RTP - see;"> SRTP
+    * YRTP - Yate RTP stack, that can be used in other projects.
+    * FreeSWITCH
+    * PJMEDIA: Small footprint media stack with a tiny RTP/RTCP stack suitable for DSP or embedded deployment 
+
+
+
+==Other tools==
+
+    * Vovida.org STUN server: A STUN server
+    * Vomit converts a Cisco IP phone conversation (recorded with TCPdump) into a standard WAV file
+    * Oreka capture and retrieval of SIP, Cisco Skinny (SCCP) and raw RTP sessions with audio compression, rdbms metadata storage and web based user interface.
+    * MORCC - automated online Calling Card store. Paypal integrated.
+    * Voipong - Voice over IP (VoIP) sniffer and call detector. 
+
+
+
+
+
+==PBX platforms==
+
+Some of these include SIP proxy functionality
+
+    * Asterisk: Open Source PBX. Supports IAX, SIP, MGCP, H.323 and other protocols
+    * CallWeaver: a fork of Asterisk with T.38 termination
+    * OpenPBX: Open Source PBX developed using Perl
+    * PBX4Linux: ISDN PBX with H.323 GW
+    * sipX - The SIP PBX for Linux from SIPfoundry, sipX on freshmeat.net
+    * SIPexchange PBX Pingtel's SIP PBX
+    * YATE Yet Another Telephony Engine - supports H.323, SIP, IAX, PSTN
+    * FreeSWITCH 
+
+
+==IVR platforms==
+
+    * Asterisk: Open Source PBX with built-in IVR server
+    * Bayonne: GNU project IVR server
+    * CT Server Perl based Open Source client/server library supporting Voicetronix Telephony hardware.
+    * OpenVXI: Implementation of VoiceXML
+    * sipX PBX The SIP PBX for Linux (open source) with built-in IVR (voice mail & auto-attendant)
+    * YATE Yet Another Telephony Engine
+    * FreeSWITCH
+    * See Also: VoiceXML 
+
+
+
+==Voicemail servers==
+
+    * Asterisk: Open Source PBX with built-in Voicemail Server
+    * OpenPBX: Open Source PBX with built in voicemail
+    * sipX PBX The SIP PBX for Linux (open source) with built-in IVR (voice mail & auto-attendant)
+    * Lintad: Linux Telephone Answering Device - A Voice and Faxmail Server
+    * OpenUMS: Linux Voicemail and Unified Messaging Server
+    * VOCP: A Voicemail Server for voice modems
+    * YATE Yet Another Telephony Engine with H.323, SIP and IAX support.
+    * FreeSWITCH 
+
+
+==Speech==
+
+'''Text-to-speech and speech-to-text (voice recognition)'''
+
+    * Festival: Voice synthesis system (implemented with a trainable neural network)
+    * OpenSALT: Implementation of SALT
+    * OpenVXI: Implementation of VoiceXML
+    * Sphinx: speaker-independent speech recognizer
+    * FreeSWITCH 
+
+
+==Fax Servers==
+
+    * Lintad: Linux Telephone Answering Device - A Voice and Faxmail Server
+    * Hylafax
+    * Asterisk Fax Email Gateway 
+
+
+==Development platforms, protocol stacks==
+
+    * OpenMGCP: Open Source MGCP Protocol Stack Developed with C and POSIX APIs,
+    * OpenSS7: SS7 Protocol Stack
+    * H323plus: Open Source H.323 Protocol Stack following on from the original openH323
+    * ooh323c: Open Source H.323 Protocol Stack Developed in C
+    * ++Skype C library for skype add-on platform independent software development. It is platform independent, easy to use, and easy to extend because of the flexible library design, inspired by modern C++ design ideas. Performance is one of the goals.
+    * OpenBloX: OpenBloX Open Source Java Diameter framework with all IMS and SIP servers interfaces; maintained by Traffix Systems,
+    * OpenSS7: SS7 Protocol Stack 
+
+
+==Radius Servers==
+
+    * Aradial: Radius server and Billing for VoIP
+    * BSDRadius: Radius server for VoIP
+    * Interlink RADIUS Server RADIUS Server Software
+    * RadBox RADIUS Server + Billing System. (For a work, you nead instal Framework 2.0) 
+
+
+==Middleware==
+
+    * Mobicents: The most popular Open Source Service Logic Execution Environment (JSLEE) and SIP Application Server for the Java platform.
+    * Ernie: Open Source Python based applications platform for VoIP and presence based applications 
+
+
+==Suite Solutions==
+
+    * Zoontelecom: Zoon Suite is a Open Source solution for make VoIP services with billing and more. (Spanish) 
+
+=More Information=
+
+#[http://www.voip-info.org/ VOIP Info]
+#[[Open Source Telephony]]
+#[[Internet Telephony]]
+#[[SIP]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Open]]

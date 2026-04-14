@@ -1,0 +1,4 @@
+<includeonly>{{#ifexist: {{#if: {{{2|}}} | {{{2}}} | {{#if: {{NAMESPACE}} | {{NAMESPACE}}:}}{{BASEPAGENAME}}}}/{{{1}}} | &nbsp;&bull;&nbsp;<span lang="{{{1}}}">{{#if: {{{2|}}}|[[{{{2}}}/{{{1}}}|{{#language:{{{1}}}}}]]| [[:{{NAMESPACE}}:{{BASEPAGENAME}}/{{{1}}}|{{#language:{{{1}}}}}]]|}}</span>|<span></span>}}</includeonly>
+<noinclude>
+Shows only the existing articles.
+</noinclude>

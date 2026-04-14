@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  blog:
+    image: nginx:alpine
+    container_name: p2p-blog
+    restart: unless-stopped
+    ports:
+      - "8088:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./blog.p2pfoundation.net:/usr/share/nginx/html/blog.p2pfoundation.net:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.p2p-blog.rule=Host(`blog.p2pfoundation.net`)"
+      - "traefik.http.services.p2p-blog.loadbalancer.server.port=80"
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

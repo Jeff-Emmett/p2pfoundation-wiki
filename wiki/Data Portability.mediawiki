@@ -1,0 +1,124 @@
+'''= concept [http://en.wikipedia.org/wiki/DataPortability] and specific project [http://www.dataportability.org/]'''
+
+=Concept=
+
+'''= Data portability is the ability for people to reuse their data across interoperable applications - the ability for people to be able to control their identity, media and other forms of personal data.''' [http://en.wikipedia.org/wiki/DataPortability]
+
+
+==Discussion==
+
+===Two possible solutions===
+
+Yihong Ding:
+
+"There are two basic paths of resolving this issue of resource portability. One path is to make the resources be presented in more portable formats; and the other path is to produce a mechanism that aligns user-owned resources to particular community standards. While most of the current data portability efforts focus on the first path, I am going to discuss my thoughts on the second path.
+
+The key of resource portability is the switch of ownership over resources instead of the deployment of resources. For instance, when a user make a comment on a blog, who should own this comment, the commenter or the blog owner? By default, the current mechanism is that the one who owns the physical storage space of the comment owns the comment. Most of the time, the comment belongs to the blog owner. Many other times, however, the comment may actually be owned by a third party who provides the space for the blog owner. In very few extreme cases, the commenter actually owns the comment. This reality theoretically contradicts to the comment logic that the one who makes the comment (i.e. the commenter) should be the unquestionable owner. Will the improvement of portability of comments solve this problem? Not precisely since the problem is not really about whether the comment is portable but it is about who should own this piece of user-generated resources.
+
+The fundamental assumption underneath the current environment indeed has no problem. That is, the one who owns the physical storage of a resource should be granted the ownership of the resource. Following this assumption, we need to let any Web user have a piece of Web spaces that can store their "owned" resources. In our previous example, whenever a Web user leaves a comment in a remote site, the commenter should actually store this comment in his own space instead of the remote site. By contrast, the remote blog site should be added an RSS-type feed that brings the comments to the proper location. This mechanism allows the ownership of the comment clearly belonging to the commenter, and the commenter has the full control of updating or even deleting the comments based on their own interest. At the same time, the commenters might be granted an option to leave their comment out of their own spaces (i.e. storing them on remote site as it is done currently). By choosing this option, the commenters agrees giving up their ownership over their generated resources (the comments in our example).
+
+A center component in this described environment is the home-spaces (comparing to homepages) of the Web users. By storing the resources in their home-spaces, Web users exclaim the ownership over these resources. When users connect to a registered site (i.e. be willing to participating to the social activities in the specific community), it is a process of casting the respective stored resources in home-spaces to the community convention. This process, as I names, is Automatic Character Switch (ACtS).
+
+In each home-space, a Web user may store many resources that are related to varied sites (communities). When this Web user join a site, there must be a communication between the site manager and the user to decide which resources are of interest and thus could be casted to the community view and contribute to the community. This is the key of the ACtS technology. Apparently, ACtS is similar to a Web operating system. But indeed it is not an operating system since it does no more "operations" than "managing" the switch of ownership over resources. This mechanism may eventually solve the resource portability problem and leads the Web to the next generation."
+(http://yihongs-research.blogspot.com/2008/02/resource-portability-path-towards-next.html)
+
+
+==More Information==
+
+#Watch: [[Robert Scoble on Data Portability]]
+#[[Data Neutrality]]
+#[[Data Property Rights]]	  
+
+
+
+=Project=
+
+Standards-related project: 'The initiative of DataPortability Workgroup is '''to allow regular Web users freely carrying their own data over the Web'''." [http://yihongs-research.blogspot.com/2008/02/resource-portability-path-towards-next.html]
+
+URL =  
+
+==Description==
+
+"As users, our identity, photos, videos and other forms of personal data should be discoverable by, and shared between our chosen tools or vendors. We need a DHCP for Identity. A distributed File System for data. The technologies already exist, we simply need a complete reference design to put the pieces together.
+
+Our mission is too put all existing technologies and initiatives in context to create a reference design for end-to-end Data Portability. To promote that design to the developer, vendor and end-user community."
+(http://www.dataportability.org/)
+
+
+==Discussion:== 
+
+===Difficulties in implementation===
+
+Juan Carlos Perez:
+
+"Vendor Interest Minimal
+
+Unfortunately, the enthusiasm, commitment and passion displayed by participants, many of whom are acting as individual volunteers, hasn't so far been replicated by the major Internet players.
+
+While the decisions by Google and Facebook to become members put the workgroup in a news spotlight, their representatives don't seem to have yet participated in the forum discussions. Google and Facebook also declined to have their workgroup representatives be interviewed for this article. Each separately sent a brief, prepared statement saying that they want to participate in the group because they're committed to data portability.
+
+This isn't new. The CEOs of both companies at different times have said that their companies believe in data portability, and yet, neither them nor any other major Internet company can be said to have taken a leadership role in this effort.
+
+"I haven't seen anything convincing from the big Internet companies that illustrates that they want to embrace this wholeheartedly," Breslin said. "These sites haven't really been rushing to make their data portable yet."
+
+"We are yet to see if they are fully committed. So far they have only committed to the conversation," said Saad, who is also CEO of Faraday Media in Australia and cofounder of the APML Workgroup. "That being said, however, it's encouraging to see them take the first few steps in the right direction,"
+
+This isn't a minor point. The DataPortability Workgroup and the other technical organizations could come up with fantastic solutions, but if the major Internet players -- and in particular the major social-networking sites -- don't adopt them, data portability will not become a reality for end-users. MySpace, Friendster, LinkedIn and Bebo did not reply to requests for comment for this story.
+Portable or Piracy?
+
+Maybe these Internet companies aren't truly convinced that data portability will be good for their businesses. In what some viewed as an example of words being inconsistent with actions, Facebook recently booted from its social network the well-known technology blogger Robert Scoble.
+
+Scoble's crime? He exported his contacts data in his Facebook account over to Plaxo's address book management service, Pulse. No can do, Facebook said, explaining that Plaxo's tool violated Facebook's terms of service and posed a security risk because it "scraped" the data from the social network. Scoble's account was later reinstated, but under the condition he doesn't do this again.
+
+If you operate a social-networking site -- or any site where people create an account or profile, list contacts and post content -- a way to discourage them from switching to a competitor is to make it hard or impossible for them to easily export and reuse that data elsewhere.
+
+Yet, proponents of data portability like Saad say that things are starting to change, and that Facebook, MySpace, Google and others need to wise up if they don't want to fall into disfavor with their users.
+
+What has changed is that these "social" sites have reached mainstream status, and a critical mass of users have realized the inconvenience of having to reenter and update a lot of the same information and content in multiple "social" sites and applications.
+
+"As more and more applications start to feel the impact of social features, users will begin to demand a data portability solution. Either that or network fatigue will reduce adoption and eventually kill the fun," Saad said.
+
+For example, a concrete result of data portability could be a console-like management application where a person could manage his address book contacts, photos, videos, social news entries, social bookmarks and blog posts. With that application, the user would be able to share data between multiple social applications, sites and services.
+
+Unlike other vendors, Plaxo is heavily involved in data portability discussions and efforts, precisely because its Pulse service has been designed to help people manage their dispersed contacts data across address books, sites and e-mail accounts.
+
+"By making data portable, you're enabling all these tools to work together. The user can be the hub and the different services can be spokes. That's what we're pushing for: users in control of the data and interoperability among the services," said Joseph Smarr, Plaxo's chief platform architect."
+(http://www.pcworld.com/businesscenter/article/141541/data_portability_reasonable_goal_or_impossible_dream.html)
+
+
+
+===Critique from the [[Free Network Services]] movement===
+
+Adriana [http://www.mediainfluencer.net/about/]:
+
+"The problem I have with dataportability.org is that they don't
+actually insist on the user owning the data but merely being able to
+do specified things with it. Much has been said and written by one
+Elias Bizanes on the foolishness of insisting on literal ownership of
+one's data. (http://liako.biz/2008/11/you-dont-nor-need-to-own-your-data/)
+Having watched the debate, I believe that in order to get the big
+players on board, they compromised on what data ownership means and
+what data portability actually entails. The big players facebook,
+myspace, Google etc. who live off user data, of course, so the idea of
+people being to take them out of silos and with them elsewhere didn't
+really agree with them. So the idea is some kind of standards and
+openness that allows the user to see his data from Facebook on
+myspace, or on google or indeed on any platform/silos that agrees to
+participate, signs up to dataportability.org and uses their standards.
+That'll be the day but more importantly, that's not data portability
+in my book.
+
+In short, it seems to be that to dataportability.org data portability
+come to be ability to 'port' data in different places on the web,
+rather than 'take them' with me where I want. Certainly not what I
+imagine and am interested in."
+(Autonomo.us mailing list, May 2009)
+
+==More Information==
+
+#See the wiki of The [[DataPortability Project]]
+
+[[Category:Standards]]
+[[Category:Relational]]
+[[Category:Technology]]
+[[Category:Data Commons]]

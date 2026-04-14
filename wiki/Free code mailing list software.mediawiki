@@ -1,0 +1,47 @@
+There are a number of free code packages for running mailing list servers. This list was sourced from a [https://www.coactivate.org/projects/permaculture/mailing-list-software page in the Permageeks resources], that I curated on the wiki of the [https://www.coactivate.org/projects/permaculture/ Aotearoa Permaculture Network]. That page has been retired, and the list is now curated here. --[[User:Strypey|Strypey]] ([[User talk:Strypey|talk]]) 11:56, 14 October 2019 (UTC)
+
+= Discussion Lists and Newsletter Lists =
+
+* GNU Mailman (license: GNU GPLv2+, programming language: Python). Developed by the GNU Project, with oversight by the Free Software Foundation.
+** index on a Mailman server: http://lists.ibiblio.org/mailman/listinfo
+** list home page on a Mailman server: http://lists.ibiblio.org/mailman/listinfo/cc-nz
+** list archives on a Mailman server: http://lists.ibiblio.org/pipermail/cc-nz/
+* GroupServer (license: ZPL 2.1, programming language: Python/ Zope). Mailing lists that can also be used like forums, using the searchable archive website. Developed by OnlineGroups, which is operated by a private company called Fiorenza Limited, based in Aotearoa (NZ). Development and blog posts seem to have dropped off around 2016. Possibly a dying or dead project?
+** index on GroupServer: http://groups.nzoss.org.nz/
+** list home page on GroupServer: http://groups.nzoss.org.nz/groups/openchat/
+** list archives on GroupServer: http://groups.nzoss.org.nz/groups/openchat/
+
+* Schleuder (license: GPLv3, programming language: Ruby-on-Rails). Encrypted mailing lists. As of 2019, you have to trust the host running your Schleuder server, because they have the power to store and decrypt emails sent through its mailing lists. Developed by an anonymous group who have their code repo on a GitLab instance loosely associated with RiseUp.net, and an IRC channel on irc.Indymedia.org.
+** May not have publicly-visible index and list home pages because of the privacy orientated nature of the project. Certainly won't have list archive pages.
+
+* Sympa (license: GNU GPLv2+, programming language: Perl). Developed by an open source community, under the stewardship of RENATER, a national research and education network in France since 2011.
+* index on a Sympa server: https://lists.riseup.net/directory/agriculture/
+* list home page on a Sympa server: https://lists.riseup.net/www/info/permaculturehudsonvalley
+* list archives on a Sympa server: https://lists.riseup.net/www/arc/permaculturehudsonvalley
+
+= Web Forum Software That Includes Mailing List Features =
+
+* Discourse (license: GPLv2, programming language: Ruby on Rails): primarily a web forum platform, but forums can be interacted with via email in a similar way to an email discussion list. Developed by an VC-funded company called the Civilized Discourse Construction Kit Inc, that is incorporated in the USA.
+
+* Loomio (license: AGPLv3, programing language: Ruby on Rails, Angular): primarily a group decision-making platform, but groups and subgroups can be interacted with via email in a similar way to an email discussion list. Developed by an Aotearoa (NZ) based worker-owned coop that is a member of the Enspiral network.
+
+
+= Newsletter Lists Only =
+
+* CiviCRM (license: GNU AGPLv3, programming language: PHP) note: CRM, does newsletter lists, but not discussion lists
+
+* DadaMail (license: GNU GPLv2+, programming language: Perl) note: mainly a newsletter mail-out server. Can support discussion lists using a Bridge plug-in
+
+* Mail-for-Good (license: 3-clause BSD, programming language: ) note: targeted at not-for-profits running lobbying campaigns or doing large scale organising, using "AWS Simple Email Service to send bulk emails at $0.10 per 1000 emails."
+
+* Mailtrain (license: GPLv3, programming language: Javascript/ NodeJS): "self-hosted newsletter app built on top of Nodemailer"
+
+* Mautic (license: GNU GPLv3+, programming language: PHP/ Javascript) note: aims to clone MailChimp type functions
+
+* Postal (license: "MIT", programming language: Ruby) note: intended as a free code replacement for proprietary mail delivery platforms like  Sendgrid, Mailgun or Postmark
+
+See also: 
+* [[Open Source Mailing List Software]]
+* A list with more free code CRM packages can be found at [[Open_Source_CRM]]
+
+[[Category:Software]]

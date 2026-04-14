@@ -1,0 +1,160 @@
+
+
+Typology of abuses of [[Open Licenses]], by Florian v. Samson.
+
+This text is licensed under "Creative Commons Attribution-Share Alike 3.0
+(CC BY-SA 3.0)" license <http://creativecommons.org/about/license/>.
+
+
+=Text=
+
+Florian Samson:
+
+"F/OSS-licenses (conforming to the almost equivalent definitions
+by the [[Free Software Foundation]] (FSF) [http://www.fsf.org/licensing/essays/free-sw.html] and the Open
+Source Initiative (OSI) [http://opensource.org/docs/definition.php>];
+[http://opensource.org/licenses/alphabetical]) can be utilised
+in multiple different ways.  Almost none of the usages described below
+can be clearly called an abuse, as they are mostly covered by the
+corresponding licenses.  There is absolutely no way of limiting the use
+of F/OSS-licenses and -products to the "good" use cases, just "the way
+it was meant to be".  "Fortunately", I must add, as everyone's definition
+of "good" and "right" largely varies.
+
+==0. "Just take it"==
+
+Grab F/OSS-stuff at your choice and utilise it internally for whatever
+you like to: Just use it // Enhance it // Found a project/product upon
+it.
+
+All BSD-style licenses allow for that (e.g. MIT-, X.org-, the three
+classical BSD-licenses), but you are not going to tell anybody, anyway.
+Hence other F/OSS-licenses are basically O.K., too, as long as you take
+care that nobody finds out what is inside of your product (try
+obfuscating that fact a bit).  And if somebody really finds out and
+pulls you to court, a settlement of a few 10.000 $ is usually sufficient
+to silence those F/OSS enthusiasts.
+
+Examples: CISCO IOS, presumably some small parts in Micosoft Windows, etc.
+
+
+==1. "Marketing only"==
+
+Develop in a closed manner, without any chance for others to contribute,
+practically.
+
+Set up a nice web site, mailing-list(s), wiki to create the "right"
+impression of your "F/OSS"-project, and generate some traffic / content
+there, but nothing too significant.  If you did it right, after a while
+some people will automatically show up and perpetually generate traffic /
+insignificant content without much ado from your side.
+
+"Release late, release rarely": significantly delay the release of the
+sources (at least 6 months) after releasing a compiled version (potentially,
+but not necessarily only available for money), and take your time for a
+source release (at least 15 months past the last).  Reasons to name:
+Preparation of the source "to be ready for the public", sorting out
+licensing issues, "Our feature driven development aims at timely product
+delivery to our customers, not at the source releases for the interested
+public, you must understand", etc..
+
+Extra evilness: Prove that you perfectly understand to play with F/OSS-
+licenses by releasing only the fragments of the source you definitly have
+to, licensewise.  Argue that the other portions are not derived work and
+contain pieces which are licensed (proprietary) from third parties or are
+patent protected.  Hence nobody will be able to rebuild and re-release
+your "F/OSS"-product in its completeness.
+
+Examples: Microsoft WiX (on Sourceforge) & ODF Filter Plugin (also on SF),
+potentially OGD / Traversaltech / Techsource, etc..
+
+
+==2. "Marketing & Maximise scoop up"==
+
+Prove that you well understand the F/OSS-principle "do not reinvent the
+wheel", by thourougly investigating the F/OSS-landscape for components
+from vivid F/OSS-projects you can utilise.  This minimises your own
+implementation efforts.
+
+Do not feed back any enhancements or bugfixes to third party components
+to the upstream projects, as this can turn out to be labour intensive and
+would derogate the technical advantages of your product (actually this
+mindset turns out to completely wrong in the long run, as it usually
+causes major efforts to regulary integrate upstream enhancements and
+bugfixes in your private branch(es) of the source(s)).
+
+Also apply all of 1. "Marketing only", but you can tone down on real
+marketing, as your primary goal is to maximise the scooping!
+
+Examples: Tom-Tom-Firmware, Google-Chrome, Apple-MacOsX (Apple is slightly getting better over the years), Microsoft SfU ("Services for UNIX", which started as "UNIX services for Windows NT4" in 1998), Microsoft WindowsCE, etc.
+
+
+==3. "Marketing, Scoop up & Feed back upstream only when necessary"==
+
+You have understood or learned the hard way that not feeding back
+anything to the upstream projects backfires sooner or later, as described
+in 2. "Marketing & Maximise scoop up".  Hence you feed back your
+enhancements and bugfixes to the upstream projects where you feel it is
+expedient and really necessary, but you still perceive this as tedious
+work worth avoiding whenever possible.
+
+Still you adhere to most of the "golden rules" in 2. "Marketing &
+Maximise scoop up" and therefore also to 1. "Marketing only".
+Also, you may have realised that you can also scoop up labour, if you
+really allow for volunteers to contribute.  Thus you may implement
+practices to skim the best people and ideas in order to enhance your
+products.
+
+Finally, you understood that a public bug-tracker gives you access to
+thousands of beta-testers you can spare inhouse, a working public mailing
+list with developer-feedback provides feature-requests really fulfilling
+the users needs, and a wiki or alike significantly reduces ("auto-
+fulfills") support requests.
+
+Examples: Apple-Safari, good parts of SUNs software stack (esp.
+Java, Solaris, etc.), Microsoft CodePlex (with many projects
+e.g. IronPython, IronRuby, etc.), Canonical Ubuntu, Google
+Summer of Code ("GSOC"), products on Mozilla.com, etc.
+
+
+==4. "Developing _in_ the public, Developing _for_ upstream"==
+
+Well, the title says it; the only variable is who can contribute and how
+easily.  This makes up the whole (IMHO vastly academic) debate about
+extremely open ("everybody can directly contribute", e.g. Wikipedia) and
+closed ("we have a core team / maintainer who decides what goes in or not")
+development model, with many nuances in between.  "Model as it fits",
+is my suggestion.
+
+It makes life simpler, if you are maintaining / hosting projects yourself,
+so upstream is yours / in-house.  If that is not feasible, pay / employ
+developers in upstream projects.
+
+"Release early, release often", shortens feed-back cycles and
+accelerates product development.
+
+Access to the complete project sources is implicitly given, as
+everything happens in the public.
+
+Examples: Debian (simply defines "upstream is always us", as if all the F/OSS-world would be developing for Debian), RedHat (most
+products), OpenSuSE, Mandriva (most products), products on Mozilla.org, etc.; and in small doses:
+SUN, SGI, Intel, AMD, Hewlett-Packard (HP), etc., etc..
+
+
+This is all, but new: Cisco has taken BSD to found its IOS in the 1980ies
+and it has taken SUN three decades to go (or being pushed by commercial
+failures) from 0. to 3. / 4..  Even Microsoft crawled from 0. to 3.
+(<http://www.codeplex.com/>, <http://port25.technet.com/>) in the last
+15 years."
+
+=License=
+
+This text is licensed under "Creative Commons Attribution-Share Alike 3.0
+(CC BY-SA 3.0)" license <http://creativecommons.org/about/license/>.
+
+
+[[Category:IP]]
+
+[[Category:Articles]]
+
+[[Category:Licensing]]

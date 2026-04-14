@@ -1,0 +1,52 @@
+
+=Description=
+
+Evan Prodromou:
+
+"Social news Web sites have become a staple of many people’s Web experience. Examples include Reddit, Digg, Mixx, Yahoo! Buzz and Propeller. In my opinion, a flagship free network service for social news could be an important part of an open software services ecology.
+
+The Wikipedia article on social news redirects to social bookmarking, which I think is incorrect. Here’s my description: on a typical social news site, users submit URLs for Web sites, images, videos, or news articles. Other users comment on and rate the URLs — usually a binary thumbs-up/thumbs-down vote. Submitted URLs with the highest ranking are shown on the social news site’s front page, and users may also have “personalized” front pages that include only URLs recommended for them. Typically (not always) there’s a social network involved, such that a friend’s submissions or votes matter more than a stranger’s in recommending links for the user.
+
+Digg, in particular, has become an important arbiter of popularity on the Web in 2008. Getting a new link “dugg” and ranked highly, or even put on the front page, can be a make-or-break driver of traffic for bloggers and other site owners. The once-famed Slashdot effect is now dwarfed by Digg’s ability to send traffic to a new site.
+
+There are, of course, some serious downsides. The algorithms for ranking submitted links on most social news sites are proprietary. Data on URLs’ popularity, voting records, the social network itself and the profiles of users on the service is typically put under a strict no-reuse policy (Digg’s public domain dedication being a notable and refreshing exception) and is usually hard to retrieve in bulk. Finally, no current social news site supports a distributed model, e.g. cross-site voting or “friending” protocols."
+(http://autonomo.us/2008/10/social-news/)
+
+
+=Examples=
+
+Evan Prodromou:
+
+"There are several Free and Open Source social-news packages available for download. 
+
+Here are a few notable ones: 
+
+Slynkr. This Apache-licensed package drives Sun’s interesting but little-used SDN Share site. Slynkr has a good professional look, but my guess is that its dependence on Java technology is inhibiting its spread on the Web. Getting cheap Java hosting is just not that easy today. 
+
+Reddit. A site once neck-and-neck with Digg, but with flagging popularity, Reddit released its source under the CPAL. Reddit’s software, written in Python, has stood the test of time, and has undergone a lot of revisions based on feedback from the site’s active users. reddit.com also supports a Unfortunately, Reddit didn’t follow through with a release of its data under an Open Data license — all data is under a no-lookee-no-touchee personal-use-only user agreement. It would be interesting to see if Reddit can take this important next step and become a real Open Software Service. 
+
+Menéame is a fairly popular (Alexa rank: 6878) social news site in Spanish. Its software is available under the old AGPL, and all contents are licensed under the very liberal Creative Commons Attribution 2.5 Spain. As far as I can tell, Menéame is a model Open Software Service, and I strongly suggest its use for Spanish-speaking Web users. The main downside I see is that the software doesn’t seem to support any distributed sociality, so each new installed version will be isolated from existing sites. 
+
+Pligg (sounds like…) was originally started as an English-language fork of Menéame, but has been under heavy development for the last two years and is probably at this point significantly more mature than its ancestor. However, the software remains under the old AGPL (ah, copyleft…), although the status of add-on packages in the Pligg Pro shop is kind of mysterious. In any event, the really slick interface (see the interactive demo) and active dev community make Pligg a natural go-to for an Open Software Service. However, no clear leader for a general-purpose social news site using Pligg has come forward, and those that do exist (see http://pliggsites.com/ or Ten Pligg Sites Worth Visiting) don’t typically have an Open Data license. And, again, distribution across installed sites hasn’t happened yet. 
+
+sux0r.org is a brand new piece of software, AGPL-licensed, and the default license for shared data on the site is Creative Commons Attribution 3.0. It’s got a lot of interesting features, including Bayesian classification of submissions, and I think it’s worth a close watch. "
+(http://autonomo.us/2008/10/social-news/)
+
+
+=Discussion=
+
+Evan Prodromou:
+
+"What could a social news site (or sites) that works well in an Open Software Services ecology look like? First, it’s probably clear that a single leader is necessary, to get the kind of traffic numbers that will drive people to submit and rank stories. Second, it will have to leverage its Open Source software with a networked voting system, such that adding more services to the site will stimulate a network effect. Letting groups and users create their own sites that use the same software, but feed data and users into the rest of the network, would really grow the project and make it more valuable.
+
+I encourage anyone interested in helping to move forward Free Network Services to look into this problem. Just installing Pligg or Reddit and adding liberal data-sharing provisions is going to be a big win. (If it was me, I’d scrape that nice public-domain data from Digg, too. Why not?) The distributed social news problem is a hard one, but ultimately (I think) necessary to the project."
+(http://autonomo.us/2008/10/social-news/)
+
+
+[[Category:Standards]]
+
+[[Category:Open]]
+
+[[Category:Technology]]
+
+[[Category:Media]]

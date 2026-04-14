@@ -1,0 +1,56 @@
+
+=Typology=
+
+Ken Macon:
+
+"The term “encryption” is often used broadly, but in the realm of private messaging services, it usually implies a specific standard: default end-to-end encryption.
+
+There are Two Main Types of Encryption:
+
+
+==Non-End-to-End Encryption (Cloud Encryption)==
+
+"In non-end-to-end encryption, messages are encrypted by the sender, but the encryption keys needed to decrypt the messages are accessible to the service provider. This means that while the messages are protected during transmission (over the internet), once they reach the service provider’s servers, the provider can decrypt and access the content of the messages. This setup is common in services where the provider might need to access message content for various reasons, such as indexing for search, applying spam filters, or complying with legal requests.
+
+For example, Gmail uses this type of encryption. When you send an email via Gmail, it is encrypted during transit, ensuring that interceptors cannot read it. However, once your email reaches Google’s servers, Google has the capability to decrypt the emails. This is because Google controls the encryption keys. This capability allows Google to scan emails for spam and malware, provide search functionality across your emails, and comply with legal demands such as subpoenas or warrants that require access to email content.
+
+
+==End-to-end Encryption==
+
+"Conversely, with end-to-end encryption, the data (such as messages or calls) are encrypted on the sender’s device and only the intended recipient has the key to decrypt it. This means no intermediary, not even the service provider, has access to the encryption keys necessary to decrypt the data. The message stays encrypted throughout its journey from sender to receiver, becoming readable only when it reaches its intended destination.
+
+When you send a message via these platforms, nobody besides you and the recipient—not even the companies running these services—can read what’s sent. This secures your communication against both cyber threats and any potential surveillance from service providers or government authorities, making it a stronger option for protecting privacy.
+
+...
+
+For simplicity’s sake, there are two basic forms of end-to-end encryption – open source, and closed source.
+
+
+===Open Source Encryption===
+
+"Open-source encryption is widely regarded by cybersecurity experts as one of the most secure methods of encryption. This preference is rooted in the transparency and community scrutiny that open-source projects afford. When encryption software is open source, its source code is publicly available, allowing anyone to examine how the software functions and verify the security of its encryption methods.
+
+Transparency and Security Audits: One of the primary advantages of open-source encryption is the level of transparency it provides. Since the source code is accessible to all, independent security experts, researchers, and developers can scrutinize it for vulnerabilities, flaws, or backdoors. This continuous and open vetting process tends to result in more secure software, as issues are identified and, in theory, patched more quickly compared to proprietary software, where the code is only accessible to the company’s internal team.
+
+Community Collaboration: Open source projects benefit from the collective expertise of a global community. Developers from around the world can contribute to the project, enhancing the software with new features, security enhancements, and fixes. This collaborative approach not only speeds up the development and fortification of the software but also fosters innovation within the field of encryption.
+
+Building Trust Through Transparency: For encryption software, trust is paramount. Users need to trust that the software will protect their data as claimed. Open-source encryption builds trust through its transparency—users don’t need to rely on the security claims of a vendor; they can see for themselves or rely on the assessment of independent experts who have reviewed the code.
+
+
+===Closed-Source Encryption===
+
+Most experts caution against the use of closed-source encryption due to its lack of transparency, which can obscure potential vulnerabilities and limit external verification. Unlike open-source encryption, where the code is available for public review, closed-source encryption keeps its operational code hidden, restricting the assessment of its security to the internal teams of the company that owns it. This secrecy can prevent independent security experts from conducting thorough audits, making it harder to trust the encryption’s robustness. Additionally, without external scrutiny, it’s more challenging to identify and rectify security flaws, which could potentially leave user data at risk of unauthorized access or breaches.
+
+When using closed-source encryption, requires more trust as the claims about the degree to which communications are encrypted can’t be independently verified."
+
+(https://reclaimthenet.org/is-telegram-encrypted)
+
+
+=Example=
+
+* Telegram analyzed: https://reclaimthenet.org/is-telegram-encrypted
+
+
+[[Category:Technology]]
+
+[[Category:Security]]

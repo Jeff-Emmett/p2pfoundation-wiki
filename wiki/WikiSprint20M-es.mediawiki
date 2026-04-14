@@ -1,0 +1,115 @@
+<noinclude>
+<b>Formulario del P2P WikiSprint del 20 de Marzo</b>.
+
+Ingresa el nombre de la experiencia a incluir en la base de experiencias P2P.
+
+{{#forminput:form=WikiSprint20M-es}}
+</noinclude>
+<includeonly>
+__NOTOC__
+<div id="wikiPreview" style="width: 600px; display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|WikiSprint-20M}}}
+{| class="formtable"
+! Nombre:
+| {{{field|Name}}}
+| {{{field|Language|input type=text|hidden|default=Spanish}}}
+|-
+! URL:
+| {{{field|Main URL|rows=90|input type=url}}}
+|-
+! Descripción corta:
+| {{{field|Short description}}}
+|-
+! Detalles:
+| {{{field|Details|input type=textarea|autogrow}}}
+|-
+! Citas y menciones:
+| {{{field|Discussions/Quotes|input type=textarea|autogrow}}}
+|-
+! Referencias y enlaces externos:
+| {{{field|References/Links|input type=textarea|autogrow}}}
+|-
+! Referentes:
+| {{{field|Contact person}}}
+|-
+! E-mail de contacto:
+| {{{field|Contact's person e-mail|input type=url}}}
+|-
+! Número estimado de participantes:
+| {{{field|Number of participants|input type=number}}}
+|-
+! Fecha de inicio:
+| {{{field|Start date|input type=date}}}
+|-
+! Proyectos relacionados:
+| {{{field|Related projects|input type=text|autogrow|placeholder=valores separados por coma}}}
+|}
+
+== Información de ubicación ==
+
+{| class="formtable"
+! Ciudad:
+| {{{field|City}}}
+|-
+! País:
+| {{{field|Country}}}
+|-
+! Ubicación exacta:
+| {{{field|Location|input type=map|zoom=1|default=0,0}}}
+|}
+
+== Categorización ==
+
+{| class="formtable"
+|-
+! Temáticas:
+| {{{field|Topics|input type=categories|top category=P2P Domains|height=200|hideroot=on|depth=3}}}
+|-
+! Tipo / Clase:
+| {{{field|Types|input type=categories|top category=P2P Entity Type|height=200|hideroot=on|depth=3}}}
+|-
+! Formato / Soporte:
+| {{{field|Formats|input type=categories|top category=P2P Multimedia Directory|height=200|hideroot=on|depth=3}}}
+|-
+! Palabras clave:
+| {{{field|Categories/Tags|placeholder=valores separados por coma}}}
+|}
+{{{for template|MC}}}
+== Categorización de MoveCommons ==
+<img style="float:right; margin: 0 0 10px 10px;" src="http://movecommons.org/mc/0.1/images/logo-pp.png">
+Al contestar las preguntas de abajo calificarás a la iniciativa teniendo en cuenta el esquema propuesto por el proyecto [http://movecommons.org/es/ MoveCommons]. Si tienes dudas sobre como funciona este sistema de marcado, te recomendamos visitar [http://movecommons.org/es/preview/ este enlace]. 
+
+=== Tiene fin de lucro (Profit) es una iniciativa sin fines de lucro (Non Profit)? ===
+{|
+| {{{field|mc1|values=Non Profit,For-Profit|input type=radiobutton|mandatory|default=Non Profit}}}
+|}
+
+=== Los resultados de esta iniciativa son reproducibles o exclusivo? ===
+{|
+| {{{field|mc2|values=Exclusive,Reproducible|input type=radiobutton|mandatory|default=Reproducible}}}
+|}
+
+=== Fortalece a los bienes comunes (Commons) o no lo hace (Other Aims)? ===
+{|
+| {{{field|mc3|values=Reinforcing the Commons,Reinforcing other aims|mandatory|default=Reinforcing the Commons|input type=radiobutton|show on select=Reinforcing the Commons=>type}}}
+|}
+<div id="type">
+{|
+! A qué tipo de bienes comunes está relacionado?:
+| | {{{field|mc3e|values=Nature, Body/Health,Town/Community/Society,Digital|input type=radiobutton|mandatory|default=Nature}}}
+|}
+</div>
+
+=== Posee una forma de gobierno representativo/vertical o uno Horizontal (Grassroots)?===
+{|
+| {{{field|mc4|values=Representative,Grassroots|input type=radiobutton|mandatory|default=Grassroots}}}
+|}
+{{{end template}}}
+
+
+{{{end template}}}
+
+{{{standard input|summary}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

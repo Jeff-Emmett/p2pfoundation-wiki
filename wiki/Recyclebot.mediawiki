@@ -1,0 +1,90 @@
+
+A '''RecycleBot''' is a [[waste plastic extruder]] that creates [[3D Printing|3-D printer]] filament from waste plastic and natural polymers. This information is ported from Appropedia - for up-to-date information on the Recyclebot see: http://www.appropedia.org/Recyclebot
+
+==Distributed Recycling of Waste Polymer into RepRap Feedstock==
+'''Source:''' Christian Baechler, Matthew DeVuono, and Joshua M. Pearce, “[http://dx.doi.org/10.1108/13552541311302978 Distributed Recycling of Waste Polymer into RepRap Feedstock]” ''Rapid Prototyping Journal,'' '''19'''(2), pp. 118-125 (2013). [http://www.academia.edu/2643418/Distributed_Recycling_of_Waste_Polymer_into_RepRap_Feedstock open access] [[Image:Recyclebot.png |200px|right]]
+
+===Abstract===
+'''''Purpose'' -''' A low-cost, open source, self-replicating rapid prototyper ([[RepRap]]) has been developed, which greatly expands the potential user base of [[rapid prototyper]]s. The operating cost of the RepRap can be further reduced using waste polymers as feedstock. Centralized [[recycling]] of polymers is often uneconomic and energy intensive due to transportation [[embodied energy]]. This paper provides a proof of concept for high-value recycling of waste [[polymers]] at distributed creation sites.
+
+'''''Design/methodology/approach''''' - Previous designs of waste plastic extruders (also known as RecycleBots) were evaluated using a weighted evaluation matrix. An updated design was completed and the description and analysis of the design is presented including component summary, testing procedures, a basic  [[life cycle analysis]] and extrusion results. The filament was tested for consistency of density and diameter while quantifying electricity consumption.
+
+'''''Findings''''' - Filament was successfully extruded at an average rate of 90 mm/min and used to print parts. The filament averaged 2.805±0.003mm diameter with 87% of samples between 2.540± 0.003mm and 3.081± 0.003mm. The average mass was 0.564 ± 0.001 g/100mm length. Energy use was 0.06 kWh/m.
+
+'''''Practical implications''''' - The success of the Recyclebot further reduces RepRap operating costs, which enables distributed in-home, value added, plastic recycling. This has implications for municipal waste management programs as in-home recycling could reduce cost and greenhouse gas emissions associated with waste collection and transportation as well as the environmental impact of manufacturing custom plastic parts.
+
+'''''Originality/value''''' - This paper reports on the first technical evaluation of a feedstock filament for the RepRap from waste plastic material made in a distributed recycling device.
+
+==Distributed Recycling of Post-Consumer Plastic Waste in Rural Areas==
+
+M. Kreiger, G. C. Anzalone, M. L. Mulder, A. Glover and J. M Pearce (2013). Distributed Recycling of Post-Consumer Plastic Waste in Rural Areas. ''MRS Online Proceedings Library'', 1492, [https://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=8851128 mrsf12-1492-g04-06] doi:10.1557/opl.2013.258. [http://www.academia.edu/2921972/Distributed_Recycling_of_Post-Consumer_Plastic_Waste_in_Rural_Areas open access]
+
+==Abstract==
+[[image:Recyclebot-process.png|right]]
+Although the environmental benefits of [[recycling]] plastics are well established and most geographic locations within the U.S. offer some plastic recycling, recycling rates are often low. Low recycling rates are often observed in conventional centralized recycling plants due to the challenge of collection and transportation for high-volume low-weight polymers. The recycling rates decline further when low population density, rural and relatively isolated communities are investigated because of the distance to recycling centers makes recycling difficult and both economically and energetically inefficient. The recent development of a class of open source hardware tools (e.g. [[RecycleBots]]) able to convert post-consumer plastic waste to polymer filament for [[3D Printing|3-D printing]] offer a means to increase recycling rates by enabling distributed recycling. In addition, to reducing the amount of plastic disposed of in landfills, distributed recycling may also provide low-income families a means to supplement their income with domestic production of small plastic goods. This study investigates the environmental impacts of polymer recycling. A [[life-cycle analysis]] (LCA) for centralized plastic recycling is compared to the implementation of distributed recycling in rural areas. Environmental impact of both recycling scenarios is quantified in terms of energy use per unit mass of recycled plastic. A sensitivity analysis is used to determine the environmental impacts of both systems as a function of distance to recycling centers. The results of this LCA study indicate that distributed recycling of [[HDPE]] for rural regions is energetically favorable to either using virgin resin or conventional recycling processes. This study indicates that the technical progress in [[solar photovoltaic]] devices, [[open-source 3-D printing]] and polymer filament extrusion have made distributed polymer recycling and upcycling technically viable.
+
+==Key Findings==
+
+<font color="#000000">'''Table 1: Energy Demand and Reduction for Various Recycling Cases'''</font>
+
+{| cellspacing="2" cellpadding="7"
+|-
+| bgcolor="#d9d9d9" | <font color="#000000">'''Case'''</font>
+| bgcolor="#d9d9d9" | <font color="#000000">'''Energy Demand (MJ/kg HDPE)'''</font>
+| bgcolor="#d9d9d9" | <font color="#000000">'''Percent Reduction (Δ%) for Distributed''' '''Recycling <sup>c</sup>'''</font>
+|-
+| <font color="#000000">Distributed Recycling:</font>
+<font color="#000000">Insulated RecycleBot </font>
+| <font color="#000000">8.74</font>
+| <font color="#000000">--</font>
+|-
+| <font color="#000000">Virgin Resin<sup>a</sup></font>
+| <font color="#000000">79.7</font>
+| <font color="#000000">89</font>
+|-
+| <font color="#000000">Centralized Recycling<sup>b</sup> – Rural: Copper Harbor (monthly)</font>
+| <font color="#000000">28.4</font>
+| <font color="#000000">69</font>
+|-
+| <font color="#000000">Centralized Recycling<sup>b</sup> – Rural: Copper Harbor (bi-weekly)</font>
+| <font color="#000000">48.9</font>
+| <font color="#000000">82</font>
+|-
+| colspan="3" | <font color="#000000">'''Notes:''' a.</font><font color="#000000"> </font><font color="#000000">[26], </font><font color="#000000">b. </font><font color="#000000">Estimate based on [24], c. Percent reduction </font><font color="#000000">= (Central-Distributed)/Central*100 </font>
+|}
+
+== Articles about the RecycleBot ==
+* Turning Trash into Cash . . . and Saving Energy -- [http://www.mtu.edu/news/stories/2013/february/story85355.html Michigan Tech News], [http://upmichigan.wdio.com/news/environment/53552-turning-trash-cashand-saving-energy WDIO], [http://nanopatentsandinnovations.blogspot.com/2013/03/turn-trash-into-cash-replace-made-in.html Ideas, Inventions and Innovations], [http://www.thecuttingedgenews.com/index.php?article=79110&pageid=&pagename= The Cutting Edge], [http://www.sciencecodex.com/turn_trash_into_cash_and_save_energy-107791 Science Codex], [http://www.albanytribune.com/01032013-turning-trash-into-cash-and-saving-energy/ Albany Tribune], [http://www.sciencenewsline.com/articles/2013030200390008.html Science News Online], [http://www.innovationtoronto.com/2013/03/turning-trash-into-cash-and-saving-energy/ Innovation Toronto], [http://www.examiner.com/article/thingiverse-turn-trash-into-cash-and-design-recycled-gadgets-with-3-d-printing Examiner], [http://www.pddnet.com/news/2013/03/turning-trash-cash-and-saving-energy Product Design and Development], [http://www.newswise.com/articles/turning-trash-into-cash-and-saving-energy-additional-information-related-links-joshua-pearce-s-research-group-in-open-sustainability-technology-categories-academics-administration-alumni-athletics-campus-life-entertainment-honors-industry-outreach-philant Newswise], [http://www.energy-daily.com/reports/Turning_Trash_into_Cash_and_Saving_Energy_999.html Energy Daily], [http://www.materialsgate.de/en/mnews/9169/Turning+Trash+into+Cash+and+Saving+Energy.html Materials Gate]
+*3D Printed gun moving from sinister joke to sinister business model By Bruce Sterling -- [http://www.wired.com/beyond_the_beyond/2013/03/3dprinted-gun-moving-from-sinister-joke-to-sinister-business-model/ Wired - Beyond the Beyond]
+* 3-D Printing Using Old Milk Jugs - [http://www.sciencedaily.com/releases/2013/03/130301153645.htm Science Daily]
+* New process transforms old milk jugs into everything from lab equipment to cell phone cases - [http://phys.org/news/2013-03-jugs-lab-equipment-cell-cases.html Phys.org]
+* Feed Your 3D-Printer With Used Milk Jugs -- [http://www.scienceworldreport.com/articles/5319/20130301/feed-3d-printer-used-milk-jugs.htm Science World Report]
+* RecycleBot turns old milk jugs into 3D printer feedstock -- [http://www.3ders.org/articles/20130302-recyclebot-turning-old-milk-jugs-into-3d-printer-feedstock.html 3Ders]
+* Researchers Develop RecycleBot to Recycle Plastic Using 3D Printers -- [http://www.azom.com/news.aspx?newsID=35907 Azom]
+* 3D Printer Recycles Milk Jugs -- [http://www.laboratoryequipment.com/news/2013/03/3d-printer-recycles-milk-jugs Laboratory Equipment]
+* RecycleBot: An open source recycling plant - [http://www.prsnlz.me/articles/recyclebot-an-open-source-recycling-plant/ Personolize]
+* How Recycled Milk Jugs Can Make 3D Printing Cheaper and Greener - [http://www.greenoptimistic.com/2013/03/04/3d-printing-milk-jugs-recyclebot/#.UTUMdaXCaSo Green Optimistic]
+* Your 3D Printer Could Eat Empty Milk Jugs Instead of Expensive Plastic -- [http://gizmodo.com/5988147/your-3d-printer-could-eat-empty-milk-jugs-instead-of-expensive-plastic?post=57940526 Gizmodo],[http://www.i4u.com/2013/03/michigan-technological-university/jugs-could-plastic-instead-3d-expensive-your-milk-empty I4U]
+* RecycleBot zet oud plastic om in grondstof voor 3d-prints - [http://tweakers.net/nieuws/87629/recyclebot-zet-oud-plastic-om-in-grondstof-voor-3d-prints.html Tweakers (Dutch)], [http://www.demorgen.be/dm/nl/5401/Multimedia/article/detail/1590016/2013/03/04/RecycleBot-zet-plastic-om-in-grondstof-voor-3D-printer.dhtml DMorgan]
+* La basura puede servir para imprimir en 3D - [http://www.elcorreo.com/innova/investigacion/20130304/impresion-botella-leche-201303041853-rc.html El Correo (Spanish)]
+* Designing the Future -- [http://www.3d4dchallenge.org/designing-the-future/ Tech4Trade]
+* Trash Technology: 3D Printing With Recycled Material - [http://www.redorbit.com/news/science/1112796887/trash-recycled-used-3d-printing-030513/ Red Orbit]
+* The importance of the Lyman Extruder, Filamaker, Recyclebot and Filabot to 3D printing - [http://voxelfab.com/blog/2013/03/the-importance-of-the-lyman-extruder-filamaker-recyclebot-and-filabot-to-3d-printing/ Voxel Fab]
+* How milk jugs can make 3D printing cheaper - [http://www.smartplanet.com/blog/bulletin/how-milk-jugs-can-make-3d-printing-cheaper/14223 Smart Planet]
+* Research: 3D Printed Filament from Recycled Milk Jugs - [http://3dprintingindustry.com/2013/03/07/research-3d-printed-filament-from-recycled-milk-jugs/ 3D Printing Industry]
+* Rapid Ready Roundup: OsteoFab, Dreambox, RecycleBot and Trains - [http://www.rapidreadytech.com/2013/03/rapid-ready-roundup-osteofab-dreambox-recyclebot-and-trains/?utm_source=rss&utm_medium=rss&utm_campaign=rapid-ready-roundup-osteofab-dreambox-recyclebot-and-trains Rapid Ready Tech]
+* Turn your milk jugs into… whatever. At home. With 3D printing. - [http://guildofscientifictroubadours.com/2013/03/11/turn-your-milk-jugs-into-whatever-at-home-with-3d-printing/ Guild of Scientifc Troubadours]
+* How to Turn Trash into Cash- [http://organicconnectmag.com/wp/how-to-turn-trash-into-cash/#.UUB12VfwMTY Organic Connections]
+* Recycled fodder for the 3D printer - [http://stochasticscientist.blogspot.com/2013/03/recycled-fodder-for-3d-printer.html Stochastic Scientist]
+* 3-D Printing Using Old containers - [http://dawoolgar.blogspot.com/2013/04/3-d-printing-using-old-containers.html DA Woolgar Blog]
+* [http://noticiasdelaciencia.com/not/6809/imprimir_en_3d_a_bajo_costo_usando_plastico_convencional_reciclado_en_casa/ Print in 3D at low cost using conventional plastic recycling at home (Spanish)] -- Noticias de la Ciencia
+* Health, Wealth & Wisdom on 1470 AM WMGG April 12, 2013 ([http://seniorvoiceamerica.com/2013/04/14/are-you-going-napstered-and-what-exactly-printing/ listen])
+* [http://www.mtu.edu/engineering/media/publications/pdfs/2013.html Turning Trash into Cash and Saving Energy] - MTU Undergraduate Engineering Education 2013
+
+[[Category:3D Printing]]
+
+[[Category:Ecology]]
+
+[[Category:Manufacturing]]
+
+[[Category:Sustainable Manufacturing]]

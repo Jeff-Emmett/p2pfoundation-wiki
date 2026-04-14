@@ -1,0 +1,88 @@
+'''= OpenSocial defines a common API for social applications across multiple websites. With standard JavaScript and HTML, developers can create apps that access a social network's friends and update feeds.''' 
+
+URL = https://code.google.com/apis/opensocial/
+
+
+=Introduction=
+
+Initiative by Google, joined by other industry players.
+
+URL = http://en.wikipedia.org/wiki/OpenSocial
+
+Documentation at http://code.google.com/apis/opensocial ; http://sites.google.com/a/opensocial.org/opensocial/Home
+
+See also the [[OpenSocial Foundation]]
+
+
+=Definition=
+
+'''= a set of common application programming interfaces (APIs) that will enable developers to create applications for social networks, blogs and any Web sites that accept the OpenSocial code.''' [http://www.news.com/8301-10784_3-9808145-7.html?]
+
+
+=Description=
+
+"Open Social is like a specification for Java Application Servers except that it is a spec for hosting applications and widgets inside social networks. Specifically, Open Social defines the following three broad areas:
+
+    
+* Widget/Application API
+    
+* Friends API
+    
+* Activity API
+
+The Widget/Application API is similar to the Facebook Application API. It defines a protocol between widgets/applications and the social network (the container). A widget written according to the protocol is guaranteed to work in any social network that supports it. As an example, if you write a widget for iGoogle it will also work on Ning. This is because both of these environments have implemented support for a common widget format. This format itself is very straightforward and is based on the existing Google modules. Each module is an XML file which describes the properties of the widget and contains JavaScript code for it. The deployment process typically consists of putting this file on a network and then specifying a URL on the social network's configuration screen.
+
+The Friends API allows external applications to query a piece of the social graph inside the social network. Based on explicit permission from the user, applications may get a list of his or her friends. This is important, because it unlocks the social graph. For example, Flixster holds a piece of your social graph that defines people who like similar movies, basically your movie friends. If Flixster implements Open Social then you could send this information over to Netflix. This is powerful and important, because it empowers consumers to control their data and saves people time by helping information from one service bootstrap another.
+
+The Activity API is designed to both import and export the user activity from the social network. It is similar to Facebook's news feed and Beacon ads, except that those are not exportable. Examples of this include things like: Alex posted a photo to Flickr or Alex twittered that he is on a plane. And also for the activities inside the network: Alex and Richard just became friends or Alex is attending the NYC Tech Meetup.
+
+The first API is really about portability of widgets and applications, while the second and third are about portability of the social graph and attention information. All of these still have a long way to evolve but they bring powerful concepts of openness and interoperability into the social network marketplace."
+(http://www.readwriteweb.com/archives/why_open_social_matters.php)
+
+
+=Discussion=
+
+==What is the Impact on Developers?==
+
+"The slogan: write once, run anywhere, is music to the ears of any developer. Having to support a piece of code that is targeted towards many incompatible platforms is a nightmare. With Open Social, widget and application developers will be able to have a single, hopefully simple, code base. The direct benefit is that developers can focus on the essence of their offering instead of having to deal with infrastructure and portability issues.
+
+The fact that the same piece of code can run on many social networks is also likely to encourage more companies to enter the widget marketplace. Prior to their announcement of Open Social some companies may have been reluctant because the cost of creating specific widgets for each network might have been prohibitive. With Open Social, there are no longer any excuses. Investing in a widget or a widget set that can be deployed across a wide range of social networks is a no-brainer.
+
+Commoditization of social networks is not good for Facebook. It has been positioning itself as a leader, a unique place that connects people in the just the right way. The Facebook platform is what made Facebook into "the company" of 2007. If everyone has the platform and not a proprietary, but standard platform, then Facebook's value shrinks back to the size of its current audience."
+(http://www.readwriteweb.com/archives/why_open_social_matters.php)
+
+
+==OpenSocial will allow sharing between networks!==
+
+From Product Guy [http://tpgblog.com/2007/11/20/opensocial-impediment-or-catalyst/]:
+
+The most exciting information can be found in the highlighted statement within the above excerpted quote from Google’s explanation of the OpenSocial SPI. It is the possibility of sharing, exchanging, porting information between DIFFERENT social networks, not tied down to any one social network, where the networks have to provide value-add and truly unique user experiences to keep a user. In an environment where a user can easily move all of their gadgets (apps, widgets, modules) from one network to another, as well as, and most excitingly, port their user created content and friends from one network to another, at will, is tremendous (or should I say, ‘will be’?) for the progression of the Internet environment and user experiences, and the evolution of the Internet towards one of all around [[Modular Innovation]].
+
+Creating the OpenSocial applications and modules that can run on every social network (that supports them) is nice - but hardly the exciting part. The part that is far from production ready, albeit starting to become available on places like hi5, Ning, and Plaxo, is the Container piece.
+
+If OpenSocial lives up to the press releases and talking points, then OpenSocial just might be a positive catalyst in the world of Modular Innovation. If the walls of portability, access, sharing, self-determination of one’s own content remain, or if new walls spring up, or new cumbersome hindrances or restrictions emerge, then, what might be a positive influence may become the impeding technology, slowing progress of the clear eventuality where Modular Innovation rules the day.
+
+For now, we shall all wait, continue to play with the pieces that constitute OpenSocial, the pieces that have been released, that eventually, will constitute the full release of OpenSocial — an event that we are all still anticipating.
+
+Until then, myself and others will keep experimenting, observing and discussing Google’s OpenSocial to see just where it ends up; and waiting and watching for more Modular Innovations and noting those companies that facilitate the next phase of the Internet, and those that attempt to impede the inevitability."
+(http://tpgblog.com/2007/11/20/opensocial-impediment-or-catalyst/)
+
+From Google:
+
+“To host OpenSocial apps, your website must support the SPI side of the OpenSocial APIs. Usually your SPI will connect to your own social network, so that an OpenSocial app added to your website automatically uses your site’s data. However, it is possible to use data from another social network as well, should you prefer. Soon, we will provide a development kit with documentation and code to better support OpenSocial websites, along with a sample sandbox which implements the OpenSocial SPI using in-memory storage. 
+
+The SPI implements:
+
+*Adding and removing friends
+*Adding and removing apps
+*Storing activities
+*Retrieving activity streams for self and friends
+*Storing and retrieving per-app and per-app-per-user data “
+(Pasted from http://code.google.com/apis/opensocial/container.html)
+
+=Examples=
+
+Examples at http://opensocial-examples.googlemashups.com/
+
+
+[[Category:Standards]]

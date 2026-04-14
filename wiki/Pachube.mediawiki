@@ -1,0 +1,66 @@
+
+URL = http://www.pachube.com/
+
+Has become: [[Cosm]]
+
+
+=Description=
+
+Excerpts from an extensive interview by Tish Shute.
+
+Usman Haque:
+
+Further down the line, I would like to see Pachube able to help two particular processes:
+
+1)	to make it straightforward for developers and manufacturers to web-enabled thei products and services; and
+
+2) to help building and environment designers create their buildings (by providing access to realtime site data) and also help in the post-occupancy evaluation process — where buildings will be able to talk with each other, share information on energy consumption, resource management or occupancy rates and even “learn” from each others’ strategies. 
+
+This type of approach has a parallel at the level of individuals (for example, networked electricity meter users who are able to compare and contrast their usage and strategies for conservation). I don’t want Pachube to become the application; rather I want to make it easier for other people and companies to create such applications. So in that sense, yes, perhaps Pachube can be considered an enabler of social networking applications…!
+
+
+=History=
+
+Pachube came about as a direct attempt to enable the production of dynamic, responsive, conversant ‘environments’. It basically evolved out of three strands of thought.
+
+The first was the notion of the geographical non-specificity of architecture these days. By this I mean that, for many of us now, “home” is an idea constructed from several places –we live and work in environments composited by networked technology from fragments that bridge huge geographical distances. These environments are resolutely “human” (in the sense of being inhabited, designed and determined by people) yet context-free (because they do not privilege geographical location). I wanted to find a way to “connect” up remote spaces, much like Remote Home and a whole range of other projects had done, but in a generalized way so that it would be possible to keep adding to the ecosystem of connected environments on an ad hoc basis; a global architecture if you will.
+
+The second strand of thought came from the desire to open up the production process of “smart homes.” I’m concerned by developments in ubiquitous computing whereby “making technology invisible” equates to placing the design and construction process solely in the hands of knowledgeable others. Whereas it’s still possible more or less to do DIY on your home, if many ubicomp technologists had their way it would become less and less possible simply because of the complexity of reverse-engineering such closed-systems. It’s already a problem with larger buildings: service companies go out of business, proprietary skills or tools disappear and complex lighting and sensor systems remain unused. So, with Pachube I wanted to help foster a more open way of developing the discipline: to embrace the concept of the maker, and to help people negotiate their technological future.
+
+The final strand of thought relates to Pachube’s emphasis on “environments” rather than “sensors.” I believe that one of the major failings of the usual ubicomp approach is to consider the connectivity and technology at the object-level, rather than at the environment-level. It’s built into much of contemporary Western culture to be object-centric, but at the level of “environment” we talk more about context, about disposition and subjective experience. An ‘environment’ has dynamic frames of reference, all of which are excluded when simply focusing on devices, objects or mere sensors. If one really studies deeply what an ‘environment’ is (by this I mean more than simply saying that “it’s what things exist in”), one begins to understand that an environment is a construction process and not a medium; nor is it a state or an entity. In this I would refer to Gordon Pask’s phenomenally important text “Aspects of Machine Intelligence” in Nicholas Negroponte’s Soft Architecture Machine though it makes for extremely tough reading (Negroponte compared it in importance to Alan Turing’s contributions to the computer science discipline).
+(http://www.ugotrade.com/2009/01/28/pachube-patching-the-planet-interview-with-usman-haque/)
+
+
+=Status=
+
+What new directions for Pachube will emerge from enabling the dynamic relationship between sensors and accuators?
+Usman Haque: This will be a crucial evolution in Pachube, when we make actuators more evident. It’s input heavy at the moment, basically in the sense of being easy to see the inputs — you add “inputs” rather than “outputs”, so at the moment we have no idea of what’s actually plugged into the outputs unless people tell us! However, we know that there are plenty of outputs because they’re making API requests, we just don’t know what they’re being used for! Once the concept of actuators and output environments get built in to the system then I think we’ll know a lot more about how people are using the system.
+
+To make this easier in the meantime we recently announce the Pachube.apps site, where people can start contributing Pachube ‘plugins’ and ‘plugouts’ — things that can be used by others without needing to code or hack, to create, generate or modulate Pachube inputs and outputs. One of these was Status2Pachube, which turns the online status of AIM, MSN Messenger, Skype or Yahoo! Messenger users into a Pachube input feed (to make it easy to create “remote presence” orbs and such); another was the CurrentCost2Pachube app to make it easy to connect up Current Cost electricity meters as input feeds; all of which can then be used by Pachube output apps, like the G1 Android phone Pachube viewer by Pachube user N4Spd or in the soon-to-launch Pachube2SketchUp plugout which will direct Pachube outputs into Google SketchUp (and by extension Google Earth) in order to generate or modulate 3-d models in response to realtime environmental/sensor data. (Pachube2SketchUp is pretty much finished for Mac OS X — but we’re having difficulty getting it to work on Windows, because of its sometimes pigheaded security measures… we’ll probably release it for Mac OS X alone soon anyway).”
+(http://www.ugotrade.com/2009/01/28/pachube-patching-the-planet-interview-with-usman-haque/)
+
+
+=Discussion=
+
+==Open source aspects==
+
+“Regarding the connection to the FLOSS movement, there is no specific technical part of Pachube that is currently open source (apart from all the example apps and tutorials of course). However, I find the approach taken by OpenSim and Hypergrid really fascinating: I haven’t given this enough thought to how it might be implemented but I find quite appealing the idea of a multitude of open source and geographically dispersed Pachube-enabled servers with seamless transfer of data connections between them as necessary…”
+(http://www.ugotrade.com/2009/01/28/pachube-patching-the-planet-interview-with-usman-haque/)
+
+
+==Difference with Sensorbase==
+
+Tish Shute: I am interested in some of the differences between SensorBase.org’s project and Pachube. Is Sensorbase as more of a data repository (environmental data in particular)?
+
+Usman Haque: The difference I see between Pachube and SensorBase is that while (from what I know) SensorBase is mostly about “write” operations, with later “read” operations (i.e. it’s about being a data repository), Pachube is really “read-write” (i.e. it’s about being both a data repository _and_ a quasi-realtime proxy). Pachube will be able to handle potentially millions of connections, both incoming and outgoing, and as we’ll soon start storing every data point ever recorded, so of course the data repository aspect will be crucial. However, the fact that it *also* facilitates one-to-many realtime broadcasts of that data (and facilitates conversion to a number of different formats: EEML, CSV and JSON now, more in the future) means that the two-way connectivity aspect of it is just as important.
+(http://www.ugotrade.com/2009/01/28/pachube-patching-the-planet-interview-with-usman-haque/)
+
+[[Category:Geography]]
+
+[[Category:Design]]
+
+[[Category:Geography]]
+
+[[Category:Technology]]
+
+[[Category:Manufacturing]]

@@ -1,0 +1,81 @@
+"'''Meraki makes it brain dead simple to share wi-fi and pushes it out to massive scale at super low costs. The result is free wi-fi across areas much bigger than previously feasible by individuals, and at much lower cost and subject to much lower red tape than previous municipal wi-fi projects'''." [http://www.boingboing.net/2008/01/10/meraki-free-mesh-wif.html]
+
+'''Status: Discontinued. Meraki (the startup) was sold to Cisco'''
+
+=Description=
+
+"In most mesh networks, all the nodes that receive a particular data packet
+forward it on; but in Biswas's version, the nodes "talk" to each other and
+decide, on the basis of the packet's destination and their own signal
+strengths, which one of them should forward it. The protocol also takes into
+account changing network conditions, as users sign on or off, or, say, a
+passing truck blocks a node's radio signal. Biswas's protocol, combined with
+commonly available hardware components, allows Meraki to produce Wi-Fi
+routers that cost as little as $50. (The routers Biswas used at MIT
+initially cost $1,500.)
+
+Here's how a Meraki network works: a user plugs a router into a broadband
+Internet connection; that person's neighbors stick routers to their windows,
+and a mesh network of up to hundreds of people forms automatically. Users
+can give away or sell Internet access to their neighbors. There are already
+Meraki-based networks in 25 countries, from Slovakia to Venezuela, serving
+more than 15,000 users."
+
+
+Mark Pesce on the importance of Meraki [http://blog.futurestreetconsulting.com/?p=39]:
+
+"Four months ago, a small startup in Silicon Valley named Meraki (Greek for “doing it with love”) for unveiled a cute little device, a wireless router that they simply named the Mini. Inside it has a RISC CPU running a custom version of LINUX which handles all of the routing tasks. That’s where it gets interesting. You see, Meraki have pioneered a new technology known as “wireless mesh networking”. You can power up a Mini in anywhere you like, and if there’s another Mini within distance – and these devices can reach nearly half a kilometer, outdoors – it will connect to it, share routing information, and route packets from one to another – all without any need to configure anything at all. Add another, and another, and another, and all of a sudden you’ve created a very wide area WiFi network. Only one of the Minis needs to be connected to the Internet as a gateway; the others will find it and route traffic through it. The Minis are small – and they’re also cheap. For just $49 dollars US, you can order one complete with an Australian wall wart. That’s cheaper than most access points out there, and because of the mesh networking, it does a whole lot more.
+
+But what does the Meraki Mini have to do with the end of the telcos? Just this: a mesh network is a network that’s been subject to the corrosive effects of a network. There is no center anywhere. There’s no hierarcy or preferred route. There’s no gatekeeper anywhere. You can have one gateway, or twenty. You can have one mesh node or a thousand. Just throw another mesh node into the mix, and it’ll all work seamlessly. And mesh networks scale: the dynamics of a network of a thousand mesh repeaters aren’t substantially different from a network with ten. Packets still find their way, with minimal delay.
+
+What this means is that we all have the capability to create our own large-scale, low-cost wireless networks within our grasp. Meraki is already proving this in San Francisco, where Google and Earthlink had been fighting the telcos for years to get a city-wide free wireless network installed. Last week, Earthlink pulled out – they just couldn’t fight the politically power of AT&T. Meanwhile, since February, Meraki has been offering free Meraki Minis to anyone in San Francisco who wanted to donate a little of their own broadband to a free municipal WiFi network. Lately that network has been growing by leaps and bounds – no easy feat in a city which effectively broken up by a series of large hills. The “Free the Net SF” project already has almost 14,000 users – that’s nearly triple the number two months ago – and hundreds of nodes. It is proof that us mob can seize control of the spectrum and use it for our own ends."
+(http://blog.futurestreetconsulting.com/?p=39)
+
+
+=How-to=
+
+From the San Francisco [http://sf.meraki.com Free the Net] project:
+
+"Free the Net is a community-built network. Meraki provides the technology, but we rely on people to help build and grow. There are a number of ways you can help:
+
+* If you can see the Free the Net signal, sign up for a free repeater to boost your signal.
+* Volunteer to host an outdoor repeater on your roof or balcony. The outdoor units help spread the signal throughout your neighborhood and are critical to the growth of the network.
+* Spread the word! Tell your friends and neighbors to sign up at http://sf.meraki.com.
+* Check out the network map and keep yourself up-to-date on our progress."
+(http://www.boingboing.net/2008/01/10/meraki-free-mesh-wif.html)
+
+
+=Discussion=
+
+==David Isenberg==
+
+"Sanjit Biswas of Meraki has what David Isenberg thinks is the "holy grail" of wifi mesh networking. It's a $50 mesh router. It's a spinout of MIT's Roofnet. They want to create networks deployed by communities without involving a telco (except for one person's access). They've been in beta for 6 months. Meraki's market is the "next billion" Internet users. They have 15,000 people connected. It costs users $1-$2 month. Meraki is trying to engage local entrepreneus to create these networks. Today he announces they're building a "huge experiment" in San Francisco, building a network of 1,000 repeaters with free DSL bandwidth - maybe 30 lines would serve the area."
+(http://www.hyperorg.com/blogger/mtarchive/f2c_panel.html)
+
+
+==Steve Stroh==
+
+"community wireless groups for years now, but such efforts inevitably bog down when it comes to actually deploying network devices to form a network that's truly usable.
+
+Meraki has overcome that hurdle by creating commercialized, cheap, easy-to-use-and-deploy Wireless Mesh nodes. Meraki's indoor unit (upper) is $49, and the outdoor unit (lower) is $99. The outdoor unit uses Power Over Ethernet, so you can put it up high and in the clear and keep the power brick and the Ethernet adapter inside. The outdoor unit also has an external antenna port... Wow!Meraki_mini_outdoor_1
+
+You... as in you and your neighbors... civilians, ordinary people... just start putting these things up and boom - a network is born. Either use Ethernet to connect to them (each node has an Ethernet port) or connect via Wi-Fi, so practically anything Wi-Fi is going to work with them. What would be very cool, but the literature doesn't suggest this (I've sent an email query to Meraki), would be to be able to put up multiple outdoor nodes with directional antennas, and link them on a rooftop via Ethernet. The trick is to have the "meshing" function work over the Ethernet ports as well as it does over the radio ports.
+
+Focusing on the limitations of this particular hardware implementation would be a huge mistake, because there's absolutely nothing inherent in what Meraki has done to constrain their systems to work only at modest ranges. What they've done to date is to optimize for price, compromising range somewhat in these particular units. Much higher power is possible, as well as using other frequency bands such as 5 GHz that would make the meshing function even more impressive."
+(http://www.bwianews.com/2007/03/meraki_another_.html)
+
+=More Information=
+
+See images of Meraki's routers and its network administration tools.
+<http://www.technolo gyreview. com/player/ 07/09/TR35Biswas /1.aspx>
+
+#[[WiFi P2P]]
+#[[Wireless Commons]]
+#[[Oplan Foundation]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Resources]]

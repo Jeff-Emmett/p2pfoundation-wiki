@@ -1,0 +1,67 @@
+=Description=
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Today most applications manage their own data, and have their own processes
+for handling authentication and access controls to their databases. As a result, it is
+challenging for users to switch between services that operate on similar content, or to
+migrate their data from one service to another. Moreover, application developers cannot
+easily build services that draw from a variety of data sources, because they are
+restricted to the information made accessible through specific platform Application
+Programming Interfaces (APIs). These proprietary APIs tend to operate on diverse data
+formats and closed protocols, which makes it challenging to repurpose data that is
+generated on a specific platform, creating a siloed effect. For example, Facebook stores
+the social profile data and interactions of its 1.7 billion users on its servers, and it isn’t
+available in a format users can export to another application, like Google Plus, Diaspora
+or Ello. Furthermore, platforms constrain access to their APIs, limiting the number of
+times per day they can be used, making it very difficult to maintain a social network
+using another company’s API.
+
+This trend towards private data silos contributes to many of the risks to online
+speech we outline in this report. First, it makes it easy for governments to censor
+content, because they can pressure the corporations that house that content on their
+servers to comply with takedown requests. Even if users proactively replicate content
+that they fear might be taken down from a major platform like Facebook, there is no
+clear method for redirecting others to where that information is newly housed. For
+example, when the Thai government pressured Facebook to take down a satirical page
+from its site, the political commentators who ran the page had no clear methods for
+pointing their audience to an alternative location where that content could be found.
+More decentralized methods of data storage could make it difficult, if not
+practically impossible, for a single entity to censor content. For example, peer-to-peer
+file sharing services like Gnutella, Limewire, and Bittorrent made it almost impossible for
+the Recording Industry Association of America to stop the spread of illegal music
+downloads. In the following sections we will take a look at the InterPlanetary File
+System (IPFS), a project which aims to enable users to find content even if a specific
+website owner decides to take it down, or they opt to migrate it over to a new location
+(i.e. a different URL), and Solid, a framework for building applications which puts users
+in control of their data.
+
+Data silos create lock-in effects, which make it challenging for users to switch
+between platforms or self-publish if they are excluded or unhappy with mainstream
+platforms, like Facebook or Twitter."
+
+
+=Examples=
+
+"Both IPFS and Solid have the potential to enable a
+more vibrant landscape of publishing options by supporting shared protocols and
+formats for handling data across applications. While these projects are not
+decentralized publishing platforms in and of themselves, they could serve as critical
+building blocks for more decentralized and interoperable publishing applications to be
+built."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+See:
+
+* the [[Inter-Planetary File System]] (IPFS) is an open source project that aims to
+enable peer-to-peer methods for storing and disseminating information on the web.
+
+* [[Solid]]
+
+[[Category:Open Data]]
+[[Category:Big Data]]
+[[Category:Standards]]
+[[Category:P2P Infrastructure]]
+[[Category:Encyclopedia]]
+[[Category:Technology]]
+[[Category:Data Commons]]

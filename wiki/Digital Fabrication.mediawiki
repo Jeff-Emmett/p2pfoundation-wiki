@@ -1,0 +1,97 @@
+'''= Digital fabrication is the art of using computers to describe physical objects and using genetics, robotics and nanotechnology (GNR) to create them.''' [http://smari.yaxic.org/blag/about]
+
+=Definition=
+
+Dianna Pfeitter:
+
+= '''The making of physical objects through the use of computer-controlled tools'''. [http://scholar.lib.vt.edu/theses/available/etd-12152009-131820/unrestricted/Pfeiffer_DV_T_2009.pdf]
+
+Marcin Jakubowski:
+
+"Digital fabrication is '''the use of computer-controlled fabrication, as instructed by data files that generate tool motions for fabrication operations.''' Digital fabrication is an emerging byproduct of the computer age. It is becoming more accessible for small scale production, especially as the influence of open source philosophy is releasing much of the know-how into non-proprietary hands. For example, the Multimachine is an open source mill-drill-lathe by itself, but combined with computer numerical control (CNC) of the workpiece table, it becomes a digital fabrication device."
+
+
+=Description=
+
+Dianna Pfeiffer:
+
+"Digital fabrication requires a relatively complex
+set of operations to accomplish. First, a digital
+model is created using specialized software. The
+geometric information from the digital model is
+then translated into instructions for tool paths
+and related tooling information. Any tooling or
+material setup is readied, and the instructions are
+communicated to the tool and then run. Each
+type of computer controlled tool has its own
+specific approach, but most rely on a robotic head
+that traverses a spatial grid based on coordinate
+instructions, and which deposits, cuts, or otherwise
+manipulates material. 
+
+Digital fabrication tools are categorized by the
+manner in which they are controlled and the
+way in which they manipulate materials. These
+categories are not always clearly bounded and
+there is overlap where tools may work in ways not
+adequately defined by the category."
+(http://scholar.lib.vt.edu/theses/available/etd-12152009-131820/unrestricted/Pfeiffer_DV_T_2009.pdf)
+
+
+=Typology=
+
+Dianna Pfeiffer:
+
+"In general, there
+are currently two methods of digital fabrication:
+
+1) [[Solid Free-Form Fabrication]], '''Common methods of solid free-form fabrication are [[3D Printing]] (3DP), [[Selective Laser Sintering]] (SLS), [[Stereo-lithography]] (SLA), [[Fused Deposition Modeling]] (FDM), and [[Laminated Object Manufacturing]] (LOM)''', among others.
+
+2) and [[CNC]] (computer numerically controlled machining tools)."
+(http://scholar.lib.vt.edu/theses/available/etd-12152009-131820/unrestricted/Pfeiffer_DV_T_2009.pdf)
+
+
+=Discussion=
+
+==Radical Promises of Digital Fabrication==
+
+Neil Gershenfeld:
+
+"What's emerging from that is in a whole bunch of areas we're discovering we can do things that were just not considered remotely possible before.                
+
+On the very smallest scale, the most exciting work on digital fabrication is the creation of life from scratch. The cell does everything we're talking about. We've had a great collaboration with the Venter Institute on microfluidic machinery to load designer genomes into cells. One step up from that we're developing tabletop chip fab instead of a billion dollar fab, using discrete assembly of blocks of electronic materials to build things like integrated circuits in a tabletop process.                          
+
+A step up from that, we had a paper in Science last year showing we can make the world's highest performance ultralight material for things like airplanes by digitizing composites into little linked loops of carbon fiber instead of making giant pieces. Now we're working with the aerospace industry on making printers of jumbo jets. But the printers are really assemblers.
+
+Bigger scale, we're working with Homeland Security on geoprinting. Extreme events like Katrina or Sandy do tens or hundreds of billions of dollars of damage. National technical means to defend against them are bags of wet sand. We're now developing machines that are like robotic ribosomes that link discrete parts to build geological scale features to make landscape. We're working with NASA on doing this in space, leading up to the idea of how you bootstrap a civilization. There's a series of books by David Gingery on how to make a machine shop starting with charcoal and iron ore. You make a furnace and you melt it, and then you make hand tools, then slowly you bootstrap up to make a machine shop. When people think about a notion like colonizing space and bootstrapping a civilization, that's what they're thinking of implicitly.                          
+
+Now to come back to the ribosome again. There are twenty amino acids. With those twenty amino acids you make the motors in the molecular muscles in my arm, you make the light sensors in my eye, you make my neural synapses. The way that works is the twenty amino acids don't encode light sensors, or motors. They’re very basic properties like hydrophobic or hydrophilic. With those twenty properties you can make you. In the same sense, digitizing fabrication in the deep sense means that with about twenty building blocks—conducting, insulating, semiconducting, magnetic, dielectric—you can assemble them to create modern technology.                          
+
+Digi-Key—the electronic parts vendor—sells 500,000 different kinds of resistors but at heart there's only three attributes: conducting, resistive, insulating. That's what we're doing. By discretizing those three parts we can make all those 500,000 resistors, and with a few more parts everything else.                          
+
+That's the revolution. It intellectually exactly aligns with digitizing communication and computation, but now for fabrication. In turn, the alignment is even closer with the history of computing. Where I realized this alignment was so close was, to do this research CBA got a big NSF grant to buy machines. We wrote an ambitious proposal to get one of anything to make anything, and that's luckily what we got funded, which is an interesting story. But the problem we ran into was that it would take too long to teach people to use all of those machines. I started a class called How to Make Almost Anything and that wasn't meant to be provocative. It was just aimed at ten or so research students to use the machines to do that research. Something strange happened, which is hundreds of students showed up to take a class for ten people, and they would say things like, "This is too useful. Can you teach it at MIT?" Every year hundreds of students try to take this class. Then in turn, the next surprise was they weren't there for research, they weren't there for theses, they wanted to make stuff. I taught additive, subtractive, 2D, 3D, form, function, circuits, programming, all of these skills, not to do the research but just using the existing machines today.                          
+
+Kelly Dobson, who’s run Digital Media at RISD, made a device that saves up screams and plays it back later when it's convenient. And Meejin Yoon, who runs Architecture now at MIT, when she took the class she made a dress instrumented with sensors and spines to defend your personal space. That happened year after year until, finally, I realized that the students were answering what I hadn't asked, which is: what is this good for? I was asking: can you do digital fabrication? It didn't even occur to me to ask why. It was obviously just such an interesting question. What they were answering was the killer app for digital fabrication is personal fabrication, meaning, not making what you can buy at Walmart, it’s making what you can't buy in Walmart, making things for a market of one person."
+(http://edge.org/conversation/neil_gershenfeld-digital-reality)
+
+
+==The roadmap for the future of digital fabrication==
+
+Neil Gershenfeld:
+
+"Technically, the roadmap we're going down is very clear. If you take this alignment between mainframes, minicomputers, hobbyist computers, PCs, the research tools we're using are like the mainframes, the fab labs are the minicomputers. They're being used to do the equivalent of invent the Internet. The next step is we're doing a lot of work on machines that make machines. You don't go to a fab lab to get access to the machine; you go to the fab lab to make the machine. To do that we've had to rip up CAD-CAM, machine control, motion control, all the ways you make stuff, to make machines that make machines. That's the next step. Over the next maybe five years we'll be transitioning from buying machines to using machines to make machines. Self-reproducing machines. But they still have consumables like the motors, and they still cut or squirt. Then the interesting transition comes when we go from cutting or printing to assembling and disassembling, to moving to discretely assembled materials. And that's when you do tabletop chip fab or make airplanes. That's when technical trash goes away because you can disassemble.                          
+
+An early version of that is Google's Project Ara. Ara was one of my students. That's based on modular reconfigurable cell phones intentionally as the first step down this roadmap. Instead of buying and throwing out a cell phone, it's made out of building blocks you can reconfigure. The research will replace this bit by bit. We'll reconfigure the blocks in the building blocks and then the blocks in the blocks in the building blocks. That's maybe the twenty-year roadmap technically from where we are today.                          
+
+Now, the biggest surprise for me in this is I thought the research was hard. It's leading to how to make the Star Trek Replicator. The insight now is that's an exercise in embodied computation—computation in materials, programming their construction. Lots of work to come, but we know what to do. The thing that's been most surprising for me is the consequences of this. The equivalent of inventing the Internet. As the fab labs have been spreading, we've been working with heads of state, NGOs, and tribal chiefs, and community activists, and generals—this amazing range, because if anybody can make anything anywhere, it challenges everything."
+(http://edge.org/conversation/neil_gershenfeld-digital-reality)
+
+=More Information=
+
+#[[Digital Fabrication Primer]]
+#[[Flexible Manufacturing]]
+
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]

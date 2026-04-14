@@ -1,0 +1,41 @@
+
+'''Network Discrimination refers to the capacity of Internet Service Providers to differentiate the types of network traffic they carry.''' It's an aspect of the [[Network Neutrality]] debate.
+
+
+=Background=
+
+
+Edward Felten follows this issue in his blog Freedom to Tinker [http://www.freedom-to-tinker.com/]. Here's an introductory explanation, which is followed up by a number of different blog entries.
+
+URL = http://www.freedom-to-tinker.com/?p=983
+
+
+"Think of the Internet as a set of routers (think: metal boxes with electronics inside) connected by links (think: long wires). Packets of data get passed from one router to another, via links. A packet is forwarded from router to router, until it arrives at its destination.
+
+Focus now on a single router. It has several incoming links on which packets arrive, and several outgoing links on which it can send packets. When a packet shows up on an incoming link, the router will figure out (by methods I won’t describe here) on which outgoing link the packet should be forwarded. If that outgoing link is free, the packet can be sent out on it immediately. But if the outgoing link is busy transmitting another packet, the newly arrived packet will have to wait — it will be “buffered? in the router’s memory, waiting its turn until the outgoing link is free.
+
+Buffering lets the router deal with temporary surges in traffic. But if packets keep showing up faster than they can be sent out on some outgoing link, the number of buffered packets will grow and grow, and eventually the router will run out of buffer memory.
+
+At that point, if one more packet shows up, the router has no choice but to discard a packet. It can discard the newly arriving packet, or it can make room for the new packet by discarding something else. But something has to be discarded.
+
+(This is one illustration of the “best effort? principle, which is one of the clever engineering decisions that made the Internet feasible. The Internet will do its best to deliver each packet promptly, but it doesn’t make any guarantees. It’s up to software that uses the Internet Protocol to detect dropped packets and recover. The software you’re using to retrieve these words can, and probably often does, recover from dropped packets.)
+
+When a router is forced to discard a packet, it can discard any packet it likes. One possibility is that it assigns priorities to the packets, and always discards the packet with lowest priority. The technology doesn’t constrain how packets are prioritized, as long as there is some quick way to find the lowest-priority packet when it becomes necessary to discard something.
+
+This mechanism defines one type of network discrimination, which prioritizes packets and discards low-priority packets first, but only discards packets when that is absolutely necessary. I’ll call it minimal discrimination, because it only discriminates when it can’t serve everybody.
+
+With minimal discrimination, if the network is not crowded, lots of low-priority packets can get through. Only when there is an unavoidable conflict with high-priority packets is a low-priority packet inconvenienced.
+
+Contrast this with another, more drastic form of discrimination, which discards some low-priority packets even when it is possible to forward or deliver every packet. A network might, for example, limit low-priority packets to 20% of the network’s capacity, even if part of the other 80% is idle. I’ll call this non-minimal discrimination.
+
+One of the basic questions to ask about any network discrimination regime is whether it is minimal in this sense. And one of the basic questions to ask about any rule limiting discrimination is how it applies to minimal versus non-minimal discrimination. We can imagine a rule, for example, that allows minimal discrimination but limits or bans non-minimal discrimination.
+
+This distinction matters, I think, because minimal and non-minimal discrimination are supported by different arguments. Minimal discrimination may be an engineering necessity. But non-minimal discrimination is not technologically necessary — it makes service worse for low-priority packets, but doesn’t help high-priority packets — so it could only be justified by a more complicated economic argument, for example that non-minimal discrimination allows forms of price discrimination that increase social welfare. Vague arguments that you have to reserve some fraction of capacity for some purpose won’t cut it."
+(http://www.freedom-to-tinker.com/?p=983)
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Standards]]

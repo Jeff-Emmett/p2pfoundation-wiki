@@ -1,0 +1,39 @@
+=Description=
+
+Federico Ast:
+
+'''1.'''
+
+"The field of mechanism design can be considered as the “engineering” part of economic theory. The designer starts with a desired goal and then defines how a mechanism (a game) can be designed to attain it. Required is a systematic look at institutions and how they will affect the interactions between agents that are expected to act strategically in order to reach their own goals.
+
+...
+
+The Bitcoin blockchain was a working example of how a clever mechanism design could create an institution that effectively incentivized a distributed network of anonymous computers to reach consensus on a single state of a ledger. This new discipline combining cryptography and economic theory to create secure distributed networks came to be known as cryptoeconomics, which can be considered a branch of mechanism design.
+
+In the wake of Nakamoto's pioneering design, the potential of blockchains for building economic and social institutions has been studied. Cryptoeconomic designers seek to engineer solutions that drive human behavior toward the desired goal. In this way, blockchain is a technology for creating and executing the types of rule-systems (i.e. smart contracts, decentralized autonomous organizations) that enable economic coordination.
+
+Cryptoeconomic design can be applied to produce a wide variety of systems to reach desired outputs through incentivizing adequate behaviors. Cryptoeconomic systems provide an innovative way to coordinate behavior beyond governments or centralized mechanisms. As we shall see in the next section, it also has the potential to produce a legal order than can be defined as decentralized justice."
+
+(https://stanford-jblp.pubpub.org/pub/birth-of-decentralized-justice/release/1?)
+
+
+
+=Discussion=
+
+==Mechanism Design, Bitcoin and the Blockchain==
+
+Yongseung Kim:
+
+"Building on the principles of game theory, mechanism design is a branch that focuses on how to structure the rules of a system so that individual participants, acting in their own self-interest, achieve outcomes that are desirable for the system as a whole. Rather than analyzing existing games, mechanism design creates systems where the incentives align individual actions with collective goals. This concept is integral to the design of decentralized systems like Bitcoin.
+
+In Bitcoin, mechanism design is applied through the proof-of-work (PoW) consensus mechanism, ensuring that participants (miners) act in ways that secure the network. Miners expend computational resources to solve cryptographic puzzles. The first miner to solve the puzzle adds a new block to the blockchain and is rewarded with newly minted Bitcoin and transaction fees. This reward system ensures that miners are incentivized to follow the protocol because deviating from it, such as attempting to submit fraudulent transactions, would result in wasted resources without reward.
+
+A key aspect of Bitcoin’s design is its defense against a 51% attack, where an attacker would need to control more than 51% of the network’s mining power to manipulate the blockchain. However, the enormous cost of obtaining this level of control, both in terms of hardware and energy, makes the attack impractical. Even if successful, the value of Bitcoin would likely plummet due to the attack, making it economically irrational. This aspect of mechanism design ensures that the best course of action for miners is to cooperate honestly with the network’s rules.
+
+Another critical feature of Bitcoin’s design is its difficulty adjustment mechanism, which regulates how difficult it is to solve the cryptographic puzzles that secure the network. As more miners join the network and add computational power, the difficulty of the puzzles increases, maintaining a stable block time of approximately 10 minutes. This adjustment mechanism ensures that Bitcoin’s supply schedule remains predictable, and it prevents any single miner from dominating the network.
+
+Through this carefully structured system, Bitcoin’s mechanism design aligns the interests of individual participants with the security and stability of the entire network. By making honest participation more profitable than malicious behavior, Bitcoin demonstrates how decentralized systems can achieve consensus and security without central control. This use of game theory and mechanism design principles highlights how well-designed incentives can lead to cooperative behavior even in trustless environments."
+
+(https://medium.com/@deframing/the-meaning-of-monetary-economics-in-the-crypto-world-e7f89e60d3a3)
+
+[[Category:Crypto_Governance]]

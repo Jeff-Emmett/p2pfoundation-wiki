@@ -1,0 +1,65 @@
+
+'''= a platform that helps scientists draft, collaborate on, share, and publish academic articles''': lets you write articles collaboratively online and it renders them in HTML5, right inside your browser. [https://www.authorea.com/aboutus] ; 
+
+URL = https://www.authorea.com/
+
+
+=Interview=
+
+Nathan Jenkins, cofounder, interviewed by 
+
+'''How did you come up with the idea for Authorea?'''
+
+I had left my post-doc. I was going to leave for a year. I just planned on playing guitar and going climbing. Then Alberto [Pepe, Authorea cofounder] came down for a visit to New York. We had a long talk about open science. He mentioned an idea of starting Authorea, which we did not name at the time. The idea was really when you publish a paper, for example, if you write a simulation on the traffic in New York, or, in my case, you fit a superconductor in spectrum, you have some source data. You have some analytical code, and you have a model. You represent that model with code, and you apply that to the data. That gives your best fit, which is what you publish. 
+
+Every scientist that I know has gone through and picked out the points on the curve with various tools to do this. It's quite a tedious little task, but you have some software to do that because people are not sharing their source data.
+
+
+'''We hear a lot about the open science movement, which is about giving everyone access to this data. Why is it a bad thing that the data just sits there and dies?'''
+
+This is bad because you might have an idea but you might not have this data set. You might want to look at combinations of data sets. There's lot of different things. Even though I'm the one who takes the data, there's no reason that I have all the ideas on how to analyze it. If you just gave it away for free, it would already be an improvement because any further contributions are just icing on the cake if what we want is to know more in science. 
+
+Obviously, people are worried about advancing their career. People are not so much worried about advancing science, but making sure that they have a job.
+
+
+'''So how does Authorea address these issues?'''
+
+My one-liner is we’re Google Docs meets GitHub for science.
+
+
+'''Why does science need a Google Docs or a GitHub?'''
+
+Most of hard sciences is using LaTeX as a markup language. There have been people who’ve tried to change that in the past. They said let's modify the PDF, and make all this interactivity possible inside the PDF. Now, you run in a lot of problems because you're working with a proprietary format. It's complicated. It's already made a lot of decisions. PDFs do a lot more than just publishing a research article.
+
+Our main backend is Ruby on Rails. What I really like with that is there's been constraints placed upon you. You follow these rules; you get all this stuff for free. I like this idea of constraint.
+
+LaTeX is totally open-ended. You can do whatever you want in LaTeX. Nobody ever uses any of this, but it means that you can compile your paper, and it might crash, and you get some totally non-obvious error.
+
+It's complicated, but we're writing research papers and no one ever needs to write text that goes around some arbitrary vector. It doesn't happen. If you remove that, things get simpler and you can start thinking of doing more.
+
+That's the mode we set on. We said we want interactive figures. Let's just make the decisions that make that possible, and not make all the decisions right away. The decision that makes that possible means that the figures are no longer included in the LaTeX sources. They're pulled out. If you import a document into Authorea, that's a LaTeX file. It's going to take all the figures and for each figure, it's going to make a directory. The directory introduces a very simple constraint. There's a size file. There's a caption file. There's either the figure or there's some HTML that has some JavaScript in it and some data files.
+
+
+'''So everything becomes a structured Git directory?'''
+
+Everything is stored in Git at the moment. There's a file that’s called layout. The layout file lists the elements that are going to be in the article. Currently, this means some content or a figure, which can be in LaTeX or Markdown. Two possibilities.
+
+
+'''If it’s totally open like that, how do you make money?'''
+
+We are charging. I'm saying if you have your stuff on Authorea, you should always to be able to get it back. Our philosophy: We want people to be reassured that if we go under, you can get everything back. If we get sold for some reason, you can get everything back. You can jump ship easily. Everybody has problems with lots of web services where you can’t get your stuff. We are trying to be a business. For users, we’re similar to GitHub’s pricing model and philosophy. We limit the number of private articles you can have, but if you write an article from scratch in the open, that’s free forever.
+
+
+'''So you have this concept of open articles? In a way, it sounds like you’re trying to be a repository yourself--not in the Git sense, but similar to arXiv or something like that?'''
+
+That is actually the exact term I was going to use. We want to be a better arXiv. ArXiv is great--it’s been a great service for a long time--but I don’t feel like it’s changing fast enough. You can do a lot more. Once you publish, with traditional publishers, there’s a lot of constraints that they have to live with because they’re big companies. We’re small. We can do whatever we want. As long as users are happy, people find interesting content, that’s great.
+
+In the short term or in the medium term, I think being a better arXiv is valuable. We don’t want to tell people that if you write your article on Authorea, you have to publish on Authorea because it’s important to go and publish in Nature and Science or wherever you publish, but we want to be a better pre-publishing server."
+(http://www.fastcolabs.com/3016677/can-the-github-for-science-convince-researchers-to-open-source-their-data)
+
+
+[[Category:Research]]
+
+[[Category:Intelligence]]
+
+[[Category:Science]]

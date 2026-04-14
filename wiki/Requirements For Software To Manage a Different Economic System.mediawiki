@@ -1,0 +1,114 @@
+
+=Discussion=
+
+==Overview of the software for a different economic system==
+
+Bob Haugen:
+
+"You need four levels: 
+
+* analysis,
+
+* planning, 
+
+* reactive re-planning in feedback loops, and 
+
+* peer-to-peer coordination.
+
+You don’t need optimal. Good enough is good enough. You don’t need (or want) prices, for all of the reasons Cosma Shalizi lists in his marvelous essay [http://bactra.org/weblog/918.html In Soviet Union, Optimization Problem Solves You] ("the whims of the rich matter more than the needs of the poor... it is more important to keep bond traders in strippers and cocaine than feed hungry children")  and a few more.
+
+I don’t know for sure if the scheme I outline below will work. Lotta hand-waving. But the techniques are all used in big corporate supply chains now, just driven by profit rather than human and ecological needs. In other words, in this way as in others, once again, the new is gestating inside the old.
+
+The analysis has been done for many years by the big oil companies, assessing the global energy sources and needs, and by global finance capital. And now by companies like Amazon, Google and Facebook. The reactive re-planning has ample precedent in the US DOD and NASA. The P2P coordination started with the Toyota Production System which has spawned many derivatives.
+
+
+===Analysis===
+
+This is about strategies, policies and the analysis of needs.
+
+For example, do we want to continue to contribute to greenhouse gases? Do we want to prioritize cocaine for stockbrokers over food for children? Etc.
+
+Or, for example in Nova Scotia, do we want to privilege trawlers who destroy fish spawning beds over smaller fish boats who do not destroy fish spawning beds but also don’t bring in as many fish? Or is it better to bring in fewer fish so the fish populations can sustain themselves?
+
+I have my own extremely strong opinions, but possibly unfortunately, I think those need to be democratic decisions. (I hope not in the current bought-and-paid-for democracy, though. Although we are getting rid of money in this thought experiment, so that should help.) 
+
+Also on the level of analysis, we need to figure out some of implications of our policy decisions. So, for example, if we want more small fishing boats, how do we get them? Most of the small fishing boat builders have gone out of business. What will be required to create new fishing boats? And new fishing boat builders? And where are the all the sustainable fishing boat crew members we will need? They have retired and their children want to be something else. What will be required to recruit and train new fishing boat crew members?.
+
+That’s an example of one of the chores of the analysts: break down policies and general statements of need into operational details. How detailed does the breakdown need to be? Shalizi seems to think it needs to get down to something like a GTIN level. No way that gets decided democratically. But the end-item value systems could decide that themselves, based on historical usage, best guesses about the future, and incoming signals. That’s pretty much what happens now. ‘Twould be good enough.
+
+
+===Planning===
+
+By planning, I mean “how do we do that?” in some level of detail. Eventually operational detail, if you want it to actually happen. As I do.
+
+Planning will be based on signals of need. For example, commercial consumer-oriented supply chains are now often driven by point-of-sale signals. Facebook and their advertisers respond to signals that a new baby is on the way. If you so much as look at a product on Amazon, you will be tracked in all of your subsequent Web surfing with ads for that commodity for several days. Google reads your emails to try to figure out what ads you might want to see, and thus what you might want to buy. For example, I wrote an email about cooperatives and used the shortened form “coop”, and thus was presented with ads for chicken coops. (Ok, it’s not optimal…)
+
+
+I list what is being done now only to suggest what is technically feasible. I do not mean we want point of sale signals or Facebook advertisements. We don’t want prices or money. So we need to expand our notions of signals of need. Netention is working on this problem. See also Analysis above: some of the needs will come from analysis, especially those that require long time-frames.
+
+However, unlike Shalizi’s assumptions, planning will not be this big batch job that plans a whole economy at once and takes forever. It will be done signal-by-signal; the plans will be updated all the time. What about the first plan? Doesn’t that need to cover the whole economy, maybe the whole world economy, all at once? Maybe not. I don’t think we’ll see a leap from this economy to the next. More likely a new planning system will emerge from experiments. See Implementation below. So then larger plans will evolve from internetworking smaller plans.
+
+Shalizi is interested in signals other than markets and prices, but does not seem to know how much of this is already being done.
+
+To those who say we do not need to plan, yes we do. Think about agriculture. Or constructing a new hospital or manufacturing plant, or making your own 3D printer. And all inventions are planned.
+
+
+===Dynamic Planning through Feedback Loops===
+
+Feedback loops and reactive re-planning (aka dynamic planning)
+
+A plan is wrong almost immediately. Something did not go according to plan. So a plan needs to live within feedback loops, and adjust to changes in events and conditions.
+
+* Overview: http://en.wikipedia.org/wiki/Reactive_planning
+
+* In games: https://games.soe.ucsc.edu/reactive-planning-idioms-multi-scale-game-ai
+
+* Industrial, military and surveillance: http://www.palantirsolutions.com/solutions/portfolio-management/integrated-dynamic-planning-system
+
+Now, reactive replanning needs to leave a lot of room for human judgment. The plans will never be perfect. They will sometimes be stupid. Replanning is not so much AI as IA (Intelligent Assistance).
+
+And the replanning needs to start with the smallest production units, and then rippled off to their neighbors. P2P already!
+
+
+===P2P coordination===
+
+Feedback loops and reactive re-planning also have limitations, for example, "a contingency planner such as Cassandra cannot handle exogenous events as it cannot predict them."
+
+Likewise, many coordination problems require so much information that it is impractical to try to compute them unless they will be executed by machines.
+
+Fine-grained coordination for humans is better done by humans, coordinating between neighboring nodes in economic networks, using various kinds of signals, in addition to techniques like talking to each other.
+
+* http://en.wikipedia.org/wiki/Kanban
+
+* http://en.wikipedia.org/wiki/Visual_control
+
+Even when done by machines, the machines will coordinate P2P (M2M? R2R?).
+
+
+===Implementation===
+
+Because this is not some humongous all-or-nothing whole-economy batch job, it does not need to be implemented that way, either.
+
+We will start using pieces of these ideas (planning plus replanning plus coordination), as they are implemented, in value networks (as soon as a value network is ready to use them: Sensorica isn’t yet). And then in networks of networks (as soon as we get some networks of networks to work with).
+
+The ideas would also apply to Steve Bosserman’s plan for Local Business Ecosystems, where we could also do some analysis.
+
+One of the differences between this and other similar proposals is that we are developing the software, and people are starting to use it. We have most of the model for the proposed system in our Value Network and Local Economy software projects, if you assume we can do some the features on our roadmap. We mostly need to bring in those less-defined signals of need, which Netention is working on.
+
+We lack some of the analysis, but that can come.
+
+So in this thought experiment, will we ever plan “the whole economy” at once? Probably not. It certainly will not start out that way. Could continue to be regional ecosystem plans that intertwingle with their neighbors by sending and responding to more signals, and always replanning in regions, never all at once.
+
+A friend used to work on airline replanning, which they called “trip repair”. They broke their systems down into Planospheres, which needed to negotiate with each other to move stuff from one planosphere to another. Would probably be more like that.
+
+Michel says “mutual coordination economics”. I like it.
+
+Will it work?
+
+Who knows? The hard parts are in the human organization and reorganization, not the software. And if and when it starts to evolve in large networks in the real world, it will probably not look much like this head design.
+
+The difference, again, is that we will test it out as we develop it in smaller experiments until it is ready to go big. And then keep testing and evolving."
+([https://docs.google.com/document/d/1q6hEpH75Q0VkkCIFUAJhXejrBZqD_j6-gFhkmKNROMQ/edit#heading=h.m321wqk8reg9])
+
+
+[[Category:Mutual Coordination]]

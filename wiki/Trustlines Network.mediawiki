@@ -1,0 +1,129 @@
+
+'''= "In the Trustlines Network every user is acting as a bank by granting credit lines to friends they trust".'''
+
+URL = https://trustlines.network/
+
+"the original [[Ripple]] idea built on Ethereum"
+
+
+
+=Description=
+
+'''1.'''
+
+"In the Trustlines Network every user is acting as a bank by granting credit lines to friends they trust. This allows to issue people powered money between friends and facilitate secure payments between strangers, by sending payments along a chain of trusting friends."
+
+
+'''2.'''
+
+"The Trustlines Network targets the problem of fair access to money by implementing money as bilateral peer-to-peer issued blockchain-based credit. We are developing an open source protocol, including a mobile app empowering end-users to make global payments based on their existing trusted social network."
+
+
+=Details=
+
+Tomi Kalmi:
+
+"Trustlines Network is an Ethereum-based P2P platform for creating IOU networks.
+Based on the original idea of Ripple as presented by Ryan Fugger in 2004, Trustlines
+Network would enable users to create money and make safe payments between each
+other. The high-level idea is that individuals provide credit for the people they trust,
+and only for an amount they deem fair. This provided credit is money that is valid
+for anyone who trusts the creditor. Thus, Trustlines Network is like the current
+credit-based monetary system, in a sense, but instead of just banks, anyone can
+become a creditor.
+
+Even though credit provided by user A is directly valid money only for users
+who trust user A, it can become valid for any third party by finding someone who
+trusts both user A and the third party in question, as is illustrated in Figure 2. This
+simple concept ideally eliminates the need for trust between parties who do not know
+each other, and the created money becomes universal. It is also scalable, as per
+the popular "Six-degree Theorem", everyone on the Earth is connected to each
+other on average by six links at most – therefore it is enough to establish connections
+with only a handful of people to have a sufficiently large network. Although there is
+no definite proof that the six-degree theorem holds, empirical studies and popular
+social media platforms such as LinkedIn and Facebook suggest it has merit.
+
+Connecting users using these intermediary links is called multi-hopping or rippling. ... In the case two users are not connected via a chain of nodes, they can be connected using ETH. This is more expensive for the user, but ensures the possibility of transactions in all cases.
+
+Since the scaling of the system depends on well-connected users, users are incited
+to establish as many connections as possible. This is implemented by including a
+small capacity fee in every transaction, which is paid to users/nodes that work as
+middlemen connecting two end nodes. In addition to the capacity fee, there is a
+relay fee (more on relays below), an imbalance fee (a fee for adding imbalance to a
+used trustline), and the Ethereum transaction fee. Optionally, users can also add an
+interest rate to any of their debtors.
+
+All fees, except the Ethereum transaction fee, are paid using Trustlines Money
+and they are aggregated for the user to confirm. The ETH that is required to pay the
+Ethereum transaction fee is acquired automatically by the frontend by exchanging
+it for Trustlines Money. An important part of the system is that users are not
+willing to credit others any more than they are comfortable to. In case a user is
+unable to pay back their debt, the dispute must be settled privately between the
+involved parties.
+
+There can be an arbitrary number of currency networks within the Trustlines
+Network ecosystem, using a related Currency Network Token Factory smart contract.
+Thus, there is no single "Trustlines token", but instead an arbitrary number of coexisting
+currencies that share only the Trustlines Network platform, which are called
+Trustlines Money. From the point of view of Helsinki, this type of dynamic IOU
+network would essentially mean that the city should act as a central bank of sorts.
+
+
+=Status=
+
+Evaluation by Tomi Kalmi based on a interview in 2018:
+
+"The interview regarding the Trustlines Network was conducted on 9th of May, 2018
+with Gustav Friis, who is a project lead at Trustlines Network. The objective of
+the interview was to validate that the author had understood the Trustlines Network
+whitepaper correctly, and to learn more about the platform’s roadmap and current
+state.
+
+Based on the interview it became clear that the whitepaper used as the basis of
+the evaluation of Trustlines Network is partly outdated. The main finding was that
+there is drastically less decentralization in the current and envisioned versions of the
+platform than what the whitepaper implies. According to the whitepaper, Trustlines
+Network is built on top of the Ethereum main chain and is heavily entwined with
+it, whereas the platform depicted by the interview is an off-chain technology by
+default, with the chance to connect it to Ethereum through extra configuration. How
+the operating costs resulting from Ethereum connection would be handled was left
+unclear.
+
+According to the interview, the funding for the Trustlines Network and the
+company behind it, brainbot technologies AG, is sufficient to ensure development
+and operations for the foreseeable future. However, as this claim was made without
+giving any further access to the related financial information, it should be accepted
+with reservations. Nevertheless, the interview gave a sense of a positive confidence
+regarding the Trustlines Network and its future.
+
+...
+
+Trustlines Network was founded and is being developed by brainbot technologies
+AG, a German company that was founded over 15 years ago. In addition to the
+Trustlines Network, they are active in developing the Ethereum Core and the Raiden
+network.
+
+Trustlines Network codebase is open source, licensed under the permissive ISC
+and MIT licenses as of May 2018. It has fairly active development, with 132 commits
+on three repositories (contracts, clientlib, and relay) between 7th of April and 7th of
+May in 2018 by four different authors.
+
+As of 9th of May 2018, there have been two test launches, with an MVP launch
+on its way"
+(https://wiki.p2pfoundation.net/Comparison_of_Blockchain-Based_Technologies_for_Implementing_Community_Currencies)
+
+
+=More information=
+
+* for the concept, see [[Trustlines Networks]]
+
+
+[[Category:Money]]
+
+[[Category:Cryptoledger Applications]]
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Commons Economics]]
+
+[[Category:Mutual Coordination]]

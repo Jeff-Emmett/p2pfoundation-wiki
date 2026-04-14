@@ -1,0 +1,31 @@
+URL = http://yacy.net/
+
+=Details=
+
+Heath Matlock:
+
+"You want to visit http://yacystats.de , and if you don't speak German,
+punch that in at http://translate.google.com . From there, you'll want
+to look at the "Network Statistics" link and also the "Peer Table". I
+went ahead and emailed a developer those questions, but I don't expect
+a response. That was another reason we decided to fork the work, the
+devs never responded to our inquiries, nor are they active on the
+#yacy channel on Freenode.
+
+Anyway, on average there are about 55 peers hosting a yacy instance,
+and about 1 billion links indexed and available. There are more peers,
+it's just 55 is the average available. It's supposed to scale to an
+infinite number of nodes. It's slow, being that it's based on http
+requests. Query response time depends on peers, the default timeout is
+at 3 seconds at the moment. There aren't any statistics for this
+available right now. "YaCy knows 5 different ways to acquire web
+indexes, find out detalis by downloading it and going to
+http://localhost:8080/CrawlResults.html ..The image without the
+details is on my server at
+http://ybit.ath.cx/images/yacy_index_monitor.png"
+
+Now the website is available in english, french, spanish, and chinese as well and there are Wikis. [[User:JohnnyB | Johannes ]]
+
+[[Category:Software]]
+
+[[Category:Technology]]

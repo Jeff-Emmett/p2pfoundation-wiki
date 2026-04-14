@@ -1,0 +1,36 @@
+Which node has power in a network?
+
+http://www.orgnet.com/PowerInNetworks.pdf
+
+
+=Description=
+
+"They say the golden rule in Real Estate is: Location, Location, Location. Might this rule also hold in social networks? In real estate, location is determined by geography - your physical location. In social networks, location is determined by your connections and the connections of those around you - your virtual location. '''Two social network measures, Betweenness and Closeness, are particularly revealing of a node's advantageous or constrained location in a network. The values of both metrics are dependent upon the pattern of connections that a node is embedded in. Betweenness measures the control a node has over what flows in the network - how often is this node on the path between other nodes? Closeness measures how easily a node can access what is available via the network - how quickly can this node reach all others in the network? A combination where a node has easy access to others, while controlling the access of other nodes in the network, reveals high informal power'''."
+
+
+=Discussion=
+
+
+==Betweenness as the most important metric of influence==
+
+Stowe Boyd:
+
+"this research in ARVIX blog, [http://www.technologyreview.com/blog/arxiv/24748/?ref=rss&a=f Best Connected Individuals Are Not the Most Influential Spreaders in Social Networks] suggests that a different way to measure the centrality might be more useful in determining how much throw weight a person actually has. Betweenness is a measure of how short are the chains that connects a person to the totality of the network. Like PageRank, betweenness is recursive: the people with the highest betweenness are likely to be connected to other people with high betweenness.
+
+This means people are influential because they are connected to many influential people. But influence doesn’t seem directly linked to how many people you are connected to. It’s a function of being connected to others who have short chains to many other people with high betweenness. Or, looked at differently, betweenness is a measure of how many social circles, or social scenes, a person is connected to.
+
+So, it’s not who you know: it’s where you know. It’s where you are situated in the network, and not just in the limited sense of how many immediate contacts you have."
+(http://www.stoweboyd.com/post/2093344403/content-context-conduit-its-not-who-you-know-but)
+
+
+=More Information=
+
+# [[P2P Metrics]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Relational]]
+
+[[Category:Geography]]

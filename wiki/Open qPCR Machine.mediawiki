@@ -1,0 +1,23 @@
+
+= an upgrade to the [[Open PCR]]
+
+URL = http://chaibio.com/openqpcr
+
+=Description=
+
+Perfetto:
+
+"The original OpenPCR we released 3 years ago is known as an endpoint PCR thermocycler. The machine takes DNA as an input, and gives (possibly much more) DNA as an output. So for example if you want to know if ground beef is contaminated with E. Coli, you put a beef sample into the PCR, target an E. Coli gene, and if that gene is present, you’ll get tons of E. Coli DNA out. However because the output is still DNA, you need to use some other downstream laboratory process to detect this DNA and convert it to information you’re after: whether the beef is contaminated. This downstream processing adds cost, reliability issues, and requires more skilled personnel, so it’s not a practical solution for diagnostics.
+In contrast, Open qPCR is what is known as a Real-Time PCR thermocycler. It takes DNA in, does the same selective DNA amplification, but using an optical detection system is able to directly detect whether the targeted DNA is present, and generate data as an output which is displayed on a web interface or exported via a standardized data format/API. And information out makes all the difference — I think the entire history of the Web has shown what happens when you expose information via a standardized interface.
+
+The other main difference of course is that OpenPCR was a DIY build-it-yourself kit, while Open qPCR is a manufactured, ready-to-use machine, meaning this is now a real solution for your average biologist who wants results, rather than a hobbyist who wants to solder things together."
+(https://medium.com/backchannel/diybio-comes-of-age-4a5b15d1131f)
+
+
+=Discussion=
+
+"Even before we’ve formally announced our machine, I am being pinged left and right (at least 7x in the past 2 weeks) about Ebola. People want to do everything from diagnosing patients in clinics to community monitoring of the animal population, which is where Ebola outbreaks begin from. What’s interesting to me is that people who want to deploy dozens of machines throughout western Africa are coming to us rather than the established players. Open qPCR certainly doesn’t have the features of the higher-priced machines, but it performs good enough at a price point that works in their situation."
+(https://medium.com/backchannel/diybio-comes-of-age-4a5b15d1131f)
+
+
+[[Category:Science]]

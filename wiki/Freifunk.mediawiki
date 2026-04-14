@@ -1,0 +1,45 @@
+= a [[Wireless Commons]] initiative in Berlin, similar to [[Consume]] in the UK
+
+URL = http://www.freifunk.net
+
+
+=Definition=
+
+"Freifunk is a non-commercial open Grassroots initiative to support free radio networks in the German region. Freifunk is part of the international movement for open wireless radio networks."
+
+
+=Description=
+
+Freifunk.net (German for: "Free radio") is a non-commercial open initiative to support free radio networks in the German region. Freifunk initiatives exist in many German cities and villages. There are too many to list them all here and their size and level of activity does vary a lot. You might want to look at this page: https://freifunk.net/community
+
+Freifunk.net is part of a international movement for free (as in free speech and in free beer) wireless computer networks. Freifunk has been active with regards to the developing world and in the evolution of mesh routing protocols, open firmware and ad-hoc driver support for wireless cards in Linux.
+
+In 2003 Freifunk started to experiment with mesh networking in Berlin. In the very beginning the mesh experiments were based on the proactive mesh protocol Mobilemesh. In order to support more operating systems Freifunk switched to OLSR RFC3626 in 2004, since there were a number of implementations offering support for other OSes besides Linux. In 2004 Freifunk took OLSR RFC3626 for a large mesh test on the conference Wizards of OS III, involving participants laptops as mesh nodes. The test exposed a number of severe problems. The wireless driver support was very buggy and unstable, causing frequent ad-hoc cell splitting. OLSR RFC3626 didn't perform well.
+
+One major problem of OLSR RFC3626 was the lack of a reasonable metric. So developers from Freifunk Berlin added ETX to the OLSR implementation of Olsr.org. Other protocol modifications addressed routing loops, route flaps and route breakdowns. By the beginning of 2005 the Olsr protocol shipped with the Freifunk firmware had become usable for productive use and some hacks of the Broadcom driver solved the cell-splitting problem for Broadcom-based embedded devices like the popular Linksys WRT54GL. As the mesh technology had become more and more usable, multipoint-to-multipoint mesh networking became the de-facto standard of operation in Freifunk community networks, and the modified OLSR daemon available from Olsr.org became popular for mesh networks worldwide. In 2006 Freifunk developers invented the B.A.T.M.A.N. mesh protocol algorithm. Since 2006 active mesh protocol development at Freifunk is mostly concentrating on the evolution of the B.A.T.M.A.N. protocol. 
+
+
+=Background=
+
+From a lecture description by Gregers Petersen:
+
+"The background of Freifunk is Berlin in the 90's, the years after the fall of the wall and unification. Suddenly the city was turned into a vast borderland between what had been and what was to become. People began with a hectic process of exploring this new space, squatting buildings and creating experimenting initiatives. Also commercial and state interests threw themselves at this new frontier. One focal area was the building of a completely new information infrastructure, based on optical fibre. Then the big bubble blew, and a new term was instated: Opal areas. Large parts of Berlin was abandoned by both state and commercial interests without functional broadband infrastructure. The response came as a horizontal movement, influenced by Consume in London, a burst in wireless technology and the day-to-day activities of people meeting and helping each other. The state was passive and people had to do-it-themselves, and the result was a new way of “growing” infrastructure. The manifestation of a mesh without a central-node, and doing away with the normal vertical management.
+
+The French anthropologist Pierre Clastres asked in the early 70's the essential question: Is it possible to imagine a society without a state? His answer was based on extensive ethnographic work and stated: It is a reality that other and different regimes have existed. Large scale societies who are not submissive to the state model, but actively avert it and render its conditions impossible, have been there long before the rise of the Western world. This opposes the present dogma that society is un-imaginable without a central power, and a class of powerful leaders. Today Clastres analysis resonates in response to the recent, and accelerating, verticalization of the state and the dominance of the market-economic model. New large scale societies are infecting both cities, landscape and the world with cultural and technological models in a horizontal mode.
+
+This presentation will weave the Freifunk reality together with the (re-)asking of Pierre Clastres seminal question and discuss the emergence of a new horizontalism taking the form of DIY societies against the state. The (re)production of “chaotic communication” plays a central role in this discussion. Access to, and free flow of, information becomes the basis of a mash-up where people, technology and ideas converge – resulting in energetic DIY solutions. Hereby solving questions which prior had no answers. Mutual aid is re-emerging as praxis, and it reaches across and beyond boundaries and borders with a tactical stand based on many small steps. The present results show that, when people are able to control major decisions and are free to make their own contribution to the design, construction and management of infrastructure then both the process and the environment produced stimulate individual and social well-being. People are building affirmative alternatives celebrating life while opposing the continuation of despotic power. The example of Freifunk will help with the painting of this new landscape"
+(http://events.ccc.de/congress/2007/Fahrplan/events/2254.en.html)
+
+
+=More Information=
+
+#Podcast: [[Kloschi on the Freifunk and Free Radio Movement‎]]
+
+
+[[Category:Movements]]
+
+[[Category:Media]]
+
+[[Category:Germany]]
+
+[[Category:P2P Infrastructure]]

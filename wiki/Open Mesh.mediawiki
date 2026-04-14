@@ -1,0 +1,145 @@
+General idea, platform proposal, and particular product.
+
+
+=General Idea=
+
+Mark Canter has an extensive investigation of what we need to build the open mesh:
+
+1) [http://blog.broadbandmechanics.com/2008/03/how-to-build-the-mesh-1-id-social-graphs-and-groups Layer One], [[Identity]], [[Data Portability]], [[Social Graph]]
+
+"The key foundation set of constructs, web services and APIs to support when building the mesh - is the area of profiles, personas, friendships, relationships, social graphs and groups. It all starts with humans and every construct, element and component of the open social web we’re building has to do with people. So that’s I’m starting here.
+
+openid.jpgLuckily for us- we have OpenID2, oAuth, FOAF and XFN/hCard as great starting points. And the new Social Graph APIs are now available to get us started building up portable social graphs.
+
+bigshake.gifLuckily for us - end-users are starting to become aware of their own ID rights, privacy and security. And the kinds of controls that THEY should be able to assert over their own data. Standards for access controls and privileges need to be established so as I move between systems or I opt in and allow others to move my profile, content and social graph data around - I have the ability to control who sees my data - and when."
+(http://blog.broadbandmechanics.com/2008/03/how-to-build-the-mesh-1-id-social-graphs-and-groups)
+
+
+2) [http://blog.broadbandmechanics.com/2008/04/how-to-build-the-mesh-2-persistent-ubiquitous-content Layer 2]: [[Persistent Ubiquitous Content]].
+
+"If you step back and think about content as infrastructure you can take a different attitude towards stock photos, soundtracks and beats, 3D models, 3D city models and all sorts of reusable digital content assets. You can bake historical references, sports statistics, background on diseases and weather trends into your blog posts and software. You can make collaborative hypermedia a dream come true.
+
+A mesh which has ubiquitous persistent content in it - as a key construct - is a mesh that can provide health information, small business knowledge and courseware for all ages - free and built into word processors, email, spreadsheets or browsers.
+
+A mesh which has ubiquitous persistent content in it - can enable entirely new kinds of record labels, movie studios and book publishers - which have a fighting chance of surviving. By lowering distribution, development and www costs - we can enable the Long Tail to at least cover their costs and pay the rent and feed themselves.
+
+A mesh which has ubiquitous persistent content in it can seamlessly tie into other domains like the ‘Live Web‘ or ‘Tools‘- and seamlessly ‘mesh’ with other constructs like micro-content, aggregators or collections.
+(http://blog.broadbandmechanics.com/2008/04/how-to-build-the-mesh-2-persistent-ubiquitous-content)
+
+
+3) [http://blog.broadbandmechanics.com/2008/04/how-to-build-the-mesh-3-shared-structured-content-servers Layer 3]: [[Shared Structured Content Servers]]
+
+"Call it micro-content, micro-formats, tagging, meta-data, semantic web, shared knowledge bases or what have you - the idea is that content comes along with extra ’stuff’ associated with it and that all that content and data is available on public, shared servers - where a community can contribute to it - and it’s overall value goes up.
+
+Wikipedia in one way - is a shared structured content server. So is DMOZ. And there are all sorts of knowledge bases, open courseware and shared resources available on the web which could be considered ‘shared structured content servers‘.
+
+But what I’m talking about here is one step beyond that. Something a bit more specific. It’s about shared Events, Reviews, local ads and info, maps, digital assets, even people databases or aggregated groups. Having APIs that can specify “Walnut Creek, April 20th, 2008 at 4:20 PM” kind of accuracy and granularity.
+
+That means that the service needs Open APIs so developers (like us) can access it and rely upon it as infrastructure. Structured Content as infrastructure."
+(http://blog.broadbandmechanics.com/2008/04/how-to-build-the-mesh-3-shared-structured-content-servers)
+
+
+4) [http://blog.broadbandmechanics.com/2008/04/how-to-build-the-mesh-4-the-live-web Layer 4]: The [[Live Web]]
+
+"The Live Web is a commodity. Everybody is gonna have it - so there won’t be any huge tollgates or lock-ins into one particular technology or vendor. Even Skype is finding that out today. By utilizing tcp/ip and http the Live Web benefits from having an infrastructure in place to build on. But the Live Web can only be practical if it’s ALSO connected to the world of POTS and mobile devices.
+
+GSM (the standard for cell phones) is pretty ubiquitous, but there are other forms of cell phone technology out there (CDMA) but nobody seems to worry about that. The different speeds for uploading and moving data (none of which are interoperable) have fragmented the so-called 3G world. But its the handset manufacturers and carrier platform vendors who have hopelessly fragmented the world of cell phones - to the point where there are over 10-15 different development platforms to worry about to ship ‘mobile’ compatible software.
+
+This just makes it that more challenging in connecting the Live Web into the mesh - and enabling any kind of vendor to mesh into that same opportunity - as the Big Boys enjoy today. But it can be done!
+
+The incredible real-time communication vehicle which we call IM, chat or Twittering provides a base platform from which 100’s if not 1,000s of unique solutions and innovative use case scenarios are being born - as we speak.
+
+But the Live Web is more than just communicating.
+
+It is about presence and just knowing if someone if there or not. And the world of 3D immersive virtual reality. Its about a swarm grid of tiny sensors monitoring the status of some factory or city streets and reporting back 20 times a second. Harnessing technology to improve our lives and make a buck - is what its all about."
+(http://blog.broadbandmechanics.com/2008/04/how-to-build-the-mesh-4-the-live-web)
+
+
+=Discussion=
+
+==Why Open Mesh Networks are beneficial==
+
+Mark Cooper:
+
+"The technologies at the heart of the digital revolution are also at the heart of the deployment of open wireless networks in the spectrum commons.  The potential spectrum carrying capacity has been the direct beneficiary of the convergence of progress in digital technology and the institutional development of networks.   When users add radios that help by cooperating in receiving and forwarding signals, i.e. act as repeaters, carrying capacity of the network increases.   Smart nodes get their expanding brainpower from decentralized computational capacity to communicate seam-lessly, utilizing embedded coordination protocols. 
+
+Smart technologies in mesh networks cooperating to deliver messages also show the beginning of anti-rivalry characteristics.   The ability of each node to receive and transmit messages, even when they are neither the origin nor the destination, expands the capacity of the network.  This intelligence is the key to mesh networks’ immense capacity. 
+
+The [[Spectrum Commons]] in which these networks exist exhibits the characteristic of inclusiveness, since the more nodes on the net-work, the greater the value to users.   The denser the nodes in the commons, the greater is the commons’ communications capacity.   The combination of digital technology and network organization has turned the old logic on its head; adding users on a mesh network improves performance.   [[Mesh Networks]] allow devices to share their resources dynamically, allowing more communications to take place with less power.  
+
+However, even with new technology, there is still the challenge of how to ensure cooperation among users.  Since cooperation is the key to the capacity gain, if users chose not to cooperate, the mesh network will not work.   Therefore, more devices are transitioning to “embed coordination” to ensure cooperation.   For example, radios become smart by embedding intelligence – algorithms – that take on the functions necessary to transmit a signal after listening to the spectrum and finding available frequencies to use and determining the power necessary."
+(http://cyberlaw.stanford.edu/system/files/From+Wifi+to+Wikis+and+Open+Source.pdf)
+
+
+
+
+=Projects=
+
+
+==[[Open-Mesh]]==
+
+
+===As Platform===
+
+URL = https://www.open-mesh.net/
+
+"a platform for projects, knowledge, and experience related to free and open mesh networks. We want to provide informations and services covering everything in the range of technical to social aspects and visions to real-live examples."
+
+===As Product===
+
+'''= Aims to replace [[Meraki]] which became restrictive.'''
+
+URL = http://www.open-mesh.com/
+
+"Initiative by Michael Burmeister-Brown, the co-founder of NetEquality and the developer of the Dashboard Software that made managing dozens, even hundreds, of Meraki repeaters fast, easy and cost/effective.
+
+Open-Mesh does everything the original Meraki did — and more:
+
+    
+* It’s inexpensive. Open-Mesh WiFi repeaters cost $49 each or $39.95 (qty 20)
+    
+* It’s Ad free. Open-Mesh promises they will never push ads into your networks. You decide what, if any, content you want to display.
+    
+* It’s 100% open source and deployed on top of OpenWRT. You can change anything.
+    
+* You can re-flash the firmware if you want.
+    
+* The Dashboard management system provides free administration, alerting and mapping. It allows you to configure the ESSID, splash page, passwords, and Bandwith allocation of your networks.
+    
+* The devices auto-configure. It’s simple to create a neighborhood or apartment network. You don’t need to use their management system if you don’t want to.
+
+Unlike Meraki and FON, their architecture is 100% open source. You can re-flash the firmware if you want. Put up a new splash page. Use their free management software (below) — or not."
+(http://www.dailywireless.org/2008/03/11/the-open-mesh-revolution/)
+
+==[[OpenMesh Project]]==
+
+URL = http://www.openmeshproject.org/
+
+
+Shervin Pishevar:
+
+""Fast forward almost exactly one year later to January 25, 2011—a day that shall live in history in the company of dates like July 4, 1776. Egypt’s decision to block the entire Internet and mobile telecommunications network was one of the first salvos in a war of electronic munitions. In this new frontier humans are the routers and armed with new technologies they can never be blocked or silenced again.
+
+I was staying up for days sharing and tweeting information as they happened. I had two close personal friends of mine in Egypt who were passing me information when they could. The day Egypt blocked the internet and mobile networks my mind went back to what I had said to Secretary Clinton. The only line of defense against government filtering and blocking their citizens from freely communicating and coordinating via communication networks was to create a new line of communications technologies that governments would find hard to block: Ad hoc wireless mesh networks. I called the idea OpenMesh and tweeted it.
+
+Within hours through crowdsourced volunteer efforts the OpenMesh Project was alive complete with domain name, website and forum. One volunteer, Gary Jay Brooks, a tech entrepreneur from Michigan, stepped up to lead the effort as a volunteer Executive Director. Another company from Canada volunteered to donate their specs for a tiny mobile router, that could be hidden in a pocket, and would cost only $90 per unit for us to make. Another well known communications pioneer stepped up to donate some important patents in this space.
+
+OpenMesh’s basic idea is that we could use some new techniques to create a secondary wireless Internet in countries like Libya, Syria, Iran, North Korea and other repressive regimes to allow citizens to communicate freely. By create mobile routers that connect together we could create a wireless network that mobile phones and personal computers can connect to. The first priority would be to have the people connect together and the second priority is for them to connect to the world. One the second front, we could use intermittent satellite internet connections so people in those nations could upload and download information with the rest of the world. Openmesh aims to be a clearinghouse for the best ideas out there to connect and get products out into the hands of people.
+
+...
+
+We will be establishing, building, maintaining, and distributing a common Open Source Mesh software/firmware that will allow citizens of the world to commonly communicate without telephone or cable companies. The raw product OpenMeshProject.org will free to download and free of charge. The technology will be released and maintained as Open Source GPL V2 project. This means that anyone can use or change the software. Our job as a community will be to maintain this project. We will help to build standards. We will help communities build mesh networks. We will lobby equipment manufactures to join the Open Mesh Project initiative. The idea all revolves around wireless technology that will allow us to connect and communicate with each other without telephone lines, cable, or fiber. We will build private networks that can span countries. We will empower the citizens of tomorrow. At the end of the day a grandmother might find this disk on the street, walk into the house, install a CD on her laptop and join the mesh cloud with 2 clicks. After joining the mesh she starts to see others in her network, clicks to call others in the mesh, joins group calls, or searches for friends online to dial. We as the OpenMeshProject.org community will facilitate the building, offering, and support for this project. We will all build 1 common mesh. We invite people to participate and to offer new innovations. Working together we can secure tomorrows communications needs."
+(http://techcrunch.com/2011/02/27/humans-are-the-routers/)
+
+
+
+
+
+
+[[Category:Standards]]
+
+[[Category:Movements]]
+
+[[Category:Technology]]
+
+[[Category:Open]]

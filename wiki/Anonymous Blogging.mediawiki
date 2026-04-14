@@ -1,0 +1,92 @@
+From a full introductory guide by Ethan Zuckerman:
+
+
+some of the strategies for protecting identity online require a great deal of technical knowledge and work.
+
+
+=Without Tor=
+
+==Step one - pseudonyms==
+
+One easy way Sarah can hide her identity is to use a free webmail account and free blog host outside her native country. (Using a paid account for either email or webhosting is a poor idea, as the payment will link the account to a credit card, a checking account or paypal account that could be easily linked to Sarah.) She can create a new identity - a psuedonym - when she signs up for these accounts, and when the Minister finds her blog, he'll discover that it belongs to “A. N. Ymous”, with the email address anonymous.whistleblower@hotmail.com.
+
+    
+Some providers of free webmail accounts:
+  
+# Hotmail
+# Yahoo
+# Hushmail - free webmail with support for strong cryptography
+
+    
+Some providers of free weblog hosting:
+  
+# Blogsome - free WordPress blogs
+# Blogger
+# Seo Blog
+
+Here's the problem with this strategy - when Sarah signs up for an email service or a weblog, the webserver she's accessing logs her IP address. If that IP address can be traced to her - if she's using her computer at home, or her computer at work - and if the email or weblog company is forced to release that information, she could be found. It's not a simple matter to get most web service companies to reveal this information - to get Hotmail, for instance, to reveal the IP Sarah used to sign up for her account, the Minister would likely need to issue a subpoena, probably in cooperation with a US law enforcement agency. But Sarah may not want to take the risk that she could be found if her government can persuade her email and weblog host to reveal her identity.
+
+==Step two - public computers==
+
+One additional step Sarah could take to hide her identity is to begin using computers to make her blogposts that are used by lots of other people. Rather than setting up her webmail and weblog accounts from her home or work computer, Sarah could set them up from a computer in a cybercafe, a library, or a university computer lab. When the Minister traces the IP used to post a comment or a post, he'll discover that the post was made from a cybercafe, where any number of people might have been using the computers.
+
+There are flaws in this strategy as well. If the cybercafe or computer lab keeps track of who is using what computer at what time, Sarah's identity could be compromised. She shouldn't try to post in the middle of the night when she's the only person in the computer lab - the geek on duty is likely to remember who she is. And she should change cybercafes often. If the Minister discovers that all the whistleblower's posts are coming from “Joe's Beer and Bits” on Main Street, he might stake someone out to watch the cybercafe and see who's posting to blogs in the hopes of catching Sarah.
+
+
+==Step three - anonymous proxies==
+
+Sarah's getting sick of walking to Joe's cybercafe every time she wants to post to her blog. With some help from the neighborhood geek, she sets up her computer to access the web through an anonymous proxy. Now, when she uses her webmail and weblog services, she'll leave behind the IP address of the proxy server, not the address of her home machine… which will make it very hard for the Minister to find her.
+
+First, she finds a list of proxy servers online, by searching for “proxy server” on Google. She picks a proxy server from the publicproxyservers.com list, choosing a site marked “high anonymity”. She writes down the IP address of the proxy and the port listed on the proxy list.
+
+    
+Some reliable lists of public proxies:
+  
+# publicproxyservers.com - lists anonymous and non-anonymous proxies
+# Samair - only lists anonymous proxies, and includes information on proxies that support SSL
+# rosinstrument proxy database - searchable database of proxy servers
+
+Then she opens the “preferences” section of her webbrowser. Under “general”, “network” or “security” (usually), she finds an option to set up a proxy to access the Internet. (On the Firefox browser, which I use, this option is found under Preferences - General - Connection Settings.)
+
+She turns on “manual proxy configuration”, enters the IP address of the proxy server and port into the fields for HTTP proxy and SSL proxy and saves her settings. She restarts her browser and starts surfing the web.
+
+She notices that her connection to the web seems to be a bit slower. That's because every page she requests from a webserver takes a detour. Instead of connecting directly to Hotmail.com, she connects to the proxy, which then connects to Hotmail. When Hotmail sends a page to her, it goes to the proxy first, then to her. She also notices that she has some difficulty accessing websites, especially sites that want her to log in. But at least her IP isn't being recorded by her weblog provider!
+
+Alas, proxies aren't perfect either. If the nation Sarah lives in has restrictive internet laws, many websurfers may be using proxies to access sites blocked by the government. The government may respond by ordering certain popular proxies to be blocked. Surfers move to new proxies, the government blocks those proxies, and so the circle of life continues. All of this can become very time consuming.
+
+Sarah has another problem if she's one of very few people in the country using a proxy. If the comments on her blog can be traced to a single proxy server, and if the Minister can access logs from all the ISPs within a country, he might be able to discover that Sarah's computer was one of the very few that accessed a specific proxy server. He can't demonstrate that Sarah used the proxy to post to a weblog server, but he might conclude that the fact that the proxy was used to make a weblog post and that she was one of the few people in the nation to use that proxy constituted evidence that she made the post. Sarah would do well to use proxies that are popular locally and to switch proxies often.
+
+
+==Step four - MixMaster, Invisiblog and GPG==
+
+Sarah starts to wonder what happens if the proxy servers she's using get compromised? What if the Minister convinces the operator of a proxy server - either through legal means or through bribery - to keep records and see whether anyone from his country is using the proxy, and what sites they're using. She's relying on the proxy administrator to protect her, and she doesn't even know who the administrator is!
+
+Spending quite a long time with the local geek this time, she explores a new option: Invisiblog. Run by an anonymous group of Australians called vigilant.tv, Invisiblog is a site designed for and by the truly paranoid. You can't post to Invisiblog via the web, as you do with most blog servers. You post to it using specially formatted email, sent through the MixMaster remailer system, signed cryptographically.
+
+It took Sarah a few tries to understand that last sentence. Eventually, she set up GPG - the GNU implementation of Pretty Good Privacy, a public-key encryption system. (In two sentences: Public-key encryption is a technique that allows you to send messages to a person that only she can read, without her needing to share a secret key with you that would let you read messages other people send to her. Public key encryption also allows people to “sign” documents with a digital signature that is almost impossible to forge.) She generates a keypair that she will use to post to the blog - by signing a post with her “private key”, the blog server will be able to use her “public key” to check that a post is coming from her, and then put it on the blog.
+
+She then sets up MixMaster, a mailing system designed to obscure the origins of an email message. MixMaster uses a chain of anonymous remailers - computer programs that strip all identifying information off an email and send it to its destination - to send email messages with a high degree of anonymity. By using a chain of 2 to 20 remailers, the message is very difficult to trace, even if one or more of the remailers is “compromised” and is recording sender information. She has to “build” MixMaster by compiling its source code, a project that requires a great deal of geek assistance.
+
+She sends a first MixMaster message to Invisiblog, which includes her public key. Invisiblog uses this to set up a new blog, with the catchy name “invisiblog.com/ac4589d7001ac238″ - the long string is the last 16 bytes of her GPG key. Then she sends future posts to invisiblog, by writing a text message, signing it with her public key and sending it via MixMaster.
+
+It's not nearly as fast as her old style of blogging. The misdirection of MixMaster mailers means that it takes anywhere from two hours to two days for her message to reach the servers. And she has to be very careful about looking at the blog - if she looks at it too often, her IP address will appear in the blog's log frequently, signalling that she'l likely to be the blog author. But she's reassured by the fact that the owners of invisiblog have no idea who she is… and she now knows more about open-source software than she'd ever wanted to know.
+
+The main problem with the Invisiblog system is the fact that it's incredibly difficult for mere mortals to use. Most people find GPG a challenge to set up, and have difficulty understanding the complexities of public and private keys. More userfriendly crypto tools, like Ciphire, have been set up to help the less geeky of us, but even they can be tricky to use. As a result, very few people - including people who might really need it - use encryption for most of their email.
+
+MixMaster is a true technical challenge for most users. Windows users can use an early DOS version of the program by just downloading it. I downloaded and tested it yesterday, and it doesn't appear to work… or perhaps my email is still being remailed back and forth between remailers. Anyone wanting to use the newer version, or wanting to use the program on Linux or Mac, needs to be able to compile the program themselves, a task beyond many expert users. It's possible that Invisiblog would become more useful if it accepted messages from web-accessible remailers, like riot.eu.org - for now, I can't see it as being particularly helpful for the people who need it most.
+
+There's an additional set of problems with strong encryption in repressive nations. If Sarah's computer is seized by the government and her private key is found, it would constitute strong evidence that Sarah had authored the controversial blog posts. And, in countries where encryption is not widely used, simply sending out MixMaster messages - mail messages wrapped in strong encryption - might be enough to cause Sarah's internet usage to be watched closely.
+
+Is Sarah's solution - learning enough about cryptography and software to use MixMaster - your solution? Or is some combination of steps 1,2 and 3 sufficient to let you blog anonymously? There's no one answer - any path towards anonymity needs to consider local conditions, your own technical competence and your level of paranoia. If you have reason to be worried that what you're posting could endanger your safety, a combination of steps 1, 2 and 3 is probably not a bad idea."
+(http://www.globalvoicesonline.org/?p=125)
+
+
+=Using Tor=
+
+See our entry on [[Tor]] for details.
+
+[[Category:Politics]]
+
+[[Category:Resources]]
+
+[[Category:Technology]]

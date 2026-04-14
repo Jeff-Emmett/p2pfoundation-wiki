@@ -1,0 +1,165 @@
+
+'''= Smart Contract is a formalisation of contractual relations in digital form, most often associated recently with developments of the [[Blockchain]]'''
+
+URL = https://en.wikipedia.org/wiki/Smart_contract
+
+
+=Definition=
+
+By Gideon Greenspan:
+
+"A smart contract is a piece of code which is stored on an Blockchain, triggered by Blockchain transactions, and which reads and writes data in that Blockchain’s database."
+(http://www.the-blockchain.com/2016/04/12/beware-of-the-impossible-smart-contract/)
+
+
+=Description=
+
+'''1. David Bollier:'''
+
+"A more generic aspect of this field of blockchain-related experimentation is smart contracts.  These are dynamic software modules that may soon enable new types of group governance, decision-making and rules-enforcement on open network platforms.  We are already familiar with rudimentary – and corporate-oriented versions – of this idea, such as Digital Rights Management (DRM), an encryption/authentication system that attempts to constrain how users may use their legally purchased technologies (DVDs, CDs, etc.).  Based on the power of collaborative networks, some tech innovators have realized that the challenge is not how to lock up and privatize digital artifacts, but how to assure that they can be shared on open platforms in legally enforceable ways. Hence the many active efforts now underway to devise technical systems that would act as “smart” digital software agents whose transactions would also be enforceable under conventional law.  The “transactions” could, of course, be used to invent new types of markets, but they also could be used to create new types of commons; ultimately, the two realms may bleed into each other and create social hybrids that conjoin community commitments and market activity."
+
+
+
+'''2. by Steve Omohundro, George Gregory, and Tuna Oezer, ACM:'''
+
+"Contract law has been fundamental to the formation of sophisticated human societies. Digital, self-enforcing “smart contracts” were proposed by Nick Szabo in 1993 (http://firstmonday.org/ojs/index.php/fm/article/view/548/469) but the economic and communications infrastructure at that time weren’t adequate to bring them into practice.
+
+With the success of Bitcoin, several groups have proposed successor “Bitcoin 2.0″ designs that incorporate more sophisticated forms of smart contracts. The most developed of these systems is called “Ethereum” (https://www.ethereum.org/). It has a blockchain similar to bitcoin’s but allows has a Turing complete contracting language which is executed on the blockchain. This capacity allows complex contracts to be created and automatically enforced.
+
+Ethereum’s rich contracting allows financial exchanges, insurance contracts, derivatives, and many other transactions to be precisely defined and executed. Digital services like renting out storage space, computational power, or bandwidth are also easy to implement. There are also proposals for extending contracts to include information and interactions in the physical world. These include reputation management, “smart property” ownership records for real estate and vehicles, earthquake or weather insurance, and automated room rental.
+
+Modern corporations are defined by a set of contracts with investors, management, employees, customers, and suppliers. If these are automated, then “Decentralized Autonomous Organizations” (DAOs) become possible. These entities might buy and sell things, make decisions, and hire and fire contractors without human management. It is also possible to create human-run organizations which make decisions by voting on the blockchain. Adam Levine has proposed “Self Bootstrapped” organizations which issue cryptoequities to investors based on a mission statement and then create themselves using contractors guided by decentralized blockchain voting (https://bitsharestalk.org/index.php?topic=1854.0).
+(http://steveomohundro.com/2014/10/22/cryptocurrencies-smart-contracts-and-artificial-intelligence/)
+
+
+=Typology=
+
+==Complete vs Incomplete Smart Contracts==
+
+Chris Berg, Sinclair Davidson and Jason Potts:
+
+"Smart contracts are limited by what can be specified in the algorithm. Economists have focused on the distinction between complete and incomplete contracts.
+
+A complete contract specifies what is to occur under every possible contingency. An incomplete contract allows the terms of the contract to be renegotiated in the case of unexpected events. Incomplete contracts provide one explanation for why some exchanges take place in firms, and why others take place in markets, and provides a further guide to questions surrounding vertical integration and the size of the firm.
+
+Complete contracts are impossible to execute, while incomplete contracts are expensive. The blockchain, though smart contracts, lowers the information costs and transactions costs associated with many incomplete contracts and so expands the scale and scope of economic activity that can be undertaken. It allows markets to operate where before only large firms could operate, and it allows business and markets to operate where before only government could operate.
+
+The precise details of how and when this will occur is a challenge and a problem for entrepreneurs to resolve. Currently, oracles provide a link between the algorithmic world of the blockchain and the real world, trusted entities that convert information into data that can be processed by a smart contract.
+
+The real gains to be made in the blockchain revolution, we suggest, are in developing better and more powerful oracles — converting incomplete contracts to contracts that are sufficiently complete to be written algorithmically and executed on the blockchain.
+
+The merchant revolution of the middle ages was made possible by the development of merchant courts — effectively trusted oracles — that allowed traders to enforce agreements privately. For blockchain, that revolution seems yet to come."
+(https://medium.com/cryptoeconomics-australia/the-blockchain-economy-a-beginners-guide-to-institutional-cryptoeconomics-64bf2f2beec4)
+
+
+=Applications=
+
+
+==Time Banks==
+
+Rogelio Segovia:
+
+"On [[Ethereum]], you can manage on the [[Blockchain]] transactions, as in other cryptocurrencies, but also contracts managing these transactions. These contracts can be written in several languages (serpent, LLL and other specific ethereum languages). The creation of local or global currencies is therefore very much simplified."
+(email October 2014)
+
+= Legal Aspects =
+
+* [[Primavera De Filippi]]:
+
+"But, to come back to the legal issues: what’s so special about Distributed Autonomous Organisations? And why do they raise so many interesting legal challenges?
+
+* First of all, they are autonomous in the sense that once they’ve been created on the blockchain, they no longer need their creators, nor are they under any obligation to respond to, or be responsible of any requests made by them.
+* Secondly, they are self-sufficient in that they charge users for the services they provide in order to pay others for the resources they need (such as bandwidth and processing power).
+* Finally, they are decentralized, since they do not subsist on a specific server, but instead are encoded into the blockchain (which is distributed to the entire network), and their code is executed in a decentralized manner by every node of the network.
+
+These characteristics make them extremely difficult to regulate because there is no single entity which has control over them. In addition, given the self-enforcing properties of their code, they might actually challenge some of the most basic principles of our legal system. In fact, there are many legal challenges raised by Ethereum, but I will focus here only on the three that seem most interesting to me.
+
+Let’s begin with Contract Law. As previously stated, the particularities of smart contracts are that they are transparent (their code is open source; anyone can examine them) and self-enforcing (trust between parties is unnecessary; contracts are executed automatically, independent of their will).
+
+In traditional contracts, each party is free to decide whether to fulfill the contract, whether to only partially implement the contract (by leaving out some obligations), or whether to breach the contract (and pay instead for damages or compensation). By contrast, in the case of smart contracts, parties have no choice but to implement the contract, because the contract has been encoded, written into the code. It cannot be breached unless one actually manages to break into the code.
+
+This raises the question of what is legally binding vs. what is technically binding.
+
+For instance, there are many situations in contract law that might either invalidate the contract (if it was agreed to under undue influence, for example) or limit its enforceability (to the extent that it goes against the interests of consumers). But smart contracts are not affected by these provisions as they operate within their own closed technological framework, which does not necessarily implement any of these legal safeguards. In this sense, smart contracts could effectively bypass the legal framework of contract law.
+
+When it comes property law, the situation is quite similar, in that Ethereum implements its own technical framework which operates outside of the legal framework of property law. In particular, Ethereum introduces two important features that significantly differ from traditional property rights.
+
+The first is the concept of smart property, which relies on smart contracts and digital tokens to establish a decentralised and trust-free asset management system. The idea is that ownership of something can be transferred directly via the blockchain, through the transfer of specifically designed coins which are linked to a particular item. This allows for the creation of “cryptographically-activated” assets, such as a smartphone that can only be used by spending a particular token, or a car that can only be driven by the person who owns that token. Instead of transferring the ownership of the car, transferring the token associated with that car is sufficient to achieve the same result.
+
+And the other is the concept of crypto-property. This is extremely interesting in that it allows for algorithmical entities, which are neither moral persons nor legal persons, to own currency or particular assets as if they were their own property. So, as opposed to standard property rights – which have been defined by the law and can therefore, in certain situations, also be taken away by the law – crypto-property rights are both defined and automatically enforced by code! This means that they cannot be seized, but that also, once they have been stolen, there is no possibility of recourse."
+
+Source: http://blog.p2pfoundation.net/ethereum-freenet-or-skynet/2014/11/19
+
+
+=Discussion=
+
+* Very important, read: '''The limitations of smart contracts''' [http://www.the-blockchain.com/2016/04/12/beware-of-the-impossible-smart-contract/]
+
+
+==The Concerns of [[Primavera De Filippi]]:==
+
+"Returning to Ethereum, this essentially means that Distributed Autonomous Organizations have absolute sovereignty over their own resources, which cannot be seized by anyone unless this is specifically provided for by the code of these organizations. That brings us back to what Lawrence Lessig had already identified over 10 years ago: basically, that in cyberspace, code is law. I think we all understand that by now.
+
+So the question is: if code is law, how can the law regulate the code so that it actually regulates our behaviors in a way that remains compliant with the law? This brings up some more fundamental questions: how do we want to regulate Distributed Autonomous Organizations? Should they be regulated in the same way as standard corporations or organizations, or do we need a distinct body of law that would better account for their specificities?
+
+As I was researching these questions, most of the material I found was related to the question of the regulation of intelligent robots. This was surprising at first, but in fact it makes complete sense since they both share this commonality of being autonomous and self-sufficient.
+
+This bring us to the third point, which is the issue of liability and responsibility. Let’s take the example of a Distributed Autonomous Organisation designed to send a copyrighted song to everyone who transfers the equivalent of $1.00. Here, the main challenge is to determine who is in charge of, and responsible for, this kind of activity?
+
+It could be the creator of the Distributed Organization, but then we run into two problems. First, the creator might be difficult to identify if the distributed organization was created anonymously. Second, even if the creator could be identified, it would be possible that the creator would no longer have the power to control the organisation – which will continue to operate as long as there are sufficient funds for it to operate on its own.
+
+Or, should the users be held vicariously liable for the services for which they’ve paid? This would only apply to the extent that they knew or had good reason to believe that the Decentralized Organization was doing something wrong (but, in this case, users might actually not be unaware that they are purchasing an infringing song).
+
+Perhaps the Distributed Autonomous Organization itself should be held liable for its own actions. But then we encounter an ever bigger problem in terms of law enforcement. It is virtually impossible to recover damages or to obtain an injunction unless these measures have been specifically encoded into the contract/constitution of the organization.
+
+So, we find ourselves in a state of legal limbo, as we cannot rely on traditional legal means to regulate the code of this technology. The question is: do we actually need to?
+
+The supporters of Ethereum would argue that we don’t. In fact, if Bitcoin was designed as a decentralized alternative to counteract the corruption and inefficiency of the financial system, then Ethereum constitutes a decentralized alternative to the legal system as a whole! This refers to the somewhat anarchic idea of decentralized law, where everyone is free to implement their own rules within their own contracts, creating an interconnected system of rules interacting with each other in a reliably predictable way and not dependent on trust between parties.
+
+Of course, the flipside is that Ethereum could potentially be taken over by big corporations, financial institutions, or even by the State, in an attempt to recreate the same economic system and political order that we have today – except that this time, it would be much more difficult to escape from that system.  This could lead to the establishment of a totalitarian society that is (almost exclusively) regulated by self-enforcing contracts, which establish the rules that everyone must abide by, without any constitutional constraints."
+
+Source: http://blog.p2pfoundation.net/ethereum-freenet-or-skynet/2014/11/19
+
+
+==Smart Contracts and Crime==
+
+Tom Simonite:
+
+"Some companies think smart contracts could make financial markets more efficient, or simplify complex transactions such as property deals (see “The Startup Meant to Reinvent What Bitcoin Can Do”). Ari Juels, a cryptographer and professor at the Jacobs Technion-Cornell Institute at Cornell Tech, believes they will also be useful for illegal activity–and, with two collaborators, he has demonstrated how.
+“In some ways this is the perfect vehicle for criminal acts, because it’s meant to create trust in situations where otherwise it’s difficult to achieve,” says Juels.
+
+In a paper to be released today, Juels, fellow Cornell professor Elaine Shi, and University of Maryland researcher Ahmed Kosba present several examples of what they call “criminal contracts.” They wrote them to work on the recently launched smart-contract platform Ethereum.
+
+One example is a contract offering a cryptocurrency reward for hacking a particular website. Ethereum’s programming language makes it possible for the contract to control the promised funds. It will release them only to someone who provides proof of having carried out the job, in the form of a cryptographically verifiable string added to the defaced site.
+
+Contracts with a similar design could be used to commission many kinds of crime, say the researchers. Most provocatively, they outline a version designed to arrange the assassination of a public figure. A person wishing to claim the bounty would have to send information such as the time and place of the killing in advance. The contract would pay out after verifying that those details had appeared in several trusted news sources, such as news wires. A similar approach could be used for lesser physical crimes, such as high-profile vandalism.
+
+“It was a bit of a surprise to me that these types of crimes in the physical world could be enabled by a digital system,” says Juels. He and his coauthors say they are trying to publicize the potential for such activity to get technologists and policy makers thinking about how to make sure the positives of smart contracts outweigh the negatives."
+(http://www.technologyreview.com/news/540151/bitcoins-dark-side-could-get-darker/)
+
+=More Information=
+
+* Jay Cassano, “What are [[Smart Contracts]]?  Cryptocurrency’s Killer App,” Fast Company, September 17, 2014; and Smart Contract.  [https://en.wikipedia.org/wiki/Smart_contract] Wikipedia entry, “Smart contract.” 
+
+* [[Common Accord]]
+
+* first theoretization by Nick Szabo:
+
+#http://en.wikipedia.org/wiki/Nick_Szabo
+#http://szabo.best.vwh.net/
+#Formalizing and Securing Relationships on Public Networks, http://szabo.best.vwh.net/formalize.html
+
+* [[Distributed Contracts]]
+
+
+[[Category:Cryptoledger Applications]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Encyclopedia]]
+
+[[Category:P2P Law]]
+
+[[Category:Law and the Commons Project]]
+
+[[Category:Crypto Economy]]

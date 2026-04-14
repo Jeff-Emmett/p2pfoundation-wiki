@@ -1,0 +1,46 @@
+
+= a [[Quality Assessment of FOSS]] methodology
+
+
+=Description=
+
+"QualOSS provides a high-level methodology for benchmarking the quality of FOSS. Main
+quality focus for the benchmarking are the “Evolvability” and “Robustness” of FOSS
+(Deprez et al., 2008):
+
+• “Robustness” is defined to be the capability that the FOSS endeavour displayed/-s
+in solving past and current problems.
+
+• “Evolvability” is defined to be the capability that the FOSS endeavour will likely
+display in solving future problems.
+
+QualOSS uses the term “FOSS endeavour” instead of FOSS project. A FOSS endeavour
+is defined by the following four elements: 1) A set of work products, 2) the FOSS community
+creating, updating and using these work products, 3) the tools used to act on
+these work products or to build or run the software product, and 4) the set of development
+processes executed by the community, these processes include rules and a division
+of labour accepted and followed by community members when interacting and creating
+work products” (Ruiz and Glott, 2009). The third element has so far not materialised into
+QualOSS.
+
+Figure 5.2 illustrates the structure of the QualOSS Standard Assessment Method, starting
+with the defined quality focus (robustness and evolvability) as the root node, further
+decomposed into the FOSS endeavour elements (software product, community members,
+software process), and ending up with a set of subgoals as the leafs. Various metrics are
+further associated with each of the leaf characteristics.
+
+The overall purpose is to evaluate the degree of risk for selected (or all) leaf characteristics,
+related to a selected context with specified viewpoints. The QualOSS Standard Assessment
+Method represent one specific predefined configuration, context (Usage=integration
+in a product, Mode=product comparison, Collaboration=full FOSS collaboration)
+with a set of viewpoints (long term management viewpoint, short term management
+viewpoint, long term technical viewpoint, short term technical viewpoint). The intension
+behind the possibility of making configurations is to “tune” the measurement to specific
+business cases. Depending on the configuration, only the most relevant metrics will be
+used. But since only one standardised configuration exist,the QualOSS Standard Assessment
+Method, more details regarding configurations will not be pursued in any more
+depth here."
+(http://publications.nr.no/Compendium-INF5780H11.pdf)
+
+
+[[Category:Peerproduction]]

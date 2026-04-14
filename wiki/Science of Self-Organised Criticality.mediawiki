@@ -1,0 +1,40 @@
+
+'''* Book: How Nature Works: The Science of Self-Organised Criticality. By Per Bak. New York, NY: Copernicus Press, 1996'''
+
+URL = 
+
+=Review=
+
+Oswaldo Teran:
+
+"The image of the sand pile, retaining its conical shape as more sand is added, became widely known. Although avalanches on the sides of the pile (maintaining its stability) were individual unpredictable in size and timing, the distribution of avalanches and their timings displayed an interesting kind of regularity. In this review, I describe Bak's key ideas and explore their implications for social simulation and our understanding of society.
+
+Some of the characteristics of a self-organised system Bak introduces are:
+
+The system is open and dissipative, and its components are metastable.
+The system organises itself in a critical state with avalanches of change at all sizes via which dissipation manifests itself. These avalanches are regular but not periodic.
+The system is embedded in a single spatiotemporal fractal structure (p. 172). Unfortunately, Bak does not make explicit exactly what he means by structure.
+A critically self-organised system might become catastrophically unstable if it were manipulated and forced into certain optimal states which take it out of its self-organised state.
+*  Bak's Evolution Model
+Bak's evolution model is derived from the failed attempts which he and Stuart Kauffman made to produce self-organised critically (SOC) in the Kauffman NKC model: a model also referred to as 'interacting dancing landscapes'. Using this model, Bak and some collaborators devised another model that successfully displayed SOC. This model is particularly illustrative of Bak's ideas and the theory of SOC. Bak uses this model to show not only characteristics of the state of SOC but also features of the 'transition state' from a (non self-organised) initial state to the state of SOC. It seems important to start by describing the original NKC model because of the importance Bak attributes to it. As he states: "...it is the first serious attempt to model a complete biology." Nevertheless, experimentation with this model was not entirely successful, as Bak himself points out: "...despite Stu's early enthusiastic claims, for example in his book The Origin of Order, that his models converge to the critical point, that they exhibit SOC, they simply don't."
+
+The NKC model consists of an array of size K representing K interacting species, where each species consists of a binary string {0, 1} of size N. Each digit represents a gene (or "trail") and each species interacts with C other species. This interaction would involve only certain specific genes of the interacting species. For example, a 232 model (e.g., N = 2, K = 3 and C = 2) would be shown as (10 11 01). In this case, all species interact with each other by using one gene. The first species interacts with the second one by means of the first species' first gene (with value 1 at present) and the second species' first gene (also with value 1 at present).
+
+A fitness function is associated with the system. This function determines the fitness of a species by operating over the species' digits. The dynamics is defined as follows: for each species, one digit is randomly chosen, then this digit and the linked digits of other species (those digits by means of which other species interact with the selected species) are randomly changed (mutated).
+
+This model was devised as an attempt to experiment with representations of co-evolution in systems that include more than one species. The predator-prey model is the typical example of interaction for only two species - a model that has been well studied but is very limited as a metaphor for reality.
+
+Bak reports that he and Kauffman spent three years attempted to find SOC operating in several variations of this model without any success. Then, he explains how he and his colleague Kim Sneppen found a very interesting variation of the model that successfully shows SOC. The important insight, he says, concerned the method for choosing the mutating species. It was necessary to choose the least fit species rather than all of them. Bak justifies this change in the model on empirical evidence "...bacteria start mutating at a faster rate when their environment changes for the worse, for example when their diet changes from sugar to starch" and from what seems to be a rule in nature. Those species with the lowest fitness are the most likely to disappear or mutate as they are most vulnerable to environmental or to internal fluctuations.
+
+By further simplification Bak and Sneppen developed another model. In this, species were represented by a single number (their fitness) and placed in a circle where each species can interacts only with its two neighbours. The dynamics of the model involves beginning with random numbers, choosing the species with the lowest fitness in each period and then randomly changing its fitness and the fitness of its two neighbours. In Bak's words, "Random numbers are arranged in a circle. At each time step, the lowest number, and the numbers of their two neighbours, are each replaced by random numbers". This model robustly demonstrates SOC under different randomisation of the mutations.
+
+One of the most enlightening and enjoyable parts of the book is Bak's report of the model dynamics towards SOC via periods of avalanches and stasis, as well as the description of the further dynamics after the model reaches the self-organised state. Once the system becomes self-organised, periods of avalanches and stasis continue but the system does not 'organise' any further - the successive stasis states are described by the same analytical rules."
+(http://jasss.soc.surrey.ac.uk/4/4/reviews/bak)
+
+[[Category:Books]]
+
+[[Category:Ecology]]
+
+[[Category:Thermodynamic Efficiencies]]
+
+[[Category:Network Theory]]

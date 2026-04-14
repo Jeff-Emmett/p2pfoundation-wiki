@@ -1,0 +1,158 @@
+'''= protocols are agreements among a set of parties on a sequence of operations and the format of messages that will be used to communicate for a given purpose.'''
+
+
+=Contextual Quote=
+
+"Understanding protocols is crucial because they play a fundamental role in coordinating complex systems, from digital networks to social interactions to biological processes. Protocols serve as a critical link between individual components and larger systemic structures. By examining the protocols at play in any given system, we can gain insights into how that system functions, what values or priorities it embodies, and how it might evolve or be changed."
+
+- Andrea Farias [https://diome.xyz/2+%F0%9F%8C%BF+Leaves/Protocols]
+
+
+=Definition=
+
+Ethereum:
+
+"A protocol is a stratum of codified behavior that allows for the construction or emergence of complex coordinated behaviors at adjacent loci." [https://venkatesh-rao.gitbook.io/summer-of-protocols#ehi77ca7jdys]
+
+
+=Description=
+
+Phil Windley:
+
+'Protocols are agreements among a set of parties on a sequence of operations and the format of messages that will be used to communicate for a given purpose. For example, SMTP, Simple Mail Transport Protocol is the protocol that enables email servers to exchange email messages with one another.
+
+Distributed systems depend on protocols to function. In Protocol (PDF), Andrew Galloway says “protocols are the enemy of bureaucracy, of rigid hierarchy, and of centralization.” Protocols enable ways to overpower and supplant places.
+
+Protocols have both syntactic and semantic elements. For example, there is a specific form or syntax that the SMTP protocol prescribes for indicating the recipient of the message. The fact that it indicates the message recipient is the semantics of that particular field.
+
+Internet protocols usually rely on other protocols. For example, actually doing email involves not just SMTP, defining how to exchange email messages, but also other protocols like DNS for name resolution, IMAP or POP for mailbox management, and MIME for specifying message content. Then there’s the “envelop” protocol. For example, SMTP doesn’t talk about transport, that’s TCP/IP’s job. TCP/IP is, for SMTP, and envelop protocol."
+
+(http://www.windley.com/archives/2012/03/protocols_and_metaprotocols_what_is_a_personal_event_network.shtml)
+
+
+=Characteristics=
+
+'''1. Ethereum:'''
+
+"1. Protocols are richer and more dynamic than typical social conventions and industry standards, and exhibit some evolutionary tendencies driven by an internal logic.
+
+2. APIs embody part of the design of protocols, but do not define them.3. Unlike stacks and platforms, protocols tend to define and regulate flows of codified behaviors rather than stocks of technological artifact."
+
+(https://efdn.notion.site/Pilot-Study-1bf3e3be6bf34a2eb8156ddf98d3fa67)
+
+
+'''2. Andrea Farias:'''
+
+* "'''Collective Nature''': Protocols are inherently social or systemic, requiring collective adherence to function effectively. They facilitate interaction and coordination between multiple entities or components within a system. For example, communication protocols like Morse code only work when all parties understand and use the same code.
+
+* '''Adaptive Capacity''': Many protocols can evolve organically in response to changing circumstances, without requiring centralized control. This adaptability allows protocols to remain effective in shifting environments. Language evolution exemplifies this characteristic, as new words and expressions emerge naturally to reflect societal changes.
+
+* '''Enforcement Mechanisms''': Protocols often incorporate built-in enforcement mechanisms to ensure adherence and maintain system integrity. These can be technical (error checking in computer protocols), social (peer pressure in etiquette), or even biological (cellular mechanisms for DNA replication).
+
+* '''Scalability:''' Well-designed protocols can coordinate complex behaviors across large networks. They maintain consistency whether applied to small or large-scale systems. The Internet Protocol (IP) demonstrates this by enabling seamless communication among billions of devices worldwide using the same basic rules.
+
+* '''Context-Dependency''': Protocols derive their meaning and effectiveness from their operational context. A protocol that works well in one environment might be ineffective or meaningless in another. For instance, a handshake protocol only makes sense within certain cultural contexts and may be inappropriate or confusing in others."
+
+(https://diome.xyz/2+%F0%9F%8C%BF+Leaves/Protocols)
+
+
+==Ten Dimensions of Sufficiency==
+
+Ethereum:
+
+"One of the key tasks in developing a satisfying and useful theory of protocols.
+
+...
+
+We briefly survey ten aspects of protocols that repeatedly came up in our initial discussions:
+
+* for these ten aspects, see the Pilot study at https://efdn.notion.site/Pilot-Study-1bf3e3be6bf34a2eb8156ddf98d3fa67 
+
+
+=Typology=
+
+Ethereum:
+
+"It is useful to think about protocols along two basic dimensions: '''hard to soft, and atomic to systemic'''.
+
+Loosely speaking, a hard protocol is one with relatively inflexible expectations, with small deviations causing errors. Traditional computer protocols are typically hard in this sense, butones capable of sustaining more forgiving interactions, using AI elements for example, can besoft. A soft protocol on the other hand, accommodates a wide range of behaviors. Human behavioral protocols, such as handshakes, are usually soft, but in the case of highly formalized examples, such as ceremonial military protocols, can have nearly machine-like hardness. An atomic protocol is one that is difficult or pointless to further decompose, while a systemic protocol is one that is made up of many atomic protocols, often organized in strata."
+
+(https://efdn.notion.site/Pilot-Study-1bf3e3be6bf34a2eb8156ddf98d3fa67)
+
+
+=Example=
+
+'''1.'''
+
+* "The Internet is a creature born of protocol." [http://www.windley.com/archives/2012/03/protocols_and_metaprotocols_what_is_a_personal_event_network.shtml]
+
+
+'''2. Andrea Farias:'''
+
+"a few examples of protocols:
+
+* In social interactions, handshake protocols specify how to greet someone in a professional setting. This coordinates behavior between individuals, setting expectations and reducing uncertainty in social encounters.
+
+* In computer networking, the TCP/IP protocol suite defines how data should be packaged, addressed, transmitted, and received across the internet. This protocol coordinates the behavior of millions of devices, ensuring they can communicate effectively regardless of their hardware or software specifics.
+
+* In biology, DNA serves as a protocol for cellular processes, providing instructions for protein synthesis. This coordinates the behavior of cellular components, ensuring that the right proteins are produced at the right time."
+
+
+=Discussion=
+
+==[[Summer of Protocols - Ethereum Foundation]]==
+
+"Protocols have historically played a critical but strangely invisible role in all aspects of human life, shaping and regulating everything from political and religious life to commerce and fashion. Over the last two centuries, protocols have also acquired an increasingly technological character. Today, networked, computer-mediated protocols have arguably turned into the most important element of the built environment, underpinning the safe and efficient operation of everything from urban utilities to nuclear reactors and air travel. While low-tech and no-tech human protocols, from greeting and handshake conventions to diplomatic protocols and codes of conduct at events, remain as important as ever, they too are being transformed by their increasingly technological contexts.
+
+Yet, despite their obvious importance, protocols remain a woefully under-studied and under-theorized subject, relative to comparably foundational social realities such as nations, organizations, markets, and legal systems, which are the foci of scholarly disciplines, artistic scenes, and even fiction genres. Even within engineering disciplines, where most modern protocols take shape, they remain the preserve of experienced specialists, and are not prominent in engineering education. Most engineers today earn degrees and enter their professions without ever having read a protocol specification, let alone authored one.
+
+This neglect is arguably a result of the unreasonable historical *success* of protocols in addressing a vast array of societal needs in a sufficiently comprehensive way that they can be forgotten. This has led to protocols receding into the backgrounds, interstices, and margins of civilization, forming a kind of technological wilderness boundary that is hard to study and easy to ignore. The natural invisibility of protocols is compounded by their relative conceptual illegibility, relative to more charismatic constructs at a similar level of abstraction, such as nations, corporations, and ideologies.
+
+Protocols, therefore, are the very embodiment of A. N. Whitehead’s observation: “Civilization advances by extending the number of important operations which we can perform without thinking of them.”
+
+The cost of this neglect is that critical protocols can grow increasingly complex, fragile and sclerotic, succumb to attacks or capture as they mature, fail at critical moments, and get captured. Beyond the risks, there are also lost opportunities: Vast potential may go untapped due to poor protocol design, insufficient stewardship, and weak defenses.
+
+As we continue to build protocols for ever more complex infrastructures based on increasingly complex technologies, such as blockchains, machine learning, and climate technologies – the cost of such neglect will only increase. And on the flip side, more imaginative and thoughtful development and stewardship of protocols might unlock unprecedented civilizational advances in a world that many pessimistically believe is in terminal stagnation."
+
+(https://efdn.notion.site/Summer-of-Protocols-3d7983d922184c4eb72749e9cb60d076)
+
+
+==Protocols vs APIs==
+
+Phil Windley:
+
+Some people are rather militant about properly distinguishing APIs from protocols. I’ve gotten comments from people that say things like “that’s a protocol, not an API!” Lately it’s become fashionable to call any thing with a REST interface an “API”—even when they’re more properly protocols. I think some of this is simple confusion, but it’s also an attempt to make things sound easier. No company wants programmers to think their system is hard to use and protocols sound hard.
+
+What’s more, some Web APIs are pretty straightforward request-response systems where protocol sounds overly ambitious. For those interfaces, API is probably the right word. But other so-called APIs are really protocols. People have started to refer to these as “push” APIs. Twilio’s API, for example is a full blown protocol as it clearly defines an agreement on sequences of operations and formats for messages with the goal of accomplishing telephony tasks using the Twilio system. Modulo intellectual property issues, one could imagine another online PBX adopting the Twilio API as a standard.
+
+One of my goals is to get more Web APIs to send events—to become more properly protocols instead of mere request-response based APIs. My motivation is systems that are more loosely coupled and better able to act as peers in orchestrated Web interactions. Sam Curren and I have developed the Evented API specification to come up with a standard way of adding events to APIs, making them more properly protocols.
+
+
+==[[Metaprotocols]]==
+
+Phil Windley:
+
+"Programmers reverence protocols. We think of protocols as something given to us from on high by the Cerfs, Postels, and Berners-Lees of the world. But the truth is that programmers build protocols all the time. Sometimes these are ad hoc and other times they are built with the help of a metaprotocol.
+
+A metaprotocol is a protocol for building or describing other protocols. You’re undoubtedly familiar with some metaprotocols even if you haven’t thought of them that way before. SOAP, RMI, CORBA, and JSON are all examples of metaprotocols. We often use words like framework, IDL, specification, or even just format when we’re talking about metaprotocols. The page from Caucho Technology on metaprotocol taxonomy does a pretty good job of classifying various metaprotocols.
+
+RMI, for example is a metaprotocol that defines the syntax of interactions between classes. RMI specifications are given by the Java class definition using reflection. Whenever someone uses RMI to specify the interactions between Java classes, they’re defining a machine-readable protocol.
+
+The Evented API specification also defines a metaprotocol. Events are transported over HTTP and the specification defines a format (i.e. syntax) for how events can be encoded."
+
+Using the Evented API specification, however, requires that a developer further define the events that will be raised. By defining the event domain and type as well as the required and optional attributes for each event type, the developer creates a protocol for sending notifications. We’ll see example of this below."
+
+(http://www.windley.com/archives/2012/03/protocols_and_metaprotocols_what_is_a_personal_event_network.shtml)
+
+
+=More Information=
+
+* [[Protocollary Power]]
+
+* [[Protocol Society]]
+
+[[Category:Encyclopedia]]
+[[Category:Standards]]
+[[Category:Protocols_and_Algorithms]]
+[[Category:P2P_Infrastructure]]
+[[Category:Technology]]

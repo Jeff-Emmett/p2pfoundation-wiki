@@ -1,0 +1,35 @@
+
+=Discussion=
+
+Vitalik Buterin:
+
+"Optimism's retroactive founding round 1 results were chosen by a quadratic vote among 24 "badge holders". Round 2 will likely use a larger number of badge holders, and the eventual goal is to move to a system where a much larger body of citizens control retro funding allocation, likely through some multilayered mechanism involving sortition, subcommittees and/or delegation.
+
+There have been some internal debates about whether to have more vs fewer citizens: should "citizen" really mean something closer to "senator", an expert contributor who deeply understands the Optimism ecosystem, should it be a position given out to just about anyone who has significantly participated in the Optimism ecosystem, or somewhere in between? My personal stance on this issue has always been in the direction of more citizens, solving governance inefficiency issues with second-layer delegation instead of adding enshrined centralization into the governance protocol. One key reason for my position is the potential for insider trading and self-dealing issues.
+
+The Optimism retroactive funding mechanism has always been intended to be coupled with a prospective speculation ecosystem: public-goods projects that need funding now could sell "project tokens", and anyone who buys project tokens becomes eligible for a large retroactively-funded compensation later. But this mechanism working well depends crucially on the retroactive funding part working correctly, and is very vulnerable to the retroactive funding mechanism becoming corrupted. 
+
+
+Some example attacks:
+
+* If some group of people has decided how they will vote on some project, they can buy up (or if overpriced, short) its project token ahead of releasing the decision.
+
+* If some group of people knows that they will later adjudicate on some specific project, they can buy up the project token early and then intentionally vote in its favor even if the project does not actually deserve funding.
+
+* Funding deciders can accept bribes from projects.
+
+
+There are typically three ways of dealing with these types of corruption and insider trading issues:
+
+* Retroactively punish malicious deciders.
+* Proactively filter for higher-quality deciders.
+* Add more deciders.
+
+
+The corporate world typically focuses on the first two, using financial surveillance and judicious penalties for the first and in-person interviews and background checks for the second. The decentralized world has less access to such tools: project tokens are likely to be tradeable anonymously, DAOs have at best limited recourse to external judicial systems, and the remote and online nature of the projects and the desire for global inclusivity makes it harder to do background checks and informal in-person "smell tests" for character. Hence, the decentralized world needs to put more weight on the third technique: distribute decision-making power among more deciders, so that each individual decider has less power, and so collusions are more likely to be whistleblown on and revealed."
+
+(https://vitalik.eth.limo/general/2022/09/20/daos.html)
+
+[[Category:Peerfunding]]
+
+[[Category:Crypto Economy]]

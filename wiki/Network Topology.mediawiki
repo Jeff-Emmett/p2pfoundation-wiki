@@ -1,0 +1,106 @@
+=Definition=
+
+From the Wikipedia [http://en.wikipedia.org/wiki/Network_topology]:
+
+"Network topology is the study of the arrangement or mapping of the elements (links, nodes, etc.) of a network, especially the physical (real) and logical (virtual) interconnections between nodes.
+
+It is important to note that the physical and logical topologies might be identical in any particular network but they also may be different.
+
+Any particular network topology is determined only by the graphical mapping of the configuration of physical and/or logical connections between nodes - Network Topology is, therefore, technically a part of graph theory. Distances between nodes, physical interconnections, transmission rates, and/or signal types may differ in two networks and yet their topologies may be identical."
+(http://en.wikipedia.org/wiki/Network_topology)
+
+[[Image:Topologías de red.gif]]
+
+Three examples of network topologies: centralized, decentralized, and distributed networks
+
+=Topologies=
+
+From the Wikipedia [http://en.wikipedia.org/wiki/Network_topology]:
+
+==Point-to-point==
+
+The simplest topology is a permanent link between two endpoints. Switched point-to-point topologies are the basic model of conventional telephony. The value of a permanent point-to-point network is the value of guaranteed, or nearly so, communications between the two endpoints. The value of an on-demand point-to-point connection is proportional to the number of potential pairs of subscribers, and has been expressed as Metcalfe's Law.
+
+- '''Permanent''' (dedicated):
+
+Easiest to understand, of the variations of point-to-point topology, is a point-to-point communications channel that appears, to the user, to be permanently associated with the two endpoints. Children's "tin-can telephone" is one example, with a microphone to a single public address speaker is another. These are examples of physical dedicated channels.
+Within many switched telecommunications systems, it is possible to establish a permanent circuit. One example might be a telephone in the lobby of a public building, which is programmed to ring only the number of a telephone dispatcher. "Nailing down" a switched connection saves the cost of running a physical circuit between the two points. The resources in such a connection can be released when no longer needed, as, for example, a television circuit from a parade route back to the studio.
+
+- '''Switched''':
+
+Using circuit-switching or packet-switching technologies, a point-to-point circuit can be set up dynamically, and dropped when no longer needed. This is the basic mode of conventional telephony.
+
+==Bus==
+
+- '''Linear Bus''':
+
+The type of network topology in which all of the nodes of the network are connected to a common transmission medium which has exactly two endpoints (this is the 'bus', which is also commonly referred to as the backbone, or trunk) – all data that is transmitted between nodes in the network is transmitted over this common transmission medium and is able to be received by all nodes in the network virtually simultaneously (disregarding propagation delays)[1][3].
+
+- '''Distributed Bus''':
+
+The type of network topology in which all of the nodes of the network are connected to a common transmission medium which has more than two endpoints that are created by adding branches to the main section of the transmission medium – the physical distributed bus topology functions in exactly the same fashion as the physical linear bus topology (i.e., all nodes share a common transmission medium).
+
+      
+==Star==
+
+    
+The type of network topology in which each of the nodes of the network is connected to a central node with a point-to-point link in a 'hub' and 'spoke' fashion, the central node being the 'hub' and the nodes that are attached to the central node being the 'spokes' (e.g., a collection of point-to-point links from the peripheral nodes that converge at a central node) – all data that is transmitted between nodes in the network is transmitted to this central node, which is usually some type of device that then retransmits the data to some or all of the other nodes in the network, although the central node may also be a simple common connection point (such as a 'punch-down' block) without any active device to repeat the signals.
+
+- '''Extended Star''':
+
+A type of network topology in which a network that is based upon the physical star topology has one or more repeaters between the central node (the 'hub' of the star) and the peripheral or 'spoke' nodes, the repeaters being used to extend the maximum transmission distance of the point-to-point links between the central node and the peripheral nodes beyond that which is supported by the transmitter power of the central node or beyond that which is supported by the standard upon which the physical layer of the physical star network is based.
+
+
+- '''Distributed Star''':
+
+A type of network topology that is composed of individual networks that are based upon the physical star topology connected together in a linear fashion – i.e., 'daisy-chained' – with no central or top level connection point (e.g., two or more 'stacked' hubs, along with their associated star connected nodes or 'spokes').
+
+
+==Ring==
+
+    
+The type of network topology in which each of the nodes of the network is connected to two other nodes in the network and with the first and last nodes being connected to each other, forming a ring – all data that is transmitted between nodes in the network travels from one node to the next node in a circular manner and the data generally flows in a single direction only.
+
+- '''Dual-ring''':
+
+        
+The type of network topology in which each of the nodes of the network is connected to two other nodes in the network, with two connections to each of these nodes, and with the first and last nodes being connected to each other with two connections, forming a double ring – the data flows in opposite directions around the two rings, although, generally, only one of the rings carries data during normal operation, and the two rings are independent unless there is a failure or break in one of the rings, at which time the two rings are joined (by the stations on either side of the fault) to enable the flow of data to continue using a segment of the second ring to bypass the fault in the primary ring.
+
+==Mesh==
+
+The value of fully meshed networks is proportional to the exponent of the number of subscribers, assuming that communicating groups of any two endpoints, up to and including all the endpoints, is approximated by Reed's Law.
+
+- '''Fully Connected''':
+
+The type of network topology in which each of the nodes of the network is connected to each of the other nodes in the network with a point-to-point link – this makes it possible for data to be simultaneously transmitted from any single node to all of the other nodes.
+
+
+- '''Partially Connected''':
+
+       
+The type of network topology in which some of the nodes of the network are connected to more than one other node in the network with a point-to-point link – this makes it possible to take advantage of some of the redundancy that is provided by a physical fully connected mesh topology without the expense and complexity required for a connection between every node in the network.
+
+       
+==Tree== 
+
+(also known as Hierarchical):
+
+    
+The type of network topology in which a central 'root' node (the top level of the hierarchy) is connected to one or more other nodes that are one level lower in the hierarchy (i.e., the second level) with a point-to-point link between each of the second level nodes and the top level central 'root' node, while each of the second level nodes that are connected to the top level central 'root' node will also have one or more other nodes that are one level lower in the hierarchy (i.e., the third level) connected to it, also with a point-to-point link, the top level central 'root' node being the only node that has no other node above it in the hierarchy – the hierarchy of the tree is symmetrical, each node in the network having a specific fixed number, f, of nodes connected to it at the next lower level in the hierarchy, the number, f, being referred to as the 'branching factor' of the hierarchical tree."
+(http://en.wikipedia.org/wiki/Network_topology)
+
+
+=More Information=
+
+#[[Network]], overview
+#[[Network Typology]]
+#[[Mesh Networks]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:Relational]]
+
+[[Category:Network Theory]]

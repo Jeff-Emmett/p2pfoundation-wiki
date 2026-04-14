@@ -1,0 +1,87 @@
+'''SIP = Session Initiation Protocol'''
+
+'''= a standards-based Peer-to-Peer architecture''', it can also be used for streaming applications
+
+
+URL = http://www.p2psip.org
+
+
+[http://www.madpenguin.org/cms/?m=show&id=7577 Why open-source advocates should use a SIP-based phone system like Gizmo instead of Skype]
+
+
+=Context=
+
+
+'''SIP is important for (SIP)-based IP telephony systems'''
+
+See also the related items on [[Internet Telephony]] and [[Open Source Telephony]]
+
+
+From IT Architect:
+
+
+"The Promise: A P2P VoIP network based on the SIP protocol.
+
+The Players: The IETF, which is developing the standard; the College of William & Mary and Columbia University, which have early working implementations of P2P SIP; and developers of consumer-oriented SIP clients, including vendors such as Xten Networks.
+
+The Prospects: SIP is a proven protocol, and the P2P extensions being added to the protocol are nominal. However, it's still unclear how much demand there will be for the technology and how much resistance it will meet from the entrenched vendor community. 
+
+When the Session Initiation Protocol (SIP) was initially conceived, enterprises were pitched on being free of the tyranny of the PBX--no more high maintenance charges, expensive hardware, or limited selection categorized by proprietary environments. A lot has changed since SIP's introduction, but one thing remains the same: For the most part, enterprises are as tied as ever to the costly back-end telephony servers.
+
+A new Internet draft promises to change all that with a peer-to-peer (P2P) version of SIP. By dropping SIP's back-end requirements, the protocol will be easier to configure and install, as well as cheaper to operate. This could extend SIP's appeal into low-end consumer markets and help it compete with the likes of P2P Internet telephony service provider Skype. It could also expand the range of resiliency options available to larger enterprises.
+
+It's early days for P2P SIP, however. Although there are implementations of the protocol at Columbia University and the College of William & Mary, much of the P2P SIP draft has yet to be specified. Questions remain on a host of issues, including how to ensure a consistent and unique namespace without a centralized authority. Internet e-mail addresses are the most likely option, but that's still open for discussion. Also up in the air is the database structure underlying the P2P SIP protocol, which can easily become inefficient if organizations add a proxy server onto the P2P SIP network to act on the behalf of SIP clients.
+
+The draft poses a dilemma for SIP server vendors and service providers, but to what extent they'll promote or inhibit the technology's development is unclear. "It's a technology looking for a problem," says Cullen Jennings, a distinguished engineer in Cisco Systems' Voice Technology Group and co-author of the Internet draft. Despite the potential implications for consumers, bringing P2P SIP to the client threatens to eliminate the key component that infrastructure and service providers depend on to retain their customer base."
+([http://www.itarchitect.com/shared/article/showArticle.jhtml%3bjsessionid=V3OUEVXGJYNJQQSNDBCSKH0CJUMEKJVN?articleId=160701508&classroom=])
+
+
+=P2P VoIP Products=
+
+
+'''Skype'''Skype uses a proprietary [[Supernode P2P System]]
+
+
+'''Avay One-X Quick Edition''' [http://www.avaya.com/gcm/master-usa/en-us/wowtopics/one-x_quick_edition/one-x_quick_edition.htm]
+
+"Avaya one-X™ Quick Edition delivers intelligent communications to very small businesses and small branches of enterprises. SIP-based peer-to-peer technology, means system set up and installation is dramatically simplified. Plug the telephones into the LAN and they configure themselves. In minutes users have access to features including voicemail, conferencing, auto attendant, and call management."
+
+
+'''Peerio from Popular Telephony''', at http://www.peerio.com/index.php
+
++Invented and patented by Popular Telephony, Peerio (TM) is a radically new method for the next generation communications over IP - a serverless communications system, based on peer-to-peer principle.
+
+Serverless network architecture is a revolutionary concept that effectively removes the need for a centralized system, switch, or server to control the communication process. It marks the next most significant step in computer networking evolution since the creation of mainframes and the subsequent migration towards existing client/server architecture. Peerio serverless design challenges the existing architecture by providing a unified solution to the needs and limitations of modern networking.
+
+Peerio serverless networks are made up of intelligent nodes; communication devices like IP phones, gateways, PDAs, etc, that process network applications in an interconnected manner as though served by a centralized switch or server, but in fact administered by the IP infrastructure alone. The key element is the Peerio middleware that runs inside the node with a standard packet network connection over LAN, WAN or both. Enabled nodes can interconnect and provide all advanced communication features, services and applications without intervention from a third device.
+
+Based on the intuitive principles of peer-to-peer, Peerio makes communication cheaper by eliminating mandatory hardware requirements and turning the network into a pure IP service transport layer. Removing switch, server, installation, maintenance and support costs can lower communications system TCO (total costs of ownership) by up to 80%. Call establishment delay and other critical issues are minimized by a system that can seamlessly adapt to new users and services. Peerio networks offer harmonious self-healing, self-managing IP communications structures with enhanced scalability, flexibility, redundancy, reliability, efficiency, cost-effectiveness and more."
+(http://www.peerio.com/aboutpeerio.php)
+
+
+=More Information=
+
+
+Article in New Telephony magazine [http://www.nxtbook.com/fx/books/virgo/newtelephony-May24-05/]
+
+General information about SIP and SIP products can be found at www.sipcenter.com and www.sipforum.org.
+
+Papers on using SIP in peer to peer telephony systems are located here at,
+http://www1.cs.columbia.edu/~kns10/research/p2p-sip/
+
+The P2P-Sip blog at http://p2p-sip.blogspot.com/
+
+The related entries on [[Internet Telephony]] and [[Open Source Telephony]], which mention Projet Gizmo and Open Wengo.
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:Resources]]
+
+[[Category:Technology]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

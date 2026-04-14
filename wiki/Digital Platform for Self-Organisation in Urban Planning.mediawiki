@@ -1,0 +1,548 @@
+
+'''* Article: Do it ourselves: Digital platform for self-organisation in urban planning - research through design. By Herman Mitish.'''
+
+URL = https://dspace.cc.tut.fi/dpub/bitstream/handle/123456789/26735/Mitish.pdf?
+
+=Abstract=
+
+"In the beginning of new century, on the wave of ICT pervasion collaborative urban design was expected to boost, but digitalization of established practices was far to be a cure-all solution. Many successful planning systems eventually discredited themselves in the face of challenges of 21st century: to recognize broad public as an equal actor in the process of decision-making; to revise notion of value in a changing economic and political reality; to take into consideration informal manifestations of urban life; to process, interpret and use overwhelming amounts of data in a legitimate way. Effective comprehensive solution for these challenges does not lie in neither of existing fundamental planning paradigms. Hypothesis behind this work is that it can naturally
+emerge, based on self-organizing capacities of humankind accompanied with technological
+innovation. As we witness success of self-organizing online communities operating in the reality of shared economies and urban commons, we need to take part in the design of new digital infrastructures, that would facilitate the emergence of new communities that would better serve our common needs and aspirations. The first aim of this work is to theoretically describe technological artifacts, that are needed to facilitate the emergence and becoming of bottom-up urban planning initiatives. Technology can play crucial role, helping us to reflect on our society, to identify convergence amongst our needs and wishes, to inform us about potentials for local cooperation and
+to facilitate the process of collaborative design and decision-making. The second, practical goal, is to implement prototypes, test them in the real life, analyze results and iteratively develop further."
+
+=Excerpts=
+
+==From the conclusion==
+
+"To summarize work done within this thesis project, I can say that there is yet a lot to do and it is
+only the first of many iterations of Action Design Research (or Design Science) methodology
+pathway. Theoretical premises and specifications constructed in the chapter “Defining artifact” were
+implemented only on a basic level in final web application, and yet to be developed and tested at the
+later stages. The idea of such a custom made technology, that would help us to self-organize and find
+like-minded people in general has been welcomed very well, as by fellow students, colleagues, big
+international EASA community, so by the people from outside of architectural or urban planning. All
+this gives me a lot of inspiration to continue with Reflection City experiment (and with beautiful
+http://reflection.city website). I also feel excited about the fact that I get to realize all my plans
+regarding this thesis - which started from a deep literature review, in a fields like architecture, urban
+planning, economy, politics, philosophy, information and communication technology, game studies,
+ICT and HCI, and then developed into synthesis of a single principal idea out of this huge amount of
+information. Consequently, I went through development and implementation of technological
+artifact in two different ways, without any prior knowledge in information technologies. Then
+participation in the numerous conferences, such as Dwellers in Agile Cities, Urban Studies Days,
+Urban Education Live, multiple interviews with people from varying fields, and in the end
+participation and tutorship in the biggest architectural student assembly in Europe complemented by
+successful implementation of research experiment. All these events and new acquaintances became
+crucially important part of me, and I am happy now to continue this journey."
+
+==[[Self-Organization in Urban Planning]]==
+
+By Herman Mitish:
+
+"The continuum of general planning theoretical debate, starting after the Second World War and
+until nowadays, consist of four general paradigms closely related to democratic theories:
+comprehensive-rationalistic, incrementalist, consensus-oriented communicative and conflictoriented agonistic. All of them in different ratio are present in the current urban planning practice
+worldwide and also identified as being relevant in the Finnish context (Bäcklund & Mäntysalo, 2010).
+In the beginning of the new century, Theory of Communicative Action, has played particularly big
+role reflecting and shaping a big turn in the course of modern democracies and planning systems - in
+instance it has been identified that the adoption of Finnish legislation for public involvement in the
+planning process in many ways was related to it (Puustinen, 2006, p. 193; Saad-Sulonen, 2012, p. 5).
+However, consensus based decision-making process was never fully realized on a big scale due to the
+idealistic nature of its underlying concept of universal human rationality. In practice it showed itself
+to be infeasible in the complex fragmented world of pluralistic realities, with relatively low
+transparency and communication capacity. Conflict-oriented agonistic paradigm consequently
+emerged to describe more realistic understanding of existing at a time communicative processes,
+and acknowledges existence of competition or conflict. Its main idea is that innovation does not 
+require full agreement. 
+
+In the middle of 20th century citizens of the western world notably started the process of
+liberation from comprehensive systems of governance and control. According to Szebeko & Tan (
+2010), in the 1960s onwards there was a growing demand for greater consideration of community
+opinions in the decision-making process. Phenomena of participatory planning was related to
+different socio-political movements, focused on community development and grassroots initiatives,
+which liberated concepts of public space, streets and city in general, offering them a new role and
+purpose (e.g. Reclaim The Streets). Here it’s appropriate to mention the birth of the movements such
+as “grassroots placemaking” and “tactical urbanism”, as they are still on a rise and are prominent as
+an example of self-organizing urban planning. It was a time denoted by the works of epochal authors
+such as Jane Jacobs, William H. Whyte and Jan Gehl, who offered their groundbreaking vision on how
+to perceive and design cities, and why people, not shopping centers and cars, play the most
+important role in them. Participatory planning has had a long history of development and according
+to Saad-sulonen (2014), along its history it went through four stages, each with different level of
+citizen involvement and organizational structure: starting from non-participation, consultative staged
+participation, collaborative staged participation and currently emerging type of self-organizing
+participation. If we think about it from more general point of view then we see that self-organizing
+participation is a point of transition or paradigm shift and it encompasses not even the new methods
+of participation, but the change of roles and of power relations between state and civil society. Such
+a shift does reveal many issues with existing practices of participation and with understanding of
+urban planning as of inherent component of expert-driven culture. Boonstra (2015, p. 67) wrote that
+current take on urban planning “does not help to overcome the distance between professional
+planners and civic initiatives, or the contrast between disciplinary and inclusionary tendencies in
+planning on one hand, and the complexity and diversity of civil society on the other”. New model
+must recognize civil society at least as, if not more then, equal actor operating on the same level
+together with authorities and governmental body in the process of decision-making. To elaborate on
+Saad-Sulonen & Horelli, 2010, and Saad-sulonen (2014, p. 45), acknowledgment of self-organization
+as of a type of participatory urban planning probably would not help us to step far beyond online
+questionnaires and polls with development of e-planning tools. Still the situation is often so, that
+planning process is dominated by established governmental and municipal institutions and urban
+planning experts, who are not interested in competition, and civil society can seldom represent its
+own interests as an equal actor. The problem with multitudinous and indefinite party such as civil
+society is that it is usually being organized only on a very basic level and don’t have a proper means
+of self-representation. There are many reasons for it, but, in my opinion, it is mostly because of the
+natural limitations of conventional methods of communication within big enough groups of people. 
+
+To overcome this situation, first of all we would need such a communication interfaces, that allow
+civil society to be equally organized and coherent power to urban planner and municipality, even
+without being one legal body – and that would be the first step towards the change of roles. Big
+emergent civic groups should be capable to stand their position and comprehend their own
+capacities - and this is when we ask what are the means of management and technologies that
+would help us to connect with each other, collectively organize and make decisions together. And
+recognizing communicative and organizing potential of everyday technology such as social networks,
+wikis, etc. can be a good starting point in our exploration."
+(https://dspace.cc.tut.fi/dpub/bitstream/handle/123456789/26735/Mitish.pdf?)
+
+
+==[[Technologies for Urban Networking and Self-Governance]]==
+
+By Herman Mitish:
+
+"There has been great technological revolution along with the development of participation
+practices in urban planning. Emergence of personal electronic devices, World Wide Web,
+development of information and communication systems - all of these innovations have played
+invaluable role in the modern history of humanity and also shaped the ideas of participatory
+planning. With a rise of ICT participative urban design was expected to boost, considering new level
+of freedom of communication and self-expression, but first emerged e-planning platforms only
+allowed more organized and substantive way of carrying out dominant model of consultative staged
+participation, without providing to the public flexibility to spotlight important for them issues (SaadSulonen, 2012). Modern platforms such as Maptionnaire, SoftGIS methodology and various smartcity implementations substantially evolved comparing to the early e-planning developments and
+already incorporate that feature, getting to the category of collaborative participation platforms.
+Though digitalization of established practices generally is far to be a cure-all solution, because many
+successful in the past planning systems, that are being used as models for e-planning technologies,
+already discredited themselves in the face of challenges of 21st century. These were the challenges
+of fundamental nature: to recognize broad public as an equal actor in the process of decisionmaking; to take into consideration informal manifestations of urban life; to revise notion of value in a
+changing economic and political reality; to process.
+
+The first fascinating case of a system trying to overcome the above mentioned challenges will be
+a smart city platform from Finland named Happycity, launched in beta on 2017 (Chaos Architects,
+2017). I was lucky to convey an interview with the founder of Happycity, Natalia Rincon, in the early
+spring 2018 and few month later to test their newly launched Happycity mobile application.
+Application starts with a questionnaire on the general demographic information and continues with
+a newsfeed, where users can see the nearest or most popular ideas on city improvement with a
+photo, a field for short description of an issue, likes and comments. There is also a button to add a
+new proposal, specify location and upload a photo for it with a short description. From the website
+we read that proposed system is designed to give to the people “the power to transform their cities”
+by organizing citizen engagement and providing e-governance tools. “By combining open and
+licensed data that different systems are creating with the data that people produce in their living
+environment (ideas, behavior, sentiments) we produce forecasts that help us take better decisions in
+the future.” (Chaos Architects, 2018). These principles sound promising as they recognize civil society
+as a crucial actor for shaping expert opinion on strategic urban planning. However, it is not clearly
+stated, how much it is related to actual decision-making and who is responsible for interpretation of
+user-generated data in proposed scheme. Later in description this interpretative third party is
+mentioned as “AI cloud platform with a user interface that allows you to share your ideas about your
+city and co-create together with your community “. This model tends to embody technocratic
+mindset, as the role and objectivity of Artificial Intelligence is not elaborated, but seems to be taken
+as neutral and objective. This approach could have been problematic if we consider AI as a subjective
+actor. If AI neural network gain its intelligence through the process of “learning” from datasets, given
+by the developer, then depending on the developer and provided dataset, we can get potentially
+different results of pattern recognition. Web site also introduces a fair system of licensing for
+Happycity products (which consist of analyzed data and APIs), that allows third parties to buy user
+data with their consent and with a financial or equivalent compensation through the bonus
+rewarding system. Although this system can have its biases, it shows well elaborated high-end
+solution for public involvement and can be good for political or entrepreneurial activity, when gets
+substantial number of users.
+
+Another good example of innovative participation method was openly exhibited initiative of
+Tampere City Municipality on public engagement through gamification. In the spring of 2018, I had a
+great opportunity to meet with Rodrigo Coloma, Urban Planner and City Information Model
+Coordinator (Suunnittelija, Tietomallikoordinaattori), who provided more information about the
+initiative. He introduced me to numerous ongoing projects aimed for better interaction with a public,
+regarding the issues of urban planning and city development. One of the exhibited video games
+allowed player to move along a programmed path in the city, seeing it from the fly view, and to
+pinpoint issues or ideas related to specific places along the way. The other one was an invitation to
+have a VR bicycle tour around Tampere of a near future. Players had to earn points by riding a bike
+through array of gates, that were leading them along all the currently planned and work-in-progress
+projects, to let them feel the scale and experience spatially all the public spaces along the way. The
+other VR project was also quite impressive as it was immersing players in real-scale VR Tampere City,
+to let them literary change it real-time. They were given special 3d brush to select and install new
+elements of street furniture, add or remove greenery, sort out and apply different types of cladding
+and pavements, place new building masses and much more. We were also introduced into the
+projects of children engagement, where groups of children had to design the Tampere City of their
+dream, in the Minecraft-like world. It has been mentioned that these exercises were very popular
+and successful amongst the children, who were willing to learn new tools, co-create and have fun
+together. In fact, all these projects attracted a lot of attention and interest from the public, and
+served well to declared purpose. Although these means of art and technology weren’t making
+people any closer to real decision-making process, they were great examples of a project on urban
+education and gamification of urban planning.
+
+Gamified participative urban planning is in fact an established concept within the urban
+planning practice, but it is often used in indirect ways and for educational purposes only - whether it
+is open call to build a dream city in simulation games (Hämeenlinna, 2018; Kangasala, 2018) or public
+invitation to play board games, to establish better communication (Vaasa, 2018). The hints on where
+to find real solutions for overwhelming challenges of participatory planning could be eventually
+found in digital games industry and game research. Massive multiplayer online games, such as World
+of Warcraft count on hundreds of millions accounts registered around the world (Samit, 2014).
+Digital games have become ubiquitous and persistent in the modern world, successfully engaging
+almost all age and interest groups into play. Emergent AR multiplayer games, such as Ingess or
+Pockemon Go have shown its’ power to unite for genuine collaboration people on the streets, that
+have never known each other before. Perception of game as informal and entertaining activity gives
+a great opportunity to include informal manifestations of participatory movements within it. The
+complexity of modern city can be interpreted by game, and big data can play crucial role in it,
+shaping it’s in-game meta-landscape. Augmented reality (AR) multiplayer online game model could
+fit to all the criteria of proper planning medium within given problematics, but, in my opinion, to find
+comprehensive solution for fundamental issues of public participation we need first to dig deeper, 
+and look into more general mechanism behind cooperative online games. This is a mechanism of a
+human communication, with a game being an ICT medium of it.
+
+Effective solution for given challenges cannot be founded neither by technical means of
+digitalization, nor by cognitive means of gamification, but on the fundamental level of understanding
+the human nature and its self-organizing communicative capacities, magnified by technological
+innovation. Technological innovations and ICT in particular have played invaluable role during
+modern history, accompanying great cultural, social and economic shifts. Social media networks,
+instant messaging, blogging, geo-referenced media and augmented reality - all these technologies
+are largely shaping our reality. But how do they fit our needs and what kind of technology should we
+design for our decentralized self-governing societies of the future? On March 2018, we have heard a
+lot about one of the largest social networks of the world, Facebook, and their issue related to illegal
+acquisition of their users’ personal data by a third party for illegitimate political manipulations (The
+Week, 2018). Despite Facebook’s obvious failure to control and preserve flows of personal data,
+there are much more substantial ethical issues related to the currently working models of social
+media. One of the most problematic issues relates to their business model, which is based on
+exploitation of unaware user as of a source of demographic data, that is sold for target marketing
+purposes to increase level of users’ consumption for the benefit of commerce. According to Rigi
+(2015) and Fraysse (2015) “what they are selling in Facebook is derived from our sharing, i.e. data
+about our likes and interests, and it goes essentially to advertisers. They are operating not in the
+production of value, but in the sphere of realization or circulation of value, i.e. helping sell what
+capitalism produces” (Bauwens & Niaros, 2017, p. 9). Thus entrepreneurship in collusion with
+everyone’s beloved social networks easily turn into insatiable evil, while their initial purposes stay
+positive - to provide services, goods and communication means for people on demand. The
+abovementioned ethical problem however exists for much longer time than the social media
+networks by themselves - this is a heritage of the 20th century industrial and consumerist socioeconomic paradigm, recently exposed through the lens of modern technology. It reveals expertdriven culture where supply defines demand, and where everything is done on behalf of people and
+seemingly for people, but never with consideration of real people's needs and opinions. It also
+reveals apparent objectification of a personality within this paradigm: as a target of marketing, tool
+of politics and asset of economy.
+
+Our goal must be to rethink social networking in the frames of modern reality, to make it a tool
+in our hands to mobilize ourselves for making the world a better place. Maybe we even don’t need 
+much for it – we can use existing media networking architectures, but replace their top-down “usercentered” structure with a model of collaborative horizontal partnership intrinsic to emerging
+sharing economies. There are more and more of applications and services that do utilize this
+emerging socio-economic model. I will give a short overview of those that seem the most
+appropriate and could be used as a prototype or source of inspiration, or as ready-made solutions to
+integrate or use together with subject of this research.
+
+Useful examples that I use as a prototypes along this work, are a dating applications, and in
+instance Tinder. Tinder is a location-based social search mobile app that allows users to like or dislike
+other users, and allows users to chat if both parties accordingly liked each other. The official web site
+puts it like this: “Meet new and interesting people nearby. Swipe right to like someone or swipe left
+to pass. If they swipe right too then it’s a match. Only people you have matched with can message
+you” (Wolfe et al., 2012). The concept seems pretty universal - to find a convergence of intentions (in
+this case of dating) amongst unknown people sharing the same physical space, limit convergent
+groups by appropriate number (in this case two) and then to initiate communication between
+members of group for realization of their shared intentions. Here it is suitable to cite Healey, 1997,
+to show analogy with ideas on urbanism “What may unify people from diverse backgrounds is that
+they share a physical place in which they live and work and they often share a concern for the
+development of this place, despite having different moral orders”. What exactly people can share
+within common physical space and despite their different moral orders is an open question: is it an
+intention to find a romance or concern for their common environment, or anything else - we just
+need to ask that question people by themselves. That is why this project started as an idea to create
+“urban planning Tinder” where the people would group around common intentions that they are
+free to identify themselves. Though if we start analyzing Tinder and other dating apps of similar
+mechanics we get to realize that the design of a system in its details largely shapes the way the app
+is used and consequently the way relationships are organized. Tinder is in fact quite notorious
+example of dating application, as it is said that it fosters hookup culture (Grigoriadis, 2017). For us it seems obvious consequence for its operating system, where social search is organized around
+selection of best looking photos and almost absolute elimination of any semantic information. Also,
+as Tinder does not incorporate any social capital or trust economy, it does not as well stimulate for a
+long term relationship. But, for example, in the case of dating app Appetence, the outcomes of
+interaction could be in fact opposite to ones of Tinder, as its rules guide users towards more
+semantically rich relations. They cannot see the picture of people they chat with unless they have
+spent a decently long time with them in the process of communication. There is also a dating app 
+called Bumble, where the privilege to start messaging is given only to female users and it has a very
+different effects as well. We believe that the analytical models of the Theory of Games would be the
+best to investigate the flaws or features of relational systems of such kind, as well as for our own
+artifact. Setting up initial rules of the game we often determine its further dynamics and outcomes
+on a statistical level. Thus it is our responsibility to set proper rules for our purposeful game.
+I would like to introduce two more brilliant programs related to our case under the names
+Loomio and Co-budget. They were developed by entrepreneurial coalition called Enspiral Network,
+that has started with an aim to help people to do socially meaningful work collectively (Enspiral,
+2010). Loomio is a decision-making software designed to assist groups with the collaborative
+decision-making process (Enspiral, 2014). It is a free software web application, where users can
+initiate discussions, polls and different customized voting and planning systems. As the discussions
+progress to initiating a proposal, the group is being informed through various updatable graphs and
+charts, depending on type of proposal. I have tested it during different cases of teamwork and was
+pleased to realize how easy it is to use and how helpful it can be. It has emerged during the Occupy
+movements, was crowdfunded and collectively supported by numerous communities and individuals,
+and also used during Occupy movement in New Zealand. Basically it allows users to create, modify
+and process ideas, rank the issues, organize the time, etc. in cooperative and transparent fashion.
+The whole system seems very well designed and thought through and can work well together with
+any social group/network, and I believe with the subject of this research. I will analyze it in detail
+later in the design phase to either embed it in target application or to bridge two ecosystems. The
+same goes for Co-Budget (Enspiral, 2017), which is similar solution for collaborative financial
+decision-making.
+
+One more thing to mention is an emerging research field called ‘social computing’ which is
+concerned with the interrelation of social behaviors and computational information and
+communication systems. It is based on creation or simulation of social contexts through the use of
+software and technology, and further analysis, design and prediction of such socio-technological
+systems. One of the prominent works in this field, much related to this research, is focused on design
+and evaluation of tools for technology assisted crowd-scale deliberation and decision-making.
+Professor of MIT Center for Collective Intelligence, Mark Klein, is describing and developing digital
+tools for pareto-centric decision-making, complex negotiations and constructive deliberation of a
+large group scale, with a help of the Deliberatorium digital platform. In the intro to this platform he
+features a lot of constructive critique towards currently existing social-media networks, as they “...
+fail badly when we try to engage large crowds in deliberating about how to solve complex problems,
+typically generating huge volumes of highly redundant disorganized content of very mixed quality,
+making it prohibitively expensive to find the ‘good stuff’, as well as difficult to measure and improve
+how well the crowd meets the customer's needs. This problem plagues a broad swath of institutions,
+including news media, business, government, and NGOs” (Klein, 2018).
+
+Big part of Klein’s research work is in fact dedicated to critics of existing ICT, especially their
+incapability to cope with any constructive deliberation/negotiation within any medium/large scale
+groups of people. “While the Internet now provides the cheap, capable and ubiquitous
+communication infrastructure needed to enable crowd-scale deliberation, current technologies (i.e.
+social media tools such as email, forums, blogs, and so on) generally result in very poor deliberation
+outcomes, characterized by large volumes of disorganized and low-quality content, haphazard
+evaluation, toxic interactions, and such debilitating emergent dysfunctions as clique formation,
+groupthink, polarization, and deadlock” (Klein, 2018). He states several reasons for these problems,
+e.g. current tools do not provide technological support for crowd members to work together to
+collaboratively develop new ideas, but use a contest frame which actually “disincentivizes”
+collaboration. There is also an issue with unsystematic exploration, as current tools do not provide
+ways to systematically explore the design space of potential solutions; “small voices” issue, when lots
+of redundancy crowd out good ideas from smaller groups. There are issues with “extremization”,
+when participants tend to push their own or group-favored ideas, rather than seek win-win ideas;
+balkanization, the phenomena when participants self-organize into sub-groups, wherein ideas rarely
+cross-fertilize across groups. This can be caused by the structure of existing social media tools (“filter bubbles”) or by people's tendency to find groups they can relate to (“homophily”) (Klein, 2018).
+“Current social media technologies do not provide any inherent support for systematic, wellreasoned evaluations of solution alternatives. On the contrary, fallacious arguments are presented as
+fact and not challenged, undercutting participants' ability to accurately evaluate which solutions are
+better than others. “
+
+To develop a solution for these challenges Klein combines ideas from argumentation theory and
+social computing and developing web-based deliberation platform ‘Deliberatorium’. The definition of
+deliberation is “the activity where groups of people identify possible solutions for a problem,
+evaluate these alternatives, and select the solution(s) that best meet their needs” (Klein, 2017). He
+states that deliberation processes have not changed substantially for a very long time in the history.
+
+In most of the cases it is about those who hold power, deciding on policies behind the cabinets 
+doors, and then competing for the most beneficial for them options by engagement of wider
+support. In this situation most of the people, affected by decision-making, have no possibility to
+input their own propositions and opinions. In the modern world it is increasingly inadequate
+approach, as the scale of complexity of the problems we face is overwhelming, and many important
+ideas and perspectives, that would allow far superior solutions are simply not incorporated. Including
+a wide public in the scale of crowds (hundreds, thousands or more) into deliberation process we
+unveiling a great potential to do much better. According to Klein, 2017 “it is because crowd-scale
+interactions have been shown to produce, in appropriate circumstances, such powerful emergent
+phenomena as ‘the long tail’ - availability of much greater idea diversity, ‘Idea synergy’ - the ability
+for users to share and form novel combinations and extensions of ideas, ‘Many eyes’ - production of
+high-quality results due to the multiple independent verifications, ‘Wisdom of the crowds’ - better
+judgments made by large groups of contributors, than those produced by the individuals that make
+them up. These often exceed the performance of experts, because collective judgment cancels out
+the biases and gaps of the individual members” (Klein, 2017)."
+(https://dspace.cc.tut.fi/dpub/bitstream/handle/123456789/26735/Mitish.pdf?)
+
+
+==[[Commons Economy and Value Systems]]==
+
+By Herman Mitish:
+
+"If we search for “Sharing Economy” topic in Google Trends, we can see exponential growth of
+interest in it starting from the year 2012. Nowadays we can often hear that notion, together with
+“commons economy” (Bauwens & Niaros, 2017) in a very different contexts and regarding different
+spheres of our life. We can hear about it in a discussion on Uber services, fab-labs, 3d printing, bikesharing, Couchsurfing or Airbnb, self-driving cars, distributed energy production, crowdfunding
+initiatives or any other peer-to-peer based sharing of access to goods and services. The fact is that
+we are witnessing the rise of a new socio-economic paradigm. One reason could be that with
+improved means of communication we finally started to realize, that we share the same needs and
+intentions, and we can better realize them in cooperation. Another could be of purely economic
+nature, related to economic advantages of such modes of production and use. As a matter of fact,
+cooperative practices globally have a revival, boosted by development of technology and ICT.
+
+According to Jeremy Rifkin (2015) and his book The Zero-Marginal Cost Society (Bauwens &
+Niaros, 2017, p. 12), the trend of decommodification which is best seen in intangible realms such as
+software or social networking now extends to innovative ‘material’ production. Once the initial
+investment is made, either in a renewable source of energy or 3d printer, an abundant flow of
+output product destroys its own monetary value. Hence Rifkin predicts a future economy of
+demonetized collaborative commons where market functions operate only at the periphery. Paul
+Mason (2015) in his book Post-Capitalism, argues that when software and design produced through
+open and collaborative commons, that can be abundantly replicated , then it should be considered as
+‘virtual machine’. This means that, once labor is used to produce new software, very little new labor
+is needed to reproduce it, and therefore, the input of labor is minimized (Bauwens & Niaros, 2017, p.
+12). Thus, in order to fit modern reality and to make maximal impact, the model of value production
+of collaborative commons will be the major economic model for the subject of this research. All the
+ideas, programs and designs cooperatively produced inside of the ecosystem will be publicly
+available and free for use and modification for all the members of community, to generate returns
+for the common value and not for the benefit of few.
+
+The big challenge though is that the world is currently facing the ‘value crisis’. It is when in
+“open and contributory systems many contributors co-create value as a commons which can be used
+by all those that are connected to networks, but the income is generated by a fraction of the
+contributors connected to the marketplace, … that do not re-invest sufficiently in the social
+reproduction of the commoners” (Bauwens & Niaros, 2017, p. 2) In instance we can identify such a
+crisis in its peak destructiveness in the realm of today’s urban planning, when social and cultural
+value produced by creative citizen communities is then expropriated by the landowners during fully
+legitimate procedures of gentrification. Or when socially valuable landscapes, public spaces or
+historical buildings are legitimately demolished to be replaced with a high density real estate for the
+benefit of construction developers. The same happens even within paradigm of sharing economy, as, 
+in instance, in case of Airbnb. Landlord who uses Airbnb may have unfair advantage over the
+neighbors, when extensively uses housing and urban commons to serve his tenants and do not
+reinvest sufficiently back, generating returns only for himself. To overcome such a value crisis, we
+need to step beyond capitalist understanding of value and to choose new orienteers and operating
+principles for our society, rather than resource extraction. We need to consolidate around new
+commonly affirmed value system and to establish new social contract on its basis.
+
+One particularly interesting idea was suggested by ecologist John D. Liu (Bauwens & Niaros,
+2017, p. 14) on how to link the value to its expression in the common monetary system for the sake
+of humanity: “If we say that money comes from ecological function instead from extraction,
+manufacturing, buying and selling, then we have a system in which all human efforts go toward
+restoring, protecting and preserving ecological function. That is what we need to mitigate and adapt
+to climate change, to ensure food security, to ensure that human civilizations survive. Our monetary
+system must reflect reality. We could have growth, not from stuff, but growth from more
+functionality. If we do that and we value that higher than things, we will survive” (Groome, 2016).
+This seems to be a promising sustainable standpoint to resolve the value crisis and to manage global
+problems of humanity. But in order to use this model the notion of sustainability must be elaborated
+and negotiated through, from environmental, economic, social and cultural points of view. “The
+current format of ‘netarchical capital’ - in which capital no longer produces commodities for sale
+through commodified labor, but ‘enables’ peer to peer commons production ... to extract rent from
+it - is similarly ‘socially’ unsustainable” (Bauwens & Niaros, 2017, p. 15). Just recalling phenomena of
+failed states and overly uneven capital distribution within global world we get to understand how far
+of economical sustainability are we, when dominant economies legitimately keep extracting
+resources from the minor states. Just realizing the scale of socially accepted modes of discrimination
+in the modern societies, when dominant identities keep self-affirming their dominance by resource
+extraction from the minor groups, we get to understand how unsustainable is the modern culture.
+Thus the solution for new sustainable model must outline the whole spectrum of considerations
+from all of these spheres, defined in the process of constructive inclusive deliberation on the global
+level. “The key underlying shift needed from extractive models, practices that enrich some at the
+expense of the others, to generative value models, practices that enrich the communities, resources
+etc., to which they are applied” (Bauwens & Niaros, 2017, p. 3). This is what Bauwens & Niaros call
+the Value Shift.
+
+There are some great examples of communities around the world that already operate on the
+basis of new value systems, in different ways embedded in the current global market economy
+context. We would like to mention here some of those, listed in Bauwens and Niaros, 2017, that
+potentially can be used as prototypes for our own proposal, or some concepts or ideas of which
+could be borrowed for our purpose. First example will be the open value network dedicated to the
+open-source hardware development under the name Sensorica OVN. It rests on a techno-social
+infrastructure in order to reinforce decentralized self-organization and render the network creative
+and productive. This infrastructure comprises three main interlocking systems (Sensorica, 2016): (a)
+a Value Accounting System (VAS), which records and evaluates every member's input and calculates
+revenues in proportion to each contribution; (b) a reputation system, which determines the behavior
+within the community and attributes merit in accordance with the collective interest; and (c) a role
+system, which allocates the arrangement and interrelation of the different activities among the
+agents, based on their skills and interests (Bauwens & Niaros, 2017, p. 28). This system seems to be
+logical and pragmatic, thus some elements of it can be borrowed for the development of our artifact.
+Value Accounting system in our case would be needed to establish fair relational economy, e.g. with
+any voluntary work being accounted and attributed. Reputation system is important for communities
+to build trust and long term commitment amongst its members. Role system might be helpful in our
+effort to formalize processes of self-organization, though we don’t know yet what effects it may
+cause. At least using it in case-specific fashion can be a good idea for better distribution of
+responsibilities. The other good example of such a unique community would be the Enspiral Network
+which was created to make “social enterprise ventures and social entrepreneurs work together with
+shared vision and values” (Enspiral, 2010). It is famous for many things but one in particular is it’s
+incredible open-source freeware toolset for collaborative decision-making and co-budgeting, Loomio
+and Co-budget, which they until nowadays actively develop and use.
+
+Another particularly interesting approach for Value Accounting System we found in the work on
+technology assisted crowd-scale deliberation and decision-making, in (Klein, 2017). There author
+suggests deliberation mapping (also known as argument mapping) for crowd-scale negotiations,
+which is “a simple but powerful approach wherein deliberations are captured as topically-organized
+tree structures made up of questions to be answered, possible answers for these questions, and
+arguments (statements that support or detract from an answer or argument)” (Klein, 2017, p. 5). So
+for the value accounting he suggests mechanics of a system called Deliberation Task Marketplace:
+“Crowd members can submit a wide range of deliberation tasks in a Task Marketplace, e.g., to
+formalize some free text into the deliberation map, check whether a new map post is correctly
+structured, fact check posts, contribute arguments for/against an idea, mentor a peer, and so on.
+Each task will include a virtual currency ‘bounty’ conditional on it being performed properly…
+Markets provide a natural incentive for mutual support amongst deliberation participants: if they
+want to benefit from the crowd, they need to contribute to others as well. In order to maximize their
+income, participants are incented to bid to take on the tasks that are most important (i.e., have the
+highest bounties) and that they can perform quickly and well, thereby actualizing an effective taskperson matchmaking process. We can manage priority across different activities simply by adjusting
+budgets: contributors with bigger budgets can offer bigger bounties and get quicker results.
+
+Participants will have a natural incentive to acquire the skills (e.g., by taking additional training)
+needed to fill critical (and thus potentially) lucrative gaps in the market. “ (Klein, 2017, p. 11)
+Accordingly, this kind of VAS motivates its users to engage in the process of sensemaking,
+critical analysis, constructive deliberation and negotiation and also learning, developing persons’
+own intellectual skills. “If moderation could be crowdsourced i.e. broken down into a series of easyto-do micro-tasks that are distributed redundantly to regular crowd members “ (Klein, 2017, pp. 10–
+11) then members of the network would generate value for the whole community also by
+performing those accountable routines. Thus the value would be linked directly to the processes of
+sensemaking and knowledge sharing, to transparency contributions and education. It would
+potentially lead us to the society where above all stands a common sense and well informed decision
+making, and where fairness and legitimacy become paramount - and this would be a reliable
+fundament for mitigation of climate change, and solving any of our global societal problems. This
+mode of value production, by the means of making meaningful contributions into general discourse,
+also fits to post-structuralist understanding of the process of ‘gaining power’. According to Murdoch
+(1995, p. 748) and Thrift (1996, p. 25): “Those who are powerful are not those who hold power but
+are those able to enroll, convince and enlist others into networks on terms which allow the initial
+actors to ‘represent’ these others. Powerful actors ‘speak for’ all the enrolled entities and actors and
+control the means of representation.” (Boonstra, 2015, p. 121)
+
+In regard to economy of our future digital platform or economy of commons in general, it would
+be appropriate to mention the concept of local exchange trading system (abbreviated LETS). “It is a
+locally initiated, democratically organized, not-for-profit community enterprise that provides a
+community information service and records transactions of members exchanging goods and services
+by using locally created currency. LETS allow people to negotiate the value of their own hours or
+services” (W.A. Government, 1990). One interpretation and inspirational example of it, is an 
+emerging social media network under the name Nimses, that was developed and launched in
+Ukraine on the beginning of 2017. It is location based application, where users can post any kinds of
+media with attachment to their geolocation, as well as to read and interact with the posts and other
+users in the near proximity. All the interactions inside of Nimses are based on a virtual currency
+called “nims”. This name for currency hypothetically could be the reference to the New
+Associationist Movement known from Kojin Karatani, with its NAM currency, though we have no
+verified information on it. According to the authors and official website (Nimses Inc., 2018) the name
+“nim” is inherited from inverted word “min”, i.e. one minute, as one unit of currency is being
+unconditionally issued to every active user every minute. This way the currency represents the value
+of a time of human life, which is an interesting example representing ‘value shift’ in action. This way
+the issuance of a currency is limited and conditions are equal for everyone and predictable. Nims
+could be used to create location-based posts or to like posts generated by other users nearby, or,
+alternatively, to advertise or to buy local goods and services, which is basically tangible and
+intangible realms of the same matter. Therefore, the users collaboratively define value of various
+community generated posts and goods within ecosystem, while app developers benefit from
+entrepreneurs, having rent for extended target marketing features. Application developers also
+promise functionality to convert nims to the real currencies, after the initial coin offering takes place.
+
+The fact is that the system is working for more than a year and users can buy goods and services
+from number of sellers and entrepreneurs with nims currency, so far mostly in Ukraine and Eastern
+Europe. It does have more than 4 million of users and it’s being in active development stage yet. The
+system has its own social ecology along with economic system, and outlines 12 principles of
+community, which encompass ideas on empathy, care, respect, value of human life and its purpose.
+Just observing notable progress of this experimental project, we can state, that carefully designed
+location-based social media network, combined with a virtual exchange trading system, can embody
+very lively and sustainable value system, even when integrated in global socio-economic context.
+This also fits to the conceptual framework from Kojin Karatani (2014), which describes four
+fundamental modes of exchange in their evolutionary chronology. Briefly these are: the mode of
+community, based on the reciprocity of the gift or ‘pooling’ through commons; the mode of state,
+based on ruling and protection, ‘plunder and redistribute’; the mode of market, which represents
+commodity exchange and capitalist market; and the mode of association, which transcends the other
+three - the return of community mode at a higher level of complexity and integration (Bauwens &
+Niaros, 2017, p. 17). He posits an ongoing transition towards mode of association, which is a mode of
+exchange that integrates the preceding ones, but is dominated by the pooling that was originally 
+dominant in the early nomadic groups, and calls this modality ‘associationism’. “This opens up
+thinking about the value shift or value transition, not just as the replacement of one system by
+another, but as an ongoing inter-modal struggle. The question then becomes, how can we think
+about a commons transition as a way for the commons to engage the other modalities? Just as the
+logic of capitalist markets attempts to commodify, the logic of the commons is an effort to
+commonify. There is evidence of this type of value shift in the current practices of peer to peer
+based, commons-producing communities“ (Bauwens & Niaros, 2017, p. 18). This evidence we can
+find in Nimses, as well as in majority of commons systems, described above.
+Following evolutionary logic that we found in the historical process of development of
+participatory planning, we need to realize that it is our responsibility to take part in the design of our digital environments as well as physical urban environments. In best case scenario we must develop
+our own platforms, that would fit our needs best. This way we avoid situation when third parties
+extracting rents from our communities, at zero marginal cost of a service, as existing social media
+platforms do, and this way we are able to reinvest all the returns into further development and the
+common value. And this is how we get to the main idea and the purpose of this thesis, which is to
+develop conceptually and practically self-made adaptive technological artifact, that would facilitate
+the emergence and becoming of bottom-up civic initiatives. The main function of it would be to
+identify convergence amongst our own demands and intentions, and to inform ourselves about
+potentials for local cooperation in particular cases of interest. If in some of these cases such
+cooperation consequently emerges and different cooperatives find efficient legitimate ways to
+collaborate and to manage inevitable conflicts amongst themselves, then it logically leads us towards
+the system of complete self-governance."
+(https://dspace.cc.tut.fi/dpub/bitstream/handle/123456789/26735/Mitish.pdf?)
+
+=More information=
+
+* http://reflection.city
+
+* referenced: Bauwens, M., & Niaros, V. (2017). [[Value in the Commons Economy]]: Developments in Open and
+Contributory Value Accounting. https://doi.org/10.1074/JBC.270.32.19158
+
+
+[[Category:Urbanism]]
+
+[[Category:Articles]]
+
+[[Category:Urban Commons]]
+
+[[Category:P2P Infrastructure]]

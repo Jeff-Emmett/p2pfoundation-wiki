@@ -1,0 +1,128 @@
+
+
+=Description=
+
+Chad Whitacre:
+
+"The practice of letting each employee decide their own salary, known as "self-set salaries," has existed since at least the 1980s. Semco (a Brazilian manufacturer) and Morning Star (a U.S. tomato processor) are the two earliest companies associated with the practice. Both are still going strong, though a third early adopter, Gordian Engineering, is defunct.
+
+Through the influence of Semco owner Ricardo Semler's 1989 book Maverick, and Frederic Laloux's 2014 book Reinventing Organizations, a fresh crop of organizations is now discovering this practice and making it their own. Programming bootcamps Dev Academy (part of the Enspiral Network) and Makers Academy, software company Figure 53, design firm Hanno, and management consultancy Realize! (as described in Reinventing Organizations) are each practicing self-set salaries in some form or another.
+
+However, let's be careful not to confuse self-set salaries with two similar practices: algorithmic salaries, where compensation is based on a consistent formula (e.g., Buffer), and rankings-based salaries, where compensation depends on a system of peer assessments (e.g., W. L. Gore). In the case of self-set salaries, the individual, not an algorithm, makes salary determinations, and, while peers may influence these decisions, the individual retains final control over their compensation.
+
+Inspired by Maverick, Gratipay implemented a version of self-set salaries in July 2013, which we came to call "take-what-you-want" (to parallel the "pay-what-you-want" pricing model that we also offer). Organizations with pay-what-you-want pricing share control over revenue with their customers. Similarly, organizations that practice take-what-you-want compensation share control over expenses with their workers.
+
+We introduced two minor innovations to adapt the model to the fluid associations characteristic of Gratipay's open source context. First, we allowed for a full range of compensation :  not just salaries for full-time employees, but also remuneration for part-time workers who best fit under the category of contractors. Second, whereas our fellow innovators set salaries as an annual ritual , sometimes quite fraught , we made it easy to adjust one's compensation at any time. In fact, this became a normal part of the weekly rhythm at Gratipay—though, as we'll see, we did periodically have longer conversations about money."
+
+
+=Examples=
+
+==[[Gratipay]]==
+
+Chad Whitacre:
+
+"Others have already articulated the general benefits of self-set salaries and, by extension, take-what-you-want compensation. However, these systems are still rare enough that it can be hard to wrap your head around what they look like in practice. As one Gratipay team member said at the outset, "[I]'ll admit the concept that [you are] proposing is foreign enough to me that it's hard for me to picture where it will go."
+
+Our basic model was this:
+
+* When someone started performing work, a manager would invite that person to join the organization's money distribution at $0.01 per week.
+
+* After that, only the individual could change their "take" — the absolute dollar amount they wished to receive each week.
+
+* The last individual added was the first one to take a share during the weekly money distribution (hence, we referred to our implementation as "kids eat first").
+
+* Anything left over went into the organization's bank account.
+
+
+All in all, Gratipay's pilot project with take-what-you-want compensation ran for almost two years, during which we distributed about $50,000 from more than 100 organizations to more than 300 individuals.
+
+Two organizations comprised the bulk of the dollar volume: Drupal, and Gratipay itself. Drupal distributed about $13,000 to 22 people over the course of one year; none of these people depended on their take as a significant source of personal income. Gratipay itself distributed about $20,000 to more than 100 individual contributors over the course of almost two years. Moreover, several individuals depended on Gratipay as a primary (though admittedly meager) source of income, which meant that we had a chance to see the system start to run up against that most unchangeable of design constraints: human nature."
+
+
+=Discussion=
+
+==What could go wrong?==
+
+Chad Whitacre:
+
+"Take-what-you-want may sound nice in theory, and it may even be possible to imagine the system working in limited cases, but it's probably even easier to imagine things going horribly wrong. What happens when someone takes too much?
+
+At a technical level, we added two measures to prevent the most obvious abuses:
+
+An individual could only raise their take by a factor of two in any given week (but could raise it to $1 at any time).
+
+The organization's managers could remove an individual from the organization entirely (but not otherwise change their take).
+
+These measures only go so far, however; the fact is that take-what-you-want is not designed to eliminate tension within an organization. Instead, when approached with transparency and openness, take-what-you-want can transform tension over money into fuel for organizational growth.
+
+...
+
+
+Gratipay's experience, together with that of Semco, Morning Star, and others, shows that take-what-you-want compensation can, in fact, work. We had a healthy mix of contributors during our take-what-you-want pilot—some depending on it for income, some not—and money didn't get in the way. We were able to add an economic layer directly onto an open source community without dampening the intrinsic motivation that makes open source special in the first place.
+
+Why does take-what-you-want work? I suspect part of the answer is that it gives individuals both responsibility for, and control over, their own resentment and guilt.
+
+During our first stress test, four months after we started with take-what-you-want, the same person who had a hard time initially picturing where it would go said (edited for style):
+
+For what it's worth, I was uncomfortable with the "set your own take" approach when it was first being discussed. I've largely come around to seeing it as good, and bold, and unique, and a little hard to get my head around and decide what I should take.
+
+After a little more conversation, we reached this insight: "Everyone should set their take to balance their internal resentment and guilt." Guilty at taking too much? Work more, take less. Resentful of others for taking more than their fair share? Work less, take more. Take-what-you-want optimizes the balance of guilt and resentment across a team.
+
+But take-what-you-want only works when there's a solid baseline of care and trust. Do team members feel safe with one another? Is your team strong enough to occasionally have a hard conversation about money? Then having those conversations can make you even stronger.
+
+If you'd like to dig deeper and begin thinking about ways you might apply the model in your own organization, then check out the examples on the Reinventing Organizations wiki.
+
+At Gratipay, we're working to bring back our own take-what-you-want payments product in the next year or two."
+(https://opensource.com/open-organization/16/7/compensating-employees-letting-them-take-what-they-want)
+
+
+===Lesson 1: Takes are information===
+
+'''Allow me to illustrate with stories about the three moments in our two-year experience when people took too much.'''
+
+
+"The first time someone took too much from the Gratipay team occurred about four months after we introduced take-what-you-want. The person involved was a long-time team member. He had objected to the new system, arguing instead for a rankings-based approach, and he decided to use his take to express his frustration and make a point about the limits of our system:
+
+It's difficult for me to express something like "take an even percentage that maxes out at $X." And yes, it's too easy for me to take too much, since apparently I've managed to do close enough to that to get some attention.
+
+I approached him with the question, "What's your thought process here?" and we had a 90-minute conversation—he and I and a couple others—out of which emerged a ticket to improve the system, and an improved script to use as a workaround in the meantime. Then the magic happened: he adjusted his take to within an appropriate range, of his own volition.
+
+The lesson for me was that, with take-what-you-want, money can become information about the social reality of your team. Is money out of balance? Time out. Talk with your team, and find out what's really going on. Who's frustrated about what? Have the hard conversation together. Then—voilà! Takes will naturally rebalance to reflect the new social reality of the team, and the team's commitment to each other will deepen in the process.
+
+
+===Lesson 2: One in 77 just won't get it===
+
+The second time we had to talk about takes occurred when, after six months, we had accumulated a long tail of contributors. With 77 people on the roster, 5% of our money was going to contributors who were no longer active. A core contributor started a conversation, and we were able to remove most of the inactive members without incident. We did have one who complained, however, and when I tried to communicate with him, it was clear this person was just not on the same page as the rest of the team. This is the one time in two years that we had to essentially use the "nuclear option"—removing someone from the team against their will.
+
+The lesson I took from this is that there will always be someone who just doesn't get it. That's true whether you're open or closed, no matter what. Expect it, manage it, and move on.
+
+
+===Lesson 3: It really works===
+
+The third time was over a year later, about 18 months into our take-what-you-want experiment. By then, a few of us were depending on our Gratipay takes as a significant source of income. I was the one who initiated a conversation this time around, because I felt that some folks were taking too much relative to their contributions. Could we find a way to help them be more productive, and/or lower their takes to make room for the rest of us?
+
+As we'd learned to do by then, we hit the pause button. Our core team of about seven people were able to reach a conclusion that included both adjusting takes and making arrangements to help increase productivity—a win both for the team and the individuals involved.
+
+The lesson here is that take-what-you-want works. What was remarkable about this episode is that it was a non-event: no fireworks, no drama, just individuals collaborating together to solve a problem."
+(https://opensource.com/open-organization/16/7/compensating-employees-letting-them-take-what-they-want)
+
+
+
+
+
+
+[[Category:Peerfunding]]
+
+[[Category:Peerproduction]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Business]]
+
+[[Category:P2P Hierarchy Theory]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Open Company Formats]]
+
+[[Category:Labor]]

@@ -1,0 +1,28 @@
+
+'''=  a [[Arduino]]-compatible, [[Wireless Mesh Network]] for the [[Internet of Things]]'''
+
+URL =  http://pinocc.io/
+
+
+=Description=
+
+"The world can now welcome pinoccio, a wireless mesh network micro-controller, to its growing collection of  Arduino compatible sweetness.
+
+The pinoccio uses an Atmel ATmega128RFA1 – which is sort of like getting an Arduino Mega but with a built-in radio.  The radio operates at 2.4GHz using the 802.15.4 wireless standard – this is what allows each pinoccio scout to communicate with one another – and that’s how things get interesting.
+
+A pinoccio scout is what you call the pinoccio board when it does not have a wireless shield attached.  The scouts use the radio to communicate with one another – and they can do this at very low power.  In fact, if both the MCU and radio are in a sleep mode, the battery will last 9615 hours, that’s 400 days!
+
+That’s right a battery – and while micro-controller batteries might seem like boring topics, the whole battery situation with the pinoccio is one of my favorite features.  It is a lithium-ion polymer battery that fits snugly under the board and is recharged using one of the 42 micro-USB adapters you have scattered across your home.
+
+But enough about the battery – what links all your scouts to the web is a WiFi shield that fits on the top of one of the scouts – this little crown makes it the leader scout.  The leader scout is what transmits and receives information over the internet.  All the software that’s required to make this happen is already written.  Of course you can write your own too – that’s kind of the idea – the community will continue to improve upon this platform."
+(http://opensourcehardwarejunkies.com/2013/02/if-arduino-wished-upon-a-star-pinoccio-a-wireless-mesh-network/)
+
+
+=More Information=
+
+* podcast interview http://opensourcehardwarejunkies.com/2013/02/if-arduino-wished-upon-a-star-pinoccio-a-wireless-mesh-network/, see: [[Sally Carson and Eric Jennings on the Pinoccio Wireless Mesh Network for the Internet of Things]]
+
+* podcast: http://traffic.libsyn.com/opensourcehardwaregroup/pinoccio.mp3
+
+
+[[Category:P2P Infrastructure]]

@@ -1,0 +1,111 @@
+'''= The ODRL Initiative  is an international effort aimed at developing and promoting an open standard for rights expressions.''' 
+
+'''= This project focusses on one of the three components of [[Creative Commons]] licences (human-, lawyer-, machine-readable): the machine-readable representation of licences.''' [http://snurb.info/node/145]
+
+URL = http://odrl.net/
+
+
+=Definition=
+
+"ODRL is intended to provide flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distributing and consuming of digital media across all sectors and communities.
+
+The ODRL Initiative governance is managed by the [http://odrl.net/IAB/ ODRL International Advisory Board]."
+
+ODRL is not a DRM cryptoghraphic system, but a way to embed regulation in a XML format.
+
+
+=Description=
+
+ODRL is an open standard language for the
+expression of terms and conditions over assets in open and trusted
+environments. ODRL consists of an expression language and a data
+dictionary. The expression language defines basic terms of rights
+expressions and their organization using a set of abstract concepts. The
+data dictionary defines the semantics of the concrete terms used to
+express an instance of a rights specification.
+
+ODRL is based upon an extensible model for rights expression, and
+defines the following three core entities and their relationships:
+
+   
+* Assets, the objects being licensed
+   
+* Rights, the rules concerning permitted activities, the constraints
+or limits to these permissions, the requirements or obligations needed
+to exercise the permission, and the conditions or specifications of
+exceptions that, if true, terminate the permissions and may require
+re-negotiation of the rights
+   
+* Parties, the information regarding the service provider, consumer,
+or broker
+
+With these entities, ODRL can express offers (proposals from rights
+holders for specific rights over their assets) and agreements (contracts
+or deals between the parties with specific offers). ODRL supports the
+declaration of a wide range of expressions. It can also be extended to
+different types of domains. For example, we can use ODRL to specify that
+a consumer of a geocoding web service can only use this service in a
+non-commercial context, as well as the number of times the service can
+be accessed each day. ODRL has been published by the World Wide Web
+Consortium ([[W3C]]), and has received wide acceptance. ODRL is supported by
+several industry consortia such as the [[Dublin Core Metadata Initiative]]
+(DCMI) and the [[Open Mobile Alliance]] (OMA).
+(http://www.osbr.ca/archive.php#A4)
+
+
+=Examples=
+
+'''1.'''
+
+The ODRL Initiative is a supporter of open-source DRM projects to provide open and equitable access to all stakeholders in the community.
+
+The following are two leading examples:
+
+    
+* [http://sourceforge.net/projects/opensdrm/ OpenSDRM]
+    
+* [http://sourceforge.net/projects/openipmp OpenIPMP]
+
+
+'''2.'''
+
+Two applications of ODRL are an ODRL profile of the semantics of
+Creative Commons (CC) licenses and the ODRL profile for services
+(ODRL-S). The core semantics of CC licenses have been expressed in ODRL.
+This profile supports extensions to these semantics, and defines an XML
+Schema. ODRL-S is an extended version of ODRL to express clauses for
+service licensing, creating a machine-understandable service license."
+(http://www.osbr.ca/archive.php#A4)
+
+
+
+=Discussion=
+
+Nicholas Bentley:
+
+"I believe that producing open standards in Rights Expression Languages (RELs) and trying to express the rights associated with content clearly is a worthwhile endeavor.
+
+From the point of view of my alternative DRM system of Common Rights (which would be totally open itself) an open REL like ODRL would be very important because trying to clearly state the human/social rules is integral to the system. The reason why I believe the Common Rights system could be open in comparison to other DRM is because it relies on regulating rights not content.  The CR system would define clearly who has what rights and then it relies on other social and environmental forces to encourage people to fairly reward authors and other contributors."
+(p2presearch mailing list, December 2007)
+
+Sam Rose:
+
+"[http://lessig.org/blog/2006/03/opendrm.html Sun's OpenDRM] from a couple of years ago is actually is a cryptographic system, which claims to be an "OpenDRM".
+
+Most DRM is a mechanism for enclosure that is designed for business/monetization of content and technologies. DRM (including Sun's "OpenDRM") works towards "physically" removing access to code or hardware.
+
+In contrast, metadata like ODRL could be used to do something that I already do, for example, which is to "tithe" money to open source software projects, when I make money using them, to pay people for commercial use of artefacts and content they release under certain licenses that require you to do so, etc.
+
+As we discuss in the http://www.communitywiki.org/en/CyberneticEconomy "networked data" that is standardized can become part of a cybernetic system that has potential to make it easier, and more convenient to be "ethical".  Once the positive externalities become apparent, and once the positive effects feedback to enough people, and when it is easy ("cybernetic"), then it will become appealing to many people. Some have also discussed issues related to this at http://www.communitywiki.org/en/PayExpected
+
+From a media ecology perspective, ODRL can help (some) people realize the nature of resources they are using, the nature of the production and distribution. Successful "enforcement" can be voluntary, self-enforced."
+(p2presearch mailing list, 12/2007)
+
+=More Information=
+
+#[[DRM]]
+#[[Open DRM]]
+
+
+
+[[Category:Standards]]

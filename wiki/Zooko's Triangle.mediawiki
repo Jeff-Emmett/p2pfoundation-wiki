@@ -1,0 +1,36 @@
+
+=Description=
+
+From the Wikipedia:
+
+"Zooko's triangle is a diagram named after Zooko Wilcox-O'Hearn which sets out a conjecture for any system for giving names to participants in a network protocol. At the vertices of the triangle are three properties that are generally considered desirable for such names:
+
+* Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.
+
+* Decentralized: The lack of a centralized authority for determining the meaning of a name. Instead, measures such as a Web of trust are used.
+
+* Human-meaningful: The quality of meaningfulness and memorability to the users of the naming system. Domain names and nicknaming are naming systems that are highly memorable.
+
+
+Of these three properties, Zooko's conjecture states that no single kind of name can achieve more than two. 
+
+
+So the edges of the triangles represent the three possible choices for a naming scheme:
+
+* Decentralized and human-meaningful: This is true of nicknames people choose for themselves.
+
+* Secure and human-meaningful: This is the property that domain names and URLs aim for.
+
+* Secure and decentralized: This is a property of OpenPGP public key fingerprints.
+Zooko's conjecture was disproved through creating practical systems that exhibit all three properties."
+(https://en.wikipedia.org/wiki/Zooko%27s_triangle)
+
+=More Information=
+
+* Graphic via https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Zooko%27s_Triangle.svg/250px-Zooko%27s_Triangle.svg.png
+
+* original essay, http://zooko.com/distnames.html
+
+[[Category:Security]]
+
+[[Category:P2P Infrastructure]]

@@ -1,0 +1,88 @@
+
+'''= A Framework for developing and deploying secure cloud applications to collect, compute on, and share personal data: seeks to enable users to build new sorts of decentralized, dynamically responsive and transparent digital institutions.'''  
+
+URL = https://docs.openmustardseed.org/ [http://idcubed.org/open-platform/platform/][http://idhypercubed.org/wiki/ProjectMustardSeed]
+
+an open data platform to enable people to share all their personal data within a legally constituted trust framework
+
+
+=Definition=
+
+"With the help of researchers, developers and entrepreneurs, primarily from Harvard and MIT and the Boston Community, we are building an open data platform to enable people to share all their personal data within a legally constituted trust framework. This framework will allow people to have their own personal data service that can securely store and process static and dynamic data about themselves. Governed by ‘privacy by design’ principles, all agreements of the trust framework support open authentication, storage, discovery, payment, auditing, market making and monetized “app store” services. The goal is to take all of these services and make them available within an open-source framework that can be “mashed up” to enable the development of high value applications."
+
+=Description=
+
+'''1. David Bollier:'''
+
+"Collaboration between Institute for Data-Driven Design (ID3), a tech nonprofit based in Boston, Massachusetts, headed by Dr. John H. Clippinger, and the M.I.T. Media Lab’s Human Dynamics Group, led by Professor Alex “Sandy” Pentland.  Working with a range of partners, the ID3/MIT team is developing a new software platform, Open Mustard Seed (OMS), that seeks to enable users to build new sorts of decentralized, dynamically responsive and transparent digital institutions.  By enabling people to build trust and cooperation among each other, Open Mustard Seed seeks to fulfill the promise of Reed’s Law.
+
+Soon to be available as an alpha-release, OMS will provide a new infrastructure to let people build their own highly distributed social ecosystems for reliably governing all sorts of shared resources, including their personal data.  The software is a synthesis of a variety of existing software systems – for digital identity, security, computable legal contracts and data-management – designed to serve as a new platform for social exchange and online governance.   Just as the original html code gave rise to the World Wide Web and new types of bottom-up social communication and collaboration, OMS can be conceived as a new “social stack” of protocols and software for self-organized governance.  Instead of looking to (unreliable, unwieldy) external institutions of law and policy, OMS uses software code to internalize governance to individuals and online communities.
+
+OMS solves a number of interrelated problems about Big Data.  Users have not had an easy or reliable means to express their preferences for how their personal data may be accessed and used, especially when one context (a bank) differs so much from another (a healthcare provider) and still others (family and friends).  A user may not know with whom they are really transacting, nor can they readily verify that their privacy preferences are actually respected and enforced.  Users are often wary of exposing or sharing their data with third parties whose trustworthiness is not known.  In this context, it is not surprisingly that protecting one’s personal information is seen as antithetical to commercial and governmental uses of it.
+
+The Open Mustard Seed project seeks to overcome these problems through a technical architecture called the “[[Trustworthy Compute Framework]]” (TCF).  The TCF extends the core functionality of “Personal Data Stores” (PDS) – digital repositories in the cloud that let users strictly control their personal information – by enabling online users to interact flexibly with third parties in secure, trustworthy ways.  The system architecture uses nested tiers of “trusted compute cells” starting at the “private” level and moving up to portal and group levels.  The idea is to enable trusted social relationships and collaboration that can scale.  Each trusted compute cell (TCC) – the basic unit of individual control over data – enables users to curate their digital personas; manage the data that they collect, produce and distribute; manage privacy settings for the various social scenes and commercial vendors they interact with; and manage group-specific apps for secure communication and data-sharing.
+
+The terms of interaction between an individual’s private TCC and a “portal TCC” is mediated with OpenID Connect-authenticated API connections.  These application-programming interfaces ascertain the terms of interaction and information-disclosure through “trust wrappers” or “trust manifests” that encase a communications module.  “Wrappers” amount to digital legal contracts that outline the opt-in terms of agreement for online interactions.  They specify what data may be collected, accessed, stored, etc.; what access control mechanisms and policies will govern data; and the “constitutional rules” by which groups may form, manage themselves and evolve.
+
+By enabling individual users to express and enforce their own bottom-up preferences in the management of data, the Trust Compute Framework enables the development of entirely new types of network-based governance institutions.  People can develop trusted online social and commercial relationships that can persist and scale.  This capacity depends critically on people being able to control their own personal information – and to be able to efficiently authenticate other people’s identities based on self-selected criteria for mutual association, trust and risk.
+
+In such a network environment, one can imagine an ecosystem of “branded portals” emerging as central repositories for people’s personal data.  One can also imagine companies arising to serve as “trust providers” of social, secure, cloud-based applications.  Users could begin to enjoy many benefits that stem from sharing their data (avoidance of advertising, group discounts, trusted interactions with affinity groups and strangers, etc.)  Businesses that engage with this architecture (app developers, service providers, retailers) could gain trusted access to large, highly refined pools of personal data that can be monetized directly or indirectly, using new business models.  Government institutions, similarly, could gain access to large pools of personal data without violating people’s privacy or the Fourth Amendment, and craft more reliable, effective and demographically refined policies and programs.  As a completely decentralized and open source platform, OMS cannot be “captured” by any single player or group.  It aims to be always capable of the kinds of open-ended innovation that we have seen in open-source software, the Web and other open platforms."
+(http://bollier.org/blog/next-great-internet-disruption-authority-and-governance)
+
+
+'''2.'''
+
+A Framework for developing and deploying secure cloud applications to collect, compute on, and share personal data
+
+"The Open Mustard Seed project is an open-source framework for developing and deploying web apps in a secure, user-centric personal cloud. The framework provides a stack of core technologies that work together to provide a high level of security and ease of use when sharing and collecting personal and environmental data, controlling web-enabled devices, and engaging with others to aggregate information and view the results of applied computation via protected services.
+
+The scope of this effort is largely driven by the needs of the Trust Framework architecture for personal data ecosystems being developed at ID3.
+
+Overall, the project aims to contribute a layer of software and methodology for the development, deployment, and management of user-centric, data-intensive, and distributed cloud applications and services."
+(http://idhypercubed.org/wiki/ProjectMustardSeed)
+
+
+=Discussion=
+
+==Critique: Identity is Unnecessary for Online Transactions==
+
+by Amanda B. Johnson:
+
+"The ID3 software, called Open Mustard Seed, wouldn’t just contain your name, home address, birthday, government tracking numbers, etc. It would also contain “biometric” and “behavioral” trackers, and all this data would be fused with every online transaction you ever used it for.
+
+...
+
+ID3 wouldn’t dream of sharing this mass of private data about you with others—unless, of course, the third party requesting the data is a government employee, by ID3’s own admission.
+
+In fact, the software developers have a vision of an entire Internet built on trust—which, as you’ll remember, is exactly the opposite of how cryptocurrency works. A statement by ID3 Managing Director Dan Harple is especially revealing:
+
+“The next phase of Internet growth requires a re-tooling, with identity and trust at the foundation.”
+Identity? Trust? One has to wonder if Dan Harple has ever even used Bitcoin.
+
+ID3 claims that they there are many Bitcoin-based businesses who are wild about their new identity-tracking software, including BitPay, Bitstamp, Delta, Ripple Labs, Swarm, Xapo and ZipZap. This isn’t surprising, as some businesses choose to be more responsive to governments than they are to customers.
+
+And governments have been itching for a way to track individuals online as closely as they attempt to track them in the physical world. ID3 may have just created the End to Online Anonymity 1.0—that is, for those who opt-in.
+
+This means that there’s likely going to be a divide among Bitcoin businesses—those who “comply” and cut off services to customers who don’t pony up their flesh-and-blood identities first, and those who continue to serve their customers the way they always have—more or less anonymously.
+
+While the shape of this divide remains to be seen, what is obvious is the lesson that cryptocurrency has taught us: that online transactions don’t require trust or identity. That in fact, we’re all safer without them.
+
+Online transactions have two purposes and two alone: that the seller delivers what he promised to deliver and the buyer pays what he promised to pay. That’s it. Real-world, flesh-and-blood identity has nothing to do with this process.
+
+...
+
+Many are already building a new Internet foundation that requires no identity and no trust. Think MaidSafe and Ethereum, due to be released within months. Or the already available OpenBazaar and NXT FreeMarket. Why were they built? Because so many understand that the less we have to trust one another or divulge our identities, the safer we all are.
+
+The trustlessness of a decentralized Internet is what most of us will choose to use in the coming years. Emerging alternative Internet protocols are the future. ID3 and all others who cling to old trusted third party models are cementing themselves in the past."
+(http://cointelegraph.com/news/112900/id3-hopes-youll-opt-in-to-your-own-surveillance-op-ed)
+
+=More Information=
+
+* [[Trust]]
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Open]]
+
+[[Category:Standards]]

@@ -1,0 +1,27 @@
+From Slashdot:
+
+"Ian Clarke, creator of [[Freenet]], has been working on a new open source project called Swarm. The concept is to allow a computer program to be distributed across multiple computers in a manner almost completely transparent to the programmer. The system observes the program executing and figures out how the workload should be distributed for maximum efficiency. Swarm is implemented in Scala. Its at an early-prototype stage, and Ian has created a good 36 minute video explaining the concept and the current implementation."
+
+==Overview==
+
+Swarm is a framework allowing the creation of web applications which can scale transparently through a novel portable continuation-based approach. Swarm embodies the maxim "move the computation, not the data".
+
+==Status==
+
+Swarm is implemented in Scala 2.8 (unreleased at the time of writing), and makes use of the delimited continuations plugin.
+
+Swarm is currently at an early stage of development, although it is able to migrate a thread between servers as needed. Currently the best way to learn about Swarm is to watch the video above and then read about our current efforts on the OpenIssues page.
+
+==History==
+
+Swarm was initially [http://blog.locut.us/main/2008/10/6/swarm-a-true-distributed-programming-language.html|proposed by Ian Clarke in this blog post], although the concept has evolved considerably since then. 
+
+==Key resources==
+*http://code.google.com/p/swarm-dpl/
+
+==See Also==
+*[[P2P Computing]]
+
+[[Category:Software]]
+[[Category:Free Software]]
+[[Category:P2P Infrastructure]]

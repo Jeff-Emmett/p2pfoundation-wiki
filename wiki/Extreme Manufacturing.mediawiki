@@ -1,0 +1,94 @@
+
+=Description=
+
+'''1. Marcin Jakubowski:'''
+
+"Extreme Manufacturing (XM) is an open source hardware development methodology based on the principles of Extreme Programming in the field of software. XM focuses open source design and collaboration, and the revenue model is Distributive Enterprise. Extreme Manufacturing is lean in all respects, while retaining sufficient structure to enable scalability. The platform is currently in development. Joe Justice of Team Wikispeed and I have coined the term. We’re here to change the paradigm of how things are made – by unleashing economic collaboration and eliminating competitive waste. My fundamental motivation stems  from a conclusion that the rate of innovation could increase significantly – if open collaboration were the norm for doing business.
+
+We are taking baby steps to arrive at the open source economy. The XM Platform is our first attempt to take all that we learned over the last 5 years about open hardware development – and shake our techniques down for extreme results – extreme development velocity while retaining strict standards of quality control. We are aiming for parallel development of 25 GVCS tools by July 1 – on a 3 month prototyping cycle – to deliver the complete set of 50 GVCS tools by year-end 2012. Our goal is to develop a scalable platform, such that a new process for developing any product or service can be organized on a week time scale. Moreover, this platform may be adapted to any product or service  - such as organizational development of Factor e Farm or OSE. My personal prediction is that this method will scale to a 2% market penetration of all global production by 2018. I am referring to any enterprises started via XM techniques – such as GVCS products, which span a wide range of productive sectors. The assumption is that if sufficient rigor and resources are allocated to the development of a product via open source methods – such a product naturally surpasses the quality and service of any ‘competitors’."
+(http://blog.opensourceecology.org/2012/04/extreme-manufacturing/)
+
+
+'''2. Benjamin Tincq:'''
+
+"Treating hardware products like software by applying modularity and agility principles to the physical world, gave birth to a revolutionary process: Extreme Manufacturing (XM). The name was coined after Extreme Programming (XP) software development by Joe Justice and Marcin Jakubowski, founder of Open Source Ecology. OSE has been developing a set of 50 open source industrial machines capable of building a modern civilization from scratch, and is now using XM after Joe gave an Agile crash course to Marcin earlier this year.
+
+The Extreme Manufacturing approach enables maximum velocity and minimum cost of making changes by adopting multiple short development cycles rather than a long one, in order to recieve early and regular user feedback. While standard development cycles in the manufacturing industry take several years, WikiSpeed has 7 day development cycles – called “Sprints”.
+
+Applying the mindset “working product is the deliverable”, XM applies Test-Driven Manufacturing: before any work is done, the team defines the tests for quality goals on criteria such as road-legal safety, comfort or efficiency. Passing the tests while meeting the vision of the Product Owner validates an iteration of a working product. When tests are too expensive to carry out every seven days – for instance, road-legal crash tests – WikiSpeed replaces them by computer simulations, of which the accuracy is refined by real data whenever they can afford a crash test.
+
+
+
+We practiced XM during the workshops in Rome, Barcelona and Paris, where Joe guided a bunch of improvised Product Owners among us through the process:
+
+1) Defining the product vision (role of the Product Owner)
+
+2) Crafting user stories to make the vision tangible for everyone
+
+3) Defining the tests required to validate each user story for the product
+
+4) Defining the tasks that need to be done to iterate the product on each user story
+
+5) Prioritize the user stories (features) : some may need to come before others
+
+6) Planning the demo time to showcase the new current state of the product
+
+7) Planning the work time (including tests) ahead of demo, and assigning tasks
+
+
+The last two steps basically consist of “Planning a Sprint”, in other words: figuring out the leanest thing that can be done to successfully iterate the product before next week. For this purpose, WikiSpeed hosts a 1 hour weekly standup call with the global team which is distributed across several countries. A short YouTube video of the current state of the product is shown, then people assign themselves tasks; each garage relies on its own Kanban board to optimize its workflow during the week, and all boards are all synced on a weekly basis with Scrumy, a free online tool for backlog management.
+
+
+A recurring question from workshop participants was: is this Extreme Manufacturing or Extreme Prototyping? In other words, how does it scale?
+
+Firstly, scale is not relevant to WikiSpeed. Cars are produced on-demand, when a client offers to pay for it. This implies almost no capital investment upfront to produce a SGT-01 commercial unit, which costs $14K for a $25K price tag. The new WikiSpeed commuter car will be sold around $17K, and Joe is already thinking about a future $1.000 “mini car”. R&D being carried out along the way, its costs are supported both by sales and donations made via the WikiSpeed homepage.
+
+WikiSpeed does not grow, it distributes itself. This development model is pioneered by Open Source Ecology and puts the open, independent replication of its business model at the core of its operational strategy. Shared knowledge and radical collaboration allows economies of scope rather than economies of scale, and quality is ensured by common tests and a shared kanban.
+
+The Distributive Enterprise model is an expression of human-centered economics of collaborative production, where people regain their autonomy in a complex world.
+
+To distribute even more quickly, WikiSpeed members are currently practicing to build cars within a rectangular space marked on the ground. By achieving this, micro factories could be encapsulated within containers, and shipped to where there is demand for local production. Once the work is done, a micro factory could be moved to a surrounding area to meet new demand."
+(http://magazine.ouishare.net/2012/10/wikispeed-agile-manufacturing/)
+
+=How To=
+
+Graphic via http://1.bp.blogspot.com/-cxt3iz4GxGY/UelnHqWKTKI/AAAAAAAAAyA/AlfAJ34ZlP8/s400/Extreme+Manufacturing+Webinar+v1.jpg
+
+
+"The diagram on your right shows the elements Joe combines to generate the process efficiencies XM achieves.  As you can see most of the concepts like iterative development, continuous improvement and pairing are familiar to Agile developers. What Joe adds to the equation is object-oriented architecture.
+
+[[Modularity]] allows for innovative design while building on iterative development. For example, the Team WIKISPEED car uses eight different and independent components. That allows the team to re-design the suspension system, speedometer or car body at any point and not have to tweak the chassis or dashboard to make the improved components fit. Modularity prevents engineering challenges from rippling through the entire design process. It also allows the team to swarm on the most important improvement without affecting the rest of the car.
+
+Contract First Design: The interfaces between the different modules of the Wikispeed car are negotiated beforehand and the “contract” between how the modules interact with each other (bolt locations, data sharing, etc.) remain fixed until they need to be re-negotiated to accommodate a more significant change.
+
+XM leverages Design Patterns in two ways: 1) by re-using mature designs with a proven track record; and 2) by reducing the number of different designs wherever possible to reduce complexity. Basically, don’t re-invent the wheel. If a particular bolt worked well fastening the suspension system, use it again and be done. And, if that bolt could also work reasonably well fastening the crush zone to the chassis, use it there as well. It is better to have some solutions a little over-designed than to maintain hundreds of subtly different and customized solutions. This reduces waste, saves time and lowers costs."
+(http://scrum.jeffsutherland.com/2013/07/scrum-and-extreme-manufacturing.html)
+
+=Discussion=
+
+'''1.'''
+
+"The magic of this method lies in synergistic, lively, distributed, parallel development – occurring both at Factor e Farm (FeF) and via global collaboration. This platform will combine parallel remote prototyping, Desisgn and CAD Flash Mobs, feedback from advisers, constant vlogging of results, Daily Standups, and Product Demos. The most remarkable feature of Scrum is that ALL STEPS MAY HAPPEN AT THE SAME TIME AND MAY OCCUR IN NO PARTICULAR ORDER. The key to this is modular design – where as long as the interface between components is clearly defined – all components may be developed simultaneously. Moreover, if the effort involves breakdown into very small steps, then any single step is likely to be sufficiently low-cost that performing that step becomes feasible. Massive parallel development also means that any result provides useful feedback to inform other steps. On the Scrum Floor – or the FeF workshop – people are aware of each others’ work, they can pair up to learn, and they can swarm on a problem if needed."
+
+
+
+'''2.'''
+
+"It is worthwhile to note that while we are developing the methods at FeF, the intent is that any group can replicate this effort in other locations – as a new paradigm for economic productivity. The highlight of the platform is extreme collaboration via ongoing  feedback, open process, transparency of results, and sufficient rigor to allow for all necessary development steps to happen – while remaining lean via application of Scrum methods.
+
+The key to success lies in recruiting a team of 10 Scrum Masters and 1-2 Product Owners to run the process –  for  10 GVCS product groups at one time."
+(http://blog.opensourceecology.org/2012/04/extreme-manufacturing/)
+
+
+=More Information=
+* See Wikipedia entry - [https://en.wikipedia.org/wiki/EXtreme_Manufacturing]
+* Video explanation: http://youtu.be/UQd1yO8fOC0 ; [[Introduction to the Extreme Manufacturing Methodology]]
+* [[Extreme Recruiting]]
+
+
+
+[[Category:Manufacturing]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Social Business Design]]

@@ -1,0 +1,26 @@
+
+
+=Description=
+
+David Bollier:
+
+"Users are often wary of exposing or sharing their data with third parties whose trustworthiness is not known.  In this context, it is not surprisingly that protecting one’s personal information is seen as antithetical to commercial and governmental uses of it.
+
+The Open Mustard Seed project seeks to overcome these problems through a technical architecture called the “[[Trustworthy Compute Framework]]” (TCF).  The TCF extends the core functionality of “Personal Data Stores” (PDS) – digital repositories in the cloud that let users strictly control their personal information – by enabling online users to interact flexibly with third parties in secure, trustworthy ways.  The system architecture uses nested tiers of “trusted compute cells” starting at the “private” level and moving up to portal and group levels.  The idea is to enable trusted social relationships and collaboration that can scale.  Each trusted compute cell (TCC) – the basic unit of individual control over data – enables users to curate their digital personas; manage the data that they collect, produce and distribute; manage privacy settings for the various social scenes and commercial vendors they interact with; and manage group-specific apps for secure communication and data-sharing.
+
+The terms of interaction between an individual’s private TCC and a “portal TCC” is mediated with OpenID Connect-authenticated API connections.  These application-programming interfaces ascertain the terms of interaction and information-disclosure through “trust wrappers” or “trust manifests” that encase a communications module.  “Wrappers” amount to digital legal contracts that outline the opt-in terms of agreement for online interactions.  They specify what data may be collected, accessed, stored, etc.; what access control mechanisms and policies will govern data; and the “constitutional rules” by which groups may form, manage themselves and evolve.
+
+By enabling individual users to express and enforce their own bottom-up preferences in the management of data, the Trust Compute Framework enables the development of entirely new types of network-based governance institutions.  People can develop trusted online social and commercial relationships that can persist and scale.  This capacity depends critically on people being able to control their own personal information – and to be able to efficiently authenticate other people’s identities based on self-selected criteria for mutual association, trust and risk.
+
+In such a network environment, one can imagine an ecosystem of “branded portals” emerging as central repositories for people’s personal data.  One can also imagine companies arising to serve as “trust providers” of social, secure, cloud-based applications.  Users could begin to enjoy many benefits that stem from sharing their data (avoidance of advertising, group discounts, trusted interactions with affinity groups and strangers, etc.)  Businesses that engage with this architecture (app developers, service providers, retailers) could gain trusted access to large, highly refined pools of personal data that can be monetized directly or indirectly, using new business models.  Government institutions, similarly, could gain access to large pools of personal data without violating people’s privacy or the Fourth Amendment, and craft more reliable, effective and demographically refined policies and programs.  As a completely decentralized and open source platform, OMS cannot be “captured” by any single player or group.  It aims to be always capable of the kinds of open-ended innovation that we have seen in open-source software, the Web and other open platforms."
+(http://bollier.org/blog/next-great-internet-disruption-authority-and-governance)
+
+
+=More Information=
+
+* [[Trust]]
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Standards]]

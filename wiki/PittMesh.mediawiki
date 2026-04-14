@@ -1,0 +1,23 @@
+
+'''= "a new community-owned wireless network that runs OpenWrt".'''
+
+URL = http://www.pittmesh.net/
+
+
+=Description=
+
+Justin Goetz:
+
+"PittMesh is a new community-owned wireless network that runs OpenWrt, a widely supported, well documented, open source firmware for embedded systems like WiFi routers. PittMesh routers are owned by individuals and configured in a way that make them work together to build a larger, decentralized network. The project was started by a wireless networking non-profit called Meta Mesh and has been developed by a world-wide coalition of programmers for well over a decade.
+
+The PittMesh network uses a simple network routing protocol called Optimized Link-State Routing (OLSR). This protocol automatically senses other OLSR-enabled routers wirelessly and publishes routes to non-adjacent subnets on the network, which allows the routers themselves to act as the infrastructure needed to connect neighbors to one another. It also delivers Internet access from bandwidth donors. OLSR is one of thousands of freely available open source packages that the community has developed for a multitude of use cases. PittMesh also uses Simple Network Management Protocol (SNMP) for monitoring, Nagios for alerting, and ProxMox as a centralized virtual machine server hosting useful applications on the network. All of these technologies work together to power the network and empower the communities in which PittMesh exists.
+
+All source code is published to GitHub, and we also have published a step-by-step manual for others to follow when setting up their own router.
+
+Because PittMesh is community-owned, we need to ensure that every user can afford the equipment. Proprietary solutions would make building a community wireless network uncomfortably expensive for router hosts. For example, Meraki mesh routers can easily cost more than US $400, pricing out many interested node hosts. Moreover, the Meraki routers must be mounted directly to a wall because they can't be installed on a mast and do not have external antennas that would increase signal sensitivity. PittMesh tries to use inexpensive and open source hardware that can be easily customized to fit the role that the router plays in the network—often for under US $100.
+
+Open source is the way to go for many reasons. Some routers need to have highly-directional antennas for long distance links, and you can't customize single-solution hardware devices without external antenna connectors in that way. Many proprietary systems also require licenses for the software to work. Even though you own the device, you can't use it unless you pay the manufacturer to turn on. Open source technology allows us to build a world where anyone and everyone can connect without boundaries; where entire communities have free public WiFi and access to local resources such a VOIP system, e-book libraries, and a Wikipedia mirror."
+(https://opensource.com/life/16/5/pittmesh)
+
+
+[[Category:P2P Infrastructure]]

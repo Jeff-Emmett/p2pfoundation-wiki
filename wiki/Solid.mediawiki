@@ -1,0 +1,142 @@
+
+'''= social linked data project, originally proposed by Tim Berners-Lee'''
+
+URL = https://solid.mit.edu/
+
+"Solid aims to decentralized storage by supporting a pod model, whereby users store their data in “pods” that they control, rather than proprietary platform server." [http://dci.mit.edu/assets/papers/decentralized_web.pdf]
+
+=Contextual Citation=
+
+"The Solid vision leads to a Facebook-like app that no longer controls all your social data and healthcare records that are under your control rather than your HMO’s. The Solid approach to building apps requires a bit of a change in perspective so that apps essentially turn into views into underlying data that is controlled by the user."
+
+- Gideon Rosenblatt [https://www.the-vital-edge.com/data-ownership-by-decoupling-storage-from-service/]
+
+=Description=
+
+'''1.'''
+
+"Solid (derived from "social linked data") is a proposed set of conventions and tools for building decentralized social applications based on Linked Data principles. Solid is modular and extensible. It relies as much as possible on existing W3C standards and protocols."
+(https://github.com/solid/solid)
+
+
+'''2.'''
+
+By David Weinberger:
+
+"With Solid, you store your data in “pods” (personal online data stores) that are hosted wherever you would like. But Solid isn’t just a storage system: It lets other applications ask for data. If Solid authenticates the apps and — importantly — if you’ve given permission for them to access that data, Solid delivers it.
+
+For example, you might keep your personal information in one or several pods: the sort of data about yourself that you put into your Facebook profile; a list of your friends, family, and colleagues; your banking information; maps of where you’ve traveled; some health information. That way if someone built a new social networking application—perhaps to compete head-on with Facebook, or, more likely, to offer specialized services to people with shared interests—you could join by giving it permission to access the appropriate information in your pod. Your data in your pod would remain your own in every sense of the word: completely under your control, stored where you prefer, and usable only by apps that you’ve given permission to.
+
+Solid is designed from the bottom up to enable the discovery and sharing of information. That’s why there’s “linked data” in the “LID” part of its name. Linked Data is another Berners-Lee invention, a way of expressing data that makes it easy to, well, link up across repositories. While Linked Data can be tough to master, Solid could make the web’s information noticeably smarter. For example, if you wanted to, you could give permission to a travel site or to a climate action group to access the information in your pods about your demographics and the trips you’ve taken. That group could mash that information up with data from other people’s pods to get an updated picture of where people are traveling and how that’s affecting local economies, carbon emissions, and perhaps national attitudes toward foreigners.
+
+Solid does all this without having to centralize information in hands that we may not—and often should not—fully trust.
+
+(http://www.digitaltrends.com/web/ways-to-decentralize-the-web/)
+
+=Discussion=
+
+Melvin Carvalho:
+
+"Try not to think as Solid as separate from the web. All web clients and servers already run 90% of the solid protocol. These are just the features inented by Tim Beners-Lee from the very start of the web, to make it P2P (this is all laid out in his book, weaving the web, which is a sort of manifesto, that unfortunately does not gain the attention it deserves). But if I can summarize.
+
+1. The core of Solid is actually the web, web 1.0, web 2.0, web 3.0. Any system on the web is either already compatible with Solid or could be made compatible much in the same way that linux uses drivers to connect to things. So the starting point of solid is everything we have today. But the Web is an ambitious project, it wants to change humanity for the better, via a giant network effect. The first phase of the roll out was just documents (web pages) because that was needed. I'll list the next phases.
+
+2. The web should be both documents and data. Documents are a delivery mechanism for data. 15 Years of web standards have matured to allow another layer of data to emerge in the web which is useful in itself, aka Linked Data. The state of linked data is that it is very widely adopted with perhaps more than 50% of the web using it already (but normally in a rather boring way). Solid build on this data layer in order to bring much more interesting functionality. You dont have to use this feature, but if you do, the scope of use cases you can cover with the web increases an order of magnitude. 
+
+3. The first folder in any web server is called public_html. The web was never intended to stop there. The last 25 years has been a lot of work on private data and also shared data. Solid add a simple access control mechanism powered by linked data to enable you to share what you want with who you want. And protect your privacy. This is a feature that can be used with Solid but you dont need to. You can just keep everything public and the web will work as-is.
+
+4. Browsers are a problem on the web. The idea of browsing says "you can look but you cant touch". The web was designed to be interactive. The first browser was also an editor. This is the concept of the "read / write" web. But since Mosiac is the father of all browsers today, the writing functionality was taking out. Marc Andressen said it was too hard. But Tim know it could be done, because his original web browser did it. So how is it possible? Well essentially you have a save file option using HTTP POST, and the ideas of folders. This is standardized in what's called the LInked Data Platform and is a W3C REC. It builds on linked data and just lets you save your files and data to any server that has this turned on. Its a small change to any existing web server to allow this, and the hope as a w3c REC is that people will start adding it to sever configs. Of course, ability to write also comes with the need for access control, so that is why when taking write functionality you probably want to take permissions.
+
+5. Finally as a popularly requested feature solid provides realtime updates to subscribing to resources. It doesnt need to go in the solid spec, nor does anyone need to implement it, but you can build nice realtime apps with tight feedback loops with this feature.
+
+So in summary, anything you can do on the web today is already solid. Solid the spec just offers more festures, more decentralization and more P2P (as the web was designed to be). App developers dont need to do anything different to what they do today using HTML, HTTP and AJAX. But if you are a fan of decenralization you can start propagating that pattern to clients and servers all through the web, and we'll see the web transformed from the solid / centralized system it is today, to to a hybrid where both decentralization and centralization offer choices for a large user base.
+
+
+ 
+Any system that is NOT backwards compatible with the existing web has to rely on organic growth. This is going to be in almost all cases an insurmountable hurdle. Take a very successful "P2P" system such as bitcoin. It has about 10 million users and is not really backwards compatible with the web (it could become moreso tho). And that's taken 7 years. So any other system apart from a giant like bittorrent is going to really struggle with organic growth. Compare that to zynga's cityville, which is one game on one website, and got 100 million users in one month after launch. We should quickly establish that organic growth is a low impact strategy. A high impact strategy is to "redecentralize" the web. Now of the technologies out there doing this Solid is really imho the leading light. As one person on the team said, "nothing else is anywhere close", and Id agree with that. And what you'd expect from Tim Berners-Lee who has already done it twice before, and knows how this goes. Its still under a year old but the great hope IMHO. We just need a few more programmers to start to get behind decentralization, pick a stack with an ipmact, and get us to the point where it starts to snowball. Tim uses the analogy of the bobsled. In the beginning you start to push, but after a while you jump in and it starts to push you. We're at that point where we can almost jump in, but 1-2 more people helping or evangelizing would speed things up alot!"
+(fb, March 2016)
+
+==[[Social Linked Data]] as Decentralized Infrastructure==
+
+By Chelsea​ ​Barabas, Neha​ ​Narula and Ethan​ ​Zuckerman:
+
+"Solid (short for Social Linked Data) is a new project that attempts to extend ideas
+around open standards to create a platform for building decentralized social applications
+with linked data. At the heart of this work is an effort to develop a foundation for using 112
+shared data schemas, in order to support multiple applications built on the same data.
+This project is led by Tim Berners Lee, as a collaboration with members of the World
+Wide Web Consortium and his research group based at the MIT Computer Science and
+Artificial Intelligence Lab. The goal of Solid is to support a high degree of interoperability
+between applications, as well as to enable greater portability of data between servers.
+
+The Solid team aims to do this by developing a standard API that makes it easy for
+developers to write applications that allow users to use the same data in different
+applications instead of leaving it locked inside different application data repositories.
+This project combines aspects of both Blockstack (decentralized identity
+management and authentication) and IPFS (decentralized data storage) , while also
+working hard to develop the “glue” that ties these pieces together through shared
+standards for access control and a standardized data schema. Ultimately, the goal of
+this project is to render platforms like Facebook and Twitter as merely “front-end”
+services that present a user’s data, rather than silos for millions of people’s personal
+data. To this end, Solid aims to support users in controlling their own personal online
+datastore, or “pod,” where their personal information resides. Applications would
+generally run on the client-side (browser or mobile phone) and access data in pods via
+APIs based on HTTP.
+
+The data stored within pods are structured according to the Resource Description
+Framework (RDF), an open and extensible data format which is a simple knowledge
+representation language that links different data schemas together. Today, URLs don’t
+include much information about the types of resources to which they are linking. RDF
+extends URL linking on the web to include a third element, the relationship between the
+two resources being linked, and supports the evolution of data schemas over time.116
+For example, a developer might create a simple calendar application which records
+events at certain times. Later, she might want to add a feature to include a location for
+events, effectively extending the data schema, and linking events to a new resource
+location. Other applications (i.e. a social app that delivers notifications when your
+friends are in the same neighborhood as you) could then operate on this same
+time/location data. RDF was designed to produce a machine-readable web of
+knowledge for data portability. Social standards like FOAF (Friend of a Friend) grew out
+of RDF.
+
+Ideally, RDF would serve as a neutral, flexible, extensible schema that lets
+disparate applications work together on the same data. This would make it possible for
+Solid pods to be application agnostic, enabling the development of a variety of
+applications without the need to modify the underlying server. Pods can offer optional
+support for SPARQL, a language used to provide more complex data retrieval queries,
+including queries that require following links between different applications or servers.
+
+For example, applications that require more sophisticated querying, like finding status
+updates amongst a user’s friends-of-friends, would create a SPARQL request to query
+all the different users’ pods. SPARQL is critical for supporting rich, dynamic
+applications. Most of the data in the example applications the Solid developers have
+created is stored using various existing standards, like vCards for user contacts.118
+Solid’s success hinges on whether or not developers pick up these tools and
+write their applications to leverage the Solid specification. The Solid team has worked
+hard to provide libraries, different pod server implementations, and example
+applications to support easy development on their platform. Their hope is that they
+can accelerate adoption by continuously growing the set of libraries and components
+that work in the Solid ecosystem. If this happens, it could create a virtuous cycle, in
+which developers opt for Solid’s open frameworks, which in turn promotes more pod
+implementations and increased user awareness. Like the World Wide web, Solid might
+succeed where other systems have failed because it is non-proprietary, meaning that
+anyone could implement its protocols without paying fees.
+
+However, it is uncertain whether or not developers will adopt these new
+standards. On the one hand, the web and its underlying protocols have been
+extraordinarily successful. The W3C, the standards body responsible for developing and
+supporting these protocols, has been instrumental in coordinating companies and
+browser vendors to implement new standards. On the other hand, this process is
+laborious and sometimes riddled with conflict. The W3C has not seen widespread
+adoption of its more sophisticated standards and protocols, particularly around the
+Semantic web, Tim Berners Lee’s vision for a web where data is structured and tagged
+in a machine-readable way. The reasons for this are complex -- sometimes, there isn’t
+broad consensus about standards, and things die in committee. Other times, standards
+turn out not to be as useful as their creators thought and they don’t get adopted broadly."
+(http://dci.mit.edu/assets/papers/decentralized_web.pdf)
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Standards]]
+
+[[Category:Open Data]]

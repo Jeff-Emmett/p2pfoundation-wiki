@@ -1,0 +1,75 @@
+
+
+Status report by Evan Prodromou in November 2008
+
+=Description=
+
+Evan Prodromou:
+
+"In this article, I’m going to attempt to cover social networking sites like MySpace, FaceBook, Friendster, Hi5, Bebo, Tribe.net, and Orkut as well as special-purpose networks like LinkedIn. It’s hard to provide a focused definition of this kind of site, but prinicipally users can create a profile page in the service, and then declare that other users are their “friends” and link from their profile page. Some allow “group” pages for affinity groups, sharing music, images, videos and other media, or even custom applications that tap into the social network data.
+
+The format has been wildly successful and many other types of Web applications, like microblogs, social bookmarking, and photo-sharing, provide similar social-networking paradigm and functionality. There’s a fine line between this kind of site and a social aggregator like FriendFeed or SocialThing. Probably the main difference is that social aggregators pull together functionality from around the Web, while social networking sites tend to provide this kind of functionality within the site.
+
+The news in this space is good and bad. Good, because there are a lot of Free and Open Source applications in the area, and also good because most of these work in a distributed model. Bad, though, because there are few or no existing well-known sites that provide social networking services to the public with Free Software (compare Reddit in the social news space). The worst news? Social networking sites like Facebook are some of the most egregious walled gardens on the Internet today — yet they remain incredibly popular."
+(http://autonomo.us/2008/11/social-networking/)
+
+=Examples=
+
+
+"These are some of the more promising Free Software packages that provide social networking services. 
+
+Elgg is pulling away as the leader in this area and is rapidly becoming the poster child for Free and Open Source social networking software. I’ve played around a bit with the version at community.elgg.org and it’s definitely a nice piece of software. The developers have put a lot of work into supporting distributed protocols like OpenID, OpenSocial and Open Data Definition, to their credit. The main downsides? First, there’s not a well-known flagship service for general public use — a head-on competitor to Facebook or MySpace. Second, although the data portability is impressive, it would still be nice to have cross-site sociality — so if your profile is on site A and I’m on site B, we can still be “friends” and interact. Finally, there doesn’t seem to be much emphasis in the code for Free and Open Content licenses; I don’t know if it’s possible to mark up pages for Creative Commons licenses, allow users to choose licenses for their data, and require license agreement at signup. I think these can come, though. 
+
+DiSo is a project we’ve discussed on this blog before (see my Interview with Steve Ivy of the Diso Project). DiSo is built on top of the ubiquitous WordPress blogging software, with special extensions to support semantically-rich links to other people’s blogs. The goal is to create a social network of independent sites — one site per person. I think this is a strong contender, and the emphasis on distribution is laudable; using WordPress gives the opportunity to leverage that platform’s wide array of data-licensing tools, media-sharing, and other cool features. But the software remains pretty new. The ease-of-use is nowhere near competitive with proprietary sites like Facebook. I think DiSo still has a long way to go. 
+
+AroundMe is another interesting, distributed product, using PHP and MySQL. It used to be aimed at a one-site-per-user model, but has recently moved to a group-collaboration model: one site per group. Each group has a collaboration site, group blog, and wiki; users join the group using OpenID (using, for example, the related Prairie software). I think this is an awesome way to push typical group dynamics into a distributed model, and it uses the increasingly popular OpenID network to achieve that. The downside? Very little of the sociality propagates back to people’s identity server. If I look at your OpenID page, for example, I can’t see the AroundMe groups you’re part of or the people you consider “friends”. I think this model, although promising, needs to push more sociality back into the identity page. 
+
+NoseRub is a package similar to AroundMe but with more of a global network model. It seems to be doing a better job at “profile aggregation” — tying together people’s profiles from elsewhere on the Web — rather than centralizing in itself. The downside of that, though, is that people are still using non-free services for photo-sharing, video-posting, etc. Probably the most exciting thing about NoseRub is its distributed sociality model — it does a very good job of synchronizing data between sites. There are also a few sites with medium-high profile, like identoo.com, that are providing the software as a service to the public. 
+
+HelloWorld (de) is a new project that autonomo.us reader Matthias Weiler recently notified us about. I haven’t got the German language skills to decrypt the site, so I’m not 100% sure there’s even software to check out, yet. I think this will be one to watch. 
+
+I’ve only just poked at it a bit, but the CC Network looks promising, and the software is available under the AGPLv3. 
+
+The Mugshot Project, part of/related to the Gnome Open Desktop initiative, is an attempt to make something like a social aggregator. I think it’s a step in the right direction, but the functionality hasn’t been built out very well, and the project seems to be moribund (no posts on the blog in 2008, for example). This may not be cause for alarm; Gnome projects are renowned for going dormant for years on end and eventually re-emerging with incredible strength. 
+
+Many general-purpose community/CMS software packages, such as TikiWiki, Drupal, or Joomla!, have social-networking tools or plugins. To be honest, their social networking tools leave a lot to be desired, and with the exception of Drupal’s well-intentioned but poor efforts in cross-site login, there’s little or no cross-site sociality. The penetration of these kinds of community software packages is incredible, and activating them as a distributed social network would be a huge step forward for this effort."
+(http://autonomo.us/2008/11/social-networking/)
+
+=Discussion=
+
+==The problematic protocols==
+
+"The outlook on the protocol level isn’t particularly heartening. The philosopher’s stone for social networking on the Web will be a standard for distributed sociality: defining “friend” relationships between people and groups with identities on different servers. With the exception of NoseRub, there’s not been much advancement in the area. However, some of the pieces are coming together, and I’d like to mention them here. 
+
+The aforementioned Open Data Definition standard is intended to allow users to transfer their identities from one server to another. (This has been a goal for the Data Portability project, which seems to be getting more attention.) Currently, it’s only supported by Elgg; I’d like to get it built into Laconi.ca, too, if only for solidarity’s sake. 
+
+OpenSocial is a project led by Google. It’s an interesting development, but ultimately it’s about providing a platform for widgets that fit into existing (mostly proprietary) social networking services. It does not, for example, allow users of one OpenSocial container site to be social with friends on another container site. I think ultimately social networking software like Elgg will do well to implement this protocol to encourage development and deployment of widgets, but I think it’s insufficient for building a Web-wide social network. 
+
+Although it’s not normally considered a social networking protocol, OpenID holds a lot of promise in this area. The protocol allows people to associate their identity with a single URL and then use that identity to interact with other people, groups, and data objects on the rest of the Web. To a large part, that’s mostly what a distributed social network is about. What’s missing? Group and social data doesn’t back-propagate to the OpenID provider sites; my identity URL on for example certifi.ca doesn’t have a full-featured profile, links to groups I belong to, or links to the profile pages of my friends. There are some protocols for back-propagating data in the OpenID world, but no one has applied them to the social networking space. A great opportunity, though! 
+
+XMPP is also an interesting part of this space. It’s distributed, it’s got lots of Open Source implementations, it’s got a strong concept of universal identity and it’s got a refined model for social connections. I think there’s a lot to watch here, and the xmpp social mailing list is an important place to monitor."
+(http://autonomo.us/2008/11/social-networking/)
+
+
+==What Needs to be Done?==
+
+"Clearly, we’re reaching a cusp for Free Network Services for social networking. First and foremost, we need some flagship sites with high visibility and traffic. I think public services here are crucial to mass adoption; it’s simply infeasible for inexperienced Facebook or MySpace users to install and manage their own software instances.
+
+A smart business person who wants to break into this crowded market could use the Free Network Service model as a strong differentiator and attract a sophisticated and influential crowd of early adopters to such a site. Using Elgg as an initial platform and applying serious development resources to it would probably give a big leg up. Alternately, non-profit groups may want to provide this kind of service, too.
+
+More important, I think, is going to be the development of a featureful social-networking protocol that the developers of Elgg and other social networking software can implement. I think that such a protocol should definitely include OpenID as an enabling technology for user identity and as the base URL for profile pages; attribute exchange might be a good data platform to start with.
+
+The great part about a good open protocol here is that it can be implemented in software that’s not specifically about social networking. Free and Open Source photo-sharing, video-sharing, microblogging, and social bookmarking software could implement the protocol and tie themselves into a Web-wide social net. Additionally, community CMSes like Drupal and blog software like WordPress could implement the protocol and expand the open network even farther.
+
+There are a lot of challenges. A lot of the advocacy around opening up social networks has been around petitioning existing networks like MySpace or Facebook to open up to the wider world. This has been almost entirely unsuccessful; there’s a strong incentive for these companies — especially the more successful ones — to keep their customer base captive. Social networks are extremely sticky sites; abandoning one means leaving behind all the friends you have there. Finally, thought leaders on the Web have a strong incentive to maintain their presence on existing social networks; they already have influence there. Taking a principled stand is hard. (Let me note that I personally still have a Facebook account and probably will for some time.)
+
+But I believe this is a fight worth fighting. (Some of my colleagues at autonomo.us will probably disagree; hackers are typically pretty sniffy about popular sites and software, and social networking is no exception.) Today’s social Web is one with too many walls, too much manipulation, and too much lock-in. We need to make the social Web look more like the document Web — open, distributed, and interconnected."
+(http://autonomo.us/2008/11/social-networking/)
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:Relational]]
+
+[[Category:Open]]

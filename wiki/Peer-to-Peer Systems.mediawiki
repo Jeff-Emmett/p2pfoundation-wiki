@@ -1,0 +1,98 @@
+ 
+'''* Article: Peer-to-Peer Systems. By Rodrigo Rodrigues, Peter Druschel. Communications of the ACM, Vol. 53 No. 10, Pages 72-82''' 
+
+URL = http://cacm.acm.org/magazines/2010/10/99498-peer-to-peer-systems/fulltext
+
+
+Within a decade, P2P has proven to be a technology that enables innovative new services and is used by millions of people every day.
+
+
+=History=
+
+"While P2P systems are a recent invention, technical predecessors of P2P systems have existed for a long time. Early examples include the NNTP and SMTP news and mail distribution systems, and the Internet routing system. Like P2P systems, these are mostly decentralized systems that rely on resource contributions from their participants. However, the peers in these systems are organizations and the protocols are not self-organizing.
+
+While the earliest and most visible P2P systems were mainly file-sharing applications, current uses of P2P technology are much more diverse and include the distribution of data, software, media content, as well as Internet telephony and scientific computing. Moreover, an increasing number of commercial services and products rely on P2P technology."
+(http://cacm.acm.org/magazines/2010/10/99498-peer-to-peer-systems/fulltext)
+
+
+
+=Characteristics=
+
+"For the purposes of this article, a P2P system is a distributed system with the following properties:
+
+'''High degree of decentralization'''. The peers implement both client and server functionality and most of the system's state and tasks are dynamically allocated among the peers. There are few if any dedicated nodes with centralized state. As a result, the bulk of the computation, bandwidth, and storage needed to operate the system are contributed by participating nodes.
+
+'''Self-organization'''. Once a node is introduced into the system (typically by providing it with the IP address of a participating node and any necessary key material), little or no manual configuration is needed to maintain the system.
+
+'''Multiple administrative domains'''. The participating nodes are not owned and controlled by a single organization. In general, each node is owned and operated by an independent individual who voluntarily joins the system.
+
+
+
+P2P systems have several distinctive characteristics that make them interesting:
+
+'''Low barrier to deployment'''. Because P2P systems require little or no dedicated infrastructure, the upfront investment needed to deploy a P2P service tends to be low when compared to client-server systems.
+
+'''Organic growth'''. Because the resources are contributed by participating nodes, a P2P system can grow almost arbitrarily without requiring a "fork-lift upgrade" of existing infrastructure, for example, the replacement of a server with more powerful hardware.
+
+'''Resilience to faults and attacks'''. P2P systems tend to be resilient to faults because there are few if any nodes that are critical to the system's operation. To attack or shut down a P2P system, an attacker must target a large proportion of the nodes simultaneously.
+
+'''Abundance and diversity of resources'''. Popular P2P systems have an abundance of resources that few organizations would be able to afford individually. The resources tend to be diverse in terms of their hardware and software architecture, network attachment, power supply, geographic location and jurisdiction. This diversity reduces their vulnerability to correlated failure, attack, and even censorship."
+(http://cacm.acm.org/magazines/2010/10/99498-peer-to-peer-systems/fulltext)
+
+
+
+=Applications=
+
+"Here, we discuss some of the most successful P2P systems and also mention promising P2P systems that have not yet received as much attention.
+
+'''Sharing and distributing files'''. Presently, the most popular P2P applications are file sharing (for example, eDonkey) and bulk data distribution (for example, BitTorrent).
+
+'''Streaming media'''. An increasingly popular P2P application is streaming media distribution and IPTV (delivering digital television service over the Internet). As in file sharing, the idea is to leverage the bandwidth of participating clients to avoid the bandwidth costs of server-based solutions.
+
+'''Telephony'''. Another major use of P2P technology on the Internet is for making audio and video calls, popularized by the Skype application. Skype exploits the resources of participating nodes to provide seamless audiovisual connectivity to its users, regardless of their current location or type of Internet connection. Peers assist those without publicly routable IP addresses to establish connections, thus working around connectivity problems due to firewalls and network address translation, without requiring a centralized infrastructure that handles and forwards calls. Skype reported 520 million registered users at the end of 2009.
+
+'''Volunteer computing'''. A fourth important P2P application is volunteer computing. In these systems, users donate their spare CPU cycles to scientific computations, usually in fields such as astrophysics, biology, or climatology. The first system of this type was SETI@home. Volunteers install a screen saver that runs the P2P application when the user is not active. This application downloads blocks containing observational data collected at the Arecibo radio telescope from the SETI@home server. Then the application analyzes this data, searching for possible radio transmissions, and sends the results back to the server.
+
+'''Other applications'''. Other types of P2P applications have seen significant use, at least temporarily, but have not reached the same levels of adoption as the systems we describe here. Among them are applications that leverage peer-contributed disk space to provide distributed storage. Freenet aims to combine distributed storage with content distribution, censorship resistance, and anonymity. It is still active, but the properties of the system make it difficult to estimate its actual use. MojoNation was a subsequent project for building a reliable P2P storage system, but it was shut down after proving unable to ensure the availability of data due to unstable membership and other problems."
+(http://cacm.acm.org/magazines/2010/10/99498-peer-to-peer-systems/fulltext)
+
+
+
+=How Do P2P Systems Work?=
+
+"Here, we sketch some of the most important techniques that make P2P systems work. 
+
+'''Degree of centralization'''. We can broadly categorize the architecture of P2P systems according to the presence or absence of centralized components in the system design.
+
+'''Overlay maintenance'''. P2P systems maintain an overlay network, which can be thought of as a directed graph G = (N,E), where N is the set of participating computers and E is a set of overlay links. ... We distinguish between systems that maintain an unstructured or a structured overlay network.
+
+'''Distributed state'''. Most P2P systems maintain some application-specific distributed state. Without loss of generality, we consider that state as a collection of objects with unique keys. Maintaining this collection of state objects in a distributed manner, that is, providing mechanisms for object placement and locating objects, are key tasks in such systems.
+
+'''Distributed coordination'''. Frequently, a group of nodes in a P2P application must coordinate their actions without centralized control. For instance, the set of nodes that replicate a particular object must inform each other of updates to the object. In another example, a node that is interested in receiving a particular streaming content channel may wish to find, among the nodes that currently receive that channel, one that is nearby and has available upstream network bandwidth. We will look at two distinct approaches to this problem: epidemic techniques where information spreads virally through the system, and tree-based techniques where distribution trees are formed to spread the information."
+(http://cacm.acm.org/magazines/2010/10/99498-peer-to-peer-systems/fulltext)
+
+
+
+
+=Challenges=
+
+"Much of the promise of P2P systems stems from their independence of dedicated infrastructure and centralized control. However, these very properties also expose P2P systems to some unique challenges not faced by other types of distributed systems. Moreover, given the popularity of P2P systems, they become natural targets for misuse or attack. Here, we give an overview of challenges and attacks that P2P systems may face, and corresponding defense techniques. As you will see, some of the issues have been addressed to varying degrees, and others remain open questions.
+
+'''Controlling membership'''. Most P2P systems have open or loosely controlled membership. This lack of strong user identities allows an attacker to populate a P2P system with nodes under his control, by creating many distinct identities.
+
+'''Protecting data'''. Another aspect of P2P system robustness is the availability, durability, integrity, and authenticity of the data stored in the system or downloaded by a peer. Different types of P2P systems have devised different mechanisms to address these problems.
+
+'''Incentives'''. Participants in a P2P system are expected to contribute resources for the common good of all peers. However, users don't necessarily have an incentive to contribute if they can access the service for free. Such users, called free riders, may wish to save their own disk space, bandwidth, and compute cycles, or they may prefer not to contribute any content in a file-sharing system.
+
+'''Managing P2P systems'''. Whether P2P systems are easier to manage than other distributed systems is an open question. On the one hand, P2P systems adapt to a wide range of conditions with respect to workload and resource availability, they automatically recover from most node failures, and participating users look after their hardware independently. As a result, the burden associated with the day-to-day operation of P2P systems appears to be low compared to server-based solutions, as evidenced by the fact that graduate students have been able to deploy and manage P2P systems that attract millions of users.16 On the other hand, there is evidence that P2P systems can experience widespread disruptions that are difficult to manage."
+(http://cacm.acm.org/magazines/2010/10/99498-peer-to-peer-systems/fulltext)
+
+
+
+[[Category:Articles]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

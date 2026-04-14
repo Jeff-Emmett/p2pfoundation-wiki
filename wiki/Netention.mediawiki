@@ -1,0 +1,106 @@
+
+
+==Description==
+'Netention collects a community of peoples' stories, and interlinks them with automatically discovered opportunities that are mutually inter-satisfying - essentially suggesting to its participants how they could realize the desired futures they have described.
+
+Netention is a tool for describing one's current life situation (“is”), and potential future situations (“will be”)  – as linked data objects. A semantic description of a human life can be considered to consist of a set of declarations representing aspects about which one is concerned or interested.  Link the current and desired states of real and imaginary concepts - including people, environments, objects, processes, knowledge, or time.
+
+Netention realizes one’s goals based on their desires and translates them into tangible outcomes in one’s own network.
+
+Netention aims to solve, in general, all resource management and planning issues that occur among communities of participants.  A complete system could conceivably eliminate the balkanization of various separate online services that presently serve relatively narrow subsets of the more general problem.
+
+The term Netention is a portmanteau of the words Network, and Attention or Intention.  It refers to a community's collective abilities.
+
+Don't "search" - describe what you want. Edit it at any time to adjust or improve the description.
+
+Netention works at the basic thought level, to elicit descriptions of "something" that you're thinking about.  Whether it describes a dream (something that you would like to happen), an object, or hypothetical object - it can be fully described and re-described.  
+
+A hypothetical (desired) object can become an actual object, or an abstract concept can become an actual future event, etc.  Fluid and flexible.  The system can then connect your descriptions to others - these are analogous to hyperlinks.  Links are useful because they suggest ways to achieve the implied desired state of something - whether you want to sell something, whether you want to participate in something, whether you want others to participate in something, whether you want someone to donate something to you for free, etc...  
+
+Netention is a system for describing objects, thoughts, places, concepts, times, etc... Create descriptions of reality that consist of data about the state in which something presently “is”, AND statements about your desired or anticipated state in which it “will be” - how you would like it to become - usually involving ranges of acceptable indeterminate values.
+
+Using these two kinds of statements, the system can link any set of objects according to a presence of mutually satisfying statements, like a lock-and-key, or receptor site on a cell.  It can then suggest links (representing possibilities such as transactions or assignments), ranked according to the strength of their correlation.
+
+A general-purpose semantic-network computer system simulates “described experience” and discovers “possible experiences” to function as a tool for analyzing and optimizing certain qualities of one's existence.
+
+A semantic concept represents each agent (ex: a human) participating in interaction processes that constitute awareness of and potential to operate upon arbitrary subsets of simulation content. Choice and configuration of interaction modalities may be customized according to a particular situation or adjusted to compensate for sensory, kinesthetic, or cognitive disabilities.
+
+'''A Network is a community-managed web service to which clients connect.  Servers communicate with other servers in a P2P network'''."
+
+==Features==
+Open-Source Decentralized Personal Semantic Web Database Communicator - providing a white-label, generic, and free synthesis of:
+
+    * Classified Ads similar to sites such as Craigslist, Oodle.com, and Google Base
+    * Event Scheduling 
+    * Social Networking similar to sites such as Facebook and MySpace
+    * News Discovery combining global and local (ex: friend feeds) news sources
+    * plus any other "describable" domains"
+
+==External Links==
+* [https://github.com/automenta/netjs Source Code]
+* [[Automenta]]
+
+==Update 2015==
+
+By Seth :
+
+here's a few projects which could be considered pieces of a larger puzzle if completed and integrated
+
+Netention - various prototypes of this exist but a good starting point might be the README on jim's fork here: https://github.com/rezn8d/netentionjs2  i see a lot in common with AIKIF not so much at a user interface or even data model but in terms of goals for practical functionality
+
+ClimateViewer - https://github.com/rezn8d/climateviewer essentially a geospatial event viewer, being adapted as a component for next version of netention and other projects
+
+SpimeDB - spatiotemporal semantic database server with p2p replication https://github.com/automenta/spimedb
+
+OpenNARS - general purpose reasoning engine https://github.com/opennars/opennars
+
+i'm mostly working in java and a little javascript/typescript wherever i cant avoid it. i tend to avoid python though i have used it in the past a bit. btw jython is python as a JVM languag.  so is javascript among others, and they all have good bidirectional interoperability with java code.
+
+none of the above projects are really at a production stage yet except for jim's ClimateViewer which is running at http://climateviewer.net
+
+==Eric Hunting's description==
+
+If I may take a stab at describing this, Netention has been a project deriving from Semantic Web/Desktop development. It's an attempt to create a platform for Social-Semantic Networking. The Semantic Web is a way of making on-line information auto-associate using the addition of metadata making it more intelligible to machine intelligence. And so you cultivate a kind of machine knowledge--an ability for computers to understand what on-line information means as opposed to just being able to match keywords and such. To 'read' and not just 'parse'. Many computer scientists, including Tim Berners Lee, believe it to be the future of the World Wide Web, but to date progress has been slow because most coders/developers don't quite understand the concept and those who are working on it have their own new language for everything.
+
+The Semantic Desktop is a platform for interacting with the Semantic Web, allowing the creation of a personal information space with integral metadata--a desktop--that auto-associates, and thus auto-links to, information within it and across the larger internet. So instead of 'searching' for information using a 'search engine' of some sort and personally filtering through a lot of junk, the desktop knows how information relates and pre-links it so related information self-aggregates in your desktop space and you 'drill down' or 'spiral out' as needed to navigate.
+
+Seth's breakthrough idea was to apply this to social networking. To create a kind of Semantic Desktop that deals in social information so as to semi-anonymously find constructive/cooperative associations across large communities of people. And so users create an information space out of their own personal information, history, personal schedule, and the usual sort of personal blog of the conventional social network and the system looks for constructive associations across the whole user community. I like to call it an internet with a pronoia imperative--a secret digital conspiracy that's out to help you, and everyone else. Applications of Netention use this associative information to facilitate various social activities. It can manage Open Value Networks, crowdsourcing and crowdfunding, or automate contracting and other various economic exchanges. It can help people with common interests find each other and organize. It can help students find people who can provide knowledge and training. It can coordinate the 'swarmed' collectivization and use of dispersed resources, like the use of random spare cargo space in people's vehicles as an alternative form of parcel transit.
+
+I've recently been suggesting that Netention could evolve into a future Digital Tao as a means of automating the management of social credit/capital by being able to relate individual intention to the collective intention of society--offering a better alternative to numerical metrics and other kinds of digital currencies as a means to mediate resource distribution. We anticipate future systems of currency to become social credit systems. Social credit is a measure of merit--social capital--that can be exchanged for access to common resources. (above what might be a common Basic Income baseline) But abstracting this as a numerical metric, as is very often suggested in SciFi, oversimplifies and anonymizes it, makes it too fungible, leading to pathological or corrupt behavior and a tendency to game the system. Netention is like having a system of direct democracy that is polling everyone about everything all the time. If a machine can continuously crowdsource an understanding of merit and what society thinks is 'good' and then associatively relate that to the intent and history of individuals and the local groups they collaborate with, there's no need for an abstract metric or some form of bureaucracy. It can see where personal and societal intent converge or synchronize and 'weight' other associations accordingly. This can then be used to automate access to resources when paired to a resource and production network by associatively 'weighting' the flow in that network toward that individual and his activities, increasing on-demand availability. Thus I liken it to the 'Tao' of Taoist philosophy; a subtle intrinsic will or current in nature that, if you align yourself to it, empowers and facilitates your actions.
+
+You can get why Seth drifts back and forth between this and artificial intelligence because AI and the Semantic Web are complimentary. My guess is that he's thinking about the discrete agents making up semantic applications and the Society of Mind (after Marvin Minsky) the Semantic Web may develop into.
+
+==More Information==
+* Wider context: [[Compilation of Materials on Platform Cooperativism]]
+
+Various Prototypes :
+
+* [https://github.com/automenta/netjs Netention Code]
+* [https://github.com/automenta/netentionj Netention Code 2014]
+
+and forked from automenta
+
+* [https://github.com/dantegabryell/spimedb SpimeDB Code 2017]
+* [https://github.com/dantegabryell/narchy Narchy AI 2018]
+
+
+
+* [https://www.slideshare.net/helenefinidori/introduction-to-netention Slides]
+
+* Related Article from [[Eric Hunting]] : [http://blog.p2pfoundation.net/a-proposal-for-a-social-semantic-network-infrastructure-by-eric-hunting/2015/12/28 A proposal for a social semantic network infrastructure]
+
+
+
+[[Category:Technology]]
+[[Category:Intelligence]]
+[[Category:Application_Layer]]
+[[Category:Commons_Abundance_Network]]
+[[Category:Free_Software]]
+[[Category:Gaming]]
+[[Category:Health]]
+[[Category:Peergovernance]]
+[[Category:Research]]
+[[Category:Sharing]]
+[[Category:Software]]
+[[Category:Technology]]
+[[Category:Mutual Coordination]]

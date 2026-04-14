@@ -1,0 +1,57 @@
+'''* The [https://murmurations.network/ Murmurations Protocol] is an open source data sharing project which makes distributed data interoperable across platforms and networks.'''
+
+== Description ==
+
+=== What’s the point of Murmurations? ===
+
+The ultimate aim of Murmurations is to accelerate the use of interoperable, composable data by creating an open data commons which anyone can contribute to and build on.
+
+By putting end users in charge of their own data and enabling anyone to share data about their Organisation/s, People, Offers and Wants and other kinds of data, Murmurations solves the problems of closed, siloed data and increases the reliability, integrity, and portability of open data.
+
+=== How does Murmurations work? ===
+
+See the video at https://vimeo.com/799887727
+
+The Murmurations protocol combines three key elements.
+
+# '''Profiles''' - A Murmurations profile is a .json file which describes a ‘node’ on the Murmurations network. Anyone can make a profile to describe a person, a project, an organisation, or any other entity. Profiles are hosted anywhere online and their URLs are submitted to the Murmurations Index.
+# '''The Index''' - The Murmurations Index keeps a record of all the profile URLs and timestamps of when they were last updated. When you update a profile you can resubmit its URL to update the index. The Index is accessible to aggregators via an open API.
+# '''Aggregators''' - Aggregators query the index regularly for profile changes, enabling them to provide accurate and timely information in maps, directories and content aggregators, using the Murmurations WordPress aggregator plugin, or their own custom code.
+
+=== How does Murmurations handle different ontologies? ===
+
+Data sharing is often hard to achieve because every site has its own [https://en.wikipedia.org/wiki/Ontology_(information_science) ontology] or vocabulary and even minor differences in ontology make data seemingly incompatible.
+
+Instead of trying to enforce any particular ontology, Murmurations applies the principles of composability to enable data holders to share data using existing ontologies, or to build on other’s work, to liberate the potential of open data sharing across platforms and networks.
+
+The flexible approach to ontology is built around an open-source [https://github.com/MurmurationsNetwork/MurmurationsLibrary/tree/main/fields field library], to which anyone can [https://docs.murmurations.network/about/contributing.html contribute] new fields. These fields are assembled into [https://docs.murmurations.network/about/common-terms.html#schema schemas], which anyone can use, or build on, to create new schemas. Whenever fields are re-used, data which is shared using these fields becomes interoperable, increasing the total value of the data in the network – and the ability for deeper integration and [https://dazuck.substack.com/p/data-composability-what-it-is-why advanced uses of the data].
+
+=== How can I publish a Murmurations Profile? ===
+
+There are currently 3 ways to create and host a Murmurations profile:
+
+# '''Via Wordpress''' - The WordPress Profile Plugin makes it simple to create profiles for people, organisations, groups, projects and offers/wants via your WordPress site.
+# '''The Murmurations Profile Generator (MPG)''' can be used to generate profiles and can host them too if you are not able to upload a file anywhere else on the internet. MPG posts profiles to MPG's database and the IPFS network.
+# '''Hosted on your server''' - Use this method for greater data 'authority' if you are able to upload a file to your own server.
+
+See the Docs for [https://docs.murmurations.network/guides/create-a-profile.html#create-a-murmurations-profile full details about creating Profiles].
+
+=== How can I use Murmurations to create maps and directories? ===
+
+Murmurations provides a simple way to build customised maps and directories, with the added advantage that you can draw from, and add to, a large body of collaborative mapping data, so you don’t need to start from scratch and your mapping efforts will contribute to a growing body of open, interoperable data.
+
+You can create quick and easy [https://docs.murmurations.network/guides/map.html#option-1-create-an-embedded-map maps to embed on your own site] using iframes.
+
+Or you can use the [https://docs.murmurations.network/developers/wp-aggregator.html Wordpress Collaborative Map Builder Plugin] to create multiple maps and directories from inside your Wordpress admin interface.
+
+Or you can create your own custom maps by querying the [https://docs.murmurations.network/developers/index-api.html Murmurations API] directly and aggregating the data yourself.
+
+== More Information ==
+
+* Latest news and announcements about Murmurations are published on [https://murmurations.network/blog/ the blog] 
+* The [https://docs.murmurations.network/ Docs] provide more detailed instructions 
+* You can ask for help in the [https://t.me/joinchat/JvotB0kuxrjFgvYszbNvZw Murmurations Telegram channel].
+
+[[Category:Mutual_Coordination]]
+[[Category:Network_Theory]]
+[[Category:Open_Data]]

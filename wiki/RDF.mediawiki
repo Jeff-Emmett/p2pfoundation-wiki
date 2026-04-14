@@ -1,0 +1,18 @@
+La RDF (Ressource Description Framework) est la structure de base du [[Web sémantique]]. Il s'agit d'un modèle de données reposant sur la notion de "triplet". Un sujet, un objet, un prédicat, ce dernier définissant entre les deux premiers. Cela peut être comparé à la structure verbale sujet-verbe-complément (ou attribut). "Pierre a une voiture" peut ainsi être réduit à un triplet : "Pierre" le sujet, "a" le prédicat, "une voiture" l'objet. 
+La RDF n'est pas un langage. Elle peut s'exprimer de plusieurs manières. La plus connue est RDF/XML, mais il existe d'autres langages, comme par exemple n3, moins complexe mais moins compatible avec les technologies existantes.
+
+Chaque triplet est donc constitué de trois ressources, désignées par des URI (Universal Ressources Identifiers). Il s'agit de leur adresse sur le Net. Dans la plupart des cas, les "URI" ne désignent rien d'autre que des URL, de bonnes vieilles adresses Web. Prenons par exemple :
+le chat mange la souris". Nous avons bien un triplet. "chat" est le sujet, "mange" le prédicat et "la souris" l'objet. En RDF/XML, on peut l'exprimer de la manière suivante :
+
+       <rdf:Description rdf:about="http://animals.org#chat">
+      < mange>
+          <rdf:Description rdf:about="http://animals.org#souris" />
+      </ mange>
+    </rdf:Description>
+
+
+
+RDF tout comme XML, est un metalangage. Autrement dit, rien dans les spécifications ne précise les "mots clés" qui devront être utilisé dans la description des données. Dans notre exemple, la balise "mange" est une invention. Cependant, pour que les "agents intelligents" et autres "searchbots" se montrent capables de comprendre les informations, il faut que ces termes appartiennent à des normes auxquelles se référer. Donc, tout comme XML possède différents DTD ou Schémas s'appliquant à des domaines variés, il existe plusieurs Schémas RDF tels le Dublin Core, utilisé par les bibliothécaires ou FOAF (Friend Of A Friend) servant à catégoriser les personnes. Le plus populaire est sans doute RSS, très utilisé dans le monde en expansion des "blogs". RSS signifie "RDF Site Summary". Cette norme peut servir à de multiples usages, mais elle se révèle surtout précieuse pour la publication de news. Un programme nommé l'"agrégateur RSS" pourra ainsi consulter simultanément plusieurs blogs, puis afficher les nouvelles les plus récentes en se reposant sur le "flux RSS" de chacun d'eux. Autrement dit, un tel logiciel sait synthétiser plusieurs blogs en une seule page, évitant d'avoir à visiter différents sites. RSS existe en plusieurs versions, la 1.0 seule pouvant être considérée comme un sous-ensemble de RDF/XML.
+
+[[Category:French]]
+[[Category:Définitions]]

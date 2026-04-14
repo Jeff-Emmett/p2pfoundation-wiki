@@ -1,0 +1,42 @@
+
+From Agroblogger at http://www.agroblogger.com/2007/10/18/open-source-at-whats-next/:
+
+'''Progress has been made''':
+
+the somewhat nebulous concept of Open Source AT is now becoming a reality. Just take a look at any one of the aforementioned online communities; they are vibrant and growing, and within the context of each community their exist subcommunities around a specific project or idea, like the Hexayurt. So yes, great progress has been made. 
+
+
+'''Problems remain''':
+
+But as we move forward, there are still a lot of questions to be answered, and more obstacles to be overcome.
+
+
+First, is the question of accessibility. It is true, the information is out there, but the online communities that contain the information make it somewhat more difficult to access than is ideal. The notion of having to filter through at least four different online sites looking for a specific solution is a daunting task, and becomes almost impractical for all but the most dedicated. Consider that the Honeybee Network has thousands of different innovations; to date, their user interface is not advanced enough to provide information with a couple of mouse clicks.
+
+
+Anybody with the the initiative to include their information on these websites would be somewhat deterred by the prospect of having to reproduce the information four, five, six...times to give it full coverage on all of the different existing communities. What is becoming evident, is that a wiki is a very blunt instrument indeed for the much more detailed process of collaborative technology development. Open Source software is leaps and bounds ahead of the OSAT community. Linus Torvalds no longer submits much code to the kernel; by his own admission most of his time is spent tracking submissions from the community, and coding a sophisticated tool he has developed to keep track of those contributions.
+
+
+Similar tools for the OSAT community are conspicuously lacking. To move forward, we cannot continue to believe that simple tools like wikis and community forums will be sufficient to get full leverage out of the technology development, validation, and deployment process. After all, we want these tools to be deployed in the field, as quickly as possible, and we want to create viable business models around the technologies in question. Why should we continue to drive screws with a hammer? To do this right, we need the right tools.
+
+
+'''Proposal for a way forward''':
+
+
+The first step is to take a page from the FOSS community, and make a call for the development of a software package that is specifically designed to design, document, and track technology development. What might such a tool look like? Before I attempt a description, I should note I'm not a software engineer. I do, however, have a great deal of experience as a Linux Sys Admin, so I have a general feel for how these types of systems work and how they are configured, though very little experience with actual software design and coding.
+
+
+Immediately, it occurs to me that such a system may require a backend and a frontend. The backend would be some kind of server-based database that keeps track of changes to the information, then serves up those changes to the community of users who are running the frontend GUI on their client machines. Also, the backend would serve data to a web interface where general users/browsers could access the information without any real need for getting into the meat and potatoes of development. The description is very similar to something like Joomla, Drupal, or Wordpress.
+
+
+In the case of a frontend running on the client machine, Wordpress provides a compelling example. The Qumana blog editor provides a nice analog for a front end OSAT development tool. Qumana interfaces with a number of blogging engines, including the GPL Wordpress CMS, and allows bloggers to edit and post blog and photo entries to a Wordpress blog through a very accessible and powerful GUI interface.
+
+
+Now, let's imagine for a moment a similar setup, specifically designed not for blogging, but for appropriate technology development. Through the frontend, users could manage a number of related products during the development process. Documentation could be written and updated on the fly, as the database is updated, changes would ripple through the community instantly. A photo manager would help users to categorize and tag photos. Business opportunities could be created in niche areas, much in the same way developers have taken advantage of the opportunities around SugarCRM. Programmers could write plugins for an ArcGIS bridge, or an AutoCAD bridge, tools that the whole community may not need, but certain types of people would surely benefit from. These plugins could allow a user to import all emails with a certain tag or subject line into the database, or could update changes made to a CAD file and immediately post them to the server backend. The frontend would allow for the management of licenses, contact information, and well...any other information that the community felt needed management and organization.
+
+
+Online communities like Instructables and Howtopedia may fall to the wayside when anybody with a LAMP server and an Internet connection can setup an entire OSAT development kit on their network. This doesn't mean that these groups wouldn't have a stake in the development of such a software package. I would imagine that their role would shift from central organizer to more of a tracking role, keeping tabs of changes in different projects and providing a searchable index of different information, much like the shift we have seen in the past 4 years from Kazaa to the Pirate Bay as the primary tool for file sharing. And, they could also provide an already configured backend for those people who don't have the bandwidth, the technical know-how, or the time (or any combination thereof) to setup their own LAMP server.
+
+ 
+It is not far-fetched to think that this tool does not need to be built from the ground up.  Perhaps an already existing CMS like Wordpress or Joomla could be forked, or a detailed Joomla component could be developed for this purpose.  All of these are possibilites that I put out there to the community to debate and consider."
+(http://www.agroblogger.com/2007/10/18/open-source-at-whats-next/)

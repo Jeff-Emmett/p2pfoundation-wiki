@@ -1,0 +1,17 @@
+
+
+'''Research project for a P2P-based search engine'''
+
+URL = http://www.mpi-sb.mpg.de/departments/d5/software/minerva/index.html
+
+
+=Description=
+
+"The peer-to-peer (P2P) approach, which has become popular in the context of file-sharing systems such as Gnutella or KaZaA, allows handling huge amounts of data in a distributed and self-organizing way. In such a system, all peers are equal and all of the functionality is shared among all peers so that there is no single point of failure and the load is evenly balanced across a large number of peers. These characteristics offer enormous potential benefits for search capabilities powerful in terms of scalability, efficiency, and resilience to failures and dynamics. Additionally, such a search engine can potentially benefit from the intellectual input (e.g., bookmarks, query logs, etc.) of a large user community. One of the key difficulties, however, is to efficiently select promising peers for a particular information need.
+
+Each peer is considered autonomous and has its own local search engine with a crawler and a corresponding local index. Peers share their local indexes (or specific fragments of local indexes) by posting meta-information into the P2P network. This meta-information contains compact statistics and quality-of-service information, and effectively forms a global directory. However, this directory is implemented in a completely decentralized and largely self-organizing manner. More specifically, we maintain it as a distributed hash table (DHT) using the (re-implemented and adapted) algorithms of the Chord system. Our per-peer engine uses the global directory to identify candidate peers that are most likely to provide good query results. A query posed by a user is forwarded to other peers for better result quality. The local results obtained from there are merged by the query initiator."
+
+
+[[Category:Resources]]
+
+[[Category:Technology]]

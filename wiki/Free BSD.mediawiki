@@ -1,0 +1,42 @@
+
+
+=Peer Governance Case Study=
+
+By George Dafermos, reported by Christian Siefkes:
+
+"The core team comprises 9 people which are elected by the committers and who, in turn, decide who gets commit rights. There are about 250 committers (who have the right to commit code to the code base) and about 5500 contributors (who have to filter their contributions through one of the committers). This confirms the 1-9-90 rule of thumb: less than 1% of participants steer the project (the core team), less than 10% contribute regularly (the committers), the rest contributes occasionally (the contributors). Officially, the core team also has the task to resolve conflicts, but there are very few conflicts, and usually the involved people resolve them by themselves.
+
+
+People become committers through a mentoring process: If you submit sufficiently many good patches, some committer will propose that you get commit rights; if the core team accepts her proposition, she will usually become your mentor, responding to your questions etc. and easying your transition to your new position (but you already have full commit rights). Usually new committers work about one year closely with their mentor, after that they are sufficiently initiated to know how things go.
+
+There are various teams caring for specific tasks: collecting donations, documentation, security, marketing, release engineering, port (application) management etc. People self-select for participation in some team and are accepted by the core team; of course, the core team doesn’t have any commanding power over them.
+
+The division of labor is emergent: not dictated by the top, but based on the self-selection of people. People start at the periphery of the project (reporting bugs, submitting small patches etc.); if they’re interested in the project, they will move closer and closer to the core.
+
+For the development process, their are guidelines (recommendations), but no strict rules. Usually developers test their code locally and ask the community for review; after feedback and test, it is submitted to the current (experimental) branch. After thorough evaluation, code from the experimental branch is merged into the stable branch; every 3 to 6 months, development of the stable branch is interrupted (only bug fixes are allowed)—a “code slush” or “code freeze” occurs. After fixing bugs and problems, a production release (meant for end users) is produced from the stable branch. The release engineering team are strict “dictators” supervising this process.
+
+I think it’s interesting that the one team which exercises strict, “dictatorial” power isn’t the core team, but the release engineering team, one of the several task-specific teams surrounding the core. Clearly, the quality of production releases is very important for the reputation and success of a project, so the decisions of the release team are generally respected even thought they aren’t formally at the “top of the hierarchy.”
+
+Generally, there are only guidelines, no strict “laws.” Over time, the guidelines have become more formalized, they are taken more seriously, but they are still only guidelines, and usually nothing bad will happen if you don’t follow them.
+
+Brooks’s law famously states that by adding more developers to a project, you will slow it down, since the communication overhead increases exponentially, while man power increases only linearly. That’s empirically false for FreeBSD, which is probably caused in part by the two-tier structure of the project and the modularity of the code base.
+
+In the discussions surrounding Oekonux, the question of monetary payments for peer production regularly pops up. In the case of the FreeBSD project, somewhat less than 50% of the contributors are directly or indirectly paid for their work, so more than 50% are unpaid volunteers.
+
+In the discussion, we talked about differences to other large projects. Many large projects have similar structures, for example, Debian. The Linux kernel project is quite different, is depends very strongly on a single person (Linus Torvalds), there are no elections, and the organizational boundaries of the project (who is allowed to do what) are much less clear. I suppose that dependency on a single core maintainer is typically a first-generation phenomenon for large projects. When the initial core maintainer and founder retires or withdraws from the project, (s)he will be replaced by a team or a person elected for a limited period of time. That’s how it happened at Debian and Wikipedia, at least.
+
+George thinks that there is no hierarchy of tasks—contributions of people writing documentation or testing code are valued as highly as those of code writers. Writing documentation is highly esteemed. Committers are expected to contribute code to different areas of the project (e.g. contributing to the kernel but also to apps) or to contribute in different ways (writing code and documentation, for example)—specialization on just a single area and task is rare."
+(http://www.keimform.de/2009/05/15/ox4-notes-iv-case-study/)
+
+
+=More Information=
+
+#[http://www.watson.org/~robert/freebsd/2006eurobsdcon/eurobsdcon2006-howfreebsdworks.pdf How Free BSD Works]
+#[http://www.freebsd.org/doc/en_US.ISO8859-1/articles/releng/article.html FreeBSD Release Engineering]: This paper describes the approach used by the FreeBSD release engineering team to make production quality releases of the FreeBSD Operating System.
+
+
+[[Category:Governance]]
+
+[[Category:Cases]]
+
+[[Category:Peergovernance]]

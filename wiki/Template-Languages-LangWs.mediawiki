@@ -1,0 +1,4 @@
+<includeonly>{{#ifexist: {{#if: {{{2|}}} | {{{2}}} | {{#if: {{NAMESPACE}} | {{NAMESPACE}}:}}{{BASEPAGENAME}}}}/{{{1}}} |&nbsp;&bull;&nbsp;<span lang="{{{1}}}">{{#if: {{{2|}}}|[[{{{2}}}/{{{1}}}|{{#language:{{{1}}}}}]]| [[:{{NAMESPACE}}:{{BASEPAGENAME}}/{{{1}}}|{{#language:{{{1}}}}}]]|}}</span>|&nbsp;&bull;&nbsp;<span class="links-red" style="font-style: italic;">[http://p2pfoundation.net/Special:FormEdit?form=WikiSprint20M-{{{1}}}&target={{urlencode:{{BASEPAGENAME}}/{{{1}}}}}&preload={{urlencode:{{PAGENAME}}}} {{#language:{{{1}}}}}]</span>}}</includeonly>
+<noinclude>
+Shows only the existing articles.
+</noinclude>

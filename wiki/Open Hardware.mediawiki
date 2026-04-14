@@ -1,0 +1,434 @@
+'''Open Hardware = Hardware that is the result of open designs, similar to open source code, and the result of collaborative work.'''
+
+Careful:
+
+#Open hardware and [[Open Source Hardware]] may also be seen to be a part of a thriving [[Open Design]] movement [http://en.wikipedia.org/wiki/Open_design].
+#Collaborative work refers to the [[Open Development]] process that is also seen as a characteristic of [[Open Source Software]].
+#Open Hardware is also used as a trademark of the Open Hardware Specification Program. It is a limited form of open source hardware.
+
+
+
+=Definition=
+
+Please note:
+
+"Is it "open hardware" or "open source hardware?" This distinction is still under discussion. The term open source corresponds directly to programmatic source code, which holds true for hardware designs described in languages like Verilog hardware description language (HDL), but not for designs that may be described only in computer-aided design (CAD) drawings."
+(http://www.ibm.com/developerworks/opensource/library/os-openhardware/index.html) 
+
+
+==Short Definitions==
+
+'''1.'''
+
+"Open Hardware is a thing - a physical artifact, either electrical or mechanical - whose design information is available to, and usable by, the public in a way that allows anyone to make, modify, distribute, and use that thing." 
+
+- The TAPR Open Hardware License [http://www.tapr.org/ohl.html]
+
+
+'''2.''' 
+
+"Open source hardware refers to computer and electronic hardware that is designed in the same fashion as free and open source software. Open source hardware is part of the open source culture that takes the open source ideas to fields other than software." 
+
+- Wikipedia [http://en.wikipedia.org/wiki/Open_source_hardware]
+
+'''3.'''
+
+By Janet Hope at http://rsss.anu.edu.au/~janeth/OSBiotech.html
+
+"Open source hardware" refers to computer hardware for which all the design information is made available to the general public. A "free" or "libre" hardware design is a design which can be freely copied, distributed, modified and manufactured; the fact are design is free does not imply that it cannot be sold or that any hardware implementation of the design will be free of cost. '''Open source hardware may or may not be based on a free hardware design.'''
+
+The term "open hardware" has a more precise meaning than either of these terms. For hardware to be open hardware:
+
+1. Its design must be publicly accessible in a form that enables implementation and full understanding.
+
+2. The software tools used to create the design should be free so that others can develop and improve the design.
+
+3. The software interface to the hardware must be publicly accessible and free to use."
+(http://rsss.anu.edu.au/~janeth/OSBiotech.html)
+
+
+'''4.'''
+
+"The term OpenHardware refers to hardware, which is fully documented, with both
+specifications and documentation freely available, including the drivers and
+firmware required to make the hardware operational for its principle task. The
+source code of the drivers and the firmware as well as all items of the MIB
+should be directly available to the software developers."
+(http://openpattern.org/drupal/?q=node/11)
+
+==Long Definition==
+
+By Graham Seaman, at http://opencollector.org/Whyfree/open_hardware.html
+
+
+'''"What is 'Open Source Hardware'?''' 
+
+Open-ness in hardware terms can have a whole range of meanings. In all the cases listed below, some hardware is open and some is not - but the trend is for open-ness to become more and more limited, restricting the freedom of designers to create or implement their own designs, and even of programmers to write the programs they wish. 
+
+
+'''Truly open hardware would have to satisfy all the requirements below:'''
+
+'''Information on using the hardware must be available.'''
+
+It sounds crazy that people could sell hardware and not tell you how to use it, but it is actually a growing trend. If a company sells any device which interfaces to a computer without publishing the interface specs, they then have a monopoly on interface software (or can sell the monopoly to a software company). WinModems and WinPrinters - which also cannot be supported by Linux - are a related problem. This aspect of open-ness in hardware is so closely linked with work on free software that the FSF, Debian, and FreeBSD are all among the sponsors for the Open Hardware Certification program which ... is a self-certification program for hardware manufacturers. By certifying a hardware device as Open, the manufacturer makes a set of promises about the availability of documentation for programming the device-driver interface of a specific hardware device.... sufficient documentation for the device must be available for a competent systems programmer to write a device-driver. 
+
+
+'''The design of the hardware must be available.'''
+
+Designs can be free in exactly the same senses as software can be free.
+
+If the design is published others can learn from it, improve on it, or even second-source the same device. Much digital hardware has never been open in this sense, creating a whole industry of reverse-engineering and patent claims and counter claims. But there have been exceptions; most notably, the SPARC architecture. Here the lessons from open-source software as a tool for companies with a minority market share have been successfully imported to hardware.
+
+Although many designs have always been patented, there is also a long traditional of engineers borrowing and improving on designs that just 'float around'. Many of these can be found in various places on the Internet, but few of them have been gpl-ed or otherwise protected as `free' designs. The attempt to create IP design libraries which are available only for sale will tend to destroy this tradition (one such IP company is already `giving' away the Strasburg library as a free offer ...).
+
+
+'''Design software for hardware must be available.'''
+
+For many devices this has never been a problem -- until recently. For the old 74 series logic devices, enough information was always made available for people to be able to create free design tools. Processor manufacturers have always published their processor Instruction Set Architectures, so it has always been possible to write free compilers. Now it seems that even this may change - the ISA for the Philips Trimedia Processor is not available (it is a compressed VLIW and they consider the compression algorithm a trade secret).
+
+But for other types of hardware, information about the underlying technologies is a commercial secret so that only the companies which own these secrets can create libraries or even efficient design tools which use them. This applies both to some types of VLSI design and to programmable logic: in the days of the first PALs, internal structure and programming details were widely published in order to expand the market. Now no manufacturer publishes the bit-stream format for programming FPGAs (the one exception, the Xilinx XC6200, now seems to have been dropped). As a result, the only design software available for these devices has been commercial software, and it has not been possible to create free software to make up for some of the deficiencies in these tools.
+
+
+'''Summary'''
+
+
+'''To fully qualify as 'open hardware':'''
+
+
+'''1. The interface to the hardware must be explicitly made public, so the hardware can be used freely
+
+
+2. The design of the hardware must be made public, so that others can implement it and learn from it.
+
+3. The tools used to create the design should be free, so that others can develop and improve the design.'''
+
+
+=Related Definitions=
+
+Graham Seaman:
+
+"* [[Free Hardware Design]] refers to a design which can be freely copied, distributed, modified, and manufactured. It does not imply that the design cannot also be sold, or that any hardware implementation of the design will be free of cost. All the same arguments about the meaning of 'freedom' between supporters of the Free Software Foundation, and the supporters of BSD_style licensing for software unfortunately carry over to hardware designs.
+    
+* [[Libre Hardware Design]] refers to the same class of design as free hardware design, but tries to make it clear that the word free refers to freedom, not price. The term sounds very clumsy to many English ears, but is of course natural for French speakers (and translations of it are natural to speakers of most languages, which do not use one word in both free beer and free speech).
+    
+* [[Open Source Hardware]] refers to hardware for which all the design information is made available to the general public. Open source hardware may be based on a free hardware design, or the design on which it is based may be restricted in some way.
+    
+* Open Hardware is a trademark of the Open Hardware Specification Program. It is a limited form of open source hardware, for which the requirement is that:
+
+"''Sufficient documentation on the device must be available for a competent systems programmer to write a device driver. The documentation must cover all of the features of the device-driver interface that any user would be expected to employ. This includes input/output and control functions and auxiliary functions such as performance measurement or self-test diagnostics. Details of on-board firmware and the hardware implementation need not be disclosed except when necessary to make it possible to program a driver for the device''." 
+
+      
+That is, only a limited amount of information about the design need be available; possibly not enough, for example, to attempt a repair.
+    
+* [[Free Hardware]] is a term occasionally used as a synonym for open source hardware. It is a tempting term, since 'hardware' appears to be directly parallel to 'software', but suffers from blurring the distinction between design and implementation. The term free hardware is particularly confusing since it implies that the physical hardware, rather than its' design, is somehow free. This is not normally true in the cost sense, and is meaningless (except metaphorically) in a social sense. It seems simpler to avoid this term completely, except in it's cost meaning, as with the free computers given away by various social organizations."
+(http://www.opencollector.org/Whyfree/definitions.html)
+
+=History=
+
+
+'''1.'''
+
+"Von Hippel observes that open-source hardware actually predates open-source software by centuries: people have always shared blueprints and sketches for such things as furniture and machinery. But the visibility of the open-source-software community "has created a new awareness of what has long been the historical practice in hardware," he says."
+(http://www.technologyreview.com/article/21495/page2/)
+
+'''2.'''
+
+From the Economist's status report, June 2008:
+
+"In some ways, open-source hardware is a throwback to the 1970s and 1980s, when early computers were sold in kits or shipped with schematic diagrams to make it easier for users to customise them. But the open-hardware trend has been reborn in recent years, thanks to the rise of the internet and the success of open-source software. Some enthusiasts point to 2005 as a crucial year: that was when work began on devices such as the RepRap (a rapid-prototyping machine that will, its makers hope, be able to replicate itself) and the TuxPhone, an open, Linux-powered mobile-phone. It was also when Sun Microsystems, a computer-maker, decided to publish the specifications of one of its microprocessors, the UltraSPARC T1. The open-source hardware trend is now growing fast, says Adrian Bowyer, a mechanical engineer at the University of Bath and the inventor of the RepRap.
+
+Now companies, and not just internet-based enthusiasts, are embracing the open-source hardware model. Neuros is one example; another is OpenMoko, based in Taipei, which has an open-source mobile-phone operating system and a mobile phone, the Neo1973. Chumby Industries, based in San Diego, has the Chumby—a sort of computerised cushion with wireless internet access and a small touch-screen, which can be reprogrammed as an alarm clock, weather station, photo album and so on."
+(http://www.economist.com/printedition/displaystory.cfm?story_id=11482589)
+
+
+'''3.'''
+
+"Open-source hardware has a loud and passionate following in the hobbyist community. In 2005, O'Reilly Media began publishing Make magazine, a quarterly how-to guide for all sorts of engineering and science projects. Make now has more than 100,000 subscribers and has spawned events known as Maker Faires, which are a cross between souped-up science fairs and high-tech craft shows. Last spring, 65,000 professionals and amateurs flocked to the San Francisco Bay Area Maker Faire to demonstrate projects that ranged from arts and crafts to engineering and science--and many that blurred the boundaries. And as they showed off their creations, attendees also shared ideas and met potential collaborators.
+
+Around the time that Make was getting off the ground, Eric Wilhelm '99, SM '01, PhD '04, launched the Instructables website, which provides a template for step-by-step instructions that lets people document their engineering projects online. Since its users are allowed to comment on other people's projects, Instructables has created a vibrant community of technology enthusiasts who share information on building just about anything--including a computer mouse made from an actual dead mouse, an eight-foot-long match, and biodiesel fuel. (See Wilhelm's profile as a TR35 winner in the September/October issue of Technology Review.)"
+(http://www.technologyreview.com/article/21495/page3/)
+
+=Benefits=
+
+Summary on '''Why Open Hardware?''' By Patrick McNamara, [[Open Hardware Foundation]], at http://www.osbr.ca/archive.php?issue=10&section=Ar#A4:
+
+
+Lourens Veen who is on the board of directors for the Open Hardware Foundation or OHF summarized the answer to this question as follows: "''Essentially, this is a problem of freedom. We users want to be free to use the objects we own for any purpose and in combination with any other objects or software we choose or create. We should not be limited to using it only in ways that the manufacturer or some other, external, entity deems appropriate''."
+
+
+'''Several benefits can be achieved when hardware is made open to its users:'''
+
+'''You can use it as you see fit''': The quote from Lourens is actually a paraphrase of freedom 0 from the Free Software Foundation: the freedom to use software however you see fit, made in the context of hardware. This is effectively the philosophical underpinning for "Why Open Hardware"? The remainder of the Free Software Foundation's freedoms apply, to some degree, to the hardware realm as well.You can figure out how it really works: This corresponds to the FSF freedom 1: the freedom to study how the something works and to adapt it to your own needs. Far from being a simple matter of curiosity, being able to understand how a device works can enable you to make much better use of it. For instance, if there are two ways of performing the same operation in a device, being able to understand the internal operation allows you to determine the more efficient of the two ways for a given situation.
+
+'''You can make it better for everyone''': This echoes the FSF freedom 3: the freedom to improve the hardware and to release your improvements so that others may benefit as well. This is the most altruistic of the philosophical reasons for open hardware. Much of the innovation throughout history has been due to individuals building on preexisting ideas and sharing the results. Building on preexisting hardware is no different.
+
+You will notice I skipped over freedom 2: the freedom to redistribute copies so you can help your neighbor. It doesn't map quite so well into the hardware world; not for philosophical reasons so much as for practical ones. In the hardware world, especially that of semiconductors, the financial barrier to making copies of hardware is such that redistributing physical copies is not generally viable for an individual. In order to enable freedom 2, you have to embrace a number of more practical, and commercially interesting reasons for using open hardware. These are the reasons a business might be interested in producing a device based on open hardware.
+
+'''Open hardware can sell more units''': By making a device open, you gain access to market segments that would not be available otherwise. Over the past few years a number of home firewall/router devices have been found to be running a version of Linux. Further, in some cases, it is possible to modify the operating system running on these devices to allow them to provide other functionality potentially unrelated to their original purpose. In these cases, the ability to modify the functionality of the device has been discovered by reverse engineering. Still, you now have people buying units, sometimes several, to use for other reasons. A unit with a lower barrier to modification, due to available open documentation, will generate an even higher level of interest within certain groups leading to sales that otherwise would not have occurred.
+
+'''Open hardware has the potential to speed development of new devices''': Most complex hardware devices are made up of many smaller building blocks many of which are not specific to that device, just like most programs use general purpose libraries for many functions. Large hardware companies build up libraries of hardware building blocks over time, but in many cases multiple companies end up re-implementing the same basic hardware blocks. As an analogy, I don't write my own SSL library when I need SSL functionality in software; I go pull down the OpenSSL library and use it. Why should I re-design a hardware multiplier when I need one for a micro controller ALU (arithmetic logic unit)? It should be noted that this effect of open hardware, reducing design and implementation time by providing readily-available libraries, tends to benefit small companies more than large ones. This can have the effect of reducing the barrier to entry into a market segment and allowing more resources to be focused on the innovative part of the product which in turn helps increase competition. The community will help you support your product. When talking about personal computer hardware, you run into the problem of drivers. Anyone who has tried to use cutting edge hardware in Linux, BSD, OpenSolaris, Plan 9, or other more esoteric operating systems is keenly aware that much new hardware is supported poorly, or not at all. Many companies may not see a sufficient ROI (Return On Investment) for developing drivers in house for non-Windows operating systems. And in truth, it may not be financially justifiable. However, if I as an end user cannot use brand X hardware on my nice shiny new Linux box because I can't get drivers, I am going to go by brand Y hardware for which I can get good, working drivers even if the brand Y hardware provides less functionality. The company making brand X cards just lost a sale, all because there weren't drivers available. This is not due to a lack of people willing to write drivers for such hardware. It is due to a lack of the necessary documentation on how to make the hardware work."
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A4)
+
+There is another overview of benefits here at
+http://www.opencores.org/articles.cgi/view/12
+
+=Typology=
+
+
+==Four Categories of Openness==
+
+Patrick McNamara, [[Open Hardware Foundation]], at http://www.osbr.ca/archive.php?issue=10&section=Ar#A4:
+
+"I believe hardware can be loosely placed into four categories of openness. They are, in order of least to most open: Closed, Open Interface, Open Design, and Open Implementation.
+
+Closed: [[Closed Hardware]] is any hardware for which the creator of the hardware will not release information on how to make normal use of the hardware, in such a way that that information may be freely shared with others. A sure sign of closed hardware is requiring the signing of an NDA to receive documentation on how to make use of a device.
+
+"Whether or not a hardware device's internal design is free, it is absolutely vital for its interface specifications to be free. We can't write free software to run the hardware without knowing how to operate it. (Selling a piece of hardware, and refusing to tell the customer how to use it, strikes me as unconscionable.) But that is another issue." Richard M Stallman
+
+'''[[Open Interface]]''': In the case of Open Interface hardware, all the documentation on how to make a piece of hardware perform the function for which it is designed is available. In the case of computer hardware, this means that all the information necessary to produce fully functional drivers is available. This is the minimum level of openness that makes hardware useful to the open software community. Surprisingly, large amounts of integrated circuits fall into this category. Any device for which you can get a complete data sheet from the manufacturer, with no limitations on sharing the data contained within, meets the Open Interface definition.
+
+'''[[Open Design]]''': Open Design hardware is hardware in which enough detailed documentation is provided that a functionally compatible device could be created by a third party. It is not at all uncommon for the programmer's guides for a microcontroller to have complete instruction encoding formats, memory maps, block diagrams of the processor core, and other technical details that would make it possible to reproduce a compatible microcontroller. Open Design hardware allows you to see what was implemented and what it should do, but still keeps the finer details of how it was implemented closed.
+
+'''[[Open Implementation]]''': Hardware for which the complete bill of materials necessary to construct the device is available fall into the category of Open Implementation. In the realm of computer chips, this means the hardware definition language description of the device is available. For a circuit board, this would include the schematic. Everything needed to reproduce an exact copy of a device is available. This is the hardware parallel to the concept of open source software. The debate between 'open' and 'free' (libre) that exists in the software space exists for hardware as well. In this regard, the only hardware that can truly be claimed to be free, in the same manner that the Free Software Foundation defines free, is that which falls into the Open Implementation category. Unfortunately, unlike software, an idea and the desire to produce a hardware device that is free and open is not sufficient. Certainly in the semiconductor space, the ability to do so is beyond the individual and in most cases, beyond even a reasonably equipped development group."
+(http://www.osbr.ca/archive.php?issue=10&section=Ar#A4)
+
+
+==Differences between open hardware, free hardware, open hardware design==
+
+By Graham Seaman, at http://opencollector.org/Whyfree/open_hardware.html
+
+
+"Many of the arguments over free hardware design consist of people from software and hardware backgrounds talking at cross-purposes. One cause of this is the simple fact that the word `software' refers both to source code and executables, while the words `hardware' and `hardware design' clearly refer to two different things. Using the word `hardware' as short-hand for both design and physical object is a recipe for confusion. The following terms have all been used in discussions of this topic.
+
+    
+* '''Free hardware design refers to a design which can be freely copied, distributed, modified, and manufactured. It does not imply that the design cannot also be sold, or that any hardware implementation of the design will be free of cost'''. All the same arguments about the meaning of 'freedom' between supporters of the Free Software Foundation, and the supporters of BSD_style licensing for software unfortunately carry over to hardware designs.
+    
+* '''Libre hardware design refers to the same class of design as free hardware design, but tries to make it clear that the word free refers to freedom, not price'''. The term sounds very clumsy to many English ears, but is of course natural for French speakers (and translations of it are natural to speakers of most languages, which do not use one word in both free beer and free speech).
+    
+* '''Open source hardware refers to hardware for which all the design information is made available to the general public. Open source hardware may be based on a free hardware design, or the design on which it is based may be restricted in some way.'''
+    
+* '''Open Hardware is a trademark of the Open Hardware Specification Program'''. It is a limited form of open source hardware, for which the requirement is that:
+
+          
+Sufficient documentation on the device must be available for a competent systems programmer to write a device driver. The documentation must cover all of the features of the device-driver interface that any user would be expected to employ. This includes input/output and control functions and auxiliary functions such as performance measurement or self-test diagnostics. Details of on-board firmware and the hardware implementation need not be disclosed except when necessary to make it possible to program a driver for the device. 
+
+      
+That is, only a limited amount of information about the design need be available; possibly not enough, for example, to attempt a repair.
+    
+* Free hardware is a term occasionally used as a synonym for open source hardware. It is a tempting term, since 'hardware' appears to be directly parallel to 'software', but suffers from blurring the distinction between design and implementation. The term free hardware is particularly confusing since it implies that the physical hardware, rather than its' design, is somehow free. This is not normally true in the cost sense, and is meaningless (except metaphorically) in a social sense. It seems simpler to avoid this term completely, except in it's cost meaning, as with the free computers given away by various social organizations."
+(http://opencollector.org/Whyfree/definitions.html)
+
+
+==Three-stage Roadmap for Implementation==
+
+Jamil Kathib:
+
+"The OpenHW road map can be divided into three main stages. If we can follow these stages we will have new industrial and technological revolution. 
+
+Simple prototyping boards: A set of small generic prototyping boards can be designed to test small IP cores. The designers will use the available free tools which give lot of feedback to the EDA developers. 
+
+Advanced boards and IP Cores: Designers will publish OpenHW cores and OpenSource software for the boards. The boards will be much advanced in this stage and new companies will emerge that depend on selling the fabrication of the OpenHW boards. So anyone can download the design files from the Internet and implement it on one of the prototyping boards. At the end of this stage FPGA and CPLD companies will publish the programming technique or provide free tools for their devices. 
+
+Run time Configurable logic systems: will be more popular in this stage where relation between the software and hardware will change. The user will not feel if the program he is running is executing instructions of the host PC or if new hardware is being created on the board. The use of this idea will produce new free software-hardware compilers and new design methodologies."
+(http://www.opencores.org/articles.cgi/view/12)
+
+=Examples=
+
+This directory of projects is maintained in our entry on [[Product Hacking]]
+
+#[[Arduino]], an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software.
+#[[Aurora Mixer]], an open-source (hardware and software) usb powered multichannel mixer.
+#[[Bug Labs]], a programmable hardware device, The Bug, run on open source software Bugbase
+#[[Chumby]], a powerful little device with Wi-Fi, a 3.5-inch screen and an interface that you can customize
+#[[Concentrated Solar Power Open Source Initiative]]
+#[[Daisy MP3 Player]]
+#[[Free Telephony Project]], provides free  reference designs for embedded telephony. Both the hardware and software are open. 
+#[[Grid Beam Building System]], reuseable parts for building
+#[[Hexayurt]], an open source disaster relief shelter
+#[[Ikea Hacker]] 
+#[[Jaldi Battery Charger]]
+#[[Lego Factory]], design your own kits, in the corporate framework
+#[[LugNet]], design your own Lego kits, outside the corporate framework
+#[[Movisi Open Design Furniture]]
+#[[Neuros Technology]] and its [[OSD Open Source Device]]
+#[[Night Brights]], the entire making process of the lights is open source and shared publicly
+#[[Open Cola]] 
+#[[Open EEG]]
+#[[Open Micromanufacturing and Nanomanufacturing Equipment]]
+#[[Open Moko]], an [[Open Mobile Telephony]] project
+#[[Open Source Green Vehicle]] 
+#[[Open Source Pharma]] 
+#[[Open Source Scooter]], a project to make a Segway-type vehicle
+#[[Open Source Sewing Patterns]] such as [[Burdastyle]] 
+#[[Open Source Velomobile Development Project]]
+#[[Ronen Kadushin Open Design]]
+#[[Ronja]] by [[Twibright Labs]], optical point-to-point data link device
+#[[Roomba]], hackable Vacuuming Robots
+#[[SHPEGS Open Energy Project]] 
+#[[Whirlwind Wheelchair International]]
+#[[Worldbike]]
+#[[x0xb0x]], "Roland" MIDI synthesizer
+#[[Ybox]], an internet connected set-top box
+
+=Discussion: Specific difficulties of Open Hardware= 
+
+
+
+==Problems and solutions of OpenHW==
+
+"There are many problems facing designers and prevent them from following the OpenHW methodology. 
+
+Cost of EDA tools: individuals can not afford commercial EDA tools. This makes OpenSW developers start developing free EDA tools such as gEDA and Alliance which enables OpenHW designers to work at home. 
+
+Cost of manufacture: HW manufacturing is relatively expensive, so OpenHW designers can use simulation or programmable logic devices to check their designs. 
+
+Design protection: no one in the world likes to give his ideas and work for free, unless there is some kind of control and protection over his work. Currently there are some groups on the net who try to define some kind of protection. One of these groups, is the OpenIPCore Project which has several suggestion like ``openNDA, GNU like license, OpenPatents ... etc''.
+(http://www.opencores.org/articles.cgi/view/12)
+
+
+==Pro: Graham Seaman==
+
+By Graham Seaman, at http://opencollector.org/Whyfree/open_hardware.html
+
+An important comment about the difficulty of developping it, as compared to open source:
+
+
+"At first blush, the open source model doesn't necessarily seem like a good fit for physical objects. The reason comes down to replication: with open source software, I can give you a copy of (for example) Firefox without losing my own. With open source hardware, at present the best I can give you a copy of the instructions as to how to make your own (for example) microprocessor with your own equipment; it's the functional equivalent of saying "you want Firefox? Here's the source code -- go find a compiler and learn how to read and modify the code to work with your hardware." While this is hardly a barrier for people who already do have the necessary tools and skills, it's a major hurdle if open source hardware is ever to move beyond a few niche fields.
+
+But replicability is something of a secondary effect of open source -- if you give someone a copy of a program's source code, it's hard to prevent them from giving away complete versions. The key elements of open source, accessibility and modifiability of the underlying instructions, apply just as readily to hardware designs as they do to software code. Moreover, the lack of replicability is something of an artifact of technology; that I can't send you a copy of a computer chip (or mobile phone, or fabber, or bacteria), only a design, is important only in that you can't just double click something and see that microchip (etc.) pop up in front of you.
+
+As fabrication technologies take on an increasingly digital form, this distinction will become less clear. When I send you a copy of Firefox, what I'm actually sending is a set of instructions telling your computer how to organize bits of magnetic material on a hard drive to create another instantiation of Firefox. Similarly, at some point in the next decade or two, I will be able to send you a "copy" of my phone simply by sending a set of instructions telling your computer how to organize bits of carbon in a desktop nanofactory to create another instantiation of a phone. Very soon, a more software-like open source physical world paradigm will become possible.
+
+But what will really make a big difference will be the emergence of tools allowing you to take that set of instructions for the phone and modify it to meet your particular needs prior to it being printed out.
+
+I don't mean a requirement that you design your own phone from basic parts on up, or can only get a bare-bones phone that you then must seek out and add on (potentially conflicting) modules to give it any kind of real utility. I'm talking instead about an interface to the code that makes it easy for amateur designers to tweak the instructions without running the risk of easily breaking the final result. In effect, I imagine that we'll soon be in a world of "skins," "plug-ins," and "overlays" for the material world."
+(http://www.worldchanging.com/archives/004155.html)
+
+==Pro==
+
+From http://w:ww.rowetel.com/blog/?p=14
+
+"1. I think open software has been a good thing for the world, so I think open hardware is also good.
+   
+2. If closed IP makes a small amount of people a lot of money - does '''opening the IP make a moderate amount of money for a large amount of people?''' The latter seems a better outcome to me. It also suggests that open hardware benefits small companies more than large ones.
+   
+3. I think the specific benefit of open hardware is '''lower R&D costs'''. This is what is happening with my project - there is a small team of people designing DSP boards, BRI-ISDN hardware, doing Asterisk ports etc. So far I would estimate about 5 man-years of hardware R&D I now have available for free. If I like I can now re-use this open hardware in my local market, potentially without hurting the business of my co-developers. There is a spirit of cooperation rather than competition.
+   
+4. A common perception is that “if the hardware design is open, people will just copy it and put you out of business”. Well after some thought I disagree. A business is much more than just the product design - for example you need support, capital, manufacture, service, and relationships with customers. So '''even if the whole design is open, you can still build a nice little business''' (but perhaps not a $100M business). You can also add proprietary components and build on the open technology, or focus on your local market.
+   
+5. My pet favourite - '''open hardware allows us to invent new business models''', for example developing countries could build advanced telephone systems for cost price. This is so much better than buying technology from a first-world profit-oriented business that must charge a 70% mark up to cover their overheads. This is the business model behind the one laptop per child project. A $100 laptop is possible if u remove the overheads, use community input and sponsership for R&D and build volume. Well a $100 IP-PBX is also possible. Another benefit is that the hardware can be built locally (remember the hardware design is free) overcoming import tariff problems and building local industry. Combining these elements means lots of people getting connected cheaply. And that is a very good thing for the world."
+(http://www.rowetel.com/blog/?p=14)
+
+
+==The Benefits of Open Hardware==
+
+"Today's hardware development is split into separate hardware divisions across
+the industrial landscape resulting in individual development branches and only
+little innovation.
+
+OpenHardware will bring about dialogs between all parties involved - the producers,
+the customers and the consumers. By directly communicating with customers /
+communities / free developers, producers can access innovative input from outside
+the company itself on advices to improve their products thereby working closer
+on the consumers needs and ultimately widen their market.
+
+The customer could express needs for adaptation of old products or even lead
+the way to the creation of a totally new product altogether. These synergy effects
+drastically reduce the research & development costs, increase the number
+of potential customers and most importantly form the fundamental basis for a
+level of customer satisfaction demanded in the 21st century."
+(http://openpattern.org/drupal/?q=node/11)
+
+
+==Contra: Review of sceptical arguments by Janet Hope==
+
+From http://rsss.anu.edu.au/~janeth/OSBiotech.html
+
+"The first point is that no generally accepted open hardware licences yet exist. As noted in an earlier section, copyleft licences (and other forms of open source software licence) rely on copyright: the copyright owner uses his or her exclusive rights to guarantee certain freedoms for users of the software program covered by the licence. However, as with biotechnology research tools, computer hardware is mostly protected by patent. In contrast to copyright protection, which is quick, cheap and simple, obtaining a patent is a costly, time-consuming process; moreover, maintaining a patent requires the payment of substantial renewal fees. (There may be other relevant differences between patent protection and copyright protection besides cost -- if so, they will be explored as part of this project.) The costs of obtaining patent protection may make patent owners less willing than copyright owners to give up the income stream associated with standard proprietary licensing, and/or it may discourage otherwise willing contributors to an open source biotechnology project who are not in a position to obtain patent protection for their contributions. The question of how to translate open source licences into the context of patent protection (and other types of protection that may apply to biotechnology research tools) is an important one for open hardware, and also for open source biotechnology. Licensing experiments in the open hardware context continue: for example, the Indian Simputer is subject to a lawyer-drafted GPL-like licence.
+
+The second point made by open hardware sceptics that may also apply to open source biotechnology is that hardware is not as modular and compartmentalised as software. Benkler has emphasised modularity as an important feature of successful open source projects, in particular in connection with contributors' motivation. However, open hardware sceptics have raised a different point, which is that unless the technology itself is highly modular and compartmentalised, small changes to one part are likely to interact in unforeseen ways with the rest. Whether this is in fact a difference between software and hardware is not clear. However, the general point may be particularly relevant to biotechnology research tools, as many are living organisms or components of living organisms: unpredictable, delayed side-effects in response to apparently small changes are established characteristics of living organisms as a class of complex systems.
+
+The third point is that capital costs associated with hardware manufacture are higher than for software, so that human creativity costs are a smaller proportion of the total costs in the hardware context. (As we saw earlier, Benkler suggests that the advantages of the peer production mode relative to other modes relate to information about and allocation of human creativity, and become salient when human creativity is a salient component of production.) Capital costs for hardware manufacture are higher than for software manufacture in relation to both development (for example, tools for developing, testing and debugging software are much cheaper and more easily made accessible -- e.g. by Internet and open source software licensing, as many such tools are themselves software -- than tools for developing hardware) and production (for example, silicon for making chips costs money). Open hardware sceptics have suggested that there are therefore minimal start-up costs for software programmers but not for hardware developers, and further, that resulting reliance on institutional funding for hardware manufacture makes the process more vulnerable to conservative institutional attitudes and employment-related legal constraints. (As noted in an earlier section, the latter problems may be partially solved by top-down influence on institutional thinking by, for example, funding agencies such as the NIH, and by direct participation in open source biotechnology projects by institutions or companies, as distinct from individual employees.)"
+
+
+=Open Design=
+
+From the Wikipedia article at http://en.wikipedia.org/wiki/Open_design
+
+"Open Design is a term that applies to the investigation and potential of open source and the collaborative nature of the internet to create physical objects. People apply their skills and time to projects for the common good, perhaps where funding or commercial interest is lacking.
+Open design image
+
+The "Open Design" movement is currently fairly nascent but holds great potential for the future in developing products and physical systems. There are certain barriers to overcome for open design when compared to software development where there are mature and widely used tools available and the duplication and distribution of code cost next to nothing. Creating, testing and modifying physical designs is not quite so straightforward because of the effort and time required to create the physical artifact."
+(http://en.wikipedia.org/wiki/Open_design)
+
+
+=More Information=
+
+==Articles==
+
+Trend review article by MIT's Technology Review at http://www.technologyreview.com/article/21495/
+
+
+#'''Free Software and Free Hardware Designs''', at http://opencollector.org/Whyfree/whyfree.html: Graham Seaman explains why hardware design should be as free as software code.
+#'''Free Hardware Design - Past, Present, Future''', at http://opencollector.org/Whyfree/freedesign.html
+#'''Richard Stallman, on Free Hardware''', at http://www.linuxtoday.com/news_story.php3?ltsn=1999-06-22-005-05-NW-LF
+#'''Business Models for Open Source hardware design''', at
+http://pages.nyu.edu/~gmp216/papers/bmfosh-1.0.html
+#'''Episodes of Collective Invention''', at
+http://opensource.mit.edu/papers/meyer.pdf: (Peter B. Meyer, August 2003) An article on several historical examples of what could be called "open design.
+
+More writings on Open Hardware are listed here at http://www.opencollector.org/Whyfree/
+
+==Associations==
+
+#[[Open Design Foundation]]
+#[[Open Hardware Foundation]]
+
+==Reference Sites==
+
+
+#[[Appropedia ]]
+#[[Instructables]] 
+#[[Open Circuits]], a wiki for sharing open source electronics knowledge, schematics, board layouts, ports and parts libraries
+#[[Open Cores]], a loose collection of people who are interested in developing hardware, with a similar ethos to the free software movement"
+#[[Open Sustainability Network]] and its [[Standarrd]] blog
+#[[TaskForge]]
+
+
+==Related Concepts==
+
+
+#[[Citizen Product Design]]
+#[[Co-Creation]]
+#[[Co-Design]]
+#[[Crowdsourced Advertising]]
+#[[Crowdsourced Design]]
+#[[Free Hardware]]
+#[[Open Customization]]
+#[[Open Design]]
+#[[Open Hardware]]
+#[[Open P2P Communities]]
+#[[Open Peer to Peer Design]]
+#[[Open Production]]
+#[[Open Source Hardware]]
+#[[Open Source Product Design]]
+#[[Open Innovation]]
+#[[Peer Production Entrepreneurs]]
+#[[Personal Fabricators]]
+#[[RepRap]]
+#[[Self-organized Design Communities]]
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Business]]
+
+[[Category:IP]]
+
+[[Category:Design]]
+
+[[Category:Open]]
+
+[[Category:Manufacturing]]
+
+[[Category:P2P Hardware]]

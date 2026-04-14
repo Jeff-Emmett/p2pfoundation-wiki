@@ -1,0 +1,215 @@
+
+'''= (individual control across any number of authorities)'''
+
+For contrast, see [[Generative Identity]]
+
+
+=Contextual Citation=
+
+Challenging the mainstream libertarian (individualist) view of sovereignty:
+
+"Sovereignty is about relationships and boundaries. … Sovereignty defines a boundary, within which the sovereign has complete control and outside of which the sovereign relates to others within established rules and norms.
+
+I argue from the perspectives of complexity science and sociology (not unrelated of course) that not only are many of the SSI principles false — they don't reflect how the world works — but even this attempt at reconciliation entails clean boundary lines that simply don't exist. But Windley concludes:
+
+The beauty of sovereignty isn't complete and total control, but rather balance of power that leads to negotiations about the nature of the relationships between various entities in the system."
+
+- Philip Sheldrake [https://akasha.org/blog/2019/09/02/generative-identity-beyond-self-sovereignty]
+
+
+==Definition==
+
+'''1. Christopher Allen:'''
+
+"With all that said, what is self-sovereign identity exactly? The truth is that there’s no consensus. As much as anything, this article is intended to begin a dialogue on that topic. However, I wish to offer a starting position.
+
+Self-sovereign identity is the next step beyond user-centric identity and that means it begins at the same place: the user must be central to the administration of identity. That requires not just the interoperability of a user’s identity across multiple locations, with the user’s consent, but also true user control of that digital identity, creating user autonomy. To accomplish this, a self-sovereign identity must be transportable; it can’t be locked down to one site or locale.
+
+A self-sovereign identity must also allow ordinary users to make claims, which could include personally identifying information or facts about personal capability or group membership. It can even contain information about the user that was asserted by other persons or groups.
+
+In the creation of a self-sovereign identity, we must be careful to protect the individual. A self-sovereign identity must defend against financial and other losses, prevent human rights abuses by the powerful, and support the rights of the individual to be oneself and to freely associate.
+
+However, there’s a lot more to self-sovereign identity than just this brief summation. Any self-sovereign identity must also meet a series of guiding principles — and these principles actually provide a better, more comprehensive, definition of what self-sovereign identity is." 
+(http://www.lifewithalacrity.com/2016/04/the-path-to-self-soverereign-identity.html)
+
+
+'''2. Aaron Fernando:'''
+
+
+" Simply put, a self-sovereign identity on the blockchain is a permanent identity that can only be accessed in full by the person or entity to whom it belongs, yet portions of that identity can be shown to any individual, organization, or agency whenever it becomes relevant. Since self-sovereign identities are decentralized and encrypted, identity theft or incidents like last-year's Equifax hack become much less of a problem.
+
+The existence of self-sovereign identities could allow individuals and small organizations to verify information about each other without having to go through third parties, again facilitating peer-to-peer uses. For example, instead of waiting on a credit report for a rental application, a landlord would be able to verify an applicant's rental payment history, after the applicant chooses to authorize the landlord to see that information. Furthermore, the existence of self-sovereign identities would allow startups, NGOs, and government agencies to provide services to beneficiaries  and vulnerable populations while granting agency and protections to recipients of those services."
+(https://www.shareable.net/blog/blockchain-as-a-force-for-good-how-this-technology-could-transform-the-sharing-economy)
+
+
+'''3. Team Metadium:'''
+
+"There is no consensus on an exact definition of self-sovereign identity yet. We use the terminology of SSI, as the concept of individuals or organizations having sole ownership of their digital and analog identities, and control over how their personal data is shared and used. This adds a layer of security and flexibility allowing the identity holder to only reveal the necessary data for any given transaction or interaction. Since identity is such a central part of society, we need to ensure that user control will be the primary foundation SSI will be built upon.
+Under self-sovereign identity model, individuals and organizations (holders) who have one or more identifiers (something that enables a subject to be discovered and identified) can present claims relating to those identifiers without having to go through an intermediary. As a result, the best way to implement a system with self-sovereign identity would be through blockchain technology where no intermediary is needed."
+(https://medium.com/metadium/introduction-to-self-sovereign-identity-and-its-10-guiding-principles-97c1ba603872)
+
+==Characteristics==
+
+===Ten Principles of Self-Sovereign Identity===
+
+Christopher Allen:
+
+"A proposal for them follows:
+
+A number of different people have written about the principles of identity. Kim Cameron wrote one of the earliest “Laws of Identity”20, while the aforementioned Respect Network policy and W3C Verifiable Claims Task Force FAQ22 offer additional perspectives on digital identity. This section draws on all of these ideas to create a group of principles specific to self-sovereign identity. As with the definition itself, consider these principles a departure point to provoke a discussion about what’s truly important.
+
+These principles attempt to ensure the user control that’s at the heart of self-sovereign identity. However, they also recognize that identity can be a double-edged sword — usable for both beneficial and maleficent purposes. Thus, an identity system must balance transparency, fairness, and support of the commons with protection for the individual.
+
+====Existence.====
+
+Users must have an independent existence. Any self-sovereign identity is ultimately based on the ineffable “I” that’s at the heart of identity. It can never exist wholly in digital form. This must be the kernel of self that is upheld and supported. A self-sovereign identity simply makes public and accessible some limited aspects of the “I” that already exists.
+
+====Control.====
+
+Users must control their identities. Subject to well-understood and secure algorithms that ensure the continued validity of an identity and its claims, the user is the ultimate authority on their identity. They should always be able to refer to it, update it, or even hide it. They must be able to choose celebrity or privacy as they prefer. This doesn’t mean that a user controls all of the claims on their identity: other users may make claims about a user, but they should not be central to the identity itself.
+
+====Access.====
+
+Users must have access to their own data. A user must always be able to easily retrieve all the claims and other data within his identity. There must be no hidden data and no gatekeepers. This does not mean that a user can necessarily modify all the claims associated with his identity, but it does mean they should be aware of them. It also does not mean that users have equal access to others’ data, only to their own.
+
+====Transparency.====
+
+Systems and algorithms must be transparent. The systems used to administer and operate a network of identities must be open, both in how they function and in how they are managed and updated. The algorithms should be free, open-source, well-known, and as independent as possible of any particular architecture; anyone should be able to examine how they work.
+
+====Persistence.====
+
+Identities must be long-lived. Preferably, identities should last forever, or at least for as long as the user wishes. Though private keys might need to be rotated and data might need to be changed, the identity remains. In the fast-moving world of the Internet, this goal may not be entirely reasonable, so at the least identities should last until they’ve been outdated by newer identity systems. 
+
+This must not contradict a “right to be forgotten”; a user should be able to dispose of an identity if he wishes and claims should be modified or removed as appropriate over time. To do this requires a firm separation between an identity and its claims: they can't be tied forever.
+
+====Portability.====
+
+Information and services about identity must be transportable. Identities must not be held by a singular third-party entity, even if it's a trusted entity that is expected to work in the best interest of the user. The problem is that entities can disappear — and on the Internet, most eventually do. Regimes may change, users may move to different jurisdictions. Transportable identities ensure that the user remains in control of his identity no matter what, and can also improve an identity’s persistence over time.
+
+====Interoperability.====
+
+Identities should be as widely usable as possible. Identities are of little value if they only work in limited niches. The goal of a 21st-century digital identity system is to make identity information widely available, crossing international boundaries to create global identities, without losing user control. Thanks to persistence and autonomy these widely available identities can then become continually available.
+
+====Consent====
+
+Users must agree to the use of their identity. Any identity system is built around sharing that identity and its claims, and an interoperable system increases the amount of sharing that occurs. However, sharing of data must only occur with the consent of the user. Though other users such as an employer, a credit bureau, or a friend might present claims, the user must still offer consent for them to become valid. Note that this consent might not be interactive, but it must still be deliberate and well-understood.
+
+====Minimalization.====
+
+Disclosure of claims must be minimized. When data is disclosed, that disclosure should involve the minimum amount of data necessary to accomplish the task at hand. For example, if only a minimum age is called for, then the exact age should not be disclosed, and if only an age is requested, then the more precise date of birth should not be disclosed. This principle can be supported with selective disclosure, range proofs, and other zero-knowledge techniques, but non-correlatibility is still a very hard (perhaps impossible) task; the best we can do is to use minimalization to support privacy as best as possible.
+
+====Protection.====
+
+The rights of users must be protected. When there is a conflict between the needs of the identity network and the rights of individual users, then the network should err on the side of preserving the freedoms and rights of the individuals over the needs of the network. To ensure this, identity authentication must occur through independent algorithms that are censorship-resistant and force-resilient and that are run in a decentralized manner."
+(http://www.lifewithalacrity.com/2016/04/the-path-to-self-soverereign-identity.html)
+
+==History==
+
+On the [[Evolution of Online Identity]]:
+
+User-centric designs turned centralized identities into interoperable federated identities with centralized control, while also respecting some level of user consent about how to share an identity (and with whom). It was an important step toward true user control of identity, but just a step. To take the next step required user autonomy.
+
+This is the heart of self-sovereign identity, a term that’s coming into increased use in the ‘10s. Rather than just advocating that users be at the center of the identity process, self-sovereign identity requires that users be the rulers of their own identity.
+One of the first references to identity sovereignty occurred in February 2012, when developer Moxie Marlinspike wrote about “Sovereign Source Authority”. He said that individuals “have an established Right to an ‘identity’”, but that national registration destroys that sovereignty. Some ideas are in the air, so it’s no surprise that almost simultaneously, in March 2012, Patrick Deegan began work on Open Mustard Seed, an open-source framework that gives users control of their digital identity and their data in decentralized systems12. It was one of several "personal cloud" initiatives that appeared around the same time.
+
+Since then, the idea of self-sovereign identity has proliferated. Marlinspike has blogged how the term has evolved. As a developer, he shows one way to address self-sovereign identity: as a mathematical policy, where cryptography is used to protect a user’s autonomy and control. However, that’s not the only model. Respect Network instead addresses self-sovereign identity as a legal policy; they define contractual rules and principles that members of their network agree to follow. The Windhover Principles For Digital Identity, Trust and Data and Everynym’s Identity System Essentials offer some additional perspectives on the rapid advent of self-sovereign identity since 2012.
+
+In the last year, self-sovereign identity has also entered the sphere of international policy. This has largely been driven by the refugee crisis that has beset Europe, which has resulted in many people lacking a recognized identity due to their flight from the state that issued their credentials. However, it’s a long-standing international problem, as foreign workers have often been abused by the countries they work in due to the lack of state-issued credentials.
+
+If self-sovereign identity was becoming relevant a few years ago, in light of current international crises its importance has skyrocketed." 
+(http://www.lifewithalacrity.com/2016/04/the-path-to-self-soverereign-identity.html)
+
+==Discussion==
+
+From Outlier Ventures:
+
+"None of us actually owns a digital identity. We simply ‘rent’ identities from each of the websites or apps we use, resulting in an inefficient, fraud-riddled, privacy-invading mess. Additionally, each organization we interact with must store our personal information in massive databases. These ‘silos’ become gold mines to hackers and toxic liabilities for anyone obligated to store the data. A siloed approach to identity may have worked in the early days of the Internet, but with practically every business and billions of people now online, problems such as fraud are growing rapidly. The costs of these problems will soon balloon as billions more identities come online with the Internet of Things. Regulators try to police misbehavior by dishing out billions in fines each year, but they don’t address the root cause. Data breaches continue to occur almost daily, often because siloed identity creates massive troves of data attractive to hackers.
+
+
+Solving the identity silo problem begins with a digital identity that you literally own, not just control — a “self-sovereign” identity. When combined with verifiable claims, it enables any person, organization, or thing to interact directly with any other person, organization or thing, with trust and privacy. If anyone other than you can “pull the plug” or change the rules for your identity, it isn’t self-sovereign, it is siloed – even if it uses ‘blockchain’ technology. True, globally scalable self-sovereign identity requires an open source, decentralized network which no single entity owns or controls. Until the advent of distributed ledger technology (DLT) this was impossible. 
+
+Like the Internet, it is not owned by anyone: everyone can use it and anyone can improve it.
+
+- Any person, organization, or thing can actually own their digital identity – not just control it – independent from any silo.
+- Any person, organization, or thing can instantly verify the authenticity of “claims,” including who (or what) something claims to be.
+- Complete control of how, what and when information is shared, without added risk of correlation and without creating troves of breachable data."
+
+(https://outlierventures.io/)
+
+===Self-Sovereign Identity and the Blockchain===
+
+Alastair Berg:
+
+"Self-sovereign identity, which sees individuals as having full ownership and control over all aspects of their identity, is another such possibility in a blockchain economy. As one’s identity, and all claims related to it, are owned by the individual, no third-party can take it away. In addition, identity is truly portable in this instance. You can take your claim of an attribute, such as a university certification along with you as you move to a new country, even if your university along with its records has been destroyed during war.
+
+The blockchain, a type of digital, decentralised, distributed ledger, does this as the integrity of the data does not rely on a trusted third-party like a bank or a government. Elegant incentives and game theory which underpin blockchain design — cryptoeconomics — allow for trustless interactions between individuals and entities. While we may still rely on traditional third parties to initially attest to our university certifications, our ability to drive, or our citizenship, we will not need them to attest to those claims on an ongoing basis.
+
+All of this means that individuals, firms and even things can make claims about their identity, and counterparties can verify those claims with probabilistic certainty. A cryptographically secure blockchain can also remove the need for centralised authorities (firms or governments) to hold virtual honey-pots of personally identifiable information. The immutability of the ledger, achieved through public key cryptography and clever consensus mechanisms mean that counterparties can quickly, cheaply and reliably verify claims while being unable to tamper with or delete them.
+
+In addition, the need for privacy can be satisfied through zero-knowledge proofs, and data stored off-chain allow for a claim to be verified without ever sharing the nature of that claim with a counterparty.
+
+The innovation in blockchain technology and digital identity management comes when regulatory bodies are attempting to address concerns about the collection and storage of personally identifiable information (PII) and the privacy protections afforded to that data. The EU General Data Protection Regulation (GDPR) which is due to come into effect in May of 2018, provides requirements such as privacy ‘by design’, consent to data collection, the right to access and erasure of personal data, and notification requirements in the event of a data breach. Other similar, yet less onerous regulations exist, such as in most US states which require firms to notify customers when their personal information has been breached.
+
+Regulations like the GDPR may in the long run provide an impetus for firms to reconsider the way in which they store PII. Fines of up to EUR20 million, or 4% of worldwide turnover, whichever is higher, in the event of an infringement, may create a financial and regulatory imperative for firms to offload some of the risk associated with storing such data. This may create a commercial incentive for a world where individuals have control and ownership over more aspects of their identity.
+
+In the light of recent data breaches — Yahoo and Equifax included — firms will need to evaluate the costs associated with obtaining and storing data*. Especially sensitive data — financial and health related — may prove to have too high of a risk profile to justify central storage, and could be passed back to consumers as they ‘de-risk’.
+
+All this of course presupposes that large data gatherers like Facebook and Google will suddenly become too risk averse to hold PII. The idea of these companies suddenly relinquishing their ability to monetise such data through advertising seems unlikely, at least in the short to medium term."
+(https://medium.com/cryptoeconomics-australia/identitytech-and-the-role-of-identity-in-economic-political-and-social-transactions-a270c3b1f02f)
+
+===Jordan Greenhall on a true holistic understanding of personal sovereignty===
+
+Jordan Greenhall:
+
+"Sovereignty is the capacity to take responsibility. It is the ability to be present to the world and to respond to the world — rather than to be overwhelmed or merely reactive. Sovereignty is to be a conscious agent.
+
+As it turns out, sovereignty can be understood as consisting of three distinguishable capacities.
+
+* Your ability to relate to the world. This includes things like your ability to perceive the world. Reality. To be sensitive to what is going on in all sorts of different ways. To be able to listen and see. And feel. To “tune in” to what is going on without preemptively closing off the world with your own frames or judgements. Or to be overwhelmed by what the world is sending at you.
+
+* Your ability to make sense of the world. This includes your ability to skillfully select frames and concepts that are appropriate to what is really going on. And to create new ones when the old ones won’t do. It is a measure of both speed and precision. Move too slowly and the world has passed you by. Move too haphazardly and you will confuse sense with error.
+
+* Your ability to make and effect choice in the world. This includes both the ability to actually move the world with your actions (your ability to deploy a force on the world) and your capacity to do so with both wisdom and elegance. That is, your ability to move from sense to action with sound judgement (to make good choices) and your ability to do just and only what you intend. No more, no less. And with as little effort as necessary."
+(https://medium.com/deep-code/on-jordan-peterson-and-the-future-51402a370d79)
+
+
+===Background on SSI by Akasha Foundation===
+
+Philip Sheldrake:
+
+"Self-sovereign identity is the current state of the art. The concept and term emerged in 2016 having morphed from "sovereign source authority" in 2012. Here is an extract from Devon Loffreto's argument for such sovereignty:
+
+- Society is an Agreement. It is made by and between Individuals. Within any Society, Individuals have an established Right to an "identity", and to all of the benefits and responsibilities of some form of "Nationally Sovereign Structure" of governance and administration. Sovereign Source Authority (SSA) refers to the actual default design parameter of Human identity, prior to the "registration" process used to inaugurate participation in Society.
+
+
+The motivation here is valid at least, evidenced in the analysis of the conditions by which totalitarianism took hold in Europe in the 1930s and early 40s:
+
+- The stateless and the minorities … had no governments to represent and to protect them. … The very phrase ‘human rights' became for all concerned — victims, persecutors, and onlookers alike — the evidence of hopeless idealism or fumbling feeble-minded hypocrisy.
+
+When only states are sovereign, the individual rendered stateless has no rights. This is unacceptable and led to the Universal Declaration of Human Rights in 1948 and more recently to the inclusion under the Sustainable Development Goals of the target to ensure everyone has a legal identity by 20306.
+
+We are also moved by the motivations for such a target and recognise that there are choices to be made of how best to achieve it, and indeed to define precisely what it is. Is it to serve only in tightly specified legal or humanitarian contexts for example? If so, who gets to decide? And who gets to decide who gets to decide?7 We must remain cognizant that efficient identity related bureaucracy was also fatal in the 1940s8. It was easier to find people to murder in jurisdictions in which legal identity worked well. On which point, the minimum qualification of an expert in this field must be historical awareness and dedication to not repeating its tragedies."
+(https://akasha.org/blog/2019/09/02/generative-identity-beyond-self-sovereignty)
+
+==More information==
+
+* Outlier Ventures claims that "Sovrin, invented by Evernym, is the world’s only global public utility for trusted, self-sovereign identity". [https://outlierventures.io/]
+
+
+For the following links, see [https://akasha.org/blog/2019/09/02/generative-identity-beyond-self-sovereignty here]:
+
+* deliberations by various communities, not least Rebooting the Web of Trust, Internet Identity Workshop, Identity Foundation, ID2020, and Good ID. Rather, the following resources are excellent introductions if you need to jump off here.
+
+* The Path to Self-Sovereign Identity (includes "Ten Principles of Self-Sovereign Identity"), Christopher Allen, April 2016
+
+* What is self-sovereign Identity?, Sovrin, 2018
+
+*Self-sovereign identity: Unraveling the terminology, IBM, 2018
+
+* The Three Models of Digital Identity Relationships, Timothy Ruff, Evernym, 2018
+
+[[Category:Relational]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

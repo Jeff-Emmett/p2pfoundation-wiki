@@ -1,0 +1,31 @@
+
+'''DHT = a table used in distributed [[P2P Computing]] that obviates the needs for central servers.'''
+
+
+=Definition=
+
+"A Distributed Hash Table (DHT) is a distributed and often decentralized mechanism for associating [[Hash]] values (keys) with some kind of content. Participants in the DHT each store a small section of the contents of the hashtable. The main advantage of DHTs are their scalability."
+(http://www.infoanarchy.org/en/Distributed_hash_table)
+
+
+=Technical Description=
+
+"DHTs obviated the server from [[P2P Networks|P2P networks]]. A DHT is a hash table that partitions the keyspace and distributes the parts across a set of nodes.
+
+For any new content added to the network, a hash (k) is calculated and a message is sent to any node participating in the DHT. This message is forwarded from node to node until it reaches the node responsible for k. The pair (k, data) gets stored at this node. Any peer can retrieve the file by generating the hash k querying any DHT node to find the data associated with k with a message. The message will again be routed through to the node responsible for k, which replies with the stored data. DHTs can scale to large numbers of nodes and handle continual node arrivals and failures.
+
+They can be used to build complex services such as distributed file systems, peer-to-peer file sharing systems, cooperative web caching, multicast, anycast, and domain name services.
+
+Several DHT implementations like Chord, Pastry and Tapestry are available.
+
+Open DHT is a publicly accessible DHT service whose clients do not need to run a DHT node. Instead, they can issue put and get operations to any DHT node, which processes the operations on their behalf."
+
+(http://thothzone.blogspot.com/2006/07/p2p-buzz-to-biz.html)
+
+=More Information=
+
+#Article here at http://www.infoanarchy.org/en/Distributed_hash_table
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]

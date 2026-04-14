@@ -1,0 +1,41 @@
+
+
+=Discussion=
+
+==Colin Hawkett==
+
+"Given the following desirable outcomes from the distributed internet -
+
+   1. Cannot be shutdown at a central location
+   2. Difficult to shut down via 'virus' type attack
+   3. The threshold for being able to connect, participate and strengthen the network is low
+   4. Can operate as separate parts in isolation if necessary
+   5. Protects privacy and anonymity
+
+
+Then the key requirements for those things
+
+* Commodity hardware - easily & affordably obtainable & installable without dependence on single point-of-failure mega suppliers. One of the biggest problem in a distributed system is bridging physical distance between nodes - e.g. intercontinental connection is very difficult to do without expensive centralised hardware (big wires, satellites etc.). The more bandwidth we can get at range, the better our system becomes. Greater connectivity reduces the need for individual bandwidth requirements.
+    
+* Diversity - of routes and of protocols. The former is fairly clear, while the latter offers some protection against virus type attacks, and reminds us to keep innovating the protocol(s). Also offers some protection against privacy issues.
+    
+* Every node must be capable of filling all roles. This doesn't mean each node does the same role, but it might. Another way of stating this requirement is that the smallest distributed net should be able to consist of as little as one node.
+    
+* Must be latency tolerant. Unless we have solved the range problem, then getting from A -> B may take a lot of network hops.
+    
+* Have a clearly defined reliability algorithm (more than likely using geographical redundancy), and subsequent recovery mechanism should critical data be lost (e.g DNS records may be lost if the wrong nodes in the wrong combination go down, and if this is a big problem then it becomes a target for attack)
+    
+* Have a clearly defined consistency algorithm. If we are keeping replicas, then how close are they to all being the same at any given point in time. In general the system must be able to cope with eventual consistency, and in the case of a network that becomes divided, some copies may be very different from the master. This problem is fairly related to the previous point.
+
+
+Here are some harder ones -
+
+* Distributed governance - who owns the master data? Who decides which protocols we use? Who decides which hardware is appropriate? Who punishes misuse? On whose authority? Distributed tech is only part of the story. Who watches the watchers?
+    
+* Identity & Trust - who holds your identifying information? Where? How are you authorised to maintain it? Is the mechanism I use as reliable as the mechanism you use? How is your reputation determined? Where is that information held? How do we trust the holders of the information?
+    
+* Resilience - the system must have an immune system. If we look at the biological distributed system, then the human body (for example) has a very complex and trusted internal network, and a very few external interfaces which are heavily protected. Should one of those interfaces be damaged, then others can adapt to fill their role. 'Intruders' in the trusted internal system must be identifiable and destroyable. In effect this point highlights that we must design for malicious intent. We must also have a quarantine mechanism to protect sections of the net from being destroyed by compromised other sections."
+(http://www.quora.com/What-are-the-fundamental-requirements-and-building-blocks-of-a-distributed-internet)
+
+
+[[Category:P2P Infrastructure]]

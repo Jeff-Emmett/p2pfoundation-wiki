@@ -1,0 +1,350 @@
+Please listen to this really great conversation: [[ECSA on Transcending Hayek and his Digital Disciples]]
+
+
+=Introductory Contextual Quotes about the Crypto Economy=
+
+"Is cryptoeconomy just a refinement and acceleration of a capitalist economy or can it create new economic space? It could be either or, indeed both. The platforms that utilize blockchain and cryptographic technologies can be placed at the service of protocols that are essentially capitalist — designed around private property, self interest and profit calculus — or protocols that are conceived more co-operatively and commons-oriented — designed around shared networks and risking together. The technology permits both capitalist and social versions to be designed centrally or in a distributed way."
+
+- Dick Bryan and Akseli Virtanen [https://medium.com/econaut/crypto-political-economy-dd91c6fcff7]
+
+
+"What makes cryptocurrencies so powerful is that we can use them to express different social and economic agendas and to measure things differently; to implement different incentives and record their effects. Economy opens as a design question. This is the precondition for building different social and economic agendas and de-naturalising the rule of private and individual measures of social contribution, materialising in concepts like ‘profit’ and ‘efficiency’."
+
+- Dick Bryan and Akseli Virtanen [https://medium.com/econaut/whose-stability-6521874f6c5a]
+
+
+=Key Patterns and Tools=
+
+Some tools and patterns proposed for the crypto economy, collated by Michele Iovino [https://abundancepatterns.substack.com/p/97f45c9d-ace4-4d17-9f88-b9f45d6db5b9?]:
+
+* [[Hypercerts]]: Digital proofs of positive outcomes, verified and tradable.
+
+* [[Quadratic Funding]] (QF): Boosts projects with broad community support.
+
+* Movement-Accountable Investing: Investors’ returns tied to community outcomes.
+
+* Care Credits: Non-transferable recognition of care work, tied to rights and stipends.
+
+* [[Exit to Community]] (E2C): Ownership shifts to users and stewards.
+
+* Mutual-Credit Bridge: Shared ledger for fair inter-community trade.
+
+* [[Zero-Knowledge Proofs]] (ZK Proofs): Privacy-preserving verification.
+
+* [[Polycentric Governance]]: Different domains managed by their own groups.
+
+* Retro Funding: Pay after proven outcomes, not before.
+
+
+=Discussion=
+
+==The Integrative Aspects of Crypto Economics, in the context of monetary theories==
+
+Youngseun Kim:
+
+"'''Synthesizing Economic Thought for the Future of Crypto''':
+
+As the world transitions into the digital age, understanding the history of money and financial systems is crucial to designing sustainable and resilient crypto ecosystems. The evolution of money — from commodity-based systems to credit-based systems — lays the foundation for modern monetary theory, as explored by the four major schools of thought: Austrian Economics, Neoclassical Synthesis, Institutional Economics, and Keynesian/Post-Keynesian Economics.
+
+The '''Austrian School''' highlights the importance of sound money and decentralization. Its support for Bitcoin as a strategic reserve asset aligns with the Austrian critique of fiat currencies and their susceptibility to inflation. Bitcoin’s fixed supply and independence from central authorities make it a perfect example of hard money, which Austrian economists argue is necessary for a stable financial system. The recent legislative proposal in the U.S. to recognize Bitcoin as a national reserve asset further underscores this viewpoint, positioning Bitcoin as a safeguard against inflation and monetary instability.
+
+The '''Neoclassical Synthesis''', with its focus on market efficiency and models like the Quantity Theory of Money (QTM), has influenced the design of token economies and the issuance of stablecoins. The Efficient Market Hypothesis (EMH) and Rational Expectations Hypothesis offer frameworks for understanding how information flows in markets and how expectations shape behavior. However, the Terra-Luna collapse and failures in other algorithmic stablecoins also illustrate the limitations of purely applying neoclassical models without considering the complexities of demand and supply fluctuations in volatile crypto markets.
+
+'''Institutional Economics''' sheds light on the importance of governance structures and the role of institutions in shaping economic outcomes. This school of thought is particularly relevant in the development of Decentralized Autonomous Organizations (DAOs) and the governance mechanisms that underpin decentralized platforms. By applying game theory and mechanism design, we can create incentive structures that promote participation and maintain system stability. The auction models used in Ethereum’s transaction fee mechanism and the governance frameworks in DAOs exemplify how institutional theories can be applied to build fair and efficient systems.
+
+Finally, '''Keynesian and Post-Keynesian theories of endogenous money''' and effective demand provide insights into the creation and management of liquidity in decentralized finance (DeFi) platforms. Keynesian ideas of government intervention to manage economic cycles are mirrored in DeFi protocols, where liquidity and token issuance are dynamically adjusted based on market demand. The rise of CBDCs brings additional complexity, challenging the 2-tier banking system and raising questions about the relationship between sovereign money and commercial bank money. From a Keynesian viewpoint, CBDCs could offer a more direct means of managing liquidity and maintaining effective demand, which is crucial for economic stability.
+
+By synthesizing these diverse economic perspectives, crypto ecosystems can avoid the pitfalls of traditional financial systems while offering innovative, decentralized alternatives that promote long-term stability and growth. Understanding the social, political, and economic aspects of money is crucial for shaping the future of decentralized finance. The rise of meme coins further exemplifies the need for a deeper exploration of money’s role in society, presenting intriguing opportunities for redefining money in the digital age.
+
+By leveraging the lessons of the past and applying them to the innovations of the present, the future of crypto can be both sustainable and transformative. The thoughtful integration of economic theories into the design of crypto systems will be key to ensuring their resilience, fostering trust, and driving mass adoption, ultimately creating a financial ecosystem that is both innovative and equitable for all."
+
+(https://medium.com/@deframing/the-meaning-of-monetary-economics-in-the-crypto-world-e7f89e60d3a3)
+
+
+
+==The Limitations of Blockchain and DAOs for Complex Economic Processes==
+
+Tiberius Brastaviceanu:
+
+ < ''smart contracts are excellent for certain trustless operations (e.g., escrows, auctions) but fail to capture the dynamics of real-world production, collaboration, and adaptive planning'' >
+
+
+===Smart Contracts: Deterministic, Rigid, and Passive===
+
+Smart contracts are finite state machines. While they enable conditional logic and self-enforcing agreements, they suffer from key constraints:
+
+
+===Lack of agency===
+
+Smart contracts cannot initiate actions; they passively await external transactions.
+
+
+===No adaptivity===
+
+They cannot learn or evolve in response to new contexts.
+
+
+===Low expressiveness===
+
+They model narrow rule-based interactions but cannot handle rich workflows, commitments, or evolving plans.
+
+
+===High operational cost===
+
+Every interaction incurs gas fees, limiting granularity and frequency of updates.
+
+
+==DAOs Are Only a Good Model for Governance Without Production==
+
+Tiberius Brastaviceanu:
+
+ < ''DAOs were designed to manage funds and collective decisions. While conceptually intriguing, most DAOs reduce governance to token-weighted voting and budget allocation'' >
+
+
+"DAOs lack:
+
+* A production grammar: DAOs manage treasuries, but not the economic processes that generate and transform valuables.
+Contextual roles and coordination: All agents are flattened to token holders; there is no representation of task-specific expertise or social embeddedness.
+
+* Traceability of contributions: There is no natively supported way to account for who contributed what, how, and with what impact.
+
+In essence, DAOs are governance shells with limited economic depth. They serve as digital cooperatives but do not embody operational infrastructures for economic activity.'
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+
+==The Blockchain Architecture's Global State Creates Consensus Bottleneck Inappropriate for the Coordination of Physical Production==
+
+Tiberius Brastaviceanu:
+
+Blockchain relies on a globally shared ledger, secured by consensus. This introduces:
+
+* Scalability issues: All agents must agree on the same state, which limits throughput.
+
+* Privacy limits: All state changes are visible to all participants.
+
+* Poor fit for diverse local contexts: Global rules enforced via consensus do not adapt well to context-sensitive collaboration.
+
+This model is inherently brittle for complex organizations with multi-scale, asynchronous, and context-specific workflows. Moreover, blockchain-based architectures are grounded in a low-level computational model (deterministic, transactional, state-machine driven) that is ill-suited for expressing complex, adaptive, multi-agent economic systems. In formal terms, blockchains are positioned near the low end of a spectrum of computational expressivity. At best, they enable finite state automation with strict constraints on complexity, timing, and semantic nuance."
+
+(https://sensoricablog.blogspot.com/2025/07/beyond-ledger-why-blockchain-and-daos.html)
+
+
+=Quotes=
+
+'''1.'''
+
+"Current attempts to develop new kinds of cryptocurrencies must be judged, valued and rethought on the basis of this simple question as posed by Andrea Fumagalli: Is the currency created not limited solely to being a means of exchange, but can it also affect the entire cycle of money creation – from finance to exchange? Does it allow speculation and hoarding, or does it promote investment in post-capitalist projects and facilitate freedom from exploitation, autonomy of organization etc.?"
+
+- Tiziana Terranova [http://www.euronomade.info/?p=2268]
+
+
+
+'''2.'''
+
+"Blockchain is inconceivable without commodification – its very architecture rests on economic incentives coordinating independent actors, and its raison d’etre is the dis-intermediation of digital asset transfer. But their unique features not only allow blockchains to dis-intermediate and reorganize existing markets, but also to create new markets under previously unfavorable conditions. They thus constitute a crucial element in looming processes of formal subsumption, pushing the frontiers of capitalism ever further into the sphere of social relations previously unattainable to commodification. What’s more, through incentive systems rewarding specific interactions and punishing others, these technologies open the door for what Marx 
+referred to as real subsumption – the systematic restructuration of commodified relations along the
+needs of capitalist profit maximization – of hitherto not or only formally subsumed social spheres."
+
+- Felix Fritsch [https://www.researchgate.net/publication/347390602_The_Common_Factory_Governance_and_Incentive_Systems_of_Blockchain-based_Social_Networks]
+
+
+'''3.'''
+
+"There are good reasons to worry about entrusting the basis of social institutions entirely to economic nudges, with or without cryptography. Long before crypto, political theorists have warned of the corrosive effects that economic forces can have on democracy. In The Human Condition, Hannah Arendt argued for a conservative view of politics: that political life must be separate from economic pressures, so that it can focus on the common good rather than anyone’s personal interests. More recently, from the left, Wendy Brown has criticized the “neoliberal” urge to replace politics with business. When the market takes over roles like providing health care and setting environmental standards from democratic governments, the very nature of these issues changes. We forget that we are all citizens, she argues, and instead focus only on the economic side of ourselves; we forget about values like justice and fairness, seeing only the costs and benefits."
+
+- Nathan Schneider [https://thereboot.com/beyond-cryptoeconomics-platform-cooperativism-and-the-future-of-blockchain-governance/]
+
+
+==Neither Bitcoin nor Blockchain will liberate us from an exploitative society, but they may be useful in post-capitalism==
+
+'''1.'''
+
+"To think that Bitcoin can solve the problem of money, or the problem of the state, is to misunderstand what money is or what states do. Every exploitative socio-economic system is predicated on what the minority running it can make the rest do for them (who does what to whom, as Lenin famously put it). Money and the state are epiphenomena of this system. To believe that you can fix money, or that you can fix the state, is to demonstrate a devastating innocence regarding the larger exploitative system with which they are integrated. No smart contract can, for example, subvert the labour contracts that underpin society’s layered patterns of exploitation. No NFT can change an art world where art is a commodity within a universe of commodified people and things. No central bank can serve the interests of the people so long as it is independent of the demos. Yes, blockchain will be useful in societies liberated from the patterned extractive power of the few. However, blockchain will not liberate us. Indeed, any digital service, currency, or good that is built on it within the present system will simply reproduce the present system’s legitimacy."
+
+- Yanis Varoufakis [https://metacpc.org/en/crypto-blockchain/]
+
+
+'''2.'''
+
+"Assets, by themselves, are neither feudalist nor capitalist. Whether we are talking about gold, cucumbers, or Bitcoin, assets are assets – end of story. What makes an asset feudal or capitalist or socialist is the manner in which it interacts with a society’s social relations of production, the pattern of property rights it shores up, etc. My point, when referring to Bitcoin’s early adopters as a crypto-aristocracy, as crypto-lords, was that, when an asset like Bitcoin (whose exchange value is built on engineered scarcity) is embedded in any oligarchic exploitative system (capitalism, kleptocracy, techno-feudalism, etc.), it acquires the basic character of the (pre-capitalist) feudal order: a small minority are empowered to collect rents in proportion to the chunks of the asset that they began with. '''To recap, Bitcoin is neither feudalist nor capitalist per se. It is simply oligarchic".'''
+
+- Yanis Varoufakis [https://metacpc.org/en/crypto-blockchain/]
+
+
+==From a DAO to a DPO, i.e. a [[Distributed_Programmable_Organization]]==
+
+"The Distributed Autonomous Organization evolves toward the [[Distributed Programmable Organization]]. Post-blockchain architectures are already emerging that have even more flexible, lower-cost, rhizomatic architectures operating on the peer-to-peer model. These make it possible to design alternative models embodying an ethos of sustainable economic and social cooperation that is integrally built into the systems architecture at all levels.
+
+These developments open new possibilities for collective projects to invent their own self-sustaining creative economies, operating not in competition with each other but in a shared, open-source environment based on notions of the “common”."
+
+- SenseLab [http://senselab.ca/wp2/immediations/3eprocessseedbank/]
+
+
+==Encoding the neoliberal subject (methodological individualism)==
+
+"What kinds of subjectivity do we want to algorithmically inscribe into our systems? Blockchain start-ups begin from the assumption that there is no trust and no community, only individual economic agents acting in self-interest. Fair enough, you might think, it’s precisely the fact that projects like Ethereum engineer confidence and provide economic incentives for contribution that may distinguish it from other services like Freenet. But it also proceeds from a perspective that already presumes a neoliberal subject and an economic mode of governance in the face of social and/or political problems. ‘How do we manage and incentivise individual competitive economic agents?’ In doing so, it not only codes for that subject, we might argue that it also reproduces that subject."
+
+- Rachel O'Dwyer [https://www.academia.edu/11627298/The_Revolution_Will_not_be_Decentralised_Blockchain-based_Technologies_and_the_Commons]
+
+
+==The circular logic of crypto decentralization==
+
+"The crypto industry has long depended on circular logic. In short, things must be decentralised because governments otherwise might censor them. Thus, the problem is “the man” and the solution to all problems is more decentralization. The greatest enemy is, thus, the man with the biggest and longest stick, usually the US (e.g. early ethereum folks ended up helping N. Korea to evade sanctions [https://www.coindesk.com/business/2022/04/12/former-ethereum-developer-virgil-griffith-sentenced-to-5-years-in-prison-for-north-korea-trip/]. This first logic problem is intrinsic to the field of cryptoeconomics which, by default, accepts no extrinsic data. That is say, '''a cryptoeconomics system (for example, a bunch of robots that live by consuming bioelectricity) can be optimally successful by growing as large as possible (i.e. by consuming all of the biomass of the planet). What allow this system to succeed and grow is, thusly, defined as the good of this system.  If there is an externality (i.e. the loss of all human and animal life) it will never be accounted for'''. At no point in the last decade since the term was first introduced has anyone successful introduced any “oracle” that would temper these systems or allow or any external sense of “good.”  In short, Milton Friedman’s wet dream has come true, and is being played out around us.  Formal economic and private money systems dominate, and there is no law that can contain them. Despite obvious problems in this logic, there is an even deeper flaw. Most decentralisation is fake. No one knows how much, because there is no one you can trust in the web3 to provide accurate information. The classic example from the NFT space is wash trading. It is trivially easy to create 100 account that all belong to you and trade a $69M object amongst them to make it look like there are millions of dollars of volume and, correspondingly, that the value of the  jpeg approaches $100M. Naturally, folks not “in the know” will assume that this is a real sale and pile into the new digital gold rush. The classic crypto refrain is, of course, “we know it is a scam but it is good for decentralisation.”  In short, decentralisation has become a self-referential religious belief which feeds on itself. The same refrain is consistently used for exchanges, the number of nodes supposedly supporting layer 1 blockchains, and the backing of stable coins. In short, we have created a near utopia for everyone who loves printing money and to join their cartel you must espouse their belief system. The question is, are these systems simply “amoral” (that is, do they exist in a moral vacuum, helpfully provided by postmodernity) or are they “immoral,” do they actually encourage some kind of vice? Moreover, even if one does not accept an extrinsic moral law (i.e. the canon of the catholic church) might one accept that living by tulip cash might create some dangerous instability or unhealthy behaviour? Additionally, one must ask, if a system has been designed to be uncensorable, is there any party that could censor these systems should they require some redirection?"
+
+- Joel Dietz (IDW, April 2022)
+
+
+==Vinay Gupta on the Four Waves of the Crypto Economic Revolution==
+
+"'''Getting crypto built into the web browsers and into the infrastructure of the Internet was the first stage''', and the thing that enabled ecommerce. It was probably the single largest transformation that we’ve ever seen in terms of mass consumer adoption of cryptography. Cryptography built into Web browsers is the thing that created multiple trillions of dollars of value in the form of the entire ecommerce ecosystem, and then the Web 2.0 ecosystem that survives on advertising largely driven by ecommerce. All of that was cryptography; prior to the building of the crypto into the Web browsers there was no ecommerce, there were no credit card transactions online, there was really nothing but documents. So, we’ve already gone through one almost industrial revolution in real-world asset trading driven by crypto. '''The second huge transformation was the creation of SIM cards. SIM cards and bank cards that have chip and PIN and all the rest of these kinds of things were the first real large-scale adoption of hardware cryptography''', that was when we started having cryptographic algorithms embedded in chips, which gave you a completely new kind of security. '''Then, the next turning point, the third, is the Bitcoin whitepaper'''. ... Finally, '''in the fourth step, Ethereum made it possible to run decentralised applications on the blockchain''', making NFTs and DeFi possible. "
+
+- Vinay Gupta [https://medium.com/humanizing-the-singularity/the-road-to-rwa-f99cac31361d]
+
+
+==Beyond the False Dichotomy of Markets vs States==
+
+"While the hunt for liquidity and profit is a significant driver in crypto, the community and technology are not fundamentally based in this vibe — rather it is an offshoot of more systemic geo-economic dynamics. At its most innovative, crypto represents transformative possibilities for distributed, privacy respecting communication and coordination. The real prize is not crypto’s potential as decentralized private money (to the extent private money will exist, it will most likely be monopolized by large telecommunication entities) but that it suggests a new infrastructure of communication and an expert class devoted to its development. If one lives with privilege in a society, the concern with surveillance of that communication is perhaps less pronounced. But for much of the world and much of history, a healthy anti-authoritarianism wary of surveillance is a friend of freedom, progress and well-being. Framing crypto as a money fight requiring legacy arrangements to step in and take over is too big brother, too neoliberal.
+
+On the non-left, colleagues are often ‘anti-centralisation’ and anti-regulation. They forget that there is always already background institutional rules (markets aren’t ‘natural’) and that centralisation isn’t a fact, but a characterisation in that you can always describe something as decen/centr depending on whether zoom in or out (much like ‘time’ being long or short), and even if we could approximate it. Nor does decentralisation result in transcending hierarchy. To fragment authority and set practices means you need standardisation to achieve efficiencies, and standardisation means over time cutting down on innovation and usually being captured by concentrated power or at least its logic. In other words, it doesn’t avoid the problem, it just shifts the terrain a bit. Out with the old boss, in with the same-ish boss.
+
+The point here, is that whatever position one has, the point is we should consider shifting away from tired debates championing ‘the markets’ or ‘the state’ since these are largely metaphysical/rhetorical terms that can be flipped around endlessly and captured politically. To speak of a state as a fixed entity is to ignore its messy porous boundaries, replete with public-private arrangements, acrimonious stakeholder interests and warring administrative processes across local, regional and global terrains. To speak of a market as if existing outside politics is to pretend that its arrangements reflect legal regimes (e.g., contracts, property) formalising polity/political decisions — changing a background law can change a business model that can shift cultural behaviors and market reasoning. And often, the struggles seem to be less about actual politics or analytical clarity, and more people getting caught up in some sort of culture war with based on stylistic/rhetorical/experiential comfort zones."
+
+- John Haskell [https://medium.com/cryptolawreview/cryptos-crypto-is-coordination-not-currency-8bb4059e1336]
+
+
+==Investment/Plutocracy vs Democracy==
+
+'''1.'''
+
+"If we have democracy, capital attraction, and treasury utilization efficiency, we have the trilemma of DAO governance. 
+
+1) Once we maintain democracy and treasury efficiency (considering the community as a parameter for what would be effective), we lose capital; 
+
+2) If we maintain the efficiency of treasury utilization and want large values ​​inside the DAO, we lose in democracy; 
+
+3) And if we want democracy and capital attraction, we lose treasury utilization efficiency, since democratic decisions can lead to slower processes and mutual concessions, which can impact resource allocation efficiency."
+
+- Danimim [https://mirror.xyz/blockful.eth/Ht7raeMRhVNg64X-uHJ3vowmox2Dx8_OPMWVWPnkVyI]
+
+
+'''2. Two future scenarios for the Crypto/DAO economy:'''
+
+"Two possible futures:
+
+'''DAO ownership becomes in large part subsumed and instrumentalized by centralized financial institutions''' and TNCs. DAOs accomplish little in the way of advancing a self-sovereign, fiscally and politically decentralized control network. The risks of global financial capitalism are exported to DAOs, and they fail to create any meaningful difference viz-a-viz today’s global order. Ideas like DAO-governed commons become meaningless over time as DAOs ultimately congeal into speculatory investment vehicles (profits, of course, measured in fiat). In this scenario, the large connected component — the beating core of the financial industry — simply eats the crypto-institutional young.
+
+'''DAOs endogeneously structure a self-sovereign, crypto-institutional control network of their own, generally aiming for separation or mitigation from centralized organizations'''. They pursue a topology advantageous to scaling a core of collaborative governance entities, like crypto-institutional commons. It could be argued that the forkability intrinsic to open-source software resists instrumentalization (while on the other hand, barriers to secession may actually help stabilize complex control networks). In this future, I hypothesize that centralized institutions move towards decentralization to more favorably integrate with the cryptosphere — assuming, of course, DAOs effectively enforce new crypto-institutional norms in international affairs."
+
+- Pat Rawson [https://blog.curvelabs.eu/ownership-in-cryptonetworks-96f13f4a113e]
+
+
+==Towards an Ecosophic Design of Programmable Currencies==
+
+"Crypto-technologies will produce a radically different economy. The very notion of for-profit firms accumulating away mirobolant amounts of money will be durably disrupted in the coming years. The mechanisms by which Capital is over-heating the planet could very well come to an halt. With blockchain and virtual ledger technologies, the economy is becoming a design question for everyone to contribute to if so they wish.
+
+The money as monetized today holds a higher perceived value because it discounts the many environmental and human negative impacts associated with capital formation. But with crypto-economics, it becomes possible to re-engineer and decolonize the money-form from within. That is: we can design money-forms and circuits of exchange that reflect our desires and values. The opportunity to redesign the current global economy is opening to us from programmable money — money that is not itself an end-goal commodity but rather what it was always meant to be, a tool for exchanging and collaboratively generating value. We can start engineering a world in which the surplus-value generated by our productive activities won’t get extracted and conserved in anti-social stores of value; a world in which the sociality of production and circulation will remain at hand, immediately felt throughout the newly designed economic spaces we are participating in."
+
+- Eric Bordeleau [https://medium.com/economic-spacing/zero-degree-project-for-cooling-off-capital-part-1-initial-ecosystem-offering-ieo-1e39545f8eeb]
+
+
+== To open, within capitalism, a spread of new calculative systems and values ==
+
+"ECSA and its Protocols book is a project designed to move beyond seeking the political solidarity of articulate critique (Bryan et al., Reference Bryan, López and Virtanen2023). Its project is to utilise distributed ledger technology and an expanded accounting grammar as a foundation to explore how something progressive can be built that is both specific to the current period of financially dominated capitalism and utilises (rather than resists) current financial analytics. There are of course no truths here, but a couple of core propositions warrant noting at the outset:
+
+1. The revelation in 2009 of blockchain ledgers (in the form of Bitcoin) created the possibility, largely neglected over the subsequent decade, of a record-keeping system that does not have to replicate a capitalist mode of calculating. It does not have to adopt its unit of account, its accounting system that defines all entries by reference to profit criteria. Nor must it replicate the state’s money – its functions, issuance, or verification system. Perhaps, we need to recognise, finance is not the natural enemy of postcapitalism. Indeed, its reach, both spatially and temporally, embeds a sociality that is invaluable. But how can we use this technology to shift the debate about finance and money beyond the critique of monopoly power and beyond state-underwriting of private credit issuance, to questions of who has the right to issue credit, and of what conditions would give that issuance social reputation and trust? How can credit be the glue that binds a network in cohesion rather than the wedge that fractures it in exploitation?
+
+2. This same distributed ledger system opened the possibility for distributed social decision-making, and at scale (something coherently coordinated and way beyond the spatial reach of community economies). Data gathering and mining could record and process infinite voting processes. The challenge for postcapitalism is how to make this capacity for real-time decision- and sense-making about what to produce (or ‘perform’), what constitutes ‘value’, and how to govern value creation and surplus production and distribution, without deference to know-all central planners and without descending into endless consensus-seeking collective meetings that require time to stand still. What if distributed ledger technology could enable decision- and sense-making via automated market order matching, credit clearing, and portfolio rebalancing, all at scale and without the need for a central clearing house? This is the protocol ECSA is building (the economic space protocol) and whose grammar is explained within Protocols. We hold that the new substrate of high-speed computer networks with which the economy is catching up is a critical new basis on which to imagine, and then design, the essential elements of a postcapitalist alternative. But for this to become possible, we need also to expand the economic calculative logic with which we currently compute.
+
+The political claim, therefore, is not to provide the seeds of a mass movement, but to open, within capitalism, a spread of calculative systems and values."
+
+- Dick Bryan [https://www.cambridge.org/core/journals/finance-and-society/article/protocols-for-postcapitalist-finance-a-reply/9EB5FA737F66F96E201F9E36039DB90E]
+
+
+==Expanding the measures of value==
+
+'''1.'''
+
+"What we need is neither unfettered markets nor hegemonic state control, but a new economic theory of value—a regenerative cryptoeconomic framework that leverages decentralized technologies to create pluralistic economic structures. Such structures would enable communities to define, measure, and exchange diverse forms of value without relying on either corrupted state power or extractive market mechanisms. By creating economic infrastructure that can recognize and incentivize contributions to social cohesion, ecological health, and human flourishing, we can build systems that generate and equitably distribute real value rather than extracting and concentrating financial wealth."
+
+
+'''2.'''
+
+"The future of capital allocation lies not in the persistence of monistic valuation nor in its mere negation, but in a dialectical synthesis that preserves the coordinative efficiency of markets while transcending their reductionist value frameworks. By expanding what we measure, value, and incentivize, we can build economic systems that optimize not for narrow financial returns but for the flourishing of human and more-than-human communities across multiple generations."
+
+- Benjamin Life [https://omniharmonic.substack.com/p/beyond-narrow-optimization?]
+
+=Key Resources=
+
+* The [[Capital Allocation Pattern Language]]
+
+* The [[Onchain Capital Allocation Handbook]]
+
+* Report: [[On-Chain Impact Networks]]: How Crypto Is Being Used To Regenerate The World. A GreenPill Network Writer’s Guild.
+[https://greenpill.network/pdf/onchain-impact-networks.pdf]
+
+
+==Key Articles==
+
+* '''Introduction to the history, present and future of [[Decentralized Commerce]]''', by Ori Shimoni.
+
+* Intro: [https://medium.com/cryptoeconomics-australia/the-blockchain-economy-a-beginners-guide-to-institutional-cryptoeconomics-64bf2f2beec4 The Blockchain Economy: A beginner’s guide to institutional cryptoeconomics]
+
+* Intro: This excellent overview [https://medium.com/@deframing/the-meaning-of-monetary-economics-in-the-crypto-world-e7f89e60d3a3 article by Yongseung Kim] is an excellent contextualization of the design of Bitcoin within the different traditions of money and economic theories:
+** The [[Ledger Theory of Money]]
+
+*  [[Foundations of Cryptoeconomic Systems]]. By Shermin Voshmgir and Michael Zargham. WU Vienna, Working Paper Series 1/20 [https://epub.wu.ac.at/7782/1/Foundations%20of%20Cryptoeconomic%20Systems.pdf]: '''very important to understand what problems CE is trying to solve, what it makes possible as successor economics, and on what scientific disciplines it is based.'''
+
+* [[Limitations of Cryptoeconomic Governance Mechanisms]]. By Nathan Schneider.
+
+* [[Coops Based on Cryptonetworks]]. Jesse Walden: "we believe that '''cryptonetworks — what we call “community owned and operated networks” — could unlock a new paradigm for continued cooperation, while still sustaining strong network effects".'''
+
+* Jeff Emmett on the [[Commons Stack]] project: [https://medium.com/commonsstack/automating-ostrom-for-effective-dao-management-cfe7a7aea138 Towards an ‘Ostrom Compliant’ Cyber-Physical Commons] + [[Aligning Cryptocurrency Incentives To Finance Positive Externalities]]
+
+* [[Most Cryptoeconomics Do Not Challenge Neoclassical Premises]] + [[Potential of Cryptotokens as Innovative Units of Account]]
+
+'''* IMPORTANT: Why Bitcoin would be a economic disaster as world standard''': [[Yanis Varoufakis on Bitcoin's Economic Fallacy of Composition]]
+
+
+
+'''See also:'''
+
+* '''Please read''' this very good overview of Metacurrency / Holochain and Economic Space Agency projects: ''The state of the art of co-designing digital ledger technologies for commons and common good''. By Dan Diojdescu.''' [https://www.researchgate.net/publication/326905079_The_state_of_the_art_of_co-designing_digital_ledger_technologies_for_commons_and_common_good?]
+
+Please read: [[Will Ruddick of Grassroots Economics on the Characteristics of a Fair and Decentralized Currency System]]
+
+* Davidson, S., De Filippi, P., & Potts, J. (2016). Disrupting governance: The new institutional economics
+of distributed ledger technology. SSRN Working Paper https://dx.doi.org/10.2139/ssrn.2811995
+
+* Davidson, S., de Filippi, P. and Potts, J. (2018) ‘Blockchains and the economic institutions of
+capitalism’, Journal of Institutional Economics. Cambridge University Press, 14(4), pp. 639–658.
+https://doi.org/10.1017/S1744137417000200
+
+* Davidson, S., De Filippi, P., & Potts, J. (2016). Economics of blockchain. Available at SSRN 2744751.
+https://dx.doi.org/10.2139/ssrn.2744751
+
+
+
+===ECSA===
+
+* [[Redesigning Markets Through Different Distributed Network Protocols‎]] : "Transcending Hayek and his digital disciples: the market, prices and profits as protocols"
+
+* The [[Influence of Hayek on the Crypto Economy]]
+
+==Key Books==
+
+
+* [[Onchain Capital Allocation Handbook]] - by Kevin Owocki. Allo, 2024 [https://allobook.gitcoin.co/?]
+
+"Capital allocation, from paying bills to complex organizational funding, often suffers from inefficiencies and lack of transparency. Crypto, with programmable smart contracts, has the potential to revolutionize this by enabling more efficient, effective, and transparent capital distribution. By addressing coordination failures and introducing new onchain strategies, crypto could transform how society allocates resources, similar to how the internet revolutionized information sharing. This book explores these possibilities within the web3 space, offering a comprehensive guide to the emerging innovations in capital allocation."
+
+
+* [[Protocols for Cryptoeconomic Networks]]. the [[Economic Space Agency]]'s White paper. By Dick Bryan and Akseli Virtanen.
+
+'''* Radical Markets. By Eric Posner & Glen Weyl.'''[https://www.ethnews.com/ethnews-exclusive-e-glen-weyl-on-radical-markets-ethereum-and-designing-a-better-society]: "Their ideas have captured the imaginations of blockchain technologists in particular. That is because while it is hard to change real-world property law, it is easy to rewrite the rules governing ownership of crypto-assets. Thus, '''there is a fascinating possibility of architecting crypto-asset ownership schemes that are simultaneously more efficient and more egalitarian than the Common Law scheme''' governing the real economy." [https://medium.com/blockchannel/reimagining-property-fbce9d3832a4]
+
+==Key Podcasts==
+
+* [[ECSA on Transcending Hayek and his Digital Disciples]] [https://soundcloud.com/user-177407194/crypto-political-economy-ch-2]
+
+ECSA is probably the most sophisticated project to come out of the peer to peer commons movement.

@@ -1,0 +1,322 @@
+
+=Definition=
+
+Dick Bryan and Akseli Virtanen:
+
+"Cryptocurrencies are not just ‘money’ — they are part money, part asset and part political organization ...  What makes cryptocurrencies so powerful is that we can use them to express different social and economic agendas and to measure things differently; to implement different incentives and record their effects. Economy opens as a design question. This is the precondition for building different social and economic agendas and de-naturalising the rule of private and individual measures of social contribution, materialising in concepts like ‘profit’ and ‘efficiency’." 
+(https://medium.com/econaut/whose-stability-6521874f6c5a)
+
+
+=Description=
+
+'''1. Adam Ludwin:'''
+
+"Defining cryptocurrency:
+
+Without a working definition we are lost. Most people arguing about cryptocurrencies are talking past each other because they don’t stop to ask the other side what they think cryptocurrencies are for.
+
+Here’s my definition: '''cryptocurrencies are a new asset class that enable decentralized applications'''.
+
+And since this isn’t about cryptocurrencies vs. fiat currencies let’s stop using the word currency. It’s a head fake. It has way too much baggage and I notice that when you talk about Bitcoin in public you keep comparing it to the Dollar, Euro, and Yen. That comparison won’t help you understand what’s going on. In fact, it’s getting in the way. So for the rest of this note, I will refer to cryptocurrencies as crypto assets.
+
+So, to repeat: crypto assets are a new asset class that enable decentralized applications.
+
+And like every other asset class, they exist as a mechanism to allocate resources to a specific form of organization. Despite the myopic focus on trading crypto assets recently, they don’t exist solely to be traded. That is, in principle at least, they don’t exist for their own sake.
+
+To understand what I mean, think about other asset classes and what form of organization they serve:
+
+* Corporate equities serve companies
+* Government bonds serve nations, states, municipalities
+* Mortgages serve property owners
+
+
+And now:
+
+* Crypto assets serve decentralized applications
+
+
+Decentralized applications are a new form of organization and a new form of software. They’re a new model for creating, financing, and operating software services in a way that is decentralized top-to-bottom. That doesn’t make them better or worse than existing software models or the corporate entities that create them. As we’ll see later, there are major trade-offs. What we can say is simply that they are radically different from software as we know it today and radically different from the forms of organization we are used to."
+(https://blog.chain.com/a-letter-to-jamie-dimon-de89d417cb80)
+
+
+'''2. ACM:'''
+
+"Humans have attempted to create secret codes since the invention of writing but modern mathematical cryptography has developed over the past 50 years. Public key cryptography was introduced in 1976 (http://www-ee.stanford.edu/~hellman/publications/24.pdf) and the first cryptocurrencies were attempted in the early 1980’s (http://bitcoinmagazine.com/12241/quick-history-cryptocurrencies-bbtc-bitcoin/). Digital signatures are able to guarantee that a digital cash transfer was authorized by its owner but cannot prevent the owner from spending the cash twice.
+
+Several solutions for the double-spending problem have been proposed but the 2008 posting of the “Bitcoin” paper (https://bitcoin.org/bitcoin.pdf) by pseudonomous author(s) Satoshi Nakamoto described the first system which has become widely used. The current value of all bitcoins now exceeds 5 billion dollars and 507 related cryptographic “altcoins” have been created using the same principles (http://coinmarketcap.com/). A flurry of bitcoin and altcoin based businesses now exist ranging from coin miners and exchanges to coffee houses and flower stores (http://www.coindesk.com/information/what-can-you-buy-with-bitcoins/).
+
+The primary bitcoin innovation is the use of “bitcoin miners” to add transactions to the decentrallized “bitcoin blockchain”. They perform computationally expensive “proof of work” and are rewarded in bitcoins for their efforts. This enables a decentralized consensus about transactions that cannot be disrupted by attackers who expend fewer computational resources than the total of  the other miners in the network. Bitcoin supports some forms of transaction that go beyond transferring money from one party to another. For example, it is possible to implement “multi-signature” transactions in which two out of three participants must validate a transfer (https://en.bitcoin.it/wiki/Contracts). But bitcoin’s facility for defining contracts is limited."
+(http://steveomohundro.com/2014/10/22/cryptocurrencies-smart-contracts-and-artificial-intelligence/)
+
+
+
+==The One of the Many ?==
+
+Arthur Brock:
+
+"Currently, most people think of cryptocurrencies as things that run on blockchains like bitcoin, ethereum, dogecoin, and all the alt-coins and ledger systems. This post outlines a completely different strategy for implementing cryptocurrencies with completely distributed chains. Before presenting the approach, I want step back and validate some basic assumptions, because this very notion seems impossible to many, especially those steeped in blockchain.
+
+In the MetaCurrency project we started with a different goal. '''Rather than trying to make one global, anonymous, digital cash ''(“One ring to rule them all…”)'', we are interested in the resilience that comes from building a rich ecosystem of interoperable currencies.''' We seek to empower communities of all shapes, flavors, and sizes to organize themselves and their flows of resources more effectively. Our different assumptions and design requirements has led us down a different path toward implementation."
+(https://medium.com/metacurrency-project/beyond-blockchain-simple-scalable-cryptocurrencies-1eb7aebac6ae#.eb8wu62p5)
+
+=Characteristics=
+
+Andrew Bailey et al. :
+
+"Cryptocurrency characterized
+
+We are now in a position to better explain our characterization of cryptocurrency as digital money that makes essential
+use of cryptography to manage and verify issuance and transfer of bearer instruments on a distributed ledger. Let's take each
+piece in turn.
+
+* Digital: cryptocurrencies are inherently digital and need not involve any concrete material representation of value
+like a coin or paper bill.
+
+* Money: cryptocurrencies, to some extent, enjoy some classical properties of money, like divisibility, portability, and
+fungibility. (Whether they are apt stores of value, means of exchange, or units of account is more contentious)
+
+* Essential use of cryptography: cryptocurrencies must use cryptography to function properly. They need cryptographic
+algorithms to generate addresses and signatures, provide a tamper-resistant ordering of blocks, and, in several
+cases, mint tokens.
+
+* Bearer instruments: ownership of a bearer instrument requires nothing beyond possession. Cryptocurrencies, in this
+respect, resemble bearer instruments. The possession of a token typically amounts to the control of one or more
+private keys.
+
+* Distributed ledger: issuance and transfer of cryptocurrency tokens occurs on a record of transactions or holdings
+jointly maintained by participants on a network."
+
+(https://andrewmbailey.com/MoneyWithoutState.pdf)
+
+
+==The MetaCurrency view==
+
+Arthur Brock:
+
+"What are the core elements of a modern cryptocurrency?
+
+* Digital: This one may be obvious, but it’s worth saying. It’s electronic, not paper or coins. Holdings are electronic and only exist and operate by virtue of a community’s agreement about how to interpret digital bits according to rules about operation and accounting of the currency.
+
+* “Trustless:” You don’t have to trust a 3rd party central authority (a bank, government, business, or club) for the currency to work. The currency operates independent of the goodwill, integrity, practices, or decisions of any particular (non-representative / unaccountable) group.
+
+* Decentralized: The primary to ensure the currency is not controlled by a small group for their own benefit is to make the currency itself function in a decentralized manner so that it is literally held and managed by many, most, or all of its participants. Specifically, access, issuance, transaction accounting, rules & policies, should be collectively visible, known, and held.
+
+* Cryptographic: Since a decentralized information architecture also means many “fingers in the pie,” the currency should leverage cryptographic data structures (hash-chains, Merkle trees, etc) to ensure Intrinsic Data Integrity. This cryptographic structure is used to enable a variety of people to host the data without being able to alter it.
+
+* Identity: Since the currency only exists as bits, there must be a way to associate these bits with some kind of account, wallet, owner, or agent who can use them. Some kind of identity and authorization infrastructure is required (even if it permits anonymous use). This is typically implemented using cryptographic public/private key pairs. This is a second distinct use of cryptography from the cryptographic structures to ensure data integrity in #4.
+
+
+...
+
+
+I acknowledge our assumptions stray from the norm in these ways:
+
+- It does not have to be stored in a synchronized global ledger, if you can meet the above criteria another way.
+
+- A currency does not have to be money. It may be a reputation currency, or data used for identity, or naming, etc.
+
+- Its units do not have to be cryptographic tokens or coins.
+
+- It does not have to protect the anonymity of users, although it may."
+(https://medium.com/metacurrency-project/beyond-blockchain-simple-scalable-cryptocurrencies-1eb7aebac6ae#.eb8wu62p5)
+
+
+
+
+==The Faircoin view==
+
+Text from same author as our [[Faircoin]] article.
+
+
+===Background===
+
+The world of cryptocurrencies started with the enigmatic person or collective Satoshi Nakamoto. His origin or place of residence remains unknown. Everyone talks about him, but nobody really knows him.
+
+In 2008 he published his white paper, introducing a disruptive technology.
+
+Satoshi not only launched the theory, but also designed it and put it into our hands. The following year he launched a free software application to create the first cryptocurrency, Bitcoin. Then the race began. Hundreds of coins have been developed from this initial one, each with its own peculiarities, but generally respecting basic features such as blockchains, encryption, pre-coined money supply, etc.
+
+We are at a historic moment. Peer society alternatives have been growing fast, and cryptocurrencies provide us with just the tool that was missing to enable us to change the rules of the game.
+A revolution of economic, technological and social systems is taking off.
+
+
+=== What is a cryptocurrency? ===
+
+It is a digital currency, or virtual money based on a peer-to-peer, decentralized exchange network protected by cryptography.
+
+This means that, in the first place, it isn’t a material currency, but rather that everything works virtually from our computers and the Internet. Second, it is protected by encryption, hence the name “cryptocurrency”. This is a way to secure the system and the transactions through mathematical algorithms which convert the information in an encrypted block, only readable with the correct key, with a level of encryption that’s impossible to decipher with today’s known technology.
+
+Coins are not actually units as we may think, but pieces of information, specifically they’re exchanges of keys which are recorded on a public accounts book which everyone can see and check, and which is is almost impossible to fake. To put it simply, what actually happens when you give someone else a coin is that you sign a transaction with your private key, transferring a value (“coins”) to another person’s direction. These signatures make up chains that are verified and confirmed by an entire community of people who use their own computers to verify that the transactions are correct.
+
+As complex as the system may seem, it is actually very simple, and enough technology has been developed to make a cryptocurrency payment as easy as paying with your code-protected credit card.
+
+The innovation and main difference of cryptocurrencies as compared to central money is, in the first place, cryptocurrencies are neither saved nor controlled by any central bank or State. In this system, you own all your money, and the system is secure thanks to peer2peer technology. Secondly, counterfeiting is currently unfeasible.
+
+Thus, cryptocurrencies give us immunity to interference and manipulation by central banks and return us our freedom of economic management
+
+
+=== How are notes and balances secured? ===
+
+Satoshi’s great contribution to humankind is the blockchain. It consists of a p2p program which collects all the transactions done in a period of time in a block and joins them together in “chains”, resulting in something resembling a ledger containing all transactions, which are then distributed and verified to avoid fraud.
+
+In order for a block to be added in the chain, it must be submitted to automatized voting among all the computers connected to the net, so they can determine whether the block contains valid information or not. Once the node accepts a block as valid (which means that all transactions contained are true), other nodes confirm its validity by building the next blocks on the same chain. Therefore, each block maintains a mathematical relationship with the previous block and the future one. This whole process has its foundations laid in the mathematical algorithms specially designed for this purpose.
+
+The blockchain provides the world’s first decentralized, incorruptible system for registering any financial or legal contract, so it’s already being used for multiple purposes, and new ones will gradually appear. Each computer which downloads the program acts as a notary, and all computers working simultaneously decide according to mathematical laws.
+
+
+=== How are coins created? ===
+
+The software released for Bitcoin was designed in such a way that only 21 million coins could be created. For Faircoin, there are 50 million coins plus those which are generated through the minting system explained below.
+
+There are different ways to create these coins. The most common and widespread methods are POW and POS. Both are designed with a feedback system, ie, in order to get coins from the system, you must contribute to making the system work properly. Let’s take a closer look into the way this functions.
+
+
+=== POW ([[Proof Of Work]]) ===
+
+This is a validation system based on work, also called mining. It is dependent on computing power. Miners are those who participate in the network, contributing with their computer and the energy expenditure derived from mining.
+
+Mining itself is performed on different nodes working in unison through the POW infrastructure. The more computing power supplied to the system, the more likely it is for a block to be completed.
+
+For each block completed and added to the blockchain, the creator node is awarded a certain amount of coins, in the case of bitcoins, 25BTC.
+
+This system values the work of the mining community in completing the blocks, and compensates it with coins. This is the system used for bitcoins and is known as MINING.
+
+
+=== POS ([[Proof Of Stake]]) ===
+
+In this case, the system validation is based on demonstrating that you own the coins by using “money age”. New coins are created once you prove that you have been saving a certain amount for a certain time, and through this savings, you also contribute to the network’s security. This method began with Peercoin and is also currently used in Faircoin. The process is known as MINTING.
+
+Both methods are widely used by different cryptocurrencies, separately or as a hybrid. However, POS arose to overcome some disadvantages of POW: on the one hand, there is the problem of energy consumption. As the system has grown, along with the number of transactions, it is increasingly difficult to mine a block and it requires more and more computing power, therefore becoming an ecological and economic issue.
+
+On the other hand, since transactions are validated by miners, if 51% of the computing power of mining nodes were to unite, they could seize control of transactions and therefore of the registered coins.This is known as a 51% attack.
+
+In opposition to this, POS does not require large energy resources for minting. Anyone, with just a computer and an open purse, can mint (see specifications below), so it’s a much greener way to maintain the system. Also, the only way a monopoly could arise, as in the case of POW, would be if someone were to own more than 50% of minted coins — which would be meaningless in terms of economics, for the owner to prejudice their own capital.
+
+In conclusion, POS encourages savings and thus helps generate sustained growth in currency value which will be gradually fed by all cooperative members.
+
+
+=== How are cryptocurrencies used? ===
+
+To use cryptocurrencies, you first need a virtual wallet. There are many models, each with its own peculiarities, and can be local, as in mobile or computer apps, or online through a server. Each has different features. You can download one for FairCoin [https://fair.coop/faircoin/ here].
+
+Wallets are good for keeping your coins safe and making transactions, both to receive and send money, by just entering a receiver address.
+
+It is important to note that any transaction made is impossible to reverse, as it is recorded in the blockchain; therefore, users need to be careful!" [https://bitcoin.org/en/secure-your-wallet Here are some safety tips.]
+
+
+=Typology=
+
+Andrew Bailey et al. :
+
+"Here are four key dimensions along which cryptocurrencies differ:
+
+* Monetary Policy. Cryptocurrencies differ in their inflation rates, total future supplies, the amount and nature of their
+supplies at their network's genesis, and the introduction and distribution of future supplies.
+
+* Privacy. Some privacy-focused cryptocurrencies allow for shielded or private transactions where the sender, the
+receiving address, or the amount are hidden from view. Others offer privacy through obscurity within a crowd.
+
+* Censorship-Resistance. How easy is it to contribute to the network or transact over it? Who, if anyone, gives permission to do so? Can anyone block transactions?
+
+* Consensus. Some networks use something other than solving math problems to update the ledger. What do they use,
+and what are the tradeoffs?
+
+
+Thinking along these dimensions will blend technical, economic, and normative matters. For example, on the first
+dimension: what are the tradeoffs of having a particular (inflationary, say) issuance schedule? Who stands to lose or
+gain? On the second: is financial privacy good? For whom? Against what does it trade off, and what are the costs and
+benefits of implementing transactions that cannot easily be tracked or monitored? On the third: should people need
+permission before being able to use a financial system? From whom? And finally: who should be in charge of a ledger?
+Is the use of vast computational resources to cultivate a network worth it? What are the costs and benefits of such a
+system and how do they stack up against possible alternative models?"
+
+(https://andrewmbailey.com/MoneyWithoutState.pdf)
+
+
+=Status=
+
+From ChatGPT, January 2025:
+
+"The number of cryptocurrency users and wallet owners worldwide has grown significantly in recent years, with various sources providing differing estimates:
+
+Triple-A: As of 2024, global cryptocurrency ownership was estimated at over 560 million people, representing approximately 6.8% of the world's population. 
+
+
+Statista: The global user base of cryptocurrencies increased by nearly 190% between 2018 and 2020, with further acceleration in 2022. 
+
+
+Coinweb: In 2023, there were over 420 million crypto users worldwide, with Bitcoin being the most popular cryptocurrency, boasting 219 million users. 
+
+
+Demand Sage: The number of cryptocurrency users grew from 295 million in 2021 to 617 million in 2024, marking a 377% increase since 2021. 
+
+
+Crypto.com: The global number of cryptocurrency users increased by 34% in 2023, growing from 432 million to 580 million people. 
+
+
+Investing in the Web: Global crypto ownership rates were estimated at around 4.2% in 2024, encompassing more than 420 million users worldwide. 
+
+
+Moneyzine: In 2023, the number of global crypto users was estimated at 420 million, with over 87 million people worldwide owning a blockchain wallet."
+
+=Discussion=
+
+Daniel Pinchbeck:
+
+"In the last part of this essay, I considered a few of the main criticisms of cryptocurrency coming from the traditional Left. To review: 
+
+Leftists argue that cryptocurrencies are not actually a new form of money – a universal unit of exchange for purchasing goods and services – but mainly function as speculative assets that are highly volatile and prey to market manipulation, such as “pump and dump” and “rug pulling1” schemes. Leftists think that cryptocurrencies, in general, increase the “financialization” of the economy (the movement away from producing goods to trading complex financial products) as well as the privatization of public goods or commonly held resources. They believe these ongoing trends have caused negative outcomes over the last half century, such as Structural Adjustment Programs in the developing world and the 2008 crash of the global financial system. 
+
+Not just Leftist critics but critics from across the political spectrum — including both Hilary Clinton and Donald Trump – warn that cryptocurrency may disrupt fiat currency as money becomes privatized. The private creation of money-like tokens could lead to increasing wealth inequality as more people “invest” their money into crypto (or, in other words, get swindled by crypto scams). It could disempower governments without providing any better answer to our social and environmental needs. 
+
+Traditional Leftists (socialists and communists) believe that national governments should maintain control over the creation of money. Hence, the Leftist project should focus on reforming government, as someone like Bernie Sanders wants to do. Structural inequality can be addressed using traditional techniques like taxation – increasing taxes on corporations and the wealthy and then redistributing capital through social programs – or even reparations, where money is given to indigenous people and the contemporary descendants of former slaves, to ameliorate unjust legacies. 
+
+In The Politics of Bitcoin: Software as Right Wing Extremism, David Golumbia argues that the design of Bitcoin and other cryptocurrencies have an intrinsic Libertarian bias – that this political ideology is “encoded in the software itself.” Crypto is a way to avoid regulation and taxation, and ultimately bring down governments which, Libertarians believe, limit human freedom. Golumbia writes that Bitcoin’s core proponents seek an “anarchic apocalypse” to put governments out of business: “This, in the end, is the extreme rightist—anarcho-capitalist, winner-take-all, even neo-feudalist— political vision too many of those in the Bitcoin (along with other cryptocurrency) and blockchain communities, whatever they believe their political orientation to be, are working actively to bring about.” Traditional Leftists like Golumbia want a strong centralized State but one aimed at their goals: Wealth redistribution, demilitarization, protection of civil rights, and universal social programs.
+
+Yet, in a country like the US, it doesn’t seem possible to overcome the entrenched inertia of the system, which is beholden to corporate power and the financial elite. The people no longer trust the government and seek alternatives. Out of frustration, many are embracing Right Wing authoritarianism. Any significant challenge to our current political-economic system must come from outside of it — from the private sector or from hackers in the tech world. Blockchain-based technologies can redefine the creation and distribution of both economic value and political power. Rather than rejecting them, we should use them to build something new.
+
+Critics also note that Bitcoin and other cryptocurrencies are environmentally destructive. Bitcoin mining uses an incredible amount of energy – more than a country like Sweden, or more than all of the solar panels currently operating in the world. Bitcoin investors and promoters will argue around this point in a number of ways. For instance they will insist that the Bitcoin mining industry is somehow leading the way in accessing renewable sources of energy, such as hydro-power. But this doesn’t hide the reality of the ruinous impact of “proof of work” mining. All of the energy going into solving complex mathematical puzzles could be used, instead, for actual necessities, at a time when we must radically reduce CO2 output or face imminent planetary catastrophe. (Of course, some on the Libertarian Right still insist, all evidence to the contrary, that anthropogenic global warming is a myth or a Deep State conspiracy).  
+
+Ethereum is currently in the process of transitioning from “proof of work” to “proof of stake” mining, which requires far less energy. But this has not yet been accomplished. Critics such as Michel Bauwens and Alex Pazaitis, in a recent report for the P2P Foundation, argue that there are inherent problems with both modes of maintaining distributed ledgers: “Both proof-of-work and proof-of-stake protocols do not present fair mechanisms for the distribution of power in decision-making. Proof-of-work creates soaring demands in energy and processing power… proof of stake is explicitly based on ownership of stakes, which represents the outcome of the very same unequally-distributed underlying dynamics” found throughout Capitalism with its hierarchical power structures.  
+
+One of the main terms used to promote cryptocurrency adoption is “decentralization.” Yet critics argue that this ideal of decentralization is both a bit of a fraud and problematic in a number of ways. Some critics make an analogy to the way “democratization” was used to promote the adoption of Web2.0 technologies such as social networks and blogging. In the end, it is unclear if these tools have promoted democratic values. Authoritarian movements and regimes make effective use of them and appear to be growing around the world. Similarly, decentralization could easily lead to a recentralization, through Central Bank issued digital currencies or by other means. 
+
+Critics argue that promoting decentralization as a goal of the movement is misleading in a few different ways. One problem is that certain aspects of the creation and distribution of cryptocurrencies tend to become more centralized over time. For example, originally it was possible for individuals to mine Bitcoin on their personal computers. As the network grew, it required more computing power to perform its ongoing calculations. Bitcoin creation is now mainly done by a small number of huge, centralized mining operations who, presumably, have a great deal of influence over the network. 
+
+As ‘Amazon’s Server Outage Took Down a ‘Decentralized’ Crypto Exchange,’ an article from Vice reveals, many of the so-called decentralized tokens and exchanges rely on highly centralized infrastructure, such as Amazon’s Web Services (AWS). They are thus prone to failure or potentially can be targeted for attack. The article notes: “It's clear that the "decentralized" part of "decentralized finance" has a bit to go in some cases, and Amazon's cloud dominance is now pretty much a core part of the web, whether that's web1, 2, or 3. And that can cause all sorts of problems.”
+
+
+While Blockchain-based cryptocurrencies are not as decentralized as they seem to be, they are also not devoid of internal political battles, which was supposed to be another selling point. Crypto-economics holds out the vision of a world where messy political contests are unnecessary because the purity of the code resolves such dilemmas. Yet in actuality, many cryptocurrencies reach points in their development where complex decisions must be made through traditional political means, with factions of stakeholders holding emergency summits and frantic Zoom calls to piece the thing back together."
+
+(https://danielpinchbeck.substack.com/p/crypto-criticism-part-two?)
+
+=More Information=
+
+* [[Smart Contracts]]
+
+
+==Directory==
+
+* Information on hundred of cryptocurrencies	coinwarz.com/cryptocurrency/coins
+* Coinmarketcap	coinmarketcap.com
+* Augur : Prediction market	augur.net
+* OpenBazaar : Trade online directly to other users, using Bitcoin	openbazaar.org
+* Cryptocurrency partners	cryptocurrencypartners.com
+* Horizon platform : Crypto-currency & plateform	horizonplatform.io
+* Mercuryex : The decentralized cryptocurrency exchange	mercuryex.com
+* A modern bitcoin wallet hand forged to keep your transactions private, your identity masked, and your funds secure	samouraiwallet.com
+* Buy and spend bitcoin	brawker.com
+* Bitcoin wallets	blockchain.com
+* BitcoinCity.info - The Road to the Blockchain	bitcoincity.info
+* Bitcoin wallet	copay.io
+* Streaming & Bitcoin	streamium.io
+* Zeronet - P2P websites using Bitcoin	zeronet.io
+* Chip for embedded bitcoin mining	21.co
+* Blockchain-Info : Explorateur de blocs Bitcoin	blockchain.info
+* Film on Bitcoin	iamsatoshi.com
+* cryptorats.com
+* Currency for Crowdfunding	startcoin.org
+
+[[Category:Money]]
+[[Category:Encyclopedia]]
+[[Category:Crypto Economy]]

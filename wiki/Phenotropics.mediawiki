@@ -1,0 +1,44 @@
+
+'''“phenotropics,” = a word that roughly translates to “surfaces relating to each other.”'''
+
+An pattern recognition approach to computer programming.
+
+
+=Description=
+
+Jaron Lanier:
+
+"There is an emerging kind of programming that has been practiced by diverse people like robot builders, experimental user-interface designers, and machine-vision experts. These people had to find ways for a computer to interface with the physical world, and it turns out that doing so demands a very different, more adaptable approach.
+
+The core idea of phenotropics is that it might be possible to apply statistical techniques not just to robot navigation or machine vision but also to computer architecture and general programming. Right now, however, computer interiors are made of a huge number of logical modules that connect together through traditional, explicitly defined protocols, a very precise but rigid approach. The dark side of formal precision is that tiny changes can have random, even catastrophic effects. Flipping just one bit in a program might cause it to crash.
+
+The phenotropic approach would be closer to what happens in biological evolution. If tiny flips in an organism’s genetic code frequently resulted in huge, unpredictable physical changes, evolution would cease. Instead there is an essential smoothness in the way organisms are related to their genes: A small change in DNA yields a small change in a creature—not always, but often enough that gradual evolution is possible."
+(http://discovermagazine.com/2007/jul/jaron2019s-world)
+
+=Discussion=
+
+==[[Microformats]] as phenotropics==
+
+Matt Webb:
+
+"What microformats and other forms of structure do is increase the resolution of the Web: each page becomes a complex surface of many kinds of wrinkles, and by looking at many pages next to each other it becomes apparent that certain of these wrinkles are repeated patterns. These are microformats, lists, blog archives, and any other repeating elements. Now this reminds me of proteins, which have surfaces, part of which have characteristics shared between proteins. And that in turn takes me back to Jaron Lanier and phenotropics, which is his approach to programming based on pattern recognition.
+
+So what does phenotropics mean for the Web? Firstly it means that our browsers should become pattern recognition machines. They should look at the structure of every page they render, and develop artificial proteins to bind to common features. Once features are found (say, an hCalendar microformat), scripting can occur. And other features will be deduced: plain text dates 'upgraded' to microformats on the fly. By giving the browser better senses - say, a copy of WordNet and the capability of term extraction - other structures can be detected and bound to (I've talked about what kind of structures before).
+
+While browsers look for patterns inside pages, search engines would look for inter-page, structural features: the research search engine companies should be doing now is into what kind of linking goes on. Just as there is a zoology of traffic, and the exploration into the world of cellular automata resembles a biologist's hacking into a rainforest rather than the scientific method, I want a typology of the fine structure of the Web: dense pockets that persist over time; starbursts; ping-pong conversations with a slowly changing list of references. What animals are these and how do I search them? Here's an example of the kind of search I want to do: 'conversations that have arisen in a small, pre-existing group of friends that converge on referencing projects identified by the wider Web as physical computing.' Or the same search but for conferences, and then have my browser scoot over the pages, and deduce event microformats from them.
+
+The technological future of the Web is in micro and macro structure. The approach to the micro is akin to proteins and surface binding--or, to put it another way, phenotropics and pattern matching. Massively parallel agents need to be evolved to discover how to bind onto something that looks like a blog post; a crumb-trail; a right-hand nav; a top 10 list; a review; an event description; search boxes. Functionality can be bound to the pattern matchers: Technorati becomes a text search over everything that has a blog post matcher bound to it; a site with a search matcher bound to it can have extra functionality offered in the browser, for site-wide search offered in a consistent way for every site on the Web (ditto crumb-trails and site maps).
+
+The macro investigation is like chemistry. If pages are atoms, what are the molecules to which they belong? What kind of molecules are there? How do they interact over time? We need a recombinant chemistry of web pages, where we can see multiple conversation molecules, with chemical bonds via their blog post pattern matchers, stringing together into larger scale filaments. What are the long-chain hydrocarbons of the Web? I want Google, Yahoo and Microsoft to be mining the Web for these molecules, discovering and name them.
+
+The most important thing I think we've learned about the Web in the last 10 years is this: there is not infinite variety. That means the problem of finding the patterns in pages and inter-page structure is a tractable one. It might be large and difficult, but it can be done: you make a first approximation that finds patterns in most of the Web, and then another to find patterns in most of the rest, then most of the rest, then most of the rest, and then special case it. Then you'll be done. It'll take years. Whatever.
+
+Micro/macro structure is the first of the challenges that faces the Web."
+(http://interconnected.org/home/2007/12/28/wrapping_up_2007)
+
+=More Information=
+
+[[Microformats]]
+
+
+[[Category:Technology]]

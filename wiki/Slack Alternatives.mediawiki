@@ -1,0 +1,152 @@
+'''= alternatives to the proprietary Slack software'''
+
+Directory created by Danyl Strype of [[Disintermedia]], now maintained here. Original at https://web.archive.org/web/20181208131734/https://www.coactivate.org/projects/disintermedia/slacking-off/
+
+= Introduction =
+
+When commons stewardship organisations like [https://creativecommons.org/2016/10/18/slack-announcement/ CreativeCommons started to use Slack] in place of IRC, along with [https://web.archive.org/web/20200918075746/https://wiki.mozilla.org/NDA-Slack open source projects like Mozilla], this was justified on the basis that people didn't have to use the [https://drewdevault.com/2016/11/24/Electron-considered-harmful.html proprietary (and some say awful) Slack client]. Instead, they could use their choice of app by using Slack's IRC or XMPP bridges, which allowed Slack to enclose organisations that would otherwise never have gone there. Now that those bridges have been removed, they're locked in, because Slack has their chat history, a [https://opkode.com/blog/slacks-bait-and-switch/ classic bait-and-switch tactic]. This page is about liberating software your team could use in place of Slack. Apps within each section are listed in alphabetical order.
+
+= A few questions to help you decide what to replace Slack with: =
+
+* do you use Slack mainly to communicate with a team, or as more of a chat-based social network?
+* are you in a position to self-host a team chat package, or are you only interested in using hosted services?
+* do you use Slack mainly for realtime chat, or asynchronous messages, or equally for both?
+* is voice and video mission critical, or do you only need text chat?
+* how important is your chat history? Is it an essential archive of your institutional memory, like mailing list archives? Is it ephemeral, like idling in IRC, with your team usually summarizing Slack chat in docs on a wiki or whatever? 
+* do you want it to allow federation between different servers, or are you happy having all participants set up an account on one server (yours or a third-party host) with backups?
+* is email integration of interest, or are you all drowning in email and not wanting email delivery/ replies as a option? (I'm guessing it's not that important since Slack has no email bridge, but...)
+
+= Potential replacements =
+
+This page aims to offer a wide range of possible replacements for Slack, all of which publish their source code under a liberating license that respects their users' [https://www.gnu.org/philosophy/free-sw.en.html software freedom]. Some of the projects listed may be experimental, which will be mentioned where known, others may have been abandoned since the page was last updated. Updates and feedback on testing experiences is welcome, and will be used to improve the usefulness of the listings on this page.
+
+== Chat-like Slack replacements ==
+
+Key criteria for being included here as a possible Slack replacement is supporting realtime text chat, and having at least one way of using it in on the web, so its usable by anyone with a web browser. But like Slack itself, many of these projects can also be used via desktop and mobile apps. Also, some of these projects may integrate with voice/ video chat systems (See [[Free Code Chat Apps]] for a table of chat apps, their features, and how they work).
+
+=== Standalone ===
+
+If what you're look for is a private chat space for your team, or your organization, rather than a chat-based social network, one of these is probably your best option:
+
+* [https://mattermost.com/ Mattermost] ([https://github.com/mattermost/mattermost-webapp/blob/master/LICENSE.txt Apache 2.0]): Demo available by clicking 'Enterprise Trial' on the home page.
+
+* [https://rocket.chat/ Rocket.Chat] ("[https://github.com/RocketChat/Rocket.Chat/blob/develop/LICENSE MIT]"): Demo available at [https://open.rocket.chat/ open.rocket.chat]. Messages can be edited after sending. Threaded like mailing lists. Supports voice messages within chats.
+
+* [https://wire.com/en/features/encrypted-messaging/ Wire] ([https://github.com/wireapp/wire-webapp/blob/dev/LICENSE GPLv3]): Demo available at [https://app.wire.com app.wire.com]. Impressive list of features including full end-to-end encryption, disposable messages, message editing, and voice and video conferencing. Has a web app, as well as apps that run on all the major OS. Downsides: [https://drewdevault.com/2016/11/24/Electron-considered-harmful.html desktops apps use Electron] (so no 32-bit support) and will probably continue to do so for some time. [https://github.com/wireapp/wire/issues/160#issuecomment-581999012 Self-hosted Wire servers can't yet do server>server federation with each other], although this is said to be in the works.
+
+* [https://zulipchat.com/for/open-source/ Zulip] ([https://github.com/zulip/zulip/blob/master/LICENSE Apache 2.0]): Demo available at [https://chat.zulip.org/ chat.zulip.org]. Gratis hosting for free code and open source projects. Threaded like mailing lists. Has [https://zulipchat.com/apps/ apps for desktop and mobile] and can be used in third-party apps like Ferdi. Downsides: uses Electron for desktop apps (see entry on Wire).
+
+=== Social ===
+
+If a chat-based social network is what you're looking for, where you can easily connect with other people involved in free code development and other commons projects, one of these could be for you:
+
+* [https://element.io/ Element] (formerly Riot, [https://github.com/vector-im/element-web/blob/master/LICENSE Apache 2.0]): Connects with any [https://matrix.org/docs/projects/try-matrix-now/ chat server using matrix, a federated communication protocol]. There are other [https://matrix.org/clients/ matrix apps in development] but as of 2020 none of these are as feature complete. Direct chats and invite-only chats are end-to-end encrypted by default and encryption can be turned on in other rooms. Messages can be edited after sending. [https://element.io/get-started Element also offers desktop and mobile apps for all major OS]; GNU-Linux, MacOS, Windows, [https://f-droid.org/en/packages/im.vector.app/ Android], and iThings. Downsides: uses Electron for desktop apps (see entry on Wire).
+
+* [https://fediverse.party/en/fediverse/ fediverse]: not an app or a service, but rather a federation of services (or "instances") each running one of a range of apps that can federate with each other. Each app uses one or more of the [https://codeberg.org/fediverse/fediparty/wiki/Fediverse-app-criteria shared standards/ protocols for social networking] on the web, the [https://codeberg.org/fediverse/delightful-fediverse-apps most popular being ActivityPub]. The original fediverse apps were designed more as a micro-blogging network (eg Mastodon, Pleroma), but can be used for non-public team discussions using Direct Posts, and particularly for discussion between teams around solving shared problems. More recently, multimedia apps like PixelFed (images), PeerTube (videos), FunkWhale (music) have joined the fediverse, along with "threadiverse" forum apps like Lemmy, KBin, and Discourse.
+
+* [https://gitter.im Gitter] ([https://gitlab.com/gitterHQ/webapp/-/blob/develop/LICENSE Original software was "MIT"]): The hosted service at Gitter.im is run by Element and free to use. "Slack ... has limitations for large communities and public usage. All of Gitter’s public conversation history is completely unlimited, open, archived and indexed by popular search engines, contributing the public knowledge base of the internet". [https://about.gitlab.com/blog/2017/03/15/gitter-acquisition/ GitLab announced they were acquiring Gitter in 2017] and then [https://techcrunch.com/2020/09/30/element-acquires-gitter-to-get-more-developers-on-board-with-the-open-matrix-messaging-protocol/ sold it on to Element in 2020]. As of 2023, [https://blog.gitter.im/2023/02/13/gitter-has-fully-migrated-to-matrix/ Gitter.im has been migrated to Element software].
+
+* [https://www.kontalk.org/ Kontalk] (various licenses): "Kontalk is run by a community of volunteers offering servers and splitting costs among them", all software used in both the XMPP servers and clients they distribute is free code. Full end-to-end encryption for both client-to-server and server-to-server channels. Uses phone numbers as user IDs, like Signal, but in [https://www.moparisthebest.com/phonehash/ Kontalk's case this is known to potentially compromise user privacy].
+
+* [http://thelounge.chat/ The Lounge] ("[https://github.com/thelounge/thelounge/blob/master/LICENSE MIT]"): Web client for IRC. Can be used on servers like [https://libera.chat/ Libera Chat], which began as a [https://matt-rickard.com/the-fall-of-freenode breakaway from Freenode], a not-for-profit IRC service that had hosted chat rooms for free code projects since 1998.
+
+=== XMPP (jabber) ===
+
+The eXtensible Messaging and Presence Protocol was originally designed for one-to-one Instant Messaging (IM), basically a way to see if a friend or coworker is online and available to chat, and send short text messages back and forth in realtime. It can also support chat rooms using Multi-User Chat (MUC), like an Internet Relay Chat (IRC) channel, but unlike IRC, you don't have to be on the XMPP server hosting the chat room to participate. Slack's stated mission is to provide team communications, not casual watercooler chat, and rose to its current popularity due to a perceived lack of team-specific features and user-friendliness in XMPP and IRC software. That said, if your team only started using Slack because "everyone is there", and you're comfortable with choosing an XMPP app with Slack-a-like features that may not work with all other XMPP servers and clients, these web-based apps may be of interest:
+
+* [https://conversejs.org/ Converse.js] ([https://github.com/conversejs/converse.js/blob/master/LICENSE MPL 2.0]): web client for XMPP. Demo site at [https://inverse.chat/ inverse.chat].
+
+* [https://www.jsxc.org/ JSXC] "([https://github.com/jsxc/jsxc/blob/master/LICENSE MIT]"): web client for XMPP. Was used in a short-term experiment with providing a [https://wiki.diasporafoundation.org/JSXC_Development realtime chat feature some Diaspora pods].
+
+* [https://repos.goffi.org/libervia Libervia] ([https://repos.goffi.org/libervia/file/tip/COPYING AGPLv3]): An experiment with building a federated blogging and forum network app on XMPP. Demo site at [https://www.libervia.org/ libervia.org]. The developers are also working on an native desktop and Android app, called Cagou ([https://repos.goffi.org/cagou/file/tip/COPYING AGPLv3]).
+
+* [https://movim.eu/ Movim] ([https://github.com/movim/movim/blob/master/COPYING AGPLv3]): An experiment with building a federated social network app on XMPP. Also [https://f-droid.org/en/packages/com.movim.movim available as an Android app].
+
+* [https://www.xabber.com/ Xabber] ([https://github.com/redsolution/xabber-web/blob/master/LICENSE AGPLv3]): A web client that aims to support all the new features added in recent extensions to XMPP. [https://f-droid.org/en/packages/com.xabber.android/ Native app for Android] also available ([https://github.com/redsolution/xabber-android/blob/master/LICENSE GPLv3]).
+
+== Forum-like Slack Replacements ==
+
+Maybe you found yourself using Slack because you needed a comms tool that has a better set of team features than most email lists, but you actually find [https://m.signalvnoise.com/is-group-chat-making-you-sweat/ realtime chat distracting rather than useful]. Key criteria for being included here as a possible Slack replacement is supporting asynchronous text chat, and having at least one way of using it in on the web, so its usable by anyone with a web browser. But like Slack itself, many of these projects can also be used via desktop and mobile apps.
+
+* [https://www.discourse.org/ Discourse] ([https://github.com/discourse/discourse/blob/master/LICENSE.txt GPLv2+]): Demo link on homepage. Web forums with full email integration, so users can receive and reply to posts by email. [https://blog.codinghorror.com/civilized-discourse-construction-kit/ Developed by an VC-funded company] called the [https://www.discourse.org/team Civilized Discourse Construction Kit Inc], that is incorporated in the USA.
+
+* [https://www.hylo.com/ Hylo] ([https://github.com/Hylozoic/hylo-evo/blob/dev/LICENSE Apache 2.0]): A web-based community discussion platform developed by [https://www.terran.io/ Terran Collective LLC]. [https://holo.host/wp-content/uploads/Holo-Acquires-Hylo-Community-and-Collaboration-Software.pdf Acquired in 2019 by Holo], who announced plans to port it Hylo to their Holochain P2P framework. [https://hylozoic.gitbook.io/hylo/about/faq According to their FAQ], "Terran Collective is recognized by Holo as the official administrator and maintainer of Hylo".
+
+* [https://www.loomio.org/ Loomio] ([https://github.com/loomio/loomio/blob/master/LICENSE.txt/ AGPLv3]): Demo available at [https://www.loom.io/ Loom.io]. Supports both discussions and decision-making using a range of poll types. Granular public/ private settings for each groups, subgroups, threads, and poll. Full email integration, so users can receive and reply to posts by email, and participate in polls. Developed by an [https://loomio.coop/ Aotearoa (NZ) based worker-owned coop] that is a [https://loomio.coop/history.html member of the Enspiral network].
+
+ 
+== Possible Alternatives to Slack-a-likes ==
+
+These are text chat tools that don't have a web app. To even test them, you need to download a desktop or mobile app (whichever is available). They are included here for anyone who wants the total opposite of Slack.
+
+* [https://jami.net/ Jami] ([https://github.com/savoirfairelinux/jami-project/blob/master/COPYING GPLv3+]): a P2P ("distributed") chat app that supports one-to-one and group chats, file transfers, and voice/ video conferencing. 
+
+* [https://www.manyver.se/ Manyverse] ([https://gitlab.com/staltz/manyverse/blob/master/LICENSE MPLv2]): an app for the P2P ("distributed") social network using the [https://scuttlebot.io/more/protocols/secure-scuttlebutt.html SSB (Secure Scuttlebutt) protocol], available for all major OS. Moving to their own protocol, PPPP, which as of November 2023 was [https://www.manyver.se/blog/2023-11-05/ validated and ready to be implemented]. 
+
+* [https://www.nos.social/ Nos] ([https://github.com/planetary-social/nos/blob/main/LICENSE MPL 2.0]): an app for the P2P ("distributed") social network using the [https://nostr.com/ Nostr protocol]. A new project by the [https://www.nos.social/blog/pivoting-from-ssb-to-nostr developers of Planetary].
+
+* [https://www.planetary.social/ Planetary] ([https://github.com/planetary-social/planetary-ios/blob/main/LICENSE MPL 2.0]): An iThing only app for the [https://scuttlebot.io/more/protocols/secure-scuttlebutt.html SSB (Secure Scuttlebutt) protocol].
+
+ 
+= Stalled or Abandoned? =
+
+* [http://groupserver.org/ GroupServer] ([https://github.com/groupserver/buildout/blob/32a69bcb8ff2b4cf43dc9b515234486fcd50611f/docs/LICENSE ZPLv2.1]): Demo available at [https://onlinegroups.net/sites/ OnlineGroups.net]. Mailing lists that can also be used like forums, using the searchable archive website. Developed by [https://onlinegroups.net/l/groupserver OnlineGroups], which is operated by a [https://onlinegroups.net/about/ private company called Fiorenza Limited, based in Aotearoa (NZ)]. Downsides: no HTTPS, little sign of active maintenance.
+
+= Abandonware =
+
+Free code Slack-a-likes that seem to have been started and then abandoned. Included here for completeness, and in case studying the code may help someone:
+
+* [https://github.com/candy-chat/candy/issues/516 Candy] ("[https://github.com/candy-chat/candy/blob/master/LICENSE MIT]"): web client for XMPP, the only one I'm aware of to add WebRTC support. Was [http://adhearsion.com/foundation handed over to the Adhearsion Foundation] before development ceased.
+
+* [https://github.com/jappix/jappix Jappix] ([https://github.com/jappix/jappix/blob/master/COPYING.md AGPL]): web client for XMPP. No commits on GH since 2017
+
+* [https://github.com/sstrigler/jwchat JWChat] ([https://github.com/sstrigler/jwchat/blob/master/README GPLv2+]): possibly the oldest web client for XMPP
+
+* [http://getkaiwa.com/ Kaiwa] ("[https://github.com/digicoop/kaiwa/blob/master/LICENSE MIT]"): web client for XMPP. Some [https://github.com/ForNeVeR/Kaiwa/tree/develop activity carried on in a fork by GH user ForNeVeR], but that seems inactive since 2018.
+
+* [https://github.com/kandanapp/kandan Kandan] ([https://github.com/kandanapp/kandan/blob/master/LICENSE AGPLv3]): Modeled on HipChat. No commits on GH since 2015.
+
+* [https://sdelements.github.io/lets-chat/ Let's Chat] ("[https://github.com/sdelements/lets-chat/blob/master/LICENSE MIT]"): Compatible with XMPP/ MUC (see above), so a Let's Chat server can be accessed from any XMPP client, but doesn't federate with other XMPP servers. [https://github.com/sdelements/lets-chat/issues/781#issuecomment-770150296 Abandoned by developers] in about 2018.
+
+* [https://github.com/ssbc/patchwork/ Patchwork] ([https://github.com/ssbc/patchwork/blob/master/LICENSE AGPLv3]): an app for the P2P ("distributed") social network using the [https://scuttlebot.io/more/protocols/secure-scuttlebutt.html SSB (Secure Scuttlebutt) protocol]. Desktop apps were available for GNU/Linux, Mac, and Windows. Went read-only in 2021.
+
+* [http://soashable.sourceforge.net/ Soashable] ([https://github.com/harlanji/soashable/blob/master/soashable-web/LICENSE GPL]): web client for XMPP, built by the developer of [http://xmpp4js.sourceforge.net/ Xmpp4js (LGPL, also unmaintained)]
+
+* [https://github.com/igniterealtime/Sparkweb SparkWeb] ([https://github.com/igniterealtime/Sparkweb/commit/05e77c95c965a95aa79f7251310f8c729248737e LGPL?]): web client for XMPP
+
+* [https://github.com/withspectrum/spectrum/ Spectrum] ([https://github.com/withspectrum/spectrum/blob/alpha/LICENSE New BSD]): Web-based Slack-a-like. Originally [https://trendsandevents4developers.wordpress.com/2017/03/19/this-week-in-retrospect-33/ developed by Space Program Inc]. [https://spectrum.chat/spectrum/general/spectrum-is-joining-github~1d3eb8ee-4c99-46c0-8daf-ca35a96be6ce Acquired by Microsoft via GitHub]. The spectrum.chat domain now links to GH Discussions, which could be a rebranding of Spectrum?
+
+* [http://toc.im/ Toc.im] ([https://github.com/lewisl9029/toc/blob/master/LICENSE.txt AGPLv3]): P2P chat client built on [https://github.com/telehash/ Telehash] (also unmaintained since 2019)
+
+
+= Sources =
+
+Mainly blog pieces pointing out the problems with Slack, especially for open source communities, and in some cases suggesting replacements:
+
+* 2015: '[https://sameroom.io/blog/self-hosted-team-chat-options-and-alternatives/ Self-Hosted Team Chat Options and Alternatives]' - Andrei Soroker and Niral Patel, SameRoom blog
+
+* 2015: '[https://sircmpwn.github.io/2015/11/01/Please-stop-using-slack.html Please don't use Slack for FOSS projects]' - Drew DeVault's blog
+
+* 2015: '[https://medium.freecodecamp.org/so-yeah-we-tried-slack-and-we-deeply-regretted-it-391bcc714c81 So Yeah We Tried Slack… and We Deeply Regretted It]' - FreeCodeCamp blog
+
+* 2016: '[https://ux.useronboard.com/slack-i-m-breaking-up-with-you-54600ace03ea Slack, I’m Breaking Up with You]' - Samuel Hulick's blog
+
+* 2016: '[https://medium.com/@benbartling/why-slack-hurts-your-teams-productivity-af9804d06606 How Slack Can Hurt Your Teams Productivity]' - Ben Bartling's blog
+
+* 2016: '[https://www.theregister.co.uk/2016/03/17/no_slack_for_open_sourcers/ Software Slack smackback: There's no IRC in team (software), say open-sourcers]' - Scott Gilbertson, The Register 
+
+* 2017: '[https://medium.com/santiment/goodbye-slack-hello-open-source-messaging-platform-c97398a20ce9 Goodbye Slack and hello open-source messaging platform]' - Wilhelm, Santiment blog
+
+* 2017: '[https://dave.cheney.net/2017/04/11/why-slack-is-inappropriate-for-open-source-communications Why Slack is inappropriate for open source communications]' - Dave Cheney's blog
+
+* 2017: '[https://opensource.com/alternatives/slack5 Open source alternatives to Slack for team chat]' - Jason Baker, OpenSource.com
+
+* 2018: '[https://davelane.nz/why-slack-better-and-why-open-communities-shouldnt-use-it Why Slack is better, and why open communities shouldn't use it]' - Dave Lane's blog
+
+* 2018: '[https://medium.com/counter-intuition/the-hidden-side-of-using-slack-2443d9b66f8a Death By a Thousand Pings: The Hidden Side of Using Slack]' - Alicia Liu's blog
+
+* 2019: '[https://www.huffpost.com/entry/slack-is-bad-for-privacy_l_5d0bdc05e4b0aa375f49aa23 Slack Is Bad, Actually' - Monica Torres, Huffington Post
+
+[[Category:Free_Software]]
+[[Category:P2P_Infrastructure]]
+[[Category:Technology]]

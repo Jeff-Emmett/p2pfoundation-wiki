@@ -1,0 +1,23 @@
+
+'''= 'federated' online encyclopedia network'''
+
+URL = https://open.ibis.wiki/
+
+
+=Discussion=
+
+Status review by Felix Ableitner:
+
+"I have worked on Lemmy for the past four years, bringing it from a prototype to a fully functional Reddit alternative. I wrote the entire federation code and became very familiar with the protocol. I realized that the same technology easily be used to create a federated encyclopedia. As no one else took up such a project, I finally decided to do it on my own and create Ibis. Thanks to my previous experience with the tech stack and the ActivityPub library I created, I was able to complete a proof of concept in a relatively short time of four months. Just like Lemmy, Ibis is built on a stack of PostgreSQL and Rust, in this case with a frontend written in Rust Webassembly. This means it can efficiently run on low-powered servers or scale to high user numbers.
+
+The proof of concept includes all the necessary core features. Users can create, read and edit articles. Each article has an edit history showing the individual changes. Edits are stored as diffs which means that conflicts can be resolved through merges, similar to git. Most importantly all of this is fully federated, so it is possible to synchronize articles between instances, and interact with remote articles as if they were on the local website. You can see it in action on this very website, or register an account on open.ibis.wiki to start editing (no email verification necessary). All articles and edits are automatically synchronized between instances. You can also deploy Ibis on your own server by following the Setup_Instructions.
+
+Ibis is still in a very early stage, but it has the potential to completely change the way online encyclopedias work. '''Instead of individual, centralized websites there will be an interconnected network of encyclopedias. This means the same topic can be treated in completely different ways.''' For example geology.wiki/article/Mountain may be completely different different from poetry.wiki/article/Mountain. There can be Ibis instances strictly focused on a particular topic with a high quality standard, and others covering many areas in layman’s terms. Others may document fictional universes from television series or videogames. If one instance is badly moderated or presents manipulated information, an alternative can easily be created. Yet all of them will be interconnected, and users can read and edit without leaving their home website.
+
+However Ibis is still in a very early stage of development. It is missing countless important features, such as user profile settings, discussions, localization, moderation tools, and so on. I have already worked on the project for four months, and estimate that it would take at least another year to make it ready for production."
+
+(https://ibis.wiki/article/Announcing_Ibis,_the_federated_Wikipedia_Alternative@ibis.wiki)
+
+[[Category:Intelligence]]
+
+[[Category:P2P Infrastructure]]

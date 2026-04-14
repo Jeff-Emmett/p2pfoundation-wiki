@@ -1,0 +1,271 @@
+
+=Source=
+
+Draft from Bill St. Arnaud: A personal perspective on the evolving Internet and Research and Education Networks ("for discussion purposes only")
+
+URL = http://docs.google.com/Doc?docid=0ARgRwniJ-qh6ZGdiZ2pyY3RfMjc3NmdmbWd4OWZr&hl=en
+
+
+=Description=
+
+Bill St. Arnaud:
+
+"The Internet appears to be  once again is enabling another major wave of innovation. Although compared to past transformative changes in the Internet such as the invention of the web or packet switching this new wave to date has received very little public notice or attention.  This lack of awareness is surprising given that investment by private sector companies and government in this transformative technology now rivals what the carriers are investing in traditional backbone and last mile Internet technology.  
+
+
+
+
+
+This evolution of the Internet was predicted several years ago by an Internet pioneer Dr Van Jacobson [VAN JACOBSON] where he argued that network engineers and researchers are in danger of being stuck with a tunnel vision of  the need for an ”end-to-end” network much like a previous generation of engineers and researchers were trapped in thinking that all networks had to be connection oriented.  Dr Van Jacobson’s predictions have recently been vindicated by data from the Arbor [ARBOR] study showing that over 50% of data on the Internet now comes from mostly content and application providers using distributed computing and storage infrastructure independent of the traditional carrier Internet backbones. 
+
+
+
+
+
+Note that end-to-end network should not be confused with the end-to-end principle established by MIT researchers Reed and Clark where that, whenever possible, communication control operations should be defined to occur at the end-points of the Internet or as close as possible to the resource being controlled.
+
+
+
+
+Up to most recently the text book model of the Internet was for businesses and consumers to access the internet through a last mile provider such as telephone or cable company. Their traffic would be sent across the backbone to its destination by an Internet service provider.  This model worked reasonably well in the early days of the Internet but as new multimedia content such as video and  network applications evolved  the current model failed to provide a satisfactory quality of experience for users in terms of responsiveness and speed. As a result a host of content, application and hosting companies invested in something for the purposes of this paper I have collectively labeled as a Application Content Infrastructure  (ACI) that complemented and expanded the original Internet through the integration of computing, storage and network links.
+
+
+
+
+In the academic world these developments have been underway for some time and the resulting infrastructure is often referred to cyber-infrastructure or eInfrastructure. As in the commercial world it is creating profound changes in how we think about networking as a generalized end-to-end telecommunications service connecting users or institutions to a facility that is seamlessly integrated with  distributed computing and storage delivering specific applications or data solutions for targeted communities. Examples include Optiuter, Teragrid, LHCnet, etc
+
+These investments by ACIs are quite distinct from that made by the networks that transport traffic across the Internet, even though both they use many of  the same technologies such as optical networks, routers, etc.  Rather, ACIs are integrated networks and other associated infrastructure used by application and content providers used to host, cache and distribute their services.  Fundamentally ACIs are about the transport of content and applications rather than bits. 
+
+
+
+
+
+Examples of ACIs include large distributed caching networks such as Akamai, cloud service providers such as Amazon and Azure, Application Service Providers (ASPs) like Google and Apple, Content Distribution Networks (CDNs) such as Limelight and Hulu, and social networking services like Facebook and Twitter.   Many Fortune 500 companies like banks and airlines have also deployed their own ACIs as an adjunct to their own private wide area networks  in order to provide secure and timely service to their customers. Most major content and application organizations have contracted with commercial ACIs or have deployed their own infrastructure. ACIs also allows the content provider to load balance demand, so that traffic in regions expressing  excessive loads can be re-directed to nodes where there is spare capacity.
+
+The end result is that with very little fanfare the Internet has been transformed so much so over the past decade that virtually all major content and every advanced application on the Internet is now delivered over an ACI independent of the traditional carrier Internet backbones."
+(http://docs.google.com/Doc?docid=0ARgRwniJ-qh6ZGdiZ2pyY3RfMjc3NmdmbWd4OWZr&hl=en)
+
+
+=Advantages=
+
+Bill St. Arnaud:
+
+"This enormous investment in ACIs have resulted in major benefits not only for the content and hosting companies but also have significantly improved Internet performance as perceived by the end user. In many ways they have also relieved the major carriers from having to make major investments in their own backbone and last mile infrastructure. These benefits and market drivers for the development of ACIs can be briefly summarized as follows:
+
+
+
+
+(a)    They provide for faster and more responsive Internet experience for users as they allow a organization’s content and services to be largely delivered locally  over the ACI rather than over a long distance end-to-end  network with all the attendant issues of latency, congestion and packet loss;
+
+ 
+
+(b)   They can deliver their data and services much cheaper than across traditional Internet because reliability and redundancy can be achieved in many different ways through distributed computing and storage at the application layer rather than the network layer; and
+
+ 
+
+(c)    They enable new Internet business model where revenue is not related to the number of bits a user downloads but linked to the specific application such as advertising, product purchase and eventually such things as energy savings and carbon offsets.
+
+
+
+
+There is growing evidence that ACIs now constitute one of the fastest growing parts of the overall Internet eco-system and represents a substantial, if not the largest, portion of the investment by companies in the Internet itself. In some cases their investment in Internet infrastructure equal or outweigh those of the carriers and ACIs now girdle the globe and rival the carrier’s infrastructure in terms of scale and complexity.  This major growth in ACIs is also supported by recent study done from Arbor Networks that demonstrated that the majority of Internet traffic is now being generated by ACIs directly at major peering points.  This traffic from ACIs is continued to expect to grow significantly faster over time versus than traditional  Internet traffic and will largely dominate traffic patterns and network architecture in the coming decades.
+
+
+
+
+Some people mistakenly think ACI provide a "privileged" access channel for major content and application companies. In fact the just the opposite has happened. Many companies now specialize in providing third party ACI services which results in greater competition and reduced costs. Content and application providers now have much greater number of choices in how they want to deliver their product and service to the end consumer.
+
+
+
+
+As a result ACI also helps lower the barriers for small companies and start-ups as well, enabling them to grow and compete. It is near-impossible for small providers to quickly deploy and maintain additional servers during a wave of sudden popularity; at the same time, over-provisioning and maintaining infrastructure up-front can be very costly. ACI helps solve this dilemma - small companies can work with third-party ACI providers, and "scale" up their services efficiently and cost-effectively.
+
+
+
+
+It is not only small businesses but also academic research and education projects that benefit from third party ACI facilities. A good example is the distribution of HDTV video from the ocean floor with project Neptune [NEPTUNE] and new Federal government services such as "apps.gov" [GSA].  In both cases it would be cost prohibitive for a university or government department to deploy the thousands of servers and purchase Internet access to deliver these services. More importantly according to Internet 2 [INTERNET2] cost savings of up to 40% on Internet transit traffic are possible by connecting to ACIs at various Internet Exchange points. 
+
+ 
+
+The same ACI drivers of enhanced customer experience and low deployment cost have driven the market for clouds and ASPs. More importantly because of the low deployment cost of ACIs application and cloud providers can focus on business models where revenue is based on the service provided rather than charging by bit of data transferred across the network. This is a fundamental difference in the view of the world compared to end-to-end Internet carriers. Carriers come largely from a centuries old telephone view of the world where bandwidth was expensive and had to be carefully rationed by charging users by the minute or by the bit. But the advent of  low cost, high bandwidth optical networks and new data architectures enabled by ACIs allows them to effectively ignore the cost of bandwidth and distance and instead focus on the value of the actual service in terms of functionality and ease of use.
+
+
+
+
+New promising business models demonstrate that revenue can be obtained from other value add services such as cloud computing and eCommerce solutions such as SalesForce. On the horizon other promising business models for ACIs can be made from energy reduction and the sale of carbon offsets. For example two recent papers from researchers at MIT [MIT] and Rutgers [RUTGERS] indicate that a ACI can save up to 35% and 45% respectively in energy costs by moving data and storage to sites in the network with the lowest instantaneous energy costs.  
+
+
+
+
+
+Some organizations are also investigating how carbon offsets can be used to pay for the deployment of this type of ACI which in a small way address the challenges of climate change.
+
+ACIs in many ways are dis-intermediating many of the traditional end-to-end telecommunication services offered by carriers. As the ACI infrastructure reaches ever closer to the end user it may require new business models for the last and undoubtedly will result in renewed debates on network neutrality. This will be especially true as the mobile Internet develops with a corresponding infrastructure to deliver ACI to these devices.  As ACI does not require an end-to –end wireless network, offering wireless data locally through WiFi or new “white space” spectrum may become the norm."
+(http://docs.google.com/Doc?docid=0ARgRwniJ-qh6ZGdiZ2pyY3RfMjc3NmdmbWd4OWZr&hl=en)
+
+
+=Discussion=
+
+
+==Future Evolution for ACIs==
+
+Bill St. Arnaud:
+
+
+"The distinguishing and unifying feature of ACIs is that they are an Internet infrastructure the closely couples network links with compute storage and content to enhance user’s Internet experience by delivering content and applications locally. ACIs are likely to be a major component of the next generation of wireless and Internet networks as exemplified by research programs such as GENI  and the future “green” or “energy-aware” Internet. These programs generalize the concept of ACIs as fundamental feature of the Internet through virtualization of the network, computing and storage links.
+
+
+
+
+The UCLP [UCLP] initiative extended this concept further by allowing users to deploy and manage their own ACIs.  Although UCLP is often confused with end-to-end circuit switched optical network solutions as it also uses lightpaths, its original intended purpose was to allow researchers and businesses to  construct their own ACI (also referred to as an Articulated Private Network (APN)) and/or establish direct peering to one or more Internet Exchange points.
+
+
+
+
+'''The Zero Carbon Internet''' 
+
+
+
+
+
+Since ACIs achieve redundancy and reliability at the application or content layer they are inherently more robust and reliable than a traditional end-to-end network which can have many points of failure. As a consequence they are ideally suited to an environment that has clean but perhaps unreliable sources of power.  As mentioned previously  research by MIT and Rutgers  indicate the ACIs may reduce computing and storage energy costs by as much as 45% compared to distributing and storing data over the public end-to-end Internet. These energy savings are possible because it is a fundamental feature of ACIs to support distributed computation, data sets and information where data and computation quickly moved from one node to another in the wide scale infrastructure.
+
+
+
+
+Research projects such as GreenStar [GREENSTAR] are deploying “green” ACIs where the infrastructure is powered solely by renewable energy may play an important role in addressing the challenge of climate change. A future Internet may be made up of multiple Green ACIs like Greenstar whose revenue may be derived not only from traditional content and applications but through carbon offsets or “gCommerce” applications under a national Cap and Dividend or Cap and Reward program.[CAP]
+
+
+
+
+'''ACI,  Network Neutrality Challenges and Last Mile Networks'''
+
+
+
+
+The growing dominant role of ACIs in the Internet infrastructure may pose future challenges for regulators to insure that ACIs are able to peer and interconnect to last mile Internet service providers and  that their services are accessible and unconstrained to the ultimate consumer.
+
+As more and more  Internet Exchanges are deployed closer to consumers, the future Internet regulatory battle ground will be the last mile. 
+
+
+
+
+
+The inadequate investment in last mile infrastructure, particularly in North America, was one of the principal drivers to deploy ACI facilities so that content and application companies could ensure a certain degree of  responsiveness and interactivity with users.  As ACI facilities are increasingly bypassing the backbone ISPs, despite the drop in Internet transit costs, the last redoubt for the cable and telephone companies will be ownership and control of the last mile infrastructure.  But as discussed earlier it is in the last mile where most Internet congestion occurs. Despite the huge investment made by ACIs in building out their infrastructure as close as possible to the end consumer, it may not be sufficient to overcome the limitations to today’s last mile infrastructure particularly with the next generation of high bandwidth applications and as the carriers increasingly rely on traffic management techniques to address the challenges of congestion.
+
+
+
+
+Historically building a last mile infrastructure that was part of a national or global end-to-end network was very challenging and you needed large companies to maintain and build this infrastructure. But with the development of ACIs and the disintermediation of end-to-end network the last mile is a stand alone element which does not require the complexity of previous end-to-end facilities.
+
+
+
+
+Concepts like   “[[Customer Owned Networks]]” [CUSTOMER] are thereby easier to imagine and may represent the future direction of how we deploy and manage last mile infrastructure.  The concept of RPON [RPON] was a further articulation of this idea to allow consumers to control and manage their peering and multi-home with multiple ACIs at a nearby Internet Exchange point.
+
+The recent announcement by Google to fund a number of last mile fiber to the home pilot projects may be the necessary catalyst to enable these types of innovative last mile solutions."
+(http://docs.google.com/Doc?docid=0ARgRwniJ-qh6ZGdiZ2pyY3RfMjc3NmdmbWd4OWZr&hl=en)
+
+
+==P2P Commentary from Sepp Hasslberger==
+
+Sepp Hasslberger:
+
+"This is a very interesting discussion (I just re-read it) and it does touch on the question of a user-owned network controlled by peers, although it does not delve into how such a network could work. St. Arnaud talks about the growing importance of Application Content Infrastructure (ACI) on the net, and how much of the traffic that traditionally would go over the internet backbone of internet service providers is actually being routed and computed and stored in alternative ways. 
+
+
+- BSTA: "E''xamples of ACIs include large distributed caching networks such as Akamai, cloud service providers such as Amazon and Azure, Application Service Providers (ASPs) like Google and Apple, Content Distribution Networks (CDNs) such as Limelight and Hulu, and social networking services like Facebook and Twitter. Many Fortune 500 companies like banks and airlines have also deployed their own ACIs as an adjunct to their own private wide area networks in order to provide secure and timely service to their customers. Most major content and application organizations have contracted with commercial ACIs or have deployed their own infrastructure. ACIs also allows the content provider to load balance demand, so that traffic in regions expressing excessive loads can be re-directed to nodes where there is spare capacity. The end result is that with very little fanfare the Internet has been transformed so much so over the past decade that virtually all major content and every advanced application on the Internet is now delivered over an ACI independent of the traditional carrier Internet backbones''."
+
+
+
+
+In effect, the document says that ISPs are following the outdated model of the phone companies but aren't really doing their job of connecting users to the greater net with sufficient bandwidth for the content, especially video, to arrive at the end user in a proper way. It goes on to make the point that ACI or Application Content Infrastructure could be expanded, and in conjunction with R&E (Regional and Educational) networks could get even closer to the end user.
+
+
+- BSTA: "U''p to most recently the text book model of the Internet was for businesses and consumers to access the internet through a last mile provider such as telephone or cable company. Their traffic would be sent across the backbone to its destination by an Internet service provider. This model worked reasonably well in the early days of the Internet but as new multimedia content such as video and network applications evolved the current model failed to provide a satisfactory quality of experience for users in terms of responsiveness and speed. As a result a host of content, application and hosting companies invested in something for the purposes of this paper I have collectively labeled as a Application Content Infrastructure (ACI) that complemented and expanded the original Internet through the integration of computing, storage and network links''."
+
+
+
+
+What is left open is how the last mile is going to function. The ISPs seem to be too busy metering their pipes and even grading traffic, giving priority to certain content and degrading the stuff that is seen as being in violation of intellectual property laws and they forget that their job includes to connect everyone with a sufficiently wide band connection for content not to suffer degradation before arriving at the end user.
+
+
+Mobile networks are mentioned as a possible solution, but with demands escalating, they may soon be running into the same trouble as current last mile technologies. 
+
+
+There is a mention of "customer owned networks" but with no vision of how to achieve these. 
+
+
+
+
+I would like to make a point or two here, just for discussion. 
+
+
+There are currently efforts to adapt WIFI technology to build mesh networks, but WIFI was conceived as a short range technology and "last mile" typically means we may be talking distances between nodes of several hundred meters. This degrades signal throughput of WIFI, even with external antennas. G3 or G4 mobile phone technology could help, but here we talk about competing providers that are not about to share networks with each other.
+
+
+In addition, there are fairly widespread concerns over the huge increase in electromagnetic pollution brought to our homes by both WIFI and mobile phone technologies, which are not going to go away, unless there is a change in technical specs that can assure the electrosensitive that they have a future that doesn't involve hiding out in far away places or wearing protective clothing and installing special shielding in their homes. 
+
+
+There IS an interesting technology that does not involve pulsed microwaves as the transmission medium and that could - with some help - be made available to end users, constructing a tight weave of local connectivity that can tap into both ISPs and ACIs and their extensions and that is sufficiently fast and robust to be a candidate. 
+
+
+ISPs could perhaps be induced to adopt it as an alternative to building out their last mile connectivity alone, which turns out to be very expensive if it is to carry broadcast quality content. Users could be the ultimate custodians of that type of network but it would imply end users and and ISPs forming some kind of alliance, out of which the end users get free local connectivity (they supply the electricity and basic maintenance) and ISPs get a functioning last mile distribution and customers for their backbone services.
+
+
+The vision is to take the light beams that travel through optic cables and to replace the cables by simple light-based transmission, preferably laser, between the end users. This would form a fault tolerant and fast (high data throughput) network from one rooftop to the next, which would make local connectivity free and fast. Not every end user would have to be connected to the backbone. The user-cloud could be linked by what we might call "super users" (those with need for high bandwidth or with need for exceptionally stable connection) such as large businesses, educational institutions, city hall, etc. to the optic cable backbones. Those connections that are anyway needed and already paid for would be quite sufficient to connect the user-cloud to the internet. 
+
+
+The technology will need some development, but it has been proven to work in concept. One implementation marries ultra wide band radio technology with a laser and a single optic fiber: 
+
+
+- BSTA: "M''oshe Ran, Coordinator of the EU-funded project, UROOF (Photonic components for Ultra-wideband Radio Over Optical Fiber), has a vision. He wants to see streams of high-definition video and other high-bandwidth services flowing through homes, office buildings, and even ships and planes, through a happy marriage of optical and ultra-wideband radio technologies.
+
+'''...'''
+
+- The UROOF EAT system starts with a central laser that generates an unmodulated optical signal and sends it through a single optical fibre to remote units. In its downlink mode, the central unit receives a UWB radio signal, modulates the optical carrier, and beams it to the remote units. In the uplink mode, a remote EAT modulates the optical signal and sends it back to the central station.
+
+
+- ''The EAT based Access Node 2 has the potential to carry far more information than Access Node 1, but there is a catch. "With EAT you can approach 60 GHz," says Ran, "but it is expensive''."
+
+- ''The UROOF team is actively working to increase the bandwidth of Access Node 2 and reduce its cost. Ran is encouraged by the progress UROOF has made. They have shown that UWB signals can be beamed over hundreds of metres using inexpensive optical technology, with greater bandwidth and longer distances in sight''.
+
+- "A''s ultra-wideband technology penetrates the mass market - within the next two years - it will be possible to manufacture an access node that will meet the demand very nicely," says Ran''.''
+
+The UROOF project received funding from ICT strand of the EU's Sixth Framework Programme for research. See the link: http://www.cellular-news.com/story/34767.php
+
+
+Another way of linking is to directly beam the laser from one user's device to a receiving sensor of another user as described in the patent application of Ajang Bahar of Toronto, Canada. 
+
+
+- BSTA: "T''he current options for wireless communication have changed the way people work and the way in which networks can be deployed. However, there remains unresolved problems in the setup and configuration of wireless communication links. Both known cellular and ad hoc wireless networking protocols and systems are deficient in that the ability for users to communicate without a priori knowledge of MAC addresses (represented by phone numbers, IP addresses and the like) is limited or may be compromised in a hostile environment. In contrast, provided by aspects of the present invention are devices, systems and methods for establishing ad hoc wireless communication between users that do not necessarily have MAC addresses and the like for one another. In some embodiments, a first user visually selects a second user and points a coherent light beam at an electronic device employed by the second user. Data specific to the first user is modulated on the coherent light beam, which can then be demodulated when the coherent light beam is received by the electronic device of the second user''."
+
+
+Link: http://www.faqs.org/patents/app/20080247345#ixzz0q61l0c8U
+
+
+A similar patent by Doucet and Panak can be found here: http://www.google.com/patents/about?id=RbQjAAAAEBAJ&dq=6188988&ie=ISO-8859-1
+
+
+There is a paper by Akella and others of Rensselaer Polytechnic Institute titled Building Blocks for Mobile Free-Space-Optical Networks. 
+
+
+Optical wireless, also known as free space optics (FSO), is an effective high bandwidth communication technology serving commercial point-to-point links in terrestrial last mile applications and in infrared indoor LANs. FSO has several attractive characteristics such as (i) dense spacial reuse, (ii) low power usage per transmitted bit, (iii) license-free band of operation, and (iv) relatively high bandwidth. Despite these features it has not been considered as a communication environment for general-purpose metropolitan area networks or multi-hop ad-hoc networks, which are currently based on radio frequency (RF) communication technologies...
+
+
+Link: http://www.cse.unr.edu/~yuksem/my-papers/wocn05-simulation.pdf
+
+
+
+The US military has analyzed Free Space Optics as a transmission technology and has produced and published a White Paper: http://www.docstoc.com/docs/25017951/Analysis-of-FSO
+
+
+
+My point is that the technology of optical transmission has been explored and is well in hand. It is technically feasible for last mile applications. Since users can be connected to more than one peer, the network becomes fault tolerant. Increasing proximity to a super-user, a node connected with the backbone, will make for increasing reliability of the network connection.
+
+
+Now if telcos and ISPs could be induced to embrace that technology, a simple, cheap hardware implementation could be developed that could easilty be provided to end users, in exchange for operation of the node. ISPs would have resolved the spiny problem of covering the last mile, while users would be linked in to the internet at negligible or no cost and would have a local p2p network that data can travel on without having to go through any provider. Even in a national context, data would only have to go short hops (such as from one city to another) saving backbone capacity. Existence of such a massive p2p infrastructure would make the internet very much more resilient."
+
+
+[[Category:Technology]]
+[[Category:P2P Infrastructure]]

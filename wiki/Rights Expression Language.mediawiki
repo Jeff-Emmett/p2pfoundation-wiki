@@ -1,0 +1,138 @@
+
+=Definition=
+
+A Rights Expression Language (REL) provides a means to present a formal description of the rights associated with an item of content or a service. Rights here refer to rights in content held by a user such as authors, publishers, distributors, or consumers. The advantage of expressing them formally is that it will be clear to everyone what actions are allowed by these rights and potentially computers can automatically resolve these rights.
+
+
+In most cases the REL forms part of a larger system of [[Digital Rights Management]] (DRM) used to manage or even enforce the rights associated with an intellectual work such as a item of music. 
+
+
+=Description=
+
+By G.R. Gangadharan and Michael Weiss, from the article, An Introduction to Rights Expression Languages:
+
+"The foundation of DRM technology relies
+on our ability to represent the rights over digital assets. RELs
+represent the rights over assets in a machine-understandable way. RELs
+describe different aspects of usage control, payment, and access, for a
+digital access environment.
+
+According to Parrott, a REL consists of four components:
+
+   
+* Subjects, the actors who perform some operation or action
+   
+* Objects, the content against which a subject wants to perform an
+operation
+   
+* Operations or what the subjects wants to do to the object
+   
+* A set of constraints or conditions under which an operation can be
+performed
+
+These components and their relations support a range of models, each
+describing a way of applying digital rights. In general, a REL expresses
+the rights of an information asset either in some form of logic or in an
+XML-based language."
+(http://www.osbr.ca/archive.php#A4)
+
+
+=Examples=
+
+
+By G.R. Gangadharan and Michael Weiss
+
+"What follows is a brief history of RELs. A pioneering formal language
+called DigitalRights describes a mathematical model of simple licenses
+that consists of payment and rendering events and a formal
+representation of licenses. LicenseScript is a logic-based REL.
+
+Logic-based RELs express general prepositions of a permissive or
+obligatory (restrictive) statement. However, these languages cannot
+express a finer level of granularity of the assets, actors, or actions
+involved. Logic-based RELs cannot interoperate with other types of RELs.
+
+XML-based RELs support interoperable ways of expressing the rights of an
+information asset. An XML-based REL allows asset producers to specify
+flexible expressions. The [[Extended Rights Markup Language]] ([[XrML]]) and the
+[[Open Digital Rights Language]] (ODRL) are two XML-based RELs which have
+gained international recognition and are widely used in industry.
+
+XrML is the basis for the REL of the MPEG-21 multimedia framework. It
+focuses on the license through which a rights holder confers usage
+rights to a consumer. A license can be digitally signed by the rights
+holder, now also referred to as the issuer, to confirm that the holder
+grants the rights contained in the license. An XrML license contains one
+or multiple grants and the license issuer. A grant is the element within
+the license that authorizes a subject to exercise a right on some object
+under some constraints. Note that the actual terminology used by XrML is
+slightly different from this. 
+
+ODRL is an open standard language for the
+expression of terms and conditions over assets in open and trusted
+environments. ODRL consists of an expression language and a data
+dictionary. The expression language defines basic terms of rights
+expressions and their organization using a set of abstract concepts. The
+data dictionary defines the semantics of the concrete terms used to
+express an instance of a rights specification.
+
+ODRL is based upon an extensible model for rights expression, and
+defines the following three core entities and their relationships:
+
+   
+* Assets, the objects being licensed
+   
+* Rights, the rules concerning permitted activities, the constraints
+or limits to these permissions, the requirements or obligations needed
+to exercise the permission, and the conditions or specifications of
+exceptions that, if true, terminate the permissions and may require
+re-negotiation of the rights
+   
+* Parties, the information regarding the service provider, consumer,
+or broker
+
+With these entities, ODRL can express offers (proposals from rights
+holders for specific rights over their assets) and agreements (contracts
+or deals between the parties with specific offers). ODRL supports the
+declaration of a wide range of expressions. It can also be extended to
+different types of domains. For example, we can use ODRL to specify that
+a consumer of a geocoding web service can only use this service in a
+non-commercial context, as well as the number of times the service can
+be accessed each day. ODRL has been published by the World Wide Web
+Consortium (W3C), and has received wide acceptance. ODRL is supported by
+several industry consortia such as the Dublin Core Metadata Initiative
+(DCMI) and the Open Mobile Alliance (OMA).
+
+Two applications of ODRL are an ODRL profile of the semantics of
+Creative Commons (CC) licenses and the ODRL profile for services
+(ODRL-S). The core semantics of CC licenses have been expressed in ODRL.
+This profile supports extensions to these semantics, and defines an XML
+Schema. ODRL-S is an extended version of ODRL to express clauses for
+service licensing, creating a machine-understandable service license."
+(http://www.osbr.ca/archive.php#A4)
+
+
+=Discussion=
+
+
+==Open Rights Expression Languages==
+
+One of the problems of DRM systems is that there are many different propriatery systems and many of them and they can't talk to each other. Thus they fragment the market and inconvenience many users who would prefer to access any item of content on any system. In the absence of a universal DRM system this leads to the call for [[DRM Interoperability|interoperable DRM]]. This in turn requires standard and open rights expressions or at least interoperable RELs.
+
+Among a large field of proprietary RELs there are two main contenders striving to produce an open REL standard:
+
+
+* The [http://www.xrml.org/ eXtensible rights Markup Language] ([[Wikipedia:XrML|XrML]]) uses the extensible markup language ([[Wikipedia:XML|XML]]) to "provide a universal method for securely specifying and managing rights and conditions associated with all kinds of resources including digital content as well as services." It is "based on years of research at Xerox Palo Alto Research Center (PARC), which invented the digital rights language concept, and backed by patented technology, XrML is currently governed by ContentGuard, Inc."
+
+
+* The [http://odrl.net/ Open Digital Rights Language] (ODRL) "initiative is an international effort aimed at developing and promoting an open standard for rights expressions. ODRL is intended to provide flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distributing and consuming of digital media across all sectors and communities." One possible advantage of ODRL is that it is license-free.
+
+
+=Further Reading:=
+
+* For further discussion of the need for interoperability at all levels of information exchange and in particular at the level of DRM and RELs see the Berkman Center's white papers 'Breaking Down Digital Barriers'. (http://cyber.law.harvard.edu/interop/)
+
+
+[[Category:IP]]
+
+[[Category:Standards]]

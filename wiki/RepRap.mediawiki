@@ -1,0 +1,170 @@
+'''= (Self-) Replicating Rapid-Prototyper'''
+
+URL = http://reprap.org/
+
+==Definition==
+
+1.
+
+"practical self-copying 3D printer. RepRap will make plastic, ceramic, or metal parts, and is itself made from plastic parts, so it will be able to make copies of itself. It is a three-axis robot that moves several material extruders. These extruders produce fine filaments of their working material with a paste-like consistency."
+
+
+2.
+
+"(short for Replicating Rapid-prototyper); from: Bath University in England
+
+"Dr. Adrian Bowyer and his graduate student, Ed Sells,
+created RepRap in 2004 with the goal of making a low
+cost 3D printer, but also one that could print its own parts.
+Darwin, an open-source 3D printer, was made available
+in 2007. 
+
+Today a number of commercial kit makers sell versions of the RepRap, 
+'''including [[Ponoko]] in New Zealand, [[Bits From Bytes]] (UK), [[MakerBot]] (U.S.) and [[Shapercube]] (Germany).''' 
+
+MakerBot sells their entry level
+Cupcake machine for about $9506.
+
+In 2009, Bowyer and team introduced '''the second generation RepRap machine, [[Mendel]]".'''
+(http://web.mae.cornell.edu/lipson/FactoryAtHome.pdf)
+
+==Description==
+
+1. From the Wikipedia [http://en.wikipedia.org/wiki/RepRap_Project]:
+
+"The RepRap Project is an initiative aimed at creating a self-replicating machine which can be used for rapid prototyping and manufacturing. A rapid prototyper is a 3D printer that is able to fabricate three dimensional artifacts from a computer-based model. Project authors describe 'self-replication', understood as the ability to reproduce the components necessary to build another version of itself, as one of the goals for the project.
+
+Due to the potential self-replicating ability of the machine, authors envision the possibility to cheaply distribute RepRap units to people and communities, enabling them to create (or download from the internet) complex products and artifacts without the need for expensive industrial infrastructure. They further speculate that the RepRap will eventually demonstrate evolution in this process as well as being able to increase in number exponentially. This, in theory, would give RepRap the potential to become a powerful disruptive technology, similar to that of other anticipated low-cost personal fabrication technologies.
+
+The stated goal of the RepRap project is not to produce a pure self-replicating device for its own sake but rather to put in the hands of individuals anywhere on the planet, for a minimal outlay of capital, a [[Desktop Manufacturing]] system that would enable the individual to manufacture many of the artifacts used in everyday life. The self-replicating nature of RepRap could also facilitate its viral dissemination and may well facilitate a major paradigm shift in the design in manufacture of consumer products from one of factory production of patented products to one of personal production of unpatented products with open specifications."
+(http://en.wikipedia.org/wiki/RepRap_Project)
+
+
+'''2.''' S Bradshaw, A Bowyer et al.:
+
+"In 2004 Adrian Bowyer realised that 3D printing was such a versatile technology that it ought to be possible to design a fused-filament fabrication 3D printing machine that could manufacture a significant fraction of its own parts.8 Conventional industry has little use for this idea: why sell a machine to your customers that means that they never need to come back to you to buy another, never need to buy spares, or even that allows them to go into production themselves in direct competition with you? But owning such a machine would have real advantages for people in general: anyone who had one could use it to make things, and could also make another such machine and give that to a friend. This is an interesting example of a failure of the market: such a self-replicating machine is an object that people would value, but that it is in no one’s interest to sell. For these reasons it was decided to make the machine and to give all its designs away free under the GNU General Public Licence on the web.9 This was the start of the RepRap project. RepRap is short for Replicating Rapid-prototyper.
+
+RepRap has been a significant success, and is now in its second version.
+
+From the beginning RepRap was conceived as a machine that would be owned and used by people in the home to make things, as well as by industry. The cost of all the materials needed to make a RepRap is low - about €400 - bringing it well within the budget of individuals in the developed world (as well as small communities in the developing world). RepRap makes items at a slightly lower quality than the commercial machines do, but at about 1 per cent of the cost.
+
+Any development or improvement of RepRap design, software or electronics arises out of its users’ own initiatives. There is no central institution giving directions: users themselves invest time and thought in the evolutionary process of RepRap design. If they inspire other users they can all team up and combine their efforts. Because of the lack of deadlines for developmental goals, progress is very wide ranging, but it is also admittedly slower than in industrial R&D departments. However, personal ambition to realise their own ideas for the project drives the progress of the users’ work. Involving users in product design by providing tool kits has become more important in recent times.10
+
+The reactions of industry to RepRap have been twofold: the conventional 3D printing manufacturers have (to the best of the authors’ knowledge) ignored it, but there has been a flurry of garage start-ups (for example Bits from Bytes Ltd in Bristol and MakerBot Industries LLC in New York) making very low cost machines that are based on RepRap technology. There is also another significant open-source 3D printer: the Fab@Home machine, which was inspired by RepRap.11 Unlike RepRap, these machines do not copy themselves. They are however all able to make RepRap machines, as are almost all the large-scale commercial 3D printing machines. The asymmetry that this introduces into the population dynamics of 3D printing has not escaped us."
+(http://www.law.ed.ac.uk/ahrc/script-ed/vol7-1/bradshaw.asp)
+
+==Characteristics==
+
+[[DiDIY]]:
+
+===Community===
+
+"RepRap has been conceived as a complete replication system rather than
+simply a piece of hardware. To this end the system includes computeraided
+design (CAD) in the form of a 3D modeling system and computeraided
+manufacturing (CAM) software and drivers that convert RepRap
+users' designs into a set of instructions to the RepRap hardware that turns
+them into physical objects.
+
+The core community space is the RepRap wiki at http://reprap.org. Online
+spaces include forums, IRC channels, blogs, while physical spaces are
+listed under the RepRap User Groups, that provide local hubs for
+RepRappers, such as hackerspaces and makerspaces.
+
+===Licensing===
+
+The content on the RepRap.org wiki is under a free license: GNU FDL.
+The RepRap itself is under the GNU GPL20, while different machine
+designs – by different members – are under different licenses:
+http://reprap.org/wiki/RepRap_Machines.
+
+===Revenue models=== 
+
+• Donations.
+• Each participant may have its own income strategies, as other
+cases demonstrate.
+
+===Modes of production===
+
+Community members either built their own RepRap from scratch, with
+help from other members (who already have a machine to replicate the
+necessary parts), buy a kit for self-assembly or acquire a fully assembled
+product. It is worth noting that RepRaps built on top and include various
+other Open Source Hardware and Free Software projects, such as Arduino.
+
+===Governance models===
+
+* Ownership of contributions lie with the individual contributors.
+
+There is no central organisation holding control over the
+community.
+
+===Indicators of impact===
+
+* "RepRap was the first of the low-cost 3D printers, and it can be argued that the project started the open-source 3D printer revolution. It has become the most widely-used 3D printer among the global members of the Digital DIY culture and maker community.
+* Google Incoming Links (reprap.org): 147.000.
+* Alexa Global Rank (reprap.org): 21.092."
+<br />
+(http://www.didiy.eu/public/deliverables/didiy-d6.3-1.0-pub.pdf)
+
+==Discussion==
+
+===Two Possible Scenarios===
+
+James Cascio:
+
+"What's really interesting, though, is the question of what happens if RepRap works.
+
+Bowyer envisions RepRaps as eventually costing about $500. What happens when such relatively low-cost 3D printers become available? For every "napster fabbing" scenario, there are sober rapid prototyping specialists arguing that large-scale mass production will still be more efficient than individual home factories. The latter will likely be true, at least initially, as long as the intent is to try to reproduce in one's home exactly what one could buy in a store. It's a less compelling argument, however, if RepRaps are used to make objects with a degree of customization and individuation unsupportable within a mass-production model.
+
+There are a couple of ways that scenario could play out. One is akin to free/open source software: the products are so complex that only specialists design them, although quite a few are self-taught; good designers and functional components are well-regarded, and tend to show up in multiple projects; most people who use the designs appreciate the open, collaborative heritage, but end up being simply consumers, not contributors. The other is in a manner closer to website design: the first tools are sufficiently opaque that only the dedicated work with them; the next set make design easy enough for anyone to do, and the vast majority of the results are painfully bad; finally, the tools themselves do so much hand-holding that few really horrible designs result, but there's a level of uniformity approaching that of mass production anyway. Which path is taken depends on the complexity of the process.
+
+Of course, it's possible that the actual path will be more of the first blending into the second, as the technology becomes easier to use and more widely available.
+
+RepRap will likely be crude, clumsy, more expensive than intended, and ultimately a bust -- but, if even marginally successful, it will blaze the trail for better, more efficient, more cost-effective designs which can learn from RepRap's mistakes. Such follow-on designs could even emerge as variations of RepRap itself. Bowyer is making the right decision in putting RepRap's design on the web as open source -- he may not end up with the perfect design, but with enough hands and minds on the problem, someone eventually will."
+(http://www.worldchanging.com/archives/002398.html)
+
+===Ecological Aspects===
+
+Mahdi Gheshlaghi:
+
+"Replicating Rapid-Prototyper (RepRap) is a general purpose “self-replicating” manufacturing machine which can be used in form of a desktop 3D printer in order to print plastic objects (RepRap, 2013). “Self-replicating” means it can print 50% of its own parts (RepRap, 2013).
+
+Ecological aspects of RepRap 3D printer:
+
+* Using biodegradable raw material (PLA), Many components of RepRap are made from a plastic called Polylactic acid (PLA) which is a biodegradable material (Pearce, 2010).
+* Designed for easy disassembly (Sells, et.al, 2009);
+* Designed for local production; In RepRap, standard material and components are used which are “available everywhere in the world” (Sells, et.al, 2009)." (http://p2pfoundation.net/Potential_of_Open_Design_for_Eco-Efficient_Product_Development)
+* Available maintenance documentation; There is access to maintenance information for some of its models on RepRap online forum (RepRap, 2013)."
+
+==More Information==
+
+* [[3D Printing]]
+* [[Open Source Desktop 3D Printers]]
+* [[World RepRap Map]]: A map of the locations of RepRap users around the world. 
+
+* [[Personal Manufacturing]]; [[Desktop Manufacturing]]
+* [[FAB]], [[Fab Labs]], [[Fab@Home]] ; [[Desktop Factory]]
+* [[Personal Fabricators]]
+* [[Rapid Manufacturing]]
+
+External material:
+
+* [[Andrew Bowyer on the RepRap Project]], video
+* [[Andrew Bowyer on the RepRap Project and Self-replicating Machines]], audio podcast
+* Profile of Andrew Boyer at http://www.newelectronics.co.uk/articles/8217/Revolutionary.pdf
+
+
+Check out these websites:
+
+* http://www.reprap.org
+* http://blog.reprap.org
+* http://builders.reprap.org
+* http://blog.erikdebruijn.nl/categories/7-RepRap
+
+[[Category:Design]]
+[[Category:Encyclopedia]]
+[[Category:Manufacturing]]
+[[Category:Peerproduction]]
+[[Category:Free Software]]
+[[Category:P2P Hardware]]

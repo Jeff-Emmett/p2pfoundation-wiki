@@ -1,0 +1,115 @@
+Interview of Jordan S. Hatcher:
+
+
+=Text=
+
+
+"'''[[Open Data Commons]] is a project by the [[Open Knowledge Foundation]]. Can you give us a brief overview over your mission and activities?'''
+
+The mission of Open Data Commons is to provide legal tools for open data, and we've produced two legal tools to date.  We're looking to expand our work to do more education and research around open data, as well as to build out a robust framework for the organisation and updating and maintaining the licenses. We're very excited that the Open Street Map community is looking to adopt the Open Database License for their materials.
+
+We were started with the support of Talis http://www.talis.com/ who very early on recognised the importance of data licensing and the difficulties with trying to use existing approaches in this context. They've been great supporter all along in our activities and deserve a special thanks, together with OSM community who provided invaluable feedback  in the process for developing the ODbL.
+
+Like all OKF projects, we're a bottom up organisation, and if you want to get involved, just join the ODC mailing list or join in on OKFN-Discuss. We'd especially like to help people understand the licenses and bring them to their communities.
+
+We're also very interested in speaking opportunities and to run more workshops.  We had a very successful open data and the semantic web full day workshop in London in November, and are looking to hold more events, including at our yearly OKCon this spring.  The biggest barrier now isn't the legal one -- it's education and awareness around open data.
+
+
+'''What is actually the subject being protected by data licenses?'''
+
+This could be taken two different ways:  one as what legal rights are being licensed, and two as to what parts of the database are being licensed.
+
+As to what legal rights may apply, databases aren't terribly different from other areas in that a number of IP rights may apply to databases, including:
+
+* [[Copyright]];
+    
+* in Europe, the sui generis Database Right;
+    
+* [[Patents]]; and
+    
+* [[Trademarks]].
+
+
+In addition, lots of other IP or IP-like rights could apply such as technical protection measures, trade secret laws, unfair competition, and contract.
+
+Open licenses, such as those for software (GPL, CDDL, MPL, BSD, Apache, etc.) or content (Creative Commons), typically only license copyright and sometimes patents. Open content licenses usually only address copyright, though Creative Commons are kind of a mixed bag when it comes to how they approach the database right -- some waive it, others are silent about it, none AFAIK try to license it.
+
+Incidentally, commercial companies take a very different approach in licensing data and so may try to use all of these to protect their databases.
+ 
+
+'''Why do we need a separate legal framework for open data?'''
+
+This is really more the question "Why can't we use the same open licensing approach for databases as we do for content and software?"
+
+The answer to me is that database and data are different.  They're different legally and different practically in what consumers and producers of open data want to do with it.  They're also different in what the future looks like in terms of things like linked data.
+
+When people started thinking seriously about doing for content what free and open source did for software, it was much the same problem, which is why you have Creative Commons and content-specific open licenses. People wanted to apply something like the GPL for a picture, and found that the GPL itself doesn't make sense in that context.  So too when people start thinking about databases and data seriously some people find open licenses made for software or for content not to be a good fit.  The answer isn't that you absolutely can't apply content licenses like the CC licenses , it's just that some of the people that have been applying CC licenses to databases got dissatisfied and wanted something more.
+
+In addition, when thinking about the future of the web, or specific domains such as science, even a typical open licensing approach such as Share Alike / Copyleft might not make the most sense, which is where the great work of people like John Wilbanks and the rest of the team at Science Commons come in -- they recommend a public domain approach for databases.
+
+Specific problems often require specific solutions, and in some cases solving some of the problems unique to open data require new licenses tailored for data, which is why Open Data Commons was born.
+ 
+
+'''In Europe data licensing is being bound to the EU Database Directive which does not really correspond to open data. How do Open Data Commons complement or transcend this framework?'''
+
+I have to stop right here and challenge the assumption that the database directive doesn't correspond to open data. One, database licensing in Europe does include copyright -- the Database Directive did not eliminate or replace copyright as being an element of databases so data licensing isn't solely about the database right. Two, the database right is a right like any other and can be licensed, whether under an open framework or under more "traditional" proprietary licenses. We've in fact done just that and licensed the database right in the Open Database License (ODbL).
+
+Open Data Commons currently offers two main legal tools for databases.
+
+1. The PDDL or Public Domain Dedication and License.  This is a legal tool to totally give up your legal rights over a database and/or its contents. so for  database rights, it gives up these too (just like copyright).  The end result can be a database that is totally interoperable and in the public domain.
+
+2. The ODbL or Open Database License.  The ODbL equates to the CC attribution share alike license (CC-BY-SA) or GPL, but for databases. So for this area, the database right gets licensed just like copyright does. The ODbL operates through a combination of copyright, database rights, and contract.
+A big topic from a business perspective is legal certainty. Is this supported by Open Licensing?
+
+I'd agree that there is a desire for certainty, but mostly businesses just look to get risk down to an acceptable level or known quantity of risk, rather than the definitive legal answer. Nothing under an open license (or any license for that matter) is ever certain: The law (unlike software code) is not a binary yes/no space. Law contains a "maybe".  It's about getting certainty around the level of risk, which is just as much about business processes and IP management as it is about open licenses themselves.
+
+
+'''What is the difference between [[Creative Commons]] and [[Open Data Commons]]?'''
+
+Creative Commons is a large organisation with a broad focus on a number of issues. Open Data Commons exclusively focuses on providing legal tools for open data. We're a project of the Open Knowledge Foundation and started in 2007 working on data licensing issues. At the time, Creative Commons did not have a database specific public domain dedication tool that complied with the (then brand new) Science Commons Protocol for Implementing Open Access Data.  We were one of the first ones to comply with the protocol via the PDDL and launched ahead of CC0.
+Creative Commons is basically bound to documents and not really applicable to data. Is this notion correct?
+
+They're some challenges here as well as to how CC applies.  Formally, several of the Creative Commons licenses (in terms of the various ports of the main 6 licenses) take different approaches to the European database right -- some waive them (like the unported license) and others are silent. That can be a problem from a data licensor perspective, particularly for people looking to use their database rights in a non-CC context. They may find out they've waived the rights and can no longer license them.  As an example, if you used the "Non-Commercial" CC-BY-NC license and wanted to license commercial use to others -- your use of  CC-BY-NC may mean that you've waived your database rights (assuming you are in Europe and qualify for the right) and so don't have a database right to commercial license.
+
+But licensing databases isn't all about the database right, and copyright plays a role too.  This means that CC licenses can be used on databases.  In some jurisdictions this may make sense, such as Australia, which takes a slightly different approach to copyright and factual data / databases.  
+
+
+Instead the challenges with CC licenses, as I see them, are threefold:
+
+1) Legal.  CC licenses if you included all the various international ports treat the database right differently, and this can cause issues from a legal perspective, particularly for people who have the European database right.
+
+2) Practical.  From our work with the Open Street Map community, one of the main challenges that they saw when using CC  licenses (CC-BY-SA) was that it left a lot of unanswered questions on the day-to-day use of it  as a guiding document for a database project.
+
+3) Institutional. CC as an organisation takes a position that the public domain is the best option for data, and so don't have incentives to support people using CC licenses for databases to fix some of the legal and practical problems mentioned above. 
+
+Since your questions specifically talks about the context of "data", it is worth expanding further on the definition of "data".  Lots of people think of data as factual information, and here as a general rule copyright doesn't apply to facts.  However when you start collecting and organising facts together into a database, then you start to have questions of copyright that can come up.
+
+But data isn't just factual information -- the contents of a database can be anything. Sounds, text, personal data, geodata, images... anything.  Take a database of images for example.  Those images could all be under copyright, and all under different copyright licenses or terms and conditions. So there are two challenges -- the rights over the database and the rights over the contents of that database (the data).  CC can be entirely appropriate when used on the contents (a database of CC-BY Flickr images for example) and then another license or public domain dedication could be used for the database layer.
+
+
+'''There are confusions about the correct attribution mixing documents with data. Do you have examples for good practices in open data licensing?'''
+
+We at the OKF and as part of Open Data Commons are trying to help develop what good practice in open data licensing looks like, both through developing tools such as CKAN, setting standards such as the Open Definition, or just making projects that work with open data such as Open Shakespeare. Of course we certainly aren't the only ones working in this area, and Science Commons, and the fantastic work on open data done by the group of people involved with QUT, its Oak Law Project and CC Australia, among many others.
+
+On the commercial side, a clear example of a company that has thought very much about how to implement database licensing is Freebase. Reading through their work can give an idea of the challenges and level of detail that best practice around data licensing may involve.
+ 
+
+'''How do I find the right license? How can I get started with the topic?'''
+
+There can be lots of issues with data other than the IP side of things, such as personal data and making sure that you respect people's privacy.  That right there means that some data just isn't suitable for an open data licensing approach. 
+
+For commercial users or large community based projects, choosing a license is really important, and in many ways it's best to seek the advice of someone experienced in this area to help with decision.  
+
+For others, it's still important to recognise:
+
+* you can only license or dedicate to the public domain something that you own; and
+    
+* your goals with sharing your database
+
+
+Carefully thinking about both of those points can help a long way to decide what legal tool to choose."
+(http://www.semantic-web.at/1.36.resource.296.jordan-s-hatcher-x22-why-we-can-x27-t-use-the-same-open-licensing-approach-for-databases-a.htm)
+
+[[Category:IP]]
+[[Category:Interviews]]
+[[Category:Data Commons]]

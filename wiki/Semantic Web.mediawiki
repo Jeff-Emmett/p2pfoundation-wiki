@@ -1,0 +1,160 @@
+= '''the core idea of the Semantic Web is to create the meta data describing data, which will enable computers to process the meaning of things.''' [http://www.readwriteweb.com/archives/10_future_web_trends.php]
+
+=Definition=
+
+
+'''The semantic web is a technological approach to making it easier to exchange data between information systems, using not only Web technologies, but also the use of shared agreements (as established by schemata, ontologies and logic) to facilitate some of the automated aspects of the knowledge exchange.''' 
+
+The semantic web makes information directly readable by machines, without necessarily passing through human interpretation.
+
+Mark Bergman:
+
+"By semantics, we are referring to whether different statements from different sources indeed refer or not to the same entity or concept; in other words, have the same meaning. Such a determination is pivotal if we are to combine data from multiple sources.
+
+Ultimately, semantic mediation (such as my “glad” is equivalent to your “happy”) means resolving or mediating potential heterogeneities from on the order of 40 discrete categories of potential mismatches"
+(http://www.mkbergman.com/?p=390)
+
+
+=Examples=
+
+Early implementations on today's [[Web 2.0]]:
+
+#[[Twine]]
+#[[Imindi]]
+
+
+=Status=
+
+==The Semantic Web has failed==
+
+Dominiek ter Heide:
+
+"After two decades of failed attempts, semantic web has become a dirty word with investors and consumers. So what exactly went wrong? Why are we still so far away from the web of data? Here’s my take on it.
+
+Most attempts at creating a knowledge repository have involved converting “expert knowledge” into a web of data. The result is an inherently boring web of data. Google’s Knowledge Graph promotional video is a great example of how boring this web can be. “Let’s say you’re searching for Renaissance Painters”…. Really? Who searches for that?
+
+More accessible technology is causing an explosion of information. This has the effect of making the shelf-life of knowledge shorter and shorter. Alvin Toffler has – in his seminal book Revolutionary Wealth – coined the term Obsoledge to refer to this increase of obsolete knowledge.
+
+If we want to create a web of data we need to expand our definition of knowledge to go beyond obsolete knowledge and geeky factoids. I really don’t care what Leonardo DaVinci’s height was or which Nobel prize winners were born before 1945. I care about how other people feel about last night’s Breaking Bad series finale. How did they find the ending? What other series or movies might I enjoy based on those experiences?
+
+We are living in the Now. The Now is eating ever greater quantities of our attention. It’s drowning out the obsolete past. Human attention, sentiment and emotion are key elements to today’s information age. They cannot be ignored. They need to be at the very core of any web of data."
+(http://gigaom.com/2013/11/03/three-reasons-why-the-semantic-web-has-failed/)
+
+=Discussion=
+
+
+==W3C explanation==
+
+From the W3C at http://www.w3.org/2001/sw/
+
+"The Semantic Web is a web of data. There is lots of data we all use every day, and its not part of the web. I can see my bank statements on the web, and my photographs, and I can see my appointments in a calendar. But can I see my photos in a calendar to see what I was doing when I took them? Can I see bank statement lines in a calendar?
+
+Why not? Because we don't have a web of data. Because data is controlled by applications, and each application keeps it to itself.
+
+The Semantic Web is about two things. It is about common formats for interchange of data, where on the original Web we only had interchange of documents. Also it is about language for recording how the data relates to real world objects. That allows a person, or a machine, to start off in one database, and then move through an unending set of databases which are connected not by wires but by being about the same thing."
+(http://www.w3.org/2001/sw/)
+
+
+==Explanation 2==
+
+"Berners-Lee defines the Semantic Web as “a web of data that can be processed directly and indirectly by machines.”
+
+In the Semantic Web data itself becomes part of the Web and is able to be processed independently of application, platform, or domain. This is in contrast to the World Wide Web as we know it today, which contains virtually boundless information in the form of documents. We can use computers to search for these documents, but they still have to be read and interpreted by humans before any useful information can be extrapolated. Computers can present you with information but can’t understand what the information is well enough to display the data that is most relevant in a given circumstance. The Semantic Web, on the other hand, is about having data as well as documents on the Web so that machines can process, transform, assemble, and even act on the data in useful ways."
+(http://www.altova.com/semantic_web.html)
+
+
+==Critique==
+
+Alex Iskold:
+
+1) [http://www.readwriteweb.com/archives/semantic_web_difficulties_with_classic_approach.php explains] why the classic 'bottom-up' approach is unlikely to work and needs to be
+
+2) [http://www.readwriteweb.com/archives/the_top-down_semantic_web.php replaced] by a top down approach
+
+=Semantic Web Tools=
+
+The semantic web comprises the standards and tools of [[XML]], [[XML Schema]], [[RDF]], [[RDF Schema]] and [[OWL]].
+
+
+==Overall structure==
+
+The OWL [[Web Ontology Language]] Overview describes the function and relationship of each of these
+components of the semantic web:
+
+• XML provides an elemental syntax for content structure within documents, yet associates no
+semantics with the meaning of the content contained within.
+
+• XML Schema is a language for providing and restricting the structure and content of elements
+contained within XML documents.
+
+• RDF is a simple language for expressing data models, which refer to objects ("resources") and
+their relationships. An RDF-based model can be represented in XML syntax.
+
+• RDF Schema is a vocabulary for describing properties and classes of RDF-based resources, with
+semantics for generalized-hierarchies of such properties and classes.
+
+• OWL adds more vocabulary for describing properties and classes: among others, relations
+between classes (e.g. disjointness), cardinality (e.g. "exactly one"), equality, richer typing of
+properties, characteristics of properties (e.g. symmetry), and enumerated classes.
+
+• SPARQL is a protocol and query language for semantic web data sources.
+
+==Details==
+
+[[Resource Description Framework]], at [http://en.wikipedia.org/wiki/Resource_Description_Framework Wikipedia]
+
+"An official W3C recommendation, RDF is an XML-based standard for describing resources that exist on the Web, intranets, and extranets. RDF builds on existing XML and URI (Uniform Resource Identifier) technologies, using a URI to identify every resource, and using URIs to make statements about resources. RDF statements describe a resource (identified by a URI), the resource’s properties, and the values of those properties. RDF statements are often referred to as “triples” that consist of a subject, predicate, and object, which correspond to a resource (subject) a property (predicate), and a property value (object)."
+(http://www.altova.com/semantic_web.html)
+
+
+[[RDF Schema]] (RDFS)
+
+"RDFS is used to create vocabularies that describe groups of related RDF resources and the relationships between those resources. An RDFS vocabulary defines the allowable properties that can be assigned to RDF resources within a given domain. RDFS also allows you to create classes of resources that share common properties.
+
+Using the same triples paradigm defined by RDF, RDFS triples consist of classes, class properties, and values that define the classes and relationships between the resources within a particular domain.
+
+In an RDFS vocabulary, resources are defined as instances of classes. A class is a resource too, and any class can be a subclass of another. This hierarchical semantic information is what allows machines to determine the meanings of resources based on their properties and classes."
+(http://www.altova.com/semantic_web.html)
+
+
+[[Web Ontology Language]] (OWL), at [http://en.wikipedia.org/wiki/Web_Ontology_Language Wikipedia]
+
+"OWL is a third W3C specification for creating Semantic Web applications. Building upon RDF and RDFS, OWL defines the types of relationships that can be expressed in RDF using an XML vocabulary to indicate the hierarchies and relationships between different resources. In fact, this is the very definition of “ontology” in the context of the Semantic Web: a schema that formally defines the hierarchies and relationships between different resources. Semantic Web ontologies consist of a taxonomy and a set of inference rules from which machines can make logical conclusions.
+
+A taxonomy in this context is system of classification, such as the scientific kingdom/phylum/class/order/etc. system for classifying plants and animals that groups resources into classes and sub-classes based on their relationships and shared properties.
+
+Since taxonomies (systems of classification) express the hierarchical relationships that exist between resources, we can use OWL to assign properties to classes of resources and allow their subclasses to inherit the same properties. OWL also utilizes the XML Schema datatypes and supports class axioms such as subClassOf, disjointWith, etc., and class descriptions such as unionOf, intersectionOf, etc. Many other advanced concepts are included in OWL, making it the richest standard ontology description language available today." 
+(http://www.altova.com/semantic_web.html)
+
+
+[[Microformats]]
+
+"Recognizing the complexity of RDF and OWL, a group of people are trying a different approach called Microformats. The goal of microformats is to embed the basic semantics right into HTML pages. It is not as expressive right now as RDF and OWL, but it is very compact and uses available XHTML facilities to add semantics to the pages. For example, there is a microformat for describing contact information called hCard. Using hCard it is possible to annotate the HTML so that a microformat-aware browser or a search engine can deduce the information about a person such as first and last name, a company or a phone number. Another mature microformat called hCalendar enables page authors to describe events. Many popular event sites, such as Facebook and Yahoo! Local use this format to annotate events in their HTML pages.
+
+Leaving the aesthetics of the representation aside, the microformats approach is clearly simpler than RDF and OWL. And even though it is less powerful, it is becoming very popular. Many site authors are starting to embed microformats into their HTML pages."
+(http://www.readwriteweb.com/archives/semantic_web_road.php)
+
+=More Information=
+
+An interview with Tim Berners-Lee at
+http://www.consortiuminfo.org/bulletins/semanticweb.php
+
+A semantic web overview at
+http://ontoworld.org/wiki/Semantic_Web_overview
+
+Cory Doctorow gives seven reasons why metadata projects will not work, at
+http://www.well.com/~doctorow/metacrap.htm 
+
+The [[Synaptic Web]]
+
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Governance]]
+
+[[Category:Intelligence]]

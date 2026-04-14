@@ -1,0 +1,189 @@
+'''= "DeFi is a nascent field of unlicensed, unregulated, and non-custodial financial services that utilise public distributed ledgers and crypto-assets rather than corporate structures and sovereign currencies." ''' [https://www.sciencedirect.com/science/article/pii/S0160791X23000568?via%3Dihub]
+
+
+=Description=
+
+'''0. From the Wikipedia:'''
+
+"Decentralized finance (often stylized as DeFi) provides financial instruments and services through smart contracts on a programmable, permissionless blockchain. This approach reduces the need for intermediaries such as brokerages, exchanges, or banks. DeFi platforms enable users to lend or borrow funds, speculate on asset price movements using derivatives, trade cryptocurrencies, insure against risks, and earn interest in savings-like accounts. The DeFi ecosystem is built on a layered architecture and highly composable building blocks. While some applications offer high interest rates, they carry high risks. Coding errors and hacks are a common challenge in DeFi."
+
+(https://en.wikipedia.org/wiki/Decentralized_finance)
+
+
+'''1. Philipp Sandner et al.:'''
+
+"Decentralized Finance (DeFi) is likely to have a significant impact on how banks operate in the future – and even has the potential to shift the structure of the whole financial system at a macroeconomic level. Before we discuss and substantiate this hypothesis, we would first like to introduce the core concept of DeFi.
+
+Decentralized Finance or “DeFi” in short, is an umbrella term encompassing the vision of a financial system that functions without any intermediaries, such as banks, insurances or clearinghouses, and is operated just by the power of smart contracts. DeFi applications strive to fulfill the services of traditional finance (also coined as Centralized Finance, or just CeFi) – but in a completely permissionless, global and transparent manner.
+
+..
+
+DeFi protocols enable for the first time to borrow or lend money on a large scale between unknown participants and without any intermediaries. Those applications bring lenders and borrowers together and set interest rates automatically in accordance with supply and demand. Moreover, those protocols are truly inclusive, as anybody can interact with them at any time, from any location, and with any amount. 
+
+In fact, the recent hype around DeFi applications is largely driven by the advancement of borrowing and lending protocols, such as Compound. In contrast to traditional finance, loans in DeFi are commonly secured by over-collateralization. However, companies such as Aave are currently working on enabling uncollateralized loans similarly to traditional finance. "
+
+(https://www.forbes.com/sites/philippsandner/2021/02/22/decentralized-finance-will-change-your-understanding-of-financial-systems/?)
+
+
+'''2. Tools for the Commons:'''
+
+"Decentralized Finance, or DeFi, takes the principles of [[Open Finance]] a step further by utilizing blockchain technology to reduce intermediaries participation in financial transactions. 
+
+DeFi platforms enable peer-to-peer transactions and offer a wide range of financial services, including lending, borrowing, trading, and investing, all without relying on traditional financial institutions. 
+
+Take, for instance, the case of Compound, a prominent DeFi platform that automates the matching of lenders and borrowers through smart contracts and, by adjusting interest rates according to supply and demand dynamics, has lowered costs for users and boosted returns for lenders, showcasing it's ability to offer accessible and efficient financial services outside the realm of traditional banks.
+Similarly, MakerDAO operates the DAI stablecoin, a cryptocurrency pegged to the US dollar, allowing users to collateralize their assets to generate DAI, which can be utilized for transactions, savings, or additional investments in DeFi products. Not just that, by featuring decentralized governance where MKR token holders vote on major decisions, it displays efficiency to establish stable, decentralized, and collective management of financial instruments, emerging as a crucial element of its ecosystem, facilitating more reliable operations amidst market volatility.
+
+Aave, on the other hand, introduces innovative features such as "flash loans," which require borrowing and repayment within a single transaction, enabling users to take advantage of arbitrage opportunities without requiring significant upfront capital, and also provides conventional lending and borrowing services across a diverse array of supported assets, demonstrating the full inventive potential of DeFi, creating new opportunities for traders and developers while highlighting the flexibility and creativity inherent in Decentralized Finance."
+
+(https://www.linkedin.com/pulse/embracing-decentralized-finance-future-open-toolsforthecommonsxyz-ab8kf/?)
+
+
+=Characteristics=
+
+From the Wikipedia:
+
+"DeFi revolves around decentralized applications, also known as DApps, that perform financial functions on distributed ledgers called blockchains, a technology that was made popular by Bitcoin and has since been adapted more broadly. Rather than transactions being made through a centralized intermediary such as a cryptocurrency exchange or a traditional securities exchange, transactions are directly made between participants, mediated by smart contract programs. These smart contracts, or DeFi protocols, typically run using open-source software that is built and maintained by a community of developers.
+
+DApps are typically accessed through a browser extension or application. For example, MetaMask allows users to directly interact with Ethereum through a digital wallet. Many of these DApps can be linked to create complex financial services. For example, stablecoin holders can lend assets such as USD Coin or DAI to a liquidity pool in a borrow/lending protocol such as the Aave protocol, and allow others to borrow those digital assets by depositing their own collateral. The protocol automatically adjusts interest rates based on the demand for the asset. Some DApps source external (off-chain) data, such as the price of an asset, through blockchain oracles.
+
+Additionally, Aave Protocol popularized "flash loans", which are uncollateralized loans of an arbitrary amount that are taken out and paid back within a single blockchain transaction. Max Wolff is credited with the original invention of flash loans with the original implementation released in 2018 by Marble Protocol. Many exploits of DeFi platforms have used flash loans to manipulate cryptocurrency spot prices.
+
+Another DeFi protocol is Uniswap, which is a decentralized exchange (DEX) set up to trade tokens issued on Ethereum. Rather than using a centralized exchange to fill orders, Uniswap pays users to form liquidity pools in exchange for a percentage of the fees collected from traders swapping tokens in and out of the liquidity pools. Because no centralized party runs Uniswap (the platform is governed by its users), and any development team can use the open-source software, there is no entity to check the identities of the people using the platform and meet KYC/AML regulations. As of 2020, it is not clear what position regulators will take on the legality of such platforms.
+
+(https://en.wikipedia.org/wiki/Decentralized_finance)
+
+
+=Status=
+
+"Since 2020, DeFi is growing at an astonishing pace and billions of USD [https://defipulse.com/] have been put in the ecosystem. The growth is mainly led by applications (also denominated as protocols) that are built on the Ethereum blockchain.
+
+For the first time in history, a financial system is developing without intermediaries at a large scale. So far, DeFi applications cannot compete in terms of security, speed, and ease of use with traditional finance solutions yet. But DeFi has produced real, working applications that have already managed to attract billions of capital. Those resources will be used to develop more competitive and user-friendly applications in the future."
+
+
+==Three maturity stages of a decentralized finance system==
+
+Phillipp Sandner et al. :
+
+
+===Stage 1: Efficient value transfers ===
+
+"Until now, centralized exchanges and wallet providers have been the only successful blockchain business models at scale. The reason for the success of centralized exchanges is that they are the main entry point to the crypto space (see Figure 1). The common user needs to swap fiat money (e.g. US Dollar) against a cryptocurrency before being able to interact with services in decentralized finance. Furthermore, wallet applications are established that enable users to safely store and transfer their cryptocurrencies.
+
+Based on those two applications, exchanges and wallets, efficient value transfers between unknown parties could be conducted for the first time without the need of traditional finance actors. This enabled the crypto space to fulfill limited functions of a financial system, namely speculation on (crypto) assets and the facilitation of payments. Thus, disintermediation of financial firms occurred – but only, if savers of traditional finance wanted to diversify their portfolio towards crypto assets or needed a frictionless payment system. We propose this to be the first maturity stage of a decentralized finance system.
+
+
+===Stage 2: Connecting savers and borrowers===
+
+Still missing was the ability to deal with flows of funds from savers to borrowers and vice versa. In the following years, additional elements of a more advanced financial system were developed. The function of a payment system could be advanced with the development of stablecoins, decentralized exchanges, and borrowing/lending protocols. Thereby, DeFi developed the necessary platforms for facilitating the flows between savers and borrowers.
+
+It might be no coincidence that the start of the explosive growth for the whole DeFi ecosystem could be observed with the advancement of the lending/borrowing protocol Compound. Since Compound started the distribution of its governance token, COMP, on June 15, 2020, the whole DeFi ecosystem showed a steep growth trajectory. Functioning lending/borrowing protocols, such as Compound, might have been the missing cornerstone for the foundation of a properly working decentralized financial system. This can be marked as the second maturity stage of the decentralized finance system.
+
+
+===Stage 3: Competing for traditional finance funds===
+
+DeFi can be described as a platform that is competing with traditional financial firms for the same resources. However, DeFi is an encapsulated system, which is not obeying the same rules as traditional finance. In particular, national law does not apply and regulatory policies can hardly be enforced in the DeFi space. This might be a major competitive advantage over the highly regulated traditional finance firms. 
+
+For example, financial innovations can be freely developed and implemented in DeFi without regarding regulatory boundaries. On the other hand, the absence of common legislative and political principles has certainly major disadvantages. It can be doubted that mainstream savers would consider the current DeFi environment a trustworthy destination to invest their pension. 
+
+
+Hence, the crucial question for the advancement of DeFi to the next evolutionary stage will be:
+
+* To which degree are savers of traditional finance willing to relocate their funds towards DeFi applications?
+* To which degree are borrowers of traditional finance willing to access funds from DeFi applications?
+
+To answer both questions at the current point in time: Only to a very limited degree. The reason is that most traditional finance savers or lenders do not trust the crypto space or simply do not know about DeFi. The influx of capital into DeFi applications since June 2020 most likely stems from idle assets on crypto wallets, i.e. from a redistribution of assets within the crypto space. Nevertheless, the rising use of DeFi protocols proves that the system is scalable and working. Today, the users of DeFi belong to the group of "innovators" or "early adopters" (i.e. a very small proportion of households). Tomorrow, the users might be mainstream households."
+
+(https://www.forbes.com/sites/philippsandner/2021/02/22/decentralized-finance-will-change-your-understanding-of-financial-systems/?)
+
+
+=Typology=
+
+Jeff Emmet et al. :
+
+==DeFi==
+
+"Decentralized Finance envisions a world beyond the rigid inefficiencies
+and monoculture of centralized finance, for people to “become their
+own banks” and start anew in the infinite gardens of Ethereum and other
+blockchains. DeFi saw the rise of tools like Aave, Balancer, Curve Finance,
+and Uniswap, where many degen fortunes were made and lost.
+Regenerative Finance is a call to use the newfound power of DeFi towards
+all forms of planetary regeneration, a song of redemption to transmute
+DeFi degens into ReFi regens. 
+
+
+==[[ReFi]]==
+
+This movement aims to use the magic of
+token issuance to solve for public goods funding and realign incentives
+toward positive-sum outcomes. ReFi was led by mystical collectives
+like Regen Network, ReFiDAO, ReFi Spring, Optimism, Gitcoin, and the
+GreenPill Network, among many others.
+
+
+==[[CoFi]]==
+
+Collaborative Finance seeks to complement the existing, centralized
+economic models by proposing systems of mutual obligation clearing,
+where networked debts cancel each other out in a harmonious cycle.
+
+CoFi found resonance in the hearts of those dreaming of a world woven
+together without an unhealthy addiction to finance. The meme first
+emerged in the Cosmos ecosystem, appealing to complementary currency
+activists and crypto commoners already practicing similar tactics.
+
+
+==[[MycoFi]]==
+
+It is from these memetic mycelial threads that MycoFi is woven. The
+concept of mycelial finance beckons us to learn from the ancient wisdom
+of nature, interlacing economic design patterns with the rhythm of life
+forms that have adaptively co-evolved over billions of years on this planet.
+Like spores on the wind, MycoFi first emerged as a playful jest to tickle the
+CoFi vines but quickly sprouted into its own vibrant memetic tapestry of
+inspiration for regenerative economic design."
+
+(https://greenpill.network/pdf/mycofi.pdf)
+
+
+=Governance=
+
+Tom Barberau:
+
+"DeFi’s governance thus depends on the distribution and exercise of tokenised voting rights. Since archetypal DeFi projects are not managed by companies or public institutions, not much is known about DeFi’s governance."
+
+(https://www.sciencedirect.com/science/article/pii/S0160791X23000568?via%3Dihub)
+
+
+=Examples=
+
+* borrowing and lending protocols, such as Compound. In contrast to traditional finance, loans in DeFi are commonly secured by over-collateralization. However, companies such as Aave are currently working on enabling uncollateralized loans similarly to traditional finance.
+
+* Synthetix is a derivatives issuance protocol, which enables the decentral creation and trading of derivatives on assets such as stocks, currencies, and commodities. Also, decentral asset management for cryptocurrencies is evolving. 
+
+* Yearn Finance, for example, is an autonomous protocol, which searches for the best yields in the DeFi space and invests automatically for its users.
+
+* Exchanges:  Coinbase or Binance (which are centralized organizations) to swap a unit of a cryptocurrency against another. 
+
+* with the emergence of decentralized exchanges (DEX), holders of cryptocurrencies no longer need to leave the crypto space for swapping their tokens. A prominent example of a DEX is Uniswap. DEX are composed of smart contracts that hold liquidity reserves and function according to defined pricing mechanisms. Such automated liquidity protocols play a key role in the development of an independent decentralized ecosystem without any CeFi intermediaries.
+
+*  An example of decentralized insurance is Nexus Mutual, which offers insurances that cover bugs in smart contracts. Since everything is based on smart contracts in DeFi, vulnerabilities in the code of smart contracts is a fundamental risk for DeFi users. 
+
+* [[Stablecoins]] are based on blockchain protocols that have the principle of price stability inherently encoded and, thus, fulfill the function of a reserve currency. The introduction of stablecoins set the foundation of the functioning decentralized financial system, as they enable participants to engage with each other without the underlying risk of price volatility
+
+(Source: https://www.forbes.com/sites/philippsandner/2021/02/22/decentralized-finance-will-change-your-understanding-of-financial-systems/?)
+
+
+=More information=
+
+* https://defipulse.com/
+
+* Article: Distribution and Exercise of [[Tokenised Voting Rights]]
+
+[[Category:Crypto_Economy]]
+[[Category:Cryptoledger_Applications]]
+[[Category:Encyclopedia]]
+[[Category:Economics]]
+[[Category:Commons_Economics]]
+[[Category:Money]]

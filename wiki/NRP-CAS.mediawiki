@@ -1,0 +1,130 @@
+#REDIRECT [[Network Resource Planning]]
+'''= "stands for Network Resource Planning and Contribution Accounting. Network Resource Planning (NRP) replaces Enterprise Resource Planning (ERP)".'''
+
+'''= Network Resource Planning [NRP] is Enterprise Resource Planning [ERP] rethought completely for P2P [[Open_Value_Networks|Open Value Networks]].'''
+
+
+=Context=
+
+From [[Bob Haugen]]:
+
+
+"This project started in 2012 as a collaboration between [[Sensorica]] and [http://mikorizal.org Mikorizal Software]. Network Resource Planning [NRP] is Enterprise Resource Planning [ERP] rethought completely for P2P [[Open_Value_Networks|Open Value Networks]]. 
+
+The software has changed its name regularly. It started out being called Valnet, then Value Accounting System [VAS], then Open Value Network Operating System [OVN-OS], NRP, and now it seems to have settled down as NRP-CAS.
+
+See also: [[Valnet]]"
+
+
+=Description=
+
+"The system allows a network of agents to use a pool of shared ''resources'', material or virtual, under different property regimes and access rules, to engage in [[peer production]]. The use or consumption of a ''resource'' in a ''process'' by an ''agent'' constitutes an ''event''. ''Events'' and recorded in the NRP-CAS associated with ''processes'', which belong to ''projects''. The NRP-CAS uses the REA ontology (Resources, Events, Agents) which was first proposed by [[Bill McCharthy]], an accounting professor from Michigan State University. 
+
+The first version of the NRP-CAS was developed in the context of [[Sensorica]], an open network engaged in open source hardware production. It was implemented by [[Bob Haugen]] as an embedded software developer with the [[Sensorica]] community. 
+
+
+'''1. [[Bob Haugen]]:'''
+
+"NRP means Network Resource Planning. Its purpose is to coordinate economic networks.
+
+A [[Supply Chain]] is an [[Economic Network]], with a head, which is the agent producing end products for consumers, and a tail, which is a tree of
+agents that supply them with components. A value system also includes the demand chain, which includes all of the agents who distribute the
+products from the head of the supply chain to consumers. It's shaped, as you may imagine, like an X.
+
+A [[Business Ecosystem]] is more complex, shaped like a directed graph. See https://en.wikipedia.org/wiki/Business_ecosystem
+
+“An economic community supported by a foundation of interacting organizations and individuals—the organisms of the business world. The
+economic community produces goods and services of value to customers, who are themselves members of the ecosystem. The member organisms also
+include suppliers, lead producers, competitors, and other stakeholders. Over time, they coevolve their capabilities and roles,
+and tend to align themselves with the directions set by one or more central companies. Those companies holding leadership roles may change
+over time, but the function of ecosystem leader is valued by the community because it enables members to move toward shared visions to
+align their investments, and to find mutually supportive roles.”
+
+Linux, Raspberry PI, and Android are examples of business ecosystems. [[Enspiral]], [[Sensorica]], and [[Fair Coop]] are examples of potential business-like ecosystems for a better economic system.
+
+If [[Enspiral]], [[Sensorica]], and [[Fair Coop]] converged with the Mutual Aid Networks, the P2P Foundation, a permaculture community, and a small-to-medium-sized city or two, they could become an economic network.
+
+Capitalism is an economic network.
+
+NRP in its present state is only able to coordinate small economic networks. If the current convergence and refactoring project succeeds, it will be able to coordinate larger ones. If the Value Flows project succeeds, it will be able to coordinate economic networks of any size.
+
+The next economic system will be an economic network."
+(email, March 2017)
+
+
+'''2. Apostolis Xekoukoulotakis:'''
+
+"New software is emerging designed for OVNs producing material goods. One such application is Network Resource Planning (NRP), which is ERP (Enterprise Resource Planning) for networks.  NRP is being developed by a collaboration between [[]Sensorica]] (described above), and some open-source software developers who have experience in “lean manufacturing” supply chains (http://mikorizal.org).
+
+This is operational software, for running an open value network as an economic organization. It logs contributions, coordinates work, and distributes income to contributors. It also does multi-party accounting: that is, accounting reports for each participating person and organization, covering their activities within the network. It does not do ecommerce or social networking."
+(http://commonsfest.info/en/2015/anichta-diktia-axias/)
+
+=Status=
+
+"The django-rea organization is created in aim to create a set of building blocks on which other Django apps can build upon to create [[Network Resource Planning]] Systems - NRP, as opposed to the more restricted common patterns we encounter in enterprise resource planning systems - ERP.
+
+The project starts from the valuenetwork project, centered around [[Open Value Networks]]. This evolved into a NRP gravitating towards openness and transparency. NRP was co-designed and is in daily use by [[Sensorica]].
+
+The NRP software was then adopted, forked , and changed, by [[Freedom Coop]] for their [[Open Collaborative Platform]] (OCP). They upgraded from Django 1.4 to Django 1.8, added the ability to handle the digital currency [[FairCoins]], added a new app called work, with some separation, protections, and permissions between different organizations using the same system, added a membership procedure, and improved the menus and look-and-feel. OCP is in daily use.
+
+The Freedom Coop fork was then forked again by [[GoPacifia]] for their [[Democratic Emancipatory Economy Platform]] (DEEP), which is still under development.
+
+And the [[Matrioshka]] project, a spinoff from [[Sensorica]], also wants to use the same code base, and is starting by using OCP.
+
+The goal of this django-rea project is to unify all of those forks and modularize the code base, so all of those organizations can work on the same core software, and separate out all of the features that not everybody wants to use into optional modules. A secondary goal is to be able to be able to support future apps that could be even more limited than these groups need.
+
+As we understand somebody’s needs might be different than those we have been using it for thus this project. Which is born to create a set of modular apps on which to develop business apps. In a sense it’s another framework in your toolbox.
+
+In django-rea we are going a step forward generalizing and modularizing the previous projects since we think and understand REA modelling provides an invaluable asset in business model driven applications."
+
+(http://rea-project.readthedocs.io/en/latest/intro.html)
+
+==Features of the Django-based NRP system==
+
+* '''Inventory''': / resource management - is presented as a long list of items that can be filtered by deliverable, domain, source, etc. The inventory is updated from a process, which can add new items to the inventory, subtract items, augment or diminish quantity. Processes have outputs that can be material resources kept in inventory, like new prototypes or products for example. They can also consume and use resources. The inventory can also be updated by purchasing.
+* Project and process management
+** '''Planning''': the use of recipes to plan collaborative work
+** '''Resource allocation''': in processes, plan or log the use of resources. 
+* '''Contribution accounting''': build a ledger of various type of contributions 
+* '''Benefit redistribution''': feed on the ledger of contributions to compute access to benefits, in redistribution of benefits, access to governance processes, access to use resources, etc. 
+* '''Transactions''': transfers of resources, exchanges of tokens, etc..
+
+
+=History=
+
+[[Tiberius Brastaviceanu]] (Tibi) started, in early 2011, a spreadsheet-based resource planning system for [[Sensorica]]. 
+
+"I like the fact that everyone can see what's needed. We use a Google Spreadsheet to manage purchasing, and one can subscribe to changes. Every time someone adds items to it, or modifies an item, every one else who subscribed to this doc gets notified by email. The comment function also gets used a lot. Some of us would ask questions in context about a specific product or about some of its features, or even give some advice.
+
+The spreadsheet also makes it possible for [[Sensorica]] members to cluster orders together to save on shipment and even on cost. Someone has the habit of sending an email to the group every time he orders something, in case someone else needs something form the same supplier. I find the spreadsheet much more convenient, because this issue can be resolved in there, without adding more noise to the mailing system.
+
+I also like to have the links to the supplier right next to the item to order.
+
+I suppose in the future we'll have a list of things to buy, with filters on it, by type of product, supplier, etc. This list would be populated manually, one item at the time, or from Recipes. Every product will have suppliers associated with them, which are rated by the community in for lead time, quality, distance, etc. Members will be able to cluster items together. Optimizations can be made for cost, environmental concerns, etc. Users would and press a PURCHASE button and orders will be sent, if a relation is already established with the supplier, or by email... The PURCHASE action would also update the value accounting system with a financial contribution. This supposes that every item in the list of things to buy are already associated with projects, which would be the normal procedure of entering things to buy in the system."
+
+[[Bob Haugen]] discovered Tibi's efforts from a post on G+ (social media app from Google, now extinct) and asked if he wants to transfer the spreadsheet management system on a more robust application, using the REA ontology (see above).
+
+
+=More Information=
+
+You can find more about the NRP-CAS on [https://github.com/bhaugen/valuenetwork Github]. Also find more on [http://valuenetwork.referata.com/wiki/NRP-CAS the OVN wiki]
+The NRP-CAS has been forked by other organisations. The effort evolved into the [https://valueflo.ws/ ValueFlows] initiative and [[HoloREA]] 
+
+The software is available in several forks from:
+#https://github.com/valnet/valuenetwork
+#https://github.com/FreedomCoop/valuenetwork
+#https://github.com/gopacifia/DEEP (in development)
+#https://github.com/christroutner/rpiovn
+and being redesigned by a team from three of the forks at:
+https://github.com/django-rea
+
+These are the current running known instances:
+#http://nrp.sensorica.co/
+#https://ocp.freedomcoop.eu/
+#http://commons.webfactional.com/
+#http://rpiovn.org/
+
+[https://speakerdeck.com/mikorizal slide decks]
+
+[[Category:Mutual_Coordination]]
+[[Category:P2P_Accounting]]

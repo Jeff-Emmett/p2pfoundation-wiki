@@ -1,0 +1,19 @@
+
+'''= using [[XML]] to achieve Machine Interoperability: "MTConnect is a basic first step in linking shop floor technologies and moving towards the goal of seamless manufacturing operation".'''
+
+=Description=
+
+"MTConnect is a set of open, royalty-free standards intended to foster greater interoperability between controls, devices and software applications by publishing data over networks using the Internet Protocol.
+
+'''MTConnect is a basic first step in linking shop floor technologies and moving towards the goal of seamless manufacturing operation'''. By establishing an open and extensible channel of communication for plug-and-play interconnectivity between devices, equipment and systems, MTConnect allows sources to exchange and understand each other's data. That common communication is facilitated by using widely accepted XML and Internet Protocol technology to provide managers with near real-time data from throughout a factory. This thus empowers them to develop applications aimed at providing more efficient operations, improved production optimization and increased productivity.
+
+The standard is available on this MTConnect website for users (software designers) to download, use, comment upon, and to provide recommend enhancements.  As enhancements are developed they will also be made available via this website.  It is anticipated that over a period of time, growth industries could be spawned in the software and sensor areas utilizing the standard as the core for development and information transfer.
+
+In a typical scenario in which instrumented equipment emits data files in a proprietary format, extensive knowledge of the schema (data layout, and what each piece of data represents) used by each piece of equipment would be required to accomplish even a simple task. For example, a temperature-analysis software module might want to look for specific temperature-related data in data files emitted by a variety of equipment, while ignoring other fields it does not care about. To accomplish this, all pieces of equipment would have to emit the specific schema for the analysis tool to read.  Insisting on this type of a single "portable" schema is difficult to achieve and in the past has not been a universally accepted answer: in this case, advance agreement would be required by all participants as to what data would and would not be included in the schema, and how it would be represented. We are faced with a Hobson's choice: if each schema is proprietary, interoperation is next to impossible, but trying to get advance agreement on a single "master" schema seems just as hard."
+(http://mtconnect.org/overview/mtconnect-overview/what,-how-why.aspx)
+
+
+
+[[Category:Manufacturing]]
+
+[[Category:Standards]]

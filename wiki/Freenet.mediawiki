@@ -1,0 +1,92 @@
+'''= free software which lets you publish and obtain information on the Internet without fear of censorship'''
+
+
+URL = http://freenetproject.org/; Wikipedia article at http://en.wikipedia.org/wiki/Freenet
+
+=Definition=
+
+From the Wikipedia: 
+
+"Freenet is a peer-to-peer platform for censorship-resistant  
+ommunication. It uses a decentralized distributed data store 
+and a suite of free software."
+(http://en.wikipedia.org/wiki/Freenet)
+
+==Description==
+
+" Freenet is free software which lets you publish and obtain information on the Internet without fear of censorship. To achieve this freedom, the network is entirely decentralized and publishers and consumers of information are anonymous. Without anonymity there can never be true freedom of speech, and without decentralization the network will be vulnerable to attack.
+
+Communications by Freenet nodes are encrypted and are "routed-through" other nodes to make it extremely difficult to determine who is requesting the information and what its content is.
+
+Users contribute to the network by giving bandwidth and a portion of their hard drive (called the "data store") for storing files. Unlike other peer-to-peer file sharing networks, Freenet does not let the user control what is stored in the data store. Instead, files are kept or deleted depending on how popular they are, with the least popular being discarded to make way for newer or more popular content. Files in the data store are encrypted to reduce the likelihood of prosecution by persons wishing to censor Freenet content.
+
+
+The network can be used in a number of different ways and isn't restricted to just sharing files like other peer-to-peer networks. It acts more like an Internet within an Internet. For example Freenet can be used for:
+
+* Publishing websites or 'freesites'
+    
+* Communicating via message boards
+    
+* Content distribution
+    
+* Sending email messages
+
+Unlike many cutting edge projects, Freenet long ago escaped the science lab, it has been downloaded by over 2 million users since the project started, and it is used for the distribution of censored information all over the world including countries such as China and the Middle East. Ideas and concepts pioneered in Freenet have had a significant impact in the academic world. Our 2000 paper "Freenet: A Distributed Anonymous Information Storage and Retrieval System" was the most cited computer science paper of 2000 according to Citeseer, and Freenet has also inspired papers in the worlds of law and philosophy. Ian Clarke, Freenet's creator and project coordinator, was selected as one of the top 100 innovators of 2003 by MIT's Technology Review magazine."
+(http://freenetproject.org/whatis.html)
+
+Also:
+
+"Freenet is extensible too, with a number of extensions and plugins that allow a user to retain anoymity across functions as various as web posting, e-mailing, message boards and file sharing and an http capacity to navigate Freenet just like the web.
+
+Frost is a Freenet client that will give you a multiple-paned browser-style tabbed interface to manage message boards and newsreaders. A Freenet-compatible version control system is available too. It’s called Arch."
+(http://www.freesoftwaremagazine.com/columns/gnu_linux_free_software_tools_preserve_your_online_privacy_anonymity_and_security)
+
+
+==Discussion==
+
+FSM:
+
+"Freenet is more properly a platform than an application—which Clarke treated more as a technical rather than a political project.
+
+Freenet allows vulnerable users to upload material (which is automatically encrpyted and not decrypted until downloaded) and then disconnect. Any material uploaded is heavily mirrored and moved around the net to make it difficult to trace or destroy.
+
+More importantly, the creators of Freenet realised that what users needed was not only conventional anonymity but freedom from the fear that authorities would know they were using Freenet itself and therefore draw unwelcome attention to themselves. They provided a solution in the form of something they called “darknet capability” which makes tracing users more problematical for anyone—including governments and corporations. Freenet also saw the potential objection to promulgating anonymous information and introduced their equivalent to the good standing of digital certificates in extending the radius of trust between users. It’s called “subspaces”, one of four different file keys provided by Freenet for different purposes.. For those of us with a bee in our bonnet about the pitfalls of copyright it is good to report that Freenet takes the view that freedom of speech (before or after the event) is incompatible with copyright."
+(http://www.freesoftwaremagazine.com/columns/gnu_linux_free_software_tools_preserve_your_online_privacy_anonymity_and_security)
+
+
+==Innovative P2P Aspects of Freenet==
+
+Ian Clarke:
+
+"In particular, we were the first decentralized scalable P2P network, and the
+first to apply a P2P approach to Internet anonymity. A number of other
+anonymity-preserving systems, including [[Gnunet]] and [[I2P]], borrowed from
+Freenet's design. To my knowledge Freenet is probably the highest-profile
+decentralized anonymous p2p network (obviously Tor is better known, but it
+isn't really decentralized due to its global relay list).
+ 
+Freenet is also the only anonymous P2P system that can operate as a
+"[[Darknet]]"."
+(Building a distributed internet mailing list, March 2011)
+
+==More Information==
+
+*Essay: The [http://www.lawtechjournal.com/articles/2002/05_021229_roemer.php Digital Evolution: Freenet and the Future of Copyright on the Internet] by Ryan Roemer, 2002, UCLA Journal of Law and Technology
+
+* You can read lots more information here: http://freenetproject.org/papers.html
+
+==See Also==
+*[[Tor]]
+*[[Mozilla Drumbeat]]
+*[[P2P Networks]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Resources]]
+
+[[Category:Software]]
+
+[[Category:P2P Infrastructure]]

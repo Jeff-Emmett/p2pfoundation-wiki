@@ -1,0 +1,49 @@
+
+=Discussion=
+
+Since 2007, we moved from a document-centric web to a people-centric web, but the new model is not mature yet and limited because of the dominance of siloed proprietary platforms:
+
+ 
+Chris Messina and Jyri Engeström:
+
+The "real-time web is not mature yet, since the platforms that sequester all of our activities today are proprietary ones like Facebook and Twitter. These are convenient, to be sure, but of limited utility to users with cross-site ambitions, who require interoperability.
+
+
+While “brand-mediated” profiles and relationships may not seem completely odious on the surface, there are four major drawbacks to keep in mind:
+
+* Tying one’s identity and communications to a single silo means relying on a single point of failure, degrading the overall reliability and stability of the system. (Remember the failwhale and efforts to keep Twitter from going offline during the Iran uprising, for example).
+    
+* Handing over management of one’s identity to a company means being dependent on their decisions and priorities. (Consider the 5,000 friend limit on Facebook; Twitter’s arbitrary suggested users list; and examples of users being ousted from various services for controversial reasons).
+    
+* A web built on top of a few proprietary platforms means less diversity and ultimately smaller scale than a web built on non-proprietary protocols and standards (consider how useful email, the web, and the internet itself became once open standards for interoperability were adopted, and the power of “small pieces loosely joined“).
+    
+* And finally, on an ethical and emotional level — it just doesn’t feel right.
+
+
+Fortunately, there are a number of initiatives that are gaining in popularity and finding pockets of adoption throughout industry, leading us to a juncture, where in one direction is the status quo and in the other is what we call “the people-centric (real-time) web”.
+The people-centric (real-time) web
+
+If the document-centric web was dominated by static pages, then the people-centric web is about placing you at the center (as Time Magazine did famously in 2006). '''We’re seeing the rise of dynamic, portable friend lists and non-brand-mediated identities that can be used across a range of standards-compliant websites.''' People are beginning to move freely between silos. Individuals are increasingly able to bring their data with them and substitute one service or service provider with another, as one can switch between Outlook and Thunderbird for email, or Photoshop and Pixelmator for image editing on the desktop. Relevant information and friends’ activities are starting to come to users via distributed push publishing. (Thomas Vander Wal has called this the “come to me” web).
+
+
+Let us briefly describe the key enablers of this emerging new phase:
+
+* '''Portable profiles''' means that instead of creating an account on each service you join, you can now host your identity in one place and bring your profile and friends with you to other sites as you surf the social web. Webfinger, OpenID, Portable Contacts, and OAuth all make this possible (and for bootstrapping profiles from the legacy document-web, we have Google’s Social Graph API).
+
+* '''Distributed push publishing''' means there is no longer a need to rely on proprietary platforms. The emerging standards here are PubSubHubbub (PuSH) and rssCloud (see comparisons on TheNextWeb and TechCrunch).
+
+* '''Synchronized conversation threads''' means that users can participate on the same conversation thread across multiple interfaces and services (we are still waiting for a standard, for which various geeks are actively devising a plan).
+
+Much work remains to make cloud services fully interoperable, but the foundations are in place to turn the web into a truly people-centric place. This call to action goes out to developers, corporations, and individuals alike. Best of all, it’s not that hard to start supporting these efforts:
+
+Let people use existing accounts to sign in and sign up for your service. First, the signup ritual offers the least amount of value to users so get it out of the way as fast as possible! Plus, it’s an automatic barrier to entry — you’ll see an increase in successful signups by reducing the friction in logging in up front (as Plaxo did). Second, unless it’s core to what you do, this will also save you the chore of managing profiles on your service. Third, people have so many profiles these days, they can’t keep track of them and they certainly don’t want to be creating yet another. Instead, figure out a way to subscribe to someone’s existing profile — and keep a reference of it up to date on your site.
+
+Sharing information and activities from your site is how other people will discover you. Stickiness as a business practice was a byproduct of the document era of the web; on the people-centric web, portability is critical. Data, identities, relationships, and activities need to flow between sites in order to expose insights, spread knowledge, and engender meaningful social interactivity. This sounds complicated but is relatively straightforward. To begin, your site can make available atomic units of data, exported as streams of activity that indicate who acted in which way upon what object. It’s easier than it sounds and formats are available to support this modular approach (see: Activity Streams)"
+(http://www.arcticstartup.com/2009/09/11/the-web-at-a-new-crossroads/)
+
+
+[[Category:Standards]]
+
+[[Category:Technology]]
+
+[[Category:P2P Infrastructure]]

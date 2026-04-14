@@ -1,0 +1,76 @@
+'''= proposed mechanism for a [[Peer Economy]] by Christian Siefkes:'''
+
+
+Christian Siefkes, August 2008:
+
+
+=Motivation=
+
+What can people do if the open flatrate approach of the Commons Network doesn’t work? If nobody is ready to produce the goods you like to have, and you can’t produce them for yourself?
+
+→ For such cases, peers can enter a joint agreement to help each other to produce what each of them likes to have, and to divide in a fair manner the effort that’s necessary to do so.
+Open Flatrate vs. Luxury Production
+
+(Optimistic) assumption: the open flatrate model of the Commons Network should be able to produce all the “normal” things and services that people need (the “8 Essentials”).
+
+→ Explicit agreements about effort sharing (effort recovery) are therefore necessary only (if at all) for goods that most people don’t consider as relevant—for goods that aren’t part of the usual standard of living (“luxury goods”).
+
+That’s why we call the complementary network for producing such goods the General Luxury Production System (GLuPS).
+Effort Distribution
+
+People help each other to produce the “luxury goods” they like to have, by contributing effort proportional to the effort necessary to produce the “luxury goods” they like to have.
+
+
+=Process=
+
+In order to ensure that the different kinds of tasks (more or less popular ones) are picked up, a task weighting (weighted labor) approach as described in the peerconomy book can be used.
+
+
+Possible modification to make formal task auctioning unnecessary:
+
+* Task niceness is self-estimated on a scale from -3 to 3 and averaged over everybody doing the task.
+    
+* Task priority is measured on a scale from 1-8. Initial priority of all tasks is 1, but people can vote for tasks they would like to be done in order to increase their priority.
+    
+* Time spent for a task is self-estimated.
+
+
+Overall task weight is determined by combining task niceness (lower niceness → higher weight) with task priority (higher priority → higher weight). The production effort of a good is the sum of the task weight multiplied with the time spent on all tasks necessary for producing it (averaged over all goods of the same kind).
+
+
+People give back the production effort spent on all the goods they take by contributing the same amount of production effort back to the system (helping to produce “luxury goods” that other people want).
+
+    
+* Details of a possible implementation:
+
+          o Convert niceness n to a niceness factor nf = 1 - 0.2n (range: 0.4-1.6)
+          o Convert priority p to priority factor pf = 0.8 + 0.2p (range 1.0-2.4).
+          o Calculate task weight by multiplying both: tw = nf * pt
+          
+o → The lowest possible weight for nice+3/prio1 tasks is 0.4, the highest possible weight for nice-3/prio8 tasks is 3.84—people doing a very nice and unimportant task will have to work about ten times as much as people doing a very ugly and very important task.
+
+=Problems=
+
+
+Dealing with Cheating
+
+* Absolute and relative self-estimates of projects are visible.
+    
+* Public user feedback (user trust?) ratings.
+    
+* People decide with whom to cooperate and with whom not.
+
+
+People Who Cannot Contribute
+
+As described in the peerconomy book, people who cannot effort (e.g. because they are old, ill, or disabled) must not be excluded from consumption because of that.
+
+→ There must be an effort redistribution mechanism in order to ensure that “luxury goods” are available to people who cannot contribute effort."
+(http://www.keimform.de/2008/09/14/hiddinghausen-talks-3-glups/)
+
+
+[[Category:Design]]
+
+[[Category:Peereconomy]]
+
+[[Category:Manufacturing]]

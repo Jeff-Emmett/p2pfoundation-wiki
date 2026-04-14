@@ -1,0 +1,81 @@
+=Description=
+
+In a situation where a large numbers of peers have to interact, trust becomes an issue that can be managed in part by the use of reputation systems, which let users (or moderators, or a technical system) rank each other or their content. Reputation is crucial to a system like eBay but also in systems based on user-generated content such as Slashdot.
+
+'''Down and Out in the Magic Kingdom''' is a novel about a future society organized around such principles, and was written by '''Cory Doctorow''' in 2003.
+
+"'''By leveraging our limited and local human judgement power with collective networked filtering, it is possible to promote an interconnected ecology of socially beneficial reputation systems''' — to restrain the baser side of human nature, while unleashing positive social changes and enabling the realization of ever higher goals."
+(http://www.firstmonday.org/issues/issue9_7/masum/index.html )
+
+
+=Example=
+
+'''Example: The Slashdot 'karma' moderation system'''
+
+"NoLogo.org is perhaps the most prominent second-generation slash site. This makes it a good example of how the OSI experience, embodied by a specific code, is now at a stage where it can be replicated across different contexts with relative ease. NoLogo.org is based on the current, stable release of Slashcode, an open source software platform released under the GPL, and developed for and by the Slashdot community. Slashdot is the most well-known and obvious example of OSI, since it is one of the main news and discussion sites for the open source movement (www.slashdot.org). 
+
+Of particular importance for OSI is the collaborative moderation process supported by the code. Users who contribute good stories or comments on stories are rewarded with "karma," which is essentially a point system that enables people to build up their reputation. Once a user has accumulated a certain number of points, she can assume more responsibilities, and is even trusted to moderate other people's comments. Karma points have a half-life of about 72 hours. If a user stops contributing, their privileges expire. Each comment can be assigned points by several different moderators, and the final grade (from -1 to +5) is an average of all the moderators' judgments. A good contribution is one that receives high grades from multiple moderators. This creates a kind of double peer-review process. The first is the content of the discussion itself where people respond to one another, and the second is the unique ranking of each contribution.  This approach to moderation addresses several problems that bedevil e-mail lists very elegantly. First, the moderation process is collaborative. No individual moderator can impose his or her preferences. Second, moderation means ranking, rather than deleting. Even comments ranked -1 can still be read. Third, users set their preferences individually, rather than allowing a moderator to set them for everyone. Some might enjoy the strange worlds of -1 comments, whereas others might only want to read the select few that garnered +5 rankings. Finally, involvement is reputation- (i.e. karma-) based and flexible. Since moderation is collaborative, it's possible to give out moderation privileges automatically. Moderators have very limited control over the system. As an additional layer of feedback, moderators who have accumulated even more points through consistently good work can "meta-moderate," or rank the other moderators."
+(http://news.openflows.org/article.pl?sid=02/04/23/1518208 )
+
+
+=Discussion=
+
+
+==Principles underlying reputation systems==
+
+Olivier Zara:
+
+"An analysis of the evaluation methods and communications of eBay’s competitors reveals that they operate on 2 basic principles.
+
+1st Principle: Since no one’s perfect, neutral or negative ratings have to be allowed.
+
+The goal is to create an evaluation of the person and/or their acts that comes as close to reality as possible. When a person behaves badly, it’s to be expected that this should be shared. In fact, this is what underpins eBay’s system. A small measure of discretion, however, is in order. Indeed, studies of eBay’s system have shown the limitations of neutral or negative feedback. If you give a negative rating, you expose yourself to in-kind retaliation from the other party. As a result, the system can sometimes get mired in an implicit understanding of non-aggression (i.e. mutually assured destruction). There have been instances where some buyers have even gone so far as to threaten sellers to try to get more than what was agreed upon: “If you don’t give me more, I’ll give you a negative rating”. A credible threat given that a seller’s reputation is his working capital!
+
+More importantly still is the fact that while some criticisms may be well-founded, others may be fabricated; some may be fair and others unfair; some may rely on readily observable and quantifiable facts and others on prejudices, opinions or value judgments.
+
+Linkedin is the most often cited example of why this principle is needed. If you take a look on that service at the recommendations on users’ profiles, you’ll see that the content of these is always positive and sometimes even panegyric. Given that a user may refuse a recommendation, this leads to a situation where de facto only positive feedback is allowed. It’s not true, however, that feedback is necessarily false just because it is positive. Conversely, it’s just as likely that neutral or negative feedback may be false.
+
+In addition, if we consider the recruiter’s concerns, her decision whether to recruit someone is based on the skills that person possesses, and not on those which they have yet to master. User testimonies work on the same principle. While they do not give any indications about a person’s missing skills, they do validate part of this person’s skill set. As such, Linkedin’s system is imperfect, in the sense that a recruiter still has some legwork to do. The candidate and his references must still be interviewed in order to validate the skills not mentioned in any recommendations. The recruiter no longer needs, however, to validate the candidate’s full skill set. Regardless, this is an improvement on the current system.
+
+It’s also important to realize that the person making the recommendation is putting his or her reputation on the line. You will be destroying your own reputation if you write that such and such is a computer genius, when in fact the person has a marginal grasp of IT. It follows that the value of a recommendation is tied to the reputation of the recommender; the higher the reputation the greater the value of the recommendation, and vice-versa.
+
+Similarly, the more recommendations you garner the more likely it is, statistically speaking, that you already have a good reputation. It’s the same principle as Google’s PageRank. The more people recommend a site, the more they contribute to its credibility and good reputation.
+
+Finally, giving negative feedback may lead to a form of vigilantism. On the Internet as anywhere else, laws defining the balance of rights between the accuser and the accused must be respected. The Internet must not become a lawless place where private disputes are settled in public through acts of vigilantism (libel) or where the lure of a positive rating is used to shake down merchants (see the example above).
+
+From opinion to libel: While the laws concerning libel differ from country to country, in most of them, you leave yourself open to lawsuits and to adverse legal judgments if you leave a negative comment that’s liable to be interpreted as libelous.
+
+2nd Principle: Anonymous ratings and comments have to be allowed in order to let people say what they truly think.
+
+How can we believe an underling’s glowing feedback about his manager when this same manager is responsible for allocating year-end bonuses and promotions? Who will openly complain about their clients’ late payments?
+
+Thus, anonymity would appear to be THE solution for venting, sight unseen, about one’s manager or clients with the full freedom of expression required.
+
+However, who will want to promote their reputation on a service where just about anyone might publicly vilify them? Strangely enough, when you visit sites that allow anonymous posting, you immediately notice that on average 98% of feedback is positive. Weird, isn’t it? It’s not so weird if you take into account the fact that people with negative scores have closed their accounts and numerous others never even opened one for fear of negative feedback. Under such circumstances, the system of anonymous posting doesn’t meet its disclosure goals.
+
+To counter user flight, some services such as Rapleaf have resorted to creating profiles, without asking for anyone’s approval, from email addresses harvested from the Internet. However, nothing is more easily changed than an email address (we already do so to escape from spam). In case this isn’t enough, we can have a “clean-up” service dispatch their lawyers to have the offending content removed. Either the content will be taken down or the offending service will have to lay out a great deal of money to pay for legal costs.
+
+In summary, unless a certain number of conditions are respected, anonymity and neutral or negative ratings produce pernicious effects."
+(http://online-reputation.axiopole.info/2008/02/28/ebay-a-universal-system-for-evaluating-reputation/)
+
+
+
+=Projects=
+
+'''[[Bitchun Society Whuffie Tracker]], is a [[Reputation]] tracking project''' at http://sourceforge.net/projects/bitchun/
+
+
+
+
+=More Information=
+
+#[http://buildingreputation.com/doku.php?id=chapter2 A Grammar for Reputation Systems]: Chapter 2 of the book: [[Building Web 2.0 Reputation Systems]]
+#[[Reputation]] ; [[Reputation Economy]]
+
+[[Category:P2P Accounting]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Governance]]
+
+[[Category:Business]]

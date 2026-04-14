@@ -1,0 +1,150 @@
+URL = http://www.apache.org/ 
+
+'The Apache Software Foundation provides support for the Apache community of open-source software projects. The Apache projects are characterized by a collaborative, consensus based development process, an open and pragmatic software license, and a desire to create high quality software that leads the way in its field.'
+
+
+=Description=
+
+
+'''1.''' From http://www.apache.org/foundation/how-it-works.html
+
+" '''What is the Apache Software Foundation?'''
+
+The Apache Software Foundation (ASF) is a 501(c)3 non-profit organization incorporated in the United States of America and was formed primarily to:
+
+* provide a foundation for open, collaborative software development projects by supplying hardware, communication, and business infrastructure
+    
+* create an independent legal entity to which companies and individuals can donate resources and be assured that those resources will be used for the public benefit
+    
+* provide a means for individual volunteers to be sheltered from legal suits directed at the Foundation's projects
+    
+* protect the 'Apache' brand, as applied to its software products, from being abused by other organizations
+
+That's the dry fact, but how did all this come to be and what does it really mean in its details? We need to step back a little in history.
+
+
+'''2. A bit of history'''
+
+The foundation was created in 1999 by a group of people, that called themselves the "Apache Group" and had come together several years earlier, to continue to support and maintain the HTTPD web server written by the NCSA.
+
+That server was freely available, came with source code and was licensed under a license that allowed very open modification and redistribution, but the original developers lost interest in that project and moved onto something else, leaving users with no support.
+
+Some of those users started to exchange fixes (called "patches") and information on how to prevent problems and improve the existing software. Brian Behlendorf created a mailing list on his own machine for those users to collaborate to fix, maintain and improve that software.
+
+The name 'Apache' was chosen from respect for the Native American Indian tribe of Apache, well-known for their superior skills in warfare strategy and their inexhaustible endurance. It also makes a cute pun on "a patchy web server" -- a server made from a series of patches -- but this was not its origin. The group of developers who released this new software soon started to call themselves the "Apache Group".
+
+Between 1995 and 1999, the Apache HTTPD Web Server created by the Apache Group became the leader of the market (and currently still is, with more than 65% of the web sites in the world powered by it).
+
+But as the web grew bigger, economical interests started to grow, and the Apache web site hosted new sister projects (such as the mod_ perl project, the PHP project, the Java Apache project). The need for a more coherent and structured organization that would shield individuals from potential legal attacks felt more and more necessary."
+(http://www.apache.org/foundation/how-it-works.html)
+
+
+'''3. Mikeal Rogers:'''
+
+"Apache was founded about 12 years ago, a time when companies were still very afraid of open source and many people in the open source community were very afraid of companies. The world hasn't changed that tremendously, big companies still use an open source stamp as a marketing tool, commonly referred to as "open washing", and some in the enterprise  are still wary about open source, particularly when it comes to certain kinds of licensing.
+
+But, you would be hard pressed to find a single company that didn't use some amount of open source software nowadays. More importantly, it's practically inconceivable that a technology company would not be using some amount of open source software to build their products. Nobody can afford to license, or develop on their own, all the technology necessary to build a new product, so for some portion of your stack you must turn to open source.
+
+The Apache mission can still be relevant, even if corporations don't have the same biases against open source software, developers still need protections of their own. Legal issues are real and have only gotten worse, especially patent issues. IP protections are more important now than they've ever been for creators of open source software.
+
+But, the interpretation of "Through a collaborative and meritocratic development process [Apache delivers] software products that attract large communities of users", which was created and first realized in a very different world, is what anchors Apache to the past. What exactly is this process and how does it attract large communities?
+
+Ten years ago open source projects faced a long list of barriers to entry. Source hosting was a pain in the ass. Wiki hosting, Mailing List hosting, bug tracking, all of these things we can now take for granted were actually quite hard to set up and maintain as recently as 5 years ago.
+
+There were also conceptual hurdles. If a project became big enough what kept a single company from dominating it? What protected one company from another company taking over a project? For this reason, and others, a series of processes and bylaws were created that governed projects, voting and the election and rights of committers.
+
+Apache became a very political organism and navigating those politics has come to require more and more institutional knowledge over the years. At the same time, its early successes gave new insights in to the future of open source.
+
+A blog of ASF meeting notes and FAQ's maintained by Shane Curcuru is titled "Community over Code". That title is a perfect characterization of the ethos Apache grew into over the years. Open source is about people, people over all else, even code."
+(http://www.mikealrogers.com/posts/apache-considered-harmful.html)
+
+
+=Discussion=
+
+==Why was the Apache web server so successfull?==
+
+"Consider the Apache web server; it was able to completely dominate the web server market, easily besting all of its proprietary competitors, including the super-deep-pocketed Microsoft. Why? It won because a large number of volunteers were able to collaborate together to create a very fully featured product, using a “stone soup” model where each developer “scratched their own itch”. Many, if not most, of these volunteers were compensated by their employers for their work. Since their employers were not in the web server business, but instead needed a web server as means (a critical means, to be sure) to pursue their business, there was no economic reason not to let their engineers contribute their improvements back to the Apache project. Indeed, it was cheaper to let their engineers work on Apache collaboratively than it was to purchase a product that would be less suited for their needs. In other words, it was a collective “build vs. buy” decision, with the twist that because a large number of companies were involved in the collaboration, it was far, far cheaper than the traditional “build” option. This is a powerful model, and the fact that Sun originally asked Roy Felding from the Apache Foundation to assist in forming the Solaris community indicates that at least some people in Sun appreciated why this was so important."
+(http://thunk.org/tytso/blog/2008/04/26/organic-vs-non-organic-open-source-revisited/)
+
+=Evaluation=
+*'''Source of information:''' [http://webmink.com/2011/03/11/is-apache-open-by-rule/ Is Apache Open-By-Rule? by Simon Phipps] (retrieved on March 11, 2011)
+
+{| border="2" cellspacing="2" cellpadding="3"
+! scope="col" | Rule
+! scope="col" | Data
+! scope="col" | Evaluation
+! scope="col" align="center" | Score
+|-
+| ''Open, Meritocratic Oligarchy''
+|
+[http://www.apache.org/foundation/how-it-works.html How Apache Works][http://incubator.apache.org/incubation/Incubation_Policy.html The Incubator][http://www.apache.org/dev/committers.html Committers]
+|
+The so-called Apache Way' has been sometimes characterized as community over code' though that phrase is now deprecated. Instead, the ASF considers itself community created code.' The main idea is that the creation and fostering of an open, healthy community will result in exceptional code.  The ASF goes to great lengths to ensure that a project is seen, and actually ''is'', a community project, and not lead by any single person. By being a purely meritocratic environment, developers are able to quickly prove themselves and obtain positions of responsibility and authority. However, development is all peer-based; for example, whether a committer has been part of the project for 5 years or 5 days, their votes are counted the exact same; no one's opinion is more important' than a peer's. This level playing field makes it easier for new blood to join projects and feel as integral parts of the community.At the core of the project is a group of individuals which are the PMC (Project Management Committee) members. This group has final authority over the direction and management of the project and the codebase. Due to the volunteer nature of the ASF, it is expected that this group will be transient in nature, and so the PMC will vote in new members based on merit and effort. The normal route is that new potential PMC members are first given commit priviledges (allowing them to actually commit code changes to the codebase), making them project contributors. After a period of time, as their merit and effort increase, they are recommended and voted on for PMC membership.Code patches and development is dependent on the 3 +1 Rule' which means that at least 3 PMC members must agree with and approve a patch, feature, software update, etc' before it becomes part of the official codebase. The ASF also allows for vetoes (-1) which, when based on technical reasons, can not be over-ruled or ignored. These protections ensure a more comprehensive buy-in of effort while limiting the damage possible by rogue committers' (those extremely rare individuals that are not acting in the best interests of the project, the community, and the ASF).As noted below, the legal, corporate arm of the ASF (the board, the membership,') does not control or direct the projects themselves.
+| align="center" | +3
+|-
+| ''Modern license''
+|
+[http://www.apache.org/licenses/ Apache License 2.0 ]
+|
+The Apache License, a BSD derivative, is a modern, OSI-approved FOSS license. The AL places very few restrictions on the distribution of code, as compared to more viral' licenses such as the GPL. The flexibility and freedoms offered by the AL allowed for more varied usage and distribution of the codebase, and allows for almost unfettered use in commerical and proprietary software.  The AL is ideally suited for software that implements Open Standards and Open Protocols or software which is designed to be a foundation for more extensive development.Software under the AL can be very easily used within software under just about any other license, open or otherwise.
+| align="center" | +1
+|-
+| ''Copyright accumulation''
+|
+[http://www.apache.org/licenses/icla.txt Individual Contributor License]<br />[http://incubator.apache.org/ip-clearance/index.html Incubator Policy]
+| The ASF does not require that the copyright holder assign copyright of the code or patch to the ASF or the project. Contributors are simply asked to signed an Individual Contributor License, which simply states that the person is authorized to provide the software to the ASF and the ASF can re-license the code.
+| align="center" | +1
+|-
+| ''Trademark policy''
+|
+[http://www.apache.org/foundation/marks/ Policy]
+| The ASF realizes that as a non-profit, public charity, our trademarks are important to the community and to the foundation itself, since they reflect the brand and the reputation of the projects. Because of this, there is a comprehensive, foundation-wide policy that all projects must enforce. This ensures that all communities are on equal footing and that all external agencies which may wish to use our marks (1) know the rules and (2) are treated equally.
+| align="center" | +1
+|-
+| ''Roadmap''
+|
+[http://www.apache.org/dev/contributors.html Contributors][http://www.apache.org/dev/pmc.html PMC][http://www.apache.org/foundation/voting.html Voting rules][http://www.apache.org/dev/release.html Release process][http://www.apache.org/dev/release-publishing.html Release publishing]
+|
+Projects are self-sustaining and self-directed entities. The corporate' arm of the ASF provides no direction or influence over the directional roadmap of any ASF project. Also, since all developers operate as individuals, and not as representatives of their employers, no external agency (company, organization, etc') can provide control or influence as well.  The roadmap is derived from the needs and desires of the developer and user community. A common phrase is scratching one's itch', which means that if a developer thinks a feature would be useful, and at least 2 other developers agree, the feature or capability becomes part of the official codebase.There are no formal release schedules' if a project decides they want to create such a schedule, that is fine, but most projects operate under the â€˜early and often' rule. Of course, security patches are treated specially and will pretty much all the time trigger a release. There is a standard release process that all ASF Projects must adhere to.The key aspects of how the ASF works is that any PMC member may be the release manager (RM), and they can create a release pretty much at any time. To ensure adequate oversight, releases require at least 3 +1s from other PMC members (binding votes). It is also important to note that releases may NOT be vetoed. Once someone has taken on the mantle of release manager for a release, the responsibility for that release lies completely on his/her shoulders. All of this is to make as few restrictions as possible on creating releases, so we can â€˜release early andoften.'Of course, most RMs will float the idea to the project first (Hey, I'm thinking about doing a release next week') to gauge support or get some feedback. Sometimes the RM will decide to postpone the release due to the feedback but, again, that is his/her prerogative.All ASF projects use the normal X.Y.Z release numbering where X is a major release (not backwards compatible API-wise), Y is the minor release (API-compatible) and Z is the patch release. Some, such as Apache httpd and Apache APR also use a Minor Even=Official; Odd=Development numbering scheme (eg: 2.3.2 is a development version, whereas 2.4.3 is the stable' branch).
+| align="center" | +1
+|-
+| ''Multiple co-developers''
+|
+|
+As noted, ASF projects are built around the realization that developers will come and go, based on the fact that their are all volunteers. The community focus ensures that projects will survive the absence of any single developer. Projects are also designed to not be dependent on any external sponsor' for work or support.  All ASF projects have seen this ebb and flow' of developers and have handled that change.
+| align="center" | +1
+|-
+| ''Forking feasible''
+|
+| With the pragmatic Apache License, forking of any and all ASF code is extremely feasible. The open history of projects also ensure that the forked community has access to all the development knowledge throughout the history of the project at the ASF.
+| align="center" | +1
+|-
+| ''Transparency''
+|
+[http://www.apache.org/foundation/mailinglists.html Mailing Lists]
+|
+All development of projects, including code votes, roadmap discussions and the like are done in the open, on archived public mailing lists. Other methods of collaboration, such as IRC, Wiki's, etc are avoided and discouraged due to the time-sensitivity to this synchronous methods and the lack of archival-history capability. Within the ASF there is a phrase if it didn't happen on the mailing lists, it didn't happen at all.'  This openness makes it easier for new interested parties to jump in and get up to speed on a project. It's creates a lower barrier-to-entry than other methods.The ASF also feels that the more open a project is, the more welcoming it is; full transparency implies that there is nothing to hide. It also ensures the level playing field so crucial for the continued success of projects: nothing is more damaging to open source than decisions made behind closed-doors, especially regarding software development. It creates a wall between the existing developer community and both the user community and the new-potential-developer community.
+| align="center" | +1
+|-
+|
+|
+| '''Summary (scale -10 to +10)'''
+| align="center" | '''+10'''
+|}
+
+=More Information=
+
+#[[Apache - Governance]]
+#[[Free Software]] , [[Open Source]], [[Open Source Software]]
+#[[Open Development]]
+
+
+External links:
+
+# Apache Software Foundation. Contributing to The Apache Software Foundation. 2005. http://www.apache.org/foundation/contributing.html
+# Apache Software Foundation. How the ASF Works. 2005. http://www.apache.org/foundation/how-it-works.html
+
+
+[[Category:Movements]]
+
+[[Category:Governance]]

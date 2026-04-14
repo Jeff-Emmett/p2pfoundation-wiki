@@ -1,0 +1,154 @@
+'''= Netsukuku is the name of an experimental peer-to-peer routing system, developed by the FreakNet MediaLab (Italian), created to build up a distributed network, anonymous and censorship-free, fully independent but not necessarily separated from Internet, without the support of any server, ISP and no central authority. It does not rely on a backbone router, or on any routing equipment other than normal network interface cards.''' [http://en.wikipedia.org/wiki/Netsukuku]
+
+URL = http://netsukuku.freaknet.org/
+
+=Description=
+
+'''1.'''
+
+Developed by the Freaknet, '''Netsukuku is a new p2p routing system''', which will be utilised to build a worldwide distributed, anonymous and anarchical network, separated from the Internet, without the support of any servers, ISPs or authority controls. In a p2p network every node acts as a router, therefore in order to solve the problem of computing and storing the routes for 2^128 nodes, Netsukuku makes use of a new meta-algorithm, which exploits the chaos to avoid cpu consumption and fractals to keep the map of the whole net constantly under the size of 2Kb. Netsukuku includes also the Abnormal Netsukuku Domain Name Anarchy, a non hierarchical and decentralised system of hostnames management which replaces the DNS. It runs on GNU/Linux.
+(http://www.kuro5hin.org/story/2005/10/6/101832/209)
+
+
+'''2.''' 
+
+"The February 2010 issue of Wired Magazine in Italian runs a cover story on Netsukuku, a fractal address system for a cloud of user maintained, linked computers forming a p2p network.
+
+The Netsukuku project is based on the idea of exploiting the potential of WiFi connectivity, linking the PCs of wireless communities to act as routers, forming a network that could become as large or larger than the current Internet.
+
+Netsukuku is an ad-hoc network forming software built around an address system designed to handle massive numbers of nodes while requiring minimal CPU and memory resources.
+
+It could be used to build a world-wide distributed, fault-tolerant, anonymous, and censorship-resistant network, fully independent of the Internet.
+
+Netsukuku does not rely upon  backbones, routers or internet service providers nor any other centralized system, although it may take advantage of existing systems of this nature to augment unity and connectivity of the existing Netsukuku network.
+
+New Netsukuku users need do little more than install an antenna within range of other local  nodes and run the Netsukuku software on their computer to link themselves into the network.
+
+The number of interconnected nodes can grow almost infinitely.
+
+If a node is outside the range of another node's WiFi signal, a "virtual tunnel" over the normal Internet connection will supplant the missing radio link."
+(http://www.masternewmedia.org/the-alternative-p2p-wireless-internet-network-the-netsukuku-idea/)
+
+
+=How It Works=
+
+Sepp Hasslberger:
+
+"Netsukuku’s address system is called Andna (A Netsukuku Domain Name Architecture). Others, perhaps a bit maliciously, re-named it "Abnormal Netsukuku Domain Name Anarchy".
+
+    
+"In practice, ''my algorithm sees the network as a fractal, allowing almost infinite compression," explains Andrea. "Addressing of data packages follows a hierarchic net topology, which is different from the flat topology the current address system uses. With this architecture, Netsukuku can form a perfectly functioning local version of the internet among a number of wireless nodes. Data packets are efficiently routed using a special method Andrea invented called QSPN or Quantum shortest pat''h Netsukuku."
+
+The vision of Andrea and his friends at Freaknet is a wide band wireless internet, created and controlled directly by users without the need for a telco operator.
+
+The only conditions for this to work are that the software must be up and running and the wireless objects have to be sufficiently close to each other to connect. At that point, one of those ‘bubbles’ that Andrea envisions will automatically form.
+
+A Netsukuku bubble is therefore a small, wireless and perfectly functional local version of the internet.
+
+It is sufficient for one of those nodes that form the bubble to be connected to the internet for everyone to be in communication with the larger net.
+
+In Netsukuku there is no difference between private and public networks, because whenever the software is active, computers are automatically connected with their peers.
+
+The bubbles extend and connect with others.
+
+In theory, a network of this kind cannot be controlled or destroyed, because it is completely decentralized, anonymous and distributed.
+
+Everything is decentralized and works even with devices of moderate computing power and memory.
+
+If widely implemented, Netsukuku could help bridge the digital divide, bringing the internet to many who can ill afford expensive broadband connections."
+(http://www.masternewmedia.org/the-alternative-p2p-wireless-internet-network-the-netsukuku-idea/)
+
+
+==Status Update 2010==
+
+Provided by Jaromil at the end of december 2010:
+
+"i'll just give an update on the technical status
+here and include crash in my mailout, one of its original developers.
+
+at its beginnning, the development of netsukuku's (NTK) first
+implementation was in C language, drafting of requests for comments
+was lead by Alpt, who also wrote most of its current code, and Crash
+(in CC: to this mail), condensing various brainstorms held within our
+network, mostly at the Hinezumi labs and Freaknet labs and at annual
+Hackmeeting gatherings in the past 10 years.
+
+NTK was written twice: the second rewrite involved a reimplementation
+of most of its logics in python language to take advantage of its
+specific features.
+
+this is an overview of current NTK RFCs
+ http://lab.dyne.org/Netsukuku_RFC
+
+and this is its code repository
+ http://code.hinezumi.org/browser/netsukuku
+
+below is Alpt's last message on the NTK list, dated jan 2009:
+
+ While currently there are many dynamic routing protocols, most are
+ capable of managing networks composed by a maximum of few hundred
+ nodes. The project here proposed regards the further development of
+ Netsukuku [1], a protocol that has been designed to build an ad-hoc
+ network scalable up to 2^32 nodes, completely distributed and
+ decentralised, anonymous and autonomous.  The software, which must be
+ executed by every node of the network, is unobtrusive.  Since it uses
+ very few CPU and memory resources, it is possible to run it inside
+ low-performance computers, like access points, embedded devices and
+ old computers.  For these reasons, Netsukuku and wireless
+ technologies can be easily used to build worldwide distributed and
+ anonymous networks, without the support of any servers or ISPs.
+
+ [1] Description of Netsukuku by Wikipedia: http://en.wikipedia.org/wiki/Netsukuku
+
+ Even though the software relative to the main theory and to the
+ distributed P2P service management over the Netsukuku network has
+ been already implemented , there are still many issues to be
+ addressed. During the Winter Camp the Netsukuku developers will focus
+ on one of the following tasks:
+
+ 
+1. accurate study, tests and enhancement of the performance of the
+Netsukuku addressing system
+ 
+2. stable implementation of the Netsukuku software
+ 
+3. software implementation of ANDNA: a distributed, non hierarchical
+and decentralised system of hostname management;
+ 
+4. experimental tests
+
+since then, apparently Alpt has left development to continue his
+studies in Cambridge. however, as you can see, NTK is a project many
+more people is involved and in which a swarm of valuable collective
+knowledge, passionate and well motivated by contingent urgency, has
+been invested through the years.. its mailinglist is active (but we
+don't have an active refresh of its web archive, unfortunately) and
+its development is mostly participated by italian and russian hackers.
+
+actually, despite most NTK documentation was written in spaghetti
+english (by italians) nowadays many updated translations are available
+in russian. we have no detailed information on how and where NTK and
+derivatives of its algorithms are being used in russia, however we
+have good reasons to think it is being researched and useful in a
+number of projects. i'd be happy to hear if you find out more.
+
+to conclude: besides testing (see howto in attach) mantainance should
+be reactivated on NTK. both me and crash, knowing well the codebase
+and developers, can be active on it. while we'll have a meeting in
+january, any news about investements focusing on development of NTK is
+very welcome to us now and we'd be more than happy to coordinate a
+documented distribution of resources towards people involved: securing
+financial resources is crucial for us in this phase, to dedicate our
+time to social development rather than survive on stupid jobs."
+
+
+=More  Information=
+* [http://blog.p2pfoundation.net/netsukuku-construction-of-p2p-cloud/2010/03/15 Netsukuku and the construction of a p2p cloud]
+* [[Forban]]
+* [[Wireless Mesh Networks]]
+
+[[Category:Resources]]
+[[Category:Software]]
+[[Category:Technology]]
+[[Category:Standards]]
+[[Category:P2P Infrastructure]]

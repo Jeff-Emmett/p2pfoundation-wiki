@@ -1,0 +1,379 @@
+==Description==
+
+"The '''Fediverse''' (a portmanteau of "federation" and "universe") is the ensemble of [[wikipedia:Federation_(information_technology) |federated]] servers that are used for web publishing (i.e. social networking, [[microblogging]], macroblogging, or websites) and file hosting. 
+
+On different servers (instances), users can create so called identities. These identities are able to communicate over the boundaries of the instances because the softwares running on the servers support one or more Communication protocol|communication protocols which follow the 
+Open Standard.<ref>[https://web.archive.org/web/20170409030653/http://mastoguide.info/Pages/fedFAQ.html Mastodon User Guide] 2017-04-09 dead-url</ref> As an identity on the fediverse, you are able to exchange private messages or other data with other identities or to follow posts by other identities. In some cases, you can even show or share data (video, audio, text and other files) publicly or to a selected group of identities and allow other identities to edit your data (i.e. a calendar or an address book)."
+(https://en.wikipedia.org/wiki/Fediverse)  
+
+== History ==
+
+In 2008, the social network [[identi.ca]] was founded by [[wikipedia:Evan Prodromou|Evan Prodromou]]. He published the software GNU Social under a free license ([[GNU Affero General Public License|GNU Affero General Public License, AGPL]]). Besides the server, identi.ca, there were only few other instances existing, run by persons for their own use. This changed in 2011/2012 when identi.ca switched to another software called pump.io. Several new GNU Social instances were created.
+
+At the same time as GNU Social, other projects like Friendica, 
+Hubzilla,<ref name="Hubzilla gnusoc">[https://framagit.org/hubzilla/addons/tree/master/gnusoc gnusoc · master · hubzilla / addons] access-date=2018-07-17 </ref> [[Wikipedia:Mastodon (software)|Mastodon]] and Pleroma<ref name="Pleroma">[https://pleroma.social/ Pleroma] access-date=2018-07-17</ref> integrated the [[OStatus]] protocol, thus extending the fediverse.
+
+In the meantime, other communication protocols have evolved which are integrated to different degrees into the platforms. In January 2016, the [[World Wide Web Consortium|W3C]] presented the [[ActivityPub|ActivityPub]] protocol, aiming to improve the interoperability between the platforms. As of 2018-08, this protocol is supported by thirteen platforms (see the table below).
+
+
+
+==Governance==
+
+===OpenWeb Governance Body===
+
+The body is made up of three different, balanced groups:
+
+'''1. Stakeholders'''
+
+One for each instance – if you want a voice, you can run an instance and register it.
+This is clearly the voice of the #fediverse, as they are the people running it.
+
+
+'''2. Users'''
+
+The Stakeholders are then balanced dynamically by the same number of Users who are interested in the process.
+They are chosen by lottery from the registered accounts.
+You have a choice to register or not your account as a possible Member of the Body.
+
+
+'''3. The Affiliate Stakeholders'''
+
+These have to be ratified through the body to become members. 
+
+
+A few examples below:
+
+* Fediverse Codebases (e.g. pixelfeed, mastodon, peertube)
+* Fediverse Events (e.g. group meet-ups, conferences)
+* Fedivers Support Organizations (e.g. ActivityPub Rocks, Fediverse party)
+* ActivityPub Standards Crew (e.g. wc3) "
+
+
+(https://unite.openworlds.info/Open-Media-Network/openwebgovernancebody/wiki/Online-governance-?)
+
+==Status==
+
+=== Actual spreading ===
+
+The statistic service ''the-federation.info'' states for the 6th of December 2018 following data about the fediverse. The statistics do not reflect the whole fediverse. <ref>[https://the-federation.info Welcome to the new social web] The Federation - access-date=2018-08-18</ref>
+* Number of instances (servers): 3,952
+* Number of  identities: 2,382,670
+* Number of posts: 201,681,558
+* Number of comments: 4,764,706
+
+==Discussion==
+
+
+===Beyond the Fediverse===
+
+Michael Kwet:
+
+"The foundation for a commons-based social media system was laid in the establishment of the Fediverse – a set of interoperable social networks based on free and open-source software. Fediverse platforms include Mastodon (akin to Twitter), PeerTube (akin to YouTube), and PixelFed (akin to Instagram).
+
+The Mastodon social network, which has more than four million registered users, is the most polished example to date. Its feature set resembles Twitter: you can post to your wall, “like” and “share” other posts, follow user accounts, and so on.
+
+However, there are a few crucial differences.
+
+For one, there is no central server or administrator through which all user activity, data, and membership flow. Instead, you join one of many servers, called “instances”, which host and transmit user data. Each instance sets its own terms and conditions: it might ban hate speech and pornography, or focus on a shared hobby or interest.
+
+To open an account, you simply sign up with an instance. Let us say you pick the username Alice at an instance called instance123.social. Your social media handle would be: @alice@instance123.social. Alternatively, you can pay to host your own instance and set the code of conduct to your liking.
+
+The Fediverse uses shared communications protocols like ActivityPub so that users can interact across platforms. For example, a user from Mastodon can post a comment or follow a user from the PeerTube social network without ever leaving Mastodon. This is similar to email, where you can send messages from a Gmail account to a Yahoo account.
+
+With Twitter, you have one timeline that displays posts and activity from other users. With Mastodon, you can pick from three timelines. The first is your home timeline that displays content (such as wall posts or videos shared) by the people you follow. The second is a local timeline that displays content from members of your instance. The third is your federated timeline, which displays content from other instances. Each timeline provides a different way to interact and discover content.
+
+To make sure the experience is safe and enjoyable, Mastodon builds in a variety of content moderation policies. Individual users can filter out other users and instances that they do not want to see or interact with. Instance moderators can also filter out other users or instances. For example, if another instance is loaded with white supremacists, then you or your instance administrator can block that instance.
+
+The ability for individuals to create their own instances, interact across networks, and set their own code of conduct undermines the centralised ownership and control model of Big Social Media. And because the server software powering Mastodon falls under a strong Free Software licence, the public can modify it to make it work as they wish.
+
+For example, some developers created Glitch, a modified version of Mastodon which has its own set of features built in. In Glitch, you can set your posts as local-only so that they will not show up in outside instances.
+
+The open sourcing of the network software also creates direct accountability to the public. If the Mastodon developers tried to, say, place banner ads inside their platform, an outside developer could take the code, strip out the ads, and release an ad-free version to the community.
+
+The current Fediverse model is mostly decentralised, but there is room for improvement. Server administrators still possess the authority to surveil users and impose content moderation decisions on instance members. This means users have to trust the server administrators they interact with. To address this feature, Free Software developers are creating peer-to-peer technologies that fully distribute power and privacy down to the end users.
+
+The LibreSocial network offers a glimpse of how this can work. There is no need to trust server administrators because the peer-to-peer architecture eliminates them altogether. Instead, the social network is operated by the community of end users through the LibreSocial software. The network is free and open-source, easy to use, and allows for customisation of the user experience – such as how to visualise a user wall, or social games – through the use of plugins that anyone can create or download.
+
+While LibreSocial is still in a testing phase (which will soon be open to the public), the developers have built an impressive model for a fully decentralised social network."
+(https://www.aljazeera.com/opinions/2020/5/19/to-fix-social-media-we-need-to-introduce-digital-socialism)
+
+
+==Directory==
+
+=== Communication Protocols Used in the Fediverse ===
+
+These communication protocols which follow the [[Open Standard]] are used in the fediverse:
+
+<!-- Alphabetical Order -->
+* [[ActivityPub]]
+* [[DFRN]] <ref>[https://github.com/friendica/friendica/blob/master/spec/dfrn2.pdf DFRN2] author=github.com/friendica/ access-date=2018-08-18</ref>
+* [[Diaspora (social network)|Diaspora Network]]
+* [[OStatus]]
+* [[Zot Communications Protocol|Zot &amp; Zot/6]] <ref>[https://macgirvin.com/wiki/mike/Zot%2BVI/Home Zot/6] author=Mike Macgirvin|access-date=2018-09-14</ref> <ref>[https://project.hubzilla.org/help/en/developer/zot_protocol Zot Protocol] author=project.hubzilla.org|access-date=2018-08-18</ref>
+
+===Fediverse software platforms===
+
+The software spanning the fediverse are all [[Free Software|free]]. Some of them vaguely resemble [[Twitter]] in style (for example, [[Mastodon]] and [[GNU Social]], which are similar in their [[microblogging]] function), while others include more communication and transaction options that are instead comparable to Google+ or Facebook (such as is the case with Friendica and Hubzilla).
+
+The following software platforms span the fediverse by using the listed communication protocols:
+
+<!-- Alphabetical sorting. It is not possible to set a default sort for the table. -->
+{| class="wikitable sortable"
+|-
+! Platform Name
+! Type
+![[ActivityPub]]
+!DFRN
+!Diaspora<br/>Network
+![[OStatus]]
+![[Zot Communications Protocol|Zot<br />Zot/6]]
+|-
+| Aardwolf
+| Social network
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Anfora
+| Image hosting
+| <!-- ActivityPub -->              In progress <ref>[https://github.com/anforaProject/anfora/issues/23 Implement mastodon API endpoints#23] access-date=2018-12-10</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| CloutStream
+| Professional Social network
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| [[Diaspora (software)|diaspora* software]]
+| Social Network, [[Microblogging]]
+| <!-- ActivityPub -->              Proposed <ref>[https://github.com/diaspora/diaspora/issues/7422 Support ActivityPub #7422]  access-date=2018-08-18</ref> <ref>[https://discourse.diasporafoundation.org/t/lets-talk-about-activitypub/741 Let's talk about ActivityPub] access-date=2018-08-18</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         Yes
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| distbin
+| Pastebin
+| <!-- ActivityPub -->              Yes 
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Friendica<br />(f. Friendika; orig. Mistpark)
+| Social network, [[Microblogging]]
+| <!-- ActivityPub -->              Yes 
+| <!-- DFRN -->                     Yes
+| <!-- Diaspora Network -->         Yes
+| <!-- OStatus -->                  Yes
+| <!-- Zot/6 -->                    No
+|-
+| Funkwhale
+| Audio, sound hosting
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| GNU MediaGoblin
+| file, image, audio, video hosting
+| <!-- ActivityPub -->              Proposed <ref>[https://issues.mediagoblin.org/ticket/5503 Move federation code to ActivityPub spec #5503] access-date=2018-08-18</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| GNUsocial<br />(f. StatusNet; orig. Laconica)
+| [[Microblogging]]
+| <!-- ActivityPub -->              Proposed <ref>[https://git.gnu.io/gnu/gnu-social/issues/256 Support ActivityPub #256] access-date=2018-08-18]</ref> <ref>[https://git.gnu.io/dansup/ActivityPub/ title=Plugin] access-date=2018-08-18</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  Yes
+| <!-- Zot/6 -->                    No
+|-
+| Hubzilla<br/>(f. RedMatrix; orig. Friendica-Red)
+| CMS, Social Network, [[Microblogging]], [[Wiki]], [[Blog|Blogging]], Image gallery, File hosting
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         Yes
+| <!-- OStatus -->                  Yes <ref name="Hubzilla gnusoc"></ref>
+| <!-- Zot/6 -->                    Zot
+|-
+| Littr.me
+| Link-sharing
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| [[Mastodon]]
+| [[Microblogging]]
+| <!-- ActivityPub -->              Yes <ref>[https://github.com/tootsuite/mastodon/issues/1557 ActivityPub support #1557] access-date=2018-08-18</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  Yes
+| <!-- Zot/6 -->                    No
+|-
+| microblog.pub
+| [[Microblogging]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Misskey
+| [[Social Network]], [[Microblogging]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| [[Nextcloud]]
+| File hosting
+| <!-- ActivityPub -->              Yes <ref>[https://nextcloud.com/blog/nextcloud-introduces-social-features-joins-the-fediverse/ Nextcloud introduces social features, joins the fediverse] access-date=2018-12-10</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Numaverse
+| [[Microblogging]], [[Ethereum|ETH blockchain]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Osada
+| [[Social Network]], [[Microblogging]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    Zot/6
+|-
+| PeerPx
+| Image hosting
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| [[PeerTube]]
+| Video hosting
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| PixelFed
+| Image hosting
+| <!-- ActivityPub -->              In progress <ref>[https://mastodon.social/@pixelfed/101204332099526273 We can't wait to join the fediverse.] access-date=2018-12-10</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Pleroma
+| [[Microblogging]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  Yes <ref name="Pleroma"></ref>
+| <!-- Zot/6 -->                    No
+|-
+| Plume
+| [[Blog|Blogging]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| postActiv 
+| [[Microblogging]]
+| <!-- ActivityPub -->              Proposed <ref>[https://git.postactiv.com/postActiv/postActiv/issues/97 ActivityPub support #97] access-date=2018-08-18</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  Yes
+| <!-- Zot/6 -->                    No
+|-
+| Prismo
+| Link-sharing
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Pubcast (f. Metapods)
+| Netcasting
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| pump.io
+| [[Microblogging]]
+| <!-- ActivityPub -->              Proposed <ref>[https://github.com/pump-io/pump.io/issues/1241 ActivityPub support #1241] access-date=2018-08-18</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  Dropped <ref>[https://github.com/pump-io/pump.io/issues/8 OStatus #8] access-date=2018-08-18</ref>
+| <!-- Zot/6 -->                    No
+|-
+| Read.as
+| Feed reader
+| <!-- ActivityPub -->              Yes <ref>[https://github.com/writeas/Read.as Long-form ActivityPub-enabled reader] access-date=2018-08-29</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Socialhome
+| Website, [[Social Network]], [[Microblogging]]
+| <!-- ActivityPub -->              In progress <ref>[https://socialhome.network/content/83203/federation-socialhome-federates-using-the-di/ Federation - ActivityPub support is work in progress] access-date=2018-09-16</ref>
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         Yes
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    Proposed <ref>[https://git.feneas.org/socialhome/socialhome/issues/479  Implementing Zot]  author=Jason Robinson date=May 19, 2018</ref>
+|-
+| Write.as / Write Freely
+| [[Blog|Blogging]]
+| <!-- ActivityPub -->              Yes
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  No
+| <!-- Zot/6 -->                    No
+|-
+| Zap
+| [[Social Network]], [[Microblogging]]
+| <!-- ActivityPub -->              No
+| <!-- DFRN -->                     No
+| <!-- Diaspora Network -->         No
+| <!-- OStatus -->                  Noa
+| <!-- Zot/6 -->                    Yes [[Zot]]/6
+|-
+|}
+
+==References==
+<references />
+
+[[Category:Free Software]]
+[[Category:Social Networks]]
+[[Category:P2P Infrastructure]]
+[[Category:Technology]]

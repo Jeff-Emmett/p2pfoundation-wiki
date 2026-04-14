@@ -1,0 +1,37 @@
+URL = http://www.olsr.org/
+
+=Description=
+
+=Definition 1=
+
+From http://www.olsr.org/ :
+
+"The olsr.org OLSR daemon is an implementation of the Optimized Link State Routing protocol. OLSR is a routing protocol for mobile ad-hoc networks. The protocol is pro-active, table driven and utilizes a technique called multipoint relaying for message flooding. olsrd also implements a popular optional link quality extension. Currently the implementation compiles on GNU/Linux, Windows, OS X, FreeBSD, OpenBSD and NetBSD systems.
+Olsrd is ment to be a well structured and well coded implementation that should be easy to maintain, expand and port to other platforms. The implementation is RFC3626 compliant with respect to both core and auxiliary functioning.
+Olsrd supports use of loadable plugins. These can be used to to handle and generate custom packettypes to be carried by OLSRs MPR flooding scheme or for any other desired functioning.
+
+Olsrd is much used in community-driven free wireless networks. Based on the experience gained in such networks a project called Open-Mesh is developing a new routing protocol called B.A.T.M.A.N."
+(http://www.olsr.org/)
+
+
+=Definition 2=
+
+"The Optimized Link State Routing Protocol (OLSR) is developed for mobile ad hoc networks. It operates as a table driven, proactive protocol, i.e., exchanges topology information with other nodes of the network regularly. Each node selects a set of its neighbor nodes as "multipoint relays" (MPR). In OLSR, only nodes, selected as such MPRs, are responsible for forwarding control traffic, intended for diffusion into the entire network. MPRs provide an efficient mechanism for flooding control traffic by reducing the number of transmissions required.
+
+Nodes, selected as MPRs, also have a special responsibility when declaring link state information in the network. Indeed, the only requirement for OLSR to provide shortest path routes to all destinations is that MPR nodes declare link-state information for their MPR selectors. Additional available link-state information may be utilized, e.g., for redundancy.
+
+Nodes which have been selected as multipoint relays by some neighbor node(s) announce this information periodically in their control messages. Thereby a node announces to the network, that it has reachability to the nodes which have selected it as an MPR. In route calculation, the MPRs are used to form the route from a given node to any destination in the network. Furthermore, the protocol uses the MPRs to facilitate efficient flooding of control messages in the network.
+
+A node selects MPRs from among its one hop neighbors with "symmetric", i.e., bi-directional, linkages. Therefore, selecting the route through MPRs automatically avoids the problems associated with data packet transfer over uni-directional links (such as the problem of not getting link-layer acknowledgments for data packets at each hop, for link-layers employing this technique for unicast traffic).
+
+OLSR is developed to work independently from other protocols. Likewise, OLSR makes no assumptions about the underlying link-layer.
+
+OLSR inherits the concept of forwarding and relaying from HIPERLAN (a MAC layer protocol) which is standardized by ETSI [3]. The protocol is developed in the IPANEMA project (part of the Euclid program) and in the PRIMA project (part of the RNRT program)."
+(http://www.olsr.org/index.cgi?action=adhoc)
+
+
+=More Information=
+
+[[Ad hoc On Demand Distance Vector]]
+
+[[Category:Standards]]

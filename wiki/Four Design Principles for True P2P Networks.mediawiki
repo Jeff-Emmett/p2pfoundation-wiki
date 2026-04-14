@@ -1,0 +1,64 @@
+
+
+=Source=
+
+Excerpted from a mini-essay by Mark Pesce
+
+URL = http://blog.futurestreetconsulting.com/smoke-signals//
+
+
+
+=Design Principles=
+
+
+==Design Principle One: Distribute Everything==
+
+The recording industry used the courts to shut down Napster because they could.  Napster had a single throat they could get their legal arms around, choking the life out of it.  In a display of natural selection that would have brought a tear to Alfred Russel Wallace’s eye, the selection pressure applied by the recording industry only led to the creation of Gnutella, which, through its inherently distributed architecture, became essentially impossible to eradicate.  The Day of the Darknet had begun.
+
+Break everything up.  Break it all down.  When you have these components, make them all independent.  Replicate them widely.  Allow them to talk to one another.  Allow them to search one another, share with one another, so that together they will create a whole greater than a simple sum of parts.  Then you will never be rid of them, because if one part should be cut down, there will be two others to take its place.
+
+This is an extension of the essential UNIX idea of simple programs which can be piped together to do useful things.  ‘Small pieces, loosely joined.’  But these pieces shouldn’t live within a single process, a single processor, a single computer, or a single subnet.  They must live everywhere they can live, in every compatible environment, so that they can survive any of the catastrophes of war.
+
+
+==Design Principle Two: Transport Independence==
+
+The inundation of Brisbane and its surrounding suburbs brought a sudden death to all of its networks: mobile, wired, optic.  All of these networks are centralized, and for that reason they can all be turned off – either by a natural disaster, or at the whim of The Powers That Be.  Just as significantly, they require the intervention of those Powers to reboot them: government and telcos had to work hand-in-hand to bring mobile service back to the worst-affected suburbs.  So long as you are in the good graces of the government, it can be remarkably efficient.  But if you find yourself aligned against your government, or your government is afflicted with corruption, as simple a thing as a dial tone can be almost impossible to manifest.
+
+We have created a centralized communications infrastructure.  Lines feed into trunks, which feed into central offices, which feed into backbones.  This seems the natural order of things, but it is entirely an echo of the commercial requirements of these networks.  In order to bill you, your communications must pass through a point where they can be measured, metered and tariffed.
+
+There is another way.  Years before the Internet came along, we used UUCP and FidoNet to spread mail and news posts throughout a far-flung, only occasionally connected global network of users.  It was slower than we’re used to these days, but no less reliable.  Messages would forward from host to host, until they reached their intended destination.  It all worked if you had a phone line, or an Internet connection, or, well, pretty much anything else.  I presume that a few hardy souls printed out a UUCP transmission on paper tape, physically carried it from one host to another, and fed it through.
+
+A hierarchy is efficient, but the price of that efficiency is vulnerability.  A rhizomatic arrangement of nodes within a mesh is slow, but very nearly invulnerable.  It will survive flood, fire, earthquake and revolution.  To abolish these dangerous hierarchies, we must reconsider everything we believe about ‘the right way’ to get bits from point A to point B.  Every transport must be considered – from point-to-point laser beams to wide-area mesh networks using unlicensed spectrum down to semaphore and smoke signals.  Nothing is too slow, only too unreliable.  If we rely on TCP/IP and HTTP exclusively, we risk everything for the sake of some speed and convenience.  But this is life during wartime, and we must shoulder this burden.
+
+
+==Design Principle Three: Secure Everything==
+
+Why would any message traverse a public network in plaintext?  The bulk of our communication occurs in the wide open – between Web browsers and Web servers, email servers and clients, sensors and their recorders.  This is insanity. It is not our job to make things easy to read for ASIO or the National Security Agency or Google or Facebook or anyone else who has some need to know what we’re saying and what we’re thinking.
+
+As a baseline, everything we do, everywhere, must be transmitted with strong encryption.  Until someone perfects a quantum computer, that’s our only line of defense.
+
+We need a security approach that is more comprehensive than this.  The migration to cloud computing – driven by its ubiquity and convenience, and baked into Google’s Chrome OS – deprives us of any ability to secure our own information.  When we use Gmail or Flickr or Windows Live or MobileMe or even Dropbox (which is better than most, as it stores everything encrypted), we surrender our security for a little bit of simplicity.  This is a false trade-off.  These systems are insecure because it benefits those who offer these systems to the public.  There is value in all of that data, so everything is exposed, leaving us exposed.
+
+If you do not know where it lives, if you do not hold the keys to lock it or release it, if it affects to be more pretty than useful (because locks are ugly), turn your back on it, and tell the ones you love – who do not know what you know – to do the same.  Then, go and build systems which are secure, which present nothing but a lock to any prying eyes.
+
+
+==Design Principle Four: Open Everything==
+
+I don’t need to offer any detailed explanation for this last point: it is the reason we are here.  If you can’t examine the source code, how can you really trust it?  This is an issue beyond maintainability, beyond the right to fork; this is the essential element that will prevent paranoia.  ‘Transparency is the new objectivity’, and unless any particular program is completely transparent, it is inherently suspect.
+
+Open source has the additional benefit that it can be reused and repurposed; the parts for one defensive weapon can rapidly be adapted to another one, so open source accelerates the responses to new threats, allowing us to stay one step ahead of the forces who are attempting to close all of this down.  There’s a certain irony here: in order to compete effectively with us, those who oppose us will be forced to open their own source, to accelerate their own responses to our responses.  On this point we must win, simply because open source improves selection fitness.
+
+When all four of these design principles are embodied in a work, another design principle emerges: resilience.  Something that is distributed, transport independent, secure and open is very, very difficult to subvert, shut down, or block. It will survive all sorts of disasters.  Including warfare.  It will adapt at lightning speed.  It makes the most of every possible selection advantage.  But nothing is perfect.  Systems engineered to these design principles will be slower than those built purely for efficiency.  The more immediacy you need, the less resilience you get.  Sometimes immediacy will overrule other design principles.  Such trade-offs must be carefully thought through.
+
+Is all of this more work?  Yes.  But then, building an automobile that won’t kill its occupants at speed is a lot more work than slapping four wheels and a gear train on a paper mache box.  We do that work because we don’t want our loved ones hurtling toward their deaths every time they climb behind the wheel.  Freedom ain’t free, and ‘extremism in the defense of liberty is no vice.’"
+(http://blog.futurestreetconsulting.com/smoke-signals/)
+
+
+
+[[Category:Articles]]
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

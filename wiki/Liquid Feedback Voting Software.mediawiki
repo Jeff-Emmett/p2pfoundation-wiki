@@ -1,0 +1,146 @@
+
+'''= a free software for political opinion formation and decision making, blurring the boundaries between representative and direct democracy. Its most important feature is the implementation of a Delegated voting system which is to establish a new form of political representation and participation''' [http://en.wikipedia.org/wiki/LiquidFeedback]
+
+
+URL = http://liquidfeedback.org/
+
+
+=Description=
+
+From the Wikipedia:
+
+"LiquidFeedback (abbreviated lqfb) is a free software for political opinion formation and decision making, blurring the boundaries between representative and direct democracy. Its most important feature is the implementation of a Delegated voting system ("Liquid Democracy") which is to establish a new form of political representation and participation that takes into account the knowledge disparity of its participants.
+
+Liquid feedback is intended to help parties, associations and citizens' groups evaluate the opinions of their members, without the limitations of a traditional internet forum.
+
+It aims to create an accurate representation of the opinions held by the members of the group without them being distorted by social hierarchies and knowledge disparities. Each individual is encouraged to further his own initiatives within the limitations set by the operators.
+
+An essential feature of Liquid feedback is the ability to submit text proposals ("initiatives") that can then be voted on by others. The user selects an appropriate subject area for his proposal or creates a new one. Alternatively, he can submit an alternative proposal to an already existing initiative.
+
+The operator sets certain time limits and quorums and decides about the follow-up actions in case of a successful vote.
+
+LiquidFeedback was developed in October 2009 by Public Software Group e. V. after being suggested by some members of Germany's Pirate Party unsatisfied with conventional means of political opinion formation. Despite this affiliation, its developer is fully independent and allows the software's usage by other parties and organisations. The first stable version of its back end was released in April 2010.
+
+The software has been successfully used for the preparation of several national conventions by the Pirate Parties of Germany, Austria, Italy, Switzerland and Brazil. It is also used by Slow Food Germany.
+
+The front end is written in Lua while the back end is written in PL/pgSQL. Both parts are released under the MIT License. There is also an API available which allows external applications to add additional features to the program."
+(http://en.wikipedia.org/wiki/LiquidFeedback)
+
+
+=Discussion=
+
+David Bollier:
+
+"Its new open source software platform, LiquidFeedback, is credited with helping the Pirates host more open, participatory and serious internal debates about party policies -- and to organize themselves to take action in conventional political arenas. 
+
+The makers of Liquid Feedback characterize their platform in a mission statement as “a bridge between direct and representative democracy.”  They believe the software “has the potential to empower the ordinary members of mainstream political parties, making these parties more attractive to citizens and democracy stronger.”  The software, released in version 2.0 in March 2012, is currently used by several associations and political parties.
+
+It is too early to know if LiquidFeedback is a breakthrough or not, but it clearly shows the potential for re-imagining more open, legitimate and responsive forms of governance.  A recent piece in the New York Times explained how LiquidFeedback enables the Pirates “to create a continuous, real-time political forum in which every member has equal input on party decisions, 24 hours a day. It’s more than just a gimmicky Web forum, though: complex algorithms track member input and generate instantaneous collective decisions.” Thanks to the software, some 1,300 Pirate Party members were able to mobilize themselves to travel to the German city of Neumünster to elect a new executive board.
+
+Liquid Feedback is not just another web forum platform.  As Andreas Nitsche explains on the website for the software (developed by Public Software Group of Berlin):
+
+LiquidFeedback is an online system for discussing and voting on proposals in an inner party (or inner organizational) context and covers the process from the introduction of the first draft of a proposal to the final decision. Discussing an issue before voting increases the awareness of pros and cons, chances and risks, and allows people to consider and suggest alternatives.
+
+It combines concepts of a non-moderated, self-organized discussion process (quantified, constructive feedback) and liquid democracy (delegated or proxy voting). Following the idea of interactive democracy, LiquidFeedback introduces a new communication channel between voters and representatives (in this case, members and board members), delivers reliable results about what the members want and can be used for information, suggestion, or directive depending on the organizational needs and the national legislation.
+
+Because of this system, the concentrated power of boards of directors can be minimized and made more directly accountable to large memberships.  This, in turn, is makes for more substantive dialogue about what members want.  It avoids the familiar pattern of leaders trying to temper members' demands for change and urging them to be “politically realistic.”
+
+LiquidFeedback would appear to invert this dynamic by empowering the members of a party or organization to make their “leaders” more directly accountable to them.  Instead of elected leaders and boards neutralizing dissent and co-opting power threats, members can collectively determine how they really feel about issue x or y, and demand that the organization publicly advocate those positions. 
+
+This is exactly why the Pirate Party is so refreshing:  it is willing to entertain new forms of direct participation and aggressive leadershp while avoiding demoralizing slides into the mushy middle.  It adopted LiquidFeedback because it “wanted to perpetuate the chances for each and every party member to participate in both the development of ideas and decisions.” 
+
+The idea is that leadership must be kept accountable in practice.  Members should not just be passive donors.  As the LiquidFeedback website explains: 
+
+Although we want everybody to be able to participate in the development of ideas, we believe at the first instance many drafts will be created by small groups or even individuals. This is no problem providing
+
+    everybody can find out about the initiative
+    everybody can contribute by making suggestions
+    everybody can create an alternative initiative
+    everybody can vote in the end.
+
+Every member may start an initiative. During the discussion period the initiators advertise their proposals and get feedback about the degree of support within the organization…. This system allows all members to participate not only in voting but also in developing ideas and at the same time it is helping board members to understand what the majority really want, to make right and responsible decisions based on the “popular vote.”
+
+….The basic idea: a voter can delegate his vote to a trustee (technically a transitive proxy). The vote can be further delegated to the proxy’s proxy thus building a network of trust. All delegations can be done, altered and revoked by topic. I myself vote in environmental questions, Anne represents me in foreign affairs, Mike represents me in all other areas but I can change my mind at any time.
+
+Anyone can select his own way ranging from pure democracy on the one hand to representative democracy on the other. Basically one participates in what one is interested in, but for all other areas gives their vote to somebody acting in their interest. Obviously one may make a bad choice once in a while but they can change their mind at any time.
+
+One reason that representative democracy took hold in the 18th Century was that it was arguably the only practical form of democracy.  “Pure” democracy – direct participation by citizens in actual decisionmaking – was simply not feasible, and many considered it the equivalent of mob rule. 
+
+But the problem with representative democracy is that public opinion can only be expressed crudely.  Citizens vote every few years – and then a single legislator is said to “represent” you and tens of thousands of other citizens for a fixed term.  But if circumstances change, if you change your mind or if you don’t like all elements of a candidate’s bundle of political views, you’re out of luck.  Your opinion can be safely ignored by those in power.  Politicians come to mold and manipulate public opinion, with help from corporate money ("manufacturing consent, in Chomsky's terms), rather than public opinion having sovereignty over politicians.  
+
+No wonder there is such alienation from conventional politics!  We’re relying upon political structures invented in the 1700s when mail was delivered by horses, and public opinion had few vehicles to manifest itself, let alone do so rapidly and with granularity.  Now, we have myriad forms of instantaneous private and public communication, many accessible repositories of serious expertise, and many supple systems for forging and mobilizing public opinion – yet our government system remains resolutely stuck in a 18th Century frame of reference.  Constitutionalists may try to ignore this egregious mismatch, citing the sanctity of history and patriotic tradition, but the Internet generation, and the Pirate Party in particular, may have the last word.  LiquidFeedback may be the "first word" in this longer debate.
+
+The LiquidFeedback mission statement concludes, “All the experience we have gained over the past months shows people participate if they think it makes sense and representatives at least acknowledge the will of the participants rather than arguing with silent majorities.”  It concludes with a ringing line from Thomas Jefferson:  … every man is a sharer… and feels that he is a participator in the government of affairs, not merely at an election one day in the year, but every day.” 
+
+Devise a process of governance that is open, fair, trustworthy and participatory:  that may be the best prescription for reinvigorating democracy. It will be fascinating to watch the future evolution of LiquidFeedback and the Pirates."
+(http://bollier.org/blog/liquidfeedback-what-genuine-democratic-process-looks)
+
+
+==Critique==
+
+Via the Wikipedia:
+
+"The implementation of LiquidFeedback led to heated discussion among the members of the German Pirate Party. Defenders of data protection criticized the software's ability to match each statement and vote to its individual author. Because the software only allows for voting by a Recorded vote, it is easily possible to identify the participants' political opinions by their voting behaviour.
+
+Some have argued that the ability to delegate votes could create and enforce power structures, even though delegations can be withdrawn at any time. The authors of the program tried to limit this effect by allowing for the automatic removal of inactive users.
+
+Another point of criticism is that the system does not take account of the interests of the minority. Even though minority opinion holders are able to voice their views and submit initiatives, the operator may ask for a certain amount of supporters at a given deadline. The final vote always requires a majority of 50% (or more, according to the operator's settings)."
+(http://en.wikipedia.org/wiki/LiquidFeedback)
+
+=Example=
+
+"The open source Liquid Feedback software -- developed in Berlin and launched by the Pirates in 2010 -- is unique in German party politics. With the platform, issues that would previously only gradually find their way to the national leadership through local, district and state organizations can quickly gain momentum and importance, so that they can then be voted on at party conferences."
+(http://www.spiegel.de/international/germany/liquid-democracy-web-platform-makes-professor-most-powerful-pirate-a-818683.html)
+
+
+
+==Use by German Pirate Party==
+
+By By Sven Becker et al.:
+
+"Their system, such as it is, can be illustrated by the case of Christopher Lauer, a 27-year-old member of the legislature in the city-state of Berlin. Recently, he came up with the idea of extending the terms of party leaders from one year to two, arguing that the party needs continuity in its leadership. The proposal will be put up for a vote at the party convention this weekend.
+
+Lauer, though, wants to know what the Pirates think about his proposal before that, and he wants a recommendation from the grassroots to take to the convention. To that end, he uses the Liquid Feedback voting software to introduce his motion. Party members who have registered are entitled to vote.
+
+The discussion takes place simultaneously on a Pirate Pad, an online document to which everyone can contribute. Lauer also promotes his proposal on Twitter, where he currently has 14,000 followers. Marina Weisband immediately retweets his idea to her own followers, of which she has 25,000. In this way, all it takes are a few clicks before Lauer's idea reaches the majority of the party base.
+
+A  member named "Herr Bert" also finds out about the motion. Herr Bert, who is opposed to Lauer's proposal, places a counter-initiative on Liquid Feedback. The debate ensues. Members argue and explain their positions on such matters as the early resignation of a party leadership board member. Here is an excerpt:
+
+2:26 p.m. - crackpille: If there's a re-election, the Federal Executive Board stays the same and only the open position is filled in a new election
+
+2:27 p.m. - Anthchirp: Basically amounts to resignation of people + entire re-election of the rest
+
+2:27 p.m. - crackpille: exactly. although I think when you get too many resignations you'll have to justify why only some members of the executive board are being put up for election
+
+2:28 p.m. - crackpille: Because then the advantage (team, continuity) is eliminated 
+
+2:28 p.m. - crackpille: which is why you limit it to 1-2 people
+
+2:29 p.m. - Penis: why not limit to 25%? 
+
+2:29 p.m. - Penis: that is, a relative representation 
+
+2:29 p.m. - Anthchirp: I would say set lower limit to 3 people. Then it also doesn't depend on size of the Federal Executive Board
+
+2:29 p.m. - crackpille: 3 people who stay? 
+
+2:29 p.m. - Anthchirp: yep 
+
+This is the new sound of politics. The players, crackpille, Anthchirp and Penis, prefer to appear under pseudonyms. This is how Lauer's motion is discussed.
+
+When the Pirates vote in March, after a month of discussion, party member Martin Haase decides in favor of Lauer's motion. Haase is a professor of Romance studies in the Bavarian city of Bamberg and a so-called super-delegate. On Liquid Feedback, Pirates can delegate their votes to other members. In this way, Haase has become probably the most powerful member of the Pirate Party.
+
+Lauer gets 59 votes from Haase. Super delegates Klaus Peukert and Monika Belz contribute 34 and 36 votes respectively. In this way, three party members have contributed 129 of 425 votes in favor of the motion. Lauer's proposal is accepted at a rate of 72 percent on Liquid Feedback. But the debate isn't over yet. The Pirates still have to vote at the national convention, where the outcome from Liquid Feedback isn't binding."
+(http://www.spiegel.de/international/germany/germany-s-pirate-party-seek-to-reinvent-politics-a-829451.html)
+
+
+=More Information=
+
+* In Germany: http://www.spiegel.de/international/germany/liquid-democracy-web-platform-makes-professor-most-powerful-pirate-a-818683.html
+
+
+[[Category:Facilitation]]
+
+[[Category:Politics]]
+
+[[Category:Democracy]]

@@ -1,0 +1,144 @@
+An important licensing and business strategy in commercial [[Open Source Software]] industry.
+
+'''= Dual licensing is based on the idea of simultaneous use of both open source and proprietary licenses: "dual licensing model does not nullify the direct sale value of the software product".''' [http://www.valimaki.com/org/dual_licensing.pdf]
+
+=Definition=
+
+"The first license is a GPL-like license, which is free but forces users to disclose the source code of any modified version of the original design. The second is a commercial license, which has a fee but allows buyers to conceal the source code of any modified version."
+(http://www.osbr.ca/ojs/index.php/osbr/article/view/570/523)
+
+
+=Description=
+
+'''1.'''
+
+"With a dual-licensing approach, the company is protected by a GPL (or similar) license, because both competitors and potential customers who wish to embed/link with the GPL software must also GPL their own code. Since most competitors/customers don’t wish to do so, they are willing instead to pay for a commercial license. This simple yet subtle point is at the heart of the success of nearly every commercial open source organization."
+(http://robertogaloppini.net/2007/06/02/open-source-firms-enterprisedb-business-model/)
+
+
+'''2. Adam Beberg:'''
+
+"One way is to release everything under both a traditional commercial use and an open source license. Users who wish to use the code commercially can provide revenue while providing the benefits of open source to noncommercial and academic users. The other way dual licensing is done is to lead with the current version under a commercial license, and follow later releasing old, obsolete versions under an open source license. Again many paying users will need the most current version; others can wait for the version to be made open source. Dual licensing seems to be more acceptable to the open source community since it has been done for a longer time."
+(http://www.softpanorama.org/OSS/webliography.shtml)
+
+
+
+'''3. Thomas Prowse:'''
+
+"This established, yet declining, OSS business model is premised on a dual (or multiple) license approach. Typically, this has involved the combination of a reciprocal (copyleft) license with a more conventional commercial software license. One of the most cited examples is MySQL, which licensed its database product under both a GPL and a largely conventional commercial software license.
+
+At a high level, this business model is designed to use the OSS license to facilitate large-scale adoption of the licensed product and then follow such adoption with the offer of the commercial license. The commercial license is positioned to address certain actual or perceived deficiencies of the OSS license for certain types of adoption and use of the licensed product. In many cases, the marketing of the commercial offering has focused on creating "Fear, Uncertainty, and Doubt" (FUD) in the mind of actual or potential end users about the legal implications of licensing software under the so-called "viral" GPL, and now Affero GPL.
+
+According to a study by the 451 Group (reported on by GlobalThoughtz Research), the proportional use of a dual-licensing approach among open source software vendors has declined from 20% of vendors two years ago down to just 5% of vendors using this approach today. I believe that the decline in dual licensing is being driven by both the inherent challenges of creating and maintaining a code base that is capable of being dual licensed as well as the increasing education and sophistication of end users with respect to OSS licensing." (http://www.osbr.ca/ojs/index.php/osbr/article/view/1157/1107)
+
+=Discussion=
+
+Valimaki:
+
+"Dual licensing mixes several of the introduced generic software business models. Duality
+means that both the free software distribution mechanism and traditional software product
+business are combined. There is technically only one core product but two licenses: one for
+free distribution and free use and another for other (proprietary).
+
+Dual licensing model differs from pure free software model in several ways. First, the
+development community does not have development power to start competing products
+(forks). Copyright and control of the core product development is held in one hand, the
+original developer. The ability to license the product with other terms than open source
+requires full ownership of all rights to the product.
+
+Second, the users of the free license have an option to obtain a proprietary license. If a
+software product with an inheriting copyleft clause – as for example term 2b) in the GNU
+GPL License (GNU, 1991) – is embedded to become a part of another product then the
+combined product should be distributed for free. A proprietary license may free the user from
+this restriction. In this way, third party product businesses become also possible. From the
+user’s perspective, dual licensing can be described as indiscriminating."
+(http://opensource.mit.edu/papers/valimaki.pdf)
+
+
+==
+
+"This approach has important drawbacks (some of them nicely developed by Glyn Moody a few years ago and also discussed  here by Lajos Moczar) that make it question whether a dual-licensing model is really fair to the  community and its developers.
+
+Indeed, regular open source community developers are usually:
+
+* Free to exert their IP (copy)rights at any time, any way they want
+* Free to offer contributions approved by the community
+* Free to fork new versions
+* Overall free to produce work in the best interest of the community
+
+In current dual-licensed models, none of these basic open source freedoms can be easily –if at all- exercised. Icing on the cake, the open source company is not forced to contribute back to the community.
+
+
+* '''By controlling IP rights Dual-Licensing (DL) companies are controlling your contribution to other open source projects'''
+
+In a dual model, all external contributors are required to re-assign their copyrights (and sometimes all of their IP rights) to the open source company.
+
+Assume a contributor releases his/her rights for a piece of code P to MyCompany.
+
+Later on, a famous open source project is approaching the developer: we’d like to use this P code you wrote but it has been released under the GPL which is not compatible with XXX, our project license. Can you release it under another open source license?
+
+The answer is: sorry guys, I’d love to but I can’t, you’ve got to ask MyCompany. To which MyCompany will likely answer: sorry it’s not our policy to release our code under license XXX.
+
+
+* '''By controlling the source tree DL companies are controlling the directions, the maturity and the crippleware-level of the code'''
+
+Of course a contributing developer could refuse to sign any IP assignment. But then MyCompany would refuse to integrate the contributed code in the source tree. And it works because no developer is going to fork a new project just to incorporate his/her patch.
+
+In the same vain, certain DL companies are often releasing patches to the proprietary version before releasing them to the open source community. Good for business (see we are the only professionaluntil it was reminded their duties by the community. version)  bad for the community. Ghostcript for instance didn't level both releases
+
+
+* '''By controlling the right to fork DL companies are also depriving developers of their right to choose'''
+
+You cannot fork: Dual licensing is about exerting a very tight control over the community. That’s why in this model, most key and/or respected developers are usually paid or employed by the company: a very strong disincentive to fork.
+
+To realize the extent of the influence and control of companies over open source project, think about this:  Sr. VP and former MySQL CEO Mårten Mickos is now the boss (at SUN) of  PostgreSQL core developer  Josh Berkus .
+
+
+The company can fork but you cannot choose: Any addition of proprietary code to the dual licensed code (and distributed through the proprietary license) is a de facto fork. In the open source world when such fork happens, you can always choose which one suits your need. In the dual-licensed world, you cannot.
+
+
+* '''By controlling the key developers DL companies are diverting key resources from the open source community: dual-licensing  is  a road to one-way schemes'''
+
+When distributing the code under the proprietary license MyCompany is never forced to contribute to the community while the open source community is always  forced to contribute to both licenses (remember the IP assignment).
+
+The more proprietary code is included, the more difficult it is for MyCompany to release patches that are compatible with both the proprietary version and the open source version.
+
+As time goes by,  MyCompany will release more and more patches of no-use to the community.
+
+And who is working on those patches? Well, the key developers who have been so wisely hijacked by the company and who are now prevented to really contribute to the community. Business is business after all.
+
+'''Community attrition'''
+
+For all of the reasons above, many developers are not keen to the idea of dual licensing. They don’t like the idea of their contribution released as proprietary, nor are they found of this idea of given up all of their IP rights. MySQL for instance has a much less thriving community than that of PostgeSQL."
+(http://blog.milkingthegnu.org/2008/05/exisiting-dual.html)
+
+=Example=
+
+The EntrepriseDB strategy:
+
+"First, we created a superset of PostgreSQL called EnterpriseDB Advanced Server, and closed-sourced the code. In other words, atop base PostgreSQL, we added deep Oracle-compatibility, dynamic performance tuning, and world-class tools, including replication, debuggers, browsers, and more. Then we closed-sourced the whole package. In this manner, we have crisply defined a set of value-added features for which we charge, much like SugarCRM’s professional edition. If you want the free-and-open-source version version of the software, though, it’s easily available…and it’s called PostgreSQL.
+
+The second — and equally important — part of our business strategy is to be an excellent citizen in the PostgreSQL open source community. We are building a successful company on the shoulders of one of the world’s most successful open source projects, and we have a responsibility to give back to that community to the maximum extent possible, while still protecting our ability to generate revenue. In addition to our ethical responsibility, we also “do well by doing good” because we promote the wider spread of PostgreSQL, the world’s most advanced and enterprise-class open source database (albeit only the second most popular)."
+(http://robertogaloppini.net/2007/06/02/open-source-firms-enterprisedb-business-model/)
+
+
+=More Information=
+
+#[[Open Licenses]]
+#Research paper: [http://opensource.mit.edu/papers/dual_lic.pdf Dual Licensing in Open Source Software Markets]. Stefano Comino and Fabio M. Manenti
+#Välimäki, Mikko, 2003. “Dual Licensing in Open Source Software Industry,” Systemes
+d’Information et Management. URL: http://opensource.mit.edu/papers/valimaki.pdf
+
+
+
+[[Category:IP]]
+
+[[Category:Business]]
+
+[[Category:Peerproduction]]
+
+[[Category:Peerproperty]]
+
+[[Category:Licensing]]
+
+[[Category:Business Models]]

@@ -1,0 +1,55 @@
+
+
+=Definition=
+
+From the Wikipedia:
+
+"Information Cards are personal digital identities that people can use online. Visually, each Information Card has a card-shaped picture and a card name associated with it that enable people to organize their digital identities and to easily select one they want to use for any given interaction."
+(http://en.wikipedia.org/wiki/Information_Card)
+
+
+=Typology=
+
+"The Identity Selector Interoperability Profile specifies two types of Information Cards an Identity Selector must support.
+
+    
+* Personal (also called Self-Issued) Information Cards: These cards allow you to issue Claims about yourself to sites willing to accept them. These claims can include your name, address, phone numbers, e-mail address, web address, birth date, gender, and a site-specific key uniquely generated for each site where the card is used.
+    
+* Managed Information Cards: These cards allow Identity Providers other than yourself to make Claims about you to sites willing to accept them. These claims can include any information that that a Relying Party requests, an Identity Provider is able to provide, and you are willing to send between them.
+
+
+However the Information Card format allows for custom types; The Bandit project demonstrated prototype managed cards backed by OpenIDs at the BrainShare conference in March 2007. The Higgins project is defining two new kinds of Information Cards as well, as described in the I-Card article: Relationship Cards (a.k.a. R-Cards) that establish an ongoing relationship between the identity provider and relying party (that themselves may be either self-issued or managed) and Zero-Knowledge (a.k.a. Z-Cards)."
+(http://en.wikipedia.org/wiki/Information_Card)
+
+=Discussion=
+
+==Why we need information cards instead of passwords==
+
+
+Randall Stross:
+
+"“I once felt ashamed about failing to follow best practices for password selection — but no more. Computer security experts say that choosing hard-to-guess passwords ultimately brings little security protection. Passwords won’t keep us safe from identity theft, no matter how clever we are in choosing them.
+
+“That would be the case even if we had done a better job of listening to instructions. Surveys show that we’ve remained stubbornly fond of perennial favorites like “password,” “123456” and “LetMeIn.” The underlying problem, however, isn’t their simplicity. It’s the log-on procedure itself, in which we land on a Web page, which may or may not be what it says it is, and type in a string of characters to authenticate our identity (or have our password manager insert the expected string on our behalf).
+
+“This procedure — which now seems perfectly natural because we’ve been trained to repeat it so much — is a bad idea, one that no security expert whom I reached would defend.”
+
+“The solution urged by the experts is to abandon passwords — and to move to a fundamentally different model, one in which humans play little or no part in logging on. Instead, machines have a cryptographically encoded conversation to establish both parties’ authenticity, using digital keys that we, as users, have no need to see.
+
+“In short, we need a log-on system that relies on cryptography, not mnemonics.
+
+“As users, we would replace passwords with so-called information cards, icons on our screen that we select with a click to log on to a Web site. The click starts a handshake between machines that relies on hard-to-crack cryptographic code…”
+(http://www.nytimes.com/2008/08/10/technology/10digi.html?)
+
+
+=More Information=
+
+#[[Identity]]
+#[[Information Cards Foundation]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:Encyclopedia]]

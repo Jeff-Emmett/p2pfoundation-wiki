@@ -1,0 +1,54 @@
+
+=Definition=
+
+"Internet Protocol version 6 (IPv6) is a version of the Internet Protocol  (IP) that is designed to succeed Internet Protocol version 4 (IPv4). The Internet operates by transferring data in small packets that are independently routed across networks as specified by an international communications protocol known as the Internet Protocol. Each data packet contains two numeric addresses that are the packet's origin and destination devices. Since 1981, IPv4 has been the publicly used Internet Protocol, and it is currently the foundation for most Internet communications. The Internet's growth has created a need for more addresses than IPv4 has. IPv6 allows for vastly more numerical addresses, but switching from IPv4 to IPv6 may be a difficult process."
+(http://en.wikipedia.org/wiki/IPv6)
+
+=Discussion=
+
+Simon Brooks:
+
+"IPv4 is a protocol was designed when the Internet was never expected to grow
+beyond major servers in the US military and academia. It was never designed
+for a global Internet and it's address space is not big enough. If you think
+that IPv6 is part of the problem then you do not understand the problem.
+ 
+Without IPv6 we cannot do any of the things we want to do in making the
+Internet a global, democratic platform controlled by its users.
+ 
+Obviously the telecoms suppliers want to protect their interests; obviously
+the US government is trying to protect its declining influence in world
+affairs. That has nothing whatsoever with updating an obsolete and
+inadequate transport layer protocol to a new generation which has the
+address space and the encryption and security features which WE need.
+ 
+We CANNOT build a decentralised, distributed network for the whole world
+using IPv4. The address space isn't big enough, and it's too easy for people
+owning key infrastructure to intercept our traffic.
+ 
+We CAN do so using IPv6. It has much a bigger address space and built in
+features supporting end-to-end authentication and security."
+(building a distributed internet mailing list, 3/2011)
+
+==Eugen Leitl: IPV6 is a P2P Friend==
+
+"IPv6 is just a protocol. It actually on our side, because of
+the following:
+ 
+* IPv4 is almost finished, and any attempts to keep it around longer make it expensive for telcos and will break a lot of P2P protocols (NAT44) -- if this happens this will bite us in the butt, hard.
+ 
+* IPv6 is rough at the edges and there's an attention focus on it to fix them. It is still possible to ride on the momentum to add features interesting to us.
+ 
+* IPv6 is not a 128 bit address space, but a 64 bit address space, and will be dished out in form of large network blocks to *individual customers*. (That the DOCSIS pilot issues only /64 to end customers is hopefully an anomaly). You can easily get huge amounts of address space, and use it basically to purposes the designers did not intend."
+(building a distributed internet mailing list, 3/2011)
+
+=More Information=
+
+# [[Vint Cerf on IPV6]]
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]
+
+[[Category:P2P Infrastructure]]

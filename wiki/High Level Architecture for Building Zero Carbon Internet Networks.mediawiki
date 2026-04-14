@@ -1,0 +1,84 @@
+
+* Article: [[High Level Architecture for Building Zero Carbon Internet Networks]] , ICT products and services. By Bill St. Arnaud. 
+
+URL = http://green-broadband.blogspot.com/2013/02/high-level-architecture-for-building.html
+
+
+=Excerpts=
+
+==1.0 Introduction==
+
+Bill St. Arnaud:
+
+"One of the biggest challenges facing this planet is climate change.  It is estimated that ICT consumes 5-10% of global electricity and contributes to 2% of GHG emissions.  Greentouch predicts that ICT energy consumption is going to double in the next decade.  As Price Waterhouse Coopers (PwC) stated in a recent report the current global rate of de-carbonization is .8%.  We need to achieve a rate of 5.1% for the next 39 years if we are to keep global average temperatures increasing less than 2C.  That means that we have to increase the rate of de-carbonization by 40 times, for all sectors of society including ICT, starting right now. 
+
+Greentouch claims that already ICT equipment is achieving 10-20% increase in energy efficiency per year.  But given the growth of ICT of approximately 10% per year, overall efficiency is probably neutral. 
+
+Increased energy efficiency does not have a one to one correspondence to reduction in GHG emissions.  The reduction in GHG emissions depends on the local energy mix. So for example in the US you need 30% increased energy efficiency to achieve 10% reduction in GHG emissions, as coal powered energy is 30-40% of the energy mix.  Overall globally coal powered electricity is typically 50% of the electrical energy supply which means that you need a 20% increase in energy efficiency to achieve 10% reduction in GHG emissions.
+
+To meet the PwC target therefore would require the ICT sector would have to achieve overall energy efficiency of 8000- 10000% per year!!  Clearly to achieve this greater rate of de-carbonization we will need much more radical measures to reduce the contribution of ICT to GHG emissions.  Efficiency on this scale essentially means we must build zero carbon ICT solutions.
+
+Although ICGT contribution to GHG emissions is relatively small at 2%, it is one of the fastest growing sectors in terms of GHG emissions.   Achieving GHG reductions as suggested by PwC forecasts is not uniformly  attainable across all sectors of society.   Some sectors such as airplane travel will have extreme difficulty achieving any meaningful reduction. Fortunately the ICT sector, with the right architecture can possibly achieve the required GHG reductions and more, thereby compensating for those sectors.  As well, the lifecycle of ICT products  and services is very short, typically 5 years.  By designing zero carbon solutions today, it is conceivable that within 5 years we will be able to achieve significantly better than 8000-10000% overall energy efficiency  for the sector thereby helping other sectors less amenable to GHG reductions.
+
+
+==2.0 Purpose of this paper==
+
+"The purpose of this paper is to lay out a possible zero carbon architecture for networks and ICT equipment.  
+
+
+It is predicated on the following assumptions:
+
+(a) Solar power will become cheaper than power from the grid within 2 years in Europe and 5 years in North America
+
+(b) Most of the growth and availability in solar power will be from off grid, highly distributed and relatively small sources such as roof top and mobile systems.
+
+(c) Even with low cost solar, for the foreseeable future utilities will continue to supply a major portion of their power from fossil fuel resources, because of sunk capital cost and reliability of such power.
+
+(d) Renewable energy will constitute only a small portion of the energy mix and large scale storage is still a pipe dream.
+
+(e) The use of Renewable Energy Credits (RECs) from the utility will not reduce meaningful dependence on fossil generated fuel because of need for dependable and reliable power.
+
+(f) In jurisdictions that have mandated the utilities to use renewable energy such as California at 30%, the utilities will be motivated to find customers who can use the unpredictable power feed represented by this renewable power.
+
+The network architecture also assumes that small scale, low power computing devices will almost be universal and in the same cost range as a single solar chip e.g. Raspberry PI.  In fact it is conceivable that some solar arrays will be manufactured with integrated computing, network processors and memory storage. As a result we may well end up with a surplus of distributed computing and storage whose availability will wax and wane depending on the time of day.
+
+It is clear that any dependence on the electrical grid, which will still incorporate fossil fuels for the foreseeable future will make it impossible to achieve 8000-10000% energy efficiency  never mind zero carbon solutions. Based on these assumptions this paper proposes a zero carbon ICT architecture that will primarily be based on a highly distributed, off grid, small scale solar power, sometimes supplemented by off loaded grid power in those jurisdictions that mandate the use of significant percentage of renewable power.
+
+
+The architecture will involve different approaches for different ICT devices broken down as follows:
+
+(a) Access Networks – Optical and wireless - Reverse passive optical networks (RPON) and wireless mesh networks with software defined radios
+
+(b) Computing –  Infrastructure powered  solely by renewable energy and highly distributed computing as above
+
+(c) Consumer Devices – Multiplex AC power systems and PoE solar powered charging stations
+
+(d) Backbone networks, Base stations and routers–  Solar panel arrays supplemented with autonomous eVehicle mobile storage systems."
+
+
+=More Information=
+
+* [[Zero Carbon Access Networks]] ; * [[Zero Carbon Computing Infrastructure]]
+
+* PWC study on de-carbonization, http://greenmonk.net/2013/01/25/pwc-low-carbon-index-report-is-a-call-to-arms-for-decarbonisation/
+
+* Greentouch ICT energy statistics, http://www.greentouch.org/index.php?page=how-the-ict-industries-can-help-the-world-combat-climate-change
+
+* UBS study that solar will be cheaper than  grid power, http://cleantechnica.com/2013/01/23/unsubsidized-solar-revolution-starting-ubs-reports/
+
+* Reverse Passive Optical Networking (RPON), ftp://cs.cinvestav.mx/jorge/bib/webservices/gridcontro4opticalnets.pdf
+
+* Green Hadoop, http://gigaom.com/2012/05/08/a-green-hadoop-could-manage-solar-powered-data-centers/
+
+
+[[Category:P2P Infrastructure]]
+
+[[Category:Energy]]
+
+[[Category:Ecology]]
+
+[[Category:Technology]]
+
+[[Category:Articles]]
+
+[[Category:Policy]]

@@ -1,0 +1,296 @@
+
+
+'''Book: Scott Rosenberg. Dreaming Code.'''
+
+=Description=
+
+by Trebor Scholz [http://mailman.thing.net/pipermail/idc/]:
+
+"Have you ever worked on the collaborative creation of an ambitious piece
+of software? If you did, then the book Dreaming in Code is for you.
+
+Scott Rosenberg, the author, is the co-founder of Salon.com. While he is
+not a programmer, he is known as a writer, reporter, and a long-term
+observer of Silicon Valley. His book is "Dreaming Code, Two Dozen
+Programmers. Three Years. 4,732 Bugs, And One Quest For Transcendent
+Software."
+
+Starting in 2003, for three years, Rosenberg attended meetings of the
+development team for Chandler, an open source, peer-to-peer,
+python-driven, personal information manager software. This project,
+named after the mystery writer Raymond Chandler (no, not the character
+in "Friends") was initiated by the Opensource Application Foundation, a
+research center for non-profit application production. The project
+leader is Mitch Kapor who is also the co-founder of the Electronic
+Frontier Foundation and the creator of Lotus 1-2-3.
+
+Scott Rosenberg was propelled to write this book driven by a compelling
+yet simple question: Why is good software so hard to make?
+
+Tracing the history of science and programming, Rosenberg proposes a
+historical overview of failed software projects. Dreaming in Code spells
+out the many examples when such projects run off the tracks, suddenly
+costs too much or are simply not doable. A non-profit organization may
+work for years on a piece of software only to find that Google just
+released an equal or better solution. But even large-scale projects
+supported by millions in government funding had to be abandoned, he
+reminds us. When is a piece of software finished? How do you
+define the functionality of the software? Rosenberg reports live from
+the front of the religious wars fueled by disagreements about use of the
+JAVA programming language versus C or C++, Python, or Ruby.
+
+He analyzes that in the development process there are usually too many
+goals: we are constantly asking software to do more and therefore he
+recommends us to start small and incrementally add to a given software.
+Dreaming in Code juxtaposes the traditional thinking that more people
+cannot make software development faster (you can't have a new widget in
+a week even if a thousand people work on it) to the practice of
+distributed coding (e.g., Linux)."
+
+
+=Interview=
+
+Interview with Scott Rosenberg, by Trebor Scholz:
+
+
+"Trebor Scholz: You pointed out that after 2002, with the Silicon Valley
+parking lots getting empty, many programmers took on non-profit
+projects, which gave a remarkable push to that field. Could you give
+examples?
+
+Scott Rosenberg: I don't think I said "non-profit", but rather
+open-source and/or labor-of-love projects. These labels are closely
+connected but they each mean something a little different. We've got
+for-profit companies in the open source world, of course, and then
+sometimes your little "labor of love" can take off and turn into a
+for-profit company.
+
+Anyway, a good chunk of what we now think of as Web 2.0 emerged in
+this fashion. If I recall correctly, Joshua Schachter's del.icio.us
+was basically a labor of love at first. Matt Haughey's Metafilter,
+which is now a thriving little business, was his own hobby project.
+Wordpress, the blogging tool that I and now millions of other people
+use, started as an open source project around then. And it followed
+Movable Type, another great product that began in Ben and Mena Trott's
+apartment, the story goes, and later turned into a VC-funded company.
+
+I think that period -- from the first clear signals that the bubble
+was going to bust in mid 2000 to the bottom of the cycle in 2002 or so
+-- was immensely fertile and interesting precisely because there was
+no obvious road to riches, and people were thrown back on their
+passions. Not coincidentally, that was the era in which blogging
+achieved its mass breakthrough.
+
+TS: It is somewhat counterintuitive to see a large number of social
+networking sites (e.g., Hi5, LinkedIn, MySpace, XING, WAYN) started up
+in 2003, right after the dot com disaster. How did you perceive this
+time period?
+
+SR: My personal experience of that era (roughly 2002-3) was really
+split down the center: on the one hand, at Salon, for which I was then
+serving as managing editor, it was a very difficult time. We were
+fighting for our life, and we made it, thanks to the support of our
+users, who paid for subscriptions, and of some very committed
+investors, who, I think, saw that user support and felt there was
+long-term value.
+
+On the other hand, despite the business doldrums, it was -- as I said
+above -- a very fertile and creative time for people interested in
+extending the Web in  new ways. I'm more focused on creative
+contributions (what the Web industry calls "content") than social
+networking, so I was paying more attention to companies like Flickr
+and the blogging platforms than to the social networks. But I think
+all these enterprises shared the same basic awareness: the dotcom bust
+meant that a lot of companies went under and a lot of investors lost
+significant sums of money, but it didn't mean that people were going
+to stop using the incredibly versatile and fascinating Web platform
+itself. In the media, particular in New York, the attitude was a kind
+of relief -- thank god the Web is over, we can all crawl back into our
+holes now! This was obviously nuts.  It was just a turn of the
+business-cycle wheel that didn't actually have much bearing on the
+creative uses of the technology. Those continued, and in some ways
+they continued more robustly once the pressure for "monetization"
+eased.
+
+And of course we can't forget that these were the years of Google's
+great growth, and the time during which Google figured out how to be a
+fantastically profitable business on top of being a phenomenally
+useful service. That, far more than the rise of the early SNSes, is
+what I think marks the time period you're citing.
+
+TS:  You have your ear on the technological ground in California for
+many years. In the history of the Social Web, cultural projects are
+often omitted. What is your perspective on the influence of culture on
+the programmers of the most formative social platforms of our time?
+
+SR: "Culture" is a big word. If by "culture" we mean the collective
+sum of the creative expression of individuals, which for me is a
+nicely neutral definition, then it's pretty hard to talk about its
+influence on programmers -- if by "programmers" you mean the people
+actually writing the code for social platforms like Friendster or
+LinkedIn or Facebook or MySpace.
+
+There's a whole semi-subterranean tradition of artists using digital
+technology for their own ends. This easily predates the Web -- I first
+encountered it during the CD-ROM era of the early '90s, but before
+that there were people building Hypercard stacks, and before that I'm
+sure there was something else. I don't think there's ever been much of
+a dialogue or cross-fertilization between the people in that tradition
+and the people who set out to program large-scale applications.
+Programmers are most commonly engineers with a utilitarian bent.
+Sometimes they get amused or diverted by creative use or misuse of
+their tools, but they rarely think ahead about the cultural
+opportunities their products open up. The best programmers at least
+keep their eyes and ears open so that when users who are artists bend
+an application in an usual direction they take note.
+
+TS: Today, many people work two jobs. First, there is their day-job and
+then they "work the network." Do you think that there will be a tipping
+point at which people do feel exploited?
+
+SR: In order to feel exploited, people need first to feel deceived.
+Today, I think, most of the people who contribute material to social
+networking sites (or any other kind of site) don't do so with any
+expectation that they will, or ought to be, compensated financially
+-- so they don't think, "Hey, that should be my money" when they hear
+about big-ticket corporate deals. This does change at the edges, and
+there are examples of "awakenings" to the feeling of being exploited
+in the past (as with conflicts between management and volunteers at
+AOL forums and between management and "guides" at About.com).
+
+I think that when an ambitious person begins on the Web by pouring a
+lot of his/her labor (and the content that labor produces)
+into  relatively "closed" sites like Facebook or Myspace, they sooner
+or later come to understand that they are building something that is
+not truly theirs. These people will eventually start their own blogs,
+register their own domains, and so on: they will make use of the more
+level playing field the open Web affords. More casual users, on the
+other hand, will probably be grateful for the convenience these
+services provide, and not worry about the lost value of their labor,
+because they're not contributing as much.
+
+The dynamic here thus tends toward stratification, where the
+sophisticated users flee, and the services become more of a
+wasteland. We saw this happen in the mid-90s with site-building sites
+like Geocities, Angelfire, and Tripod. In other words, I think it's
+quite likely that the overall value of today's hot networking
+services may well be at their peak now.
+
+TS: Business on the Social Web is increasingly centralized, the high
+number of recent mergers made that even more apparent. While its not a
+surprise that the rich get more and more wealthy, which ethical
+suggestions would you make to those who run large social milieus?
+
+SR: The fundamentals of ethics aren't much different online from off,
+though people get more easily confused in new media environments (and
+unscrupulous operators have more of an opportunity to exploit that
+confusion). If a business views its users as targets from whom value
+can be extracted, it's going to act one way; if it views them as
+customers to be served, it's going to act another; if it views them
+as partners or equals in building a community, it will act another.
+The way you handle issues like privacy, service, pricing and content
+restrictions will inevitably flow from where on that relationship
+spectrum you start. Some useful touchstones for ethics in this realm
+are: (1) How easy is it for users to communicate with the business
+(and get real answers)? (2) How easy is it for users to export their
+contributions? (3) How carefully does the business protect access to
+users' personal information?
+
+TS: How do you interpret the "Facebook rebellion" in September 2006
+when 740,000 users joined a FB group Students Against the Facebook
+News Feed"? FB implemented an RSS feature that was perceived by users
+as a breach of their privacy. The protest was an expression of a kind of
+communal lock down; the exit costs for Facebookers were simply too high
+people have all their friends on that platform and much content
+(pictures, videos, text entries, diaries) and none of that can be easily
+exported. The dominance of Orkut in Brazil and India has similar
+reasons. What's your interpretation?
+
+SR: I'm not immersed enough in Facebook's culture to comment
+knowledgeably. I do know that history shows that any kind of lock-in
+based on the difficulty of exporting content is subject to simple
+erosion over time. For instance, one's Facebook network may be vital
+to one's life in college, and no doubt many people will carry that on
+into their post-college lives, and to the extent Facebook remains a
+good service people will do that. But if they see that Facebook is
+more and more constrained in one way or another; or if Facebook, for
+instance, began to spam people with irrelevant commercial offers; or
+if some other negatives arose, I think some percentage of users would
+just say goodbye to the content they added to Facebook and move on to
+greener pastures.
+
+TS: Should users have full control over their own content?
+
+SR: That's a great ideal. With a phrase like "full control" the devil
+is always in the details. So the foundation of this sort of control
+lies in easy exportability of your stuff. Open APIs also matter a
+lot, because they make it possible for outside developers to add
+tools for user control of content. (And note that Facebook's
+open-but-inward-looking APIs, which let you add stuff *to* Facebook,
+are very different from, for instance, Flickr's outward-looking open
+APIs, which let you use Flickr all over the Web.) But true "full
+control" is really only available to you on a Web site that you own
+and operate. Once you're on someone else's site there's always a
+trade-off between control and convenience -- often a very useful
+trade-off, but a trade-off nonetheless.
+
+TS: When advertising started in the United States in the 1880s it was
+soon associated with the loyalty to and identification with a brand.
+What has changed?
+
+SR: I'm not an expert on marketing or branding. One of the things
+that has always appealed to me about the Web is that it is
+(relatively) less under the influence of mass-market brand power --
+or at least it is easier to participate in the medium and stay away
+from mass-market brands than it is to, for example, consume TV and do
+the same.
+
+For social networking services the nature and evolution of the brand
+is signficantly out of the owners' control. (Orkut didn't set out to
+be the big Brazilian network!) So there is a real difference there
+from the world of packaged-goods branding.
+
+TS: There is much lateral surveillance on the sociable web, which
+makes it hard to trust a corporate platform with our data. Today,
+Facebook is seen as a convenient place for employers to check
+prospective employees and police uses it to conduct background checks.
+Facebook (FB) claims full rights over uploaded content. FB outlines that
+it pulls in information about users from other sources, based on their
+profiles. Marketing is about entering a conversation in order to
+influence it, how far can transparency go before it reaches corporate
+limits?
+
+SR: This is a huge topic, and the question is a little broad. I think
+the most important thing for anyone to understand is that any
+for-profit business's goal is to earn a profit. Public companies are
+committed to the interests of shareholders; private companies are
+committed to the interests of owners. That said, some companies
+manage better than others at operating in a more transparent way. To
+me, Craigslist is a pretty good example of a company that says,
+"We're a for-profit business but we treat our customers as partners
+in a community" -- and delivers on its promises, too. But it's not
+perfectly transparent; I couldn't tell you, for instance, how much
+money it's making. From what I understand, it's healthily profitable,
+and yet I don't think its users feel exploited. So it's possible to
+do that. But rare, and difficult!
+
+TS: Given your extensive experience with Internet culture, do you
+think that there could be an equivalent to public broadcasting in
+social networking? And, what would it take to get a public,
+independent social networking site  off the ground?
+
+SR: My view is that it's less likely that we will end up with a
+"public-broadcasting"-style nonprofit social network service than
+that the whole notion of a "social networking service" as a closed
+(or delineated) space on the Web will become outdated. The Internet
+is a great network already. What we need -- and I'm enough of an
+optimist to believe this can and will develop -- are open technical
+protocols and platform technologies that anyone can use to
+participate in social networking activities with anyone else, under
+whatever sets of rules those individuals collectively choose to adopt."
+
+Source: http://mailman.thing.net/pipermail/idc/
+
+[[Category:Books]]
+
+[[Category:Technology]]

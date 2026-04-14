@@ -1,0 +1,44 @@
+
+=History=
+
+Ori Shimoni:
+
+"In 2015, the launch of Ethereum inspired new alternatives that combined crypto’s focus on technical disintermediation with the collective ownership models of platform co-ops. Smart contracts—self-executing agreements encoded in software—promised to automate marketplace functions previously requiring trusted third parties. Ethereum offered the possibility of creating commerce platforms free from fallible intermediaries and collectively governed by users.
+
+Early attempts to enable peer-to-peer commerce through smart contracts emerged alongside Ethereum's launch. La'Zooz aimed to create a community-owned ride-sharing network to eliminate intermediaries like Uber. The project introduced a “proof-of-movement” mechanism that rewarded users with tokens for contributing driving data, attempting to solve the chicken-and-egg problem that new ride-sharing services faced. However, while developing the prototype, founder Matan Field realized governance tooling wasn't mature enough to empower token-holders, leading him to shift focus toward building governance infrastructure with DAOstack.
+
+'''Slock.it''' aimed to create a “Universal Sharing Network” combining blockchain with IoT devices for peer-to-peer rental of physical assets. Smart locks connected to Ethereum smart contracts would allow anyone to rent physical items without intermediaries—users could discover available assets, make cryptocurrency payments, and receive digital access credentials automatically. Despite initial excitement and successful prototypes, Slock.it never launched their peer-to-peer rental marketplace at scale. The DAO hack in 2016 impacted the company’s resources and reputation, which diverted attention from their core product and raised questions about smart contract security. In the aftermath, Slock.it refocused on lightweight IoT blockchain integration rather than their consumer marketplace vision.
+
+The 2017-2018 ICO boom fueled new funding and interest in decentralized commerce. In 2017, District0x launched with a $9 million token sale, aiming to develop a network of autonomous marketplaces. It created a modular framework called d0xINFRA that provided core marketplace functionalities like listing creation, search, filtering, reputation, and payments—all managed through smart contracts with front-end interfaces distributed via IPFS. Rather than a single marketplace, District0x envisioned a network of specialized “districts” (decentralized marketplaces), governed by token holders through Aragon-based DAOs. Their first application, Ethlance, created in 2016, competed with freelancing platforms like Upwork by eliminating commission fees. The platform used smart contracts to manage escrow and reputation, allowing freelancers to receive full payment. Later districts included Name Bazaar for trading Ethereum domain names and Meme Factory for creating and trading digital collectibles. Despite launching several functional districts, the project struggled to gain adoption, and development slowed after the 2018 crypto market downturn.
+
+'''Origin Protocol''', founded in 2017, raised $38 million through private funding and a public ICO to build marketplace infrastructure on Ethereum. Similar to District0x, Origin created smart contracts and developer tools for decentralized marketplaces. The project aimed to enable direct transactions between buyers and sellers across various verticals without intermediaries, featuring a shared identity system, reputation tracking, and dispute resolution. Origin deployed demonstration applications including Dshop (an e-commerce storefront), Origin Marketplace (a general goods marketplace), and a vacation rental service. Despite technical achievements and partnerships with ServiceRocket and Brave, the platform struggled to attract mainstream users due to Ethereum's scaling limitations and complex user experience. By 2020, the project pivoted toward DeFi and NFTs, moving away from its original focus on peer-to-peer commerce.
+
+'''Swarm City''', founded in 2017, aimed to create a decentralized commerce protocol with ride-sharing as its first use case. The project utilized the SWT token for transactions and focused on a user-friendly interface to make onchain commerce accessible to mainstream users. It organized commerce through “hashtags” (specialized marketplaces) where “seekers” could post requests with prices and “providers” could respond. Its reputation system minted context-specific tokens upon successful transactions, creating an onchain record of marketplace-specific credibility, while allowing users to form “hives” (communities) to share resources and build collective reputation. Swarm City took a novel approach to moderation—each “hashtag” marketplace had its own creator who was responsible for maintaining quality and resolving disputes between users, creating a federated model where governance was localized rather than platform-wide. Swarm City’s architecture emphasized local data storage on user devices and employed Whisper for private chat. It introduced solutions to blockchain usability challenges, including an IPFS consortium for distributed data storage and a “gas station” to simplify transaction fee payments for new users.
+
+Swarm City faced a significant setback in July 2017 when a vulnerability in Parity's multisig wallet resulted in the loss of 44,055 ETH (worth ~$9 million at the time). Despite this loss, the team continued development for a time but struggled with the same adoption challenges as other DeCom projects—Ethereum's scalability limitations, complex onboarding, and competition with established platforms. 
+
+After the 2018 cryptocurrency market decline, development activity diminished.
+
+
+By 2019, early decentralized marketplace projects failed to achieve significant adoption, struggling with ongoing challenges:
+
+* Security vulnerabilities: Smart contract exploits like The DAO hack and the Parity multisig incident demonstrated the risks of building on immature infrastructure.
+
+* Technical limitations: Ethereum couldn't support the speed, cost, or volume requirements of everyday commerce.
+
+* UX complexity: Onboarding required technical knowledge that deterred mainstream users, from wallet setup to gas payments.
+
+* Network effect barriers: Token incentives were inadequate to overcome the network effects of established platforms with millions of users and suppliers.
+
+* Missing building blocks: Key marketplace components like decentralized identity, reputation, governance, and dispute resolution remained underdeveloped.
+
+These projects had ambitious visions ahead of their time. The infrastructure, tooling, and economic models for DeCom weren't mature enough to support the marketplace concepts envisioned. As these limitations became apparent, attention shifted to financial applications. From 2019 to 2021, investment and developer attention concentrated on DeFi primitives like lending, trading, and yield aggregation rather than real-world commerce. Deterministic finance proved a better fit for smart contracts than the messy business of human commerce.
+
+As we enter 2025, blockchain infrastructure has reached an inflection point. Cheap L2s have addressed scalability concerns, robust oracles connect reliably to real-world data, and ZKPs provide practical privacy. Meanwhile, account abstraction is simplifying wallet UX, interoperability solutions are on the way to solving chain fragmentation, and simple fiat onramps are proliferating. These advances are dismantling the technical barriers to DeCom, laying a foundation for onchain alternatives to today's marketplace giants."
+
+([https://docs.google.com/document/d/1kQ44sPFO2IFhz_4Vw-nGMWEScS-Dla-eeihr_xv0O2Q/edit?tab=t.0])
+
+
+[[Category:Crypto Economy]]
+
+[[Category:Business]]

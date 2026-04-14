@@ -1,0 +1,155 @@
+=Typology=
+
+== Modes of Property Table - By Paul Cockshott ==
+
+This typology is proposed by Paul Cockshott.
+
+"Who owns what is the basic question which must be answered by any system of prop-
+erty law. The atoms of property relations are owners and the things they own;
+systems of property are like molecules built up of these atoms. The simplest
+property relationship is ‘A owns B’. But at diﬀerent times and in diﬀerent places
+this right of ownership amounts to diﬀerent things. To a peasant farmer with
+property in land and a commodity dealer with property in wheat futures, own-
+ership has a diﬀerent practical signiﬁcance. Let us consider
+ownership as being made up of four components: the right to use, the right
+to buy, the right to sell and the right to inherit. In the previous example the
+peasant is more interested in the right to use and to inherit; to the commodity
+dealer the rights to buy and sell are everything. (By the right to inherit we
+include acquisitions by means of marriage.)
+We can order the component rights as follows: use, sale, purchase, inheri-
+tance. These rights can be treated as logical predicates. In logic a set of ordered
+pairs (A,B) for which some predicate holds is termed a relation. For instance,
+the relation of usufruct is the set of all pairs (A,B) such that A uses B.
+We thus have four distinct relations that deﬁne property rights. These derive
+from four predicates: the relation Usufruct from the predicate (A uses B), the
+relation Sale from (A can sell B), Purchase from (A can buy B) and Inheritance
+from the predicate (A can inherit B).
+
+A given pair of entities, for instance a trader on the wheat futures market
+(A) and a shipment of wheat (B), may be members of more than one of these
+sets. In this case the pair (wheat futures trader, wheat shipment) would be
+included in the relations Sale and Purchase. This is because the Sale relation
+includes all pairings of potential sellers with all that they can potentially sell,
+and similarly for Purchase.
+
+A property right between a class of owners P and a class of owned things Q
+can therefore be characterised by the set of property relations that pairs (p,q)
+can belong to, there p is an instance of P and q of Q. A property right between
+classes of entities is therefore a set of between 0 and 4 relations.
+
+Since any predicate is a Boolean relation, we can thus encode property rights
+in terms of 4 boolean values, giving a total of 16 different forms of property
+right."
+
+
+{|cellpadding="20" cellspacing="0" border="1"
+|A uses B 
+| A can sell B 
+| A can buy B 
+| A can inherit B 
+| examples 
+|-
+| no     
+| no       
+| no    
+| no 
+|(slave, American law)
+|-
+| yes    
+| no       
+| no    
+| no 
+| (collective farm and land)
+|-
+| no     
+| yes      
+| no    
+| no 
+|(hired worker and labour)
+|-
+| yes    
+| yes      
+| no    
+| no
+| (??)
+|-
+| no    
+| no      
+| yes  
+| no
+| ?
+|-
+| yes    
+| no      
+| yes  
+| no  
+| (consumer and electricity) 
+|- 
+| no     
+| yes      
+| yes   
+| no 
+| (commodity trader and commodity)
+|-
+| yes    
+| yes      
+| yes   
+| no 
+| (capitalist ﬁrm/factory)
+|-
+| no     
+| no       
+| no   
+| yes
+| ??
+|-
+| yes    
+| no       
+| no    
+| yes 
+| (traditional peasant and land)
+|-
+| no    
+| yes      
+| no    
+| yes
+| ??
+|-
+| yes   
+| yes      
+| no    
+| yes
+| ??
+|-
+| no    
+| no       
+| yes   
+| yes
+| ??
+|-
+| yes   
+| no      
+| yes  
+| yes
+| ??
+|-
+| no    
+| yes      
+| yes   
+| yes
+| ??
+|-
+| yes   
+| yes      
+| yes   
+| yes 
+| (full bourgeois right)
+|-
+|}
+
+
+=More information=
+
+* [[Property]]
+
+[[Category:Peerproperty]]

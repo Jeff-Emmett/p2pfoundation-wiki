@@ -1,0 +1,669 @@
+'''= open source electronics prototyping platform'''
+
+URL = http://www.arduino.cc
+
+"Arduino, the Italian firm that makes this circuit board, a hot commodity among DIY gadget-builders. The electronics factory is one of the most picturesque in existence, nestled in the medieval foothills of Milan"
+(http://www.wired.com/techbiz/startups/magazine/16-11/ff_openmanufacturing?)
+
+
+
+=Definition=
+
+1.
+
+"[A]n open-source electronics prototyping platform based on flexible, easy-to-
+use hardware and software. It’s intended for artists, designers, hobbyists, and
+anyone interested in creating interactive objects or environments . . . It’s an
+open-source physical computing platform based on a simple microcontroller
+board, and a development environment for writing software for the board."
+(http://www.arduino.cc/)
+
+
+
+'''2. What is Arduino?'''
+
+"Arduino is a tool for making computers that can sense and control more of the physical world than your desktop computer. It's an open-source physical computing platform based on a simple microcontroller board, and a development environment for writing software for the board.
+
+Arduino can be used to develop interactive objects, taking inputs from a variety of switches or sensors, and controlling a variety of lights, motors, and other physical outputs. Arduino projects can be stand-alone, or they can be communicate with software running on your computer (e.g. Flash, Processing, MaxMSP.) The boards can be assembled by hand or purchased preassembled; the open-source IDE can be downloaded for free.
+
+The Arduino programming language is an implementation of Wiring, a similar physical computing platform, which is based on the Processing multimedia programming environment." 
+(http://www.arduino.cc/en/Guide/Introduction)
+
+
+'''3. S. De Paoli and C. Storni:'''
+
+"Arduino is therefore a hardware and software platform whose goal is to
+enable people to create interactive products or environments through the use
+of electronic material that is widely available, inexpensive, and quite easy to
+use. Essentially the board is composed of: (1) a series of digital and analog
+ports for inputs (inputs can come from a variety of switches or sensors like
+motion, light, proximity sensors, etc.); (2) a series of output ports connected
+with whatever actuator is used (motor, lights, computerized devices); and (3) a
+central processor (a microcontroller chip) with a flash memory where the user
+writes and flashes specific instructions (via USB) on how to process inputs
+into outputs (figure 2). The Source Code for controlling the board is written
+by using a specific FOSS programming language called ‘‘Processing’’ 
+(http://p2pfoundation.net/Sociotechnical_Skills_in_the_Case_of_Arduino)
+
+=Description=
+
+'''1.'''
+
+"Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments.
+
+Arduino can sense the environment by '''receiving input from a variety of sensors and can affect its surroundings by controlling lights, motors, and other actuators'''. 
+
+The microcontroller on the board is programmed using the Arduino programming language (based on Wiring) and the Arduino development environment (based on Processing). Arduino projects can be stand-alone or they can communicate with software on running on a computer (e.g. Flash, Processing, MaxMSP)."
+
+
+
+'''2.'''
+
+"At its heart, Arduino is a programmable microcontroller, which was developed in Italy in 2005. You can connect the microcontroller via a serial or USB connection to a computer running Windows, Mac OS or Linux, and program it using the free open-source integrated development environment.
+
+Arduino is often described as a physical computing platform because you can use sensors to measure motion, light or temperature, and to flash LEDs or lights, sound buzzers or run motors. Arduino also has communications extensions that add Bluetooth, Ethernet or wireless-mesh networking capabilities, and can be triggered by events on the web or via web APIs.
+
+During the Guardian's recent hack day, Arduino was used to create a robot that responded to hashtags on Twitter. It powered a device to alert journalists when people were reading their stories, and the team from Arduino consultancy Tinker.it built a leaderboard that measured responses to the Twitter accounts of the main British political parties.
+
+Alexandra Deschamps-Sonsino, CEO of Tinker.it, says all kinds of people are using the platform, including hobbyists and engineers but also artists and designers – people who don't have a technical background. Clothing designers even use Arduino with special circuit boards that can easily be sewn into fabric.
+
+You can buy pre-built Arduino boards or, true to the open-source movement, can download plans and build your own. To rapidly create prototype projects many Arduino enthusiasts use solder-less breadboards. To get started Deschamps-Sonsino suggests going to the "playground" on the Arduino website. It has a list of projects broken down by difficulty and purpose. For instance, there are audio, visual, and communication projects, as well as physical or mechanical projects.
+
+Tinker.it and other Arduino suppliers, such as SparkFun in the US, can sell you microcontrollers, lights, sensors and other components for the projects. Tinker.it also holds workshops, and with hardware hacker Maker Faires you can see what's possible with Arduino and other open-source hardware platforms."
+(http://www.guardian.co.uk/technology/2009/aug/12/open-source-hardware-projects)
+
+
+'''3.'''
+
+From a detailed reportage on the place of Arduino in the Italian tradition of interaction design, by Nathan Waddington and Russell Taylor:
+
+"The Arduino platform is fast becoming a platform of choice for
+interaction designers, and open source is a big part of that choice, even if it
+is an unintentional (or unknown) part of that choice. Open source allows for
+effective iterative design and creates a community out of the users. Physical
+computing specifically is not interaction design, but it is becoming more and
+more an integrated part of interaction design. During the summer of 2007,
+the Italy Design SFU Field School went to Italy and interviewed several top
+Italian designers. Among them was Massimo Banzi, an interaction designer
+who helped to design the Arduino. He took the time to tour the field school
+participants through the manufacturing process, the factory where the
+boards are made and assembled, gave a lecture on his previous (and current)
+works and finally, agreed to be interviewed for the project. Much of this
+paper derives from those tours and interviews. It is clear that around Massimo
+a community of young designers is growing, working in ways unfamiliar in
+Italy. This is yet another place where we see new growth in Italian Design.
+
+So, what is Arduino? The Arduino is a tool. A little computer that
+can help designers interact with the physical world. Ostensibly though, it’s
+not much more than any other similar platform; what makes it special is how
+it’s been designed and supported. “Arduino is an open-source electronics
+prototyping platform based on flexible, easy-to-use hardware and software.
+
+It’s intended for artists, designers, hobbyists, and anyone interested in
+creating interactive objects or environments” (Arduino, 2007). The key is its
+intention – intended for artists and designers, two groups of people whose
+backgrounds aren’t necessarily technical ones (or if they are, they aren’t likely
+to be deep in embedded computing). So, in the city where Olivetti once
+stood (it is now a part of Telecom Italia), the designers of Arduino substituted
+corporate ownership and support with community and openness. This shift
+is what makes the Arduino accessible, and it is what has caused its rapid
+growth and popularity in the communities using it. So why was it developed?
+
+“Physical computing is about creating a conversation between
+the physical world and the virtual world of the computer” (O’Sullivan &
+Igoe, 2004, pp xix). The Arduino was developed initially to help students
+at Interaction Design Institute Ivrea to develop projects of their own. The
+students needed a platform to build their interactive projects on which would
+ease the burden of entering into the physical computing realm. Students with
+limited computing knowledge could program working prototypes themselves
+and take radical ideas developed in the hothouse of a good design school
+into stuff that actually worked and could be used and played with by an
+audience. Traditionally physical computing has been the domain of computer
+science students, professional programmers and hardware developers who
+use other kinds of basic hardware (such as a basic stamp, a kind of hardware
+platform with basic components sufficient to run an application, CPU,
+memory, etc.) to deal with sensor input and output to devices. However, now
+the barriers to entry have been significantly reduced with the Arduino, as the
+hardware is very cheap and readily available and the software is much more
+forgiving and user-friendly than that of other hardwares. Using Arduino,
+students can get up and running quite a bit faster than they otherwise could.
+
+And for many that becomes addictive and professionally valuable. The Ivrea
+students for instance have had great success getting work at Interaction
+Design stalwarts such as IDEO London. And of course, all these people using
+the boards has fed back into the production process for improving the boards
+through the company’s open source development."
+(http://www.sfu.ca/italiadesign/2007/page/papers/arduino-and-open-source-design.pdf)
+
+Source: [[Arduino and Open Source Design]]. By Nathan Waddington and Russell Taylor. URL = http://www.sfu.ca/italiadesign/2007/page/papers/arduino-and-open-source-design.pdf
+
+
+=Characteristics=
+
+[[DiDIY]]:
+
+==Community== 
+
+"The Arduino community has as its main community platform the
+Arduino.cc website. It contains the official documentation and learning
+resources, a forum, online shop, personal profile, karma points, direct
+personal messaging, unified account management and allows connections
+to 3rd party platforms. Software development takes place through the
+github repository at https://github.com/arduino.
+
+Additionally the community self-organises through Arduino meetups and
+workshops around the world.
+
+The community makes both derivatives and extensions (shields) to the
+official Arduino products.
+
+
+==Licensing== 
+
+All explicit knowledge is shared under free licenses:
+• content, documentation and designs under CC BY-SA 3.0
+• software (derived from Processing and Wiring):
+◦ GNU General Public License (GPL)
+◦ GNU Lesser General Public License (LGPL)
+
+The Arduino name is exclusively protected by trademarks owned by the
+founders and their respective companies. Use of the Arduino name is to be
+negotiated with its owners. 
+
+Two general licensing programmes are in
+place and require fees to be paid:
+• Arduino Certified for derivative products
+• Arduino AtHeart for products that incorporate Arduino
+
+
+==Revenue models== 
+
+• Arduino sells physical versions of their digital designs through
+their online shop and a network of distributors – these are official
+Arduino products and come with quality assurance by the founders
+• legal replicas are available in the market (legal, given it’s free
+license of the designs), often at much lower costs than the official
+products (cf. an official Arduino Uno may cost 20€, while Chinese
+versions are available for around 3€)
+• despite the higher cost of the official products, many people buy
+the official, thereby supporting the core team for its work
+• licensing fees for partners in the Arduino Certified or Arduino
+AtHeart programmes
+• training, conferences and consultancy
+
+
+==Modes of production== 
+
+The original Arduino hardware was produced by the Italian company
+Smart Projects from one of the Arduino cofounders. Some Arduinobranded
+boards have been designed by the American companies SparkFun
+Electronics and Adafruit Industries. As of 2016, 17 versions of the
+Arduino hardware have been commercially produced.
+
+Additionally several companies produce unofficial versions (replicas) and
+in many makerspaces people produce their own selfmade Arduino boards,
+with some help of the local community.
+
+==Governance models== 
+
+• Arduino.cc and core community infrastructure is owned by the
+foundation, Arduino AG, while global distribution under the
+Arduino brand is controlled by the Arduino Holding (see more in
+Other below).
+• The governance model is the so called “Benign Dictatorship”
+model: the community continues to support the leadership of the
+founders as long as they are dominantly perceived as being useful
+for the progress of the collective project.
+• Replicability: the whole project can be replicated, which is done
+by both small community groups at local makerspaces as well as
+by manufacturers. This replicability keeps the project leaders
+honest: as long as they work for the common good of the
+community, these may stick with them, otherwise they may go to a
+“fork” or alternative project.
+
+
+==Indicators of impact== 
+
+• Number of sales: according to Arduino co-founder David
+Cuartielles they have a global community of approx. 110 million
+users.
+• Arduino is used in many DIY products, like in 3D printers such as
+RepRap.
+• Number of community groups and meetups around the world.
+• Google Incoming Links (Arduino.cc): 3.690.000.
+• Alexa Global Rank (Alexa.cc): 2.631.
+
+Other One of Arduino’s founders managed to secretly obtain some of the
+trademarks for his own company (Smart Projects SRL) exclusively and do
+not bring it into the shared company, Arduino LLC. His company was then
+renamed into Arduino SRL and stopped collaboration with the other
+founders. This has led the latter to continue the core project with two
+brand names: Arduino and Genuino to continue global distribution. In
+2016 however the two Arduino companies reached a settlement and have
+created the Arduino holding as the single point of contact for distribution
+and the Arduino AG foundation for hosting the community."
+(http://www.didiy.eu/public/deliverables/didiy-d6.3-1.0-pub.pdf)
+
+=Details and FAQ=
+
+Excerpts from the FAQ:
+
+'''How can I get an Arduino board?'''
+
+You can buy an Arduino board from one of the distributors listed on the buy page. If you'd prefer to build your own, see the Arduino Single-Sided Serial board, which can be easily etched and assembled.
+
+
+'''Who makes Arduino boards?'''
+
+Most of the official Arduino boards are manufactured by SmartProjects in Italy. The Arduino Pro, Pro Mini, and LilyPad are manufactured by SparkFun Electronics (a US company). The Arduino Nano is manufactured by Gravitech (also a US company).
+
+
+'''Which are the official Arduino boards?'''
+
+The official Arduino boards are the ones listed on the hardware page: the Uno, Mega2560, Nano, Bluetooth (BT), LilyPad, Mini, Pro, Pro Mini, and a few older models, along with the Ethernet, XBee, motor, and prototyping shields. These are boards whose manufacturers work with the Arduino team to ensure a good user experience, compatibility with the Arduino software, and a quality product. In return for their status as official boards, the manufacturers pay a licensing fee to the Arduino team to support the further development of the project.
+
+In general, we try to restrict use of the name "Arduino" to the official boards. If you find a product under a different name but described as "Arduino compatible", itâ€™s probably not an official board and doesnâ€™t fund continued work on the project."
+(http://arduino.cc/en/Main/FAQ)
+
+
+==License==
+
+Stefano De Paolia; Cristiano Storni:
+
+"The board schematics and design files are released under the ‘‘Attribution
+share alike 3.0’’ Creative Commons’ (2010) license (http://creativecommons.
+org/licenses/by-sa/3.0/). In this way, anyone can produce copies of the board,
+redesign it, or even sell boards that copy the design. Under the provisions of
+this license, one does not need to pay a fee to the Arduino team or even ask
+their permission. However, anyone republishing the reference design, has to
+credit the original Arduino group (this is the ‘‘Attribution’’ part of the
+license). Moreover, if someone tweaks or changes the board, the new design
+must use the same or a similar Creative Commons license to ensure that new
+versions of the board’s schematic will be equally without fees and open to
+future modification and redesign. In this case, the mentioned language used
+to program the microcontroller (Processing) is a FOSS language readapted by
+the Arduino team to deal with microcontroller-enabled tangible computing."
+(http://p2pfoundation.net/Sociotechnical_Skills_in_the_Case_of_Arduino)
+
+
+==The Arduino Trademark==
+
+Stefano De Paolia; Cristiano Storni:
+
+"The only thing that is outside
+the direct control of users is the name Arduino, which is a registered
+trademark. 
+
+Indeed, there is a specific strategy in place here, as an interviewee
+pointed out:
+
+- The only protection we have in play regards the name of the board that is
+trademarked. If you want to make a board and called it Gino, it is ok with me
+and I do not care. But if you make a board and you called it Arduino you
+cannot. We want to prevent the diffusion of low quality copies. Arduino for us
+means that the design respects certain quality as the ease of use, the quality of
+the components and of their assemblage.
+
+Another developer stated: ‘‘we aimed to create a brand, and brand matters!’’
+(http://p2pfoundation.net/Sociotechnical_Skills_in_the_Case_of_Arduino)
+
+
+==Arduino integrated development environment==
+
+Stefano De Paolia; Cristiano Storni:
+
+"The ‘‘Arduino integrated development environment’’ is a software (where
+one edits the Processing language) released under GNU General Public
+License (GPL), and it is used to write and flash the code into the board’s
+memory. The GPL embodies a Copyleft clause that gives the user the rights to
+change and distribute the software, provided that new enhancements are
+released under the same license (Stallman 2002). Finally, the Arduino web
+site, where a collection of libraries of code examples from the user community
+grows on a daily basis, has also been released under Creative Commons so
+that people can freely make use of all the scripts, code, and tricks posted by
+users. This makes the appropriation of Arduino even easier because
+inexperienced users can take advantage of solutions and tutorials prepared
+by peer users who share their expertise online. The only thing that is outside
+the direct control of users is the name Arduino, which is a registered
+trademark."
+(http://p2pfoundation.net/Sociotechnical_Skills_in_the_Case_of_Arduino)
+
+
+==The Arduino Enterpreneurial Coalition==
+
+"Several quirky companies have also emerged. For example, a firm called
+Botanicals has developed an Arduino powered device that monitors house-
+plants: this phones (or tweets) when the plant needs to be watered. The web
+site Makezine.com inaugurated an Arduino section by introducing the board
+as the best all around centerpiece to a modern electronics project, and listing
+a huge series of step-by-step tutorials on how to build Arduino-powered
+gadgets. Also Ponoko.com*one of the biggest DIY technology web sites*
+sells Arduino-based products along with a series of add-ons that extend the
+possibility of the board. "
+(http://p2pfoundation.net/Sociotechnical_Skills_in_the_Case_of_Arduino)
+
+=History=
+
+
+
+'''1. Stefano De Paolia; Cristiano Storni:'''
+
+"The Arduino was initially designed for teaching purposes in a well-known
+design institute in Italy. 
+
+
+As one of the main three original developers of the
+board recalled in an interview:
+
+- We already worked with Processing a lot. At that time Processing was limited to
+graphical animation. Basically students used it to do graphics. When dealing
+with tangible and real-time interaction we had to use another language. One
+day we asked ourselves: why not use Processing to generate programs for our
+hardware too? (Arduino Developer, Interview October 2008)
+
+Initially, a hardware-specific programming language was used with another
+board, one more expensive and less open than the actual Arduino. The idea
+soon emerged of developing an agile, easy-to-use and open board, with an
+integrated development environment. A specific module for the Processing
+language was consequently implemented by the original developers so that
+students would not have to learn another language in order to program
+hardware in their tangible computing prototypes. A couple of months later,
+the first Arduino Board was ready, paid out of the developers’ own pockets.
+Along with it, a first series of demonstration workshops was arranged by the
+three developers, where the boards were provided to students and teachers.
+
+Interviewees recall a big design workshop in Madrid in 2005, followed by one
+in London and then in Copenhagen. Many Arduino boards were given away
+for free to teachers who wanted to explore the possibility of adopting the
+Arduino for their classrooms. In a few months, the Arduino board gained
+widespread popularity in design institutes all over Europe and*due to word-
+of-mouth*within many ‘‘Do It Yourself’’ communities.
+
+In this OH project the role of users*in terms of inscribed affordances and
+constraints*is only partially defined by the developers. The Arduino board is
+intended to be the central core for the implementation and prototyping of
+interactive products or environments designed by the users themselves. In this
+sense, the design possibilities and the different ways of appropriation for users
+are endless, also because Arduino developers*in their strategy*have
+inscribed quite weak forms of control over future uses. The board design
+does not anticipate the negotiation of its role as would happen in proprietary
+software. Instead, it remains equally open through a series of inscriptions that
+sustain a specific strategy."
+(http://p2pfoundation.net/Sociotechnical_Skills_in_the_Case_of_Arduino)
+
+
+'''2. Alicia Gibb:'''
+
+"The Arduino microcontroller is a principle representative of the microcontrollers 
+commonly used in art and design. Others in the field include Wiring, Making Things, PIC, and the Basic Stamp.
+
+The Arduino microcontroller was originally created as an 
+educational platform for a class project at the Interaction Design Institute Ivrea in 
+2005. It grew from the previous work of the Wiring microcontroller designed by 
+Hernando Barragán in 2004.
+
+From its inception, the Arduino was developed to engage
+artistic and design-oriented minds. 
+
+Barragán, an artist and designer, created the Wiring microcontroller to be used 
+as a tool for a parsing data to electronics. He intended it to be used by a “non-technical” 
+audience: “artists, designers, and architects,” in short, not requiring prior electrical 
+engineering or computer science knowledge. He emphasized the Wiring board as a 
+prototyping tool. Wiring fulfilled Barragán‟s need for a designer-friendly tool (in this 
+case a microcontroller) that was easy to use without a great deal of engineering or 
+programming experience. Barragán‟s advisors for his thesis on Wiring were Casey Reas 
+and Massimo Banzi. Reas created the visual programming language Processing with 
+Ben Fry. Reas studied interaction in art as an undergrad,
+continued with John Maeda 
+while at MIT, and developed Processing for a language accessible to artists and 
+designers. Banzi, on the other hand was more interested in further developing the 
+microcontroller as an art and design tool. The Arduino was originally developed 
+for an interaction design class taught by Banzi. The creators of the Arduino are Massimo 
+Banzi, David Cuartielles, Dave Mellis,26 Gianluca Martino with Nicholas Zambetti.
+
+The  Arduino team currently consists of Banzi, Cuartielles, Martino, Mellis and Tom Igoe.
+
+The Arduino team wanted to further simplify the Wiring platform and thus the 
+Arduino microcontroller was developed. The Arduino team made the Arduino 
+microcontroller more usable by focusing on simplicity, a goal in pursuit of designing for 
+a non-technical audience. Four cohesive reasons are echoed by Banzi when defining the 
+Arduino‟s success.
+
+These reasons also denote Arduino‟s differences from other 
+similarly intended microcontrollers for artists and designers:
+
+1. It is inexpensive
+
+2. It is packaged with the Integrated Development Environment (IDE).
+
+3. It is programmable via USB.
+
+4. It is supported by a community. 
+
+
+The above points were deliberate decisions when the Arduino platform was being 
+conceptualized and designed. The usability of the Arduino platform is significant being 
+that every person interviewed spoke directly of the usability of the Arduino. Three people 
+interviewed currently work at IDEO, and are experts in the field of usability. Participants 
+were asked how they would describe the level of entry to the Arduino versus other 
+microcontrollers. The answer was unanimous that the Arduino was easier to use. From 
+having a simplified platform with a chip on board to a user-friendly Integrated 
+Development Environment (IDE), made a difference to new users and people who
+appreciate visual aesthetics. Mellis comments that their goal was to make it less 
+expensive and smaller than the Wiring board, “A lot of things people tend to build 
+initially tend to be simple, they don‟t need a powerful microcontroller”. Ninety-Four 
+percent of interviewees felt the four points outlined by Banzi; cost, an integrated IDE, 
+programmable over USB, and supported by a community, were useful in their work and 
+made the Arduino a successful platform."
+([http://c298394.r94.cf1.rackcdn.com/New%20Media%20Art,%20Design,%20and%20the%20Arduino%20Microcontroller.pdf])
+
+
+==The unacknowledged Wiring as original prototype for Arduino==
+
+Hernando Barragan:
+
+"The Formation of Arduino: When IDII manufactured the first set of Wiring boards, the cost was probably around USD$50 each. (I don’t know what the actual cost was, as I wasn’t involved in the process. However, I was selling the boards from Colombia for about USD$60.) This was a considerable drop in price from the boards that were currently available, but it was still a significant cost for most people.
+
+In 2005, Massimo Banzi, along with David Mellis (an IDII student at the time) and David Cuartielles, added support for the cheaper ATmega8 microcontroller to Wiring. Then they forked (or copied) the Wiring source code and started running it as a separate project, called Arduino.
+
+There was no need to create a separate project, as I would have gladly helped them and developed support for the ATmega8 and any other microcontrollers. I had planned to do this all along.
+
+To this day, I do not know exactly why the Arduino Team forked the code from Wiring. It was also puzzling why we didn’t work together. So, to answer the question, I was never asked to become a member of the Arduino Team.
+
+Even though I was perplexed by the Arduino Team forking the code, I continued development on Wiring, and almost all of the improvements that had been made to Wiring, by me and plenty of contributors, were merged into the Arduino source code. I tried to ignore the fact that they were still taking my work and also wondered about the redundancy and waste of resources in duplicating efforts.
+
+By the end of 2005, I started to work with Casey Reas on a chapter for the book “Processing: A Programming Handbook for Visual Artists and Designers.” The chapter presents a short history of electronics in the Arts. It includes examples for interfacing Processing with Wiring and Arduino. I presented those examples in both platforms and made sure the examples included worked for both Wiring and Arduino.
+
+The book got a second edition in 2013 and the chapter was revised again by Casey and me, and the extension has been made available online since 2014.
+
+...
+
+The reference to Wiring on the Arduino.cc website, although it has improved slightly over time, is misleading as it tries to attribute Wiring to Programma2003.
+
+It is no secret that the acknowledgement of Wiring has been very limited in the past. Back in 2013, at Open Hardware Summit at MIT, during the panel “Implications of Open Source Business: Forking and Attribution”, David Mellis acknowledges, for the first time, that the Arduino Team hadn’t done a very good job acknowledging Wiring. Unfortunately, he didn’t go into details why they hadn’t."
+(http://arduinohistory.github.io/)
+
+=Status=
+
+==Technical==
+
+"The Arduino prototyping platform is a good example of all this. It can be programmed to read sensors, control motors and build interactive objects and artistic installations. Its compiling environment is multiplatform and free (as in freedom) and the only extra hardware needed for programming it is a serial/ USB cable. This software can be downloaded from the website Arduino web site, which also contains Arduino schematics released under Creative Commons Attibution-ShareAlike. The project has used many ingredients to achieve a successful widely used project. For example, it contains a removable Atmega8 microcontroller which can be easily replaced if broken—without the need to buy a new Arduino board. '''Two years after its creation, you can see an expanding community of developers who support it, workshops all around the world''', new plugins and modules like ArduinoXbee (ZigBee communications interface), Arduino BT (arduino with bluetooth connectivity), Arduino Mini or the recent Arduino GPS, and third party projects as SquidBee."
+(http://www.freesoftwaremagazine.com/articles/making_open_hardware_possible)
+
+
+==Market Penetration==
+
+'''Regarding Google choosing the open source hardware platform (Arduino) for the “[[Android Open Accessory]]” kit''', by Phillip Torrone, May 12, 2011:
+
+"Besides there being about ''300,000+ Arduino “in the wild'',” '''I estimate there are about half a million people somehow doing something with the Arduino''', from students to people not even realizing they’re using this open platform in some way (Processing, education, etc). For a microcontroller platform, as I’ve said before, it’s won and it’s here to stay. Community, open IDE, open hardware, no-mess drivers, cross platform — it’s fairly cheap and easy to get going and do something right away. There really isn’t an easier way to get analog sensor data or control a motor easier and faster than with an Arduino — and that’s a biggie, especially if you’re a phone and want to do this.
+
+So with millions of phones out there and Google looking to make it dead simple to develop accessories, what easy-to-use, sensor-ready, open source platform has enough umpf to get this party started? Arduino. I’m sure that’s debatable (head to comments), but really, what else would be a better match?
+
+Keep in mind, the current “Arduino” hardware Google rolled out isn’t likely what’s going to be used as this matures. We’ll see cheaper (and better) versions shortly, although Google did give away free ones to everyone at Google I/O, and that’s hard to beat. I do think Google made some decisions in their first implementation that I don’t agree with — more on that in a bit."
+(http://blog.makezine.com/archive/2011/05/why-google-choosing-arduino-matters-and-the-end-of-made-for-ipod-tm.html)
+
+=Discussion 1=
+
+
+==Is Arduino Open Source?==
+
+Arduino has a trademarked name (http://arduino.cc/en/Main/FAQ),
+
+but: '''Is Arduino open-source?''' 
+
+"Yes. The source code for the Java environment is released under the GPL, the C/C++ microcontroller libraries under the LGPL, and the schematics and CAD files under Creative Commons Attribution Share- Alike licenses. I want to design my own board; what should I do? The reference designs for the Arduino boards are available from the hardware page. They’re licensed under a Creative Commons Attribution Share-Alike license, so you are free to use and adapt them for your own needs without asking permission or paying a fee. If you’re looking to make something of interest to the community, we’d encourage you to discuss your ideas on the hardware development forum so that potential users can offer suggestions. What should I call my boards? If you’re making your own board, come up with your own name! This will allow people identify you with your products and help you to build a brand. Be creative: try to suggest what people might use the board for, or emphasize the form factor, or just pick a random word that sounds cool. \”Arduino\” is a trademark of Arduino team and should not be used for unofficial variants. If you’re interested in having your design included in the official Arduino product line, please see the So you want to make an Arduino document and contact the Arduino team. Note that while we don’t attempt to restrict uses of the \”duino\” suffix, its use causes the Italians on the team to cringe (apparently it sounds terrible); you might want to avoid it."
+(http://www.adafruit.com/blog/2009/03/28/open-source-hardware-overview-slides/)
+
+
+==What do you mean by open-source hardware?==
+
+"Open-source hardware shares much of the principles and approach of free and open-source software. In particular, we believe that people should be able to study our hardware to understand how it works, make changes to it, and share those changes. To facilitate this, we release all of the original design files (Eagle CAD) for the Arduino hardware. These files are licensed under a Creative Commons Attribution Share-Alike license, which allows for both personal and commercial derivative works, as long as they credit Arduino and release their designs under the same license.
+
+The Arduino software is also open-source. The source code for the Java environment is released under the GPL and the C/C++ microcontroller libraries are under the LGPL."
+(http://arduino.cc/en/Main/FAQ)
+
+==Five Reasons why Arduino is popular==
+
+Wired:
+
+(By Priya Ganapati, July 6, 2010)
+
+Here are five reasons why the Arduino is more popular than the BeagleBoard:
+
+
+'''Starter Projects'''
+
+Editing and rewriting is often easier than writing from scratch. It’s the same with electronics. It’s easier to mod an idea than start with a blank slate.
+
+That’s where the BeagleBoard falls short. “It has virtually no example application that you can just copy and hack to learn from,” says Massimo Banzi, one of the co-founders of the Arduino project.
+
+The Arduino has hundreds of projects and ideas that are cooked up and shared by its users. For instance, check out this list of 40 Arduino projects that includes ideas such as a Wiimote-controlled Espresso machine, a biking jacket that flashes a turn signal and a wireless electricity monitor that tweets your power usage.
+
+It’s a chicken-and-egg problem for the BeagleBoard. Unless there are more example codes out there, it is difficult to draw in the audience. And without the audience it is challenging to get enough sample projects into the community.
+
+
+'''Cost and Durability'''
+
+At $30 a piece, an Arduino is an inexpensive investment for someone who wants to try it out. “It’s the price of a few sandwiches,” says Torrone.
+
+Compare that to the BeagleBoard-xM, which costs $180.
+
+One reason why the Arduino is so cheap is because it is easy to clone. The microcontroller is completely open source so the “components are all commodity,” says Torrone.
+
+With the BeagleBoard, hobbyists don’t have the same amount of freedom. They have to work closely with Texas Instruments or its partners, says Torrone.
+
+Arduino is also very resilient. Drop it, smash it and it still stays alive. Add to that its low-power requirement, and the product becomes a must-have for DIYers. An Arduino can run on a 9V-battery for days.
+
+“The BeagleBoard is fast and powerful but that also means lots of energy is needed, which makes it difficult for simple projects,” says Torrone.
+
+
+'''A Thriving Community'''
+
+Arduino’s popularity means it’s easy to get started. Companies such as Adafruit, SparkFun and Liquidware not only sell chips, but they also host blogs that suggest ideas on how to use your Arduino while providing extensive project plans to guide you in completing your creations.
+
+Will Chellman, a student who has played with Arduino for years, says he’s now experimenting with the BeagleBoard. But finding documentation and information to work off is not easy, he says.
+
+The lack of well-documented projects done with the BeagleBoard can be intimidating to new users as well, says Banzi.
+
+“There’s lots of of interesting stuff (about the BeagleBoard) but it is very technical,” he wrote in a comment recently on Gadget Lab in response to the launch of BeagleBoard-xM.
+
+Banzi says BeagleBoard documentation is also scattered and fragmented.
+
+“Parts of it have aged and you spend quite a bit of time jumping from wikis to mailing list to track which specific bit of documentation applies to your board, bootloader etc.,” he says.
+
+
+'''Maturity Is the Key'''
+
+Arduino has had a head start on the BeagleBoard. By October 2008, about 50,000 Arduino boards had already been shipped. That year, the first BeagleBoards started making their way into the hands of hardware enthusiasts.
+
+“The BeagleBoard is just two years old. Since it hasn’t been around long enough, there’s not enough people building apps based on it,” says Chellman.
+
+That’s not to say that BeagleBoard isn’t catching up. Earlier this month, we showed five projects ranging from a videowall to the iPad of ham radios that use the BeagleBoard. There’s also a build-your-own tablet kit that is based off the BeagleBoard.
+
+If DIYers take a shine to it, expect to see more ideas like these.
+
+
+'''Simple Is Attractive'''
+
+With its single-board computer configuration, 1-GHz processing power and the choice of accessories, the BeagleBoard is a creative engineer’s dream come true.
+
+But the same reasons make it intimidating to those who want to geek out on a DIY project but don’t have the technical know-how.
+
+Arduino users point out that it is simple to connect external sensors to the board, and the example codes out there make it easy to get started quickly.
+
+Arduino is a simple system designed for creative people with little or “no prior knowledge of electronics,” says Banzi. “It’s cheap and open source with lots of documentation written in a not too technical language. Above all, it has a very welcoming attitude towards beginners and tries not to scare them too much.”
+(http://www.wired.com/gadgetlab/2010/07/hardware-hobbyists-arduino/)
+
+
+==Why Arduino Won==
+
+
+By Phillip Torrone:
+
+* "The IDE Runs on Macs, Linux, and Win
+
+The IDE works on a Mac, Win, and Linux, and it’s completely open source. The IDE is how you program the Arduino — it’s based on Processing (a graphics programming language and development system popular with artists and designers), which has been around for a long time. It runs on Macs and Linux, not just Windows, and that matters if you want to be inclusive. It’s based on a strong and well-supported backend, the open source gcc toolchain, and wrapped in Java, so porting is easy and bugs can be found and fixed. There are enough smart people using and working on the IDE to keep it going strong. Want freaky cool people to do neat stuff with your platform? You gotta have your IDE run seamlessly on a Mac and also Linux.
+
+
+* The Driver Actually Work On Macs, Linux, and Win
+
+Again, like the IDE, the drivers to use the board work on Mac, Win, Linux, and the FTDI drivers “just work.” Sticking with serial, a well understood (but slow) interface, was a good call. Sure HID or something custom is cool and all, and can be much faster, but the serial chip works, can be used for debugging as well as programming, and easily slots into software tools like Java, Python, Perl, C, NET, BASIC, Delphi, MAX/MSP, and PureData, Processing, etc.
+
+
+* Libraries, Easy-to-Do Simple Things, Easy-to-Do Hard Things
+
+There are tons of object-wrapped libraries to do complex things, like writing to SD cards, LCD screens, parsing GPS. And there’s are also libraries to do simple things, like twiddle pins or debounce buttons. We’ve written UART setup code 10 times for 10 chips and frankly, we’re tired of it. Much nicer to just call Serial.begin(9600) and have it sort out the registers for us.
+
+
+* Lightwight, Runs on the Metal
+
+The code runs directly on bare metal, with a well-tested and understood compiler (we would even say that avr-gcc is the default/standard compiler for AVR.) It’s not interpreted like .NET or BASIC. It’s fast, it’s small, it’s lightweight, and you can use the HEX file to program fresh chips in bulk.
+
+ 
+* Sensors
+
+The Arduino really took off because it has analog-to-digital input, in other words, you can take in sensor data like light, temperature, sound, or whatever using the low-cost sensors already on the market and get that into the Arduino easily. It also has ready-to-go SPI and I2C for digital sensors. This covers 99% of sensors on the market. You can’t easily do this with other platforms — it’s completely bizarre to see a BeagleBoard (great product) with an Arduino basically strapped to it just to get sensor data in.
+
+
+* Simple, But Not Too Simple
+
+Many dev boards are historically enormously complex with a lot of added-on parts like LCDs, buttons, LEDs, 7-segments, etc,. showing everything it can do. Arduino has the bare minimum. Want more? Get a shield. There are hundreds of Arduino shields, from LCD to Wi-Fi, but it’s up to the user to add that. Shields add extra functionality easily, and there is a business incentive for others to make them.
+
+
+* Not Made By a Chip Maker
+
+The board was not designed by a chip maker. Why is this important? Chip makers often want to show how their product is different so they add weird things to differentiate themselves. The Arduino highlights commonalities between microcontrollers, not the differences. This means that the Arduino is a perfect beginner platform – everything you can do with an Arduino you can do with any other microcontroller, and the basics will last you for a long time.
+
+
+* Low Cost
+
+You can get an Arduino for $30, and we’ll probably see $20 Arduinos soon. Many dev boards start at $50 and could easily get to $100+, although now we’re seeing chip companies start to realize that its worthwhile to have a more pragmatic pricing strategy.
+
+
+* Open Source
+
+While it’s nice that Arduino is open source, and commercial use is allowed if you make a clone, it’s not the biggest reason, which is why it’s down near the end of the list. However, that isn’t to say it doesn’t matter at all. Specialized derivatives can be made without paying someone or asking anyone. It’s open source hardware so a company or school can use it without any per-seat licensing. There’s no risk that it will be discontinued and the software gone forever. If you want a new feature, you can spend the time and get it added. When thousands of people have a small stake in something, or ownership, they care more. Does anyone even debate if open source software is a good idea any more?"
+(http://blog.makezine.com/archive/2011/02/why-the-arduino-won-and-why-its-here-to-stay.html)
+
+=Discussion 2: Business Model Issues=
+
+See the specialized treatment at: [[Arduino - Business Model]]
+
+
+=Example=
+
+==A really really open Arduino? The Brasuíno-Holoscópio==
+
+"Brasuíno BS1 is a single board microcontroller inspired on Arduino that uses the AVR microcontroller. This Brazillian version was redesigned using Libre Software, free to reuse and derive, and it's licensed as GPLv2+ (the original Arduino still uses a microchip that is not open hardware). It's also compatible with Arduino Uno and Arduino software."
+(http://www.furtherfield.org/features/reviews/celebrating-brazilian-open-digital-culture-festival-cultura-digital)
+
+
+=More Information=
+
+#Full directory of [[Open Hardware]] projects via: [[Product Hacking]]
+#Listen to [[Massimo Banzi on Arduino]]
+#Book: [http://www.boingboing.net/2008/12/10/getting-started-with.html Getting Started with Arduino]
+
+[[Category:Design]]
+
+[[Category:Manufacturing]]

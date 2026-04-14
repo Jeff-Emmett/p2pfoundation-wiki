@@ -1,0 +1,60 @@
+
+=Discussion=
+
+Adam Brandt and Michael Dale:
+
+"''Net energy analysis (NEA) is a broad class of methods used to determine the effectiveness of energy capture and conversion systems. In this sense, NEA is the systems-scale analog to efficiency analysis of technologies. The end result from NEA is often an energy return ratio'' (hereafter ERR), which compares the amount of energy consumed in extracting an energy resource to the amount of valuable energy provided to society (or to the next stage in the energy processing chain if a tighter system boundary is used). For example, a gas turbine might be characterized by a well-defined conversion efficiency (e.g., MJ electricity/MJ natural gas input, LHV basis), while the efficiency of a natural gas extraction, processing, and distribution pathway can be measured using an ERR. Numerous ERRs exist, and the usefulness of a given ratio depends on its formulation and the question of concern.
+
+Net energy analysis rose and then fell from favor in the energy analysis community, with high interest occurring from ≈1975–1985 and again in recent years. One factor in the declining interest in NEA in the 1980s were concerns that an ERR provides no additional information beyond economic analyses. Also, NEA faced methodological difficulties without clear solutions. Recent interest has been spurred by concerns over oil depletion and interest in the fundamental energetics of the transition to renewable resources. This recent resurgence in interest in NEA sees current attention focused on a specific ERR known as the energy return on investment, or EROI."
+
+(https://www.mdpi.com/1996-1073/4/8/1211?ref=ageoftransformation.org)
+
+
+==The Usefulness of Energy Return Ratios==
+
+"Energy return ratios give different information depending on their formulation. For example the net energy ratio (NER) has as its numerator net output of refined energy to society, while the denominator contains all energy consumed in the energy production and refining process. In contrast, the denominator of the net external energy ratio (NEER) includes only those inputs that are consumed from the existing industrial energy system, excluding any “self use” (e.g., produced oil burned on site to power oil producing operations). Therefore, the NER is a more comprehensive measure of the total energy return from a production pathway, and will be closely correlated with environmental impacts of a pathway (such as greenhouse gas emissions). In contrast, the NEER is a more useful measure of the potential growth in energy supply to society because it only counts those inputs that must be produced and delivered externally through the existing energy supply system.
+
+Useful information can be obtained by comparing the values of NER and NEER for a given process. This comparison indicates to what extent a conversion and extraction process is self-fueled. For example, recent studies of oil shale development in the Green River formation of Colorado found that NEER was significantly higher than the NER for in situ and mine-and-retort oil shale extraction schemes [16,17]. This is because the oil shale retorting processes studied were fueled primarily by the energy content of the shale itself (either through combusting the spent shale “char” or by using co-produced HC gases to fuel shale retorting), not by external energy inputs. Thus, while the total amount of energy used in extracting oil from oil shale is large, comparatively little of that is commercial energy that must be provided by the rest of the energy system (thus NEER ≫ NER and the process is largely self fueling).
+
+Energy return ratios can also help illuminate two important aspects of an energy system: the quality of the energy resource being extracted, and the ingenuity with which humans extract that energy. A shift from high-quality resources (e.g., light, sweet conventional oil) to low-quality resources (e.g., Canadian oil sands) affects the efficiency of extraction, the cost of energy, and the overall environmental impacts from our energy system. Similarly, the sophistication with which we extract and convert energy affects the end cost to users and the environmental profile of energy use. In practice, it is difficult to disentangle technological factors from resource quality factors, and both will simultaneously affect the values of ERRs [18,19,20,21,22].
+
+Some have argued that the historical transition to high-ERR resources, such as conventional fossil fuels, has driven much of the improvement in quality of life in recent centuries [23,24,25]. This transition to high-ERR resources is a complex interaction of economic growth, technological change, and capital investment. For example, Sorrell [26] describes the intertwined processes that occurred early in the industrial revolution, whereby some of the energy mined as coal was reinvested into coal extraction, either directly (e.g., to run steam engines in order to de-water deep coal mines) or indirectly (in the form of steel for railways used as coal transport infrastructure). This positive feedback, driven by a high ERR resource, allowed the industrial system to push coal energy supply into all forms of industrial activity.
+
+
+==The Limitations of Energy Return Ratios==
+
+One problematic feature of NEA is that the energy return ratios used are often poorly defined. Methods vary between authors, and authors often fail to state system boundaries explicitly or to report data on the magnitudes of flows used in deriving ERRs. Recent efforts have been made to define standard methods of computing EROI [14,15,27,28].
+
+Also, methods that sum disparate energy types often do not capture valuable attributes of energy sources other than their energetic content [3]. This problem is profound for electricity, which has a per-MJ cost (and value) significantly higher than the primary fuels used to generate it (such as coal). Huettner argued that net energy analysis will achieve similar results to economic analysis when fuels are valued solely by their energy content (such assumptions are the basis of so-called “energy theories of value”) [2]. Since energy carriers are also valued by other characteristics (such as thermodynamic order, convenience, and cleanliness), energy theories of value are lacking as complete frameworks of analysis. Cleveland and others have addressed this limitation by weighting energy inputs and outputs by economic value [3].
+
+More fundamentally, ERRs cannot be comprehensive indicators because energy is only one of a number of scarce factors that have fundamental economic value [29]. Other prominent factors include time, space, information, and organized (low-entropy) matter [30]. This causes economically-oriented critics to argue that NEA is only able to capture a subset of the information contained in an economic analysis [2,31]. Of course, other metrics for understanding energy systems (like conversion efficiencies) suffer from similar limitations. These limitations are offset by the fact that NEA is useful in understanding poorly monetized factors such as environmental impacts, as well as understanding the energetic usefulness of subsidized energy systems.
+Another problematic aspect is that temporal aspect of energy flows is absent from simple NEA [12]. This can be illustrated by financial analogy: if a company offers investors a bond with a total monetary return on investment (say, MROI) of 1.2 (i.e., the investor receives $1.20 for each dollar invested), this could either be a good investment or a poor one: if it is a 10 year bond then this is a very low rate of return, while if it is a 3 month bond then this is an excellent rate of return. Thus, the total return on investment (whether monetary or energetic) is a less useful indicator without information on the time it takes to earn the return. Since all organisms, as well as our economy, are temporal entities that utilize flows of energy, total energy returns are only a partially useful indicator [1].
+
+ERRs are only well defined in relation to a specific investment project with a well-specified start and end date over which the analysis is performed. Any system that is the combination of many such projects with staggered start and end dates (such as the global energy system), specifying any finite time-period of analysis will not capture the true energy return, since current production is a result of past investment (possibly made before the analysis began) and investment in the present is made to generate returns at some future date (perhaps after the analysis has finished). Definition of the ERR as the ratio of gross energy production during the time period, 𝑡0 to 𝑡0+Δ𝑡, over all investments into the energy production process during the same period, assumes that the system is at steady-state, i.e., is not changing in size. This may introduce important errors in rapidly growing systems [12].
+
+Lastly, NEA suffers similar from the same general difficulties as life cycle analysis (LCA), of which it can be considered a sub-type. For example, ERRs are most useful when they are used to compare processes with equivalent final product outputs (e.g., comparing two methods of producing liquid fuels for spark-ignition internal combustion engines). NEA is often plagued, like LCA, by ambiguous or poorly defined system boundaries, and faces the danger of “truncation error” from failing to include upstream inputs [32,33]. For example, when computing the NER of a solar panel, should one include energy embodied in the aluminum frame surrounding the panel? What about the food consumed by workers mining the bauxite ore used in aluminum production [34]? There is also unavoidable uncertainty in dealing with co-product allocation. For example, oil and natural gas are often produced from the same well, and it is unclear whether the oil or the gas should be assigned the energy cost of drilling wells and pumping fluids. Also, should the cost be allocated between oil and gas based on proportional mass, energy content or economic value of the oil and gas? And lastly, there are ambiguities associated with accounting for internal energy usage vs. external energy usage. This is a sub-problem of the system boundaries issue."
+
+(https://www.mdpi.com/1996-1073/4/8/1211?)
+
+
+=More information=
+
+'''* Article: A General Mathematical Framework for Calculating Systems-Scale Efficiency of Energy Extraction and Conversion: Energy Return on Investment (EROI) and Other Energy Return Ratios. By Adam R. Brandt and Michael Dale. Energies ''2011'', 4(8), 1211-1245; [https://doi.org/10.3390/en4081211 DOI]'''
+
+URL = https://www.mdpi.com/1996-1073/4/8/1211?
+
+
+"'''The efficiencies of energy extraction and conversion systems are typically expressed using energy return ratios (ERRs) such as the net energy ratio (NER) or energy return on investment (EROI)'''. A lack of a general mathematical framework prevents inter-comparison of NER/EROI estimates between authors: methods used are not standardized, nor is there a framework for succinctly reporting results in a consistent fashion. In this paper we derive normalized mathematical forms of four ERRs for energy extraction and conversion pathways. A bottom-up (process model) formulation is developed for an n-stage energy harvesting and conversion pathway with various system boundaries. Formations with the broadest system boundaries use insights from life cycle analysis to suggest a hybrid process model/economic input output based framework. These models include indirect energy consumption due to external energy inputs and embodied energy in materials. Illustrative example results are given for simple energy extraction and conversion pathways. Lastly, we discuss the limitations of this approach and the intersection of this methodology with “top-down” economic approaches."
+
+
+
+
+
+
+[[Category:Energy]]
+[[Category:P2P Accounting]]
+[[Category:Thermodynamic Efficiencies]]
+
+[[Category:Energy]]
+[[Category:P2P Accounting]]
+[[Category:Thermodynamic Efficiencies]]

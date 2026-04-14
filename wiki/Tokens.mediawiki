@@ -1,0 +1,382 @@
+
+'''= virtual currencies used in companies based on blockchains'''
+
+
+=Definition=
+
+William Mougayar:
+
+"I'''n the technical realm''' of the blockchain, the concept of a cryptocurrency token is well understood. It represents ''a programmable currency unit that is bolted to a blockchain, and is part of smart contract logic in the context of a specific software application''. 
+
+But '''in the non-technical arena''', what is a token, really? A token is just another term for ''a type of privately issued currency''. Traditionally, sovereign governments issued currency and set its terms and governance; in essence directing how our economy works with money as the exchange medium for value. With the blockchain, we now have new types organizations (and soon, more of the existing type) who are issuing their own currency in the form of digital money as cryptocurrency, and they are setting their own terms and rules around its operations, in essence creating new self-sustainable mini-economies. What was the purview of governments is now in the hands of the many.
+
+In '''the business realm''', we can define the token as: ''A unit of value that an organization creates to self-govern its business model, and empower its users to interact with its products, while facilitating the distribution and sharing of rewards and benefits to all of its stakeholders''."
+(https://medium.com/@wmougayar/tokenomics-a-business-guide-to-token-usage-utility-and-value-b19242053416)
+
+
+=Description=
+
+'''1.'''
+
+"Tokens are the new “new” thing in the blockchain space. Just when everyone thought that blockchains were hot enough, everyone realized that tokens *are* the business model for Web 3.0.
+
+A decentralized system spreads control among many parties. It may or may not be tokenized. The key benefit of tokens is to align incentives among participants of the ecosystem. It’s a positive-sum game among the tribe of token holders. (And let’s not forget the windfall of a token launch, if you choose that path.)
+
+So far, only startups have launched tokens. But what about enterprises? Could we tokenize Facebook? What about Amazon or IBM? How? What would be the benefit?
+In short: tokens will eat the enterprise from within, because investors will make money and the community will gain. We’ll have crypto tribes that started as companies. Repeat across many enterprises and it means goodbye to the stock market."
+(https://blog.bigchaindb.com/tokenize-the-enterprise-23d51bafb536)
+
+
+'''2. Josiah Wilmot:'''
+
+"Because the term “ICO” is a derivative of “initial public offering” (ICO), utility token creators usually refer to these crowdsales as token generation events (TGEs) or token distribution events (TDEs) to avoid the appearance that they are engaging in a securities offering."
+(https://strategiccoin.com/ico-101-utility-tokens-vs-security-tokens/)
+
+=Typology=
+
+Token Classification Framework at https://medium.com/untitled-inc/the-token-classification-framework-290b518eaab6
+
+==1==
+
+===1. Coins or Cryptocurrencies===
+
+Micha Benoliel:
+
+"These are digital currencies like Bitcoin in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds. They are operating independently of a central bank.
+
+Soon every fiat currency may become a cryptocurrency, in that case operating with central banks. This is what Singapore has started with their Ubin project.
+
+
+===2. Utility tokens===
+
+'''1.'''
+
+The utility tokens are services or units of services that can be purchased. As describes in Balaji S. Srinivasan post, these tokens can be compared to API keys, used to access the service.
+
+They are a way to fund projects of shared infrastructure that couldn’t be funded before. To enable such ecosystems to be built some tokens can be “pre-mined” in addition to be sold in “crowd-sales” during tokens launches.
+
+
+'''2. Liechtenstein Cryptoassets Exchange:'''
+
+"Utility tokens represent access to a company’s (future) product or service — like a voucher. Utility tokens are not designed as investments, but as purchases. They are a unit of account for the network to which the utility token gives access, and the bigger the networks becomes, the more utility the token gives access to. Moreover, the utility token will become more valuable with an increase in demand as the industry standard is to cap the maximum number of issued tokens, which the majority of existing projects adhere to.
+
+Participants of an ICO for a utility token are buyers of a product or service, not investors. The outcome of their purchase is the ability to use the product or service their utility token gives access to. Besides the access to the network, product or service, a utility token can also give access to dynamics such as the governance of the network and staking mechanisms, among many other features that can be coded in to the programmable digital assets.
+
+To illustrate utility tokens in a real world context, we can compare these digital assets to pinball tokens. Such tokens provide access to one specific utility, playing pinball. Now imagine that there’s a limited number of these tokens and that the pinball game is continuously given new, valuable features in the form of new gameplay elements, making the pinball machine unique. The inserted tokens are distributed to those developing and adding value to the game, who can sell them to people eager to play. As more people want to play the game, the demand for the tokens will increase but the supply will remain the same, making the tokens more valuable. To illustrate the governance element of utility tokens, pinball token holders can use their holdings to vote on improvements to the game they want to see implied, and thus vote on which developer receives the tokens.
+
+In conclusion, a defining characteristic of a utility token is that it is not designed as an investment, which exempts it from the extensive body of traditional security regulations."
+(https://medium.com/lcx/from-network-backed-to-asset-backed-will-security-tokens-take-crypto-mainstream-37f5547c2948)
+
+===3. Tokenised securities:===
+
+Tokens are representing shares of a business. In addition, considering the SEC announcement any token that can’t pass the Howey test should be considered as a security and fall under the 1934 Security Exchange Act. "
+(https://medium.com/startup-grind/understanding-the-difference-between-coins-utility-tokens-and-tokenized-securities-a6522655fb91)
+
+
+====Discussion====
+
+LCX:
+
+"Securities have been around since the 13th century and are widely understood and subject to extensive regulatory frameworks. Based on Investopedia’s definition, traditional securities are financial instruments that hold some type of monetary value and represent ownership (stock), a creditor relationship (bond), or the representation of rights to ownership (option). They can provide a variety of financial rights to the owner of the securities, such as equity, dividends, or interest. Moreover, investors in securities expect the value of the security itself to appreciate over time.
+
+Additionally, security tokens are defined as “essentially, digital and liquid contracts for fractions of any asset that already has value, like a house, a car or equity in a company”. Security tokens thus denominate fractional ownership of value-holding assets in tokens. A key difference with traditional securities is that security tokens represent programmable ownership, giving the assets more functionalities, flexibility and built-in automation of security-related processes.
+
+Both securities and security tokens derive their value from their underlying asset and are generally very similar. Because of these similarities, security tokens are easily classified and subject to existing regulatory frameworks in place for traditional securities. Even though entrepreneurs in the space have been going through lengths not to have their token classified as a security to avoid to stringent red tape and high registration costs, having your token registered as a security does allow the digital asset to smoothly fit into existing rules and regulations. This enables the token to be compliant from the start instead of finding itself in the regulatory twilight most digital tokens are currently positioned in.
+
+To illustrate the classification of a security, we can use the American Howey Test, a test designed to assess whether a transaction is in fact an investment contract. 
+
+
+The test entails 4 core criteria:
+
+* There is a capital investment;
+* The investment is in a common enterprise;
+* There is an expectation of profit;
+* The profit stems from the work of the promoters or the third party (outside the investor’s control)
+
+
+If these criteria are met, a token classifies as a security. However, questions have been arising as to whether the Howey Test and other security criteria, stemming from the pre-digital era, are still an appropriate measure for assessing whether an asset is a security, especially with the rise of security tokens. We’re expecting more legal clarity regarding this over the coming years."
+(https://medium.com/lcx/from-network-backed-to-asset-backed-will-security-tokens-take-crypto-mainstream-37f5547c2948)
+
+==2==
+
+Josiah Wilmot:
+
+"Like cryptocurrencies, tokens are fungible and tradable, but they are also unique in that their value is derived from something they represent, such as company equity or access to a service — not their utility as a currency or store of value. Two common types of ICO coins are equity tokens and utility tokens.
+
+===Equity Tokens===
+
+Equity tokens are a subcategory of security tokens that represent ownership of an asset, such as debt or company stock. By employing blockchain technology and smart contracts, a startup could forgo a traditional initial public offering (IPO) and instead issue shares and voting rights over the blockchain. Additionally, a lender could create tokens that represent debt owned by the company, enabling loans to be bought and sold in a high-liquidity environment.
+
+Many people believe that equity tokens will eventually become the predominant type of ICO token. However, the U.S. Securities and Exchange Commission (SEC) has indicated that equity tokens are subject to federal securities regulations, and as of the time of writing, few startups are equipped with the resources to issue equity tokens that comply with all applicable regulations. Consequently, investors should not contribute to an equity token ICO without obtaining guidance from a legal professional who specializes in federal securities law.
+
+===Utility Tokens===
+
+Utility tokens, often called app coins or user tokens, provide users with future access to a product or service. Through utility token ICOs, startups can raise capital to fund the development of their blockchain projects, and users can purchase future access to that service, sometimes at a discount off the finished product’s sticker price.
+
+An example of a utility token is the Basic Attention Token (BAT). As Strategic Coin explains in its BAT token launch research report, the BAT token functions as a medium exchange between users, advertisers, and publishers who participate in the Brave browser ecosystem. Advertisers purchase ads using BAT tokens, which are then distributed among both publishers and browser users as compensation for hosting the ads and viewing them, respectively. 
+
+Utility tokens are not designed as investments; however, many people contribute to utility token ICOs with the hope that the value of the tokens will increase as demand for the company’s product or service increases. Utility token price fluctuations can be compared to those of sporting event tickets. The value of a ticket to a future sporting event may increase if one or both of the teams wins a significant number of games and becomes a contender for the championship. On the other hand, that same ticket may decrease in value if a star player suffers an injury or a team goes on a prolonged losing streak."
+(https://strategiccoin.com/difference-utility-tokens-equity-tokens/)
+
+==3==
+
+Nick Tomaino:
+
+"The first thing to realize when thinking about this question is that there are different tokens that offer different types of fundamental value. The four major token types are: traditional asset tokens, usage tokens, work tokens, and hybrid tokens. 
+
+
+===Traditional asset tokens===
+
+The token type that has obvious fundamental value is any type of traditional asset token that cryptographically represents underlying traditional assets such as equity, real estate, gold, etc. The value underlying tokenized traditional assets is well understood and outside the scope of this post. I think we will see a proliferation of traditional asset tokens as regulatory clarity increases because of the liquidity and global nature of tokens on blockchains. To date though, this is the least common and interesting type of token in my view (of the top 10 tokens by market value today, none of them represent traditional assets).
+
+
+===Usage tokens===
+
+A usage token is a token where a digital service is offered and the token is required to access that digital service that no centralized party controls. Protocol is the sexy word that people tend to use but its easier for an average person to simply think of a protocol as a public digital service.
+
+To the extent that the digital service is useful and supported by a scarce and unique set of resources, the value of the token underlying that digital service will persist. The fundamental value of usage tokens is determined by the uniqueness of the resources underlying the digital service and the utility of the decentralized digital service itself.
+
+Usage tokens are the most popular type today and Bitcoin is the best known example of a usage token to date. One needs bitcoin (BTC) to use the Bitcoin blockchain, which is secured by more hashing power than has ever been aggregated before. The resources that power the digital service Bitcoin provides are: the hashing power that secures the blockchain, the users and the developers. To the extent that these resources remain unique and differentiated and people get utility out of a secure, public, distributed ledger, Bitcoin will maintain some level of fundamental value.
+
+
+===Work Tokens===
+
+A work token is a token that gives token holders the right to contribute work to a decentralized organization to help enable that decentralized organization to function. In some cases there are fees rewarded for that work, but not always. The fundamental value of a work token is determined by the utility that token holders get from the decentralized organization. That utility can come in the form of fees (a more direct utility) or good will (a less direct utility).
+
+Work tokens are far less understood than traditional asset tokens and usage tokens to date. There are a few good examples of work tokens, like Augur’s Reputation (REP), and Maker DAO’s Maker (MKR), but not many. In Augur, one does not need REP to use the decentralized prediction market, but REP instead gives stakeholders the right to report on outcomes of events, which is necessary for the whole system to function properly. In the case of Maker, MKR stakeholders are the governors of the decentralized organization, providing a number of services required to make the organization function properly (including being the backdrop of CDPs in the system).
+
+When evaluating a work token, the most important question to ask is: will people continue to get utility from the service being provided by the decentralized organization?
+
+
+===Hybrid Tokens===
+
+Many future tokens may function as both usage and work tokens. When Ethereum switches from proof of work to proof of stake, ETH will be both a usage token (you need gas to use the EVM) and a work token (ETH gives you the right to validate transactions and earn in exchange for that work). Based on the white paper, the upcoming Filecoin (FIL) from Protocol Labs looks to be another example of a token that functions both for usage (one needs FIL to use the decentralized storage system) and work (one needs FIL to contribute storage space to the system as well)."
+(https://thecontrol.co/on-token-value-e61b10b6175e)
+
+
+==Fungible Tokens vs. Non-Fungible Tokens (Ethereum)==
+
+Joseph Pallant:
+
+"The rules for “Non-Fungible Tokens” (NFTs) built on the Ethereum blockchain have recently been standardized. If “Fungible Tokens” (FTs) are like cash, NFTs are like baseball cards. Each NFT is unique, and holds a distinct set of data. It’s these same NFTs that will allow us to embed specific information pertaining to each tonne of carbon directly into a new blockchain token. However, these tokens typically represent only one unit of their respective type, hence you’d need to mint a new NFT for every tonne of carbon."
+(https://medium.com/@blockforclimate/putting-the-paris-agreement-on-the-blockchain-57eda4c481af)
+
+See also: [[Unique Fungible Tokens for Carbon Reduction]]
+
+=Characteristics=
+
+Key Kreutler:
+
+"for DAOs with the mission of economic value creation, a token becomes a useful mechanism on three fronts:
+
+* Bootstrapping Funding
+    
+* Distributing Governance Rights
+    
+* Aligning Ecosystem of DAOs
+
+Tokenization introduces a powerful cultural norm into early stage organizations: the expectation of transparent co-ownership of its assets from the start. The tension between more traditional corporate structures that pay dividends and DAOs persists (17). Because most DAOs represent governance rights through a token, in some sense tokens Trojan horse principles of cooperatives directly into highly financialized spaces. These are two important sides of, quite literally, one coin, and for this reason, tokenization should not be dismissed. Tokens may be one key to unlock the ownership economy, but to reach a more equitable version of this future, we must participate in crafting the culture around token distribution, mediation, and governance now. This becomes important because, unlike shares in cooperatives, many tokens that double as governance rights can be sold on secondary markets. While this makes the conditions for entrance into an organization easier, DAOs can learn from cooperatives’ emphasis on long termism, through establishing more cultural patterns around token vesting, limited transferability, or more experimental mechanisms."
+
+(https://gnosisguild.mirror.xyz/t4F5rItMw4-mlpLZf5JQhElbDfQ2JRVKAzEpanyxW1Q)
+
+
+==William Mougayar==
+
+William Mougayar:
+
+Twenty things a token can enable:
+
+
+#Is the token tied to a product usage, i.e. does it give the user exclusive access to it, or provide interaction rights to the product?
+#Does the token grant a governance action, like voting on a consensus related or other decision-making factor?
+#Does the token enable the user to contribute to a value-adding action for the network or market that is being built?
+#Does the token grant an ownership of sorts, whether it is real or a proxy to a value?
+#Does the token result in a monetizable reward based on an action by the user (active work)?
+#Does the token grant the user a value based on sharing or disclosing some data about them (passive work)?
+#Is buying something part of the business model?
+#Is selling something part of the business model?
+#Can users create a new product or service?
+#Is the token required to run a smart contract or to fund an oracle? (an oracle is a source of information or data that other a smart contract can use)
+#Is the token required as a security deposit to secure some aspect of the blockchain’s operation?
+#Is the token (or a derivative of it, like a stable coin or gas unit) used to pay for some usage?
+#Is the token required to join a network or other related entity?
+#Does the token enable a real connection between users?
+#Is the token given away or offered at a discount, as an incentive to encourage product trial or usage?
+#Is the token your principal payment unit, essentially functioning as an internal currency?
+#Is the token (or derivative of it) the principal accounting unit for all internal transactions?
+#Does your blockchain autonomously distribute profits to token holders?
+#Does your blockchain autonomously distribute other benefits to token holders?
+#Is there a related benefit to your users, resulting from built-in currency inflation?
+
+===The Right===
+
+Owning a token bestows a right that results in product usage, a governance action, a given contribution, voting, or plain access to the product or market. In some cases, tokens will grant real ownership, even if most organizations are trying to avoid passing the Howey Test by skirting around the ownership aspect. For examples, look at Numerai, DigixDAO, FirstBlood and Tezos.
+
+
+===The Value Exchange===
+
+The token is also an atomic unit of value exchange inside a particular market or app, resulting in the creation of a transactional economy between buyers and sellers. This consists of features that allow users to earn value and to spend it on services that are internal to the inherent ecosystem. They can earn it by doing active work (real work and actions), or passive work (e.g. sharing data). The creation of such an internal economy is arguably one of the most important outcomes, and one that must be sustained over time. For examples, look at Steemit, Kik, Tezos, and Augur.
+
+
+===The Toll===
+
+Just like paying a toll to use a freeway, the token can be the pay-per-use rail for getting on the blockchain infrastructure or for using the product. This also ensures that users have skin in the game. It can include running smart contracts to perform a specific function, paying for a security deposit, or plain usage fees in the form of transaction fees or other metered metric. For examples, look at Gnosis, Augur, Melonport, Tezos, Dfinity, Ethereum, and Bitcoin.
+
+
+===The Function===
+
+The token can also be used as a lever to enrich the user experience, including basic actions like joining a network, or connecting with users. It can also be used as an incentive, if it is given in return to begin usage or for on-boarding. For examples, look at Dfinity, Steemit, Civic, and Brave.
+
+
+===The Currency===
+
+The token is a very efficient payment method and transaction engine of choice. This is key for enabling frictionless transactions inside these closed environments. For the first time, companies can be their own payment processors without the cumbersome or costly aspects of traditional financial settlement options. Tokens offer a much lower barrier for processing end-to-end transactions inside a given market.
+
+
+===The Earnings===
+
+An equitable redistribution of the resulting increased value is part of what blockchain-based models can enable. Whether it is profit sharing, benefits sharing or other benefits (such as from inflation), sharing the upside with all the stakeholders is expected."
+(https://medium.com/@wmougayar/tokenomics-a-business-guide-to-token-usage-utility-and-value-b19242053416)
+
+
+==Five Dimensions==
+
+From the Token Classification Framework:
+
+(see the graph at [https://cdn-images-1.medium.com/max/2000/1*c6DQbkUZt_xGrYvUoRgu5A.png])
+
+===Purpose.=== 
+
+What is the token’s main purpose? What is it designed to do? This dimension illustrates why the people who call any token a cryptocurrency err. Tokens can certainly be intended as a cryptocurrency. But often they are meant to enable a specific network and catalyze its growth (network tokens) or merely present a way to invest in an entity or asset (investment token).
+
+
+=== Utility.===  
+
+The term “utility token” has become commonplace¹ but there are various types. When looking at different tokens, you’ll find many approaches to creating utility for token owners. But on an abstract level, there are two major ways to provide utility: by giving access to network or service features (usage tokens) or by allowing token holders to actively contribute work to the system (work tokens). Some tokens do both (hybrid tokens) and some tokens don’t provide any utility at all².
+
+=== Legal Status.===  
+
+The legal perspective is extremely relevant as of now, so it is reflected in the framework. The category’s content, however, is expected to change quite a bit in the upcoming months as it is a volatile environment and more regulation is expected to emerge. Moreover, every jurisdiction can differ. The general outline of the current state in multiple countries is that tokens which aren’t clearly a utility token — i.e. a means to access features of a network/service — or which aren’t a pure cryptocurrency can easily be classified as a security token by regulators. In some jurisdictions, such as Germany, there is some definition by regulators as to what constitutes a cryptocurrency. Several cases we found hover between two types, due to fact that current legal frameworks have been created before tokens existed and most haven’t been updated so far. (This isn’t legal advice.)
+
+
+=== Underlying Value.===  
+
+Most tokens are created to have a monetary value. But the sources of their value differ considerably. Some basically work as IOUs to a real-world asset which they are tied to (asset-backed tokens). Others showcase stock-like properties as they are linked to the commercial success of the issuing entity. Those share-like tokens would be regarded as securities in most jurisdictions (actual enforcement by the regulator is a different subject). Finally, there are tokens which are tied to the value of a network, not a central entity (network value tokens). The latter might be the hardest to wrap one’s head around and the most interesting value source at the same time.
+
+
+=== Technical Layer.===  
+
+Tokens can be implemented on different technical layers of blockchain-based systems: on the blockchain level as the chain’s native token (blockchain-native tokens), as part of a cryptoeconomic protocol that sits on top of the blockchain (non-native protocol tokens), or on the application level ((d)App tokens)."
+(https://medium.com/untitled-inc/the-token-classification-framework-290b518eaab6)
+
+
+=History=
+
+==Tokens and the history of abstracting social relations==
+
+Mehmet Gunus:
+
+"The emergence of coinage in the ancient kingdom of Lydia during the 7th century BCE marked a structural shift in the organization of value. Electrum coins — milled from a naturally occurring gold-silver alloy and weighted into standardized units — allowed value to be represented, counted, and stored in portable form. Prior to this development, the exchange of goods depended on negotiated equivalences, customary obligations, or tribute systems embedded in hierarchical social arrangements. Standardized coinage introduced a numerical abstraction: value became a unit that could be counted, compared, and transferred without reference to personal status or reciprocal relationship.
+
+At approximately the same historical moment, the Ionian city-states to the west of Lydia experimented with countable political participation. In these assemblies, political decisions were recorded by the placement of pebbles (psēphoi), producing a procedural parallel to the standardized measure of value that emerged in Lydia. The act of counting became a shared principle underlying both economic and political order. As Kojin Karatani argues, coins and votes do not resemble one another by analogy; they are both historical expressions of the same underlying abstraction: the tokenization of social relations (Karatani, Isonomia and the Origins of Philosophy, 2017). A token is not merely a symbol but a device that allows relationships to be represented independent of the individuals who enact them. The emergence of the token thus made possible a society in which units of value and units of decision could be aggregated, partitioned, and transferred.
+
+This parallel origin matters because it indicates that monetary systems and political systems — often studied as separate domains — have historically been co-constitutive. The form in which value is stabilized affects the form in which authority is distributed, and vice versa. When value becomes countable, political will can be made countable; when both become countable, collective life can be coordinated beyond the limits of kinship, memory, and direct reciprocity. The abstraction of value is therefore not an economic event alone; it is also the precondition for political abstraction."
+
+(https://medium.com/@said.mehmet/tokens-value-and-the-parallel-emergence-of-political-and-economic-abstraction-9e21a4aa168e)
+
+
+=Discussion=
+
+==A Token is an Organization ... and a Commons!==
+
+Rutger van Zuidam:
+
+"A token ecosystem is more than a blockchain or “coins”. It is an information (also value) carrier. An economic structure where multiple parties, often with conflicting interests, coordinate their actions coherently — without any formal organization in the conventional sense of the word. All coordination is literally encoded in the protocol, including the governing and regulatory aspects. Compare it to traffic rules and laws.
+
+This has given rise to a whole new area of economics: token economics; a mix of micro economics, game theory and behavioral economics. Again, the hard work has to be done before the coding starts. What are the goals of the ecosystem, what are the actors involved, what are their motives and goals and what rules and incentives do we need to align all these different actors and interests?
+
+This is not so much about software engineering. This is about engineering complex systems. It’s about creating interconnected collaborative communities.
+Once launched, a token ecosystem can be a self regulating organization. No one is in charge, and it is owned by itself. We know relatively little of the needs of this kind of organizations. Should it have a specific legal framework? It’s own regulatory framework? What kind of standards will it adopt or reject and why? How will it fund itself? How will it fund its changes? Which changes? The fact that these organizations are digital and (thus) borderless makes answering these questions even more difficult. But that doesn’t mean there is no way forward. On the contrary, there is so much of this in the making right now and we can only find out how it works by actually putting this to work.
+
+===Blockchains and Tokens are Part of the Digital Commons===
+
+One of the most interesting aspects of open blockchains especially, is that something (code, data, protocols) has come into existence that is not owned by any private or public entity. It is not unique in this respect — there is a long tradition of Public Domain and Open Source software, and there is a large amount of digital content in the Creative Commons. But still, it is relatively rare that valuable resources are created, maintained and upgraded outside the scope of both the state and the private sector. It seems to defeat the economic law that is known as “the tragedy of the commons”.
+
+The commons, of course, refers to the pre-industrial communal meadows that existed throughout Europe. But the commons never really vanished, in Europe. Many institutions, from building unions in Britain to vinicultural co-ops in France to the “waterschappen” (polder and dike authorities) in the Netherlands have strong communal characteristics. One could say that the commons are deeply rooted in European culture.
+
+In the digital domain, the commons have been brought up as an alternative to what has been dubbed data capitalism, platform capitalism or even surveillance capitalism. Because of the strong network effects in the digital economy, markets have a tendency towards monopolies. By putting infrastructure, protocols and certain data in the commons, one can create “fat protocols” (UPDATE: These are more precisely described as Application Layer Protocols, as suggested by sebnem), so that a much larger part of the network value falls to the community — and private companies can offer their services in competition on top of that, without fear of monopolization.
+
+'''To sum it all up: #commonization'''
+
+… we have learned that the real value of blockchain and tokens lies in the possibility to “commonize” important parts of the digital infrastructure. At the most fundamental level, we are talking about only a handful of entities: value, identity, maybe two or three more. One level higher, we envision things like a commonized infrastructure for energy, for payment systems, for supply chains, for pension rights, for consent, and many, many more (we can build protocols on top of these protocols). Each new protocol a fresh market with opportunities for business to deliver value.
+
+We know, by and large, what we want to build. Ecosystems. Complex systems that are antifragile because of their decentralized nature, that thrive in unpredictable conditions. We take our inspiration from nature itself."
+(https://medium.com/@rutgervz/blockchain-and-tokenization-beyond-the-hype-8bacd3c43481)
+
+
+
+==Designing Tokens for the Commons Economy==
+
+Akseli Virtanen:
+
+"In their money role, crypto-tokens can be an alternative unit of account, not just a means of exchange. They open a possibility to invoke a new measure of value, not just facilitate new processes of trade. As such, tokens can have a ‘backing’ in the value of output they facilitate, and not function simply as tools of speculative position-taking. Here is their radicalness, that they open a possibility of re-thinking and re-engineering what we understand by production. What are the new social units of production? How is such production measured as a social contribution? How is output distributed, accessed and owned? Re-defining and re-measuring production provides the material basis of the crypto economy — a basis that gives crypto-tokens a long-term future as the currency of an alternative economic logic. A different way of doing economy."
+(https://medium.com/econaut/cryptoeconomics-working-sessions-at-nyu-stern-24a60d99d243)
+
+
+==Tokens as Derivatives==
+
+"We don’t know yet what tokens can do. To approach tokens only as “money” or “assets” is to approach through an old paradigm. In their ownership role, crypto-tokens can be derivatives (purchases of risk exposure, not just asset ownership) designed so that people risk together, not individually. They are distributed economic-organizational systems. Organizing tools in the interactive logic of contingent claims and speculative positions. Just like derivatives, tokens can work as collective tools, as collective approaches to risk taking, as ways to share the upsides created by facing change (volatility) together. Can we think, design, and use these decentralized organizational-economic applications (these “tokens 2.0”, these “cryptographically enabled distributed economic and social systems”) as derivatives in precisely this sense? Can we think them as a new value form?"
+(https://medium.com/econaut/cryptoeconomics-working-sessions-at-nyu-stern-24a60d99d243)
+
+
+==The long-term value of tokens==
+
+Dick Bryan:
+
+"Long-term token values will be determined by three factors:
+
+The current valuation of a token business
+Projections of the future positions of that business
+The level of ‘speculation’ on crypto assets and financial assets generally
+We know that the third factor is impossible to explain. It depends on what Keynes called ‘animal spirits’. It is likely that speculation will remain high, for this is an immature market with rapid new entry in a sector of the capital market with widely-appreciated potential but low levels of technical comprehension. It makes valuation difficult, but it is unavoidable.
+
+The second factor is also impossible to know with certainty. We know that the emerging landscape of cryptographically enabled distributed economic and social systems is changing exponentially, and that there will be some extraordinary success stories and some dismal failures. But we cannot yet know which is which. There is a proposition that, in this dimension, tokens be equated with call options: the right to participate in/own an as yet unknown future. It is an important insight, although our capacity to value the option is also limited. Critical to pricing options is quantifying the volatility of the underlying asset and the time to maturity. We cannot yet model volatility, and we cannot know the time horizons of success.
+
+But the first factor can potentially be known for crypto tokens that exist to produce something: an accountable, measurable value of some kind. This is an area where many token launches are vague, if not entirely silent. But it is the one domain in which current tokens can and should be critically valued. We face the danger that too many coin issuances are pitching an idea, but without nominating means to measure/validate its success.
+
+A thought experiment: the ECSA economy proposes to define and measure value as it has never before been measured. We want to measure value in terms of social contribution, not contribution only to profit. We want to measure produced social benefits, and most of them do not make conventionally-defined profits. Recognising the existence of these contributions is not new. Measuring them in terms of a new unit of account is new. But is it possible?
+
+The measurement process is important if we would like to report to the public, each year, estimates of the value of output created within ECSA. Our thinking right now is that financial markets place a value on this production. In combination with available data like the quantum of tokens in circulation and the balance sheets of ECSA, we believe that the ‘market’ will be able to assess the fundamental current value of ECSA. This is critical for the market needs this information to make clear evaluation of the current value of ECSA tokens."
+(https://medium.com/econaut/valuation-crisis-and-crypto-economy-39c5b7e373af)
+
+
+==Why App Tokens are not a good idea==
+
+Nader Al-Naji:
+
+"Today, many projects are funding themselves by selling a token. At a high level, someone creates an initial supply of a new cryptocurrency, sells some fraction of that initial supply, and promises to build something that will accept that token as payment. For this reason, such tokens are called app tokens. For example, Filecoin sold tokens that can be used to purchase storage on its network. The idea here is that use of whatever they're building will drive demand for the token, causing the token's price to appreciate over time (hence why you'd want to buy it in the first place). This idea that more use will cause the token's price to appreciate is a bit suspect, and you can read more about it here, but even ignoring that for a moment, 
+
+
+there are big problems with this model:
+
+* Nobody wants to hold a different token for every single different service they want to use.
+
+* Nobody wants to pay for things with a volatile token whose value is tied to the value of something they don't really want exposure to, like a distributed storage network.
+
+
+The fact that some people hold the token with an expectation of profit makes most app tokens look and smell like a security. If app tokens are classified as securities, this is a big problem because it means they most likely can't be widely-held, usually a requirement if you want your app to go main-stream.
+The fundamental problem with the app token model today is that it's coupling currency and equity together into a single asset, which makes no sense. Currency should be stable and used for transactions and equity should be distinct from currency and used to speculate on the earnings of a company. "
+
+(https://docs.google.com/document/d/1mm_krUG2qIv56n-AhZF13TVFaBhes9Jbe2mtjUGwtlU/edit)
+
+
+=More information=
+
+* [[Money]]
+
+[[Category:Money]]
+[[Category:Cryptoledger Applications]]
+[[Category:Economics]]
+[[Category:Encyclopedia]]
+[[Category:Crypto Economy]]
+[[Category:P2P Accounting]]

@@ -1,0 +1,62 @@
+
+=General Concept=
+
+Will Ruddick:
+
+"Peering, in its essence, represents fair exchanges, where individuals or entities interact with each other (their peers) and their resources. In the realm of Economics and Resource Management, this could be seen in practices like barter systems and direct trade. Yet, in the microcosms of rural Kenya, peering finds its roots in traditions like knowledge transfer, reciprocal gifting and mutual service and aid practices, reflecting a profound connection and mutual respect among individuals.
+
+This principle of direct exchange is not confined to economics or anthropology. In Information Technology, we observe peering through Peer-to-Peer (P2P) Networking, an embodiment of direct and decentralized communication. Similarly, Systems Theory echoes this with its emphasis on network collaborations and direct data synchronizations. Taken to an extreme peering could be seen as markets with no real purpose or surplus - this is where pooling comes in."
+
+(https://willruddick.substack.com/p/peering-and-pooling-across-disciplines?)
+
+See also: [[Pooling]]
+
+
+
+=Technical Concept=
+
+'''= the voluntary interconnection of administratively separate Internet networks for the purpose of exchanging traffic between the customers of each network'''
+
+
+
+'''Inter-ISP sharing arrangements are known as "peering" or "transit," and they are the two mechanisms that underlie the interconnection of networks that form the Internet.'''
+(http://arstechnica.com/guides/other/peering-and-transit.ars)
+
+From the Wikipedia:
+
+"Peering is voluntary interconnection of administratively separate Internet networks for the purpose of exchanging traffic between the customers of each network. The pure definition of peering is settlement-free or "sender keeps all," meaning that neither party pays the other for the exchanged traffic, instead, each derives revenue from its own customers. Marketing and commercial pressures have led to the word peering routinely being used when there is some settlement involved, even though that is not the accurate technical use of the word. The phrase "settlement-free peering" is sometimes used to reflect this reality and unambiguously describe the pure cost-free peering situation.
+
+Peering requires physical interconnection of the networks, an exchange of routing information through the Border Gateway Protocol (BGP) routing protocol and is often accompanied by peering agreements of varying formality, from "handshake" to thick contracts."
+(http://en.wikipedia.org/wiki/Peering)
+
+==Discussion==
+
+
+===Transit and Peering===
+
+Rudolph van der Berg:
+
+"In order to get traffic from one end-user to another end-user, these networks need to have an interconnection mechanism. These interconnections can be either direct between two networks or indirect via one or more other networks that agree to transport the traffic.
+
+Most network connections are indirect, since it is nearly impossible to interconnect directly with all networks on the globe. In order to make it from one end of the world to another, the traffic will often be transferred through several indirect interconnections to reach the end-user. 
+
+
+The economic arrangements that allow networks to interconnect directly and indirectly are called "peering" and "transit": 
+
+Peering: when two or more autonomous networks interconnect directly with each other to exchange traffic. This is often done without charging for the interconnection or the traffic. 
+
+Transit: when one autonomous network agrees to carry the traffic that flows between another autonomous network and all other networks. 
+
+Since no network connects directly to all other networks, a network that provides transit will deliver some of the traffic indirectly via one or more other transit networks. A transit provider's routers will announce to other networks that they can carry traffic to the network that has bought transit. The transit provider receives a "transit fee" for the service. 
+
+The transit fee is based on a reservation made up-front for the number of Mbps. Traffic from (upstream) and to (downstream) the network is included in the transit fee; when you buy 10Mbps/month from a transit provider you get 10 up and 10 down. The traffic can either be limited to the amount reserved, or the price can be calculated afterward (often leaving the top five percent out of the calculation to correct for aberrations). Going over a reservation may lead to a penalty. "
+
+(http://arstechnica.com/guides/other/peering-and-transit.ars)
+
+==More Information==
+
+#Detailed explanation at http://arstechnica.com/guides/other/peering-and-transit.ars
+#[[Autonomous Systems - Internet]]
+
+[[Category:Encyclopedia]]
+[[Category:Technology]]

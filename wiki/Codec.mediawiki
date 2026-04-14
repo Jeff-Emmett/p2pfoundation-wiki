@@ -1,0 +1,40 @@
+=Definition=
+
+The term 'Codec' usually applies to audio or video encoding and decoding which generally implies [[Compression]] and decompression.
+
+
+=Issues=
+
+From: http://www.digitalcitizen.info/2007/12/30/ogg-theoravorbis-as-default-for-video-scuttled-in-html5-spec-who-benefits:
+
+''Ogg Theora+Vorbis can change that but Apple and Nokia are fighting it. They want their preferred patent-encumbered formats to become the standard means for distributing video online. This is a real problem for anyone who can’t pay for the relevant patent licenses, which means all free software hackers.''
+
+* Implementing MPEG standards (such as mp3 or H-264) is difficult to do without encountering patent issues which will require royalty payments to http://MPEGLA.com
+
+
+=Resources=
+
+Compiled by Valentin Spirik:
+
+'''FOSS Codecs For Online Video''' http://wiki.transmission.cc/index.php/FOSS_Codecs_For_Online_Video:_Usability_Uptake_and_Development_1.2 "'''Usability Uptake''' and '''Development''' 1.2"
+
+'''Flip4Mac''' http://www.flip4mac.com/wmv_download.htm is a commercial but free (there is a pro/to buy version) that '''allows Mac users to watch (newer) .wmv encoded files''' either via the web browser or with the QuickTime Player. Since the latest version of the open-source VLC (0.8.6) - see above - now also plays back videos encoded with the newer Windows Media 9 codec (on the Mac), Flip4Mac might not be so important any more for some Mac users.
+
+'''QTAmateur''' http://www.mikeash.com/?page=software/qtamateur/index.html is "a small, simple QuickTime video player. It can play any format that QuickTime can understand, handle '''fullscreen video playback''', and '''export files to any format that QuickTime can write''' ...'''includes a Batch Export function''' which can convert any number of movies at a time to another format."
+
+'''Perian''' http://perian.org/ is "a free, open source '''QuickTime® component that adds native support for many popular video formats'''" (like .avi and .flv). Requires '''OS X 10.4.7'''.
+
+'''Xiph QuickTime Components''' http://www.xiph.org/quicktime/ is "the solution for '''Mac and Windows users''' who want to use Xiph formats in any QuickTime-based application, e.g. '''playing Ogg Vorbis in iTunes'''."
+
+'''[[Ogg Vorbis]]''' http://www.vorbis.com/ (for audio) and '''Ogg Theora''' http://www.theora.org/ (for video) are '''open-source alternatives for media encoding''', also interesting for commercial online publishing since they are '''patent free''' and '''no license fees will have to be paid'''.
+
+'''(*)''' '''VLC 0.8.6''' (December 2006): '''Windows Media 9 and Flash Video''' now also '''supported under OS X'''. The only major format '''not supported yet''' on any platform is the increasingly unpopular '''RealVideo'''.
+
+=More Information=
+
+#[[Video Compression]]
+#[[Audio Compression]]
+
+[[Category:Technology]]
+
+[[Category:Audiovisual]]

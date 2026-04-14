@@ -1,0 +1,55 @@
+=Definition=
+
+From the Wikipedia at
+http://en.wikipedia.org/wiki/REST:
+
+"'''Representational State Transfer''' (REST) is a style of software architecture for distributed hypermedia systems such as the World Wide Web. The term was introduced in the doctoral dissertation of Roy Fielding in 2000, one of the principal authors of the Hypertext Transfer Protocol (HTTP) specification, and has come into widespread use in the networking community.
+
+REST strictly refers to a collection of network architecture principles that outline how resources are defined and addressed. The term is often used in a looser sense to describe any simple interface that transmits domain-specific data over HTTP without an additional messaging layer such as SOAP or session tracking via HTTP cookies. These two meanings can conflict as well as overlap."
+
+
+=Description=
+
+Joe Geldart:
+
+"This views the Web as a collection of objects which may only be manipulated using four verbs: GET, POST, PUT and DELETE. All manipulation is done via combinations these verbs, which should treat the documents as immutable. In this sense, the Web could be seen as the world's most used functional program. This view of the Web, as a collection of discrete and immutable documents."
+(http://www.dur.ac.uk/j.r.c.geldart/essays/there_again/towards_the_active_web.html)
+
+
+=Principles=
+
+REST's proponents argue that the Web enjoyed the scalability and growth that it has had as a direct result of a few key design principles:
+
+
+* Application state and functionality are divided into resources
+    
+* Every resource is uniquely addressable using a universal syntax for use in hypermedia links
+    
+* All resources share a uniform interface for the transfer of state between client and resource, consisting of
+          
+o A constrained set of well-defined operations
+o A constrained set of content types, optionally supporting code-on-demand
+    
+* A protocol that is:
+
+o Client/Server
+o Stateless
+o Cacheable
+o Layered
+
+    
+REST's client-server separation of concerns simplifies component implementation, reduces the complexity of connector semantics, improves the effectiveness of performance tuning, and increases the scalability of pure server components. Layered system constraints allow intermediaries--proxies, gateways, and firewalls--to be introduced at various points in the communication without changing the interfaces between components, thus allowing them to assist in communication translation or improve performance via large-scale, shared caching.
+
+    
+REST enables intermediate processing by constraining messages to be self-descriptive: interaction is stateless between requests, standard methods and media types are used to indicate semantics and exchange information, and responses explicitly indicate cacheability."
+
+
+=More Information=
+
+Roy T. Fielding, Richard N. Taylor, "Principled design of the modern Web architecture", ACM Transactions on Internet Technology (TOIT), Volume 2, Issue 2 (May 2002), ACM Press, ISSN:1533-5399
+
+
+[[Category:Standards]]
+
+
+[[Category:Technology]]

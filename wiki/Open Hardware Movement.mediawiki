@@ -1,0 +1,59 @@
+Our entry on [[Open Hardware]] has a copy of an older discussion on the specific difficulties of open hardware compared to free software.
+
+Here is discussion from May 2008 in Free Software Magazine.
+
+For a directory of open hardware projects, see our entry on [[Product Hacking]]
+
+
+=Discussion: the difficulties of open hardware=
+
+Free Software Magazine has an interesting [http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_2_technical_and_social_issues conversation/interview]  with members of the [[Open Graphics Project]] [http://www.freesoftwaremagazine.com/node/1665], an open hardware initiative, in which they talk about what difficulties make open hardware more challenging.
+
+FSM introduces the topic:
+
+"The tools and techniques for creating hardware designs are very different from those used for software; and because of this, developing open hardware is a significantly different and greater challenge than creating free software. In the second part of my interview with the developers of the Open Graphics project, I wanted to explore these factors and the solutions this one open hardware project has found ... '''For a moment, rewind to the world of the 1980s, when the GNU project began, before all of that ((free software) infrastructure was created. That’s exactly where hardware design still is today'''."
+
+
+A '''selection of the key questions asked''', especially those that have a more general relevance beyond the specific project:
+
+"'''Q. What technological changes have led to the recent boom in open hardware development?'''
+
+AK: There are two things that made open hardware possible: the possibility to cheaply produce electronics (A PCB that would have cost $100 twenty years ago can now be produced for $10, even in low quantities); and the availability of powerful computers in every home to run EDA software without the need of special workstations.
+
+
+'''Q. How does the much greater cost of replication and derivation make things harder for hardware than software?'''
+
+AK: If open hardware wants to use the same methods that FLOSS profited from, building hardware must become a lot cheaper. Note that I do not speak about producing hardware as this can not get cheaper than a certain level. But if we would be able to use some hardware building blocks that are mass-produced just to put together a new device, we could use the same hardware over and over again to build new devices, just like software uses the very expensive computer it runs on to build new “devices”.
+
+
+'''Q. Any advice for future open hardware projects on how to manage the above resources? Is it really any different from software projects?'''
+
+AF: It is very different from software. For software, all you need is Vim; for hardware, a lot of tools are proprietary and they are not cheap. You can simulate to a certain degree, but when the actual hardware is here, you need some expensive equipment plus many years of experience to troubleshoot it. This will prevent you from working together unless you are really physically together. The challenge is then the huge start-up cost when developing hardware. So, if you can partner with a company which can provide these kinds of resources, it will make it a lot easier.
+
+LV: I think that technically there is not all that much difference between a hardware design and the source code for a piece of software. Both are a collection of files that are modified collectively to create different versions and branches. What seems to be lacking is tool support. We have tools that let you browse a Subversion repository online and compare different versions of the source of a piece of software. That will work for HDL as well, but it will not work for a board layout. Another example of something that we need software for is a fail safe part number registry.
+
+
+'''Q. Is there a problem finding enough people who are technically qualified to work on an open hardware project like Open Graphics?'''
+
+TM: There is a small handful of people with the OGP who actually know chip design or how to write HDL. It’s a very specialized thing that even the smartest people take many years to learn, so it’s hard for new people to just jump right in. Thinking about everything happening in parallel is something that takes a lot of getting used to.
+
+AF: As I said earlier, not only there are less hardware people, but also many times, you really need to sit together and stare at the problem and try to come up with a solution. However, I think people are out there. Look at the gEDA mailing list and OpenCores.org.
+
+
+'''Q. Is the recent boom in open hardware more about the increased need of consumers for control of their hardware, or about the increased ease in designing and producing hardware?'''
+
+TM: Open hardware has always been around. The Apple I was built by hand by Steve Wozniak, and he and Jobs were members of the Home Brew Computer Club. Those tinkerers have never gone away. But back in the 70s, electronic end products actually contained large circuit boards with discrete ICs. You could see the logic. As circuit integration grew, however, we ended up with more and more black boxes that people couldn’t learn from or hack, and they certainly couldn’t afford to make their own.
+
+This manufacturing gap, you might call it, has been discouraging to the hardware hacker, because the guy with a breadboard full of 74138s can’t compete in any way with the guy with the chip fab. Still, in the 70s and 80s, there were lots of black box chips, like CPUs. But at least you could stick one on a breadboard. The shift from DIPs to surface mount and particularly BGAs has made it impossible for the enthusiast to put common off the shelf chips into a custom design, unless they can make their own custom PCBs with 1/100 inch precision.
+
+However, as certain kinds of hackable devices—like FPGAs, microcontrollers, and boards like the Arduino—become cheap and plentiful, a new breed of hardware hackers has arisen. In fact, the hardware hacking community has never gone away; it’s just adapted to the changes in technology."
+([http://www.freesoftwaremagazine.com/articles/group_interview_graphic_view_open_hardware_movement_part_2_technical_and_social_issues])
+
+
+[[Category:Design]]
+
+[[Category:Encyclopedia]]
+
+[[Category:Movements]]
+
+[[Category:Open]]

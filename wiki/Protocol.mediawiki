@@ -1,0 +1,274 @@
+'''Protocol. How Control Exists after Decentralization. Alexander Galloway. MIT Press, 2004'''
+
+URL = http://mitpress.mit.edu/protocol
+
+
+
+=Description=
+
+
+Important book, which distinguishes decentralization from distribution, and explains how control is exerted in distributed networks.
+
+
+=Excerpt=
+
+Alexander Galloway:
+
+"Excerpt from the "Introduction":
+
+This book is about a diagram, a technology, and a management style. The
+diagram is the distributed network, a structural form without center
+that resembles a web or meshwork. The technology is the digital
+computer, an abstract machine able to perform the work of any other
+machine (provided it can be described logically). The management style
+is protocol, the principle of organization native to computers in
+distributed networks. All three come together to define a new apparatus
+of control that has achieved importance at the start of the new
+millennium.
+
+Much work has been done recently on theorizing the present historical
+moment and on offering periodizations to explain its historical
+trajectory. I am particularly inspired by five pages from Gilles
+Deleuze, "Postscript on Control Societies," which begin to define a
+chronological period after the modern age that is founded neither on the
+central control of the sovereign nor on the decentralized control of the
+prison or the factory. My book aims to flesh out the specificity of this
+third historical wave by focusing on the controlling computer
+technologies native to it.
+
+How would control exist after decentralization? In former times control
+was a little easier to explain. In what Michel Foucault called the
+sovereign societies of the classical era, characterized by centralized
+power and sovereign fiat, control existed as an extension of the word
+and deed of the master, assisted by violence and other coercive factors.
+Later, the disciplinary societies of the modern era took hold, replacing
+violence with more bureaucratic forms of command and control.
+
+Deleuze has extended this periodization into the present day by
+suggesting that after the disciplinary societies come the societies of
+control. Deleuze believed that there exist wholly new technologies
+concurrent with the societies of control. "The old sovereign societies
+worked with simple machines, levers, pulleys, clocks," he writes, "but
+recent disciplinary societies were equipped with thermodynamic
+machines... control societies operate with a third generation of
+machines, with information technology and computers." Just as Marx
+rooted his economic theory in a strict analysis of the factory's
+productive machinery, Deleuze heralds the coming productive power of
+computers to explain the sociopolitical logics of our own age.
+
+According to Critical Art Ensemble (CAE), the shift from disciplinary
+societies to control societies goes something like this:
+
+"Before computerized information management, the heart of
+institutional command and control was easy to locate. In fact, the
+conspicuous appearance of the halls of power was used by regimes to
+maintain their hegemony.... Even though the monuments of power still
+stand, visibly present in stable locations, the agency that
+maintains power is neither visible nor stable. Power no longer
+permanently resides in these monuments, and command and control now
+move about as desired."
+
+The most extensive "computerized information management" system existing
+today is the Internet. The Internet is a global distributed computer
+network. It has its roots in the American academic and military culture
+of the 1950s and 1960s. In the late 1950s, in response to the Soviet
+Sputnik launch and other fears connected to the Cold War, Paul Baran at
+the Rand Corporation decided to create a computer network that was
+independent of centralized command and control, and would thus be able
+to withstand a nuclear attack that targets such centralized hubs. In
+August 1964, he published an eleven-volume memorandum for the Rand
+Corporation outlining his research.
+
+Baran's network was based on a technology called packet-switching that
+allows messages to break themselves apart into small fragments. Each
+fragment, or packet, is able to find its own way to its destination.
+Once there, the packets reassemble to create the original message. In
+1969, the Advanced Research Projects Agency (ARPA) at the U.S.
+Department of Defense started the ARPAnet, the first network to use
+Baran's packet-switching technology. The ARPAnet allowed academics to
+share resources and transfer files. In its early years, the ARPAnet
+(later renamed DARPAnet) existed unnoticed by the outside world, with
+only a few hundred participating computers, or "hosts."
+
+All addressing for this network was maintained by a single machine
+located at the Stanford Research Institute in Menlo Park, California. By
+1984 the network had grown larger. Paul Mockapetris invented a new
+addressing scheme, this one decentralized, called the Domain Name System
+(DNS).
+
+The computers had changed also. By the late 1970s and early 1980s
+personal computers were coming to market and appearing in homes and
+offices. In 1977, researchers at Berkeley released the highly
+influential "BSD" flavor of the UNIX operating system, which was
+available to other institutions at virtually no cost. With the help of
+BSD, UNIX would become the most important computer operating system of
+the 1980s.
+
+In the early 1980s, the suite of protocols known as TCP/IP (Transmission
+Control Protocol/Internet Protocol) was also developed and included with
+most UNIX servers. TCP/IP allowed for cheap, ubiquitous connectivity. In
+1988, the Defense department transferred control of the central
+"backbone" of the Internet over to the National Science Foundation, who
+in turn transferred control to commercial telecommunications interests
+in 1995. In that year, there were 24 million Internet users. Today, the
+Internet is a global distributed network connecting billions of people
+around the world.
+
+At the core of networked computing is the concept of protocol. A
+computer protocol is a set of recommendations and rules that outline
+specific technical standards. The protocols that govern much of the
+Internet are contained in what are called RFC (Request For Comments)
+documents. Called "the primary documentation of the Internet," these
+technical memoranda detail the vast majority of standards and protocols
+in use on the Internet today.
+
+The RFCs are published by the Internet Engineering Task Force (IETF).
+They are freely available and used predominantly by engineers who wish
+to build hardware or software that meets common specifications. The IETF
+is affiliated with the Internet Society, an altruistic, technocratic
+organization that wishes "[t]o assure the open development, evolution
+and use of the Internet for the benefit of all people throughout the
+world." Other protocols are developed and maintained by other
+organizations. For example, many of the protocols used on the World Wide
+Web (a network within the Internet) are governed by the World Wide Web
+Consortium (W3C). This international consortium was created in October
+1994 to develop common protocols such as Hypertext Markup Language
+(HTML) and Cascading Style Sheets. Scores of other protocols have been
+created for a variety of other purposes by many different professional
+societies and organizations. They are covered in more detail in chapter
+4 [on "Institutionalization"].
+
+Protocol is not a new word. Prior to its usage in computing, protocol
+referred to any type of correct or proper behavior within a specific
+system of conventions. It is an important concept in the area of social
+etiquette as well as in the fields of diplomacy and international
+relations. Etymologically it refers to a fly-leaf glued to the beginning
+of a document, but in familiar usage the word came to mean any
+introductory paper summarizing the key points of a diplomatic agreement
+or treaty.
+
+However, with the advent of digital computing, the term has taken on a
+slightly different meaning. Now, protocols refer specifically to
+standards governing the implementation of specific technologies. Like
+their diplomatic predecessors, computer protocols establish the
+essential points necessary to enact an agreed-upon standard of action.
+Like their diplomatic predecessors, computer protocols are vetted out
+between negotiating parties and then materialized in the real world by
+large populations of participants (in one case citizens, and in the
+other computer users). Yet instead of governing social or political
+practices as did their diplomatic predecessors, computer protocols
+govern how specific technologies are agreed to, adopted, implemented,
+and ultimately used by people around the world. What was once a question
+of consideration and sense is now a question of logic and physics.
+
+To help understand the concept of computer protocols, consider the
+analogy of the highway system. Many different combinations of roads are
+available to a person driving from point A to point B. However, en route
+one is compelled to stop at red lights, stay between the white lines,
+follow a reasonably direct path, and so on. These conventional rules
+that govern the set of possible behavior patterns within a heterogeneous
+system are what computer scientists call protocol. Thus, protocol is a
+technique for achieving voluntary regulation within a contingent
+environment.
+
+These regulations always operate at the level of coding--they encode
+packets of information so they may be transported; they code documents
+so they may be effectively parsed; they code communication so local
+devices may effectively communicate with foreign devices. Protocols are
+highly formal; that is, they encapsulate information inside a
+technically defined wrapper, while remaining relatively indifferent to
+the content of information contained within. Viewed as a whole, protocol
+is a distributed management system that allows control to exist within a
+heterogeneous material milieu.
+
+It is common for contemporary critics to describe the Internet as an
+unpredictable mass of data--rhizomatic and lacking central organization.
+This position states that since new communication technologies are based
+on the elimination of centralized command and hierarchical control, it
+follows that the world is witnessing a general disappearance of control
+as such.
+
+This could not be further from the truth. I argue in this book that
+protocol is how technological control exists after decentralization. The
+"after" in my title refers to both the historical moment after
+decentralization has come into existence, but also--and more
+important--the historical phase after decentralization, that is, after
+it is dead and gone, replaced as the supreme social management style by
+the diagram of distribution."
+(http://rhizome.org/discuss/view/12004)
+
+
+=Discussion=
+
+Nicolas Mendoza:
+
+"In Protocol, Galloway argues that Internet protocols are an apparatus of control; that “The founding principle of the Net is control, not freedom.”  This essay wants to show how this is the incorrect dichotomy. Through critical analysis of the dominant narratives at the net’s genesis I will show that, on the contrary, the founding principle of the Net is not control but command and control and, further, distributed command and control. The significance of this precision lays in that the distribution of command and control, as long as it remains real, leads necessarily to the collapse of traditional power and to the emergence of an unprecedented social order of distributed power. Such an order, precisely because of power distribution, is close to what anarchist scholars like David Graeber and web activist groups like Anonymous advocate for. In their theoretical and pure form, the founding protocols of a true distributed network as was initially conceived, even while endangered and partially implemented, break the dam towards collective emancipation. They are the protocols of freedom.
+
+...
+
+"Alex Galloway has coined the term 'Protocologic Control' to describe the notion that the underlying protocols that make electronic networks operational are the instruments of a grand shift in contemporary societies to become the Deleuzian “Societies of Control”  . In that sense, the term describes a situation of thorough disempowerment of the individual. For Galloway the distributed network, the digital computer, and the network protocol define “a new apparatus of control”  through which power is exercised in contemporary societies.  While he argues that all distributed media is necessarily endogenous to the societies of control, the analysis of the apocalyptic narratives that gave shape to the net shows us that, contrary to Galloway's reading of Deleuze: a protocol with the characteristics and origin of TCP/IP is a threat to social control precisely because it transfers significant control to its users.
+
+The term “Protocologic Control”, I think, needs to be used with caution because when taken out of context it gives the impression that wherever there is protocol, the dominant logic is that of a hegemonic society of control. It is true and concerning that through code and protocol hegemonic power can be exercised and control can be implemented. This concern is real. Nevertheless, pointing the finger at 'protocol' is analogous to seeing someone die after drinking poison and deducing 'liquids' are poisonous. To say 'Protocologic Control' is like saying 'Liquidic Fluidity' in that, yes, liquids are fluids, but the term 'fluid' tells us little else about their properties. Network protocols do control informational processes, but the question is in what ways and for whom. Raising suspicion on all protocol is unhelpful; rather, the call should be for a differentiated examination of what each one does, who owns them, through what processes they are managed, etc. Such analysis is central to focus the efforts needed to secure the integrity of the full transformational potential of the Internet. 
+
+Galloway’s notion of ‘Protocologic Control’ conflates two levels of the meaning of the word 'protocol'. On the one hand the expression refers to languages within the technical universe of computers that come into play at different layers in their interactions: the institutionalised feedback mechanisms that effectively route datagrams through distributed digital networks. On the other hand, intermittently through Galloway’s analysis the technical essence of ‘protocol’ is concluded in itself to carry a political weight: “the Net is not simply a new, anarchical media format, ushering in the virtues of diversity and multiplicity, but is, in fact, a highly sophisticated system of rules and regulations (protocol).”  This quote exemplifies the confusion present all through Galloway’s argument, consisting in inferring (or implying) hegemony from the existence of 'rules and regulations' in the protocol, regardless of what they are. In Galloway, all of the ‘highly sophisticated’ technical standards known as protocol necessarily negate political ‘virtues of diversity and multiplicity’. While it is clear that protocols can be designed for exclusion and oppression, the sophistication of TCP/IP lies precisely in that it is able to glue networks of diverse nature, enabling otherwise incompatible actors (both human and non-human) to communicate. It is an inclusive protocol. TCP/IP articulates what we know as ‘the Inter-net’ because it is designed to enable the dialogue between computers and digital networks as diverse as they can be imagined.
+
+Further, Galloway’s recurrent assertions in the sense that the Internet is “the mostly highly controlled mass media hitherto known”  are the result of a second conflation: in this case of two meanings of the word ‘control’. On the one hand, the term ‘control’ in TCP (Transfer Control Protocol) stands for the ability of the protocol to modulate and route datagrams ensuring that they reach their desired destination. It means feedback based control, of the protocol, over the movement of datagrams. On the other hand, we have the historical use of the term ‘control’ described earlier, used by Cold War strategists, always preceded by the term ‘command’ to conform ‘command and control’. Here it means fundamentally repressive control, of the President, over nuclear missiles. The significance of the term 'command and control' is that it is critical to understand the ethos of the Net as a communication system devised to empower its users both to initiate and terminate action. This key term is missing from Galloway’s analysis. The identity of the network, this essay argues, is shaped after both principles alike, not just control. Galloway’s description of the Internet as ‘the most controlled mass media hitherto known” is too blunt a statement, he fails to differentiate between a media that enables control over its users, and a media that gives them both command and control. Not total command and control, but distributed command and control. When billions of actors, a diversity of humans, governments, corporations, machines, and software actors are all given their share of command and control, a new level of complexity emerges. Even the environment and ‘nature’ exercise their agencies in this new arrangement. This stochastic assemblage renders even the most powerful actors impotent.
+
+While protocol determines the universe of possibility in the network, and in that sense it can be said to determine the very ‘physical’ properties of the net, it does not follow TCP/IP is an instrument for social control from above. The opposite is true, as it is a protocol that, at least in its purest theoretical form, distributes the opportunity of access to power, or command and control, evenly through the nodes in the network. Actually, it represents a massive blow to the existing ‘control’ as it, protocologicaly, takes power from its historical monopolists to distribute it among those who had none, an operation that represents a double setback for the hierarchical-and-centralist entities of power. 
+
+Galloway’s confusion results in the proposal of thinking in terms of ‘counterprotocological practices’ to achieve emancipation. Yet it is actually governments and corporations who are currently attack the protocols most vigorously, i.e. practicing counterprotocological practices: pushing in the US draconian legislative projects like DMCA, SOPA and PIPA (and their equivalents around the world), implementing censorship machines like ‘Great Firewall of China’, Australia’s ‘Great Firewall Reef’, Hosni Mubarak’s Internet ‘kill switch’, injecting malware into consumer products to prevent data duplication, etc. The bearers of power defend their hegemony by attacking the protocols that distribute power. If real world current events tell us something, it is that the true counterprotocological practices, when it comes to TCP/IP and other realms of digital technologies, are censorship, surveillance and commodification."
+(February 2012)
+
+=More Information=
+
+#Concept: [[Protocollary Power]]
+#Interview: [[Alexander Galloway on Protocollary Power]]
+#table of contents: http://homepages.nyu.edu/~ag111/Protocol-contents.doc
+#amazon page: http://www.amazon.com/exec/obidos/ASIN/0262072475
+
+
+==Links==
+
+
+http://p2pfoundation.net/4Chan,_WikiLeaks_and_the_Silent_Protocol_Wars ;
+
+http://p2pfoundation.net/Protocollary_Power ;
+http://p2pfoundation.net/Alexander_Galloway_on_Protocollary_Power ;
+http://p2pfoundation.net/Protocol ;
+http://p2pfoundation.net/Value_Sensitive_Design ;
+http://p2pfoundation.net/Dividuation ;
+http://p2pfoundation.net/Design_for_Cognitive_Justice ;
+http://p2pfoundation.net/Digital_Sovereignty ;
+http://p2pfoundation.net/Do_Artifacts_Have_Politics ;
+http://p2pfoundation.net/Architectures_of_Control ;
+http://p2pfoundation.net/Exploit
+http://p2pfoundation.net/Social_Architecture ;
+http://p2pfoundation.net/Galloway,_Alexander ;
+http://p2pfoundation.net/Politics_of_Code_in_Web_2.0 ;
+http://p2pfoundation.net/Computing_Regime ;
+http://p2pfoundation.net/Social_Machines ;
+http://p2pfoundation.net/Program_or_Be_Programmed ;
+http://p2pfoundation.net/Politics_of_Platforms ;
+http://p2pfoundation.net/Critical_Engineering ;
+http://p2pfoundation.net/Code_Space ;
+http://p2pfoundation.net/Kevin_Slavin_on_the_Algorithms_that_Shape_Our_World
+; http://p2pfoundation.net/Jean-François_Noubel_on_Collective_Intelligence_and_Invisible_Architectures
+; http://p2pfoundation.net/Protocols ;
+http://p2pfoundation.net/Metaprotocols ;
+http://p2pfoundation.net/Accountable_Algorithms
+
+
+
+
+
+
+
+[[Category:Books]]
+
+[[Category:Relational]]
+
+[[Category:Governance]]
+
+[[Category:Standards]]
+
+[[Category:Protocols and Algorithms]]

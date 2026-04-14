@@ -1,0 +1,222 @@
+
+=Introductory Citation=
+
+Felix Stalder:
+
+"We should start from the understanding of what privacy is conventionally thought to achieve: individual and social self-determination. We need then to review the contemporary conditions under which this goal can be advanced and assess the role of privacy in advancing it. Today, it requires both the ability to make oneself visible to others in relatively open ettings, as well as means of mitigating the resulting power-differentials between the users who provide personal and those institutions which collect, aggregate and act upon this information. The notion of privacy is of limited use in the context of the first dimension, but remains vital in relation to the second."
+(http://felix.openflows.com/node/183)
+
+
+=Discussion= 
+
+==Danah Boyd on why privacy is different in online spaces==
+
+
+'''In physical spaces, different audiences don't mix and we can perform differently. However, in the context of [[Networked Sociality]], this changes, argues Danah Boyd'''
+ 
+ 
+From Danah Boyd in the IDC mailing list, February 2007:
+ 
+"In unmediated spaces, there are walls that allow us to separately
+contextualize different situations without dealing with the
+ramifications of those collisions.  Online, no such walls.  This is a
+new architecture.  So, people have two choices: go into hyper
+paranoid mode and constantly try to think about what it means to be
+seen by all people across all time OR live your life in the context
+you think it should be and hope that you can convince others of this
+later.  (This can be called the ostrich solution.)  The problem is
+that living your life in a pristine manner imagining yourself on the
+path to presidency (or at least a good behavior patch) is no fun.
+It's especially no fun for teenagers who are trapped at home and want
+to hang out with their peers and their only hang out place is online.
+
+There are two populations that complicate the lives of teens: those
+who hold power over them (parents, teachers, future employers) and
+those who want to prey on them (primarily marketers).  How do you
+teach people how to behave with such mixed audiences?"
+
+
+==Identity Management may be a danger to Privacy==
+
+
+Brad Templeton on the paradox of digital identity management [http://ideas.4brad.com/paradox-identity-management]:
+
+"On the surface, privacy-conscious identity management puts control over who gets identity information in the hands of the user. You decide who to give identity info to, and when. Ideally, you can even revoke access, and push for minimal disclosure. Kim Cameron summarized a set of laws of identity outlining many of these principles.
+
+In spite of these laws one of the goals of most identity management systems has been ease of use. And who, on the surface, can argue with ease of use? Managing individual accounts at a thousand web sites is hard. Creating new accounts for every new web site is hard. We want something easier.
+
+However, '''here is the contradiction. If you make something easy to do, it will be done more often. It’s hard to see how this can’t be true. The easier it is to give somebody ID information, the more often it will be done.''' And the easier it is to give ID information, the more palatable it is to ask for, or demand it.
+
+Consider the magstripe found on most driver’s licences. This seems like personal identity management. That card is physically under your control, in your wallet. Nobody, except a police officer who suspects you of something, can demand you produce it. You control whether they can just look at it or can scan it.
+
+Yet the very existence of the stripe makes it easy to read all the data on the card. Sure, they could also look in the card and slowly type it all in, or photograph it, but as you know this is rare. If somebody is demanding this card for ID, it’s faster for them and for you to have them swipe it rather than type in the number and/or your other information. As a result it seems more “reasonable” for them to ask to swipe it, even if they don’t demand it. And thus far more data is collected. (So much that there are legal efforts to limit such scanning.)
+
+This applies even to “ideal” digital identity management systems which let you tweak what information they provide to a web site. In such a system, you can control whether your system offers up a pseudonym or your full name and address. You want that, because if you’re buying a book you want to easily tell them where to send it.
+
+However, at the same time this easy ability to offer your address makes it easy to ask. Today, a site that wants to ask for extra information it doesn’t really need has a disincentive — it has to push you to a form where you have to type it in manually. This makes it far more likely they will ask for this only if they really need it. It makes it really unlikely that they will demand it unless they truly need it. It still happens (I routinely see sites asking for phone numbers they don’t need) but it happens less often than if providing this information required merely a click.
+
+That’s because once you make it trivial to hand over your information, you quickly get to the state where only the privacy zealots put up a fight. And thanks to the fundamental theorem of privacy advocacy — most people don’t care about their privacy until after it’s invaded — this means most people will hand over far more information than needed, and in many cases the few who complain are few enough that companies can safely decide to refuse to deal with them if they won’t hand over the information that’s so easy to hand over.
+
+It’s against our intuition to think of ease of use as a bug, rather than a feature, but sometimes this can be the case.
+
+In addition, single sign-on systems tend to make correlation of user data easier, in spite of their many efforts to try to address this problem. If you use the same ID to sign on at many web sites, it’s hard to stop them from correlating that fact if they get together. Of course, most people use the same login on many sites today, but this is less reliable. (When a site demands an E-mail from me I give a different E-mail to each site, which among other things allows me to see if they pass the E-mail address to any 3rd party.) One of the common identity attributes that will be requested with OpenID is an E-mail address, and this becomes harder to vary if you’re getting the benefit of the single sign-on.
+
+Identity management also encourages the creation of “accounts” when they are not strictly needed at all. Should OpenID become a success, every site will want to use it. Sites that would not have troubled users to create an account to use them will now find it trivial to do so. Their current easy alternative — cookies — are stored on the user’s machine and much more under user control, and much harder to correlate with other sites.
+
+Fully implemented, I predict we’ll see “one click account creation” and “one click login” through the user of browser add-ons. This will result in sites that were perfectly usable without an account suddenly demanding them. Why not, after all? Sites with commercial interest are keenly interested in accounts in order to learn about their users and present information to advertisers or investors.
+
+It is also important to consider how the identity management technology we build will be used in places like China, Saudi Arabia or North Korea. Whatever global standards we adopt, especially with open source or free software, will be readily available for use in these countries.
+
+Unfortunately, these countries will not follow the same principles of user control and consent on identity collection that we do. However, we will save them the time and trouble of building their own ID and surveillance infrastructure. They can readily adapt ours.
+
+We may have to ask ourselves what ethical duty we have to the people of those countries. How would we design our systems if we lived in those places? What software would we give away to those governments? Is our own convenience and ease of use worth so much to us that we want to give these technologies to China where they will help restrict the activities of a billion people? This is not an easy question. The real villains are the oppressors, not the authors of the technology, but that doesn’t stop us from considering how what we build will be used.
+No solution?
+
+There may be no solution to this paradox. Identity disclosure is, in a sense, the opposite of privacy. Any system that assists in identity disclosure is unlikely to help protect privacy. There are technologies, such as secure pseudonyms and anonymity, and non-correlatable identifiers, which can help, but they are tricky."
+(http://ideas.4brad.com/paradox-identity-management)
+
+
+==Privacy in Search Engines==
+
+Michael Zimmer explains how Google is collecting a wide range of personal data; thereby overcoming privacy through obscurity. Instead, we need value-conscious design.
+
+Here are 8 recommendations to the European search engine project Quaero:
+
+#"Quaero must be designed in such a way as to prevent any substantive response to a civil or criminal subpoena of user activity 
+#Quaero must be designed so IP addresses and cookies cannot be associated with particular users or accounts 
+#Query traffic must be encrypted to prevent ‘man in the middle’ monitoring 
+#Quaero must provide transparency in the data it collects about users, how it is used, who uses it, and how long it is retained 
+#Quaero must not engage in personalized or behaviorally-targeted advertising 
+#Quaero must take steps to remove or obscure personally-identifiable images (faces, license plates, etc) from its searchable index 
+#Quaero must provide individuals the ability to remove or obscure personally-identifiable data from its searchable index 
+#Quaero must provide users the ability to view, edit, and delete any search history data associated with their account 
+(http://michaelzimmer.org/2007/09/29/privacy-and-quaeros-quest-for-the-perfect-search-engine-threats-and-opportunities/)
+
+Full presentation at http://michaelzimmer.org/files/Zimmer%20Quaero%20slides.pdf
+
+Questions to ask of search engines:
+
+"• What are the politics of the structure and image of search engines and their technologies?
+
+• To what extent have search engines like Google, which started from the ideal of access to information, become the modus operandi of political bias? Can we envisage scenarios for the search engine as a public domain institution?
+
+• What kind of hierarchy (if any) should be implemented when deciding what should go into a search engine’s database, and what is left out?
+
+• Can contemporary web practices tackle the conventional static models used to archive and present (institutional) concepts of cultural heritage and democracy?
+
+• Collaborative and participatory methods are increasingly placing the Demos as the force that structures information. Can we work towards a ‘politics of code & categorization’ that allows plural interpretations of data to coexist and enrich each other?
+
+• How can concepts of digital and networked European cultural heritage reflect the political and social issues related to Europe’s changing borders?"
+(http://michaelzimmer.org/2007/09/15/update-on-quaero-forum/)
+
+
+==Proposed [[Privacy Manifesto]]==
+
+Alec Saunders [http://gigaom.com/2008/01/08/a-privacy-manifesto-for-the-web-20-era/]:
+
+" Here are four principles that form a Privacy Manifesto for the Web 2.0 Era.
+
+   
+1. Every customer has the right to know what private information is being collected. That rules out any secret data collection schemes, as well as monitoring regimes that the customer hasn’t agreed to in advance. It also rules out any advertising scheme that relies on leaving cookies on a customer’s hard disk without the customer’s consent.
+   
+2. Every customer has the right to know the purpose for which the data is being collected, in advance. Corporations must spell out their intent, in advance, and not deviate from that intent. Reasonable limits must be imposed on the collection of personal information that are consistent with the purpose for which it is being collected. Furthermore, the common practice of inserting language into privacy policies stating that the terms may be modified without notice should be banned. If the corporation collecting data wishes to change its policy then it’s incumbent upon the corporation to obtain the consent of customers in advance.
+   
+3. Each customer owns his or her personal information. Corporations may not sell that information to others without the customer’s consent. Customers may ask, at any time, to review the personal information collected; to have the information corrected, if that information is in error; and to have the information removed from the corporation’s database.
+   
+4. Customers have a right to expect that those collecting their personal information will store it securely. Employees and other individuals who have access to that data must treat it with the same level of care as the organization collecting it is expected to."
+(http://gigaom.com/2008/01/08/a-privacy-manifesto-for-the-web-20-era/)
+
+
+==Designing for Privacy in Online Communities==
+
+Michael Zimmer:
+
+From "the paper “Designing Privacy Into Online Communities” by Drs. Cathy Dwyer and Starr Roxanne Hiltz. Dwyer and Hiltz criticize the poor design of privacy management on social networking sites, such as Facebook, and suggest three important ways to design privacy into these services:
+
+Evaluate the privacy level of each component: Just as each component of a system can be evaluated as to its usability and security, so should each component be evaluated as to its privacy.
+
+Provide privacy feedback: We need a privacy WYSIWYG (“what you see is what you get”), showing users exactly what is visible to friends versus strangers as they tweak their privacy settings.
+Publish privacy norms: Social networking sites should publish aggregated metrics that reveal norms with respect to privacy settings, such as “70% of users make their e-mail address visible to friends; 10% make it visible to strangers.” Knowing this information can help inform users and perhaps influence their behavior.
+
+I also suggest adding a fourth design suggestion:
+
+Provide privacy reminders: Periodically prompt users to revisit their privacy settings."
+(http://michaelzimmer.org/2008/10/18/de-brief-aoir-ir90-conference-in-copenhagen/)
+
+
+==Jeff Jarvis: The Impact of Publicness on Privacy==
+
+'''= Once-abundant privacy is now scarce. Once-scarce publicness is now abundant.'''
+
+Jeff Jarvis:
+
+"The economics of abundant publicness mean that the old gatekeepers -- editors, agents, producers, publishers, broadcasters, the entire media industry -- overnight lost their power. That's why they're so upset. That's why they keep complaining about all these amateurs taking over their sacred turf -- because they are. What they thought was valuable -- their control -- now had no value. They can't sell their casting couches and presses on craigslist for nothin'. They are being beat by those who break up their control and hand it out for free (Google, craigslist, Facebook, YouTube, etc.). 
+
+Abundant publicness also creates new value. Google search is made up of that value. Twitter movie chatter predicting box-office success is that value. Annotations on maps, restaurant reviews, health trends, customer desires -- and on and on -- all find value in our publicness and so new companies are being built on that value. That is why it is in the interests of both companies and customers to be public and why privacy -- when it does compete, when it discourages publicness -- becomes a nuisance for them."
+(http://www.buzzmachine.com/2010/08/05/the-price-of-privacy/)
+
+
+==Why the market fails to protect privacy==
+
+Scott Cleland:
+
+"Why are market forces so weak in protecting users’ online privacy?
+
+The main reason is that the online marketplace is economically structured around users being a commodity, data, to be aggregated and mined, not customers to be served and protected in a competitive marketplace. That’s because the overriding economic force that created the free and open commercial Internet – the predominant Silicon Valley venture capital/IPO value creation model – was and remains largely antithetical to protecting online privacy.
+
+The Silicon Valley venture capital/IPO driven model is laser-focused on achieving Internet audience/user scale fastest in order to gain first-mover advantage and then rapid dominance of a new product or service segment. This predominant Internet economic model is predicated on a precious few investments achieving such rapid user scale that it: warrants a buy-out at an enormous premium multiple; enables fast and exceptionally-profitable liquidity (via the new secondary derivative market for private venture shares or employee options); or broad liquidity via a public IPO.
+
+What is the essential critical element of achieving audience/user scale fastest? Free. No direct cost to the user fuels fastest, frictionless, viral adoption. This free economic model presupposes online advertising as an eventual monetization mechanism and shuns products and services directly paid for by the user because their inherent time-to-market is too slow and their upfront sunk cost of sales and customer service is too high for this predominant value creation model.
+
+The other essential element of a fastest-adoption-possible model is user trust. User trust is created legitimately by providing the user with very valuable innovation for no monetary cost. However, user trust also is illegitimately manufactured and maintained via misrepresentation that the free service works for the user (when the real monetary value creation comes from the Silicon Valley liquidity derivative market and the online advertising market); and only has the interests of users in mind by: downplaying privacy concerns, risks or harms; implying that privacy undermines the free speech and sharing ethos of the free and open Internet; and claiming that privacy is outdated, anti-innovation, and no longer the current social norm.
+
+Privacy policies generally meet the letter of full disclosure but seldom the spirit, by refusing to openly explain to the user in detail the purposes, amount, breadth and sensitivity of the private data being collected on a user and how that aggregated information could be used or abused by the collector, a third party or the government.
+
+'''The second big reason that market forces for privacy protection are so weak is that the user is not the customer but the product'''. Once Internet companies’ founders, early investors, and employees have generated wealth via the Silicon Valley value creation model, their companies’ economic models shift to the full harvesting of the value of this economic model via advertising revenue growth. In the online advertising model, the user is the product and the advertiser is the customer. Importantly, the grand assumption of the online advertising model is that it assumes and depends on publicacy (the opposite of privacy), because what makes online advertising work is the unlimited business freedom to maximally leverage whatever customer data (private/personal information) a company can mine in order to most effectively and profitably micro-target users’ personal hot buttons.
+
+'''The third big reason market forces for privacy protection are so weak is the glaring lack of user leverage/consumer power in the market equation'''. By design, the Silicon Valley venture capital/IPO model produces first-movers that can dominate their chosen Internet segment: Google-search, Facebook-social networking, eBay-online auctions and payments, Amazon-retailing, Twitter-real-time-micro-blogging, Zynga-games, etc. By design, this adoption-fastest model seeks to preclude or limit the viability of a significant competitive alternative. Thus the purveyors of this model can claim users have privacy choice, when they know their model has limited choice of alternatives and the limited choices that are available also have limited market incentives to protect privacy.
+
+Given the Internet loophole in privacy law, where other industries operate under strict privacy laws in health care, financial services and communications, online users have no meaningful privacy rights or power in the Internet marketplace to protect their privacy. What this means is that consumers face the exact opposite market situation as they do in other markets, where consumers (buyers) have unique private knowledge of what their own wants, needs, means and budget are. However, in the online market, the seller has most all that private information on the buyer, and the buyer generally does not know that, so they have dramatically less buyer leverage or negotiating power than they do in a market where they are the customer and not the product.
+
+Despite there being substantial value being exchanged when users use ad-based online services, there is no real market transaction for privacy in that exchange, i.e. no market choice for users to generally protect it -- or to sell it if one so chooses to exploit one’s privacy for one’s own personal financial benefit. The current model assumes that the user is and always will be a data-pawn without a real economic role or say in the market transaction over their personal data.
+
+Tellingly, Smart Money reports that Michael Fertik, CEO of Reputation.com, estimates that a user’s “personal information can be worth $50 and $5,000 per person per year to advertisers and market researchers.” If this estimate is remotely accurate, why couldn’t/shouldn’t there be a market mechanism for a user to either protect their private/personal information or sell it for their personal benefit? What’s wrong or not workable with having users have a market role in influencing the market outcomes of their personal information? It is truly remarkable that such a rich marketplace, worth literally tens of billions of dollars per year in revenues, nearly completely shuts out the user from participating openly and directly in these transactions involving their private information.
+
+Where does this leave us? Recently, the Supreme Court ruled in U.S. vs. Jones that using a tracking device was an infringement of someone’s private property. If people’s private data is in fact a legal form of private property -- that a user has some right to exercise a substantial amount of personal control over -- then the online advertising model may be built on a foundation of sand and not the foundation of rock that people assume.
+
+Moreover, '''there is mounting evidence that in the future users will have more power over their privacy/private information than they do today'''. The EU is proposing an update of their privacy rules for the first time since 1995 and they propose to give users much greater control to opt out and control what personal information an on online company has on them. The FTC favors an Internet “Do Not Track” mechanism like the FTC’s wildly popular Do Not Call List, and Do Not Track legislation has been introduced in Congress. The Department of Commerce has proposed a Privacy Bill of Rights. Google’s new centralization of private information in its new privacy policy has generated strong opposition, a bipartisan letter from lawmakers urging that Google allow users the freedom to opt out, and charges that Google is violating the FTC-Google Buzz privacy agreement. There is evidence that Facebook users continue to be concerned about oversharing with FaceBook’s new Timeline. And the FTC has sanctioned Google, Facebook, and Twitter for not adequately protecting users’ privacy.
+
+In sum, isn’t it ironic, that in this supposed market that allegedly serves and empowers the interests of users “at the edge,” there is no real privacy innovation to protect users’ privacy the way that users want, but only innovation to more effectively invade, abuse, or monetize people’s privacy largely without their knowledge or permission?
+
+What does all this mean? It means '''there is a serious market failure in protecting users’ online privacy'''. "
+(http://precursorblog.com/content/wheres-market-online-privacy)
+
+=Case Studies=
+
+==Facebook==
+
+Summary [http://www.gnuband.org/2007/06/26/report_of_conference_on_e-identity_social_issues_in_social_networking_trust_and_reputation/] of a presentation by Alessandro Acquisti [http://www.enisa.europa.eu/doc/pdf/Workshop/June2007/Presentations/acquisti_facebook_ENISA07.zip]:
+
+"Alessandro Acquisti , Carnegie Mellon University, delighted us with great insights about “Imagined communities: awareness, information sharing and privacy: the Facebook case” . His research is in the economics of privacy and he revealed interesting facts about Facebook, for example, 89% of Facebook users reveale their real name. And 87% of CMU Facebook profiles reveale birthday, 51% reveale the address, 40% reveale their phone number (40%!). 61% of the posted images are suited for direct identification. Remember that this information will never disappear, it will stored forever in many computers (facebook servers, google servers, archive.org servers and … as the following discussion easily revealed, governments servers, secret agencies servers and probably many companies who can just afford to save everything and decide in future what to do with this information). There is an evident privacy risk of re-identification: 87% of US population is uniquely identified by {gender, ZIP, date of birth} (Sweeney, 2001), Facebook users that put this information up on their profile could link them up to outside, de-identified data sources
+Facebook profiles often show high quality facial images, Images can be linked to de-identified profiles using face recognition. Some findings on Facebook: Non members rate privacy (concerns, worries, importance) statistically significantly (although only slightly) higher than members. Members deny they use Facebook for dating, however they state they think other members use it for dating. Majority agrees that the information other Facebook members reveal may create a privacy risk for them (mean Likert 4.92). They are significantly less concerned about their own privacy (mean Likert 3.60). Respondents trust the Facebook… more than they trust unconnected Facebook users. The survey about how much users know about Facebook’s privacy policy is interesting as well: “Facebook also collects information about you from other sources, such as newspapers and instant messaging services. This information is gathered regardless of your use of the Web Site.” 67% believe that is not the case. “We use the information about you that we have collected from other sources to supplement your profile unless you specify in your privacy settings that you do not want this to be done.” 70% believe that is not the case."
+(http://www.gnuband.org/2007/06/26/report_of_conference_on_e-identity_social_issues_in_social_networking_trust_and_reputation/)
+
+
+
+=Tools=
+
+#EPIC Online Guide to Practical Privacy , at http://epic.org/privacy/tools.html
+
+
+=More Information=
+
+#See our entry on [[Open Privacy]] standards.
+
+
+[[Category:Encyclopedia]]
+
+[[Category:Policy]]
+
+[[Category:Standards]]
+
+[[Category:Relational]]

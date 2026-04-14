@@ -1,0 +1,441 @@
+Random artifacts from the old Sarapis wiki.
+
+==FLOecology.org Architecture==
+
+People 
+*Community: JomSocial
+*Experts: K2 user pages
+
+Places 
+*Profiles: GreenMap
+*News Feeds: RSS2Content
+
+Projects 
+*K2 Categories 
+*BEEx Clusters (eventually)
+
+Participate 
+*Updates: Newletter
+*Join: Community
+*Support: BEEx
+*Volunteer: Opportunity Feed(?)
+
+==Jomsocial Profile Types==
+
+*Standard Profile
+**Name
+**Location
+**Profile URL -
+**About Me -
+**Dream Project -
+**Talk to Me About -
+**What makes you most upset? -
+**What makes you happiest? -
+*Subject Matter Experts are people interested in contributing their specialized skills to the community.
+**Professional Skill
+**Experience (URL Acceptable)
+**Level of Interest
+**Other links*
+*Space Owners are people interested in contributing their physical space to the community.
+**Address
+**Space Type
+**Useful Features
+**Level of Interest
+**Other links*
+*Fabricators are people interested in building FLŒcology tools.
+**Specific Skills
+**Address
+**Free Hours/Week
+**Pay for your own raw materials?
+*Artists/Craftspeople want to use FLŒcology tools to engage in arts and crafts projects.
+**Type of Art and/or Crafts (checklist)
+**What materials do you use?
+**What tools do you need?
+**Can you finance your own tools/materials?
+**Would you like to build your own tools?
+**Location
+**Retreat
+*Contributors want to give their time and unique skill set to advance the FLŒcology movement.
+**What types of projects would you like to participate in? (Checklist)
+**How can you help us?
+*True Fans want to give their money and social support to FLŒcology member's projects.
+**How much social support can you give?
+**How much financial support can you give?
+**What types of projects would you most like to support?
+*Non-English Speakers
+
+[[Michael Zick Doherty]]: [http://sense.neufuture.com/ OpenRTMS] is a FLO Mobile Sensor Solution that enables people to connect a standard sensor to an Arduino device that sends data to an Android phone that can upload it to an online database.
+
+[http://www.nikolay-georgiev.net/blog/2011/01/open-source-ecology-overview/ Niholay Georgiec]: articulates Open Source Ecology in a very organized, clear way.
+
+Miquel Torres + Charles Collins on FreeCAD.
+
+[[Jeff Roush]]
+
+https://groups.google.com/forum/#!topic/openmanufacturing/dflXQm7uaaI
+
+http://maitreyal3c.com/Home.html
+
+http://cotidianosensitivo.info/blog/
+
+http://www.mecoconcept.com/
+
+http://gnusha.org/skdb/
+
+=Collaboration Tools and Techniques=
+
+The Sarapis Foundation has developed a practice for using FLO tools and techniques that will hopefully enable us to communicate and collaborate more effectively, amongst ourselves and our partners.
+
+==Communication==
+Email is the most widely used online communication technology among people of all technical skill levels. We recommend that organizations use email lists as much as possible because they are (1) more effective way than cc’ing to communicate with multiple people, (2) new email lists are easy to create and (3) email list archives can be made accessible to the public.
+
+===Tools===
+*[http://www.list.org/ Mailman] is a FLO email listserve management tools.  
+*[https://groups.google.com/forum/#!overview Google Groups] are a hosted option.
+
+Social media is an extremely popular way to communicate with people and, we believe, an appropriate place to use proprietary solutions while open source projects like Diaspora and Status.net mature.  There's a tremendous amount of content on the web about effective use of social media.  We suggest looking around.
+
+===Techniques===
+Every discrete organization project should have it’s own email list, and every email list should have at least one person who is responsible for reading every message in the list and adding relevant information from these messages into the organization’s documentation resource.
+
+==Documentation==
+“Wiki” means easy in Hawaiian and has become the term describing easy collaborative document editing platforms.  Wiki’s democratize the process of documentation, lowering the barriers of entry for contributors while providing highly functional version controls so errors can be easily tracked and fixed.
+
+===Tools===
+*[http://www.mediawiki.org/wiki/MediaWiki MediaWiki] is the most widely used FLO wiki platform and is used by Wikipedia. 
+
+===Techniques===
+Every wiki should have at least three sections: 
+*Email list hightlights: aggregates the important points from the email list conversations.
+*Research repository that develops resources useful to members of the organization.
+*An unstructured area for document collaboration
+*(optional) Project pages that outline tasks and milestones for the organization.
+
+==Web Platform==
+Content management systems (CMS) allow people to build and maintain content driven websites without having to use computer code.  If you can use a word processor, you can use use any of the world’s most popular FLO content management systems.  These systems have a large, stable development community and plug-in architectures that enable the CMS’s functionality to be extended in a wide variety of ways.
+
+===Tools===
+*[http://www.wordpress.org Wordpress] is the world’s most popular CMS platform.  It’s designed for blogs but it’s features can be extended.
+*[http://www.joomla.org Joomla] is a popular CMS system that is more polished but less dynamic than Drupal.
+*[http://www.drupal.org Drupal] is the most popular CMS for PHP developers so it’s the most dynamic and extensible.
+
+===Techniques===
+At the very least, an organization’s website should publish a regular digest of the activity taking place within the organization accessible via the website’s RSS feed.  RSS feeds allow other services to “syndicate” your organization’s content.  For example, if someone wanted to subscribe to updates from an organization, they could add the organization’s RSS feed to their feed reader or use a simple widget on an organization’s site to receive automatic email updates containing the digests contents.  Additionally, fans, partners and community news outlets could add the organization’s feeds to their own website.  RSS will become increasingly important as we weave feeds together to create a real time picture of progress within certain organization verticals.  Beyond RSS updates, organizations should post basic information on their site.  Read more about “principals of organization website information architecture”.
+
+==Constituent Relationship Management==
+
+===Tools===
+Every organization should have a system for accepting donations, tracking donor activity and communicating with their community through email and direct mail if necessary.  
+
+'''We recommend:'''
+*[http://www,civicrm.org CiviCRM] is a FLO constituent relationship management system (CRM) designed specifically for organization and community service organizations that integrate with Drupal, Joomla and Wordpress.  There are easy to deploy plug-ins for event ticketing, case management, fundraising, email marketing, reporting, and more.  
+*[http://www.phplist.org PHPlist] is a simple email marketing and newsletters application.
+
+===Techniques===
+CiviCRM has a tremendous amount of features and there are many great resources about how to use many of them.  One important feature set is the ability to categorize people in different ways.  CiviCRM has three ways to do this: (1) groups, (2) tags, (3) fields.  Groups are directly connected to CiviCRM’s emailing function, so you’d create groups for all your different email newsletters and assign people to the groups from which they’d like to receive correspondence.  There is no limit to the amount of groups of which a person can be a part.  You can also assign people tags which enable you to sort people using any terminology you like.  For example, one could search a group for people who have the tags ‘volunteer’ ‘gardening’ to find volunteers who’d be interested in gardening.  You can also add your own fields to people’s profiles, allow you to add whatever information you’d like.  The options are truly endless.
+
+=Documentation=
+
+==CiviCRM==
+
+===Importing Contacts into CiviCRM===
+
+There are two ways to input contacts into CiviCRM.
+
+a. Adding contacts through the CiviCRM application
+
+b. Placing your contacts into a spreadsheet and then importing the spreadsheet into CiviCRM.
+
+'''Add contacts through the CiviCRM application:'''
+
+1. Log into your CiviCRM.  If you're using Drupal, this requires logging into your Drupal site and then clicking a button in your navigation menu titled 'CiviCRM'.
+
+2. Find the CiviCRM navigation bar.  It's probably on the top of your screen.  It's buttons include: 'Home', 'Search', 'Contacts'... etc.
+
+3. Click on the 'Contacts' button and a drop down menu will appear.  Click on "New Individual."
+
+4. Fill out as many fields as you want.  You'll have an opportunity to add groups and tags to contacts later.
+
+5. Click 'Save'
+
+Congratulations!  You just created your first contact.
+
+'''Adding Contacts with a Spreadsheet'''
+
+If you have more than 20 contacts to add to CiviCRM, you will probably save time by putting your contacts into a spreadsheet and then uploading that spreadsheet into your CiviCRM system.  The first step is to start with a spreadsheet that is formatted to be imported into CiviCRM.  You can download one [http://sarapisfoundation.org/index.php/lets-collab/downloads/cat_view/12-floers here] or you can create your own by following these steps:
+
+1. Click 'Search' on top of your CiviCRM navigation menu and click 'Find Contacts.'
+
+2. Don't fill out the fields, click 'search.'
+
+3. You should have a list of the contacts in your CiviCRM system.  Select them all, click on the drop down menu, select 'export' and click 'go.'
+
+4. Select 'Export PRIMARY fields' and click continue.  The system will download your export file. 
+
+5. Open the file with your computer's spreadsheet program.  We'll assume it's "LibreOffice Calc."
+
+6. Once LibreOffice has booted up, it will give you a 'Text Import" window.  BEFORE you click 'OK' you MUST click the check box entitled 'Seperated by: Comma" under the 'Seperator options' section.  Once you've clicked that box, click 'OK'.  The spreadsheet should open.
+
+7. Look at the top of the spreadsheet's window.  If it says 'read only' you need to 'Save As' the spreadsheet to your computer.
+
+Now you can enter information into the appropriate cells on your spreadsheet.  You do not need to fill out all the cells.  In fact, you can delete the columns you don't want to fill in.  We suggest deleting the everything before 'First Name' and everything between 'Birth Date' and 'Current Employer' to make life simpler.
+
+Now it's time to import your full, nicely formatted spreadsheet into your CiviCRM.  Make sure you have deleted the contacts you had initially imported and make sure your second row is filled with information.
+
+1.  Save your file in a CVS format.  This means the file's title will end with .csv.
+
+2.  Go to your CiviCRM, click the 'Contacts' menu item and click 'Import Contacts.'
+
+3. Select your file in the Upload CSV File field.
+
+4. Does your first row contains headers and not contact information?  If so, click the first check box.
+
+5. Leave everything else as it is and click 'Continue.'
+
+6. In this area you need to match your 'Column Names' on the left with the 'matching CiviCRM field' on the right.  
+*If your import rows are blank, it's because you first few rows don't have content.  Click 'Previous', go back to your spreadsheet, delete the blank rows on top of your spreadsheet, save and reimport the sheet.
+*Do not map 'current employers' because it will cause an error.
+*If you filled out a field that doesn't have a corresponding CiviCRM field and still want to import it, consider mapping it to the 'Note' field.  
+
+7.  If you plan to add more contacts in the future with the same spreadsheet format, click 'save this field mapping.'  Click 'Continue'
+8. Make sure you're importing the same amount of rows that you have in your spreadsheet (minus the column headers).
+
+9. Add these contacts to the appropriate groups and tags.  Click 'Import Now.'  Click 'Ok'.
+
+10. If an error appears, check to make sure that your contacts haven't imported anyway before trying again.  Imported contacts don't always show up in the 'recent items' feed on the left of your CiviCRM so make sure to search for a contact that you imported to see if everything works.  Sometimes it works, even if it says it didn't. :)
+
+'''Supporting Files'''
+
+
+
+'''References'''
+
+CiviCRM.org: [http://wiki.civicrm.org/confluence/display/CRMDOC40/Exporting+Data Exporting Data] and [http://wiki.civicrm.org/confluence/display/CRMDOC40/Importing+Data Importing Data].
+
+FlossManuals.net: [http://en.flossmanuals.net/civicrm/ch019_importing/ Importing Data into CiviCRM]
+
+=Currency=
+
+[http://www.complementarycurrency.org/ Complementary Currency Resource Center]
+
+[http://en.wikipedia.org/wiki/Local_Exchange_Trading_Systems LETS: Local Exchange Trading Systems]
+
+[http://www.hubculture.com/ Hub Culture]
+
+[http://www.slowmoney.org/ Slow Money]
+
+[http://www.timebanks.org/ TimeBanks USA]
+
+[http://www.livingeconomies.org/ BALLE]
+
+[http://www.transitionnetwork.org/ Transition Network]
+
+[http://www.metacurrency.org/ Meta Currency Projects]
+
+[http://www.threebles.com/presentation Threebles]
+
+[http://en.wikipedia.org/wiki/Network_Economy Network Economy ]
+
+[http://www.berkshares.org/ Berkshares]
+
+[http://brooklyntorch.org/ Brooklyn Torch]
+
+[http://www.hourexchangeportland.org/ Hour Exchange Portland]
+
+[http://www.transitionus.org/ Transition USA]
+
+[http://davisdollars.org/ Davis Dollars]
+
+[http://www.davinciinstitute.com/ da Vinci Institute]
+
+[http://www.dyndy.net/ Dyndy]
+
+[http://onebluedot.org/ One Blue Dot]
+
+[http://emergentbydesign.com/2010/08/27/35-social-lending-platforms-around-the-world/ 35 social lending platforms]
+
+[http://www.bitcoin.org/ BitCoin]
+
+[http://meshing.it/categories/5-Goods Directory of Barter Tools] 
+
+[http://baltimoregreencurrency.org/ B Notes Baltimore]
+
+[http://bernalbucks.org/ Bernal Bucks] San Fran Local Loyalty Program
+
+http://trustcurrency.blogspot.com/
+
+http://www.opensourcecurrency.org/
+
+http://blog.newcurrencyfrontiers.com/
+
+http://greensborocurrencyproject.blogspot.com/
+
+http://ripple-project.org/
+
+http://ccmag.net/
+
+=Organizations=
+
+[http://www.livingeconomies.org/ BALLE] is a vehicle for connecting to local businesses.
+
+[http://www.ilsr.org/ Institute for Local Self-Reliance] "mission is to provide innovative strategies, working models and timely information to support environmentally sound and equitable community development. To this end, ILSR works with citizens, activists, policymakers and entrepreneurs to design systems, policies and enterprises that meet local or regional needs; to maximize human, material, natural and financial resources; and to ensure that the benefits of these systems and resources accrue to all local citizens."
+*[http://arstechnica.com/tech-policy/news/2011/03/133-us-cities-now-run-their-own-broadband-networks.ars 133 US cities with their own broadband networks.]
+
+==Space Databases==
+
+[http://www.OpenCoworking.org/wiki OpenCoworking Wiki]
+
+[http://www.Hackerspaces.org Hackspaces Wiki]
+
+[http://www.ecovillages.org Ecovillages]
+
+==Community Groups==
+
+[http://groups.google.com/group/coworking The Coworking Google Group] is a community of space owners, operators, members and enthusiasts who discuss issues pertaining to the coworking movement 
+
+[http://hackerspaces.org/wiki/ HackerSpaces.org] is a one stop shop for a tremendous about of information about hackerspaces including a directory of spaces and information about best practices.
+
+[http://coworking.de/ Coworking.de] is the German coworking community portal.
+
+==News and Thought Leadership==
+
+[http://emergentresearch.com/ Emergent Research] has a 'coworking lab' that focuses on monitoring the growth of the movement.  
+
+[http://www.deskmag.com/ DeskMag] is "the magazine about the new places we work, how they look, how they function, how they could be improved and how we work in them. We especially focus on workspaces which are home to the new breed of independent workers, such as coworking spaces, private shared studios and executive offices."
+
+==Open Software and Data Projects==
+
+[http://github.com/thehub/ The Hub's open source software projects] including space management software.  
+
+[http://groups.google.com/group/coworkingdb?hl=en Coworking Registry] is a database of coworking spaces that focuses on developing a powerful APi.
+
+[https://github.com/nadineproject/nadine Nadine] is a Django web project that helps coworking space staff track and bill members, and more.
+
+[http:///www.opencoworking.org/wiki OpenCoworking] is an open data platform for the coworking community.  More info [http://wiki.coworking.info/w/page/31359618/NadineProject here].
+
+==Open Space Handbooks and Manuals==
+
+The [http://socialinnovation.ca/ Center for Social Innovation] of Toronto Canada has published [http://socialinnovation.ca/sssi three pdfs] about their experiences creating a space, how to create your own space and how collaborative spaces are changing in the world.
+
+The Hub Design+Make Handbook version 1.7 is "aimed at helping Hub Design and Make Teams develop and use principles, tools and systems to conceive and navigate the project of creating a physical Hub."
+
+The [http://sarapisfoundation.org Sarapis Foundation] has published [http://sarapisfoundation.org/files/Coworking_Finances_v1.0.zip financial models] for a coworking space in Brooklyn, New York.  One model includes a cafe, the other is just coworking space and events.
+
+Kaan Aksay also shared a great [http://www.editgrid.com/user/harro33/shared_office_model financial model] on the coworking google group that is highly geared towards the process of starting a shared office space.
+
+==Exemplary Spaces==
+
+[http://bucketworks.org/ Bucketworks] in Milwaukee
+
+[http://www.indyhall.org/ Indy Hall] in Philadelphia 
+
+[http://thecubelondon.com/ The Cube] in London
+
+[http://www.cocovivo.com/blog.html Coco Vivo] in Panama
+
+==Practices==
+
+[http://ickevald.net/resistance/anti-mass.htm The Anti-Mass: Methods of Organizing for Collectives]
+
+==Space Directories==
+
+The [http://directory.ic.org/ Intentional Communities Directory] is part of the Intentional Communities website, a project of the [http://fic.ic.org/ Fellowship for Intentional Community (FIC)].  The community list is 1000s long and [http://directory.ic.org/iclist/geo.php here.]
+
+==Art Submissions==
+
+I would like ideas on how to allow submissions of open source art.
+
+I am attempting to create a competitive repository of coin designs. The designs will be used in printing coins via print services or other means (ideally locally, then try CloudFab, backups: Ponoko and Shapeways) as well as online display of incentive earnings. These will be distributed as fundraiser incentives as well.
+
+One way I thought of to do this:
+
+*Within a FLOfarm wiki...
+*Create a Template for each coin to be modeled, limit access to template to admins
+*Allow contributors to post original artwork by creating a page and applying the appropriate template
+*Alter templates to display the winning entries in each category
+*Post an ongoing running tally with winners to be determined at specific intervals
+*Create and apply additional Template for each category winner 
+
+Missing features
+Submission form for automatic content generation
+Automated result reporting on design tallies
+Overlay user art on coin material, rotate blanks
+Display 3D data
+
+==Similar Projects==
+
+[http://akvo.org/ Akvo] makes it easy to bring development aid projects online. Use our open web and mobile tools to connect and share progress with funders and followers.  Open source code [https://github.com/akvo/ here].
+
+[http://catarse.me/ Catarse] is an open source 'clone' of Kickstarter.  You can access the code [https://github.com/danielweinmann/catarse here].
+
+[http://www.cofundos.org/ CoFundOS] helps to realize open-source software ideas, by providing a platform for their discussion & enrichment and by establishing a process for organizing the contributions and interests of different stakeholders in the idea.
+`
+
+==DaDaMac==
+
+An idea and a reality
+
+Brilliantly expressed  - you accurately describe the picture that I have clearly in my mind for dadamac but I have never explained it all in one go, or so clearly, or perceptively, or in such detail. I just have it in my head and the details keep getting clearer as I am responding to new and extending challenges as dadamac grows. I am trying to build the things you describe into the architecture of the dadamac.net site. Your description is all so clear and real that I imagine you are describing how it is for your online community too. Given the close fit , and the fact that we are intending to have a one-to-one skype, I want to share with you more of how things are going at dadamac. No need to read it all now - it can serve as a kind of information-back-up/reference-point/agenda when we talk, so my explanations are contextual and not too incoherent ;-)
+
+Our reality
+
+Some of what I explain you can already see at dadmac.net, some is in the architecture but not populated yet, some is still vision. What I will describe next will make most sense if you also understand where the site (and the dadamac community) is in its evolution, so I will be explaining both together.
+
+Starting with John
+
+At the moment dadamac.net is populated mostly with information about what John Dada is doing in Nigeria. Obviously he has very high trust in Dadamac  as he is the "dada" of Dadamac. The site is dominated by Information about his initiatives. It has developed, so far,  to show the ongoing story of his work, to increase his visibility, and also to act as an online office and reference resource for him and his team. My side of things has been less in evidence, except for how I support his work.
+
+Issues of open-ness
+
+Much of our dadamac information is visible to anyone - but some of it can only be seen by the people most involved in any initiative. Decisions about what is visible, and what is not visible, are largely guided by "relationships" and issues of "noise" "value" etc and the work of making things visible.
+
+For instance we have weekly meetings - http://www.dadamac.net/network/uk-nigeria-dadamac-team - and we share personal news and concerns in our "meet and greet" times there - just as any close community would do in its informal times together. The difference is that we have to share these things in writing. There needs to be understanding and trust regarding what is "just between ourselves" (so we can be sensitive and supportive of each other) and what is news to share online and maybe promote to the front page of dadamac.net and to send out in our twitter stream.
+
+We always keep the full archives of our weekly online meetings, so they are available for team reference, but they are not public. Parts of them we quote in full, and we publish a report on them (through Nikki's blog),
+
+We also share news about some of our hopes (and attempts to get funding etc) in very early stages,  but we tend not to share details such as proposed salaries, because those figures relate to proposed jobs for real people, and the people may not want everyone to know what they earn. We are also sensitive to the fact that some of our collaborators (or potential collaborators) may come from less open organisational cultures and we need to respect their norms as well. We do a lot of asking for permission to share, which is a bit irksome, but important in building trust.
+
+Right for John - right for me - right for everyone
+
+The idea behind dadamac.net development is that if we get the information flows right for John, then we will be able to extend the processes for others in the dadamc community  (which is what we are now starting to do through collaborators connect - http://www.dadamac.net/initiatives/cross-cultural-collaboration/collaborators-connect). I am also starting to see how what we have created for John and his initiatives fits my interests and initiatives (NB as "mac" side of dadamac I'm the other high trust contributor). 
+
+Reputation - starting out
+
+There are two ways for someone to start to have a presence at dadamac.net - one way is that I write an introduction about them on my network list http://www.dadamac.net/Community/Network, the other  way (not much used yet) is for the person to complete their own profile http://dadamac.net/user/register.
+
+The two kinds of personal details (my introduction and their profile) relate to each other through an automatic cross referencing (hmm there may be a temporary glitch with that - I just checked one and it misdirected me - I've tweeted "Andy the tech" about it). At present I'm filling in most of what is written about people, through my introductions, but I hope that when the self-completed profiles take off the balance will shift. This will mean that people fill in their own information about websites, twitter, interests etc and my introductions will take a different shape to the one they have now (and be less work for me).
+
+introductions and reputation
+
+Gradually there will tend to be two kinds of introduction written by me/high-trust-dadamac-people. One introduction type will be in parallel with the self-completed profiles and will be like a testimonial to the person, affirming (or not) what they are claiming in their profile.
+
+The other kind will be introductions that I (or oher high-trust-dadamac-people have filled in for personal/group benefit. These will be intorductions about people who are unlikely to ever want to fill in a dadamac profile or become a part of the dadamac community. These introductions are more like annotated  business cards (reminders of people I/we have met, online or face-to-face). If  I may want to remember someone later, or introduce them to others, then it makes sense to add them to my network list as I go along. Other dadamac core members may want to do the same.
+
+As the system develops other people in Dadamac will be able to write introductions too, but there will be different levels of introductions, only the very high trust core members will be able to contribute to the core list of introductions as they are very important to the credibility of the track record in our high trust network.
+
+A track record
+
+John's recent track record is what currently fills most of dadamac.net, through the reports of our online meetings and write-ups of the initiatives. We are building in various features to help make the updating fairly painless and an increasingly automatic feature of "making use of the site as an office" rather than having to do updates as a separate 'housekeeping task".
+
+All John's initiatives can be accessed via the initiatives menus. All initiatves initiated by dadamac will be accessible via the initiatives menus, and it will be easy to see who is contributing to those initiatives. People who are not high trust will also be able to develop evidence of their own track record, but it will be obvious how much of that record is known to dadamac and how much is separate. Each person in their profile will be able to point to the initiatives they are involved in - either initiatives in dadamac (with all the cross referencing that brings) or initiatives out side (with whatever trust cross referencing they are able to point to from outside of dadamac).
+
+Over time it will become obvious who the valued core members are and who are new comers or marginal contributors etc. If anyone is making misleading claims about their role and value in dadamac that should become obvious through the lack of evidence backing up their claims. Obviously in extreme cases statements could be made about them on the introductions and/or they could be evicted from the community - but we imagine if will be largely as self-regulating system.
+
+My own track record
+
+I am beginning to recognise how I can show my own online activities in dadamac/net (guided by the model of what John is doing in the physical world). For about a year now I have been posting to posterous to give an "over my shoulder" flavour of what I do, and to make visible some of the places and ideas that I visit or help to build online (just as he shares about his physical realities). I'm exploring how I best link that somewhat chaotic activity record with the structures in Dadamac.net. (What is my equivalent of the weekly UK Nigeria meeting that feeds into Nikki's blog)
+
+I've started to see more of my own work as "initiatives" and this means that as I start new "initiatives" (such as setting up different groups, or experimenting with different socio-tech "orchestrations" I will write them up what I am exploring in terms of initiatives and updates. I will also gradually go back over what I have done in the past and place it in appropriately in dadamac to make it more visible/accessible/understandable/contextualised for others.
+
+Static and dynamic information
+
+We are experimenting with the "right connections" between static and dynamic information in a variety of ways. We think in terms of information flows, and what information we need to push/pull/park/process and how that can happen most naturally - i.e. as we are working on it anyhow, and through the system looking after things for itself.
+
+How far in reality?
+
+Dadamac.net is working in a useful way for John, and I am starting to add my own information, then "the collaborators", and others should follow. My situation is very different to John's. He is active in physical locations on the ground in Nigeria, doing visible projects with real people -  integrated programmes of many kinds. I am active mainly on the Internet, supplemented by face to face meetings, and what I do is seldom related to the physical world - it is much more to do with ideas and information, so I am still exploring the best ways to capture that. We are only just starting to bring other people in - but we think that once a few of them see how the system is serving others they will gradually come over more quickly - and then I will have something more visible to show. Of course I do already have some evidence of what I am developing at dadamac.net  - because the structure of that site and  the way John's content is flowing through is one of my projects (in collaboration with Andy Broomfield http://www.dadamac.net/network/andy-broomfield and Nikki Fishman http://www.dadamac.net/about/Nicola ) .
+
+Why do it?
+
+A mixture of reasons. Regarding UK Africa see Dadamac - the Internet-enabled alternative to top-down development         http://dadamac.posterous.com/dadamac-the-internet-enabled-alternative-to-t and Peter Adetunji Oyawale        http://www.dadamac.net/network/peter-adetunji-oyawale
+Also my ongoing fascination with emergent educational systems, and the changing nature of learning/teaching/studying/researching now that we have new ways of accessing and creating knowledge.

@@ -1,0 +1,17 @@
+
+
+URL = http://loci.cs.utk.edu/ibp/
+
+=Description=
+
+"The Internet Backplane Protocol (IBP) is '''middleware for managing and using remote storage. It was invented to support Logistical Networking in large scale, distributed systems and applications'''. We define logistical networking as the global scheduling and optimization of data movement, storage and computation based on a model that takes into account all the network's underlying physical resources. This contrasts with more traditional networking, which does not explicitly model storage or computation resources in the network. We call this approach "logistical" because of the analogy it bears with the systems of warehouses, depots and distribution channels commonly used in the logistics of military and industrial activity. IBP provides a mechanism for using distributed storage for logistical purposes.
+
+It acquired its name because it was designed to enable applications to treat the Internet as if it were a processor backplane. Whereas on a typical backplane, the user has access to memory and peripherals and can direct communication between them with DMA, IBP gives the user access to remote storage and standard Internet resources (e.g. content servers implemented with standard sockets) and can direct communication between them with the IBP API.
+
+By providing a uniform, application-independent interface to storage in the network, IBP makes it possible for applications of all kinds to use logistical networking to exploit data locality and more effectively manage buffer resources. We believe it represents the kind of middleware needed to overcome the current balkanization of state management capabilities on the Internet, so that any application that needs to manage distributed state can benefit from the kind of standardization, interoperability, and scalability that have made the Internet into such a powerful communication tool."
+(http://loci.cs.utk.edu/ibp/)
+
+
+[[Category:Technology]]
+
+[[Category:Standards]]

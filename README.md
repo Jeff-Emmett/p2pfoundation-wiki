@@ -6,10 +6,22 @@ Content archive and infrastructure configs for the [P2P Foundation](https://p2pf
 
 | Directory | Contents | Size |
 |-----------|----------|------|
-| `wiki/` | 41,500+ MediaWiki articles as `.mediawiki` files | ~275 MB |
-| `xmldump/` | 31 XML database dumps (Git LFS) | ~507 MB |
+| `wiki/` | 41,500+ MediaWiki articles as `.mediawiki` files (main namespace only) | ~275 MB |
+| `xmldump/` | 31 paginated Special:Export XMLs from an earlier seed (Git LFS) — **superseded** by the self-hosted dump endpoint below | ~507 MB |
 | `blog/` | Static blog server configs (mirror is rsync'd separately) | configs only |
-| `infra/` | Docker Compose stack for the full MediaWiki + WordPress platform | configs only |
+| `infra/p2pwiki/` | Docker Compose stack for wiki.p2pfoundation.net — mirrors live `/opt/websites/p2pwiki/` | configs only |
+
+## Live dumps
+
+Canonical wiki exports are now generated server-side by `dumpBackup.php` / `dumpUploads.php` and served at:
+
+- <https://wiki.p2pfoundation.net/dumps/> — directory index
+- `…/p2pwiki-latest-current.xml.bz2` — current revisions, all namespaces (~53 MB)
+- `…/p2pwiki-latest-history.xml.bz2` — full revision history (~135 MB)
+- `…/p2pwiki-latest-images.tar` — all uploaded images (~1.7 GB)
+- `…/p2pwiki-latest-uploads.txt` — image filename list
+
+Current XML regenerates weekly; history + images monthly. See [`infra/p2pwiki/README.md`](infra/p2pwiki/README.md) for the cron script and import instructions. Unlike `xmldump/`, these cover **all namespaces** — Templates, Categories, Files, Talk, User, Draft, MediaWiki, Help — which is what you want if you're bootstrapping a working mirror.
 
 ## Quick Start
 
@@ -21,20 +33,26 @@ Articles are plain text MediaWiki markup — open any file in `wiki/` to read it
 cat wiki/Commons-Based_Peer_Production.mediawiki
 ```
 
-### Run the Full Stack (Operators)
-
-The `infra/` directory contains the complete Docker Compose setup for wiki.p2pfoundation.net, blog.p2pfoundation.net, and related sites.
+### Run the stack (operators)
 
 ```bash
-cd infra/
-cp .env.example .env
-# Fill in database passwords (or use Infisical)
+cd infra/p2pwiki/
+cp .env.example .env   # fill in DB_ROOT_PASSWORD, DB_PASSWORD (or source from Infisical)
 docker compose up -d
 ```
 
-### XML Dumps
+`LocalSettings.php` is not in the repo — pull from the Netcup backup or generate a fresh one with `maintenance/install.php`.
 
-XML dumps are stored via Git LFS. After cloning:
+### Getting a full wiki snapshot
+
+Prefer the live endpoint (always current, all namespaces):
+
+```bash
+curl -O https://wiki.p2pfoundation.net/dumps/p2pwiki-latest-history.xml.bz2
+curl -O https://wiki.p2pfoundation.net/dumps/p2pwiki-latest-images.tar
+```
+
+The older Git LFS dumps in `xmldump/` are kept for historical reference only:
 
 ```bash
 git lfs pull

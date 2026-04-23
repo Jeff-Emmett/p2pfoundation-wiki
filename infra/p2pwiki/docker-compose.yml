@@ -1,0 +1,106 @@
+services:
+  p2pwiki-db:
+    image: mariadb:10.11
+    container_name: p2pwiki-db
+    restart: unless-stopped
+    mem_limit: 4G
+    cpus: 4
+    command: >
+      --max-connections=500
+      --wait-timeout=300
+      --interactive-timeout=300
+      --innodb-buffer-pool-size=2G
+      --innodb-log-file-size=512M
+      --innodb-flush-log-at-trx-commit=2
+      --innodb-flush-method=O_DIRECT
+      --max-allowed-packet=64M
+      --table-open-cache=800
+      --tmp-table-size=64M
+      --max-heap-table-size=64M
+      --thread-cache-size=50
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: p2pwiki
+      MYSQL_USER: wikiuser
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+    - p2pwiki-db-data:/var/lib/mysql
+    networks:
+    - p2pwiki-internal
+    cap_drop:
+    - ALL
+    cap_add:
+    - DAC_OVERRIDE
+    - FOWNER
+    - SETGID
+    - SETUID
+    security_opt:
+    - no-new-privileges:true
+  p2pwiki:
+    image: mediawiki:1.40
+    container_name: p2pwiki
+    mem_limit: 1536m
+    cpus: 1
+    restart: unless-stopped
+    depends_on:
+    - p2pwiki-db
+    volumes:
+    - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+    - ./.htaccess:/var/www/html/.htaccess:ro
+    - ./htaccess-enable.conf:/etc/apache2/conf-enabled/htaccess-enable.conf:ro
+    - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+    - ./robots.txt:/var/www/html/robots.txt:ro
+    - ./block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
+    - ./remoteip.conf:/etc/apache2/conf-enabled/remoteip.conf:ro
+    - p2pwiki-images:/var/www/html/images
+    - p2pwiki-extensions:/var/www/html/extensions
+    labels:
+    - traefik.enable=true
+    # HTTP → HTTPS redirect (CF proxy removed, Traefik handles TLS directly)
+    - traefik.http.routers.p2pwiki-http.rule=Host(`wiki.p2pfoundation.net`)
+    - traefik.http.routers.p2pwiki-http.entrypoints=web
+    - traefik.http.middlewares.p2pwiki-redirect.redirectscheme.scheme=https
+    - traefik.http.routers.p2pwiki-http.middlewares=p2pwiki-redirect
+    # HTTPS with Let's Encrypt
+    - traefik.http.routers.p2pwiki.rule=Host(`wiki.p2pfoundation.net`)
+    - traefik.http.routers.p2pwiki.entrypoints=websecure
+    - traefik.http.routers.p2pwiki.tls.certresolver=letsencrypt
+    - traefik.http.services.p2pwiki.loadbalancer.server.port=80
+    # Rate limiting per client IP (default sourceCriterion = TCP remote addr, which is the real client
+    # since wiki.p2pfoundation.net DNS resolves direct to Netcup — traffic is NOT CF-proxied yet)
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.average=30
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.burst=60
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.period=1s
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip
+    # Concurrent connections per client IP
+    - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.amount=20
+    - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.sourcecriterion.requestheadername=Cf-Connecting-Ip
+    - traefik.http.middlewares.p2pwiki-cfonly.ipwhitelist.sourcerange=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32
+    - traefik.http.routers.p2pwiki.middlewares=p2pwiki-cfonly,p2pwiki-ratelimit,p2pwiki-inflightreq
+    networks:
+    - p2pwiki-internal
+    - traefik-public
+    cap_drop:
+    - ALL
+    cap_add:
+    - NET_BIND_SERVICE
+    - CHOWN
+    - SETGID
+    - SETUID
+    - DAC_OVERRIDE
+    - FOWNER
+    security_opt:
+    - no-new-privileges:true
+volumes:
+  p2pwiki-db-data: null
+  p2pwiki-images: null
+  p2pwiki-extensions: null
+networks:
+  p2pwiki-internal: null
+  traefik-public:
+    external: true

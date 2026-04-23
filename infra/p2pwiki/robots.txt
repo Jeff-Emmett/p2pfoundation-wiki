@@ -78,6 +78,20 @@ Disallow: /index.php?diff=
 Disallow: /index.php?oldid=
 Disallow: /api.php
 
+# Block aggressive Apple crawler (ignores default crawl rules, hammers API/Special pages)
+User-agent: Applebot
+Crawl-delay: 10
+Disallow: /Special:
+Disallow: /index.php?title=Special:
+Disallow: /index.php?action=
+Disallow: /index.php?diff=
+Disallow: /index.php?oldid=
+Disallow: /api.php
+
+# Block LinkupBot
+User-agent: LinkupBot
+Disallow: /
+
 # Default
 User-agent: *
 Disallow: /Special:

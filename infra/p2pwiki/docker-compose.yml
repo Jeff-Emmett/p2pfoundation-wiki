@@ -9,7 +9,7 @@ services:
       --max-connections=500
       --wait-timeout=300
       --interactive-timeout=300
-      --innodb-buffer-pool-size=2G
+      --innodb-buffer-pool-size=1G
       --innodb-log-file-size=512M
       --innodb-flush-log-at-trx-commit=2
       --innodb-flush-method=O_DIRECT

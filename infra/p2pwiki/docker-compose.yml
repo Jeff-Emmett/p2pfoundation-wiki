@@ -43,6 +43,8 @@ services:
     - no-new-privileges:true
   p2pwiki:
     image: mediawiki:1.40
+    # Enable mod_headers so cache-images.conf can set Cache-Control / drop Vary
+    command: ["bash","-c","a2enmod headers >/dev/null 2>&1; exec apache2-foreground"]
     container_name: p2pwiki
     mem_limit: 1536m
     cpus: 1
@@ -57,6 +59,7 @@ services:
     - ./robots.txt:/var/www/html/robots.txt:ro
     - ./block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
     - ./remoteip.conf:/etc/apache2/conf-enabled/remoteip.conf:ro
+    - ./cache-images.conf:/etc/apache2/conf-enabled/cache-images.conf:ro
     - p2pwiki-images:/var/www/html/images
     - p2pwiki-extensions:/var/www/html/extensions
     labels:

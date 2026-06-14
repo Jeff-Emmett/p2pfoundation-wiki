@@ -3,7 +3,7 @@ services:
     image: mariadb:10.11
     container_name: p2pwiki-db
     restart: unless-stopped
-    mem_limit: 4G
+    mem_limit: 6G
     cpus: 4
     command: >
       --max-connections=500
@@ -43,11 +43,15 @@ services:
     - no-new-privileges:true
   p2pwiki:
     image: mediawiki:1.40
-    # Enable mod_headers so cache-images.conf can set Cache-Control / drop Vary
     command: ["bash","-c","a2enmod headers >/dev/null 2>&1; exec apache2-foreground"]
+    environment:
+      ER_APPROVER_EMAIL: michel@p2pfoundation.net
+      ER_BASE_URL: https://wiki.p2pfoundation.net
+      ER_FROM_EMAIL: noreply@p2pfoundation.net
+      ER_DATA_DIR: /var/editor-request-data
     container_name: p2pwiki
-    mem_limit: 1536m
-    cpus: 1
+    mem_limit: 1g
+    cpus: 2
     restart: unless-stopped
     depends_on:
     - p2pwiki-db
@@ -55,6 +59,7 @@ services:
     - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
     - ./.htaccess:/var/www/html/.htaccess:ro
     - ./htaccess-enable.conf:/etc/apache2/conf-enabled/htaccess-enable.conf:ro
+    - ./mpm-tuning.conf:/etc/apache2/conf-enabled/mpm-tuning.conf:ro
     - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
     - ./robots.txt:/var/www/html/robots.txt:ro
     - ./block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
@@ -62,6 +67,9 @@ services:
     - ./cache-images.conf:/etc/apache2/conf-enabled/cache-images.conf:ro
     - p2pwiki-images:/var/www/html/images
     - p2pwiki-extensions:/var/www/html/extensions
+    - ./extensions:/var/www/html/p2pwiki-custom:ro
+    - ./editor-request:/var/www/html/editor-request:ro
+    - ./editor-request-data:/var/editor-request-data
     labels:
     - traefik.enable=true
     # HTTP → HTTPS redirect (CF proxy removed, Traefik handles TLS directly)
@@ -69,19 +77,24 @@ services:
     - traefik.http.routers.p2pwiki-http.entrypoints=web
     - traefik.http.middlewares.p2pwiki-redirect.redirectscheme.scheme=https
     - traefik.http.routers.p2pwiki-http.middlewares=p2pwiki-redirect
+    # commons-hub.at variant: CF-proxied, so no origin HTTPS redirect (CF Always-HTTPS handles edge)
+    - traefik.http.routers.p2pwiki-ch-http.rule=Host(`wiki.commons-hub.at`)
+    - traefik.http.routers.p2pwiki-ch-http.entrypoints=web
+    - traefik.http.routers.p2pwiki-ch-http.service=p2pwiki
     # HTTPS with Let's Encrypt
-    - traefik.http.routers.p2pwiki.rule=Host(`wiki.p2pfoundation.net`)
+    - traefik.http.routers.p2pwiki.rule=Host(`wiki.p2pfoundation.net`) || Host(`wiki.commons-hub.at`)
     - traefik.http.routers.p2pwiki.entrypoints=websecure
-    - traefik.http.routers.p2pwiki.tls.certresolver=letsencrypt
+    - traefik.http.routers.p2pwiki.tls=true
     - traefik.http.services.p2pwiki.loadbalancer.server.port=80
     # Rate limiting per client IP (default sourceCriterion = TCP remote addr, which is the real client
     # since wiki.p2pfoundation.net DNS resolves direct to Netcup — traffic is NOT CF-proxied yet)
-    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.average=30
-    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.burst=60
+    # Tightened 2026-04-25 after Tencent/meta-webindexer scraper saturation
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.average=10
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.burst=20
     - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.period=1s
     - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip
     # Concurrent connections per client IP
-    - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.amount=20
+    - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.amount=8
     - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.sourcecriterion.requestheadername=Cf-Connecting-Ip
     - traefik.http.middlewares.p2pwiki-cfonly.ipwhitelist.sourcerange=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32
     - traefik.http.routers.p2pwiki.middlewares=p2pwiki-cfonly,p2pwiki-ratelimit,p2pwiki-inflightreq

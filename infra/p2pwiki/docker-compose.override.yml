@@ -3,11 +3,12 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
     container_name: p2pwiki-elasticsearch
     restart: unless-stopped
-    mem_limit: 3G
+    mem_limit: 3g
+    memswap_limit: 4g
     cpus: 2
     environment:
       discovery.type: single-node
-      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
       xpack.security.enabled: "false"
       bootstrap.memory_lock: "true"
     ulimits:
@@ -46,7 +47,12 @@ services:
       - traefik.enable=true
       - traefik.http.routers.p2pwiki-dumps.rule=Host(`wiki.p2pfoundation.net`) && PathPrefix(`/dumps`)
       - traefik.http.routers.p2pwiki-dumps.entrypoints=websecure
-      - traefik.http.routers.p2pwiki-dumps.tls.certresolver=letsencrypt
+      - traefik.http.routers.p2pwiki-dumps.tls=true
+      - traefik.http.routers.p2pwiki-dumps-http.rule=Host(`wiki.p2pfoundation.net`) && PathPrefix(`/dumps`)
+      - traefik.http.routers.p2pwiki-dumps-http.entrypoints=web
+      - traefik.http.routers.p2pwiki-dumps-http.priority=100
+      - traefik.http.routers.p2pwiki-dumps-http.middlewares=p2pwiki-dumps-strip,p2pwiki-ratelimit
+      - traefik.http.routers.p2pwiki-dumps-http.service=p2pwiki-dumps
       - traefik.http.routers.p2pwiki-dumps.priority=100
       - traefik.http.routers.p2pwiki-dumps.middlewares=p2pwiki-dumps-strip,p2pwiki-ratelimit
       - traefik.http.middlewares.p2pwiki-dumps-strip.stripprefix.prefixes=/dumps

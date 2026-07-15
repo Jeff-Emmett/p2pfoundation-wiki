@@ -19,10 +19,10 @@ services:
       --max-heap-table-size=64M
       --thread-cache-size=50
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root
       MYSQL_DATABASE: p2pwiki
       MYSQL_USER: wikiuser
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql_pw
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 30s
@@ -30,6 +30,8 @@ services:
       retries: 3
     volumes:
     - p2pwiki-db-data:/var/lib/mysql
+    - /opt/infisical/secret-files/p2pwiki-mysql-root:/run/secrets/mysql_root:ro
+    - /opt/infisical/secret-files/p2pwiki-mysql-pw:/run/secrets/mysql_pw:ro
     networks:
     - p2pwiki-internal
     cap_drop:
@@ -76,7 +78,7 @@ services:
     - traefik.http.routers.p2pwiki-http.rule=Host(`wiki.p2pfoundation.net`)
     - traefik.http.routers.p2pwiki-http.entrypoints=web
     - traefik.http.middlewares.p2pwiki-redirect.redirectscheme.scheme=https
-    - traefik.http.routers.p2pwiki-http.middlewares=p2pwiki-redirect
+    - traefik.http.routers.p2pwiki-http.middlewares=p2pwiki-cfonly,p2pwiki-ratelimit,p2pwiki-inflightreq
     # commons-hub.at variant: CF-proxied, so no origin HTTPS redirect (CF Always-HTTPS handles edge)
     - traefik.http.routers.p2pwiki-ch-http.rule=Host(`wiki.commons-hub.at`)
     - traefik.http.routers.p2pwiki-ch-http.entrypoints=web
@@ -96,7 +98,7 @@ services:
     # Concurrent connections per client IP
     - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.amount=8
     - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.sourcecriterion.requestheadername=Cf-Connecting-Ip
-    - traefik.http.middlewares.p2pwiki-cfonly.ipwhitelist.sourcerange=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32
+    - traefik.http.middlewares.p2pwiki-cfonly.ipwhitelist.sourcerange=127.0.0.1/32,10.0.0.0/8,172.16.0.0/12,173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32
     - traefik.http.routers.p2pwiki.middlewares=p2pwiki-cfonly,p2pwiki-ratelimit,p2pwiki-inflightreq
     networks:
     - p2pwiki-internal

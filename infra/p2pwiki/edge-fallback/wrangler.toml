@@ -2,6 +2,12 @@ name = "p2pwiki-edge-fallback"
 main = "src/worker.js"
 compatibility_date = "2026-08-17"
 
+# Required because this login sees two accounts ("cflare" and this one), and a
+# non-interactive deploy cannot choose. This is the account that holds
+# p2pfoundation.net and the existing cloudflared tunnels. An account ID is a
+# public identifier, not a secret — it appears in dashboard URLs.
+account_id = "0e7b3338d5278ed1b148e6456b940913"
+
 # The route is what puts this in front of the wiki. Until it exists, the Worker
 # is deployed but inert — which is the safe order to do this in: deploy, test on
 # the workers.dev URL, then add the route.

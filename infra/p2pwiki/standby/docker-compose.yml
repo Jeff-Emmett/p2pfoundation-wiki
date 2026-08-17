@@ -130,13 +130,17 @@ services:
   # no key or certificate) and every API call with it returns unauthorized.
   # Put the token in .env as TUNNEL_TOKEN.
   #
-  # cloudflared:
-  #   image: cloudflare/cloudflared:latest
-  #   container_name: cloudflared-p2pwiki-standby
-  #   restart: unless-stopped
-  #   command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN:?set in .env}
-  #   networks:
-  #     - p2pwiki-standby-internal
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-p2pwiki-standby
+    restart: unless-stopped
+    # Fails loudly if the token is missing rather than starting a connector that
+    # registers nothing.
+    command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN:?set in .env}
+    mem_limit: 256m
+    networks:
+      - p2pwiki-standby-internal
+
   #
   # -- OPTION B: locally-managed tunnel ---------------------------------------
   # Ingress lives in cloudflared-config.yml on this box. Needs a WORKING origin

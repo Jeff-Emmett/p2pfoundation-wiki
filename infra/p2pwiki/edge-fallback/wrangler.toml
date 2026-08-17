@@ -21,6 +21,12 @@ WAYBACK_ENABLED = "on"
 # Shown in the banner when the R2 object carries no builtAt metadata.
 SNAPSHOT_BUILT = "unknown"
 
+# Rung 2 — the GX10 read-only standby (infra/p2pwiki/standby). Empty disables it.
+# Must be a hostname on this zone with a tunnel pointing at GX10; same-zone
+# subrequests bypass Workers, so there is no loop. Set once the tunnel exists:
+#   STANDBY_ORIGIN = "https://wiki-standby.p2pfoundation.net"
+STANDBY_ORIGIN = ""
+
 # Stage 2. Uncomment once the bucket exists (see scripts/build-snapshot.py).
 # Deploying with a binding to a bucket that does not exist FAILS the deploy, so
 # this stays commented until `wrangler r2 bucket create p2pwiki-snapshot` has run.

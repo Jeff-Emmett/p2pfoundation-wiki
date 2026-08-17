@@ -161,7 +161,12 @@ async function serveFallback(request, env, ctx, meta) {
   const asset = isAssetPath(url.pathname);
   let response = null;
 
-  if (!isDynamicPath(url.pathname, url.search)) {
+  // Rung 2: the GX10 standby. Tried before everything else and for EVERY path,
+  // including assets and dynamic ones — it is a real MediaWiki, so it can serve
+  // skins, load.php bundles and Special: pages that no static copy can.
+  response = await fromStandby(request, url, env, meta);
+
+  if (!response && !isDynamicPath(url.pathname, url.search)) {
     // The snapshot holds article wikitext only, so an asset never has a hit
     // there — skipping it saves an R2 read on every image of every page.
     if (!asset) response = await fromSnapshot(url, env, meta);
@@ -178,6 +183,69 @@ async function serveFallback(request, env, ctx, meta) {
     ctx.waitUntil(cache.put(cacheKey, response.clone()));
   }
   return response;
+}
+
+/**
+ * The GX10 read-only standby — a real MediaWiki on our own metal
+ * (infra/p2pwiki/standby). Best fallback available: live rendering, working
+ * skins, categories, Special: pages, and content as fresh as its last import.
+ *
+ * NO LOOP RISK, and it is worth stating why rather than hoping. The standby
+ * hostname is on the same zone, and Cloudflare sends same-zone subrequests
+ * straight to the origin without re-running Workers ("Routes cannot be the
+ * target of a same-zone fetch() call"). The standby also does NOT
+ * host-canonicalise — verified: it answers 200 for any Host header — so it will
+ * not 301 us back to wiki.p2pfoundation.net and round the loop that way.
+ *
+ * Its $wgServer is the PRODUCTION hostname on purpose, so every link it emits
+ * points back at wiki.p2pfoundation.net. Readers stay on the real address and
+ * each click re-enters this Worker; they never see the standby's name.
+ */
+async function fromStandby(request, url, env, meta) {
+  const origin = (env.STANDBY_ORIGIN || "").trim();
+  if (!origin) return null;
+
+  const target = new URL(url.pathname + url.search, origin);
+
+  let response;
+  try {
+    response = await fetch(target.toString(), {
+      method: request.method,
+      headers: request.headers,
+      redirect: "manual",
+    });
+  } catch {
+    return null;
+  }
+
+  // The standby being down too is not an error worth reporting — it just means
+  // the next rung takes over.
+  if (isOriginFailure(response.status) || response.status >= 500) return null;
+
+  const type = response.headers.get("content-type") || "";
+  if (!type.includes("text/html")) {
+    const passthrough = new Response(response.body, response);
+    passthrough.headers.set("x-p2pwiki-fallback", "standby-asset");
+    passthrough.headers.set("cache-control", "no-store");
+    return passthrough;
+  }
+
+  // Status is passed through rather than forced to 503: this is a genuine,
+  // fully-rendered wiki response, and the standby sets noindex itself so a
+  // stale copy cannot be indexed as canonical.
+  const html = await response.text();
+  const banner = bannerHtml({ source: "standby", builtAt: env.STANDBY_BUILT || "recently", meta });
+  const injected = html.replace(/<body([^>]*)>/i, `<body$1>${banner}`);
+
+  const out = new Response(injected, {
+    status: response.status,
+    headers: response.headers,
+  });
+  out.headers.set("content-type", "text/html; charset=utf-8");
+  out.headers.set("cache-control", "no-store");
+  out.headers.delete("content-length");
+  out.headers.set("x-p2pwiki-fallback", "standby");
+  return out;
 }
 
 /**
@@ -277,11 +345,23 @@ function assetUnavailable() {
 }
 
 function bannerHtml({ source, builtAt, meta }) {
+  const code = meta && meta.originStatus ? ` (origin returned ${meta.originStatus})` : "";
+
+  // The standby is a real wiki, so the honest message is different: search and
+  // navigation DO work there. Promising less than we deliver is as misleading
+  // as promising more.
+  if (source === "standby") {
+    return `<div class="p2pwiki-offline-banner" role="status">
+  <strong>The main wiki server is temporarily unavailable.</strong>
+  You are reading the standby copy${escapeHtml(code)} — browsing and search work
+  normally, but editing and login are disabled and recent changes may be missing.
+</div>`;
+  }
+
   const where =
     source === "wayback"
       ? "an Internet Archive copy"
       : `an offline copy taken ${escapeHtml(builtAt)}`;
-  const code = meta && meta.originStatus ? ` (origin returned ${meta.originStatus})` : "";
   return `<div class="p2pwiki-offline-banner" role="status">
   <strong>The P2P Foundation Wiki is temporarily offline.</strong>
   You are reading ${where}${escapeHtml(code)}. Editing, search and login are unavailable

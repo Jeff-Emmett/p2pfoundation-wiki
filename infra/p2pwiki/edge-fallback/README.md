@@ -51,10 +51,22 @@ still in the chain, one rung down.
 
 | # | Source | Status served | Notes |
 |---|--------|---------------|-------|
-| 1 | Origin | whatever it says | A healthy origin is passed through untouched |
-| 2 | R2 snapshot (ours) | 503 + `Retry-After` | Article rendered from wikitext at the edge |
-| 3 | Wayback Machine | 503 (docs) / 200 (assets) | Opportunistic; `WAYBACK_ENABLED=off` to disable |
-| 4 | Branded offline page | 503 | Always works, needs nothing |
+| 1 | Origin (Netcup) | whatever it says | A healthy origin is passed through untouched |
+| 2 | **GX10 standby** | passed through (200) | Real MediaWiki on our own metal — skins, search, Special: pages. `STANDBY_ORIGIN` empty disables it |
+| 3 | R2 snapshot (ours) | 503 + `Retry-After` | Article rendered from wikitext at the edge |
+| 4 | Wayback Machine | 503 (docs) / 200 (assets) | Opportunistic; `WAYBACK_ENABLED=off` to disable |
+| 5 | Branded offline page | 503 | Always works, needs nothing |
+
+The standby is tried for **every** path, assets and `Special:` pages included,
+because it is a real wiki and can serve things no static copy can. The rungs
+below it only handle article paths.
+
+**Why this does not loop.** The standby hostname is on the same zone, and
+Cloudflare sends same-zone subrequests straight to the origin without re-running
+Workers. The standby also does not host-canonicalise — verified, it answers 200
+for any `Host` — so it cannot 301 back to `wiki.p2pfoundation.net` and round the
+loop that way. Its `$wgServer` is the *production* hostname on purpose, so every
+link it emits keeps readers on the real address.
 
 **Why 503 and not 200** on fallback documents: it is the standards-correct signal for
 temporary downtime, and it stops search engines treating a reduced offline copy as the

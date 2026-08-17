@@ -1,0 +1,31 @@
+name = "p2pwiki-edge-fallback"
+main = "src/worker.js"
+compatibility_date = "2026-08-17"
+
+# The route is what puts this in front of the wiki. Until it exists, the Worker
+# is deployed but inert — which is the safe order to do this in: deploy, test on
+# the workers.dev URL, then add the route.
+routes = [
+  { pattern = "wiki.p2pfoundation.net/*", zone_name = "p2pfoundation.net" }
+]
+
+[vars]
+# Kill switch. "off" makes the Worker a transparent pass-through to the origin
+# without a redeploy:  wrangler deploy --var FALLBACK_ENABLED:off
+FALLBACK_ENABLED = "on"
+
+# The Internet Archive leg. Worth having, worth being able to switch off — it was
+# itself returning 503 during the outage this was written for.
+WAYBACK_ENABLED = "on"
+
+# Shown in the banner when the R2 object carries no builtAt metadata.
+SNAPSHOT_BUILT = "unknown"
+
+# Stage 2. Uncomment once the bucket exists (see scripts/build-snapshot.py).
+# Deploying with a binding to a bucket that does not exist FAILS the deploy, so
+# this stays commented until `wrangler r2 bucket create p2pwiki-snapshot` has run.
+# [[r2_buckets]]
+# binding = "SNAPSHOT"
+# bucket_name = "p2pwiki-snapshot"
+
+# account_id is taken from `wrangler login` / CLOUDFLARE_ACCOUNT_ID.

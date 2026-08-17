@@ -1,0 +1,12 @@
+{
+  "name": "p2pwiki-edge-fallback",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker serving an offline copy of wiki.p2pfoundation.net when the origin is unreachable",
+  "scripts": {
+    "test": "node --test test/fallback.test.mjs",
+    "dev": "wrangler dev --remote",
+    "deploy": "wrangler deploy"
+  }
+}

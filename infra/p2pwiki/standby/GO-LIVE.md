@@ -11,79 +11,150 @@ Total time: about 15 minutes.
 
 ---
 
-## Step 1 — Cloudflare login (you, browser)
+## Why the CLI route fails before you start
 
-```bash
-cloudflared tunnel login
+`~/.cloudflared/cert.pem` on the WSL box is **truncated**: 266 bytes containing
+only the `ARGO TUNNEL TOKEN` block, with no `PRIVATE KEY` and no `CERTIFICATE`.
+A healthy one is 1–2 KB with all three. Every API call made with it returns
+`unauthorized`, and `cloudflared tunnel create` fails with:
+
+```
+failed to create tunnel: Create Tunnel API call failed:
+Failed to create tunnel: code: 10000, reason: Authentication error
 ```
 
-A browser opens. **Select the `p2pfoundation.net` zone**, not another one — the
-certificate this writes is scoped to whatever you pick, and picking the wrong
-zone fails later at step 3 with a permissions error rather than here.
+Same failure shape as the 2026-07-01 Netcup `cloudflare.env` truncation: a
+credential file silently emptied by something, discovered only when next used.
 
-Writes `~/.cloudflared/cert.pem`. (The existing one at that path is from
-2026-01-02 and returns `unauthorized`; this replaces it.)
+Two ways forward. **Path A avoids the cert entirely and is fewer steps.**
 
 ---
 
-## Step 2 — Create the tunnel
+## Path A (recommended) — dashboard tunnel, token only
+
+No origin cert, no credentials file, no `config.yml`, no DNS command. Cloudflare
+creates the DNS record for you.
+
+### 1. Create the tunnel
+
+Go to **one.dash.cloudflare.com** → **Networks** → **Tunnels** →
+**Create a tunnel** → **Cloudflared**.
+
+Name it `p2pwiki-standby` and save.
+
+⚠️ Check the **account selector** at the top first. The tunnel must be created in
+the account that holds `p2pfoundation.net` — the same account as the existing
+`cloudflared-erpnext` / `cloudflared-immich` tunnels
+(`0e7b3338d5278ed1b148e6456b940913`). Wrong account, and step 3 will not offer
+the domain.
+
+### 2. Copy the token
+
+The install screen shows a command like
+`cloudflared service install eyJhIjoi…`. You want **only the long token string**,
+not the whole command. It is a secret — treat it like a password.
+
+Put it on GX10 without it passing through anyone's clipboard history twice:
 
 ```bash
-cloudflared tunnel create p2pwiki-standby
+ssh spark
+cd ~/p2pwiki-standby
+read -rs TOKEN && echo "TUNNEL_TOKEN=$TOKEN" >> .env && unset TOKEN
+# paste the token, press Enter — it will not echo
+grep -c '^TUNNEL_TOKEN=' .env    # expect 1
 ```
 
-Prints a UUID and writes `~/.cloudflared/<UUID>.json`. **Keep that file secret** —
-it is the tunnel's credential. Note the UUID; the next steps need it.
+### 3. Add the public hostname
 
-```bash
-cloudflared tunnel list          # confirm it exists
-```
+On the tunnel's page, open the **Public Hostname** tab → **Add a public
+hostname**:
 
----
+| Field | Value |
+|---|---|
+| Subdomain | `wiki-standby` |
+| Domain | `p2pfoundation.net` |
+| Type | `HTTP` |
+| URL | `p2pwiki-standby:80` |
 
-## Step 3 — Point DNS at it
+The URL is the **container name and container port** — not `localhost`, not
+`18081`. The connector runs inside the compose network and resolves
+`p2pwiki-standby` by Docker DNS; the host port mapping is irrelevant to it.
 
-```bash
-cloudflared tunnel route dns p2pwiki-standby wiki-standby.p2pfoundation.net
-```
+Saving this auto-creates the proxied CNAME to `<UUID>.cfargotunnel.com`. No
+`cloudflared tunnel route dns` needed.
 
-Creates a proxied CNAME `wiki-standby.p2pfoundation.net → <UUID>.cfargotunnel.com`.
+### 4. Start the connector
 
-Verify:
-
-```bash
-dig +short wiki-standby.p2pfoundation.net    # Cloudflare edge IPs
-```
-
----
-
-## Step 4 — Install the connector on GX10
-
-```bash
-UUID=<paste-the-uuid-from-step-2>
-
-scp ~/.cloudflared/$UUID.json spark:~/p2pwiki-standby/tunnel-credentials.json
-ssh spark 'chmod 600 ~/p2pwiki-standby/tunnel-credentials.json'
-
-ssh spark "cd ~/p2pwiki-standby && \
-  sed 's/TUNNEL-UUID-HERE/$UUID/' cloudflared-config.yml.template > cloudflared-config.yml && \
-  grep '^tunnel:' cloudflared-config.yml"
-```
-
-Then uncomment the `cloudflared` service block at the bottom of
-`~/p2pwiki-standby/docker-compose.yml` (it is already written, just commented),
-and start it:
+Uncomment the **OPTION A** `cloudflared` block in
+`~/p2pwiki-standby/docker-compose.yml`, then:
 
 ```bash
 ssh spark 'cd ~/p2pwiki-standby && docker compose up -d cloudflared'
 ssh spark 'docker logs --tail 20 cloudflared-p2pwiki-standby'
 ```
 
-Healthy output contains `Registered tunnel connection` — usually four of them.
+Healthy output contains `Registered tunnel connection` — usually four. The
+dashboard should also flip the tunnel to **HEALTHY**.
+
+Now skip to step 5.
 
 ---
 
-## Step 5 — Verify the standby is publicly reachable
+## Path B — CLI tunnel (only if you want routing in git)
+
+Requires repairing the cert first.
+
+```bash
+# 1. keep the broken one, in case it explains what truncated it
+cp ~/.cloudflared/cert.pem ~/.cloudflared/cert.pem.truncated-20260817
+
+# 2. re-authenticate
+cloudflared tunnel login
+```
+
+`wslview` is installed, so this should open the Windows browser by itself. If it
+does not, copy the printed URL manually — the command waits for the callback
+either way.
+
+In the browser: pick the **account** that holds `p2pfoundation.net`, then pick
+the **`p2pfoundation.net` zone**. The cert is scoped to the zone you choose, and
+choosing wrong does not fail here — it fails two steps later with a confusing
+permissions error.
+
+```bash
+# 3. verify the repair BEFORE going further
+wc -c < ~/.cloudflared/cert.pem                       # expect 1000-2000, not 266
+grep -c 'BEGIN' ~/.cloudflared/cert.pem               # expect 3
+cloudflared tunnel list                               # must NOT say unauthorized
+```
+
+If `wc -c` still shows a few hundred bytes, stop — the login did not take, and
+every following step will fail with the same `code: 10000`.
+
+```bash
+# 4. create the tunnel and its DNS record
+cloudflared tunnel create p2pwiki-standby
+cloudflared tunnel route dns p2pwiki-standby wiki-standby.p2pfoundation.net
+dig +short wiki-standby.p2pfoundation.net             # Cloudflare edge IPs
+
+# 5. install the connector on GX10
+UUID=<paste-the-uuid-from-step-4>
+scp ~/.cloudflared/$UUID.json spark:~/p2pwiki-standby/tunnel-credentials.json
+ssh spark 'chmod 600 ~/p2pwiki-standby/tunnel-credentials.json'
+ssh spark "cd ~/p2pwiki-standby && \
+  sed 's/TUNNEL-UUID-HERE/$UUID/' cloudflared-config.yml.template > cloudflared-config.yml"
+```
+
+Uncomment the **OPTION B** `cloudflared` block, then:
+
+```bash
+ssh spark 'cd ~/p2pwiki-standby && docker compose up -d cloudflared'
+ssh spark 'docker logs --tail 20 cloudflared-p2pwiki-standby'
+```
+
+---
+
+## Step 5 — Verify the standby is publicly reachable (both paths)
 
 ```bash
 curl -sS -o /dev/null -w "%{http_code}\n" https://wiki-standby.p2pfoundation.net/Peer_to_Peer

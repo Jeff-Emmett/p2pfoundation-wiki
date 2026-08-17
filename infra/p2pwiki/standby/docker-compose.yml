@@ -121,10 +121,27 @@ services:
     security_opt:
       - no-new-privileges:true
 
-  # Publication. Needs a tunnel credentials file that only Jeff can mint
-  # (the local cloudflared origin cert is unauthorized, and GX10's existing
-  # tunnels are --token/remotely-managed so their ingress cannot be edited from
-  # the host). Uncomment once ./tunnel-credentials.json exists.
+  # Publication. Two ways; pick ONE and uncomment it. See GO-LIVE.md step 1.
+  #
+  # -- OPTION A (recommended): remotely-managed, dashboard-created tunnel ------
+  # Ingress lives in the Zero Trust dashboard; the connector only needs a token.
+  # No origin cert, no credentials file, no config.yml — which matters here
+  # because the local ~/.cloudflared/cert.pem is truncated (token block only,
+  # no key or certificate) and every API call with it returns unauthorized.
+  # Put the token in .env as TUNNEL_TOKEN.
+  #
+  # cloudflared:
+  #   image: cloudflare/cloudflared:latest
+  #   container_name: cloudflared-p2pwiki-standby
+  #   restart: unless-stopped
+  #   command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN:?set in .env}
+  #   networks:
+  #     - p2pwiki-standby-internal
+  #
+  # -- OPTION B: locally-managed tunnel ---------------------------------------
+  # Ingress lives in cloudflared-config.yml on this box. Needs a WORKING origin
+  # cert to create the tunnel and its DNS record first. Prefer this only if you
+  # want the routing under version control rather than in the dashboard.
   #
   # cloudflared:
   #   image: cloudflare/cloudflared:latest

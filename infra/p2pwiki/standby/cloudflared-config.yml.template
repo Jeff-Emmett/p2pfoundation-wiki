@@ -1,0 +1,33 @@
+# Copy to cloudflared-config.yml and replace TUNNEL-UUID-HERE.
+#
+# Use the UUID, not the tunnel name. A name has to be resolved to a UUID through
+# the account API, which needs the origin cert; the UUID plus the credentials
+# file is self-contained and keeps working if that cert ever lapses — which is
+# exactly what happened to the one on the WSL box.
+#
+# Find it with `cloudflared tunnel list`, or read it off the credentials
+# filename: ~/.cloudflared/<TUNNEL-UUID>.json
+
+tunnel: TUNNEL-UUID-HERE
+credentials-file: /etc/cloudflared/creds.json
+
+# Keep the connector's own metrics off the wire.
+metrics: 127.0.0.1:2000
+no-autoupdate: true
+
+ingress:
+  # p2pwiki-standby resolves over the compose network p2pwiki-standby-internal,
+  # which the cloudflared service joins. Port 80 is the container port, NOT the
+  # 127.0.0.1:18081 host mapping — the connector never touches the host port.
+  - hostname: wiki-standby.p2pfoundation.net
+    service: http://p2pwiki-standby:80
+    originRequest:
+      # MediaWiki renders 41k-page categories slowly on a cold cache.
+      connectTimeout: 30s
+      # The standby answers 200 for any Host, so no Host rewriting is needed —
+      # and $wgServer is already the production hostname, so links come out
+      # pointing at wiki.p2pfoundation.net rather than at this name.
+
+  # Required catch-all. Anything not matched above gets a flat 404 rather than
+  # being proxied somewhere unintended.
+  - service: http_status:404

@@ -199,7 +199,20 @@ export default {
     try {
       const r = await fetch(probe, {
         redirect: "manual",
-        headers: { "user-agent": "p2pwiki-health/1.0" },
+        headers: {
+          // A browser user-agent, and not for politeness. The honest-looking
+          // "p2pwiki-health/1.0" got a flat 403 from Cloudflare's bot
+          // heuristics, so the probe spent its first hour reporting the wiki
+          // DOWN while the wiki was serving perfectly — it was measuring its own
+          // user-agent. Verified side by side: p2pwiki-health/1.0 -> 403,
+          // curl/8.5.0 -> 200, browser UA -> 200.
+          //
+          // A monitor must traverse the same path as a reader. Announcing
+          // itself as something the edge treats differently means it is no
+          // longer testing what anyone experiences.
+          "user-agent":
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36",
+        },
       });
       // A wiki that answers with a login page or an error page is still broken,
       // so check for content, not merely for a response.

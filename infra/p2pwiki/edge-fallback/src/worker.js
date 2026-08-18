@@ -218,8 +218,27 @@ export default {
       // so check for content, not merely for a response.
       if (r.status === 200) {
         const body = await r.text();
-        ok = body.includes("P2P Foundation Wiki") && body.length > 4000;
-        detail = ok ? `200, ${body.length}B` : `200 but body looks wrong (${body.length}B)`;
+
+        // "MediaWiki has been installed" is the installer's placeholder Main
+        // Page. It sat on the live front page for two days: install.php wrote it
+        // at 2026-08-17 10:19, which is NEWER than every imported revision, so
+        // importDump merged by timestamp and the stub became current.
+        //
+        // The previous check — title contains "P2P Foundation Wiki", body over
+        // 4KB — passed the whole time, because the title is in <head> and the
+        // stub page is ~17KB of chrome. It was measuring that MediaWiki was
+        // running, which was never in doubt, rather than that the wiki was
+        // there. A monitor has to assert something only the REAL content can
+        // satisfy.
+        const isInstallerStub = body.includes("MediaWiki has been installed");
+        const hasRealContent = body.includes("Together we know everything");
+
+        ok = !isInstallerStub && hasRealContent && body.length > 20000;
+        detail = ok
+          ? `200, ${body.length}B`
+          : isInstallerStub
+            ? "200 but serving the INSTALLER STUB — Main Page has been clobbered"
+            : `200 but the Main Page content is missing (${body.length}B)`;
       } else {
         detail = `HTTP ${r.status}`;
       }

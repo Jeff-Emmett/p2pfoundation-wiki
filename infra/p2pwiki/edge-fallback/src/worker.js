@@ -401,20 +401,28 @@ async function fromStandby(request, url, env, meta) {
     return passthrough;
   }
 
-  // Status is passed through rather than forced to 503: this is a genuine,
-  // fully-rendered wiki response, and the standby sets noindex itself so a
-  // stale copy cannot be indexed as canonical.
-  const html = await response.text();
-  const banner = bannerHtml({ source: "standby", builtAt: env.STANDBY_BUILT || "recently", meta });
-  const injected = html.replace(/<body([^>]*)>/i, `<body$1>${banner}`);
-
-  const out = new Response(injected, {
+  // Passed through UNMODIFIED — no banner injection.
+  //
+  // There used to be one, and it became a liability the moment GX10 stopped
+  // being a standby. It announced "editing and login are disabled" on every
+  // page, which was true while this was a read-only fallback and became exactly
+  // backwards once editing was enabled. Every visitor was told not to bother
+  // trying, by infrastructure, over the top of the wiki's own correct notice.
+  //
+  // The lesson is about ownership, not wording: messaging baked into the edge
+  // can only be corrected by a redeploy, and it silently goes stale whenever the
+  // thing it describes changes. MediaWiki's own $wgSiteNotice says the same
+  // things, renders in the right place, and can be edited by a sysop through
+  // MediaWiki:Sitenotice without touching this Worker at all. One source of
+  // truth, owned by the people who know the current situation.
+  //
+  // Status is passed through too: this is a genuine, fully-rendered wiki
+  // response, and the wiki sets its own robot policy.
+  const out = new Response(response.body, {
     status: response.status,
     headers: response.headers,
   });
-  out.headers.set("content-type", "text/html; charset=utf-8");
   out.headers.set("cache-control", "no-store");
-  out.headers.delete("content-length");
   out.headers.set("x-p2pwiki-fallback", "standby");
   return out;
 }

@@ -105,6 +105,17 @@ export default {
       return fetch(request);
     }
 
+    // Readable health state, so an external monitor (or a human on a phone) can
+    // see what the cron probe last found without a Cloudflare login. Carries no
+    // secrets — only status, and a path no wiki article will ever occupy.
+    if (new URL(request.url).pathname === "/__p2pwiki-health") {
+      const state = env.HEALTH ? await env.HEALTH.get("state") : null;
+      return new Response(state || '{"state":"unknown — no check has run yet"}', {
+        status: 200,
+        headers: { "content-type": "application/json", "cache-control": "no-store" },
+      });
+    }
+
     // A request body can be read ONCE. The origin attempt below consumes it, so
     // by the time the fallback wants to forward the same POST to the standby
     // there is nothing left to send and reading it throws — which the fallback
@@ -159,7 +170,96 @@ export default {
       });
     }
   },
+
+  /**
+   * Health probe, run on a cron trigger.
+   *
+   * WHY IT LIVES HERE. Netcup is deactivated and GX10 now holds the only copy of
+   * the wiki, but nothing was watching GX10 — the dead-man's switch watches
+   * Netcup, i.e. the host that already died, not the service that replaced it.
+   *
+   * A checker on GX10 itself would be theatre: it dies with the thing it is
+   * meant to report on, and reports nothing precisely when it matters. This runs
+   * on Cloudflare's infrastructure, so it is independent of GX10, of Netcup, and
+   * of the home uplink between them.
+   *
+   * Flap discipline is copied from netcup-deadman.sh, which has already proved
+   * it works: alert after N consecutive failures, not the first, and then hold
+   * off re-alerting so a long outage does not become a stream of notifications
+   * nobody reads.
+   */
+  async scheduled(event, env, ctx) {
+    const target = (env.STANDBY_ORIGIN || "").trim();
+    if (!target || !env.HEALTH) return;
+
+    const probe = `${target}/Main_Page`;
+    let ok = false;
+    let detail = "";
+
+    try {
+      const r = await fetch(probe, {
+        redirect: "manual",
+        headers: { "user-agent": "p2pwiki-health/1.0" },
+      });
+      // A wiki that answers with a login page or an error page is still broken,
+      // so check for content, not merely for a response.
+      if (r.status === 200) {
+        const body = await r.text();
+        ok = body.includes("P2P Foundation Wiki") && body.length > 4000;
+        detail = ok ? `200, ${body.length}B` : `200 but body looks wrong (${body.length}B)`;
+      } else {
+        detail = `HTTP ${r.status}`;
+      }
+    } catch (e) {
+      detail = `fetch failed: ${e && e.message ? e.message : "unknown"}`;
+    }
+
+    const now = Date.now();
+    const prev = JSON.parse((await env.HEALTH.get("state")) || "{}");
+    const consec = ok ? 0 : (prev.consec || 0) + 1;
+    let alerted = prev.alerted || 0;
+
+    const FAILS_BEFORE_ALERT = 2;
+    const REALERT_MS = 6 * 60 * 60 * 1000;
+
+    if (!ok && consec >= FAILS_BEFORE_ALERT && now - alerted > REALERT_MS) {
+      await notify(env,
+        `p2pwiki DOWN — ${consec} consecutive failed checks. ${detail}. ` +
+        `GX10 holds the only copy of the wiki; Netcup is deactivated.`);
+      alerted = now;
+    } else if (ok && (prev.consec || 0) >= FAILS_BEFORE_ALERT) {
+      await notify(env, `p2pwiki RECOVERED — ${detail}`);
+      alerted = 0;
+    }
+
+    await env.HEALTH.put("state", JSON.stringify({
+      consec, alerted, ok, detail, checkedAt: new Date(now).toISOString(),
+    }));
+  },
 };
+
+/**
+ * Push an alert. The destination is a SECRET (`wrangler secret put
+ * ALERT_WEBHOOK`) rather than a config value, because an ntfy topic URL is
+ * effectively a password — anyone holding it can read the alerts — and this
+ * repository is public.
+ *
+ * Deliberately silent when unset: a monitor that throws on a missing webhook
+ * would turn "no alerting configured" into "no monitoring at all".
+ */
+async function notify(env, message) {
+  const hook = (env.ALERT_WEBHOOK || "").trim();
+  if (!hook) return;
+  try {
+    await fetch(hook, {
+      method: "POST",
+      headers: { "content-type": "text/plain", title: "p2pwiki" },
+      body: message,
+    });
+  } catch {
+    /* an alert we cannot deliver must not break the probe that found the fault */
+  }
+}
 
 async function serveFallback(request, env, ctx, meta) {
   const url = new URL(request.url);

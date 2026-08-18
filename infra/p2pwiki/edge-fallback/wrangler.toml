@@ -41,3 +41,19 @@ STANDBY_ORIGIN = "https://wiki-standby.p2pfoundation.net"
 # bucket_name = "p2pwiki-snapshot"
 
 # account_id is taken from `wrangler login` / CLOUDFLARE_ACCOUNT_ID.
+
+# Health state for the cron probe (see the `scheduled` handler in worker.js).
+[[kv_namespaces]]
+binding = "HEALTH"
+id = "51164151af7848909cc8e6c53b596a92"
+
+# Every 15 minutes. Netcup is deactivated and GX10 now holds the only copy of
+# the wiki, but nothing was watching GX10 — the dead-man's switch watches
+# Netcup, the host that already died. This probe runs on Cloudflare, so it does
+# not share a failure domain with the thing it is checking.
+#
+# The alert destination is a SECRET, not a var:
+#     wrangler secret put ALERT_WEBHOOK
+# (an ntfy topic URL is effectively a password, and this repo is public)
+[triggers]
+crons = ["*/15 * * * *"]

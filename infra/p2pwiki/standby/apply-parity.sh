@@ -144,6 +144,34 @@ $wgExtraNamespaces[119] = 'Draft_talk';
 PHP
 fi
 
+if ! grep -q "NETCUP PARITY - FILES" LocalSettings.php; then
+  echo "   appending file/upload parity"
+  cat >> LocalSettings.php <<'PHP'
+
+# --- NETCUP PARITY - FILES -------------------------------------------------
+# The live wiki has 1,248 File: pages, so uploads are plainly enabled there.
+# Enabled here too — but the FEATURE and the RIGHT are separated on purpose:
+#
+#   $wgEnableUploads = true   lets maintenance/importImages.php restore the
+#                             files recovered from the Internet Archive
+#   upload right denied       means no editor can add a NEW file through the web
+#
+# That split matters because an uploaded file does not travel in the XML export
+# used to merge edits back to Netcup: it would arrive there as a redlink with
+# the file stranded on this box. Restoring what already existed is safe;
+# accepting new files during the standby window is not.
+$wgEnableUploads = true;
+$wgGroupPermissions['*']['upload']      = false;
+$wgGroupPermissions['user']['upload']   = false;
+$wgGroupPermissions['user']['reupload'] = false;
+
+$wgFileExtensions = [
+	'png', 'gif', 'jpg', 'jpeg', 'webp', 'svg',
+	'pdf', 'odt', 'ods', 'odp', 'txt',
+];
+PHP
+fi
+
 echo
 echo "== 3. logo into the images volume =="
 if [ -f logo-final-box-128.png ]; then

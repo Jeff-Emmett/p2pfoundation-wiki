@@ -101,6 +101,10 @@ services:
       - ./block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
       - p2pwiki-standby-images:/var/www/html/images
       - ./dumps:/dumps
+      # YouTube is the one extension Netcup runs that the mediawiki image does
+      # not bundle. Mounted as a single subdirectory rather than shadowing the
+      # whole extensions/ tree, so the image's bundled extensions stay intact.
+      - ./extensions/YouTube:/var/www/html/extensions/YouTube:ro
     ports:
       # Bound to localhost only. Publication is the tunnel's job, and GX10 has
       # no Traefik to hide behind — an 0.0.0.0 bind here would put an

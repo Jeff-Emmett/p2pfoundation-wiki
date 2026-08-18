@@ -105,11 +105,37 @@ export default {
       return fetch(request);
     }
 
+    // A request body can be read ONCE. The origin attempt below consumes it, so
+    // by the time the fallback wants to forward the same POST to the standby
+    // there is nothing left to send and reading it throws — which the fallback
+    // reports as "standby unavailable" and answers with the offline page. Every
+    // save appeared to fail while the standby was answering the identical
+    // request with a 200. Buffer it up front and reuse the bytes for both.
+    const method = request.method.toUpperCase();
+    const hasBody = method !== "GET" && method !== "HEAD";
+    let bodyBytes;
+    if (hasBody) {
+      try {
+        bodyBytes = await request.arrayBuffer();
+      } catch {
+        bodyBytes = undefined;
+      }
+    }
+
     let originResponse = null;
     let originThrew = false;
 
     try {
-      originResponse = await fetch(request);
+      originResponse = await fetch(
+        hasBody
+          ? new Request(request.url, {
+              method: request.method,
+              headers: request.headers,
+              body: bodyBytes,
+              redirect: "manual",
+            })
+          : request
+      );
     } catch {
       originThrew = true;
     }
@@ -122,6 +148,8 @@ export default {
     try {
       return await serveFallback(request, env, ctx, {
         originStatus: originThrew ? null : originResponse.status,
+        // Carried, not re-read: the stream is already consumed by here.
+        bodyBytes,
       });
     } catch (err) {
       // A bug in the fallback must never be worse than the outage it covers.
@@ -137,14 +165,15 @@ async function serveFallback(request, env, ctx, meta) {
   const url = new URL(request.url);
   const method = request.method.toUpperCase();
 
-  // Never replay a write against a fallback. An edit that appears to succeed
-  // and is silently discarded is far worse than a clear refusal.
+  // Writes go to the standby when there is one. A standby that can serve reads
+  // but silently refuses saves is worse than no standby: an editor writes a
+  // paragraph, gets a friendly page, and loses the work. The standby decides
+  // whether it will accept the edit (it enforces its own login and read-only
+  // state) — this only declines to invent an answer on its behalf.
   if (method !== "GET" && method !== "HEAD") {
-    return offlineResponse(request, env, {
-      ...meta,
-      writeAttempt: true,
-      status: 503,
-    });
+    const written = await fromStandby(request, url, env, meta);
+    if (written) return written;
+    return offlineResponse(request, env, { ...meta, writeAttempt: true, status: 503 });
   }
 
   const cache = caches.default;
@@ -155,7 +184,13 @@ async function serveFallback(request, env, ctx, meta) {
     { method: "GET" }
   );
 
-  const cached = await cache.match(cacheKey);
+  // Anyone carrying a cookie may be logged in, and a logged-in MediaWiki page
+  // has their username, watchlist state and edit links baked into the HTML.
+  // Caching that and handing it to the next reader would be a session leak, so
+  // cookie-bearing requests bypass the cache in both directions.
+  const mayBePersonalised = request.headers.has("cookie");
+
+  const cached = mayBePersonalised ? undefined : await cache.match(cacheKey);
   if (cached) return cached;
 
   const asset = isAssetPath(url.pathname);
@@ -179,7 +214,14 @@ async function serveFallback(request, env, ctx, meta) {
     response = asset ? assetUnavailable() : offlineResponse(request, env, meta);
   }
 
-  if (response.status !== 503 || response.headers.get("x-p2pwiki-fallback")) {
+  // Standby responses are NEVER cached. They are live MediaWiki output, they
+  // may be personalised, and they carry `no-store` — which the Cache API
+  // refuses, throwing straight into the error path and costing us the response
+  // for no benefit. Only the static rungs below it are worth caching.
+  const source = response.headers.get("x-p2pwiki-fallback") || "";
+  const cacheable = !mayBePersonalised && source && !source.startsWith("standby");
+
+  if (cacheable) {
     ctx.waitUntil(cache.put(cacheKey, response.clone()));
   }
   return response;
@@ -207,11 +249,27 @@ async function fromStandby(request, url, env, meta) {
 
   const target = new URL(url.pathname + url.search, origin);
 
+  const method = request.method.toUpperCase();
+  const hasBody = method !== "GET" && method !== "HEAD";
+
+  // The bytes were buffered once in fetch(), before the origin attempt consumed
+  // the stream. Re-reading the request here would throw.
+  const bodyBytes = meta && meta.bodyBytes;
+
   let response;
   try {
     response = await fetch(target.toString(), {
       method: request.method,
       headers: request.headers,
+      // Without this a POST arrives at MediaWiki with an empty body: the edit
+      // form submits, the wiki sees no wpTextbox1 and no edit token, and the
+      // save fails in a way that looks like a permissions problem.
+      body: hasBody ? bodyBytes : undefined,
+      // 'manual' so MediaWiki's post-save 302 is handed to the BROWSER rather
+      // than followed here. Its Location points at wiki.p2pfoundation.net
+      // (because $wgServer is the production hostname), so the browser lands on
+      // the real address and re-enters this Worker — the editor never sees the
+      // standby's name, even on the redirect after saving.
       redirect: "manual",
     });
   } catch {

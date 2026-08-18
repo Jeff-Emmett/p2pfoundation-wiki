@@ -155,6 +155,72 @@ falls through to the R2 snapshot and offline page as before.
 
 ---
 
+## Editing, and how edits get back to Netcup
+
+The standby is **writable** as of `standby-writable-since.txt`. Say plainly what
+that does and does not mean:
+
+> There is no shared datastore. Netcup is unreachable, so its MySQL and this one
+> cannot be "the same store" in any sense. What exists instead is a
+> one-directional merge that is tractable **because only one side is alive** —
+> Netcup gains no edits while it is off, so nothing has to be reconciled in the
+> other direction.
+
+```
+standby edits ──export──> conflict check ──import──> Netcup
+```
+
+| Script | Does |
+|---|---|
+| `enable-editing.sh` | Opens the window, records the boundary, creates accounts |
+| `export-standby-edits.sh` | Exports every page edited since the boundary, full history |
+| `merge-to-netcup.sh --check` | Compares against Netcup, splits SAFE vs CONFLICT, changes nothing |
+| `merge-to-netcup.sh --apply-safe` | Imports only the safe set |
+| `verify-edit-roundtrip.sh` | Proves the whole chain end to end through the public URL |
+
+### The gap, which is the whole risk
+
+| | |
+|---|---|
+| This copy's content | Netcup as of **2026-07-31 12:46:47Z** |
+| Netcup's DB on return | its state at **2026-08-17 06:21Z** |
+| Unseen Netcup edits | **16 days**, ~150 revisions over perhaps 60–100 pages of 40,647 |
+
+If a page is edited *here* that also changed *there* in those 16 days, importing
+our version makes our older-derived text current and the Netcup change stops
+being the live text. It survives in history and is recoverable, but the article
+visibly regresses. `merge-to-netcup.sh` detects exactly these and **refuses to
+merge them** — there is no `--apply-all`, deliberately.
+
+⚠️ **The watermark is recorded, never derived.** `import-watermark.txt` holds
+`20260731124647`, taken from the dump's newest revision. Do not compute it as
+`MAX(rev_timestamp)` over the local database: `install.php` writes its own
+Main_Page revision when the wiki is created, which made the local maximum
+`20260817101902` — *after* Netcup had already died at 06:21Z. A watermark of
+that value asks Netcup for changes made after it was dead, gets none, and
+declares every page conflict-free. The detector would be permanently, silently
+green. The export script now refuses to run without the recorded file.
+
+Note also that the dump's *filename* says 2026-08-04 while its newest revision
+is 2026-07-31 — the filename records when it was generated, not what is in it.
+That is why the gap is 16 days and not 13.
+
+### Deliberate restrictions while the window is open
+
+- **Login required, no anonymous editing.** Production denies anon edits, and
+  anything written here is destined to be replayed into production — an open
+  wiki collects spam within hours, and that spam would arrive in Netcup wearing
+  the authority of a merge.
+- **Accounts use Netcup's exact usernames** (`Mbauwens`, `JeffEmmett`, …).
+  Revision attribution is matched on the username string at import, so
+  `mbauwens` would merge as a different person and split one editor's history.
+  Passwords are freshly generated here — the user table never left Netcup — and
+  are in `standby-accounts.txt` (0600).
+- **Uploads off.** Files do not travel in an XML export; an upload would merge
+  as a redlink with the file stranded here.
+- **Moves and deletions are sysop-only.** They do not propagate through an XML
+  export either and must be replayed by hand.
+
 ## Limitations
 
 1. **Read-only, always.** Not a failover you can write to; a failback would lose

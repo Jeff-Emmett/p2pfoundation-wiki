@@ -13,7 +13,13 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
-import { isOriginFailure, isDynamicPath, isAssetPath, snapshotKey } from "../src/worker.js";
+import {
+  isOriginFailure,
+  isDynamicPath,
+  isAssetPath,
+  snapshotKey,
+  looksLikeBareProxy404,
+} from "../src/worker.js";
 import { renderWikitext, titleToPath, pathToTitle, escapeHtml } from "../src/wikitext.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -130,4 +136,63 @@ test("templates and tables degrade visibly rather than silently", () => {
 
 test("escapeHtml is applied before markup interpretation", () => {
   assert.equal(escapeHtml('<a href="x">&'), "&lt;a href=&quot;x&quot;&gt;&amp;");
+});
+
+// 2026-08-19: the wiki served a hard 404 to every reader for ~40 minutes while
+// the origin was healthy and the fallback sat idle, because a revived tunnel
+// put a Traefik with no matching router in front of it. 404 was not a failure
+// status, so the Worker forwarded the proxy's own 404 straight through.
+test("a bare reverse-proxy 404 counts as an unreachable origin", () => {
+  const bare = {
+    status: 404,
+    contentType: "text/plain; charset=utf-8",
+    contentLength: "19",
+    body: "404 page not found\n",
+  };
+  assert.ok(looksLikeBareProxy404(bare), "cloudflared/Traefik http.NotFound must trigger the fallback");
+  assert.ok(
+    looksLikeBareProxy404({ ...bare, body: "404 page not found" }),
+    "the same body without the trailing newline is the same failure"
+  );
+});
+
+test("a real MediaWiki 404 is never mistaken for a dead origin", () => {
+  // A missing article is a real answer. Serving a snapshot over it would be a
+  // downgrade, so every property that distinguishes it must be load-bearing.
+  assert.ok(
+    !looksLikeBareProxy404({
+      status: 404,
+      contentType: "text/html; charset=UTF-8",
+      contentLength: "4334",
+      body: "<!DOCTYPE html><html>...there is currently no text in this page...",
+    }),
+    "MediaWiki's HTML 404 must pass through"
+  );
+  assert.ok(
+    !looksLikeBareProxy404({
+      status: 404,
+      contentType: "text/plain; charset=utf-8",
+      contentLength: "220",
+      body: "404 page not found\n",
+    }),
+    "an oversized body is not the 19-byte signature"
+  );
+  assert.ok(
+    !looksLikeBareProxy404({
+      status: 404,
+      contentType: "text/plain; charset=utf-8",
+      contentLength: null,
+      body: "404 page not found\n",
+    }),
+    "no content-length means no bounded read, so no classification"
+  );
+  assert.ok(
+    !looksLikeBareProxy404({
+      status: 200,
+      contentType: "text/plain; charset=utf-8",
+      contentLength: "19",
+      body: "404 page not found\n",
+    }),
+    "an article whose text happens to be that string is still a 200"
+  );
 });

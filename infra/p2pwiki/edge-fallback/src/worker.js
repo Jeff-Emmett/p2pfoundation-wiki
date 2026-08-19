@@ -58,6 +58,64 @@ export function isOriginFailure(status) {
   return ORIGIN_FAILURE_STATUSES.has(status);
 }
 
+/**
+ * A bare reverse-proxy 404 — cloudflared's catch-all `http_status:404`, and
+ * Traefik's "no router matched", which is byte-identical because both are Go's
+ * http.NotFound: `404 page not found\n`, text/plain, 19 bytes.
+ *
+ * WHY THIS IS AN ORIGIN FAILURE. 2026-08-19: the wiki went hard 404 for every
+ * reader while the origin was perfectly healthy and the fallback sat idle. The
+ * DNS for wiki.p2pfoundation.net still pointed at the old Netcup tunnel; that
+ * connector had been dead since the host went away, so the edge saw 530 and the
+ * fallback fired — the outage was invisible because the Worker was covering it.
+ * Then the tunnel was revived on GX10 at 11:59:59Z, sharing a network namespace
+ * with a Traefik that has no router for the wiki. The tunnel was now UP, so no
+ * more 530; Traefik answered "404 page not found"; 404 is not in the failure
+ * set, so the Worker passed it straight through to every reader.
+ *
+ * Reviving a dead connector made the outage worse than leaving it dead. The
+ * fallback must treat "a proxy answered, but nothing is behind it" as what it
+ * is: the origin is unreachable.
+ *
+ * NARROW ON PURPOSE. MediaWiki's own 404s are HTML, several KB, and carry the
+ * skin — they must keep passing through untouched, because a missing article is
+ * a real answer and a two-week-old snapshot of it would be a downgrade. The
+ * signature below cannot collide with one: an exact 19-byte text/plain body.
+ */
+const BARE_PROXY_404_BODY = "404 page not found\n";
+
+export function looksLikeBareProxy404({ status, contentType, contentLength, body }) {
+  if (status !== 404) return false;
+  if (!/^text\/plain\b/i.test(contentType || "")) return false;
+  // Guard the read: never buffer an origin body just to classify it.
+  if (contentLength === null || contentLength === undefined) return false;
+  if (Number(contentLength) > 64) return false;
+  return body === BARE_PROXY_404_BODY || body === BARE_PROXY_404_BODY.trim();
+}
+
+/**
+ * The same test against a live Response. Reads a CLONE, so the original stays
+ * intact for the pass-through path; anything unexpected answers false and the
+ * response is returned untouched.
+ */
+export async function isBareProxy404(response) {
+  try {
+    const contentLength = response.headers.get("content-length");
+    if (contentLength === null || Number(contentLength) > 64) return false;
+    const contentType = response.headers.get("content-type");
+    if (!/^text\/plain\b/i.test(contentType || "")) return false;
+    const body = await response.clone().text();
+    return looksLikeBareProxy404({
+      status: response.status,
+      contentType,
+      contentLength,
+      body,
+    });
+  } catch {
+    return false;
+  }
+}
+
 /** Paths that cannot possibly be served from a static snapshot. */
 export function isDynamicPath(pathname, search) {
   const p = pathname.toLowerCase();
@@ -151,7 +209,11 @@ export default {
       originThrew = true;
     }
 
-    if (originResponse && !isOriginFailure(originResponse.status)) {
+    // A proxy that answers with nothing behind it is an unreachable origin,
+    // whatever status code it chose to say that with. See isBareProxy404.
+    const originIsBare404 = originResponse ? await isBareProxy404(originResponse) : false;
+
+    if (originResponse && !isOriginFailure(originResponse.status) && !originIsBare404) {
       return originResponse;
     }
 

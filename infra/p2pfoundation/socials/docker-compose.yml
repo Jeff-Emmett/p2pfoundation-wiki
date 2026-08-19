@@ -1,0 +1,163 @@
+services:
+  postiz-p2pf:
+    image: ghcr.io/gitroomhq/postiz-app:latest
+    container_name: postiz-p2pf
+    mem_limit: 4G
+    cpus: 2
+    restart: unless-stopped
+    entrypoint: ["/infisical-entrypoint.sh"]
+    command: ["docker-entrypoint.sh", "sh", "-c", "nginx && pnpm run pm2"]
+    environment:
+      # === Infisical secret injection ===
+      INFISICAL_CLIENT_ID: "${INFISICAL_CLIENT_ID}"
+      INFISICAL_CLIENT_SECRET: "${INFISICAL_CLIENT_SECRET}"
+      INFISICAL_PROJECT_SLUG: "postiz-p2pfoundation"
+      INFISICAL_ENV: "prod"
+      INFISICAL_URL: "http://infisical:8080"
+      # === Config (not secrets) ===
+      MAIN_URL: "https://socials.p2pfoundation.net"
+      FRONTEND_URL: "https://socials.p2pfoundation.net"
+      NEXT_PUBLIC_BACKEND_URL: "https://socials.p2pfoundation.net/api"
+      REDIS_URL: "redis://postiz-p2pf-redis:6379"
+      BACKEND_INTERNAL_URL: "http://localhost:3000"
+      TEMPORAL_ADDRESS: "postiz-p2pf-temporal:7233"
+      IS_GENERAL: "true"
+      DISABLE_REGISTRATION: "false"
+      STORAGE_PROVIDER: "local"
+      UPLOAD_DIRECTORY: "/uploads"
+      NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
+      # === OAuth config (client_id/secret come from Infisical) ===
+      POSTIZ_GENERIC_OAUTH: "true"
+      NEXT_PUBLIC_POSTIZ_OAUTH_DISPLAY_NAME: "EncryptID"
+      NEXT_PUBLIC_POSTIZ_OAUTH_LOGO_URL: ""
+      POSTIZ_OAUTH_URL: "https://auth.ridentity.online"
+      POSTIZ_OAUTH_AUTH_URL: "https://auth.ridentity.online/oidc/authorize"
+      POSTIZ_OAUTH_TOKEN_URL: "https://auth.ridentity.online/oidc/token"
+      POSTIZ_OAUTH_USERINFO_URL: "https://auth.ridentity.online/oidc/userinfo"
+      # === Email config (EMAIL_PASS comes from Infisical) ===
+      EMAIL_PROVIDER: "nodemailer"
+      EMAIL_FROM_NAME: "P2P Foundation Socials"
+      EMAIL_FROM_ADDRESS: "noreply@rmail.online"
+      EMAIL_HOST: "mailcowdockerized-postfix-mailcow-1"
+      EMAIL_PORT: "587"
+      EMAIL_SECURE: "false"
+      EMAIL_USER: "noreply@rmail.online"
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+      API_LIMIT: 30
+      NX_ADD_PLUGINS: false
+    volumes:
+      - postiz-p2pf-config:/config/
+      - postiz-p2pf-uploads:/uploads/
+      - ./infisical-entrypoint.sh:/infisical-entrypoint.sh:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.postiz-p2pf.rule=Host(`p2pf.rsocials.online`) || Host(`socials.p2pfoundation.net`)"
+      - "traefik.http.routers.postiz-p2pf.entrypoints=web,websecure"
+      - "traefik.http.services.postiz-p2pf.loadbalancer.server.port=5000"
+      - "traefik.docker.network=traefik-public"
+    networks:
+      - traefik-public
+      - postiz-p2pf-internal
+      - mailcow-network
+      - infisical-internal
+    depends_on:
+      postiz-p2pf-postgres:
+        condition: service_healthy
+      postiz-p2pf-redis:
+        condition: service_healthy
+      postiz-p2pf-temporal:
+        condition: service_started
+
+  postiz-p2pf-postgres:
+    image: postgres:17-alpine
+    container_name: postiz-p2pf-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_pw
+      POSTGRES_USER: postiz
+      POSTGRES_DB: postiz
+    volumes:
+      - postiz-p2pf-postgres-data:/var/lib/postgresql/data
+      - ./secrets/postiz-p2pf-pg:/run/secrets/pg_pw:ro
+    networks:
+      - postiz-p2pf-internal
+    healthcheck:
+      test: pg_isready -U postiz -d postiz
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  postiz-p2pf-redis:
+    image: redis:7.2
+    container_name: postiz-p2pf-redis
+    restart: unless-stopped
+    healthcheck:
+      test: redis-cli ping
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    volumes:
+      - postiz-p2pf-redis-data:/data
+    networks:
+      - postiz-p2pf-internal
+
+  postiz-p2pf-temporal:
+    image: temporalio/auto-setup:1.28.1
+    container_name: postiz-p2pf-temporal
+    # Added 2026-08-07 (TASK-140). Without this the container reported Up for
+    # two months while looping on an unresolvable DB host. $$ escapes compose
+    # interpolation; hostname -i returns MULTIPLE ips here, so take the first.
+    healthcheck:
+      test: ["CMD-SHELL", "temporal operator cluster health --address $$(hostname -i | awk '{print $$1}'):7233 | grep -q SERVING"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    restart: unless-stopped
+    depends_on:
+      - postiz-p2pf-temporal-wait
+    environment:
+      - DB=postgres12
+      - DB_PORT=5432
+      - POSTGRES_USER=temporal
+      - POSTGRES_PWD=${TEMPORAL_POSTGRES_PASSWORD}
+      - POSTGRES_SEEDS=temporal-shared-postgres
+      - DBNAME=temporal_p2pf
+      - VISIBILITY_DBNAME=temporal_visibility_p2pf
+      - ENABLE_ES=false
+      - TEMPORAL_NAMESPACE=default
+    networks:
+      - postiz-p2pf-internal
+      - postiz-temporal-shared
+
+  postiz-p2pf-temporal-wait:
+    image: postgres:16
+    container_name: postiz-p2pf-temporal-wait
+    restart: "no"
+    entrypoint: ["sh", "-c", "until pg_isready -h temporal-shared-postgres -U temporal; do sleep 2; done"]
+    networks:
+      - postiz-temporal-shared
+
+volumes:
+  postiz-p2pf-postgres-data:
+  postiz-p2pf-redis-data:
+  postiz-p2pf-config:
+  postiz-p2pf-uploads:
+
+networks:
+  traefik-public:
+    external: true
+  postiz-p2pf-internal:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.221.0/24
+  infisical-internal:
+    external: true
+    name: infisical_infisical-internal
+  mailcow-network:
+    external: true
+    name: mailcowdockerized_mailcow-network
+  postiz-temporal-shared:
+    external: true
+    name: shared-temporal_postiz-temporal-shared

@@ -1,0 +1,53 @@
+# Temporal's shared Postgres, rehosted on GX10.
+#
+# postiz-p2pf does not talk to this directly — its own temporal container does,
+# over the network this stack creates. The network NAME is load-bearing: postiz
+# joins `shared-temporal_postiz-temporal-shared`, which is the compose project
+# prefix `shared-temporal` plus the network key. Deploy this from a directory of
+# that name, or the prefix changes and postiz cannot find it.
+#
+# The data volume is deliberately NOT restored. It holds Temporal workflow state,
+# not user data, and init-databases.sql recreates the two schemas on first boot;
+# temporalio/auto-setup then reprovisions. A stale workflow history restored
+# under a freshly provisioned cluster is worse than an empty one.
+services:
+  temporal-shared-postgres:
+    image: postgres:16
+    container_name: temporal-shared-postgres
+    mem_limit: 1g
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: "${TEMPORAL_POSTGRES_PASSWORD}"
+      POSTGRES_USER: temporal
+    volumes:
+      - temporal-shared-postgres-data:/var/lib/postgresql/data
+      - ./init-databases.sql:/docker-entrypoint-initdb.d/init-databases.sql:ro
+    networks:
+      - postiz-temporal-shared
+    healthcheck:
+      test: pg_isready -U temporal
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  temporal-shared-ui:
+    image: temporalio/ui:2.34.0
+    container_name: temporal-shared-ui
+    mem_limit: 512m
+    restart: unless-stopped
+    environment:
+      - TEMPORAL_ADDRESS=postiz-temporal:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:8080
+    networks:
+      - postiz-temporal-shared
+
+volumes:
+  temporal-shared-postgres-data:
+
+networks:
+  # Pinned: GX10 has consumed every default docker address pool.
+  postiz-temporal-shared:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.220.0/24

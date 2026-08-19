@@ -1,0 +1,142 @@
+# p2pfoundation.net + blog.p2pfoundation.net, rehosted on GX10.
+#
+# Netcup went off the network 2026-08-17 06:21Z and has not come back. This is a
+# faithful rebuild of netcup's /opt/p2pfoundation from the R2 restic backups,
+# with two differences that matter:
+#
+#   1. FILES are current to the outage — snapshot d1abae65, taken 03:03Z that
+#      same morning, ~3h before the host went. wp-content, uploads, themes and
+#      plugins are intact.
+#
+#   2. The DATABASE is from 2026-06-29 (snapshot c5790d62) and is the NEWEST
+#      that exists anywhere. The nightly dump reads $MYSQL_ROOT_PASSWORD from
+#      the container environment; this stack was migrated to the Infisical
+#      MYSQL_ROOT_PASSWORD_FILE pattern, after which the dump logged
+#      "SKIP: p2p-db (no root password found)" every night. The raw volume
+#      p2pfoundation_db_data is on restic's exclude list precisely BECAUSE the
+#      logical dump was believed to cover it. Each half was defensible; together
+#      they left this database with no backup at all for ~7 weeks.
+#
+#      => Posts, edits and comments between 2026-06-29 and 2026-08-17 are NOT
+#         here. Their uploaded media IS, because that lives in the file volumes,
+#         so the gap is recoverable by hand from the Wayback Machine if a
+#         specific post is wanted. If Netcup ever returns, ITS database is
+#         authoritative and newer: reconcile toward it, never overwrite it with
+#         this one.
+#
+# Bind mounts rather than named volumes: this data came off a restore, and being
+# able to see and back up the actual directory is worth more than volume tidiness.
+#
+# Deployed at ~/apps/p2pfoundation-refugee on GX10.
+
+services:
+  db:
+    image: mariadb:10.11
+    container_name: p2p-db
+    restart: unless-stopped
+    mem_limit: 4g
+    mem_reservation: 1g
+    command: >
+      --max-connections=200
+      --wait-timeout=300
+      --interactive-timeout=300
+      --innodb-buffer-pool-size=512M
+      --innodb-log-file-size=128M
+      --innodb-flush-log-at-trx-commit=2
+      --innodb-flush-method=O_DIRECT
+      --max-allowed-packet=64M
+      --table-open-cache=400
+      --tmp-table-size=64M
+      --max-heap-table-size=64M
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./secrets/p2pf-mysql-root:/run/secrets/mysql_root:ro
+    networks:
+      - p2p-internal
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  blog:
+    image: wordpress:6.4-php8.2-apache
+    container_name: p2p-blog
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: p2p_blog
+      WORDPRESS_DB_USER: p2p_blog
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/wp_db_pw
+    volumes:
+      - ./data/blog:/var/www/html
+      - ./secrets/p2pf-wp-blog:/run/secrets/wp_db_pw:ro
+      - ./conf/mpm-tuning-blog.conf:/etc/apache2/conf-enabled/zz-mpm-tuning.conf:ro
+      - ./conf/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+      - ./conf/robots.txt:/var/www/html/robots.txt:ro
+      - ./conf/block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
+      - ./conf/rdata-analytics.php:/var/www/html/wp-content/mu-plugins/rdata-analytics.php:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.p2p-blog.entrypoints=web"
+      - "traefik.http.routers.p2p-blog.rule=Host(`blog.p2pfoundation.net`) || Host(`www.blog.p2pfoundation.net`)"
+      - "traefik.http.services.p2p-blog.loadbalancer.server.port=80"
+    networks:
+      - p2p-internal
+      - traefik-public
+
+  web:
+    image: wordpress:6.4-php8.2-apache
+    container_name: p2p-web
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: p2p_web
+      WORDPRESS_DB_USER: p2p_web
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/wp_db_pw
+    volumes:
+      - ./data/web:/var/www/html
+      - ./secrets/p2pf-wp-web:/run/secrets/wp_db_pw:ro
+      - ./conf/mpm-tuning-web.conf:/etc/apache2/conf-enabled/zz-mpm-tuning.conf:ro
+      - ./conf/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+      - ./conf/robots.txt:/var/www/html/robots.txt:ro
+      - ./conf/block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
+      - ./conf/rdata-analytics.php:/var/www/html/wp-content/mu-plugins/rdata-analytics.php:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.p2p-web.entrypoints=web"
+      - "traefik.http.routers.p2p-web.rule=Host(`p2pfoundation.net`) || Host(`www.p2pfoundation.net`)"
+      - "traefik.http.services.p2p-web.loadbalancer.server.port=80"
+    networks:
+      - p2p-internal
+      - traefik-public
+
+volumes:
+  db_data:
+
+networks:
+  # Subnet PINNED, not chosen by docker. GX10 runs ~120 containers across 34
+  # networks and has consumed every default address pool — 172.17-172.31/16 and
+  # 192.168.16-240 in /20s — so an unpinned network fails outright with
+  # "all predefined address pools have been fully subnetted". 192.168.208.0/22 is
+  # the gap below guest_guest-isolated (192.168.222.0/24); it is deliberately a
+  # /22 rather than the free /20 so it cannot grow into that. Widening docker's
+  # pools in daemon.json is the real fix and needs a docker restart, which would
+  # bounce every container on the box — not during an outage.
+  p2p-internal:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.208.0/22
+  traefik-public:
+    external: true

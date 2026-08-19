@@ -1,0 +1,95 @@
+# translate.p2pfoundation.net (translation-cache), rehosted on GX10.
+#
+# Source and .env restored from the R2 restic backup of netcup, snapshot
+# d1abae65. Four departures from netcup's compose:
+#
+#   * The entrypoint override is gone. Netcup mounted a hardened wrapper from
+#     /opt/infisical/entrypoint-wrapper.sh over the image's own entrypoint; that
+#     file is netcup-local and the image already ships the same Infisical
+#     injection script, so the image entrypoint is used directly.
+#
+#   * The stack joins infisical_infisical-internal, because `infisical:8080` has
+#     to resolve for the secret fetch. On netcup that reachability came for free
+#     from a flat network layout that does not exist here.
+#
+#   * ai-internal (a netcup-only external network) is replaced by
+#     gx10-litellm_default, which is where the LLM backend lives on this host.
+#     The LITELLM_BASE_URL that Infisical injects is http://litellm:4000/v1, and
+#     that name resolves on this network to GX10's own litellm — so the backend
+#     came back without repointing the secret. Verified at startup:
+#     /health/liveliness 200, and the service reports {"llm": true}.
+#
+#   * certresolver=letsencrypt is dropped: GX10's traefik has no ACME resolver,
+#     and a router naming a resolver that does not exist never serves.
+services:
+  translation-cache:
+    build: .
+    container_name: translation-cache
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      LITELLM_MODEL_OVERRIDE: auto
+      LITELLM_TASK_CLASS: translation
+      REDIS_URL: redis://translation-cache-redis:6379/0
+      INFISICAL_PROJECT_SLUG: p2p-translation-cache
+      INFISICAL_URL: http://infisical:8080
+      INFISICAL_ENV: prod
+    depends_on:
+      translation-cache-redis:
+        condition: service_healthy
+    networks:
+      - translation-internal
+      - traefik-public
+      - infisical-internal
+      - litellm
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.translation-cache.rule=Host(`translate.p2pfoundation.net`)"
+      - "traefik.http.routers.translation-cache.entrypoints=websecure"
+      - "traefik.http.routers.translation-cache.tls=true"
+      - "traefik.http.services.translation-cache.loadbalancer.server.port=8000"
+
+  translation-cache-redis:
+    image: redis:7-alpine
+    container_name: translation-cache-redis
+    restart: unless-stopped
+    command:
+      - redis-server
+      - --maxmemory
+      - 512mb
+      - --maxmemory-policy
+      - allkeys-lru
+      - --save
+      - "900"
+      - "1"
+      - --appendonly
+      - "no"
+    volumes:
+      - translation-cache-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - translation-internal
+
+networks:
+  # Pinned: GX10 has consumed every default docker address pool.
+  translation-internal:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.216.0/22
+  traefik-public:
+    external: true
+  infisical-internal:
+    external: true
+    name: infisical_infisical-internal
+  litellm:
+    external: true
+    name: gx10-litellm_default
+
+volumes:
+  translation-cache-redis-data:

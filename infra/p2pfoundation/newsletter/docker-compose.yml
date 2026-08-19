@@ -1,0 +1,93 @@
+# newsletter.p2pfoundation.net (listmonk), rehosted on GX10.
+#
+# Restored from the R2 restic backup of netcup, snapshot d1abae65 (2026-08-17
+# 03:03Z). Unlike the WordPress stack, this one has a CURRENT database: listmonk
+# runs on Postgres, the nightly pg_dumpall reads no password out of the container
+# environment, and so it never hit the failure that silently killed the MariaDB
+# dump. p2p-listmonk-db.sql is from the morning of the outage.
+#
+# Two departures from netcup's compose:
+#
+#   * The `init-secrets` service is gone. It rendered config.toml and db_password
+#     out of Infisical at boot; both files were restored from the backup and are
+#     mounted directly. Reintroducing the Infisical round-trip would mean giving
+#     this stack machine credentials for a project it only needs at first boot.
+#
+#   * certresolver=letsencrypt is dropped. GX10's traefik has no ACME resolver
+#     configured, and a router naming a resolver that does not exist does not
+#     serve. The tunnel reaches this over https://localhost:443 with
+#     noTLSVerify: true, so traefik's default self-signed cert is sufficient —
+#     the public TLS is terminated by Cloudflare regardless.
+name: p2p-newsletter
+services:
+  listmonk:
+    image: listmonk/listmonk:v5.1.0
+    container_name: p2p-listmonk
+    restart: unless-stopped
+    mem_limit: 512m
+    depends_on:
+      listmonk-db:
+        condition: service_healthy
+    command: ./listmonk
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ./config.toml:/listmonk/config.toml:ro
+      - p2p_listmonk_uploads:/listmonk/uploads
+    extra_hosts:
+      - mail.rmail.online:host-gateway
+    networks:
+      - p2p-listmonk-internal
+      - traefik-public
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-public
+      - traefik.http.routers.p2p-listmonk.rule=Host(`newsletter.p2pfoundation.net`)
+      - traefik.http.routers.p2p-listmonk.entrypoints=websecure
+      - traefik.http.routers.p2p-listmonk.tls=true
+      - traefik.http.routers.p2p-listmonk.service=p2p-listmonk
+      - traefik.http.services.p2p-listmonk.loadbalancer.server.port=9000
+
+  listmonk-db:
+    image: postgres:16-alpine
+    container_name: p2p-listmonk-db
+    restart: unless-stopped
+    mem_limit: 256m
+    environment:
+      POSTGRES_USER: listmonk
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+      POSTGRES_DB: listmonk
+    secrets:
+      - db_password
+    volumes:
+      - p2p_listmonk_pgdata:/var/lib/postgresql/data
+    networks:
+      - p2p-listmonk-internal
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U listmonk -d listmonk"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  p2p_listmonk_pgdata:
+  p2p_listmonk_uploads:
+
+secrets:
+  db_password:
+    file: ./db_password
+
+networks:
+  # Pinned for the same reason as the WordPress stack: GX10 has exhausted every
+  # default docker address pool, so an unpinned bridge network cannot be created.
+  p2p-listmonk-internal:
+    name: p2p-listmonk-internal
+    ipam:
+      config:
+        - subnet: 192.168.212.0/22
+  traefik-public:
+    external: true

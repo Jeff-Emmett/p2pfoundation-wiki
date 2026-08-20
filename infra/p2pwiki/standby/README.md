@@ -233,3 +233,24 @@ That is why the gap is 16 days and not 13.
 4. **No images, no custom extensions, generated config** until Netcup returns.
 5. **Credentials are local to the box**, not in Infisical, and deliberately so
    while Infisical lives on the host this is meant to survive.
+
+## Gap import — executed 2026-08-20
+
+`import-gap-2026-08.sh` ran on GX10 against `p2pwiki-standby`, reached over the
+`gx10-ssh2` cloudflared door rather than the mesh (Headscale was still down for
+this machine; see memory `cloudflared-ssh-doors`). Result:
+
+- 163/163 pages verified **through the public API**, not from inside the
+  container: `ok=163 missing=0 stale=0`. Every live revision is at or newer than
+  the delta's.
+- Attribution landed on the real accounts — `user=Mbauwens`, not
+  `imported>Mbauwens` — which is what dropping `--no-local-users` was for.
+- `Special:Statistics` now reads pages=45559 articles=15309 edits=46838
+  **users=2283** images=1209. It read 6 users before step 4.
+- Pre-import database snapshot kept at
+  `~/p2pwiki-standby/dumps/pre-gap-import/p2pwiki-20260820T145757Z.sql.gz`
+  (139 MB) on GX10.
+
+The dry run reported 163 pages/163 revisions and the real run imported the same
+count with no errors. Re-running is harmless; importDump skips revisions the
+wiki already has.

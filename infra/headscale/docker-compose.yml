@@ -35,6 +35,29 @@
 # connect directly relay through public DERP.
 #
 # Deployed at ~/apps/headscale on GX10. See deploy-on-gx10.sh.
+#
+# !! DO NOT FRONT THIS WITH THE CLOUDFLARE TUNNEL. It was tried on 2026-08-20
+# and it cannot work. Headscale's own docs are explicit: "Running Headscale
+# behind a Cloudflare Proxy or Cloudflare Tunnel is not supported and will not
+# work as Cloudflare does not support WebSocket POSTs as required by the
+# Tailscale protocol." The control protocol upgrades with POST +
+# `Upgrade: tailscale-control-protocol`, and Cloudflare forwards neither.
+#
+# The failure is quiet and looks like success, which is why it is worth the
+# warning: /health returns {"status":"pass"} and /apple renders, because those
+# are ordinary GETs. Only /ts2021 breaks — it answers "Internal error", the
+# client falls back to the legacy /machine/register endpoint that 0.28 no
+# longer serves, and reports a bare 500. A monitor checking /health would call
+# this healthy forever.
+#
+# So this needs a path to GX10 that is NOT Cloudflare-proxied:
+#   * forward a port on the router to GX10 and grey-cloud the DNS record —
+#     headscale can terminate its own TLS (tls_letsencrypt_hostname), or
+#   * run headscale on a host that has a public IP.
+#
+# The second is the better answer regardless of Cloudflare, because it fixes
+# the fault that caused this outage: the control plane for the admin path
+# should not live on the host the admin path exists to reach.
 
 services:
   headscale:

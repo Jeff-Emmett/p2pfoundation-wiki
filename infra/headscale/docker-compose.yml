@@ -1,0 +1,71 @@
+# Headscale, moved to GX10 after Netcup died.
+#
+# WHY THIS IS URGENT RATHER THAN TIDY. Headscale is the tailnet's control plane
+# and it lived on Netcup, so when that host went dark on 2026-08-17 every device
+# on the tailnet was left with no way to re-authenticate. Clients keep working on
+# cached state for a while and then log out for good: "fetch control key: dial
+# tcp 159.195.32.209:443: connect: connection timed out". At that point the whole
+# 100.64.0.0/10 range is unreachable — including 100.64.0.5, which is the only
+# admin route to GX10 itself, the host now carrying the entire estate.
+#
+# THE NODES DO NOT HAVE TO RE-ENROL, because data/ came back from restic snapshot
+# d1abae65 intact: db.sqlite with every registration, its 4 MB WAL, and — the
+# part that actually matters — noise_private.key. That key IS the control
+# plane's identity; clients pin it. Restore it and the existing tailnet resumes.
+# Generate a new one and every device is a stranger that must be re-enrolled by
+# hand, which is a very different afternoon.
+#
+# Three departures from netcup's compose:
+#
+#   * entrypoints=web, and no certresolver. GX10's traefik has no ACME resolver
+#     configured, and a router naming a resolver that does not exist never
+#     serves. TLS is terminated by Cloudflare; the tunnel delivers plain HTTP.
+#
+#   * headplane (the admin UI) is not here. It needs the docker-socket proxy,
+#     an Infisical machine identity and a basic-auth hash, and none of that is
+#     required to get the tailnet breathing again. Restoring connectivity should
+#     not be gated on a web UI. Add it back once the tailnet is up.
+#
+#   * No new docker network. GX10 has consumed every default address pool, and
+#     this needs nothing but traefik-public, which already exists.
+#
+# derp.server.enabled is false in config.yaml and the DERP map comes from
+# Tailscale's public servers, which is what makes fronting this with an HTTP-only
+# Cloudflare tunnel viable at all: no UDP has to reach us. Peers that cannot
+# connect directly relay through public DERP.
+#
+# Deployed at ~/apps/headscale on GX10. See deploy-on-gx10.sh.
+
+services:
+  headscale:
+    image: headscale/headscale:0.28
+    container_name: headscale
+    restart: unless-stopped
+    command: serve
+    volumes:
+      - ./config:/etc/headscale
+      - ./data:/var/lib/headscale
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.headscale.rule=Host(`vpn.jeffemmett.com`)"
+      - "traefik.http.routers.headscale.entrypoints=web"
+      - "traefik.http.routers.headscale.priority=200"
+      - "traefik.http.services.headscale.loadbalancer.server.port=8080"
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /var/run/headscale:mode=0770
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

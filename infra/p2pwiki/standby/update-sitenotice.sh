@@ -7,21 +7,34 @@
 # infrastructure change can update goes stale exactly when the situation moves,
 # which is what happened when the Worker kept telling readers that "editing and
 # login are disabled" for hours after editing was enabled.
+#
+# Usage:
+#   ./update-sitenotice.sh                 # clear the notice (MediaWiki reads "-" as none)
+#   ./update-sitenotice.sh notice.html     # publish the contents of a file
+#   ./update-sitenotice.sh - < notice.html # publish from stdin
+#
+# The text is NOT baked into this script any more. It was, and the incident it
+# described (the 31 Jul–17 Aug gap, transferred passwords) was fixed on
+# 2026-08-20 while the script still carried the old wording — a re-run would
+# have put a false warning back in front of every reader. Pass the wording in.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-cat > /tmp/sitenotice.txt <<'MSG'
-<div style="border:1px solid #e0c48a;background:#fdf3e3;color:#5c3d13;padding:.7rem 1rem;margin-bottom:1rem;line-height:1.5">
-<strong>The wiki is running on backup infrastructure.</strong>
-Reading and editing both work normally, and everything you save here is kept and backed up daily.
-
-Two things to know: edits made on the main server between <strong>31 July and 17 August</strong> are temporarily missing and will be restored; and <strong>your existing password will not work</strong> — account passwords live on the main server and could not be transferred. Contact Michel or Jeff for access. Password reset by email is unavailable for now.
-</div>
-MSG
+src="${1:-}"
+if [[ -z "$src" ]]; then
+  printf -- "-\n" > /tmp/sitenotice.txt
+  summary="clear status notice"
+elif [[ "$src" == "-" ]]; then
+  cat > /tmp/sitenotice.txt
+  summary="status notice"
+else
+  cp "$src" /tmp/sitenotice.txt
+  summary="status notice"
+fi
 
 docker cp /tmp/sitenotice.txt p2pwiki-standby:/tmp/sitenotice.txt >/dev/null
 docker exec p2pwiki-standby bash -c \
-  "php /var/www/html/maintenance/edit.php --user=Admin --summary='status notice' MediaWiki:Sitenotice < /tmp/sitenotice.txt"
+  "php /var/www/html/maintenance/edit.php --user=Admin --summary='$summary' MediaWiki:Sitenotice < /tmp/sitenotice.txt"
 
 # $wgSiteNotice in LocalSettings OVERRIDES the MediaWiki:Sitenotice page, so the
 # page would be ignored while that variable is set. Neutralise it and let the

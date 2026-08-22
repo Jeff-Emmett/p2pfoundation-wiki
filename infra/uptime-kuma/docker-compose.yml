@@ -1,0 +1,77 @@
+# Uptime Kuma, recovered onto GX10 after Netcup died.
+#
+# IT HAD BEEN DOWN SINCE 2026-08-17 AND NOTHING SAID SO — which is the specific
+# joke of losing your monitoring host. Worse, the push-based alarms kept running:
+# GX10's crontab still fires `disk-usage-push.sh` every five minutes and
+# `hetzner-usage-push.sh` every fifteen, both aimed at `http://127.0.0.1` with a
+# `Host: status.jeffemmett.com` header. On Netcup that reached Kuma through
+# traefik. On GX10 nothing serves that name, so for five days every disk alarm
+# and every storage-box-fill alarm has been posting into a 301 and exiting
+# quietly. The estate had no early warning on the one resource — disk — that
+# took Netcup down twice in July.
+#
+# All 241 monitors, their history and their push tokens came back intact from
+# restic snapshot d1abae65 (`/var/lib/docker/volumes/uptime-kuma_uptime-kuma-data`,
+# 871 MB, kuma.db 228 MB plus its WAL). Because the tokens survive, the existing
+# cron scripts start working again the moment this is up, with no edit to any of
+# them.
+#
+# TWO DEPARTURES FROM NETCUP'S COMPOSE:
+#
+#   * A BIND MOUNT, not a named volume. The restored files are owned by the host
+#     user, and populating a named volume would need them chowned to root, which
+#     needs sudo on every restore. A bind mount just works: this container runs
+#     as root and keeps DAC_OVERRIDE, since nothing here drops capabilities.
+#     (Where capabilities ARE dropped — headplane next door — that missing
+#     DAC_OVERRIDE is precisely what caused an EACCES on a file root owned.)
+#
+#   * entrypoints=web with no certresolver, because GX10's traefik has no ACME
+#     resolver and a router naming one that does not exist never serves. TLS
+#     terminates at Cloudflare.
+#
+# `host.docker.internal` is kept: several monitors probe services on the host
+# rather than in a container, and dropping it would turn them all red at once.
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    restart: unless-stopped
+    # Public resolvers, as on Netcup. Kuma runs DNS monitors, and pointing those
+    # at a resolver inside this estate would mean an outage here could make the
+    # DNS checks pass or fail for reasons that have nothing to do with the DNS
+    # being checked.
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      # THE PUSH ALARMS CANNOT USE TRAEFIK, and restoring Kuma without this
+      # would have left all 44 of them just as dead as they were while Kuma was
+      # gone — which is the worst outcome, because the dashboard would be back
+      # and would look complete.
+      #
+      # The scripts post to `http://127.0.0.1` with a `Host:
+      # status.jeffemmett.com` header. On GX10 traefik answers that with a 301
+      # to https, and following it lands on a Cloudflare Access sign-in page —
+      # `curl -fsS` treats the 301 as success and exits 0 having delivered
+      # nothing. Bound here on loopback so a push reaches Kuma directly and gets
+      # a real answer: {"ok":false,"msg":"Monitor not found or not active."}
+      #
+      # 127.0.0.1 rather than 0.0.0.0: this is for jobs on this host, and the
+      # dashboard is already published through traefik behind Cloudflare Access.
+      - "127.0.0.1:3001:3001"
+    volumes:
+      - ./data:/app/data
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-public
+      - traefik.http.routers.uptime-kuma.rule=Host(`status.jeffemmett.com`)
+      - traefik.http.routers.uptime-kuma.entrypoints=web
+      - traefik.http.services.uptime-kuma.loadbalancer.server.port=3001
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

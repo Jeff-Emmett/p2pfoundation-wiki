@@ -188,9 +188,51 @@ done
 # The secret files are what make a restore actually start. Without them a
 # recovered WordPress meets "Error establishing a database connection", which is
 # how the 2026-08-19 restore spent its first hour.
+#
+# TWO THINGS MAKE THIS HARDER THAN A COPY, and both failed silently at first.
+#
+# 1. `rsync -a` preserves ownership, and the destination is sshfs to a storage
+#    box that permits no chown or chgrp. Every file errors with "chgrp failed:
+#    Permission denied" and rsync exits 23 — but the *data* usually lands, so
+#    a `|| true` here would hide a genuine failure behind a real one. Hence
+#    --no-o --no-g: ownership is meaningless on the storage box anyway, and it
+#    is restored from the compose file, not from the backup's mode bits.
+#
+# 2. Two of the three secrets are root:www-data 0640, so the user running this
+#    backup CANNOT READ THEM. rsync skipped both with "failed to open:
+#    Permission denied" and carried on, which would have left a restore with the
+#    MySQL root password and neither WordPress password — discovered only at the
+#    moment of restoring. They are read out through the containers that mount
+#    them instead, since dockerd is root. The values are redirected straight to
+#    disk and never pass through a terminal or a log.
+echo "== secrets and configs =="
 install -d -m 700 "$DEST/secret-files"
-rsync -a --chmod=F600 "$STACK/secrets/" "$DEST/secret-files/"
-rsync -a "$STACK/docker-compose.yml" "$STACK/conf" "$DEST/" 2>/dev/null || true
+
+RSYNC_OPTS=(-rlptD --no-o --no-g)
+rsync "${RSYNC_OPTS[@]}" --chmod=F600 "$STACK/secrets/" "$DEST/secret-files/" 2>/dev/null || true
+rsync "${RSYNC_OPTS[@]}" "$STACK/docker-compose.yml" "$DEST/"
+rsync "${RSYNC_OPTS[@]}" "$STACK/conf" "$DEST/"
+
+# The two the host user cannot read, fetched via the containers that can.
+for pair in "p2p-web p2pf-wp-web" "p2p-blog p2pf-wp-blog"; do
+  set -- $pair
+  if docker exec "$1" cat /run/secrets/wp_db_pw > "$DEST/secret-files/$2" 2>/dev/null; then
+    chmod 600 "$DEST/secret-files/$2" 2>/dev/null || true
+  fi
+done
+
+# Verify by SIZE, never by value — a secret that reaches a log is disclosed and
+# has to be rotated. Zero bytes means the read failed and the restore is broken
+# in a way nobody would notice until they needed it.
+for f in p2pf-mysql-root p2pf-wp-web p2pf-wp-blog; do
+  sz=$(stat -c%s "$DEST/secret-files/$f" 2>/dev/null || echo 0)
+  if [ "$sz" -lt 8 ]; then
+    echo "   FAIL: secret $f backed up as $sz bytes — a restore would not start" >&2
+    FAIL=1
+  else
+    echo "   ok  $f ($sz bytes)"
+  fi
+done
 
 # --- retention ---------------------------------------------------------------
 echo "== retention (keeping $KEEP per database) =="

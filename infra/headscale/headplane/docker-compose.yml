@@ -1,0 +1,84 @@
+# Headplane — the Headscale admin UI, brought back after the emergency move.
+#
+# NOT BEHIND TRAEFIK, AND NOT BEHIND CLOUDFLARE. This is the one deliberate
+# departure from how everything else on this host is published, and it follows
+# directly from the outage that made this move necessary.
+#
+# Headscale's control plane lived on Netcup. When Netcup died on 2026-08-17
+# every device coasted on cached state for about three days and then logged out
+# for good — and `ssh gx10` resolves to a tailnet address, so the admin route to
+# the host carrying the entire estate went with it. GX10 was perfectly healthy
+# and completely unadministrable for days.
+#
+# An admin UI for the tailnet that is only reachable *over* the tailnet repeats
+# that fault at one remove: the moment you most need it is the moment it is
+# gone. So this binds to the host instead, which makes it reachable three ways —
+#
+#     over the tailnet   http://100.64.0.5:3200
+#     over the LAN       http://192.168.0.13:3200     <- works when the tailnet does not
+#     on the box itself  http://127.0.0.1:3200
+#
+# — and, because GX10 has no public IP, from nowhere on the internet. That is
+# also why there is no basic-auth middleware here: the network boundary is doing
+# the work, and a password in front of a service that cannot be reached is
+# security theatre that mostly just gets lost.
+#
+# It needs a headscale API key. deploy-headplane.sh mints one and writes it
+# straight into headplane.env without it ever passing through a terminal, a
+# shell history, or an agent's context.
+services:
+  headplane:
+    image: ghcr.io/tale/headplane:0.6.0
+    container_name: headplane
+    restart: unless-stopped
+    env_file: ./headplane.env
+    environment:
+      # Reached over the shared docker network by container name, so this does
+      # not depend on DNS, on Cloudflare, or on the tailnet being up — all three
+      # of which are things this UI may be needed to repair.
+      HEADPLANE_LOAD_ENV_OVERRIDES: "true"
+      # Headplane can edit config.yaml and restart headscale through the docker
+      # socket. Both are declined: the socket is a root-equivalent grant, and
+      # this UI exists to look at nodes, not to rewrite the control plane's
+      # configuration from a browser.
+      HEADPLANE__HEADSCALE__CONFIG_STRICT: "false"
+    ports:
+      # Bound to every interface ON PURPOSE — see the note above. On a host with
+      # no public IP this means LAN plus tailnet, which is exactly the reach
+      # this needs to have.
+      - "3200:3000"
+    volumes:
+      # Headplane's OWN config, RENDERED from config.yaml by deploy-headplane.sh
+      # with the real cookie secret in place. It refuses to start without this
+      # file even when every value is supplied by environment, and it validates
+      # the file BEFORE applying any override — so the secret has to be in here,
+      # not merely in the environment.
+      - ./config.rendered.yaml:/etc/headplane/config.yaml:ro
+      - ./data:/var/lib/headplane
+      # Headscale's config, read-only: headplane reads it to learn the DNS and
+      # prefix settings it displays.
+      - ../config/config.yaml:/etc/headscale/config.yaml:ro
+    cap_drop:
+      - ALL
+    cap_add:
+      # DAC_OVERRIDE, and only DAC_OVERRIDE. config.rendered.yaml holds the
+      # cookie signing secret so it is 0600 and owned by the host user, while
+      # this image runs as root inside the container — and `cap_drop: ALL`
+      # removes precisely the capability that lets root ignore mode bits. The
+      # result is a root process getting EACCES on a file it appears to have
+      # every right to read, which is a genuinely confusing way to fail and has
+      # now cost this estate an afternoon twice: once here and once on
+      # listmonk's config.toml.
+      #
+      # The alternative is chowning the file to root, which needs sudo on every
+      # deploy. This is the same capability headscale itself is granted next
+      # door, so the two services stay consistent.
+      - DAC_OVERRIDE
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

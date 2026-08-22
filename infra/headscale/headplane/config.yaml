@@ -1,0 +1,53 @@
+# Headplane's own configuration, distinct from headscale's.
+#
+# It needs this file to EXIST before it will look at any environment variable.
+# `HEADPLANE_LOAD_ENV_OVERRIDES=true` overrides values that are already here; it
+# does not stand in for the file. Without it the container exits 1 with
+# "Unable to read a configuration file at /etc/headplane/config.yaml", which
+# reads like a mounting mistake rather than a missing default.
+#
+# THIS FILE IS A TEMPLATE AND IS NOT WHAT THE CONTAINER READS.
+# deploy-headplane.sh renders it into config.rendered.yaml with the real cookie
+# secret substituted, and that rendered file — gitignored, 0600 — is the mount.
+#
+# The first attempt instead left a placeholder here and relied on
+# HEADPLANE_LOAD_ENV_OVERRIDES to replace it. Headplane validates the FILE before
+# applying any override, so a placeholder of the wrong length aborted startup
+# outright ("cookie_secret must be exactly length 32 (was 17)"). The obvious
+# patch — make the placeholder 32 characters — starts cleanly but leaves nobody
+# able to say whether the live signing key is the real secret or a committed row
+# of zeros. Rendering removes the question rather than answering it.
+#
+# The headscale API key is still supplied by environment from headplane.env,
+# because it has no length validation and so cannot fail this way.
+
+server:
+  host: "0.0.0.0"
+  port: 3000
+  # Substituted by deploy-headplane.sh. Exactly 32 characters so that the
+  # template itself is valid and can be linted, and unmistakably not a secret so
+  # that a rendered file is never confused with this one.
+  cookie_secret: "PLACEHOLDER_REPLACED_AT_DEPLOY__"
+  # Served over plain HTTP on the LAN and the tailnet — GX10 has no public IP
+  # and this is not published through Traefik. A Secure-flagged cookie would
+  # never be sent back, and the resulting login loop looks exactly like a
+  # rejected password.
+  cookie_secure: false
+
+headscale:
+  # By container name on the shared docker network, so reaching the control
+  # plane does not depend on DNS, Cloudflare, or the tailnet being up — each of
+  # which is something this UI may be needed to diagnose.
+  url: "http://headscale:8080"
+  config_path: "/etc/headscale/config.yaml"
+  # Read-only mount, so headplane must not insist it can write the file back.
+  config_strict: false
+
+integration:
+  # Headplane can restart headscale through the docker socket. Declined: the
+  # socket is a root-equivalent grant on this host, and this UI is here to look
+  # at nodes, not to restart the control plane from a browser.
+  docker:
+    enabled: false
+  proc:
+    enabled: false

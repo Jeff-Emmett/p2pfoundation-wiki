@@ -1,0 +1,115 @@
+/* Shared by both placeholders. Deliberately one small file with no build step
+   and no external requests: these pages exist to be reliable, and a placeholder
+   that depends on a CDN can fail in ways the thing it stands in for cannot. */
+:root {
+  --bg: #faf9f7;
+  --fg: #1b1a17;
+  --muted: #5f5b54;
+  --rule: #e2ded7;
+  --accent: #1f6f5c;
+  --accent-soft: #eaf2ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a;
+    --fg: #eceae5;
+    --muted: #9b9790;
+    --rule: #2b2f36;
+    --accent: #5fbfa3;
+    --accent-soft: #17251f;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  flex: 1 0 auto;
+}
+.eyebrow {
+  font-size: .75rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 .75rem;
+}
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -.02em;
+}
+.lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 2.5rem; }
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: .35rem .85rem;
+  font-size: .8125rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.dot {
+  width: .5rem; height: .5rem; border-radius: 50%;
+  background: currentColor;
+}
+h2 {
+  font-size: .8125rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+ul.plan { list-style: none; padding: 0; margin: 0; }
+ul.plan li {
+  padding: .55rem 0 .55rem 1.6rem;
+  position: relative;
+  color: var(--muted);
+}
+ul.plan li::before {
+  content: "";
+  position: absolute;
+  left: .25rem; top: 1.15rem;
+  width: .4rem; height: .4rem;
+  border-radius: 50%;
+  background: var(--rule);
+}
+.links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.links a {
+  display: inline-block;
+  padding: .5rem .9rem;
+  border: 1px solid var(--rule);
+  border-radius: .5rem;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: .9375rem;
+  transition: border-color .15s, color .15s;
+}
+.links a:hover, .links a:focus-visible { border-color: var(--accent); color: var(--accent); }
+footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: .875rem;
+}
+footer a { color: inherit; }

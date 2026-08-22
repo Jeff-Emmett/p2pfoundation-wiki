@@ -25,10 +25,23 @@
 # Two shapes, because the two halves fail differently:
 #   DB dumps — dated, 14 kept. This is the part that was lost and the part that
 #              changes every day.
-#   Files    — an rsync mirror, not dated tars. 5.6 GB of WordPress tree; dated
-#              copies would be 78 GB of near-identical data. restic already
-#              carries file history; what was missing here is currency.
+#   Files    — streamed tars, 4 kept. The obvious choice was an rsync mirror,
+#              and it was measured and rejected: the destination is an sshfs
+#              mount to a Hetzner storage box that does 3.8 MB/s sequential, and
+#              rsync's per-file round-trips over FUSE moved 3 MB of a 5.6 GB tree
+#              in fifteen minutes. One sequential stream finishes in about
+#              twenty-five. Same shape as the wiki backup next door, which means
+#              one restore procedure covers both.
 set -euo pipefail
+
+# A single run writes several GB to a 3.8 MB/s sshfs mount and can take half an
+# hour, so a nightly cron can genuinely overlap the previous night's. Two
+# concurrent runs write the same dated filenames and produce interleaved
+# garbage that still passes every check below — verified the hard way on
+# 2026-08-22, when two overlapping runs each reported "ok 20/20 tables" into
+# the same log. Take the lock or exit; do not queue.
+exec 9>/tmp/p2pfoundation-backup.lock
+flock -n 9 || { echo "another p2pfoundation backup is still running — exiting" >&2; exit 0; }
 
 STACK="${STACK:-$HOME/apps/p2pfoundation-refugee}"
 DEST="${DEST:-/mnt/hetzner-media/backups/p2pfoundation-gx10}"
@@ -131,11 +144,28 @@ pg_dump_one postiz-p2pf-postgres postiz  postiz
 echo "== files =="
 for tree in web blog; do
   [ -d "$STACK/data/$tree" ] || { echo "   FAIL: $STACK/data/$tree missing" >&2; FAIL=1; continue; }
-  rsync -a --delete \
-    --exclude 'wp-content/cache/' \
-    --exclude 'wp-content/*/cache/pages/' \
-    "$STACK/data/$tree/" "$DEST/files/$tree/"
-  echo "   ok  $tree  $(du -sh "$DEST/files/$tree" | cut -f1)"
+  out="$DEST/files/$tree-$DATE.tar.zst"
+  # Excluding only WordPress's own regenerable page cache, and nothing else.
+  # The 2026-08-19 restore used a `**/cache/**` restic exclude that also ate two
+  # real Polylang plugin files and brought the blog down with a fatal, so the
+  # patterns here are anchored rather than glob-anywhere.
+  tar -C "$STACK/data" \
+      --exclude="$tree/wp-content/cache" \
+      --exclude="$tree/wp-content/*/cache/pages" \
+      -cf - "$tree" | zstd -1 -T0 -q -o "$out" -f
+
+  # tar exits 0 having written nothing if the source vanishes mid-run, so test
+  # the archive rather than the exit code.
+  if ! zstd -t "$out" >/dev/null 2>&1; then
+    echo "   FAIL: $out did not verify" >&2; FAIL=1; continue
+  fi
+  files_in=$(zstd -dc "$out" | tar -tf - | wc -l)
+  files_on_disk=$(find "$STACK/data/$tree" | wc -l)
+  # Allow for the excluded cache; a large shortfall is a truncated archive.
+  if [ "$files_in" -lt $(( files_on_disk / 2 )) ]; then
+    echo "   FAIL: archive holds $files_in entries against $files_on_disk on disk" >&2; FAIL=1; continue
+  fi
+  echo "   ok  $tree  $(du -h "$out" | cut -f1)  $files_in entries"
 done
 
 # The secret files are what make a restore actually start. Without them a
@@ -149,6 +179,11 @@ rsync -a "$STACK/docker-compose.yml" "$STACK/conf" "$DEST/" 2>/dev/null || true
 echo "== retention (keeping $KEEP per database) =="
 for db in p2p_web p2p_blog listmonk postiz; do
   ls -1t "$DEST/db/$db-"*.sql.bz2 2>/dev/null | tail -n +$((KEEP + 1)) | xargs -r rm -f
+done
+# Fewer file archives than database dumps: they are 100x the size and change far
+# more slowly, and restic carries the deeper history.
+for tree in web blog; do
+  ls -1t "$DEST/files/$tree-"*.tar.zst 2>/dev/null | tail -n +5 | xargs -r rm -f
 done
 
 echo

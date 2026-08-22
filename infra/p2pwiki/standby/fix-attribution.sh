@@ -56,7 +56,7 @@ echo "== 4/5 rebuild the counters MediaWiki derives rather than stores =="
 # These are cosmetic relative to the row changes above, so a failure here must
 # not abort — but it must not be silent either, which is the exact shape of the
 # bug that cost this estate seven weeks of database.
-for m in "initEditCount --force" "initSiteStats --update"; do
+for m in "initEditCount" "initSiteStats --update"; do
   if docker exec "$CONTAINER" php maintenance/run.php $m >/tmp/mw-$$.log 2>&1; then
     echo "   ok   $m"
   else
@@ -71,18 +71,17 @@ echo "== 5/5 verify through the public API, which is what a reader actually sees
 # The database being right is not the claim; the claim is that a contributor can
 # see their own history again. So ask the wiki the way a browser would.
 sleep 3
-for u in Mbauwens Stacco%20Troncoso KevinF; do
-  # cb= defeats any edge cache, so a stale 200 cannot be mistaken for a result.
-  curl -sS -m 30 -A "Mozilla/5.0 p2pwiki-verify" \
-    "https://wiki.p2pfoundation.net/api.php?action=query&list=usercontribs&ucuser=$u&uclimit=1&ucprop=title%7Ctimestamp&format=json&cb=$STAMP" \
-    > /tmp/uc-$$.json 2>/dev/null || echo '{}' > /tmp/uc-$$.json
-  python3 - "$u" < /tmp/uc-$$.json <<'PYV'
+# Written to a file rather than fed on stdin: `python3 -` takes its PROGRAM from
+# stdin, so it cannot also take its DATA from there.
+VERIFY_PY=$(mktemp)
+trap 'rm -f "$VERIFY_PY"' EXIT
+cat > "$VERIFY_PY" <<'PYV'
 import sys, json, urllib.parse
 name = urllib.parse.unquote(sys.argv[1])
 try:
     d = json.load(sys.stdin)
 except Exception:
-    print("   %-18s ?  could not reach the API — this says nothing about the data" % name); raise SystemExit
+    print("   %-18s ?  could not read the API response" % name); raise SystemExit
 if "error" in d:
     print("   %-18s ?  API error: %s" % (name, d["error"].get("code"))); raise SystemExit
 c = d.get("query", {}).get("usercontribs", [])
@@ -91,6 +90,13 @@ if c:
 else:
     print("   %-18s STILL EMPTY" % name)
 PYV
+
+for u in Mbauwens Stacco%20Troncoso KevinF Elifarley; do
+  # cb= defeats any edge cache, so a stale 200 cannot be mistaken for a result.
+  curl -sS -m 30 -A "Mozilla/5.0 p2pwiki-verify" \
+    "https://wiki.p2pfoundation.net/api.php?action=query&list=usercontribs&ucuser=$u&uclimit=1&ucprop=title%7Ctimestamp&format=json&cb=$STAMP" \
+    > /tmp/uc-$$.json 2>/dev/null || echo '{}' > /tmp/uc-$$.json
+  python3 "$VERIFY_PY" "$u" < /tmp/uc-$$.json
   rm -f /tmp/uc-$$.json
 done
 

@@ -1,0 +1,53 @@
+# Placeholder pages for ai. and forum.p2pfoundation.net.
+#
+# WHY THESE EXIST. Both hostnames resolve, are proxied by Cloudflare, and reach
+# GX10 — where nothing claims them, so they return the bare 19-byte Go 404
+# `404 page not found`. That string is indistinguishable from the signature of a
+# real outage: it is exactly what the wiki emitted on 2026-08-19 when a revived
+# tunnel had nothing behind it. Two hostnames permanently emitting the estate's
+# own outage signature is a standing false alarm during triage, and to a visitor
+# it reads as a broken site rather than one that has not been built yet.
+#
+# So this is two jobs at once: say something true to visitors, and stop these
+# names lying to whoever is debugging the next incident.
+#
+# No DNS or tunnel change is needed. The gx10-ingress tunnel's ingress is a
+# catch-all to http://traefik:80, so any hostname already CNAME'd there arrives
+# at this host's traefik and a router label is enough to claim it.
+services:
+  p2pf-placeholders:
+    image: nginx:1.27-alpine
+    container_name: p2pf-placeholders
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./site:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.p2pf-placeholders.rule=Host(`ai.p2pfoundation.net`) || Host(`forum.p2pfoundation.net`)"
+      # entrypoints=web with no certresolver: GX10's traefik has no ACME
+      # resolver, and a router naming one that does not exist never serves.
+      # This cost an afternoon on the headscale move; it is written down here so
+      # it does not cost another.
+      - "traefik.http.routers.p2pf-placeholders.entrypoints=web"
+      - "traefik.http.services.p2pf-placeholders.loadbalancer.server.port=80"
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
+      - NET_BIND_SERVICE
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

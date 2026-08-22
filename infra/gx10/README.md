@@ -111,3 +111,70 @@ Both take effect on restart of their daemon. Do the dbus one first: restarting
 docker is exactly the container-churn event that trips the old limit, so raising
 the cap before restarting docker is the difference between a maintenance window
 and a repeat of 2026-08-22.
+
+---
+
+## `99-tailnet-bind.conf` → `/etc/sysctl.d/99-tailnet-bind.conf`
+
+Sets `net.ipv4.ip_nonlocal_bind=1`, so a socket can bind an address that does not
+exist yet.
+
+Fourteen containers publish ports on the **tailnet** address (`100.64.0.5:PORT`).
+At boot docker starts them before tailscaled has claimed that address, the bind
+fails with `cannot assign requested address`, and the container exits 128.
+
+**It self-heals only partly, which is what makes it dangerous.** Containers with
+a restart policy retry until `tailscale0` appears and recover on their own; the
+rest stay dead. A restart therefore leaves a random-looking subset of the fleet
+down — and on 2026-08-22 that subset included **traefik**, which is why the whole
+estate stayed dark after everything else had come back.
+
+Apply with `sudo sysctl --system` (takes effect immediately, no restart needed).
+
+### After any restart of this host, check traefik explicitly
+
+```bash
+docker ps --format '{{.Names}}\t{{.Status}}' | grep -E '^traefik'
+curl -s -o /dev/null -w '%{http_code}\n' -H 'Host: p2pfoundation.net' http://127.0.0.1:8090/
+```
+
+A 530 on every public hostname while GX10 looks healthy is almost always traefik
+or a tunnel, not the applications.
+
+### `docker start` is the wrong tool after a networking failure
+
+A container that failed during *network setup* and is then brought back with
+`docker start` can come up **with no networks attached at all**. It reports
+`Up` and even `healthy`, because its healthcheck runs inside the container — but
+nothing can reach it, and cloudflared fails with
+`lookup traefik on 127.0.0.11:53: server misbehaving`.
+
+Use `docker compose up -d --force-recreate <service>` from the project directory,
+which rebuilds the network attachment. This cost an hour on 2026-08-22: traefik
+was "running and healthy" the entire time it was unreachable.
+
+### Reading `NetworkSettings.Networks` will mislead you
+
+`nets=0` is **normal** for `network_mode: <name>` or `network_mode: container:…`
+— that field is only populated for `networks:` attachments. Verified against a
+freshly-composed container. Do not use it to detect breakage; test reachability
+instead:
+
+```bash
+ip=$(docker inspect <c> --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
+```
+
+An empty IP *combined with* a failing consumer is a real fault. `nets=0` alone is not.
+
+### Services that will not come back with plain compose
+
+`falkordb`, `doc-forge` and `server-nzyme-node-1` refuse to start without their
+secrets:
+
+```
+required variable FALKORDB_PASSWORD is missing a value: refusing to start
+unauthenticated — use ./deploy.sh, which resolves it from Infisical
+```
+
+That is a deliberate fail-closed design, not damage. Bring them up with their own
+`./deploy.sh`, after Infisical is running.

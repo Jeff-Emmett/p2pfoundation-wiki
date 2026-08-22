@@ -36,8 +36,19 @@
 #
 # Deployed at ~/apps/headscale on GX10. See deploy-on-gx10.sh.
 #
-# !! DO NOT FRONT THIS WITH THE CLOUDFLARE TUNNEL. It was tried on 2026-08-20
-# and it cannot work. Headscale's own docs are explicit: "Running Headscale
+# !! DO NOT FRONT THIS WITH THE CLOUDFLARE TUNNEL. Tried 2026-08-20, and
+# CONFIRMED AGAIN 2026-08-22 with the proof isolated to one hop:
+#
+#     direct to the container   POST /ts2021  -> 400   (healthy)
+#     through Cloudflare        POST /ts2021  -> 500
+#
+# and headscale's own log names the culprit outright:
+#
+#     No Upgrade header in TS2021 request. If headscale is behind a reverse
+#     proxy, make sure it is configured to pass WebSockets through.
+#
+# Cloudflare strips the Upgrade header. Headscale is fine; the path is not. It
+# cannot work. Headscale's own docs are explicit: "Running Headscale
 # behind a Cloudflare Proxy or Cloudflare Tunnel is not supported and will not
 # work as Cloudflare does not support WebSocket POSTs as required by the
 # Tailscale protocol." The control protocol upgrades with POST +

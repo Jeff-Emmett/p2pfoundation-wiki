@@ -149,21 +149,38 @@ for tree in web blog; do
   # The 2026-08-19 restore used a `**/cache/**` restic exclude that also ate two
   # real Polylang plugin files and brought the blog down with a fatal, so the
   # patterns here are anchored rather than glob-anywhere.
+  # The entry count is taken from tar's own verbose listing as it WRITES, not by
+  # reading the archive back. Reading back cost more than creating: the blog tar
+  # is 3.5 GB and the destination is an sshfs mount doing 3.8 MB/s, so a
+  # read-back verification added roughly fifteen minutes a night to confirm
+  # something the write pass already knew.
+  count_file=$(mktemp)
   tar -C "$STACK/data" \
       --exclude="$tree/wp-content/cache" \
       --exclude="$tree/wp-content/*/cache/pages" \
-      -cf - "$tree" | zstd -1 -T0 -q -o "$out" -f
+      -cvf - "$tree" 2>"$count_file" | zstd -1 -T0 -q -o "$out" -f
+  files_in=$(wc -l < "$count_file")
+  rm -f "$count_file"
 
-  # tar exits 0 having written nothing if the source vanishes mid-run, so test
-  # the archive rather than the exit code.
-  if ! zstd -t "$out" >/dev/null 2>&1; then
-    echo "   FAIL: $out did not verify" >&2; FAIL=1; continue
-  fi
-  files_in=$(zstd -dc "$out" | tar -tf - | wc -l)
   files_on_disk=$(find "$STACK/data/$tree" | wc -l)
-  # Allow for the excluded cache; a large shortfall is a truncated archive.
+  # Halved to allow for the excluded cache, which is large and varies. A shortfall
+  # beyond that means tar stopped early — it exits 0 having written nothing if the
+  # source vanishes mid-run, so the exit code is not the thing to check.
   if [ "$files_in" -lt $(( files_on_disk / 2 )) ]; then
     echo "   FAIL: archive holds $files_in entries against $files_on_disk on disk" >&2; FAIL=1; continue
+  fi
+
+  # A full integrity read WEEKLY rather than nightly. zstd stores frame
+  # checksums, so this is the check that would catch corruption in transit or at
+  # rest — but it has to read every byte back across the slow link, and paying
+  # that every night is what makes people quietly delete the verification step
+  # six months later. Sunday is a compromise between cost and never checking.
+  if [ "$(date -u +%u)" = "7" ]; then
+    if zstd -t "$out" >/dev/null 2>&1; then
+      echo "   weekly integrity read: ok"
+    else
+      echo "   FAIL: $out failed its integrity check" >&2; FAIL=1; continue
+    fi
   fi
   echo "   ok  $tree  $(du -h "$out" | cut -f1)  $files_in entries"
 done

@@ -1,0 +1,39 @@
+# Headscale on a VPS with a public IP.
+#
+# The one structural difference from the GX10 compose: NOTHING SITS IN FRONT.
+# No traefik, no Cloudflare tunnel, no proxy of any kind. Headscale binds 443 and
+# terminates its own TLS via ACME TLS-ALPN-01, because every proxy in the path is
+# a chance for the `Upgrade: tailscale-control-protocol` header to be stripped —
+# which is exactly what Cloudflare does, and exactly why the tailnet has been
+# unable to accept new handshakes since 2026-08-17.
+#
+# host networking rather than a published port: TLS-ALPN-01 needs to own :443
+# outright to answer the ACME challenge, and there is nothing else on this box to
+# isolate it from.
+services:
+  headscale:
+    image: headscale/headscale:0.28
+    container_name: headscale
+    restart: unless-stopped
+    command: serve
+    network_mode: host
+    volumes:
+      - ./config:/etc/headscale
+      - ./data:/var/lib/headscale
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+      # DAC_OVERRIDE: data/ is 0600 and owned by the host user while the
+      # container runs as root, and cap_drop:ALL removes precisely the capability
+      # that lets root ignore mode bits. Without it headscale gets EACCES on a
+      # file it appears to own. Cost an afternoon on GX10; do not remove.
+      - DAC_OVERRIDE
+      # Binding :443 as a non-root-owned process needs this.
+      - NET_BIND_SERVICE
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /var/run/headscale:mode=0770

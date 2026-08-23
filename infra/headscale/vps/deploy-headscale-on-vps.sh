@@ -37,6 +37,7 @@ echo "== 0/6 pre-flight =="
 ss -ltn "sport = :443" 2>/dev/null | grep -q LISTEN \
   && { echo "something already listens on :443 — free it first" >&2; exit 3; }
 command -v docker >/dev/null || { echo "install docker first" >&2; exit 3; }
+docker compose version >/dev/null 2>&1 || { echo "docker compose plugin missing" >&2; exit 3; }
 command -v restic >/dev/null || { echo "install restic first" >&2; exit 3; }
 [ -r "$HOME/.r2_backup_credentials" ] || {
   echo "copy ~/.r2_backup_credentials from GX10 first — restic cannot read the backup without it" >&2
@@ -91,8 +92,14 @@ echo "== 4/6 start =="
 cp -n "$(dirname "$0")/docker-compose.yml" "$DEST/docker-compose.yml" 2>/dev/null || true
 cd "$DEST"
 docker compose up -d
-sleep 15
-docker ps --format '{{.Names}}\t{{.Status}}' | grep -E '^headscale' || true
+# Poll rather than sleep: ACME on first run can take longer than any fixed wait,
+# and a fixed wait that is too short reports failure for a deploy that worked.
+for _ in $(seq 1 30); do
+  docker ps --format '{{.Names}}' | grep -qx headscale && break
+  sleep 2
+done
+docker ps --format '{{.Names}}\t{{.Status}}' | grep -E '^headscale' \
+  || { echo "headscale did not start:" >&2; docker compose logs --tail 20 >&2; exit 5; }
 
 echo "== 5/6 the check that actually matters =="
 # /health is NOT the test. It returned 200 throughout the outage that killed the
@@ -103,8 +110,24 @@ TS=$(curl -s -o /dev/null -w '%{http_code}' -m 20 -X POST \
       -H 'Upgrade: tailscale-control-protocol' -H 'Connection: Upgrade' \
       "https://$FQDN/ts2021" 2>/dev/null || echo 000)
 HE=$(curl -s -o /dev/null -w '%{http_code}' -m 15 "https://$FQDN/health" 2>/dev/null || echo 000)
-echo "   /health  -> $HE"
+echo "   /health  -> $HE   (informational only — it lies)"
 echo "   /ts2021  -> $TS   (4xx = HEALTHY, 5xx = still proxied, 000 = DNS/firewall)"
+
+# EXIT ON THIS. A deploy script that prints a failure and returns 0 is how a
+# broken control plane gets signed off as working — which is the whole failure
+# pattern this migration exists to escape.
+case "$TS" in
+  4[0-9][0-9]|1[0-9][0-9]) echo "   control protocol is intact" ;;
+  5[0-9][0-9])
+    echo "   FAILED: 5xx means something is still proxying and stripping the" >&2
+    echo "           Upgrade header. Check the DNS record is GREY-clouded." >&2
+    exit 6 ;;
+  *)
+    echo "   FAILED: no usable response ($TS). DNS may not point here yet, or" >&2
+    echo "           :443 is firewalled, or ACME has not issued a cert." >&2
+    echo "           Check: docker compose logs --tail 40" >&2
+    exit 6 ;;
+esac
 
 echo "== 6/6 nodes =="
 docker exec headscale headscale nodes list 2>&1 | head -12 || true

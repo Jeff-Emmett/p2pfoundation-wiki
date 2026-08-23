@@ -1,0 +1,38 @@
+# LiveKit, reconstructed 2026-08-23 from the running container.
+#
+# WHY THIS FILE EXISTS. The original compose lived in a /tmp scratchpad belonging
+# to a different session. The 2026-08-22 restart cleared /tmp, so for a day the
+# ONLY copy of livekit's definition was the running container itself — one
+# `docker rm` from being unrecoverable. Everything here was read back out of that
+# container with `docker inspect`.
+#
+# livekit.yaml was never at risk; it is a bind mount from this directory. Only
+# the compose file was homeless.
+#
+# The secret is NOT in this file. LIVEKIT_KEYS was extracted from the running
+# container straight into ./livekit.env (0600) without passing through a
+# terminal, and is read from there.
+services:
+  livekit:
+    image: livekit/livekit-server:v1.8.4
+    container_name: livekit
+    restart: unless-stopped
+    command: --config /etc/livekit.yaml --node-ip 100.64.0.5
+    env_file: ./livekit.env
+    volumes:
+      - ./livekit.yaml:/etc/livekit.yaml
+    ports:
+      # Bound to the TAILNET address, which is why this was one of the
+      # containers that died on the 2026-08-22 restart: docker starts before
+      # tailscaled has claimed 100.64.0.5 and the bind fails with "cannot assign
+      # requested address". Fixed host-wide by net.ipv4.ip_nonlocal_bind=1
+      # (/etc/sysctl.d/99-tailnet-bind.conf) — see infra/gx10/README.md.
+      - "100.64.0.5:7881:7881/tcp"
+      - "100.64.0.5:50000:50000/udp"
+    network_mode: traefik-public
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-public
+      - traefik.http.routers.livekit.rule=Host(`livekit.jeffemmett.com`)
+      - traefik.http.routers.livekit.entrypoints=web
+      - traefik.http.services.livekit.loadbalancer.server.port=7880

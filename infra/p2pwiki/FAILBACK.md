@@ -150,11 +150,46 @@ Netcup**, which holds the authentic versions.
 
 ## Left standing, deliberately
 
-- **`cloudflared-netcup-local` on GX10 is stopped and must stay stopped.** It
-  runs the Netcup tunnel against a GX10 Traefik with no wiki router. Reviving it
-  on 08-19 is what turned a covered outage into a visible one. It is
-  `restart=unless-stopped`, so a `docker compose up` in that directory would
-  bring it back.
+- ~~`cloudflared-netcup-local` must stay stopped.~~ **Removed from
+  `~/apps/netcup-refugee/docker-compose.yml` on GX10, 2026-08-24**, so
+  `docker compose up` can never recreate it.
+
+  The container itself is deliberately KEPT, stopped. `tunnel-primary-guard.sh`
+  (cron, every 2 min, on both hosts) starts and stops it by name and is the
+  automatic failover for the 431 hostnames on tunnel `a838e9dc` — it took over at
+  09:56Z when the tunnel was provably unserved and yielded at 11:33Z when Netcup
+  returned, arbitrated by the TXT record `_tunnel-primary.jeffemmett.com`
+  (currently `"netcup"`). The guard yields unconditionally and takes over only on
+  two consecutive 530s, so a stopped container is safe; an absent one means no
+  failover and a `FATAL` on every guard run.
+
+  **Never run `docker compose up --remove-orphans` in that directory** — it would
+  delete the stopped container and the failover with it.
+
+- ~~A GX10 tunnel token was disclosed and needs rotating.~~ **Rotated 2026-08-24
+  20:54Z** with `standby/rotate-tunnel-token.sh`
+  (`57eb9758…` → `79bfd6a5…`). It PATCHes `tunnel_secret`, which rotates the
+  credential while **keeping the tunnel id** — necessary, because
+  `wiki-standby.p2pfoundation.net` is a CNAME to `<id>.cfargotunnel.com` and the
+  Worker's `STANDBY_ORIGIN` points at that hostname. Recreating the tunnel would
+  cost a DNS change and a Worker redeploy for nothing.
+
+  Two things that are easy to get wrong:
+  **`docker restart` is not enough.** The token is an argv element baked in at
+  container-create time, so a restart re-runs the dead one. Use
+  `docker compose up -d --force-recreate`.
+  **Verify by `opened_at`, not by status.** A tunnel reads `healthy` the moment
+  any connector attaches; the proof a rotation took is that *every* connection
+  opened after it. All four did, within three seconds.
+
+  The token is now `isec://claude-ops/prod/P2PWIKI_STANDBY_TUNNEL_TOKEN` as well
+  as in the standby's `.env`, closing the note in the standby README about it
+  living outside Infisical. The rotation is driven by
+  `CLOUDFLARE_DNS_TUNNEL_TOKEN`; `CLOUDFLARE_API_TOKEN` is not authorized for
+  `cfd_tunnel` on this account.
+
+  **Do not inspect a token-run connector with `docker inspect … .Config.Cmd` or
+  `.Env`.** That is how the value leaked in the first place. `.Mounts` is safe.
 - ~~The standby is still writable.~~ **Closed 2026-08-24 20:34Z** with
   `standby/disable-editing.sh`. The writable window was
   `[20260818083810 .. 20260824203432]`, recorded in `standby-readonly-since.txt`

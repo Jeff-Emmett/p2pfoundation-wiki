@@ -96,6 +96,58 @@ Also backported from the host, where they existed only on disk: `robots.txt`
 (the 2026-05-09 crawler rules), `block-scrapers.conf` (the 2026-08-14
 worker-pool saturation fix) and its compose mount.
 
+## RecentChanges looked empty after the failback, and was not
+
+The first report after cutting over was "I only see back to Aug 20". Nothing was
+missing. `Special:RecentChanges` defaults to **7 days / 50 entries**, and the
+wiki spent 08-17 to 08-24 on the standby, so Netcup's revision table holds almost
+nothing in a 7-day window. The page rendered exactly four lines. The last
+pre-outage edit (`Glomo`, 08-17 05:39) sat *just* outside seven days.
+
+Raised in `LocalSettings.php` (server-only, not in this repo):
+
+    $wgDefaultUserOptions['rcdays']  = 30;
+    $wgDefaultUserOptions['rclimit'] = 500;
+
+30 days is the largest window `Special:RecentChanges` offers in its own UI;
+`$wgRCMaxAge` is 90 days, so `?days=90&limit=500` reaches further by hand. The
+30-day default now renders 500 entries back to late July in ~1.8 s. **If Apache
+saturates again (`block-scrapers.conf`, 2026-08-14), this limit is the first
+knob to turn back down** — RecentChanges is anon-readable and DB-expensive.
+
+An outage makes RecentChanges lie in both directions: the standby made it look
+too thin by collapsing history, and the failback made it look too short by
+leaving a quiet week inside the default window. Read the revision table, not the
+special page, when deciding whether data survived.
+
+## Loss audit, run after the cutover
+
+Compared **every page on both hosts**, not just recently-changed ones.
+
+- 45,579 pages on Netcup, 45,566 on the standby. **Nothing real exists only on
+  the standby.** The seven standby-only titles are 3 standby-local interface
+  pages (`MediaWiki:Sitenotice`/`Loginprompt`/`Userloginprompt`) and 4 namespace
+  import artifacts — `Draft:Template_Draft`, `Ns274:AddThis/Vimeo/YouTube` landed
+  in ns 0 as literal titles because those namespaces were undeclared at import.
+  Netcup holds all four correctly in ns 118 and ns 274.
+- **Files: the standby has none Netcup lacks** (0 by `img_name`), while Netcup has
+  35 the Wayback recovery never found, including MDEE's two 2026-05-18 uploads.
+  4,802 files / 1.8 GB on disk against 1,244 `image` rows — `oldimage` versions
+  are there too, so the volume is whole.
+- **Accounts: no editor exists only on the standby.** Its two extras are `Admin`
+  and `MediaWiki default`, both created by its own installer.
+- Interim writes on the standby were 4 Mbauwens page edits (merged), 3 interface
+  pages, and one test page created and deleted. **No user uploaded a file to the
+  standby** — its 1,209 upload log rows are all the Wayback recovery, and it never
+  ran the `editor-request` flow, so no access requests were stranded there either.
+- The four merged pages hash **byte-identical** on both hosts
+  (`action=parse&prop=wikitext`). Verify a merge this way, not by eye.
+
+Only 1,210 pages are "newer" on the standby: 1,209 `File:` description pages the
+Wayback re-upload restamped, and `Main_Page`, which the standby had to rebuild
+because the installer stub had overwritten it. **Neither should ever be pushed to
+Netcup**, which holds the authentic versions.
+
 ## Left standing, deliberately
 
 - **`cloudflared-netcup-local` on GX10 is stopped and must stay stopped.** It

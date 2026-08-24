@@ -155,9 +155,25 @@ Netcup**, which holds the authentic versions.
   on 08-19 is what turned a covered outage into a visible one. It is
   `restart=unless-stopped`, so a `docker compose up` in that directory would
   bring it back.
-- **The standby is still writable.** That was right during a multi-day outage
-  and is a divergence risk now: a transient Netcup 5xx sends a reader to a
-  standby they can still edit. Make it read-only, or accept that the merge has
-  to be re-run.
+- ~~The standby is still writable.~~ **Closed 2026-08-24 20:34Z** with
+  `standby/disable-editing.sh`. The writable window was
+  `[20260818083810 .. 20260824203432]`, recorded in `standby-readonly-since.txt`
+  next to `standby-writable-since.txt`. The risk it closes: the edge Worker falls
+  back per-request, so a transient Netcup 5xx could hand a reader an editable
+  page on the copy nobody merges from, and that divergence would be silent.
+
+  The script appends a final block rather than deleting what `enable-editing.sh`
+  added. That file now carries four overlapping blocks and is read top to bottom
+  with the last assignment winning, so cutting one out of the middle means
+  reasoning about what the other three leave in force. Appending is easier to
+  verify and reverses by deleting one section.
+
+  **Test the shape of the edit form, never the $wgReadOnly message.** The
+  group-permission check fires first, so grepping for the message returns 0 hits
+  and reads as a failure. Confirmed four ways: `<title>View source`, a `readonly`
+  textarea, no `wpSave`, and `action=edit` over the API returning error code
+  `readonly`. Reads still 200; `showSiteStats.php` still runs, because the
+  `PHP_SAPI === 'cli'` exception is re-asserted last — without it `importDump.php`
+  refuses and the standby could never be resynced.
 - **The standby is now far behind** (46,852 revisions vs 150,071) and is a
   read-only last resort, not a peer.

@@ -103,3 +103,13 @@ Disallow: /index.php?diff=
 Disallow: /index.php?oldid=
 Disallow: /api.php
 Crawl-delay: 2
+
+# Added 2026-05-09: aggressive crawlers ignoring default rules causing Apache saturation
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: meta-webindexer
+Disallow: /
+
+User-agent: Amzn-SearchBot
+Disallow: /

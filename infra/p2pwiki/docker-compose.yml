@@ -65,6 +65,7 @@ services:
     - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
     - ./robots.txt:/var/www/html/robots.txt:ro
     - ./block-bots.conf:/etc/apache2/conf-enabled/block-bots.conf:ro
+    - ./block-scrapers.conf:/etc/apache2/conf-enabled/zz-block-scrapers.conf:ro
     - ./remoteip.conf:/etc/apache2/conf-enabled/remoteip.conf:ro
     - ./cache-images.conf:/etc/apache2/conf-enabled/cache-images.conf:ro
     - p2pwiki-images:/var/www/html/images

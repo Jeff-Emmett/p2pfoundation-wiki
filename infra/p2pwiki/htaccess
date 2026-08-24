@@ -1,0 +1,40 @@
+# Block aggressive bots that ignore robots.txt
+RewriteEngine On
+
+# Applebot: hammering Special pages, edit actions, and API — burns 50% CPU
+RewriteCond %{HTTP_USER_AGENT} Applebot [NC]
+RewriteCond %{REQUEST_URI} (Special:|api\.php) [NC,OR]
+RewriteCond %{QUERY_STRING} (action=edit|action=history|title=Special|feedrecentchanges) [NC]
+RewriteRule .* - [F,L]
+
+# LinkupBot: blocked entirely
+RewriteCond %{HTTP_USER_AGENT} LinkupBot [NC]
+RewriteRule .* - [F,L]
+
+# Block ALL unauthenticated access to Special:RecentChanges* pages
+# Scraper botnets use spoofed Chrome UAs, so UA-based blocking is useless.
+# Logged-in editors have a p2pwiki_session cookie and are allowed through.
+RewriteCond %{QUERY_STRING} title=Special(\%3A|:)RecentChangesLinked [NC]
+RewriteCond %{HTTP_COOKIE} !p2pwiki_session
+RewriteRule .* - [F,L]
+
+# Also block when title= is not present but URL path contains Special:RecentChanges
+RewriteCond %{REQUEST_URI} Special:RecentChangesLinked [NC]
+RewriteCond %{HTTP_COOKIE} !p2pwiki_session
+RewriteRule .* - [F,L]
+
+# Block feedrecentchanges API for unauthenticated users
+RewriteCond %{QUERY_STRING} feedrecentchanges [NC]
+RewriteCond %{HTTP_COOKIE} !p2pwiki_session
+RewriteRule .* - [F,L]
+
+# MediaWiki short URL support
+RewriteBase /
+
+# Redirect root to Main_Page
+RewriteRule ^/*$ /index.php/Main_Page [L,R=301]
+
+# Short URL support - rewrite /Page_Name to /index.php/Page_Name
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/ [L,QSA]

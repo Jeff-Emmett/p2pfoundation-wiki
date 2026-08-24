@@ -42,10 +42,13 @@ Nothing on the page is placeholder copy. `scripts/build-corpus.py` pulls live fr
 LITELLM_BASE_URL=http://100.64.0.5:4001 python3 scripts/warm-embeddings.py
 LITELLM_BASE_URL=http://100.64.0.5:4001 python3 scripts/build-corpus.py --skip-fetch
 
-# 2. inline the data into the page  → dist/index.html
+# 2. audit the lenses against every category on the wiki (adds `taxonomyAudit`)
+python3 scripts/audit-taxonomy.py
+
+# 3. inline the data into the page  → dist/index.html
 ./build.sh
 
-# 3. publish
+# 4. publish
 CLOUDFLARE_API_TOKEN=… CLOUDFLARE_ACCOUNT_ID=… ./build.sh --deploy
 ```
 
@@ -73,17 +76,38 @@ only the computation re-runs. Drop it to re-read the wiki.
   `git add -f`; a new generated file under `data/` will need the same, or it will
   look committed and not be.
 
-## A real bug this demo surfaced
+## Real bugs this demo surfaced
 
-The reading-room lenses match keywords against categories by substring. The lens
-keywords are `peer production`, `peer governance`, `peer property` — but the categories
-editors actually use on the wiki are **`Peerproduction`, `Peergovernance`,
-`Peerproperty`**, single words. The match never fires.
+`scripts/audit-taxonomy.py` runs the nine reading-room lenses against **all 497
+categories on the wiki** (106,598 category memberships). The result is on the page,
+in §2:
 
-The consequence is visible in §2: **Peer Production**, with more inbound links than all
-but two articles in the sample, is *unfiled* — invisible to the `p2p-paradigms` lens
-that exists to hold it. Same for the 4 `Peergovernance` and 5 `Peerproperty` pages.
+**41 of the 91 lens keywords match no category at all.**
 
-The fix is to add the concatenated spellings to those keyword sets in
-`server/portico/taxonomy-p2p.ts`. Nothing surfaces this on its own, because "unfiled"
-is a legitimate state and a silent one.
+Three of those fail only because of a space:
+
+| lens keyword | the category that actually exists | pages |
+|---|---|---|
+| `peer production` | `Peerproduction` | 672 |
+| `peer governance` | `Peergovernance` | 1,030 |
+| `peer property`  | `Peerproperty`  | 847 |
+
+Matching is case-insensitive **substring**, so none of them fire. That is **2,549
+pages** the opening lens — *Understanding P2P Dynamics & the Commons in the Digital
+Age* — exists to hold and cannot see. The fix is to add the concatenated spellings to
+those keyword sets in `server/portico/taxonomy-p2p.ts`.
+
+Two more, visible in the same table:
+
+- **`how-p2p` (*The Commons-Based Society*) matches 0 categories and 0 pages.** All
+  five of its keywords are dead, including `intellectual property` — the wiki files
+  those pages under `IP` (1,059 pages). A lens with no members reads as an empty
+  shelf, not a broken rule.
+- **`domains` (*Applying P2P to the Domains of Life*) reaches 20,430 pages**, far more
+  than any other, because its keywords include terms as broad as `economics`,
+  `technology`, `policy` and `science`. A lens that matches most of everything does
+  not discriminate.
+
+All three fail silently: unfiled is a legal state, an empty lens throws nothing, and
+an over-broad lens returns plenty of results. Nothing surfaces them from inside the
+code — only running the mapping against the categories the wiki really has does.

@@ -231,6 +231,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
   <div class="readrow" id="read2"></div>
   <div id="lenslist" style="margin-top:14px"></div>
   <div class="note finding" id="note2"></div>
+  <div id="audit2" style="margin-top:14px"></div>
 </div></section>
 
 <!-- ═══════════════ §3 RETRIEVE ═══════════════ -->
@@ -769,6 +770,7 @@ chapter(2, {
 
     const sizes = D.facets.map(f => ({f, n: members[f.id].length})).sort((a,b) => b.n - a.n);
     const biggest = sizes[0], empty = sizes.filter(x => x.n === 0);
+    renderAudit(i >= 5);
     document.getElementById('note2').innerHTML = i >= 5 ? (
       `<b>Three real defects, all found by simply running the taxonomy over the live wiki.</b><br><br>` +
       `<b>1 · The concatenation miss.</b> The lens keywords are <code>peer production</code>, ` +
@@ -790,6 +792,41 @@ chapter(2, {
     ) : '';
   }
 });
+
+/** The sample shows the shape of the miss; the audit shows its size. */
+function renderAudit(show) {
+  const el2 = document.getElementById('audit2');
+  const A = D.taxonomyAudit;
+  if (!show || !A) { el2.innerHTML = ''; return; }
+  const totalKw = D.facets.reduce((a, f) => a + f.keywords.length, 0);
+  const deadKw = A.lenses.reduce((a, l) => a + l.dead_keywords.length, 0);
+  const maxPages = Math.max(...A.lenses.map(l => l.pages)) || 1;
+  const rows = A.lenses.map(l => {
+    const w = Math.round((l.pages / maxPages) * 100);
+    const dead = l.dead_keywords.length;
+    const col = l.pages === 0 ? COL.bad : (l.pages === maxPages ? COL.warn : COL.violet);
+    return `<tr>
+      <td style="padding:5px 10px 5px 0;color:var(--ink-2);font-size:12.5px">${esc(l.label)}</td>
+      <td style="padding:5px 8px;width:150px">
+        <div style="height:7px;border-radius:4px;background:rgba(150,170,230,.12)">
+          <div style="height:7px;width:${w}%;border-radius:4px;background:${col};opacity:.85"></div></div></td>
+      <td class="t-mono" style="padding:5px 8px;text-align:right;color:#fff;font-size:12px;width:74px">${fmt(l.pages)}</td>
+      <td class="t-mono" style="padding:5px 0 5px 8px;text-align:right;font-size:11.5px;width:120px;color:${dead ? COL.warn : COL.ink4}">
+        ${dead ? dead + ' dead kw' : 'all match'}</td></tr>`;
+  }).join('');
+  el2.innerHTML = `<div class="pane" style="border-color:rgba(255,196,107,.28)">
+    <h4 style="color:${COL.warn}">The same test, run against all ${fmt(A.categories)} categories on the wiki</h4>
+    <div class="hint" style="margin-bottom:10px">pages reachable by each lens · ${fmt(A.categorised_pages)} category memberships in total</div>
+    <table style="width:100%;border-collapse:collapse">${rows}</table>
+    <div style="margin-top:12px;font-size:13px;color:var(--ink-2);line-height:1.6">
+      <b style="color:${COL.warn}">${deadKw} of the ${totalKw} keywords match no category at all.</b>
+      The three that fail only on a space are the expensive ones:
+      ${A.near_misses.map(n => `<code>${esc(n.keyword)}</code> → <code>${esc(n.actual)}</code>
+        (<b>${fmt(n.pages)}</b> pages)`).join(', ')} —
+      <b>${fmt(A.near_misses.reduce((a, n) => a + n.pages, 0))} pages</b> that the opening lens is built for and
+      cannot see. This is measured across the whole wiki, not the ${D.docs.length}-article sample above.
+    </div></div>`;
+}
 
 function showLens(b, k) {
   const list = members[b.f.id].slice().sort((x, y) => y.backlinks - x.backlinks);

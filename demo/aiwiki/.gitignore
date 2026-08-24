@@ -1,0 +1,8 @@
+# generated site — rebuild with ./build.sh
+dist/
+
+# fetch cache: wiki pages, backlinks, site stats and embedding vectors.
+# Large and reproducible — build-corpus.py regenerates it, and --skip-fetch
+# reuses it. The computed dataset (data/aiwiki-data.json) IS committed so the
+# page can be rebuilt with no network and no model access.
+data/_cache/

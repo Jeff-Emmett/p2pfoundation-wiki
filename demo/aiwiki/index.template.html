@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>P2P Wiki · a corpus you can work with</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="A step-through tour of what the Portico gateway makes possible over the P2P Foundation wiki: regrouping 45,559 pages by lens, retrieving with two retrievers that fail differently, holding subsets you do not own, re-viewing at any level of detail, and grounding what gets claimed."/>
+<meta name="color-scheme" content="dark"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c-cyan:#5ef0df; --c-blue:#5b9cff; --c-violet:#b884ff; --c-gold:#ffd27a; --c-rose:#ff86a8;
+  --c-lime:#a6e86a; --c-amber:#ffb861;
+  --ink:#eef2fb; --ink-2:#aeb9d4; --ink-3:#74809e; --ink-4:#4d5875;
+  --panel:rgba(20,26,46,.62); --panel-2:rgba(28,35,60,.7);
+  --line:rgba(150,170,230,.16); --line-2:rgba(150,170,230,.30);
+  --bad:#ff7a8f; --warn:#ffc46b; --good:#66e6b8;
+  --font-display:'Instrument Serif', Georgia, serif;
+  --font-body:'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body); color:var(--ink); min-height:100vh; line-height:1.5;
+  background:
+    radial-gradient(900px 520px at 18% -8%, rgba(91,156,255,.14), transparent 60%),
+    radial-gradient(820px 520px at 88% 4%, rgba(184,132,255,.13), transparent 60%),
+    radial-gradient(1200px 700px at 50% 118%, rgba(94,240,223,.07), transparent 60%),
+    #06080e;
+  position:relative; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+}
+.t-mono{font-family:var(--font-mono);}
+.eyebrow{font-family:var(--font-mono); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3);}
+a{color:var(--c-blue); text-decoration:none;}
+a:hover{color:var(--c-cyan);}
+.wrap{max-width:1120px; margin:0 auto; padding:0 1.4rem; position:relative; z-index:1;}
+.spectrum-bar{height:2px; background:linear-gradient(90deg,var(--c-cyan),var(--c-blue),var(--c-violet),var(--c-gold)); border-radius:2px;}
+::selection{background:rgba(94,240,223,.25);}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky; top:0; z-index:30; backdrop-filter:blur(10px);
+  background:linear-gradient(180deg,rgba(6,8,14,.9),rgba(6,8,14,.34)); border-bottom:1px solid var(--line);}
+.topbar .row{display:flex; align-items:center; gap:14px; height:54px;}
+.brand{font-family:var(--font-display); font-size:1.25rem; white-space:nowrap;}
+.brand b{font-weight:400; background:linear-gradient(90deg,var(--c-cyan),var(--c-violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.topnav{margin-left:auto; display:flex; gap:16px; font-size:12.5px; font-family:var(--font-mono); color:var(--ink-3);}
+.topnav a{color:var(--ink-3);} .topnav a:hover{color:var(--c-cyan);}
+@media(max-width:900px){.topnav{display:none;}}
+
+/* ---------- hero ---------- */
+.hero{padding:4.6rem 0 2.2rem; text-align:center;}
+.hero h1{text-wrap:balance; font-family:var(--font-display); font-size:clamp(2.5rem,6.4vw,4.6rem); line-height:1.04;
+  margin:.7rem auto .55rem; font-weight:400; max-width:17ch;}
+.hero h1 em{font-style:italic; background:linear-gradient(90deg,var(--c-cyan),var(--c-violet) 55%,var(--c-gold));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p{color:var(--ink-2); max-width:64ch; margin:0 auto; font-size:1.05rem;}
+.hero .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:1.7rem;}
+.btn{font-family:var(--font-mono); font-size:13px; padding:10px 18px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--line-2); background:rgba(20,26,46,.5); color:var(--ink); transition:.2s; user-select:none;}
+.btn:hover{border-color:var(--c-cyan); color:#fff; transform:translateY(-1px); box-shadow:0 10px 30px -16px var(--c-cyan);}
+.btn.primary{border-color:transparent; background:linear-gradient(120deg,rgba(94,240,223,.22),rgba(184,132,255,.22)); color:#fff;}
+.hero .barwrap{width:210px; margin:1.9rem auto 0;}
+
+/* corpus stat strip */
+.statstrip{display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px; margin:2.4rem 0 .4rem;}
+.stat{border:1px solid var(--line); border-radius:14px; padding:12px 14px; background:var(--panel); text-align:left;}
+.stat .n{font-family:var(--font-mono); font-size:1.32rem; color:#fff; letter-spacing:-.02em;}
+.stat .l{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); margin-top:3px;}
+.provenance{margin-top:14px; font-family:var(--font-mono); font-size:11.5px; color:var(--ink-3); text-align:center; line-height:1.7;}
+.provenance b{color:var(--ink-2); font-weight:500;}
+
+/* ---------- chapters ---------- */
+.chapter{padding:4.2rem 0 1rem; border-top:1px solid var(--line); margin-top:3rem; scroll-margin-top:64px;}
+.chapter .head{max-width:780px;}
+.chapter .num{font-family:var(--font-mono); font-size:12px; letter-spacing:.18em; color:var(--a,var(--c-cyan));}
+.chapter h2{text-wrap:balance; font-family:var(--font-display); font-size:clamp(1.85rem,4.2vw,2.7rem); font-weight:400; margin:.35rem 0 .5rem;}
+.chapter .lede{color:var(--ink-2); font-size:1.01rem; max-width:66ch;}
+.chapter .lede code{font-family:var(--font-mono); font-size:.86em; color:var(--a,var(--c-cyan)); background:rgba(255,255,255,.05); padding:1px 5px; border-radius:5px;}
+
+/* stage */
+.stage{position:relative; border-radius:22px; margin-top:1.5rem; padding:16px;
+  background:radial-gradient(760px 340px at 50% -12%, color-mix(in srgb,var(--a,var(--c-cyan)) 12%, transparent), transparent 70%), rgba(10,14,26,.5);
+  border:1px solid var(--line);}
+svg.viz{display:block; width:100%; height:auto; touch-action:manipulation; border-radius:14px; overflow:visible;}
+
+/* stepper */
+.stepper{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 6px;}
+.step{font-family:var(--font-mono); font-size:12px; padding:8px 12px; border-radius:10px; cursor:pointer;
+  border:1px solid var(--line); background:rgba(18,24,42,.6); color:var(--ink-2); transition:.18s; text-align:left;}
+.step:hover{border-color:var(--line-2); color:var(--ink);}
+.step.on{border-color:var(--a,var(--c-cyan)); color:#fff; background:color-mix(in srgb,var(--a,var(--c-cyan)) 14%, rgba(18,24,42,.6));
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--a,var(--c-cyan)) 40%,transparent) inset;}
+.step .k{color:var(--a,var(--c-cyan)); margin-right:6px;}
+.pager{display:flex; align-items:center; gap:10px; margin-top:8px; font-family:var(--font-mono); font-size:12px; color:var(--ink-3);}
+.pager .mini{padding:6px 10px; border:1px solid var(--line); border-radius:8px; cursor:pointer; color:var(--ink-2); background:rgba(18,24,42,.6);}
+.pager .mini:hover{border-color:var(--c-cyan); color:#fff;}
+.pager .grow{flex:1;}
+.caption{margin-top:10px; min-height:3.2em; color:var(--ink-2); font-size:14px; max-width:74ch;}
+.caption b{color:#fff; font-weight:600;}
+.caption code{font-family:var(--font-mono); font-size:.86em; color:var(--a,var(--c-cyan));}
+.caption .tag{font-family:var(--font-mono); font-size:11px; color:var(--a,var(--c-cyan)); border:1px solid var(--line-2);
+  border-radius:999px; padding:1px 8px; margin-right:6px; white-space:nowrap;}
+
+/* readouts / chips / toolbars */
+.readrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+.read{font-family:var(--font-mono); font-size:12px; padding:7px 11px; border-radius:10px; border:1px solid var(--line); background:rgba(18,24,42,.55); color:var(--ink-2);}
+.read b{color:#fff;} .read .big{font-size:15px; color:var(--a,var(--c-cyan));}
+.toolbar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px;}
+.chip-btn{font-family:var(--font-mono); font-size:11.5px; padding:6px 10px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--line-2); background:rgba(18,24,42,.6); color:var(--ink); transition:.15s; user-select:none;
+  display:inline-flex; gap:6px; align-items:center;}
+.chip-btn:hover{border-color:var(--c-cyan); color:#fff;}
+.chip-btn.on{border-color:var(--a,var(--c-cyan)); background:color-mix(in srgb,var(--a,var(--c-cyan)) 18%, rgba(18,24,42,.6)); color:#fff;}
+.chip-btn .dot{width:8px; height:8px; border-radius:50%; flex:none;}
+.hint{font-family:var(--font-mono); font-size:11px; color:var(--ink-3);}
+
+/* note / callout */
+.note{margin-top:14px; border:1px solid var(--line); border-left:2px solid var(--a,var(--c-cyan)); border-radius:0 12px 12px 0;
+  padding:12px 14px; background:rgba(18,24,42,.45); font-size:13.5px; color:var(--ink-2); max-width:78ch;}
+.note b{color:#fff;} .note code{font-family:var(--font-mono); font-size:.87em; color:var(--a,var(--c-cyan));}
+.note.finding{border-left-color:var(--warn);} .note.finding b{color:var(--warn);}
+
+/* generic cards / panes */
+.pane{border:1px solid var(--line); border-radius:14px; background:rgba(12,17,30,.6); padding:14px;}
+.pane h4{margin:0 0 8px; font-family:var(--font-mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); font-weight:500;}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px;}
+@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr;}}
+.mono-block{font-family:var(--font-mono); font-size:11.5px; line-height:1.65; color:var(--ink-2); white-space:pre-wrap;
+  word-break:break-word; max-height:230px; overflow:auto;}
+.mono-block .k{color:var(--c-violet);} .mono-block .s{color:var(--c-cyan);} .mono-block .c{color:var(--ink-4);}
+.mono-block::-webkit-scrollbar{width:8px;} .mono-block::-webkit-scrollbar-thumb{background:var(--line-2); border-radius:8px;}
+
+/* article cards */
+.artcard{border:1px solid var(--line); border-radius:12px; padding:10px 12px; background:rgba(18,24,42,.5); transition:.16s;}
+.artcard .t{font-size:13.5px; color:#fff; line-height:1.3;}
+.artcard .m{font-family:var(--font-mono); font-size:10.5px; color:var(--ink-3); margin-top:4px;}
+.artcard .x{font-size:12px; color:var(--ink-2); margin-top:6px; line-height:1.45;}
+
+/* outro */
+.outro{padding:4rem 0 5rem; border-top:1px solid var(--line); margin-top:3rem;}
+footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); font-size:11.5px; border-top:1px solid var(--line); line-height:1.9;}
+
+/* toast */
+#toast{position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(14px); z-index:60;
+  font-family:var(--font-mono); font-size:12.5px; padding:9px 15px; border-radius:999px; pointer-events:none;
+  background:rgba(12,17,30,.94); border:1px solid var(--line-2); color:var(--ink); opacity:0; transition:.22s;}
+#toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+/* Narrow screens: a 1000-unit diagram scaled into 350px is a strip of unreadable
+   3px type. Keep the diagram legible and let it scroll inside its own stage —
+   the page body itself never scrolls sideways. */
+@media(max-width:860px){
+  .stage{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  .stage::after{content:"drag the diagram sideways →"; display:block; margin-top:8px;
+    font-family:var(--font-mono); font-size:10px; color:var(--ink-4);}
+  svg.viz{min-width:720px;}
+  .hero{padding-top:3rem;}
+  .chapter{padding-top:3rem;}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+<div id="toast"></div>
+
+<div class="topbar"><div class="wrap row">
+  <div class="brand">P2P Wiki <b>× Portico</b></div>
+  <nav class="topnav">
+    <a href="#ch1">§1 ingest</a><a href="#ch2">§2 regroup</a><a href="#ch3">§3 retrieve</a>
+    <a href="#ch4">§4 subset</a><a href="#ch5">§5 re-view</a><a href="#ch6">§6 ground</a>
+  </nav>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">45,559 pages · addressable</div>
+  <h1>A wiki you read, or a corpus you can <em>work with</em></h1>
+  <p>The P2P Foundation wiki has been accumulating the commons literature since 2006. Behind a
+  gateway it stops being a pile of pages to search and becomes something you can regroup by lens,
+  hold a subset of without copying, re-view at any level of detail, and — crucially — build on
+  without laundering away where the claims came from.</p>
+  <div class="cta">
+    <button class="btn primary" id="btn-tour">▶ Play the whole tour</button>
+    <a class="btn" href="#ch1">Start at §1</a>
+    <a class="btn" href="https://wiki.p2pfoundation.net" target="_blank" rel="noopener">The wiki ↗</a>
+  </div>
+  <div class="barwrap"><div class="spectrum-bar"></div></div>
+
+  <div class="statstrip" id="statstrip"></div>
+  <div class="provenance" id="provenance"></div>
+</div></header>
+
+<!-- ═══════════════ §1 INGEST ═══════════════ -->
+<section class="chapter" id="ch1" style="--a:var(--c-cyan)"><div class="wrap">
+  <div class="head">
+    <div class="num">§1 — INGEST · A PAGE BECOMES A HOLON</div>
+    <h2>Nothing is thrown away on the way in</h2>
+    <p class="lede">An article arrives as MediaWiki markup and leaves as an addressable document:
+    de-marked-up, split on its own headings, and stamped with where it came from, who wrote it and
+    what licence it carries. That stamp is the part that matters later — it is what lets a synthesis
+    three steps downstream still say whose work it rests on.</p>
+  </div>
+  <div class="stage"><svg class="viz" id="viz1" viewBox="0 0 1000 560" role="img" aria-label="Ingest pipeline"></svg></div>
+  <div class="stepper" id="steps1"></div>
+  <div class="pager"><button class="mini" data-prev="1">← prev</button><button class="mini" data-next="1">next →</button><span class="grow"></span><span class="hint" id="hint1"></span></div>
+  <div class="caption" id="cap1"></div>
+  <div class="readrow" id="read1"></div>
+</div></section>
+
+<!-- ═══════════════ §2 REGROUP ═══════════════ -->
+<section class="chapter" id="ch2" style="--a:var(--c-violet)"><div class="wrap">
+  <div class="head">
+    <div class="num">§2 — REGROUP · NINE LENSES OVER FREE-FORM CATEGORIES</div>
+    <h2>Same corpus, someone else's order</h2>
+    <p class="lede">MediaWiki categories are whatever editors typed over twenty years. Michel Bauwens'
+    reading-room presort is a different order over the same articles — nine lenses, "same vision,
+    different lens". It is applied as a <em>map</em>, not a migration: nothing is moved, an article
+    can sit under several lenses at once, and one searchable corpus replaces nine siloed ones.</p>
+  </div>
+  <div class="stage"><svg class="viz" id="viz2" viewBox="0 0 1000 560" role="img" aria-label="Category to lens regrouping"></svg></div>
+  <div class="stepper" id="steps2"></div>
+  <div class="pager"><button class="mini" data-prev="2">← prev</button><button class="mini" data-next="2">next →</button><span class="grow"></span><span class="hint">click any lens to read its members</span></div>
+  <div class="caption" id="cap2"></div>
+  <div class="readrow" id="read2"></div>
+  <div id="lenslist" style="margin-top:14px"></div>
+  <div class="note finding" id="note2"></div>
+</div></section>
+
+<!-- ═══════════════ §3 RETRIEVE ═══════════════ -->
+<section class="chapter" id="ch3" style="--a:var(--c-blue)"><div class="wrap">
+  <div class="head">
+    <div class="num">§3 — RETRIEVE · TWO RETRIEVERS THAT FAIL DIFFERENTLY</div>
+    <h2>The documents worth recovering are the ones only one of them found</h2>
+    <p class="lede">Keyword search and vector search have different blind spots, so the gateway runs
+    both and takes the <em>union</em> — an intersection would return only what they already agreed on,
+    which is exactly the set that needed no help. Their scores are never averaged: BM25 is unbounded
+    and cosine lives in [-1,1], so each candidate keeps its origin and its rank, and only the ranks
+    are fused.</p>
+  </div>
+  <div class="toolbar" id="qpicker"></div>
+  <div class="stage"><svg class="viz" id="viz3" viewBox="0 0 1000 620" role="img" aria-label="Hybrid retrieval"></svg></div>
+  <div class="stepper" id="steps3"></div>
+  <div class="pager"><button class="mini" data-prev="3">← prev</button><button class="mini" data-next="3">next →</button><span class="grow"></span><span class="hint" id="hint3"></span></div>
+  <div class="caption" id="cap3"></div>
+  <div class="readrow" id="read3"></div>
+</div></section>
+
+<!-- ═══════════════ §4 SUBSET ═══════════════ -->
+<section class="chapter" id="ch4" style="--a:var(--c-gold)"><div class="wrap">
+  <div class="head">
+    <div class="num">§4 — SUBSET · HOLD YOUR ORGANIZATION, NOT THE CONTENT</div>
+    <h2>A reading list that never copies the reading</h2>
+    <p class="lede">A group wants its own shelf: these forty articles, our tags, our review dates, our
+    order. An overlay gives them exactly that and nothing more — every entry is a pointer upstream plus
+    the group's own metadata, and the body slot stays empty by construction. Not as a storage
+    optimisation: a body you persisted is a fork you now have to maintain, and a licence you now have
+    to honour.</p>
+  </div>
+  <div class="toolbar" id="ov-tools"></div>
+  <div class="stage"><svg class="viz" id="viz4" viewBox="0 0 1000 560" role="img" aria-label="Overlay store"></svg></div>
+  <div class="stepper" id="steps4"></div>
+  <div class="pager"><button class="mini" data-prev="4">← prev</button><button class="mini" data-next="4">next →</button><span class="grow"></span><span class="hint">click articles in the left column to shelve them</span></div>
+  <div class="caption" id="cap4"></div>
+  <div class="readrow" id="read4"></div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="pane"><h4>What the overlay stores</h4><div class="mono-block" id="ov-json"></div></div>
+    <div class="pane"><h4>What it points at</h4><div class="mono-block" id="ov-upstream"></div></div>
+  </div>
+</div></section>
+
+<!-- ═══════════════ §5 RE-VIEW ═══════════════ -->
+<section class="chapter" id="ch5" style="--a:var(--c-lime)"><div class="wrap">
+  <div class="head">
+    <div class="num">§5 — RE-VIEW · BANDS AND FORMS</div>
+    <h2>One query, however much of the answer you can actually use</h2>
+    <p class="lede">A map needs a dot, a list needs a line, a reader needs the document. Asking the
+    same corpus three times and throwing away what you did not need is three times the disclosure for
+    one answer. A band says how much to reveal — and the charge follows the band actually served, not
+    the one requested, so a caller downgraded to a smaller rung is told, and billed for what they
+    really got.</p>
+  </div>
+  <div class="toolbar" id="band-tools"></div>
+  <div class="stage"><svg class="viz" id="viz5" viewBox="0 0 1000 520" role="img" aria-label="Level-of-detail bands"></svg></div>
+  <div class="stepper" id="steps5"></div>
+  <div class="pager"><button class="mini" data-prev="5">← prev</button><button class="mini" data-next="5">next →</button><span class="grow"></span><span class="hint" id="hint5"></span></div>
+  <div class="caption" id="cap5"></div>
+  <div class="readrow" id="read5"></div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="pane"><h4>Requested form → what you get</h4><div id="form-out" class="mono-block"></div></div>
+    <div class="pane"><h4>Degradation ladder</h4><div id="ladder-out" class="mono-block"></div></div>
+  </div>
+</div></section>
+
+<!-- ═══════════════ §6 GROUND ═══════════════ -->
+<section class="chapter" id="ch6" style="--a:var(--c-rose)"><div class="wrap">
+  <div class="head">
+    <div class="num">§6 — GROUND &amp; DERIVE · WHAT YOU MAY CLAIM</div>
+    <h2>A shaky secondary must not become a confident tertiary</h2>
+    <p class="lede">The answer below is real: a local model, the sources it was actually given, no
+    editing. Every sentence is then checked back against those sources, and the ones the sources do
+    not carry are marked rather than quietly shipped. Anything derived from this inherits a licence
+    computed from its sources and a confidence that <em>cannot go up</em> — because prose quality is
+    uncorrelated with evidential strength, and a reader downstream has no way to tell them apart.</p>
+  </div>
+  <div class="toolbar" id="g-tools"></div>
+  <div class="stage"><svg class="viz" id="viz6" viewBox="0 0 1000 600" role="img" aria-label="Grounding and derivation"></svg></div>
+  <div class="stepper" id="steps6"></div>
+  <div class="pager"><button class="mini" data-prev="6">← prev</button><button class="mini" data-next="6">next →</button><span class="grow"></span><span class="hint" id="hint6"></span></div>
+  <div class="caption" id="cap6"></div>
+  <div class="readrow" id="read6"></div>
+  <div class="note" id="note6"></div>
+</div></section>
+
+<!-- ═══════════════ OUTRO ═══════════════ -->
+<section class="outro" id="outro"><div class="wrap">
+  <div class="eyebrow">what this is and is not</div>
+  <h2 style="font-family:var(--font-display); font-weight:400; font-size:clamp(1.6rem,3.4vw,2.2rem); margin:.4rem 0 .8rem;">Honest edges</h2>
+  <div class="grid3" id="honest"></div>
+  <div class="note" style="--a:var(--c-blue); margin-top:18px" id="outro-note"></div>
+</div></section>
+
+<footer><div class="wrap" id="footer"></div></footer>
+
+<script id="corpus" type="application/json">__DATA__</script>
+<script>
+/* ══════════════════════════════════════════════════════ data + shared utils */
+const D = JSON.parse(document.getElementById('corpus').textContent);
+const NS = 'http://www.w3.org/2000/svg';
+const COL = {cyan:'#5ef0df', blue:'#5b9cff', violet:'#b884ff', gold:'#ffd27a', rose:'#ff86a8',
+             lime:'#a6e86a', amber:'#ffb861', ink2:'#aeb9d4', ink3:'#74809e', ink4:'#4d5875',
+             bad:'#ff7a8f', warn:'#ffc46b', good:'#66e6b8'};
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const SMALL = matchMedia('(max-width:860px)').matches;
+const EASE = 'cubic-bezier(.22,.68,.31,1)';
+const DUR = REDUCED ? 0 : 620;
+
+const clamp = (v,a,b) => Math.max(a, Math.min(b,v));
+const fmt = n => n.toLocaleString('en-US');
+const sleep = ms => new Promise(r => setTimeout(r, REDUCED ? 0 : ms));
+const byTitle = Object.fromEntries(D.docs.map(d => [d.title, d]));
+const facetById = Object.fromEntries(D.facets.map(f => [f.id, f]));
+
+function el(tag, attrs = {}, kids = []) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) if (attrs[k] != null) e.setAttribute(k, attrs[k]);
+  for (const c of [].concat(kids)) if (c) e.appendChild(c);
+  return e;
+}
+function txt(s, attrs = {}) { const t = el('text', attrs); t.textContent = s; return t; }
+function h(tag, cls, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+/** Trim to a character budget on a word boundary, with an ellipsis. */
+function trim(s, n) {
+  if (!s || s.length <= n) return s || '';
+  const cut = s.slice(0, n);
+  const sp = cut.lastIndexOf(' ');
+  return (sp > n * 0.6 ? cut.slice(0, sp) : cut).trimEnd() + '…';
+}
+/** Wrap text into <=n-char lines, at most `max` of them. */
+function wrap(s, n, max) {
+  const words = String(s || '').split(/\s+/); const lines = []; let cur = '';
+  for (const w of words) {
+    if ((cur + ' ' + w).trim().length > n) { lines.push(cur.trim()); cur = w; if (lines.length === max) break; }
+    else cur = (cur + ' ' + w).trim();
+  }
+  if (lines.length < max && cur) lines.push(cur.trim());
+  if (lines.length === max && words.join(' ').length > lines.join(' ').length + 1) {
+    lines[max-1] = trim(lines[max-1], n - 1);
+  }
+  return lines;
+}
+
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+/** Give an element a transition, then move it. Returns the element. */
+function anim(e, props, dur = DUR, delay = 0) {
+  e.style.transition = `all ${dur}ms ${EASE} ${delay}ms`;
+  requestAnimationFrame(() => { for (const k in props) e.setAttribute(k, props[k]); });
+  return e;
+}
+function fade(e, o, dur = DUR, delay = 0) {
+  e.style.transition = `opacity ${dur}ms ${EASE} ${delay}ms`;
+  requestAnimationFrame(() => e.style.opacity = o);
+  return e;
+}
+/** Count a number up, for readouts. */
+function tweenNum(node, from, to, dur = 700, suffix = '', dp = 0) {
+  if (REDUCED) { node.textContent = to.toFixed(dp) + suffix; return; }
+  const t0 = performance.now();
+  (function frame(t) {
+    const p = clamp((t - t0) / dur, 0, 1);
+    const e = 1 - Math.pow(1 - p, 3);
+    node.textContent = (from + (to - from) * e).toFixed(dp) + suffix;
+    if (p < 1) requestAnimationFrame(frame);
+  })(t0);
+}
+
+/* rounded-rect card, the repeated visual primitive of the whole page */
+function card(x, y, w, hh, opts = {}) {
+  const g = el('g', {transform:`translate(${x},${y})`, opacity: opts.opacity ?? 1});
+  g.appendChild(el('rect', {x:0, y:0, width:w, height:hh, rx: opts.rx ?? 10,
+    fill: opts.fill ?? 'rgba(18,24,42,.82)',
+    stroke: opts.stroke ?? 'rgba(150,170,230,.22)', 'stroke-width': opts.sw ?? 1}));
+  return g;
+}
+function label(s, x, y, opts = {}) {
+  return txt(s, {x, y, fill: opts.fill ?? COL.ink2, 'font-size': opts.size ?? 12,
+    'font-family': opts.mono === false ? "'Hanken Grotesk',sans-serif" : "'JetBrains Mono',monospace",
+    'text-anchor': opts.anchor ?? 'start', 'font-weight': opts.weight ?? 400,
+    'letter-spacing': opts.ls ?? 0, opacity: opts.opacity ?? 1});
+}
+
+/* ══════════════════════════════════════════════════════ chapter framework */
+const CHAPTERS = [];
+
+/**
+ * Wire one chapter: a stepper, prev/next, a caption, and a draw(step) hook.
+ * Chapters are lazily drawn — the first draw happens when the section scrolls
+ * into view, so opening the page does not run six SVG builds at once.
+ */
+function chapter(n, def) {
+  const stepsEl = document.getElementById('steps' + n);
+  const capEl = document.getElementById('cap' + n);
+  const svg = document.getElementById('viz' + n);
+  const state = {n, def, i: 0, drawn: false, svg,
+    set(i, opts) {
+      state.i = clamp(i, 0, def.steps.length - 1);
+      [...stepsEl.children].forEach((c, k) => c.classList.toggle('on', k === state.i));
+      const s = def.steps[state.i];
+      capEl.innerHTML = `<span class="tag">${esc(s.tag || ('step ' + (state.i+1)))}</span>${s.cap}`;
+      def.draw(state.i, state, opts || {});
+    }};
+
+  def.steps.forEach((s, k) => {
+    const b = h('button', 'step');
+    b.innerHTML = `<span class="k">${String(k+1).padStart(2,'0')}</span>${esc(s.label)}`;
+    b.onclick = () => state.set(k);
+    stepsEl.appendChild(b);
+  });
+  document.querySelector(`[data-prev="${n}"]`).onclick = () => state.set(state.i - 1);
+  document.querySelector(`[data-next="${n}"]`).onclick = () => state.set(state.i + 1);
+
+  const io = new IntersectionObserver(es => {
+    for (const e of es) if (e.isIntersecting && !state.drawn) { state.drawn = true; state.set(0); io.disconnect(); }
+  }, {rootMargin: '160px'});
+  io.observe(svg.closest('.chapter'));
+
+  CHAPTERS.push(state);
+  return state;
+}
+
+/* ══════════════════════════════════════════════════════ hero */
+(function hero() {
+  const w = D.wiki;
+  const stats = [
+    [fmt(w.pages), 'pages'], [fmt(w.articles), 'articles'], [fmt(w.edits), 'edits'],
+    [fmt(w.users), 'accounts'], [fmt(w.images), 'images'], [String(D.docs.length), 'in this demo'],
+  ];
+  const strip = document.getElementById('statstrip');
+  stats.forEach(([n, l]) => {
+    const s = h('div', 'stat'); s.appendChild(h('div', 'n', n)); s.appendChild(h('div', 'l', l));
+    strip.appendChild(s);
+  });
+  document.getElementById('provenance').innerHTML =
+    `Every article, category, link and score on this page was pulled from <b>${esc(w.host)}</b> ` +
+    `on <b>${esc(D.fetchedAt)}</b> and put through the gateway's own algorithms. ` +
+    `Nothing here is placeholder copy.`;
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ §1 · ingest → holon */
+chapter(1, {
+  steps: [
+    {label:'the source', tag:'GET · api.php', cap:'One real article, exactly as MediaWiki stores it — link syntax, heading rules, bold ticks and all. <b>Nothing is parsed yet.</b>'},
+    {label:'stripMarkup()', tag:'render.ts', cap:'The markup comes off: <code>[[target|label]]</code> keeps the label, <code>== Heading ==</code> keeps the heading, ticks and file links go. Deliberately light — this is de-markup, not a wikitext parser, and every rule it applies it can also explain.'},
+    {label:'toChunks()', tag:'section-aware', cap:'Split on the article\'s <b>own headings</b> rather than every N characters. A chunk that begins mid-sentence retrieves badly and grounds worse, and the author already told us where the seams are.'},
+    {label:'provenance stamp', tag:'Justitia', cap:'Source URI, licence, the contributor, and who ingested it — folded into the document\'s own metadata, not a side ledger. It rides along to every copy, which is what makes attribution survive three hops downstream.'},
+    {label:'indexed', tag:'collection: p2pwiki', cap:'The article is now addressable: retrievable by meaning or by word, renderable into other forms, and citable with its lineage intact. <b>This is the unit everything after §1 operates on.</b>'},
+  ],
+  draw(i, st) {
+    const R = D.render, doc = byTitle[R.title];
+    if (!st.scene) {
+      const s = st.svg; s.innerHTML = '';
+      const g = k => { const e = el('g'); s.appendChild(e); return e; };
+      const sc = st.scene = {};
+
+      // ── column 1: the source ──────────────────────────────
+      sc.src = g();
+      sc.src.appendChild(card(24, 56, 300, 400, {}).firstChild ? card(24,56,300,400) : null);
+      const srcCard = card(24, 56, 300, 400);
+      sc.src.appendChild(srcCard);
+      srcCard.appendChild(label('wikitext', 14, 24, {size:10.5, fill:COL.ink3, ls:1.6}));
+      srcCard.appendChild(label(`${fmt(doc.bytes)} bytes`, 286, 24, {size:10.5, fill:COL.ink4, anchor:'end'}));
+
+      const rawLines = R.wikitext.split('\n').filter(l => l.trim()).slice(0, 15);
+      sc.raw = el('g'); sc.plain = el('g', {opacity:0});
+      srcCard.appendChild(sc.raw); srcCard.appendChild(sc.plain);
+      rawLines.forEach((line, k) => {
+        const y = 50 + k * 23.5;
+        // raw: markup tokens picked out in violet so the diff in step 2 is visible
+        const t = txt('', {x:14, y, 'font-family':"'JetBrains Mono',monospace", 'font-size':10.5, fill:COL.ink2});
+        const parts = String(line).slice(0, 44).split(/(\[\[[^\]]*\]\]|'''?|={2,}|\[https?:\/\/\S+)/g);
+        parts.forEach(p => { if (!p) return;
+          const isMk = /^(\[\[|'''?$|''$|={2,}$|\[http)/.test(p);
+          const ts = el('tspan', {fill: isMk ? COL.violet : COL.ink2}); ts.textContent = p; t.appendChild(ts); });
+        sc.raw.appendChild(t);
+
+        const stripped = String(line)
+          .replace(/\[\[File:[^\]]*\]\]/g,'').replace(/\[\[Category:[^\]]*\]\]/g,'')
+          .replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g,'$1')
+          .replace(/^={2,}\s*(.+?)\s*={2,}\s*$/,'$1').replace(/'''?/g,'')
+          .replace(/\[https?:\/\/\S+\s+([^\]]+)\]/g,'$1').replace(/\[https?:\/\/\S+\]/g,'');
+        sc.plain.appendChild(label(stripped.slice(0, 44), 14, y, {size:10.5, fill:COL.ink2}));
+      });
+
+      // ── arrow 1 ───────────────────────────────────────────
+      sc.a1 = g(); sc.a1.setAttribute('opacity', 0);
+      sc.a1.appendChild(el('path', {d:'M334 250 L392 250', stroke:COL.cyan, 'stroke-width':1.4, 'marker-end':'url(#ah1)'}));
+      sc.a1.appendChild(label('stripMarkup()', 363, 238, {size:10, fill:COL.cyan, anchor:'middle'}));
+      const defs = el('defs');
+      defs.appendChild(el('marker', {id:'ah1', viewBox:'0 0 10 10', refX:9, refY:5, markerWidth:6, markerHeight:6, orient:'auto'},
+        [el('path', {d:'M0 0 L10 5 L0 10 z', fill:COL.cyan})]));
+      s.appendChild(defs);
+
+      // ── column 2: chunks ──────────────────────────────────
+      sc.chunks = g(); sc.chunks.setAttribute('opacity', 0);
+      const chs = R.forms.chunks.slice(0, 5);
+      sc.chunkCards = chs.map((c, k) => {
+        const cd = card(404, 56 + k * 78, 300, 66, {fill:'rgba(20,28,48,.9)', stroke:'rgba(94,240,223,.28)'});
+        cd.appendChild(label(`chunk ${k+1} · ${c.heading || '(lead)'}`, 13, 20, {size:10, fill:COL.cyan}));
+        wrap(c.text, 44, 2).forEach((ln, j) => cd.appendChild(label(ln, 13, 38 + j*15, {size:10, fill:COL.ink3})));
+        sc.chunks.appendChild(cd); return cd;
+      });
+      sc.chunkMore = label(`+ ${Math.max(0, doc.nchunks - chs.length)} more sections`, 554, 56 + chs.length*78 + 16,
+        {size:10, fill:COL.ink4, anchor:'middle'});
+      sc.chunks.appendChild(sc.chunkMore);
+
+      // ── column 3: provenance ──────────────────────────────
+      sc.prov = g(); sc.prov.setAttribute('opacity', 0);
+      const pc = card(738, 56, 238, 300, {fill:'rgba(24,20,40,.9)', stroke:'rgba(184,132,255,.35)'});
+      pc.appendChild(label('provenance stamp', 14, 24, {size:10.5, fill:COL.violet, ls:1.2}));
+      const rows = [
+        ['source', 'p2pwiki'],
+        ['uri', '/' + R.title.replace(/ /g,'_')],
+        ['licence', D.ingestLicense],
+        ['contributor', doc.revuser || '—'],
+        ['revised', (doc.rev || '').slice(0,10)],
+        ['page_id', String(doc.pageid)],
+        ['categories', String(doc.categories.length)],
+        ['witness', 'portico:ingest'],
+      ];
+      rows.forEach(([k2, v], k) => {
+        pc.appendChild(label(k2, 14, 54 + k*30, {size:10, fill:COL.ink4}));
+        pc.appendChild(label(trim(v, 22), 224, 54 + k*30, {size:10.5, fill:COL.ink, anchor:'end'}));
+      });
+      sc.prov.appendChild(pc);
+      sc.provNote = label('rides along to every copy', 857, 378, {size:10, fill:COL.violet, anchor:'middle'});
+      sc.prov.appendChild(sc.provNote);
+
+      // ── indexed rail ──────────────────────────────────────
+      sc.idx = g(); sc.idx.setAttribute('opacity', 0);
+      const ic = card(24, 476, 952, 62, {fill:'rgba(16,24,40,.86)', stroke:'rgba(94,240,223,.3)'});
+      ic.appendChild(label('collection · p2pwiki', 16, 24, {size:10.5, fill:COL.cyan, ls:1.2}));
+      ic.appendChild(label('addressable · retrievable by word or by meaning · renderable · citable', 16, 44, {size:11, fill:COL.ink3}));
+      const badges = [['768-dim vector','#5b9cff'], ['BM25 postings','#a6e86a'], ['link graph','#ffd27a'], ['licence lineage','#b884ff']];
+      badges.forEach(([b, c], k) => {
+        const bx = 560 + k*100;
+        ic.appendChild(el('rect', {x:bx, y:18, width:92, height:26, rx:13, fill:'none', stroke:c, 'stroke-width':1, opacity:.55}));
+        ic.appendChild(label(b, bx+46, 35, {size:8.5, fill:c, anchor:'middle'}));
+      });
+      sc.idx.appendChild(ic);
+
+      // title
+      s.appendChild(label(R.title, 24, 34, {size:13, fill:'#fff'}));
+      s.appendChild(label(`wiki.p2pfoundation.net · page ${doc.pageid}`, 976, 34, {size:10.5, fill:COL.ink4, anchor:'end'}));
+    }
+
+    const sc = st.scene;
+    fade(sc.raw,   i >= 1 ? 0 : 1);
+    fade(sc.plain, i >= 1 ? 1 : 0);
+    fade(sc.a1,    i >= 1 ? 1 : 0);
+    fade(sc.chunks, i >= 2 ? 1 : 0);
+    fade(sc.prov,  i >= 3 ? 1 : 0);
+    fade(sc.idx,   i >= 4 ? 1 : 0);
+    sc.chunkCards.forEach((c, k) => {
+      c.style.transition = `all ${DUR}ms ${EASE} ${k*70}ms`;
+      c.setAttribute('transform', i >= 2 ? `translate(404,${56 + k*78})` : 'translate(340,250)');
+    });
+
+    const read = document.getElementById('read1');
+    read.innerHTML =
+      `<div class="read">bytes in <b>${fmt(doc.bytes)}</b></div>` +
+      `<div class="read">sections <b>${doc.nchunks}</b></div>` +
+      `<div class="read">categories <b>${doc.categories.length}</b></div>` +
+      `<div class="read">links in <span class="big">${doc.backlinks}</span></div>` +
+      `<div class="read">licence <b>${esc(D.ingestLicense)}</b></div>`;
+    document.getElementById('hint1').textContent = `featured article: ${R.title}`;
+  }
+});
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ §2 · regroup by lens */
+(function(){
+const FCOL = ['#5ef0df','#5b9cff','#b884ff','#ffd27a','#ff86a8','#a6e86a','#ffb861','#7ad7ff','#d3a0ff'];
+const members = {};                       // facet id -> docs
+D.facets.forEach(f => members[f.id] = []);
+D.docs.forEach(d => d.facets.forEach(f => members[f].push(d)));
+const unfiled = D.docs.filter(d => !d.facets.length);
+const allCats = new Set(); D.docs.forEach(d => d.categories.forEach(c => allCats.add(c)));
+const multi = D.docs.filter(d => d.facets.length > 1);
+
+// deterministic scatter, so the cloud looks the same on every visit
+function rng(seed){ let t = seed + 0x6D2B79F5; return () => {
+  t = Math.imul(t ^ t>>>15, t | 1); t ^= t + Math.imul(t ^ t>>>7, t | 61);
+  return ((t ^ t>>>14) >>> 0) / 4294967296; }; }
+
+const BINS = D.facets.map((f, k) => ({
+  f, col: FCOL[k],
+  x: 388 + (k % 3) * 200, y: 74 + Math.floor(k / 3) * 126, w: 190, h: 116,
+}));
+
+chapter(2, {
+  steps: [
+    {label:'as filed', tag:`${allCats.size} categories`, cap:`These ${D.docs.length} articles carry <b>${allCats.size} distinct MediaWiki categories</b> between them — <code>Encyclopedia</code>, <code>Peerproduction</code>, <code>Agrifood</code>, <code>Bios</code>. Free-form, accreted over twenty years, and nobody's idea of a taxonomy.`},
+    {label:'nine lenses', tag:'reading room', cap:'The presort is nine lenses, each defined by a handful of keywords. It is <b>consumer-side</b>: it lives outside the ingest machinery and never edits the wiki, so the same corpus can carry someone else\'s ordering tomorrow without a migration.'},
+    {label:'match & regroup', tag:'facetsForCategories()', cap:'A category matches a lens if it <b>contains</b> one of the lens keywords, case-insensitively; an article takes the union of its categories\' lenses. So an article can land in several at once — the lenses overlap by design.'},
+    {label:'overlaps', tag:'union, not partition', cap:`<b>${multi.length} of ${D.docs.length}</b> articles sit under more than one lens. That is the point: nine siloed collections would have forced a choice, and the choice would have been wrong for half the readers.`},
+    {label:'what falls through', tag:'unfiled', cap:`<b>${unfiled.length} articles match no lens at all.</b> The code is explicit that this is allowed — unfiled articles stay fully searchable, they just do not appear under a lens. But look at <i>which</i> ones fell through.`},
+    {label:'three real misses', tag:'substring', cap:'Run the mapping against the categories the wiki really has and three defects fall out: a keyword that can never match, a lens with <b>no members at all</b>, and a lens that swallows <b>more than half the corpus</b>. All three are silent failures — read them below.'},
+  ],
+  draw(i, st) {
+    if (!st.scene) {
+      const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+
+      sc.cloudLabel = label(`${D.docs.length} articles · ${allCats.size} categories`, 24, 34, {size:11, fill:COL.ink3});
+      s.appendChild(sc.cloudLabel);
+
+      // floating category names in the unsorted cloud
+      sc.cats = el('g');
+      const catCounts = {}; D.docs.forEach(d => d.categories.forEach(c => catCounts[c] = (catCounts[c]||0)+1));
+      Object.entries(catCounts).sort((a,b)=>b[1]-a[1]).slice(0,14).forEach(([c, n], k) => {
+        const r = rng(k * 977);
+        sc.cats.appendChild(label(c, 40 + r()*230, 92 + (k/14)*380 + r()*24,
+          {size: 8.5 + Math.min(n,20)*0.22, fill:'rgba(174,185,212,.38)'}));
+      });
+      s.appendChild(sc.cats);
+
+      // lens bins
+      sc.bins = el('g', {opacity:0}); s.appendChild(sc.bins);
+      BINS.forEach((b, k) => {
+        const g = el('g', {transform:`translate(${b.x},${b.y})`, style:'cursor:pointer'});
+        g.appendChild(el('rect', {x:0, y:0, width:b.w, height:b.h, rx:12, fill:'rgba(16,22,38,.6)',
+          stroke:b.col, 'stroke-width':1, opacity:.5}));
+        wrap(b.f.label, 27, 3).forEach((ln, j) =>
+          g.appendChild(label(ln, 10, 18 + j*11.5, {size:8.5, fill:b.col})));
+        b.countNode = label('', b.w - 10, 19, {size:11, fill:'#fff', anchor:'end'});
+        g.appendChild(b.countNode);
+        g.onclick = () => showLens(b, k);
+        sc.bins.appendChild(g);
+      });
+
+      // unfiled tray
+      sc.tray = el('g', {opacity:0});
+      sc.tray.appendChild(el('rect', {x:24, y:472, width:340, height:66, rx:12, fill:'rgba(30,22,22,.5)',
+        stroke:'rgba(255,196,107,.4)', 'stroke-width':1}));
+      sc.tray.appendChild(label(`unfiled · ${unfiled.length} articles, no lens matched`, 40, 494, {size:10, fill:COL.warn}));
+      sc.tray.appendChild(label('still indexed, still retrievable — just not under a lens', 40, 512, {size:9.5, fill:COL.ink4}));
+      s.appendChild(sc.tray);
+
+      // dots: one node per (doc, facet) pair, plus one for unfiled docs
+      sc.dots = el('g'); s.appendChild(sc.dots);
+      sc.nodes = [];
+      const binCursor = {}; BINS.forEach(b => binCursor[b.f.id] = 0);
+      D.docs.forEach((d, di) => {
+        const r = rng(d.pageid);
+        const sx = 40 + r() * 280, sy = 80 + r() * 380;
+        const slots = d.facets.length ? d.facets : [null];
+        slots.forEach((fid, si) => {
+          let tx, ty, col, ghostR = null;
+          if (fid) {
+            const b = BINS.find(x => x.f.id === fid);
+            const n = binCursor[fid]++;
+            const total = members[fid].length;
+            const cols = Math.max(8, Math.ceil(total / 3));       // aim for <= 3 rows
+            const dx = (b.w - 24) / cols;
+            const dy = Math.min(19, (b.h - 54) / Math.max(1, Math.ceil(total / cols)));
+            tx = b.x + 12 + (n % cols) * dx + dx / 2;
+            ty = b.y + 50 + Math.floor(n / cols) * dy;
+            col = b.col; ghostR = clamp(dx * 0.34, 2, 4.4);
+          } else {
+            const n = unfiled.indexOf(d);
+            tx = 44 + (n % 12) * 26; ty = 520 + Math.floor(n / 12) * 14;
+            col = COL.warn;
+          }
+          const c = el('circle', {cx:sx, cy:sy, r: si ? 3 : 4.4, fill: 'rgba(174,185,212,.55)',
+            stroke:'none', opacity: si ? 0 : 1});
+          sc.dots.appendChild(c);
+          sc.nodes.push({el:c, d, fid, sx, sy, tx, ty, col, ghost: si > 0, rr: ghostR});
+        });
+      });
+
+      // spotlight for step 6
+      sc.spot = el('g', {opacity:0});
+      const sp = card(388, 380, 588, 150, {fill:'rgba(28,22,18,.94)', stroke:'rgba(255,196,107,.5)'});
+      sp.appendChild(label('the miss, concretely', 16, 26, {size:10.5, fill:COL.warn, ls:1.2}));
+      const pp = byTitle['Peer Production'];
+      const lines = [
+        ['lens keyword', '"peer production"', COL.cyan],
+        ['category on the wiki', '"Peerproduction"', COL.warn],
+        ['"Peerproduction".includes("peer production")', 'false', COL.bad],
+        ['articles affected', 'Peerproduction 6 · Peergovernance 4 · Peerproperty 5', COL.ink2],
+        ['cost', `Peer Production (${pp ? pp.backlinks : 82} inbound links) is unfiled`, COL.ink],
+      ];
+      lines.forEach(([k, v, c], j) => {
+        sp.appendChild(label(k, 16, 52 + j*20, {size:10, fill:COL.ink4}));
+        sp.appendChild(label(v, 572, 52 + j*20, {size:10, fill:c, anchor:'end'}));
+      });
+      sc.spot.appendChild(sp); s.appendChild(sc.spot);
+    }
+
+    const sc = st.scene;
+    const showBins = i >= 1, moved = i >= 2, ghosts = i >= 3, tray = i >= 4, spot = i >= 5;
+
+    fade(sc.cats, moved ? 0.12 : 1);
+    fade(sc.bins, showBins ? 1 : 0);
+    fade(sc.tray, tray ? 1 : 0);
+    fade(sc.spot, spot ? 1 : 0);
+
+    BINS.forEach(b => b.countNode.textContent = moved ? members[b.f.id].length : '');
+
+    sc.nodes.forEach((n, k) => {
+      const isPP = n.d.title === 'Peer Production';
+      const go = moved && (!n.ghost || ghosts) && !(n.fid === null && !tray);
+      n.el.style.transition = `all ${DUR}ms ${EASE} ${(k % 22) * 26}ms`;
+      requestAnimationFrame(() => {
+        n.el.setAttribute('cx', go ? n.tx : n.sx);
+        n.el.setAttribute('cy', go ? n.ty : n.sy);
+        n.el.setAttribute('fill', go ? n.col : 'rgba(174,185,212,.55)');
+        n.el.setAttribute('r', spot && isPP ? 7 : (go && n.rr != null ? n.rr : (n.ghost ? 3 : 4.4)));
+        n.el.setAttribute('stroke', spot && isPP ? COL.warn : 'none');
+        n.el.setAttribute('stroke-width', spot && isPP ? 2.5 : 0);
+        n.el.style.opacity = n.ghost ? (ghosts ? 0.92 : 0) : (spot && !isPP && n.fid === null ? .35 : 1);
+      });
+    });
+
+    const sz = D.facets.map(f => members[f.id].length);
+    document.getElementById('read2').innerHTML =
+      `<div class="read">lenses <span class="big">9</span></div>` +
+      `<div class="read">categories <b>${allCats.size}</b></div>` +
+      `<div class="read">in ≥1 lens <b>${D.docs.length - unfiled.length}</b></div>` +
+      `<div class="read">in ≥2 lenses <b>${multi.length}</b></div>` +
+      `<div class="read">unfiled <b style="color:${COL.warn}">${unfiled.length}</b></div>` +
+      `<div class="read">largest lens <b style="color:${COL.warn}">${Math.max(...sz)}</b></div>` +
+      `<div class="read">empty lenses <b style="color:${COL.warn}">${sz.filter(n => !n).length}</b></div>`;
+
+    const sizes = D.facets.map(f => ({f, n: members[f.id].length})).sort((a,b) => b.n - a.n);
+    const biggest = sizes[0], empty = sizes.filter(x => x.n === 0);
+    document.getElementById('note2').innerHTML = i >= 5 ? (
+      `<b>Three real defects, all found by simply running the taxonomy over the live wiki.</b><br><br>` +
+      `<b>1 · The concatenation miss.</b> The lens keywords are <code>peer production</code>, ` +
+      `<code>peer governance</code>, <code>peer property</code>. The categories editors actually use are ` +
+      `<code>Peerproduction</code>, <code>Peergovernance</code>, <code>Peerproperty</code> — single words — so ` +
+      `the substring test never fires. <b>Peer Production</b>, with more inbound links than all but two ` +
+      `articles in this sample, is unfiled as a result.<br><br>` +
+      (empty.length ? `<b>2 · A lens that matches nothing.</b> <i>${esc(empty[0].f.label)}</i> holds ` +
+        `<b>0 articles</b>. Its keywords include <code>intellectual property</code>, but the wiki files those ` +
+        `pages under <code>IP</code>. A lens with no members looks like an empty shelf, not a broken rule.<br><br>` : '') +
+      `<b>3 · A lens that swallows the corpus.</b> <i>${esc(biggest.f.label)}</i> matches ` +
+      `<b>${biggest.n} of ${D.docs.length}</b> articles (${Math.round(100*biggest.n/D.docs.length)}%), because its ` +
+      `keyword set includes terms as broad as <code>economics</code>, <code>technology</code>, ` +
+      `<code>policy</code> and <code>science</code>. A lens that matches most of everything does not ` +
+      `discriminate, and a reader browsing it is back where they started.<br><br>` +
+      `None of this is visible from inside the code: unfiled is a legal state, an empty lens throws nothing, ` +
+      `and an over-broad lens returns plenty of results. It only shows up when you run the mapping against ` +
+      `the categories the wiki really has.`
+    ) : '';
+  }
+});
+
+function showLens(b, k) {
+  const list = members[b.f.id].slice().sort((x, y) => y.backlinks - x.backlinks);
+  const wrapEl = document.getElementById('lenslist');
+  wrapEl.innerHTML = `<div class="pane" style="border-color:${b.col}44">
+    <h4 style="color:${b.col}">${esc(b.f.label)} · ${list.length} articles</h4>
+    <div class="hint" style="margin-bottom:10px">keywords: ${b.f.keywords.map(x=>`<code>${esc(x)}</code>`).join(' · ')}</div>
+    <div class="grid3">${list.slice(0, 9).map(d => `
+      <div class="artcard"><div class="t">${esc(d.title)}</div>
+      <div class="m">${d.backlinks} inbound · ${esc(d.categories.slice(0,2).join(', ') || 'no categories')}</div>
+      <div class="x">${esc(trim(d.lead, 110))}</div></div>`).join('')}</div>
+    ${list.length > 9 ? `<div class="hint" style="margin-top:10px">+ ${list.length - 9} more</div>` : ''}
+  </div>`;
+  wrapEl.scrollIntoView({block:'nearest', behavior: REDUCED ? 'auto' : 'smooth'});
+}
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ §3 · hybrid retrieval */
+(function(){
+const K = 8;                                    // rows shown per column
+const QIDS = Object.keys(D.retrieval);
+let qid = QIDS[0];
+
+const COLS = {
+  lex:  {x: 24,  col: COL.lime,   name: 'LEXICAL · BM25',    sub: 'exact words, unbounded score'},
+  sem:  {x: 356, col: COL.blue,   name: 'SEMANTIC · cosine', sub: '768-dim vectors, [-1,1]'},
+  fus:  {x: 688, col: COL.violet, name: 'UNION → FUSED',     sub: 'ranks fused, never scores'},
+};
+
+// query picker
+const picker = document.getElementById('qpicker');
+QIDS.forEach((id, k) => {
+  const b = h('button', 'chip-btn' + (k === 0 ? ' on' : ''));
+  b.innerHTML = `<span class="dot" style="background:${COL.blue}"></span>${esc(trim(D.retrieval[id].query, 44))}`;
+  b.onclick = () => { qid = id; [...picker.children].forEach(c => c.classList.remove('on')); b.classList.add('on');
+    CH3.scene = null; CH3.set(CH3.i); };
+  picker.appendChild(b);
+});
+
+const CH3 = chapter(3, {
+  steps: [
+    {label:'the query', tag:'/v1/retrieve', cap:'One question, put to a corpus of real articles. Both retrievers get it at the same time — they are queried in parallel, so the wait is the slower one, not the sum.'},
+    {label:'lexical recall', tag:'BM25', cap:'Word matching. Excellent when the query says the thing the document says; blind when it does not. Scores are unbounded — a strong hit here can score 40 while a strong cosine hit scores 0.7.'},
+    {label:'semantic recall', tag:'cosine', cap:'Vector matching over real 768-dimension embeddings. Strong conceptual recall, weaker exact-match precision — the textbook dense-retrieval signature, and visible in these very results.'},
+    {label:'union, not intersection', tag:'HybridRetriever', cap:'Everything either one found. An intersection would keep only what both already agreed on — which is precisely the set that needed no help. <b>The documents worth recovering are the ones exactly one retriever found.</b>'},
+    {label:'rank fusion', tag:'RRF k=60', cap:'Scores in different units cannot be averaged, so only <b>ranks</b> are fused: each origin contributes <code>1/(60 + rank)</code>. Agreement accumulates — ranked 2nd by both beats ranked 1st by one and missed by the other.'},
+    {label:'a signal an index cannot have', tag:'link-centrality', cap:'A search index knows what a document contains. It does not know how central that document is in a link graph the corpus itself defines. That signal is added with weight 0.3, saturating — the gap between 1 and 3 inbound links matters, the gap between 40 and 42 does not.'},
+  ],
+  draw(i, st) {
+    const R = D.retrieval[qid];
+    if (!st.scene) {
+      const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+
+      const qb = card(24, 20, 952, 44, {fill:'rgba(18,26,48,.9)', stroke:'rgba(91,156,255,.4)'});
+      qb.appendChild(label('query', 16, 27, {size:9.5, fill:COL.ink4}));
+      qb.appendChild(label('“' + R.query + '”', 16, 30, {size:13.5, fill:'#fff'}));
+      qb.lastChild.setAttribute('y', 30);
+      s.appendChild(qb);
+
+      sc.heads = {};
+      for (const key in COLS) {
+        const c = COLS[key], g = el('g', {opacity: 0});
+        g.appendChild(el('rect', {x:c.x, y:84, width:288, height:2, rx:1, fill:c.col, opacity:.6}));
+        g.appendChild(label(c.name, c.x, 104, {size:10.5, fill:c.col, ls:1.1}));
+        g.appendChild(label(c.sub, c.x, 119, {size:9, fill:COL.ink4}));
+        s.appendChild(g); sc.heads[key] = g;
+      }
+
+      // ── build rows ─────────────────────────────────────────
+      const mkRow = (x, y, w, colr) => {
+        const g = el('g', {transform:`translate(${x},${y})`, opacity:0});
+        g.appendChild(el('rect', {x:0, y:0, width:w, height:38, rx:9,
+          fill:'rgba(18,24,42,.85)', stroke:'rgba(150,170,230,.2)'}));
+        return g;
+      };
+      sc.lexRows = R.lexical.slice(0, K).map((r, k) => {
+        const g = mkRow(COLS.lex.x, 136 + k*46, 288);
+        g.appendChild(label(String(k+1).padStart(2,'0'), 11, 24, {size:10, fill:COL.lime}));
+        g.appendChild(label(trim(r.title, 26), 34, 24, {size:11, fill:COL.ink}));
+        g.appendChild(label(r.bm25.toFixed(1), 277, 24, {size:10, fill:COL.ink3, anchor:'end'}));
+        st.svg.appendChild(g); return g;
+      });
+      sc.semRows = R.semantic.slice(0, K).map((r, k) => {
+        const g = mkRow(COLS.sem.x, 136 + k*46, 288);
+        g.appendChild(label(String(k+1).padStart(2,'0'), 11, 24, {size:10, fill:COL.blue}));
+        g.appendChild(label(trim(r.title, 26), 34, 24, {size:11, fill:COL.ink}));
+        g.appendChild(label(r.cos.toFixed(3), 277, 24, {size:10, fill:COL.ink3, anchor:'end'}));
+        st.svg.appendChild(g); return g;
+      });
+
+      // fused: sorted by RRF alone (step 5) and by composite (step 6)
+      sc.byRRF = R.fused.slice().sort((a,b) => b.rrf - a.rrf || b.centrality - a.centrality).slice(0, K);
+      sc.byComposite = R.fused.slice(0, K);
+      const fusedSet = [...new Set([...sc.byRRF, ...sc.byComposite])];
+      sc.fusRows = fusedSet.map(c => {
+        const g = mkRow(COLS.fus.x, 136, 288);
+        g.appendChild(el('rect', {x:0, y:0, width:3, height:38, rx:2,
+          fill: c.origins.length === 2 ? COL.violet : (c.origins[0] === 'lexical' ? COL.lime : COL.blue)}));
+        g.appendChild(label(trim(c.title, 25), 14, 17, {size:11, fill:COL.ink}));
+        const badge = c.origins.length === 2 ? 'both' : c.origins[0];
+        g.appendChild(label(badge, 14, 31, {size:8.5,
+          fill: c.origins.length === 2 ? COL.violet : (c.origins[0] === 'lexical' ? COL.lime : COL.blue)}));
+        const sn = label('', 277, 24, {size:10.5, fill:'#fff', anchor:'end'});
+        g.appendChild(sn);
+        return {g, c, sn};
+      });
+      sc.fusRows.forEach(r => st.svg.appendChild(r.g));
+
+      // connector lines union → fused
+      sc.links = el('g', {opacity:0}); st.svg.appendChild(sc.links);
+
+      // math panel
+      sc.math = el('g', {opacity:0});
+      const mp = card(688, 476, 288, 118, {fill:'rgba(24,20,40,.94)', stroke:'rgba(184,132,255,.42)'});
+      mp.appendChild(label('composite', 14, 22, {size:9.5, fill:COL.violet, ls:1.2}));
+      sc.mathLines = [0,1,2,3].map(j => { const t = label('', 14, 46 + j*22, {size:10, fill:COL.ink2}); mp.appendChild(t); return t; });
+      sc.math.appendChild(mp); st.svg.appendChild(sc.math);
+    }
+
+    const sc = st.scene;
+    const show = {lex: i >= 1, sem: i >= 2, fus: i >= 3};
+    fade(sc.heads.lex, show.lex ? 1 : 0); fade(sc.heads.sem, show.sem ? 1 : 0); fade(sc.heads.fus, show.fus ? 1 : 0);
+    sc.lexRows.forEach((g, k) => { g.style.transition = `opacity ${DUR}ms ${EASE} ${k*45}ms`;
+      requestAnimationFrame(() => g.style.opacity = show.lex ? 1 : 0); });
+    sc.semRows.forEach((g, k) => { g.style.transition = `opacity ${DUR}ms ${EASE} ${k*45}ms`;
+      requestAnimationFrame(() => g.style.opacity = show.sem ? 1 : 0); });
+
+    const order = i >= 5 ? sc.byComposite : sc.byRRF;
+    sc.fusRows.forEach(({g, c, sn}, k) => {
+      const pos = order.indexOf(c);
+      const visible = show.fus && pos >= 0;
+      g.style.transition = `all ${DUR}ms ${EASE} ${Math.max(pos,0)*50}ms`;
+      requestAnimationFrame(() => {
+        g.style.opacity = visible ? 1 : 0;
+        g.setAttribute('transform', `translate(${COLS.fus.x},${136 + Math.max(pos,0)*46})`);
+      });
+      sn.textContent = i >= 5 ? c.composite.toFixed(3) : (i >= 4 ? c.rrf.toFixed(3) : '');
+    });
+
+    // union connectors
+    sc.links.innerHTML = '';
+    if (i >= 3) {
+      order.forEach((c, pos) => {
+        c.origins.forEach(o => {
+          const src = o === 'lexical' ? R.lexical : R.semantic;
+          const idx = src.slice(0, K).findIndex(r => r.title === c.title);
+          if (idx < 0) return;
+          const x0 = (o === 'lexical' ? COLS.lex.x : COLS.sem.x) + 288, y0 = 136 + idx*46 + 19;
+          const x1 = COLS.fus.x, y1 = 136 + pos*46 + 19;
+          sc.links.appendChild(el('path', {
+            d:`M${x0} ${y0} C${x0+34} ${y0} ${x1-34} ${y1} ${x1} ${y1}`,
+            fill:'none', stroke: o === 'lexical' ? COL.lime : COL.blue, 'stroke-width':.9, opacity:.34}));
+        });
+      });
+      fade(sc.links, 1);
+    } else fade(sc.links, 0);
+
+    fade(sc.math, i >= 4 ? 1 : 0);
+    if (i >= 4) {
+      const top = order[0];
+      sc.mathLines[0].textContent = `top: ${trim(top.title, 26)}`;
+      sc.mathLines[1].textContent = `rrf   = ${top.ranks.map(r => `1/(60+${r.rank})`).join(' + ')}`;
+      sc.mathLines[2].textContent = `      × 61 = ${top.rrf.toFixed(4)}`;
+      sc.mathLines[3].textContent = i >= 5
+        ? `+ 0.3 × ${top.centrality.toFixed(3)} centrality = ${top.composite.toFixed(4)}`
+        : '';
+    }
+
+    const both = R.fused.filter(c => c.origins.length === 2).length;
+    const lexOnly = R.fused.filter(c => c.origins.length === 1 && c.origins[0] === 'lexical').length;
+    const semOnly = R.fused.filter(c => c.origins.length === 1 && c.origins[0] === 'semantic').length;
+    document.getElementById('read3').innerHTML =
+      `<div class="read">union size <span class="big">${R.fused.length}</span></div>` +
+      `<div class="read">found by both <b style="color:${COL.violet}">${both}</b></div>` +
+      `<div class="read">lexical only <b style="color:${COL.lime}">${lexOnly}</b></div>` +
+      `<div class="read">semantic only <b style="color:${COL.blue}">${semOnly}</b></div>` +
+      `<div class="read">recovered by the union <b>${lexOnly + semOnly}</b></div>`;
+    document.getElementById('hint3').textContent =
+      `${lexOnly + semOnly} of ${R.fused.length} results were found by only one retriever`;
+  }
+});
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ §4 · overlay subsets */
+(function(){
+const SHELF_CANDIDATES = ['Governing the Commons','Elinor Ostrom','Commons','Tragedy of the Commons',
+  'Urban Commons','Knowledge Commons','Digital Commons','Seed Commons','Food Commons','Energy Commons',
+  'Community Land Trust','Commoning'];
+const POOL = SHELF_CANDIDATES.map(t => byTitle[t]).filter(Boolean).slice(0, 10);
+const TAGS = ['core-reading','ostrom','case-study','policy','to-review','provisioning'];
+const shelved = new Map();                 // title -> {tags, status}
+
+function entryFor(d, k) {
+  return {
+    resource: d.id,
+    type: 'concept',
+    title: d.title,
+    tags: [TAGS[k % TAGS.length], d.facets[0] || 'unfiled'],
+    status: k % 3 === 0 ? 'reviewed' : 'reading',
+    stale_after: '2027-01-01',
+    // NO body — enforced at the conversion boundary, not asserted in a comment
+  };
+}
+
+const CH4 = chapter(4, {
+  steps: [
+    {label:'two stores', tag:'upstream ≠ yours', cap:'On the left, a corpus your group does not own and cannot edit. On the right, a store your group entirely controls. The interesting question is what may legitimately cross.'},
+    {label:'shelve an article', tag:'resource:', cap:'An overlay entry is created. Its identity is a <b>pointer upstream</b> — <code>resource:</code> — not a path and not a copy. The article stays exactly where it is, under whoever maintains it.'},
+    {label:'your own metadata', tag:'tags · status', cap:'Now the part that is genuinely yours: tags, a reading status, a review date, an order. This is a group\'s holonic organization of someone else\'s corpus, and it is the whole reason the overlay exists.'},
+    {label:'the body stays behind', tag:'invariant', cap:'Try to bring the text across and it is <b>refused</b>, not silently dropped. Quietly discarding content is how you get a store that looks like it round-trips and does not — so a concept arriving with a body raises rather than shrugs.'},
+    {label:'no new format', tag:'conformant OKF', cap:'None of this needed a new file format. An entry carrying only a type is already a conformant concept, so the existing linter validates it and the existing importer round-trips it. The epic added <b>storage and one invariant</b> — not a serialization.'},
+  ],
+  draw(i, st) {
+    if (!st.scene) {
+      const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+
+      const up = card(24, 60, 400, 490, {fill:'rgba(14,20,34,.7)', stroke:'rgba(150,170,230,.22)'});
+      up.appendChild(label('upstream · wiki.p2pfoundation.net', 16, 26, {size:10, fill:COL.ink3, ls:1.1}));
+      up.appendChild(label('you do not own this, and you do not need to', 16, 43, {size:9.5, fill:COL.ink4}));
+      s.appendChild(up);
+
+      sc.rows = POOL.map((d, k) => {
+        const g = el('g', {transform:`translate(40,${124 + k*41})`, style:'cursor:pointer'});
+        const r = el('rect', {x:0, y:0, width:368, height:36, rx:8, fill:'rgba(20,28,48,.8)',
+          stroke:'rgba(150,170,230,.18)'});
+        g.appendChild(r);
+        g.appendChild(label(trim(d.title, 30), 12, 22, {size:11, fill:COL.ink}));
+        g.appendChild(label(`${(d.bytes/1024).toFixed(1)} KB`, 338, 22, {size:9.5, fill:COL.ink4, anchor:'end'}));
+        const tick = label('✓', 358, 22, {size:12, fill:COL.gold, anchor:'end', opacity:0});
+        g.appendChild(tick);
+        g.onclick = () => toggle(d, k);
+        s.appendChild(g);
+        return {g, r, tick, d, k};
+      });
+
+      const ov = card(576, 60, 400, 490, {fill:'rgba(28,24,14,.6)', stroke:'rgba(255,210,122,.34)'});
+      ov.appendChild(label('your overlay · space:commons-reading', 16, 26, {size:10, fill:COL.gold, ls:1.1}));
+      ov.appendChild(label('pointers + your metadata · no bodies', 16, 43, {size:9.5, fill:COL.ink4}));
+      s.appendChild(ov);
+      sc.entries = el('g'); s.appendChild(sc.entries);
+      sc.empty = label('nothing shelved yet — click an article', 776, 300, {size:11, fill:COL.ink4, anchor:'middle'});
+      s.appendChild(sc.empty);
+
+      // the refused body
+      sc.body = el('g', {opacity:0});
+      sc.body.appendChild(el('rect', {x:-52, y:-16, width:104, height:32, rx:8,
+        fill:'rgba(60,20,28,.9)', stroke:COL.bad, 'stroke-width':1.2}));
+      sc.bodyLabel = label('body', 0, 5, {size:10, fill:COL.bad, anchor:'middle'});
+      sc.body.appendChild(sc.bodyLabel);
+      sc.body.setAttribute('transform', 'translate(300,300)');
+      s.appendChild(sc.body);
+      sc.refusal = label('', 500, 548, {size:10.5, fill:COL.bad, anchor:'middle', opacity:0});
+      s.appendChild(sc.refusal);
+
+      sc.arrow = el('g', {opacity:0});
+      sc.arrow.appendChild(el('path', {d:'M436 295 L562 295', stroke:COL.gold, 'stroke-width':1.3,
+        'stroke-dasharray':'5 4'}));
+      sc.arrow.appendChild(label('resource: →', 499, 283, {size:9.5, fill:COL.gold, anchor:'middle'}));
+      s.appendChild(sc.arrow);
+    }
+
+    const sc = st.scene;
+    if (i >= 1 && shelved.size === 0) { toggle(POOL[0], 0, true); toggle(POOL[1], 1, true); }
+    fade(sc.arrow, i >= 1 ? 1 : 0);
+
+    // the refusal beat
+    if (i === 3) {
+      const first = byTitle[[...shelved.keys()][0]] || POOL[0];
+      sc.bodyLabel.textContent = `body: ${(first.bytes / 1024).toFixed(1)} KB`;
+      sc.body.setAttribute('transform', 'translate(300,300)');
+      sc.body.style.opacity = 1;
+      anim(sc.body, {transform:'translate(520,300)'}, 520);
+      setTimeout(() => {
+        anim(sc.body, {transform:'translate(300,300)'}, 460);
+        sc.refusal.textContent = 'overlayEntryFromConcept() — refuses a concept carrying a body';
+        fade(sc.refusal, 1, 300);
+      }, REDUCED ? 0 : 620);
+    } else { fade(sc.body, 0); fade(sc.refusal, 0); }
+
+    render(i);
+  }
+});
+
+function toggle(d, k, silent) {
+  if (shelved.has(d.title)) shelved.delete(d.title);
+  else shelved.set(d.title, entryFor(d, shelved.size));
+  if (!silent) toast(shelved.has(d.title) ? `shelved · ${d.title}` : `removed · ${d.title}`);
+  render(CH4.i);
+}
+
+function render(step) {
+  const sc = CH4.scene; if (!sc) return;
+  sc.rows.forEach(({r, tick, d}) => {
+    const on = shelved.has(d.title);
+    r.setAttribute('stroke', on ? COL.gold : 'rgba(150,170,230,.18)');
+    r.setAttribute('fill', on ? 'rgba(44,36,16,.75)' : 'rgba(20,28,48,.8)');
+    tick.style.opacity = on ? 1 : 0;
+  });
+
+  sc.entries.innerHTML = '';
+  const list = [...shelved.entries()];
+  sc.empty.style.opacity = list.length ? 0 : 1;
+  list.slice(0, 6).forEach(([title, e], k) => {
+    const g = el('g', {transform:`translate(592,${124 + k*66})`, opacity:0});
+    g.appendChild(el('rect', {x:0, y:0, width:368, height:64, rx:9, fill:'rgba(34,28,16,.85)',
+      stroke:'rgba(255,210,122,.4)'}));
+    g.appendChild(label(trim(title, 30), 12, 20, {size:11, fill:'#fff'}));
+    g.appendChild(label(e.resource, 12, 36, {size:9, fill:COL.gold}));
+    if (step >= 2) {
+      let tx = 12;
+      e.tags.forEach(t => {
+        const w = t.length * 5.2 + 14;
+        g.appendChild(el('rect', {x:tx, y:44, width:w, height:15, rx:7.5,
+          fill:'none', stroke:'rgba(255,210,122,.5)'}));
+        g.appendChild(label(t, tx + w/2, 55, {size:8, fill:COL.gold, anchor:'middle'}));
+        tx += w + 6;
+      });
+      g.appendChild(label(e.status, 356, 55, {size:9, fill:COL.ink3, anchor:'end'}));
+    }
+    // the empty body slot, drawn as an absence rather than omitted
+    g.appendChild(label('body ∅', 356, 20, {size:9, fill:COL.ink4, anchor:'end'}));
+    sc.entries.appendChild(g);
+    fade(g, 1, 380, k * 60);
+  });
+  if (list.length > 6) {
+    sc.entries.appendChild(label(`+ ${list.length - 6} more entries`, 776, 124 + 6*66 + 4,
+      {size:10, fill:COL.ink4, anchor:'middle'}));
+  }
+
+  const stored = JSON.stringify([...shelved.values()]);
+  const referenced = [...shelved.keys()].reduce((a, t) => a + (byTitle[t]?.bytes || 0), 0);
+  document.getElementById('read4').innerHTML =
+    `<div class="read">entries <span class="big">${shelved.size}</span></div>` +
+    `<div class="read">stored <b>${(stored.length/1024).toFixed(2)} KB</b></div>` +
+    `<div class="read">referenced <b>${(referenced/1024).toFixed(1)} KB</b></div>` +
+    `<div class="read">bodies held <b style="color:${COL.gold}">0</b></div>` +
+    `<div class="read">ratio <b>${referenced ? Math.round(referenced/Math.max(stored.length,1)) : 0}×</b></div>`;
+
+  document.getElementById('ov-json').innerHTML = list.length
+    ? esc(JSON.stringify([...shelved.values()].slice(0, 3), null, 1))
+        .replace(/&quot;(\w+)&quot;:/g, '<span class="k">"$1"</span>:')
+        .replace(/: &quot;([^&]*)&quot;/g, ': <span class="s">"$1"</span>')
+      + (list.length > 3 ? `\n<span class="c">… ${list.length - 3} more entries</span>` : '')
+    : '<span class="c">// empty — shelve an article</span>';
+
+  document.getElementById('ov-upstream').innerHTML = list.length
+    ? list.slice(0, 3).map(([t]) => {
+        const d = byTitle[t];
+        return `<span class="s">${esc(d.id)}</span>\n  ${esc(d.url)}\n  <span class="c">${fmt(d.bytes)} bytes · ${d.nchunks} sections · rev ${esc((d.rev||'').slice(0,10))} · ${esc(d.revuser||'—')}</span>\n  <span class="c">licence ${esc(D.ingestLicense)} — unchanged, unforked, still theirs</span>`;
+      }).join('\n\n')
+    : '<span class="c">// nothing referenced yet</span>';
+}
+
+// toolbar
+const tools = document.getElementById('ov-tools');
+const b1 = h('button', 'chip-btn', 'shelve all 10');
+b1.onclick = () => { POOL.forEach((d, k) => { if (!shelved.has(d.title)) shelved.set(d.title, entryFor(d, shelved.size)); });
+  render(CH4.i); toast('10 entries · still zero bodies'); };
+const b2 = h('button', 'chip-btn', 'clear');
+b2.onclick = () => { shelved.clear(); render(CH4.i); };
+tools.appendChild(b1); tools.appendChild(b2);
+tools.appendChild(h('span', 'hint', 'an overlay is a group\'s order over a corpus it does not hold'));
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ §5 · bands and forms */
+(function(){
+const BANDS = ['far','mid','near','full'];
+const BLABEL = {far:'a glyph', mid:'a list row', near:'a result card', full:'the document'};
+const R = D.render, doc = byTitle[R.title];
+let resident = true;                 // a federated upstream cannot serve `full`
+let pivotRegistered = false;         // is a translation engine plugged in?
+let requested = 'translation';
+
+function servedBand(b) { return (b === 'full' && !resident) ? 'near' : b; }
+function bandText(b) {
+  const served = servedBand(b);
+  if (served === 'far')  return '';
+  if (served === 'mid')  return trim(R.forms.text, 240);
+  if (served === 'near') return trim(doc.lead, 460);
+  return R.forms.text;
+}
+/** render.ts: walk FALLBACK down until a form can actually be produced. */
+function walk(form) {
+  const path = [form];
+  let cur = form;
+  const producible = f => ['text','markdown','chunks','excerpt'].includes(f)
+    || (f === 'translation' && pivotRegistered);
+  while (!producible(cur)) {
+    const next = R.ladder[cur];
+    if (!next || next === cur) break;
+    cur = next; path.push(cur);
+  }
+  return {path, form: cur, degraded_from: path.length > 1 ? form : null};
+}
+
+chapter(5, {
+  steps: [
+    {label:'four rungs', tag:'lod-band.ts', cap:'A map, a list and a reader want three different amounts of the same answer. Rather than three queries against one corpus, one query names a <b>band</b>.'},
+    {label:'the same article, four ways', tag:'one query', cap:'Same article, same retrieval, four amounts of it. <code>far</code> is identity only — no body at all — and it is deliberately not free, because telling a caller that a document exists and matches their query is itself disclosure.'},
+    {label:'the charge follows', tag:'disclosure', cap:'Each rung carries a cost. <code>near</code> stays at 1 so a caller who never heard of bands sees an unchanged budget and a byte-identical response.'},
+    {label:'a rung you cannot serve', tag:'no silent downgrade', cap:'<code>full</code> needs a document body, which only a collection you actually hold can produce. Asked of a federated upstream it is served at <code>near</code> — <b>and the caller is told</b>, rather than handed a fragment labelled <code>full</code>. Charging for what was not disclosed would be billing for a lie.'},
+    {label:'form, not just amount', tag:'/v1/render', cap:'Beyond how much, there is <i>what shape</i>. When a rich form has no engine behind it, the request walks down a ladder to something plainer that always succeeds — and the answer carries <code>degraded_from</code> so nobody downstream mistakes the fallback for the real thing.'},
+  ],
+  draw(i, st) {
+    if (!st.scene) {
+      const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+      s.appendChild(label(`${R.title} · one retrieval, four bands`, 24, 32, {size:11, fill:COL.ink3}));
+      sc.cols = BANDS.map((b, k) => {
+        const x = 24 + k * 244, g = el('g', {opacity:0});
+        const cd = card(x, 52, 220, 372, {fill:'rgba(14,22,28,.7)', stroke:'rgba(166,232,106,.3)'});
+        cd.appendChild(label(b, 14, 24, {size:12, fill:COL.lime, ls:1.4}));
+        cd.appendChild(label(BLABEL[b], 206, 24, {size:9, fill:COL.ink4, anchor:'end'}));
+        const budget = D.bands[b].chars;
+        cd.appendChild(label(budget === null ? 'snippet ∞' : `snippet ${budget} chars`, 14, 42, {size:9, fill:COL.ink4}));
+        const body = el('g'); cd.appendChild(body);
+        const note = label('', 14, 352, {size:9, fill:COL.warn});
+        cd.appendChild(note);
+        const cost = label('', 206, 352, {size:11, fill:'#fff', anchor:'end'});
+        cd.appendChild(cost);
+        g.appendChild(cd); s.appendChild(g);
+        return {g, body, note, cost, b, x};
+      });
+      sc.meter = el('g', {opacity:0});
+      sc.meter.appendChild(label('disclosure charged, per result', 24, 456, {size:10, fill:COL.ink3}));
+      sc.bars = BANDS.map((b, k) => {
+        const x = 24 + k*244;
+        const bg = el('rect', {x, y:468, width:220, height:8, rx:4, fill:'rgba(150,170,230,.12)'});
+        const fg = el('rect', {x, y:468, width:0, height:8, rx:4, fill:COL.lime, opacity:.8});
+        sc.meter.appendChild(bg); sc.meter.appendChild(fg);
+        sc.meter.appendChild(label('', x, 494, {size:9.5, fill:COL.ink3}));
+        return {fg, lbl: sc.meter.lastChild, b};
+      });
+      s.appendChild(sc.meter);
+    }
+
+    const sc = st.scene;
+    sc.cols.forEach((c, k) => {
+      c.g.style.transition = `opacity ${DUR}ms ${EASE} ${k*90}ms`;
+      requestAnimationFrame(() => c.g.style.opacity = i >= 1 ? 1 : 0.18);
+      c.body.innerHTML = '';
+      if (i >= 1) {
+        const served = servedBand(c.b);
+        if (served === 'far') {
+          c.body.appendChild(el('circle', {cx:110, cy:150, r:9, fill:COL.lime, opacity:.85}));
+          c.body.appendChild(label(trim(R.title, 22), 110, 182, {size:10.5, fill:COL.ink2, anchor:'middle'}));
+          c.body.appendChild(label('identity only', 110, 200, {size:9, fill:COL.ink4, anchor:'middle'}));
+        } else {
+          wrap(bandText(c.b), 34, served === 'full' ? 17 : (served === 'near' ? 11 : 6))
+            .forEach((ln, j) => c.body.appendChild(label(ln, 14, 68 + j*15.5, {size:9.5, fill:COL.ink2})));
+        }
+        const downgraded = servedBand(c.b) !== c.b;
+        c.note.textContent = downgraded ? `served at ${servedBand(c.b)} — told, not silent` : '';
+        c.cost.textContent = i >= 2 ? `${D.bands[servedBand(c.b)].cost} unit` : '';
+        c.g.querySelector('rect').setAttribute('stroke', downgraded && i >= 3 ? COL.warn : 'rgba(166,232,106,.3)');
+      }
+    });
+    fade(sc.meter, i >= 2 ? 1 : 0);
+    sc.bars.forEach(({fg, lbl, b}) => {
+      const cost = D.bands[servedBand(b)].cost;
+      anim(fg, {width: i >= 2 ? (cost / 3) * 220 : 0});
+      lbl.textContent = i >= 2 ? `${b}${servedBand(b) !== b ? ' → ' + servedBand(b) : ''} · ${cost}` : '';
+    });
+
+    renderForms();
+    const total = BANDS.reduce((a, b) => a + D.bands[servedBand(b)].cost, 0);
+    document.getElementById('read5').innerHTML =
+      `<div class="read">bands <span class="big">4</span></div>` +
+      `<div class="read">far <b>${D.bands.far.cost}</b></div>` +
+      `<div class="read">mid <b>${D.bands.mid.cost}</b></div>` +
+      `<div class="read">near <b>${D.bands.near.cost}</b></div>` +
+      `<div class="read">full <b>${D.bands.full.cost}</b></div>` +
+      `<div class="read">this row costs <b>${total.toFixed(2)}</b></div>`;
+    document.getElementById('hint5').textContent = resident
+      ? 'collection is resident — every band is servable'
+      : 'collection is federated — `full` degrades to `near`';
+  }
+});
+
+function renderForms() {
+  const w = walk(requested);
+  const out = document.getElementById('form-out');
+  const produced = w.form === 'chunks'
+    ? R.forms.chunks.slice(0, 3).map((c, k) => `[${k+1}] ${c.heading || '(lead)'}\n    ${trim(c.text, 150)}`).join('\n')
+    : trim(R.forms[w.form] || R.forms.text, 620);
+  out.innerHTML =
+    `<span class="k">requested</span>: <span class="s">${esc(requested)}</span>\n` +
+    `<span class="k">form</span>     : <span class="s">${esc(w.form)}</span>\n` +
+    (w.degraded_from ? `<span class="k">degraded_from</span>: <span class="s">${esc(w.degraded_from)}</span>\n` : '') +
+    `\n${esc(produced)}`;
+
+  document.getElementById('ladder-out').innerHTML =
+    w.path.map((f, k) => {
+      const last = k === w.path.length - 1;
+      return `${k ? '   ↓ ' : '     '}<span class="${last ? 's' : ''}">${esc(f)}</span>` +
+             (last ? '   <span class="c">← produced</span>' : '   <span class="c">no engine registered</span>');
+    }).join('\n') +
+    `\n\n<span class="c">// every chain terminates at \`text\`, which never fails.\n` +
+    `// the translation pivot is ${pivotRegistered ? 'REGISTERED — the rich form is produced' : 'NOT registered — the request degrades'}.</span>`;
+}
+
+const bt = document.getElementById('band-tools');
+['translation','summary','okf','opds','chunks','markdown'].forEach(f => {
+  const b = h('button', 'chip-btn' + (f === requested ? ' on' : ''), f);
+  b.onclick = () => { requested = f; [...bt.querySelectorAll('.chip-btn')].forEach(c => {
+      if (['translation','summary','okf','opds','chunks','markdown'].includes(c.textContent)) c.classList.remove('on'); });
+    b.classList.add('on'); renderForms(); };
+  bt.appendChild(b);
+});
+const tp = h('button', 'chip-btn', 'translation pivot: off');
+tp.onclick = () => { pivotRegistered = !pivotRegistered; tp.textContent = 'translation pivot: ' + (pivotRegistered ? 'on' : 'off');
+  tp.classList.toggle('on', pivotRegistered); renderForms(); };
+bt.appendChild(tp);
+const rs = h('button', 'chip-btn on', 'collection: resident');
+rs.onclick = () => { resident = !resident; rs.textContent = 'collection: ' + (resident ? 'resident' : 'federated');
+  rs.classList.toggle('on', resident); const c = CHAPTERS.find(x => x.n === 5); if (c.drawn) c.set(c.i); };
+bt.appendChild(rs);
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ §6 · ground & derive */
+(function(){
+let band = 'near';
+const SCOL = {grounded: COL.good, uncertain: COL.warn, unsupported: COL.bad};
+const G = () => D.grounding[band];
+
+/** Two honest readings of "how much of this is carried by the sources". */
+function scores(g) {
+  const n = g.claims.length || 1;
+  const strict = g.claims.filter(c => c.grounding_status === 'grounded').length / n;
+  const any = g.claims.filter(c => c.grounding_status !== 'unsupported').length / n;
+  return {strict, any, n};
+}
+
+const CH6 = chapter(6, {
+  steps: [
+    {label:'a real answer', tag:'gx10-general', cap:'A local model, the five sources retrieval actually returned, and no editing. It reads well. Reading well is exactly the problem: prose quality tells you nothing about whether the sources carry the claims.'},
+    {label:'split into claims', tag:'splitClaims()', cap:'The answer is cut into sentences and each is treated as a separate assertion. Fragments under four words are dropped — they carry no checkable claim.'},
+    {label:'measure the coverage', tag:'supportScore()', cap:'For each claim, the fraction of its <b>significant words</b> that appear in a source. Deterministic, no model in the loop, and the same input always gives the same verdict — which is what makes it worth attaching to a receipt.'},
+    {label:'raise the disclosure', tag:'band: near → full', cap:'Same question, same sources, more of each source revealed. Watch the weakest claim: at <code>near</code> nothing supports it, at <code>full</code> the sources do carry it. <b>Grounding is bounded by how much you were willing to disclose.</b>'},
+    {label:'the licence is computed', tag:'deriveLicense()', cap:'A derivative of share-alike <i>is</i> share-alike, so the licence is computed from the sources and a caller-supplied one is ignored. An unknown source resolves to the most restrictive answer — otherwise "we could not tell" becomes the cheapest route to an unencumbered work.'},
+    {label:'confidence cannot go up', tag:'deriveConfidence()', cap:'<code>min(sources) × grounding</code>. The minimum, not an average — an average lets one strong source carry several weak ones, which is precisely the laundering. <b>No path through this raises confidence.</b>'},
+  ],
+  draw(i, st) {
+    const g = G(), sc0 = scores(g);
+    if (!st.scene || st.scene.band !== band) {
+      const s = st.svg; s.innerHTML = ''; const sc = st.scene = {band};
+
+      s.appendChild(label(`“${trim(g.question, 76)}”`, 24, 30, {size:11, fill:COL.ink3}));
+      s.appendChild(label(`band: ${band}`, 976, 30, {size:10, fill:COL.rose, anchor:'end'}));
+
+      // the answer as one block (step 0)
+      sc.prose = el('g');
+      const pc = card(24, 48, 952, 132, {fill:'rgba(24,16,24,.75)', stroke:'rgba(255,134,168,.28)'});
+      wrap(g.answer, 128, 6).forEach((ln, k) => pc.appendChild(label(ln, 16, 28 + k*20, {size:11, fill:COL.ink2})));
+      sc.prose.appendChild(pc); s.appendChild(sc.prose);
+
+      // claims (step 1+)
+      sc.claims = el('g', {opacity:0});
+      sc.claimRows = g.claims.map((c, k) => {
+        const y = 200 + k * 74;
+        const cd = card(24, y, 536, 64, {fill:'rgba(20,18,32,.88)', stroke:'rgba(150,170,230,.2)'});
+        wrap(c.text, 80, 2).forEach((ln, j) => cd.appendChild(label(ln, 14, 24 + j*16, {size:10, fill:COL.ink2})));
+        const badge = label('', 522, 54, {size:9.5, anchor:'end', fill:SCOL[c.grounding_status]});
+        cd.appendChild(badge);
+        const bar = el('rect', {x:14, y:54, width:0, height:3, rx:1.5, fill:SCOL[c.grounding_status]});
+        cd.appendChild(bar);
+        sc.claims.appendChild(cd);
+        return {cd, badge, bar, c, y};
+      });
+      s.appendChild(sc.claims);
+
+      // sources
+      sc.srcs = el('g', {opacity:0});
+      sc.srcRows = g.sources.map((sd, k) => {
+        const y = 200 + k * 74;
+        const cd = card(660, y, 316, 64, {fill:'rgba(16,24,36,.88)', stroke:'rgba(94,240,223,.24)'});
+        cd.appendChild(label(trim(sd.title, 34), 12, 22, {size:10.5, fill:COL.cyan}));
+        cd.appendChild(label(sd.id, 12, 38, {size:8.5, fill:COL.ink4}));
+        cd.appendChild(label(`${band === 'full' ? 'document body' : 'card snippet'} · ${sd.text.length} ch`, 12, 54, {size:8.5, fill:COL.ink4}));
+        sc.srcs.appendChild(cd);
+        return {cd, sd, y};
+      });
+      s.appendChild(sc.srcs);
+      sc.wires = el('g', {opacity:0}); s.appendChild(sc.wires);
+      sc.derive = el('g', {opacity:0}); s.appendChild(sc.derive);
+    }
+
+    const sc = st.scene;
+    fade(sc.prose, i >= 1 ? 0 : 1);
+    fade(sc.claims, i >= 1 ? 1 : 0);
+    fade(sc.srcs, i >= 2 ? 1 : 0);
+    // the prose block is gone by step 1; pull the columns up into the space it left
+    const lift = i >= 1 ? -132 : 0;
+    [sc.claims, sc.srcs, sc.wires].forEach(g => anim(g, {transform:`translate(0,${lift})`}));
+
+    sc.claimRows.forEach(({badge, bar, c}, k) => {
+      badge.textContent = i >= 2 ? `${c.grounding_status} · ${c.score.toFixed(3)}` : '';
+      bar.style.transition = `width ${DUR}ms ${EASE} ${k*80}ms`;
+      requestAnimationFrame(() => bar.setAttribute('width', i >= 2 ? c.score * 508 : 0));
+    });
+
+    sc.wires.innerHTML = '';
+    if (i >= 2) {
+      sc.claimRows.forEach(({c, y}) => {
+        c.citations.forEach(cid => {
+          const s2 = sc.srcRows.find(r => r.sd.id === cid); if (!s2) return;
+          sc.wires.appendChild(el('path', {
+            d:`M560 ${y+32} C608 ${y+32} 612 ${s2.y+32} 660 ${s2.y+32}`,
+            fill:'none', stroke:SCOL[c.grounding_status], 'stroke-width':1, opacity:.42}));
+        });
+        if (!c.citations.length) {
+          sc.wires.appendChild(el('path', {d:`M560 ${y+32} l34 0`, stroke:COL.bad,
+            'stroke-width':1, 'stroke-dasharray':'3 3', opacity:.6}));
+        }
+      });
+      fade(sc.wires, 1);
+    }
+
+    // derive panel
+    fade(sc.derive, i >= 4 ? 1 : 0);
+    if (i >= 4) {
+      sc.derive.innerHTML = '';
+      const dy = 200 + Math.max(sc.claimRows.length, sc.srcRows.length) * 74 + 8 + lift;
+      const dc = card(24, dy, 952, 128, {fill:'rgba(18,16,32,.94)', stroke:'rgba(184,132,255,.4)'});
+      dc.appendChild(label('the derived work', 16, 24, {size:10, fill:COL.violet, ls:1.3}));
+      const conf = 1 * sc0.any;
+      const rows = [
+        ['sources', `${g.sources.length} × ${D.ingestLicense} · each a primary (confidence 1.0)`, COL.ink2],
+        ['licence  = most restrictive of sources', `${D.ingestLicense}  ·  share-alike: obligatory`, COL.gold],
+        [`grounding = claims not unsupported (${sc0.n - g.claims.filter(c=>c.grounding_status==='unsupported').length}/${sc0.n})`, sc0.any.toFixed(3), COL.cyan],
+        ['confidence = min(sources) × grounding', `1.000 × ${sc0.any.toFixed(3)} = ${conf.toFixed(3)}`, i >= 5 ? '#fff' : COL.ink4],
+        ['actor, licence, confidence', 'all COMPUTED — a caller cannot supply any of the three', COL.ink3],
+      ];
+      rows.forEach(([k2, v, c], j) => {
+        dc.appendChild(label(k2, 16, 48 + j*18, {size:9.5, fill:COL.ink4}));
+        dc.appendChild(label(v, 936, 48 + j*18, {size:9.5, fill:c, anchor:'end'}));
+      });
+      sc.derive.appendChild(dc);
+      st.svg.setAttribute('viewBox', `0 0 1000 ${dy + 150 + lift}`);
+    } else {
+      st.svg.setAttribute('viewBox', `0 0 1000 ${200 + Math.max(sc.claimRows.length, sc.srcRows.length)*74 + 20 + lift}`);
+    }
+
+    const nUnsup = g.claims.filter(c => c.grounding_status === 'unsupported').length;
+    document.getElementById('read6').innerHTML =
+      `<div class="read">band <b style="color:${COL.rose}">${band}</b></div>` +
+      `<div class="read">claims <span class="big">${sc0.n}</span></div>` +
+      `<div class="read">unsupported <b style="color:${nUnsup ? COL.bad : COL.good}">${nUnsup}</b></div>` +
+      `<div class="read">grounded ≥0.6 <b>${(sc0.strict*100).toFixed(0)}%</b></div>` +
+      `<div class="read">any support ≥0.3 <b>${(sc0.any*100).toFixed(0)}%</b></div>` +
+      `<div class="read">best claim <b>${Math.max(...g.claims.map(c=>c.score)).toFixed(3)}</b></div>`;
+    document.getElementById('hint6').textContent = `${g.sources.length} sources · ${band} band`;
+
+    const nearW = Math.min(...D.grounding.near.claims.map(c => c.score));
+    const fullW = Math.min(...D.grounding.full.claims.map(c => c.score));
+    const nearG = D.grounding.near.claims.filter(c => c.grounding_status === 'grounded').length;
+    const fullG = D.grounding.full.claims.filter(c => c.grounding_status === 'grounded').length;
+    const nearU = D.grounding.near.claims.filter(c => c.grounding_status === 'unsupported').length;
+    const fullU = D.grounding.full.claims.filter(c => c.grounding_status === 'unsupported').length;
+    document.getElementById('note6').innerHTML = i >= 2 ? (
+      `<b>Read the numbers, not the vibe.</b> At the <code>near</code> band the weakest claim scores ` +
+      `${nearW.toFixed(3)} with ${nearU} claim${nearU === 1 ? '' : 's'} unsupported; at <code>full</code> the ` +
+      `weakest scores ${fullW.toFixed(3)} with ${fullU} unsupported, and ${fullG} of ` +
+      `${D.grounding.full.claims.length} claims clear the <code>grounded</code> threshold of 0.6 ` +
+      `(against ${nearG} at <code>near</code>). More disclosure bought better grounding — which is the ` +
+      `honest trade the band mechanism exists to price. ` +
+      `Note also how strict this measure is: v1 scores coverage by significant-word overlap, and a model ` +
+      `that paraphrases well reuses few of the source's exact words, so a sound sentence can still land in ` +
+      `<i>uncertain</i>. That is a known limit of the lexical scorer, not a verdict on the answer — the ` +
+      `module is written so it can be swapped for a semantic measure without changing the contract.`
+    ) : '';
+  }
+});
+
+const gt = document.getElementById('g-tools');
+['near','full'].forEach(b => {
+  const btn = h('button', 'chip-btn' + (b === band ? ' on' : ''), `band: ${b}`);
+  btn.onclick = () => { band = b; [...gt.querySelectorAll('.chip-btn')].forEach(c => c.classList.remove('on'));
+    btn.classList.add('on'); CH6.scene = null; CH6.set(CH6.i); };
+  gt.appendChild(btn);
+});
+gt.appendChild(h('span', 'hint', 'the answer, the sources and every score below are real output, not written copy'));
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════ outro + guided tour */
+(function(){
+const unfiled = D.docs.filter(d => !d.facets.length).length;
+const cards = [
+  ['#5ef0df', 'A slice, not the index',
+   `This page works over <b>${D.docs.length} articles</b> pulled live from a wiki of ` +
+   `<b>${fmt(D.wiki.articles)}</b>. The production gateway indexes the whole main namespace from the ` +
+   `weekly dump — the mechanisms are the same at both sizes, but a link-centrality figure computed over ` +
+   `77 articles is not the one you would get over 38,000. Inbound-link counts shown here are real and ` +
+   `whole-wiki; the demo's own edge lists are restricted to this slice.`],
+  ['#b884ff', 'Precomputed, not live',
+   `Every number was produced by running the gateway's real algorithms — de-markup, facet matching, BM25, ` +
+   `768-dimension embeddings, RRF, saturating rank signals, grounding coverage — over real wiki content, ` +
+   `then baked into this page. Nothing is invented, and nothing is being called at page load either: ` +
+   `the page is static so it cannot go down, and so a reader is never waiting on a model.`],
+  ['#ffc46b', 'It found a real bug',
+   `Building §2 turned up a live defect in the reading-room taxonomy: the lens keywords are ` +
+   `<code>peer production</code>, <code>peer governance</code>, <code>peer property</code>, while the wiki's ` +
+   `actual categories are <code>Peerproduction</code>, <code>Peergovernance</code>, <code>Peerproperty</code>. ` +
+   `Substring matching never fires. <b>${unfiled} of ${D.docs.length}</b> articles here are unfiled, and the ` +
+   `most-linked peer-production article is one of them.`],
+];
+document.getElementById('honest').innerHTML = cards.map(([c, t, b]) =>
+  `<div class="pane" style="border-color:${c}33"><h4 style="color:${c}">${t}</h4>
+   <div style="font-size:13.5px;color:var(--ink-2);line-height:1.6">${b}</div></div>`).join('');
+
+document.getElementById('outro-note').innerHTML =
+  `<b>Reproduce it.</b> <code>demo/aiwiki/scripts/build-corpus.py</code> fetches the articles, backlinks and ` +
+  `site statistics from <code>wiki.p2pfoundation.net</code>, embeds them, runs every algorithm above and ` +
+  `writes the JSON this page is built from. Re-run it and the page rebuilds against whatever the wiki says ` +
+  `that day — which is the only honest way to demo a corpus that people are still editing.`;
+
+document.getElementById('footer').innerHTML =
+  `P2P Foundation Wiki · ${fmt(D.wiki.pages)} pages · ${esc(D.wiki.generator)} · corpus read ${esc(D.fetchedAt)}<br>` +
+  `Article text is the wiki's, ingested as ${esc(D.ingestLicense)} with its contributor lineage intact. ` +
+  `Retrieval, grounding and derivation logic mirror the Portico gateway in rspace-online.<br>` +
+  `<a href="https://wiki.p2pfoundation.net">wiki.p2pfoundation.net</a> · ` +
+  `<a href="https://p2pfoundation.net">p2pfoundation.net</a>`;
+
+/* guided tour — walk every chapter, one step at a time */
+let touring = false;
+const btn = document.getElementById('btn-tour');
+btn.onclick = async () => {
+  if (touring) { touring = false; btn.textContent = '▶ Play the whole tour'; return; }
+  touring = true; btn.textContent = '■ Stop';
+  for (const ch of CHAPTERS) {
+    if (!touring) break;
+    document.getElementById('ch' + ch.n).scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block:'start'});
+    await sleep(700);
+    ch.drawn = true;
+    for (let i = 0; i < ch.def.steps.length; i++) {
+      if (!touring) break;
+      ch.set(i);
+      await sleep(2600);
+    }
+  }
+  if (touring) document.getElementById('outro').scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth'});
+  touring = false; btn.textContent = '▶ Play the whole tour';
+};
+
+// keyboard: ← / → step the chapter nearest the middle of the viewport
+addEventListener('keydown', e => {
+  if (!['ArrowLeft','ArrowRight'].includes(e.key)) return;
+  if (/input|textarea/i.test(document.activeElement?.tagName || '')) return;
+  const mid = innerHeight / 2;
+  let best = null, bd = Infinity;
+  for (const ch of CHAPTERS) {
+    const r = document.getElementById('ch' + ch.n).getBoundingClientRect();
+    const d = Math.abs((r.top + r.bottom) / 2 - mid);
+    if (r.bottom > 0 && r.top < innerHeight && d < bd) { bd = d; best = ch; }
+  }
+  if (best) { best.drawn = true; best.set(best.i + (e.key === 'ArrowRight' ? 1 : -1)); e.preventDefault(); }
+});
+})();
+</script>
+</body>
+</html>

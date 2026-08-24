@@ -212,3 +212,35 @@ Netcup**, which holds the authentic versions.
   refuses and the standby could never be resynced.
 - **The standby is now far behind** (46,852 revisions vs 150,071) and is a
   read-only last resort, not a peer.
+
+## Postscript: the outage quietly froze the GitHub copy
+
+Worth recording because the symptom looks like a lagging mirror and is not one.
+
+While Netcup was dark, Gitea was dark with it, so work went straight to GitHub —
+the documented stopgap. Five direct pushes on 2026-08-20, the last at 14:09:35Z
+(`381b75b3`). When Gitea came back, pushes went there instead, and GitHub simply
+stopped, 21 commits behind.
+
+**This repo had no push mirror at all.** Not a broken one — none. Gitea's
+mirroring is selective, not estate-wide: 78 of 376 repos have one, and
+`jeffemmett/p2pfoundation-wiki` was never among them. The machinery was healthy
+throughout (85 mirrors, 0 never-run, syncs seconds old), which is exactly what
+made the gap read as latency.
+
+So the check that matters is not "is the mirror lagging" but **"does a mirror
+exist"**:
+
+    GET /api/v1/repos/{owner}/{repo}/push_mirrors     # count: 0 means never
+
+Fixed both ways on 2026-08-24: a one-off direct push to catch up, then a real
+push mirror (`sync_on_commit: true`, 8h interval) so it stays caught up.
+Credentials came from `isec://claude-ops/prod/local/GITEA_TOKEN` and
+`isec://claude-ops/prod/local/GITEA_GITHUB_MIRROR_TOKEN` — note **`local/`**, not
+`git/`: `git/GITEA_TOKEN` and `git/GITEA_TOKEN_LOCAL` both 401 against this
+instance.
+
+Mirror credentials live in the bare repo's git config on the Gitea host, not in
+the database — `push_mirror.remote_address` is stored credential-free. A repo
+whose config holds a `remote_mirror_*` URL with **no** credentials in it is a
+fossil of the shared token that died in July 2026, not a working mirror.

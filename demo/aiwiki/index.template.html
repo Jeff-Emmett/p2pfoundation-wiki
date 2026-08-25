@@ -20,6 +20,7 @@
   --font-display:'Instrument Serif', Georgia, serif;
   --font-body:'Hanken Grotesk', system-ui, -apple-system, sans-serif;
   --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --top:54px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;}
@@ -48,7 +49,7 @@ a:hover{color:var(--c-cyan);}
 /* ---------- top bar ---------- */
 .topbar{position:sticky; top:0; z-index:30; backdrop-filter:blur(10px);
   background:linear-gradient(180deg,rgba(6,8,14,.9),rgba(6,8,14,.34)); border-bottom:1px solid var(--line);}
-.topbar .row{display:flex; align-items:center; gap:14px; height:54px;}
+.topbar .row{display:flex; align-items:center; gap:14px; height:var(--top);}
 .brand{font-family:var(--font-display); font-size:1.25rem; white-space:nowrap;}
 .brand b{font-weight:400; background:linear-gradient(90deg,var(--c-cyan),var(--c-violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
 .topnav{margin-left:auto; display:flex; gap:16px; font-size:12.5px; font-family:var(--font-mono); color:var(--ink-3);}
@@ -77,53 +78,90 @@ a:hover{color:var(--c-cyan);}
 .provenance b{color:var(--ink-2); font-weight:500;}
 
 /* ---------- chapters ---------- */
-.chapter{padding:4.2rem 0 1rem; border-top:1px solid var(--line); margin-top:3rem; scroll-margin-top:64px;}
-.chapter .head{max-width:780px;}
+.chapter{padding:3.4rem 0 0; border-top:1px solid var(--line); margin-top:2.6rem; scroll-margin-top:var(--top);}
+.chapter .wrap{max-width:1340px;}
+.chapter .head{max-width:800px;}
 .chapter .num{font-family:var(--font-mono); font-size:12px; letter-spacing:.18em; color:var(--a,var(--c-cyan));}
 .chapter h2{text-wrap:balance; font-family:var(--font-display); font-size:clamp(1.85rem,4.2vw,2.7rem); font-weight:400; margin:.35rem 0 .5rem;}
 .chapter .lede{color:var(--ink-2); font-size:1.01rem; max-width:66ch;}
 .chapter .lede code{font-family:var(--font-mono); font-size:.86em; color:var(--a,var(--c-cyan)); background:rgba(255,255,255,.05); padding:1px 5px; border-radius:5px;}
+.chapter .extras{margin-top:1.2rem; padding-bottom:.4rem;}
 
-/* stage */
-.stage{position:relative; border-radius:22px; margin-top:1.5rem; padding:16px;
+/* ---------- the scene: one frame, one screen ----------
+   A scene is a fixed-height column: controls, stage, caption, readouts. The
+   stage takes whatever is left, and the SVG is drawn to that box in CSS pixels
+   (see metrics() in the script) — so nothing is ever scaled into illegibility
+   and nothing ever spills off the bottom of the screen. */
+.scene{
+  height:calc(100svh - var(--top) - 10px);
+  min-height:min(560px, calc(100svh - var(--top) - 10px));
+  max-height:1040px;
+  margin-top:1.2rem;
+  display:flex; flex-direction:column; gap:9px;
+  scroll-margin-top:calc(var(--top) + 4px);
+}
+.scene .stage{
+  flex:1 1 auto; min-height:170px; position:relative; padding:14px; margin:0;
+  border-radius:20px; border:1px solid var(--line);
   background:radial-gradient(760px 340px at 50% -12%, color-mix(in srgb,var(--a,var(--c-cyan)) 12%, transparent), transparent 70%), rgba(10,14,26,.5);
-  border:1px solid var(--line);}
-svg.viz{display:block; width:100%; height:auto; touch-action:manipulation; border-radius:14px; overflow:visible;}
+}
+/* Sized by explicit percentages, never by `auto`: an SVG is a replaced element,
+   so with auto width/height an absolutely positioned one falls back to its
+   viewBox ratio instead of honouring right/bottom. */
+svg.viz{position:absolute; left:14px; top:14px; width:calc(100% - 28px); height:calc(100% - 28px);
+  display:block; touch-action:manipulation; overflow:visible;}
 
-/* stepper */
-.stepper{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 6px;}
-.step{font-family:var(--font-mono); font-size:12px; padding:8px 12px; border-radius:10px; cursor:pointer;
-  border:1px solid var(--line); background:rgba(18,24,42,.6); color:var(--ink-2); transition:.18s; text-align:left;}
+/* one control row: steps, hint, pager. Chapter tool rows use the same shell.
+   A tool row never wraps — six query chips wrapping into six lines cost the
+   stage more height than the diagram had. */
+.controls{display:flex; flex-wrap:wrap; align-items:center; gap:8px; flex:0 0 auto;}
+.controls .grow{flex:1 1 auto; min-width:0;}
+.controls.tools{flex-wrap:nowrap; overflow-x:auto; overflow-y:hidden; padding-bottom:2px;
+  scrollbar-width:none; -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent);}
+.controls.tools::-webkit-scrollbar{display:none;}
+.controls.tools > *{flex:0 0 auto;}
+.stepper{display:flex; flex-wrap:wrap; gap:7px; margin:0;}
+.step{font-family:var(--font-mono); font-size:12px; padding:7px 11px; border-radius:9px; cursor:pointer;
+  border:1px solid var(--line); background:rgba(18,24,42,.6); color:var(--ink-2); transition:.18s; text-align:left; white-space:nowrap;}
 .step:hover{border-color:var(--line-2); color:var(--ink);}
 .step.on{border-color:var(--a,var(--c-cyan)); color:#fff; background:color-mix(in srgb,var(--a,var(--c-cyan)) 14%, rgba(18,24,42,.6));
   box-shadow:0 0 0 1px color-mix(in srgb,var(--a,var(--c-cyan)) 40%,transparent) inset;}
 .step .k{color:var(--a,var(--c-cyan)); margin-right:6px;}
-.pager{display:flex; align-items:center; gap:10px; margin-top:8px; font-family:var(--font-mono); font-size:12px; color:var(--ink-3);}
-.pager .mini{padding:6px 10px; border:1px solid var(--line); border-radius:8px; cursor:pointer; color:var(--ink-2); background:rgba(18,24,42,.6);}
+.pager{display:flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:12px; color:var(--ink-3);}
+.pager .mini{padding:6px 11px; border:1px solid var(--line); border-radius:8px; cursor:pointer; color:var(--ink-2); background:rgba(18,24,42,.6);}
 .pager .mini:hover{border-color:var(--c-cyan); color:#fff;}
-.pager .grow{flex:1;}
-.caption{margin-top:10px; min-height:3.2em; color:var(--ink-2); font-size:14px; max-width:74ch;}
+.pager .mini:disabled{opacity:.32; cursor:default; border-color:var(--line);}
+
+/* Caption height is measured across every step of the chapter and pinned, so
+   stepping never resizes the stage — a resized stage would have to be redrawn,
+   and a redrawn stage cannot animate. */
+.caption{flex:0 0 auto; color:var(--ink-2); font-size:14px; line-height:1.5;
+  overflow-y:auto; overflow-x:hidden; scrollbar-width:thin;}
 .caption b{color:#fff; font-weight:600;}
 .caption code{font-family:var(--font-mono); font-size:.86em; color:var(--a,var(--c-cyan));}
 .caption .tag{font-family:var(--font-mono); font-size:11px; color:var(--a,var(--c-cyan)); border:1px solid var(--line-2);
-  border-radius:999px; padding:1px 8px; margin-right:6px; white-space:nowrap;}
+  border-radius:999px; padding:1px 8px; margin-right:7px; white-space:nowrap;}
 
-/* readouts / chips / toolbars */
-.readrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
-.read{font-family:var(--font-mono); font-size:12px; padding:7px 11px; border-radius:10px; border:1px solid var(--line); background:rgba(18,24,42,.55); color:var(--ink-2);}
+/* readouts: always exactly one row — a wrapping row would change the stage height */
+.readrow{flex:0 0 auto; display:flex; flex-wrap:nowrap; gap:8px; overflow-x:auto; overflow-y:hidden;
+  scrollbar-width:none; -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 26px),transparent);}
+.readrow::-webkit-scrollbar{display:none;}
+.read{flex:0 0 auto; font-family:var(--font-mono); font-size:12px; padding:7px 11px; border-radius:10px; border:1px solid var(--line); background:rgba(18,24,42,.55); color:var(--ink-2); white-space:nowrap;}
 .read b{color:#fff;} .read .big{font-size:15px; color:var(--a,var(--c-cyan));}
+
 .toolbar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px;}
 .chip-btn{font-family:var(--font-mono); font-size:11.5px; padding:6px 10px; border-radius:999px; cursor:pointer;
   border:1px solid var(--line-2); background:rgba(18,24,42,.6); color:var(--ink); transition:.15s; user-select:none;
-  display:inline-flex; gap:6px; align-items:center;}
+  display:inline-flex; gap:6px; align-items:center; white-space:nowrap;}
 .chip-btn:hover{border-color:var(--c-cyan); color:#fff;}
 .chip-btn.on{border-color:var(--a,var(--c-cyan)); background:color-mix(in srgb,var(--a,var(--c-cyan)) 18%, rgba(18,24,42,.6)); color:#fff;}
 .chip-btn .dot{width:8px; height:8px; border-radius:50%; flex:none;}
-.hint{font-family:var(--font-mono); font-size:11px; color:var(--ink-3);}
+.hint{font-family:var(--font-mono); font-size:11px; color:var(--ink-3); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:0 1 auto; min-width:0; margin-right:4px;}
 
 /* note / callout */
 .note{margin-top:14px; border:1px solid var(--line); border-left:2px solid var(--a,var(--c-cyan)); border-radius:0 12px 12px 0;
   padding:12px 14px; background:rgba(18,24,42,.45); font-size:13.5px; color:var(--ink-2); max-width:78ch;}
+.note:empty{display:none;}
 .note b{color:#fff;} .note code{font-family:var(--font-mono); font-size:.87em; color:var(--a,var(--c-cyan));}
 .note.finding{border-left-color:var(--warn);} .note.finding b{color:var(--warn);}
 
@@ -144,6 +182,13 @@ svg.viz{display:block; width:100%; height:auto; touch-action:manipulation; borde
 .artcard .m{font-family:var(--font-mono); font-size:10.5px; color:var(--ink-3); margin-top:4px;}
 .artcard .x{font-size:12px; color:var(--ink-2); margin-top:6px; line-height:1.45;}
 
+/* a quiet marker that a chapter carries supporting material under the fold.
+   It is always in the layout and only toggles visibility, so showing it never
+   resizes the stage. */
+.more{flex:0 0 auto; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-4); text-align:center; visibility:hidden;}
+.more.on{visibility:visible;}
+
 /* outro */
 .outro{padding:4rem 0 5rem; border-top:1px solid var(--line); margin-top:3rem;}
 footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); font-size:11.5px; border-top:1px solid var(--line); line-height:1.9;}
@@ -154,16 +199,24 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
   background:rgba(12,17,30,.94); border:1px solid var(--line-2); color:var(--ink); opacity:0; transition:.22s;}
 #toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
 
-/* Narrow screens: a 1000-unit diagram scaled into 350px is a strip of unreadable
-   3px type. Keep the diagram legible and let it scroll inside its own stage —
-   the page body itself never scrolls sideways. */
-@media(max-width:860px){
-  .stage{overflow-x:auto; -webkit-overflow-scrolling:touch;}
-  .stage::after{content:"drag the diagram sideways →"; display:block; margin-top:8px;
-    font-family:var(--font-mono); font-size:10px; color:var(--ink-4);}
-  svg.viz{min-width:720px;}
+/* Narrow screens. The diagram is redrawn for the box it is given rather than
+   scaled down into it, so there is nothing to scroll sideways — but the step
+   labels have to give up their words to keep the control row one line tall. */
+@media(max-width:820px){
+  .scene{gap:8px;}
+  .scene .stage{padding:10px; border-radius:16px;}
+  svg.viz{left:10px; top:10px; width:calc(100% - 20px); height:calc(100% - 20px);}
+  .step .t{display:none;}
+  .step{padding:7px 9px;}
+  .step .k{margin-right:0;}
+  .controls .hint{display:none;}
+  .caption{font-size:13.5px;}
   .hero{padding-top:3rem;}
-  .chapter{padding-top:3rem;}
+  .chapter{padding-top:2.6rem;}
+}
+@media(max-height:640px){
+  .scene{max-height:none; min-height:0;}
+  .caption{font-size:13px;}
 }
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
 </style>
@@ -207,11 +260,16 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     what licence it carries. That stamp is the part that matters later — it is what lets a synthesis
     three steps downstream still say whose work it rests on.</p>
   </div>
-  <div class="stage"><svg class="viz" id="viz1" viewBox="0 0 1000 560" role="img" aria-label="Ingest pipeline"></svg></div>
-  <div class="stepper" id="steps1"></div>
-  <div class="pager"><button class="mini" data-prev="1">← prev</button><button class="mini" data-next="1">next →</button><span class="grow"></span><span class="hint" id="hint1"></span></div>
-  <div class="caption" id="cap1"></div>
-  <div class="readrow" id="read1"></div>
+  <div class="scene" id="scene1">
+    <div class="controls">
+      <div class="stepper" id="steps1"></div>
+      <span class="grow"></span><span class="hint" id="hint1"></span>
+      <div class="pager"><button class="mini" data-prev="1">←</button><button class="mini" data-next="1">→</button></div>
+    </div>
+    <div class="stage"><svg class="viz" id="viz1" role="img" aria-label="Ingest pipeline"></svg></div>
+    <div class="caption" id="cap1"></div>
+    <div class="readrow" id="read1"></div>
+  </div>
 </div></section>
 
 <!-- ═══════════════ §2 REGROUP ═══════════════ -->
@@ -224,14 +282,21 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     different lens". It is applied as a <em>map</em>, not a migration: nothing is moved, an article
     can sit under several lenses at once, and one searchable corpus replaces nine siloed ones.</p>
   </div>
-  <div class="stage"><svg class="viz" id="viz2" viewBox="0 0 1000 560" role="img" aria-label="Category to lens regrouping"></svg></div>
-  <div class="stepper" id="steps2"></div>
-  <div class="pager"><button class="mini" data-prev="2">← prev</button><button class="mini" data-next="2">next →</button><span class="grow"></span><span class="hint">click any lens to read its members</span></div>
-  <div class="caption" id="cap2"></div>
-  <div class="readrow" id="read2"></div>
-  <div id="lenslist" style="margin-top:14px"></div>
-  <div class="note finding" id="note2"></div>
-  <div id="audit2" style="margin-top:14px"></div>
+  <div class="scene" id="scene2">
+    <div class="controls">
+      <div class="stepper" id="steps2"></div>
+      <span class="grow"></span><span class="hint">click any lens to read its members</span>
+      <div class="pager"><button class="mini" data-prev="2">←</button><button class="mini" data-next="2">→</button></div>
+    </div>
+    <div class="stage"><svg class="viz" id="viz2" role="img" aria-label="Category to lens regrouping"></svg></div>
+    <div class="caption" id="cap2"></div>
+    <div class="readrow" id="read2"></div>
+  </div>
+  <div class="extras">
+    <div id="lenslist"></div>
+    <div class="note finding" id="note2"></div>
+    <div id="audit2" style="margin-top:14px"></div>
+  </div>
 </div></section>
 
 <!-- ═══════════════ §3 RETRIEVE ═══════════════ -->
@@ -245,12 +310,17 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     and cosine lives in [-1,1], so each candidate keeps its origin and its rank, and only the ranks
     are fused.</p>
   </div>
-  <div class="toolbar" id="qpicker"></div>
-  <div class="stage"><svg class="viz" id="viz3" viewBox="0 0 1000 620" role="img" aria-label="Hybrid retrieval"></svg></div>
-  <div class="stepper" id="steps3"></div>
-  <div class="pager"><button class="mini" data-prev="3">← prev</button><button class="mini" data-next="3">next →</button><span class="grow"></span><span class="hint" id="hint3"></span></div>
-  <div class="caption" id="cap3"></div>
-  <div class="readrow" id="read3"></div>
+  <div class="scene" id="scene3">
+  <div class="controls tools" id="qpicker"></div>
+    <div class="controls">
+      <div class="stepper" id="steps3"></div>
+      <span class="grow"></span><span class="hint" id="hint3"></span>
+      <div class="pager"><button class="mini" data-prev="3">←</button><button class="mini" data-next="3">→</button></div>
+    </div>
+    <div class="stage"><svg class="viz" id="viz3" role="img" aria-label="Hybrid retrieval"></svg></div>
+    <div class="caption" id="cap3"></div>
+    <div class="readrow" id="read3"></div>
+  </div>
 </div></section>
 
 <!-- ═══════════════ §4 SUBSET ═══════════════ -->
@@ -264,13 +334,18 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     optimisation: a body you persisted is a fork you now have to maintain, and a licence you now have
     to honour.</p>
   </div>
-  <div class="toolbar" id="ov-tools"></div>
-  <div class="stage"><svg class="viz" id="viz4" viewBox="0 0 1000 560" role="img" aria-label="Overlay store"></svg></div>
-  <div class="stepper" id="steps4"></div>
-  <div class="pager"><button class="mini" data-prev="4">← prev</button><button class="mini" data-next="4">next →</button><span class="grow"></span><span class="hint">click articles in the left column to shelve them</span></div>
-  <div class="caption" id="cap4"></div>
-  <div class="readrow" id="read4"></div>
-  <div class="grid2" style="margin-top:14px">
+  <div class="scene" id="scene4">
+  <div class="controls tools" id="ov-tools"></div>
+    <div class="controls">
+      <div class="stepper" id="steps4"></div>
+      <span class="grow"></span><span class="hint">click an article on the left to shelve it</span>
+      <div class="pager"><button class="mini" data-prev="4">←</button><button class="mini" data-next="4">→</button></div>
+    </div>
+    <div class="stage"><svg class="viz" id="viz4" role="img" aria-label="Overlay store"></svg></div>
+    <div class="caption" id="cap4"></div>
+    <div class="readrow" id="read4"></div>
+  </div>
+  <div class="extras grid2">
     <div class="pane"><h4>What the overlay stores</h4><div class="mono-block" id="ov-json"></div></div>
     <div class="pane"><h4>What it points at</h4><div class="mono-block" id="ov-upstream"></div></div>
   </div>
@@ -287,13 +362,18 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     the one requested, so a caller downgraded to a smaller rung is told, and billed for what they
     really got.</p>
   </div>
-  <div class="toolbar" id="band-tools"></div>
-  <div class="stage"><svg class="viz" id="viz5" viewBox="0 0 1000 520" role="img" aria-label="Level-of-detail bands"></svg></div>
-  <div class="stepper" id="steps5"></div>
-  <div class="pager"><button class="mini" data-prev="5">← prev</button><button class="mini" data-next="5">next →</button><span class="grow"></span><span class="hint" id="hint5"></span></div>
-  <div class="caption" id="cap5"></div>
-  <div class="readrow" id="read5"></div>
-  <div class="grid2" style="margin-top:14px">
+  <div class="scene" id="scene5">
+  <div class="controls tools" id="band-tools"></div>
+    <div class="controls">
+      <div class="stepper" id="steps5"></div>
+      <span class="grow"></span><span class="hint" id="hint5"></span>
+      <div class="pager"><button class="mini" data-prev="5">←</button><button class="mini" data-next="5">→</button></div>
+    </div>
+    <div class="stage"><svg class="viz" id="viz5" role="img" aria-label="Level-of-detail bands"></svg></div>
+    <div class="caption" id="cap5"></div>
+    <div class="readrow" id="read5"></div>
+  </div>
+  <div class="extras grid2">
     <div class="pane"><h4>Requested form → what you get</h4><div id="form-out" class="mono-block"></div></div>
     <div class="pane"><h4>Degradation ladder</h4><div id="ladder-out" class="mono-block"></div></div>
   </div>
@@ -310,13 +390,18 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     computed from its sources and a confidence that <em>cannot go up</em> — because prose quality is
     uncorrelated with evidential strength, and a reader downstream has no way to tell them apart.</p>
   </div>
-  <div class="toolbar" id="g-tools"></div>
-  <div class="stage"><svg class="viz" id="viz6" viewBox="0 0 1000 600" role="img" aria-label="Grounding and derivation"></svg></div>
-  <div class="stepper" id="steps6"></div>
-  <div class="pager"><button class="mini" data-prev="6">← prev</button><button class="mini" data-next="6">next →</button><span class="grow"></span><span class="hint" id="hint6"></span></div>
-  <div class="caption" id="cap6"></div>
-  <div class="readrow" id="read6"></div>
-  <div class="note" id="note6"></div>
+  <div class="scene" id="scene6">
+  <div class="controls tools" id="g-tools"></div>
+    <div class="controls">
+      <div class="stepper" id="steps6"></div>
+      <span class="grow"></span><span class="hint" id="hint6"></span>
+      <div class="pager"><button class="mini" data-prev="6">←</button><button class="mini" data-next="6">→</button></div>
+    </div>
+    <div class="stage"><svg class="viz" id="viz6" role="img" aria-label="Grounding and derivation"></svg></div>
+    <div class="caption" id="cap6"></div>
+    <div class="readrow" id="read6"></div>
+  </div>
+  <div class="extras"><div class="note" id="note6"></div></div>
 </div></section>
 
 <!-- ═══════════════ OUTRO ═══════════════ -->
@@ -338,15 +423,17 @@ const COL = {cyan:'#5ef0df', blue:'#5b9cff', violet:'#b884ff', gold:'#ffd27a', r
              lime:'#a6e86a', amber:'#ffb861', ink2:'#aeb9d4', ink3:'#74809e', ink4:'#4d5875',
              bad:'#ff7a8f', warn:'#ffc46b', good:'#66e6b8'};
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const SMALL = matchMedia('(max-width:860px)').matches;
 const EASE = 'cubic-bezier(.22,.68,.31,1)';
-const DUR = REDUCED ? 0 : 620;
+let DUR = REDUCED ? 0 : 620;           // set to 0 around a relayout: a rebuilt scene must not animate
 
 const clamp = (v,a,b) => Math.max(a, Math.min(b,v));
 const fmt = n => n.toLocaleString('en-US');
 const sleep = ms => new Promise(r => setTimeout(r, REDUCED ? 0 : ms));
 const byTitle = Object.fromEntries(D.docs.map(d => [d.title, d]));
 const facetById = Object.fromEntries(D.facets.map(f => [f.id, f]));
+
+const F_MONO = "'JetBrains Mono',ui-monospace,SFMono-Regular,monospace";
+const F_SANS = "'Hanken Grotesk',system-ui,-apple-system,sans-serif";
 
 function el(tag, attrs = {}, kids = []) {
   const e = document.createElementNS(NS, tag);
@@ -358,26 +445,59 @@ function txt(s, attrs = {}) { const t = el('text', attrs); t.textContent = s; re
 function h(tag, cls, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
-/** Trim to a character budget on a word boundary, with an ellipsis. */
+/** Trim to a character budget on a word boundary, with an ellipsis.
+    For HTML labels outside the SVG, where px measurement is the browser's job. */
 function trim(s, n) {
   if (!s || s.length <= n) return s || '';
   const cut = s.slice(0, n);
   const sp = cut.lastIndexOf(' ');
   return (sp > n * 0.6 ? cut.slice(0, sp) : cut).trimEnd() + '…';
 }
-/** Wrap text into <=n-char lines, at most `max` of them. */
-function wrap(s, n, max) {
-  const words = String(s || '').split(/\s+/); const lines = []; let cur = '';
-  for (const w of words) {
-    if ((cur + ' ' + w).trim().length > n) { lines.push(cur.trim()); cur = w; if (lines.length === max) break; }
-    else cur = (cur + ' ' + w).trim();
-  }
-  if (lines.length < max && cur) lines.push(cur.trim());
-  if (lines.length === max && words.join(' ').length > lines.join(' ').length + 1) {
-    lines[max-1] = trim(lines[max-1], n - 1);
-  }
-  return lines;
+
+/* ── text measurement ────────────────────────────────────────────────────────
+   Every diagram is drawn to a box whose size is only known at run time, so no
+   character budget guessed at design time can be right. Everything that goes
+   into an SVG is measured against the real font first — which is why nothing
+   in here spills out of the card it belongs to. */
+const _mc = document.createElement('canvas').getContext('2d');
+function tw(s, size, mono) {
+  _mc.font = `${size}px ${mono === false ? F_SANS : F_MONO}`;
+  return _mc.measureText(String(s == null ? '' : s)).width;
 }
+/** Fit to `max` px, adding an ellipsis. Returns '' for empty input. */
+function fitPx(s, size, max, mono) {
+  s = String(s == null ? '' : s);
+  if (!s || max <= 0) return '';
+  if (tw(s, size, mono) <= max) return s;
+  if (tw('…', size, mono) > max) return '';
+  let lo = 0, hi = s.length;
+  while (lo < hi) {
+    const mid = (lo + hi + 1) >> 1;
+    if (tw(s.slice(0, mid) + '…', size, mono) <= max) lo = mid; else hi = mid - 1;
+  }
+  return s.slice(0, lo).replace(/[\s,.;:–—-]+$/, '') + '…';
+}
+/** Wrap to <=maxLines lines of <=max px. The last line ends in … if truncated. */
+function wrapPx(s, size, max, maxLines, mono) {
+  const words = String(s == null ? '' : s).split(/\s+/).filter(Boolean);
+  const out = []; let cur = '', used = 0;
+  for (let k = 0; k < words.length; k++) {
+    const t = cur ? cur + ' ' + words[k] : words[k];
+    if (tw(t, size, mono) <= max || !cur) { cur = t; used = k + 1; continue; }
+    out.push(cur); cur = words[k]; used = k + 1;
+    if (out.length >= maxLines) { cur = ''; break; }
+  }
+  if (cur && out.length < maxLines) { out.push(cur); cur = ''; }
+  const complete = used >= words.length && !cur;
+  if (!complete && out.length) {
+    let l = out[out.length - 1];
+    while (l.includes(' ') && tw(l + ' …', size, mono) > max) l = l.replace(/\s*\S+$/, '');
+    out[out.length - 1] = tw(l + ' …', size, mono) <= max ? l + ' …' : fitPx(l, size, max, mono);
+  }
+  return out.map(l => tw(l, size, mono) > max ? fitPx(l, size, max, mono) : l);
+}
+/** How many rows of pitch `p` fit in `avail`, clamped to [lo,hi]. */
+const rowsFit = (avail, p, lo, hi) => clamp(Math.floor(avail / p), lo, hi);
 
 function toast(msg) {
   const t = document.getElementById('toast');
@@ -411,14 +531,14 @@ function tweenNum(node, from, to, dur = 700, suffix = '', dp = 0) {
 /* rounded-rect card, the repeated visual primitive of the whole page */
 function card(x, y, w, hh, opts = {}) {
   const g = el('g', {transform:`translate(${x},${y})`, opacity: opts.opacity ?? 1});
-  g.appendChild(el('rect', {x:0, y:0, width:w, height:hh, rx: opts.rx ?? 10,
+  g.appendChild(el('rect', {x:0, y:0, width:Math.max(0,w), height:Math.max(0,hh), rx: opts.rx ?? 10,
     fill: opts.fill ?? 'rgba(18,24,42,.82)',
     stroke: opts.stroke ?? 'rgba(150,170,230,.22)', 'stroke-width': opts.sw ?? 1}));
   return g;
 }
 function label(s, x, y, opts = {}) {
   return txt(s, {x, y, fill: opts.fill ?? COL.ink2, 'font-size': opts.size ?? 12,
-    'font-family': opts.mono === false ? "'Hanken Grotesk',sans-serif" : "'JetBrains Mono',monospace",
+    'font-family': opts.mono === false ? F_SANS : F_MONO,
     'text-anchor': opts.anchor ?? 'start', 'font-weight': opts.weight ?? 400,
     'letter-spacing': opts.ls ?? 0, opacity: opts.opacity ?? 1});
 }
@@ -426,40 +546,120 @@ function label(s, x, y, opts = {}) {
 /* ══════════════════════════════════════════════════════ chapter framework */
 const CHAPTERS = [];
 
+/** The box a chapter has to draw into, in CSS pixels, measured live. */
+function metrics(svg) {
+  const r = svg.getBoundingClientRect();
+  const W = Math.max(300, Math.round(r.width));
+  const H = Math.max(200, Math.round(r.height));
+  const fs = clamp(W / 1000, .92, 1.22);
+  return {W, H, narrow: W < 720, tiny: W < 460, short: H < 400,
+          fs, S: n => Math.round(n * fs * 10) / 10};
+}
+
 /**
  * Wire one chapter: a stepper, prev/next, a caption, and a draw(step) hook.
- * Chapters are lazily drawn — the first draw happens when the section scrolls
- * into view, so opening the page does not run six SVG builds at once.
+ *
+ * Two invariants make a chapter behave like a slide rather than a page:
+ *  · the caption box is pinned to the tallest caption in the chapter, so
+ *    stepping never changes the height of the stage, and
+ *  · the SVG viewBox is the stage box in CSS pixels, so draw() lays out to the
+ *    space it actually has and text is drawn at the size it is written at.
+ * A change in either dimension rebuilds the scene from scratch (with
+ * animation suppressed); everything else is a step transition.
  */
 function chapter(n, def) {
   const stepsEl = document.getElementById('steps' + n);
   const capEl = document.getElementById('cap' + n);
+  const readEl = document.getElementById('read' + n);
   const svg = document.getElementById('viz' + n);
-  const state = {n, def, i: 0, drawn: false, svg,
+  const prevB = document.querySelector(`[data-prev="${n}"]`);
+  const nextB = document.querySelector(`[data-next="${n}"]`);
+
+  const capHTML = (k) => {
+    const s = def.steps[k];
+    const tag = (state.m && state.m.narrow ? `${k+1}. ${s.label}` : (s.tag || ('step ' + (k+1))));
+    return `<span class="tag">${esc(tag)}</span>${s.cap}`;
+  };
+
+  const state = {n, def, i: 0, drawn: false, svg, m: null, scene: null,
+    /** Pin the caption box to the tallest step. Width-dependent, so it is
+        redone whenever the stage width changes and never in between. */
+    pin() {
+      const keep = capEl.innerHTML;
+      capEl.style.height = 'auto';
+      let max = 0;
+      for (let k = 0; k < def.steps.length; k++) { capEl.innerHTML = capHTML(k); max = Math.max(max, capEl.scrollHeight); }
+      capEl.innerHTML = keep;
+      /* a very long caption on a narrow screen would eat the stage; cap it and
+         let that one caption scroll rather than shrinking every diagram */
+      capEl.style.height = Math.ceil(Math.min(max, innerHeight * 0.27)) + 'px';
+    },
     set(i, opts) {
       state.i = clamp(i, 0, def.steps.length - 1);
       [...stepsEl.children].forEach((c, k) => c.classList.toggle('on', k === state.i));
-      const s = def.steps[state.i];
-      capEl.innerHTML = `<span class="tag">${esc(s.tag || ('step ' + (state.i+1)))}</span>${s.cap}`;
+      prevB.disabled = state.i === 0; nextB.disabled = state.i === def.steps.length - 1;
+      capEl.innerHTML = capHTML(state.i);
+      const m = metrics(svg);
+      if (!state.m || m.W !== state.m.W || m.H !== state.m.H) {
+        state.m = m; state.scene = null;
+        svg.setAttribute('viewBox', `0 0 ${m.W} ${m.H}`);
+      }
       def.draw(state.i, state, opts || {});
+      if (state.more) state.more();
+    },
+    /** Read the stage box and hand it to the viewBox. */
+    measure() {
+      state.m = metrics(svg);
+      svg.setAttribute('viewBox', `0 0 ${state.m.W} ${state.m.H}`);
+      state.scene = null;
+    },
+    /** Rebuild for a new box size, without animating the rebuild. */
+    relayout(force) {
+      if (!state.drawn) return;
+      const r = svg.getBoundingClientRect();
+      if (!force && state.m && Math.abs(r.width - state.m.W) < 1 && Math.abs(r.height - state.m.H) < 1) return;
+      const keep = DUR; DUR = 0;
+      if (force || !state.m || Math.abs(r.width - state.m.W) >= 1) state.pin();
+      state.measure(); state.set(state.i);
+      DUR = keep;
     }};
 
   def.steps.forEach((s, k) => {
     const b = h('button', 'step');
-    b.innerHTML = `<span class="k">${String(k+1).padStart(2,'0')}</span>${esc(s.label)}`;
+    b.innerHTML = `<span class="k">${String(k+1).padStart(2,'0')}</span><span class="t">${esc(s.label)}</span>`;
+    b.title = s.label;
     b.onclick = () => state.set(k);
     stepsEl.appendChild(b);
   });
-  document.querySelector(`[data-prev="${n}"]`).onclick = () => state.set(state.i - 1);
-  document.querySelector(`[data-next="${n}"]`).onclick = () => state.set(state.i + 1);
+  prevB.onclick = () => state.set(state.i - 1);
+  nextB.onclick = () => state.set(state.i + 1);
 
   const io = new IntersectionObserver(es => {
-    for (const e of es) if (e.isIntersecting && !state.drawn) { state.drawn = true; state.set(0); io.disconnect(); }
-  }, {rootMargin: '160px'});
-  io.observe(svg.closest('.chapter'));
+    for (const e of es) if (e.isIntersecting && !state.drawn) {
+      state.drawn = true; state.pin(); state.measure(); state.set(0); io.disconnect();
+    }
+  }, {rootMargin: '200px'});
+  io.observe(svg.closest('.scene'));
+
+  /* chapters that carry supporting panes below the frame say so */
+  const extras = svg.closest('.chapter').querySelector('.extras');
+  if (extras) {
+    const more = h('div', 'more', '↓ supporting detail below');
+    svg.closest('.scene').appendChild(more);
+    state.more = () => more.classList.toggle('on', extras.innerText.trim().length > 0);
+  }
+
+  let rt;
+  new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => state.relayout(), 110); }).observe(svg);
 
   CHAPTERS.push(state);
   return state;
+}
+
+/* A webfont that arrives after the first draw changes every measurement in
+   this file, so redraw once it has. */
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(() => CHAPTERS.forEach(st => st.relayout(true)));
 }
 
 /* ══════════════════════════════════════════════════════ hero */
@@ -483,6 +683,38 @@ function chapter(n, def) {
 
 <script>
 /* ══════════════════════════════════════════════════ §1 · ingest → holon */
+(function(){
+const R = D.render;
+
+/** Three panels and a rail, laid out into whatever box the stage has.
+    Side by side while there is width for it; stacked when there is not. */
+function lay(M) {
+  const {W, H, S} = M;
+  const pad = M.tiny ? 6 : 10;
+  const head = S(15) + 8;
+  const railH = M.short ? 44 : (M.narrow ? 48 : 58);
+  const railY = H - railH - 2;
+  const bodyY = head + 6;
+  const bodyH = Math.max(110, railY - 12 - bodyY);
+  const rail = {x: pad, y: railY, w: W - pad * 2, h: railH};
+  if (!M.narrow) {
+    /* the first gutter carries the stripMarkup() arrow and has to be wide
+       enough for its label; the second only separates two panels */
+    const gut = clamp(W * 0.088, 96, 150), gutB = clamp(W * 0.03, 22, 44);
+    const w = (W - pad * 2 - gut - gutB) / 3;
+    return {mode:'wide', pad, gut, gutB, bodyY, bodyH, rail,
+      src:  {x: pad,                       y: bodyY, w, h: bodyH},
+      chunk:{x: pad + w + gut,             y: bodyY, w, h: bodyH},
+      prov: {x: pad + w * 2 + gut + gutB,  y: bodyY, w, h: bodyH}};
+  }
+  const gap = 8, w = W - pad * 2, share = bodyH - gap * 2;
+  const sh = Math.round(share * .38), ch = Math.round(share * .30);
+  return {mode:'tall', pad, gut: gap, bodyY, bodyH, rail,
+    src:  {x: pad, y: bodyY,                 w, h: sh},
+    chunk:{x: pad, y: bodyY + sh + gap,      w, h: ch},
+    prov: {x: pad, y: bodyY + sh + ch + gap * 2, w, h: share - sh - ch}};
+}
+
 chapter(1, {
   steps: [
     {label:'the source', tag:'GET · api.php', cap:'One real article, exactly as MediaWiki stores it — link syntax, heading rules, bold ticks and all. <b>Nothing is parsed yet.</b>'},
@@ -492,31 +724,59 @@ chapter(1, {
     {label:'indexed', tag:'collection: p2pwiki', cap:'The article is now addressable: retrievable by meaning or by word, renderable into other forms, and citable with its lineage intact. <b>This is the unit everything after §1 operates on.</b>'},
   ],
   draw(i, st) {
-    const R = D.render, doc = byTitle[R.title];
+    const M = st.m, {W, H, S} = M, doc = byTitle[R.title];
     if (!st.scene) {
-      const s = st.svg; s.innerHTML = '';
-      const g = k => { const e = el('g'); s.appendChild(e); return e; };
-      const sc = st.scene = {};
+      const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+      const L = lay(M); sc.L = L;
 
-      // ── column 1: the source ──────────────────────────────
-      sc.src = g();
-      sc.src.appendChild(card(24, 56, 300, 400, {}).firstChild ? card(24,56,300,400) : null);
-      const srcCard = card(24, 56, 300, 400);
+      const defs = el('defs');
+      defs.appendChild(el('marker', {id:'ah1', viewBox:'0 0 10 10', refX:9, refY:5, markerWidth:7, markerHeight:7, orient:'auto'},
+        [el('path', {d:'M0 0 L10 5 L0 10 z', fill:COL.cyan})]));
+      s.appendChild(defs);
+
+      /* header */
+      const hs = S(12.5);
+      s.appendChild(label(fitPx(R.title, hs, W * .55), L.pad, S(14), {size:hs, fill:'#fff'}));
+      if (!M.tiny) s.appendChild(label(fitPx(`wiki.p2pfoundation.net · page ${doc.pageid}`, S(10), W * .4),
+        W - L.pad, S(14), {size:S(10), fill:COL.ink4, anchor:'end'}));
+
+      /* ── the source ─────────────────────────────────────── */
+      /* Everything between the header and the rail lives in one group, which
+         is then centred on what it actually drew — the three columns have
+         genuinely different natural lengths, and pinning them all to the full
+         height just left a hole at the bottom of two of them. */
+      const body = el('g'); s.appendChild(body);
+      let drawn = L.bodyY;
+      const reach = y => { drawn = Math.max(drawn, y); };
+
+      const P = L.src, ip = 13, iw = P.w - ip * 2;
+      sc.src = el('g'); body.appendChild(sc.src);
+      const ls = clamp(S(10.5), 8.5, 13);
+      const pitch = Math.max(ls * 1.62, 13.5);
+      const top = S(9) + 30;
+      const allLines = R.wikitext.split('\n').filter(l => l.trim());
+      const nLines = Math.min(allLines.length, rowsFit(P.h - top - 8, pitch, 3, 40));
+      const rawLines = allLines.slice(0, nLines);
+      const srcH = Math.min(P.h, top + (nLines - 1) * pitch + 16);
+      const srcCard = card(P.x, P.y, P.w, srcH);
       sc.src.appendChild(srcCard);
-      srcCard.appendChild(label('wikitext', 14, 24, {size:10.5, fill:COL.ink3, ls:1.6}));
-      srcCard.appendChild(label(`${fmt(doc.bytes)} bytes`, 286, 24, {size:10.5, fill:COL.ink4, anchor:'end'}));
-
-      const rawLines = R.wikitext.split('\n').filter(l => l.trim()).slice(0, 15);
+      reach(P.y + srcH);
+      srcCard.appendChild(label('wikitext', ip, S(9) + 12, {size:S(9.5), fill:COL.ink3, ls:1.4}));
+      srcCard.appendChild(label(`${fmt(doc.bytes)} bytes`, P.w - ip, S(9) + 12, {size:S(9.5), fill:COL.ink4, anchor:'end'}));
       sc.raw = el('g'); sc.plain = el('g', {opacity:0});
       srcCard.appendChild(sc.raw); srcCard.appendChild(sc.plain);
       rawLines.forEach((line, k) => {
-        const y = 50 + k * 23.5;
-        // raw: markup tokens picked out in violet so the diff in step 2 is visible
-        const t = txt('', {x:14, y, 'font-family':"'JetBrains Mono',monospace", 'font-size':10.5, fill:COL.ink2});
-        const parts = String(line).slice(0, 44).split(/(\[\[[^\]]*\]\]|'''?|={2,}|\[https?:\/\/\S+)/g);
-        parts.forEach(p => { if (!p) return;
-          const isMk = /^(\[\[|'''?$|''$|={2,}$|\[http)/.test(p);
-          const ts = el('tspan', {fill: isMk ? COL.violet : COL.ink2}); ts.textContent = p; t.appendChild(ts); });
+        const y = top + k * pitch;
+        /* raw: markup tokens picked out in violet, so the diff in step 2 reads */
+        const t = txt('', {x:ip, y, 'font-family':F_MONO, 'font-size':ls, fill:COL.ink2});
+        let budget = iw;
+        String(line).split(/(\[\[[^\]]*\]\]|'''?|={2,}|\[https?:\/\/\S+)/g).forEach(p => {
+          if (!p || budget <= 0) return;
+          const shown = fitPx(p, ls, budget); if (!shown) return;
+          budget = shown === p ? budget - tw(shown, ls) : 0;   // one ellipsis, not one per span
+          const ts = el('tspan', {fill: /^(\[\[|'''?$|''$|={2,}$|\[http)/.test(p) ? COL.violet : COL.ink2});
+          ts.textContent = shown; t.appendChild(ts);
+        });
         sc.raw.appendChild(t);
 
         const stripped = String(line)
@@ -524,85 +784,119 @@ chapter(1, {
           .replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g,'$1')
           .replace(/^={2,}\s*(.+?)\s*={2,}\s*$/,'$1').replace(/'''?/g,'')
           .replace(/\[https?:\/\/\S+\s+([^\]]+)\]/g,'$1').replace(/\[https?:\/\/\S+\]/g,'');
-        sc.plain.appendChild(label(stripped.slice(0, 44), 14, y, {size:10.5, fill:COL.ink2}));
+        sc.plain.appendChild(label(fitPx(stripped, ls, iw), ip, y, {size:ls, fill:COL.ink2}));
       });
 
-      // ── arrow 1 ───────────────────────────────────────────
-      sc.a1 = g(); sc.a1.setAttribute('opacity', 0);
-      sc.a1.appendChild(el('path', {d:'M334 250 L392 250', stroke:COL.cyan, 'stroke-width':1.4, 'marker-end':'url(#ah1)'}));
-      sc.a1.appendChild(label('stripMarkup()', 363, 238, {size:10, fill:COL.cyan, anchor:'middle'}));
-      const defs = el('defs');
-      defs.appendChild(el('marker', {id:'ah1', viewBox:'0 0 10 10', refX:9, refY:5, markerWidth:6, markerHeight:6, orient:'auto'},
-        [el('path', {d:'M0 0 L10 5 L0 10 z', fill:COL.cyan})]));
-      s.appendChild(defs);
+      /* ── arrow: across the gutter, or down it ───────────── */
+      sc.a1 = el('g', {opacity:0}); body.appendChild(sc.a1);
+      const as = S(9.5);
+      if (L.mode === 'wide') {
+        const ax = L.src.x + L.src.w + 8, bx = L.chunk.x - 8, ay = L.src.y + srcH / 2;
+        sc.a1.appendChild(el('path', {d:`M${ax} ${ay} L${bx} ${ay}`, stroke:COL.cyan, 'stroke-width':1.4, 'marker-end':'url(#ah1)'}));
+        sc.a1.appendChild(label(fitPx('stripMarkup()', as, bx - ax), (ax + bx) / 2, ay - 10, {size:as, fill:COL.cyan, anchor:'middle'}));
+      } else {
+        const ay = L.src.y + srcH + 1, by = L.chunk.y - 3, ax = L.src.x + L.src.w / 2;
+        sc.a1.appendChild(el('path', {d:`M${ax} ${ay} L${ax} ${by}`, stroke:COL.cyan, 'stroke-width':1.4, 'marker-end':'url(#ah1)'}));
+        sc.a1.appendChild(label('stripMarkup()', ax + 8, (ay + by) / 2 + 3, {size:as, fill:COL.cyan}));
+      }
 
-      // ── column 2: chunks ──────────────────────────────────
-      sc.chunks = g(); sc.chunks.setAttribute('opacity', 0);
-      const chs = R.forms.chunks.slice(0, 5);
-      sc.chunkCards = chs.map((c, k) => {
-        const cd = card(404, 56 + k * 78, 300, 66, {fill:'rgba(20,28,48,.9)', stroke:'rgba(94,240,223,.28)'});
-        cd.appendChild(label(`chunk ${k+1} · ${c.heading || '(lead)'}`, 13, 20, {size:10, fill:COL.cyan}));
-        wrap(c.text, 44, 2).forEach((ln, j) => cd.appendChild(label(ln, 13, 38 + j*15, {size:10, fill:COL.ink3})));
-        sc.chunks.appendChild(cd); return cd;
+      /* ── chunks ─────────────────────────────────────────── */
+      const C = L.chunk;
+      sc.chunks = el('g', {opacity:0}); body.appendChild(sc.chunks);
+      const wantMore = 16;
+      const nCards = clamp(Math.floor((C.h - wantMore) / 58), 1, 5);
+      const cgap = 8;
+      const cardH = Math.min(96, (C.h - wantMore - (nCards - 1) * cgap) / nCards);
+      const cs = clamp(S(10), 8.5, 12);
+      const bodyLines = rowsFit(cardH - cs * 2.4, cs * 1.45, 0, 3);
+      const from = `translate(${clamp(L.src.x + L.src.w / 2, L.pad, W - C.w - L.pad)},${L.src.y + srcH / 2})`;
+      sc.chunkCards = R.forms.chunks.slice(0, nCards).map((c, k) => {
+        const y = C.y + k * (cardH + cgap);
+        const cd = card(C.x, y, C.w, cardH, {fill:'rgba(20,28,48,.9)', stroke:'rgba(94,240,223,.28)'});
+        cd.appendChild(label(fitPx(`chunk ${k+1} · ${c.heading || '(lead)'}`, cs, C.w - 24), 12, cs + 8, {size:cs, fill:COL.cyan}));
+        wrapPx(c.text, cs, C.w - 24, bodyLines).forEach((ln, j) =>
+          cd.appendChild(label(ln, 12, cs * 2.4 + 6 + j * cs * 1.45, {size:cs, fill:COL.ink3})));
+        sc.chunks.appendChild(cd);
+        return {cd, home:`translate(${C.x},${y})`, from};
       });
-      sc.chunkMore = label(`+ ${Math.max(0, doc.nchunks - chs.length)} more sections`, 554, 56 + chs.length*78 + 16,
-        {size:10, fill:COL.ink4, anchor:'middle'});
-      sc.chunks.appendChild(sc.chunkMore);
+      const rest = Math.max(0, doc.nchunks - nCards);
+      const chunkBottom = C.y + nCards * cardH + (nCards - 1) * cgap;
+      if (rest) sc.chunks.appendChild(label(`+ ${rest} more sections`, C.x + C.w / 2,
+        chunkBottom + cgap + 11, {size:S(9.5), fill:COL.ink4, anchor:'middle'}));
+      reach(chunkBottom + (rest ? cgap + 15 : 0));
 
-      // ── column 3: provenance ──────────────────────────────
-      sc.prov = g(); sc.prov.setAttribute('opacity', 0);
-      const pc = card(738, 56, 238, 300, {fill:'rgba(24,20,40,.9)', stroke:'rgba(184,132,255,.35)'});
-      pc.appendChild(label('provenance stamp', 14, 24, {size:10.5, fill:COL.violet, ls:1.2}));
-      const rows = [
-        ['source', 'p2pwiki'],
-        ['uri', '/' + R.title.replace(/ /g,'_')],
-        ['licence', D.ingestLicense],
-        ['contributor', doc.revuser || '—'],
-        ['revised', (doc.rev || '').slice(0,10)],
-        ['page_id', String(doc.pageid)],
-        ['categories', String(doc.categories.length)],
-        ['witness', 'portico:ingest'],
+      /* ── provenance ─────────────────────────────────────── */
+      const V = L.prov;
+      sc.prov = el('g', {opacity:0}); body.appendChild(sc.prov);
+      const allRows = [
+        ['source', 'p2pwiki'], ['uri', '/' + R.title.replace(/ /g,'_')],
+        ['licence', D.ingestLicense], ['contributor', doc.revuser || '—'],
+        ['revised', (doc.rev || '').slice(0,10)], ['page_id', String(doc.pageid)],
+        ['categories', String(doc.categories.length)], ['witness', 'portico:ingest'],
       ];
-      rows.forEach(([k2, v], k) => {
-        pc.appendChild(label(k2, 14, 54 + k*30, {size:10, fill:COL.ink4}));
-        pc.appendChild(label(trim(v, 22), 224, 54 + k*30, {size:10.5, fill:COL.ink, anchor:'end'}));
+      const note = L.mode === 'wide' && V.h > 240 ? 20 : 0;
+      const vTop = S(9) + 32;
+      const rowN = rowsFit(V.h - vTop - note - 6, 18, 3, allRows.length);
+      const rowP = clamp((V.h - vTop - note - 6) / rowN, 16, 40);
+      const cardH2 = Math.min(V.h - note, vTop + rowN * rowP);
+      const pc = card(V.x, V.y, V.w, cardH2, {fill:'rgba(24,20,40,.9)', stroke:'rgba(184,132,255,.35)'});
+      pc.appendChild(label('provenance stamp', 13, S(9) + 12, {size:S(9.5), fill:COL.violet, ls:1.2}));
+      const vs = clamp(S(10), 8.5, 12.5);
+      allRows.slice(0, rowN).forEach(([k2, v], k) => {
+        const y = vTop + k * rowP + vs * .35;
+        const kw = tw(k2, vs) + 12;
+        pc.appendChild(label(k2, 13, y, {size:vs, fill:COL.ink4}));
+        pc.appendChild(label(fitPx(v, vs, V.w - 26 - kw), V.w - 13, y, {size:vs, fill:COL.ink, anchor:'end'}));
       });
       sc.prov.appendChild(pc);
-      sc.provNote = label('rides along to every copy', 857, 378, {size:10, fill:COL.violet, anchor:'middle'});
-      sc.prov.appendChild(sc.provNote);
+      if (note) sc.prov.appendChild(label('rides along to every copy', V.x + V.w / 2, V.y + cardH2 + 14,
+        {size:S(9.5), fill:COL.violet, anchor:'middle'}));
+      reach(V.y + cardH2 + note);
 
-      // ── indexed rail ──────────────────────────────────────
-      sc.idx = g(); sc.idx.setAttribute('opacity', 0);
-      const ic = card(24, 476, 952, 62, {fill:'rgba(16,24,40,.86)', stroke:'rgba(94,240,223,.3)'});
-      ic.appendChild(label('collection · p2pwiki', 16, 24, {size:10.5, fill:COL.cyan, ls:1.2}));
-      ic.appendChild(label('addressable · retrievable by word or by meaning · renderable · citable', 16, 44, {size:11, fill:COL.ink3}));
+      /* centre the three columns on what they actually drew */
+      const slack = Math.max(0, (L.bodyY + L.bodyH) - drawn);
+      if (slack > 8) body.setAttribute('transform', `translate(0,${Math.round(slack / 2)})`);
+
+      /* ── indexed rail ───────────────────────────────────── */
+      const A = L.rail;
+      sc.idx = el('g', {opacity:0}); s.appendChild(sc.idx);
+      const ic = card(A.x, A.y, A.w, A.h, {fill:'rgba(16,24,40,.86)', stroke:'rgba(94,240,223,.3)'});
+      ic.appendChild(label('collection · p2pwiki', 14, S(10) + 10, {size:S(10), fill:COL.cyan, ls:1.2}));
       const badges = [['768-dim vector','#5b9cff'], ['BM25 postings','#a6e86a'], ['link graph','#ffd27a'], ['licence lineage','#b884ff']];
-      badges.forEach(([b, c], k) => {
-        const bx = 560 + k*100;
-        ic.appendChild(el('rect', {x:bx, y:18, width:92, height:26, rx:13, fill:'none', stroke:c, 'stroke-width':1, opacity:.55}));
-        ic.appendChild(label(b, bx+46, 35, {size:8.5, fill:c, anchor:'middle'}));
-      });
+      const bs = clamp(S(8.5), 7.5, 10);
+      const bw = badges.map(([b]) => Math.round(tw(b, bs) + 18));
+      const bTot = bw.reduce((a, x) => a + x, 0) + (badges.length - 1) * 8;
+      const room = A.w - 28 - tw('collection · p2pwiki', S(10)) - 24;
+      const showBadges = !M.short && bTot <= room && A.h >= 50;
+      const subMax = A.w - 28 - (showBadges ? bTot + 18 : 0);
+      ic.appendChild(label(fitPx('addressable · retrievable by word or by meaning · renderable · citable', S(10.5), subMax),
+        14, S(10) + 10 + S(10.5) * 1.7, {size:S(10.5), fill:COL.ink3}));
+      if (showBadges) {
+        let bx = A.w - 14 - bTot;
+        badges.forEach(([b, c], k) => {
+          const bh = Math.min(26, A.h - 22);
+          ic.appendChild(el('rect', {x:bx, y:(A.h - bh) / 2, width:bw[k], height:bh, rx:bh / 2, fill:'none', stroke:c, 'stroke-width':1, opacity:.55}));
+          ic.appendChild(label(b, bx + bw[k] / 2, A.h / 2 + bs * .36, {size:bs, fill:c, anchor:'middle'}));
+          bx += bw[k] + 8;
+        });
+      }
       sc.idx.appendChild(ic);
-
-      // title
-      s.appendChild(label(R.title, 24, 34, {size:13, fill:'#fff'}));
-      s.appendChild(label(`wiki.p2pfoundation.net · page ${doc.pageid}`, 976, 34, {size:10.5, fill:COL.ink4, anchor:'end'}));
     }
 
     const sc = st.scene;
-    fade(sc.raw,   i >= 1 ? 0 : 1);
-    fade(sc.plain, i >= 1 ? 1 : 0);
-    fade(sc.a1,    i >= 1 ? 1 : 0);
+    fade(sc.raw,    i >= 1 ? 0 : 1);
+    fade(sc.plain,  i >= 1 ? 1 : 0);
+    fade(sc.a1,     i >= 1 ? 1 : 0);
     fade(sc.chunks, i >= 2 ? 1 : 0);
-    fade(sc.prov,  i >= 3 ? 1 : 0);
-    fade(sc.idx,   i >= 4 ? 1 : 0);
-    sc.chunkCards.forEach((c, k) => {
-      c.style.transition = `all ${DUR}ms ${EASE} ${k*70}ms`;
-      c.setAttribute('transform', i >= 2 ? `translate(404,${56 + k*78})` : 'translate(340,250)');
+    fade(sc.prov,   i >= 3 ? 1 : 0);
+    fade(sc.idx,    i >= 4 ? 1 : 0);
+    sc.chunkCards.forEach(({cd, home, from}, k) => {
+      cd.style.transition = `all ${DUR}ms ${EASE} ${k * 70}ms`;
+      const to = i >= 2 ? home : from;
+      requestAnimationFrame(() => cd.setAttribute('transform', to));
     });
 
-    const read = document.getElementById('read1');
-    read.innerHTML =
+    document.getElementById('read1').innerHTML =
       `<div class="read">bytes in <b>${fmt(doc.bytes)}</b></div>` +
       `<div class="read">sections <b>${doc.nchunks}</b></div>` +
       `<div class="read">categories <b>${doc.categories.length}</b></div>` +
@@ -611,6 +905,7 @@ chapter(1, {
     document.getElementById('hint1').textContent = `featured article: ${R.title}`;
   }
 });
+})();
 </script>
 
 <script>
@@ -629,10 +924,31 @@ function rng(seed){ let t = seed + 0x6D2B79F5; return () => {
   t = Math.imul(t ^ t>>>15, t | 1); t ^= t + Math.imul(t ^ t>>>7, t | 61);
   return ((t ^ t>>>14) >>> 0) / 4294967296; }; }
 
-const BINS = D.facets.map((f, k) => ({
-  f, col: FCOL[k],
-  x: 388 + (k % 3) * 200, y: 74 + Math.floor(k / 3) * 126, w: 190, h: 116,
-}));
+/** Cloud and bins side by side while there is width; stacked when there is not.
+    The step-6 spotlight gets the cloud's box in wide mode — it never lands on
+    top of a bin, which is what the old fixed layout did. */
+function lay(M) {
+  const {W, H, S} = M;
+  const pad = M.tiny ? 6 : 10;
+  const head = S(14) + 8;
+  const trayH = M.short ? 46 : 58;
+  const gap = M.tiny ? 6 : 9;
+  if (!M.narrow) {
+    const lw = clamp(W * .33, 210, 380), gut = clamp(W * .028, 16, 34);
+    const trayY = H - trayH - 2;
+    return {mode:'wide', pad, gap, cols: 3,
+      cloud: {x: pad, y: head, w: lw, h: trayY - head - 10},
+      tray:  {x: pad, y: trayY, w: lw, h: trayH},
+      bins:  {x: pad + lw + gut, y: head, w: W - pad * 2 - lw - gut, h: H - head - 4}};
+  }
+  const cols = W < 520 ? 2 : 3;
+  const trayY = H - trayH - 2;
+  const cloudH = clamp(H * .18, 62, 130);
+  return {mode:'tall', pad, gap, cols,
+    cloud: {x: pad, y: head, w: W - pad * 2, h: cloudH},
+    tray:  {x: pad, y: trayY, w: W - pad * 2, h: trayH},
+    bins:  {x: pad, y: head + cloudH + gap, w: W - pad * 2, h: trayY - (head + cloudH + gap) - 10}};
+}
 
 chapter(2, {
   steps: [
@@ -644,100 +960,137 @@ chapter(2, {
     {label:'three real misses', tag:'substring', cap:'Run the mapping against the categories the wiki really has and three defects fall out: a keyword that can never match, a lens with <b>no members at all</b>, and a lens that swallows <b>more than half the corpus</b>. All three are silent failures — read them below.'},
   ],
   draw(i, st) {
+    const M = st.m, {W, H, S} = M;
     if (!st.scene) {
       const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+      const L = lay(M); sc.L = L;
 
-      sc.cloudLabel = label(`${D.docs.length} articles · ${allCats.size} categories`, 24, 34, {size:11, fill:COL.ink3});
+      sc.cloudLabel = label(fitPx(`${D.docs.length} articles · ${allCats.size} categories`, S(10.5), W - 24),
+        L.pad, S(13), {size:S(10.5), fill:COL.ink3});
       s.appendChild(sc.cloudLabel);
 
-      // floating category names in the unsorted cloud
-      sc.cats = el('g');
+      /* ── the unsorted cloud ─────────────────────────────── */
+      const CL = L.cloud;
+      sc.cats = el('g'); s.appendChild(sc.cats);
       const catCounts = {}; D.docs.forEach(d => d.categories.forEach(c => catCounts[c] = (catCounts[c]||0)+1));
-      Object.entries(catCounts).sort((a,b)=>b[1]-a[1]).slice(0,14).forEach(([c, n], k) => {
+      const nCats = clamp(Math.round(CL.h / 30), 5, 14);
+      Object.entries(catCounts).sort((a,b)=>b[1]-a[1]).slice(0, nCats).forEach(([c, n], k) => {
         const r = rng(k * 977);
-        sc.cats.appendChild(label(c, 40 + r()*230, 92 + (k/14)*380 + r()*24,
-          {size: 8.5 + Math.min(n,20)*0.22, fill:'rgba(174,185,212,.38)'}));
+        const size = clamp(S(8.5) + Math.min(n,20) * .22, 8, 15);
+        const t = fitPx(c, size, CL.w * .82);
+        sc.cats.appendChild(label(t, CL.x + r() * Math.max(4, CL.w - tw(t, size) - 6),
+          CL.y + 14 + (k / nCats) * (CL.h - 24) + r() * 10, {size, fill:'rgba(174,185,212,.38)'}));
       });
-      s.appendChild(sc.cats);
 
-      // lens bins
+      /* ── lens bins ──────────────────────────────────────── */
+      const B = L.bins, cols = L.cols, rows = Math.ceil(D.facets.length / cols);
+      const bw = (B.w - (cols - 1) * L.gap) / cols;
+      const bh = (B.h - (rows - 1) * L.gap) / rows;
+      const bls = clamp(S(9), 7.5, 11);
       sc.bins = el('g', {opacity:0}); s.appendChild(sc.bins);
+      const BINS = sc.BINS = D.facets.map((f, k) => {
+        const x = B.x + (k % cols) * (bw + L.gap), y = B.y + Math.floor(k / cols) * (bh + L.gap);
+        return {f, col: FCOL[k], x, y, w: bw, h: bh};
+      });
+      const titleLines = clamp(Math.floor((bh - 26) / (bls * 1.35)), 1, 3);
       BINS.forEach((b, k) => {
         const g = el('g', {transform:`translate(${b.x},${b.y})`, style:'cursor:pointer'});
-        g.appendChild(el('rect', {x:0, y:0, width:b.w, height:b.h, rx:12, fill:'rgba(16,22,38,.6)',
+        g.appendChild(el('rect', {x:0, y:0, width:b.w, height:b.h, rx:11, fill:'rgba(16,22,38,.6)',
           stroke:b.col, 'stroke-width':1, opacity:.5}));
-        wrap(b.f.label, 27, 3).forEach((ln, j) =>
-          g.appendChild(label(ln, 10, 18 + j*11.5, {size:8.5, fill:b.col})));
-        b.countNode = label('', b.w - 10, 19, {size:11, fill:'#fff', anchor:'end'});
+        b.countNode = label('', b.w - 9, bls + 8, {size:clamp(S(11), 9, 13), fill:'#fff', anchor:'end'});
+        const nw = 34;
+        wrapPx(b.f.label, bls, b.w - 18 - nw, titleLines).forEach((ln, j) =>
+          g.appendChild(label(ln, 9, bls + 8 + j * bls * 1.32, {size:bls, fill:b.col})));
         g.appendChild(b.countNode);
-        g.onclick = () => showLens(b, k);
+        b.dotTop = bls + 12 + titleLines * bls * 1.32;
+        g.onclick = () => showLens(b);
         sc.bins.appendChild(g);
       });
 
-      // unfiled tray
-      sc.tray = el('g', {opacity:0});
-      sc.tray.appendChild(el('rect', {x:24, y:472, width:340, height:66, rx:12, fill:'rgba(30,22,22,.5)',
+      /* ── unfiled tray ───────────────────────────────────── */
+      const T = L.tray;
+      sc.tray = el('g', {opacity:0}); s.appendChild(sc.tray);
+      sc.tray.appendChild(el('rect', {x:T.x, y:T.y, width:T.w, height:T.h, rx:11, fill:'rgba(30,22,22,.5)',
         stroke:'rgba(255,196,107,.4)', 'stroke-width':1}));
-      sc.tray.appendChild(label(`unfiled · ${unfiled.length} articles, no lens matched`, 40, 494, {size:10, fill:COL.warn}));
-      sc.tray.appendChild(label('still indexed, still retrievable — just not under a lens', 40, 512, {size:9.5, fill:COL.ink4}));
-      s.appendChild(sc.tray);
+      const ts = clamp(S(10), 8.5, 12);
+      sc.tray.appendChild(label(fitPx(`unfiled · ${unfiled.length} articles, no lens matched`, ts, T.w - 28),
+        T.x + 14, T.y + ts + 8, {size:ts, fill:COL.warn}));
+      const roomy = T.h >= 56;
+      if (roomy) sc.tray.appendChild(label(fitPx('still indexed, still retrievable — just not under a lens', ts - 1.8, T.w - 28),
+        T.x + 14, T.y + ts * 2.6 + 6, {size:ts - 1.8, fill:COL.ink4}));
+      const uStep = Math.min(19, (T.w - 30) / Math.max(1, unfiled.length));
+      const uY = T.y + T.h - 11;
 
-      // dots: one node per (doc, facet) pair, plus one for unfiled docs
+      /* ── dots: one per (doc, facet) pair, plus one per unfiled doc ── */
       sc.dots = el('g'); s.appendChild(sc.dots);
       sc.nodes = [];
-      const binCursor = {}; BINS.forEach(b => binCursor[b.f.id] = 0);
-      D.docs.forEach((d, di) => {
+      const binCursor = {}; D.facets.forEach(f => binCursor[f.id] = 0);
+      D.docs.forEach(d => {
         const r = rng(d.pageid);
-        const sx = 40 + r() * 280, sy = 80 + r() * 380;
-        const slots = d.facets.length ? d.facets : [null];
-        slots.forEach((fid, si) => {
-          let tx, ty, col, ghostR = null;
+        const sx = CL.x + 8 + r() * Math.max(10, CL.w - 16), sy = CL.y + 10 + r() * Math.max(10, CL.h - 20);
+        (d.facets.length ? d.facets : [null]).forEach((fid, si) => {
+          let tx, ty, col, rr = null;
           if (fid) {
             const b = BINS.find(x => x.f.id === fid);
-            const n = binCursor[fid]++;
-            const total = members[fid].length;
-            const cols = Math.max(8, Math.ceil(total / 3));       // aim for <= 3 rows
-            const dx = (b.w - 24) / cols;
-            const dy = Math.min(19, (b.h - 54) / Math.max(1, Math.ceil(total / cols)));
-            tx = b.x + 12 + (n % cols) * dx + dx / 2;
-            ty = b.y + 50 + Math.floor(n / cols) * dy;
-            col = b.col; ghostR = clamp(dx * 0.34, 2, 4.4);
+            const n = binCursor[fid]++, total = members[fid].length;
+            /* fill the row before starting a new one, then centre the block in
+               the bin — packing by row count first left two sparse columns */
+            const avail = b.h - b.dotTop - 8;
+            const perRow = clamp(Math.floor((b.w - 20) / 13), 1, total);
+            const dRows = Math.ceil(total / perRow);
+            const dx = (b.w - 20) / perRow;
+            const dy = Math.min(16, avail / Math.max(dRows, 1));
+            const y0 = b.dotTop + Math.max(0, (avail - (dRows - 1) * dy) / 2);
+            tx = b.x + 10 + (n % perRow) * dx + dx / 2;
+            ty = b.y + y0 + Math.floor(n / perRow) * dy;
+            col = b.col; rr = clamp(dx * .34, 1.8, 4.4);
           } else {
             const n = unfiled.indexOf(d);
-            tx = 44 + (n % 12) * 26; ty = 520 + Math.floor(n / 12) * 14;
-            col = COL.warn;
+            tx = T.x + 16 + n * uStep; ty = uY; col = COL.warn; rr = clamp(uStep * .34, 2, 4.4);
           }
-          const c = el('circle', {cx:sx, cy:sy, r: si ? 3 : 4.4, fill: 'rgba(174,185,212,.55)',
+          const c = el('circle', {cx:sx, cy:sy, r: si ? 3 : 4.2, fill:'rgba(174,185,212,.55)',
             stroke:'none', opacity: si ? 0 : 1});
           sc.dots.appendChild(c);
-          sc.nodes.push({el:c, d, fid, sx, sy, tx, ty, col, ghost: si > 0, rr: ghostR});
+          sc.nodes.push({el:c, d, fid, sx, sy, tx, ty, col, ghost: si > 0, rr});
         });
       });
 
-      // spotlight for step 6
-      sc.spot = el('g', {opacity:0});
-      const sp = card(388, 380, 588, 150, {fill:'rgba(28,22,18,.94)', stroke:'rgba(255,196,107,.5)'});
-      sp.appendChild(label('the miss, concretely', 16, 26, {size:10.5, fill:COL.warn, ls:1.2}));
+      /* ── the step-6 spotlight ───────────────────────────── */
       const pp = byTitle['Peer Production'];
-      const lines = [
+      const rows6 = [
         ['lens keyword', '"peer production"', COL.cyan],
         ['category on the wiki', '"Peerproduction"', COL.warn],
         ['"Peerproduction".includes("peer production")', 'false', COL.bad],
         ['articles affected', 'Peerproduction 6 · Peergovernance 4 · Peerproperty 5', COL.ink2],
         ['cost', `Peer Production (${pp ? pp.backlinks : 82} inbound links) is unfiled`, COL.ink],
       ];
-      lines.forEach(([k, v, c], j) => {
-        sp.appendChild(label(k, 16, 52 + j*20, {size:10, fill:COL.ink4}));
-        sp.appendChild(label(v, 572, 52 + j*20, {size:10, fill:c, anchor:'end'}));
+      sc.spot = el('g', {opacity:0}); s.appendChild(sc.spot);
+      const SP = L.mode === 'wide' ? CL : {x: B.x + B.w * .06, y: B.y + B.h * .1, w: B.w * .88, h: B.h * .8};
+      sc.spotOverBins = L.mode !== 'wide';
+      const ss = clamp(S(9.5), 8, 11.5);
+      /* key and value share a line when there is room for both, and stack when
+         there is not — measured, not assumed. */
+      const inline = rows6.every(([k, v]) => tw(k, ss) + tw(v, ss) + 40 <= SP.w);
+      const rowH = inline ? ss * 2.1 : ss * 3.1;
+      const spH = Math.min(SP.h, ss * 3 + rows6.length * rowH + 12);
+      const spY = SP.y + Math.max(0, (SP.h - spH) / 2);
+      const sp = card(SP.x, spY, SP.w, spH, {fill:'rgba(28,22,18,.96)', stroke:'rgba(255,196,107,.5)'});
+      sp.appendChild(label('the miss, concretely', 14, ss + 10, {size:ss, fill:COL.warn, ls:1.2}));
+      rows6.forEach(([k, v, c], j) => {
+        const y = ss * 2.6 + 8 + j * rowH;
+        sp.appendChild(label(fitPx(k, ss, inline ? SP.w - 34 - tw(v, ss) : SP.w - 28), 14, y, {size:ss, fill:COL.ink4}));
+        sp.appendChild(inline
+          ? label(fitPx(v, ss, SP.w - 28), SP.w - 14, y, {size:ss, fill:c, anchor:'end'})
+          : label(fitPx(v, ss, SP.w - 28), 14, y + ss * 1.35, {size:ss, fill:c}));
       });
-      sc.spot.appendChild(sp); s.appendChild(sc.spot);
+      sc.spot.appendChild(sp);
     }
 
-    const sc = st.scene;
+    const sc = st.scene, BINS = sc.BINS;
     const showBins = i >= 1, moved = i >= 2, ghosts = i >= 3, tray = i >= 4, spot = i >= 5;
 
-    fade(sc.cats, moved ? 0.12 : 1);
-    fade(sc.bins, showBins ? 1 : 0);
+    fade(sc.cats, moved ? .12 : 1);
+    fade(sc.bins, showBins ? (spot && sc.spotOverBins ? .18 : 1) : 0);
     fade(sc.tray, tray ? 1 : 0);
     fade(sc.spot, spot ? 1 : 0);
 
@@ -751,10 +1104,11 @@ chapter(2, {
         n.el.setAttribute('cx', go ? n.tx : n.sx);
         n.el.setAttribute('cy', go ? n.ty : n.sy);
         n.el.setAttribute('fill', go ? n.col : 'rgba(174,185,212,.55)');
-        n.el.setAttribute('r', spot && isPP ? 7 : (go && n.rr != null ? n.rr : (n.ghost ? 3 : 4.4)));
+        n.el.setAttribute('r', spot && isPP ? 7 : (go && n.rr != null ? n.rr : (n.ghost ? 3 : 4.2)));
         n.el.setAttribute('stroke', spot && isPP ? COL.warn : 'none');
         n.el.setAttribute('stroke-width', spot && isPP ? 2.5 : 0);
-        n.el.style.opacity = n.ghost ? (ghosts ? 0.92 : 0) : (spot && !isPP && n.fid === null ? .35 : 1);
+        n.el.style.opacity = n.ghost ? (ghosts ? .92 : 0)
+          : (spot && sc.spotOverBins && n.fid !== null ? .18 : (spot && !isPP && n.fid === null ? .35 : 1));
       });
     });
 
@@ -816,7 +1170,7 @@ function renderAudit(show) {
   }).join('');
   el2.innerHTML = `<div class="pane" style="border-color:rgba(255,196,107,.28)">
     <h4 style="color:${COL.warn}">The same test, run against all ${fmt(A.categories)} categories on the wiki</h4>
-    <div class="hint" style="margin-bottom:10px">pages reachable by each lens · ${fmt(A.categorised_pages)} category memberships in total</div>
+    <div class="hint" style="margin-bottom:10px;white-space:normal">pages reachable by each lens · ${fmt(A.categorised_pages)} category memberships in total</div>
     <table style="width:100%;border-collapse:collapse">${rows}</table>
     <div style="margin-top:12px;font-size:13px;color:var(--ink-2);line-height:1.6">
       <b style="color:${COL.warn}">${deadKw} of the ${totalKw} keywords match no category at all.</b>
@@ -828,12 +1182,12 @@ function renderAudit(show) {
     </div></div>`;
 }
 
-function showLens(b, k) {
+function showLens(b) {
   const list = members[b.f.id].slice().sort((x, y) => y.backlinks - x.backlinks);
   const wrapEl = document.getElementById('lenslist');
   wrapEl.innerHTML = `<div class="pane" style="border-color:${b.col}44">
     <h4 style="color:${b.col}">${esc(b.f.label)} · ${list.length} articles</h4>
-    <div class="hint" style="margin-bottom:10px">keywords: ${b.f.keywords.map(x=>`<code>${esc(x)}</code>`).join(' · ')}</div>
+    <div class="hint" style="margin-bottom:10px;white-space:normal">keywords: ${b.f.keywords.map(x=>`<code>${esc(x)}</code>`).join(' · ')}</div>
     <div class="grid3">${list.slice(0, 9).map(d => `
       <div class="artcard"><div class="t">${esc(d.title)}</div>
       <div class="m">${d.backlinks} inbound · ${esc(d.categories.slice(0,2).join(', ') || 'no categories')}</div>
@@ -848,25 +1202,56 @@ function showLens(b, k) {
 <script>
 /* ══════════════════════════════════════════════════ §3 · hybrid retrieval */
 (function(){
-const K = 8;                                    // rows shown per column
 const QIDS = Object.keys(D.retrieval);
 let qid = QIDS[0];
+const COLS = [
+  {key:'lex', col: COL.lime,   name:'LEXICAL · BM25',    sub:'exact words, unbounded score'},
+  {key:'sem', col: COL.blue,   name:'SEMANTIC · cosine', sub:'768-dim vectors, [-1,1]'},
+  {key:'fus', col: COL.violet, name:'UNION → FUSED',     sub:'ranks fused, never scores'},
+];
 
-const COLS = {
-  lex:  {x: 24,  col: COL.lime,   name: 'LEXICAL · BM25',    sub: 'exact words, unbounded score'},
-  sem:  {x: 356, col: COL.blue,   name: 'SEMANTIC · cosine', sub: '768-dim vectors, [-1,1]'},
-  fus:  {x: 688, col: COL.violet, name: 'UNION → FUSED',     sub: 'ranks fused, never scores'},
-};
-
-// query picker
-const picker = document.getElementById('qpicker');
-QIDS.forEach((id, k) => {
-  const b = h('button', 'chip-btn' + (k === 0 ? ' on' : ''));
-  b.innerHTML = `<span class="dot" style="background:${COL.blue}"></span>${esc(trim(D.retrieval[id].query, 44))}`;
-  b.onclick = () => { qid = id; [...picker.children].forEach(c => c.classList.remove('on')); b.classList.add('on');
-    CH3.scene = null; CH3.set(CH3.i); };
-  picker.appendChild(b);
-});
+/** Three ranked columns and, always, a reserved strip at the bottom for the
+    composite arithmetic — reserved rather than overlaid, which is how the old
+    layout ended up drawing the panel across the eighth result row. */
+function lay(M) {
+  const {W, H, S} = M;
+  const pad = M.tiny ? 6 : 10;
+  const qH = M.short ? 34 : 42;
+  /* the composite strip is sized from its own type, not a guessed constant —
+     a fixed 90px box crushed four 12.5px lines into 10px of pitch */
+  const ms = clamp(S(10), 8.5, 11.5);
+  const mLines = M.narrow ? 4 : 3;
+  const mTop = ms * 1.5 + 12;
+  const mPitch = ms * 1.72;
+  const mathH = Math.ceil(mTop + mLines * mPitch + 6);
+  /* the head height has to come from the type size, or the sub-line lands on
+     top of the first result row */
+  const hs = clamp(S(10.5), 9, 12);
+  const twoLineHead = !M.short;
+  const headH = Math.ceil(twoLineHead ? hs * 2.3 + 20 : hs + 18);
+  const bot = H - 4 - mathH - 8;
+  if (!M.narrow) {
+    const gut = clamp(W * .028, 14, 34);
+    const w = (W - pad * 2 - gut * 2) / 3;
+    const top = 2 + qH + 12 + headH;
+    const avail = bot - top;
+    const K = clamp(Math.floor(avail / 34), 2, 8);
+    return {mode:'wide', pad, gut, w, K, headH, hs, twoLineHead, top, avail, ms, mLines, mTop, mPitch,
+      pitch: clamp(avail / K, 26, 48), q:{x:pad, y:2, w:W - pad*2, h:qH},
+      math:{x:pad, y:H - 4 - mathH, w:W - pad*2, h:mathH},
+      cx: [pad, pad + w + gut, pad + (w + gut) * 2]};
+  }
+  const w = W - pad * 2, gap = 8;
+  const top = 2 + qH + 10;
+  const secH = (bot - top - gap * 2) / 3;
+  const avail = secH - headH;
+  /* pitch has a floor: a row thinner than this is not a row, it is a line */
+  const K = clamp(Math.floor(avail / 26), 1, 5);
+  return {mode:'tall', pad, gut:gap, w, K, headH, hs, twoLineHead, top, avail, secH, ms, mLines, mTop, mPitch,
+    pitch: clamp(avail / K, 24, 44), q:{x:pad, y:2, w, h:qH},
+    math:{x:pad, y:H - 4 - mathH, w, h:mathH},
+    cx: [pad, pad, pad], cy: [top, top + secH + gap, top + (secH + gap) * 2]};
+}
 
 const CH3 = chapter(3, {
   steps: [
@@ -878,77 +1263,95 @@ const CH3 = chapter(3, {
     {label:'a signal an index cannot have', tag:'link-centrality', cap:'A search index knows what a document contains. It does not know how central that document is in a link graph the corpus itself defines. That signal is added with weight 0.3, saturating — the gap between 1 and 3 inbound links matters, the gap between 40 and 42 does not.'},
   ],
   draw(i, st) {
+    const M = st.m, {W, H, S} = M;
     const R = D.retrieval[qid];
     if (!st.scene) {
       const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+      const L = lay(M); sc.L = L;
+      const K = L.K, rowH = Math.min(L.pitch - 8, 40);
 
-      const qb = card(24, 20, 952, 44, {fill:'rgba(18,26,48,.9)', stroke:'rgba(91,156,255,.4)'});
-      qb.appendChild(label('query', 16, 27, {size:9.5, fill:COL.ink4}));
-      qb.appendChild(label('“' + R.query + '”', 16, 30, {size:13.5, fill:'#fff'}));
-      qb.lastChild.setAttribute('y', 30);
+      /* query bar */
+      const qs = clamp(S(13), 11, 15);
+      const qb = card(L.q.x, L.q.y, L.q.w, L.q.h, {fill:'rgba(18,26,48,.9)', stroke:'rgba(91,156,255,.4)'});
+      const qtag = 'query', qtw = tw(qtag, S(9)) + 26;
+      qb.appendChild(label(qtag, L.q.w - 14, L.q.h / 2 + S(9) * .36, {size:S(9), fill:COL.ink4, anchor:'end'}));
+      qb.appendChild(label(fitPx('“' + R.query + '”', qs, L.q.w - 28 - qtw), 14, L.q.h / 2 + qs * .36, {size:qs, fill:'#fff'}));
       s.appendChild(qb);
 
+      /* column heads */
+      const hs = L.hs;
       sc.heads = {};
-      for (const key in COLS) {
-        const c = COLS[key], g = el('g', {opacity: 0});
-        g.appendChild(el('rect', {x:c.x, y:84, width:288, height:2, rx:1, fill:c.col, opacity:.6}));
-        g.appendChild(label(c.name, c.x, 104, {size:10.5, fill:c.col, ls:1.1}));
-        g.appendChild(label(c.sub, c.x, 119, {size:9, fill:COL.ink4}));
-        s.appendChild(g); sc.heads[key] = g;
-      }
+      COLS.forEach((c, k) => {
+        const x = L.cx[k], y = L.mode === 'wide' ? L.top - L.headH : L.cy[k];
+        const g = el('g', {opacity:0});
+        g.appendChild(el('rect', {x, y: y + 2, width:L.w, height:2, rx:1, fill:c.col, opacity:.6}));
+        g.appendChild(label(c.name, x, y + hs + 12, {size:hs, fill:c.col, ls:1.1}));
+        if (L.twoLineHead) g.appendChild(label(fitPx(c.sub, hs - 1.5, L.w), x, y + hs * 2.3 + 12, {size:hs - 1.5, fill:COL.ink4}));
+        s.appendChild(g); sc.heads[c.key] = g;
+      });
 
-      // ── build rows ─────────────────────────────────────────
-      const mkRow = (x, y, w, colr) => {
+      const rowY = k => (L.mode === 'wide' ? L.top : L.cy[0] + L.headH) + k * L.pitch;
+      const rowYIn = (colIdx, k) => (L.mode === 'wide' ? L.top + k * L.pitch : L.cy[colIdx] + L.headH + k * L.pitch);
+      sc.rowYIn = rowYIn; sc.rowH = rowH;
+
+      const rs = clamp(S(11), 9.5, 12.5);
+      const mkRow = (x, y) => {
         const g = el('g', {transform:`translate(${x},${y})`, opacity:0});
-        g.appendChild(el('rect', {x:0, y:0, width:w, height:38, rx:9,
+        g.appendChild(el('rect', {x:0, y:0, width:L.w, height:rowH, rx:8,
           fill:'rgba(18,24,42,.85)', stroke:'rgba(150,170,230,.2)'}));
         return g;
       };
-      sc.lexRows = R.lexical.slice(0, K).map((r, k) => {
-        const g = mkRow(COLS.lex.x, 136 + k*46, 288);
-        g.appendChild(label(String(k+1).padStart(2,'0'), 11, 24, {size:10, fill:COL.lime}));
-        g.appendChild(label(trim(r.title, 26), 34, 24, {size:11, fill:COL.ink}));
-        g.appendChild(label(r.bm25.toFixed(1), 277, 24, {size:10, fill:COL.ink3, anchor:'end'}));
+      const plainRow = (list, colIdx, col, fmtScore) => list.slice(0, K).map((r, k) => {
+        const g = mkRow(L.cx[colIdx], rowYIn(colIdx, k));
+        const score = fmtScore(r);
+        const nw = tw('00', rs) + 20, sw = tw(score, rs - 1) + 16;
+        g.appendChild(label(String(k+1).padStart(2,'0'), 10, rowH / 2 + rs * .36, {size:rs, fill:col}));
+        g.appendChild(label(fitPx(r.title, rs, L.w - nw - sw - 12), nw, rowH / 2 + rs * .36, {size:rs, fill:COL.ink}));
+        g.appendChild(label(score, L.w - 11, rowH / 2 + rs * .36, {size:rs - 1, fill:COL.ink3, anchor:'end'}));
         st.svg.appendChild(g); return g;
       });
-      sc.semRows = R.semantic.slice(0, K).map((r, k) => {
-        const g = mkRow(COLS.sem.x, 136 + k*46, 288);
-        g.appendChild(label(String(k+1).padStart(2,'0'), 11, 24, {size:10, fill:COL.blue}));
-        g.appendChild(label(trim(r.title, 26), 34, 24, {size:11, fill:COL.ink}));
-        g.appendChild(label(r.cos.toFixed(3), 277, 24, {size:10, fill:COL.ink3, anchor:'end'}));
-        st.svg.appendChild(g); return g;
-      });
+      sc.lexRows = plainRow(R.lexical, 0, COL.lime, r => r.bm25.toFixed(1));
+      sc.semRows = plainRow(R.semantic, 1, COL.blue, r => r.cos.toFixed(3));
 
-      // fused: sorted by RRF alone (step 5) and by composite (step 6)
+      /* fused: ordered by RRF alone (step 5), then by composite (step 6) */
       sc.byRRF = R.fused.slice().sort((a,b) => b.rrf - a.rrf || b.centrality - a.centrality).slice(0, K);
       sc.byComposite = R.fused.slice(0, K);
-      const fusedSet = [...new Set([...sc.byRRF, ...sc.byComposite])];
-      sc.fusRows = fusedSet.map(c => {
-        const g = mkRow(COLS.fus.x, 136, 288);
-        g.appendChild(el('rect', {x:0, y:0, width:3, height:38, rx:2,
-          fill: c.origins.length === 2 ? COL.violet : (c.origins[0] === 'lexical' ? COL.lime : COL.blue)}));
-        g.appendChild(label(trim(c.title, 25), 14, 17, {size:11, fill:COL.ink}));
+      const twoLine = rowH >= 34;
+      sc.fusRows = [...new Set([...sc.byRRF, ...sc.byComposite])].map(c => {
+        const g = mkRow(L.cx[2], rowYIn(2, 0));
+        const oc = c.origins.length === 2 ? COL.violet : (c.origins[0] === 'lexical' ? COL.lime : COL.blue);
+        g.appendChild(el('rect', {x:0, y:0, width:3, height:rowH, rx:2, fill:oc}));
+        const sn = label('', L.w - 11, twoLine ? rowH / 2 + rs * .36 : rowH / 2 + rs * .36, {size:rs, fill:'#fff', anchor:'end'});
+        const sw = tw('0.0000', rs) + 16;
         const badge = c.origins.length === 2 ? 'both' : c.origins[0];
-        g.appendChild(label(badge, 14, 31, {size:8.5,
-          fill: c.origins.length === 2 ? COL.violet : (c.origins[0] === 'lexical' ? COL.lime : COL.blue)}));
-        const sn = label('', 277, 24, {size:10.5, fill:'#fff', anchor:'end'});
+        if (twoLine) {
+          g.appendChild(label(fitPx(c.title, rs, L.w - 26 - sw), 13, rs + 5, {size:rs, fill:COL.ink}));
+          g.appendChild(label(badge, 13, rowH - 8, {size:clamp(S(8.5), 7.5, 10), fill:oc}));
+        } else {
+          const bw = tw(badge, rs - 2) + 10;
+          g.appendChild(label(fitPx(c.title, rs, L.w - 26 - sw - bw), 13, rowH / 2 + rs * .36, {size:rs, fill:COL.ink}));
+          g.appendChild(label(badge, L.w - 13 - sw, rowH / 2 + rs * .3, {size:rs - 2, fill:oc, anchor:'end'}));
+        }
         g.appendChild(sn);
         return {g, c, sn};
       });
       sc.fusRows.forEach(r => st.svg.appendChild(r.g));
 
-      // connector lines union → fused
       sc.links = el('g', {opacity:0}); st.svg.appendChild(sc.links);
 
-      // math panel
+      /* composite arithmetic, in its own reserved strip */
+      const A = L.math;
       sc.math = el('g', {opacity:0});
-      const mp = card(688, 476, 288, 118, {fill:'rgba(24,20,40,.94)', stroke:'rgba(184,132,255,.42)'});
-      mp.appendChild(label('composite', 14, 22, {size:9.5, fill:COL.violet, ls:1.2}));
-      sc.mathLines = [0,1,2,3].map(j => { const t = label('', 14, 46 + j*22, {size:10, fill:COL.ink2}); mp.appendChild(t); return t; });
+      const mp = card(A.x, A.y, A.w, A.h, {fill:'rgba(24,20,40,.94)', stroke:'rgba(184,132,255,.42)'});
+      mp.appendChild(label('composite', 14, S(9.5) + 10, {size:S(9.5), fill:COL.violet, ls:1.2}));
+      const ms = L.ms;
+      sc.mathLines = Array.from({length: L.mLines}, (_, j) =>
+        mp.appendChild(label('', 14, L.mTop + j * L.mPitch, {size:ms, fill:COL.ink2})));
+      sc.mathW = A.w - 28;
       sc.math.appendChild(mp); st.svg.appendChild(sc.math);
     }
 
-    const sc = st.scene;
+    const sc = st.scene, L = sc.L, K = L.K, ms = L.ms;
     const show = {lex: i >= 1, sem: i >= 2, fus: i >= 3};
     fade(sc.heads.lex, show.lex ? 1 : 0); fade(sc.heads.sem, show.sem ? 1 : 0); fade(sc.heads.fus, show.fus ? 1 : 0);
     sc.lexRows.forEach((g, k) => { g.style.transition = `opacity ${DUR}ms ${EASE} ${k*45}ms`;
@@ -963,38 +1366,39 @@ const CH3 = chapter(3, {
       g.style.transition = `all ${DUR}ms ${EASE} ${Math.max(pos,0)*50}ms`;
       requestAnimationFrame(() => {
         g.style.opacity = visible ? 1 : 0;
-        g.setAttribute('transform', `translate(${COLS.fus.x},${136 + Math.max(pos,0)*46})`);
+        g.setAttribute('transform', `translate(${L.cx[2]},${sc.rowYIn(2, Math.max(pos,0))})`);
       });
       sn.textContent = i >= 5 ? c.composite.toFixed(3) : (i >= 4 ? c.rrf.toFixed(3) : '');
     });
 
-    // union connectors
+    /* union connectors — only where the columns sit side by side */
     sc.links.innerHTML = '';
-    if (i >= 3) {
+    if (i >= 3 && L.mode === 'wide') {
       order.forEach((c, pos) => {
         c.origins.forEach(o => {
+          const ci = o === 'lexical' ? 0 : 1;
           const src = o === 'lexical' ? R.lexical : R.semantic;
           const idx = src.slice(0, K).findIndex(r => r.title === c.title);
           if (idx < 0) return;
-          const x0 = (o === 'lexical' ? COLS.lex.x : COLS.sem.x) + 288, y0 = 136 + idx*46 + 19;
-          const x1 = COLS.fus.x, y1 = 136 + pos*46 + 19;
+          const x0 = L.cx[ci] + L.w, y0 = sc.rowYIn(ci, idx) + sc.rowH / 2;
+          const x1 = L.cx[2], y1 = sc.rowYIn(2, pos) + sc.rowH / 2;
           sc.links.appendChild(el('path', {
-            d:`M${x0} ${y0} C${x0+34} ${y0} ${x1-34} ${y1} ${x1} ${y1}`,
+            d:`M${x0} ${y0} C${x0 + L.gut*.5} ${y0} ${x1 - L.gut*.5} ${y1} ${x1} ${y1}`,
             fill:'none', stroke: o === 'lexical' ? COL.lime : COL.blue, 'stroke-width':.9, opacity:.34}));
         });
       });
-      fade(sc.links, 1);
-    } else fade(sc.links, 0);
+    }
+    fade(sc.links, i >= 3 && L.mode === 'wide' ? 1 : 0);
 
     fade(sc.math, i >= 4 ? 1 : 0);
     if (i >= 4) {
       const top = order[0];
-      sc.mathLines[0].textContent = `top: ${trim(top.title, 26)}`;
-      sc.mathLines[1].textContent = `rrf   = ${top.ranks.map(r => `1/(60+${r.rank})`).join(' + ')}`;
-      sc.mathLines[2].textContent = `      × 61 = ${top.rrf.toFixed(4)}`;
-      sc.mathLines[3].textContent = i >= 5
-        ? `+ 0.3 × ${top.centrality.toFixed(3)} centrality = ${top.composite.toFixed(4)}`
-        : '';
+      const terms = top.ranks.map(r => `1/(60+${r.rank})`).join(' + ');
+      const cen = i >= 5 ? `+ 0.3 × ${top.centrality.toFixed(3)} centrality = ${top.composite.toFixed(4)}` : '';
+      const lines = L.mLines === 4
+        ? [`top: ${top.title}`, `rrf = ${terms}`, `    × 61 = ${top.rrf.toFixed(4)}`, cen]
+        : [`top: ${top.title}`, `rrf = ${terms}   × 61 = ${top.rrf.toFixed(4)}`, cen];
+      sc.mathLines.forEach((t, j) => t.textContent = fitPx(lines[j] || '', ms, sc.mathW));
     }
 
     const both = R.fused.filter(c => c.origins.length === 2).length;
@@ -1005,10 +1409,21 @@ const CH3 = chapter(3, {
       `<div class="read">found by both <b style="color:${COL.violet}">${both}</b></div>` +
       `<div class="read">lexical only <b style="color:${COL.lime}">${lexOnly}</b></div>` +
       `<div class="read">semantic only <b style="color:${COL.blue}">${semOnly}</b></div>` +
-      `<div class="read">recovered by the union <b>${lexOnly + semOnly}</b></div>`;
+      `<div class="read">recovered by the union <b>${lexOnly + semOnly}</b></div>` +
+      (K < R.fused.length ? `<div class="read">showing top <b>${K}</b></div>` : '');
     document.getElementById('hint3').textContent =
       `${lexOnly + semOnly} of ${R.fused.length} results were found by only one retriever`;
   }
+});
+
+/* query picker */
+const picker = document.getElementById('qpicker');
+QIDS.forEach((id, k) => {
+  const b = h('button', 'chip-btn' + (k === 0 ? ' on' : ''));
+  b.innerHTML = `<span class="dot" style="background:${COL.blue}"></span>${esc(trim(D.retrieval[id].query, 44))}`;
+  b.onclick = () => { qid = id; [...picker.children].forEach(c => c.classList.remove('on')); b.classList.add('on');
+    CH3.scene = null; CH3.set(CH3.i); };
+  picker.appendChild(b);
 });
 })();
 </script>
@@ -1021,7 +1436,7 @@ const SHELF_CANDIDATES = ['Governing the Commons','Elinor Ostrom','Commons','Tra
   'Community Land Trust','Commoning'];
 const POOL = SHELF_CANDIDATES.map(t => byTitle[t]).filter(Boolean).slice(0, 10);
 const TAGS = ['core-reading','ostrom','case-study','policy','to-review','provisioning'];
-const shelved = new Map();                 // title -> {tags, status}
+const shelved = new Map();                 // title -> entry
 
 function entryFor(d, k) {
   return {
@@ -1035,6 +1450,30 @@ function entryFor(d, k) {
   };
 }
 
+/** Two stores facing each other, with a gutter wide enough for the refused
+    body to travel across it. Stacked, with the gutter turned vertical, when
+    there is not width for two columns. */
+function lay(M) {
+  const {W, H, S} = M;
+  const pad = M.tiny ? 6 : 10;
+  const refH = M.short ? 15 : 20;
+  if (!M.narrow) {
+    /* the gutter has to hold the whole refused-body chip and still leave it
+       somewhere to travel — parked over the article list it just hid a row */
+    const gut = clamp(W * .17, 132, 250);
+    const w = (W - pad * 2 - gut) / 2;
+    const h = H - 6 - refH;
+    return {mode:'wide', pad, gut, refH,
+      up: {x: pad, y: 4, w, h}, ov: {x: pad + w + gut, y: 4, w, h},
+      cross: {x0: pad + w, x1: pad + w + gut, y: 4 + h / 2}};
+  }
+  const gut = 48, w = W - pad * 2;
+  const h = (H - 6 - refH - gut) / 2;
+  return {mode:'tall', pad, gut, refH,
+    up: {x: pad, y: 4, w, h}, ov: {x: pad, y: 4 + h + gut, w, h},
+    cross: {y0: 4 + h, y1: 4 + h + gut, x: pad + w / 2}};
+}
+
 const CH4 = chapter(4, {
   steps: [
     {label:'two stores', tag:'upstream ≠ yours', cap:'On the left, a corpus your group does not own and cannot edit. On the right, a store your group entirely controls. The interesting question is what may legitimately cross.'},
@@ -1044,70 +1483,119 @@ const CH4 = chapter(4, {
     {label:'no new format', tag:'conformant OKF', cap:'None of this needed a new file format. An entry carrying only a type is already a conformant concept, so the existing linter validates it and the existing importer round-trips it. The epic added <b>storage and one invariant</b> — not a serialization.'},
   ],
   draw(i, st) {
+    const M = st.m, {W, H, S} = M;
     if (!st.scene) {
       const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
+      const L = lay(M); sc.L = L;
+      const hs = clamp(S(10), 8.5, 12);
+      const panelTop = hs * 2.9 + 14;                       // below a panel's two header lines
 
-      const up = card(24, 60, 400, 490, {fill:'rgba(14,20,34,.7)', stroke:'rgba(150,170,230,.22)'});
-      up.appendChild(label('upstream · wiki.p2pfoundation.net', 16, 26, {size:10, fill:COL.ink3, ls:1.1}));
-      up.appendChild(label('you do not own this, and you do not need to', 16, 43, {size:9.5, fill:COL.ink4}));
+      /* upstream */
+      const U = L.up;
+      const up = card(U.x, U.y, U.w, U.h, {fill:'rgba(14,20,34,.7)', stroke:'rgba(150,170,230,.22)'});
+      up.appendChild(label(fitPx('upstream · wiki.p2pfoundation.net', hs, U.w - 28), 14, hs + 12, {size:hs, fill:COL.ink3, ls:1.1}));
+      up.appendChild(label(fitPx('you do not own this, and you do not need to', hs - .5, U.w - 28), 14, hs * 2.5 + 10, {size:hs - .5, fill:COL.ink4}));
       s.appendChild(up);
 
-      sc.rows = POOL.map((d, k) => {
-        const g = el('g', {transform:`translate(40,${124 + k*41})`, style:'cursor:pointer'});
-        const r = el('rect', {x:0, y:0, width:368, height:36, rx:8, fill:'rgba(20,28,48,.8)',
-          stroke:'rgba(150,170,230,.18)'});
+      const rowsAvail0 = U.h - panelTop - 8;
+      const nRows = clamp(Math.floor(rowsAvail0 / 33), 2, POOL.length);
+      /* leave the "+ n more" line room inside the panel rather than on its edge */
+      const rowsAvail = rowsAvail0 - (nRows < POOL.length ? 18 : 0);
+      const rowP = Math.min(56, rowsAvail / nRows);
+      const rowH = Math.min(rowP - 6, 46);
+      const rs = clamp(S(11), 9.5, 12.5);
+      sc.rows = POOL.slice(0, nRows).map((d, k) => {
+        const y = U.y + panelTop + k * rowP;
+        const g = el('g', {transform:`translate(${U.x + 14},${y})`, style:'cursor:pointer'});
+        const rw = U.w - 28;
+        const r = el('rect', {x:0, y:0, width:rw, height:rowH, rx:8, fill:'rgba(20,28,48,.8)', stroke:'rgba(150,170,230,.18)'});
         g.appendChild(r);
-        g.appendChild(label(trim(d.title, 30), 12, 22, {size:11, fill:COL.ink}));
-        g.appendChild(label(`${(d.bytes/1024).toFixed(1)} KB`, 338, 22, {size:9.5, fill:COL.ink4, anchor:'end'}));
-        const tick = label('✓', 358, 22, {size:12, fill:COL.gold, anchor:'end', opacity:0});
+        const kb = `${(d.bytes/1024).toFixed(1)} KB`;
+        const kbw = tw(kb, rs - 1.5) + 14, tickw = 18;
+        g.appendChild(label(fitPx(d.title, rs, rw - 24 - kbw - tickw), 11, rowH / 2 + rs * .36, {size:rs, fill:COL.ink}));
+        g.appendChild(label(kb, rw - 11 - tickw, rowH / 2 + rs * .36, {size:rs - 1.5, fill:COL.ink4, anchor:'end'}));
+        const tick = label('✓', rw - 10, rowH / 2 + rs * .4, {size:rs + 1, fill:COL.gold, anchor:'end', opacity:0});
         g.appendChild(tick);
         g.onclick = () => toggle(d, k);
         s.appendChild(g);
         return {g, r, tick, d, k};
       });
+      if (nRows < POOL.length) s.appendChild(label(`+ ${POOL.length - nRows} more upstream`,
+        U.x + U.w / 2, U.y + panelTop + nRows * rowP + 10, {size:S(9.5), fill:COL.ink4, anchor:'middle'}));
+      sc.poolShown = nRows;
 
-      const ov = card(576, 60, 400, 490, {fill:'rgba(28,24,14,.6)', stroke:'rgba(255,210,122,.34)'});
-      ov.appendChild(label('your overlay · space:commons-reading', 16, 26, {size:10, fill:COL.gold, ls:1.1}));
-      ov.appendChild(label('pointers + your metadata · no bodies', 16, 43, {size:9.5, fill:COL.ink4}));
+      /* overlay */
+      const V = L.ov;
+      const ov = card(V.x, V.y, V.w, V.h, {fill:'rgba(28,24,14,.6)', stroke:'rgba(255,210,122,.34)'});
+      ov.appendChild(label(fitPx('your overlay · space:commons-reading', hs, V.w - 28), 14, hs + 12, {size:hs, fill:COL.gold, ls:1.1}));
+      ov.appendChild(label(fitPx('pointers + your metadata · no bodies', hs - .5, V.w - 28), 14, hs * 2.5 + 10, {size:hs - .5, fill:COL.ink4}));
       s.appendChild(ov);
+
+      const eAvail = V.h - panelTop - 8;
+      sc.nEntries = clamp(Math.floor(eAvail / 58), 1, 6);
+      sc.entryP = Math.min(88, eAvail / sc.nEntries);
+      sc.entryH = Math.min(sc.entryP - 8, 78);
+      sc.entryTop = V.y + panelTop;
+      sc.es = clamp(S(11), 9.5, 12.5);
       sc.entries = el('g'); s.appendChild(sc.entries);
-      sc.empty = label('nothing shelved yet — click an article', 776, 300, {size:11, fill:COL.ink4, anchor:'middle'});
+      sc.empty = label(fitPx('nothing shelved yet — click an article', clamp(S(11), 9.5, 12), V.w - 24),
+        V.x + V.w / 2, V.y + V.h / 2, {size:clamp(S(11), 9.5, 12), fill:COL.ink4, anchor:'middle'});
       s.appendChild(sc.empty);
 
-      // the refused body
-      sc.body = el('g', {opacity:0});
-      sc.body.appendChild(el('rect', {x:-52, y:-16, width:104, height:32, rx:8,
-        fill:'rgba(60,20,28,.9)', stroke:COL.bad, 'stroke-width':1.2}));
-      sc.bodyLabel = label('body', 0, 5, {size:10, fill:COL.bad, anchor:'middle'});
-      sc.body.appendChild(sc.bodyLabel);
-      sc.body.setAttribute('transform', 'translate(300,300)');
-      s.appendChild(sc.body);
-      sc.refusal = label('', 500, 548, {size:10.5, fill:COL.bad, anchor:'middle', opacity:0});
-      s.appendChild(sc.refusal);
-
+      /* the crossing: an arrow, and the body that is refused passage */
+      const C = L.cross, as = clamp(S(9.5), 8, 11);
       sc.arrow = el('g', {opacity:0});
-      sc.arrow.appendChild(el('path', {d:'M436 295 L562 295', stroke:COL.gold, 'stroke-width':1.3,
-        'stroke-dasharray':'5 4'}));
-      sc.arrow.appendChild(label('resource: →', 499, 283, {size:9.5, fill:COL.gold, anchor:'middle'}));
+      if (L.mode === 'wide') {
+        sc.arrow.appendChild(el('path', {d:`M${C.x0 + 8} ${C.y} L${C.x1 - 8} ${C.y}`, stroke:COL.gold, 'stroke-width':1.3, 'stroke-dasharray':'5 4'}));
+        sc.arrow.appendChild(label('resource: →', (C.x0 + C.x1) / 2, C.y - 9, {size:as, fill:COL.gold, anchor:'middle'}));
+        /* below the resource: arrow, not across it */
+        sc.bodyHome = x => `translate(${C.x0 + 10 + x / 2},${C.y + 30})`;
+        sc.bodyAway = x => `translate(${C.x1 - 10 - x / 2},${C.y + 30})`;
+      } else {
+        sc.arrow.appendChild(el('path', {d:`M${C.x} ${C.y0 + 6} L${C.x} ${C.y1 - 6}`, stroke:COL.gold, 'stroke-width':1.3, 'stroke-dasharray':'5 4'}));
+        sc.arrow.appendChild(label('resource: ↓', C.x + 10, (C.y0 + C.y1) / 2 + 4, {size:as, fill:COL.gold}));
+        sc.bodyHome = () => `translate(${C.x},${C.y0 + 17})`;
+        sc.bodyAway = () => `translate(${C.x},${C.y1 - 17})`;
+      }
       s.appendChild(sc.arrow);
+
+      sc.body = el('g', {opacity:0});
+      sc.bodyRect = el('rect', {x:-54, y:-15, width:108, height:30, rx:8, fill:'rgba(60,20,28,.95)', stroke:COL.bad, 'stroke-width':1.2});
+      sc.body.appendChild(sc.bodyRect);
+      sc.bodyLabel = label('body', 0, as * .36, {size:as, fill:COL.bad, anchor:'middle'});
+      sc.body.appendChild(sc.bodyLabel);
+      sc.homeT = sc.bodyHome(108); sc.awayT = sc.bodyAway(108);
+      sc.body.setAttribute('transform', sc.homeT);
+      s.appendChild(sc.body);
+
+      sc.refusal = label('', W / 2, H - 5, {size:clamp(S(10.5), 9, 12), fill:COL.bad, anchor:'middle', opacity:0});
+      sc.refusalW = W - 24;
+      s.appendChild(sc.refusal);
     }
 
     const sc = st.scene;
     if (i >= 1 && shelved.size === 0) { toggle(POOL[0], 0, true); toggle(POOL[1], 1, true); }
     fade(sc.arrow, i >= 1 ? 1 : 0);
 
-    // the refusal beat
+    /* the refusal beat */
+    clearTimeout(sc._bt);
     if (i === 3) {
       const first = byTitle[[...shelved.keys()][0]] || POOL[0];
-      sc.bodyLabel.textContent = `body: ${(first.bytes / 1024).toFixed(1)} KB`;
-      sc.body.setAttribute('transform', 'translate(300,300)');
+      const t = `body: ${(first.bytes / 1024).toFixed(1)} KB`;
+      const bs = clamp(S(9.5), 8, 11);
+      sc.bodyLabel.textContent = t;
+      const bw = Math.max(90, tw(t, bs) + 22);
+      sc.bodyRect.setAttribute('x', -bw / 2); sc.bodyRect.setAttribute('width', bw);
+      sc.homeT = sc.bodyHome(bw); sc.awayT = sc.bodyAway(bw);
+      sc.body.setAttribute('transform', sc.homeT);
       sc.body.style.opacity = 1;
-      anim(sc.body, {transform:'translate(520,300)'}, 520);
-      setTimeout(() => {
-        anim(sc.body, {transform:'translate(300,300)'}, 460);
-        sc.refusal.textContent = 'overlayEntryFromConcept() — refuses a concept carrying a body';
-        fade(sc.refusal, 1, 300);
-      }, REDUCED ? 0 : 620);
+      anim(sc.body, {transform: sc.awayT}, DUR ? 520 : 0);
+      sc._bt = setTimeout(() => {
+        anim(sc.body, {transform: sc.homeT}, DUR ? 460 : 0);
+        sc.refusal.textContent = fitPx('overlayEntryFromConcept() — refuses a concept carrying a body',
+          clamp(M.S(10.5), 9, 12), sc.refusalW);
+        fade(sc.refusal, 1, DUR ? 300 : 0);
+      }, DUR ? 620 : 0);
     } else { fade(sc.body, 0); fade(sc.refusal, 0); }
 
     render(i);
@@ -1123,6 +1611,7 @@ function toggle(d, k, silent) {
 
 function render(step) {
   const sc = CH4.scene; if (!sc) return;
+  const L = sc.L, V = L.ov, es = sc.es;
   sc.rows.forEach(({r, tick, d}) => {
     const on = shelved.has(d.title);
     r.setAttribute('stroke', on ? COL.gold : 'rgba(150,170,230,.18)');
@@ -1133,31 +1622,34 @@ function render(step) {
   sc.entries.innerHTML = '';
   const list = [...shelved.entries()];
   sc.empty.style.opacity = list.length ? 0 : 1;
-  list.slice(0, 6).forEach(([title, e], k) => {
-    const g = el('g', {transform:`translate(592,${124 + k*66})`, opacity:0});
-    g.appendChild(el('rect', {x:0, y:0, width:368, height:64, rx:9, fill:'rgba(34,28,16,.85)',
-      stroke:'rgba(255,210,122,.4)'}));
-    g.appendChild(label(trim(title, 30), 12, 20, {size:11, fill:'#fff'}));
-    g.appendChild(label(e.resource, 12, 36, {size:9, fill:COL.gold}));
-    if (step >= 2) {
+  const ew = V.w - 28, eh = sc.entryH;
+  const tagRow = eh >= 52;
+  list.slice(0, sc.nEntries).forEach(([title, e], k) => {
+    const g = el('g', {transform:`translate(${V.x + 14},${sc.entryTop + k * sc.entryP})`, opacity:0});
+    g.appendChild(el('rect', {x:0, y:0, width:ew, height:eh, rx:9, fill:'rgba(34,28,16,.85)', stroke:'rgba(255,210,122,.4)'}));
+    const slotW = tw('body ∅', es - 2) + 16;
+    g.appendChild(label(fitPx(title, es, ew - 24 - slotW), 12, es + 7, {size:es, fill:'#fff'}));
+    g.appendChild(label(fitPx(e.resource, es - 2, ew - 24), 12, es * 2.3 + 6, {size:es - 2, fill:COL.gold}));
+    /* the empty body slot, drawn as an absence rather than omitted */
+    g.appendChild(label('body ∅', ew - 12, es + 7, {size:es - 2, fill:COL.ink4, anchor:'end'}));
+    if (step >= 2 && tagRow) {
+      const ts = clamp(es - 2.5, 7.5, 9.5), stw = tw(e.status, ts - .5) + 10;
       let tx = 12;
       e.tags.forEach(t => {
-        const w = t.length * 5.2 + 14;
-        g.appendChild(el('rect', {x:tx, y:44, width:w, height:15, rx:7.5,
-          fill:'none', stroke:'rgba(255,210,122,.5)'}));
-        g.appendChild(label(t, tx + w/2, 55, {size:8, fill:COL.gold, anchor:'middle'}));
+        const w = tw(t, ts) + 14;
+        if (tx + w > ew - 12 - stw) return;
+        g.appendChild(el('rect', {x:tx, y:eh - 20, width:w, height:15, rx:7.5, fill:'none', stroke:'rgba(255,210,122,.5)'}));
+        g.appendChild(label(t, tx + w / 2, eh - 9, {size:ts, fill:COL.gold, anchor:'middle'}));
         tx += w + 6;
       });
-      g.appendChild(label(e.status, 356, 55, {size:9, fill:COL.ink3, anchor:'end'}));
+      g.appendChild(label(e.status, ew - 12, eh - 9, {size:ts - .5, fill:COL.ink3, anchor:'end'}));
     }
-    // the empty body slot, drawn as an absence rather than omitted
-    g.appendChild(label('body ∅', 356, 20, {size:9, fill:COL.ink4, anchor:'end'}));
     sc.entries.appendChild(g);
-    fade(g, 1, 380, k * 60);
+    fade(g, 1, DUR ? 380 : 0, k * 60);
   });
-  if (list.length > 6) {
-    sc.entries.appendChild(label(`+ ${list.length - 6} more entries`, 776, 124 + 6*66 + 4,
-      {size:10, fill:COL.ink4, anchor:'middle'}));
+  if (list.length > sc.nEntries) {
+    sc.entries.appendChild(label(`+ ${list.length - sc.nEntries} more entries`, V.x + V.w / 2,
+      sc.entryTop + sc.nEntries * sc.entryP + 10, {size:11, fill:COL.ink4, anchor:'middle'}));
   }
 
   const stored = JSON.stringify([...shelved.values()]);
@@ -1187,7 +1679,7 @@ function render(step) {
 // toolbar
 const tools = document.getElementById('ov-tools');
 const b1 = h('button', 'chip-btn', 'shelve all 10');
-b1.onclick = () => { POOL.forEach((d, k) => { if (!shelved.has(d.title)) shelved.set(d.title, entryFor(d, shelved.size)); });
+b1.onclick = () => { POOL.forEach(d => { if (!shelved.has(d.title)) shelved.set(d.title, entryFor(d, shelved.size)); });
   render(CH4.i); toast('10 entries · still zero bodies'); };
 const b2 = h('button', 'chip-btn', 'clear');
 b2.onclick = () => { shelved.clear(); render(CH4.i); };
@@ -1228,6 +1720,27 @@ function walk(form) {
   return {path, form: cur, degraded_from: path.length > 1 ? form : null};
 }
 
+/** Four rungs in one row, two rows of two, or one column of four — whichever
+    the box can hold at a legible size. The disclosure meter folds into the
+    cards when there is no width for a separate strip. */
+function lay(M) {
+  const {W, H, S} = M;
+  const pad = M.tiny ? 6 : 10;
+  const gap = M.tiny ? 6 : 10;
+  const head = S(13) + 8;
+  const cols = M.tiny ? 1 : (M.narrow ? 2 : 4);
+  const rows = 4 / cols;
+  const inline = cols === 1;                        // meter drawn inside each card
+  const meterH = inline ? 0 : (M.short ? 44 : 54);
+  const top = head + 4;
+  const gridH = H - top - 4 - (meterH ? meterH + 6 : 0);
+  const w = (W - pad * 2 - (cols - 1) * gap) / cols;
+  const hh = (gridH - (rows - 1) * gap) / rows;
+  return {pad, gap, cols, rows, inline, meterH, top, w, h: hh,
+    at: k => ({x: pad + (k % cols) * (w + gap), y: top + Math.floor(k / cols) * (hh + gap), w, h: hh}),
+    meter: {x: pad, y: H - meterH - 2, w: W - pad * 2, h: meterH}};
+}
+
 chapter(5, {
   steps: [
     {label:'four rungs', tag:'lod-band.ts', cap:'A map, a list and a reader want three different amounts of the same answer. Rather than three queries against one corpus, one query names a <b>band</b>.'},
@@ -1237,64 +1750,94 @@ chapter(5, {
     {label:'form, not just amount', tag:'/v1/render', cap:'Beyond how much, there is <i>what shape</i>. When a rich form has no engine behind it, the request walks down a ladder to something plainer that always succeeds — and the answer carries <code>degraded_from</code> so nobody downstream mistakes the fallback for the real thing.'},
   ],
   draw(i, st) {
+    const M = st.m, {W, H, S} = M;
     if (!st.scene) {
       const s = st.svg; s.innerHTML = ''; const sc = st.scene = {};
-      s.appendChild(label(`${R.title} · one retrieval, four bands`, 24, 32, {size:11, fill:COL.ink3}));
+      const L = lay(M); sc.L = L;
+      s.appendChild(label(fitPx(`${R.title} · one retrieval, four bands`, S(10.5), W - 20),
+        L.pad, S(13), {size:S(10.5), fill:COL.ink3}));
+
+      const ts = clamp(S(11.5), 10, 13);
+      const bs = clamp(S(9), 8, 10.5);
+      const body = clamp(S(9.5), 8.5, 11.5);
       sc.cols = BANDS.map((b, k) => {
-        const x = 24 + k * 244, g = el('g', {opacity:0});
-        const cd = card(x, 52, 220, 372, {fill:'rgba(14,22,28,.7)', stroke:'rgba(166,232,106,.3)'});
-        cd.appendChild(label(b, 14, 24, {size:12, fill:COL.lime, ls:1.4}));
-        cd.appendChild(label(BLABEL[b], 206, 24, {size:9, fill:COL.ink4, anchor:'end'}));
+        const P = L.at(k), g = el('g', {opacity:0});
+        const footer = L.inline ? 30 : 22;
+        const cd = card(P.x, P.y, P.w, P.h, {fill:'rgba(14,22,28,.7)', stroke:'rgba(166,232,106,.3)'});
+        cd.appendChild(label(b, 13, ts + 8, {size:ts, fill:COL.lime, ls:1.3}));
+        cd.appendChild(label(fitPx(BLABEL[b], bs, P.w - 30 - tw(b, ts)), P.w - 13, ts + 8, {size:bs, fill:COL.ink4, anchor:'end'}));
         const budget = D.bands[b].chars;
-        cd.appendChild(label(budget === null ? 'snippet ∞' : `snippet ${budget} chars`, 14, 42, {size:9, fill:COL.ink4}));
-        const body = el('g'); cd.appendChild(body);
-        const note = label('', 14, 352, {size:9, fill:COL.warn});
+        cd.appendChild(label(fitPx(budget === null ? 'no snippet cap' : `snippet ${budget} chars`, bs, P.w - 26),
+          13, ts * 2.2 + 8, {size:bs, fill:COL.ink4}));
+        const textTop = ts * 3.2 + 8;
+        const bodyG = el('g'); cd.appendChild(bodyG);
+        const note = label('', 13, P.h - footer + 2, {size:bs, fill:COL.warn});
         cd.appendChild(note);
-        const cost = label('', 206, 352, {size:11, fill:'#fff', anchor:'end'});
+        const cost = label('', P.w - 13, P.h - footer + 2, {size:clamp(S(11), 9.5, 12.5), fill:'#fff', anchor:'end'});
         cd.appendChild(cost);
+        let inBar = null, inLbl = null;
+        if (L.inline) {
+          inBar = el('rect', {x:13, y:P.h - 14, width:0, height:6, rx:3, fill:COL.lime, opacity:.8});
+          cd.appendChild(el('rect', {x:13, y:P.h - 14, width:P.w - 26, height:6, rx:3, fill:'rgba(150,170,230,.12)'}));
+          cd.appendChild(inBar);
+          inLbl = null;
+        }
         g.appendChild(cd); s.appendChild(g);
-        return {g, body, note, cost, b, x};
+        return {g, cd, bodyG, note, cost, inBar, b, P, textTop, footer,
+          lines: rowsFit(P.h - textTop - footer - 4, body * 1.55, 1, 40),
+          maxW: P.w - 26, body, bs};
       });
-      sc.meter = el('g', {opacity:0});
-      sc.meter.appendChild(label('disclosure charged, per result', 24, 456, {size:10, fill:COL.ink3}));
-      sc.bars = BANDS.map((b, k) => {
-        const x = 24 + k*244;
-        const bg = el('rect', {x, y:468, width:220, height:8, rx:4, fill:'rgba(150,170,230,.12)'});
-        const fg = el('rect', {x, y:468, width:0, height:8, rx:4, fill:COL.lime, opacity:.8});
-        sc.meter.appendChild(bg); sc.meter.appendChild(fg);
-        sc.meter.appendChild(label('', x, 494, {size:9.5, fill:COL.ink3}));
-        return {fg, lbl: sc.meter.lastChild, b};
-      });
-      s.appendChild(sc.meter);
+
+      if (!L.inline) {
+        const A = L.meter;
+        sc.meter = el('g', {opacity:0});
+        sc.meter.appendChild(label('disclosure charged, per result', A.x, A.y + S(10), {size:S(10), fill:COL.ink3}));
+        const bw = (A.w - (BANDS.length - 1) * L.gap) / BANDS.length;
+        const by = A.y + S(10) + 8;
+        sc.bars = BANDS.map((b, k) => {
+          const x = A.x + k * (bw + L.gap);
+          sc.meter.appendChild(el('rect', {x, y:by, width:bw, height:8, rx:4, fill:'rgba(150,170,230,.12)'}));
+          const fg = el('rect', {x, y:by, width:0, height:8, rx:4, fill:COL.lime, opacity:.8});
+          sc.meter.appendChild(fg);
+          const lbl = label('', x, by + S(9.5) + 12, {size:S(9.5), fill:COL.ink3});
+          sc.meter.appendChild(lbl);
+          return {fg, lbl, b, bw};
+        });
+        s.appendChild(sc.meter);
+      }
     }
 
-    const sc = st.scene;
+    const sc = st.scene, L = sc.L;
     sc.cols.forEach((c, k) => {
-      c.g.style.transition = `opacity ${DUR}ms ${EASE} ${k*90}ms`;
-      requestAnimationFrame(() => c.g.style.opacity = i >= 1 ? 1 : 0.18);
-      c.body.innerHTML = '';
-      if (i >= 1) {
-        const served = servedBand(c.b);
-        if (served === 'far') {
-          c.body.appendChild(el('circle', {cx:110, cy:150, r:9, fill:COL.lime, opacity:.85}));
-          c.body.appendChild(label(trim(R.title, 22), 110, 182, {size:10.5, fill:COL.ink2, anchor:'middle'}));
-          c.body.appendChild(label('identity only', 110, 200, {size:9, fill:COL.ink4, anchor:'middle'}));
-        } else {
-          wrap(bandText(c.b), 34, served === 'full' ? 17 : (served === 'near' ? 11 : 6))
-            .forEach((ln, j) => c.body.appendChild(label(ln, 14, 68 + j*15.5, {size:9.5, fill:COL.ink2})));
-        }
-        const downgraded = servedBand(c.b) !== c.b;
-        c.note.textContent = downgraded ? `served at ${servedBand(c.b)} — told, not silent` : '';
-        c.cost.textContent = i >= 2 ? `${D.bands[servedBand(c.b)].cost} unit` : '';
-        c.g.querySelector('rect').setAttribute('stroke', downgraded && i >= 3 ? COL.warn : 'rgba(166,232,106,.3)');
+      c.g.style.transition = `opacity ${DUR}ms ${EASE} ${k * 90}ms`;
+      requestAnimationFrame(() => c.g.style.opacity = i >= 1 ? 1 : .18);
+      c.bodyG.innerHTML = '';
+      if (i < 1) return;
+      const served = servedBand(c.b);
+      const mid = c.textTop + (c.P.h - c.textTop - c.footer) / 2;
+      if (served === 'far') {
+        c.bodyG.appendChild(el('circle', {cx:c.P.w / 2, cy:mid - 14, r:9, fill:COL.lime, opacity:.85}));
+        c.bodyG.appendChild(label(fitPx(R.title, c.body + 1, c.maxW), c.P.w / 2, mid + 12, {size:c.body + 1, fill:COL.ink2, anchor:'middle'}));
+        c.bodyG.appendChild(label('identity only', c.P.w / 2, mid + 12 + c.body * 1.7, {size:c.bs, fill:COL.ink4, anchor:'middle'}));
+      } else {
+        wrapPx(bandText(c.b), c.body, c.maxW, c.lines).forEach((ln, j) =>
+          c.bodyG.appendChild(label(ln, 13, c.textTop + c.body + j * c.body * 1.55, {size:c.body, fill:COL.ink2})));
       }
+      const downgraded = served !== c.b;
+      c.note.textContent = downgraded ? fitPx(`served at ${served} — told, not silent`, c.bs, c.maxW - 46) : '';
+      c.cost.textContent = i >= 2 ? `${D.bands[served].cost} unit` : '';
+      c.cd.querySelector('rect').setAttribute('stroke', downgraded && i >= 3 ? COL.warn : 'rgba(166,232,106,.3)');
+      if (c.inBar) anim(c.inBar, {width: i >= 2 ? (D.bands[served].cost / 3) * (c.P.w - 26) : 0});
     });
-    fade(sc.meter, i >= 2 ? 1 : 0);
-    sc.bars.forEach(({fg, lbl, b}) => {
-      const cost = D.bands[servedBand(b)].cost;
-      anim(fg, {width: i >= 2 ? (cost / 3) * 220 : 0});
-      lbl.textContent = i >= 2 ? `${b}${servedBand(b) !== b ? ' → ' + servedBand(b) : ''} · ${cost}` : '';
-    });
+
+    if (sc.meter) {
+      fade(sc.meter, i >= 2 ? 1 : 0);
+      sc.bars.forEach(({fg, lbl, b, bw}) => {
+        const cost = D.bands[servedBand(b)].cost;
+        anim(fg, {width: i >= 2 ? (cost / 3) * bw : 0});
+        lbl.textContent = i >= 2 ? fitPx(`${b}${servedBand(b) !== b ? ' → ' + servedBand(b) : ''} · ${cost}`, S(9.5), bw) : '';
+      });
+    }
 
     renderForms();
     const total = BANDS.reduce((a, b) => a + D.bands[servedBand(b)].cost, 0);
@@ -1334,10 +1877,11 @@ function renderForms() {
 }
 
 const bt = document.getElementById('band-tools');
-['translation','summary','okf','opds','chunks','markdown'].forEach(f => {
+const FORMS = ['translation','summary','okf','opds','chunks','markdown'];
+FORMS.forEach(f => {
   const b = h('button', 'chip-btn' + (f === requested ? ' on' : ''), f);
-  b.onclick = () => { requested = f; [...bt.querySelectorAll('.chip-btn')].forEach(c => {
-      if (['translation','summary','okf','opds','chunks','markdown'].includes(c.textContent)) c.classList.remove('on'); });
+  b.onclick = () => { requested = f;
+    [...bt.querySelectorAll('.chip-btn')].forEach(c => { if (FORMS.includes(c.textContent)) c.classList.remove('on'); });
     b.classList.add('on'); renderForms(); };
   bt.appendChild(b);
 });
@@ -1367,6 +1911,30 @@ function scores(g) {
   return {strict, any, n};
 }
 
+/** Claims and sources face each other while there is width; on a narrow box the
+    sources collapse to a strip of chips and each claim names its citations
+    instead. The derived-work panel always has its own reserved band at the
+    bottom — the old layout computed a viewBox that cut it in half. */
+function lay(M, deriveH, srcStripH) {
+  const {W, H, S} = M;
+  const pad = M.tiny ? 6 : 10;
+  const head = S(13) + 8;
+  const top = head + 4;
+  const bot = H - 4 - deriveH - 8;
+  if (!M.narrow) {
+    const gut = clamp(W * .09, 60, 120);
+    const cw = (W - pad * 2 - gut) * .615, sw = W - pad * 2 - gut - cw;
+    return {mode:'wide', pad, gut, top, bot, h: bot - top,
+      claims: {x: pad, y: top, w: cw, h: bot - top},
+      srcs:   {x: pad + cw + gut, y: top, w: sw, h: bot - top},
+      derive: {x: pad, y: H - deriveH - 2, w: W - pad * 2, h: deriveH}};
+  }
+  return {mode:'tall', pad, gut: 0, top, bot, h: bot - top - srcStripH - 8,
+    claims: {x: pad, y: top, w: W - pad * 2, h: bot - top - srcStripH - 8},
+    srcs:   {x: pad, y: bot - srcStripH, w: W - pad * 2, h: srcStripH},
+    derive: {x: pad, y: H - deriveH - 2, w: W - pad * 2, h: deriveH}};
+}
+
 const CH6 = chapter(6, {
   steps: [
     {label:'a real answer', tag:'gx10-general', cap:'A local model, the five sources retrieval actually returned, and no editing. It reads well. Reading well is exactly the problem: prose quality tells you nothing about whether the sources carry the claims.'},
@@ -1377,105 +1945,194 @@ const CH6 = chapter(6, {
     {label:'confidence cannot go up', tag:'deriveConfidence()', cap:'<code>min(sources) × grounding</code>. The minimum, not an average — an average lets one strong source carry several weak ones, which is precisely the laundering. <b>No path through this raises confidence.</b>'},
   ],
   draw(i, st) {
+    const M = st.m, {W, H, S} = M;
     const g = G(), sc0 = scores(g);
     if (!st.scene || st.scene.band !== band) {
       const s = st.svg; s.innerHTML = ''; const sc = st.scene = {band};
 
-      s.appendChild(label(`“${trim(g.question, 76)}”`, 24, 30, {size:11, fill:COL.ink3}));
-      s.appendChild(label(`band: ${band}`, 976, 30, {size:10, fill:COL.rose, anchor:'end'}));
+      /* the derived-work rows decide how much room that panel needs */
+      const ds = clamp(S(9.5), 8, 11.5);
+      const conf = 1 * sc0.any;
+      const nSupp = sc0.n - g.claims.filter(c => c.grounding_status === 'unsupported').length;
+      const dRows = M.narrow ? [
+        ['sources', `${g.sources.length} × ${D.ingestLicense}`, COL.ink2],
+        ['licence = most restrictive', `${D.ingestLicense} · share-alike`, COL.gold],
+        [`grounding (${nSupp}/${sc0.n})`, sc0.any.toFixed(3), COL.cyan],
+        ['confidence = min(src) × grounding', `1.000 × ${sc0.any.toFixed(3)} = ${conf.toFixed(3)}`, '#fff'],
+        ['actor · licence · confidence', 'all COMPUTED, never caller-supplied', COL.ink3],
+      ] : [
+        ['sources', `${g.sources.length} × ${D.ingestLicense} · each a primary (confidence 1.0)`, COL.ink2],
+        ['licence  = most restrictive of sources', `${D.ingestLicense}  ·  share-alike: obligatory`, COL.gold],
+        [`grounding = claims not unsupported (${nSupp}/${sc0.n})`, sc0.any.toFixed(3), COL.cyan],
+        ['confidence = min(sources) × grounding', `1.000 × ${sc0.any.toFixed(3)} = ${conf.toFixed(3)}`, '#fff'],
+        ['actor, licence, confidence', 'all COMPUTED — a caller cannot supply any of the three', COL.ink3],
+      ];
+      const dInline = dRows.every(([k, v]) => tw(k, ds) + tw(v, ds) + 40 <= W - 20);
+      const dPitch = dInline ? ds * 1.9 : ds * 3.1;
+      const dTop = ds * 4;
 
-      // the answer as one block (step 0)
+      /* Fit, in order of what can be given up: the source strip goes first,
+         then rows of the derived-work panel (least load-bearing first), then
+         claims. A claim card is never allowed below MINC — a 7px row is not a
+         smaller diagram, it is an unreadable one. */
+      const MINC = 34, DPRIO = [3, 1, 2, 0, 4];   // confidence, licence, grounding, sources, footer
+      const head0 = S(13) + 8 + 4;
+      const panelFor = k => dTop + k * dPitch + 8;
+      let dShow = dRows.slice();
+      let srcStripH = M.narrow ? Math.ceil(clamp(S(10), 8.5, 12) + 44) : 0;
+      /* the panel is exactly as tall as the rows it keeps — capping its height
+         and leaving the row count alone is what used to draw five rows through
+         the bottom of a three-row box */
+      let deriveH = panelFor(dShow.length);
+      const budget = () => H - head0 - 8 - (srcStripH ? srcStripH + 8 : 0) - MINC * 2;
+      if (deriveH > budget() && srcStripH) srcStripH = 0;
+      while (deriveH > budget() && dShow.length > 2) {
+        const keep = new Set(DPRIO.slice(0, dShow.length - 1));
+        dShow = dRows.filter((_, j) => keep.has(j));
+        deriveH = panelFor(dShow.length);
+      }
+      deriveH = Math.min(deriveH, Math.max(panelFor(2), H - head0 - 34 - (srcStripH ? srcStripH + 8 : 0)));
+      const L = lay(M, deriveH, srcStripH); sc.L = L;
+
+      const hs = clamp(S(10.5), 9, 12);
+      s.appendChild(label(fitPx(`“${g.question}”`, hs, W - 24 - tw(`band: ${band}`, S(10)) - 20),
+        L.pad, S(12), {size:hs, fill:COL.ink3}));
+      s.appendChild(label(`band: ${band}`, W - L.pad, S(12), {size:S(10), fill:COL.rose, anchor:'end'}));
+
+      /* step 0: the answer as one block. Nothing else is on stage yet, so it
+         takes the whole box rather than sitting above reserved emptiness. */
+      const CLM = L.claims, SRC = L.srcs;
+      const proseBox = {x: L.pad, y: L.top, w: W - L.pad * 2, h: H - 4 - L.top};
       sc.prose = el('g');
-      const pc = card(24, 48, 952, 132, {fill:'rgba(24,16,24,.75)', stroke:'rgba(255,134,168,.28)'});
-      wrap(g.answer, 128, 6).forEach((ln, k) => pc.appendChild(label(ln, 16, 28 + k*20, {size:11, fill:COL.ink2})));
+      const ps = clamp(S(11), 9.5, 12.5);
+      const pc = card(proseBox.x, proseBox.y, proseBox.w, proseBox.h, {fill:'rgba(24,16,24,.75)', stroke:'rgba(255,134,168,.28)'});
+      const pLines = rowsFit(proseBox.h - 24, ps * 1.72, 2, 40);
+      const pText = wrapPx(g.answer, ps, proseBox.w - 32, pLines);
+      const pTop = Math.max(18, (proseBox.h - pText.length * ps * 1.72) / 2);
+      pText.forEach((ln, k) => pc.appendChild(label(ln, 16, pTop + ps + k * ps * 1.72, {size:ps, fill:COL.ink2})));
       sc.prose.appendChild(pc); s.appendChild(sc.prose);
 
-      // claims (step 1+)
+      /* claims — as many as fit at a readable size, and a count for the rest */
+      const n = clamp(Math.floor(CLM.h / MINC), 1, g.claims.length);
+      const more = g.claims.length - n;
+      const cPitch = Math.min(88, (CLM.h - (more ? 15 : 0)) / n), cH = Math.min(cPitch - 8, 80);
+      const cOff = Math.max(0, (CLM.h - (more ? 15 : 0) - ((n - 1) * cPitch + cH)) / 2);
+      const cs = clamp(S(10), 8.5, 12);
+      const badgeW = tw('unsupported · 0.000', cs - .5) + 12;
+      /* below ~46px there is no room for a verdict row under the text, so the
+         verdict moves onto the text's own line rather than on top of it */
+      const compact = cH < cs * 1.5 + 34;
+      const cLines = compact ? 1 : rowsFit(cH - (cs * 1.5 + 16), cs * 1.5, 1, 4);
       sc.claims = el('g', {opacity:0});
-      sc.claimRows = g.claims.map((c, k) => {
-        const y = 200 + k * 74;
-        const cd = card(24, y, 536, 64, {fill:'rgba(20,18,32,.88)', stroke:'rgba(150,170,230,.2)'});
-        wrap(c.text, 80, 2).forEach((ln, j) => cd.appendChild(label(ln, 14, 24 + j*16, {size:10, fill:COL.ink2})));
-        const badge = label('', 522, 54, {size:9.5, anchor:'end', fill:SCOL[c.grounding_status]});
+      sc.claimRows = g.claims.slice(0, n).map((c, k) => {
+        const y = CLM.y + cOff + k * cPitch;
+        const cd = card(CLM.x, y, CLM.w, cH, {fill:'rgba(20,18,32,.88)', stroke:'rgba(150,170,230,.2)'});
+        const textW = CLM.w - 28 - (compact ? badgeW : 0);
+        wrapPx(c.text, cs, textW, cLines).forEach((ln, j) =>
+          cd.appendChild(label(ln, 14, (compact ? cH / 2 + cs * .36 - 2 : cs + 10) + j * cs * 1.5, {size:cs, fill:COL.ink2})));
+        const badge = label('', CLM.w - 14, compact ? cH / 2 + cs * .36 - 2 : cH - 12,
+          {size:cs - .5, anchor:'end', fill:SCOL[c.grounding_status]});
         cd.appendChild(badge);
-        const bar = el('rect', {x:14, y:54, width:0, height:3, rx:1.5, fill:SCOL[c.grounding_status]});
+        if (L.mode === 'tall' && !compact) {
+          const cite = c.citations.length ? '← ' + c.citations.join(' ') : '← nothing cites this';
+          cd.appendChild(label(fitPx(cite, cs - 1.5, CLM.w - 30 - badgeW), 14, cH - 12,
+            {size:cs - 1.5, fill: c.citations.length ? COL.cyan : COL.bad}));
+        }
+        const bar = el('rect', {x:14, y:cH - 6, width:0, height:3, rx:1.5, fill:SCOL[c.grounding_status]});
         cd.appendChild(bar);
         sc.claims.appendChild(cd);
-        return {cd, badge, bar, c, y};
+        return {cd, badge, bar, c, y, h: cH, barW: CLM.w - 28};
       });
+      if (more) sc.claims.appendChild(label(`+ ${more} more claim${more === 1 ? '' : 's'}`,
+        CLM.x + CLM.w / 2, CLM.y + cOff + (n - 1) * cPitch + cH + 13, {size:clamp(S(9.5), 8, 11), fill:COL.ink4, anchor:'middle'}));
       s.appendChild(sc.claims);
 
-      // sources
+      /* sources */
       sc.srcs = el('g', {opacity:0});
-      sc.srcRows = g.sources.map((sd, k) => {
-        const y = 200 + k * 74;
-        const cd = card(660, y, 316, 64, {fill:'rgba(16,24,36,.88)', stroke:'rgba(94,240,223,.24)'});
-        cd.appendChild(label(trim(sd.title, 34), 12, 22, {size:10.5, fill:COL.cyan}));
-        cd.appendChild(label(sd.id, 12, 38, {size:8.5, fill:COL.ink4}));
-        cd.appendChild(label(`${band === 'full' ? 'document body' : 'card snippet'} · ${sd.text.length} ch`, 12, 54, {size:8.5, fill:COL.ink4}));
-        sc.srcs.appendChild(cd);
-        return {cd, sd, y};
-      });
+      const ss = clamp(S(10), 8.5, 12);
+      if (L.mode === 'wide') {
+        const ns = clamp(Math.floor(SRC.h / MINC), 1, g.sources.length);
+        const sMore = g.sources.length - ns;
+        const sPitch = Math.min(88, (SRC.h - (sMore ? 15 : 0)) / ns), sH = Math.min(sPitch - 8, 80);
+        const sOff = Math.max(0, (SRC.h - (sMore ? 15 : 0) - ((ns - 1) * sPitch + sH)) / 2);
+        if (sMore) sc.srcs.appendChild(label(`+ ${sMore} more source${sMore === 1 ? '' : 's'}`,
+          SRC.x + SRC.w / 2, SRC.y + sOff + (ns - 1) * sPitch + sH + 13, {size:clamp(S(9.5), 8, 11), fill:COL.ink4, anchor:'middle'}));
+        sc.srcRows = g.sources.slice(0, ns).map((sd, k) => {
+          const y = SRC.y + sOff + k * sPitch;
+          const cd = card(SRC.x, y, SRC.w, sH, {fill:'rgba(16,24,36,.88)', stroke:'rgba(94,240,223,.24)'});
+          cd.appendChild(label(fitPx(sd.title, ss, SRC.w - 24), 12, ss + 9, {size:ss, fill:COL.cyan}));
+          cd.appendChild(label(fitPx(sd.id, ss - 1.5, SRC.w - 24), 12, ss * 2.5 + 7, {size:ss - 1.5, fill:COL.ink4}));
+          if (sH >= 54) cd.appendChild(label(fitPx(`${band === 'full' ? 'document body' : 'card snippet'} · ${sd.text.length} ch`, ss - 1.5, SRC.w - 24),
+            12, ss * 4 + 5, {size:ss - 1.5, fill:COL.ink4}));
+          sc.srcs.appendChild(cd);
+          return {cd, sd, y, h: sH};
+        });
+      } else if (SRC.h >= 34) {
+        const strip = card(SRC.x, SRC.y, SRC.w, SRC.h, {fill:'rgba(16,24,36,.88)', stroke:'rgba(94,240,223,.24)'});
+        strip.appendChild(label(`${g.sources.length} sources · ${band === 'full' ? 'document bodies' : 'card snippets'}`,
+          12, ss + 8, {size:ss - 1, fill:COL.cyan}));
+        const cw = (SRC.w - 24 - (g.sources.length - 1) * 6) / g.sources.length;
+        const chipY = ss + 16;                       // clear of the strip's own title
+        sc.srcRows = g.sources.map((sd, k) => {
+          const x = 12 + k * (cw + 6);
+          strip.appendChild(el('rect', {x, y: chipY, width:cw, height:19, rx:9.5, fill:'none', stroke:'rgba(94,240,223,.35)'}));
+          strip.appendChild(label(fitPx(sd.id, ss - 2, cw - 8), x + cw / 2, chipY + 13, {size:ss - 2, fill:COL.ink3, anchor:'middle'}));
+          return {cd: strip, sd, y: SRC.y, h: SRC.h};
+        });
+        sc.srcs.appendChild(strip);
+      } else {
+        sc.srcRows = [];                       // no room for the strip; the claims name their citations
+      }
       s.appendChild(sc.srcs);
       sc.wires = el('g', {opacity:0}); s.appendChild(sc.wires);
-      sc.derive = el('g', {opacity:0}); s.appendChild(sc.derive);
+
+      /* the derived work */
+      const DV = L.derive;
+      sc.derive = el('g', {opacity:0});
+      const dc = card(DV.x, DV.y, DV.w, DV.h, {fill:'rgba(18,16,32,.94)', stroke:'rgba(184,132,255,.4)'});
+      dc.appendChild(label('the derived work', 16, ds + 12, {size:ds, fill:COL.violet, ls:1.3}));
+      sc.dConf = [];
+      dShow.forEach(([k2, v, c], j) => {
+        const y = dTop + j * dPitch;
+        dc.appendChild(label(fitPx(k2, ds, dInline ? DV.w - 44 - tw(v, ds) : DV.w - 32), 16, y, {size:ds, fill:COL.ink4}));
+        const val = dInline
+          ? label(fitPx(v, ds, DV.w - 32), DV.w - 16, y, {size:ds, fill:c, anchor:'end'})
+          : label(fitPx(v, ds, DV.w - 32), 16, y + ds * 1.4, {size:ds, fill:c});
+        dc.appendChild(val);
+        if (/^confidence/.test(k2)) sc.dConf.push(val);
+      });
+      sc.derive.appendChild(dc); s.appendChild(sc.derive);
     }
 
-    const sc = st.scene;
+    const sc = st.scene, L = sc.L;
     fade(sc.prose, i >= 1 ? 0 : 1);
     fade(sc.claims, i >= 1 ? 1 : 0);
     fade(sc.srcs, i >= 2 ? 1 : 0);
-    // the prose block is gone by step 1; pull the columns up into the space it left
-    const lift = i >= 1 ? -132 : 0;
-    [sc.claims, sc.srcs, sc.wires].forEach(g => anim(g, {transform:`translate(0,${lift})`}));
 
-    sc.claimRows.forEach(({badge, bar, c}, k) => {
+    sc.claimRows.forEach(({badge, bar, c, barW}, k) => {
       badge.textContent = i >= 2 ? `${c.grounding_status} · ${c.score.toFixed(3)}` : '';
-      bar.style.transition = `width ${DUR}ms ${EASE} ${k*80}ms`;
-      requestAnimationFrame(() => bar.setAttribute('width', i >= 2 ? c.score * 508 : 0));
+      bar.style.transition = `width ${DUR}ms ${EASE} ${k * 80}ms`;
+      requestAnimationFrame(() => bar.setAttribute('width', i >= 2 ? clamp(c.score, 0, 1) * barW : 0));
     });
+    sc.dConf.forEach(t => t.setAttribute('fill', i >= 5 ? '#fff' : COL.ink4));
 
     sc.wires.innerHTML = '';
-    if (i >= 2) {
-      sc.claimRows.forEach(({c, y}) => {
+    if (i >= 2 && L.mode === 'wide') {
+      const x0 = L.claims.x + L.claims.w, x1 = L.srcs.x;
+      sc.claimRows.forEach(({c, y, h}) => {
+        const cy = y + h / 2;
         c.citations.forEach(cid => {
           const s2 = sc.srcRows.find(r => r.sd.id === cid); if (!s2) return;
-          sc.wires.appendChild(el('path', {
-            d:`M560 ${y+32} C608 ${y+32} 612 ${s2.y+32} 660 ${s2.y+32}`,
+          const sy = s2.y + s2.h / 2;
+          sc.wires.appendChild(el('path', {d:`M${x0} ${cy} C${x0 + L.gut * .5} ${cy} ${x1 - L.gut * .5} ${sy} ${x1} ${sy}`,
             fill:'none', stroke:SCOL[c.grounding_status], 'stroke-width':1, opacity:.42}));
         });
-        if (!c.citations.length) {
-          sc.wires.appendChild(el('path', {d:`M560 ${y+32} l34 0`, stroke:COL.bad,
-            'stroke-width':1, 'stroke-dasharray':'3 3', opacity:.6}));
-        }
+        if (!c.citations.length) sc.wires.appendChild(el('path', {d:`M${x0} ${cy} l${Math.min(34, L.gut * .5)} 0`,
+          stroke:COL.bad, 'stroke-width':1, 'stroke-dasharray':'3 3', opacity:.6}));
       });
-      fade(sc.wires, 1);
     }
-
-    // derive panel
+    fade(sc.wires, i >= 2 && L.mode === 'wide' ? 1 : 0);
     fade(sc.derive, i >= 4 ? 1 : 0);
-    if (i >= 4) {
-      sc.derive.innerHTML = '';
-      const dy = 200 + Math.max(sc.claimRows.length, sc.srcRows.length) * 74 + 8 + lift;
-      const dc = card(24, dy, 952, 128, {fill:'rgba(18,16,32,.94)', stroke:'rgba(184,132,255,.4)'});
-      dc.appendChild(label('the derived work', 16, 24, {size:10, fill:COL.violet, ls:1.3}));
-      const conf = 1 * sc0.any;
-      const rows = [
-        ['sources', `${g.sources.length} × ${D.ingestLicense} · each a primary (confidence 1.0)`, COL.ink2],
-        ['licence  = most restrictive of sources', `${D.ingestLicense}  ·  share-alike: obligatory`, COL.gold],
-        [`grounding = claims not unsupported (${sc0.n - g.claims.filter(c=>c.grounding_status==='unsupported').length}/${sc0.n})`, sc0.any.toFixed(3), COL.cyan],
-        ['confidence = min(sources) × grounding', `1.000 × ${sc0.any.toFixed(3)} = ${conf.toFixed(3)}`, i >= 5 ? '#fff' : COL.ink4],
-        ['actor, licence, confidence', 'all COMPUTED — a caller cannot supply any of the three', COL.ink3],
-      ];
-      rows.forEach(([k2, v, c], j) => {
-        dc.appendChild(label(k2, 16, 48 + j*18, {size:9.5, fill:COL.ink4}));
-        dc.appendChild(label(v, 936, 48 + j*18, {size:9.5, fill:c, anchor:'end'}));
-      });
-      sc.derive.appendChild(dc);
-      st.svg.setAttribute('viewBox', `0 0 1000 ${dy + 150 + lift}`);
-    } else {
-      st.svg.setAttribute('viewBox', `0 0 1000 ${200 + Math.max(sc.claimRows.length, sc.srcRows.length)*74 + 20 + lift}`);
-    }
 
     const nUnsup = g.claims.filter(c => c.grounding_status === 'unsupported').length;
     document.getElementById('read6').innerHTML =
@@ -1567,8 +2224,9 @@ btn.onclick = async () => {
   touring = true; btn.textContent = '■ Stop';
   for (const ch of CHAPTERS) {
     if (!touring) break;
-    document.getElementById('ch' + ch.n).scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block:'start'});
-    await sleep(700);
+    /* scroll to the scene, not the chapter: the scene is the frame that fits */
+    document.getElementById('scene' + ch.n).scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block:'start'});
+    await sleep(900);
     ch.drawn = true;
     for (let i = 0; i < ch.def.steps.length; i++) {
       if (!touring) break;
@@ -1587,7 +2245,7 @@ addEventListener('keydown', e => {
   const mid = innerHeight / 2;
   let best = null, bd = Infinity;
   for (const ch of CHAPTERS) {
-    const r = document.getElementById('ch' + ch.n).getBoundingClientRect();
+    const r = document.getElementById('scene' + ch.n).getBoundingClientRect();
     const d = Math.abs((r.top + r.bottom) / 2 - mid);
     if (r.bottom > 0 && r.top < innerHeight && d < bd) { bd = d; best = ch; }
   }

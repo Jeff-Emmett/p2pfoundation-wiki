@@ -1,0 +1,56 @@
+# Placeholder page for ai.p2pfoundation.net — the NETCUP variant.
+#
+# WHY A SECOND FILE. The estate failed back to Netcup on 2026-08-24 and the
+# GX10 placeholder container stopped serving with it, so `ai.p2pfoundation.net`
+# went back to the bare 19-byte Go `404 page not found` — the exact string the
+# wiki emits during a real outage, which is why these pages exist at all.
+#
+# Two things differ from docker-compose.yml (GX10) and neither survives being
+# merged into one file:
+#
+#   1. `forum.p2pfoundation.net` IS REAL NOW. Netcup runs a Discourse instance
+#      (`p2pforum`, serving 200 with the title "P2P Foundation Forum"). Claiming
+#      that hostname here would put this placeholder in a router race with the
+#      actual forum. This file claims `ai.` and nothing else.
+#
+#   2. No `entrypoints` label. Netcup's traefik takes its defaults and
+#      Cloudflare terminates TLS in front of it — every working router on this
+#      host (see `p2p-web`) carries only enable + rule + port. The GX10 file
+#      pins `entrypoints=web` because that host's traefik has no ACME resolver;
+#      copying that pin here is harmless, and copying a `certresolver` from
+#      elsewhere is not — a router naming a resolver that does not exist never
+#      serves at all.
+#
+# Deploy to /opt/apps/p2pf-placeholders alongside ./nginx.conf and ./site.
+services:
+  p2pf-placeholders:
+    image: nginx:1.27-alpine
+    container_name: p2pf-placeholders
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./site:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.http.routers.p2pf-placeholders.rule=Host(`ai.p2pfoundation.net`)"
+      - "traefik.http.services.p2pf-placeholders.loadbalancer.server.port=80"
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
+      - NET_BIND_SERVICE
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

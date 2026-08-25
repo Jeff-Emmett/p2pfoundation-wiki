@@ -1,0 +1,67 @@
+{
+  "result": {
+    "description": "Custom WAF rules to block bad bots and protect server resources",
+    "id": "1dafd866de2c48f7a4b7b4222f16d13d",
+    "kind": "zone",
+    "last_updated": "2026-08-14T12:03:34.064201Z",
+    "name": "P2P Foundation Bot Protection",
+    "phase": "http_request_firewall_custom",
+    "rules": [
+      {
+        "action": "block",
+        "description": "Block aggressive SEO crawlers and vuln scanners at the edge",
+        "enabled": true,
+        "expression": "(http.user_agent contains \"MJ12bot\") or (http.user_agent contains \"AhrefsBot\") or (http.user_agent contains \"SemrushBot\") or (http.user_agent contains \"DotBot\") or (http.user_agent contains \"BLEXBot\") or (http.user_agent contains \"MegaIndex\") or (http.user_agent contains \"Bytespider\") or (http.user_agent contains \"PetalBot\") or (http.user_agent contains \"Barkrowler\") or (http.user_agent contains \"trendictionbot\") or (http.user_agent contains \"IbouBot\") or (http.user_agent contains \"Nikto\") or (http.user_agent contains \"sqlmap\") or (http.user_agent contains \"ZmEu\")",
+        "id": "d4e50ac1cec540acb92b7d3be7e2b3c3",
+        "last_updated": "2026-02-18T19:02:39.692299Z",
+        "ref": "d4e50ac1cec540acb92b7d3be7e2b3c3",
+        "version": "1"
+      },
+      {
+        "action": "managed_challenge",
+        "description": "Challenge bots hitting expensive API/feed endpoints (incl. URL-encoded wiki Special:RecentChanges)",
+        "enabled": true,
+        "expression": "(http.request.uri.path contains \"/wp-json/\") or (http.request.uri.path contains \"/feed\") or (http.request.uri.path eq \"/xmlrpc.php\") or (http.request.uri.path contains \"/trackback\") or (http.host eq \"wiki.p2pfoundation.net\" and (http.request.uri.query contains \"Special%3ARecentChanges\" or http.request.uri.query contains \"feedrecentchanges\")) or (http.host eq \"wiki.p2pfoundation.net\" and (http.request.uri.query contains \"action=history\" or http.request.uri.query contains \"diff=\" or http.request.uri.query contains \"oldid=\" or http.request.uri contains \"Special:WhatLinksHere\" or http.request.uri contains \"Special%3AWhatLinksHere\" or http.request.uri contains \"Special:RecentChangesLinked\" or http.request.uri contains \"Special%3ARecentChangesLinked\" or http.request.uri contains \"Special:Contributions\" or http.request.uri contains \"Special%3AContributions\" or http.request.uri contains \"Special:Search\" or http.request.uri contains \"Special%3ASearch\" or http.request.uri contains \"Special:Log\" or http.request.uri contains \"Special%3ALog\"))",
+        "id": "3f4dab25ab06421e80fd21c3a41e99dc",
+        "last_updated": "2026-08-14T12:03:34.064201Z",
+        "ref": "3f4dab25ab06421e80fd21c3a41e99dc",
+        "version": "3"
+      },
+      {
+        "action": "block",
+        "description": "Block vulnerability scan paths",
+        "enabled": true,
+        "expression": "(http.request.uri.path contains \"/ALFA_DATA/\") or (http.request.uri.path contains \"/wp-content/plugins/pwnd\") or (http.request.uri.path contains \"/wp-content/plugins/developer-flavor\") or (http.request.uri.path contains \"/.env\") or (http.request.uri.path contains \"/wp-config.php.bak\") or (http.request.uri.path contains \"/debug.log\") or (http.request.uri.path contains \"/.git/\")",
+        "id": "de4970d7042f464c907199d12e883ad6",
+        "last_updated": "2026-02-18T19:02:39.692299Z",
+        "ref": "de4970d7042f464c907199d12e883ad6",
+        "version": "1"
+      },
+      {
+        "action": "managed_challenge",
+        "description": "Challenge high threat score visitors",
+        "enabled": true,
+        "expression": "(cf.threat_score gt 30)",
+        "id": "7629ac91b7ef49eda68d496e6cab9937",
+        "last_updated": "2026-02-18T19:02:39.692299Z",
+        "ref": "7629ac91b7ef49eda68d496e6cab9937",
+        "version": "1"
+      },
+      {
+        "action": "managed_challenge",
+        "description": "Challenge requests with empty or suspicious user agents",
+        "enabled": true,
+        "expression": "(http.user_agent eq \"\") or (not http.user_agent contains \"Mozilla\" and not http.user_agent contains \"bot\" and not http.user_agent contains \"Bot\" and not http.user_agent contains \"spider\" and not http.user_agent contains \"Spider\" and not http.user_agent contains \"crawl\" and not http.user_agent contains \"Crawl\" and not http.user_agent contains \"curl\" and not http.user_agent contains \"Uptime\" and not http.user_agent contains \"FeedBurner\" and not http.user_agent contains \"feedparser\" and not http.user_agent contains \"GPTBot\" and not http.user_agent contains \"ClaudeBot\" and not http.user_agent contains \"CCBot\" and not http.user_agent contains \"Applebot\")",
+        "id": "ceeeb3b3cda140ffa27fc707a2144193",
+        "last_updated": "2026-02-18T19:02:39.692299Z",
+        "ref": "ceeeb3b3cda140ffa27fc707a2144193",
+        "version": "1"
+      }
+    ],
+    "source": "firewall_custom",
+    "version": "3"
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
+}

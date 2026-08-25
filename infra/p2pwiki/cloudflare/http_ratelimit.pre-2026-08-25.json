@@ -1,0 +1,36 @@
+{
+  "result": {
+    "description": "",
+    "id": "4e93a0d4967f47089d6535aaa3f406fb",
+    "kind": "zone",
+    "last_updated": "2026-04-21T18:22:22.353202Z",
+    "name": "P2PWiki rate limits",
+    "phase": "http_ratelimit",
+    "rules": [
+      {
+        "action": "block",
+        "description": "p2pwiki-recentchanges-path-block",
+        "enabled": true,
+        "expression": "(http.host eq \"wiki.p2pfoundation.net\" and http.request.uri.path contains \"Special:RecentChanges\")",
+        "id": "c7855f743a5f4838969f66b3e041cc38",
+        "last_updated": "2026-04-21T18:22:22.353202Z",
+        "ratelimit": {
+          "characteristics": [
+            "ip.src",
+            "cf.colo.id"
+          ],
+          "mitigation_timeout": 10,
+          "period": 10,
+          "requests_per_period": 2
+        },
+        "ref": "c7855f743a5f4838969f66b3e041cc38",
+        "version": "1"
+      }
+    ],
+    "source": "rate_limit",
+    "version": "4"
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
+}

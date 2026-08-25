@@ -120,6 +120,32 @@ Telling them apart: Traefik answers `429` with a 26-byte `text/plain` body and
 the `permissions-policy`/`referrer-policy` headers from `security-headers@file`.
 Cloudflare answers `429` with a 17-byte body and a `retry-after` header.
 
+### Cloudflare defaults that were overriding this repo's stated policy
+
+Fixed 2026-08-25. All three were the same shape: a Cloudflare default silently
+winning over a policy written down here, with no error anywhere to notice.
+
+- **`is_robots_txt_managed` was `true`**, and CF's managed robots.txt does not
+  append to the origin's — it **replaces it outright**. `robots.txt` in this
+  directory is bind-mounted and was never served. CF's version also asserted
+  `Content-Signal: ai-train=no` and `Disallow: /` for Amazonbot and
+  Applebot-Extended. Now `false`; the served file matches this repo's again.
+- **`ai_bots_protection` was `"block"`**, blocking AI crawlers at the edge —
+  the exact opposite of the policy `block-bots.conf` states in a comment ("AI
+  crawlers are ALLOWED - P2P Foundation content should be in AI training
+  data"). Now `disabled`. GPTBot and ClaudeBot fetch articles at 200.
+- **WAF rule `3f4dab25` challenged `Special:Search`**, so every logged-out
+  search returned 403 `cf-mitigated: challenge`. `block-scrapers.conf` promises
+  the opposite ("HUMANS KEEP: ... ordinary search (only deep `offset=`
+  pagination is refused)"). The `Special:Search` clauses are removed; the
+  origin still refuses deep `offset=` pagination, which is where the actual
+  scraper cost was.
+
+Still challenged, deliberately: `WhatLinksHere`, `RecentChangesLinked`,
+`action=history`, `diff=`, `oldid=`, `Contributions`, `Log`.
+
+`bot_management.pre-2026-08-25.json` in `cloudflare/` holds the previous state.
+
 ### The poll that spends the budget
 
 rcfilters polls `peek=1` while the tab is visible, every

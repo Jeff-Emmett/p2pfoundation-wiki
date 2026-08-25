@@ -109,11 +109,34 @@ Raised in `LocalSettings.php` (server-only, not in this repo):
     $wgDefaultUserOptions['rcdays']  = 30;
     $wgDefaultUserOptions['rclimit'] = 500;
 
-30 days is the largest window `Special:RecentChanges` offers in its own UI;
-`$wgRCMaxAge` is 90 days, so `?days=90&limit=500` reaches further by hand. The
-30-day default now renders 500 entries back to late July in ~1.8 s. **If Apache
-saturates again (`block-scrapers.conf`, 2026-08-14), this limit is the first
-knob to turn back down** — RecentChanges is anon-readable and DB-expensive.
+### The "show more" row is a config array, not a UI feature
+
+Stock MediaWiki stops at **500 changes / 30 days**, so once the default was
+raised to exactly that, the page had no larger option left to offer — asking for
+more was not possible from the page itself. The row of links *is* two arrays:
+
+    $wgRCLinkLimits = [ 50, 100, 250, 500, 1000, 2000 ];
+    $wgRCLinkDays   = [ 1, 3, 7, 14, 30, 60, 90 ];
+    $wgRCMaxAge     = 180 * 24 * 3600;
+
+**`$wgRCMaxAge` has to move with `$wgRCLinkDays`.** Offering a 90-day link while
+the table prunes at 90 days means the oldest rows are being deleted as they are
+asked for; 180 keeps the widest offered window fully populated. Raising it
+changes nothing on its own — `rebuildrecentchanges.php` has to run afterwards to
+backfill, or the new links render an empty tail. Table went 1,837 → 2,795 rows.
+
+Measured at the origin after the change (page weight, not query time, is the
+cost — the DB side is an indexed scan):
+
+    days=30&limit=500      605 entries   1.3 MB   0.9 s
+    days=60&limit=1000   1,283 entries   2.8 MB   1.6 s
+    days=90&limit=2000   1,949 entries   4.3 MB   2.0 s
+
+Through the tunnel the widest view takes ~32 s, almost all of it transferring
+4.3 MB. Fine for a deliberate click, not something to make default. The default
+stays 500/30 d, so an anonymous hit costs what it did before. **If Apache
+saturates again (`block-scrapers.conf`, 2026-08-14), these are the first knobs
+to turn back down** — RecentChanges is anon-readable and DB-expensive.
 
 An outage makes RecentChanges lie in both directions: the standby made it look
 too thin by collapsing history, and the failback made it look too short by

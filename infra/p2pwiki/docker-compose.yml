@@ -89,16 +89,37 @@ services:
     - traefik.http.routers.p2pwiki.entrypoints=websecure
     - traefik.http.routers.p2pwiki.tls=true
     - traefik.http.services.p2pwiki.loadbalancer.server.port=80
-    # Rate limiting per client IP (default sourceCriterion = TCP remote addr, which is the real client
-    # since wiki.p2pfoundation.net DNS resolves direct to Netcup — traffic is NOT CF-proxied yet)
-    # Tightened 2026-04-25 after Tencent/meta-webindexer scraper saturation
-    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.average=10
-    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.burst=20
+    # Rate limiting per client IP. Traffic IS CF-proxied, so Cf-Connecting-Ip is the
+    # real client; sourceCriterion reads it rather than the TCP peer (a CF edge IP).
+    # Tightened 2026-04-25 after Tencent/meta-webindexer scraper saturation.
+    # Raised 2026-08-25: 10/20 and inflight=8 are below what ONE browser tab needs
+    # (HTML + ResourceLoader batches + icons), so real readers were getting bare
+    # 429s on individual subresources — and a 429 on the RecentChanges XHR renders
+    # as a permanently blank changes list, because rcfilters' Controller.js does
+    # nothing on fetch failure after it has already invalidated the list.
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.average=15
+    - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.burst=30
     - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.period=1s
     - traefik.http.middlewares.p2pwiki-ratelimit.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip
     # Concurrent connections per client IP
-    - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.amount=8
+    - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.amount=12
     - traefik.http.middlewares.p2pwiki-inflightreq.inflightreq.sourcecriterion.requestheadername=Cf-Connecting-Ip
+    # Static assets (ResourceLoader, skin/extension images, uploads) are cheap and
+    # are what actually makes a page load concurrent. They get their own router with
+    # generous limits so they never consume the dynamic budget above, which stays
+    # tight because index.php is what the scraper swarms target.
+    - traefik.http.middlewares.p2pwiki-static-ratelimit.ratelimit.average=100
+    - traefik.http.middlewares.p2pwiki-static-ratelimit.ratelimit.burst=200
+    - traefik.http.middlewares.p2pwiki-static-ratelimit.ratelimit.period=1s
+    - traefik.http.middlewares.p2pwiki-static-ratelimit.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip
+    - traefik.http.middlewares.p2pwiki-static-inflightreq.inflightreq.amount=48
+    - traefik.http.middlewares.p2pwiki-static-inflightreq.inflightreq.sourcecriterion.requestheadername=Cf-Connecting-Ip
+    - traefik.http.routers.p2pwiki-static.rule=(Host(`wiki.p2pfoundation.net`) || Host(`wiki.commons-hub.at`)) && (PathPrefix(`/load.php`) || PathPrefix(`/resources/`) || PathPrefix(`/skins/`) || PathPrefix(`/extensions/`) || PathPrefix(`/images/`))
+    - traefik.http.routers.p2pwiki-static.entrypoints=websecure
+    - traefik.http.routers.p2pwiki-static.tls=true
+    - traefik.http.routers.p2pwiki-static.priority=200
+    - traefik.http.routers.p2pwiki-static.service=p2pwiki
+    - traefik.http.routers.p2pwiki-static.middlewares=p2pwiki-cfonly,p2pwiki-static-ratelimit,p2pwiki-static-inflightreq
     - traefik.http.middlewares.p2pwiki-cfonly.ipwhitelist.sourcerange=127.0.0.1/32,10.0.0.0/8,172.16.0.0/12,173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32
     - traefik.http.routers.p2pwiki.middlewares=p2pwiki-cfonly,p2pwiki-ratelimit,p2pwiki-inflightreq
     networks:

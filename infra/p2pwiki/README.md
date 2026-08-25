@@ -80,6 +80,56 @@ tar xf p2pwiki-latest-images.tar -C /path/to/mediawiki/images/
 docker exec <mw-container> php maintenance/rebuildall.php
 ```
 
+## Rate limits — there are TWO, and one of them is not in this repo
+
+A reader clicking a RecentChanges option and getting a **blank changes list** is
+almost always a 429, not an empty result set. `mediawiki.rcfilters`'
+`Controller.js` invalidates the list before it fetches and then, on failure,
+does literally nothing (`// Do nothing for failure`), so one rejected XHR leaves
+an empty list that never recovers until the page is reloaded. Whether a given
+click survives is a race, which is why the same window looks broken at one
+`limit=` and fine at another.
+
+Two independent limiters can produce that 429:
+
+1. **Cloudflare** — zone `ea1c3cf1f24e254c062d3bea33b7ba86`, ruleset
+   `4e93a0d4967f47089d6535aaa3f406fb` (`P2PWiki rate limits`), rule
+   `c7855f743a5f4838969f66b3e041cc38`, matching
+   `http.request.uri.path contains "Special:RecentChanges"`. **This rule lives
+   only in the Cloudflare dashboard.** Added 2026-04-21 at **2 requests per 10
+   seconds**, which is below what the page costs itself: one navigation plus
+   rcfilters' live-update `peek=1` poll every 3s already exceeds it, so the
+   *next* thing the reader clicked was guaranteed to be blocked. Raised
+   2026-08-25 to **20 per 10s**, mitigation 10s. Read it with
+   `GET /zones/$Z/rulesets/phases/http_ratelimit/entrypoint`
+   (needs `CLOUDFLARE_JEFF_MAIN_API`; the infra/roller/DNS tokens all 403 here).
+   Note it matches the **path**, so `index.php?title=Special:RecentChanges`
+   sails past it and the pretty URL the UI actually uses does not — test with
+   the pretty form or the limiter looks like it is not there.
+
+2. **Traefik**, in `docker-compose.yml` — `p2pwiki-ratelimit` and
+   `p2pwiki-inflightreq`, keyed on `Cf-Connecting-Ip`. `inflightreq.amount=8`
+   was the binding constraint: it counts *concurrent* requests, and a single
+   page load (HTML + ResourceLoader batches + icons) goes past 8 on its own,
+   so subresources were being dropped at random. Now 12 for dynamic paths, with
+   a separate `p2pwiki-static` router (priority 200) carrying `/load.php`,
+   `/resources/`, `/skins/`, `/extensions/` and `/images/` at 48 concurrent —
+   static assets are what makes a page load concurrent, and they are cheap.
+
+Telling them apart: Traefik answers `429` with a 26-byte `text/plain` body and
+the `permissions-policy`/`referrer-policy` headers from `security-headers@file`.
+Cloudflare answers `429` with a 17-byte body and a `retry-after` header.
+
+### The WAF rule that broke the feed icon
+
+Custom rule `3f4dab25ab06421e80fd21c3a41e99dc` managed-challenges any path
+`contains "/feed"`. MediaWiki serves its RSS icon from
+`/resources/src/mediawiki.feedlink/images/feed-icon.svg` — which contains
+`/feed` — so the icon 403'd with `cf-mitigated: challenge` for every reader. A
+subresource cannot render a challenge interstitial; it just fails. The rule now
+excludes the wiki's static trees. Any future `contains` rule needs the same
+check against `/resources/`, `/skins/`, `/extensions/`, `/images/`, `/load.php`.
+
 ## Related P2P Foundation deployments (not in this repo)
 
 | Project | Netcup dir | Repo |

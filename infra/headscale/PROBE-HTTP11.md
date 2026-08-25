@@ -72,3 +72,15 @@ is a single point of failure on netcup, and when netcup died on 2026-08-17 every
 device logged out about three days later. That is still a real reason to move
 it. It is a different reason, and the script's header should be read with this
 correction in hand rather than at face value.
+
+## Applied
+
+2026-08-25 12:06Z, after GX10 rebooted out of the memory exhaustion that had made
+it unreachable. The probe now reports:
+
+```
+TS_CODE=400  HEALTH_CODE=200  STATUS=up
+control protocol answering 400 via 159.195.32.209, health 200
+```
+
+Kuma is green on the headscale monitor for the first time since the failback.

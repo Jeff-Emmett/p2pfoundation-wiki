@@ -120,6 +120,30 @@ Telling them apart: Traefik answers `429` with a 26-byte `text/plain` body and
 the `permissions-policy`/`referrer-policy` headers from `security-headers@file`.
 Cloudflare answers `429` with a 17-byte body and a `retry-after` header.
 
+### The poll that spends the budget
+
+rcfilters polls `peek=1` while the tab is visible, every
+`$wgStructuredChangeFiltersLiveUpdatePollingRate` seconds. `Controller.js` asks
+for `limit: 1` but the model's own params win, so **the poll carries the current
+`limit`/`days`** — an open 90-day tab re-runs the widest query the reader chose,
+indefinitely. At the stock 3s that is ~20 requests/minute per reader against the
+one endpoint Cloudflare rate-limits by path. Set to **10** in `LocalSettings.php`
+on 2026-08-25 (alongside `$wgRCMaxAge`); live updates still work, at a third of
+the traffic.
+
+`LocalSettings.php` is bind-mounted as a **single file**, so its inode is shared
+with the container: `sed -i` replaces the inode and the container keeps reading
+the old file until it is recreated. Edit it in place (`open(p,'w')`, `cat >`) and
+check `stat -c %i` matches on both sides. No restart is needed — but `opcache`
+runs with `revalidate_freq=60`, so the web SAPI serves the old value for up to a
+minute while CLI (`maintenance/getConfiguration.php`) already reports the new
+one. That disagreement is the cache, not a failed edit; wait and re-check.
+Verify what actually reaches the browser:
+
+```
+load.php?modules=mediawiki.rcfilters.filters.ui&only=scripts&raw=1
+```
+
 ### The WAF rule that broke the feed icon
 
 Custom rule `3f4dab25ab06421e80fd21c3a41e99dc` managed-challenges any path

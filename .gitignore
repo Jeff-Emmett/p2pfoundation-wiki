@@ -1,6 +1,10 @@
 # Blog static mirror (6.8GB — too large for git, use rsync)
 blog/blog.p2pfoundation.net/
 
+# Diigo export (278MB, mbauwens.jsonl alone is 79MB - too large for git)
+# Untracked and unignored since May 2026, so any `git add -A` tried to commit it.
+diigo/
+
 # Runtime data
 data/
 

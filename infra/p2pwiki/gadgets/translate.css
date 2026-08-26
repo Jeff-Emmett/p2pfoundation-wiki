@@ -1,0 +1,200 @@
+/**
+ * Styles for the translate gadget (MediaWiki:Gadget-translate.css).
+ * Source of truth: infra/p2pwiki/gadgets/translate.css in the wiki repo.
+ *
+ * The button is floated right and sits before #firstHeading, so the article
+ * title wraps beside it and the control lands at the top right of the page
+ * without absolute positioning that would break on narrow screens.
+ */
+
+.p2pwiki-translate-wrap {
+	position: relative;
+	float: right;
+	clear: right;
+	margin: 0 0 0.4em 1em;
+	z-index: 5;
+	font-size: 0.875rem;
+	line-height: 1.3;
+}
+
+.p2pwiki-translate-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.45em 0.9em;
+	border: 1px solid #2a4b8d;
+	border-radius: 999px;
+	background: #3366cc;
+	color: #fff;
+	font-weight: 600;
+	font-size: 1em;
+	cursor: pointer;
+	box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.15 );
+}
+
+.p2pwiki-translate-btn:hover,
+.p2pwiki-translate-btn:focus {
+	background: #2a4b8d;
+	color: #fff;
+	outline: none;
+}
+
+.p2pwiki-translate-btn:focus-visible {
+	outline: 2px solid #fc3;
+	outline-offset: 2px;
+}
+
+.p2pwiki-translate-badge {
+	background: #fc3;
+	color: #202122;
+	border-radius: 3px;
+	padding: 0.05em 0.4em;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+/* Panel ------------------------------------------------------------------ */
+
+.p2pwiki-translate-panel {
+	position: absolute;
+	top: calc( 100% + 0.4em );
+	right: 0;
+	width: 22em;
+	max-width: 90vw;
+	padding: 0.8em;
+	background: #fff;
+	border: 1px solid #a2a9b1;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba( 0, 0, 0, 0.2 );
+	z-index: 100;
+}
+
+.p2pwiki-translate-panel-title {
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+
+.p2pwiki-translate-form {
+	display: flex;
+	gap: 0.4em;
+	margin-bottom: 0.6em;
+}
+
+.p2pwiki-translate-input {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 0.35em 0.5em;
+	border: 1px solid #a2a9b1;
+	border-radius: 3px;
+}
+
+.p2pwiki-translate-go {
+	padding: 0.35em 0.7em;
+	border: 1px solid #2a4b8d;
+	border-radius: 3px;
+	background: #3366cc;
+	color: #fff;
+	cursor: pointer;
+}
+
+.p2pwiki-translate-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35em;
+}
+
+.p2pwiki-translate-chip {
+	padding: 0.25em 0.6em;
+	border: 1px solid #c8ccd1;
+	border-radius: 999px;
+	background: #f8f9fa;
+	cursor: pointer;
+	font-size: 0.95em;
+}
+
+.p2pwiki-translate-chip:hover {
+	background: #eaf3ff;
+	border-color: #3366cc;
+}
+
+.p2pwiki-translate-foot {
+	margin-top: 0.7em;
+	color: #54595d;
+	font-size: 0.85em;
+}
+
+/* Status bar ------------------------------------------------------------- */
+
+.p2pwiki-translate-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.6em;
+	padding: 0.5em 0.8em;
+	margin: 0 0 1em;
+	border-radius: 3px;
+	font-size: 0.95em;
+	clear: both;
+}
+
+.p2pwiki-translate-bar--busy,
+.p2pwiki-translate-bar--done {
+	background: #eef6ff;
+	border: 1px solid #a2b8dd;
+	color: #202122;
+}
+
+.p2pwiki-translate-bar--error {
+	background: #fee7e6;
+	border: 1px solid #d33;
+	color: #202122;
+}
+
+.p2pwiki-translate-bar--done span:first-child,
+.p2pwiki-translate-bar--busy span:last-child {
+	flex: 1 1 auto;
+}
+
+.p2pwiki-translate-linkbtn {
+	padding: 0.25em 0.6em;
+	background: #fff;
+	border: 1px solid #a2a9b1;
+	border-radius: 3px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.p2pwiki-translate-spinner {
+	flex: 0 0 auto;
+	width: 1em;
+	height: 1em;
+	border: 2px solid #a2b8dd;
+	border-top-color: #3366cc;
+	border-radius: 50%;
+	animation: p2pwiki-translate-spin 0.8s linear infinite;
+}
+
+@keyframes p2pwiki-translate-spin {
+	to {
+		transform: rotate( 360deg );
+	}
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+	.p2pwiki-translate-spinner {
+		animation: none;
+	}
+}
+
+/* Narrow screens: keep the button, shorten it to the essentials. */
+@media screen and ( max-width: 720px ) {
+	.p2pwiki-translate-wrap {
+		float: none;
+		margin: 0 0 0.6em;
+	}
+
+	.p2pwiki-translate-panel {
+		right: auto;
+		left: 0;
+	}
+}

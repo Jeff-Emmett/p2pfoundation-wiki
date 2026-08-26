@@ -1,0 +1,44 @@
+<div class="app">
+	<header class="masthead">
+		<div>
+			<h1>P2P Wiki Atlas</h1>
+			<p>Every article in the P2P Foundation Wiki, placed by what it is about. Neighbours share vocabulary and categories; the named regions are the groupings that fell out of the text, not a hand-made taxonomy.</p>
+		</div>
+		<div class="figures">
+			<div class="figure"><b id="fig-articles">—</b><span>articles</span></div>
+			<div class="figure"><b id="fig-cats">—</b><span>categories</span></div>
+			<div class="figure"><b id="fig-regions">—</b><span>regions</span></div>
+		</div>
+	</header>
+
+	<aside class="rail">
+		<div class="field">
+			<label for="q">Highlight search terms</label>
+			<input id="q" type="search" placeholder="commons, blockchain, mutual aid" autocomplete="off" spellcheck="false">
+			<p class="hint">Up to three terms, comma-separated. Each lights up the articles whose title or categories contain it.</p>
+		</div>
+
+		<ul class="legend" id="legend" hidden></ul>
+
+		<div>
+			<h2 class="section-title" id="matches-title">Matches</h2>
+			<ul class="matches" id="matches"></ul>
+		</div>
+
+		<div>
+			<h2 class="section-title">Regions</h2>
+			<ul class="regions" id="regions"></ul>
+		</div>
+	</aside>
+
+	<div class="map" id="map">
+		<canvas id="cv"></canvas>
+		<div class="tooltip" id="tip" role="status" aria-live="polite"></div>
+		<div class="scalenote" id="note">Scroll to zoom · drag to pan · click a point to open the article</div>
+		<div class="controls">
+			<button type="button" id="zin" aria-label="Zoom in">+</button>
+			<button type="button" id="zout" aria-label="Zoom out">−</button>
+			<button type="button" id="zreset" aria-label="Reset view">⤾</button>
+		</div>
+	</div>
+</div>

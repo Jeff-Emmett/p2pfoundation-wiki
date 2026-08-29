@@ -77,15 +77,26 @@ a:hover{color:var(--c-cyan);}
 .provenance{margin-top:14px; font-family:var(--font-mono); font-size:11.5px; color:var(--ink-3); text-align:center; line-height:1.7;}
 .provenance b{color:var(--ink-2); font-weight:500;}
 
-/* ---------- chapters ---------- */
-.chapter{padding:3.4rem 0 0; border-top:1px solid var(--line); margin-top:2.6rem; scroll-margin-top:var(--top);}
+/* ---------- chapters ----------
+   A chapter opens with a .screen: heading + scene together, sized to exactly
+   one viewport. The heading is part of the frame rather than something that
+   pushes the frame below the fold, so landing on #chN shows the whole diagram
+   without scrolling. Only .extras — the optional supporting panes — live under
+   the fold, which is what the "↓ supporting detail below" marker announces. */
+.chapter{padding:1.5rem 0 0; border-top:1px solid var(--line); margin-top:0; scroll-margin-top:var(--top);}
 .chapter .wrap{max-width:1340px;}
-.chapter .head{max-width:800px;}
-.chapter .num{font-family:var(--font-mono); font-size:12px; letter-spacing:.18em; color:var(--a,var(--c-cyan));}
-.chapter h2{text-wrap:balance; font-family:var(--font-display); font-size:clamp(1.85rem,4.2vw,2.7rem); font-weight:400; margin:.35rem 0 .5rem;}
-.chapter .lede{color:var(--ink-2); font-size:1.01rem; max-width:66ch;}
+.screen{
+  display:flex; flex-direction:column; gap:.85rem;
+  height:max(540px, calc(100svh - var(--top) - 1.5rem - 12px));
+  scroll-margin-top:var(--top);
+}
+.screen > .head{flex:0 0 auto;}
+.chapter .head{max-width:860px;}
+.chapter .num{font-family:var(--font-mono); font-size:11.5px; letter-spacing:.18em; color:var(--a,var(--c-cyan));}
+.chapter h2{text-wrap:balance; font-family:var(--font-display); font-size:clamp(1.6rem,3.1vw,2.2rem); font-weight:400; margin:.25rem 0 .35rem; line-height:1.12;}
+.chapter .lede{color:var(--ink-2); font-size:.96rem; line-height:1.45; max-width:80ch; margin:0;}
 .chapter .lede code{font-family:var(--font-mono); font-size:.86em; color:var(--a,var(--c-cyan)); background:rgba(255,255,255,.05); padding:1px 5px; border-radius:5px;}
-.chapter .extras{margin-top:1.2rem; padding-bottom:.4rem;}
+.chapter .extras{margin-top:1.2rem; padding-bottom:1.6rem;}
 
 /* ---------- the scene: one frame, one screen ----------
    A scene is a fixed-height column: controls, stage, caption, readouts. The
@@ -93,10 +104,7 @@ a:hover{color:var(--c-cyan);}
    (see metrics() in the script) — so nothing is ever scaled into illegibility
    and nothing ever spills off the bottom of the screen. */
 .scene{
-  height:calc(100svh - var(--top) - 10px);
-  min-height:min(560px, calc(100svh - var(--top) - 10px));
-  max-height:1040px;
-  margin-top:1.2rem;
+  flex:1 1 auto; min-height:0; margin:0;
   display:flex; flex-direction:column; gap:9px;
   scroll-margin-top:calc(var(--top) + 4px);
 }
@@ -212,10 +220,27 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
   .controls .hint{display:none;}
   .caption{font-size:13.5px;}
   .hero{padding-top:3rem;}
-  .chapter{padding-top:2.6rem;}
+  .chapter{padding-top:1.2rem;}
+  .screen{gap:.7rem;}
+  .chapter h2{font-size:clamp(1.35rem,5.2vw,1.7rem); margin:.2rem 0 .3rem;}
+  .chapter .lede{font-size:.875rem; line-height:1.4;}
 }
+/* Laptop heights. The heading is the only part of the frame that can give up
+   room without costing legibility, so it is the part that shrinks. */
+@media(max-height:830px){
+  .chapter{padding-top:1.1rem;}
+  .screen{gap:.6rem;}
+  .chapter h2{font-size:clamp(1.4rem,2.6vw,1.8rem); margin:.2rem 0 .3rem;}
+  .chapter .lede{font-size:.9rem; line-height:1.4; max-width:88ch;}
+  .caption{font-size:13.5px;}
+}
+
+/* Too short to hold a heading and a legible diagram at once. Give the scene a
+   screen of its own again and let the heading scroll away above it — a 120px
+   stage would be worse than a fold. */
 @media(max-height:640px){
-  .scene{max-height:none; min-height:0;}
+  .screen{display:block; height:auto;}
+  .scene{margin-top:.9rem; height:calc(100svh - var(--top) - 10px); min-height:340px;}
   .caption{font-size:13px;}
 }
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
@@ -252,6 +277,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
 
 <!-- ═══════════════ §1 INGEST ═══════════════ -->
 <section class="chapter" id="ch1" style="--a:var(--c-cyan)"><div class="wrap">
+  <div class="screen">
   <div class="head">
     <div class="num">§1 — INGEST · A PAGE BECOMES A HOLON</div>
     <h2>Nothing is thrown away on the way in</h2>
@@ -270,10 +296,12 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     <div class="caption" id="cap1"></div>
     <div class="readrow" id="read1"></div>
   </div>
+  </div>
 </div></section>
 
 <!-- ═══════════════ §2 REGROUP ═══════════════ -->
 <section class="chapter" id="ch2" style="--a:var(--c-violet)"><div class="wrap">
+  <div class="screen">
   <div class="head">
     <div class="num">§2 — REGROUP · NINE LENSES OVER FREE-FORM CATEGORIES</div>
     <h2>Same corpus, someone else's order</h2>
@@ -292,6 +320,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     <div class="caption" id="cap2"></div>
     <div class="readrow" id="read2"></div>
   </div>
+  </div>
   <div class="extras">
     <div id="lenslist"></div>
     <div class="note finding" id="note2"></div>
@@ -301,6 +330,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
 
 <!-- ═══════════════ §3 RETRIEVE ═══════════════ -->
 <section class="chapter" id="ch3" style="--a:var(--c-blue)"><div class="wrap">
+  <div class="screen">
   <div class="head">
     <div class="num">§3 — RETRIEVE · TWO RETRIEVERS THAT FAIL DIFFERENTLY</div>
     <h2>The documents worth recovering are the ones only one of them found</h2>
@@ -321,10 +351,12 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     <div class="caption" id="cap3"></div>
     <div class="readrow" id="read3"></div>
   </div>
+  </div>
 </div></section>
 
 <!-- ═══════════════ §4 SUBSET ═══════════════ -->
 <section class="chapter" id="ch4" style="--a:var(--c-gold)"><div class="wrap">
+  <div class="screen">
   <div class="head">
     <div class="num">§4 — SUBSET · HOLD YOUR ORGANIZATION, NOT THE CONTENT</div>
     <h2>A reading list that never copies the reading</h2>
@@ -345,6 +377,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     <div class="caption" id="cap4"></div>
     <div class="readrow" id="read4"></div>
   </div>
+  </div>
   <div class="extras grid2">
     <div class="pane"><h4>What the overlay stores</h4><div class="mono-block" id="ov-json"></div></div>
     <div class="pane"><h4>What it points at</h4><div class="mono-block" id="ov-upstream"></div></div>
@@ -353,6 +386,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
 
 <!-- ═══════════════ §5 RE-VIEW ═══════════════ -->
 <section class="chapter" id="ch5" style="--a:var(--c-lime)"><div class="wrap">
+  <div class="screen">
   <div class="head">
     <div class="num">§5 — RE-VIEW · BANDS AND FORMS</div>
     <h2>One query, however much of the answer you can actually use</h2>
@@ -373,6 +407,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     <div class="caption" id="cap5"></div>
     <div class="readrow" id="read5"></div>
   </div>
+  </div>
   <div class="extras grid2">
     <div class="pane"><h4>Requested form → what you get</h4><div id="form-out" class="mono-block"></div></div>
     <div class="pane"><h4>Degradation ladder</h4><div id="ladder-out" class="mono-block"></div></div>
@@ -381,6 +416,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
 
 <!-- ═══════════════ §6 GROUND ═══════════════ -->
 <section class="chapter" id="ch6" style="--a:var(--c-rose)"><div class="wrap">
+  <div class="screen">
   <div class="head">
     <div class="num">§6 — GROUND &amp; DERIVE · WHAT YOU MAY CLAIM</div>
     <h2>A shaky secondary must not become a confident tertiary</h2>
@@ -400,6 +436,7 @@ footer{padding:2.2rem 0 3rem; color:var(--ink-3); font-family:var(--font-mono); 
     <div class="stage"><svg class="viz" id="viz6" role="img" aria-label="Grounding and derivation"></svg></div>
     <div class="caption" id="cap6"></div>
     <div class="readrow" id="read6"></div>
+  </div>
   </div>
   <div class="extras"><div class="note" id="note6"></div></div>
 </div></section>
@@ -592,7 +629,7 @@ function chapter(n, def) {
       capEl.innerHTML = keep;
       /* a very long caption on a narrow screen would eat the stage; cap it and
          let that one caption scroll rather than shrinking every diagram */
-      capEl.style.height = Math.ceil(Math.min(max, innerHeight * 0.27)) + 'px';
+      capEl.style.height = Math.ceil(Math.min(max, innerHeight * 0.20)) + 'px';
     },
     set(i, opts) {
       state.i = clamp(i, 0, def.steps.length - 1);
@@ -1221,9 +1258,14 @@ function lay(M) {
      a fixed 90px box crushed four 12.5px lines into 10px of pitch */
   const ms = clamp(S(10), 8.5, 11.5);
   const mLines = M.narrow ? 4 : 3;
-  const mTop = ms * 1.5 + 12;
+  /* The strip's own caption is on the same clamp as its lines, or a wide stage
+     (where S() runs ahead of the clamped line size) drops the first line of
+     arithmetic straight through the word "composite". */
+  const mls = clamp(S(9.5), 8, 11);
+  const lblY = mls + 10;
+  const mTop = lblY + ms * 1.45;
   const mPitch = ms * 1.72;
-  const mathH = Math.ceil(mTop + mLines * mPitch + 6);
+  const mathH = Math.ceil(mTop + (mLines - 1) * mPitch + ms + 8);
   /* the head height has to come from the type size, or the sub-line lands on
      top of the first result row */
   const hs = clamp(S(10.5), 9, 12);
@@ -1236,7 +1278,7 @@ function lay(M) {
     const top = 2 + qH + 12 + headH;
     const avail = bot - top;
     const K = clamp(Math.floor(avail / 34), 2, 8);
-    return {mode:'wide', pad, gut, w, K, headH, hs, twoLineHead, top, avail, ms, mLines, mTop, mPitch,
+    return {mode:'wide', pad, gut, w, K, headH, hs, twoLineHead, top, avail, ms, mls, lblY, mLines, mTop, mPitch,
       pitch: clamp(avail / K, 26, 48), q:{x:pad, y:2, w:W - pad*2, h:qH},
       math:{x:pad, y:H - 4 - mathH, w:W - pad*2, h:mathH},
       cx: [pad, pad + w + gut, pad + (w + gut) * 2]};
@@ -1247,7 +1289,7 @@ function lay(M) {
   const avail = secH - headH;
   /* pitch has a floor: a row thinner than this is not a row, it is a line */
   const K = clamp(Math.floor(avail / 26), 1, 5);
-  return {mode:'tall', pad, gut:gap, w, K, headH, hs, twoLineHead, top, avail, secH, ms, mLines, mTop, mPitch,
+  return {mode:'tall', pad, gut:gap, w, K, headH, hs, twoLineHead, top, avail, secH, ms, mls, lblY, mLines, mTop, mPitch,
     pitch: clamp(avail / K, 24, 44), q:{x:pad, y:2, w, h:qH},
     math:{x:pad, y:H - 4 - mathH, w, h:mathH},
     cx: [pad, pad, pad], cy: [top, top + secH + gap, top + (secH + gap) * 2]};
@@ -1343,7 +1385,7 @@ const CH3 = chapter(3, {
       const A = L.math;
       sc.math = el('g', {opacity:0});
       const mp = card(A.x, A.y, A.w, A.h, {fill:'rgba(24,20,40,.94)', stroke:'rgba(184,132,255,.42)'});
-      mp.appendChild(label('composite', 14, S(9.5) + 10, {size:S(9.5), fill:COL.violet, ls:1.2}));
+      mp.appendChild(label('composite', 14, L.lblY, {size:L.mls, fill:COL.violet, ls:1.2}));
       const ms = L.ms;
       sc.mathLines = Array.from({length: L.mLines}, (_, j) =>
         mp.appendChild(label('', 14, L.mTop + j * L.mPitch, {size:ms, fill:COL.ink2})));
@@ -1498,12 +1540,17 @@ const CH4 = chapter(4, {
       s.appendChild(up);
 
       const rowsAvail0 = U.h - panelTop - 8;
-      const nRows = clamp(Math.floor(rowsAvail0 / 33), 2, POOL.length);
+      /* A floor of two rows is a floor only while two rows fit. Below that the
+         arithmetic went negative and the panel drew rows of negative height
+         over its own heading; say how many articles are up there instead. */
+      const nRows = clamp(Math.floor(rowsAvail0 / 33), 0, POOL.length);
       /* leave the "+ n more" line room inside the panel rather than on its edge */
-      const rowsAvail = rowsAvail0 - (nRows < POOL.length ? 18 : 0);
-      const rowP = Math.min(56, rowsAvail / nRows);
-      const rowH = Math.min(rowP - 6, 46);
+      const rowsAvail = rowsAvail0 - (nRows && nRows < POOL.length ? 18 : 0);
+      const rowP = nRows ? Math.min(56, rowsAvail / nRows) : 0;
+      const rowH = Math.max(0, Math.min(rowP - 6, 46));
       const rs = clamp(S(11), 9.5, 12.5);
+      if (!nRows) up.appendChild(label(fitPx(`${POOL.length} upstream articles`, hs - .5, U.w - 28),
+        U.w / 2, Math.min(U.h - 6, panelTop + 12), {size:hs - .5, fill:COL.ink3, anchor:'middle'}));
       sc.rows = POOL.slice(0, nRows).map((d, k) => {
         const y = U.y + panelTop + k * rowP;
         const g = el('g', {transform:`translate(${U.x + 14},${y})`, style:'cursor:pointer'});
@@ -1520,7 +1567,7 @@ const CH4 = chapter(4, {
         s.appendChild(g);
         return {g, r, tick, d, k};
       });
-      if (nRows < POOL.length) s.appendChild(label(`+ ${POOL.length - nRows} more upstream`,
+      if (nRows && nRows < POOL.length) s.appendChild(label(`+ ${POOL.length - nRows} more upstream`,
         U.x + U.w / 2, U.y + panelTop + nRows * rowP + 10, {size:S(9.5), fill:COL.ink4, anchor:'middle'}));
       sc.poolShown = nRows;
 
@@ -1534,7 +1581,7 @@ const CH4 = chapter(4, {
       const eAvail = V.h - panelTop - 8;
       sc.nEntries = clamp(Math.floor(eAvail / 58), 1, 6);
       sc.entryP = Math.min(88, eAvail / sc.nEntries);
-      sc.entryH = Math.min(sc.entryP - 8, 78);
+      sc.entryH = Math.max(0, Math.min(sc.entryP - 8, 78));
       sc.entryTop = V.y + panelTop;
       sc.es = clamp(S(11), 9.5, 12.5);
       sc.entries = el('g'); s.appendChild(sc.entries);
@@ -1624,14 +1671,18 @@ function render(step) {
   sc.empty.style.opacity = list.length ? 0 : 1;
   const ew = V.w - 28, eh = sc.entryH;
   const tagRow = eh >= 52;
+  /* A card too short for two lines gets one, centred. Drawing both anyway put
+     the resource line through the bottom of the card and the label below it. */
+  const eTight = eh < es * 2.3 + 12;
   list.slice(0, sc.nEntries).forEach(([title, e], k) => {
     const g = el('g', {transform:`translate(${V.x + 14},${sc.entryTop + k * sc.entryP})`, opacity:0});
     g.appendChild(el('rect', {x:0, y:0, width:ew, height:eh, rx:9, fill:'rgba(34,28,16,.85)', stroke:'rgba(255,210,122,.4)'}));
     const slotW = tw('body ∅', es - 2) + 16;
-    g.appendChild(label(fitPx(title, es, ew - 24 - slotW), 12, es + 7, {size:es, fill:'#fff'}));
-    g.appendChild(label(fitPx(e.resource, es - 2, ew - 24), 12, es * 2.3 + 6, {size:es - 2, fill:COL.gold}));
+    const eTop = eTight ? eh / 2 + es * .36 : es + 7;
+    g.appendChild(label(fitPx(title, es, ew - 24 - slotW), 12, eTop, {size:es, fill:'#fff'}));
+    if (!eTight) g.appendChild(label(fitPx(e.resource, es - 2, ew - 24), 12, es * 2.3 + 6, {size:es - 2, fill:COL.gold}));
     /* the empty body slot, drawn as an absence rather than omitted */
-    g.appendChild(label('body ∅', ew - 12, es + 7, {size:es - 2, fill:COL.ink4, anchor:'end'}));
+    g.appendChild(label('body ∅', ew - 12, eTop, {size:es - 2, fill:COL.ink4, anchor:'end'}));
     if (step >= 2 && tagRow) {
       const ts = clamp(es - 2.5, 7.5, 9.5), stw = tw(e.status, ts - .5) + 10;
       let tx = 12;
@@ -1649,7 +1700,7 @@ function render(step) {
   });
   if (list.length > sc.nEntries) {
     sc.entries.appendChild(label(`+ ${list.length - sc.nEntries} more entries`, V.x + V.w / 2,
-      sc.entryTop + sc.nEntries * sc.entryP + 10, {size:11, fill:COL.ink4, anchor:'middle'}));
+      Math.min(sc.entryTop + sc.nEntries * sc.entryP + 10, V.y + V.h - 5), {size:11, fill:COL.ink4, anchor:'middle'}));
   }
 
   const stored = JSON.stringify([...shelved.values()]);
@@ -2060,8 +2111,13 @@ const CH6 = chapter(6, {
         sc.srcRows = g.sources.slice(0, ns).map((sd, k) => {
           const y = SRC.y + sOff + k * sPitch;
           const cd = card(SRC.x, y, SRC.w, sH, {fill:'rgba(16,24,36,.88)', stroke:'rgba(94,240,223,.24)'});
-          cd.appendChild(label(fitPx(sd.title, ss, SRC.w - 24), 12, ss + 9, {size:ss, fill:COL.cyan}));
-          cd.appendChild(label(fitPx(sd.id, ss - 1.5, SRC.w - 24), 12, ss * 2.5 + 7, {size:ss - 1.5, fill:COL.ink4}));
+          /* A short card has room for the title and nothing else. Drawing the
+             page id anyway put it below the card's own bottom edge, on top of
+             the next source. */
+          const sTight = sH < ss * 2.5 + 14;
+          cd.appendChild(label(fitPx(sd.title, ss, SRC.w - 24), 12,
+            sTight ? sH / 2 + ss * .36 : ss + 9, {size:ss, fill:COL.cyan}));
+          if (!sTight) cd.appendChild(label(fitPx(sd.id, ss - 1.5, SRC.w - 24), 12, ss * 2.5 + 7, {size:ss - 1.5, fill:COL.ink4}));
           if (sH >= 54) cd.appendChild(label(fitPx(`${band === 'full' ? 'document body' : 'card snippet'} · ${sd.text.length} ch`, ss - 1.5, SRC.w - 24),
             12, ss * 4 + 5, {size:ss - 1.5, fill:COL.ink4}));
           sc.srcs.appendChild(cd);
@@ -2224,8 +2280,10 @@ btn.onclick = async () => {
   touring = true; btn.textContent = '■ Stop';
   for (const ch of CHAPTERS) {
     if (!touring) break;
-    /* scroll to the scene, not the chapter: the scene is the frame that fits */
-    document.getElementById('scene' + ch.n).scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block:'start'});
+    /* scroll to the .screen — heading and scene together are the frame that
+       fits one viewport; the scene alone would leave its own heading above. */
+    (document.getElementById('scene' + ch.n).closest('.screen') ||
+     document.getElementById('scene' + ch.n)).scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block:'start'});
     await sleep(900);
     ch.drawn = true;
     for (let i = 0; i < ch.def.steps.length; i++) {
@@ -2237,6 +2295,23 @@ btn.onclick = async () => {
   if (touring) document.getElementById('outro').scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth'});
   touring = false; btn.textContent = '▶ Play the whole tour';
 };
+
+/* A deep link lands before the corpus has been rendered into the page, and the
+   chapter above the target keeps growing as its supporting panes fill in — so
+   the browser's own jump ends up hundreds of pixels short and the frame that
+   was supposed to fit one screen starts below the fold. Hold the anchor while
+   the document is still settling, and let go the moment the reader scrolls. */
+if (location.hash) {
+  const go = () => { const t = document.querySelector(location.hash);
+                     if (t) t.scrollIntoView({block:'start', behavior:'auto'}); };
+  let held = true;
+  const release = () => { if (!held) return; held = false; ro.disconnect(); };
+  const ro = new ResizeObserver(() => { if (held) go(); });
+  requestAnimationFrame(() => { if (held) { go(); ro.observe(document.body); } });
+  for (const ev of ['wheel','touchstart','keydown','pointerdown'])
+    addEventListener(ev, release, {passive:true, once:true});
+  setTimeout(release, 2500);
+}
 
 // keyboard: ← / → step the chapter nearest the middle of the viewport
 addEventListener('keydown', e => {

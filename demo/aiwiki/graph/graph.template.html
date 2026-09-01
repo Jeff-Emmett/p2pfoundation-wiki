@@ -19,7 +19,7 @@
   --font-display:'Instrument Serif', Georgia, serif;
   --font-body:'Hanken Grotesk', system-ui, -apple-system, sans-serif;
   --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-  --top:50px; --rail:300px; --panelw:372px;
+  --top:50px; --rail:300px; --panelw:372px; --dock:58px;
 }
 *{box-sizing:border-box;}
 html,body{margin:0; height:100%; overflow:hidden;}
@@ -151,16 +151,56 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
 .menu{display:none; font-family:var(--font-mono); font-size:12px; padding:5px 9px; border-radius:7px;
   border:1px solid var(--line); background:transparent; color:var(--ink-2); cursor:pointer;}
 @media(max-width:1180px){ :root{--rail:264px; --panelw:326px;} }
+/* the dock and the sheet are phone furniture; on a desktop the rail is a rail */
+.scrim,.dock,.grab{display:none;}
 @media(max-width:900px){
-  /* Both drawers overlay the canvas here rather than sitting beside it, so the
-     translucency that reads as depth on a desktop just makes the text sit on
-     top of 39,915 moving points. Solid ground, and an edge shadow instead. */
-  .rail{position:absolute; z-index:35; height:100%; transform:translateX(-100%); transition:transform .2s;
-    background:#0a0e1a; box-shadow:14px 0 40px -20px #000;}
+  /* The rail becomes a bottom sheet. Bottom, because that is where a thumb is;
+     a sheet, because it leaves the canvas visible above it while you type. */
+  .rail{
+    /* sits ON the dock, not under it: padding-bottom would reserve space after
+       the content but does nothing to stop the last row rendering beneath a
+       fixed bar that is painted over it */
+    position:fixed; left:0; right:0; bottom:var(--dock); top:auto; width:auto; z-index:36;
+    height:min(62vh, 560px); border-right:0; border-top:1px solid var(--line-2);
+    border-radius:18px 18px 0 0; background:#0a0e1a; box-shadow:0 -18px 50px -22px #000;
+    transform:translateY(105%); transition:transform .24s cubic-bezier(.32,.72,0,1);
+    padding:0 14px 18px;
+  }
   .rail.open{transform:none;}
+  .grab{
+    display:block; position:sticky; top:0; z-index:2; margin:0 -14px 8px; padding:11px 0 9px;
+    background:#0a0e1a; border:0; border-radius:18px 18px 0 0; cursor:pointer; width:calc(100% + 28px);
+  }
+  .grab span{display:block; width:38px; height:4px; border-radius:3px; background:var(--line-2); margin:0 auto;}
+  .scrim.on{
+    display:block; position:absolute; inset:0; z-index:34; background:rgba(4,6,12,.55);
+    backdrop-filter:blur(1.5px);
+  }
   .panel{position:absolute; right:0; z-index:35; height:100%; width:min(94vw,372px);
     background:#0a0e1a; box-shadow:-14px 0 40px -20px #000;}
-  .menu{display:inline-flex;}
+  .menu{display:none;}          /* the dock owns this now */
+  .app{bottom:var(--dock);}     /* keep the canvas clear of the dock */
+  .controls{bottom:calc(var(--dock) - 40px);}
+  .scalenote{bottom:calc(var(--dock) - 38px);}
+
+  .dock{
+    display:flex; position:fixed; left:0; right:0; bottom:0; z-index:37; height:var(--dock);
+    align-items:center; gap:8px; padding:0 10px;
+    background:rgba(8,11,20,.96); border-top:1px solid var(--line); backdrop-filter:blur(10px);
+  }
+  .dbtn{
+    flex:0 0 auto; width:46px; height:46px; border-radius:12px; cursor:pointer;
+    border:1px solid var(--line); background:rgba(20,26,46,.7); color:var(--ink-2);
+    font-family:var(--font-mono); font-size:19px; line-height:1;
+  }
+  .dbtn.on{border-color:var(--c-cyan); color:#fff;}
+  .dmodes{flex:1 1 auto; display:flex; gap:6px; justify-content:center;}
+  .dchip{
+    flex:1 1 0; min-width:0; height:46px; border-radius:12px; cursor:pointer;
+    border:1px solid var(--line); background:rgba(20,26,46,.7); color:var(--ink-3);
+    font-family:var(--font-mono); font-size:12px;
+  }
+  .dchip.on{border-color:var(--c-cyan); color:#fff; background:rgba(94,240,223,.15);}
 }
 /* Touch: every control gets a 44px target, the notes shrink to a line so the
    canvas keeps the screen, and the hover tooltip is suppressed — a finger has
@@ -196,6 +236,7 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
 
 <div class="app">
   <aside class="rail" id="rail">
+    <button class="grab" id="grab" aria-label="Close controls"><span></span></button>
     <div>
       <label class="eyebrow" for="q">Find</label>
       <input id="q" type="search" placeholder="commons, mutual aid, Bauwens" autocomplete="off" spellcheck="false">
@@ -278,7 +319,23 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
   </div>
 
   <aside class="panel" id="panel" aria-live="polite"></aside>
+  <div class="scrim" id="scrim"></div>
 </div>
+
+<!-- Phone only. A side drawer covering two thirds of the width is the wrong
+     shape for this: the point of an axis query is watching the corpus move, and
+     you cannot watch it from behind the controls. So the arrangement switches
+     live in a dock that never covers the canvas, and everything else lives in a
+     sheet you can dismiss. -->
+<nav class="dock" id="dock" aria-label="Controls">
+  <button class="dbtn" id="d-find" aria-label="Search">⌕</button>
+  <div class="dmodes" id="dmodes" role="group" aria-label="Arrange by">
+    <button class="dchip on" data-dmode="atlas">atlas</button>
+    <button class="dchip" data-dmode="axes">axes</button>
+    <button class="dchip" data-dmode="focus">focus</button>
+  </div>
+  <button class="dbtn" id="d-more" aria-label="All controls">☰</button>
+</nav>
 
 <script>
 (function(){
@@ -995,6 +1052,7 @@ function setTip(i,px,py){
   t.style.top=Math.max(6,py-t.offsetHeight-12)+'px';
 }
 function wire(){
+  var qi=document.getElementById('q');
   /* One input layer for mouse, finger and pen. Pointer Events already unify the
      three, but only if you track more than one at a time — so gestures are
      driven off a map of live pointers rather than a single drag flag:
@@ -1141,11 +1199,55 @@ function wire(){
     focusQ=this.value.trim();
     clearTimeout(axTimer); axTimer=setTimeout(function(){ applyMode('focus'); },420);
   });
-  var qi=document.getElementById('q');
   qi.addEventListener('input',function(){ clearTimeout(searchTimer); searchTimer=setTimeout(runSearch,140); });
   qi.addEventListener('keydown',function(e){
-    if(e.key==='Enter'&&matches&&matches.length){ openPanel(matches[0].i); flyTo(matches[0].i); } });
-  document.getElementById('menu').onclick=function(){ document.getElementById('rail').classList.toggle('open'); };
+    if(e.key==='Enter'&&matches&&matches.length){
+      openPanel(matches[0].i); flyTo(matches[0].i);
+      qi.blur(); if (isPhone()) sheet(false);
+    } });
+  /* ---- phone: the sheet, and the dock that keeps the arrangement one tap away ----
+     Anything that produces a result the reader wants to *see* closes the sheet
+     on its way out — a match, a preset, a region. Otherwise the corpus would
+     rearrange behind the controls that asked it to. */
+  var rail=document.getElementById('rail'), scrim=document.getElementById('scrim');
+  function sheet(open, focusEl){
+    rail.classList.toggle('open', open);
+    scrim.classList.toggle('on', open);
+    if (open && focusEl) setTimeout(function(){ focusEl.focus(); }, 260);
+  }
+  function sheetOpen(){ return rail.classList.contains('open'); }
+  var mq = matchMedia('(max-width:900px)');
+  function isPhone(){ return mq.matches; }
+
+  document.getElementById('menu').onclick=function(){ sheet(!sheetOpen()); };
+  document.getElementById('grab').onclick=function(){ sheet(false); };
+  scrim.addEventListener('click',function(){ sheet(false); });
+  scrim.addEventListener('pointerdown',function(e){ e.preventDefault(); sheet(false); });
+  document.getElementById('d-more').onclick=function(){ sheet(!sheetOpen()); };
+  document.getElementById('d-find').onclick=function(){ sheet(true, qi); };
+  Array.prototype.forEach.call(document.querySelectorAll('.dchip'),function(b){
+    b.onclick=function(){
+      var m=b.dataset.dmode;
+      applyMode(m);
+      // switching to an arrangement that needs a question is useless without a
+      // way to type one, so the sheet comes up for those and stays down for the
+      // atlas, which needs nothing
+      if (m==='atlas') sheet(false);
+      else sheet(true, document.getElementById(m==='axes'?'ax-x':'fq'));
+    };
+  });
+  // the dock and the rail are two faces of one control; keep them agreeing
+  var _applyMode = applyMode;
+  applyMode = function(m){
+    Array.prototype.forEach.call(document.querySelectorAll('.dchip'),function(b){
+      b.classList.toggle('on', b.dataset.dmode===m); });
+    return _applyMode(m);
+  };
+  // dismiss the sheet whenever a choice has produced something to look at
+  document.addEventListener('click',function(e){
+    if (!isPhone() || !sheetOpen()) return;
+    if (e.target.closest('#matches li, #regions li, .preset')) sheet(false);
+  }, true);
   window.addEventListener('keydown',function(e){
     if(e.target.tagName==='INPUT') return;
     if(e.key==='Escape') closePanel();

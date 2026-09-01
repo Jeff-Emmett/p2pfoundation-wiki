@@ -1,0 +1,67 @@
+# The atlas, served at wiki.p2pfoundation.net/explore
+#
+# A separate compose project on purpose. The wiki's own stack is not touched by
+# anything here: this adds a sibling container and a Traefik route, so the worst
+# a mistake in this file can do is take /explore down. The wiki keeps serving.
+#
+# No DNS change is involved. wiki.p2pfoundation.net already resolves through
+# Cloudflare to this host; /explore is a path on a hostname that already exists,
+# and Traefik picks it off before the request reaches MediaWiki.
+
+services:
+  p2pwiki-atlas:
+    image: nginx:alpine
+    container_name: p2pwiki-atlas
+    restart: unless-stopped
+    volumes:
+      # Files live under site/explore/, so nginx serves /explore/* without a
+      # prefix strip — one less rewrite to get wrong, and relative asset paths
+      # in the page resolve exactly as they do in local preview.
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - traefik-public
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
+
+      # Origin accepts Cloudflare only, exactly as the wiki's own routers do.
+      # Defined here rather than reused from the p2pwiki container so this route
+      # does not break if that container is redeployed or renamed.
+      - "traefik.http.middlewares.atlas-cfonly.ipwhitelist.sourcerange=127.0.0.1/32,10.0.0.0/8,172.16.0.0/12,173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32"
+      # Static files, and one page load is ~28 requests, so the wiki's article
+      # rate limit (15/s) would throttle a normal visit. These match the limits
+      # the wiki already uses for its own static router.
+      - "traefik.http.middlewares.atlas-ratelimit.ratelimit.average=100"
+      - "traefik.http.middlewares.atlas-ratelimit.ratelimit.burst=200"
+      - "traefik.http.middlewares.atlas-ratelimit.ratelimit.period=1s"
+      - "traefik.http.middlewares.atlas-ratelimit.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip"
+      - "traefik.http.middlewares.atlas-inflight.inflightreq.amount=48"
+      - "traefik.http.middlewares.atlas-inflight.inflightreq.sourcecriterion.requestheadername=Cf-Connecting-Ip"
+
+      # 250 beats the wiki's static router (200) and its catch-all Host rule, so
+      # /explore is claimed before MediaWiki ever sees it.
+      - "traefik.http.routers.p2pwiki-atlas.rule=(Host(`wiki.p2pfoundation.net`) || Host(`wiki.commons-hub.at`)) && PathPrefix(`/explore`)"
+      - "traefik.http.routers.p2pwiki-atlas.priority=250"
+      - "traefik.http.routers.p2pwiki-atlas.entrypoints=websecure"
+      - "traefik.http.routers.p2pwiki-atlas.tls=true"
+      - "traefik.http.routers.p2pwiki-atlas.middlewares=atlas-cfonly,atlas-ratelimit,atlas-inflight"
+      - "traefik.http.routers.p2pwiki-atlas.service=p2pwiki-atlas"
+
+      - "traefik.http.routers.p2pwiki-atlas-http.rule=(Host(`wiki.p2pfoundation.net`) || Host(`wiki.commons-hub.at`)) && PathPrefix(`/explore`)"
+      - "traefik.http.routers.p2pwiki-atlas-http.priority=250"
+      - "traefik.http.routers.p2pwiki-atlas-http.entrypoints=web"
+      # No scheme redirect here, deliberately. Cloudflare reaches this origin
+      # over plain HTTP, so a router that answers :80 with "go to https" sends
+      # that redirect back to the browser, which asks Cloudflare again, which
+      # fetches the origin over HTTP again — a loop with no exit. The wiki's own
+      # http router defines exactly such a middleware and never applies it, for
+      # the same reason. HTTPS for the visitor is Cloudflare's job.
+      - "traefik.http.routers.p2pwiki-atlas-http.middlewares=atlas-cfonly,atlas-ratelimit,atlas-inflight"
+      - "traefik.http.routers.p2pwiki-atlas-http.service=p2pwiki-atlas"
+
+      - "traefik.http.services.p2pwiki-atlas.loadbalancer.server.port=80"
+
+networks:
+  traefik-public:
+    external: true

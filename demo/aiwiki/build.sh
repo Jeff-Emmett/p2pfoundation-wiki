@@ -53,6 +53,14 @@ else
   echo "  ⚠ skipping the atlas — no $GRAPH_DATA (run graph/scripts/ first)" >&2
 fi
 
+# The atlas is canonical at wiki.p2pfoundation.net/explore/ now. This build
+# still emits it under dist/graph (that tree is what gets rsynced to the wiki
+# host), but the copy published here only redirects, so the two can never drift.
+cat > "$OUT/_redirects" <<'REDIR'
+/graph/*  https://wiki.p2pfoundation.net/explore/:splat  302
+/graph    https://wiki.p2pfoundation.net/explore/        302
+REDIR
+
 printf 'User-agent: *\nAllow: /\n' > "$OUT/robots.txt"
 echo "✓ built ($BUILD_ID)"
 

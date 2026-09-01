@@ -34,12 +34,37 @@ open("dist/index.html", "w").write(html)
 print(f"  dist/index.html  {len(html)//1024} KB")
 PY
 
+# ---- the atlas -------------------------------------------------------
+# A second page rather than a seventh chapter: a pan/zoom canvas inside a
+# scrolling narrative fights the scroll and gets a letterboxed viewport. The
+# graph payload is fetched rather than inlined, because the leads alone are
+# 15 MB and a reader opens a handful of them.
+GRAPH_DATA="graph/data/plane3.json"
+if [ -f "$GRAPH_DATA" ]; then
+  PY_BIN="${PY_BIN:-/home/jeffe/Github/p2pwiki-ai/.venv/bin/python}"
+  "$PY_BIN" graph/scripts/pack-graph.py
+  # The semantic space is a separate payload because the page only fetches it
+  # when someone actually opens the reorganise controls.
+  "$PY_BIN" graph/scripts/pack-semantic.py
+  mkdir -p "$OUT/graph"
+  sed "s|__BUILD__|$BUILD_ID|g" graph/graph.template.html > "$OUT/graph/index.html"
+  echo "  dist/graph/index.html  $(( $(wc -c < "$OUT/graph/index.html") / 1024 )) KB"
+else
+  echo "  ⚠ skipping the atlas — no $GRAPH_DATA (run graph/scripts/ first)" >&2
+fi
+
 printf 'User-agent: *\nAllow: /\n' > "$OUT/robots.txt"
 echo "✓ built ($BUILD_ID)"
 
 if [ "${1:-}" = "--deploy" ]; then
-  : "${CLOUDFLARE_API_TOKEN:?set CLOUDFLARE_API_TOKEN}"
   : "${CLOUDFLARE_ACCOUNT_ID:?set CLOUDFLARE_ACCOUNT_ID}"
+  # A stored `wrangler login` session does NOT satisfy this: wrangler refuses
+  # OAuth in a non-interactive shell and asks for the token anyway. Inject it
+  # without it passing through a shell history or a transcript:
+  #
+  #   secretctl run --ref CLOUDFLARE_API_TOKEN=isec://claude-ops/prod/CLOUDFLARE_PAGES_TOKEN \
+  #     -- ./build.sh --deploy
+  : "${CLOUDFLARE_API_TOKEN:?set CLOUDFLARE_API_TOKEN (see the comment above this line)}"
   npx --yes wrangler@4 pages deploy "$OUT" \
       --project-name "$PROJECT" --branch main --commit-dirty=true
 fi

@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>P2P Wiki Atlas · every article, placed by what it is about</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="All 39,915 articles of the P2P Foundation wiki in three dimensions, placed by what they are about — and re-placeable: give the axes your own questions and the corpus rearranges itself around them."/>
+<meta name="color-scheme" content="dark"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c-cyan:#5ef0df; --c-blue:#5b9cff; --c-violet:#b884ff; --c-gold:#ffd27a; --c-rose:#ff86a8;
+  --c-lime:#a6e86a;
+  --ink:#eef2fb; --ink-2:#aeb9d4; --ink-3:#74809e; --ink-4:#4d5875;
+  --line:rgba(150,170,230,.16); --line-2:rgba(150,170,230,.30);
+  --bg:#06080e;
+  --font-display:'Instrument Serif', Georgia, serif;
+  --font-body:'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --top:50px; --rail:300px; --panelw:372px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0; height:100%; overflow:hidden;}
+body{font-family:var(--font-body); color:var(--ink); background:var(--bg); line-height:1.5; font-size:14px;
+  -webkit-font-smoothing:antialiased;}
+a{color:var(--c-blue); text-decoration:none;} a:hover{color:var(--c-cyan);}
+.eyebrow{font-family:var(--font-mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3);}
+::selection{background:rgba(94,240,223,.25);}
+:focus-visible{outline:2px solid var(--c-cyan); outline-offset:2px;}
+
+.topbar{position:fixed; inset:0 0 auto 0; height:var(--top); z-index:40; display:flex; align-items:center;
+  gap:14px; padding:0 16px; background:rgba(6,8,14,.88); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+.brand{font-family:var(--font-mono); font-size:12.5px; color:var(--ink-2); white-space:nowrap;}
+.brand b{color:var(--ink); font-weight:500;}
+.topbar .sp{flex:1 1 auto;}
+.topbar a.back{font-family:var(--font-mono); font-size:12px; color:var(--ink-3); white-space:nowrap;}
+.spectrum{height:2px; background:linear-gradient(90deg,var(--c-cyan),var(--c-blue),var(--c-violet),var(--c-gold));
+  border-radius:2px; width:60px;}
+.app{position:fixed; inset:var(--top) 0 0 0; display:flex;}
+
+.rail{width:var(--rail); flex:0 0 auto; border-right:1px solid var(--line); background:rgba(10,14,26,.55);
+  overflow-y:auto; overscroll-behavior:contain; padding:14px 14px 26px; display:flex; flex-direction:column; gap:15px;}
+.rail::-webkit-scrollbar{width:8px;} .rail::-webkit-scrollbar-thumb{background:var(--line-2); border-radius:4px;}
+label.eyebrow{display:block; margin-bottom:6px;}
+input[type=search],input[type=text]{width:100%; font-family:var(--font-mono); font-size:12.5px; color:var(--ink);
+  background:rgba(8,11,20,.8); border:1px solid var(--line-2); border-radius:9px; padding:8px 10px; outline:none;}
+input:focus{border-color:var(--c-cyan);}
+.hint{font-size:11.5px; color:var(--ink-4); line-height:1.5; margin:6px 0 0;}
+.seg{display:flex; gap:5px; flex-wrap:wrap;}
+.chip{font-family:var(--font-mono); font-size:11px; padding:5px 9px; border-radius:7px; border:1px solid var(--line);
+  background:rgba(18,24,42,.6); color:var(--ink-3); cursor:pointer; transition:.15s; white-space:nowrap;}
+.chip:hover{border-color:var(--line-2); color:var(--ink-2);}
+.chip.on{border-color:var(--c-cyan); color:#fff; background:rgba(94,240,223,.14);}
+h2.sec{font-family:var(--font-mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-3);
+  margin:0 0 8px; font-weight:400; display:flex; justify-content:space-between; align-items:baseline; gap:8px;}
+h2.sec span{color:var(--ink-4); letter-spacing:.05em;}
+ul.list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1px;}
+ul.list li{font-size:12.5px; padding:6px 8px; border-radius:6px; cursor:pointer; color:var(--ink-2);
+  display:flex; gap:8px; align-items:baseline; line-height:1.35;}
+ul.list li:hover{background:rgba(94,240,223,.09); color:#fff;}
+ul.list li .sw{width:7px; height:7px; border-radius:2px; flex:0 0 auto; margin-top:4px;}
+ul.list li .n{font-family:var(--font-mono); font-size:10.5px; color:var(--ink-4); margin-left:auto; flex:0 0 auto;}
+ul.list li b{font-weight:500;}
+.empty{font-size:12px; color:var(--ink-4); font-style:italic; padding:4px 8px;}
+
+.axis{display:flex; align-items:center; gap:7px; margin-bottom:6px;}
+.axis .ax{font-family:var(--font-mono); font-size:11px; width:13px; flex:0 0 auto; text-align:center; font-weight:500;}
+.axis.x .ax{color:var(--c-cyan);} .axis.y .ax{color:var(--c-gold);} .axis.z .ax{color:var(--c-rose);}
+.presets{display:flex; flex-direction:column; gap:4px; margin-top:8px;}
+.preset{font-family:var(--font-mono); font-size:10.5px; text-align:left; padding:6px 8px; border-radius:7px;
+  border:1px solid var(--line); background:rgba(18,24,42,.5); color:var(--ink-3); cursor:pointer; line-height:1.45;}
+.preset:hover{border-color:var(--c-violet); color:var(--ink);}
+.working{font-family:var(--font-mono); font-size:11px; color:var(--c-violet); margin-top:7px;}
+
+.stage{flex:1 1 auto; position:relative; min-width:0;}
+canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
+#gl{cursor:grab; touch-action:none;} #gl.drag{cursor:grabbing;}
+#ov{pointer-events:none;}
+
+.hud{position:absolute; left:14px; top:14px; z-index:10; display:flex; flex-direction:column; gap:8px; pointer-events:none;}
+.bands{display:flex; border:1px solid var(--line); border-radius:9px; overflow:hidden;
+  background:rgba(8,11,20,.82); backdrop-filter:blur(8px); pointer-events:auto;}
+.bands button{font-family:var(--font-mono); font-size:11px; padding:6px 11px; border:0; cursor:pointer;
+  background:transparent; color:var(--ink-3); border-right:1px solid var(--line); transition:.15s;}
+.bands button:last-child{border-right:0;} .bands button:hover{color:var(--ink-2);}
+.bands button.on{background:rgba(166,232,106,.16); color:#fff;}
+.bandnote{font-family:var(--font-mono); font-size:11px; color:var(--ink-3); background:rgba(8,11,20,.82);
+  backdrop-filter:blur(8px); border:1px solid var(--line); border-radius:8px; padding:6px 10px; max-width:350px;
+  line-height:1.5; pointer-events:auto;}
+.bandnote b{color:var(--c-lime); font-weight:500;}
+.axisnote{font-family:var(--font-mono); font-size:11px; color:var(--ink-3); background:rgba(8,11,20,.82);
+  backdrop-filter:blur(8px); border:1px solid var(--line); border-radius:8px; padding:6px 10px; max-width:350px;
+  line-height:1.7; pointer-events:auto;}
+.axisnote i{font-style:normal; font-weight:500;}
+.axisnote .x{color:var(--c-cyan);} .axisnote .y{color:var(--c-gold);} .axisnote .z{color:var(--c-rose);}
+
+.controls{position:absolute; right:14px; bottom:14px; z-index:10; display:flex; gap:6px;}
+.controls button{font-family:var(--font-mono); font-size:13px; height:30px; min-width:30px; padding:0 8px;
+  border-radius:8px; border:1px solid var(--line); background:rgba(8,11,20,.82); color:var(--ink-2); cursor:pointer;
+  backdrop-filter:blur(8px);}
+.controls button:hover{border-color:var(--c-cyan); color:#fff;}
+.controls button.on{border-color:var(--c-violet); color:#fff;}
+.scalenote{position:absolute; left:14px; bottom:14px; z-index:10; font-family:var(--font-mono); font-size:11px;
+  color:var(--ink-4); pointer-events:none; line-height:1.7;}
+.tip{position:absolute; z-index:20; pointer-events:none; opacity:0; transition:opacity .1s;
+  background:rgba(10,14,26,.95); border:1px solid var(--line-2); border-radius:8px; padding:7px 10px;
+  font-size:12.5px; max-width:290px; line-height:1.4; box-shadow:0 12px 40px -18px #000;}
+.tip .t{color:#fff; font-weight:500;}
+.tip .c{font-family:var(--font-mono); font-size:10.5px; color:var(--ink-3); margin-top:3px;}
+.loading{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column;
+  gap:12px; background:var(--bg); z-index:30; font-family:var(--font-mono); font-size:12px; color:var(--ink-3);}
+.loading .bar{width:190px; height:2px; background:var(--line); border-radius:2px; overflow:hidden;}
+.loading .bar i{display:block; height:100%; width:30%;
+  background:linear-gradient(90deg,var(--c-cyan),var(--c-violet)); animation:slide 1.1s ease-in-out infinite;}
+@keyframes slide{0%{transform:translateX(-110%)}100%{transform:translateX(340%)}}
+@media (prefers-reduced-motion:reduce){.loading .bar i{animation:none; width:100%;}}
+
+.panel{position:relative; width:var(--panelw); flex:0 0 auto; border-left:1px solid var(--line);
+  background:rgba(10,14,26,.72); overflow-y:auto; overscroll-behavior:contain; padding:16px 16px 30px;
+  display:none; flex-direction:column; gap:14px;}
+.panel.open{display:flex;}
+.panel::-webkit-scrollbar{width:8px;} .panel::-webkit-scrollbar-thumb{background:var(--line-2); border-radius:4px;}
+.panel .close{position:absolute; right:12px; top:12px; z-index:15; font-family:var(--font-mono); font-size:14px;
+  width:26px; height:26px; border-radius:7px; border:1px solid var(--line); background:rgba(8,11,20,.9);
+  color:var(--ink-3); cursor:pointer;}
+.panel .close:hover{color:#fff; border-color:var(--c-cyan);}
+.panel h3{font-family:var(--font-display); font-weight:400; font-size:1.42rem; line-height:1.16; margin:0;
+  padding-right:30px; text-wrap:balance;}
+.meta{display:flex; flex-wrap:wrap; gap:5px;}
+.tag{font-family:var(--font-mono); font-size:10px; padding:3px 7px; border-radius:5px; border:1px solid var(--line); color:var(--ink-3);}
+.lead{font-size:13.5px; color:var(--ink-2); line-height:1.6; border-left:2px solid var(--line-2); padding-left:12px;}
+.lead.pending{color:var(--ink-4); font-style:italic;}
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);
+  border-radius:9px; overflow:hidden;}
+.stats div{background:rgba(14,19,34,.9); padding:8px 10px;}
+.stats .v{font-family:var(--font-mono); font-size:15px; color:#fff;}
+.stats .k{font-family:var(--font-mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-4); margin-top:2px;}
+.panel .btn{font-family:var(--font-mono); font-size:12px; padding:8px 12px; border-radius:9px; cursor:pointer;
+  border:1px solid var(--line-2); background:rgba(20,26,46,.6); color:var(--ink); text-align:center; display:block;}
+.panel .btn:hover{border-color:var(--c-cyan); color:#fff;}
+.rel h4{font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3);
+  margin:0 0 7px; font-weight:400; display:flex; align-items:center; gap:7px;}
+.rel h4 i{width:16px; height:0; border-top:1.5px solid var(--c-blue); display:inline-block;}
+.rel h4 i.dash{border-top-style:dashed; border-color:var(--c-violet);}
+.simrow{display:flex; gap:8px; align-items:center; font-family:var(--font-mono); font-size:11px; color:var(--ink-3); margin-bottom:4px;}
+.simrow .tr{flex:1 1 auto; height:5px; background:rgba(150,170,230,.14); border-radius:3px; overflow:hidden;}
+.simrow .tr i{display:block; height:100%; border-radius:3px;}
+
+.menu{display:none; font-family:var(--font-mono); font-size:12px; padding:5px 9px; border-radius:7px;
+  border:1px solid var(--line); background:transparent; color:var(--ink-2); cursor:pointer;}
+@media(max-width:1180px){ :root{--rail:264px; --panelw:326px;} }
+@media(max-width:900px){
+  /* Both drawers overlay the canvas here rather than sitting beside it, so the
+     translucency that reads as depth on a desktop just makes the text sit on
+     top of 39,915 moving points. Solid ground, and an edge shadow instead. */
+  .rail{position:absolute; z-index:35; height:100%; transform:translateX(-100%); transition:transform .2s;
+    background:#0a0e1a; box-shadow:14px 0 40px -20px #000;}
+  .rail.open{transform:none;}
+  .panel{position:absolute; right:0; z-index:35; height:100%; width:min(94vw,372px);
+    background:#0a0e1a; box-shadow:-14px 0 40px -20px #000;}
+  .menu{display:inline-flex;}
+}
+/* Touch: every control gets a 44px target, the notes shrink to a line so the
+   canvas keeps the screen, and the hover tooltip is suppressed — a finger has
+   no hover, so a tooltip would only ever appear stuck under the last tap. */
+@media (pointer:coarse){
+  .bands button{padding:11px 15px; font-size:12px;}
+  .controls button{height:44px; min-width:44px; font-size:15px;}
+  .controls{gap:8px; right:10px; bottom:10px;}
+  .chip{padding:9px 12px; font-size:12px;}
+  ul.list li{padding:10px 8px;}
+  .bandnote,.axisnote{max-width:min(64vw,340px); font-size:10.5px; padding:5px 8px;}
+  .scalenote{font-size:10px;}
+  .tip{display:none;}
+  input[type=search],input[type=text]{padding:11px 12px; font-size:16px;} /* 16px stops iOS zooming the page on focus */
+  .menu{padding:9px 12px;}
+  .panel .close{width:38px; height:38px; font-size:16px;}
+}
+@media (pointer:coarse) and (max-height:560px){
+  .bandnote,.axisnote{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button class="menu" id="menu" aria-label="Toggle sidebar">☰</button>
+  <div class="brand">P2P Wiki <b>Atlas</b></div>
+  <div class="spectrum" aria-hidden="true"></div>
+  <div class="sp"></div>
+  <a class="back" href="/">← the tour</a>
+  <a class="back" href="https://wiki.p2pfoundation.net" target="_blank" rel="noopener">the wiki ↗</a>
+</div>
+
+<div class="app">
+  <aside class="rail" id="rail">
+    <div>
+      <label class="eyebrow" for="q">Find</label>
+      <input id="q" type="search" placeholder="commons, mutual aid, Bauwens" autocomplete="off" spellcheck="false">
+      <p class="hint">Highlights matching titles and categories. <kbd>Enter</kbd> flies to the strongest.</p>
+    </div>
+
+    <div>
+      <h2 class="sec">Arrange by <span id="modenote">subject</span></h2>
+      <div class="seg" id="modes">
+        <button class="chip on" data-mode="atlas">atlas</button>
+        <button class="chip" data-mode="axes">axes</button>
+        <button class="chip" data-mode="focus">focus</button>
+      </div>
+
+      <div id="axesbox" hidden style="margin-top:10px">
+        <div class="axis x"><span class="ax">X</span><input type="text" id="ax-x" placeholder="market, price, exchange" autocomplete="off"></div>
+        <div class="axis y"><span class="ax">Y</span><input type="text" id="ax-y" placeholder="commons, sharing, mutual" autocomplete="off"></div>
+        <div class="axis z"><span class="ax">Z</span><input type="text" id="ax-z" placeholder="software, protocol, network" autocomplete="off"></div>
+        <p class="hint">Each axis is your own question. Every article is re-placed by where it ranks against it,
+        so the corpus rearranges into a space you defined. Leave an axis empty to keep the atlas's own.</p>
+        <div class="presets" id="presets"></div>
+      </div>
+
+      <div id="focusbox" hidden style="margin-top:10px">
+        <input type="text" id="fq" placeholder="what is a commons?" autocomplete="off">
+        <p class="hint">Pulls the whole corpus into a shell around one question — the closer to the centre,
+        the more an article answers it.</p>
+      </div>
+      <div class="working" id="working" hidden>loading the semantic space…</div>
+    </div>
+
+    <div>
+      <h2 class="sec">Draw <span id="edgecount"></span></h2>
+      <div class="seg">
+        <button class="chip on" id="e-link" data-edge="link">wikilinks</button>
+        <button class="chip" id="e-sem" data-edge="sem">semantic</button>
+      </div>
+      <p class="hint">Wikilinks are what editors wrote. Semantic edges are computed from the text — they reach
+      the 64% of articles that link nowhere.</p>
+    </div>
+
+    <div>
+      <h2 class="sec">Reading-room lenses</h2>
+      <div class="seg" id="lenses"></div>
+    </div>
+
+    <div id="matchbox" hidden>
+      <h2 class="sec">Matches <span id="matchn"></span></h2>
+      <ul class="list" id="matches"></ul>
+    </div>
+
+    <div>
+      <h2 class="sec">Regions <span id="regionn"></span></h2>
+      <ul class="list" id="regions"></ul>
+    </div>
+  </aside>
+
+  <div class="stage" id="stage">
+    <canvas id="gl"></canvas>
+    <canvas id="ov"></canvas>
+
+    <div class="hud">
+      <div class="bands" id="bands" role="group" aria-label="Level of detail">
+        <button data-band="far">far</button><button data-band="mid">mid</button>
+        <button data-band="near">near</button><button data-band="full">full</button>
+      </div>
+      <div class="bandnote" id="bandnote"></div>
+      <div class="axisnote" id="axisnote" hidden></div>
+    </div>
+
+    <div class="scalenote" id="scalenote"></div>
+    <div class="controls">
+      <button id="spin" title="Slow rotation">◐</button>
+      <button id="zin" aria-label="Zoom in">+</button>
+      <button id="zout" aria-label="Zoom out">−</button>
+      <button id="zreset" aria-label="Reset view">⤾</button>
+    </div>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+    <div class="loading" id="loading"><div>reading the corpus…</div><div class="bar"><i></i></div></div>
+  </div>
+
+  <aside class="panel" id="panel" aria-live="polite"></aside>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Three things this does that a highlight-and-pan map does not.
+
+   1. It is three-dimensional. In 2-D a 39,915-point layout has to resolve every
+      neighbourhood onto one sheet, so distinct regions fold onto each other and
+      the middle becomes a hairball. A third axis gives them somewhere to go.
+
+   2. Zoom is disclosure, not magnification — §5's band ladder made spatial.
+      far: territory. mid: articles as points, hubs named. near: the two edge
+      relations. full: the article itself.
+
+   3. It re-arranges. A query does not merely colour the articles that match it;
+      it can become an axis, and every article is re-placed by where it ranks
+      against it. Three questions define a space the corpus has never been shown
+      in. That is the difference between asking a map to point at something and
+      asking it to reorganise itself around you.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+var BANDS = [
+  {id:'far',  d:2.35, note:'<b>far</b> — territory. 24 regions, named from the categories their members share most distinctively.'},
+  {id:'mid',  d:1.30, note:'<b>mid</b> — one point per article, sized by inbound links. Hubs are named; the rest are held as position.'},
+  {id:'near', d:0.62, note:'<b>near</b> — both relations drawn, fading with distance from what you are looking at.'},
+  {id:'full', d:0.26, note:'<b>full</b> — the article itself. Click any point for its lead text, categories and both neighbourhoods.'}
+];
+
+var D=null, S=null, gl=null, glc=null, ov=null, octx=null;
+var vw=0, vh=0, dpr=1;
+var cam={yaw:0.7, pitch:0.30, dist:2.25, tx:0, ty:0, tz:0};
+var edgeMode={link:true, sem:false};
+var lensMask=0, sel=-1, hover=-1, matches=null, matchSet=null, matchList=[];
+var leadCache={}, leadPending={};
+var mode='atlas', axisQ={x:'',y:'',z:''}, focusQ='';
+var spin=false, needsDraw=true;
+var TOUCH = matchMedia('(pointer:coarse)').matches;
+var curPos=null, srcPos=null, tgtPos=null, mixT=1, mixStart=0, MIX_MS=950;
+var MVP=null, buf={}, pPt=null, pLn=null;
+
+/* ---------- matrices ---------- */
+function mul(a,b){ var o=new Float32Array(16),i,j,k,s;
+  for(i=0;i<4;i++)for(j=0;j<4;j++){s=0;for(k=0;k<4;k++)s+=a[k*4+j]*b[i*4+k];o[i*4+j]=s;} return o; }
+function perspective(fovy,asp,n,f){ var t=1/Math.tan(fovy/2),o=new Float32Array(16);
+  o[0]=t/asp; o[5]=t; o[10]=(f+n)/(n-f); o[11]=-1; o[14]=2*f*n/(n-f); return o; }
+function lookAt(e,c,u){
+  var z=[e[0]-c[0],e[1]-c[1],e[2]-c[2]], l=Math.hypot(z[0],z[1],z[2])||1; z=[z[0]/l,z[1]/l,z[2]/l];
+  var x=[u[1]*z[2]-u[2]*z[1],u[2]*z[0]-u[0]*z[2],u[0]*z[1]-u[1]*z[0]];
+  l=Math.hypot(x[0],x[1],x[2])||1; x=[x[0]/l,x[1]/l,x[2]/l];
+  var y=[z[1]*x[2]-z[2]*x[1],z[2]*x[0]-z[0]*x[2],z[0]*x[1]-z[1]*x[0]];
+  return new Float32Array([x[0],y[0],z[0],0, x[1],y[1],z[1],0, x[2],y[2],z[2],0,
+    -(x[0]*e[0]+x[1]*e[1]+x[2]*e[2]), -(y[0]*e[0]+y[1]*e[1]+y[2]*e[2]), -(z[0]*e[0]+z[1]*e[1]+z[2]*e[2]), 1]);
+}
+function eyePos(){ var cp=Math.cos(cam.pitch);
+  return [cam.tx+cam.dist*cp*Math.sin(cam.yaw), cam.ty+cam.dist*Math.sin(cam.pitch),
+          cam.tz+cam.dist*cp*Math.cos(cam.yaw)]; }
+function buildMVP(){ MVP=mul(perspective(1.0, vw/Math.max(vh,1), 0.008, 60),
+  lookAt(eyePos(),[cam.tx,cam.ty,cam.tz],[0,1,0])); }
+function project(x,y,z){
+  var m=MVP, cx=m[0]*x+m[4]*y+m[8]*z+m[12], cy=m[1]*x+m[5]*y+m[9]*z+m[13], cw=m[3]*x+m[7]*y+m[11]*z+m[15];
+  if (cw<=0.0001) return null;
+  return [(cx/cw*0.5+0.5)*vw, (1-(cy/cw*0.5+0.5))*vh, cw];
+}
+function bandOf(){ var b=BANDS[0]; for(var i=0;i<BANDS.length;i++) if(cam.dist<=BANDS[i].d) b=BANDS[i]; return b; }
+/* The far band describes territory, which is only true while the atlas is the
+   arrangement. Once the corpus has been re-placed on your own axes there are no
+   regions to describe, and saying otherwise would be describing the map the
+   reader just left. */
+function bandNote(bi){
+  if (bi===0 && mode==='axes') return '<b>far</b> — the whole corpus in the space you defined. Orbit to read the correlation between your axes.';
+  if (bi===0 && mode==='focus') return '<b>far</b> — the corpus as a shell around your question. The bright core is what answers it.';
+  return BANDS[bi].note;
+}
+function bandIdx(){ return BANDS.indexOf(bandOf()); }
+
+/* ---------- GL ---------- */
+var PT_V=[
+'attribute vec3 aA; attribute vec3 aB; attribute vec3 aCol; attribute float aSize; attribute float aState;',
+'uniform mat4 uMVP; uniform float uMix, uScale, uBand;',
+'varying vec3 vCol; varying float vState;',
+'void main(){',
+'  vec3 p = mix(aA, aB, uMix);',
+'  vec4 c = uMVP * vec4(p,1.0);',
+'  gl_Position = c;',
+'  float base = 1.0 + aSize * (2.2 + uBand * 1.7);',
+'  gl_PointSize = clamp(uScale * base / max(c.w, 0.02), 1.35, 40.0);',
+'  vCol = aCol; vState = aState;',
+'}'].join('\n');
+var PT_F=[
+'precision mediump float;',
+'varying vec3 vCol; varying float vState;',
+'void main(){',
+'  vec2 d = gl_PointCoord - vec2(0.5);',
+'  float r2 = dot(d,d);',
+'  if (r2 > 0.25) discard;',
+'  float soft = smoothstep(0.25, 0.09, r2);',
+'  float a = vState < 0.5 ? 0.92 : (vState < 1.5 ? 0.10 : 1.0);',
+'  vec3 c = vState > 1.5 ? mix(vCol, vec3(0.37,0.94,0.87), 0.6) : vCol;',
+'  gl_FragColor = vec4(c, a * soft);',
+'}'].join('\n');
+var LN_V=[
+'attribute vec3 aA; attribute vec3 aB;',
+'uniform mat4 uMVP; uniform float uMix, uFall; uniform vec3 uFocus;',
+'varying float vFade;',
+'void main(){',
+'  vec3 p = mix(aA, aB, uMix);',
+'  gl_Position = uMVP * vec4(p,1.0);',
+'  vFade = 1.0 - smoothstep(uFall*0.30, uFall, distance(p, uFocus));',
+'}'].join('\n');
+var LN_F=[
+'precision mediump float;',
+'uniform vec3 uCol; uniform float uAlpha;',
+'varying float vFade;',
+'void main(){ if (vFade <= 0.01) discard; gl_FragColor = vec4(uCol, uAlpha*vFade); }'
+].join('\n');
+
+function sh(t,src){ var s=gl.createShader(t); gl.shaderSource(s,src); gl.compileShader(s);
+  if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
+function prog(v,f){ var p=gl.createProgram(); gl.attachShader(p,sh(gl.VERTEX_SHADER,v));
+  gl.attachShader(p,sh(gl.FRAGMENT_SHADER,f)); gl.linkProgram(p);
+  if(!gl.getProgramParameter(p,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p)); return p; }
+function initGL(){
+  glc=document.getElementById('gl');
+  gl=glc.getContext('webgl',{alpha:false,antialias:true,depth:true})
+   || glc.getContext('experimental-webgl',{alpha:false,antialias:true,depth:true});
+  if(!gl) throw new Error('this browser has no WebGL');
+  pPt=prog(PT_V,PT_F); pLn=prog(LN_V,LN_F);
+  gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+  gl.clearColor(0.024,0.031,0.055,1);
+}
+function mkbuf(data,usage){ var b=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,b);
+  gl.bufferData(gl.ARRAY_BUFFER,data,usage||gl.STATIC_DRAW); return b; }
+function attr(p,name,b,size){ var l=gl.getAttribLocation(p,name); if(l<0) return;
+  gl.bindBuffer(gl.ARRAY_BUFFER,b); gl.enableVertexAttribArray(l);
+  gl.vertexAttribPointer(l,size,gl.FLOAT,false,0,0); }
+function uni(p,n){ return gl.getUniformLocation(p,n); }
+
+/* ---------- palette ----------
+   Hue runs with a region's angle around the corpus centre, so neighbouring
+   territory takes neighbouring colour and the whole reads as a map. Nothing
+   brighter is spent on region identity: the vivid end belongs to search state
+   and selection, which are the things that change. */
+function hsl2rgb(h,s,l){ function f(n){ var k=(n+h*12)%12, a=s*Math.min(l,1-l);
+  return l-a*Math.max(-1,Math.min(k-3,Math.min(9-k,1))); } return [f(0),f(8),f(4)]; }
+function buildPalette(){
+  var K=D.k, c=D.cenNorm, cx=0,cy=0,cz=0,k;
+  for(k=0;k<K;k++){ cx+=c[k][0]; cy+=c[k][1]; cz+=c[k][2]; }
+  cx/=K; cy/=K; cz/=K;
+  D.regionColor=[]; D.regionRGB=[];
+  for(k=0;k<K;k++){
+    var a=Math.atan2(c[k][2]-cz, c[k][0]-cx);
+    var hue=(((a+Math.PI)/(2*Math.PI))*300+175)%360;
+    D.regionColor.push('hsl('+hue.toFixed(0)+' 62% 66%)');
+    D.regionRGB.push(hsl2rgb(hue/360,0.55,0.60));
+  }
+}
+
+/* ---------- layouts ----------
+   Every layout lands in the same cube, so the camera never needs re-framing and
+   moving between two arrangements is a straight interpolation the GPU does. */
+var NORM=null;
+function normStats(P,n){
+  var mn=[1e9,1e9,1e9], mx=[-1e9,-1e9,-1e9], i, a;
+  for(i=0;i<n;i++) for(a=0;a<3;a++){ var v=P[i*3+a]; if(v<mn[a])mn[a]=v; if(v>mx[a])mx[a]=v; }
+  return {mn:mn, mx:mx, span:Math.max(mx[0]-mn[0],mx[1]-mn[1],mx[2]-mn[2])||1};
+}
+function applyNorm(P,n,st){
+  for(var i=0;i<n;i++) for(var a=0;a<3;a++) P[i*3+a]=(P[i*3+a]-(st.mn[a]+st.mx[a])/2)/st.span*2;
+  return P;
+}
+var atlasCache=null;
+function atlasLayout(){
+  if (atlasCache) return atlasCache.slice();
+  var n=D.n, P=new Float32Array(n*3), i;
+  for(i=0;i<n;i++){ P[i*3]=D.x[i]; P[i*3+1]=D.y[i]; P[i*3+2]=D.z[i]; }
+  NORM=normStats(P,n); applyNorm(P,n,NORM);
+  atlasCache=P; return P.slice();
+}
+/* Percentile rank, not raw cosine. The similarity distribution is heavily
+   skewed — most of the corpus near zero, a thin tail near one — so plotting
+   cosine directly would pile everything at one end of the axis. Rank spends the
+   whole axis and states something true: where this article stands against the
+   question, relative to everything else. */
+function rankAxis(sim){
+  var n=sim.length, ord=new Array(n), i;
+  for(i=0;i<n;i++) ord[i]=i;
+  ord.sort(function(a,b){ return sim[a]-sim[b]; });
+  var out=new Float32Array(n);
+  for(i=0;i<n;i++) out[ord[i]]=(i/(n-1))*2-1;
+  return out;
+}
+function axesLayout(){
+  var n=D.n, P=new Float32Array(n*3), base=atlasLayout(), qs=[axisQ.x,axisQ.y,axisQ.z], a, i;
+  for(a=0;a<3;a++){
+    var sim = (qs[a] && S) ? S.similarity(qs[a]) : null;
+    if(!sim){ for(i=0;i<n;i++) P[i*3+a]=base[i*3+a]*0.55; continue; }
+    var r=rankAxis(sim);
+    for(i=0;i<n;i++) P[i*3+a]=r[i];
+  }
+  return P;
+}
+function focusLayout(){
+  var n=D.n, P=new Float32Array(n*3), base=atlasLayout(), i;
+  var sim = (S && focusQ) ? S.similarity(focusQ) : null;
+  if(!sim) return base;
+  var r=rankAxis(sim);
+  for(i=0;i<n;i++){
+    // direction kept from the atlas, so a region stays recognisable while the
+    // corpus is pulled into a shell; radius is how well it answers the question
+    var dx=base[i*3], dy=base[i*3+1], dz=base[i*3+2], l=Math.hypot(dx,dy,dz)||1;
+    var rad=(1-(r[i]+1)/2)*1.25+0.05;
+    P[i*3]=dx/l*rad; P[i*3+1]=dy/l*rad; P[i*3+2]=dz/l*rad;
+  }
+  return P;
+}
+function layoutFor(m){ return m==='axes'?axesLayout() : (m==='focus'?focusLayout() : atlasLayout()); }
+function ease(t){ return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+function goTo(m){
+  var target=layoutFor(m), i;
+  // freeze wherever a running animation is, so changing mid-flight never snaps
+  if (mixT<1){ var e=ease(mixT);
+    for(i=0;i<curPos.length;i++) curPos[i]=srcPos[i]+(tgtPos[i]-srcPos[i])*e; }
+  srcPos=curPos.slice(); tgtPos=target;
+  gl.bindBuffer(gl.ARRAY_BUFFER,buf.pA); gl.bufferData(gl.ARRAY_BUFFER,srcPos,gl.DYNAMIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER,buf.pB); gl.bufferData(gl.ARRAY_BUFFER,tgtPos,gl.DYNAMIC_DRAW);
+  rebuildEdgeBuffers();
+  mixT=0; mixStart=performance.now();
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches){ mixT=1; curPos=tgtPos.slice(); }
+  needsDraw=true;
+}
+function livePos(i){
+  var t=ease(Math.min(mixT,1));
+  return [srcPos[i*3]+(tgtPos[i*3]-srcPos[i*3])*t,
+          srcPos[i*3+1]+(tgtPos[i*3+1]-srcPos[i*3+1])*t,
+          srcPos[i*3+2]+(tgtPos[i*3+2]-srcPos[i*3+2])*t];
+}
+
+/* ---------- edges ---------- */
+var edgeCount={link:0,sem:0}, semPairs=null;
+function buildSemPairs(){
+  var K=D.knnK, out=[], i, j;
+  for(i=0;i<D.n;i++) for(j=0;j<K;j++){ var t=D.knn[i*K+j]; if(t>i) out.push(i,t); }
+  semPairs=new Uint16Array(out);
+}
+function fillEdges(pairs, count){
+  var A=new Float32Array(count*6), B=new Float32Array(count*6), e, i;
+  for(e=0;e<count;e++){
+    var a=pairs[e*2], b=pairs[e*2+1];
+    for(i=0;i<3;i++){ A[e*6+i]=srcPos[a*3+i]; A[e*6+3+i]=srcPos[b*3+i];
+                      B[e*6+i]=tgtPos[a*3+i]; B[e*6+3+i]=tgtPos[b*3+i]; }
+  }
+  return [A,B];
+}
+function rebuildEdgeBuffers(){
+  var n=D.ea.length, lp=new Uint16Array(n*2), e;
+  for(e=0;e<n;e++){ lp[e*2]=D.ea[e]; lp[e*2+1]=D.eb[e]; }
+  edgeCount.link=n;
+  var L=fillEdges(lp,n);
+  if(buf.lA) gl.deleteBuffer(buf.lA); if(buf.lB) gl.deleteBuffer(buf.lB);
+  buf.lA=mkbuf(L[0]); buf.lB=mkbuf(L[1]);
+  if(!semPairs) buildSemPairs();
+  edgeCount.sem=semPairs.length/2;
+  var Sx=fillEdges(semPairs, edgeCount.sem);
+  if(buf.sA) gl.deleteBuffer(buf.sA); if(buf.sB) gl.deleteBuffer(buf.sB);
+  buf.sA=mkbuf(Sx[0]); buf.sB=mkbuf(Sx[1]);
+}
+
+/* ---------- frame ---------- */
+function frame(){
+  requestAnimationFrame(frame);
+  if (mixT<1){ mixT=Math.min(1,(performance.now()-mixStart)/MIX_MS); needsDraw=true;
+    if (mixT>=1) curPos=tgtPos.slice(); }
+  if (spin){ cam.yaw+=0.0016; needsDraw=true; }
+  if (!needsDraw || !D) return;
+  needsDraw=false;
+  paint();
+}
+function paint(){
+  buildMVP();
+  var bi=bandIdx(), m=ease(Math.min(mixT,1));
+  gl.viewport(0,0,glc.width,glc.height);
+  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+
+  if (bi>=2 && (edgeMode.link||edgeMode.sem)){
+    gl.disable(gl.DEPTH_TEST);
+    gl.useProgram(pLn);
+    gl.uniformMatrix4fv(uni(pLn,'uMVP'),false,MVP);
+    gl.uniform1f(uni(pLn,'uMix'),m);
+    gl.uniform3f(uni(pLn,'uFocus'),cam.tx,cam.ty,cam.tz);
+    gl.uniform1f(uni(pLn,'uFall'),cam.dist*0.9);
+    if (edgeMode.link){
+      attr(pLn,'aA',buf.lA,3); attr(pLn,'aB',buf.lB,3);
+      gl.uniform3f(uni(pLn,'uCol'),0.357,0.612,1.0);
+      gl.uniform1f(uni(pLn,'uAlpha'),0.36);
+      gl.drawArrays(gl.LINES,0,edgeCount.link*2);
+    }
+    if (edgeMode.sem){
+      attr(pLn,'aA',buf.sA,3); attr(pLn,'aB',buf.sB,3);
+      gl.uniform3f(uni(pLn,'uCol'),0.722,0.518,1.0);
+      gl.uniform1f(uni(pLn,'uAlpha'),0.20);
+      gl.drawArrays(gl.LINES,0,edgeCount.sem*2);
+    }
+  }
+
+  gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL);
+  gl.useProgram(pPt);
+  attr(pPt,'aA',buf.pA,3); attr(pPt,'aB',buf.pB,3);
+  attr(pPt,'aCol',buf.col,3); attr(pPt,'aSize',buf.size,1); attr(pPt,'aState',buf.state,1);
+  gl.uniformMatrix4fv(uni(pPt,'uMVP'),false,MVP);
+  gl.uniform1f(uni(pPt,'uMix'),m);
+  gl.uniform1f(uni(pPt,'uScale'),0.78*dpr*(vh/900));
+  gl.uniform1f(uni(pPt,'uBand'),bi/3);
+  gl.drawArrays(gl.POINTS,0,D.n);
+
+  drawOverlay(bi);
+  document.getElementById('bandnote').innerHTML=bandNote(bi);
+  document.getElementById('scalenote').innerHTML=
+    (1/cam.dist).toFixed(2)+'× · '+D.stats.articles.toLocaleString()+' articles<br>'+
+    (TOUCH ? 'drag to orbit · pinch to zoom · two fingers to pan'
+           : 'drag to orbit · scroll to zoom · shift-drag to pan');
+  var bs=document.querySelectorAll('.bands button');
+  for(var z=0;z<bs.length;z++) bs[z].classList.toggle('on', bs[z].dataset.band===bandOf().id);
+}
+
+/* ---------- overlay: labels, hover ring, selection ---------- */
+var LC=11;
+function drawOverlay(bi){
+  octx.setTransform(dpr,0,0,dpr,0,0);
+  octx.clearRect(0,0,vw,vh);
+  var cols=Math.ceil(vw/LC), rows=Math.ceil(vh/LC), occ=new Uint8Array(cols*rows);
+  function place(x,y,w,h){
+    var c0=Math.max(0,((x-w/2)/LC)|0), c1=Math.min(cols-1,((x+w/2)/LC)|0);
+    var r0=Math.max(0,((y-h/2)/LC)|0), r1=Math.min(rows-1,((y+h/2)/LC)|0), r, c;
+    for(r=r0;r<=r1;r++) for(c=c0;c<=c1;c++) if(occ[r*cols+c]) return false;
+    for(r=r0;r<=r1;r++) for(c=c0;c<=c1;c++) occ[r*cols+c]=1;
+    return true;
+  }
+  if (mode==='atlas'){
+    var order=[], k;
+    for(k=0;k<D.k;k++) order.push(k);
+    order.sort(function(a,b){ return D.regionSizes[b]-D.regionSizes[a]; });
+    octx.textAlign='center'; octx.textBaseline='middle';
+    for(var oi=0;oi<order.length;oi++){
+      var kk=order[oi], c=D.cenNorm[kk], p=project(c[0],c[1],c[2]);
+      if(!p||p[0]<-120||p[0]>vw+120||p[1]<-30||p[1]>vh+30) continue;
+      var lab=(D.regionLabels[kk]||[]).slice(0, bi===0?2:1).join(' · ');
+      if(!lab) continue;
+      var px=bi===0?15:(bi===1?13:12);
+      octx.font='400 '+px+'px "Instrument Serif", Georgia, serif';
+      if(!place(p[0],p[1],octx.measureText(lab).width,px*1.3)) continue;
+      octx.globalAlpha=bi===0?0.95:(bi===1?0.62:0.34);
+      octx.lineWidth=3.5; octx.strokeStyle='rgba(6,8,14,.9)'; octx.strokeText(lab,p[0],p[1]);
+      octx.fillStyle=D.regionColor[kk]; octx.fillText(lab,p[0],p[1]);
+      octx.globalAlpha=1;
+    }
+    octx.textAlign='left';
+  }
+  if (bi>=1) drawArticleLabels(bi, place);
+  if (sel>=0) ring(sel,'#5ef0df',7);
+  if (hover>=0 && hover!==sel) ring(hover,'#ffffff',5.5);
+  if (mode==='axes') drawAxisGuides();
+}
+function ring(i,col,r){
+  var q=livePos(i), p=project(q[0],q[1],q[2]); if(!p) return;
+  octx.beginPath(); octx.arc(p[0],p[1],r,0,6.2832);
+  octx.strokeStyle=col; octx.lineWidth=1.6; octx.stroke();
+}
+/* When the axes are your own questions, the cube needs ends: draw the six
+   extremes so "which way is more market" is answerable without guessing. */
+function drawAxisGuides(){
+  var defs=[[[1.05,-1,-1],axisQ.x,'#5ef0df','X'],[[-1,1.05,-1],axisQ.y,'#ffd27a','Y'],[[-1,-1,1.05],axisQ.z,'#ff86a8','Z']];
+  octx.font='500 11px "JetBrains Mono", monospace'; octx.textBaseline='middle';
+  for(var a=0;a<3;a++){
+    if(!defs[a][1]) continue;
+    var e=defs[a][0], o=project(-1,-1,-1), p=project(e[0],e[1],e[2]);
+    if(!o||!p) continue;
+    octx.beginPath(); octx.moveTo(o[0],o[1]); octx.lineTo(p[0],p[1]);
+    octx.strokeStyle=defs[a][2]; octx.globalAlpha=0.5; octx.lineWidth=1.2; octx.stroke();
+    octx.globalAlpha=1; octx.fillStyle=defs[a][2];
+    var t=defs[a][3]+' · '+defs[a][1].split(/[\s,]+/).slice(0,3).join(' ');
+    octx.fillText(t, p[0]+6, p[1]);
+  }
+}
+function drawArticleLabels(bi, place){
+  var cands=[], i;
+  var minDeg = bi===1?8:(bi===2?1:0);
+  var pool = matchSet ? matchList : D.byAuthority;
+  var scan = Math.min(pool.length, bi>=3?6000:3000);
+  for(var s=0;s<scan;s++){
+    i=pool[s];
+    if (lensMask && !(D.lens[i]&lensMask)) continue;
+    if (!matchSet && D.indeg[i]<minDeg) continue;
+    cands.push(i);
+  }
+  var limit = bi>=3?300:(bi===2?140:34);
+  octx.font='500 11.5px "Hanken Grotesk", system-ui, sans-serif';
+  octx.textBaseline='middle';
+  var drawn=0;
+  for(var q=0;q<cands.length && drawn<limit;q++){
+    i=cands[q];
+    var w3=livePos(i), p=project(w3[0],w3[1],w3[2]);
+    if(!p) continue;
+    var x=p[0]+7, y=p[1];
+    if(x<-60||x>vw||y<0||y>vh) continue;
+    var t=D.titleArr[i]; if(t.length>40) t=t.slice(0,38)+'…';
+    var w=octx.measureText(t).width;
+    if(!place(x+w/2,y,w+8,15)) continue;
+    octx.fillStyle='rgba(6,8,14,.82)'; octx.fillRect(x-3,y-7.5,w+6,15);
+    octx.fillStyle=(matchSet&&matchSet[i])?'#5ef0df':'rgba(238,242,251,.92)';
+    octx.fillText(t,x,y);
+    drawn++;
+  }
+}
+
+/* ---------- picking ---------- */
+function pick(px,py,coarse){
+  // a fingertip covers roughly 8 mm; a cursor covers one pixel
+  var rad = coarse ? 30 : 17;
+  var best=-1, bd=rad*rad, i, n=D.n, t=ease(Math.min(mixT,1)), m=MVP;
+  for(i=0;i<n;i++){
+    if (lensMask && !(D.lens[i]&lensMask)) continue;
+    var x=srcPos[i*3]+(tgtPos[i*3]-srcPos[i*3])*t,
+        y=srcPos[i*3+1]+(tgtPos[i*3+1]-srcPos[i*3+1])*t,
+        z=srcPos[i*3+2]+(tgtPos[i*3+2]-srcPos[i*3+2])*t;
+    var cw=m[3]*x+m[7]*y+m[11]*z+m[15]; if(cw<=0.0001) continue;
+    var sx=((m[0]*x+m[4]*y+m[8]*z+m[12])/cw*0.5+0.5)*vw;
+    var sy=(1-((m[1]*x+m[5]*y+m[9]*z+m[13])/cw*0.5+0.5))*vh;
+    var dx=sx-px, dy=sy-py, d=dx*dx+dy*dy;
+    if(d<bd){ bd=d; best=i; }
+  }
+  return best;
+}
+
+/* ---------- semantic space, fetched only when asked for ---------- */
+function loadSemantic(){
+  if (S) return Promise.resolve();
+  if (loadSemantic.p) return loadSemantic.p;
+  document.getElementById('working').hidden=false;
+  loadSemantic.p=Promise.all([
+    fetch('semantic.json').then(function(r){ return r.json(); }),
+    fetch('vecs.bin').then(function(r){ return r.arrayBuffer(); }),
+    fetch('terms.bin').then(function(r){ return r.arrayBuffer(); })
+  ]).then(function(a){
+    var meta=a[0], dims=meta.dims, n=meta.n;
+    var A=new Int8Array(a[1]), T=new Int16Array(a[2]), i, j;
+    var idx={}; for(i=0;i<meta.terms.length;i++) idx[meta.terms[i]]=i;
+    var An=new Float32Array(n*dims);
+    for(i=0;i<n;i++){
+      var s=0;
+      for(j=0;j<dims;j++){ var v=A[i*dims+j]*meta.articleScale; An[i*dims+j]=v; s+=v*v; }
+      s=Math.sqrt(s)||1e-9;
+      for(j=0;j<dims;j++) An[i*dims+j]/=s;
+    }
+    S={
+      dims:dims, n:n, A:An, T:T, idx:idx, tScale:meta.termScale,
+      words:function(text){ return String(text).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean); },
+      /* Fold a typed query into the same basis the map was built from — the
+         standard LSA way: sum its terms' rows, normalise, cosine against the
+         corpus. No server, and the same notion of similarity the positions use. */
+      similarity:function(text){
+        var ws=this.words(text), v=new Float32Array(dims), hit=0, k, j2;
+        for(k=0;k<ws.length;k++){
+          var ti=this.idx[ws[k]]; if(ti===undefined) continue;
+          hit++;
+          for(j2=0;j2<dims;j2++) v[j2]+=this.T[ti*dims+j2]*this.tScale;
+        }
+        if(!hit) return null;
+        var s2=0; for(j2=0;j2<dims;j2++) s2+=v[j2]*v[j2];
+        s2=Math.sqrt(s2)||1e-9; for(j2=0;j2<dims;j2++) v[j2]/=s2;
+        var out=new Float32Array(this.n);
+        for(var i2=0;i2<this.n;i2++){
+          var d=0, base=i2*dims;
+          for(j2=0;j2<dims;j2++) d+=this.A[base+j2]*v[j2];
+          out[i2]=d;
+        }
+        return out;
+      },
+      unknown:function(text){
+        var ws=this.words(text), miss=[];
+        for(var k=0;k<ws.length;k++) if(this.idx[ws[k]]===undefined) miss.push(ws[k]);
+        return miss;
+      }
+    };
+    document.getElementById('working').hidden=true;
+  }).catch(function(e){
+    var w=document.getElementById('working');
+    w.hidden=false; w.style.color='var(--c-rose)';
+    w.textContent='could not load the semantic space — '+e.message;
+  });
+  return loadSemantic.p;
+}
+
+/* ---------- panel ---------- */
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function catsOf(i){ var r=D.catArr[i]; if(!r) return [];
+  return r.split(',').map(function(j){ return D.catNames[+j]; }); }
+function knnOf(i){ var o=[],K=D.knnK,j;
+  for(j=0;j<K;j++){ var t=D.knn[i*K+j]; if(t!==i) o.push({i:t,sim:D.knnSim[i*K+j]/255}); } return o; }
+var adjOff=null, adjIdx=null;
+function buildAdjacency(){
+  var n=D.n, deg=new Uint16Array(n), e, i;
+  for(e=0;e<D.ea.length;e++){ deg[D.ea[e]]++; deg[D.eb[e]]++; }
+  adjOff=new Uint32Array(n+1);
+  for(i=0;i<n;i++) adjOff[i+1]=adjOff[i]+deg[i];
+  adjIdx=new Uint16Array(adjOff[n]);
+  var fill=adjOff.slice(0,n);
+  for(e=0;e<D.ea.length;e++){ var a=D.ea[e],b=D.eb[e]; adjIdx[fill[a]++]=b; adjIdx[fill[b]++]=a; }
+}
+function linksOf(i){ var o=[]; for(var p=adjOff[i];p<adjOff[i+1];p++) o.push(adjIdx[p]); return o; }
+function list(arr,sims){
+  if(!arr.length) return '<p class="empty">none</p>';
+  var h='<ul class="list">';
+  for(var j=0;j<arr.length;j++){
+    var i=arr[j];
+    h+='<li data-i="'+i+'"><span class="sw" style="background:'+D.regionColor[D.region[i]]+'"></span><b>'+
+       esc(D.titleArr[i])+'</b><span class="n">'+(sims?sims[j].sim.toFixed(2):D.indeg[i])+'</span></li>';
+  }
+  return h+'</ul>';
+}
+/* With an axis in play, say where this article sits on it — the panel is where
+   a rank becomes a number you can check. */
+function simRows(i){
+  if(!S) return '';
+  var defs;
+  if (mode==='focus' && focusQ) defs=[['centre',focusQ,'#b884ff']];
+  else if (mode==='axes') defs=[['X',axisQ.x,'#5ef0df'],['Y',axisQ.y,'#ffd27a'],['Z',axisQ.z,'#ff86a8']];
+  else return '';
+  var rows='';
+  for(var a=0;a<defs.length;a++){
+    if(!defs[a][1]) continue;
+    var sim=S.similarity(defs[a][1]); if(!sim) continue;
+    var v=Math.max(0,Math.min(1,(sim[i]+0.2)/1.2));
+    rows+='<div class="simrow"><span style="color:'+defs[a][2]+'">'+esc(defs[a][0])+'</span>'+
+          '<span class="tr"><i style="width:'+(v*100).toFixed(0)+'%;background:'+defs[a][2]+'"></i></span>'+
+          '<span>'+sim[i].toFixed(2)+'</span></div>';
+  }
+  return rows?'<div>'+rows+'</div>':'';
+}
+function openPanel(i){
+  sel=i;
+  var p=document.getElementById('panel'); p.classList.add('open');
+  var cs=catsOf(i), ls=linksOf(i), ks=knnOf(i);
+  var rl=(D.regionLabels[D.region[i]]||[]).slice(0,2).join(' · ');
+  var h='<button class="close" id="pclose" aria-label="Close">✕</button>';
+  h+='<h3>'+esc(D.titleArr[i])+'</h3>';
+  h+='<div class="meta"><span class="tag" style="color:'+D.regionColor[D.region[i]]+
+     ';border-color:'+D.regionColor[D.region[i]]+'44">'+esc(rl||'region '+D.region[i])+'</span>';
+  for(var c=0;c<cs.length;c++) h+='<span class="tag">'+esc(cs[c])+'</span>';
+  h+='</div><div class="lead pending" id="lead">fetching the lead…</div>';
+  h+=simRows(i);
+  h+='<div class="stats"><div><div class="v">'+D.indeg[i]+'</div><div class="k">links in</div></div>'+
+     '<div><div class="v">'+D.outdeg[i]+'</div><div class="k">links out</div></div>'+
+     '<div><div class="v">'+Math.round(D.bytes[i]*64/1024)+'k</div><div class="k">size</div></div></div>';
+  h+='<a class="btn" href="https://wiki.p2pfoundation.net/'+
+     encodeURIComponent(D.titleArr[i].replace(/ /g,'_'))+'" target="_blank" rel="noopener">read on the wiki ↗</a>';
+  h+='<div class="rel"><h4><i></i>links here'+(ls.length?' · '+ls.length:'')+'</h4>';
+  h+= ls.length ? list(ls.slice(0,14)) : '<p class="empty">No wikilink either way — the position 64% of the corpus is in.</p>';
+  h+='</div><div class="rel"><h4><i class="dash"></i>reads like</h4>'+list(ks.map(function(o){return o.i;}),ks)+'</div>';
+  p.innerHTML=h; p.scrollTop=0;
+  document.getElementById('pclose').onclick=closePanel;
+  var lis=p.querySelectorAll('li[data-i]');
+  for(var q=0;q<lis.length;q++) lis[q].onclick=function(){ var t=+this.dataset.i; openPanel(t); flyTo(t); };
+  loadLead(i);
+  needsDraw=true;
+}
+function closePanel(){ sel=-1; document.getElementById('panel').classList.remove('open'); needsDraw=true; }
+function loadLead(i){
+  var k=D.region[i], el=document.getElementById('lead');
+  function put(){ if(!el||sel!==i) return; var t=leadCache[k]&&leadCache[k][i];
+    el.className='lead'+(t?'':' pending'); el.textContent=t||'No lead text for this article.'; }
+  if(leadCache[k]) return put();
+  if(leadPending[k]) return leadPending[k].then(put);
+  leadPending[k]=fetch('leads/'+String(k).padStart(2,'0')+'.json')
+    .then(function(r){ return r.ok?r.json():{}; })
+    .then(function(j){ leadCache[k]=j; return j; }).catch(function(){ leadCache[k]={}; });
+  leadPending[k].then(put);
+}
+
+/* ---------- state buffer (search / lens) ---------- */
+function pushState(){
+  var st=new Float32Array(D.n), i;
+  for(i=0;i<D.n;i++){
+    if (lensMask && !(D.lens[i]&lensMask)){ st[i]=1; continue; }
+    st[i] = matchSet ? (matchSet[i]?2:1) : 0;
+  }
+  gl.bindBuffer(gl.ARRAY_BUFFER,buf.state);
+  gl.bufferData(gl.ARRAY_BUFFER,st,gl.DYNAMIC_DRAW);
+  needsDraw=true;
+}
+
+/* ---------- search ---------- */
+var searchTimer=0;
+function runSearch(){
+  var q=document.getElementById('q').value.trim().toLowerCase();
+  var box=document.getElementById('matchbox');
+  if(q.length<2){ matches=null; matchSet=null; matchList=[]; box.hidden=true; pushState(); return; }
+  var terms=q.split(/[,;]+/).map(function(t){return t.trim();}).filter(Boolean);
+  matchSet=new Uint8Array(D.n); matches=[];
+  for(var i=0;i<D.n;i++){
+    var t=D.titleArr[i].toLowerCase(), hit=false, exact=false, j;
+    for(j=0;j<terms.length;j++) if(t.indexOf(terms[j])!==-1){ hit=true; if(t===terms[j]) exact=true; break; }
+    if(!hit){ var cr=D.searchCats[i];
+      if(cr) for(j=0;j<terms.length;j++) if(cr.indexOf(terms[j])!==-1){ hit=true; break; } }
+    if(hit){ matchSet[i]=1; matches.push({i:i,score:(exact?1e6:0)+D.indeg[i]*10-D.titleArr[i].length}); }
+  }
+  matches.sort(function(a,b){ return b.score-a.score; });
+  matchList=matches.map(function(m){ return m.i; });
+  box.hidden=false;
+  document.getElementById('matchn').textContent=matches.length.toLocaleString();
+  var ul=document.getElementById('matches');
+  ul.innerHTML = matches.length
+    ? list(matchList.slice(0,40)).replace(/^<ul class="list">|<\/ul>$/g,'')
+    : '<li class="empty">nothing matches</li>';
+  var lis=ul.querySelectorAll('li[data-i]');
+  for(var z=0;z<lis.length;z++) lis[z].onclick=function(){ var t=+this.dataset.i; openPanel(t); flyTo(t); };
+  pushState();
+}
+
+/* ---------- camera moves ---------- */
+function flyTo(i){ var p=livePos(i);
+  cam.tx=p[0]; cam.ty=p[1]; cam.tz=p[2]; cam.dist=Math.min(cam.dist,0.30); needsDraw=true; }
+function reset(){ cam.yaw=0.7; cam.pitch=0.30; cam.dist=2.25; cam.tx=cam.ty=cam.tz=0; needsDraw=true; }
+function dolly(f){ cam.dist=Math.max(0.04, Math.min(9, cam.dist*f)); needsDraw=true; }
+
+/* ---------- chrome ---------- */
+var PRESETS=[
+  {n:'market ↔ commons ↔ code', x:'market price exchange capital', y:'commons sharing mutual cooperative', z:'software protocol network code'},
+  {n:'theory ↔ practice ↔ place', x:'theory concept philosophy critique', y:'project practice pilot workshop', z:'city urban village region'},
+  {n:'land ↔ energy ↔ money', x:'land soil agriculture food farming', y:'energy solar renewable grid power', z:'money currency credit finance bank'}
+];
+function buildRail(){
+  var lens=document.getElementById('lenses'); lens.innerHTML='';
+  D.facets.forEach(function(f,fi){
+    var b=document.createElement('button'); b.className='chip'; b.textContent=f.id; b.title=f.label;
+    b.onclick=function(){ lensMask^=(1<<fi); b.classList.toggle('on',!!(lensMask&(1<<fi))); pushState(); };
+    lens.appendChild(b);
+  });
+  var order=[], k;
+  for(k=0;k<D.k;k++) order.push(k);
+  order.sort(function(a,b){ return D.regionSizes[b]-D.regionSizes[a]; });
+  var ul=document.getElementById('regions');
+  ul.innerHTML=order.map(function(kk){
+    return '<li data-k="'+kk+'"><span class="sw" style="background:'+D.regionColor[kk]+'"></span><b>'+
+      esc((D.regionLabels[kk]||[]).slice(0,2).join(' · ')||'region '+kk)+'</b><span class="n">'+
+      D.regionSizes[kk].toLocaleString()+'</span></li>'; }).join('');
+  document.getElementById('regionn').textContent=D.k;
+  var lis=ul.querySelectorAll('li[data-k]');
+  for(var q=0;q<lis.length;q++) lis[q].onclick=function(){
+    var c=D.cenNorm[+this.dataset.k];
+    cam.tx=c[0]; cam.ty=c[1]; cam.tz=c[2]; cam.dist=0.95; needsDraw=true; };
+  document.getElementById('edgecount').textContent=D.stats.links.toLocaleString()+' links';
+  var pr=document.getElementById('presets');
+  pr.innerHTML=PRESETS.map(function(p,i){ return '<button class="preset" data-p="'+i+'">'+esc(p.n)+'</button>'; }).join('');
+  Array.prototype.forEach.call(pr.querySelectorAll('.preset'),function(b){
+    b.onclick=function(){
+      var p=PRESETS[+b.dataset.p];
+      document.getElementById('ax-x').value=p.x;
+      document.getElementById('ax-y').value=p.y;
+      document.getElementById('ax-z').value=p.z;
+      axisQ={x:p.x,y:p.y,z:p.z}; applyMode('axes');
+    };
+  });
+}
+function applyMode(m){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll('#modes .chip'),function(b){
+    b.classList.toggle('on', b.dataset.mode===m); });
+  document.getElementById('axesbox').hidden = m!=='axes';
+  document.getElementById('focusbox').hidden = m!=='focus';
+  var note=document.getElementById('axisnote');
+  if(m==='atlas'){
+    note.hidden=true;
+    document.getElementById('modenote').textContent='subject';
+    goTo(m); return;
+  }
+  loadSemantic().then(function(){
+    if(m==='axes'){
+      var any=axisQ.x||axisQ.y||axisQ.z, miss=[];
+      if(S) ['x','y','z'].forEach(function(a){ if(axisQ[a]) miss=miss.concat(S.unknown(axisQ[a])); });
+      note.hidden=!any;
+      note.innerHTML = any
+        ? '<i class="x">X</i> '+esc(axisQ.x||'— atlas —')+'<br><i class="y">Y</i> '+esc(axisQ.y||'— atlas —')+
+          '<br><i class="z">Z</i> '+esc(axisQ.z||'— atlas —')+
+          (miss.length?'<br><span style="color:#ff86a8">not in the vocabulary: '+esc(miss.slice(0,6).join(', '))+'</span>':'')
+        : '';
+      document.getElementById('modenote').textContent='your axes';
+    } else {
+      var mi=(S&&focusQ)?S.unknown(focusQ):[];
+      note.hidden=!focusQ;
+      note.innerHTML = focusQ ? 'centre — <i style="color:#b884ff">'+esc(focusQ)+'</i>'+
+        (mi.length?'<br><span style="color:#ff86a8">not in the vocabulary: '+esc(mi.slice(0,6).join(', '))+'</span>':'') : '';
+      document.getElementById('modenote').textContent='one question';
+    }
+    goTo(m);
+  });
+}
+function resize(){
+  var r=document.getElementById('stage').getBoundingClientRect();
+  vw=r.width; vh=r.height; dpr=Math.min(2,window.devicePixelRatio||1);
+  glc.width=Math.round(vw*dpr); glc.height=Math.round(vh*dpr);
+  ov.width=Math.round(vw*dpr); ov.height=Math.round(vh*dpr);
+  needsDraw=true;
+}
+function setTip(i,px,py){
+  var t=document.getElementById('tip');
+  if(i<0){ t.style.opacity=0; return; }
+  t.innerHTML='<div class="t">'+esc(D.titleArr[i])+'</div><div class="c">'+
+    esc(catsOf(i).slice(0,3).join(' · ')||'no categories')+' · '+D.indeg[i]+' in</div>';
+  t.style.opacity=1;
+  t.style.left=Math.min(vw-t.offsetWidth-8,px+14)+'px';
+  t.style.top=Math.max(6,py-t.offsetHeight-12)+'px';
+}
+function wire(){
+  /* One input layer for mouse, finger and pen. Pointer Events already unify the
+     three, but only if you track more than one at a time — so gestures are
+     driven off a map of live pointers rather than a single drag flag:
+
+       one pointer   orbit          (pan instead with shift, a right/middle
+                                     button, or a pen's barrel button)
+       two pointers  pinch to zoom, and drag the midpoint to pan
+       a tap         select — with a larger hit radius for touch, because a
+                     fingertip is about 8 mm and a mouse cursor is one pixel
+
+     touch-action:none on the canvas stops the browser claiming these gestures
+     for scrolling before they reach us. */
+  var ptrs = new Map(), gesture = null, tap = null, hoverReq = null;
+  var TAP_MOVE = 12, TAP_MS = 500;
+
+  function pos(e){ var r=glc.getBoundingClientRect(); return {x:e.clientX-r.left, y:e.clientY-r.top}; }
+  function twoState(){
+    var a=null,b=null;
+    ptrs.forEach(function(v){ if(!a) a=v; else if(!b) b=v; });
+    return {dist:Math.hypot(a.x-b.x, a.y-b.y), mx:(a.x+b.x)/2, my:(a.y+b.y)/2};
+  }
+  function panBy(dx,dy){
+    var ep=eyePos(), fx=cam.tx-ep[0], fz=cam.tz-ep[2], l=Math.hypot(fx,fz)||1;
+    var rx=-fz/l, rz=fx/l, k=cam.dist*0.0018;
+    cam.tx-=rx*dx*k; cam.tz-=rz*dx*k; cam.ty+=dy*k;
+    needsDraw=true;
+  }
+
+  glc.addEventListener('pointerdown',function(e){
+    // Capture is an optimisation, not a requirement: it throws for a pointer the
+    // browser no longer considers active, and an exception here would take the
+    // whole gesture down with it.
+    try { glc.setPointerCapture(e.pointerId); } catch (_) {}
+    var p=pos(e); p.id=e.pointerId; ptrs.set(e.pointerId,p);
+    if (ptrs.size===1){
+      // e.buttons bit 32 is a pen's barrel button; treat it as pan, like shift
+      var wantPan = e.shiftKey || e.button===1 || e.button===2 || (e.pointerType==='pen' && (e.buttons&32));
+      gesture = {kind: wantPan?'pan':'orbit', x:p.x, y:p.y};
+      tap = {x:p.x, y:p.y, t:performance.now(), type:e.pointerType, moved:0};
+      glc.classList.add('drag');
+    } else if (ptrs.size===2){
+      var st=twoState();
+      gesture = {kind:'pinch', dist:st.dist, mx:st.mx, my:st.my};
+      tap = null;                       // a second finger is never a tap
+    } else {
+      gesture = null; tap = null;
+    }
+  });
+
+  glc.addEventListener('pointermove',function(e){
+    var p=pos(e);
+    if (ptrs.has(e.pointerId)){ p.id=e.pointerId; ptrs.set(e.pointerId,p); }
+
+    if (gesture && gesture.kind==='pinch' && ptrs.size>=2){
+      var st=twoState();
+      if (st.dist>0 && gesture.dist>0) dolly(gesture.dist/st.dist);
+      panBy(st.mx-gesture.mx, st.my-gesture.my);
+      gesture.dist=st.dist; gesture.mx=st.mx; gesture.my=st.my;
+      return;
+    }
+    if (gesture && (gesture.kind==='orbit'||gesture.kind==='pan')){
+      var dx=p.x-gesture.x, dy=p.y-gesture.y;
+      if (tap) tap.moved += Math.abs(dx)+Math.abs(dy);
+      gesture.x=p.x; gesture.y=p.y;
+      if (gesture.kind==='pan') panBy(dx,dy);
+      else {
+        cam.yaw-=dx*0.0060;
+        cam.pitch=Math.max(-1.45,Math.min(1.45,cam.pitch+dy*0.0060));
+        needsDraw=true;
+      }
+      return;
+    }
+    // hover is a mouse/pen affordance; a finger has no hover state to report
+    if (e.pointerType==='touch' || bandIdx()<1){ return; }
+    if (hoverReq) return;
+    hoverReq=requestAnimationFrame(function(){
+      hoverReq=null;
+      var h=pick(p.x,p.y,false);
+      if(h!==hover){ hover=h; needsDraw=true; }
+      setTip(h,p.x,p.y);
+    });
+  });
+
+  function release(e){
+    ptrs.delete(e.pointerId);
+    if (ptrs.size===0){
+      if (tap && tap.moved<TAP_MOVE && performance.now()-tap.t<TAP_MS && bandIdx()>=1){
+        var i=pick(tap.x, tap.y, tap.type==='touch');
+        if (i>=0){ openPanel(i); if (tap.type==='touch') flyTo(i); }
+        else closePanel();
+      }
+      gesture=null; tap=null; glc.classList.remove('drag');
+    } else if (ptrs.size===1){
+      // coming out of a pinch: resume orbiting from the finger still down
+      var only=null; ptrs.forEach(function(v){ only=v; });
+      gesture={kind:'orbit', x:only.x, y:only.y}; tap=null;
+    }
+  }
+  glc.addEventListener('pointerup',release);
+  glc.addEventListener('pointercancel',release);
+  glc.addEventListener('contextmenu',function(e){ e.preventDefault(); });
+  glc.addEventListener('pointerleave',function(e){
+    if (e.pointerType!=='touch'){ hover=-1; setTip(-1); needsDraw=true; }
+  });
+
+  /* Zoom sensitivity: an exponential dolly tuned so one comfortable scroll
+     gesture crosses a whole band rather than nudging a few percent per notch.
+     deltaMode is normalised because a line-scrolling mouse and a pixel-scrolling
+     trackpad describe the same gesture in numbers three orders apart. */
+  glc.addEventListener('wheel',function(e){
+    e.preventDefault();
+    var d = e.deltaMode===1 ? e.deltaY*18 : (e.deltaMode===2 ? e.deltaY*vh : e.deltaY);
+    dolly(Math.exp(Math.max(-260,Math.min(260,d))*0.0034));
+  },{passive:false});
+  glc.addEventListener('dblclick',function(e){
+    var p=pos(e), i=pick(p.x,p.y,false);
+    if(i>=0){ openPanel(i); flyTo(i); }
+  });
+
+  document.getElementById('zin').onclick=function(){ dolly(1/1.9); };
+  document.getElementById('zout').onclick=function(){ dolly(1.9); };
+  document.getElementById('zreset').onclick=reset;
+  document.getElementById('spin').onclick=function(){ spin=!spin; this.classList.toggle('on',spin); needsDraw=true; };
+  Array.prototype.forEach.call(document.querySelectorAll('.bands button'),function(b){
+    b.onclick=function(){
+      var t=BANDS.filter(function(x){ return x.id===b.dataset.band; })[0];
+      cam.dist=t.d*0.92; needsDraw=true; };
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.chip[data-edge]'),function(b){
+    b.onclick=function(){ edgeMode[b.dataset.edge]=!edgeMode[b.dataset.edge];
+      b.classList.toggle('on',edgeMode[b.dataset.edge]); needsDraw=true; };
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#modes .chip'),function(b){
+    b.onclick=function(){ applyMode(b.dataset.mode); };
+  });
+  var axTimer=0;
+  ['x','y','z'].forEach(function(a){
+    document.getElementById('ax-'+a).addEventListener('input',function(){
+      axisQ[a]=this.value.trim();
+      clearTimeout(axTimer); axTimer=setTimeout(function(){ applyMode('axes'); },420);
+    });
+  });
+  document.getElementById('fq').addEventListener('input',function(){
+    focusQ=this.value.trim();
+    clearTimeout(axTimer); axTimer=setTimeout(function(){ applyMode('focus'); },420);
+  });
+  var qi=document.getElementById('q');
+  qi.addEventListener('input',function(){ clearTimeout(searchTimer); searchTimer=setTimeout(runSearch,140); });
+  qi.addEventListener('keydown',function(e){
+    if(e.key==='Enter'&&matches&&matches.length){ openPanel(matches[0].i); flyTo(matches[0].i); } });
+  document.getElementById('menu').onclick=function(){ document.getElementById('rail').classList.toggle('open'); };
+  window.addEventListener('keydown',function(e){
+    if(e.target.tagName==='INPUT') return;
+    if(e.key==='Escape') closePanel();
+    if(e.key==='/'){ e.preventDefault(); qi.focus(); }
+    if(e.key==='+'||e.key==='=') dolly(1/1.7);
+    if(e.key==='-') dolly(1.7);
+    if(e.key==='r') reset();
+  });
+  window.addEventListener('resize',resize);
+}
+
+/* ---------- boot ---------- */
+function bin(b64,Type){ var s=atob(b64), n=s.length, u=new Uint8Array(n);
+  for(var i=0;i<n;i++) u[i]=s.charCodeAt(i); return new Type(u.buffer); }
+
+fetch('core.json').then(function(r){ return r.json(); }).then(function(j){
+  D=j;
+  D.x=bin(j.x,Uint16Array); D.y=bin(j.y,Uint16Array); D.z=bin(j.z,Uint16Array);
+  D.region=bin(j.region,Uint8Array);
+  D.indeg=bin(j.indeg,Uint16Array); D.outdeg=bin(j.outdeg,Uint16Array);
+  D.bytes=bin(j.bytes,Uint16Array); D.lens=bin(j.lens,Uint16Array);
+  D.knn=bin(j.knn,Uint16Array); D.knnSim=bin(j.knnSim,Uint8Array);
+  D.ea=bin(j.ea,Uint16Array); D.eb=bin(j.eb,Uint16Array);
+  D.titleArr=j.titles.split('\n');
+  D.catArr=j.cats.split('\n');
+  D.searchCats=D.catArr.map(function(r){
+    if(!r) return '';
+    var o='', ids=r.split(',');
+    for(var q=0;q<ids.length;q++) o+=D.catNames[+ids[q]].toLowerCase()+' ';
+    return o; });
+  D.byAuthority=Array.prototype.slice.call(D.indeg).map(function(_,i){ return i; })
+    .sort(function(a,b){ return D.indeg[b]-D.indeg[a]; });
+
+  ov=document.getElementById('ov'); octx=ov.getContext('2d');
+  initGL();
+
+  curPos=atlasLayout(); srcPos=curPos.slice(); tgtPos=curPos.slice(); mixT=1;
+  // region centroids share the layout's normalisation, so their labels land in
+  // the right place once the corpus is scaled into the cube
+  D.cenNorm=j.centroids.map(function(c){ return [
+    (c[0]-(NORM.mn[0]+NORM.mx[0])/2)/NORM.span*2,
+    (c[1]-(NORM.mn[1]+NORM.mx[1])/2)/NORM.span*2,
+    (c[2]-(NORM.mn[2]+NORM.mx[2])/2)/NORM.span*2]; });
+
+  buildPalette(); buildAdjacency(); buildRail();
+
+  var col=new Float32Array(D.n*3), size=new Float32Array(D.n), st=new Float32Array(D.n), i;
+  for(i=0;i<D.n;i++){
+    var c=D.regionRGB[D.region[i]];
+    col[i*3]=c[0]; col[i*3+1]=c[1]; col[i*3+2]=c[2];
+    size[i]=Math.min(3.2, Math.sqrt(D.indeg[i])*0.55);
+  }
+  buf.pA=mkbuf(srcPos,gl.DYNAMIC_DRAW); buf.pB=mkbuf(tgtPos,gl.DYNAMIC_DRAW);
+  buf.col=mkbuf(col); buf.size=mkbuf(size); buf.state=mkbuf(st,gl.DYNAMIC_DRAW);
+  rebuildEdgeBuffers();
+
+  wire(); resize(); reset();
+  document.getElementById('loading').style.display='none';
+  requestAnimationFrame(frame);
+
+  var hsh=location.hash.replace(/^#/,'');
+  if(hsh){ var want=decodeURIComponent(hsh).replace(/_/g,' ');
+    var k=D.titleArr.indexOf(want); if(k>=0){ openPanel(k); flyTo(k); } }
+}).catch(function(e){
+  document.getElementById('loading').innerHTML=
+    '<div style="color:#ff7a8f;max-width:36ch;text-align:center;line-height:1.6">'+
+    'could not start the atlas — '+String(e.message||e)+'</div>';
+});
+
+})();
+</script>
+</body>
+</html>

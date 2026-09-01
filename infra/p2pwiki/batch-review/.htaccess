@@ -1,0 +1,18 @@
+# The batch-review app. Closed testing: every entry point calls
+# br_require_reviewer() before doing anything, so this file is defence in depth
+# rather than the actual gate.
+
+DirectoryIndex index.php
+Options -Indexes
+
+# Never index this, and never let it be framed.
+<IfModule mod_headers.c>
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Config, library and generator sources are not web resources.
+<FilesMatch "^(config|lib|_chrome)\.php$">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,30 @@
+{
+  "description": "",
+  "id": "dd7191bd637a4be4ad141aafb7dfba4b",
+  "kind": "zone",
+  "last_updated": "2026-09-01T22:16:32.787897Z",
+  "name": "default",
+  "phase": "http_request_cache_settings",
+  "rules": [
+    {
+      "action": "set_cache_settings",
+      "action_parameters": {
+        "browser_ttl": {
+          "mode": "respect_origin"
+        },
+        "cache": true,
+        "edge_ttl": {
+          "mode": "respect_origin"
+        }
+      },
+      "description": "Atlas at /explore \u2014 make JSON and binary payloads cacheable",
+      "enabled": true,
+      "expression": "(http.host eq \"wiki.p2pfoundation.net\" and (starts_with(http.request.uri.path, \"/explore/\") or http.request.uri.path eq \"/explore\"))",
+      "id": "295364f32ff84521a1fb9f43faaa3735",
+      "last_updated": "2026-09-01T22:16:32.787897Z",
+      "ref": "295364f32ff84521a1fb9f43faaa3735",
+      "version": "1"
+    }
+  ],
+  "version": "1"
+}

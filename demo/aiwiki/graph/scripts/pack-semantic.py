@@ -22,7 +22,7 @@ import numpy as np
 
 SP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(SP, "..", "data")
-OUT = os.path.join(SP, "..", "..", "dist", "graph")
+OUT = os.path.join(SP, "..", "..", "dist-atlas")
 DIMS = 32          # of 80. The tail components split hairs an axis cannot show.
 N_TERMS = 15000    # by document frequency; the tail is rare tokens nobody types
 

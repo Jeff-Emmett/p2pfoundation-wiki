@@ -18,7 +18,7 @@ import numpy as np
 
 SP = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(SP, "..", "data")
-OUT = os.path.join(SP, "..", "..", "dist")   # the aiwiki dist/, so the graph ships with the tour
+OUT = os.path.join(SP, "..", "..", "dist-atlas")   # shipped to the wiki, not to Pages
 
 T0 = time.time()
 def log(*a): print("[%5.1fs]" % (time.time() - T0), *a, flush=True)
@@ -111,8 +111,8 @@ core = {
               "regions": K, "redirects": C["nRedirects"],
               "isolated": int((indeg == 0).sum() & 0xffffffff)},
 }
-os.makedirs(os.path.join(OUT, "graph", "leads"), exist_ok=True)
-p = os.path.join(OUT, "graph", "core.json")
+os.makedirs(os.path.join(OUT, "leads"), exist_ok=True)
+p = os.path.join(OUT, "core.json")
 json.dump(core, open(p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 log("core.json", os.path.getsize(p) // 1024, "KB")
 
@@ -123,8 +123,8 @@ for k in range(K):
     # with "read on the wiki" one click away, and region 8 alone is 6,724
     # articles — the difference is a 4.5 MB fetch against a 2 MB one.
     shard = {str(int(i)): trim(leads[i]) for i in idx if leads[i]}
-    q = os.path.join(OUT, "graph", "leads", "%02d.json" % k)
+    q = os.path.join(OUT, "leads", "%02d.json" % k)
     json.dump(shard, open(q, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 log("leads: %d shards, %d KB total" % (K, sum(
-    os.path.getsize(os.path.join(OUT, "graph", "leads", f))
-    for f in os.listdir(os.path.join(OUT, "graph", "leads"))) // 1024))
+    os.path.getsize(os.path.join(OUT, "leads", f))
+    for f in os.listdir(os.path.join(OUT, "leads"))) // 1024))

@@ -11,7 +11,12 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 DATA="data/aiwiki-data.json"
-OUT="dist"
+OUT="dist"              # -> Cloudflare Pages (the tour, and the /graph redirect)
+ATLAS_OUT="dist-atlas"  # -> netcup, served at wiki.p2pfoundation.net/explore
+
+# The two outputs are kept apart on purpose. The atlas is canonical on the wiki;
+# publishing it to Pages as well meant 20 MB of duplicate riding along in every
+# deploy, reachable only if the redirect were ever removed. One payload, one home.
 PROJECT="aiwiki-jeffemmett"
 
 [ -f "$DATA" ] || { echo "✗ missing $DATA — run: python3 scripts/build-corpus.py" >&2; exit 1; }
@@ -46,9 +51,8 @@ if [ -f "$GRAPH_DATA" ]; then
   # The semantic space is a separate payload because the page only fetches it
   # when someone actually opens the reorganise controls.
   "$PY_BIN" graph/scripts/pack-semantic.py
-  mkdir -p "$OUT/graph"
-  sed "s|__BUILD__|$BUILD_ID|g" graph/graph.template.html > "$OUT/graph/index.html"
-  echo "  dist/graph/index.html  $(( $(wc -c < "$OUT/graph/index.html") / 1024 )) KB"
+  sed "s|__BUILD__|$BUILD_ID|g" graph/graph.template.html > "$ATLAS_OUT/index.html"
+  echo "  $ATLAS_OUT/index.html  $(( $(wc -c < "$ATLAS_OUT/index.html") / 1024 )) KB"
 else
   echo "  ⚠ skipping the atlas — no $GRAPH_DATA (run graph/scripts/ first)" >&2
 fi
@@ -70,8 +74,13 @@ if [ "${1:-}" = "--deploy" ]; then
   # OAuth in a non-interactive shell and asks for the token anyway. Inject it
   # without it passing through a shell history or a transcript:
   #
-  #   secretctl run --ref CLOUDFLARE_API_TOKEN=isec://claude-ops/prod/CLOUDFLARE_PAGES_TOKEN \
+  #   secretctl run --ref CLOUDFLARE_API_TOKEN=isec://claude-ops/prod/CLOUDFLARE_API_TOKEN \
   #     -- ./build.sh --deploy
+  #
+  # That ref is claude-workers, which carries Pages Write. It looked dead for a
+  # day on 2026-09-01 — the monthly rotator rolled it and failed to store the
+  # result — which sent this build hunting for a separate Pages token it never
+  # needed. See dev-ops/netcup/scripts/cf-rotate-token.sh.
   : "${CLOUDFLARE_API_TOKEN:?set CLOUDFLARE_API_TOKEN (see the comment above this line)}"
   npx --yes wrangler@4 pages deploy "$OUT" \
       --project-name "$PROJECT" --branch main --commit-dirty=true

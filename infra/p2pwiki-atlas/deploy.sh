@@ -18,7 +18,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-SRC="../../demo/aiwiki/dist/graph"
+SRC="../../demo/aiwiki/dist-atlas"
 HOST="netcup-full"
 DEST="/opt/websites/p2pwiki-atlas/site/explore"
 

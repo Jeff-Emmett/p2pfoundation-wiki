@@ -74,12 +74,18 @@ never an editor's main password and never on the command line.
 in a non-interactive shell — it insists on an API token — so inject one:
 
 ```bash
-secretctl run --ref CLOUDFLARE_API_TOKEN=isec://claude-ops/prod/CLOUDFLARE_PAGES_TOKEN \
+secretctl run --ref CLOUDFLARE_API_TOKEN=isec://claude-ops/prod/CLOUDFLARE_API_TOKEN \
   -- bash -c 'set -a; . ~/.cloudflare-credentials.env; set +a; ./build.sh --deploy'
 ```
 
-The token needs **Account → Cloudflare Pages → Edit** on account
-`0e7b3338d5278ed1b148e6456b940913`. As of 2026-09-01,
-`isec://claude-ops/prod/CLOUDFLARE_API_TOKEN` is invalid (verify returns
-`Invalid API Token`) and `CLOUDFLARE_JEFF_MAIN_API` is valid but has no Pages
-permission — hence the separate `CLOUDFLARE_PAGES_TOKEN` ref.
+That ref is the **claude-workers** token and it carries Pages Write. It appeared
+dead on 2026-09-01 — the monthly rotator rolled it and could not store the new
+value, so Infisical kept a superseded copy — which is why an earlier version of
+this file said a separate Pages token was needed. It was not. Fixed in
+`dev-ops/netcup/scripts/cf-rotate-token.sh`; rotated and verified 2026-09-02.
+
+`CLOUDFLARE_JEFF_MAIN_API` is a different token and has no Pages permission.
+
+Note that `dist/` (the tour, plus the redirect for the old atlas URL) and
+`dist-atlas/` (the atlas payload, served from the wiki) are separate trees. The
+atlas is deployed by `infra/p2pwiki-atlas/deploy.sh`, not by this.

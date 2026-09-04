@@ -18,7 +18,9 @@
  * Needs an OpenAI-compatible endpoint:
  *   BR_LLM_BASE   e.g. http://litellm:4000/v1     (reachable from this container)
  *   BR_LLM_KEY    virtual key for that endpoint
- *   BR_LLM_MODEL  e.g. gx10-coder
+ *   BR_LLM_MODEL  e.g. gx10-heavy
+ *
+ * --timeout <seconds> caps the model call; default 900.
  *
  * Pass --dry to assemble the prompt and print what would be sent without
  * calling the model at all.
@@ -117,8 +119,13 @@ $payload = json_encode( [
 $headers = [ 'Content-Type: application/json' ];
 if ( $key !== '' ) { $headers[] = 'Authorization: Bearer ' . $key; }
 
-$raw = br_http( 'POST', $base . '/chat/completions', $headers, $payload );
-if ( $raw === null ) { g_die( 'no response from ' . $base ); }
+// A local model writing a thousand words runs for minutes, and this is a CLI
+// script with no HTTP client waiting on it, so give it real room.
+$timeout = (int)( $args['timeout'] ?? 900 );
+$t0  = microtime( true );
+$raw = br_http( 'POST', $base . '/chat/completions', $headers, $payload, $timeout );
+g_say( sprintf( '  ... %.1fs', microtime( true ) - $t0 ) );
+if ( $raw === null ) { g_die( 'no response from ' . $base . ' within ' . $timeout . 's' ); }
 $j = json_decode( $raw, true );
 $text = $j['choices'][0]['message']['content'] ?? null;
 if ( !$text ) {
@@ -130,12 +137,19 @@ if ( stripos( $text, 'INSUFFICIENT SOURCES' ) === 0 ) {
 }
 
 // ---- assemble the page with its provenance -------------------------------
-$prov  = "{{Synthesised draft}}\n"
+// The banner is written inline rather than as {{Synthesised draft}} on purpose:
+// a template call for a page that does not exist renders as a red link, which
+// would turn the one visible safety warning into a broken link. Inline wikitext
+// always renders, on any wiki, with nothing to install first.
+$prov  = "<div style=\"border:1px solid #c8a34a;background:#fdf6e3;padding:0.7em 1em;margin:0 0 1em\">\n"
+	. "'''Machine-assembled draft — not reviewed.''' This page was written on "
+	. gmdate( 'j F Y' ) . " from " . count( $corpus ) . " articles that are already on this wiki, "
+	. "using the model " . $model . ", and from no other material. Nothing in it has been "
+	. "checked for accuracy. Every source is listed at the foot of the page. Do not move it "
+	. "into the main namespace until a human has verified it.\n"
+	. "</div>\n"
 	. "<!-- Generated " . gmdate( 'Y-m-d' ) . " by batch-review from " . count( $corpus )
-	. " existing wiki articles, using model " . $model . ". Not yet reviewed for accuracy. -->\n"
-	. "''This draft was assembled from existing P2P Foundation wiki articles on "
-	. gmdate( 'j F Y' ) . ". It has not been checked for accuracy. Every source is listed at "
-	. "the foot of the page.''\n\n";
+	. " existing wiki articles, using model " . $model . ". Not yet reviewed for accuracy. -->\n\n";
 
 $foot = "\n\n== Source articles ==\n"
 	. "''This draft was synthesised from the following pages on this wiki, and from nothing else.''\n";

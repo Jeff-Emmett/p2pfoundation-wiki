@@ -97,12 +97,31 @@ function g_category_info( $cat ) {
 	];
 }
 
-/** Write a batch, refusing to clobber one that has already been committed. */
-function g_write_batch( $id, $title, $kind, $rationale, array $items ) {
+/**
+ * Write a batch, refusing to clobber one that has already been committed.
+ *
+ * Also enforces the one rule no individual generator can see: no page is
+ * rewritten more than a handful of times by a single run. A batch that touches
+ * one article eight times is not a batch of eight small proposals, it is a
+ * rewrite of that article, and it should be read as one.
+ */
+function g_write_batch( $id, $title, $kind, $rationale, array $items, $maxPerPage = 4 ) {
 	if ( !br_valid_batch_id( $id ) ) { g_die( 'bad batch id: ' . $id ); }
 	$existing = br_load_batch( $id );
 	if ( $existing && ( $existing['status'] ?? 'open' ) !== 'open' ) {
 		g_die( "batch '$id' has already been committed; choose a new id rather than overwriting the record." );
+	}
+	$perPage = [];
+	foreach ( $items as $it ) {
+		if ( ( $it['op'] ?? '' ) === 'classify-bookmark' ) { continue; }
+		$k = br_norm_title( (string)( $it['target'] ?? '' ) );
+		$perPage[$k] = ( $perPage[$k] ?? 0 ) + 1;
+	}
+	arsort( $perPage );
+	$worst = key( $perPage );
+	if ( $worst !== null && $perPage[$worst] > $maxPerPage ) {
+		g_die( sprintf( "'%s' would be changed %d times in one batch, above the %d-per-page limit. "
+			. "Split it, or raise the limit deliberately.", $worst, $perPage[$worst], $maxPerPage ) );
 	}
 	$n = 0;
 	foreach ( $items as $i => $it ) {

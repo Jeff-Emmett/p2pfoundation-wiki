@@ -67,7 +67,8 @@ code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 .p-ready{background:var(--accent-bg);color:var(--accent)}
 .p-already{background:var(--rule2);color:var(--muted)}
 .p-missing,.p-error{background:var(--bad-bg);color:var(--bad)}
-.p-dry{background:var(--warn-bg);color:var(--warn)}
+.p-dry,.p-stale{background:var(--warn-bg);color:var(--warn)}
+.p-blocked{background:var(--bad-bg);color:var(--bad)}
 .btn{display:inline-block;font:inherit;font-size:13px;font-weight:500;padding:7px 14px;
   border:1px solid var(--rule);background:var(--card);color:var(--ink);
   border-radius:3px;cursor:pointer;text-decoration:none}
@@ -113,9 +114,12 @@ in <code>config.php</code> when you are ready to apply them for real.</div>
 function br_foot() {
 	?>
 <footer>
-Closed testing. Only accounts on the reviewer list can reach this page; everyone else gets a
-403 with no detail. Proposals are generated offline by the scripts in <code>generate/</code> —
-this page only reviews and applies them, and never writes anything you have not approved.
+Closed testing. Two accounts can reach this page — <b>JeffEmmett</b> and <b>Mbauwens</b>, pinned by
+username <em>and</em> numeric user id. Everyone else gets a 403 with no detail, logged. Proposals are
+generated offline by the scripts in <code>generate/</code>; this page only reviews and applies them,
+never writes anything you have not approved, makes at most one edit per page however many items it
+carries, and stops dead if anyone writes anything at all on
+<code><?= br_h( br_config()['stop_page'] ) ?></code>.
 </footer>
 </div></body></html>
 <?php

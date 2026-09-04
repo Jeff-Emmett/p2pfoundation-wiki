@@ -53,14 +53,32 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 			br_save_batch( $b );
 			$notice = $n . ' decision' . ( $n === 1 ? '' : 's' ) . ' saved.';
 
-		} elseif ( $action === 'bulk' ) {
-			$to    = (string)( $_POST['to'] ?? '' );
-			$scope = (string)( $_POST['scope'] ?? 'page' );
-			$v = $to === 'approve' ? 'approve' : ( $to === 'reject' ? 'reject' : null );
+		} elseif ( strpos( $action, 'bulk:' ) === 0 ) {
+			// action is "bulk:<approve|reject|clear|suggest>:<page|all>" — carried by
+			// the submit button itself, so the bulk controls work with JavaScript
+			// turned off.
+			[ , $to, $scope ] = array_pad( explode( ':', $action, 3 ), 3, '' );
+			// 'clear' deliberately maps to null (undecided). Anything unrecognised must
+			// NOT fall through to that, or a typo'd action silently wipes every decision.
+			$verbs = [ 'approve' => 'approve', 'reject' => 'reject', 'clear' => null, 'suggest' => 'suggest' ];
+			if ( !array_key_exists( $to, $verbs ) || !in_array( $scope, [ 'page', 'all' ], true ) ) {
+				br_deny( 'Unrecognised bulk action.' );
+			}
+			$v = $verbs[$to];
 			$n = 0;
 			foreach ( $b['items'] as $i => $it ) {
 				if ( $scope === 'page' && ( $i < $offset || $i >= $offset + BR_PER_PAGE ) ) {
 					continue;
+				}
+				if ( $to === 'suggest' ) {
+					// Adopt the generator's own suggestion as the decision. Items
+					// with no suggestion are left alone rather than defaulted:
+					// nothing here should ever turn an absence into an approval.
+					$s = $it['suggest'] ?? null;
+					if ( $s !== 'approve' && $s !== 'reject' ) {
+						continue;
+					}
+					$v = $s;
 				}
 				$b['items'][$i]['decision']   = $v;
 				$b['items'][$i]['decided_by'] = $v ? $user['name'] : null;
@@ -68,23 +86,48 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 				$n++;
 			}
 			br_save_batch( $b );
-			$notice = $n . ' item' . ( $n === 1 ? '' : 's' ) . ' set to ' . ( $v ?: 'undecided' ) . '.';
+			$notice = $n . ' item' . ( $n === 1 ? '' : 's' ) . ' set'
+				. ( $to === 'suggest' ? ' from the suggested decision.' : ' to ' . ( $v ?: 'undecided' ) . '.' );
 
 		} elseif ( $action === 'verify' ) {
 			// Pre-flight the visible page against the wiki as it stands right now.
-			$n = 0;
+			// Grouped the same way a commit would group it, so what you see here
+			// is what the applier will actually do — including two items on one
+			// page turning into one edit.
+			$slice = [];
 			foreach ( $b['items'] as $i => $it ) {
-				if ( $i < $offset || $i >= $offset + BR_PER_PAGE ) {
+				if ( $i >= $offset && $i < $offset + BR_PER_PAGE ) { $slice[] = $it; }
+			}
+			$byN = [];
+			foreach ( $b['items'] as $i => $it ) { $byN[(string)$it['n']] = $i; }
+			$n = 0;
+			foreach ( br_group_items( $slice ) as $items ) {
+				if ( ( $items[0]['op'] ?? '' ) === 'classify-bookmark' ) {
+					foreach ( $items as $it ) {
+						$i = $byN[(string)$it['n']];
+						$prev = br_diigo_decisions()[(string)$it['target']]['visibility'] ?? null;
+						$b['items'][$i]['check'] = [
+							'status' => $prev ? 'already' : 'ready',
+							'msg'    => $prev ? ( 'already recorded as ' . $prev ) : 'no decision recorded yet',
+							'diff'   => [],
+							'at'     => gmdate( 'c' ),
+						];
+						$n++;
+					}
 					continue;
 				}
-				$plan = br_plan_item( $b, $it );
-				$b['items'][$i]['check'] = [
-					'status' => $plan['status'],
-					'msg'    => $plan['msg'] ?? '',
-					'diff'   => $plan['diff'] ?? [],
-					'at'     => gmdate( 'c' ),
-				];
-				$n++;
+				$plan = br_plan_group( $b, $items, $user['name'] );
+				foreach ( $items as $it ) {
+					$i = $byN[(string)$it['n']];
+					$p = $plan['items'][(int)$it['n']] ?? [ 'status' => $plan['status'], 'msg' => $plan['msg'] ?? '', 'diff' => [] ];
+					$b['items'][$i]['check'] = [
+						'status' => $p['status'],
+						'msg'    => $p['msg'] ?? '',
+						'diff'   => $p['diff'] ?? [],
+						'at'     => gmdate( 'c' ),
+					];
+					$n++;
+				}
 			}
 			br_save_batch( $b );
 			$notice = 'Checked ' . $n . ' item' . ( $n === 1 ? '' : 's' ) . ' against the wiki as it stands now.';
@@ -98,6 +141,11 @@ $total  = count( $b['items'] );
 $pages  = (int)ceil( $total / BR_PER_PAGE );
 $csrf   = br_csrf( $user['name'], $b['id'] );
 $frozen = ( $b['status'] ?? 'open' ) !== 'open';
+$hasSuggest = false;
+foreach ( $b['items'] as $it ) {
+	if ( !empty( $it['suggest'] ) ) { $hasSuggest = true; break; }
+}
+$isBookmarks = ( $b['kind'] ?? '' ) === 'bookmark-visibility';
 
 br_head( $b['title'] ?? $b['id'], $user );
 ?>
@@ -105,13 +153,20 @@ br_head( $b['title'] ?? $b['id'], $user );
 <p class="sub"><?= br_h( $b['rationale'] ?? '' ) ?></p>
 <p class="counts">
   <b><?= $total ?></b> items ·
-  <b><?= $c['approve'] ?></b> approved ·
-  <b><?= $c['reject'] ?></b> rejected ·
+  <b><?= $c['approve'] ?></b> <?= $isBookmarks ? 'to release' : 'approved' ?> ·
+  <b><?= $c['reject'] ?></b> <?= $isBookmarks ? 'to keep private' : 'rejected' ?> ·
   <b><?= $c['undecided'] ?></b> undecided
   <?php if ( $c['applied'] ): ?> · <b><?= $c['applied'] ?></b> applied<?php endif; ?>
   <?php if ( $c['error'] ): ?> · <b><?= $c['error'] ?></b> failed<?php endif; ?>
   · kind <code><?= br_h( $b['kind'] ?? '—' ) ?></code>
 </p>
+
+<?php if ( $isBookmarks ): ?>
+<div class="banner"><b>Undecided is not release.</b> Approve means this bookmark becomes public: its
+URL becomes eligible for the link and article generators that write into the wiki. Reject means it
+stays private and is never sent anywhere. A row left blank is neither — it stays private, and doing
+nothing is always safe.</div>
+<?php endif; ?>
 
 <?php if ( $notice ): ?><div class="banner"><?= br_h( $notice ) ?></div><?php endif; ?>
 
@@ -123,27 +178,26 @@ br_head( $b['title'] ?? $b['id'], $user );
 <?php if ( !$frozen ): ?>
 <div class="bar">
   <button class="btn primary" type="submit" name="action" value="save">Save decisions</button>
-  <button class="btn" type="submit" name="action" value="bulk"
-    onclick="document.getElementById('to').value='approve';document.getElementById('scope').value='page'">Approve this page</button>
-  <button class="btn" type="submit" name="action" value="bulk"
-    onclick="document.getElementById('to').value='reject';document.getElementById('scope').value='page'">Reject this page</button>
-  <button class="btn" type="submit" name="action" value="bulk"
-    onclick="document.getElementById('to').value='approve';document.getElementById('scope').value='all'">Approve all <?= $total ?></button>
-  <button class="btn" type="submit" name="action" value="bulk"
-    onclick="document.getElementById('to').value='';document.getElementById('scope').value='all'">Clear all</button>
+  <?php if ( $hasSuggest ): ?>
+  <button class="btn" type="submit" name="action" value="bulk:suggest:page">Adopt suggestions on this page</button>
+  <button class="btn" type="submit" name="action" value="bulk:suggest:all">Adopt all <?= $total ?> suggestions</button>
+  <?php endif; ?>
+  <button class="btn" type="submit" name="action" value="bulk:approve:page">Approve this page</button>
+  <button class="btn" type="submit" name="action" value="bulk:reject:page">Reject this page</button>
+  <button class="btn" type="submit" name="action" value="bulk:approve:all">Approve all <?= $total ?></button>
+  <button class="btn" type="submit" name="action" value="bulk:clear:all">Clear all</button>
   <button class="btn" type="submit" name="action" value="verify">Check against the wiki</button>
   <span class="spacer"></span>
   <a class="btn primary" href="commit.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">
     Review &amp; commit <?= $c['approve'] ?> approved →</a>
 </div>
-<input type="hidden" name="to" id="to" value="">
-<input type="hidden" name="scope" id="scope" value="page">
 <?php else: ?>
 <div class="bar">
   <span class="pill p-committed">committed <?= br_h( substr( (string)( $b['committed_at'] ?? '' ), 0, 16 ) ) ?>
     by <?= br_h( $b['committed_by'] ?? '?' ) ?></span>
   <span class="spacer"></span>
   <a class="btn" href="commit.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">See the commit log →</a>
+  <a class="btn danger" href="undo.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">Undo →</a>
 </div>
 <?php endif; ?>
 
@@ -158,7 +212,8 @@ br_head( $b['title'] ?? $b['id'], $user );
 
 <div class="scroll"><table>
 <thead><tr>
-  <th class="num">#</th><th>Page</th><th>Change</th><th>Why</th>
+  <th class="num">#</th><th><?= $isBookmarks ? 'Bookmark' : 'Page' ?></th>
+  <th><?= $isBookmarks ? 'Proposed' : 'Change' ?></th><th>Why</th>
   <th>State</th><th>Decision</th>
 </tr></thead>
 <tbody>
@@ -166,13 +221,15 @@ br_head( $b['title'] ?? $b['id'], $user );
 $slice = array_slice( $b['items'], $offset, BR_PER_PAGE, true );
 foreach ( $slice as $it ):
 	$d     = $it['decision'] ?? null;
+	$sg    = $it['suggest'] ?? null;
 	$chk   = $it['check'] ?? null;
 	$res   = $it['result'] ?? null;
 	$title = (string)$it['target'];
 ?>
 <tr>
   <td class="num"><?= (int)$it['n'] ?></td>
-  <td><a class="mono" href="<?= br_h( br_wiki_link( $title ) ) ?>" target="_blank" rel="noopener"><?= br_h( $title ) ?></a></td>
+  <td><a class="mono" href="<?= br_h( br_target_link( $it ) ) ?>" target="_blank" rel="noopener"><?= br_h( $it['title'] ?? $title ) ?></a>
+      <?php if ( !empty( $it['title'] ) ): ?><div class="ev"><?= br_h( $title ) ?></div><?php endif; ?></td>
   <td class="mono">
 <?php
 	if ( $it['op'] === 'append-category' ) {
@@ -180,12 +237,21 @@ foreach ( $slice as $it ):
 	} elseif ( $it['op'] === 'replace-category' ) {
 		echo '<span class="diff"><span class="del">- [[Category:' . br_h( $it['from'] ) . ']]</span>'
 		   . "\n" . '<span class="add">+ [[Category:' . br_h( $it['to'] ) . ']]</span></span>';
-	} elseif ( $it['op'] === 'create-draft' ) {
+	} elseif ( $it['op'] === 'link-mention' ) {
+		echo '<span class="diff add">+ [[' . br_h( str_replace( '_', ' ', $it['arg'] ) ) . ']]</span>';
+		if ( !empty( $it['sentence'] ) ) {
+			echo '<div class="ev">' . br_h( mb_substr( (string)$it['sentence'], 0, 200 ) ) . '</div>';
+		}
+	} elseif ( $it['op'] === 'create-draft' || $it['op'] === 'write-page' ) {
 		$len = strlen( (string)( $it['text'] ?? '' ) );
-		echo '<span class="diff add">+ create draft, ' . number_format( $len ) . ' bytes</span>';
+		echo '<span class="diff add">+ ' . ( $it['op'] === 'create-draft' ? 'create draft' : 'write page' )
+			. ', ' . number_format( $len ) . ' bytes</span>';
 		if ( !empty( $it['sources'] ) ) {
 			echo '<div class="ev">from ' . count( $it['sources'] ) . ' source articles</div>';
 		}
+	} elseif ( $it['op'] === 'classify-bookmark' ) {
+		echo '<span class="diff ' . ( ( $sg ?? '' ) === 'reject' ? 'del' : 'add' ) . '">'
+			. br_h( ( $sg ?? '' ) === 'reject' ? 'keep private' : 'make public' ) . '</span>';
 	} else {
 		echo br_h( $it['op'] );
 	}
@@ -217,10 +283,11 @@ foreach ( $slice as $it ):
     <span class="ev"><?= br_h( $d ?: '—' ) ?></span>
 <?php else: ?>
     <fieldset class="dec">
-      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="approve" <?= $d === 'approve' ? 'checked' : '' ?>>yes</label>
-      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="reject"  <?= $d === 'reject'  ? 'checked' : '' ?>>no</label>
+      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="approve" <?= $d === 'approve' ? 'checked' : '' ?>><?= $isBookmarks ? 'public' : 'yes' ?></label>
+      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="reject"  <?= $d === 'reject'  ? 'checked' : '' ?>><?= $isBookmarks ? 'private' : 'no' ?></label>
       <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value=""        <?= $d === null      ? 'checked' : '' ?>>—</label>
     </fieldset>
+    <?php if ( $sg && $d === null ): ?><div class="ev">suggested: <?= br_h( $sg === 'approve' ? ( $isBookmarks ? 'public' : 'yes' ) : ( $isBookmarks ? 'private' : 'no' ) ) ?></div><?php endif; ?>
 <?php endif; ?>
   </td>
 </tr>

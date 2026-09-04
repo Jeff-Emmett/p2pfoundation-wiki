@@ -1,0 +1,20 @@
+project_name: "P2P Foundation Wiki"
+default_status: "To Do"
+# Blocked keeps work that is waiting on someone else out of the In Progress
+# count. Several things here wait on a person (Michel approving link
+# proposals) or on another session, and calling that "In Progress" hides it.
+statuses: ["To Do", "In Progress", "Blocked", "Done"]
+labels: []
+milestones: []
+date_format: yyyy-mm-dd
+max_column_width: 20
+default_editor: "nvim"
+auto_open_browser: false
+default_port: 6421
+remote_operations: true
+auto_commit: false
+bypass_git_hooks: false
+check_active_branches: true
+active_branch_days: 30
+task_prefix: "task"
+onStatusChange: 'python3 /home/jeffe/Github/dev-ops/scripts/backlog-notify.py'

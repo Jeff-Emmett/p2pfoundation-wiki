@@ -17,3 +17,10 @@ Thumbs.db
 mail.env
 smtp-password
 standby-accounts.txt
+
+# The batch-review data files are SOURCE, not a wiki dump. The bare `data/`
+# rule above matches at every level, so it was silently excluding
+# infra/p2pwiki/batch-review/data/ — families.php and vocab.php have never been
+# committed, and a fresh clone would deploy a tool whose generators fatal on a
+# missing require. Un-ignore that one directory.
+!infra/p2pwiki/batch-review/data/

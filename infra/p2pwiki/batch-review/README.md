@@ -95,12 +95,39 @@ sysop, and the generator says so rather than pretending it is done.
   once the testers say whether the evidence line is enough to judge a row
   without opening the article. If it is not, raise the score threshold instead
   of the limit.
-- **`gen_links` has never produced a batch, and cannot yet.** It takes
-  `--from <candidates.jsonl>` and no candidate file exists. Producing one means
-  finding pairs where the target article's exact title already appears unlinked
-  in the source article's prose — across 39,915 articles. That is a corpus scan,
-  not a generator run, and it is the one piece of remaining work that is a
-  genuine project rather than a command.
+- **The uncategorised tail**, and the eleven roll-up families above. Everything
+  else has now produced a batch.
+
+### What the link batch measured
+
+`gen_links` has run (`links-mentions-20260904`, staged, 59 items). Its
+candidates are the 60 rows in `demo/aiwiki/graph/data/batch.wikitext`,
+converted to the JSONL it wants — id, source, target, sentence.
+
+That corpus is a frozen wikitext mirror: `demo/aiwiki/graph/scripts/extract-corpus.py`
+reads `<repo>/wiki/*.mediawiki`, a tree from 14 April 2026 last touched on
+10 June, against a live wiki now at 150,201 edits. The obvious worry is that
+five-month-old proposals are worthless.
+
+**They are not, and now we have the number.** `gen_links` re-fetches every
+source article and re-locates the phrase before it will propose anything —
+recorded offsets are never trusted. Of 60 candidates, **59 survived**: 1 phrase
+no longer appears unlinked, 0 were already linked, 0 pages had gone. So the
+decay on this particular signal is about 1.7%, which makes sense — a phrase an
+author already wrote in prose does not churn the way categories or titles do.
+Refreshing the corpus is still right, but it is a yield improvement, not a
+correctness fix, and nothing here is blocked on it.
+
+Two rows in that batch are worth a reviewer's suspicion, and they are the
+argument for reading the sentence column rather than bulk-approving:
+
+- `Non-Exclusive Dunbar Number` → `[[Exclusive Dunbar Number]]`. The target
+  title is a substring of the source title. The word-boundary check passes
+  because the hyphen is a boundary, so this is a true match of a phrase that
+  means the opposite of what the link says.
+- `Project State and its Rivals` → `[[Project State and Its Rivals]]`. The two
+  differ only in the case of "its". That is a duplicate-article pair, and the
+  right fix is a merge, not a link.
 
 ## Why it is built this way
 

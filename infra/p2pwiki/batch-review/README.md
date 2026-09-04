@@ -52,7 +52,55 @@ trace anywhere else.
   `config.php` when you are both satisfied.
 - The rate limit is one edit every **5 s**, **200 edits per commit**.
 - Anyone at all can stop every commit by writing anything on
-  [`P2P Foundation:Batch review/STOP`](https://wiki.p2pfoundation.net/index.php?title=P2P_Foundation:Batch_review/STOP).
+  [`P2P Foundation Wiki:Batch review/STOP`](https://wiki.p2pfoundation.net/index.php?title=P2P_Foundation_Wiki:Batch_review/STOP).
+
+### The queue, and the staging area beside it
+
+`br_list_batches()` globs `batches/*.json`, and `glob` is not recursive — so a
+batch in `batches/staged/` is generated, checked and ready, but invisible to
+reviewers. That is the whole mechanism; there is no status flag for it.
+
+Five batches are in the queue because that is what the tester's walkthrough
+describes. Two more are generated and staged, deliberately held back so the
+first test run matches its own instructions:
+
+| staged batch | items | what it is |
+|---|---|---|
+| `merge-spelling-20260904` | 14 | retire live typos — `Civilizatonal Analysis`, `Inteliigence`, `Villagess`, `C Cooperatives`, `Cooperative platforms` — by rewriting the tag on each member page |
+| `categories-index-20260904` | 1 | writes `P2P Foundation Wiki:Categories`, a 17 KB curated index of 5 facets and 16 subject groupings with counts read from the live wiki |
+
+Promote one when the testers have the appetite for it:
+
+```bash
+ssh netcup-full 'docker exec -u www-data p2pwiki mv \
+  /var/editor-request-data/batch-review/staged/<id>.json \
+  /var/editor-request-data/batch-review/batches/'
+```
+
+Note `merge-spelling` leaves four category *pages* behind — `Ethical Economy`,
+`Korea`, `Standard`, `United Kingdom` hold no articles, so there is nothing for
+a batch to rewrite. Deleting or redirecting those four is a hand job for a
+sysop, and the generator says so rather than pretending it is done.
+
+### What is still not generated
+
+- **The other eleven roll-up families.** `rollup-commons` covers one of the
+  twelve primaries in `data/families.php`. The audit measured ~18,300 implied
+  memberships across all twelve; one family at a time is the point, because a
+  reviewer can hold one subject in their head and cannot hold twelve.
+  `php generate/gen_rollup.php --family 'Governance' --min-evidence 2`
+  Start at `--min-evidence 2`, which only proposes an article carried by two or
+  more sub-topics of that primary.
+- **The uncategorised tail.** `uncat-none` holds 40 of 1,276. Raise `--limit`
+  once the testers say whether the evidence line is enough to judge a row
+  without opening the article. If it is not, raise the score threshold instead
+  of the limit.
+- **`gen_links` has never produced a batch, and cannot yet.** It takes
+  `--from <candidates.jsonl>` and no candidate file exists. Producing one means
+  finding pairs where the target article's exact title already appears unlinked
+  in the source article's prose — across 39,915 articles. That is a corpus scan,
+  not a generator run, and it is the one piece of remaining work that is a
+  genuine project rather than a command.
 
 ## Why it is built this way
 
@@ -82,7 +130,7 @@ ones that can be tested without touching the wiki; run it with
 | 05 | **Every edit names its approver.** The summary carries the batch id, the row ids and the person who approved — taken from the item's own decision, not from whoever pressed Commit. | `br_group_summary()` |
 | 06 | **Reversible.** Each applied row records its revision id; `undo.php` walks a whole batch back out through MediaWiki's own undo, which refuses cleanly if someone has edited since. | `undo.php` |
 | 07 | **Rate limited.** One edit every 5 s, 200 per run. A session of approvals cannot look like an attack or flood a watchlist. | `edit_delay_us`, `max_items_per_commit` |
-| 08 | **Stoppable by anyone.** Any text at all on `P2P Foundation:Batch review/STOP` halts every commit, for everyone. No credentials needed to pull the handle — it is an ordinary wiki page. | `br_stop_state()` |
+| 08 | **Stoppable by anyone.** Any text at all on `P2P Foundation Wiki:Batch review/STOP` halts every commit, for everyone. No credentials needed to pull the handle — it is an ordinary wiki page. | `br_stop_state()` |
 
 Guarantee 07 has a consequence: 200 items at 5 s is about **17 minutes**, and no
 HTTP request survives that — Cloudflare gives up at 100 s with a 524. So a commit
@@ -114,7 +162,7 @@ wiki is unwell is not a safety handle.
    Nothing has happened yet. Press the button to apply.
 6. Afterwards: **Publish the decision record to the wiki** writes what was
    proposed, who decided what and what happened to
-   `P2P Foundation:Batch review/<batch-id>` — so the record survives us.
+   `P2P Foundation Wiki:Batch review/<batch-id>` — so the record survives us.
 
 Decisions freeze once a batch is committed for real; a dry run leaves it open.
 
@@ -232,7 +280,7 @@ subject primaries, live counts — and proposes it as a single `write-page` item
 shown as a line diff.
 
 ```bash
-… gen_index_page.php --page "P2P Foundation:Categories" --exact
+… gen_index_page.php --page "P2P Foundation Wiki:Categories" --exact
 ```
 
 `--exact` computes each primary's true article count by unioning membership; it

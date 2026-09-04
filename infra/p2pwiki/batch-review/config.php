@@ -33,6 +33,22 @@ return [
 	// Ids read from the live wiki on 4 September 2026:
 	//   JeffEmmett  = 2943   (registered 2026-01-31, bureaucrat, sysop)
 	//   Mbauwens    = 9      (95,890 edits, bureaucrat, sysop, interface-admin)
+	//   Bryan       = 2951   (created 2026-09-04, plain user)
+	//
+	// DEPLOY NOTE — Bryan (id 2951) added 4 September 2026 at Jeff's explicit
+	// request, in this session. He was named as one of the three testers when
+	// this tool was commissioned; the list stood at two only because he had no
+	// account yet. Account created the same day by maintenance script (this
+	// wiki has anonymous creation off and a captcha on the form), email set to
+	// his own address, and a temporary password mailed to him by MediaWiki, so
+	// nobody else has ever held his credential.
+	//
+	// 'Claude bot' (id 2950) exists on this wiki and is deliberately NOT here.
+	// It is an AI assistant's account, and an approval has to be traceable to
+	// a person — the same reason 'MBauwens bot' is excluded. It is used to
+	// check that the tool renders and that this gate refuses a logged-in
+	// stranger; both of those are things it can do from the wrong side of the
+	// gate, which is the point.
 	//
 	// Note 'MBauwens bot' (id 2946) is a DIFFERENT account and is deliberately
 	// not here: a bot password can be handed around, and an approval has to be
@@ -46,6 +62,7 @@ return [
 	'reviewers' => [
 		[ 'name' => 'JeffEmmett', 'id' => 2943 ],
 		[ 'name' => 'Mbauwens',   'id' => 9 ],
+		[ 'name' => 'Bryan',      'id' => 2951 ],
 	],
 
 	// Refuse a reviewer whose account is currently blocked on the wiki, even
@@ -93,7 +110,14 @@ return [
 	// so pulling the handle needs no credentials of ours and no access to this
 	// tool: an editor who sees something going wrong can stop it themselves.
 	// Blank or absent = go.
-	'stop_page' => 'P2P Foundation:Batch review/STOP',
+	//
+	// The prefix is 'P2P Foundation Wiki:', which is namespace 4 here — NOT
+	// 'P2P Foundation:', which this wiki does not define and which therefore
+	// resolves to an ordinary article. Getting that wrong is not cosmetic: an
+	// editor pulling the handle would create the project page they can see in
+	// the sidebar, the tool would go on reading a different page in the
+	// article namespace, and the commit would not stop.
+	'stop_page' => 'P2P Foundation Wiki:Batch review/STOP',
 
 	// Guarantee 05 — every edit names its approver. Edits are made AS the
 	// approver, so their name is on the revision anyway; carrying it in the
@@ -104,7 +128,7 @@ return [
 	// automatic: it is a button on a committed batch. The point (from the
 	// same document) is that if every piece of our infrastructure disappears,
 	// the record of what was decided is still there, on the wiki, in public.
-	'record_page_prefix' => 'P2P Foundation:Batch review/',
+	'record_page_prefix' => 'P2P Foundation Wiki:Batch review/',
 
 	// Where batches and the commit log live. Must be writable by www-data and
 	// must NOT be under the docroot. Reuses the existing editor-request mount.

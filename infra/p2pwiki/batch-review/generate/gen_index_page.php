@@ -13,7 +13,7 @@
  * human sees the whole thing as a diff before it exists.
  *
  *   php generate/gen_index_page.php --id categories-index
- *   php generate/gen_index_page.php --page "P2P Foundation:Categories" --exact
+ *   php generate/gen_index_page.php --page "P2P Foundation Wiki:Categories" --exact
  *
  * --exact computes each primary's true article count by unioning its
  * categories' membership. It is correct and slow (a few hundred API calls);
@@ -26,7 +26,7 @@ require_once __DIR__ . '/common.php';
 
 $args   = g_args( $argv );
 $id     = (string)( $args['id'] ?? 'categories-index-' . gmdate( 'Ymd' ) );
-$page   = (string)( $args['page'] ?? 'P2P Foundation:Categories' );
+$page   = (string)( $args['page'] ?? 'P2P Foundation Wiki:Categories' );
 $exact  = !empty( $args['exact'] );
 $facets = require dirname( __DIR__ ) . '/data/facets.php';
 

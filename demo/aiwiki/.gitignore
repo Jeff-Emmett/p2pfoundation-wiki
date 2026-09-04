@@ -1,8 +1,16 @@
 # generated site — rebuild with ./build.sh
 dist/
 
+# the atlas payload, 25 MB of it, rebuilt by ./build.sh and pack-graph.py and
+# shipped to netcup by infra/p2pwiki-atlas/deploy.sh. `dist/` does not match it,
+# so it sat untracked-and-unignored — one `git add -A` from being committed.
+dist-atlas/
+
 # fetch cache: wiki pages, backlinks, site stats and embedding vectors.
 # Large and reproducible — build-corpus.py regenerates it, and --skip-fetch
 # reuses it. The computed dataset (data/aiwiki-data.json) IS committed so the
 # page can be rebuilt with no network and no model access.
 data/_cache/
+
+# bytecode from running the graph scripts in place
+__pycache__/

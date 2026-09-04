@@ -32,25 +32,33 @@ echo "✓ uploaded"
 
 if [ "${1:-}" = "--purge" ]; then
   : "${T:?set T to a token with Cache Purge — see the header}"
-  # Purge by URL, not by prefix: prefix purging is Enterprise-only, and this
-  # zone is on the Free plan. Free allows 30 URLs per call and the atlas has
-  # 29 files, which fits with one to spare.
+  # Purge by URL, not by prefix: prefix purging is Enterprise-only and this zone
+  # is on the Free plan, which allows 30 URLs per call. The tree used to be 29
+  # files and fitted in one call with one to spare; the gist shards took it past
+  # 50, and the previous `urls[:30]` silently dropped the rest — a purge that
+  # reports success while leaving most of the payload stale at the edge.
   BASE="https://wiki.p2pfoundation.net/explore"
-  FILES=$(python3 - "$SRC" "$BASE" <<'PY'
+  BATCHES=$(mktemp)
+  python3 - "$SRC" "$BASE" <<'PYPURGE' > "$BATCHES"
 import json, os, sys
 src, base = sys.argv[1], sys.argv[2]
-urls = []
+urls = [base + "/"]
 for root, _, names in os.walk(src):
     for n in names:
         rel = os.path.relpath(os.path.join(root, n), src).replace(os.sep, "/")
         urls.append(f"{base}/{rel}")
-urls.append(base + "/")
-print(json.dumps({"files": urls[:30]}))
-PY
-)
-  echo "→ purging $(echo "$FILES" | python3 -c 'import json,sys;print(len(json.load(sys.stdin)["files"]))') URLs"
-  curl -fsS -X POST \
-    "https://api.cloudflare.com/client/v4/zones/ea1c3cf1f24e254c062d3bea33b7ba86/purge_cache" \
-    -H "Authorization: Bearer $T" -H "Content-Type: application/json" \
-    --data "$FILES" | python3 -c 'import json,sys; print("✓ purged" if json.load(sys.stdin)["success"] else "✗ purge failed")'
+for i in range(0, len(urls), 30):
+    print(json.dumps({"files": urls[i:i + 30]}))
+PYPURGE
+  echo "→ purging $(python3 -c 'import json,sys; print(sum(len(json.loads(l)["files"]) for l in open(sys.argv[1])))' "$BATCHES") URLs in $(wc -l < "$BATCHES") call(s)"
+  while IFS= read -r BATCH; do
+    curl -fsS -X POST \
+      "https://api.cloudflare.com/client/v4/zones/ea1c3cf1f24e254c062d3bea33b7ba86/purge_cache" \
+      -H "Authorization: Bearer $T" -H "Content-Type: application/json" \
+      --data "$BATCH" \
+      | python3 -c 'import json,sys; sys.exit(0 if json.load(sys.stdin)["success"] else 1)' \
+      || { echo "✗ purge failed" >&2; rm -f "$BATCHES"; exit 1; }
+  done < "$BATCHES"
+  rm -f "$BATCHES"
+  echo "✓ purged"
 fi

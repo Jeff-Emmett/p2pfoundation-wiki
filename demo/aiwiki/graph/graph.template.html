@@ -149,6 +149,38 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
 .simrow .tr{flex:1 1 auto; height:5px; background:rgba(150,170,230,.14); border-radius:3px; overflow:hidden;}
 .simrow .tr i{display:block; height:100%; border-radius:3px;}
 
+/* ---- mass: the amount written, as a length you can compare ---- */
+.mass{display:flex; flex-direction:column; gap:2px; margin-top:2px;}
+.mrow{display:grid; grid-template-columns:8px 1fr auto; gap:7px; align-items:center; cursor:pointer;
+  padding:4px 6px; border-radius:6px;}
+.mrow:hover{background:rgba(94,240,223,.09);}
+.mrow.iso{background:rgba(94,240,223,.14);}
+.mrow .sw{width:8px; height:8px; border-radius:2px;}
+.mrow .lab{min-width:0;}
+.mrow .lab b{display:block; font-size:12px; font-weight:500; color:var(--ink-2); white-space:nowrap;
+  overflow:hidden; text-overflow:ellipsis;}
+.mrow:hover .lab b{color:#fff;}
+.mrow .bar{display:block; height:4px; border-radius:2px; margin-top:3px; min-width:1px;}
+.mrow .n{font-family:var(--font-mono); font-size:10.5px; color:var(--ink-4); white-space:nowrap;}
+.measure{display:flex; gap:4px; margin:2px 0 8px;}
+.measure button{flex:1 1 0; font-family:var(--font-mono); font-size:10.5px; padding:5px 4px; border-radius:6px;
+  border:1px solid var(--line); background:rgba(18,24,42,.6); color:var(--ink-3); cursor:pointer;}
+.measure button.on{border-color:var(--c-lime); color:#fff; background:rgba(166,232,106,.13);}
+.foot{font-size:11px; color:var(--ink-4); line-height:1.5; margin:8px 0 0;}
+.foot b{color:var(--ink-3); font-weight:500;}
+
+/* ---- topics: as many questions as you have, not three ---- */
+.trow{display:flex; gap:6px; align-items:center; margin-bottom:5px;}
+.trow .sw{width:9px; height:9px; border-radius:3px; flex:0 0 auto;}
+.trow input{flex:1 1 auto; min-width:0;}
+.trow .x{flex:0 0 auto; width:24px; height:24px; border-radius:6px; border:1px solid var(--line);
+  background:transparent; color:var(--ink-4); cursor:pointer; font-family:var(--font-mono); font-size:12px;}
+.trow .x:hover{color:var(--c-rose); border-color:var(--c-rose);}
+.addt{font-family:var(--font-mono); font-size:11px; padding:6px 10px; border-radius:7px; border:1px dashed var(--line-2);
+  background:transparent; color:var(--ink-3); cursor:pointer; width:100%;}
+.addt:hover{border-color:var(--c-cyan); color:#fff;}
+.addt[disabled]{opacity:.4; cursor:default;}
+
 .menu{display:none; font-family:var(--font-mono); font-size:12px; padding:5px 9px; border-radius:7px;
   border:1px solid var(--line); background:transparent; color:var(--ink-2); cursor:pointer;}
 @media(max-width:1180px){ :root{--rail:264px; --panelw:326px;} }
@@ -199,7 +231,7 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
   .dchip{
     flex:1 1 0; min-width:0; height:46px; border-radius:12px; cursor:pointer;
     border:1px solid var(--line); background:rgba(20,26,46,.7); color:var(--ink-3);
-    font-family:var(--font-mono); font-size:12px;
+    font-family:var(--font-mono); font-size:11px; padding:0 2px;
   }
   .dchip.on{border-color:var(--c-cyan); color:#fff; background:rgba(94,240,223,.15);}
 }
@@ -212,6 +244,9 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
   .controls{gap:8px; right:10px; bottom:10px;}
   .chip{padding:9px 12px; font-size:12px;}
   ul.list li{padding:10px 8px;}
+  .mrow{padding:8px 6px;}
+  .measure button{padding:9px 4px;}
+  .trow .x{width:34px; height:34px;}
   .bandnote,.axisnote{max-width:min(64vw,340px); font-size:10.5px; padding:5px 8px;}
   .scalenote{font-size:10px;}
   .tip{display:none;}
@@ -250,6 +285,7 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
         <button class="chip on" data-mode="atlas">atlas</button>
         <button class="chip" data-mode="axes">axes</button>
         <button class="chip" data-mode="focus">focus</button>
+        <button class="chip" data-mode="topics">topics</button>
       </div>
 
       <div id="axesbox" hidden style="margin-top:10px">
@@ -265,6 +301,23 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
         <input type="text" id="fq" placeholder="what is a commons?" autocomplete="off">
         <p class="hint">Pulls the whole corpus into a shell around one question — the closer to the centre,
         the more an article answers it.</p>
+      </div>
+
+      <div id="topicsbox" hidden style="margin-top:10px">
+        <div id="trows"></div>
+        <button class="addt" id="addtopic">+ another topic</button>
+        <p class="hint">Every article goes to whichever of your topics it is closest to, and each topic
+        becomes an island whose <b>volume is how much has been written about it</b>. Islands you can
+        compare by eye; the bars below are the measurement.</p>
+        <label class="eyebrow" style="margin-top:10px">How near counts as about it</label>
+        <div class="measure" id="strict">
+          <button data-s="0.40">broad</button><button class="on" data-s="0.20">balanced</button>
+          <button data-s="0.08">strict</button>
+        </div>
+        <p class="hint">A topic has no edge in a semantic space, so this sets one: an article counts as
+        about a topic when it is in the top 40%, 20% or 8% of the corpus for it. Watch the counts move —
+        that movement is the honest width of the answer.</p>
+        <div class="presets" id="tpresets"></div>
       </div>
       <div class="working" id="working" hidden>loading the semantic space…</div>
     </div>
@@ -284,15 +337,27 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
       <div class="seg" id="lenses"></div>
     </div>
 
+    <div>
+      <h2 class="sec">How much is written about what <span id="masstotal"></span></h2>
+      <div class="seg" id="grpsrc">
+        <button class="chip on" data-g="regions">regions</button>
+        <button class="chip" data-g="cats">categories</button>
+        <button class="chip" data-g="lenses">lenses</button>
+        <button class="chip" data-g="topics">your topics</button>
+      </div>
+      <div class="measure" id="measure" style="margin-top:8px">
+        <button class="on" data-m="articles">articles</button>
+        <button data-m="prose">prose</button>
+      </div>
+      <div class="mass" id="mass"></div>
+      <p class="foot" id="massfoot"></p>
+    </div>
+
     <div id="matchbox" hidden>
       <h2 class="sec">Matches <span id="matchn"></span></h2>
       <ul class="list" id="matches"></ul>
     </div>
 
-    <div>
-      <h2 class="sec">Regions <span id="regionn"></span></h2>
-      <ul class="list" id="regions"></ul>
-    </div>
   </aside>
 
   <div class="stage" id="stage">
@@ -310,6 +375,7 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
 
     <div class="scalenote" id="scalenote"></div>
     <div class="controls">
+      <button id="cloud" title="Topic clouds — density is how much is written">☁</button>
       <button id="spin" title="Slow rotation">◐</button>
       <button id="zin" aria-label="Zoom in">+</button>
       <button id="zout" aria-label="Zoom out">−</button>
@@ -334,6 +400,7 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
     <button class="dchip on" data-dmode="atlas">atlas</button>
     <button class="dchip" data-dmode="axes">axes</button>
     <button class="dchip" data-dmode="focus">focus</button>
+    <button class="dchip" data-dmode="topics">topics</button>
   </div>
   <button class="dbtn" id="d-more" aria-label="All controls">☰</button>
 </nav>
@@ -358,13 +425,28 @@ canvas{display:block; position:absolute; inset:0; width:100%; height:100%;}
       against it. Three questions define a space the corpus has never been shown
       in. That is the difference between asking a map to point at something and
       asking it to reorganise itself around you.
+
+   4. It says how much. A map of a corpus that does not show where the corpus is
+      thick is only half a map: "there is an article about mutual aid" and "there
+      are 2,000 of them" are different facts, and a reader wants the second.
+      Every grouping — the computed regions, the categories editors actually
+      filed under, the reading-room lenses, or topics you type yourself — is
+      shown twice: as a cloud whose density is its mass, and as a bar whose
+      length is the number. The cloud is the gestalt; the bar is the measurement.
+      Volume in perspective is not a quantity anyone reads accurately, so the
+      number is never left to the picture alone.
    ══════════════════════════════════════════════════════════════════════════ */
 
+/* Tuned so the densest place in the corpus lands near 0.75 rather than clipping.
+   This is not a taste setting. Additive brightness is the whole encoding, and
+   once a region saturates to white another thousand articles add nothing to it —
+   the picture would stop being able to say "more" exactly where more is true. */
+var CLOUD_ALPHA=[0.042, 0.028, 0.013, 0.0];
 var BANDS = [
   {id:'far',  d:2.35, note:'<b>far</b> — territory. 24 regions, named from the categories their members share most distinctively.'},
   {id:'mid',  d:1.30, note:'<b>mid</b> — one point per article, sized by inbound links. Hubs are named; the rest are held as position.'},
-  {id:'near', d:0.62, note:'<b>near</b> — both relations drawn, fading with distance from what you are looking at.'},
-  {id:'full', d:0.26, note:'<b>full</b> — the article itself. Click any point for its lead text, categories and both neighbourhoods.'}
+  {id:'near', d:0.62, note:'<b>near</b> — both relations drawn, and the nearest few articles open their first line.'},
+  {id:'full', d:0.26, note:'<b>full</b> — articles as cards: title, opening line, where it is filed. Click one for the rest.'}
 ];
 
 var D=null, S=null, gl=null, glc=null, ov=null, octx=null;
@@ -374,10 +456,17 @@ var edgeMode={link:true, sem:false};
 var lensMask=0, sel=-1, hover=-1, matches=null, matchSet=null, matchList=[];
 var leadCache={}, leadPending={};
 var mode='atlas', axisQ={x:'',y:'',z:''}, focusQ='';
+var topicQ=['market, price, exchange, capital','commons, sharing, mutual aid','software, protocol, network'];
+var strictness=0.20;                 // top fraction of the corpus that counts as "about it"
+var TOPIC_MAX=8;
+var cloudOn=false, groupSrc='regions', massMeasure='articles', isoGroup=-1;
+var G=null;                          // the active grouping — see buildGrouping()
+var gistCache={}, gistPending={}, gistWant={}, gistInFlight=0;
+var lastLabelled=Object.create(null); // label hysteresis: what was drawn last frame
 var spin=false, needsDraw=true;
 var TOUCH = matchMedia('(pointer:coarse)').matches;
 var curPos=null, srcPos=null, tgtPos=null, mixT=1, mixStart=0, MIX_MS=950;
-var MVP=null, buf={}, pPt=null, pLn=null;
+var MVP=null, buf={}, pPt=null, pLn=null, pCl=null;
 
 /* ---------- matrices ---------- */
 function mul(a,b){ var o=new Float32Array(16),i,j,k,s;
@@ -410,6 +499,7 @@ function bandOf(){ var b=BANDS[0]; for(var i=0;i<BANDS.length;i++) if(cam.dist<=
 function bandNote(bi){
   if (bi===0 && mode==='axes') return '<b>far</b> — the whole corpus in the space you defined. Orbit to read the correlation between your axes.';
   if (bi===0 && mode==='focus') return '<b>far</b> — the corpus as a shell around your question. The bright core is what answers it.';
+  if (bi===0 && mode==='topics') return '<b>far</b> — one island per topic, its <b>volume</b> the number of articles. The outer shell is what none of them claim.';
   return BANDS[bi].note;
 }
 function bandIdx(){ return BANDS.indexOf(bandOf()); }
@@ -439,6 +529,33 @@ var PT_F=[
 '  vec3 c = vState > 1.5 ? mix(vCol, vec3(0.37,0.94,0.87), 0.6) : vCol;',
 '  gl_FragColor = vec4(c, a * soft);',
 '}'].join('\n');
+/* A cloud is not a shape drawn around a group — it *is* the group's articles,
+   redrawn as large soft additive sprites. The number of sprites is proportional
+   to the group's article count, so total brightness is proportional to mass:
+   where more has been written, the cloud is denser, for the same reason a
+   photographic exposure is. Nothing is estimated and no hull is fitted. */
+var CL_V=[
+'attribute vec3 aA; attribute vec3 aB; attribute vec3 aCol; attribute float aSize;',
+'uniform mat4 uMVP; uniform float uMix, uScale;',
+'varying vec3 vCol;',
+'void main(){',
+'  vec3 p = mix(aA, aB, uMix);',
+'  vec4 c = uMVP * vec4(p,1.0);',
+'  gl_Position = c;',
+'  gl_PointSize = clamp(uScale * aSize / max(c.w, 0.02), 5.0, 220.0);',
+'  vCol = aCol;',
+'}'].join('\n');
+var CL_F=[
+'precision mediump float;',
+'varying vec3 vCol; uniform float uAlpha;',
+'void main(){',
+'  vec2 d = gl_PointCoord - vec2(0.5);',
+'  float r2 = dot(d,d);',
+'  if (r2 > 0.25) discard;',
+'  float f = 1.0 - r2 * 4.0;',
+'  gl_FragColor = vec4(vCol, uAlpha * f * f);',
+'}'].join('\n');
+
 var LN_V=[
 'attribute vec3 aA; attribute vec3 aB;',
 'uniform mat4 uMVP; uniform float uMix, uFall; uniform vec3 uFocus;',
@@ -465,15 +582,26 @@ function initGL(){
   gl=glc.getContext('webgl',{alpha:false,antialias:true,depth:true})
    || glc.getContext('experimental-webgl',{alpha:false,antialias:true,depth:true});
   if(!gl) throw new Error('this browser has no WebGL');
-  pPt=prog(PT_V,PT_F); pLn=prog(LN_V,LN_F);
+  pPt=prog(PT_V,PT_F); pLn=prog(LN_V,LN_F); pCl=prog(CL_V,CL_F);
   gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
   gl.clearColor(0.024,0.031,0.055,1);
 }
 function mkbuf(data,usage){ var b=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,b);
   gl.bufferData(gl.ARRAY_BUFFER,data,usage||gl.STATIC_DRAW); return b; }
+var enabledAttrs={};
 function attr(p,name,b,size){ var l=gl.getAttribLocation(p,name); if(l<0) return;
-  gl.bindBuffer(gl.ARRAY_BUFFER,b); gl.enableVertexAttribArray(l);
+  gl.bindBuffer(gl.ARRAY_BUFFER,b); gl.enableVertexAttribArray(l); enabledAttrs[l]=1;
   gl.vertexAttribPointer(l,size,gl.FLOAT,false,0,0); }
+/* WebGL1 keeps enabled attribute arrays in global state, not per program. Three
+   programs here draw three different vertex counts — 6,000 cloud sprites,
+   81,310 line endpoints, 39,915 points — so an array left enabled from the
+   previous pass points at a buffer too short for the current draw, and the
+   whole draw becomes INVALID_OPERATION and silently renders nothing. Clearing
+   before each pass is the only reliable fix without VAOs. */
+function beginAttrs(){
+  for(var l in enabledAttrs) gl.disableVertexAttribArray(+l);
+  enabledAttrs={};
+}
 function uni(p,n){ return gl.getUniformLocation(p,n); }
 
 /* ---------- palette ----------
@@ -494,6 +622,231 @@ function buildPalette(){
     D.regionColor.push('hsl('+hue.toFixed(0)+' 62% 66%)');
     D.regionRGB.push(hsl2rgb(hue/360,0.55,0.60));
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   GROUPINGS — four different answers to "what is this corpus made of"
+
+   regions     24 clusters the text itself falls into. A partition: every
+               article is in exactly one, so the shares sum to the corpus.
+   categories  what editors actually filed things under. Overlapping — an
+               article sits in up to six — so these shares do NOT sum to the
+               corpus, and the panel says so rather than implying a pie.
+   lenses      the nine reading-room facets, also overlapping.
+   topics      whatever you type. A partition again, but a soft one: see
+               computeTopics() for where its edge comes from.
+
+   Holding all four behind one interface is the point. "How much is written
+   about the commons" has a different answer depending on whether you ask the
+   clustering, the editors, or the text — and being able to switch between them
+   in one click is the only way to see that they disagree.
+   ══════════════════════════════════════════════════════════════════════════ */
+function spreadColor(i,n){
+  var hue=(i*(360/Math.max(n,1))+205)%360;
+  return {css:'hsl('+hue.toFixed(0)+' 66% 66%)', rgb:hsl2rgb(hue/360,0.60,0.62)};
+}
+function membersToGroup(lists, labels, colors, note, overlap){
+  var g={labels:labels, color:[], rgb:[], memb:[], count:[], bytes:[],
+         primary:new Int16Array(D.n), overlap:!!overlap, note:note||'', unclaimed:0};
+  var i,j;
+  for(i=0;i<g.primary.length;i++) g.primary[i]=-1;
+  for(j=0;j<lists.length;j++){
+    var m=lists[j], by=0;
+    for(i=0;i<m.length;i++) by+=D.bytes[m[i]]*64;
+    g.memb.push(m); g.count.push(m.length); g.bytes.push(by);
+    g.color.push(colors?colors[j].css:spreadColor(j,lists.length).css);
+    g.rgb.push(colors?colors[j].rgb:spreadColor(j,lists.length).rgb);
+  }
+  /* Colour by the SMALLEST group an article belongs to. With overlapping
+     categories that is the most specific claim anyone made about it, which is
+     the more informative one: everything is in "Articles", almost nothing is in
+     "Commons Transition". */
+  var order=[]; for(j=0;j<lists.length;j++) order.push(j);
+  order.sort(function(a,b){ return g.count[b]-g.count[a]; });
+  for(var oi=0;oi<order.length;oi++){
+    var k=order[oi], m=g.memb[k];
+    for(i=0;i<m.length;i++) g.primary[m[i]]=k;
+  }
+  for(i=0;i<g.primary.length;i++) if(g.primary[i]<0) g.unclaimed++;
+  return g;
+}
+var catGroupCache=null, lensGroupCache=null, regionGroupCache=null;
+function groupRegions(){
+  if(regionGroupCache) return regionGroupCache;
+  var lists=[], labels=[], cols=[], k, i;
+  for(k=0;k<D.k;k++){ lists.push([]); labels.push((D.regionLabels[k]||[]).slice(0,2).join(' · ')||'region '+k);
+    cols.push({css:D.regionColor[k], rgb:D.regionRGB[k]}); }
+  for(i=0;i<D.n;i++) lists[D.region[i]].push(i);
+  regionGroupCache=membersToGroup(lists,labels,cols,
+    'The 24 regions are a partition — every article is in exactly one, so these add up to the whole corpus.',false);
+  return regionGroupCache;
+}
+function groupCats(){
+  if(catGroupCache) return catGroupCache;
+  var count=new Int32Array(D.catNames.length), i, j;
+  var rows=D.catArr;
+  for(i=0;i<D.n;i++){ var r=rows[i]; if(!r) continue; var ids=r.split(',');
+    for(j=0;j<ids.length;j++) count[+ids[j]]++; }
+  var ord=[]; for(j=0;j<count.length;j++) if(count[j]>=60) ord.push(j);
+  ord.sort(function(a,b){ return count[b]-count[a]; });
+  ord=ord.slice(0,44);
+  var pos={}; for(j=0;j<ord.length;j++) pos[ord[j]]=j;
+  var lists=ord.map(function(){ return []; });
+  for(i=0;i<D.n;i++){ var rr=rows[i]; if(!rr) continue; var ii=rr.split(',');
+    for(j=0;j<ii.length;j++){ var t=pos[+ii[j]]; if(t!==undefined) lists[t].push(i); } }
+  catGroupCache=membersToGroup(lists, ord.map(function(c){ return D.catNames[c]; }), null,
+    'Categories <b>overlap</b> — an article can be filed under six — so these do not add up to the corpus and are not shares of a pie. Only the 44 largest are shown, of '+D.catNames.length+'.', true);
+  return catGroupCache;
+}
+function groupLenses(){
+  if(lensGroupCache) return lensGroupCache;
+  var lists=D.facets.map(function(){ return []; }), i, f;
+  for(i=0;i<D.n;i++) for(f=0;f<D.facets.length;f++) if(D.lens[i]&(1<<f)) lists[f].push(i);
+  lensGroupCache=membersToGroup(lists, D.facets.map(function(f){ return f.label||f.id; }), null,
+    'The nine reading-room lenses, matched by category keyword. They <b>overlap</b>, and they miss a large part of the corpus entirely — the unfiled count below is the size of that blind spot.', true);
+  return lensGroupCache;
+}
+
+/* ---------- topics: groups you define ----------
+   A topic has no edge in a semantic space. Every article has some cosine to
+   "mutual aid" and there is no value of it at which the subject stops. So the
+   edge is stated rather than discovered: an article is about a topic when it
+   is in the top `strictness` of the corpus for that topic AND closer to it than
+   to any of your others. Moving the strictness chips moves the counts, and that
+   movement is the honest width of the answer — a single number would be a
+   precision the space does not have. */
+var topicState=null, topicKey='';
+function topicList(){
+  return topicQ.map(function(q){ return String(q||'').trim(); }).filter(Boolean);
+}
+function computeTopics(){
+  var qs=topicList(), key=qs.join('||')+'#'+strictness;
+  if(topicState && topicKey===key) return topicState;
+  if(!S || !qs.length){ topicState=null; topicKey=''; return null; }
+  var n=D.n, k=qs.length, ranks=[], live=[], labels=[], j, i;
+  for(j=0;j<k;j++){
+    var sim=S.similarity(qs[j]);
+    if(!sim) continue;
+    ranks.push(rankAxis01(sim)); live.push(qs[j]); labels.push(shortLabel(qs[j]));
+  }
+  k=ranks.length;
+  if(!k){ topicState=null; topicKey=''; return null; }
+  var cut=1-strictness;
+  var assign=new Int16Array(n), best=new Float32Array(n), top=new Float32Array(n);
+  for(i=0;i<n;i++){
+    var bj=-1, bv=-1;
+    for(j=0;j<k;j++){ var v=ranks[j][i]; if(v>bv){ bv=v; bj=j; } }
+    top[i]=bv;                       // kept for everyone: the halo is a gradient
+    assign[i]= bv>=cut ? bj : -1;
+    best[i]= bv>=cut ? bv : 0;
+  }
+  var lists=[]; for(j=0;j<k;j++) lists.push([]);
+  var unc=[];
+  for(i=0;i<n;i++){ if(assign[i]<0) unc.push(i); else lists[assign[i]].push(i); }
+  // best match first, so an island's core is the articles that answer it most
+  for(j=0;j<k;j++) lists[j].sort(function(a,b){ return best[b]-best[a]; });
+  topicState={k:k, q:live, labels:labels, ranks:ranks, assign:assign, best:best,
+              top:top, lists:lists, unclaimed:unc};
+  topicKey=key;
+  return topicState;
+}
+/* A deterministic 32-bit mix. Not for cryptography — for scattering points in
+   a way that is uncorrelated with their order and identical on every reload,
+   because a layout that reshuffles itself between visits is not a map. */
+function hash01(x){
+  x=(x^61)^(x>>>16); x=(x+(x<<3))|0; x=x^(x>>>4);
+  x=Math.imul(x,0x27d4eb2d); x=x^(x>>>15);
+  return (x>>>0)/4294967296;
+}
+function shortLabel(q){
+  var w=q.split(/[\s,;]+/).filter(Boolean).slice(0,3).join(' ');
+  return w.length>26 ? w.slice(0,25)+'…' : w;
+}
+function groupTopics(){
+  var T=computeTopics();
+  if(!T) return null;
+  // T.unclaimed is the LIST of unclaimed indices; renderMass reports the count
+  // from G.unclaimed. Interpolating the list here stringified 26,214 indices
+  // into the footnote.
+  var g=membersToGroup(T.lists, T.labels, T.q.map(function(_,j){ return spreadColor(j,T.k); }),
+    'Your topics, as a partition: an article counts when it is in the top '+
+    Math.round(strictness*100)+'% of the corpus for a topic and nearer to that one than to any other of yours.', false);
+  g.isTopics=true;
+  return g;
+}
+function buildGrouping(){
+  var g=null;
+  if(groupSrc==='cats') g=groupCats();
+  else if(groupSrc==='lenses') g=groupLenses();
+  else if(groupSrc==='topics') g=groupTopics();
+  if(!g) g=groupRegions();
+  G=g; computeGroupGeom(); buildClouds(); return G;
+}
+
+/* Group centroids move with the layout, and a mean is linear — so the mean of
+   an interpolated position is the interpolation of the two means. Two cheap
+   passes at layout-change time replace one per frame. */
+function computeGroupGeom(){
+  if(!G||!srcPos) return;
+  var P=[srcPos,tgtPos], w;
+  G.cen=[[],[]]; G.rad=[[],[]];
+  for(w=0;w<2;w++){
+    for(var j=0;j<G.memb.length;j++){
+      var m=G.memb[j], cx=0,cy=0,cz=0, i, c=m.length||1;
+      for(i=0;i<m.length;i++){ var b=m[i]*3; cx+=P[w][b]; cy+=P[w][b+1]; cz+=P[w][b+2]; }
+      cx/=c; cy/=c; cz/=c;
+      var acc=0;
+      for(i=0;i<m.length;i++){ var b2=m[i]*3;
+        acc+=Math.hypot(P[w][b2]-cx,P[w][b2+1]-cy,P[w][b2+2]-cz); }
+      G.cen[w].push([cx,cy,cz]); G.rad[w].push(m.length?acc/m.length*1.35:0.05);
+    }
+  }
+}
+function groupCentre(j){
+  var t=ease(Math.min(mixT,1)), a=G.cen[0][j], b=G.cen[1][j];
+  return [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t, a[2]+(b[2]-a[2])*t];
+}
+
+/* ---------- clouds ----------
+   Sprite budget is handed out in proportion to article count, so integrated
+   brightness is proportional to mass. Puff radius is the group's own spread
+   divided by the cube root of its sprite count — the sprites tile the volume
+   the articles actually occupy rather than a sphere fitted around them. */
+var CLOUD_BUDGET=6000;
+function buildClouds(){
+  if(!G||!gl) return;
+  var total=0, j;
+  for(j=0;j<G.memb.length;j++) total+=G.count[j];
+  if(!total){ cloudN=0; return; }
+  var idx=[], col=[], siz=[];
+  for(j=0;j<G.memb.length;j++){
+    if(isoGroup>=0 && j!==isoGroup) continue;
+    var m=G.memb[j], c=m.length;
+    if(!c) continue;
+    var want=Math.max(4, Math.min(c, Math.round(CLOUD_BUDGET*c/total)));
+    var step=c/want, rgb=G.rgb[j];
+    var spread=Math.max(G.rad[1]?G.rad[1][j]:0.2, 0.03);
+    var pr=spread/Math.pow(want,1/3)*1.75;
+    for(var t=0;t<want;t++){
+      var i=m[Math.min(c-1, Math.floor(t*step))];
+      idx.push(i); col.push(rgb[0]*0.86,rgb[1]*0.86,rgb[2]*0.86); siz.push(pr);
+    }
+  }
+  cloudIdx=new Uint32Array(idx); cloudN=cloudIdx.length;
+  if(buf.cCol) gl.deleteBuffer(buf.cCol);
+  if(buf.cSize) gl.deleteBuffer(buf.cSize);
+  buf.cCol=mkbuf(new Float32Array(col)); buf.cSize=mkbuf(new Float32Array(siz));
+  rebuildCloudPositions();
+}
+var cloudIdx=null, cloudN=0;
+function rebuildCloudPositions(){
+  if(!cloudN||!srcPos) return;
+  var A=new Float32Array(cloudN*3), B=new Float32Array(cloudN*3), t, a;
+  for(t=0;t<cloudN;t++){ var b=cloudIdx[t]*3;
+    for(a=0;a<3;a++){ A[t*3+a]=srcPos[b+a]; B[t*3+a]=tgtPos[b+a]; } }
+  if(buf.cA) gl.deleteBuffer(buf.cA);
+  if(buf.cB) gl.deleteBuffer(buf.cB);
+  buf.cA=mkbuf(A); buf.cB=mkbuf(B);
 }
 
 /* ---------- layouts ----------
@@ -530,6 +883,11 @@ function rankAxis(sim){
   for(i=0;i<n;i++) out[ord[i]]=(i/(n-1))*2-1;
   return out;
 }
+function rankAxis01(sim){
+  var r=rankAxis(sim), i;
+  for(i=0;i<r.length;i++) r[i]=(r[i]+1)/2;
+  return r;
+}
 function axesLayout(){
   var n=D.n, P=new Float32Array(n*3), base=atlasLayout(), qs=[axisQ.x,axisQ.y,axisQ.z], a, i;
   for(a=0;a<3;a++){
@@ -554,7 +912,85 @@ function focusLayout(){
   }
   return P;
 }
-function layoutFor(m){ return m==='axes'?axesLayout() : (m==='focus'?focusLayout() : atlasLayout()); }
+/* ---------- islands: one per topic, volume = how much was written ----------
+   Each topic gets a ball whose radius is the cube root of its article count, so
+   the ball's VOLUME is the count — a doubling of the writing is a doubling of
+   the space it takes up, which is the comparison the reader is trying to make.
+   Members fill the ball at uniform density (radius by the cube root of rank, so
+   equal shells hold equal numbers) with the best matches at the core, and the
+   directions come off a golden-angle spiral so nothing clumps into a seam.
+
+   The islands are then pushed apart until they cannot intersect, because two
+   overlapping balls read as one larger one and would state a quantity that is
+   not there. Whatever no topic claims becomes a thin outer shell — visible, and
+   not silently dropped, because "none of your topics covers this" is a result. */
+function topicsLayout(){
+  var T=computeTopics();
+  if(!T) return atlasLayout();
+  var n=D.n, P=new Float32Array(n*3), k=T.k, j, i;
+  var maxc=1; for(j=0;j<k;j++) maxc=Math.max(maxc,T.lists[j].length);
+  var R=[]; for(j=0;j<k;j++) R.push(0.62*Math.pow(T.lists[j].length/maxc,1/3)||0.02);
+
+  // anchor directions: a Fibonacci sphere for four or more, a plain ring below
+  // that, because three balls on a sphere read as an accident and three on a
+  // ring reads as a comparison
+  var U=[], ga=Math.PI*(3-Math.sqrt(5));
+  for(j=0;j<k;j++){
+    if(k<4){ var a=j/k*2*Math.PI; U.push([Math.cos(a),0,Math.sin(a)]); }
+    else { var yy=1-2*(j+0.5)/k, rr=Math.sqrt(Math.max(0,1-yy*yy)), th=ga*j;
+           U.push([Math.cos(th)*rr, yy, Math.sin(th)*rr]); }
+  }
+  var ring=0.8;
+  for(j=0;j<k;j++) for(var j2=j+1;j2<k;j2++){
+    var d=Math.hypot(U[j][0]-U[j2][0],U[j][1]-U[j2][1],U[j][2]-U[j2][2])||1e-6;
+    ring=Math.max(ring,(R[j]+R[j2])*1.28/d);
+  }
+  if(k===1) ring=0;
+  var A=[]; for(j=0;j<k;j++) A.push([U[j][0]*ring,U[j][1]*ring,U[j][2]*ring]);
+
+  /* Radius says how well the article answers the topic; direction must say
+     nothing at all. Taking both from the same running index — a golden-angle
+     spiral was the obvious way to spread directions evenly — ties them
+     together, and the ball comes out as a wound shell with a seam at each pole
+     rather than a filled volume. So directions come from a hash of the article
+     id: uncorrelated with rank, and identical on every reload. */
+  for(j=0;j<k;j++){
+    var m=T.lists[j], c=m.length, Rj=R[j];
+    for(var t=0;t<c;t++){
+      var id=m[t], rad=Rj*Math.pow((t+0.5)/c,1/3), b=id*3;
+      var z2=hash01(id)*2-1, th2=hash01(id^0x9e3779b9)*6.2831853;
+      var r2=Math.sqrt(Math.max(0,1-z2*z2));
+      P[b]  =A[j][0]+Math.cos(th2)*r2*rad;
+      P[b+1]=A[j][1]+z2*rad;
+      P[b+2]=A[j][2]+Math.sin(th2)*r2*rad;
+    }
+  }
+  /* The halo is a gradient, not a surface. An article that just missed the
+     threshold sits at its inner edge and one that matched nothing sits at the
+     outer — so the thickness of the halo shows how much of the corpus your
+     topics ALMOST reach, which a uniform shell would hide. */
+  var un=T.unclaimed, uc=un.length, shell=ring+Math.max.apply(null,R)*1.5+0.18;
+  var cut=1-strictness;
+  for(i=0;i<uc;i++){
+    var id2=un[i], near=cut>0?Math.max(0,Math.min(1,T.top[id2]/cut)):0;
+    var s3=shell*(1.34-0.34*near), b3=id2*3;
+    var z3=hash01(id2^0x85ebca6b)*2-1, th3=hash01(id2^0xc2b2ae35)*6.2831853;
+    var r3=Math.sqrt(Math.max(0,1-z3*z3));
+    P[b3]=Math.cos(th3)*r3*s3; P[b3+1]=z3*s3; P[b3+2]=Math.sin(th3)*r3*s3;
+  }
+  var st=normStats(P,n);
+  // one uniform scale, not per-axis: squashing an axis would distort the very
+  // volumes this layout exists to compare
+  var mid=[(st.mn[0]+st.mx[0])/2,(st.mn[1]+st.mx[1])/2,(st.mn[2]+st.mx[2])/2];
+  for(i=0;i<n;i++) for(var a2=0;a2<3;a2++) P[i*3+a2]=(P[i*3+a2]-mid[a2])/st.span*2;
+  return P;
+}
+function layoutFor(m){
+  if(m==='axes') return axesLayout();
+  if(m==='focus') return focusLayout();
+  if(m==='topics') return topicsLayout();
+  return atlasLayout();
+}
 function ease(t){ return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
 function goTo(m){
   var target=layoutFor(m), i;
@@ -565,6 +1001,7 @@ function goTo(m){
   gl.bindBuffer(gl.ARRAY_BUFFER,buf.pA); gl.bufferData(gl.ARRAY_BUFFER,srcPos,gl.DYNAMIC_DRAW);
   gl.bindBuffer(gl.ARRAY_BUFFER,buf.pB); gl.bufferData(gl.ARRAY_BUFFER,tgtPos,gl.DYNAMIC_DRAW);
   rebuildEdgeBuffers();
+  computeGroupGeom(); buildClouds();
   mixT=0; mixStart=performance.now();
   if (matchMedia('(prefers-reduced-motion: reduce)').matches){ mixT=1; curPos=tgtPos.slice(); }
   needsDraw=true;
@@ -622,9 +1059,30 @@ function paint(){
   gl.viewport(0,0,glc.width,glc.height);
   gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
 
+  /* Clouds go down before anything else, additively and with the depth test
+     off: they are a density field, not geometry, and letting them occlude each
+     other would turn "more articles" into "the nearer group wins". They fade
+     out as the reader descends the bands — mass is a territory-scale question,
+     and at the near band it would only wash out the articles. */
+  if (cloudOn && cloudN && CLOUD_ALPHA[bi]>0){
+    gl.disable(gl.DEPTH_TEST); gl.depthMask(false);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+    gl.useProgram(pCl); beginAttrs();
+    attr(pCl,'aA',buf.cA,3); attr(pCl,'aB',buf.cB,3);
+    attr(pCl,'aCol',buf.cCol,3); attr(pCl,'aSize',buf.cSize,1);
+    gl.uniformMatrix4fv(uni(pCl,'uMVP'),false,MVP);
+    gl.uniform1f(uni(pCl,'uMix'),m);
+    // a world radius projected to pixels: dpr*height / (2 tan(fov/2)), fov = 1.0
+    gl.uniform1f(uni(pCl,'uScale'), dpr*vh/1.0926);
+    gl.uniform1f(uni(pCl,'uAlpha'), CLOUD_ALPHA[bi]);
+    gl.drawArrays(gl.POINTS,0,cloudN);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.depthMask(true);
+  }
+
   if (bi>=2 && (edgeMode.link||edgeMode.sem)){
     gl.disable(gl.DEPTH_TEST);
-    gl.useProgram(pLn);
+    gl.useProgram(pLn); beginAttrs();
     gl.uniformMatrix4fv(uni(pLn,'uMVP'),false,MVP);
     gl.uniform1f(uni(pLn,'uMix'),m);
     gl.uniform3f(uni(pLn,'uFocus'),cam.tx,cam.ty,cam.tz);
@@ -644,7 +1102,7 @@ function paint(){
   }
 
   gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL);
-  gl.useProgram(pPt);
+  gl.useProgram(pPt); beginAttrs();
   attr(pPt,'aA',buf.pA,3); attr(pPt,'aB',buf.pB,3);
   attr(pPt,'aCol',buf.col,3); attr(pPt,'aSize',buf.size,1); attr(pPt,'aState',buf.state,1);
   gl.uniformMatrix4fv(uni(pPt,'uMVP'),false,MVP);
@@ -676,27 +1134,15 @@ function drawOverlay(bi){
     for(r=r0;r<=r1;r++) for(c=c0;c<=c1;c++) occ[r*cols+c]=1;
     return true;
   }
-  if (mode==='atlas'){
-    var order=[], k;
-    for(k=0;k<D.k;k++) order.push(k);
-    order.sort(function(a,b){ return D.regionSizes[b]-D.regionSizes[a]; });
-    octx.textAlign='center'; octx.textBaseline='middle';
-    for(var oi=0;oi<order.length;oi++){
-      var kk=order[oi], c=D.cenNorm[kk], p=project(c[0],c[1],c[2]);
-      if(!p||p[0]<-120||p[0]>vw+120||p[1]<-30||p[1]>vh+30) continue;
-      var lab=(D.regionLabels[kk]||[]).slice(0, bi===0?2:1).join(' · ');
-      if(!lab) continue;
-      var px=bi===0?15:(bi===1?13:12);
-      octx.font='400 '+px+'px "Instrument Serif", Georgia, serif';
-      if(!place(p[0],p[1],octx.measureText(lab).width,px*1.3)) continue;
-      octx.globalAlpha=bi===0?0.95:(bi===1?0.62:0.34);
-      octx.lineWidth=3.5; octx.strokeStyle='rgba(6,8,14,.9)'; octx.strokeText(lab,p[0],p[1]);
-      octx.fillStyle=D.regionColor[kk]; octx.fillText(lab,p[0],p[1]);
-      octx.globalAlpha=1;
-    }
-    octx.textAlign='left';
-  }
+  gistWant={}; cardShown={};
+  frameCands = bi>=1 ? labelCandidates(bi) : null;
+  /* Order matters, because the occupancy grid is first-come. Whatever the band
+     is *for* claims its space first: territory at the far end, articles at the
+     near one. */
+  if (bi>=2) drawCards(bi, place);
+  drawGroupLabels(bi, place);
   if (bi>=1) drawArticleLabels(bi, place);
+  pumpGists();
   if (sel>=0) ring(sel,'#5ef0df',7);
   if (hover>=0 && hover!==sel) ring(hover,'#ffffff',5.5);
   if (mode==='axes') drawAxisGuides();
@@ -722,35 +1168,251 @@ function drawAxisGuides(){
     octx.fillText(t, p[0]+6, p[1]);
   }
 }
-function drawArticleLabels(bi, place){
-  var cands=[], i;
-  var minDeg = bi===1?8:(bi===2?1:0);
+/* ---------- group labels: a word cloud that lives in the space ----------
+   Size carries the mass, so the biggest thing written about is the biggest
+   thing written. Two guards keep that from lying:
+
+   * a group is only named where it HAS a place. A category whose members are
+     scattered across the whole corpus has a centroid, but that centroid is the
+     middle of a smear and putting a name on it would invent a territory. Past a
+     spread threshold the cloud is still drawn and the label is not.
+   * names are suppressed entirely once the corpus has been re-placed on axes or
+     around one question, because there the old groups are smears by
+     construction. Topics keep their names: in that arrangement they ARE the
+     places. */
+function drawGroupLabels(bi, place){
+  if(!G || bi>=3) return;
+  if(!(mode==='atlas'||mode==='topics')) return;
+  if(mode==='topics' && !G.isTopics) return;
+  var order=[], j, total=0;
+  for(j=0;j<G.memb.length;j++){ order.push(j); total+=massOf(j); }
+  if(!total) return;
+  order.sort(function(a,b){ return massOf(b)-massOf(a); });
+  var top=massOf(order[0])||1;
+  octx.textAlign='center'; octx.textBaseline='middle';
+  for(var oi=0;oi<order.length;oi++){
+    var k=order[oi];
+    if(isoGroup>=0 && k!==isoGroup) continue;
+    if(!G.count[k]) continue;
+    if(G.rad[1][k]>0.55 && !G.isTopics) continue;     // a smear has no place
+    var c=groupCentre(k), p=project(c[0],c[1],c[2]);
+    if(!p||p[0]<-140||p[0]>vw+140||p[1]<-30||p[1]>vh+30) continue;
+    var lab=G.labels[k]; if(!lab) continue;
+    // sqrt of the share, not the share: area is what the eye compares, and a
+    // linear font size against a 12x range would make everything but the
+    // largest illegible
+    var share=Math.sqrt(massOf(k)/top);
+    var px=Math.round((bi===0?13:11) + share*(bi===0?19:12));
+    octx.font='400 '+px+'px "Instrument Serif", Georgia, serif';
+    var w=octx.measureText(lab).width;
+    /* A group that cannot fit its name at its own centre is not a group with
+       nothing to say — it is usually the smallest of several islands whose
+       labels landed on top of each other. Try above and below before giving up,
+       because a missing name reads as a missing group. */
+    var lx=p[0], ly=p[1], off=[0, -px*1.6, px*1.6, -px*3.0, px*3.0], placed=false;
+    for(var t=0;t<off.length;t++){
+      if(place(p[0], p[1]+off[t], w+10, px*1.35)){ ly=p[1]+off[t]; placed=true; break; }
+    }
+    if(!placed) continue;
+    p=[lx,ly,p[2]];
+    octx.globalAlpha=bi===0?0.96:0.66;
+    octx.lineWidth=3.5; octx.strokeStyle='rgba(6,8,14,.9)'; octx.strokeText(lab,p[0],p[1]);
+    octx.fillStyle=G.color[k]; octx.fillText(lab,p[0],p[1]);
+    if(cloudOn||G.isTopics){
+      octx.font='500 10px "JetBrains Mono", monospace';
+      octx.globalAlpha=0.9;
+      octx.lineWidth=3; octx.strokeStyle='rgba(6,8,14,.92)';
+      octx.strokeText(massLabel(k), p[0], p[1]+px*0.82);
+      octx.fillStyle='rgba(200,210,235,.95)';
+      octx.fillText(massLabel(k), p[0], p[1]+px*0.82);
+    }
+    octx.globalAlpha=1;
+  }
+  octx.textAlign='left';
+}
+
+/* ---------- which articles get to speak ----------
+   Everything in view cannot be labelled — 39,915 titles is a grey field, not a
+   map — so a small number are chosen every frame, and the choosing is the
+   feature. A candidate's score is:
+
+     authority   how many articles link to it
+     centrality  how near the middle of the screen it is (what you turned to look at)
+     nearness    how close to the camera, so the foreground wins the space
+     memory      a bonus for having been labelled last frame
+
+   The memory term is what stops the field flickering while you orbit: without
+   it, two candidates within a pixel of each other trade the same slot back and
+   forth every frame and the whole map shimmers. */
+var frameCands=null;
+function labelCandidates(bi){
+  var out=[], i, s;
+  var minDeg = bi===0?18:(bi===1?6:(bi===2?1:0));
   var pool = matchSet ? matchList : D.byAuthority;
-  var scan = Math.min(pool.length, bi>=3?6000:3000);
-  for(var s=0;s<scan;s++){
+  var scan = Math.min(pool.length, bi>=3?9000:4000);
+  var maxDepth = cam.dist*2.2;
+  var cx=vw/2, cy=vh/2, diag=Math.hypot(cx,cy)||1;
+  var maxDeg=1;
+  for(s=0;s<scan;s++) if(D.indeg[pool[s]]>maxDeg) maxDeg=D.indeg[pool[s]];
+  for(s=0;s<scan;s++){
     i=pool[s];
     if (lensMask && !(D.lens[i]&lensMask)) continue;
+    if (isoGroup>=0 && G && G.primary[i]!==isoGroup) continue;
     if (!matchSet && D.indeg[i]<minDeg) continue;
-    cands.push(i);
-  }
-  var limit = bi>=3?300:(bi===2?140:34);
-  octx.font='500 11.5px "Hanken Grotesk", system-ui, sans-serif';
-  octx.textBaseline='middle';
-  var drawn=0;
-  for(var q=0;q<cands.length && drawn<limit;q++){
-    i=cands[q];
     var w3=livePos(i), p=project(w3[0],w3[1],w3[2]);
     if(!p) continue;
+    if(p[0]<-40||p[0]>vw+40||p[1]<-20||p[1]>vh+20) continue;
+    if(p[2]>maxDepth) continue;                       // behind the neighbourhood you are in
+    var auth=Math.log1p(D.indeg[i])/Math.log1p(maxDeg);
+    var cen=1-Math.min(1,Math.hypot(p[0]-cx,p[1]-cy)/diag);
+    var near=1-Math.min(1,p[2]/maxDepth);
+    var sc=auth*0.34 + cen*0.34 + near*0.22 + (lastLabelled[i]?0.14:0);
+    if(matchSet&&matchSet[i]) sc+=0.5;
+    if(i===sel) sc+=1.0;
+    out.push({i:i, p:p, sc:sc});
+  }
+  out.sort(function(a,b){ return b.sc-a.sc; });
+  return out.slice(0, 480);
+}
+
+/* ---------- semantic zoom: the card ----------
+   The point of zooming in is not that the dot gets bigger. Descending a band
+   should buy more of the article, so at `near` the closest few open their first
+   line and at `full` they become cards. The sentence is the article's own
+   opening, not a generated summary: writing 39,915 summaries with a model would
+   put a claim about every article on the screen that nobody has read.
+
+   The budget is tiny on purpose — seven cards, three at the band above. A card
+   is 250 x 90 pixels; twenty of them is not disclosure, it is a wall. */
+function wrap(text, maxw, maxlines){
+  var words=String(text).split(/\s+/), lines=[], cur='';
+  for(var w=0;w<words.length;w++){
+    var t=cur?cur+' '+words[w]:words[w];
+    if(octx.measureText(t).width>maxw && cur){ lines.push(cur); cur=words[w];
+      if(lines.length>=maxlines) break; }
+    else cur=t;
+  }
+  if(lines.length<maxlines && cur) lines.push(cur);
+  if(lines.length>=maxlines){
+    var last=lines[maxlines-1];
+    while(last.length>4 && octx.measureText(last+'…').width>maxw) last=last.slice(0,-1);
+    lines[maxlines-1]=last.replace(/[\s,;:]+$/,'')+'…';
+  }
+  return lines.slice(0,maxlines);
+}
+function drawCards(bi, place){
+  var budget = bi>=3?7:3;
+  if(TOUCH && vw<560) budget=Math.min(budget,3);
+  var W=Math.min(258, vw*0.46);
+  if(W<150) return;
+  var cands=frameCands||[], drawn=0, seen={};
+  for(var q=0;q<cands.length && drawn<budget;q++){
+    var i=cands[q].i, p=cands[q].p;
+    var g=gistFor(i);
+    if(g===null) continue;                            // shard still in flight
+    octx.font='500 12.5px "Hanken Grotesk", system-ui, sans-serif';
+    var tl=wrap(D.titleArr[i], W-20, 2);
+    octx.font='400 11px "Hanken Grotesk", system-ui, sans-serif';
+    var gl2=g?wrap(g, W-20, 3):[];
+    var cs=catsOf(i).slice(0,2).join(' · ');
+    var H=10 + tl.length*16 + (gl2.length?4+gl2.length*14:0) + (cs?15:0) + 8;
+    // four places to try, so a card near an edge still gets shown
+    var tries=[[p[0]+16+W/2,p[1]],[p[0]-16-W/2,p[1]],[p[0]+16+W/2,p[1]-H/2-14],[p[0],p[1]-16-H/2]];
+    var ok=null, t2;
+    for(t2=0;t2<tries.length;t2++){
+      var bx=tries[t2][0], by=tries[t2][1];
+      if(bx-W/2<4||bx+W/2>vw-4||by-H/2<4||by+H/2>vh-4) continue;
+      if(place(bx,by,W+10,H+10)){ ok=[bx,by]; break; }
+    }
+    if(!ok) continue;
+    var x0=ok[0]-W/2, y0=ok[1]-H/2;
+    var col=(G&&G.primary[i]>=0)?G.color[G.primary[i]]:D.regionColor[D.region[i]];
+    octx.beginPath();
+    octx.moveTo(p[0],p[1]); octx.lineTo(ok[0]<p[0]?x0+W:x0, ok[1]);
+    octx.strokeStyle='rgba(150,170,230,.42)'; octx.lineWidth=1; octx.stroke();
+    roundRect(x0,y0,W,H,9);
+    octx.fillStyle='rgba(9,12,22,.93)'; octx.fill();
+    octx.strokeStyle=col; octx.globalAlpha=0.42; octx.lineWidth=1; octx.stroke(); octx.globalAlpha=1;
+    octx.beginPath(); octx.arc(p[0],p[1],4.5,0,6.2832);
+    octx.strokeStyle=col; octx.lineWidth=1.5; octx.stroke();
+    var y=y0+10+8;
+    octx.textBaseline='middle'; octx.textAlign='left';
+    octx.font='500 12.5px "Hanken Grotesk", system-ui, sans-serif';
+    octx.fillStyle=(matchSet&&matchSet[i])?'#5ef0df':'#ffffff';
+    for(t2=0;t2<tl.length;t2++){ octx.fillText(tl[t2], x0+10, y); y+=16; }
+    if(gl2.length){
+      y+=2; octx.font='400 11px "Hanken Grotesk", system-ui, sans-serif';
+      octx.fillStyle='rgba(174,185,212,.92)';
+      for(t2=0;t2<gl2.length;t2++){ octx.fillText(gl2[t2], x0+10, y); y+=14; }
+    }
+    if(cs){
+      octx.font='400 9.5px "JetBrains Mono", monospace';
+      octx.fillStyle=col; octx.globalAlpha=0.8;
+      var ct=cs; while(ct.length>6 && octx.measureText(ct).width>W-20) ct=ct.slice(0,-1);
+      octx.fillText(ct, x0+10, y+4); octx.globalAlpha=1;
+    }
+    seen[i]=1; drawn++;
+  }
+  cardShown=seen;
+}
+var cardShown={};
+function roundRect(x,y,w,h,r){
+  octx.beginPath();
+  octx.moveTo(x+r,y); octx.arcTo(x+w,y,x+w,y+h,r); octx.arcTo(x+w,y+h,x,y+h,r);
+  octx.arcTo(x,y+h,x,y,r); octx.arcTo(x,y,x+w,y,r); octx.closePath();
+}
+function drawArticleLabels(bi, place){
+  var limit = bi>=3?90:(bi===2?70:(bi===1?40:14));
+  var cands=frameCands||[];
+  octx.textBaseline='middle'; octx.textAlign='left';
+  var drawn=0, now=Object.create(null);
+  for(var q=0;q<cands.length && drawn<limit;q++){
+    var i=cands[q].i;
+    if(cardShown[i]) { now[i]=1; drawn++; continue; }
+    var p=cands[q].p;
+    // nearer titles are set larger: the size difference is the depth cue a flat
+    // overlay drawn over a perspective scene otherwise throws away
+    var px=bi>=2 ? (11 + (1-Math.min(1,p[2]/(cam.dist*2.2)))*2.4) : 11.5;
+    octx.font='500 '+px.toFixed(1)+'px "Hanken Grotesk", system-ui, sans-serif';
     var x=p[0]+7, y=p[1];
     if(x<-60||x>vw||y<0||y>vh) continue;
-    var t=D.titleArr[i]; if(t.length>40) t=t.slice(0,38)+'…';
+    var t=D.titleArr[i]; if(t.length>44) t=t.slice(0,42)+'…';
     var w=octx.measureText(t).width;
-    if(!place(x+w/2,y,w+8,15)) continue;
-    octx.fillStyle='rgba(6,8,14,.82)'; octx.fillRect(x-3,y-7.5,w+6,15);
+    if(!place(x+w/2,y,w+8,px+3.5)) continue;
+    octx.fillStyle='rgba(6,8,14,.82)'; octx.fillRect(x-3,y-(px+3.5)/2,w+6,px+3.5);
     octx.fillStyle=(matchSet&&matchSet[i])?'#5ef0df':'rgba(238,242,251,.92)';
     octx.fillText(t,x,y);
-    drawn++;
+    now[i]=1; drawn++;
   }
+  for(var c in cardShown) now[c]=1;
+  lastLabelled=now;
+}
+
+/* ---------- gists: one sentence, fetched by region, on demand ----------
+   Sharded the way the leads are, and requested by what is actually on screen:
+   demand is recounted every frame, at most two shards are ever in flight, and
+   the biggest unmet demand wins. A card with no sentence yet is simply not
+   drawn — a card that pops in half-empty and fills a moment later is worse than
+   one that arrives whole. */
+function gistFor(i){
+  var k=D.region[i];
+  if(gistCache[k]) return gistCache[k][i]||'';
+  gistWant[k]=(gistWant[k]||0)+1;
+  return null;
+}
+function pumpGists(){
+  if(gistInFlight>=2) return;
+  var bestK=-1, bestV=0, k;
+  for(k in gistWant){
+    if(gistCache[k]||gistPending[k]) continue;
+    if(gistWant[k]>bestV){ bestV=gistWant[k]; bestK=+k; }
+  }
+  if(bestK<0) return;
+  gistInFlight++;
+  gistPending[bestK]=fetch('gists/'+String(bestK).padStart(2,'0')+'.json')
+    .then(function(r){ return r.ok?r.json():{}; })
+    .catch(function(){ return {}; })
+    .then(function(j){ gistCache[bestK]=j; gistInFlight--; needsDraw=true; pumpGists(); });
 }
 
 /* ---------- picking ---------- */
@@ -760,6 +1422,7 @@ function pick(px,py,coarse){
   var best=-1, bd=rad*rad, i, n=D.n, t=ease(Math.min(mixT,1)), m=MVP;
   for(i=0;i<n;i++){
     if (lensMask && !(D.lens[i]&lensMask)) continue;
+    if (isoGroup>=0 && G && G.primary[i]!==isoGroup) continue;
     var x=srcPos[i*3]+(tgtPos[i*3]-srcPos[i*3])*t,
         y=srcPos[i*3+1]+(tgtPos[i*3+1]-srcPos[i*3+1])*t,
         z=srcPos[i*3+2]+(tgtPos[i*3+2]-srcPos[i*3+2])*t;
@@ -923,6 +1586,7 @@ function pushState(){
   var st=new Float32Array(D.n), i;
   for(i=0;i<D.n;i++){
     if (lensMask && !(D.lens[i]&lensMask)){ st[i]=1; continue; }
+    if (isoGroup>=0 && G && G.primary[i]!==isoGroup){ st[i]=1; continue; }
     st[i] = matchSet ? (matchSet[i]?2:1) : 0;
   }
   gl.bindBuffer(gl.ARRAY_BUFFER,buf.state);
@@ -970,6 +1634,19 @@ var PRESETS=[
   {n:'theory ↔ practice ↔ place', x:'theory concept philosophy critique', y:'project practice pilot workshop', z:'city urban village region'},
   {n:'land ↔ energy ↔ money', x:'land soil agriculture food farming', y:'energy solar renewable grid power', z:'money currency credit finance bank'}
 ];
+/* Sets of topics worth comparing, chosen because the answer is not obvious
+   before you look — which of the provisioning systems the wiki has most on,
+   whether it writes more about governing or about producing. */
+var TPRESETS=[
+  {n:'the provisioning systems', t:['food farming agriculture', 'energy solar renewable', 'housing land urban',
+      'money currency finance', 'health care medicine', 'knowledge education learning']},
+  {n:'organising ↔ producing ↔ governing', t:['cooperative union organising movement',
+      'production manufacturing fabrication making', 'governance policy state regulation democracy']},
+  {n:'the technologies', t:['blockchain cryptocurrency token', 'artificial intelligence machine learning',
+      'free software open source licence', 'platform cooperative network protocol', 'hardware fabrication maker']},
+  {n:'commons ↔ market ↔ state', t:['commons peer production sharing', 'market business enterprise capital',
+      'state public policy government']}
+];
 function buildRail(){
   var lens=document.getElementById('lenses'); lens.innerHTML='';
   D.facets.forEach(function(f,fi){
@@ -977,20 +1654,13 @@ function buildRail(){
     b.onclick=function(){ lensMask^=(1<<fi); b.classList.toggle('on',!!(lensMask&(1<<fi))); pushState(); };
     lens.appendChild(b);
   });
-  var order=[], k;
-  for(k=0;k<D.k;k++) order.push(k);
-  order.sort(function(a,b){ return D.regionSizes[b]-D.regionSizes[a]; });
-  var ul=document.getElementById('regions');
-  ul.innerHTML=order.map(function(kk){
-    return '<li data-k="'+kk+'"><span class="sw" style="background:'+D.regionColor[kk]+'"></span><b>'+
-      esc((D.regionLabels[kk]||[]).slice(0,2).join(' · ')||'region '+kk)+'</b><span class="n">'+
-      D.regionSizes[kk].toLocaleString()+'</span></li>'; }).join('');
-  document.getElementById('regionn').textContent=D.k;
-  var lis=ul.querySelectorAll('li[data-k]');
-  for(var q=0;q<lis.length;q++) lis[q].onclick=function(){
-    var c=D.cenNorm[+this.dataset.k];
-    cam.tx=c[0]; cam.ty=c[1]; cam.tz=c[2]; cam.dist=0.95; needsDraw=true; };
   document.getElementById('edgecount').textContent=D.stats.links.toLocaleString()+' links';
+  buildTopicRows();
+  var tp=document.getElementById('tpresets');
+  tp.innerHTML=TPRESETS.map(function(p,i){ return '<button class="preset" data-tp="'+i+'">'+esc(p.n)+'</button>'; }).join('');
+  Array.prototype.forEach.call(tp.querySelectorAll('.preset'),function(b){
+    b.onclick=function(){ topicQ=TPRESETS[+b.dataset.tp].t.slice(); buildTopicRows(); applyMode('topics'); };
+  });
   var pr=document.getElementById('presets');
   pr.innerHTML=PRESETS.map(function(p,i){ return '<button class="preset" data-p="'+i+'">'+esc(p.n)+'</button>'; }).join('');
   Array.prototype.forEach.call(pr.querySelectorAll('.preset'),function(b){
@@ -1003,12 +1673,118 @@ function buildRail(){
     };
   });
 }
+/* ══════════════════════════════════════════════════════════════════════════
+   MASS — the bars, which are the measurement
+
+   Two different things get called "how much is written about X" and they do not
+   agree: the number of articles, and the number of words in them. A subject
+   with 900 stubs and one with 200 essays are not the same shape of coverage,
+   and which one you meant changes the ranking. So both are offered, one click
+   apart, and the ranking visibly reorders when you switch — that reordering is
+   the finding.
+   ══════════════════════════════════════════════════════════════════════════ */
+function massOf(j){ return massMeasure==='prose' ? G.bytes[j] : G.count[j]; }
+function fmtBytes(b){
+  if(b>=1048576) return (b/1048576).toFixed(b>=10485760?0:1)+' MB';
+  if(b>=1024) return Math.round(b/1024)+' KB';
+  return b+' B';
+}
+function massLabel(j){
+  return massMeasure==='prose' ? fmtBytes(G.bytes[j]) : G.count[j].toLocaleString();
+}
+function renderMass(){
+  if(!G) return;
+  var box=document.getElementById('mass'), j, order=[], total=0, corpusMass=0;
+  for(j=0;j<G.memb.length;j++){ order.push(j); total+=massOf(j); }
+  for(j=0;j<D.n;j++) corpusMass+= massMeasure==='prose' ? D.bytes[j]*64 : 1;
+  order.sort(function(a,b){ return massOf(b)-massOf(a); });
+  var top=massOf(order[0])||1;
+  box.innerHTML=order.map(function(k){
+    if(!G.count[k]) return '';
+    var v=massOf(k), pct=corpusMass?(v/corpusMass*100):0;
+    return '<div class="mrow'+(isoGroup===k?' iso':'')+'" data-g="'+k+'" title="'+
+      esc(G.labels[k])+' — '+G.count[k].toLocaleString()+' articles, '+fmtBytes(G.bytes[k])+'">'+
+      '<span class="sw" style="background:'+G.color[k]+'"></span>'+
+      '<span class="lab"><b>'+esc(G.labels[k])+'</b>'+
+      '<i class="bar" style="width:'+Math.max(1,v/top*100).toFixed(1)+'%;background:'+G.color[k]+'"></i></span>'+
+      '<span class="n">'+massLabel(k)+'<br>'+pct.toFixed(1)+'%</span></div>';
+  }).join('');
+  document.getElementById('masstotal').textContent =
+    massMeasure==='prose' ? fmtBytes(corpusMass)+' of prose' : D.n.toLocaleString()+' articles';
+  var foot=G.note;
+  if(G.unclaimed) foot+=' <b>'+G.unclaimed.toLocaleString()+'</b> articles ('+
+    (G.unclaimed/D.n*100).toFixed(0)+'%) are in none of them.';
+  foot+=' Percentages are of the whole corpus'+(G.overlap?', and because these overlap they add to more than 100%.':'.');
+  document.getElementById('massfoot').innerHTML=foot;
+  Array.prototype.forEach.call(box.querySelectorAll('.mrow'),function(r){
+    r.onclick=function(){ isolate(+r.dataset.g); };
+  });
+}
+/* Isolating is not filtering to a search result: the rest of the corpus stays
+   on screen, dimmed, because a group's size only means something against what
+   it is a group of. */
+function isolate(k){
+  isoGroup = (isoGroup===k) ? -1 : k;
+  buildClouds(); pushState(); renderMass();
+  if(isoGroup>=0 && G.rad[1][isoGroup]<0.9){
+    var c=groupCentre(isoGroup);
+    cam.tx=c[0]; cam.ty=c[1]; cam.tz=c[2];
+    cam.dist=Math.max(0.35, Math.min(1.6, G.rad[1][isoGroup]*2.6));
+  }
+  needsDraw=true;
+}
+function recolor(){
+  if(!G||!buf.col) return;
+  var col=new Float32Array(D.n*3), i;
+  for(i=0;i<D.n;i++){
+    var g=G.primary[i], c;
+    if(g>=0) c=G.rgb[g];
+    else c=[0.26,0.29,0.38];                 // in no group: present, not claimed
+    col[i*3]=c[0]; col[i*3+1]=c[1]; col[i*3+2]=c[2];
+  }
+  gl.bindBuffer(gl.ARRAY_BUFFER,buf.col);
+  gl.bufferData(gl.ARRAY_BUFFER,col,gl.STATIC_DRAW);
+  needsDraw=true;
+}
+function refreshGrouping(){ buildGrouping(); recolor(); renderMass(); needsDraw=true; }
+function setGroupSrc(g){
+  groupSrc=g; isoGroup=-1;
+  Array.prototype.forEach.call(document.querySelectorAll('#grpsrc .chip'),function(b){
+    b.classList.toggle('on', b.dataset.g===g); });
+  if(g==='topics'){
+    document.getElementById('working').hidden=false;
+    loadSemantic().then(function(){ document.getElementById('working').hidden=true; refreshGrouping(); });
+  } else refreshGrouping();
+}
+
+/* ---------- the topic rows ---------- */
+function buildTopicRows(){
+  var box=document.getElementById('trows'), k=Math.max(topicQ.length,1);
+  box.innerHTML=topicQ.map(function(q,j){
+    return '<div class="trow"><span class="sw" style="background:'+spreadColor(j,k).css+'"></span>'+
+      '<input type="text" data-t="'+j+'" value="'+esc(q)+'" placeholder="a topic, in a few words" autocomplete="off">'+
+      (topicQ.length>1?'<button class="x" data-x="'+j+'" aria-label="Remove topic">✕</button>':'')+'</div>';
+  }).join('');
+  document.getElementById('addtopic').disabled = topicQ.length>=TOPIC_MAX;
+  var tTimer=0;
+  Array.prototype.forEach.call(box.querySelectorAll('input[data-t]'),function(el){
+    el.addEventListener('input',function(){
+      topicQ[+el.dataset.t]=el.value;
+      clearTimeout(tTimer); tTimer=setTimeout(function(){ applyMode('topics'); },480);
+    });
+  });
+  Array.prototype.forEach.call(box.querySelectorAll('button[data-x]'),function(b){
+    b.onclick=function(){ topicQ.splice(+b.dataset.x,1); buildTopicRows(); applyMode('topics'); };
+  });
+}
+
 function applyMode(m){
   mode=m;
   Array.prototype.forEach.call(document.querySelectorAll('#modes .chip'),function(b){
     b.classList.toggle('on', b.dataset.mode===m); });
   document.getElementById('axesbox').hidden = m!=='axes';
   document.getElementById('focusbox').hidden = m!=='focus';
+  document.getElementById('topicsbox').hidden = m!=='topics';
   var note=document.getElementById('axisnote');
   if(m==='atlas'){
     note.hidden=true;
@@ -1026,6 +1802,24 @@ function applyMode(m){
           (miss.length?'<br><span style="color:#ff86a8">not in the vocabulary: '+esc(miss.slice(0,6).join(', '))+'</span>':'')
         : '';
       document.getElementById('modenote').textContent='your axes';
+    } else if(m==='topics'){
+      /* Entering this arrangement makes your topics the grouping too, because
+         the islands you are looking at and the bars you would measure them with
+         have to be the same set of things. */
+      groupSrc='topics';
+      Array.prototype.forEach.call(document.querySelectorAll('#grpsrc .chip'),function(b){
+        b.classList.toggle('on', b.dataset.g==='topics'); });
+      isoGroup=-1;
+      var T=computeTopics(), miss=[];
+      if(S) topicList().forEach(function(q){ miss=miss.concat(S.unknown(q)); });
+      note.hidden=!T;
+      note.innerHTML = T
+        ? T.labels.map(function(l,j){ return '<i style="color:'+spreadColor(j,T.k).css+'">'+esc(l)+
+            '</i> · '+T.lists[j].length.toLocaleString(); }).join('<br>')+
+          '<br><span style="color:#74809e">'+T.unclaimed.length.toLocaleString()+' in none</span>'+
+          (miss.length?'<br><span style="color:#ff86a8">not in the vocabulary: '+esc(miss.slice(0,6).join(', '))+'</span>':'')
+        : '';
+      document.getElementById('modenote').textContent='your topics';
     } else {
       var mi=(S&&focusQ)?S.unknown(focusQ):[];
       note.hidden=!focusQ;
@@ -1034,6 +1828,7 @@ function applyMode(m){
       document.getElementById('modenote').textContent='one question';
     }
     goTo(m);
+    if(m==='topics'){ buildGrouping(); recolor(); renderMass(); }
   });
 }
 function resize(){
@@ -1177,6 +1972,33 @@ function wire(){
   document.getElementById('zout').onclick=function(){ dolly(1.9); };
   document.getElementById('zreset').onclick=reset;
   document.getElementById('spin').onclick=function(){ spin=!spin; this.classList.toggle('on',spin); needsDraw=true; };
+  document.getElementById('cloud').onclick=function(){
+    cloudOn=!cloudOn; this.classList.toggle('on',cloudOn);
+    if(cloudOn && !cloudN) buildClouds();
+    needsDraw=true; };
+  Array.prototype.forEach.call(document.querySelectorAll('#grpsrc .chip'),function(b){
+    b.onclick=function(){ setGroupSrc(b.dataset.g); };
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#measure button'),function(b){
+    b.onclick=function(){
+      massMeasure=b.dataset.m;
+      Array.prototype.forEach.call(document.querySelectorAll('#measure button'),function(o){
+        o.classList.toggle('on', o.dataset.m===massMeasure); });
+      renderMass(); needsDraw=true; };
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#strict button'),function(b){
+    b.onclick=function(){
+      strictness=+b.dataset.s;
+      Array.prototype.forEach.call(document.querySelectorAll('#strict button'),function(o){
+        o.classList.toggle('on', +o.dataset.s===strictness); });
+      applyMode('topics'); };
+  });
+  document.getElementById('addtopic').onclick=function(){
+    if(topicQ.length>=TOPIC_MAX) return;
+    topicQ.push(''); buildTopicRows();
+    var ins=document.querySelectorAll('#trows input[data-t]');
+    if(ins.length) ins[ins.length-1].focus();
+  };
   Array.prototype.forEach.call(document.querySelectorAll('.bands button'),function(b){
     b.onclick=function(){
       var t=BANDS.filter(function(x){ return x.id===b.dataset.band; })[0];
@@ -1234,7 +2056,7 @@ function wire(){
       // way to type one, so the sheet comes up for those and stays down for the
       // atlas, which needs nothing
       if (m==='atlas') sheet(false);
-      else sheet(true, document.getElementById(m==='axes'?'ax-x':'fq'));
+      else sheet(true, document.getElementById(m==='axes'?'ax-x':(m==='topics'?'addtopic':'fq')));
     };
   });
   // the dock and the rail are two faces of one control; keep them agreeing
@@ -1247,7 +2069,7 @@ function wire(){
   // dismiss the sheet whenever a choice has produced something to look at
   document.addEventListener('click',function(e){
     if (!isPhone() || !sheetOpen()) return;
-    if (e.target.closest('#matches li, #regions li, .preset')) sheet(false);
+    if (e.target.closest('#matches li, .mrow, .preset')) sheet(false);
   }, true);
   window.addEventListener('keydown',function(e){
     if(e.target.tagName==='INPUT') return;
@@ -1256,6 +2078,7 @@ function wire(){
     if(e.key==='+'||e.key==='=') dolly(1/1.7);
     if(e.key==='-') dolly(1.7);
     if(e.key==='r') reset();
+    if(e.key==='c') document.getElementById('cloud').click();
   });
   window.addEventListener('resize',resize);
 }
@@ -1296,14 +2119,11 @@ fetch('core.json').then(function(r){ return r.json(); }).then(function(j){
   buildPalette(); buildAdjacency(); buildRail();
 
   var col=new Float32Array(D.n*3), size=new Float32Array(D.n), st=new Float32Array(D.n), i;
-  for(i=0;i<D.n;i++){
-    var c=D.regionRGB[D.region[i]];
-    col[i*3]=c[0]; col[i*3+1]=c[1]; col[i*3+2]=c[2];
-    size[i]=Math.min(3.2, Math.sqrt(D.indeg[i])*0.55);
-  }
+  for(i=0;i<D.n;i++) size[i]=Math.min(3.2, Math.sqrt(D.indeg[i])*0.55);
   buf.pA=mkbuf(srcPos,gl.DYNAMIC_DRAW); buf.pB=mkbuf(tgtPos,gl.DYNAMIC_DRAW);
   buf.col=mkbuf(col); buf.size=mkbuf(size); buf.state=mkbuf(st,gl.DYNAMIC_DRAW);
   rebuildEdgeBuffers();
+  buildGrouping(); recolor(); renderMass();
 
   wire(); resize(); reset();
   document.getElementById('loading').style.display='none';

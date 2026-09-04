@@ -8,12 +8,18 @@ Two tiers, because the page needs them at different moments:
   leads/NN.json  the lead text of one region's articles. Fetched only when the
                  reader zooms into that region, because 39,915 leads is 15 MB and
                  nobody reads more than a handful.
+  gists/NN.json  one sentence per article, same sharding. Separate from the
+                 leads because these are drawn *on the canvas* at the near and
+                 full bands, so they are needed for whatever happens to be in
+                 view rather than for the one article a reader clicked — and a
+                 420-character lead is 2.5x the bytes of the sentence a label
+                 can actually show.
 
 Everything numeric ships as base64 typed arrays. The corpus is under 65,536
 articles, so every index fits in a uint16 — which halves the two largest arrays
 (the k-NN table and the edge list) against the uint32 they would otherwise need.
 """
-import base64, gzip, json, os, time
+import base64, gzip, json, os, re, time
 import numpy as np
 
 SP = os.path.dirname(os.path.abspath(__file__))
@@ -30,7 +36,79 @@ def trim(t, n=420):
         return t
     cut = t[:n]
     sp = cut.rfind(" ")
-    return (cut[:sp] if sp > n * 0.6 else cut).rstrip(" ,;:") + "…"
+    # ".…" is what you get when the cut lands just after a full stop
+    return (cut[:sp] if sp > n * 0.6 else cut).rstrip(" ,;:.") + "…"
+
+
+# `==Description==` in the wikitext becomes `Description. ` in the lead, because
+# extract-corpus flattens headings rather than dropping them — in a retrieval
+# index the heading word is signal. On a label it is not: 13,082 of 38,595 gists
+# opened on one, and "Video via Description." spends four words of the widest
+# card the atlas draws saying nothing about the article.
+# `= Description = open government advocate`, `URL = Description. "…"` — what a
+# template the lead stripper could not unwrap leaves behind. Anything before the
+# last such marker is field furniture, not prose.
+FIELD = re.compile(r"^.{0,90}?=\s*")
+HEADWORD = re.compile(r"^[A-Z][\w\u2019'\-]+$")
+JOINER = {"via", "at", "and", "of", "the", "for", "in", "on", "from", "by", "to", "&"}
+# `Description. D. Sadoway: "…"` — an initial is one capitalised token followed
+# by a full stop, which is the exact shape of a flattened heading. So is an
+# honorific. Neither is furniture, and eating one silently renames the person
+# the sentence is about.
+NOTHEAD = {"mr", "mrs", "ms", "dr", "prof", "st", "sr", "jr", "rev", "hon", "fr"}
+
+def furniture(frag):
+    words = frag.split()
+    if not 1 <= len(words) <= 5:      # "Podcast at Video at Description." is five
+        return False
+    for w in words:
+        if w.lower() in JOINER:
+            continue
+        if w.lower().rstrip(".") in NOTHEAD or not HEADWORD.match(w):
+            return False
+    return True
+
+def dehead(t, floor=30):
+    """Drop leading flattened section headings. Conservative on purpose: a
+    fragment qualifies only if it is at most five words, every word is either
+    capitalised or a joiner, it carries no punctuation of its own, and real
+    prose survives underneath it. Stacked headings ("Video at Audio at
+    Description.") are peeled one at a time, up to four deep."""
+    if "=" in t[:90]:
+        t = FIELD.sub("", t, count=1).strip()
+    for _ in range(4):
+        m = re.match(r"\s*([^.!?]{1,60})\.\s+(?=\S)", t)
+        if not m:
+            break
+        if not furniture(m.group(1).strip()):
+            break
+        rest = t[m.end():]
+        if len(rest) < floor:
+            break
+        t = rest
+    return t.strip()
+
+
+SENT = re.compile(r"(?<=[.!?])\s")
+
+def gist(t, n=150):
+    """The first sentence, for a label. Not a summary of the article — a
+    summary would have to be written, and 39,915 of them written by a model is a
+    claim about every article that nobody has checked. This is the article's own
+    opening line, cut to something a card can hold."""
+    t = dehead(" ".join(t.split()))
+    if not t:
+        return ""
+    parts = SENT.split(t, 1)
+    s = parts[0]
+    if len(s) < 40 and len(parts) > 1:          # "Video via Description." alone says nothing
+        s = s + " " + parts[1]
+    # …and when there is no parts[1], it still says nothing. 1,800 articles are
+    # a bare heading and an external link the stripper removed; a label reading
+    # "Video via" is worse than no label, because it occupies the slot.
+    if furniture(s.rstrip(".")):
+        return ""
+    return trim(s, n)
 
 
 C = json.load(gzip.open(os.path.join(DATA, "corpus.json.gz"), "rt", encoding="utf-8"))
@@ -112,6 +190,7 @@ core = {
               "isolated": int((indeg == 0).sum() & 0xffffffff)},
 }
 os.makedirs(os.path.join(OUT, "leads"), exist_ok=True)
+os.makedirs(os.path.join(OUT, "gists"), exist_ok=True)
 p = os.path.join(OUT, "core.json")
 json.dump(core, open(p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 log("core.json", os.path.getsize(p) // 1024, "KB")
@@ -122,9 +201,22 @@ for k in range(K):
     # 420 characters, not the 900 the corpus holds: this is a panel preview
     # with "read on the wiki" one click away, and region 8 alone is 6,724
     # articles — the difference is a 4.5 MB fetch against a 2 MB one.
-    shard = {str(int(i)): trim(leads[i]) for i in idx if leads[i]}
+    shard = {str(int(i)): trim(dehead(" ".join(leads[i].split()))) for i in idx if leads[i]}
     q = os.path.join(OUT, "leads", "%02d.json" % k)
     json.dump(shard, open(q, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 log("leads: %d shards, %d KB total" % (K, sum(
     os.path.getsize(os.path.join(OUT, "leads", f))
     for f in os.listdir(os.path.join(OUT, "leads"))) // 1024))
+
+for k in range(K):
+    idx = np.where(reg == k)[0]
+    shard = {}
+    for i in idx:
+        g = gist(leads[i]) if leads[i] else ""
+        if g:
+            shard[str(int(i))] = g
+    json.dump(shard, open(os.path.join(OUT, "gists", "%02d.json" % k), "w", encoding="utf-8"),
+              ensure_ascii=False, separators=(",", ":"))
+log("gists: %d shards, %d KB total" % (K, sum(
+    os.path.getsize(os.path.join(OUT, "gists", f))
+    for f in os.listdir(os.path.join(OUT, "gists"))) // 1024))

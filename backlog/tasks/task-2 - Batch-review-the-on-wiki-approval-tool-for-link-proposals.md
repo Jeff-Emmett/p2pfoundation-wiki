@@ -1,11 +1,11 @@
 ---
 id: TASK-2
 title: 'Batch-review: the on-wiki approval tool for link proposals'
-status: In Progress
+status: Done
 assignee:
   - p2pfoundation-wiki-07
 created_date: '2026-09-04 19:30'
-updated_date: '2026-09-04 20:20'
+updated_date: '2026-09-05 12:10'
 labels: []
 dependencies: []
 priority: high
@@ -20,12 +20,12 @@ The tool Michel and other editors use to approve or reject proposed cross-links,
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
 - [x] #1 reviewer list is closed and pinned by username AND numeric user id
-- [ ] #2 blocked accounts are refused, and every denial is logged
+- [x] #2 blocked accounts are refused, and every denial is logged
 - [x] #3 one revision per article, however many items touch it
-- [ ] #4 commit runs in chunks so a 200-edit run survives Cloudflare's 100s limit
+- [x] #4 commit runs in chunks so a 200-edit run survives Cloudflare's 100s limit
 - [x] #5 on-wiki STOP page halts every commit for everybody
 - [x] #6 stop_page and record_page_prefix resolve into the project namespace, not the article namespace
-- [ ] #7 an interrupted commit resumes rather than sitting half-done
+- [x] #7 an interrupted commit resumes rather than sitting half-done
 <!-- AC:END -->
 
 ## Implementation Notes
@@ -65,4 +65,16 @@ Left unchecked deliberately, with the reason:
 Staying In Progress. live_writes is still false and no human has run the tool yet; that first run is the remaining gate.
 
 Also this session: 'Claude bot' (2950) and 'Bryan' (2951) created; Bryan added to reviewers with a deploy note; the authenticated path walked end to end for the first time (index -> batch -> verify -> save -> commit plan -> dry run '2 would have been applied'), on a throwaway batch since deleted. All seven generators have now produced a batch; three are staged in batches/staged/ so the queue stays at the five the tester walkthrough describes.
+
+All seven criteria met and observed, 2026-09-05.
+
+#2 closed by the test Jeff authorised. 'BR gate test' (id 2952) was created, put ON the reviewer list, and confirmed to get in — HTTP 200, full queue. Then it was blocked with maintenance/blockUsers.php and NOTHING else was changed. Same account, still on the list, still logging in fine (a block stops editing, not logging in): HTTP 403, 'Your wiki account is currently blocked.', and deny.blocked in the access log with name and id. Because the block was the only variable, the refusal can only be the block.
+Note the gate order — logged in, on the list, not blocked — means the account had to be ON the list first. An off-list account is refused as deny.not-reviewer and never reaches the block check, so testing this any other way proves nothing. 'BR gate test' is left blocked and off the list; it is inert, and MediaWiki cannot delete accounts.
+
+#4 and #7 closed together on an 82-item throwaway with commit_budget_seconds turned down to 4: 43 items, 'Continue — 33 pages left', then 39 more = 82. Both passes share one run id in the log, so resume is real and not a re-run.
+Then, unexpectedly, they were confirmed AGAIN under the normal 45s budget: the 59-item link batch chunked at 41. That is commit_chunk_pages => 40, a second and independent chunk trigger I had not exercised. Consequence worth knowing: every batch here over 40 pages will show reviewers a Continue button even when nothing is slow — cat-parents (82), rollup (60) and links (59) all will.
+
+Not exercised, and honestly cannot be without live_writes=true and a human approver: the 5s inter-edit pause (commit.php only calls usleep when live_writes is on, which is why 82 dry-run items took 3.1s) and a real editconflict.
+
+live_writes remains false. Deliberately not flipped — see the session's closing note.
 <!-- SECTION:NOTES:END -->

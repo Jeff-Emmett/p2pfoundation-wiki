@@ -54,49 +54,51 @@ trace anywhere else.
 - Anyone at all can stop every commit by writing anything on
   [`P2P Foundation Wiki:Batch review/STOP`](https://wiki.p2pfoundation.net/index.php?title=P2P_Foundation_Wiki:Batch_review/STOP).
 
-### The queue, and the staging area beside it
+### The queue
 
-`br_list_batches()` globs `batches/*.json`, and `glob` is not recursive — so a
-batch in `batches/staged/` is generated, checked and ready, but invisible to
-reviewers. That is the whole mechanism; there is no status flag for it.
+All eight batches are live. The staging area is gone — everything generated has
+been promoted.
 
-Five batches are in the queue because that is what the tester's walkthrough
-describes. Two more are generated and staged, deliberately held back so the
-first test run matches its own instructions:
-
-| staged batch | items | what it is |
+| batch | items | kind |
 |---|---|---|
-| `merge-spelling-20260904` | 14 | retire live typos — `Civilizatonal Analysis`, `Inteliigence`, `Villagess`, `C Cooperatives`, `Cooperative platforms` — by rewriting the tag on each member page |
-| `categories-index-20260904` | 1 | writes `P2P Foundation Wiki:Categories`, a 17 KB curated index of 5 facets and 16 subject groupings with counts read from the live wiki |
+| `facets-2026-09-04` | 1 | reattach the detached Entity facet root |
+| `merge-spelling-20260904` | 14 | retire live typos by rewriting each member's tag |
+| `synth-cosmo-local-production-20260902` | 1 | machine-written draft, into `Draft:` |
+| `categories-index-20260904` | 1 | writes the 17 KB curated Categories index |
+| `uncat-none-2026-09-01` | 40 | guess a subject for uncategorised articles |
+| `links-mentions-20260904` | 59 | bracket a phrase the author already wrote |
+| `rollup-commons-2026-09-01` | 60 | roll articles up into `Category:Commons` |
+| `cat-parents-2026-09-01` | 82 | wire sub-topic categories to their parent |
 
-Promote one when the testers have the appetite for it:
+258 items. Every one of the eight was confirmed to load and plan against the
+live wiki on 5 September. `merge-spelling` leaves four empty category *pages*
+behind — `Ethical Economy`, `Korea`, `Standard`, `United Kingdom` hold no
+articles, so there is nothing for a batch to rewrite; deleting those four is a
+sysop's job and the generator says so rather than pretending otherwise.
 
-```bash
-ssh netcup-full 'docker exec -u www-data p2pwiki mv \
-  /var/editor-request-data/batch-review/staged/<id>.json \
-  /var/editor-request-data/batch-review/batches/'
-```
+### The guarantees are tested, not asserted
 
-Note `merge-spelling` leaves four category *pages* behind — `Ethical Economy`,
-`Korea`, `Standard`, `United Kingdom` hold no articles, so there is nothing for
-a batch to rewrite. Deleting or redirecting those four is a hand job for a
-sysop, and the generator says so rather than pretending it is done.
+Checked 5 September, none of it requiring a real edit:
 
-### What is still not generated
+| guarantee | how it was shown |
+|---|---|
+| closed reviewer list | `Claude bot` (2950) — valid, logged in, holds `edit`, not on the list → **403**, no batch names, no counts |
+| **blocked accounts refused** | `BR gate test` (2952) put ON the list → **200, full queue**. Then blocked on the wiki, nothing else changed → **403 "Your wiki account is currently blocked."** The block was the only variable, so it is the only possible cause |
+| every denial logged | `deny.anon`, `deny.not-reviewer`, `deny.blocked` in `log/access-YYYYMM.jsonl`, each with username and numeric id |
+| one revision per article | `tests/lib-test.php` grouping cases |
+| **chunked + resumable commit** | 82-item batch with `commit_budget_seconds` turned down: 43 items → `Continue — 33 pages left` → 39 items → done. Both passes share one `run` id in the log |
+| STOP halts everything | `stop_page` pointed at a page that has text → `halted=true`; pointed back at the absent one → `halted=false` |
 
-- **The other eleven roll-up families.** `rollup-commons` covers one of the
-  twelve primaries in `data/families.php`. The audit measured ~18,300 implied
-  memberships across all twelve; one family at a time is the point, because a
-  reviewer can hold one subject in their head and cannot hold twelve.
-  `php generate/gen_rollup.php --family 'Governance' --min-evidence 2`
-  Start at `--min-evidence 2`, which only proposes an article carried by two or
-  more sub-topics of that primary.
-- **The uncategorised tail.** `uncat-none` holds 40 of 1,276. Raise `--limit`
-  once the testers say whether the evidence line is enough to judge a row
-  without opening the article. If it is not, raise the score threshold instead
-  of the limit.
-- **The uncategorised tail**, and the eleven roll-up families above. Everything
-  else has now produced a batch.
+The two that remain unexercised under **live** writes are the 5-second inter-edit
+pause (`commit.php` only calls `usleep()` when `live_writes` is true, which is
+why the 82-item dry run took 3.1s) and a real `editconflict`. Both need a human
+approver and `live_writes => true`.
+
+Testing the blocked path needs the account ON the reviewer list first — the gate
+runs logged-in → on the list → not blocked, so an off-list account is refused as
+`deny.not-reviewer` and never reaches the block check at all. `BR gate test`
+(2952) is left blocked and off the list; it is inert, and MediaWiki cannot
+delete accounts.
 
 ### What the link batch measured
 

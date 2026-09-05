@@ -5,7 +5,7 @@ status: In Progress
 assignee:
   - p2pfoundation-wiki-07
 created_date: '2026-09-04 19:30'
-updated_date: '2026-09-04 19:36'
+updated_date: '2026-09-05 12:10'
 labels: []
 dependencies:
   - TASK-2
@@ -20,10 +20,10 @@ priority: high
 
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
-- [ ] #1 the batch is loaded into batch-review and opens for a logged-in approver
-- [ ] #2 a dry run over the whole batch reports what it would change without editing
+- [x] #1 the batch is loaded into batch-review and opens for a logged-in approver
+- [x] #2 a dry run over the whole batch reports what it would change without editing
 - [ ] #3 Michel is told it exists, where it is, and what pulling the STOP page does
-- [ ] #4 one small batch is walked end to end before the full 220 is offered
+- [x] #4 one small batch is walked end to end before the full 220 is offered
 <!-- AC:END -->
 
 ## Implementation Notes
@@ -53,4 +53,10 @@ Two defects found in batch.wikitext and reported to the atlas session:
 - [[User:P2PLinkBot]] does not exist, and is the wrong actor regardless: batch-review edits AS the approver via their own session, and refuses bot accounts as approvers because an approval has to be traceable to a person.
 
 Remaining for this task: promote the batch into batches/ once one small batch has been walked end to end, then AC #1 and #2.
+
+2026-09-05. Batch promoted into the live queue; staging area removed. Queue is now 8 batches / 258 items, all confirmed to load and plan against the live wiki.
+
+AC#1 and #2 closed on a throwaway copy of the whole batch, so the real one stays pristine (verified after: 59 items, 0 decisions, status open). 59 of 59 planned, dry run applied 41 + 18 = 59, 0 failed. That also exercised the link-mention op through commit.php for the first time — it is the newest op and had only ever been run by its generator, so a crash there would have hit Michel on the largest batch.
+
+AC#3 left unchecked: telling Michel is a delivery step, not something I can verify. The document exists and is current — https://claude.ai/code/artifact/bb1e2f8b-3173-40db-ad88-dde622ceddef — and now describes all eight batches tiered by where to start, with the STOP page named correctly. Sending it is Jeff's.
 <!-- SECTION:NOTES:END -->

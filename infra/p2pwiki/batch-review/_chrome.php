@@ -111,10 +111,30 @@ in <code>config.php</code> when you are ready to apply them for real.</div>
 <?php endif;
 }
 
+/**
+ * Names the people who can actually get in, read from the same config the gate
+ * uses. This used to be the hardcoded sentence "Two accounts ... JeffEmmett and
+ * Mbauwens", which silently became a lie the moment a third reviewer was added:
+ * the footer told every reviewer that they were not one.
+ */
+function br_reviewer_sentence() {
+	static $words = [ 1 => 'One account', 2 => 'Two accounts', 3 => 'Three accounts',
+	                  4 => 'Four accounts', 5 => 'Five accounts' ];
+	$names = array_column( br_config()['reviewers'] ?? [], 'name' );
+	$n     = count( $names );
+	if ( !$n ) {
+		return 'Nobody';
+	}
+	$who = $n === 1
+		? $names[0]
+		: implode( ', ', array_slice( $names, 0, -1 ) ) . ' and ' . end( $names );
+	return ( $words[$n] ?? ( $n . ' accounts' ) ) . ' — ' . $who . ' —';
+}
+
 function br_foot() {
 	?>
 <footer>
-Closed testing. Two accounts can reach this page — <b>JeffEmmett</b> and <b>Mbauwens</b>, pinned by
+Closed testing. <?= br_h( br_reviewer_sentence() ) ?> can reach this page, pinned by
 username <em>and</em> numeric user id. Everyone else gets a 403 with no detail, logged. Proposals are
 generated offline by the scripts in <code>generate/</code>; this page only reviews and applies them,
 never writes anything you have not approved, makes at most one edit per page however many items it

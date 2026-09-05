@@ -165,6 +165,10 @@ foreach ( $b['items'] as $it ) {
 	if ( !empty( $it['suggest'] ) ) { $hasSuggest = true; break; }
 }
 $isBookmarks = ( $b['kind'] ?? '' ) === 'bookmark-visibility';
+// One place for the two verbs, so the row radios and the bulk buttons can never
+// drift apart and say different words for the same decision.
+$yesWord = $isBookmarks ? 'public'  : 'yes';
+$noWord  = $isBookmarks ? 'private' : 'no';
 
 br_head( $b['title'] ?? $b['id'], $user );
 ?>
@@ -196,14 +200,15 @@ nothing is always safe.</div>
 
 <?php if ( !$frozen ): ?>
 <div class="bar">
-  <button class="btn primary" type="submit" name="action" value="save">Save decisions</button>
+  <button class="btn primary" type="submit" name="action" value="save" id="br-save">Save decisions</button>
   <?php if ( $hasSuggest ): ?>
   <button class="btn" type="submit" name="action" value="bulk:suggest:page">Adopt suggestions on this page</button>
   <button class="btn" type="submit" name="action" value="bulk:suggest:all">Adopt all <?= $total ?> suggestions</button>
   <?php endif; ?>
-  <button class="btn" type="submit" name="action" value="bulk:approve:page">Approve this page</button>
-  <button class="btn" type="submit" name="action" value="bulk:reject:page">Reject this page</button>
-  <button class="btn" type="submit" name="action" value="bulk:approve:all">Approve all <?= $total ?></button>
+  <button class="btn" type="submit" name="action" value="bulk:approve:page"><?= br_h( ucfirst( $yesWord ) ) ?> to all on this page</button>
+  <button class="btn" type="submit" name="action" value="bulk:reject:page"><?= br_h( ucfirst( $noWord ) ) ?> to all on this page</button>
+  <button class="btn" type="submit" name="action" value="bulk:approve:all"><?= br_h( ucfirst( $yesWord ) ) ?> to all <?= $total ?></button>
+  <button class="btn" type="submit" name="action" value="bulk:reject:all"><?= br_h( ucfirst( $noWord ) ) ?> to all <?= $total ?></button>
   <button class="btn" type="submit" name="action" value="bulk:clear:all">Clear all</button>
   <button class="btn" type="submit" name="action" value="verify">Check against the wiki</button>
   <span class="spacer"></span>
@@ -301,8 +306,8 @@ foreach ( $slice as $it ):
     <span class="ev"><?= br_h( $d ?: '—' ) ?></span>
 <?php else: ?>
     <fieldset class="dec">
-      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="approve" <?= $d === 'approve' ? 'checked' : '' ?>><?= $isBookmarks ? 'public' : 'yes' ?></label>
-      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="reject"  <?= $d === 'reject'  ? 'checked' : '' ?>><?= $isBookmarks ? 'private' : 'no' ?></label>
+      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="approve" <?= $d === 'approve' ? 'checked' : '' ?>><?= br_h( $yesWord ) ?></label>
+      <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value="reject"  <?= $d === 'reject'  ? 'checked' : '' ?>><?= br_h( $noWord ) ?></label>
       <label><input type="radio" name="d[<?= (int)$it['n'] ?>]" value=""        <?= $d === null      ? 'checked' : '' ?>>—</label>
     </fieldset>
     <?php if ( $sg && $d === null ): ?><div class="ev">suggested: <?= br_h( $sg === 'approve' ? ( $isBookmarks ? 'public' : 'yes' ) : ( $isBookmarks ? 'private' : 'no' ) ) ?></div><?php endif; ?>
@@ -320,4 +325,33 @@ foreach ( $slice as $it ):
 </div>
 <?php endif; ?>
 </form>
+<script>
+// The primary button says what it will actually do, counted from the radios as
+// they stand right now. Deliberately an enhancement and nothing more: with
+// JavaScript off the button still reads "Save decisions" and still works, and
+// the bulk buttons below are all server-side round trips for the same reason.
+// It is never rendered from the saved-on-disk count — that is what made the old
+// control read "0 approved" while the screen was full of ticks.
+(function () {
+	var f = document.getElementById('f');
+	var b = document.getElementById('br-save');
+	if (!f || !b) { return; }
+	var YES = <?= json_encode( $yesWord ) ?>, NO = <?= json_encode( $noWord ) ?>;
+	function count(v) {
+		return f.querySelectorAll('input[type=radio][value="' + v + '"]:checked').length;
+	}
+	function plural(n) { return n === 1 ? ' change' : ' changes'; }
+	function update() {
+		var a = count('approve'), r = count('reject');
+		if (a && r)      { b.textContent = 'Approve ' + a + ', reject ' + r; }
+		else if (a)      { b.textContent = 'Approve ' + a + plural(a); }
+		else if (r)      { b.textContent = 'Reject ' + r + plural(r); }
+		else             { b.textContent = 'Save decisions'; }
+	}
+	f.addEventListener('change', function (e) {
+		if (e.target && e.target.type === 'radio') { update(); }
+	});
+	update();
+})();
+</script>
 <?php br_foot();

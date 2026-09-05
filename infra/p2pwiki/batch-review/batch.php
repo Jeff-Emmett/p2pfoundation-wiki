@@ -34,9 +34,15 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	} else {
 		$now = gmdate( 'c' );
 
-		if ( $action === 'save' ) {
-			$dec = (array)( $_POST['d'] ?? [] );
-			$n = 0;
+		// The radios are persisted on EVERY submission, whatever button was
+		// pressed. They used to be read only by the 'save' branch, which meant
+		// that pressing "Check against the wiki" — or walking to the commit
+		// screen — silently threw away everything the reviewer had just ticked,
+		// and the reviewer had no way of knowing. A tick is a decision; losing
+		// one quietly is the worst thing this screen could do.
+		$saved = 0;
+		$dec   = (array)( $_POST['d'] ?? [] );
+		if ( $dec ) {
 			foreach ( $b['items'] as $i => $it ) {
 				$k = (string)$it['n'];
 				if ( !array_key_exists( $k, $dec ) ) {
@@ -44,14 +50,27 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 				}
 				$v = $dec[$k] === 'approve' ? 'approve' : ( $dec[$k] === 'reject' ? 'reject' : null );
 				if ( ( $b['items'][$i]['decision'] ?? null ) !== $v ) {
-					$n++;
+					$saved++;
 				}
 				$b['items'][$i]['decision']   = $v;
 				$b['items'][$i]['decided_by'] = $v ? $user['name'] : null;
 				$b['items'][$i]['decided_at'] = $v ? $now : null;
 			}
-			br_save_batch( $b );
-			$notice = $n . ' decision' . ( $n === 1 ? '' : 's' ) . ' saved.';
+			if ( $saved ) {
+				br_save_batch( $b );
+			}
+		}
+
+		if ( $action === 'save' ) {
+			$notice = $saved . ' decision' . ( $saved === 1 ? '' : 's' ) . ' saved.';
+
+		} elseif ( $action === 'save-commit' ) {
+			// Save, then go to the commit screen. This is what the old
+			// "Review & commit" control looked like it did, and did not: it was
+			// an <a href> sitting in the button row, so it navigated away and
+			// dropped the form.
+			header( 'Location: commit.php?id=' . rawurlencode( $b['id'] ), true, 303 );
+			exit;
 
 		} elseif ( strpos( $action, 'bulk:' ) === 0 ) {
 			// action is "bulk:<approve|reject|clear|suggest>:<page|all>" — carried by
@@ -188,8 +207,7 @@ nothing is always safe.</div>
   <button class="btn" type="submit" name="action" value="bulk:clear:all">Clear all</button>
   <button class="btn" type="submit" name="action" value="verify">Check against the wiki</button>
   <span class="spacer"></span>
-  <a class="btn primary" href="commit.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">
-    Review &amp; commit <?= $c['approve'] ?> approved →</a>
+  <button class="btn primary" type="submit" name="action" value="save-commit">Save &amp; review →</button>
 </div>
 <?php else: ?>
 <div class="bar">
@@ -298,8 +316,7 @@ foreach ( $slice as $it ):
 <div class="bar">
   <button class="btn primary" type="submit" name="action" value="save">Save decisions</button>
   <span class="spacer"></span>
-  <a class="btn primary" href="commit.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">
-    Review &amp; commit <?= $c['approve'] ?> approved →</a>
+  <button class="btn primary" type="submit" name="action" value="save-commit">Save &amp; review →</button>
 </div>
 <?php endif; ?>
 </form>

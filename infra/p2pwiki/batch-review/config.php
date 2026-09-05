@@ -81,8 +81,14 @@ return [
 	// Flip this only once both of you are happy with what the previews show.
 	// Everything else about the flow is identical either way, so the dry run
 	// is a true rehearsal and not a different code path.
+	//
+	// TURNED ON 2026-09-05, at Jeff's explicit request, after he reviewed the
+	// merge-spelling batch end to end as JeffEmmett and its dry run came back
+	// 14 of 14 with nothing failed. Set it back to false when a run is done,
+	// and remember this file is the deployed copy — the repo copy must match or
+	// the next deploy silently reverts whichever value it holds.
 	// ---------------------------------------------------------------------
-	'live_writes' => false,
+	'live_writes' => true,
 
 	// ---------------------------------------------------------------------
 	// The applier's guarantees, as numbers.

@@ -242,14 +242,57 @@ nothing is always safe.</div>
 <tbody>
 <?php
 $slice = array_slice( $b['items'], $offset, BR_PER_PAGE, true );
-foreach ( $slice as $it ):
+
+// A reviewer thinks in three piles, not one list: what still needs deciding,
+// what has been approved, and what has been turned down. Partition on the
+// DECISION — but colour on the RESULT, because "approved" and "on the wiki"
+// are different claims and only the second one has earned green.
+$piles = [ 'suggested' => [], 'approved' => [], 'denied' => [] ];
+foreach ( $slice as $i => $it ) {
+	$dd = $it['decision'] ?? null;
+	$piles[ $dd === 'approve' ? 'approved' : ( $dd === 'reject' ? 'denied' : 'suggested' ) ][ $i ] = $it;
+}
+$sections = [
+	'suggested' => [ 'Suggested updates for approval',
+		'Nothing has been decided about these yet. They are proposals and nothing more.' ],
+	'approved'  => [ 'Approved updates',
+		'Green rows are on the wiki and carry an Undo. The rest are approved and waiting for a commit.' ],
+	'denied'    => [ 'Denied updates',
+		'Turned down. Nothing here will ever be written; it is kept so the decision is on the record.' ],
+];
+
+foreach ( $sections as $sKey => $sMeta ):
+	if ( !$piles[$sKey] ) {
+		continue;
+	}
+	$sCount = count( $piles[$sKey] );
+	$sDone  = 0;
+	foreach ( $piles[$sKey] as $x ) {
+		if ( ( $x['result']['status'] ?? '' ) === 'ok' && ( $x['undo']['status'] ?? '' ) !== 'ok' ) { $sDone++; }
+	}
+?>
+<tr class="sec sec-<?= br_h( $sKey ) ?>"><td colspan="6">
+  <b><?= br_h( $sMeta[0] ) ?></b>
+  <span class="pill p-<?= $sKey === 'denied' ? 'error' : ( $sKey === 'suggested' ? 'dry' : 'ready' ) ?>"><?= $sCount ?><?php
+	if ( $sKey === 'approved' ) { echo ', ' . $sDone . ' completed'; } ?></span>
+  <div class="ev"><?= br_h( $sMeta[1] ) ?></div>
+</td></tr>
+<?php
+foreach ( $piles[$sKey] as $it ):
 	$d     = $it['decision'] ?? null;
 	$sg    = $it['suggest'] ?? null;
 	$chk   = $it['check'] ?? null;
 	$res   = $it['result'] ?? null;
 	$title = (string)$it['target'];
+	// "Completed" means a revision exists on the wiki and has not been walked
+	// back. A dry run is not completed: it wrote nothing.
+	$rDone   = ( $res['status'] ?? '' ) === 'ok' && !empty( $res['revid'] );
+	$rUndone = ( $it['undo']['status'] ?? '' ) === 'ok';
+	$rowCls  = $sKey === 'denied'    ? 's-denied'
+	         : ( $sKey === 'suggested' ? 's-suggested'
+	         : ( $rUndone ? 's-undone' : ( $rDone ? 's-done' : 's-approved' ) ) );
 ?>
-<tr>
+<tr class="<?= $rowCls ?>">
   <td class="num"><?= (int)$it['n'] ?></td>
   <td><a class="mono" href="<?= br_h( br_target_link( $it ) ) ?>" target="_blank" rel="noopener"><?= br_h( $it['title'] ?? $title ) ?></a>
       <?php if ( !empty( $it['title'] ) ): ?><div class="ev"><?= br_h( $title ) ?></div><?php endif; ?></td>
@@ -292,6 +335,7 @@ foreach ( $slice as $it ):
 	if ( $res ) {
 		$cls = $res['status'] === 'ok' ? 'ready' : ( $res['status'] === 'dry-run' ? 'dry' : ( $res['status'] === 'error' ? 'error' : 'already' ) );
 		echo '<span class="pill p-' . $cls . '">' . br_h( $res['status'] ) . '</span>';
+		if ( $rUndone ) { echo ' <span class="pill p-already">undone</span>'; }
 		if ( !empty( $res['msg'] ) ) { echo '<div class="ev">' . br_h( $res['msg'] ) . '</div>'; }
 	} elseif ( $chk ) {
 		echo '<span class="pill p-' . br_h( $chk['status'] ) . '">' . br_h( $chk['status'] ) . '</span>';
@@ -302,7 +346,11 @@ foreach ( $slice as $it ):
 ?>
   </td>
   <td>
-<?php if ( $frozen ): ?>
+<?php if ( $rDone && !$rUndone ): ?>
+    <span class="pill p-ready">completed</span>
+    <div class="ev">rev <?= (int)$res['revid'] ?><?php if ( !empty( $it['decided_by'] ) ): ?> · by <?= br_h( $it['decided_by'] ) ?><?php endif; ?></div>
+    <a class="btn danger" href="undo.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>&amp;only=<?= (int)$it['n'] ?>">Undo</a>
+<?php elseif ( $frozen ): ?>
     <span class="ev"><?= br_h( $d ?: '—' ) ?></span>
 <?php else: ?>
     <fieldset class="dec">
@@ -314,6 +362,7 @@ foreach ( $slice as $it ):
 <?php endif; ?>
   </td>
 </tr>
+<?php endforeach; ?>
 <?php endforeach; ?>
 </tbody></table></div>
 

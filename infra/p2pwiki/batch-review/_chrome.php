@@ -76,6 +76,19 @@ code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.primary:hover{opacity:.9;color:#fff}
 .btn.danger{border-color:var(--bad);color:var(--bad)}
+/* Three piles, three colours. Suggested is amber because it is a question;
+   completed is green because it is on the wiki; denied is red because it is a
+   refusal. Approved-but-not-yet-written gets NO tint on purpose — it has not
+   earned green, and colouring it green would claim something untrue. */
+tr.sec td{background:var(--rule2);border-top:2px solid var(--rule);padding:12px}
+tr.sec-suggested td{border-top-color:var(--warn)}
+tr.sec-approved td{border-top-color:var(--accent)}
+tr.sec-denied td{border-top-color:var(--bad)}
+tr.s-suggested td{background:var(--warn-bg)}
+tr.s-done td{background:var(--accent-bg)}
+tr.s-denied td{background:var(--bad-bg)}
+tr.s-undone td{background:var(--rule2)}
+td .btn{margin-top:6px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
 .bar .spacer{flex:1}
 .why{color:var(--ink2);font-size:12.8px}

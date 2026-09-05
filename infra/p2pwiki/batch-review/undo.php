@@ -28,12 +28,23 @@ if ( !$b ) {
 }
 $stop = br_stop_state();
 
-/** Applied items that created a revision and have not already been undone. */
-function br_undoable( array $b ) {
+/**
+ * Applied items that created a revision and have not already been undone.
+ *
+ * $onlyRev scopes this to a single revision, which is what the per-row Undo
+ * button on the item list asks for. Note it scopes by REVISION and not by
+ * item: guarantee 04 merges every item touching one page into a single edit,
+ * so undoing one row necessarily reverses its siblings in that edit. There is
+ * no way to undo half a revision, and pretending otherwise would be a lie.
+ */
+function br_undoable( array $b, $onlyRev = null ) {
 	$out = [];
 	foreach ( $b['items'] as $it ) {
 		$r = $it['result'] ?? null;
 		if ( !$r || ( $r['status'] ?? '' ) !== 'ok' || empty( $r['revid'] ) ) {
+			continue;
+		}
+		if ( $onlyRev !== null && (int)$r['revid'] !== (int)$onlyRev ) {
 			continue;
 		}
 		if ( !empty( $it['undo'] ) && ( $it['undo']['status'] ?? '' ) === 'ok' ) {
@@ -49,7 +60,23 @@ function br_undoable( array $b ) {
 	return $out;
 }
 
-$todo   = br_undoable( $b );
+// ?only=<n> — the per-row Undo button. Resolved to the revision that item
+// created, so the scope is honest about what will actually be reversed.
+$only    = trim( (string)( $_REQUEST['only'] ?? '' ) );
+$onlyRev = null;
+if ( $only !== '' ) {
+	foreach ( $b['items'] as $it ) {
+		if ( (string)$it['n'] === $only ) {
+			$onlyRev = (int)( $it['result']['revid'] ?? 0 );
+			break;
+		}
+	}
+	if ( !$onlyRev ) {
+		$onlyRev = -1;   // asked for a row that never created a revision: undo nothing
+	}
+}
+
+$todo   = br_undoable( $b, $onlyRev );
 $report = [];
 $ran    = false;
 
@@ -96,7 +123,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		br_save_batch( $b );
 		br_audit( 'undo.chunk', [ 'user' => $user['name'], 'batch' => $b['id'], 'revisions' => $n ] );
 		$b    = br_load_batch( $id );
-		$todo = br_undoable( $b );
+		$todo = br_undoable( $b, $onlyRev );
 	}
 }
 
@@ -129,11 +156,25 @@ halts every write this tool makes, undos included.</div>
 <?php endif; ?>
 
 <?php if ( !$todo ): ?>
-<p class="sub">Nothing left to undo in this batch. An item is undoable only if it actually created a
+<p class="sub">Nothing left to undo<?= $only !== '' ? ' for that row' : ' in this batch' ?>. An item is undoable only if it actually created a
 revision — dry runs, skips and failures created none.</p>
 <?php else: ?>
-<p class="sub">These <b><?= count( $todo ) ?></b> revisions were created by this batch and can be
-walked back. MediaWiki's own undo is used, so any page somebody has edited since will refuse
+<?php if ( $only !== '' ): ?>
+<div class="banner"><b>One revision.</b> You asked to undo row <?= br_h( $only ) ?>, which is
+revision <?= (int)$onlyRev ?>.
+<?php $sib = 0; foreach ( $b['items'] as $x ) { if ( (int)( $x['result']['revid'] ?? 0 ) === (int)$onlyRev ) { $sib++; } }
+      if ( $sib > 1 ): ?>
+That single edit carried <b><?= $sib ?></b> items of this batch, because everything touching one page
+is written as one revision — so undoing it reverses all <?= $sib ?>, not just the row you clicked.
+There is no way to undo half a revision.
+<?php else: ?>
+That edit carried only this item, so nothing else is affected.
+<?php endif; ?>
+<a href="undo.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">Undo the whole batch instead →</a></div>
+<?php endif; ?>
+<?php $tn = count( $todo ); ?>
+<p class="sub">These <b><?= $tn ?></b> revision<?= $tn === 1 ? '' : 's' ?> <?= $tn === 1 ? 'was' : 'were' ?>
+created by this batch and can be walked back. MediaWiki's own undo is used, so any page somebody has edited since will refuse
 rather than lose their work — a refusal here is the tool behaving, not failing.</p>
 <div class="scroll"><table>
 <thead><tr><th class="num">#</th><th>Page</th><th class="num">rev</th><th>What it did</th><th>Approved by</th></tr></thead>
@@ -148,11 +189,12 @@ rather than lose their work — a refusal here is the tool behaving, not failing
 <form method="post">
 <input type="hidden" name="csrf" value="<?= br_h( $csrf ) ?>">
 <input type="hidden" name="id" value="<?= br_h( $b['id'] ) ?>">
+<?php if ( $only !== '' ): ?><input type="hidden" name="only" value="<?= br_h( $only ) ?>"><?php endif; ?>
 <div class="banner live"><label><input type="checkbox" name="confirm" value="1">
-I want these <?= count( $todo ) ?> revisions undone on wiki.p2pfoundation.net as
+I want <?= $tn === 1 ? 'this revision' : 'these ' . $tn . ' revisions' ?> undone on wiki.p2pfoundation.net as
 <b><?= br_h( $user['name'] ) ?></b>.</label></div>
 <div class="bar">
-  <button class="btn danger" type="submit"<?= $stop['halted'] ? ' disabled' : '' ?>>Undo <?= count( $todo ) ?> revisions</button>
+  <button class="btn danger" type="submit"<?= $stop['halted'] ? ' disabled' : '' ?>>Undo <?= $tn ?> revision<?= $tn === 1 ? '' : 's' ?></button>
   <a class="btn" href="commit.php?id=<?= br_h( rawurlencode( $b['id'] ) ) ?>">Cancel</a>
 </div>
 </form>

@@ -35,6 +35,95 @@ Deploy uses both (the default `docker compose up` picks up `.yml` and `.override
 
 Not in repo. On the server `LocalSettings.php` and `.env` live in `/opt/websites/p2pwiki/` and contain `SecretKey`, `UpgradeKey`, `DB_ROOT_PASSWORD`, `DB_PASSWORD`. Backed up via `/opt/backup-system/backup-docker.sh`.
 
+## Extensions — on disk is not the same as loaded
+
+The `mediawiki:1.40` image ships ~37 bundled extensions, and the `p2pwiki-extensions`
+named volume keeps them. **Presence does nothing**: only a `wfLoadExtension()` in
+`LocalSettings.php` turns one on, and that file is not in this repo — so this table is
+the only record a rebuilt host would have.
+
+Loaded, read back from `api.php?action=query&meta=siteinfo&siprop=extensions` on
+2026-10-02:
+
+| Extension | Provides |
+|-----------|----------|
+| Vector (skin) | Default skin, legacy 2011 rendering |
+| CategoryTree | `<categorytree>` |
+| YouTube 1.9.4 | `<youtube>`, `<aoaudio>`, `<aovideo>`, `<nicovideo>` |
+| ConfirmEdit + QuestyCaptcha | Account-creation CAPTCHA |
+| WikiEditor | Edit toolbar |
+| HitCounters | Page view counts (restored from the old wiki) |
+| Elastica + CirrusSearch | Search (replaces MySQL full-text) |
+| Cite | `<ref>` / `<references />` footnotes — enabled 2026-10-02 |
+
+Everything else in `docker exec p2pwiki ls extensions` is on disk and inert. The one
+that still costs something is **ParserFunctions**: a handful of pages use `{{#if}}`
+and render it as raw text.
+
+### Cite was lost, not never installed
+
+`Help:Create Citations` is an on-wiki help page that documents the extension and uses
+a footnote itself, so the wiki had Cite at some point. The archived `Special:Version`
+of 2026-02-02 already shows it gone, and the `LocalSettings.php` now on Netcup never
+loaded it — so 192 pages displayed `&lt;ref&gt;...&lt;/ref&gt;` as visible text and a
+bare `<references/>` line where their footnotes should have been.
+
+Re-enabled 2026-10-02 by appending `wfLoadExtension( 'Cite' );`. Nothing was
+downloaded: `extensions/Cite` in the image is the version that matches this core, and
+Cite has no tables, so no `update.php`. Two things worth knowing for next time:
+
+* The parser cache hands out the old broken HTML for up to `$wgParserCacheExpireTime`
+  (86400s here) after the switch. `UPDATE page SET page_touched = <now>` over the
+  affected pages invalidates it immediately; 200 pages were touched and re-parsed.
+* MediaWiki 1.40's Cite appends the footnote list at the foot of the article when
+  `<references />` is missing, so the 17 pages without the tag need no edit. Only
+  `Help:Create Citations` shows a red Cite error, and for a content reason: its
+  examples define `<ref name="multiple">` twice with different text.
+
+### Where this configuration actually lives
+
+`LocalSettings.php` is **not** in this repo and never has been. Production runs
+from `/opt/websites/p2pwiki` on Netcup, which is a checkout of a *second, private*
+repo — `gitea.jeffemmett.com/jeffemmett/p2pwiki`, push-mirrored to the private
+`github.com/Jeff-Emmett/p2pwiki` — and there `LocalSettings.php` **is** tracked.
+The overlapping files (`docker-compose.yml`, `block-*.conf`, `robots.txt`) were
+byte-identical in both repos when compared on 2026-10-02, but nothing enforces
+that: edits here do not reach production, and edits there do not reach here.
+
+Two traps found on 2026-10-02 while making the Cite change persistent:
+
+* That checkout's deploy branch is **`dev`**, and its `main` was **8 commits
+  behind** — the September scraper blocks among them. A fresh clone lands on
+  `main`, so a rebuild from it would have resurrected a months-old config.
+  `main` has since been fast-forwarded to `dev`.
+* `/opt/deploy-webhook` carries a `p2pwiki` entry that runs
+  `docker compose up -d --build` in that tree. Its branch filter compares the
+  pushed branch against the one checked out on the server, so **pushing `dev`
+  redeploys the live wiki** — it recreated `p2pwiki-db` (~45 s, clean start, no
+  crash recovery) and restarted `p2pwiki`. Pushes to any other branch are
+  skipped.
+
+Backup: `/opt` is one of the 22 restic roots in `/opt/backup-system/backup-docker.sh`,
+and `/opt/websites/p2pwiki/LocalSettings.php` is present in the nightly R2
+snapshot (verified against the 2026-10-02 03:03 snapshot). The exclude list does
+not touch `/opt/websites`.
+
+### Drift probe
+
+`monitoring/p2pwiki-extension-drift-probe.{sh,service,timer}` — installed on Netcup
+as `/opt/scripts/p2pwiki-extension-drift-probe.sh` with a daily timer. It asserts
+two separate things: the extension set the wiki reports as loaded, and that
+`<ref>` still renders a footnote list. Loaded and working are different claims,
+so it checks both, parsing from `text=` rather than a page so the answer cannot
+come out of the parser cache. Failures mail Jeff via `unit-failure-notify@%n`.
+
+Exit 0 OK, 3 drift, 2 inconclusive. **Inconclusive is deliberately not 0**: the
+Cite loss and the reverted `$wgSMTP` fix both went unnoticed for months precisely
+because nothing could distinguish "checked and fine" from "never checked". Both
+failure paths were exercised before installing — `EXPECTED="Cite Nonexistent"` → 3,
+`CONTAINER=no-such-container` → 2 — and `EXPECTED` is overridable for exactly
+that reason.
+
 ## Dumps
 
 Weekly current-revisions XML + monthly full-history XML + monthly images tarball, served at:

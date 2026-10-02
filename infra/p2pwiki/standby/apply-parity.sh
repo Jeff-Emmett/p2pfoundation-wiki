@@ -17,12 +17,16 @@
 #   logo       : /images/0/09/Logo-final-box-128.png
 #
 # WHAT IS DELIBERATELY *NOT* INSTALLED, and this is the discipline that makes
-# this parity rather than improvement: there is no Cite and no ParserFunctions
-# on the live wiki. 187 pages use <ref> and 6 use {{#if}}, and all of them render
-# as raw text on Netcup too. Adding those extensions would make the standby
-# *better* than production and therefore WRONG — a reader would see something the
-# real wiki never showed them, and a future comparison would report a spurious
-# diff. Parity includes the imperfections.
+# this parity rather than improvement: there is no ParserFunctions on the live
+# wiki. 6 pages use {{#if}} and render it as raw text on Netcup too. Adding it
+# would make the standby *better* than production and therefore WRONG — a reader
+# would see something the real wiki never showed them, and a future comparison
+# would report a spurious diff. Parity includes the imperfections.
+#
+# Cite used to be on that list for the same reason. It came off on 2026-10-02,
+# when Cite was enabled on Netcup: 192 pages use <ref> and they now render as
+# real footnotes there, so a standby without Cite is the one that lies. See the
+# NETCUP PARITY - CITE step below.
 #
 # Idempotent: safe to re-run.
 set -euo pipefail
@@ -66,9 +70,11 @@ else
 # NETCUP PARITY — reconstructed from the archived Special:Version of
 # 2026-02-02, because LocalSettings.php itself lives only on the Netcup host.
 #
-# Do NOT add extensions that are absent from that list (Cite, ParserFunctions,
-# and so on). The live wiki renders <ref> and {{#if}} as raw text, and this copy
-# must render them the same way or it is not a standby, it is a fork.
+# Do NOT add extensions that are absent from that list (ParserFunctions and so
+# on). The live wiki renders {{#if}} as raw text, and this copy must render it
+# the same way or it is not a standby, it is a fork. Cite is the one exception
+# and it is NOT an exception to the rule: Netcup gained it on 2026-10-02, so it
+# is applied by its own step below rather than silently added here.
 # ---------------------------------------------------------------------------
 
 wfLoadExtension( 'CategoryTree' );
@@ -169,6 +175,21 @@ $wgFileExtensions = [
 	'png', 'gif', 'jpg', 'jpeg', 'webp', 'svg',
 	'pdf', 'odt', 'ods', 'odp', 'txt',
 ];
+PHP
+fi
+
+if ! grep -q "NETCUP PARITY - CITE" LocalSettings.php; then
+  echo "   appending Cite parity"
+  cat >> LocalSettings.php <<'PHP'
+
+# --- NETCUP PARITY - CITE --------------------------------------------------
+# Netcup enabled Cite on 2026-10-02, so parity now REQUIRES it. 192 pages use
+# <ref>; without this line they show the tag as literal text and this copy is
+# the one that misrepresents the wiki.
+#
+# Bundled in the mediawiki:1.40 image, so nothing is fetched, and Cite has no
+# tables, so update.php has nothing to do for it.
+wfLoadExtension( 'Cite' );
 PHP
 fi
 

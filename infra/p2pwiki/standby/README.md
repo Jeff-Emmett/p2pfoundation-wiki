@@ -152,6 +152,23 @@ cannot snapshot a dead host**, so the standby's freshness is always capped by th
 last successful pull — which is the argument for pulling on a schedule rather
 than remembering to.
 
+**A reload invalidates the search index.** The Elasticsearch index describes the
+corpus as it was when it was built, and nothing on this box notices that the
+pages underneath it changed — the standby runs no job queue, which is the whole
+reason the index had to be built by hand in the first place. After an import,
+either rebuild it:
+
+```bash
+./cirrus.sh on && nohup ./cirrus.sh build & disown   # tens of minutes
+./cirrus.sh verify && ./cirrus.sh off
+```
+
+or leave it alone and accept that the index is as old as the last build —
+harmless while it is switched off, misleading the moment someone promotes this
+box and searches it. `cirrus.sh status` tells you the document count, not the
+date it was written, so **the build date is not recoverable from the running
+system**: if it matters, note it here.
+
 ### The read-only trap, recorded because it will catch the next person
 
 `$wgReadOnly` blocks **every** write, including maintenance scripts, so

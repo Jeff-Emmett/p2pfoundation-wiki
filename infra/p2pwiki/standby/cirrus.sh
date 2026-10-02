@@ -17,6 +17,7 @@
 #   ./cirrus.sh status   what is on, what the wiki says is answering, a sample count
 #   ./cirrus.sh on       start Elasticsearch and switch the wiki to CirrusSearch
 #   ./cirrus.sh build    build the index (slow: tens of minutes; run under nohup)
+#   ./cirrus.sh verify   documents in Elasticsearch, queue drained, query answers
 #   ./cirrus.sh off      back to MySQL full-text, Elasticsearch container removed
 #
 # `on` is safe to re-run. `off` keeps the index volume on purpose.
@@ -61,6 +62,24 @@ except Exception as exc:
 
 es_running() { [ -n "$(docker ps -q -f "name=^${ES}$")" ]; }
 es_healthy() { docker exec "$ES" curl -sf --max-time 5 http://localhost:9200/_cluster/health >/dev/null 2>&1; }
+
+doc_count() {
+	docker exec "$ES" curl -s --max-time 15 \
+		"http://localhost:9200/p2pwiki_content/_count" 2>/dev/null \
+	| python3 -c 'import sys,json
+try: print(json.load(sys.stdin)["count"])
+except Exception: print(0)' 2>/dev/null
+}
+
+# /_cluster/health answers while shards are still recovering, so "the container
+# is healthy" is not "search works". Observed: 41s after `on`, the cluster
+# answered, the index was listed, _count returned 0 and a query threw. Readiness
+# is the index being countable, not the process being up.
+es_ready() {
+	docker exec "$ES" curl -sf --max-time 15 \
+		"http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=10s" >/dev/null 2>&1 \
+	&& { ! index_exists || [ "$(doc_count)" -gt 0 ] 2>/dev/null; }
+}
 index_exists() {
 	docker exec "$ES" curl -sf --max-time 10 "http://localhost:9200/_cat/indices/p2pwiki*?h=index" 2>/dev/null \
 	| grep -q "p2pwiki"
@@ -86,8 +105,13 @@ wait_for() {    # wait_for <seconds> <command...>
 #
 # So the queue has to be drained explicitly, and the result has to be checked
 # against Elasticsearch rather than against the indexer's own opinion.
+# Only the Cirrus write jobs count. An index build also leaves ordinary
+# refreshLinksDynamic jobs behind (10 of them, here), and a check that counted
+# every job type would fail on a finished, correct index.
 jobs_left() {
-	docker exec "$WIKI" php /var/www/html/maintenance/showJobs.php 2>/dev/null | tr -cd '0-9'
+	docker exec "$WIKI" php /var/www/html/maintenance/showJobs.php --group 2>/dev/null \
+	| awk '/^cirrusSearchElasticaWrite:/ { print $2; found = 1 }
+	       END { if ( !found ) print 0 }'
 }
 
 drain_jobs() {
@@ -123,11 +147,11 @@ drain_jobs() {
 # that answers like production. Anything less is reported as a failure.
 verify_index() {
 	local docs jobs sample rc=0
-	docs=$(docker exec "$ES" curl -s --max-time 15 \
-		"http://localhost:9200/p2pwiki_content/_count" 2>/dev/null \
-		| python3 -c 'import sys,json
-try: print(json.load(sys.stdin)["count"])
-except Exception: print(0)' 2>/dev/null)
+	docs=$(doc_count)
+	# One retry window, because a just-started node reports 0 while it recovers.
+	if [ "${docs:-0}" = "0" ]; then
+		wait_for 90 test 0 != "$(doc_count)" && docs=$(doc_count)
+	fi
 	jobs=$(jobs_left)
 	sample=$(hits Ostrom)
 	echo "   documents in p2pwiki_content : ${docs:-?}"
@@ -159,7 +183,12 @@ on)
 		echo "FAILED: elasticsearch did not answer within 180s; leaving the wiki on MySQL" >&2
 		exit 1
 	fi
-	echo "   healthy"
+	echo "   container healthy"
+	if wait_for 180 es_ready; then
+		echo "   index ready"
+	else
+		echo "   WARNING: elasticsearch is up but its index is not answering yet" >&2
+	fi
 	echo "== switching the wiki to CirrusSearch =="
 	: > "$MARKER"
 	if ! wait_for 90 test cirrus = "$(backend)"; then
@@ -200,6 +229,11 @@ build)
 	verify_index
 	;;
 
+verify)
+	es_running || { echo "elasticsearch is not running; nothing to verify" >&2; exit 1; }
+	verify_index
+	;;
+
 off)
 	echo "== switching the wiki back to MySQL full-text =="
 	rm -f "$MARKER"
@@ -217,7 +251,7 @@ off)
 	;;
 
 *)
-	echo "usage: $0 {status|on|build|off}" >&2
+	echo "usage: $0 {status|on|build|verify|off}" >&2
 	exit 2
 	;;
 esac

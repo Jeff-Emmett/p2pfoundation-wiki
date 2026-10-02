@@ -4,6 +4,7 @@ title: 'GX10 wiki standby has no search: CirrusSearch/Elastica missing'
 status: To Do
 assignee: []
 created_date: '2026-10-02 13:31'
+updated_date: '2026-10-02 14:47'
 labels: []
 dependencies: []
 priority: medium
@@ -17,8 +18,8 @@ Measured 2026-10-02 from the standby's own siteinfo: it runs CategoryTree, Cite,
 
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
-- [ ] #1 Elasticsearch running on GX10 and reachable from the standby container
-- [ ] #2 CirrusSearch + Elastica loaded and the index built over the full corpus
-- [ ] #3 A search on the standby returns the same shape of result as Netcup for the same query
-- [ ] #4 apply-parity.sh updated so a re-run reproduces this rather than needing the steps again
+- [ ] #1 Elasticsearch is startable on demand and verified by actually starting it; it is NOT in the default stack and cannot restart on its own (it measures 973MiB and the standby serves no traffic)
+- [ ] #2 CirrusSearch + Elastica staged at Netcup's own versions (6.5.4 / 6.2.0) and loaded only when the switch is on; the index is built over the full corpus and the document count is checked against Elasticsearch rather than against the indexer's own report
+- [ ] #3 With the switch on the standby returns Netcup-shaped search results on the same queries; with it off it still answers from MySQL full-text
+- [ ] #4 apply-parity.sh reproduces the staging on a fresh standby and promote-to-primary.sh turns search on, so neither needs today's steps repeated by hand
 <!-- AC:END -->

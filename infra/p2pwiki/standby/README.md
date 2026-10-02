@@ -70,6 +70,56 @@ storage, which is unreachable for the same reason everything else is. Worth
 fixing on its own merits: a backup you cannot reach during an outage is a backup
 with a precondition nobody wrote down.
 
+### Search: staged, not running (2026-10-02)
+
+Netcup answers search with CirrusSearch. Without it MediaWiki falls back to MySQL
+full-text, and on this corpus that is not a slightly worse search — it is a
+different feature wearing the same name:
+
+| query | Netcup (Cirrus) | here (MySQL full-text) |
+|---|---|---|
+| commons | 8285, top hit "Commons" | 2150, top hit "Typology of Global Commons-Lacking…" |
+| peer production | 2222 | 195 |
+| Ostrom | 637 | 15 |
+| platform cooperative | 1034, top hit "Platform Cooperativism" | 11, top hit "Transkribus - Cooperative AI Platform…" |
+| self-organisation | 1078 | 21 |
+
+One to three percent of the hits, and the wrong page first.
+
+CirrusSearch is nonetheless **off** while this box idles. Elasticsearch measures
+973 MiB resident on a host already running 244 containers, and 24 hours of this
+wiki's access log contains nothing but local probes — so that gigabyte would be
+held for nobody. What is in place instead:
+
+* `extensions/CirrusSearch` and `extensions/Elastica` are **mounted but not
+  loaded** — 6.5.4 and 6.2.0, copied byte-for-byte from Netcup (Elastica needs
+  its composer `vendor/`, which a git clone does not give you)
+* `docker-compose.cirrus.yml` holds the Elasticsearch service, is not part of the
+  default stack, and carries `restart: "no"` so a reboot cannot quietly bring it
+  back
+* the index lives in `p2pwiki-standby-es-data`, which survives `off`
+* `wiki-state/cirrus-enabled` is the switch `LocalSettings.php` tests
+
+```sh
+./cirrus.sh status   # what is on, what the wiki says is answering, a sample count
+./cirrus.sh on       # start Elasticsearch, switch the wiki over
+./cirrus.sh build    # build the index — tens of minutes, run under nohup
+./cirrus.sh off      # back to MySQL, container removed, index kept
+```
+
+`promote-to-primary.sh` now runs `./cirrus.sh on` for you, because a primary is
+read and 1-3% recall is not acceptable for a wiki anyone is using.
+
+**The trap worth knowing:** `ForceSearchIndex.php` does not write to
+Elasticsearch. It enqueues `cirrusSearchElasticaWrite` jobs and prints
+*"Indexed N pages at 150/second"* — which counts pages **processed**, not
+documents **written**. With `$wgJobRunRate` at 0 and nothing running the queue,
+that cheerful message describes work that never happened: measured here, 378
+pages "indexed", 5,860 jobs queued, and Elasticsearch's own `index_total`
+counter still exactly `0`. `cirrus.sh build` therefore drains the queue in a loop
+and verifies the document count against Elasticsearch instead of trusting the
+indexer's own report.
+
 ---
 
 ## Operating it

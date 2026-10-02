@@ -73,5 +73,23 @@ for u in Mbauwens JeffEmmett; do
 done
 
 echo
+echo "== search: MySQL full-text is not good enough for a live wiki =="
+# While this box is a standby it answers search from MySQL full-text, because an
+# idle Elasticsearch would hold ~1GB for a copy nobody reads. A primary is read,
+# and the difference is drastic: "Ostrom" finds 15 pages on MySQL against 637 on
+# Netcup's CirrusSearch, and "platform cooperative" 11 against 1034 with the
+# wrong page first. So promotion turns Cirrus on.
+#
+# cirrus.sh is idempotent and keeps the index volume across off/on, so this is
+# usually a start rather than a rebuild. If it reports the index missing, run
+# `nohup ./cirrus.sh build &` -- tens of minutes -- and the wiki keeps serving
+# MySQL-backed search in the meantime.
+if [ -x ./cirrus.sh ]; then
+  ./cirrus.sh on || echo "   WARNING: search stayed on MySQL full-text; see ./cirrus.sh status"
+else
+  echo "   SKIP: cirrus.sh not present"
+fi
+
+echo
 echo "== verify =="
 curl -sS -o /dev/null -m 20 -w "   local HTTP %{http_code}\n" -H "Host: wiki.p2pfoundation.net" http://127.0.0.1:18081/Main_Page

@@ -39,10 +39,16 @@
 #                       down that SkipSkins gets "the same observable result" is
 #                       wrong about Special:Version specifically.
 #
-# The one that matters is CirrusSearch: promoted today, this copy would come up
-# with search silently degraded to MySQL full-text. Closing it needs an
-# Elasticsearch instance on GX10 and an index rebuild over 45k pages, so it is
-# tracked as a task rather than bolted on here.
+# CirrusSearch was the one that mattered, and it is now STAGED rather than
+# missing: the extensions sit on disk, the index lives in a volume, and
+# ./cirrus.sh turns the whole thing on. Elasticsearch is deliberately NOT part
+# of the default stack -- it holds ~1GB and this copy serves no traffic -- so
+# while the standby idles, search still answers from MySQL full-text at a few
+# percent of Cirrus's recall. That is a choice, documented in cirrus.sh with the
+# measured numbers, not an oversight. A promotion runs ./cirrus.sh on.
+#
+# HitCounters and WikiEditor remain absent and are left that way: one counts
+# views nobody is making, the other is an edit toolbar on a read-only copy.
 #
 # Idempotent: safe to re-run.
 set -euo pipefail
@@ -207,6 +213,69 @@ if ! grep -q "NETCUP PARITY - CITE" LocalSettings.php; then
 # tables, so update.php has nothing to do for it.
 wfLoadExtension( 'Cite' );
 PHP
+fi
+
+if ! grep -q "NETCUP PARITY - SEARCH" LocalSettings.php; then
+  echo "   appending search parity"
+  cat >> LocalSettings.php <<'PHP'
+
+# --- NETCUP PARITY - SEARCH ------------------------------------------------
+# Netcup answers search with CirrusSearch. Without it MediaWiki falls back to
+# MySQL full-text, and on this corpus that is not a slightly worse search, it is
+# a different feature wearing the same name. Measured 2026-10-02, same queries
+# against both wikis:
+#
+#   query                  Netcup (Cirrus)   standby (MySQL full-text)
+#   commons                8285  "Commons"   2150  "Typology of Global Commons-..."
+#   peer production        2222              195
+#   Ostrom                  637              15
+#   platform cooperative   1034  "Platform." 11    "Transkribus - Cooperative AI..."
+#   self-organisation      1078              21
+#
+# 1-3% of the hits, and the wrong page first.
+#
+# CirrusSearch is nonetheless OFF by default here: Elasticsearch holds ~1GB
+# (measured: 973MiB) on a host already running 244 containers, for a copy whose
+# access log contains nothing but local probes. The extensions are mounted, the
+# index volume survives, and ./cirrus.sh creates the marker this block tests --
+# so a promotion is a start, not a 45k-page rebuild.
+#
+# Being on disk is not being loaded. That distinction cost this wiki its
+# footnotes for years; here it is the point.
+if ( file_exists( '/var/www/html/wiki-state/cirrus-enabled' ) ) {
+	wfLoadExtension( 'Elastica' );
+	wfLoadExtension( 'CirrusSearch' );
+	$wgCirrusSearchServers       = [ 'p2pwiki-standby-elasticsearch' ];
+	$wgSearchType                = 'CirrusSearch';
+	$wgCirrusSearchIndexBaseName = 'p2pwiki';
+} else {
+	# Explicit rather than inherited, so Special:Version and this file agree
+	# about which backend is answering.
+	$wgSearchType = 'SearchMySQL';
+}
+PHP
+fi
+
+echo
+echo "== 2b. search extensions (copied from Netcup, not cloned) =="
+# Version parity is the whole point: CirrusSearch 6.5.4 and Elastica 6.2.0 are
+# what Netcup runs, and Elastica needs its composer vendor/ tree, which a git
+# clone does not give you. Copying the live trees avoids both problems.
+mkdir -p extensions wiki-state
+if [ -f extensions/CirrusSearch/extension.json ] && [ -d extensions/Elastica/vendor ]; then
+  echo "   present: CirrusSearch $(python3 -c 'import json;print(json.load(open("extensions/CirrusSearch/extension.json"))["version"])' 2>/dev/null || echo '?')"
+  echo "            Elastica     $(python3 -c 'import json;print(json.load(open("extensions/Elastica/extension.json"))["version"])' 2>/dev/null || echo '?')"
+else
+  echo "   MISSING. Copy them from Netcup -- relay through your workstation, since"
+  echo "   this host does not necessarily reach Netcup directly:"
+  echo
+  echo "     ssh netcup-full 'docker exec p2pwiki tar -cf - --exclude=.git \\"
+  echo "       --exclude=node_modules --exclude=tests \\"
+  echo "       -C /var/www/html/extensions CirrusSearch Elastica' \\"
+  echo "     | ssh gx10 'tar -xf - -C $(pwd)/extensions'"
+  echo
+  echo "   Then re-run this script. Until then ./cirrus.sh on will fail, and the"
+  echo "   wiki stays on MySQL full-text, which is the safe default."
 fi
 
 echo

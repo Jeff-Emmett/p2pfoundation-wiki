@@ -105,6 +105,16 @@ services:
       # not bundle. Mounted as a single subdirectory rather than shadowing the
       # whole extensions/ tree, so the image's bundled extensions stay intact.
       - ./extensions/YouTube:/var/www/html/extensions/YouTube:ro
+      # CirrusSearch + Elastica, copied byte-for-byte from what Netcup runs
+      # (6.5.4 / 6.2.0, Elastica's vendor/ included) rather than cloned, so the
+      # standby cannot drift to a different search version than production.
+      # Mounted always, LOADED only when ./cirrus.sh has created the marker:
+      # files on disk cost disk, and nothing else.
+      - ./extensions/CirrusSearch:/var/www/html/extensions/CirrusSearch:ro
+      - ./extensions/Elastica:/var/www/html/extensions/Elastica:ro
+      # The marker lives on the host so it survives a container recreate, and is
+      # read-only inside: only ./cirrus.sh on the host flips the backend.
+      - ./wiki-state:/var/www/html/wiki-state:ro
     ports:
       # Bound to localhost only. Publication is the tunnel's job, and GX10 has
       # no Traefik to hide behind — an 0.0.0.0 bind here would put an

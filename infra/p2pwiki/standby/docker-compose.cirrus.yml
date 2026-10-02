@@ -1,0 +1,42 @@
+# OPT-IN search overlay for the GX10 standby. NOT part of the default stack:
+# `docker compose up -d` never starts this, and the service deliberately has
+# `restart: "no"` so a host reboot or a docker restart does not quietly bring it
+# back. The standby serves no traffic while it idles (24h of access log: nothing
+# but local probes), and an idle Elasticsearch would hold ~1GB for nobody.
+#
+# Brought up and down by ./cirrus.sh, which also flips the wiki's search backend.
+# The index volume survives `down`, so a promotion starts searching in seconds
+# instead of rebuilding 45k pages.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.cirrus.yml up -d p2pwiki-standby-elasticsearch
+#
+# Version is pinned to what Netcup runs: CirrusSearch 6.5.4 wants Elasticsearch
+# 7.10.x, and 7.10.2 is the last of that line. It does publish an arm64 image,
+# which is the only reason this is possible on GX10 at all.
+services:
+  p2pwiki-standby-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    container_name: p2pwiki-standby-elasticsearch
+    restart: "no"
+    mem_limit: 1536m
+    cpus: 2
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+      xpack.security.enabled: "false"
+      # No memory lock: this is a stop/start service on a 244-container host, and
+      # a failed mlock would make it refuse to boot at the moment it is needed.
+      bootstrap.memory_lock: "false"
+    volumes:
+      - p2pwiki-standby-es-data:/usr/share/elasticsearch/data
+    networks:
+      - p2pwiki-standby-internal
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+volumes:
+  p2pwiki-standby-es-data:

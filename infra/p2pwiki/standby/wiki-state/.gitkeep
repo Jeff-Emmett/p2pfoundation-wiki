@@ -1,0 +1,6 @@
+This directory is bind-mounted read-only into the standby wiki container at
+/var/www/html/wiki-state. ./cirrus.sh creates and removes the single file
+`cirrus-enabled` here; LocalSettings.php checks for it to decide whether to load
+CirrusSearch or fall back to MySQL full-text. Keeping the switch in a host file
+rather than in LocalSettings means the config text never changes when the
+backend is toggled, and the setting survives a container recreate.

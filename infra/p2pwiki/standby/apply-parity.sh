@@ -28,6 +28,22 @@
 # real footnotes there, so a standby without Cite is the one that lies. See the
 # NETCUP PARITY - CITE step below.
 #
+# WHAT PARITY DOES **NOT** COVER, measured on 2026-10-02 instead of assumed. The
+# spec above was read off a Special:Version archived 2026-02-02, and Netcup has
+# moved since. Asking this copy's own siteinfo:
+#
+#   missing vs Netcup : CirrusSearch, Elastica, HitCounters, WikiEditor
+#   extra vs Netcup   : MinervaNeue, MonoBook, Timeless -- siteinfo still lists
+#                       them despite $wgSkipSkins, which hides a skin from
+#                       preferences without unregistering it. The claim further
+#                       down that SkipSkins gets "the same observable result" is
+#                       wrong about Special:Version specifically.
+#
+# The one that matters is CirrusSearch: promoted today, this copy would come up
+# with search silently degraded to MySQL full-text. Closing it needs an
+# Elasticsearch instance on GX10 and an index rebuild over 45k pages, so it is
+# tracked as a task rather than bolted on here.
+#
 # Idempotent: safe to re-run.
 set -euo pipefail
 cd "$(dirname "$0")"

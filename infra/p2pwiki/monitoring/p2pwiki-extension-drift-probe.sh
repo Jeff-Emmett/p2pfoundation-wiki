@@ -14,12 +14,14 @@
 #     by the 2026-08-24 failback to a pre-June copy of the file.
 #
 # Both are invisible to availability monitoring by construction: the wiki serves
-# 200s throughout. So this probe asserts the configuration directly, two ways --
-# the extension set the wiki says it has loaded, AND that <ref> actually renders.
-# The second check matters because "loaded" and "working" are different claims.
+# 200s throughout. So this probe asserts the configuration directly, three ways:
+# the extension set the wiki says it has loaded, that <ref> actually renders
+# ("loaded" and "working" are different claims), and that $wgSMTP still pairs
+# tls:// with 465 and still holds the password the secret file holds.
 #
-#   exit 0  UP    expected extensions loaded and <ref> renders
-#   exit 3  DOWN  drift: an extension is missing/extra, or <ref> stopped rendering
+#   exit 0  UP    extensions loaded, <ref> renders, $wgSMTP intact
+#   exit 3  DOWN  drift: an extension missing/extra, <ref> stopped rendering, or
+#                 $wgSMTP reverted
 #   exit 2  DOWN  inconclusive -- could not ask the wiki after 3 tries
 #
 # Inconclusive is deliberately NOT exit 0. A check that cannot tell "nothing
@@ -36,6 +38,12 @@ set -u
 
 CONTAINER="${CONTAINER:-p2pwiki}"
 WIKI_HOST="${WIKI_HOST:-wiki.p2pfoundation.net}"
+LS_FILE="${LS_FILE:-/opt/websites/p2pwiki/LocalSettings.php}"
+SMTP_SECRET="${SMTP_SECRET:-/opt/secrets/mailcow/p2pwiki_noreply_smtp_password}"
+# Its own file rather than an inline heredoc: the check has to match PHP string
+# literals, and embedding quotes inside quotes inside quotes is how a probe
+# acquires a bug that makes it pass.
+SMTP_CHECK="${SMTP_CHECK:-/opt/scripts/p2pwiki-smtp-config-check.py}"
 
 # The set as of 2026-10-02, read back from siteinfo. Skins and extensions
 # together, because siteinfo reports both and a lost skin is drift too.
@@ -97,18 +105,30 @@ else
     refs_ok=unknown     # no usable answer
   fi
 
-  if [ -n "$missing" ] || [ -n "$extra" ] || [ "$refs_ok" = "no" ]; then
+  # --- 3. $wgSMTP ---------------------------------------------------------
+  # The 2026-08-24 failback restored a pre-June copy of this block and undid both
+  # the port fix and the password rotation. Six weeks of dead password-reset mail,
+  # with the wiki serving 200s the whole time. States only, never a fingerprint.
+  smtp=$(LS_FILE="$LS_FILE" SMTP_SECRET="$SMTP_SECRET" python3 "$SMTP_CHECK" 2>/dev/null)
+  smtp_state="${smtp%%:*}"; smtp_detail="${smtp#*:}"
+  [ -z "$smtp_state" ] && { smtp_state=unchecked; smtp_detail="the \$wgSMTP check did not run"; }
+
+  if [ -n "$missing" ] || [ -n "$extra" ] || [ "$refs_ok" = "no" ] || [ "$smtp_state" = "drift" ]; then
     msg="DRIFT in p2pwiki LocalSettings.php:"
     [ -n "$missing" ] && msg="${msg} MISSING=[${missing% }]"
     [ -n "$extra" ]   && msg="${msg} UNEXPECTED=[${extra% }]"
     [ "$refs_ok" = "no" ] && msg="${msg} <ref> no longer renders a footnote list"
+    [ "$smtp_state" = "drift" ] && msg="${msg} \$wgSMTP: ${smtp_detail}"
     msg="${msg}. LocalSettings.php is NOT in the p2pfoundation-wiki repo -- it is tracked in gitea jeffemmett/p2pwiki, checked out at /opt/websites/p2pwiki. Compare against that repo before re-adding anything by hand."
     status=down; rc=3
-  elif [ "$refs_ok" = "unknown" ]; then
-    msg="INCONCLUSIVE: extension set matches (${have% }) but the <ref> render check got no usable answer."
+  elif [ "$refs_ok" = "unknown" ] || [ "$smtp_state" = "unchecked" ]; then
+    msg="INCONCLUSIVE: extension set matches (${have% })"
+    [ "$refs_ok" = "unknown" ] && msg="${msg}, but the <ref> render check got no usable answer"
+    [ "$smtp_state" = "unchecked" ] && msg="${msg}, and \$wgSMTP was not compared: ${smtp_detail}"
+    msg="${msg}."
     status=down; rc=2
   else
-    msg="OK: ${have% }; <ref> renders a footnote list."
+    msg="OK: ${have% }; <ref> renders a footnote list; \$wgSMTP intact."
     status=up; rc=0
   fi
 fi

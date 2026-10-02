@@ -110,19 +110,67 @@ not touch `/opt/websites`.
 
 ### Drift probe
 
-`monitoring/p2pwiki-extension-drift-probe.{sh,service,timer}` — installed on Netcup
-as `/opt/scripts/p2pwiki-extension-drift-probe.sh` with a daily timer. It asserts
-two separate things: the extension set the wiki reports as loaded, and that
-`<ref>` still renders a footnote list. Loaded and working are different claims,
-so it checks both, parsing from `text=` rather than a page so the answer cannot
-come out of the parser cache. Failures mail Jeff via `unit-failure-notify@%n`.
+`monitoring/p2pwiki-extension-drift-probe.{sh,service,timer}` plus
+`monitoring/p2pwiki-smtp-config-check.py` — installed on Netcup under
+`/opt/scripts/` with a daily timer. Three assertions, because all three have
+failed silently here:
+
+1. the extension set the wiki reports as loaded;
+2. that `<ref>` still renders a footnote list — loaded and working are different
+   claims, and this one parses from `text=` rather than a page, so the answer
+   cannot come out of the parser cache;
+3. that `$wgSMTP` still pairs `tls://` with 465 and still holds the password the
+   secret file holds.
+
+Failures mail Jeff via `unit-failure-notify@%n`. The SMTP comparison lives in its
+own Python file rather than a heredoc inside the shell script: it has to match PHP
+string literals, and nesting quotes three deep is how a probe quietly acquires a
+bug that makes it pass.
 
 Exit 0 OK, 3 drift, 2 inconclusive. **Inconclusive is deliberately not 0**: the
 Cite loss and the reverted `$wgSMTP` fix both went unnoticed for months precisely
 because nothing could distinguish "checked and fine" from "never checked". Both
-failure paths were exercised before installing — `EXPECTED="Cite Nonexistent"` → 3,
-`CONTAINER=no-such-container` → 2 — and `EXPECTED` is overridable for exactly
-that reason.
+failure paths were exercised before installing, six of them, and `EXPECTED`,
+`CONTAINER`, `LS_FILE` and `SMTP_SECRET` are all overridable for exactly that
+reason: `EXPECTED="Cite Nonexistent"` → 3, a copy with the port put back to 587 →
+3, a copy with a wrong password → 3, an unreadable `LS_FILE` → 2,
+`CONTAINER=no-such-container` → 2, and untouched → 0.
+
+The alert path was exercised too, rather than assumed: a deliberate exit 3 in a
+transient unit (`systemd-run --property=OnFailure=…`) reached
+`jeff+agent@jeffemmett.com`, `status=sent`. While checking it,
+`p2pwiki-log-tail.service` turned out to carry its `OnFailure=` inside
+`[Service]`, where systemd ignores the key with a warning — so the one unit whose
+three months of silence was the original bug still could not report its own
+death. Moved to `[Unit]`.
+
+## Mail (`$wgSMTP`) — repaired twice now, for the same reason
+
+Password reset and the editor-access notifications go out through
+`mail.rmail.online`. The scheme and the port have to agree: `tls://` is implicit
+TLS, which lives on **465**. On 587 the connection dies before anything is
+queued — from inside the wiki container,
+`fsockopen("tls://mail.rmail.online", 587)` returns
+`error:0A00010B:SSL routines::wrong version number`, and MediaWiki reports only
+"Failed to connect socket".
+
+Fixed on 2026-06-14 (port, plus a password rotation). The 2026-08-24 failback
+restored a pre-June copy of the block and undid both, silently — the wiki serves
+200s either way, so nothing noticed for six weeks. Fixed again 2026-10-02 and
+verified three ways:
+
+* `AUTH LOGIN` as `noreply@p2pfoundation.net` answers `235` on 465 (and on 587
+  with STARTTLS, which is how we know the credential, not the port, was fine);
+* PHP parses the literal in `LocalSettings.php` back to exactly the secret file's
+  bytes — written as a single-quoted literal so a `$` or a backslash in the value
+  cannot be interpolated;
+* a send through MediaWiki's own `UserMailer` reached the mailbox
+  (`status=sent` for `jeff@jeffemmett.com` in the postfix log).
+
+The password was moved by a server-side script that read
+`/opt/secrets/mailcow/p2pwiki_noreply_smtp_password` and wrote it straight back
+out, reporting only sha256 prefixes. A credential that reaches a transcript has
+to be rotated; one that never leaves the host does not.
 
 ## Dumps
 

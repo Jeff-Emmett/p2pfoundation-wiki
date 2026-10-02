@@ -162,7 +162,7 @@ reason: `EXPECTED="Cite Nonexistent"` → 3, a copy with the port put back to 58
 
 The alert path was exercised too, rather than assumed: a deliberate exit 3 in a
 transient unit (`systemd-run --property=OnFailure=…`) reached
-`jeff+agent@jeffemmett.com`, `status=sent`. While checking it,
+the maintainer's alert address, `status=sent`. While checking it,
 `p2pwiki-log-tail.service` turned out to carry its `OnFailure=` inside
 `[Service]`, where systemd ignores the key with a warning — so the one unit whose
 three months of silence was the original bug still could not report its own
@@ -189,7 +189,7 @@ verified three ways:
   bytes — written as a single-quoted literal so a `$` or a backslash in the value
   cannot be interpolated;
 * a send through MediaWiki's own `UserMailer` reached the mailbox
-  (`status=sent` for `jeff@jeffemmett.com` in the postfix log).
+  (`status=sent` to the maintainer's mailbox in the postfix log).
 
 The password was moved by a server-side script that read
 `/opt/secrets/mailcow/p2pwiki_noreply_smtp_password` and wrote it straight back

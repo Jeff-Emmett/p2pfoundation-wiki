@@ -112,8 +112,8 @@ not touch `/opt/websites`.
 
 `monitoring/p2pwiki-extension-drift-probe.{sh,service,timer}` plus
 `monitoring/p2pwiki-smtp-config-check.py` — installed on Netcup under
-`/opt/scripts/` with a daily timer. Three assertions, because all three have
-failed silently here:
+`/opt/scripts/`, every 6 h. Three assertions, because all three have failed
+silently here:
 
 1. the extension set the wiki reports as loaded;
 2. that `<ref>` still renders a footnote list — loaded and working are different
@@ -122,10 +122,34 @@ failed silently here:
 3. that `$wgSMTP` still pairs `tls://` with 465 and still holds the password the
    secret file holds.
 
-Failures mail Jeff via `unit-failure-notify@%n`. The SMTP comparison lives in its
-own Python file rather than a heredoc inside the shell script: it has to match PHP
-string literals, and nesting quotes three deep is how a probe quietly acquires a
-bug that makes it pass.
+The SMTP comparison lives in its own Python file rather than a heredoc inside the
+shell script: it has to match PHP string literals, and nesting quotes three deep
+is how a probe quietly acquires a bug that makes it pass.
+
+**Two alert channels on purpose, not by accident.** `OnFailure=unit-failure-notify@%n`
+mails Jeff when a run *fails*. Uptime Kuma push monitor **332**
+("p2pwiki config drift…", notification "Mailcow Email Alerts", heartbeat interval
+7 h against the 6 h timer) goes DOWN when a heartbeat *never arrives* — which is
+the case `OnFailure` structurally cannot see, because a timer that stops firing
+produces no failed unit to react to. The thing this whole file is about went
+unnoticed for months; one channel that cannot see a dead checker is not enough.
+
+The monitor was created from `monitoring/create-kuma-push-monitor.py`, and
+`monitoring/check-kuma-monitor.py` reads it back. Both run as a one-off through
+the `kuma-alert-agent` service, which already carries the Kuma admin credential
+from Infisical:
+
+```sh
+cd /opt/apps/kuma-alert-agent
+docker compose run -T --no-deps --name kuma-mk kuma-alert-agent python - < create-kuma-push-monitor.py
+```
+
+That is the point of the detour: Kuma has no REST route for creating a monitor,
+only socket.io, and the admin password never has to pass through a terminal or a
+command line to get there. The script prints the push token on its own last line
+so the caller can append it to `/etc/uptime-kuma-push.env` (0600) without reading
+it. Creating the monitor is idempotent — a second run finds it by name and
+reports `CREATED=no (reused)`.
 
 Exit 0 OK, 3 drift, 2 inconclusive. **Inconclusive is deliberately not 0**: the
 Cite loss and the reverted `$wgSMTP` fix both went unnoticed for months precisely

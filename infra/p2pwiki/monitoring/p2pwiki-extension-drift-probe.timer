@@ -1,9 +1,9 @@
 [Unit]
-Description=Run the p2pwiki extension drift probe daily
+Description=Run the p2pwiki extension drift probe every 6 hours (Kuma monitor 332 expects a heartbeat within 7h)
 
 [Timer]
 OnBootSec=20min
-OnUnitActiveSec=24h
+OnUnitActiveSec=6h
 AccuracySec=15min
 Persistent=true
 

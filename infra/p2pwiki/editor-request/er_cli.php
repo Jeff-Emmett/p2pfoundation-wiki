@@ -64,7 +64,7 @@ class EditorRequestCli extends Maintenance {
 	}
 
 	/** Send mail via MediaWiki's configured mailer; returns bool ok. */
-	private function sendMail( $to, $subject, $body ) {
+	private function sendMail( $to, $subject, $body, $replyTo = null ) {
 		$cfg = er_config();
 		// Probe the global name first: on MW 1.40 probing the namespaced one
 		// autoloads MailAddress.php again on every call, so a second send in
@@ -72,14 +72,15 @@ class EditorRequestCli extends Maintenance {
 		$maCls = class_exists( 'MailAddress' ) ? 'MailAddress' : 'MediaWiki\\Mail\\MailAddress';
 		$from = new $maCls( $cfg['from_email'], $cfg['from_name'] );
 		$toAddr = new $maCls( $to );
+		$opts = $replyTo ? [ 'replyTo' => new $maCls( $replyTo ) ] : [];
 
 		$services = MediaWikiServices::getInstance();
 		if ( method_exists( $services, 'getEmailer' ) ) {
-			$status = $services->getEmailer()->send( [ $toAddr ], $from, $subject, $body );
+			$status = $services->getEmailer()->send( [ $toAddr ], $from, $subject, $body, null, $opts );
 			return $status->isOK();
 		}
 		$umCls = class_exists( 'UserMailer' ) ? 'UserMailer' : 'MediaWiki\\Mail\\UserMailer';
-		$status = $umCls::send( $toAddr, $from, $subject, $body );
+		$status = $umCls::send( $toAddr, $from, $subject, $body, $opts );
 		return $status->isOK();
 	}
 
@@ -200,7 +201,7 @@ class EditorRequestCli extends Maintenance {
 			. "Log in here:\n  $login\n\n"
 			. "Please set your own password after logging in:\n  $change\n\n"
 			. "Welcome, and thank you for contributing!\n";
-		$mailed = $this->sendMail( $rec['email'], 'Your P2P Foundation Wiki editor access is approved', $body );
+		$mailed = $this->sendMail( $rec['email'], 'Your P2P Foundation Wiki editor access is approved', $body, $cfg['reply_to'] );
 
 		$rec['status'] = 'approved';
 		$rec['final_username'] = $user->getName();
@@ -222,7 +223,7 @@ class EditorRequestCli extends Maintenance {
 			. "Thank you for your interest in editing the P2P Foundation Wiki. "
 			. "After review, we're not able to grant editor access at this time.\n\n"
 			. "If you think this was a mistake, just reply to this email.\n";
-		$mailed = $this->sendMail( $rec['email'], 'About your P2P Foundation Wiki editor request', $body );
+		$mailed = $this->sendMail( $rec['email'], 'About your P2P Foundation Wiki editor request', $body, er_config()['reply_to'] );
 
 		$rec['status'] = 'denied';
 		$rec['requester_mailed'] = $mailed ? 'sent' : 'failed';

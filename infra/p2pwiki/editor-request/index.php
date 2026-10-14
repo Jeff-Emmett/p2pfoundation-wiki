@@ -33,15 +33,36 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$honeypot = trim( (string)( $_POST['website'] ?? '' ) );
 	$ip = er_client_ip();
 
+	$ft = er_check_form_token( $_POST['ft'] ?? null );
+	$silent = null; // set => pretend success, email nobody
+
 	if ( $honeypot !== '' ) {
-		// Bot filled the hidden field — pretend success, do nothing.
-		$done = true;
+		$silent = 'honeypot';
+	} elseif ( $ft === 'bad' || $ft === 'replay' ) {
+		$silent = "token-$ft";
+	} elseif ( $ft === 'fast' ) {
+		// Autofill can be this quick too, so ask again rather than drop it.
+		er_log_reject( 'too-fast', $ip );
+		$errors[] = 'That was quick! Please check your details and press the button again.';
+	} elseif ( $ft === 'stale' ) {
+		$errors[] = 'This form expired. Please submit it again.';
 	} elseif ( mb_strlen( $name ) < 2 || mb_strlen( $name ) > 120 ) {
 		$errors[] = 'Please enter your name (2–120 characters).';
+	} elseif ( er_name_looks_spammy( $name ) ) {
+		er_log_reject( 'spammy-name', $ip );
+		$errors[] = 'Please enter just your name, without links or symbols.';
 	} elseif ( !filter_var( $email, FILTER_VALIDATE_EMAIL ) || mb_strlen( $email ) > 200 ) {
 		$errors[] = 'Please enter a valid email address.';
+	} elseif ( !er_turnstile_ok( $_POST['cf-turnstile-response'] ?? null, $ip ) ) {
+		$errors[] = 'Please complete the verification check and try again.';
 	} elseif ( !er_rate_ok( $ip ) ) {
 		$errors[] = 'Too many requests from your network. Please try again later.';
+	} elseif ( er_recent_requests( 7 * 86400, $email ) > 0 ) {
+		// Already asked this week: don't email the editors (or this address) again.
+		$silent = 'duplicate-email';
+	} elseif ( er_recent_requests( 86400 ) >= (int)er_config()['max_per_day'] ) {
+		er_log_reject( 'daily-cap', $ip );
+		$errors[] = 'We are receiving a lot of requests right now. Please try again tomorrow.';
 	} else {
 		$id = bin2hex( random_bytes( 16 ) );
 		er_save( $id, [
@@ -65,6 +86,10 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		} else {
 			$errors[] = 'Sorry, we could not submit your request right now. Please try again later.';
 		}
+	}
+	if ( $silent !== null ) {
+		er_log_reject( $silent, $ip );
+		$done = true;
 	}
 }
 
@@ -94,6 +119,11 @@ require __DIR__ . '/_header.php';
 		<div class="hp" aria-hidden="true">
 			<label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
 		</div>
+		<input type="hidden" name="ft" value="<?= er_h( er_form_token() ) ?>">
+		<?php if ( er_turnstile_secret() !== '' ): ?>
+			<div class="cf-turnstile" data-sitekey="<?= er_h( er_config()['turnstile_sitekey'] ) ?>" style="margin-top:18px"></div>
+			<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+		<?php endif; ?>
 		<button type="submit">Request access</button>
 	</form>
 	<p class="muted">We use your email only to set up your account and notify

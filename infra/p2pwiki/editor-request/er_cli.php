@@ -66,7 +66,10 @@ class EditorRequestCli extends Maintenance {
 	/** Send mail via MediaWiki's configured mailer; returns bool ok. */
 	private function sendMail( $to, $subject, $body ) {
 		$cfg = er_config();
-		$maCls = class_exists( 'MediaWiki\\Mail\\MailAddress' ) ? 'MediaWiki\\Mail\\MailAddress' : 'MailAddress';
+		// Probe the global name first: on MW 1.40 probing the namespaced one
+		// autoloads MailAddress.php again on every call, so a second send in
+		// the same process dies with "Cannot declare class MailAddress".
+		$maCls = class_exists( 'MailAddress' ) ? 'MailAddress' : 'MediaWiki\\Mail\\MailAddress';
 		$from = new $maCls( $cfg['from_email'], $cfg['from_name'] );
 		$toAddr = new $maCls( $to );
 
@@ -75,7 +78,7 @@ class EditorRequestCli extends Maintenance {
 			$status = $services->getEmailer()->send( [ $toAddr ], $from, $subject, $body );
 			return $status->isOK();
 		}
-		$umCls = class_exists( 'MediaWiki\\Mail\\UserMailer' ) ? 'MediaWiki\\Mail\\UserMailer' : 'UserMailer';
+		$umCls = class_exists( 'UserMailer' ) ? 'UserMailer' : 'MediaWiki\\Mail\\UserMailer';
 		$status = $umCls::send( $toAddr, $from, $subject, $body );
 		return $status->isOK();
 	}
@@ -99,11 +102,28 @@ class EditorRequestCli extends Maintenance {
 			. "DENY  (discards the request and notifies them):\n  $deny\n\n"
 			. "Each link opens a confirmation page and can be used once. No login required.\n";
 
-		$ok = $this->sendMail( $cfg['approver_email'], 'Wiki editor request: ' . $rec['name'], $body );
-		$rec['notify_status'] = $ok ? 'sent' : 'failed';
-		$rec['notified_to'] = $cfg['approver_email'];
+		// One message per approver, so one bad address cannot sink the others.
+		// The request counts as submitted if at least one approver got it.
+		$sent = [];
+		foreach ( $cfg['approver_emails'] as $to ) {
+			$ok = $this->sendMail( $to, 'Wiki editor request: ' . $rec['name'], $body );
+			$sent[$to] = $ok ? 'sent' : 'failed';
+			$this->output( $sent[$to] . " -> $to\n" );
+		}
+		$rec['notify_status'] = in_array( 'sent', $sent, true ) ? 'sent' : 'failed';
+		$rec['notified_to'] = $sent;
 		er_save( $id, $rec );
-		$this->output( ( $ok ? 'sent' : 'failed' ) . " -> {$cfg['approver_email']}\n" );
+	}
+
+	/** Tell every approver a request is settled, so nobody acts on a stale link. */
+	private function notifyDecision( array $rec, $outcome ) {
+		$body = "The editor-access request from {$rec['name']} <{$rec['email']}> "
+			. "has been $outcome"
+			. ( isset( $rec['final_username'] ) ? " (account: {$rec['final_username']})" : '' )
+			. ".\n\nNo further action is needed; the links in the original email are now spent.\n";
+		foreach ( er_config()['approver_emails'] as $to ) {
+			$this->sendMail( $to, "Wiki editor request $outcome: {$rec['name']}", $body );
+		}
 	}
 
 	private function approve( array $rec ) {
@@ -188,6 +208,7 @@ class EditorRequestCli extends Maintenance {
 		$rec['decided_ts'] = time();
 		er_save( $id, $rec );
 		$this->output( "approved {$user->getName()} (mail " . ( $mailed ? 'sent' : 'failed' ) . ")\n" );
+		$this->notifyDecision( $rec, 'approved' );
 	}
 
 	private function deny( array $rec ) {
@@ -208,6 +229,7 @@ class EditorRequestCli extends Maintenance {
 		$rec['decided_ts'] = time();
 		er_save( $id, $rec );
 		$this->output( "denied (mail " . ( $mailed ? 'sent' : 'failed' ) . ")\n" );
+		$this->notifyDecision( $rec, 'denied' );
 	}
 
 	private function failRec( array $rec, $why ) {

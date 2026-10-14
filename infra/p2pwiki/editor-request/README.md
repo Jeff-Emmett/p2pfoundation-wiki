@@ -3,7 +3,9 @@
 Self-service "request editor access" form for the P2P Foundation Wiki, with
 one-click email approval. Editing the wiki requires an account, and account
 self-registration is disabled — this gives non-admins a way to ask, and gives
-the approver (Michel) a single email with Approve / Deny links.
+the lead editors (Michel Bauwens and Simon Grant) each an email with
+Approve / Deny links. Whoever confirms first decides; everyone on the list
+is then told the request is settled.
 
 ## Flow
 
@@ -50,7 +52,7 @@ Mount the code read-only and a writable data dir into the `p2pwiki` container:
       - ./editor-request:/var/www/html/editor-request:ro
       - ./editor-request-data:/var/editor-request-data
     environment:
-      ER_APPROVER_EMAIL: michel@p2pfoundation.net
+      ER_APPROVER_EMAIL: michel@p2pfoundation.net,asimong@gmail.com   # comma-separated
       ER_BASE_URL: https://wiki.p2pfoundation.net
       ER_FROM_EMAIL: noreply@p2pfoundation.net
       ER_DATA_DIR: /var/editor-request-data

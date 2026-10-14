@@ -6,8 +6,11 @@
  * approver address can be swapped for testing without editing this file.
  */
 return [
-	// Who receives the one-click approve/deny email.
-	'approver_email' => getenv( 'ER_APPROVER_EMAIL' ) ?: 'michel@p2pfoundation.net',
+	// Who receives the one-click approve/deny email: a comma-separated list.
+	// Every approver gets the same links; the first to confirm decides, and
+	// the rest are told it has been handled.
+	'approver_emails' => array_values( array_filter( array_map( 'trim', explode( ',',
+		getenv( 'ER_APPROVER_EMAIL' ) ?: 'michel@p2pfoundation.net' ) ) ) ),
 	// Envelope/From for outbound mail (matches the wiki's $wgPasswordSender).
 	'from_email'     => getenv( 'ER_FROM_EMAIL' ) ?: 'noreply@p2pfoundation.net',
 	'from_name'      => 'P2P Foundation Wiki',

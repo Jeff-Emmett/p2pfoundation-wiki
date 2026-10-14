@@ -51,6 +51,7 @@ services:
       ER_BASE_URL: https://wiki.p2pfoundation.net
       ER_FROM_EMAIL: noreply@p2pfoundation.net
       ER_DATA_DIR: /var/editor-request-data
+      ER_TURNSTILE_SITEKEY: 0x4AAAAAAFW9zlpy5-g1cE6l
     container_name: p2pwiki
     mem_limit: 1g
     cpus: 2

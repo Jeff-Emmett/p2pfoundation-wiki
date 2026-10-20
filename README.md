@@ -1,6 +1,6 @@
 # P2P Foundation Wiki Archive
 
-Content archive and infrastructure configs for the [P2P Foundation](https://p2pfoundation.net) — a global network focused on peer-to-peer dynamics in technology, governance, and economics.
+Content archive for the [P2P Foundation](https://p2pfoundation.net) — a global network focused on peer-to-peer dynamics in technology, governance, and economics.
 
 ## What's Here
 
@@ -9,7 +9,6 @@ Content archive and infrastructure configs for the [P2P Foundation](https://p2pf
 | `wiki/` | 41,500+ MediaWiki articles as `.mediawiki` files (main namespace only) | ~275 MB |
 | `xmldump/` | 31 paginated Special:Export XMLs from an earlier seed (Git LFS) — **superseded** by the self-hosted dump endpoint below | ~507 MB |
 | `blog/` | Static blog server configs (mirror is rsync'd separately) | configs only |
-| `infra/p2pwiki/` | Docker Compose stack for wiki.p2pfoundation.net — mirrors live `/opt/websites/p2pwiki/` | configs only |
 
 ## Live dumps
 
@@ -21,7 +20,7 @@ Canonical wiki exports are now generated server-side by `dumpBackup.php` / `dump
 - `…/p2pwiki-latest-images.tar` — all uploaded images (~1.7 GB)
 - `…/p2pwiki-latest-uploads.txt` — image filename list
 
-Current XML regenerates weekly; history + images monthly. See [`infra/p2pwiki/README.md`](infra/p2pwiki/README.md) for the cron script and import instructions. Unlike `xmldump/`, these cover **all namespaces** — Templates, Categories, Files, Talk, User, Draft, MediaWiki, Help — which is what you want if you're bootstrapping a working mirror.
+Current XML regenerates weekly; history + images monthly. Unlike `xmldump/`, these cover **all namespaces** — Templates, Categories, Files, Talk, User, Draft, MediaWiki, Help — which is what you want if you're bootstrapping a working mirror.
 
 ## Quick Start
 
@@ -33,15 +32,9 @@ Articles are plain text MediaWiki markup — open any file in `wiki/` to read it
 cat wiki/Commons-Based_Peer_Production.mediawiki
 ```
 
-### Run the stack (operators)
+### Operating the wiki
 
-```bash
-cd infra/p2pwiki/
-cp .env.example .env   # fill in DB_ROOT_PASSWORD, DB_PASSWORD (or source from Infisical)
-docker compose up -d
-```
-
-`LocalSettings.php` is not in the repo — pull from the Netcup backup or generate a fresh one with `maintenance/install.php`.
+The deployment tooling for wiki.p2pfoundation.net is kept in a private operations repository, not here.
 
 ### Getting a full wiki snapshot
 

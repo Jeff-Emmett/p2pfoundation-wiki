@@ -36,14 +36,6 @@ Articles are stored as `.mediawiki` files in the `wiki/` directory. They use sta
 - External links: `[https://example.com display text]`
 - Categories at the bottom: `[[Category:Name]]`
 
-## Infrastructure Changes
-
-For changes to Docker configs or deployment scripts in `infra/`:
-
-1. Test locally with `docker compose up -d`
-2. Ensure no secrets are hardcoded (use `${ENV_VAR}` placeholders)
-3. Document any new environment variables in `.env.example`
-
 ## Questions?
 
 Open an issue or reach out via the [P2P Foundation](https://p2pfoundation.net) website.

@@ -3,7 +3,9 @@
 Self-service "request editor access" form for the P2P Foundation Wiki, with
 one-click email approval. Editing the wiki requires an account, and account
 self-registration is disabled — this gives non-admins a way to ask, and gives
-the approver (Michel) a single email with Approve / Deny links.
+the lead editors (Michel Bauwens and Simon Grant) each an email with
+Approve / Deny links. Whoever confirms first decides; everyone on the list
+is then told the request is settled.
 
 ## Flow
 
@@ -50,7 +52,7 @@ Mount the code read-only and a writable data dir into the `p2pwiki` container:
       - ./editor-request:/var/www/html/editor-request:ro
       - ./editor-request-data:/var/editor-request-data
     environment:
-      ER_APPROVER_EMAIL: michel@p2pfoundation.net
+      ER_APPROVER_EMAIL: michel@p2pfoundation.net,asimong@gmail.com   # comma-separated
       ER_BASE_URL: https://wiki.p2pfoundation.net
       ER_FROM_EMAIL: noreply@p2pfoundation.net
       ER_DATA_DIR: /var/editor-request-data
@@ -62,3 +64,25 @@ Mount the code read-only and a writable data dir into the `p2pwiki` container:
 Recreate the container after changes (`docker compose up -d`) — these are
 bind-mounted single files/dirs, so editing in place + `sed -i` does **not**
 update the running container (inode swap); a recreate is required.
+
+## Bot defences
+
+Approval is manual, so a bot can never get an account. What it could do is
+flood the editors' inboxes, or use the form to mail strangers. Every POST
+must pass all of these before anyone is emailed (in order):
+
+| Layer | On failure |
+|---|---|
+| Honeypot field | silent fake success |
+| Signed single-use form token (HMAC, `ft`): proves the form was fetched | silent (bad/replayed) · "expired" after 2 h |
+| Minimum fill time, 4 s | visible "press again" (autofill can be fast) |
+| Name with links/markup | visible error |
+| Cloudflare Turnstile (only when `ER_TURNSTILE_SITEKEY` + `<data>/turnstile.secret` exist; then fails closed) | visible error |
+| 3 submissions / IP / hour (`CF-Connecting-IP`; origin 403s non-CF traffic) | visible error |
+| Same email already asked within 7 days | silent, nobody re-mailed |
+| 15 new requests / day site-wide | visible "try tomorrow" |
+
+Silent rejects still show the success page, so bots learn nothing. Every
+reject is a line in `<data>/log/rejects.log` (time, IP, reason).
+Requester-facing mail carries `Reply-To: ER_REPLY_TO` (default michel@).
+The form is linked from the login page via `MediaWiki:Loginprompt`.

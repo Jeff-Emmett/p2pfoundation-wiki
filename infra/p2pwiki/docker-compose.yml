@@ -47,10 +47,11 @@ services:
     image: mediawiki:1.40
     command: ["bash","-c","a2enmod headers >/dev/null 2>&1; exec apache2-foreground"]
     environment:
-      ER_APPROVER_EMAIL: michel@p2pfoundation.net
+      ER_APPROVER_EMAIL: michel@p2pfoundation.net,asimong@gmail.com
       ER_BASE_URL: https://wiki.p2pfoundation.net
       ER_FROM_EMAIL: noreply@p2pfoundation.net
       ER_DATA_DIR: /var/editor-request-data
+      ER_TURNSTILE_SITEKEY: 0x4AAAAAAFW9zlpy5-g1cE6l
     container_name: p2pwiki
     mem_limit: 1g
     cpus: 2
